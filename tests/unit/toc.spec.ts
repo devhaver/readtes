@@ -1,7 +1,11 @@
 import { describe, expect, it } from "vitest";
-import type { ChapterKind, Toc } from "~~/shared/types/content";
+import type {
+  TocChapter,
+  TocPartFile,
+  TocVolumeSkeleton,
+} from "~~/shared/types/content";
 
-const chapterOf = (id: string, kind: ChapterKind, number: number) => ({
+const chapterOf = (id: string, kind: TocChapter["kind"], number: number) => ({
   id,
   kind,
   number,
@@ -13,117 +17,19 @@ const chapterOf = (id: string, kind: ChapterKind, number: number) => ({
 const chapter = (id: string, number: number) =>
   chapterOf(id, "chapter", number);
 
-const fixtureToc: Toc = {
-  volumes: [
-    {
-      id: "volume-01",
-      number: 1,
-      title: { en: "Volume 1", he: "כרך 1" },
-      parts: [
-        {
-          id: "part-01",
-          number: 1,
-          sefariaNode: "Talmud Eser HaSefirot, Section I",
-          title: { en: "Part 1", he: "חלק 1" },
-          chapters: [
-            chapter("part-01/chapter-01", 1),
-            chapter("part-01/chapter-02", 2),
-            chapter("part-01/chapter-03", 3),
-          ],
-        },
-        {
-          id: "part-02",
-          number: 2,
-          sefariaNode: "Talmud Eser HaSefirot, Section II",
-          title: { en: "Part 2", he: "חלק 2" },
-          chapters: [chapter("part-02/chapter-01", 1)],
-        },
-      ],
-    },
-    {
-      id: "volume-02",
-      number: 2,
-      title: { en: "Volume 2", he: "כרך 2" },
-      parts: [
-        {
-          id: "part-03",
-          number: 3,
-          sefariaNode: "Talmud Eser HaSefirot, Section III",
-          title: { en: "Part 3", he: "חלק 3" },
-          chapters: [chapter("part-03/chapter-01", 1)],
-        },
-      ],
-    },
-  ],
-};
-
-describe("flattenChapters", () => {
-  it("flattens every chapter in volume -> part -> chapter reading order", () => {
-    expect(
-      flattenChapters(fixtureToc).map((entry) => entry.chapter.id),
-    ).toEqual([
-      "part-01/chapter-01",
-      "part-01/chapter-02",
-      "part-01/chapter-03",
-      "part-02/chapter-01",
-      "part-03/chapter-01",
-    ]);
-  });
-});
-
-describe("flattenChapters — mixed chapter kinds", () => {
-  // Regression coverage: `TocChapter.number` restarts at 1 within each kind
-  // (a real part-01 shape — 2 `chapter`s, 10 `inner-observation`s, 1
-  // `questions-terminology`, 54 `answers-terminology`), so sorting a part's
-  // chapters by `number` alone (the pre-fix behaviour) interleaved kinds —
-  // e.g. `chapter` #1, `inner-observation` #1, and `answers-terminology` #1
-  // all tied at `number: 1` — instead of reading through one kind before
-  // the next. `flattenChapters` must sort by kind (`KIND_ORDER`) first.
-  const mixedKindToc: Toc = {
-    volumes: [
-      {
-        id: "volume-01",
-        number: 1,
-        title: { en: "Volume 1", he: "כרך 1" },
-        parts: [
-          {
-            id: "part-01",
-            number: 1,
-            sefariaNode: "Talmud Eser HaSefirot, Section I",
-            title: { en: "Part 1", he: "חלק 1" },
-            // Authored out of reading order on purpose, to prove the sort
-            // (not incidental array order) produces the right result.
-            chapters: [
-              chapterOf(
-                "part-01/answers-terminology-02",
-                "answers-terminology",
-                2,
-              ),
-              chapterOf("part-01/inner-observation-02", "inner-observation", 2),
-              chapterOf("part-01/chapter-02", "chapter", 2),
-              chapterOf(
-                "part-01/answers-terminology-01",
-                "answers-terminology",
-                1,
-              ),
-              chapterOf(
-                "part-01/questions-terminology-01",
-                "questions-terminology",
-                1,
-              ),
-              chapterOf("part-01/inner-observation-01", "inner-observation", 1),
-              chapterOf("part-01/chapter-01", "chapter", 1),
-            ],
-          },
-        ],
-      },
-    ],
-  };
-
+describe("orderedPartChapters", () => {
   it("orders chapters by kind first, then by number within the kind", () => {
-    expect(
-      flattenChapters(mixedKindToc).map((entry) => entry.chapter.id),
-    ).toEqual([
+    const chapters: TocChapter[] = [
+      chapterOf("part-01/answers-terminology-02", "answers-terminology", 2),
+      chapterOf("part-01/inner-observation-02", "inner-observation", 2),
+      chapterOf("part-01/chapter-02", "chapter", 2),
+      chapterOf("part-01/answers-terminology-01", "answers-terminology", 1),
+      chapterOf("part-01/questions-terminology-01", "questions-terminology", 1),
+      chapterOf("part-01/inner-observation-01", "inner-observation", 1),
+      chapterOf("part-01/chapter-01", "chapter", 1),
+    ];
+
+    expect(orderedPartChapters(chapters).map((c) => c.id)).toEqual([
       "part-01/chapter-01",
       "part-01/chapter-02",
       "part-01/inner-observation-01",
@@ -133,121 +39,115 @@ describe("flattenChapters — mixed chapter kinds", () => {
       "part-01/answers-terminology-02",
     ]);
   });
-
-  it("prevNextChapter crosses from the last `chapter` into `inner-observation`, not into `answers-*`", () => {
-    const { next } = prevNextChapter(mixedKindToc, "part-01/chapter-02");
-    expect(next?.chapter.id).toBe("part-01/inner-observation-01");
-  });
-
-  it("prevNextChapter crosses from `inner-observation` into `questions-terminology`", () => {
-    const { next } = prevNextChapter(
-      mixedKindToc,
-      "part-01/inner-observation-02",
-    );
-    expect(next?.chapter.id).toBe("part-01/questions-terminology-01");
-  });
 });
 
-describe("findChapter", () => {
-  it("finds a chapter with its parent part and volume", () => {
-    const found = findChapter(fixtureToc, "part-02/chapter-01");
+describe("findChapterInPart", () => {
+  const partFile: TocPartFile = {
+    part: { id: "part-01", number: 1, title: { en: "Part 1", he: "חלק 1" } },
+    volume: {
+      id: "volume-01",
+      number: 1,
+      title: { en: "Volume 1", he: "כרך 1" },
+    },
+    chapters: [
+      chapter("part-01/chapter-01", 1),
+      chapter("part-01/chapter-02", 2),
+    ],
+  };
 
-    expect(found?.chapter.id).toBe("part-02/chapter-01");
-    expect(found?.part.id).toBe("part-02");
-    expect(found?.volume.id).toBe("volume-01");
+  it("finds a chapter by id", () => {
+    expect(findChapterInPart(partFile, "part-01/chapter-02")?.number).toBe(2);
   });
 
   it("returns undefined for an unknown chapter id", () => {
-    expect(findChapter(fixtureToc, "part-99/chapter-01")).toBeUndefined();
-  });
-});
-
-describe("prevNextChapter", () => {
-  it("returns prev/next within the same part", () => {
-    const { prev, next } = prevNextChapter(fixtureToc, "part-01/chapter-02");
-
-    expect(prev?.chapter.id).toBe("part-01/chapter-01");
-    expect(next?.chapter.id).toBe("part-01/chapter-03");
-  });
-
-  it("crosses a part boundary within the same volume", () => {
-    const { next } = prevNextChapter(fixtureToc, "part-01/chapter-03");
-
-    expect(next?.chapter.id).toBe("part-02/chapter-01");
-  });
-
-  it("crosses a volume boundary", () => {
-    const { next } = prevNextChapter(fixtureToc, "part-02/chapter-01");
-
-    expect(next?.chapter.id).toBe("part-03/chapter-01");
-  });
-
-  it("has a null prev at the corpus start", () => {
-    const { prev } = prevNextChapter(fixtureToc, "part-01/chapter-01");
-
-    expect(prev).toBeNull();
-  });
-
-  it("has a null next at the corpus end", () => {
-    const { next } = prevNextChapter(fixtureToc, "part-03/chapter-01");
-
-    expect(next).toBeNull();
-  });
-
-  it("returns nulls for an unknown chapter id", () => {
-    expect(prevNextChapter(fixtureToc, "nope")).toEqual({
-      prev: null,
-      next: null,
-    });
-  });
-});
-
-describe("breadcrumbFor", () => {
-  it("returns the volume/part/chapter chain for a known chapter", () => {
-    const breadcrumb = breadcrumbFor(fixtureToc, "part-02/chapter-01");
-
-    expect(breadcrumb).toEqual({
-      volume: fixtureToc.volumes[0],
-      part: fixtureToc.volumes[0]?.parts[1],
-      chapter: fixtureToc.volumes[0]?.parts[1]?.chapters[0],
-    });
-  });
-
-  it("returns null for an unknown chapter id", () => {
-    expect(breadcrumbFor(fixtureToc, "nope")).toBeNull();
+    expect(findChapterInPart(partFile, "part-01/chapter-99")).toBeUndefined();
   });
 });
 
 describe("volumeSlug", () => {
   it("builds a plain (non-zero-padded) slug from the volume number", () => {
-    expect(volumeSlug(fixtureToc.volumes[0]!)).toBe("volume-1");
-    expect(volumeSlug(fixtureToc.volumes[1]!)).toBe("volume-2");
+    expect(volumeSlug({ number: 1 })).toBe("volume-1");
+    expect(volumeSlug({ number: 2 })).toBe("volume-2");
   });
 });
 
+const skeletonVolumes: TocVolumeSkeleton[] = [
+  {
+    id: "volume-01",
+    number: 1,
+    title: { en: "Volume 1", he: "כרך 1" },
+    parts: [
+      {
+        id: "part-01",
+        number: 1,
+        title: { en: "Part 1", he: "חלק 1" },
+        sefariaNode: "x",
+        chapterCount: 2,
+        kindsPresent: ["chapter"],
+        firstChapterId: "part-01/chapter-01",
+        lastChapterId: "part-01/chapter-02",
+        firstChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        lastChapterTitle: { en: "Chapter 2", he: "פרק ב׳" },
+        availableSummary: { he: "full", en: "none" },
+      },
+      {
+        id: "part-02",
+        number: 2,
+        title: { en: "Part 2", he: "חלק 2" },
+        sefariaNode: "y",
+        chapterCount: 1,
+        kindsPresent: ["chapter"],
+        firstChapterId: "part-02/chapter-01",
+        lastChapterId: "part-02/chapter-01",
+        firstChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        lastChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        availableSummary: { he: "full", en: "none" },
+      },
+    ],
+  },
+  {
+    id: "volume-02",
+    number: 2,
+    title: { en: "Volume 2", he: "כרך 2" },
+    parts: [
+      {
+        id: "part-03",
+        number: 3,
+        title: { en: "Part 3", he: "חלק 3" },
+        sefariaNode: "z",
+        chapterCount: 1,
+        kindsPresent: ["chapter"],
+        firstChapterId: "part-03/chapter-01",
+        lastChapterId: "part-03/chapter-01",
+        firstChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        lastChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        availableSummary: { he: "full", en: "none" },
+      },
+    ],
+  },
+];
+
 describe("findVolumeBySlug", () => {
   it("finds a volume by its URL slug", () => {
-    expect(findVolumeBySlug(fixtureToc, "volume-2")).toBe(
-      fixtureToc.volumes[1],
-    );
+    expect(findVolumeBySlug(skeletonVolumes, "volume-2")?.id).toBe("volume-02");
   });
 
   it("returns undefined for an unknown slug", () => {
-    expect(findVolumeBySlug(fixtureToc, "volume-99")).toBeUndefined();
+    expect(findVolumeBySlug(skeletonVolumes, "volume-99")).toBeUndefined();
   });
 });
 
 describe("volumeHasContent", () => {
   it("is true when at least one part has chapters", () => {
-    expect(volumeHasContent(fixtureToc.volumes[0]!)).toBe(true);
+    expect(volumeHasContent(skeletonVolumes[0]!)).toBe(true);
   });
 
   it("is false when every part is still empty", () => {
-    const emptyVolume = {
-      ...fixtureToc.volumes[0]!,
-      parts: fixtureToc.volumes[0]!.parts.map((part) => ({
+    const emptyVolume: TocVolumeSkeleton = {
+      ...skeletonVolumes[0]!,
+      parts: skeletonVolumes[0]!.parts.map((part) => ({
         ...part,
-        chapters: [],
+        chapterCount: 0,
       })),
     };
 
@@ -255,8 +155,100 @@ describe("volumeHasContent", () => {
   });
 
   it("is false for a volume with no parts at all", () => {
-    expect(volumeHasContent({ ...fixtureToc.volumes[0]!, parts: [] })).toBe(
-      false,
+    expect(volumeHasContent({ ...skeletonVolumes[0]!, parts: [] })).toBe(false);
+  });
+});
+
+describe("flattenPartSkeletons", () => {
+  it("flattens every part in volume -> part reading order", () => {
+    expect(flattenPartSkeletons(skeletonVolumes).map((p) => p.id)).toEqual([
+      "part-01",
+      "part-02",
+      "part-03",
+    ]);
+  });
+});
+
+describe("adjacentParts", () => {
+  it("returns the previous/next part within the same volume", () => {
+    const { prevPart, nextPart } = adjacentParts(skeletonVolumes, "part-01");
+    expect(prevPart).toBeNull();
+    expect(nextPart?.id).toBe("part-02");
+  });
+
+  it("crosses a volume boundary", () => {
+    const { nextPart } = adjacentParts(skeletonVolumes, "part-02");
+    expect(nextPart?.id).toBe("part-03");
+  });
+
+  it("has null next at the corpus end", () => {
+    const { nextPart } = adjacentParts(skeletonVolumes, "part-03");
+    expect(nextPart).toBeNull();
+  });
+
+  it("returns nulls for an unknown part id", () => {
+    expect(adjacentParts(skeletonVolumes, "part-99")).toEqual({
+      prevPart: null,
+      nextPart: null,
+    });
+  });
+});
+
+describe("prevNextChapterLinks", () => {
+  const part01File: TocPartFile = {
+    part: { id: "part-01", number: 1, title: { en: "Part 1", he: "חלק 1" } },
+    volume: {
+      id: "volume-01",
+      number: 1,
+      title: { en: "Volume 1", he: "כרך 1" },
+    },
+    chapters: [
+      chapter("part-01/chapter-01", 1),
+      chapter("part-01/chapter-02", 2),
+    ],
+  };
+
+  it("returns prev within the same part when not at the part's first chapter", () => {
+    const { prev } = prevNextChapterLinks(
+      skeletonVolumes,
+      part01File,
+      "part-01/chapter-02",
     );
+
+    expect(prev).toEqual({
+      id: "part-01/chapter-01",
+      title: { en: "part-01/chapter-01", he: "part-01/chapter-01" },
+    });
+  });
+
+  it("has a null prev at the corpus start (first chapter, no prior part)", () => {
+    const { prev } = prevNextChapterLinks(
+      skeletonVolumes,
+      part01File,
+      "part-01/chapter-01",
+    );
+    expect(prev).toBeNull();
+  });
+
+  it("crosses a part boundary using the adjacent part's firstChapterId/firstChapterTitle — no neighbor part file loaded", () => {
+    // part-01/chapter-02 is last-in-part -> next crosses into part-02's
+    // firstChapterId/firstChapterTitle from the skeleton, never part-02's
+    // own toc.parts file.
+    const { next } = prevNextChapterLinks(
+      skeletonVolumes,
+      part01File,
+      "part-01/chapter-02",
+    );
+    expect(next).toEqual({
+      id: "part-02/chapter-01",
+      title: { en: "Chapter 1", he: "פרק א׳" },
+    });
+  });
+
+  it("returns nulls for an unknown chapter id", () => {
+    expect(prevNextChapterLinks(skeletonVolumes, part01File, "nope")).toEqual({
+      prev: null,
+      next: null,
+    });
   });
 });

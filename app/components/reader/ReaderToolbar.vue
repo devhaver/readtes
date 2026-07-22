@@ -8,7 +8,7 @@
 // T7 shipped it.
 import type { BreadcrumbItem } from "~/components/app/AppBreadcrumb.vue";
 import type { ReaderMode } from "~/utils/readerMode";
-import type { FlattenedChapter } from "~/utils/toc";
+import type { ChapterLink } from "~/utils/toc";
 
 defineProps<{
   // The reader page renders no other heading — this is that page's ONE
@@ -16,8 +16,8 @@ defineProps<{
   // breadcrumb right below already shows the same title on-screen.
   chapterTitle: string;
   breadcrumbItems: BreadcrumbItem[];
-  prev: FlattenedChapter | null;
-  next: FlattenedChapter | null;
+  prev: ChapterLink | null;
+  next: ChapterLink | null;
 }>();
 
 const { t, locale } = useI18n();
@@ -95,13 +95,11 @@ const showPreferences = ref(false);
     >
       <NuxtLink
         v-if="prev"
-        :to="localePath(`/read/${prev.chapter.id}`)"
+        :to="localePath(`/read/${prev.id}`)"
         class="inline-flex min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
       >
         <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
-        <span class="truncate">{{
-          localizedText(prev.chapter.title, locale)
-        }}</span>
+        <span class="truncate">{{ localizedText(prev.title, locale) }}</span>
       </NuxtLink>
       <span
         v-else
@@ -114,12 +112,10 @@ const showPreferences = ref(false);
 
       <NuxtLink
         v-if="next"
-        :to="localePath(`/read/${next.chapter.id}`)"
+        :to="localePath(`/read/${next.id}`)"
         class="inline-flex min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-end text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
       >
-        <span class="truncate">{{
-          localizedText(next.chapter.title, locale)
-        }}</span>
+        <span class="truncate">{{ localizedText(next.title, locale) }}</span>
         <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
       </NuxtLink>
       <span

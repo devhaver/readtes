@@ -1,34 +1,11 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it } from "vitest";
 import ReaderToolbar from "~/components/reader/ReaderToolbar.vue";
-import type { FlattenedChapter } from "~/utils/toc";
+import type { ChapterLink } from "~/utils/toc";
 
-const chapterEntry = (id: string, title: string): FlattenedChapter => ({
-  chapter: {
-    id,
-    kind: "chapter",
-    number: 1,
-    title: { en: title, he: title },
-    availableLayers: ["source"],
-    availableVersions: {
-      summary: [],
-      source: ["he-jerusalem-1956"],
-      commentary: [],
-    },
-  },
-  part: {
-    id: "part-01",
-    number: 1,
-    sefariaNode: "x",
-    title: { en: "Part 1", he: "חלק 1" },
-    chapters: [],
-  },
-  volume: {
-    id: "volume-01",
-    number: 1,
-    title: { en: "Volume 1", he: "כרך 1" },
-    parts: [],
-  },
+const chapterLink = (id: string, title: string): ChapterLink => ({
+  id,
+  title: { en: title, he: title },
 });
 
 const breadcrumbItems = [
@@ -69,8 +46,8 @@ describe("ReaderToolbar", () => {
   });
 
   it("links to the previous and next chapters when they exist", async () => {
-    const prev = chapterEntry("part-01/chapter-01", "Chapter 1");
-    const next = chapterEntry("part-01/chapter-02", "Chapter 2");
+    const prev = chapterLink("part-01/chapter-01", "Chapter 1");
+    const next = chapterLink("part-01/chapter-02", "Chapter 2");
 
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {

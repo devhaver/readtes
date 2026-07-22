@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // The reader: three aligned layers (summary | source | commentary) for one
-// chapter, with two-way anchor sync. Resolves the chapter from
-// `content/toc.json` by route params — an unknown id 404s, the same way
-// `/volumes/[volume]` does.
+// chapter, with two-way anchor sync. Resolves the chapter from its part's
+// `content/toc.parts/<partId>.json` by route params — an unknown part or
+// chapter 404s, the same way `/volumes/[volume]` does.
 definePageMeta({
   layout: "reader",
   // Full remount on every param change (not just on prop update) so the
@@ -19,10 +19,21 @@ const partId = route.params.part as string;
 const chapterSlug = route.params.chapter as string;
 const chapterId = `${partId}/${chapterSlug}`;
 
-const { toc, versions, localizedTitle } = await useLocalizedToc();
-const entry = findChapter(toc.value, chapterId);
+const { volumes, versions, localizedTitle } = await useLocalizedVolumes();
+const { parts } = await useLocalizedParts([partId]);
+const partFile = parts.value[partId];
 
-if (!entry) {
+if (!partFile) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Unknown part "${partId}"`,
+    fatal: true,
+  });
+}
+
+const chapter = findChapterInPart(partFile, chapterId);
+
+if (!chapter) {
   throw createError({
     statusCode: 404,
     statusMessage: `Unknown chapter "${chapterId}"`,
@@ -39,13 +50,9 @@ const {
   sourceByVersion,
   commentaryByVersion,
   summaryByVersion,
-} = await useChapterContent(
-  partId,
-  chapterSlug,
-  entry.chapter.availableVersions,
-);
+} = await useChapterContent(partId, chapterSlug, chapter.availableVersions);
 
-const readerVersions = useReaderVersions(entry.chapter, versions.value);
+const readerVersions = useReaderVersions(chapter, versions.value);
 // Study mode below `lg`, panes at/above it by default — user overrides
 // persist across chapters (`useReaderMode`). Decides which of the two
 // component trees below actually mounts; `ReaderToolbar` (rendered either
@@ -96,18 +103,18 @@ const sourceSegments = computed(() => sourceFile.value?.items ?? []);
 const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
 const summaryItems = computed(() => summaryFile.value?.items ?? []);
 
-const { prev, next } = prevNextChapter(toc.value, chapterId);
+const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
 
-const chapterTitle = computed(() => localizedTitle(entry.chapter.title));
+const chapterTitle = computed(() => localizedTitle(chapter.title));
 
 const breadcrumbItems = computed(() => [
   { label: t("common.sixVolumes"), to: localePath("/volumes") },
   {
-    label: `${t("common.volume")} ${entry.volume.number}`,
-    to: localePath(`/volumes/${volumeSlug(entry.volume)}`),
+    label: `${t("common.volume")} ${partFile.volume.number}`,
+    to: localePath(`/volumes/${volumeSlug(partFile.volume)}`),
   },
   {
-    label: `${t("common.part")} ${entry.part.number} · ${chapterTitle.value}`,
+    label: `${t("common.part")} ${partFile.part.number} · ${chapterTitle.value}`,
   },
 ]);
 
@@ -155,7 +162,7 @@ const commentarySheetItems = computed(() =>
     : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
 );
 
-const partTitle = computed(() => localizedTitle(entry.part.title));
+const partTitle = computed(() => localizedTitle(partFile.part.title));
 
 useLocalizedSeo({
   title: () => `${chapterTitle.value} · ${t("common.siteName")}`,

@@ -6,10 +6,10 @@
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const { toc, versions } = await useLocalizedToc();
+const { volumes } = await useLocalizedVolumes();
 
 const sortedVolumes = computed(() =>
-  [...toc.value.volumes].sort((a, b) => a.number - b.number),
+  [...volumes.value].sort((a, b) => a.number - b.number),
 );
 
 const breadcrumbItems = computed(() => [
@@ -36,7 +36,7 @@ useLocalizedSeo({
 
     <ol class="mt-8 flex flex-col gap-4">
       <li v-for="volume in sortedVolumes" :key="volume.id">
-        <LibraryVolumeCard :volume="volume" :versions="versions" />
+        <LibraryVolumeCard :volume="volume" />
       </li>
     </ol>
   </div>
