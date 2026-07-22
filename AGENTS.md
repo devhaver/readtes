@@ -1,29 +1,56 @@
 # Read TES — Agent Notes
 
-Read TES is a static (SSG) web app for reading *Talmud Eser Sefirot* as three
+Read TES is a static (SSG) web app for reading _Talmud Eser Sefirot_ as three
 aligned text layers (summary / source / commentary), multilingual including
 Hebrew RTL, fully self-contained — no runtime APIs, everything ships as a
 prerendered static site.
 
 ## Commands
 
-Run `pnpm install` first. On the very first install, pnpm will print
-`ERR_PNPM_IGNORED_BUILDS` and stop package build scripts short — see the
-gotcha below before assuming something is broken.
+This repo has a `Taskfile.yaml` (go-task v3) that wraps the pnpm scripts
+below — prefer it day to day:
 
-| Command | What it does |
-| --- | --- |
-| `pnpm install` | Install dependencies. |
-| `pnpm dev` | Start the Nuxt dev server. |
-| `pnpm build` | Production SSR build (not the deploy target — see `generate`). |
-| `pnpm generate` | Static site generation — this is what gets deployed. |
-| `pnpm preview` | Preview the last `build`/`generate` output locally. |
-| `pnpm lint` | `eslint .` |
-| `pnpm lint:fix` | `eslint . --fix` |
-| `pnpm test` | `vitest run` |
-| `pnpm typecheck` | `nuxi typecheck` (uses `vue-tsc`) |
-| `pnpm validate:content` | Validates every file under `content/` (schema + integrity). |
-| `pnpm import:sefaria` | Imports content from Sefaria — see "Sefaria import" below. |
+| Task                     | What it does                                                                                   |
+| ------------------------ | ---------------------------------------------------------------------------------------------- |
+| `task dev`               | `setup` then `pnpm dev` — dev server at http://localhost:6217 (see "Dev server ports").        |
+| `task setup`             | `pnpm install --frozen-lockfile`, cached on `package.json`/`pnpm-lock.yaml`.                   |
+| `task qa`                | `pnpm lint && pnpm format:check` — run before committing.                                      |
+| `task test`              | `pnpm test`.                                                                                   |
+| `task generate`          | `pnpm generate`.                                                                               |
+| `task import -- <flags>` | `pnpm import:sefaria <flags>` — flags after `--` pass through, e.g. `task import -- --part 1`. |
+| `task clean`             | Remove `.nuxt`, `.output`, `coverage`, `node_modules`, `.task`.                                |
+
+`task --list-all` shows every task with its `desc`/`summary`. `task` requires
+go-task; if it isn't installed, use the underlying pnpm scripts directly.
+
+Run `pnpm install` first if not using `task setup`. On the very first
+install, pnpm will print `ERR_PNPM_IGNORED_BUILDS` and stop package build
+scripts short — see the gotcha below before assuming something is broken.
+
+| Command                 | What it does                                                                                                                                                             |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `pnpm install`          | Install dependencies.                                                                                                                                                    |
+| `pnpm dev`              | Start the Nuxt dev server (port 6217).                                                                                                                                   |
+| `pnpm build`            | Production SSR build (not the deploy target — see `generate`).                                                                                                           |
+| `pnpm generate`         | Static site generation — this is what gets deployed.                                                                                                                     |
+| `pnpm preview`          | Preview the last `build`/`generate` output locally.                                                                                                                      |
+| `pnpm lint`             | `eslint .`                                                                                                                                                               |
+| `pnpm lint:fix`         | `eslint . --fix`                                                                                                                                                         |
+| `pnpm format`           | `prettier --write .` — formats everything except `.prettierignore` entries.                                                                                              |
+| `pnpm format:check`     | `prettier --check .` — CI/pre-commit check, no writes.                                                                                                                   |
+| `pnpm test`             | `vitest run`                                                                                                                                                             |
+| `pnpm typecheck`        | `nuxi typecheck` (app/, via `vue-tsc -b`) **and** `vue-tsc -p tsconfig.scripts.json` (`scripts/`, `tests/`, `shared/`, which sit outside Nuxt's own project references). |
+| `pnpm validate:content` | Validates every file under `content/` (schema + integrity).                                                                                                              |
+| `pnpm import:sefaria`   | Imports content from Sefaria — see "Sefaria import" below.                                                                                                               |
+
+## Dev server ports
+
+`nuxt.config.ts` pins `devServer.port` to **6217** and Vite's HMR websocket
+to **6218** (`vite.server.ws.port`), instead of the Nuxt defaults (3000 /
+same port as the dev server). This repo runs alongside other local Nuxt dev
+servers (e.g. `weburz` on 3000) — 6217/6218 don't collide with any of them.
+Keep using these two ports if you ever need to reference the dev server
+directly (proxies, browser automation, etc.) rather than re-guessing 3000.
 
 ## pnpm 11 gotchas
 
@@ -72,6 +99,20 @@ gotcha below before assuming something is broken.
   `--color-*` / `--radius-*` / `--font-*` tokens (as Tailwind utilities,
   e.g. `bg-navy-primary`, `rounded-card`, `font-hebrew`) for anything that
   doesn't. Never write a literal hex value in a component.
+- **Prettier owns formatting, ESLint owns correctness.** `eslint.config.mjs`
+  has `stylistic` off and appends `eslint-config-prettier` last, so ESLint
+  never fights Prettier on style. Run `pnpm format` (or `task qa`, which
+  checks but doesn't write) instead of hand-formatting; `.prettierrc.json`
+  mirrors weburz's config (double quotes, trailing commas, plugin
+  `prettier-plugin-organize-imports`). `content/` is excluded via
+  `.prettierignore` — the Sefaria importer owns that formatting, see
+  "Content model".
+- **Accessibility lint is on and error-level.** `eslint-plugin-vuejs-accessibility`'s
+  `flat/recommended` preset is appended in `eslint.config.mjs`, plus explicit
+  `error`-level rules for `alt-text`, `anchor-has-content`,
+  `click-events-have-key-events`, `form-control-has-label`,
+  `heading-has-content`, and `label-has-for` (nesting or `id`). Fix real
+  violations rather than disabling the rule inline.
 
 ## Git / PR rules
 
@@ -144,7 +185,7 @@ content/
 ## Sefaria import
 
 `pnpm import:sefaria (--part <N> | --all) [--dry-run]` (`scripts/import-sefaria.ts`,
-run via `tsx`) imports *Talmud Eser HaSefirot* from the Sefaria API into
+run via `tsx`) imports _Talmud Eser HaSefirot_ from the Sefaria API into
 `content/`, one part (Sefaria "Section") at a time. It resolves each part's
 main-text node and sibling nodes straight from `GET /api/v2/index/...` (chapter
 counts come from the shape of the fetched text itself — never probed/guessed),
@@ -189,7 +230,9 @@ mount components).
 Definition of done for any change:
 
 ```
-pnpm lint && pnpm typecheck && pnpm test && pnpm generate
+task qa && pnpm typecheck && pnpm test && pnpm generate
 ```
 
-All four must pass before committing.
+(`task qa` runs `pnpm lint && pnpm format:check`; without go-task, run
+`pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm generate`
+directly.) All of it must pass before committing.

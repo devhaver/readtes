@@ -31,3 +31,6 @@ coverage
 
 # Superpowers agent scratch state
 .superpowers/
+
+# go-task cache/checksum state
+.task/

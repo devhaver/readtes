@@ -1,0 +1,81 @@
+version: "3"
+
+tasks:
+  dev:
+    desc: Setup the development environment and spin up the dev server
+    summary: |
+      Start the development environment with hot-reloading.
+
+      The dev server binds to the non-standard port 6217 (not 3000) so it
+      never collides with other local Nuxt dev servers (e.g. weburz on
+      3000) — see "Dev server ports" in AGENTS.md. It will be accessible
+      at http://localhost:6217.
+    deps:
+      - task: setup
+    cmds:
+      - pnpm dev
+
+  setup:
+    desc: Install project dependencies
+    summary: |
+      Install all frontend dependencies with a frozen lockfile.
+    sources:
+      - package.json
+    generates:
+      - pnpm-lock.yaml
+    cmd: pnpm install --frozen-lockfile
+
+  qa:
+    desc: Run various QA checks on the source code
+    summary: |
+      Run various QA checks on the source code using ESLint and Prettier
+      to ensure the source code follows a uniform coding practice.
+
+      Should be run before committing changes.
+    cmds:
+      - pnpm lint
+      - pnpm format:check
+
+  test:
+    desc: Run the entire test suite
+    summary: |
+      Run the Vitest unit test suite.
+    cmd: pnpm test
+
+  generate:
+    desc: Statically generate the site
+    summary: |
+      Run Nuxt's static site generation — this is what gets deployed.
+    cmd: pnpm generate
+
+  import:
+    desc: Import content from Sefaria
+    summary: |
+      Run the Sefaria importer. Pass its CLI flags through after `--`,
+      e.g.:
+
+        task import -- --part 1
+        task import -- --all --dry-run
+    cmd: pnpm import:sefaria {{.CLI_ARGS}}
+
+  clean:
+    desc: Clean up the development environment
+    summary: |
+      Remove all build artifacts, caches, and installed dependencies.
+
+      Run this to start fresh.
+    cmds:
+      - rm -rf ./.nuxt
+      - rm -rf ./.output
+      - rm -rf ./coverage
+      # A stray Nuxt/Vite process (e.g. a host `pnpm dev`) keeps re-creating
+      # node_modules/.cache while we delete it, so a single `rm` can fail with
+      # "Directory not empty". Retry a few times before giving up for real.
+      - |
+        for i in 1 2 3 4 5; do
+          rm -rf ./node_modules && break
+          echo "node_modules busy (a dev server still running?), retrying ($i/5)..."
+          sleep 1
+        done
+        test ! -d ./node_modules
+      - rm -rf ./.task

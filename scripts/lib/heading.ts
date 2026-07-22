@@ -8,14 +8,19 @@
  * `heading`; whatever remains is the body `html` gets built from.
  */
 
-const LEADING_ELEMENT_RE = /^(?:\s*<br\s*\/?>\s*)*<(b|small)\b[^>]*>([\s\S]*?)<\/\1>/i
-const LEADING_BREAKS_RE = /^(?:\s*<br\s*\/?>\s*)+/i
+const LEADING_ELEMENT_RE =
+  /^(?:\s*<br\s*\/?>\s*)*<(b|small)\b[^>]*>([\s\S]*?)<\/\1>/i;
+const LEADING_BREAKS_RE = /^(?:\s*<br\s*\/?>\s*)+/i;
 
-const stripToPlainText = (html: string): string => html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()
+const stripToPlainText = (html: string): string =>
+  html
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
 export interface LeadingHeadingResult {
-  heading?: string
-  rest: string
+  heading?: string;
+  rest: string;
 }
 
 /**
@@ -25,19 +30,21 @@ export interface LeadingHeadingResult {
  * longer starts with one of those elements — never touches content that
  * isn't structurally at the very start of the segment.
  */
-export const extractLeadingHeading = (rawHtml: string): LeadingHeadingResult => {
-  let remaining = rawHtml
-  const parts: string[] = []
+export const extractLeadingHeading = (
+  rawHtml: string,
+): LeadingHeadingResult => {
+  let remaining = rawHtml;
+  const parts: string[] = [];
 
   for (;;) {
-    const match = LEADING_ELEMENT_RE.exec(remaining)
-    if (!match) break
-    parts.push(stripToPlainText(match[2] as string))
-    remaining = remaining.slice(match[0].length)
+    const match = LEADING_ELEMENT_RE.exec(remaining);
+    if (!match) break;
+    parts.push(stripToPlainText(match[2] as string));
+    remaining = remaining.slice(match[0].length);
   }
 
-  if (parts.length === 0) return { rest: rawHtml }
+  if (parts.length === 0) return { rest: rawHtml };
 
-  remaining = remaining.replace(LEADING_BREAKS_RE, '')
-  return { heading: parts.join(' — '), rest: remaining }
-}
+  remaining = remaining.replace(LEADING_BREAKS_RE, "");
+  return { heading: parts.join(" — "), rest: remaining };
+};
