@@ -37,6 +37,27 @@
 // whichever pane is already `activePane` (source, by default) instead of
 // sitting on the DOM-first "summary" slide the browser scrolls to by
 // default with nothing else to say otherwise.
+//
+// `[contain:layout]` on the track + `min-w-0` on every slide (mobile-only —
+// both reset back to none/auto at `lg:`) are load-bearing, not decoration:
+// on a REAL mobile viewport (`isMobile`/touch emulation — a plain desktop-
+// sized headless viewport does not reproduce this), the three slides laid
+// out side by side (summary|source|commentary, 3x the device width) are
+// real boxes at real coordinates even though the track's own
+// `overflow-x-auto` clips/scrolls them — and mobile browsers' "widen the
+// layout viewport to fit content that doesn't fit" heuristic doesn't
+// respect that clipping the way desktop overflow scrolling does. Left
+// unfixed, the *whole page* got zoomed out to a ~937px-wide layout
+// viewport to "fit" the unclipped 3-slide width, which is also why every
+// `position: fixed` element (the pane-switcher pill) measured enormous and
+// off in a corner: `inset-x-0` resolves against whatever the (wrongly
+// widened) containing block is. `contain: layout` tells the layout engine
+// "nothing inside this box affects sizing outside it," which is exactly
+// the promise `overflow-x: auto` alone doesn't make on mobile. `min-w-0`
+// closes the companion flexbox trap — a row-direction flex item's
+// default `min-width: auto` floors its width at its own content's
+// min-content size, which can also exceed the device width regardless of
+// `w-full`, unless explicitly zeroed.
 import { useMediaQuery } from "@vueuse/core";
 import type { Ref } from "vue";
 import {
@@ -164,13 +185,13 @@ watch(activePane, (pane) => {
 <template>
   <div
     ref="trackRef"
-    class="flex min-h-0 flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain lg:grid lg:snap-none lg:grid-cols-[280px_1fr_1.1fr] lg:gap-0 lg:overflow-hidden"
+    class="flex min-h-0 w-full flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain [contain:layout] lg:grid lg:snap-none lg:grid-cols-[280px_1fr_1.1fr] lg:gap-0 lg:overflow-hidden lg:[contain:none]"
   >
     <div
       id="reader-summary-pane"
       ref="summaryRef"
       data-pane="summary"
-      class="h-full min-h-0 w-full shrink-0 snap-start snap-always lg:border-e lg:border-(--border)"
+      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always lg:border-e lg:border-(--border)"
     >
       <slot name="summary" />
     </div>
@@ -178,7 +199,7 @@ watch(activePane, (pane) => {
       id="reader-source-pane"
       ref="sourceRef"
       data-pane="source"
-      class="h-full min-h-0 w-full shrink-0 snap-start snap-always lg:border-e lg:border-(--border)"
+      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always lg:border-e lg:border-(--border)"
     >
       <slot name="source" />
     </div>
@@ -186,7 +207,7 @@ watch(activePane, (pane) => {
       id="reader-commentary-pane"
       ref="commentaryRef"
       data-pane="commentary"
-      class="h-full min-h-0 w-full shrink-0 snap-start snap-always scroll-mt-4"
+      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always scroll-mt-4"
     >
       <slot name="commentary" />
     </div>
