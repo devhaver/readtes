@@ -13,7 +13,8 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "typecheck": "nuxi typecheck",
-    "validate:content": "tsx scripts/validate-content.ts"
+    "validate:content": "tsx scripts/validate-content.ts",
+    "import:sefaria": "tsx scripts/import-sefaria.ts"
   },
   "dependencies": {
     "nuxt": "^4.5.0",

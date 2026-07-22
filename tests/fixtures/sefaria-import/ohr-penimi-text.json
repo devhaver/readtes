@@ -1,0 +1,32 @@
+{
+  "ref": "Ohr Penimi on Talmud Eser HaSefirot 1",
+  "sectionNames": ["Section", "Chapter", "Seif"],
+  "textDepth": 3,
+  "versions": [
+    {
+      "language": "he",
+      "versionTitle": "Jerusalem, 1956-1966",
+      "text": [
+        [
+          "אור פשוט - פירושו שאין בו שום שינוי צורה.",
+          "אור אין סוף - כינוי לאור הפשוט קודם הצמצום.",
+          "הנקודה האמצעית - היא נקודת המרכז."
+        ],
+        [
+          "מקום החלל - הוא המקום שנשאר אחר הצמצום."
+        ]
+      ]
+    },
+    {
+      "language": "en",
+      "versionTitle": "Sefaria Community Translation",
+      "text": [
+        [
+          "1.Simple light - meaning it has no change of form.",
+          "5. Wrong leading number on purpose, to test the mismatch-warning path.",
+          ""
+        ]
+      ]
+    }
+  ]
+}

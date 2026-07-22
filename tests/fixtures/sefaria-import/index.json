@@ -1,0 +1,96 @@
+{
+  "title": "Talmud Eser HaSefirot",
+  "heTitle": "תלמוד עשר הספירות",
+  "schema": {
+    "nodes": [
+      {
+        "key": "Introduction",
+        "title": "Introduction",
+        "heTitle": "הקדמה",
+        "nodeType": "JaggedArrayNode",
+        "depth": 1,
+        "sectionNames": ["Paragraph"]
+      },
+      {
+        "key": "Section I",
+        "title": "Section I",
+        "heTitle": "חלק א׳: צמצום וקו",
+        "nodes": [
+          {
+            "key": "default",
+            "title": "",
+            "heTitle": "",
+            "default": true,
+            "nodeType": "JaggedArrayNode",
+            "depth": 2,
+            "sectionNames": ["Chapter", "Seif"]
+          },
+          {
+            "key": "Histaklut Penimit",
+            "title": "Histaklut Penimit",
+            "heTitle": "הסתכלות פנימית",
+            "nodeType": "JaggedArrayNode",
+            "depth": 2,
+            "sectionNames": ["Chapter", "Paragraph"]
+          },
+          {
+            "key": "List of Questions on Terminology",
+            "title": "List of Questions on Terminology",
+            "heTitle": "לוח השאלות לפירוש המלות",
+            "nodeType": "JaggedArrayNode",
+            "depth": 1,
+            "sectionNames": ["Paragraph"]
+          },
+          {
+            "key": "List of Answers on Terminology",
+            "title": "List of Answers on Terminology",
+            "heTitle": "לוח התשובות לפירוש המלות",
+            "nodeType": "JaggedArrayNode",
+            "depth": 2,
+            "sectionNames": ["Siman", "Paragraph"]
+          }
+        ]
+      },
+      {
+        "key": "Section VI",
+        "title": "Section VI",
+        "heTitle": "חלק ו׳",
+        "nodes": [
+          {
+            "key": "default",
+            "title": "",
+            "heTitle": "",
+            "default": true,
+            "nodeType": "JaggedArrayNode",
+            "depth": 1,
+            "sectionNames": ["Chapter"]
+          },
+          {
+            "key": "List of Questions on Cause and Effect",
+            "title": "List of Questions on Cause and Effect",
+            "heTitle": "לוח השאלות בסיבה ומסובב",
+            "nodeType": "JaggedArrayNode",
+            "depth": 1,
+            "sectionNames": ["Paragraph"]
+          }
+        ]
+      },
+      {
+        "key": "Section V",
+        "title": "Section V",
+        "heTitle": "חלק ה׳",
+        "nodes": [
+          {
+            "key": "default",
+            "title": "",
+            "heTitle": "",
+            "default": true,
+            "nodeType": "JaggedArrayNode",
+            "depth": 1,
+            "sectionNames": ["Chapter"]
+          }
+        ]
+      }
+    ]
+  }
+}
