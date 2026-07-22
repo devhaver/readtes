@@ -65,7 +65,13 @@ const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
 // what app code reads at runtime (`useRuntimeConfig().public.siteUrl`);
 // `i18n.baseUrl` needs the same literal at Nuxt-config-evaluation time so
 // `useLocaleHead()` can emit absolute hreflang/canonical/og:url tags.
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.org";
+// Strips a trailing "/" (e.g. `NUXT_PUBLIC_SITE_URL=https://example.org/`)
+// so every consumer below can safely do `${siteUrl}${path}` without
+// producing a double slash — this is the single normalization point, so
+// no call site needs its own `.replace(/\/$/, "")` footgun-guard.
+const siteUrl = (
+  process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.org"
+).replace(/\/$/, "");
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

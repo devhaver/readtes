@@ -3,6 +3,7 @@ import toc from "../../content/toc.json";
 import type { Toc } from "../../shared/types/content";
 import {
   buildSitemapEntries,
+  escapeXml,
   renderSitemapXml,
   sitemapPaths,
 } from "../../shared/utils/sitemap";
@@ -90,7 +91,52 @@ describe("sitemap URL builder", () => {
     for (const block of urlBlocks) {
       expect(block).toContain('<xhtml:link rel="alternate" hreflang="en"');
       expect(block).toContain('<xhtml:link rel="alternate" hreflang="he"');
+      expect(block).toContain(
+        '<xhtml:link rel="alternate" hreflang="x-default"',
+      );
       expect(block.match(/<loc>/g) ?? []).toHaveLength(1);
     }
+  });
+
+  it("points x-default at the English (default-locale) URL for every block", () => {
+    const entries = buildSitemapEntries(realToc, SITE_URL);
+    const xml = renderSitemapXml(entries);
+    const urlBlocks = xml.match(/<url>[\s\S]*?<\/url>/g) ?? [];
+
+    for (const block of urlBlocks) {
+      const xDefaultHref = block.match(
+        /hreflang="x-default" href="([^"]+)"/,
+      )?.[1];
+      const enHref = block.match(/hreflang="en" href="([^"]+)"/)?.[1];
+
+      expect(xDefaultHref).toBeDefined();
+      expect(xDefaultHref).toBe(enHref);
+    }
+  });
+
+  it("escapes XML metacharacters in siteUrl before interpolating into <loc>/href", () => {
+    const trickyUrl = 'https://example.org/a&b<c>d"e';
+    const entries = buildSitemapEntries(realToc, trickyUrl);
+    const home = entries.find((entry) => entry.path === "/");
+    const xml = renderSitemapXml([home!]);
+
+    expect(xml).not.toContain('a&b<c>d"e');
+    expect(xml).toContain("a&amp;b&lt;c&gt;d&quot;e");
+  });
+
+  describe("escapeXml", () => {
+    it('escapes &, <, >, and " (in that safe order)', () => {
+      expect(escapeXml("&")).toBe("&amp;");
+      expect(escapeXml("<")).toBe("&lt;");
+      expect(escapeXml(">")).toBe("&gt;");
+      expect(escapeXml('"')).toBe("&quot;");
+      expect(escapeXml('a&b<c>d"e')).toBe("a&amp;b&lt;c&gt;d&quot;e");
+    });
+
+    it("leaves already-safe text untouched", () => {
+      expect(escapeXml("/read/part-01/chapter-01")).toBe(
+        "/read/part-01/chapter-01",
+      );
+    });
   });
 });

@@ -26,6 +26,22 @@ export interface SitemapEntry {
 
 const STATIC_PATHS = ["/", "/about", "/volumes"];
 
+/**
+ * Escapes the five XML predefined entities so `siteUrl`/path values are
+ * safe to interpolate into `<loc>`/`href` attribute text — defensive
+ * hardening against a future `NUXT_PUBLIC_SITE_URL` or content-derived
+ * path containing an XML metacharacter (none of `content/toc.json`'s
+ * chapter ids do today, but this is a one-line guard against that ever
+ * becoming a live bug). Order matters: `&` must be escaped first, or the
+ * `&` introduced by escaping `<`/`>`/etc. would itself get re-escaped.
+ */
+export const escapeXml = (value: string): string =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+
 /** `@nuxtjs/i18n`'s `prefix_except_default` strategy: en is unprefixed, he gets `/he`. */
 const localizedPath = (path: string, locale: "en" | "he"): string => {
   if (locale === "en") return path;
@@ -54,12 +70,21 @@ export const buildSitemapEntries = (
     he: `${siteUrl}${localizedPath(path, "he")}`,
   }));
 
+/**
+ * One `<url>` block, self-referentially listing en/he/x-default alternates
+ * alongside its own `<loc>` (Google's recommended pattern). `x-default`
+ * points at the English (default-locale, `i18n.defaultLocale`) URL — the
+ * variant to serve a user whose locale doesn't match any listed alternate
+ * — mirroring the `x-default` link `useLocaleHead()` already emits on
+ * every page (see `app.vue`).
+ */
 const urlBlock = (loc: string, entry: SitemapEntry): string =>
   [
     "  <url>",
-    `    <loc>${loc}</loc>`,
-    `    <xhtml:link rel="alternate" hreflang="en" href="${entry.en}"/>`,
-    `    <xhtml:link rel="alternate" hreflang="he" href="${entry.he}"/>`,
+    `    <loc>${escapeXml(loc)}</loc>`,
+    `    <xhtml:link rel="alternate" hreflang="en" href="${escapeXml(entry.en)}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="he" href="${escapeXml(entry.he)}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(entry.en)}"/>`,
     "  </url>",
   ].join("\n");
 
