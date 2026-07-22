@@ -17,7 +17,8 @@
     "volumesLink": "Volumes",
     "themeToggleToDark": "Switch to dark mode",
     "themeToggleToLight": "Switch to light mode",
-    "languageSwitcherLabel": "Switch language"
+    "languageSwitcherLabel": "Switch language",
+    "breadcrumbLabel": "Breadcrumb"
   },
   "footer": {
     "attribution": "Made by students of Bnei Baruch Kabbalah Academy · original texts from Sefaria and KabbalahMedia.info, used with permission"
@@ -34,5 +35,21 @@
     "notFoundTitle": "Page not found",
     "notFoundMessage": "This page doesn't exist yet, or has moved.",
     "notFoundBackHome": "Back to home"
+  },
+  "volumes": {
+    "indexTitle": "Volumes",
+    "indexDescription": "Talmud Eser Sefirot in six volumes, sixteen parts — read as aligned summary, source, and commentary.",
+    "comingSoon": "Coming soon",
+    "chapterCount": "{count} chapters",
+    "partialLanguage": "partial",
+    "partComingSoon": "This part hasn't been added yet — check back soon.",
+    "answersTerminologyCluster": "Answers — Terminology ({count})",
+    "answersTopicsCluster": "Answers — Topics ({count})",
+    "section": {
+      "chapters": "Chapters",
+      "inner-observation": "Inner Observation",
+      "questions": "Questions",
+      "answers": "Answers"
+    }
   }
 }

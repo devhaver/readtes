@@ -17,7 +17,8 @@
     "volumesLink": "כרכים",
     "themeToggleToDark": "עבור למצב כהה",
     "themeToggleToLight": "עבור למצב בהיר",
-    "languageSwitcherLabel": "החלף שפה"
+    "languageSwitcherLabel": "החלף שפה",
+    "breadcrumbLabel": "פירורי לחם"
   },
   "footer": {
     "attribution": "נוצר על ידי תלמידי בני ברוך אקדמיה לקבלה · טקסטים מקוריים מתוך Sefaria ו-KabbalahMedia.info, בשימוש ברשות"
@@ -34,5 +35,21 @@
     "notFoundTitle": "הדף לא נמצא",
     "notFoundMessage": "דף זה עדיין לא קיים, או שהוא הועבר.",
     "notFoundBackHome": "חזרה לדף הבית"
+  },
+  "volumes": {
+    "indexTitle": "כרכים",
+    "indexDescription": "תלמוד עשר הספירות בשישה כרכים, שישה עשר חלקים — לקריאה כשכבות מיושרות של תקציר, מקור ופירוש.",
+    "comingSoon": "בקרוב",
+    "chapterCount": "{count} פרקים",
+    "partialLanguage": "חלקי",
+    "partComingSoon": "חלק זה טרם נוסף — בקרו שוב בקרוב.",
+    "answersTerminologyCluster": "תשובות — פירוש המלות ({count})",
+    "answersTopicsCluster": "תשובות — עניינים ({count})",
+    "section": {
+      "chapters": "פרקים",
+      "inner-observation": "הסתכלות פנימית",
+      "questions": "שאלות",
+      "answers": "תשובות"
+    }
   }
 }
