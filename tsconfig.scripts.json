@@ -7,7 +7,12 @@
   // `vue-tsc -p tsconfig.scripts.json --noEmit` (see `pnpm typecheck`).
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node"]
   },
-  "include": [".nuxt/nuxt.d.ts", "scripts/**/*.ts", "tests/**/*.ts", "shared/**/*.ts"],
+  "include": [
+    ".nuxt/nuxt.d.ts",
+    "scripts/**/*.ts",
+    "tests/**/*.ts",
+    "shared/**/*.ts"
+  ]
 }

@@ -9,16 +9,17 @@
  * zipping is safe as long as short arrays are treated as right-padded with
  * `""`, never assumed length-equal to a sibling version's array.
  */
-import type { SefariaJaggedText } from './sefaria-api-types.ts'
+import type { SefariaJaggedText } from "./sefaria-api-types.ts";
 
 export interface JaggedNodeShape {
   /** Address depth of the node (1 = flat list, 2 = chapters of items). */
-  depth?: number
+  depth?: number;
   /** e.g. `['Chapter', 'Seif']`, `['Paragraph']`, `['Siman', 'Paragraph']`, `['Chapter']`. */
-  sectionNames?: string[]
+  sectionNames?: string[];
 }
 
-const asLeaf = (value: SefariaJaggedText): string => (typeof value === 'string' ? value : '')
+const asLeaf = (value: SefariaJaggedText): string =>
+  typeof value === "string" ? value : "";
 
 /**
  * Reshapes a raw `versions[].text` array into a uniform `chapters[][]`
@@ -33,21 +34,26 @@ const asLeaf = (value: SefariaJaggedText): string => (typeof value === 'string' 
  * - depth 1, otherwise (e.g. `[Paragraph]` sibling lists): the whole node
  *   is one implicit chapter containing every item.
  */
-export const normalizeToChapterItemLists = (node: JaggedNodeShape, text: SefariaJaggedText[]): string[][] => {
-  const depth = node.depth ?? 1
+export const normalizeToChapterItemLists = (
+  node: JaggedNodeShape,
+  text: SefariaJaggedText[],
+): string[][] => {
+  const depth = node.depth ?? 1;
 
   if (depth >= 2) {
-    return text.map(chapter => (Array.isArray(chapter) ? chapter.map(asLeaf) : []))
+    return text.map((chapter) =>
+      Array.isArray(chapter) ? chapter.map(asLeaf) : [],
+    );
   }
 
-  const flat = text.map(asLeaf)
+  const flat = text.map(asLeaf);
 
-  if ((node.sectionNames ?? [])[0] === 'Chapter') {
-    return flat.map(item => [item])
+  if ((node.sectionNames ?? [])[0] === "Chapter") {
+    return flat.map((item) => [item]);
   }
 
-  return [flat]
-}
+  return [flat];
+};
 
 /**
  * Pads `secondary` (e.g. an English translation's chapter/item lists) to
@@ -55,8 +61,13 @@ export const normalizeToChapterItemLists = (node: JaggedNodeShape, text: Sefaria
  * filling any missing chapter or item with `""` rather than assuming
  * matching lengths.
  */
-export const alignJaggedArrays = (primary: string[][], secondary: string[][] | undefined): string[][] =>
+export const alignJaggedArrays = (
+  primary: string[][],
+  secondary: string[][] | undefined,
+): string[][] =>
   primary.map((chapterItems, chapterIndex) => {
-    const secondaryChapter = secondary?.[chapterIndex] ?? []
-    return chapterItems.map((_, itemIndex) => secondaryChapter[itemIndex] ?? '')
-  })
+    const secondaryChapter = secondary?.[chapterIndex] ?? [];
+    return chapterItems.map(
+      (_, itemIndex) => secondaryChapter[itemIndex] ?? "",
+    );
+  });

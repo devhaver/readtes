@@ -4,19 +4,26 @@
  * I/O here — everything takes plain strings/arrays and is unit-testable
  * against fixtures.
  */
-import { extractAnchors, normalizeAnchors, stripLeadingItemNumber } from '../../app/utils/anchors.ts'
-import { sanitizeHtml } from '../../app/utils/sanitizeHtml.ts'
-import type { CommentaryItem, SourceSegment } from '../../shared/types/content.ts'
-import { extractLeadingHeading } from './heading.ts'
-import type { JaggedNodeShape } from './jagged-array.ts'
-import { ohrPenimiItemRef, segmentRefFor } from './sefaria-refs.ts'
-import type { SefariaLink } from './sefaria-api-types.ts'
+import {
+  extractAnchors,
+  normalizeAnchors,
+  stripLeadingItemNumber,
+} from "../../app/utils/anchors.ts";
+import { sanitizeHtml } from "../../app/utils/sanitizeHtml.ts";
+import type {
+  CommentaryItem,
+  SourceSegment,
+} from "../../shared/types/content.ts";
+import { extractLeadingHeading } from "./heading.ts";
+import type { JaggedNodeShape } from "./jagged-array.ts";
+import type { SefariaLink } from "./sefaria-api-types.ts";
+import { ohrPenimiItemRef, segmentRefFor } from "./sefaria-refs.ts";
 
-const OHR_PENIMI_COMMENTATOR = 'Ohr Penimi'
+const OHR_PENIMI_COMMENTATOR = "Ohr Penimi";
 
 /** Mirrors the marker shape `app/utils/anchors.ts` matches — scoped here to rewriting, not extraction. */
-const ANCHOR_MARKER_RE = /<i\b([^>]*)>\s*<\/i>/g
-const MARKER_ATTR_RE = /data-(commentator|label)\s*=\s*"([^"]*)"/g
+const ANCHOR_MARKER_RE = /<i\b([^>]*)>\s*<\/i>/g;
+const MARKER_ATTR_RE = /data-(commentator|label)\s*=\s*"([^"]*)"/g;
 
 /**
  * Replaces inline commentary markers from any commentator other than Ohr
@@ -31,26 +38,27 @@ const MARKER_ATTR_RE = /data-(commentator|label)\s*=\s*"([^"]*)"/g
  */
 const neutralizeForeignAnchorMarkers = (html: string): string =>
   html.replace(ANCHOR_MARKER_RE, (full, attrString: string) => {
-    let commentator: string | undefined
-    let label: string | undefined
+    let commentator: string | undefined;
+    let label: string | undefined;
     for (const match of (attrString as string).matchAll(MARKER_ATTR_RE)) {
-      if (match[1] === 'commentator') commentator = match[2]
-      if (match[1] === 'label') label = match[2]
+      if (match[1] === "commentator") commentator = match[2];
+      if (match[1] === "label") label = match[2];
     }
-    if (commentator === undefined || commentator === OHR_PENIMI_COMMENTATOR) return full
-    return label ?? ''
-  })
+    if (commentator === undefined || commentator === OHR_PENIMI_COMMENTATOR)
+      return full;
+    return label ?? "";
+  });
 
 export interface DroppedAnchor {
-  sefariaRef: string
-  commentator: string
-  order: number
+  sefariaRef: string;
+  commentator: string;
+  order: number;
 }
 
 export interface BuildSourceSegmentsResult {
-  segments: SourceSegment[]
+  segments: SourceSegment[];
   /** Inline markers found for a commentator other than Ohr Penimi — excluded from `anchors[]`, surfaced for the report. */
-  droppedAnchors: DroppedAnchor[]
+  droppedAnchors: DroppedAnchor[];
 }
 
 /**
@@ -73,93 +81,107 @@ export const buildSourceSegments = (
    */
   extractHeadings: boolean,
 ): BuildSourceSegmentsResult => {
-  const segments: SourceSegment[] = []
-  const droppedAnchors: DroppedAnchor[] = []
+  const segments: SourceSegment[] = [];
+  const droppedAnchors: DroppedAnchor[] = [];
 
   items.forEach((rawHtml, index) => {
-    if (rawHtml === '') return
+    if (rawHtml === "") return;
 
-    const itemIndex = index + 1
-    const sefariaRef = segmentRefFor(chapterRef, node, itemIndex)
-    const { heading, rest } = extractHeadings ? extractLeadingHeading(rawHtml) : { heading: undefined, rest: rawHtml }
-    const anchors: string[] = []
+    const itemIndex = index + 1;
+    const sefariaRef = segmentRefFor(chapterRef, node, itemIndex);
+    const { heading, rest } = extractHeadings
+      ? extractLeadingHeading(rawHtml)
+      : { heading: undefined, rest: rawHtml };
+    const anchors: string[] = [];
 
     for (const anchor of extractAnchors(rest)) {
       if (anchor.commentator === OHR_PENIMI_COMMENTATOR) {
-        anchors.push(anchor.anchorId)
-      }
-      else {
-        droppedAnchors.push({ sefariaRef, commentator: anchor.commentator, order: anchor.order })
+        anchors.push(anchor.anchorId);
+      } else {
+        droppedAnchors.push({
+          sefariaRef,
+          commentator: anchor.commentator,
+          order: anchor.order,
+        });
       }
     }
 
-    const html = sanitizeHtml(normalizeAnchors(neutralizeForeignAnchorMarkers(rest)))
+    const html = sanitizeHtml(
+      normalizeAnchors(neutralizeForeignAnchorMarkers(rest)),
+    );
     segments.push({
       n: itemIndex,
       sefariaRef,
       ...(heading ? { heading } : {}),
       html,
       anchors,
-    })
-  })
+    });
+  });
 
-  return { segments, droppedAnchors }
-}
+  return { segments, droppedAnchors };
+};
 
 export interface CommentaryLinkInfo {
-  order: number
-  targetSeif: number
-  heLabel: string
+  order: number;
+  targetSeif: number;
+  heLabel: string;
 }
 
 export interface ParseCommentaryLinksResult {
   /** chapter number (the integer right before the final `:seif` in `anchorRef`) -> that chapter's link infos. */
-  byChapter: Map<number, CommentaryLinkInfo[]>
-  warnings: string[]
+  byChapter: Map<number, CommentaryLinkInfo[]>;
+  warnings: string[];
 }
 
-const ANCHOR_REF_CHAPTER_SEIF_RE = /(\d+):(\d+)$/
+const ANCHOR_REF_CHAPTER_SEIF_RE = /(\d+):(\d+)$/;
 
 /**
  * Extracts, from a `GET /api/links/{ref}` response, the Ohr Penimi
  * commentary -> seif mapping, grouped by the chapter each link belongs to
  * (parsed from `anchorRef`'s trailing `chapter:seif`).
  */
-export const parseCommentaryLinks = (links: SefariaLink[], commentaryIndexTitle: string): ParseCommentaryLinksResult => {
-  const byChapter = new Map<number, CommentaryLinkInfo[]>()
-  const warnings: string[] = []
+export const parseCommentaryLinks = (
+  links: SefariaLink[],
+  commentaryIndexTitle: string,
+): ParseCommentaryLinksResult => {
+  const byChapter = new Map<number, CommentaryLinkInfo[]>();
+  const warnings: string[] = [];
 
   for (const link of links) {
-    if (link.category !== 'Commentary') continue
-    if (link.index_title !== commentaryIndexTitle) continue
+    if (link.category !== "Commentary") continue;
+    if (link.index_title !== commentaryIndexTitle) continue;
 
-    const order = link.inline_reference?.['data-order']
-    const heLabel = link.inline_reference?.['data-label']
+    const order = link.inline_reference?.["data-order"];
+    const heLabel = link.inline_reference?.["data-label"];
     if (order === undefined || heLabel === undefined) {
-      warnings.push(`commentary link "${link.ref}" is missing inline_reference data-order/data-label — skipped`)
-      continue
+      warnings.push(
+        `commentary link "${link.ref}" is missing inline_reference data-order/data-label — skipped`,
+      );
+      continue;
     }
 
-    const match = ANCHOR_REF_CHAPTER_SEIF_RE.exec(link.anchorRef)
+    const match = ANCHOR_REF_CHAPTER_SEIF_RE.exec(link.anchorRef);
     if (!match) {
-      warnings.push(`commentary link "${link.ref}" has an anchorRef with an unexpected shape: "${link.anchorRef}" — skipped`)
-      continue
+      warnings.push(
+        `commentary link "${link.ref}" has an anchorRef with an unexpected shape: "${link.anchorRef}" — skipped`,
+      );
+      continue;
     }
 
-    const chapterNumber = Number.parseInt(match[1] as string, 10)
-    const targetSeif = Number.parseInt(match[2] as string, 10)
+    const chapterNumber = Number.parseInt(match[1] as string, 10);
+    const targetSeif = Number.parseInt(match[2] as string, 10);
 
-    const list = byChapter.get(chapterNumber) ?? []
-    list.push({ order, targetSeif, heLabel })
-    byChapter.set(chapterNumber, list)
+    const list = byChapter.get(chapterNumber) ?? [];
+    list.push({ order, targetSeif, heLabel });
+    byChapter.set(chapterNumber, list);
   }
 
-  return { byChapter, warnings }
-}
+  return { byChapter, warnings };
+};
 
 export interface BuildCommentaryItemsResult {
-  items: CommentaryItem[]
-  warnings: string[]
+  items: CommentaryItem[];
+  warnings: string[];
 }
 
 /**
@@ -172,31 +194,33 @@ export const buildCommentaryItems = (
   chapterRef: string,
   rawItems: string[],
   links: CommentaryLinkInfo[],
-  language: 'he' | 'en',
+  language: "he" | "en",
 ): BuildCommentaryItemsResult => {
-  const items: CommentaryItem[] = []
-  const warnings: string[] = []
-  const linksByOrder = new Map(links.map(link => [link.order, link]))
+  const items: CommentaryItem[] = [];
+  const warnings: string[] = [];
+  const linksByOrder = new Map(links.map((link) => [link.order, link]));
 
   rawItems.forEach((raw, index) => {
-    if (raw === '') return
+    if (raw === "") return;
 
-    const order = index + 1
-    const link = linksByOrder.get(order)
+    const order = index + 1;
+    const link = linksByOrder.get(order);
     if (!link) {
-      warnings.push(`${chapterRef}: commentary item order ${order} (${language}) has text but no links entry for it — skipped`)
-      return
+      warnings.push(
+        `${chapterRef}: commentary item order ${order} (${language}) has text but no links entry for it — skipped`,
+      );
+      return;
     }
 
-    let text = raw
-    if (language === 'en') {
-      const stripped = stripLeadingItemNumber(raw)
+    let text = raw;
+    if (language === "en") {
+      const stripped = stripLeadingItemNumber(raw);
       if (stripped.number !== undefined && stripped.number !== order) {
         warnings.push(
           `${chapterRef}: commentary item order ${order} en text leading number "${stripped.number}." does not match data-order ${order} — trusting data-order`,
-        )
+        );
       }
-      text = stripped.text
+      text = stripped.text;
     }
 
     items.push({
@@ -205,10 +229,10 @@ export const buildCommentaryItems = (
       label: { he: link.heLabel, en: String(order) },
       sefariaRef: ohrPenimiItemRef(chapterRef, order),
       targetSeif: link.targetSeif,
-      section: 'ohr-pnimi',
+      section: "ohr-pnimi",
       html: sanitizeHtml(normalizeAnchors(text)),
-    })
-  })
+    });
+  });
 
-  return { items, warnings }
-}
+  return { items, warnings };
+};
