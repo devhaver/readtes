@@ -41,6 +41,7 @@ scripts short — see the gotcha below before assuming something is broken.
 | `pnpm test`                 | `vitest run`                                                                                                                                                             |
 | `pnpm typecheck`            | `nuxi typecheck` (app/, via `vue-tsc -b`) **and** `vue-tsc -p tsconfig.scripts.json` (`scripts/`, `tests/`, `shared/`, which sit outside Nuxt's own project references). |
 | `pnpm validate:content`     | Validates every file under `content/` (schema + integrity).                                                                                                              |
+| `pnpm emit:toc-splits`      | Regenerates `content/toc.volumes.json` + `content/toc.parts/*.json` from `content/toc.json` (see "Content model"). Both importers call this automatically after writing `toc.json` — run by hand only after a manual edit to `toc.json`. |
 | `pnpm import:sefaria`       | Imports content from Sefaria — see "Sefaria import" below.                                                                                                               |
 | `pnpm import:kabbalahmedia` | Imports the Bnei Baruch/KabbalahMedia English edition (`scripts/import-kabbalahmedia.ts`).                                                                               |
 
@@ -162,7 +163,9 @@ must never end up in the client bundle).
 ```
 content/
   versions.json                              ContentVersion[] — the version registry
-  toc.json                                    the Toc (volumes -> parts -> chapters)
+  toc.json                                    the canonical Toc (volumes -> parts -> chapters) — BUILD-TIME ONLY, see below
+  toc.volumes.json                            TocVolumesFile — volumes -> parts skeleton, no chapter lists (~17KB)
+  toc.parts/part-<NN>.json                    TocPartFile — one part's full TocChapter[] + its own/parent-volume identity
   parts/part-<NN>/chapters/<chapterSlug>/
     <layer>.<versionId>.json                  one ChapterLayerFile per (chapter, layer, version)
 ```
@@ -183,14 +186,75 @@ content/
   `tsx`) Zod-validates every JSON file under `content/`, then cross-checks
   integrity: every source segment's `anchors[]` has a matching
   `CommentaryItem.anchorId` in some commentary version of the same chapter;
-  every `CommentaryItem.targetSeif` exists as a source segment `n`; and
-  every `toc.json` `availableVersions` entry has a corresponding file on
-  disk, and vice versa. `tests/unit/content-integrity.spec.ts` runs the same
-  check over the committed tree as part of `pnpm test`.
+  every `CommentaryItem.targetSeif` exists as a source segment `n`; every
+  `toc.json` `availableVersions` entry has a corresponding file on disk, and
+  vice versa; and (see "Split ToC" below) `toc.volumes.json` +
+  `toc.parts/*.json` are exactly derivable from `toc.json`.
+  `tests/unit/content-integrity.spec.ts` runs the same check over the
+  committed tree as part of `pnpm test`.
 - `ContentVersion.source` includes `'ai'` for AI-generated translations
   (the reader UI badges these); `ContentVersion.translatedFrom` optionally
   names the source-language `versionId` an AI/human translation was made
   from.
+
+### Split ToC (`toc.volumes.json` + `toc.parts/*.json`) — app-facing, `content/toc.json` is build-time only
+
+At full-corpus scale `content/toc.json` is 2.9MB+ (16 parts, 5,148+
+chapters). Loading it in `app/` code (the pre-T11 shape) meant Nuxt
+serialized the *entire* ToC into every page's inlined payload — 391KB
+reader pages, 9-11s/route prerender times, hour-scale `pnpm generate` runs.
+**`app/` code must never import `content/toc.json` directly** — a unit test
+guardrail (`tests/unit/no-full-toc-import.spec.ts`) greps `app/**/*.{ts,vue}`
+for a quoted import of it and fails the suite if one appears. `toc.json`
+stays the single canonical file for everything build-time: the importers,
+`scripts/validate-content.ts`, `nuxt.config.ts`'s prerender route list, and
+`server/routes/sitemap.xml.ts` (a Nitro server route, not `app/` — prerendered
+once per build, not shipped as a client-facing payload) all still read it
+directly.
+
+Instead, `app/` loads two smaller, derived files:
+
+- **`content/toc.volumes.json`** (`TocVolumesFile`, ~17KB total) — every
+  volume's parts, *without* chapter lists. Each part carries `chapterCount`,
+  `kindsPresent`, `firstChapterId`/`lastChapterId` +
+  `firstChapterTitle`/`lastChapterTitle` (in the same kind-then-number
+  reading order as `orderedPartChapters`, below), and a precomputed
+  `availableSummary: { he, en }` (`LanguageAvailability` — `"none" |
+  "partial" | "full"`) for the volumes index's language chips. Loaded by
+  `useLocalizedVolumes()`.
+- **`content/toc.parts/part-<NN>.json`** (`TocPartFile`) — one part's full
+  `TocChapter[]` (exactly what `toc.json` holds for that part) plus the
+  part's own `{ id, number, title }` and its parent volume's — enough for
+  the reader page and a volume's contents page to render breadcrumbs/SEO
+  from this one file alone. Loaded by `useLocalizedParts(partIds)`, a lazy
+  `import.meta.glob` over `content/toc.parts/*.json` keyed by part id (same
+  style as `useChapterContent`'s glob over `content/parts/**`) — a reader
+  page loads only its own part; a volume's contents page loads only that
+  volume's 2-3 parts.
+
+Both composables do a direct `await import()` of the statically bundled
+JSON — **no `useAsyncData`** (same reasoning as `useChapterContent`: server
+and client resolve the identical module, there's no fetch to coordinate, and
+wrapping it would re-add the payload-serialization cost this split exists to
+avoid). `app/utils/toc.ts` holds the pure helpers over these two shapes
+(`orderedPartChapters`, `findChapterInPart`, `findVolumeBySlug`,
+`volumeHasContent`, `adjacentParts`, `prevNextChapterLinks` — the last
+crosses a part boundary using the *adjacent* part's
+`firstChapterId`/`lastChapterId` + title from `toc.volumes.json`, never
+loading the neighbor part's full file just to label a nav link).
+
+**Who emits the split files**: `scripts/lib/toc-splits.ts`
+(`deriveTocVolumesFile`/`deriveTocPartFiles`, pure; `writeTocSplitFiles`,
+I/O — also removes any stale `toc.parts/*.json` for a part id no longer in
+`toc.json`). Both importers (`import-sefaria.ts`, `import-kabbalahmedia.ts`)
+call `writeTocSplitFiles` immediately after they rewrite `toc.json`, so the
+split files are always regenerated in the same run. `pnpm emit:toc-splits`
+(`scripts/emit-toc-splits.ts`) runs the same derivation standalone, for
+after a manual edit to `toc.json`. `scripts/validate-content.ts`'s
+equivalence check re-derives both files from the committed `toc.json` and
+structurally compares them against what's on disk — any drift (stale,
+missing, or mismatched file) is a validation error, so these files can never
+silently go stale.
 
 ## Sefaria import
 
