@@ -30,6 +30,14 @@ const DANGEROUS_BLOCK_RE = new RegExp(
 const FOOTNOTE_PAIR_RE
   = /<sup\b[^>]*class="[^"]*footnote-marker[^"]*"[^>]*>[\s\S]*?<\/sup>\s*<i\b[^>]*class="[^"]*\bfootnote\b[^"]*"[^>]*>([\s\S]*?)<\/i>/gi
 
+/**
+ * Placeholder token a converted footnote is temporarily replaced with,
+ * until the general tag-sanitizing pass has run. Contains no `<`, `>`, or
+ * whitespace, and an unlikely-to-collide marker string, so it survives
+ * `TAG_RE`/`ATTR_PAIR_RE` untouched.
+ */
+const FOOTNOTE_TOKEN_RE = /@@tes-footnote:(\d+)@@/g
+
 /** Removes all tags, keeping only their text content. */
 const stripTags = (html: string): string => html.replace(/<[^>]*>/g, '')
 
@@ -43,15 +51,33 @@ const escapeAttr = (value: string): string =>
 const isSafeHref = (href: string): boolean => !/^\s*javascript:/i.test(href)
 
 /**
- * Converts Sefaria's footnote-marker/footnote pair into a single inline
- * span carrying the footnote text as a `title` attribute:
+ * Converts each Sefaria footnote-marker/footnote pair into an opaque
+ * placeholder token, stashing the (unescaped) footnote text in `footnotes`
+ * by index:
  *
  *   <sup class="footnote-marker">*</sup><i class="footnote">Text</i>
- *   -> <span class="tes-footnote" title="Text">*</span>
+ *   -> @@tes-footnote:0@@
+ *
+ * The placeholder contains no `<`/`>`, so the general tag-sanitizing pass
+ * below (which re-parses tags and re-escapes their attribute values)
+ * leaves it untouched. `restoreFootnotes` swaps it back for the real
+ * `<span title="...">` markup afterwards, escaping the stashed text
+ * exactly once. Emitting the final `<span title="...">` HTML here instead
+ * (as an earlier version of this function did) would have the tag pass
+ * re-parse and re-escape that synthetic span's `title` attribute,
+ * double-escaping `&`, `"`, `<`, `>` in footnote text.
  */
-const convertFootnotes = (html: string): string =>
+const convertFootnotes = (html: string, footnotes: string[]): string =>
   html.replace(FOOTNOTE_PAIR_RE, (_full, footnoteHtml: string) => {
     const text = stripTags(footnoteHtml).replace(/\s+/g, ' ').trim()
+    const index = footnotes.push(text) - 1
+    return `@@tes-footnote:${index}@@`
+  })
+
+/** Replaces footnote placeholder tokens with the final, singly-escaped span markup. */
+const restoreFootnotes = (html: string, footnotes: string[]): string =>
+  html.replace(FOOTNOTE_TOKEN_RE, (_full, indexStr: string) => {
+    const text = footnotes[Number(indexStr)] ?? ''
     return `<span class="tes-footnote" title="${escapeAttr(text)}">*</span>`
   })
 
@@ -90,7 +116,11 @@ export const sanitizeHtml = (html: string): string => {
   let output = html
   output = output.replace(/<!--[\s\S]*?-->/g, '')
   output = output.replace(DANGEROUS_BLOCK_RE, '')
-  output = convertFootnotes(output)
+
+  const footnotes: string[] = []
+  output = convertFootnotes(output, footnotes)
   output = output.replace(TAG_RE, sanitizeTag)
+  output = restoreFootnotes(output, footnotes)
+
   return output
 }

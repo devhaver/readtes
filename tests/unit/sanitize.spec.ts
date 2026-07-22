@@ -79,6 +79,30 @@ describe('sanitizeHtml — footnote conversion', () => {
       'Text before<span class="tes-footnote" title="Note.">*</span>text after',
     )
   })
+
+  it('escapes ampersands and quotes in footnote text exactly once', () => {
+    const html = '<sup class="footnote-marker">*</sup><i class="footnote">He said "Kavod" & left.</i>'
+
+    expect(sanitizeHtml(html)).toBe(
+      '<span class="tes-footnote" title="He said &quot;Kavod&quot; &amp; left.">*</span>',
+    )
+  })
+
+  it('escapes angle brackets in footnote text exactly once', () => {
+    const html = '<sup class="footnote-marker">*</sup><i class="footnote">5 > 3 and 2 < 4</i>'
+
+    expect(sanitizeHtml(html)).toBe(
+      '<span class="tes-footnote" title="5 &gt; 3 and 2 &lt; 4">*</span>',
+    )
+  })
+
+  it('does not re-escape the synthetic footnote span when other tags follow it', () => {
+    const html = '<sup class="footnote-marker">*</sup><i class="footnote">A & B</i><a href="#op-1" class="tes-anchor">link</a>'
+
+    expect(sanitizeHtml(html)).toBe(
+      '<span class="tes-footnote" title="A &amp; B">*</span><a href="#op-1" class="tes-anchor">link</a>',
+    )
+  })
 })
 
 describe('sanitizeHtml — nested/malformed tags', () => {
