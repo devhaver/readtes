@@ -15,7 +15,7 @@ const toggleColorMode = () => {
 <template>
   <button
     type="button"
-    class="inline-flex h-9 w-9 items-center justify-center rounded-button text-surface-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+    class="inline-flex h-9 w-9 items-center justify-center rounded-button text-surface-white transition-colors hover:bg-surface-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
     :aria-label="label"
     @click="toggleColorMode"
   >

@@ -8,7 +8,7 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
 </script>
 
 <template>
-  <nav :aria-label="t('common.language')" class="flex items-center gap-1">
+  <nav :aria-label="t('nav.languageSwitcherLabel')" class="flex items-center gap-1">
     <NuxtLink
       v-for="entry in availableLocales"
       :key="entry.code"

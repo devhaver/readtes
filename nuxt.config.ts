@@ -39,11 +39,11 @@ export default defineNuxtConfig({
   routeRules: {
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
+    "/volumes": { prerender: false }, // route lands in T5 — remove exclusion then
+    "/he/volumes": { prerender: false }, // route lands in T5 — remove exclusion then
   },
   nitro: {
-    prerender: {
-      failOnError: false,
-    },
+    prerender: {},
   },
   // Non-standard ports so `pnpm dev` never fights other local dev servers
   // (weburz's Nuxt app on 3000, etc.) — see AGENTS.md "Dev server ports".

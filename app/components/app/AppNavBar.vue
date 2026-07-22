@@ -21,7 +21,7 @@ const closeMobileMenu = () => {
       <div class="flex items-center gap-3">
         <button
           type="button"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-button hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal sm:hidden"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-button hover:bg-surface-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal sm:hidden"
           :aria-label="mobileMenuOpen ? t('nav.menuClose') : t('nav.menuOpen')"
           aria-controls="mobile-nav"
           :aria-expanded="mobileMenuOpen"
