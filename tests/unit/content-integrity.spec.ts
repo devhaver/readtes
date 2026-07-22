@@ -50,3 +50,33 @@ describe("content integrity — negative fixtures", () => {
     );
   });
 });
+
+describe("content integrity — toc.volumes.json / toc.parts equivalence", () => {
+  const { errors } = validateContent(join(fixturesDir, "toc-split-drift"));
+
+  it("fires when a committed toc.volumes.json doesn't match what toc.json derives", () => {
+    expect(
+      errors.some((e) =>
+        e.startsWith(
+          "content/toc.volumes.json: does not match the file derivable from content/toc.json",
+        ),
+      ),
+    ).toBe(true);
+  });
+
+  it("fires when a toc.json part has no matching content/toc.parts/<id>.json", () => {
+    expect(
+      errors.some((e) =>
+        e.startsWith("content/toc.parts/part-01.json: missing"),
+      ),
+    ).toBe(true);
+  });
+
+  it("fires when a content/toc.parts/<id>.json has no matching part in toc.json", () => {
+    expect(
+      errors.some((e) =>
+        e.startsWith("content/toc.parts/part-99.json: exists on disk but"),
+      ),
+    ).toBe(true);
+  });
+});
