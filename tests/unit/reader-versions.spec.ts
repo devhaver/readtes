@@ -13,6 +13,14 @@ const versions: ContentVersion[] = [
     source: "sefaria",
   },
   {
+    id: "en-bb",
+    language: "en",
+    direction: "ltr",
+    title: "Bnei Baruch (KabbalahMedia)",
+    license: "Used with permission",
+    source: "kabbalahmedia",
+  },
+  {
     id: "en-sefaria-community",
     language: "en",
     direction: "ltr",
@@ -52,7 +60,17 @@ describe("resolveDefaultVersion", () => {
     ).toBe("he-jerusalem-1956");
   });
 
-  it("picks en-sefaria-community over en-ai for an English UI locale", () => {
+  it("picks en-bb over en-sefaria-community and en-ai for an English UI locale", () => {
+    expect(
+      resolveDefaultVersion(
+        ["he-jerusalem-1956", "en-bb", "en-sefaria-community", "en-ai"],
+        "en",
+        versionsById,
+      ),
+    ).toBe("en-bb");
+  });
+
+  it("picks en-sefaria-community over en-ai when en-bb isn't available", () => {
     expect(
       resolveDefaultVersion(
         ["he-jerusalem-1956", "en-sefaria-community", "en-ai"],
@@ -62,7 +80,7 @@ describe("resolveDefaultVersion", () => {
     ).toBe("en-sefaria-community");
   });
 
-  it("falls back to en-ai when en-sefaria-community isn't available", () => {
+  it("falls back to en-ai when neither en-bb nor en-sefaria-community is available", () => {
     expect(
       resolveDefaultVersion(["he-jerusalem-1956", "en-ai"], "en", versionsById),
     ).toBe("en-ai");

@@ -33,5 +33,13 @@
     "license": "CC0",
     "source": "ai",
     "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "en-bb",
+    "language": "en",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia)",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
   }
 ]

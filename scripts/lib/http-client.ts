@@ -1,8 +1,8 @@
 /**
- * Polite, cached, retrying HTTP client for the Sefaria API. Not unit
- * tested directly (it's pure I/O) — `scripts/lib/*` transform modules are
- * exercised against fixture responses instead; this module is exercised
- * by actually running the importer against the live API.
+ * Polite, cached, retrying HTTP client shared by every importer (Sefaria,
+ * KabbalahMedia). Not unit tested directly (it's pure I/O) — exercised by
+ * actually running an importer against its live API. See AGENTS.md for the
+ * politeness contract (User-Agent, minimum interval, cache location).
  */
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -12,13 +12,13 @@ export const USER_AGENT = "readtes-importer (github.com/devhaver/readtes)";
 const DEFAULT_MIN_INTERVAL_MS = 600;
 const MAX_RETRIES = 4;
 
-export class SefariaHttpError extends Error {
+export class HttpClientError extends Error {
   readonly url: string;
   readonly status: number;
   readonly body: string;
 
   constructor(url: string, status: number, body: string) {
-    super(`Sefaria request failed: ${status} ${url}`);
+    super(`HTTP request failed: ${status} ${url}`);
     this.url = url;
     this.status = status;
     this.body = body;
@@ -31,24 +31,23 @@ interface CacheEntry {
   body: string;
 }
 
-export interface SefariaHttpClientOptions {
+export interface HttpClientOptions {
   cacheDir: string;
   minIntervalMs?: number;
   /** Overridable for tests/tooling; defaults to the global `fetch`. */
   fetchImpl?: typeof fetch;
 }
 
-export interface SefariaHttpClient {
+export interface HttpClient {
   getJson: <T>(url: string) => Promise<T>;
+  getText: (url: string) => Promise<string>;
   stats: () => { requests: number; cacheHits: number };
 }
 
 const wait = (ms: number): Promise<void> =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-export const createSefariaHttpClient = (
-  options: SefariaHttpClientOptions,
-): SefariaHttpClient => {
+export const createHttpClient = (options: HttpClientOptions): HttpClient => {
   const {
     cacheDir,
     minIntervalMs = DEFAULT_MIN_INTERVAL_MS,
@@ -102,29 +101,34 @@ export const createSefariaHttpClient = (
       if (response.status >= 500 || response.status === 429) {
         attempt += 1;
         if (attempt > MAX_RETRIES)
-          throw new SefariaHttpError(url, response.status, body);
+          throw new HttpClientError(url, response.status, body);
         await wait(2 ** attempt * 1000);
         continue;
       }
 
       if (response.status >= 400)
-        throw new SefariaHttpError(url, response.status, body);
+        throw new HttpClientError(url, response.status, body);
 
       return { url, status: response.status, body };
     }
   };
 
-  const getJson = async <T>(url: string): Promise<T> => {
+  const getRaw = async (url: string): Promise<string> => {
     const cached = readCache(url);
     if (cached) {
       cacheHits += 1;
-      return JSON.parse(cached.body) as T;
+      return cached.body;
     }
 
     const result = await fetchWithRetry(url);
     writeCache(result);
-    return JSON.parse(result.body) as T;
+    return result.body;
   };
 
-  return { getJson, stats: () => ({ requests, cacheHits }) };
+  const getJson = async <T>(url: string): Promise<T> =>
+    JSON.parse(await getRaw(url)) as T;
+
+  const getText = (url: string): Promise<string> => getRaw(url);
+
+  return { getJson, getText, stats: () => ({ requests, cacheHits }) };
 };
