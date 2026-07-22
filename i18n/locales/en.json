@@ -25,7 +25,29 @@
   },
   "reader": {
     "aiTranslated": "AI translated",
-    "hebrewOnly": "Hebrew only"
+    "hebrewOnly": "Hebrew only",
+    "pane": {
+      "summary": "Summary",
+      "source": "Source",
+      "commentary": "Commentary"
+    },
+    "versionLabel": "Edition",
+    "commentarySection": {
+      "ohr-pnimi": "Inner Light",
+      "histaklut-pnimit": "Inner Observation"
+    },
+    "commentaryEmpty": "No commentary available for this chapter yet.",
+    "sourceEmpty": "No source text available for this chapter yet.",
+    "summaryEmpty": "No summary available for this chapter yet.",
+    "miniTocTitle": "In this chapter",
+    "seifLabel": "Seif {n}",
+    "missingAnchor": {
+      "message": "Not available in this edition.",
+      "switchToHebrew": "Switch to Hebrew"
+    },
+    "prevChapter": "Previous chapter",
+    "nextChapter": "Next chapter",
+    "chapterNav": "Chapter navigation"
   },
   "home": {
     "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",

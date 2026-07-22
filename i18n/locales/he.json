@@ -25,7 +25,29 @@
   },
   "reader": {
     "aiTranslated": "תרגום בינה מלאכותית",
-    "hebrewOnly": "בעברית בלבד"
+    "hebrewOnly": "בעברית בלבד",
+    "pane": {
+      "summary": "תקציר",
+      "source": "מקור",
+      "commentary": "פירוש"
+    },
+    "versionLabel": "מהדורה",
+    "commentarySection": {
+      "ohr-pnimi": "אור פנימי",
+      "histaklut-pnimit": "הסתכלות פנימית"
+    },
+    "commentaryEmpty": "אין עדיין פירוש זמין לפרק זה.",
+    "sourceEmpty": "אין עדיין טקסט מקור זמין לפרק זה.",
+    "summaryEmpty": "אין עדיין תקציר זמין לפרק זה.",
+    "miniTocTitle": "בפרק זה",
+    "seifLabel": "סעיף {n}",
+    "missingAnchor": {
+      "message": "לא זמין במהדורה זו.",
+      "switchToHebrew": "עבור לעברית"
+    },
+    "prevChapter": "הפרק הקודם",
+    "nextChapter": "הפרק הבא",
+    "chapterNav": "ניווט בין פרקים"
   },
   "home": {
     "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",

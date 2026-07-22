@@ -3,6 +3,21 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Toc } from "./shared/types/content";
 
+// Mirrors `KIND_ORDER` in `app/utils/chapterGrouping.ts` — duplicated
+// (rather than imported) on purpose: this file is type-checked as part of
+// the project *root* (not through the Nuxt app's own tsconfig/path-alias
+// setup), so pulling in an `app/` module here drags its `~~/shared/types/content`
+// import along with it and breaks under the root tsconfig's path mapping.
+// Keep in sync if the reading-order rule ever changes.
+const CHAPTER_KIND_ORDER = [
+  "chapter",
+  "inner-observation",
+  "questions-terminology",
+  "questions-topics",
+  "answers-terminology",
+  "answers-topics",
+] as const;
+
 // `nitro.prerender.routes` needs each volume's contents page listed
 // explicitly (see the comment below) — read straight from the committed
 // ToC, the same way `scripts/validate-content.ts` reads content JSON, so
@@ -22,6 +37,26 @@ const volumePrerenderRoutes = toc.volumes.flatMap((volume) => [
   `/volumes/volume-${volume.number}`,
   `/he/volumes/volume-${volume.number}`,
 ]);
+
+// `/read/<chapterId>` for every chapter that exists, in both locales.
+// Listed explicitly rather than left to the crawler: a volume's contents
+// page collapses the 54/51-chapter answers-terminology/answers-topics
+// clusters into a single link to their first chapter (see
+// `~/utils/chapterGrouping`), so the crawler alone would never discover
+// chapters 2+ of a cluster. Same kind-then-number reading order as
+// `~/utils/toc`'s `flattenChapters` — irrelevant to prerendering itself,
+// just keeps this list's order legible.
+const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
+  volume.parts.flatMap((part) =>
+    [...part.chapters]
+      .sort(
+        (a, b) =>
+          CHAPTER_KIND_ORDER.indexOf(a.kind) -
+            CHAPTER_KIND_ORDER.indexOf(b.kind) || a.number - b.number,
+      )
+      .flatMap((chapter) => [`/read/${chapter.id}`, `/he/read/${chapter.id}`]),
+  ),
+);
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -57,14 +92,9 @@ export default defineNuxtConfig({
   // scaffolding task; never ship it (or its localized variants — @nuxtjs/i18n
   // seeds every locale's copy of every static page into the prerender crawl,
   // so each locale prefix needs its own rule) in the generated static site.
-  // /read/** doesn't exist yet — volume contents pages and the homepage CTA
-  // link chapters ahead of time; excluding the routes keeps the crawler from
-  // failing the build on them. The reader task removes these.
   routeRules: {
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
-    "/read/**": { prerender: false }, // route lands in T7 — remove exclusion then
-    "/he/read/**": { prerender: false }, // route lands in T7 — remove exclusion then
   },
   nitro: {
     prerender: {
@@ -72,8 +102,11 @@ export default defineNuxtConfig({
       // it, but each `/volumes/[volume]` page's own link only exists for
       // Volume 1 (the rest render disabled/"coming soon", with no <a> for
       // the crawler to follow) — list every volume explicitly so all six
-      // contents pages still ship in the generated static site.
-      routes: volumePrerenderRoutes,
+      // contents pages still ship in the generated static site. Reader
+      // routes are listed explicitly for the same reason (see
+      // `readerPrerenderRoutes` above) — the crawler alone would miss most
+      // of the answers-terminology/answers-topics clusters.
+      routes: [...volumePrerenderRoutes, ...readerPrerenderRoutes],
     },
   },
   // Non-standard ports so `pnpm dev` never fights other local dev servers
