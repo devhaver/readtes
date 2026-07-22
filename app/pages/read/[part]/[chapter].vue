@@ -155,8 +155,16 @@ const commentarySheetItems = computed(() =>
     : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
 );
 
-useSeoMeta({
+const partTitle = computed(() => localizedTitle(entry.part.title));
+
+useLocalizedSeo({
   title: () => `${chapterTitle.value} · ${t("common.siteName")}`,
+  description: () =>
+    t("seo.chapter.description", {
+      chapter: chapterTitle.value,
+      part: partTitle.value,
+    }),
+  type: "article",
 });
 </script>
 
@@ -165,6 +173,7 @@ useSeoMeta({
     <ReaderShell v-if="mode === 'panes'">
       <template #toolbar>
         <ReaderToolbar
+          :chapter-title="chapterTitle"
           :breadcrumb-items="breadcrumbItems"
           :prev="prev"
           :next="next"
@@ -231,6 +240,7 @@ useSeoMeta({
 
     <template v-else>
       <ReaderToolbar
+        :chapter-title="chapterTitle"
         :breadcrumb-items="breadcrumbItems"
         :prev="prev"
         :next="next"

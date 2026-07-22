@@ -17,9 +17,10 @@ const breadcrumbItems = computed(() => [
   { label: t("volumes.indexTitle") },
 ]);
 
-useHead(() => ({
-  title: `${t("volumes.indexTitle")} · ${t("common.siteName")}`,
-}));
+useLocalizedSeo({
+  title: () => `${t("volumes.indexTitle")} · ${t("common.siteName")}`,
+  description: () => t("seo.volumesIndex.description"),
+});
 </script>
 
 <template>

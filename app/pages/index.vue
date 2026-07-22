@@ -62,6 +62,11 @@ onBeforeUnmount(() => {
   removeScrollListener?.();
 });
 
+useLocalizedSeo({
+  title: () => `${t("common.siteName")} — ${t("home.heroSubtitle")}`,
+  description: () => t("seo.home.description"),
+});
+
 const layers = computed(() => [
   {
     title: t("home.howItWorksSourceTitle"),

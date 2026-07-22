@@ -50,9 +50,10 @@ const breadcrumbItems = computed(() => [
   { label: volumeTitle.value },
 ]);
 
-useHead(() => ({
-  title: `${volumeTitle.value} · ${t("common.siteName")}`,
-}));
+useLocalizedSeo({
+  title: () => `${volumeTitle.value} · ${t("common.siteName")}`,
+  description: () => t("seo.volume.description", { title: volumeTitle.value }),
+});
 </script>
 
 <template>

@@ -28,6 +28,11 @@ const editions = computed(() =>
     isAi: version.source === "ai",
   })),
 );
+
+useLocalizedSeo({
+  title: () => t("about.title"),
+  description: () => t("seo.about.description"),
+});
 </script>
 
 <template>

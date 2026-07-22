@@ -11,9 +11,13 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 const localeHead = useLocaleHead();
 
-useHead(() => ({
+// See app.vue for why this cast — `@nuxtjs/i18n`'s own `MetaAttrs[]`
+// return type for `link`/`meta` is looser than `useHead`'s.
+useHead((() => ({
   htmlAttrs: { ...localeHead.value.htmlAttrs },
-}));
+  link: localeHead.value.link,
+  meta: localeHead.value.meta,
+})) as unknown as Parameters<typeof useHead>[0]);
 
 const isNotFound = computed(() => props.error.statusCode === 404);
 const title = computed(() =>
@@ -22,6 +26,14 @@ const title = computed(() =>
 const message = computed(() =>
   isNotFound.value ? t("errors.notFoundMessage") : t("errors.genericMessage"),
 );
+
+useLocalizedSeo({
+  title: () => `${title.value} · ${t("common.siteName")}`,
+  description: () =>
+    isNotFound.value
+      ? t("seo.notFound.description")
+      : t("errors.genericMessage"),
+});
 
 // clearError resets Nuxt's error boundary before navigating away — a plain
 // NuxtLink navigation can leave the error state stuck.

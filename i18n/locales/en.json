@@ -166,5 +166,26 @@
     "attributionBody": "Source texts are drawn from Sefaria's open library, and the lessons this reading is inspired by are from KabbalahMedia.info — both used with permission.",
     "portraitAlt": "Portrait of Rav Yehuda Ashlag, Baal HaSulam",
     "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — author of Talmud Eser Sefirot"
+  },
+  "seo": {
+    "ogImageAlt": "Read TES — an open book beside the ARI's Tzimtzum circles, on a night-field background",
+    "home": {
+      "description": "A free, bilingual reading of Talmud Eser Sefirot — Baruch Ashlag's foundational Kabbalah text — laid out as aligned summary, source, and commentary, in English and Hebrew."
+    },
+    "about": {
+      "description": "What Read TES is, how its three reading layers work, and the licenses and sources behind every text edition on the site."
+    },
+    "volumesIndex": {
+      "description": "The six volumes and sixteen parts of Talmud Eser Sefirot, browsable chapter by chapter."
+    },
+    "volume": {
+      "description": "The parts and chapters of {title}, with their summary, source, and commentary layers."
+    },
+    "chapter": {
+      "description": "{chapter} of {part} — read side by side with its Inner Light commentary and Inner Observation essay."
+    },
+    "notFound": {
+      "description": "This page doesn't exist yet, or has moved — find your way back to Read TES's volumes or home page."
+    }
   }
 }
