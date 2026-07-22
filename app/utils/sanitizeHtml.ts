@@ -70,6 +70,20 @@ const escapeAttr = (value: string): string =>
 const isSafeHref = (href: string): boolean => !/^\s*javascript:/i.test(href);
 
 /**
+ * Sefaria's own site-relative cross-reference links — e.g. a "List of
+ * Questions" item linking to its answer:
+ * `href="/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_55"`.
+ * That path doesn't exist on this site (only `#op-N`/`#seif-N` in-page
+ * fragments do) — Nitro's prerender crawler would otherwise follow it as an
+ * internal route and 404. Rewritten to an absolute sefaria.org link instead
+ * of stripped, since it's a genuinely useful cross-reference for the
+ * reader, just not one this site can serve itself.
+ */
+const SEFARIA_ORIGIN = "https://www.sefaria.org";
+const isSiteRelativeHref = (href: string): boolean =>
+  href.startsWith("/") && !href.startsWith("//");
+
+/**
  * Converts each Sefaria footnote-marker/footnote pair into an opaque
  * placeholder token, stashing the (unescaped) footnote text in `footnotes`
  * by index:
@@ -115,15 +129,31 @@ const sanitizeTag = (
 
   const allowedForTag = ALLOWED_ATTRS[tagName] ?? [];
   const attrs: string[] = [];
+  let rewroteSiteRelativeHref = false;
 
   for (const match of attrString.matchAll(ATTR_PAIR_RE)) {
     const name = (match[1] as string).toLowerCase();
     if (!allowedForTag.includes(name)) continue;
 
-    const value = match[3] ?? match[4] ?? match[5] ?? "";
-    if (name === "href" && !isSafeHref(value)) continue;
+    let value = match[3] ?? match[4] ?? match[5] ?? "";
+    if (name === "href") {
+      if (!isSafeHref(value)) continue;
+      if (isSiteRelativeHref(value)) {
+        value = `${SEFARIA_ORIGIN}${value}`;
+        rewroteSiteRelativeHref = true;
+      }
+    }
 
     attrs.push(`${name}="${escapeAttr(value)}"`);
+  }
+
+  // A rewritten Sefaria link now points off-site — open it in a new tab
+  // rather than navigating the reader away mid-chapter. `target`/`rel`
+  // aren't part of `ALLOWED_ATTRS.a` (nothing in the source content should
+  // control them), these are synthesized only for links this function
+  // itself just rewrote.
+  if (rewroteSiteRelativeHref) {
+    attrs.push('target="_blank"', 'rel="noopener noreferrer"');
   }
 
   const attrsStr = attrs.length > 0 ? ` ${attrs.join(" ")}` : "";
@@ -143,3 +173,25 @@ export const sanitizeHtml = (html: string): string => {
 
   return output;
 };
+
+const LEGACY_SITE_RELATIVE_HREF_RE = /href="(\/[^"#][^"]*)"/g;
+
+/**
+ * Rewrites a *already-sanitized* segment's remaining Sefaria site-relative
+ * hrefs (see `isSiteRelativeHref` above) to absolute sefaria.org links, with
+ * `target="_blank" rel="noopener noreferrer"`.
+ *
+ * `sanitizeHtml` does this itself for anything imported from here on — this
+ * narrow, standalone pass is only for content committed before this fix
+ * existed (Part 1's Questions/Answers source segments, which do this
+ * cross-referencing). It does a single attribute-level string replace, not
+ * a full re-parse of the html — the reader renders import-sanitized html
+ * as-is (see `SourcePane`), this is a one-off patch for pre-existing
+ * content, not a general render-time re-sanitization pass.
+ */
+export const rewriteLegacySefariaRelativeHrefs = (html: string): string =>
+  html.replace(LEGACY_SITE_RELATIVE_HREF_RE, (full, path: string) =>
+    path.startsWith("//")
+      ? full
+      : `href="${SEFARIA_ORIGIN}${path}" target="_blank" rel="noopener noreferrer"`,
+  );
