@@ -53,6 +53,21 @@ describe("ReaderToolbar", () => {
     expect(wrapper.text()).toContain("Part 1 · Chapter 1");
   });
 
+  it("renders exactly one <h1> containing the chapter title", async () => {
+    const wrapper = await mountSuspended(ReaderToolbar, {
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        breadcrumbItems,
+        prev: null,
+        next: null,
+      },
+    });
+
+    const headings = wrapper.findAll("h1");
+    expect(headings).toHaveLength(1);
+    expect(headings[0]?.text()).toBe("Part 1 · Chapter 1");
+  });
+
   it("links to the previous and next chapters when they exist", async () => {
     const prev = chapterEntry("part-01/chapter-01", "Chapter 1");
     const next = chapterEntry("part-01/chapter-02", "Chapter 2");
