@@ -99,6 +99,46 @@ tests/unit/              Vitest unit tests
 designs/                 Design source files (untitled.pen) — source of truth for tokens
 ```
 
+## Content model
+
+Content is committed JSON under `content/`, validated by Zod schemas in
+`shared/types/content.ts` (schemas + `z.infer` types; the app must only
+`import type` from this file — `zod` is a scripts/tests-only dependency and
+must never end up in the client bundle).
+
+```
+content/
+  versions.json                              ContentVersion[] — the version registry
+  toc.json                                    the Toc (volumes -> parts -> chapters)
+  parts/part-<NN>/chapters/<chapterSlug>/
+    <layer>.<versionId>.json                  one ChapterLayerFile per (chapter, layer, version)
+```
+
+- **One file = one (chapter, layer, version).** `layer` is `summary` |
+  `source` | `commentary`. Filenames follow `<layer>.<versionId>.json`,
+  e.g. `source.he-jerusalem-1956.json`, `summary.en-curated.json`. The
+  file's own `chapterId`/`layer`/`versionId` fields must match its location
+  and filename — `validate-content` enforces this.
+- **Chapter ids** are `<partId>/<chapterSlug>`, e.g. `part-01/chapter-01`,
+  `part-01/inner-observation-01`, `part-01/questions-terminology-01`.
+- **Anchor id grammar: `op-<order>`.** Sefaria's inline commentary markers
+  (`<i data-commentator="Ohr Penimi" data-label="…" data-order="N">`) become
+  anchor id `op-N`, where `N` is `data-order` (continuous per chapter). See
+  `app/utils/anchors.ts` (`extractAnchors`, `normalizeAnchors`) and
+  `app/utils/sanitizeHtml.ts` for the HTML transforms involved.
+- **`pnpm validate:content`** (`scripts/validate-content.ts`, run via
+  `tsx`) Zod-validates every JSON file under `content/`, then cross-checks
+  integrity: every source segment's `anchors[]` has a matching
+  `CommentaryItem.anchorId` in some commentary version of the same chapter;
+  every `CommentaryItem.targetSeif` exists as a source segment `n`; and
+  every `toc.json` `availableVersions` entry has a corresponding file on
+  disk, and vice versa. `tests/unit/content-integrity.spec.ts` runs the same
+  check over the committed tree as part of `pnpm test`.
+- `ContentVersion.source` includes `'ai'` for AI-generated translations
+  (the reader UI badges these); `ContentVersion.translatedFrom` optionally
+  names the source-language `versionId` an AI/human translation was made
+  from.
+
 ## Testing
 
 Tests live in `tests/unit/**/*.spec.ts` and run under Vitest with the
