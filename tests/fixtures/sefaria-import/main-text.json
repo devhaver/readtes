@@ -1,0 +1,30 @@
+{
+  "ref": "Talmud Eser HaSefirot, Section I",
+  "sectionNames": ["Chapter", "Seif"],
+  "textDepth": 2,
+  "versions": [
+    {
+      "language": "he",
+      "versionTitle": "Jerusalem, 1956-1966",
+      "text": [
+        [
+          "<b><big>מבאר ענין הצמצום</big></b><br><br><small>לפני הצמצום היה אין סוף</small><br><sup class=\"footnote-marker\">*</sup><i class=\"footnote\">עץ חיים שער א׳.</i>דע כי <i data-commentator=\"Ohr Penimi\" data-label=\"א\" data-order=\"1\"></i>טרם שנאצלו הנאצלים, היה אור <i data-commentator=\"Ohr Penimi\" data-label=\"ב\" data-order=\"2\"></i>עליון פשוט.",
+          "<small>סיבת הבריאה היתה כדי לגלות שמותיו.</small><br>וכאשר <i data-commentator=\"Ohr Penimi\" data-label=\"ג\" data-order=\"3\"></i>עלה ברצונו הפשוט, לברוא העולמות."
+        ],
+        [
+          "<b><big>מבאר אשר מאור א\"ס המשיך קו אור</big></b><br><br><small>מן אין סוף המשיך קו אור</small><br>והנה אחר הצמצום, <i data-commentator=\"Ohr Penimi\" data-label=\"א\" data-order=\"1\"></i>אשר אז נשאר מקום החלל, ו<i data-commentator=\"Histaklut Pnimit\" data-label=\"1\" data-order=\"99\"></i>ציון נוסף."
+        ]
+      ]
+    },
+    {
+      "language": "en",
+      "versionTitle": "Sefaria Community Translation",
+      "text": [
+        [
+          "1. <b>Explaining the concept of the initial contraction.</b> Before the contraction, there was the Infinite.",
+          ""
+        ]
+      ]
+    }
+  ]
+}

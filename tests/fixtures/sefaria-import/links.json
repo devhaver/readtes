@@ -1,0 +1,54 @@
+[
+  {
+    "category": "Commentary",
+    "index_title": "Ohr Penimi on Talmud Eser HaSefirot",
+    "ref": "Ohr Penimi on Talmud Eser HaSefirot 1:1:1",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 1:1",
+    "collectiveTitle": { "en": "Ohr Penimi", "he": "אור פנימי" },
+    "inline_reference": { "data-commentator": "Ohr Penimi", "data-order": 1, "data-label": "א" }
+  },
+  {
+    "category": "Commentary",
+    "index_title": "Ohr Penimi on Talmud Eser HaSefirot",
+    "ref": "Ohr Penimi on Talmud Eser HaSefirot 1:1:2",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 1:1",
+    "collectiveTitle": { "en": "Ohr Penimi", "he": "אור פנימי" },
+    "inline_reference": { "data-commentator": "Ohr Penimi", "data-order": 2, "data-label": "ב" }
+  },
+  {
+    "category": "Commentary",
+    "index_title": "Ohr Penimi on Talmud Eser HaSefirot",
+    "ref": "Ohr Penimi on Talmud Eser HaSefirot 1:1:3",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 1:2",
+    "collectiveTitle": { "en": "Ohr Penimi", "he": "אור פנימי" },
+    "inline_reference": { "data-commentator": "Ohr Penimi", "data-order": 3, "data-label": "ג" }
+  },
+  {
+    "category": "Commentary",
+    "index_title": "Ohr Penimi on Talmud Eser HaSefirot",
+    "ref": "Ohr Penimi on Talmud Eser HaSefirot 1:2:1",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 2:1",
+    "collectiveTitle": { "en": "Ohr Penimi", "he": "אור פנימי" },
+    "inline_reference": { "data-commentator": "Ohr Penimi", "data-order": 1, "data-label": "א" }
+  },
+  {
+    "category": "Kabbalah",
+    "index_title": "Zohar",
+    "ref": "Zohar 1:1",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 1:1"
+  },
+  {
+    "category": "Commentary",
+    "index_title": "Histaklut Pnimit on Talmud Eser HaSefirot",
+    "ref": "Histaklut Pnimit on Talmud Eser HaSefirot 1:1:1",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 1:2",
+    "collectiveTitle": { "en": "Histaklut Pnimit", "he": "הסתכלות פנימית" },
+    "inline_reference": { "data-commentator": "Histaklut Pnimit", "data-order": 99, "data-label": "1" }
+  },
+  {
+    "category": "Commentary",
+    "index_title": "Ohr Penimi on Talmud Eser HaSefirot",
+    "ref": "Ohr Penimi on Talmud Eser HaSefirot 1:1:4",
+    "anchorRef": "Talmud Eser HaSefirot, Section I 1:1"
+  }
+]

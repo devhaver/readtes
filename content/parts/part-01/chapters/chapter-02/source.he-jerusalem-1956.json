@@ -1,0 +1,59 @@
+{
+  "chapterId": "part-01/chapter-02",
+  "layer": "source",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I 2",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:1",
+      "heading": "מבאר אשר מאור א\"ס ב\"ה המשיך קו אור לעולמות, שנאצלו ונבראו במקום החלל, שנצטמצם. ובו ה' ענינים: — מן אין סוף המשיך קו אור לתוך החלל",
+      "html": "והנה אחר הצמצום הנ\"ל, <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">א</a>אשר אז נשאר מקום החלל ואויר פנוי וריקני באמצע אור הא\"ס ממש כנ\"ל, הנה כבר היה מקום שיוכלו להיות שם הנאצלים והנבראים והיצורים והנעשים. ואז <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">ב</a>המשיך מן אור א\"ס, קו א' ישר <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">ג</a>מן האור העגול שלו <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">ד</a>מלמעלה למטה, ומשתלשל, ויורד תוך החלל ההוא.",
+      "anchors": [
+        "op-1",
+        "op-2",
+        "op-3",
+        "op-4"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:2",
+      "heading": "ראש הקו נוגע באין סוף ולא סיומו",
+      "html": "<a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">ה</a>וראש העליון של הקו, נמשך מן הא\"ס עצמו <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">ו</a>ונוגע בו, אמנם סיום הקו הזה <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">ז</a>למטה בסופו אינו נוגע באור א\"ס.",
+      "anchors": [
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:3",
+      "heading": "דרך הקו מתפשט אור אין סוף לעולמות",
+      "html": "ודרך הקו הזה נמשך ונתפשט אור א\"ס למטה.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:4",
+      "heading": "כל העולמות הם במקום החלל ההוא שנצטמצם",
+      "html": "ובמקום החלל ההוא, <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">ח</a>האציל וברא, ויצר ועשה כל העולמות כולם.",
+      "anchors": [
+        "op-8"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:5",
+      "heading": "קודם הצמצום היה הוא ושמו אחד, ואין שכל יכול להשיגו",
+      "html": "<span class=\"tes-footnote\" title=\"שער מאמרי רז&quot;ל שבת ד&quot;ה ולהבין.\">*</span><a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">ט</a>קודם הד' עולמות אלו, היה הא\"ס, <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">י</a>הוא אחד ושמו אחד באחדות נפלא ונעלם ית', <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">כ</a>שאין כח אפילו במלאכים הקרובים אליו ואין להם השגה בא\"ס ית', כי אין שום שכל נברא שיוכל להשיגו, להיות, כי <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">ל</a>אין לו מקום ולא גבול ולא שם.",
+      "anchors": [
+        "op-9",
+        "op-10",
+        "op-11",
+        "op-12"
+      ]
+    }
+  ]
+}
