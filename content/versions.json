@@ -1,0 +1,28 @@
+[
+  {
+    "id": "he-jerusalem-1956",
+    "language": "he",
+    "direction": "rtl",
+    "title": "ירושלים, תשט\"ז–תשכ\"ו",
+    "license": "Public Domain",
+    "source": "sefaria",
+    "sefariaVersionTitle": "Jerusalem, 1956-1966"
+  },
+  {
+    "id": "en-sefaria-community",
+    "language": "en",
+    "direction": "ltr",
+    "title": "Sefaria Community Translation",
+    "license": "CC0",
+    "source": "sefaria",
+    "sefariaVersionTitle": "Sefaria Community Translation"
+  },
+  {
+    "id": "en-curated",
+    "language": "en",
+    "direction": "ltr",
+    "title": "Read TES Curated Summary",
+    "license": "CC-BY",
+    "source": "curated"
+  }
+]

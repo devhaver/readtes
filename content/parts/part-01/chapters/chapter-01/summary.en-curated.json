@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-01/chapter-01",
+  "layer": "summary",
+  "versionId": "en-curated",
+  "items": [
+    {
+      "id": "summary-1",
+      "targetSeif": 1,
+      "heading": "Before restriction: the simple light",
+      "html": "<p>Before anything was emanated or created, a single simple light filled all of existence with no empty place at all — called the <b>light without end</b> (Or Ein Sof).</p>"
+    },
+    {
+      "id": "summary-2",
+      "targetSeif": 2,
+      "heading": "The restriction and the central point",
+      "html": "<p>When the desire to create arose, the light restricted itself toward a single central point and withdrew to the sides around it — the first act of <em>tzimtzum</em>.</p>"
+    }
+  ]
+}

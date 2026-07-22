@@ -1,0 +1,385 @@
+{
+  "volumes": [
+    {
+      "id": "volume-01",
+      "number": 1,
+      "title": {
+        "en": "Volume 1",
+        "he": "כרך 1"
+      },
+      "parts": [
+        {
+          "id": "part-01",
+          "number": 1,
+          "sefariaNode": "Talmud Eser HaSefirot, Section I",
+          "title": {
+            "en": "Restriction and Line (Tzimtzum ve'Kav)",
+            "he": "חלק 1"
+          },
+          "chapters": [
+            {
+              "id": "part-01/chapter-01",
+              "kind": "chapter",
+              "number": 1,
+              "title": {
+                "en": "Chapter 1",
+                "he": "פרק א"
+              },
+              "availableLayers": [
+                "summary",
+                "source",
+                "commentary"
+              ],
+              "availableVersions": {
+                "summary": [
+                  "en-curated"
+                ],
+                "source": [
+                  "he-jerusalem-1956"
+                ],
+                "commentary": [
+                  "he-jerusalem-1956"
+                ]
+              }
+            },
+            {
+              "id": "part-01/chapter-02",
+              "kind": "chapter",
+              "number": 2,
+              "title": {
+                "en": "Chapter 2",
+                "he": "פרק ב"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/chapter-03",
+              "kind": "chapter",
+              "number": 3,
+              "title": {
+                "en": "Chapter 3",
+                "he": "פרק ג"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/chapter-04",
+              "kind": "chapter",
+              "number": 4,
+              "title": {
+                "en": "Chapter 4",
+                "he": "פרק ד"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/chapter-05",
+              "kind": "chapter",
+              "number": 5,
+              "title": {
+                "en": "Chapter 5",
+                "he": "פרק ה"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/inner-observation-01",
+              "kind": "inner-observation",
+              "number": 1,
+              "title": {
+                "en": "Inner Observation (Histaklut Penimit)",
+                "he": "הסתכלות פנימית"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/questions-terminology-01",
+              "kind": "questions-terminology",
+              "number": 1,
+              "title": {
+                "en": "List of Questions on Terminology",
+                "he": "רשימת שאלות במינוח"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/questions-topics-01",
+              "kind": "questions-topics",
+              "number": 1,
+              "title": {
+                "en": "List of Questions on Topics",
+                "he": "רשימת שאלות בנושאים"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/answers-terminology-01",
+              "kind": "answers-terminology",
+              "number": 1,
+              "title": {
+                "en": "List of Answers on Terminology",
+                "he": "רשימת תשובות במינוח"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/answers-topics-01",
+              "kind": "answers-topics",
+              "number": 1,
+              "title": {
+                "en": "List of Answers on Topics",
+                "he": "רשימת תשובות בנושאים"
+              },
+              "availableLayers": [],
+              "availableVersions": {
+                "summary": [],
+                "source": [],
+                "commentary": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "part-02",
+          "number": 2,
+          "sefariaNode": "Talmud Eser HaSefirot, Section II",
+          "title": {
+            "en": "Part 2",
+            "he": "חלק 2"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-03",
+          "number": 3,
+          "sefariaNode": "Talmud Eser HaSefirot, Section III",
+          "title": {
+            "en": "Part 3",
+            "he": "חלק 3"
+          },
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "volume-02",
+      "number": 2,
+      "title": {
+        "en": "Volume 2",
+        "he": "כרך 2"
+      },
+      "parts": [
+        {
+          "id": "part-04",
+          "number": 4,
+          "sefariaNode": "Talmud Eser HaSefirot, Section IV",
+          "title": {
+            "en": "Part 4",
+            "he": "חלק 4"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-05",
+          "number": 5,
+          "sefariaNode": "Talmud Eser HaSefirot, Section V",
+          "title": {
+            "en": "Part 5",
+            "he": "חלק 5"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-06",
+          "number": 6,
+          "sefariaNode": "Talmud Eser HaSefirot, Section VI",
+          "title": {
+            "en": "Part 6",
+            "he": "חלק 6"
+          },
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "volume-03",
+      "number": 3,
+      "title": {
+        "en": "Volume 3",
+        "he": "כרך 3"
+      },
+      "parts": [
+        {
+          "id": "part-07",
+          "number": 7,
+          "sefariaNode": "Talmud Eser HaSefirot, Section VII",
+          "title": {
+            "en": "Part 7",
+            "he": "חלק 7"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-08",
+          "number": 8,
+          "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
+          "title": {
+            "en": "Part 8",
+            "he": "חלק 8"
+          },
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "volume-04",
+      "number": 4,
+      "title": {
+        "en": "Volume 4",
+        "he": "כרך 4"
+      },
+      "parts": [
+        {
+          "id": "part-09",
+          "number": 9,
+          "sefariaNode": "Talmud Eser HaSefirot, Section IX",
+          "title": {
+            "en": "Part 9",
+            "he": "חלק 9"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-10",
+          "number": 10,
+          "sefariaNode": "Talmud Eser HaSefirot, Section X",
+          "title": {
+            "en": "Part 10",
+            "he": "חלק 10"
+          },
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "volume-05",
+      "number": 5,
+      "title": {
+        "en": "Volume 5",
+        "he": "כרך 5"
+      },
+      "parts": [
+        {
+          "id": "part-11",
+          "number": 11,
+          "sefariaNode": "Talmud Eser HaSefirot, Section XI",
+          "title": {
+            "en": "Part 11",
+            "he": "חלק 11"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-12",
+          "number": 12,
+          "sefariaNode": "Talmud Eser HaSefirot, Section XII",
+          "title": {
+            "en": "Part 12",
+            "he": "חלק 12"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-13",
+          "number": 13,
+          "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
+          "title": {
+            "en": "Part 13",
+            "he": "חלק 13"
+          },
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "volume-06",
+      "number": 6,
+      "title": {
+        "en": "Volume 6",
+        "he": "כרך 6"
+      },
+      "parts": [
+        {
+          "id": "part-14",
+          "number": 14,
+          "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
+          "title": {
+            "en": "Part 14",
+            "he": "חלק 14"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-15",
+          "number": 15,
+          "sefariaNode": "Talmud Eser HaSefirot, Section XV",
+          "title": {
+            "en": "Part 15",
+            "he": "חלק 15"
+          },
+          "chapters": []
+        },
+        {
+          "id": "part-16",
+          "number": 16,
+          "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
+          "title": {
+            "en": "Part 16",
+            "he": "חלק 16"
+          },
+          "chapters": []
+        }
+      ]
+    }
+  ]
+}

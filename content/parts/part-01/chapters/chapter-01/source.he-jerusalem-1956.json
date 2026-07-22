@@ -1,0 +1,20 @@
+{
+  "chapterId": "part-01/chapter-01",
+  "layer": "source",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I 1",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 1:1",
+      "html": "<p>הנה קודם שנאצלו הנאצלים ונבראו הנבראים היה <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">א</a> אור פשוט ממלא כל המציאות, ולא היה שום מקום פנוי, אלא הכל היה אור פשוט אחד שוה בהשוואה אחת, הנקרא <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">ב</a> אור אין סוף.</p>",
+      "anchors": ["op-1", "op-2"]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 1:2",
+      "html": "<p>וכשעלה ברצונו הפשוט לברוא העולמות ולהאציל הנאצלים, להוציא לאור שלמות פעולותיו... צמצם את עצמו <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">ג</a> בנקודה האמצעית אשר בו באמת, וסילק עצמו לצדדים סביבותיה.</p>",
+      "anchors": ["op-3"]
+    }
+  ]
+}
