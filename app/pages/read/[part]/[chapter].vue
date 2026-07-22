@@ -109,7 +109,7 @@ const breadcrumbItems = computed(() => [
 // "Not available in this edition" toast for the commentary pane: a source
 // anchor was activated, but the commentary version currently shown has
 // nothing for it.
-const { activeAnchor, anchorOrigin } = useReaderState();
+const { activeAnchor, anchorOrigin, reactivateAnchor } = useReaderState();
 
 const missingAnchorNotice = computed(() =>
   resolveMissingAnchorNotice({
@@ -122,8 +122,15 @@ const missingAnchorNotice = computed(() =>
   }),
 );
 
+// Switching versions doesn't change `activeAnchor`/`anchorOrigin` (the
+// anchor being looked for is the same one), so `useHighlightedAnchor`'s
+// change-based watch wouldn't otherwise re-fire once the Hebrew commentary
+// item — previously absent — renders. `reactivateAnchor` bumps the shared
+// activation sequence so the commentary pane re-runs its scroll/highlight
+// against the newly-rendered item.
 const switchCommentaryToHebrew = () => {
   readerVersions.setVersion("commentary", HEBREW_VERSION_ID);
+  reactivateAnchor();
 };
 
 useSeoMeta({

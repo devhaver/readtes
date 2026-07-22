@@ -34,9 +34,24 @@ const anchorIdFromEvent = (event: Event): string | undefined => {
   return anchor?.dataset.anchor;
 };
 
+// A focused `<a href>`'s native Enter activation fires both this `keydown`
+// (which handles it, since Space also needs handling here and anchors don't
+// natively activate on Space) and a browser-synthesized `click` right after
+// — without a guard, that click re-runs `activateAnchor` for the same Enter
+// press. `suppressNextClickId` records the id an Enter keydown just
+// activated so the following synthetic click for that same id is a no-op;
+// it's cleared on a microtask so it can never suppress a later *real*
+// click if the browser's `click` doesn't materialize (e.g. `preventDefault`
+// already stopped it upstream).
+let suppressNextClickId: string | null = null;
+
 const onContainerClick = (event: MouseEvent) => {
   const id = anchorIdFromEvent(event);
   if (!id) return;
+  if (suppressNextClickId === id) {
+    suppressNextClickId = null;
+    return;
+  }
   event.preventDefault();
   activateAnchor(id, "source");
 };
@@ -47,6 +62,13 @@ const onContainerKeydown = (event: KeyboardEvent) => {
   if (!id) return;
   event.preventDefault();
   activateAnchor(id, "source");
+
+  if (event.key === "Enter") {
+    suppressNextClickId = id;
+    queueMicrotask(() => {
+      if (suppressNextClickId === id) suppressNextClickId = null;
+    });
+  }
 };
 
 watchEffect((onCleanup) => {

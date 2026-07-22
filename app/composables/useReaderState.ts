@@ -14,6 +14,7 @@ import {
   activateAnchorState,
   clearAnchorState,
   initialReaderAnchorState,
+  reactivateAnchorState,
   type PaneId,
 } from "~/utils/readerAnchorState";
 
@@ -21,7 +22,17 @@ export interface ReaderState {
   activeAnchor: Ref<string | null>;
   anchorOrigin: Ref<PaneId | null>;
   activePane: Ref<PaneId>;
+  /**
+   * Bumped by `activateAnchor` and `reactivateAnchor`. Watch this alongside
+   * `activeAnchor` (see `useHighlightedAnchor`) to re-fire on events that
+   * don't change the anchor id/origin themselves — a repeat click, or a
+   * version switch that changes which element the current anchor resolves
+   * to.
+   */
+  activationSeq: Ref<number>;
   activateAnchor: (id: string, origin: PaneId) => void;
+  /** Re-fires the highlight/scroll for the *current* anchor without changing it. */
+  reactivateAnchor: () => void;
   clearAnchor: () => void;
 }
 
@@ -32,6 +43,7 @@ const createReaderState = (): ReaderState => {
   const activeAnchor = ref<string | null>(initial.activeAnchor);
   const anchorOrigin = ref<PaneId | null>(initial.anchorOrigin);
   const activePane = ref<PaneId>(initial.activePane);
+  const activationSeq = ref<number>(initial.activationSeq);
 
   const activateAnchor = (id: string, origin: PaneId) => {
     const next = activateAnchorState(
@@ -39,6 +51,7 @@ const createReaderState = (): ReaderState => {
         activeAnchor: activeAnchor.value,
         anchorOrigin: anchorOrigin.value,
         activePane: activePane.value,
+        activationSeq: activationSeq.value,
       },
       id,
       origin,
@@ -46,6 +59,17 @@ const createReaderState = (): ReaderState => {
     activeAnchor.value = next.activeAnchor;
     anchorOrigin.value = next.anchorOrigin;
     activePane.value = next.activePane;
+    activationSeq.value = next.activationSeq;
+  };
+
+  const reactivateAnchor = () => {
+    const next = reactivateAnchorState({
+      activeAnchor: activeAnchor.value,
+      anchorOrigin: anchorOrigin.value,
+      activePane: activePane.value,
+      activationSeq: activationSeq.value,
+    });
+    activationSeq.value = next.activationSeq;
   };
 
   const clearAnchor = () => {
@@ -53,6 +77,7 @@ const createReaderState = (): ReaderState => {
       activeAnchor: activeAnchor.value,
       anchorOrigin: anchorOrigin.value,
       activePane: activePane.value,
+      activationSeq: activationSeq.value,
     });
     activeAnchor.value = next.activeAnchor;
     anchorOrigin.value = next.anchorOrigin;
@@ -62,7 +87,9 @@ const createReaderState = (): ReaderState => {
     activeAnchor,
     anchorOrigin,
     activePane,
+    activationSeq,
     activateAnchor,
+    reactivateAnchor,
     clearAnchor,
   };
 };

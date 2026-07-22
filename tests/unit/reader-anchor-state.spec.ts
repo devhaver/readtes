@@ -6,6 +6,7 @@ describe("initialReaderAnchorState", () => {
       activeAnchor: null,
       anchorOrigin: null,
       activePane: "source",
+      activationSeq: 0,
     });
   });
 });
@@ -22,6 +23,7 @@ describe("activateAnchorState", () => {
       activeAnchor: "op-12",
       anchorOrigin: "source",
       activePane: "source",
+      activationSeq: 1,
     });
   });
 
@@ -37,6 +39,7 @@ describe("activateAnchorState", () => {
       activeAnchor: "op-1",
       anchorOrigin: "commentary",
       activePane: "commentary",
+      activationSeq: 2,
     });
   });
 
@@ -50,6 +53,35 @@ describe("activateAnchorState", () => {
     expect(next.activeAnchor).toBe("seif-3");
     expect(next.anchorOrigin).toBe("summary");
     expect(next.activePane).toBe("summary");
+  });
+
+  it("bumps activationSeq even when re-activating the same id/origin", () => {
+    const first = activateAnchorState(
+      initialReaderAnchorState(),
+      "op-1",
+      "source",
+    );
+    const second = activateAnchorState(first, "op-1", "source");
+
+    expect(second.activeAnchor).toBe("op-1");
+    expect(second.anchorOrigin).toBe("source");
+    expect(second.activationSeq).toBe(first.activationSeq + 1);
+  });
+});
+
+describe("reactivateAnchorState", () => {
+  it("bumps activationSeq without touching the active anchor/origin/pane", () => {
+    const active = activateAnchorState(
+      initialReaderAnchorState(),
+      "op-1",
+      "commentary",
+    );
+    const next = reactivateAnchorState(active);
+
+    expect(next).toEqual({
+      ...active,
+      activationSeq: active.activationSeq + 1,
+    });
   });
 });
 
@@ -66,6 +98,7 @@ describe("clearAnchorState", () => {
       activeAnchor: null,
       anchorOrigin: null,
       activePane: "commentary",
+      activationSeq: active.activationSeq,
     });
   });
 });

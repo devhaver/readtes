@@ -61,21 +61,33 @@ export const useHighlightedAnchor = (
   paneId: PaneId,
   containerRef: Ref<HTMLElement | null | undefined>,
 ): void => {
-  const { activeAnchor, anchorOrigin } = useReaderState();
+  const { activeAnchor, anchorOrigin, activationSeq } = useReaderState();
 
-  watch([activeAnchor, anchorOrigin], ([anchorId, origin]) => {
-    if (!anchorId || origin === paneId) return;
+  // Watches `activationSeq` alongside the anchor id/origin so the highlight
+  // re-fires on events that don't change those values themselves: re-
+  // clicking the same anchor (`activateAnchor` always bumps the sequence),
+  // and a version switch reconciling which element the current anchor now
+  // targets (`reactivateAnchor`). `flush: "post"` runs the callback after
+  // the DOM has been patched, so a version switch's newly-rendered element
+  // (e.g. the commentary item that only exists once the Hebrew version
+  // loads) is present in the container by the time this queries for it.
+  watch(
+    [activeAnchor, anchorOrigin, activationSeq],
+    ([anchorId, origin]) => {
+      if (!anchorId || origin === paneId) return;
 
-    const container = containerRef.value;
-    if (!container) return;
+      const container = containerRef.value;
+      if (!container) return;
 
-    const target = findAnchorElement(container, anchorId);
-    if (!target) return;
+      const target = findAnchorElement(container, anchorId);
+      if (!target) return;
 
-    target.scrollIntoView({
-      block: "center",
-      behavior: prefersReducedMotion() ? "auto" : "smooth",
-    });
-    flashHighlight(target);
-  });
+      target.scrollIntoView({
+        block: "center",
+        behavior: prefersReducedMotion() ? "auto" : "smooth",
+      });
+      flashHighlight(target);
+    },
+    { flush: "post" },
+  );
 };
