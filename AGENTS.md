@@ -256,26 +256,36 @@ structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
 
-**Known limitation (unresolved as of the split-ToC change, tracked for a
-follow-up): `useChapterContent`'s `import.meta.glob("../../content/parts/**/*.json")`
-makes every reader page's _built_ (`pnpm generate`/`pnpm build`) output
-prefetch-link nearly every chapter's content chunk**, regardless of which
-chapter it is. Rollup's client manifest records every file a glob matches
-as a "dynamic import" of the module containing the glob; Nitro's renderer
-(`vue-bundle-renderer`) turns every dynamic import of an always-touched
-module into a `<link rel="prefetch">` on every page, with no manifest-side
-or Nuxt-config opt-out (`experimental.prefetchPreloadTags` looks related
-but gates a different, unrelated opt-in feature). Measured on a generated
-`read/part-05/chapter-01` page: 5,212 prefetch links, 373KB of a 391KB
-page (95.4%) — the real rendered content is ~18KB, matching dev mode
-(unaffected — Vite dev doesn't build this manifest) almost exactly. This
-is **not** caused by (and predates) the split-ToC change above — the glob
-is unchanged from before it, only its `useAsyncData` wrapper was removed —
-and full-corpus `pnpm generate` does not currently complete under the
-default heap in this state (OOM'd at 87% of 10,313 routes in one measured
-run). The real fix is splitting that one glob into ~16 part-scoped loader
-modules (dynamically imported by `partId`) so only the current part's own
-chunks get attributed as "touched" per render — not yet done.
+**Content-chunk prefetch-link stripping (`nuxt.config.ts`'s `build:manifest`
+hook).** `useChapterContent`'s `import.meta.glob("../../content/parts/**/*.json")`
+(and `useLocalizedParts`'s equivalent over `content/toc.parts/*.json`) gives
+every reader page's _built_ (`pnpm generate`/`pnpm build`) output a
+`<link rel="prefetch">` for nearly every chapter's content chunk,
+regardless of which chapter it is — Rollup's client manifest records every
+file a glob matches as a "dynamic import" of the module containing the
+glob, and Nitro's renderer (`vue-bundle-renderer`) turns every dynamic
+import of an always-touched module into a prefetch link, with no
+manifest-side or Nuxt-config opt-out (`experimental.prefetchPreloadTags`
+looks related but gates a different, unrelated opt-in feature). Measured
+before the fix, on a generated `read/part-05/chapter-01` page: 5,212
+prefetch links, 373KB of a 391KB page (95.4%) — the real rendered content
+is ~18KB, matching dev mode (unaffected — Vite dev doesn't build this
+manifest) almost exactly. This predates the split-ToC change above (the
+glob itself is unchanged, only its `useAsyncData` wrapper was removed), and
+without a fix, full-corpus `pnpm generate` does not complete under the
+default heap (OOM'd at 87% of 10,313 routes in one measured run).
+
+Fix: `nuxt.config.ts`'s `hooks["build:manifest"]` calls
+`stripContentChunkPrefetchHints` (`shared/utils/manifestPrefetch.ts`,
+unit-tested — `tests/unit/manifest-prefetch.spec.ts`) against the client
+manifest before Nitro embeds it for runtime use. For every manifest entry
+whose own key/src lives under `content/parts/` or `content/toc.parts/`, it
+clears `prefetch`/`preload` so `vue-bundle-renderer` filters it out of any
+page's dependency set; and, belt-and-suspenders, strips any reference to
+such an id out of every entry's own `dynamicImports` list. Functionality is
+untouched — these chunks still load on demand via the glob's own dynamic
+`import()` the moment a page actually needs one; they were never
+legitimately prefetchable at this scale.
 
 ## Sefaria import
 
