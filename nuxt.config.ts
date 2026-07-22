@@ -158,6 +158,17 @@ export default defineNuxtConfig({
   // Hebrew holy books; Heebo 400/500/700 is the Hebrew UI-chrome sans
   // under /he/). Keep this list tight — extra weights balloon the
   // generated `_fonts` payload.
+  //
+  // Subset discipline (T10 fix — real bug, verified on the generated
+  // output): `@nuxt/fonts`' own default subset list is latin-only and does
+  // NOT include `hebrew`. Left unset, every one of the three Hebrew faces
+  // below silently emitted zero `@font-face` rules covering U+0590–05FF,
+  // so all Hebrew text on the shipped site fell back to the browser's
+  // default serif/sans instead of David Libre/Frank Ruhl Libre/Heebo. Each
+  // Hebrew family lists `subsets: ["latin", "hebrew"]` explicitly (`latin`
+  // stays, since digits/punctuation/the odd Latin loanword still need it);
+  // Inter and Taviraj are untouched — they have no Hebrew glyphs to begin
+  // with and must not gain a subset that would only balloon their payload.
   fonts: {
     families: [
       { name: "Inter", provider: "google", weights: [400, 500, 600] },
@@ -167,9 +178,24 @@ export default defineNuxtConfig({
         weights: [400],
         styles: ["normal", "italic"],
       },
-      { name: "Frank Ruhl Libre", provider: "google", weights: [700, 900] },
-      { name: "David Libre", provider: "google", weights: [400, 700] },
-      { name: "Heebo", provider: "google", weights: [400, 500, 700] },
+      {
+        name: "Frank Ruhl Libre",
+        provider: "google",
+        weights: [700, 900],
+        subsets: ["latin", "hebrew"],
+      },
+      {
+        name: "David Libre",
+        provider: "google",
+        weights: [400, 700],
+        subsets: ["latin", "hebrew"],
+      },
+      {
+        name: "Heebo",
+        provider: "google",
+        weights: [400, 500, 700],
+        subsets: ["latin", "hebrew"],
+      },
     ],
   },
 });
