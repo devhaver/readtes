@@ -58,6 +58,15 @@ const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
   ),
 );
 
+// There is no deployed domain yet — every absolute URL the app emits
+// (canonical links, og:url/og:image, hreflang alternates, sitemap.xml,
+// robots.txt) derives from this single value, so a real domain only ever
+// needs to be set in one place. `runtimeConfig.public.siteUrl` below is
+// what app code reads at runtime (`useRuntimeConfig().public.siteUrl`);
+// `i18n.baseUrl` needs the same literal at Nuxt-config-evaluation time so
+// `useLocaleHead()` can emit absolute hreflang/canonical/og:url tags.
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.org";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -86,6 +95,18 @@ export default defineNuxtConfig({
       },
     ],
     detectBrowserLanguage: false,
+    // Drives `useLocaleHead()`'s canonical link + hreflang alternates +
+    // og:url/og:locale meta — same value as `runtimeConfig.public.siteUrl`
+    // below, see the `siteUrl` comment above.
+    baseUrl: siteUrl,
+  },
+  runtimeConfig: {
+    public: {
+      // Overridable at build time via `NUXT_PUBLIC_SITE_URL` (Nuxt's
+      // standard public-runtime-config env override) — see the `siteUrl`
+      // comment above for what derives from this.
+      siteUrl,
+    },
   },
   compatibilityDate: "2025-07-15",
   // /design-tokens is a dev-only debug page kept around from the token
@@ -106,7 +127,14 @@ export default defineNuxtConfig({
       // routes are listed explicitly for the same reason (see
       // `readerPrerenderRoutes` above) — the crawler alone would miss most
       // of the answers-terminology/answers-topics clusters.
-      routes: [...volumePrerenderRoutes, ...readerPrerenderRoutes],
+      routes: [
+        ...volumePrerenderRoutes,
+        ...readerPrerenderRoutes,
+        // Nitro server routes (`server/routes/`) with no `<a>` anywhere for
+        // the crawler to find — need the same explicit treatment.
+        "/sitemap.xml",
+        "/robots.txt",
+      ],
     },
   },
   // Non-standard ports so `pnpm dev` never fights other local dev servers
