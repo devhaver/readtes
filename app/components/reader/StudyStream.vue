@@ -49,6 +49,38 @@ useAnchorActivation(containerRef, (id) => {
   toggleInline(id);
 });
 
+// The anchor markers themselves live in sanitized `v-html` (see
+// `ReaderSourceSegment`), outside Vue's own attribute bindings, so their
+// `aria-expanded`/`aria-controls` can't just be template-bound like a
+// normal disclosure trigger — this small effect is what keeps them in
+// sync with `expandedAnchors` instead. Scoped to this stream's own
+// container only (no cross-pane DOM reach), and `flush: "post"` so it
+// always runs after Vue has (re)patched the `v-html` markup it targets —
+// e.g. on a source-version switch, which replaces those anchor nodes
+// outright. `aria-controls` points at the matching `InlineCommentary`'s
+// own root, which is already given `:id="anchorId"` there.
+watchEffect(
+  () => {
+    const container = containerRef.value;
+    if (!container) return;
+
+    const expanded = expandedAnchors.value;
+    container
+      .querySelectorAll<HTMLAnchorElement>("a.tes-anchor[data-anchor]")
+      .forEach((anchor) => {
+        const anchorId = anchor.dataset.anchor;
+        if (!anchorId) return;
+
+        anchor.setAttribute("aria-controls", anchorId);
+        anchor.setAttribute(
+          "aria-expanded",
+          expanded.has(anchorId) ? "true" : "false",
+        );
+      });
+  },
+  { flush: "post" },
+);
+
 const isExpanded = (anchorId: string): boolean =>
   expandedAnchors.value.has(anchorId);
 

@@ -82,6 +82,21 @@ describe("StudyStream", () => {
     expect(wrapper.text()).not.toContain("Commentary for op-1");
   });
 
+  it("flips aria-expanded (and sets aria-controls) on the tapped anchor as its inline disclosure toggles", async () => {
+    const wrapper = await mountSuspended(StudyStream, { props: baseProps });
+
+    const anchor = wrapper.find('a.tes-anchor[data-anchor="op-1"]');
+    expect(anchor.attributes("aria-expanded")).toBe("false");
+    expect(anchor.attributes("aria-controls")).toBe("op-1");
+
+    await anchor.trigger("click");
+    expect(anchor.attributes("aria-expanded")).toBe("true");
+    expect(anchor.attributes("aria-controls")).toBe("op-1");
+
+    await anchor.trigger("click");
+    expect(anchor.attributes("aria-expanded")).toBe("false");
+  });
+
   it("keeps multiple anchors open at once — opening a second doesn't fold the first", async () => {
     const wrapper = await mountSuspended(StudyStream, { props: baseProps });
 

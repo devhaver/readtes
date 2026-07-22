@@ -46,6 +46,7 @@ const fold = () => toggleInline(props.anchorId);
       <button
         type="button"
         class="rounded-button px-2 py-1 text-xs text-(--text-muted) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        :aria-label="t('reader.studyMode.fold')"
         @click="fold"
       >
         {{ t("reader.studyMode.fold") }}

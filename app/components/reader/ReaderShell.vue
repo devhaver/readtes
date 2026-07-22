@@ -1,16 +1,22 @@
 <script setup lang="ts">
-// Orchestrator for the three-pane reader. Provides the shared
-// `useReaderState()` (every pane beneath it, however deeply slotted,
-// injects the same instance — see the provide/inject notes there).
+// Orchestrator for the three-pane reader. Consumes the shared
+// `useReaderState()` — `layouts/reader.vue` is the real provider (its
+// unconditional `useAutoHidingChrome()` call reaches in and provides it
+// first, being an ancestor of every reader page), so this call and every
+// pane's beneath it, however deeply slotted, just inject that same
+// instance. See the provide/inject notes on `useReaderState` itself for
+// the fresh-instance fallback (and dev warning) if that provider is ever
+// missing.
 //
 // >=1024px: a fixed-viewport CSS grid (`[280px_1fr_1.1fr]`, summary | source
 // | commentary) — the toolbar stays put and each pane scrolls independently
 // within the viewport (see `layouts/reader.vue` for the outer `h-dvh`).
 // <1024px: the same three panes simply stacked in normal document flow, no
 // fixed height — this is what panes mode falls back to on a narrow
-// viewport when the reader explicitly toggles out of study mode (T8's
-// default there); the state above already doesn't assume a desktop-only
-// shape (`activePane` exists precisely so that mode can plug into it).
+// viewport when the reader explicitly toggles out of study mode. Nothing
+// here reads `activePane` yet — it's tracked in `useReaderState` for a
+// possible future single-pane mobile mode to plug into, not wired into
+// this shell today.
 useReaderState();
 </script>
 

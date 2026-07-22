@@ -19,6 +19,13 @@
  * named in the design brief, while still applying the "never hide while a
  * disclosure is open near the top" rule baked into
  * `nextChromeVisibilityState`.
+ *
+ * The scroll listener itself is gated to study mode (`useReaderMode`):
+ * panes mode never shows any auto-hiding chrome, so it should cost zero
+ * scroll work — the listener attaches when `mode` becomes `"study"` and
+ * detaches the moment it isn't, rather than running for the lifetime of
+ * the page regardless of mode. Handler work is also rAF-throttled, same
+ * pattern as `ProgressRail`'s scroll/resize handling.
  */
 import type { ComputedRef, InjectionKey, Ref } from "vue";
 import {
@@ -37,6 +44,7 @@ const createAutoHidingChrome = (
   scrollRef: Ref<HTMLElement | null> | null,
 ): AutoHidingChrome => {
   const { expandedAnchors } = useReaderState();
+  const { mode } = useReaderMode();
   const state = ref(initialChromeVisibilityState());
 
   const readScrollTop = (): number => {
@@ -44,11 +52,25 @@ const createAutoHidingChrome = (
     return typeof window === "undefined" ? 0 : window.scrollY;
   };
 
-  const handleScroll = () => {
+  let rafHandle: number | null = null;
+
+  const measure = () => {
+    rafHandle = null;
     state.value = nextChromeVisibilityState(state.value, {
       scrollTop: readScrollTop(),
       hasOpenDisclosure: expandedAnchors.value.size > 0,
     });
+  };
+
+  const handleScroll = () => {
+    if (rafHandle !== null) return;
+    rafHandle = requestAnimationFrame(measure);
+  };
+
+  const cancelPendingMeasure = () => {
+    if (rafHandle === null) return;
+    cancelAnimationFrame(rafHandle);
+    rafHandle = null;
   };
 
   onMounted(() => {
@@ -59,8 +81,19 @@ const createAutoHidingChrome = (
         : window;
     if (!target) return;
 
-    target.addEventListener("scroll", handleScroll, { passive: true });
-    onUnmounted(() => target.removeEventListener("scroll", handleScroll));
+    watch(
+      mode,
+      (current, _previous, onCleanup) => {
+        if (current !== "study") return;
+
+        target.addEventListener("scroll", handleScroll, { passive: true });
+        onCleanup(() => {
+          target.removeEventListener("scroll", handleScroll);
+          cancelPendingMeasure();
+        });
+      },
+      { immediate: true },
+    );
   });
 
   return { visible: computed(() => state.value.visible) };
