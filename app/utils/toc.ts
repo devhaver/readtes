@@ -1,25 +1,28 @@
 /**
- * Pure helpers over a `Toc` value (volumes -> parts -> chapters, in reading
- * order). No I/O, no Zod — the app only ever needs the inferred types here.
+ * Pure helpers over the split ToC files app code loads directly:
+ * `content/toc.volumes.json` (the volumes -> parts skeleton, no chapter
+ * lists) and `content/toc.parts/part-NN.json` (one part's full chapters
+ * plus its own + parent volume's identity) — see
+ * `useLocalizedVolumes`/`useLocalizedParts` for the loaders and AGENTS.md
+ * "Content model" for the file shapes. No I/O, no Zod.
+ *
+ * App code must never import `content/toc.json` (the full, un-split ToC)
+ * directly — these helpers deliberately operate over the smaller
+ * per-volume-skeleton/per-part shapes instead.
  */
 import type {
-  Toc,
   TocChapter,
-  TocPart,
-  TocVolume,
+  TocPartFile,
+  TocPartSkeleton,
+  TocVolumeSkeleton,
 } from "~~/shared/types/content";
 import { KIND_ORDER } from "./chapterGrouping";
+import type { LocalizedText } from "./localization";
 
-export interface FlattenedChapter {
-  chapter: TocChapter;
-  part: TocPart;
-  volume: TocVolume;
-}
-
-export interface Breadcrumb {
-  volume: TocVolume;
-  part: TocPart;
-  chapter: TocChapter;
+/** A prev/next chapter nav link — just enough to render the label + href. */
+export interface ChapterLink {
+  id: string;
+  title: LocalizedText;
 }
 
 /**
@@ -28,89 +31,106 @@ export interface Breadcrumb {
  * within a kind second. `TocChapter.number` alone is only unique per kind
  * (e.g. `chapter` chapters 1-2 and `inner-observation` chapters 1-10 both
  * start at 1), so sorting by `number` alone would interleave kinds instead
- * of reading through one before the next.
+ * of reading through one before the next. `scripts/lib/toc-splits.ts` keeps
+ * its own copy of this exact order (see that file's comment) when it
+ * derives `firstChapterId`/`lastChapterId` for `toc.volumes.json`.
  */
-const orderedChapters = (chapters: TocChapter[]): TocChapter[] =>
+export const orderedPartChapters = (chapters: TocChapter[]): TocChapter[] =>
   [...chapters].sort(
     (a, b) =>
       KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) ||
       a.number - b.number,
   );
 
-/** Flattens a `Toc` into every chapter, in volume -> part -> chapter reading order. */
-export const flattenChapters = (toc: Toc): FlattenedChapter[] => {
-  const volumes = [...toc.volumes].sort((a, b) => a.number - b.number);
-  const flattened: FlattenedChapter[] = [];
-
-  for (const volume of volumes) {
-    const parts = [...volume.parts].sort((a, b) => a.number - b.number);
-
-    for (const part of parts) {
-      for (const chapter of orderedChapters(part.chapters)) {
-        flattened.push({ chapter, part, volume });
-      }
-    }
-  }
-
-  return flattened;
-};
-
-/** Finds a chapter (with its parent part/volume) by chapter id. */
-export const findChapter = (
-  toc: Toc,
+/** Finds a chapter by id within an already-loaded part file. */
+export const findChapterInPart = (
+  partFile: TocPartFile,
   chapterId: string,
-): FlattenedChapter | undefined =>
-  flattenChapters(toc).find((entry) => entry.chapter.id === chapterId);
-
-/**
- * Returns the previous/next chapter in reading order, crossing part and
- * volume boundaries. Either side is `null` at the corpus start/end.
- */
-export const prevNextChapter = (
-  toc: Toc,
-  chapterId: string,
-): { prev: FlattenedChapter | null; next: FlattenedChapter | null } => {
-  const flattened = flattenChapters(toc);
-  const index = flattened.findIndex((entry) => entry.chapter.id === chapterId);
-
-  if (index === -1) return { prev: null, next: null };
-
-  return {
-    prev: index > 0 ? (flattened[index - 1] ?? null) : null,
-    next: index < flattened.length - 1 ? (flattened[index + 1] ?? null) : null,
-  };
-};
-
-/** Returns the volume/part/chapter chain for a chapter id, for breadcrumb UI. */
-export const breadcrumbFor = (
-  toc: Toc,
-  chapterId: string,
-): Breadcrumb | null => {
-  const entry = findChapter(toc, chapterId);
-  return entry
-    ? { volume: entry.volume, part: entry.part, chapter: entry.chapter }
-    : null;
-};
+): TocChapter | undefined =>
+  partFile.chapters.find((chapter) => chapter.id === chapterId);
 
 /**
  * URL slug for a volume's contents page (`/volumes/<slug>`), e.g.
- * `volume-1` — independent of the zero-padded `TocVolume.id` (`volume-01`).
+ * `volume-1` — independent of the zero-padded volume id (`volume-01`).
  */
-export const volumeSlug = (volume: TocVolume): string =>
+export const volumeSlug = (volume: { number: number }): string =>
   `volume-${volume.number}`;
 
-/** Finds a volume by its URL slug (see `volumeSlug`). */
+/** Finds a volume skeleton entry by its URL slug (see `volumeSlug`). */
 export const findVolumeBySlug = (
-  toc: Toc,
+  volumes: TocVolumeSkeleton[],
   slug: string,
-): TocVolume | undefined =>
-  toc.volumes.find((volume) => volumeSlug(volume) === slug);
+): TocVolumeSkeleton | undefined =>
+  volumes.find((volume) => volumeSlug(volume) === slug);
 
 /**
- * Whether a volume has any populated chapters yet — drives the "coming
- * soon" disabled state on the volumes index page. Data-driven rather than
+ * Whether a volume has any populated parts yet — drives the "coming soon"
+ * disabled state on the volumes index page. Data-driven rather than
  * hardcoded, so a volume flips to "active" automatically once content
  * lands for any of its parts.
  */
-export const volumeHasContent = (volume: TocVolume): boolean =>
-  volume.parts.some((part) => part.chapters.length > 0);
+export const volumeHasContent = (volume: TocVolumeSkeleton): boolean =>
+  volume.parts.some((part) => part.chapterCount > 0);
+
+/** Every part across every volume, in volume -> part reading order. */
+export const flattenPartSkeletons = (
+  volumes: TocVolumeSkeleton[],
+): TocPartSkeleton[] =>
+  [...volumes]
+    .sort((a, b) => a.number - b.number)
+    .flatMap((volume) => [...volume.parts].sort((a, b) => a.number - b.number));
+
+/** The part immediately before/after `partId` in reading order, if any. */
+export const adjacentParts = (
+  volumes: TocVolumeSkeleton[],
+  partId: string,
+): { prevPart: TocPartSkeleton | null; nextPart: TocPartSkeleton | null } => {
+  const parts = flattenPartSkeletons(volumes);
+  const index = parts.findIndex((part) => part.id === partId);
+
+  if (index === -1) return { prevPart: null, nextPart: null };
+
+  return {
+    prevPart: index > 0 ? (parts[index - 1] ?? null) : null,
+    nextPart: index < parts.length - 1 ? (parts[index + 1] ?? null) : null,
+  };
+};
+
+/**
+ * Previous/next chapter nav links, crossing part and volume boundaries.
+ * Within the current part, walks the part file's own chapters
+ * (`orderedPartChapters` — unchanged logic from before the ToC split); at a
+ * part boundary, uses the adjacent part's `firstChapterId`/`lastChapterId`
+ * + `firstChapterTitle`/`lastChapterTitle` from the volumes skeleton, so
+ * the reader never has to load the neighbor part's full file just to label
+ * a nav link.
+ */
+export const prevNextChapterLinks = (
+  volumes: TocVolumeSkeleton[],
+  partFile: TocPartFile,
+  chapterId: string,
+): { prev: ChapterLink | null; next: ChapterLink | null } => {
+  const ordered = orderedPartChapters(partFile.chapters);
+  const index = ordered.findIndex((chapter) => chapter.id === chapterId);
+
+  if (index === -1) return { prev: null, next: null };
+
+  const prevInPart = index > 0 ? ordered[index - 1] : undefined;
+  const nextInPart =
+    index < ordered.length - 1 ? ordered[index + 1] : undefined;
+  const { prevPart, nextPart } = adjacentParts(volumes, partFile.part.id);
+
+  const prev: ChapterLink | null = prevInPart
+    ? { id: prevInPart.id, title: prevInPart.title }
+    : prevPart?.lastChapterId && prevPart.lastChapterTitle
+      ? { id: prevPart.lastChapterId, title: prevPart.lastChapterTitle }
+      : null;
+
+  const next: ChapterLink | null = nextInPart
+    ? { id: nextInPart.id, title: nextInPart.title }
+    : nextPart?.firstChapterId && nextPart.firstChapterTitle
+      ? { id: nextPart.firstChapterId, title: nextPart.firstChapterTitle }
+      : null;
+
+  return { prev, next };
+};

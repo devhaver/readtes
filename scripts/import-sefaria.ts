@@ -65,6 +65,7 @@ import {
   siblingChapterTitle,
   type ChapterFilesOnDisk,
 } from "./lib/toc-builder.ts";
+import { writeTocSplitFiles } from "./lib/toc-splits.ts";
 import {
   buildCommentaryItems,
   buildSourceSegments,
@@ -640,6 +641,7 @@ export const main = async (argv: string[]): Promise<void> => {
       })),
     };
     writeJsonFile(join(contentDir, "toc.json"), updatedToc);
+    writeTocSplitFiles(contentDir, updatedToc, versions);
   }
 
   const coverageMarkdown = buildCoverageMarkdown(

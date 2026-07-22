@@ -1,0 +1,5 @@
+{
+  "part": { "id": "part-99", "number": 99, "title": { "en": "Stale Part" } },
+  "volume": { "id": "volume-01", "number": 1, "title": { "en": "Volume 1" } },
+  "chapters": []
+}

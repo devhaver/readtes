@@ -29,9 +29,9 @@ const SECTION_FOR_KIND: Record<ChapterKind, ChapterSection> = {
 
 /**
  * Reading order of kinds within a section — also the order sections are
- * built in. Exported so `~/utils/toc` (`flattenChapters`) can sort a part's
- * chapters into true reading order too: a part's `TocChapter.number` is only
- * unique *within* a kind (e.g. `chapter` chapters 1-2 and
+ * built in. Exported so `~/utils/toc` (`orderedPartChapters`) can sort a
+ * part's chapters into true reading order too: a part's `TocChapter.number`
+ * is only unique *within* a kind (e.g. `chapter` chapters 1-2 and
  * `inner-observation` chapters 1-10 both start their own numbering at 1), so
  * sorting by `number` alone interleaves kinds instead of reading through one
  * kind before the next.

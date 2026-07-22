@@ -1,0 +1,24 @@
+{
+  "volumes": [
+    {
+      "id": "volume-01",
+      "number": 1,
+      "title": { "en": "Volume 1" },
+      "parts": [
+        {
+          "id": "part-01",
+          "number": 1,
+          "title": { "en": "Part 1" },
+          "sefariaNode": "Fixture Node",
+          "chapterCount": 5,
+          "kindsPresent": ["chapter"],
+          "firstChapterId": "part-01/chapter-01",
+          "lastChapterId": "part-01/chapter-01",
+          "firstChapterTitle": { "en": "Chapter 1" },
+          "lastChapterTitle": { "en": "Chapter 1" },
+          "availableSummary": { "he": "none", "en": "full" }
+        }
+      ]
+    }
+  ]
+}

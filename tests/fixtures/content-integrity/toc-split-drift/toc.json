@@ -1,0 +1,31 @@
+{
+  "volumes": [
+    {
+      "id": "volume-01",
+      "number": 1,
+      "title": { "en": "Volume 1" },
+      "parts": [
+        {
+          "id": "part-01",
+          "number": 1,
+          "sefariaNode": "Fixture Node",
+          "title": { "en": "Part 1" },
+          "chapters": [
+            {
+              "id": "part-01/chapter-01",
+              "kind": "chapter",
+              "number": 1,
+              "title": { "en": "Chapter 1" },
+              "availableLayers": ["source"],
+              "availableVersions": {
+                "summary": [],
+                "source": ["v1"],
+                "commentary": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

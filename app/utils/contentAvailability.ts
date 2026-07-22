@@ -1,8 +1,15 @@
 /**
  * Language/translation availability derived from `TocChapter.availableVersions`
  * (cross-referenced against the `content/versions.json` registry) — powers
- * the language chips on the volumes index and the per-chapter badges on a
- * volume's contents page.
+ * the per-chapter/version badges on a volume's contents page
+ * (`chapterLanguages`). The volumes index no longer calls
+ * `partLanguageAvailability` itself: that computation is precomputed at
+ * emit time into `toc.volumes.json`'s `availableSummary` (a separate,
+ * intentionally-duplicated copy in `scripts/lib/toc-splits.ts` — see
+ * AGENTS.md "Content model") so the index page never needs a part's full
+ * `TocChapter[]` just to render its language chips. `partLanguageAvailability`
+ * is kept here, correct and tested, as the reference algorithm that copy
+ * mirrors.
  */
 import type {
   ContentVersion,

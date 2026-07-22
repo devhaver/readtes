@@ -10,17 +10,18 @@
  * "fetch on version switch" — switching the version `<select>` just swaps
  * which already-loaded object a pane renders, so it's instant offline too.
  *
- * SSG-safe via `useAsyncData` (resolves during prerender, payload-extracted
- * for hydration). A missing layer/version file resolves to `null`, never a
+ * Direct `await import()`, no `useAsyncData`: these are statically bundled
+ * JSON files, not a fetch — server and client resolve the identical module,
+ * so there's nothing for `useAsyncData` to coordinate, and wrapping the
+ * import would only re-add the payload-serialization cost this composable
+ * exists to avoid (a chapter's full text would otherwise ride in the page
+ * payload *in addition to* the rendered HTML markup — see T11 scaling notes
+ * in AGENTS.md). A missing layer/version file resolves to `null`, never a
  * throw — most chapters simply don't have every layer/version.
  *
  * Takes the chapter's `availableVersions` as a plain argument (rather than
- * re-resolving `useLocalizedToc()`/`findChapter` internally) so this
- * composable's first statement is its own `useAsyncData` call: a Nuxt
- * composable called *after* an `await` inside a plain (non-`<script setup>`)
- * composable function can lose its Nuxt app context during prerendering —
- * the reader page already has the chapter's toc entry (and so its
- * `availableVersions`) resolved by the time it calls this.
+ * re-resolving the toc internally) so this composable's first statement is
+ * its own logic, independent of how the caller resolved the chapter.
  */
 import type { ComputedRef } from "vue";
 import type {
@@ -110,42 +111,33 @@ export const useChapterContent = async (
   chapterSlug: string,
   availableVersions: AvailableVersions,
 ): Promise<ChapterContent> => {
-  const chapterId = `${partId}/${chapterSlug}`;
-
-  const { data } = await useAsyncData(
-    `chapter-content:${chapterId}`,
-    async () => {
-      const [source, commentary, summary] = await Promise.all([
-        loadAllVersions<SourceSegment>(
-          partId,
-          chapterSlug,
-          "source",
-          availableVersions.source,
-        ),
-        loadAllVersions<CommentaryItem>(
-          partId,
-          chapterSlug,
-          "commentary",
-          availableVersions.commentary,
-        ),
-        loadAllVersions<SummaryItem>(
-          partId,
-          chapterSlug,
-          "summary",
-          availableVersions.summary,
-        ),
-      ]);
-
-      return { source, commentary, summary };
-    },
-  );
+  const [source, commentary, summary] = await Promise.all([
+    loadAllVersions<SourceSegment>(
+      partId,
+      chapterSlug,
+      "source",
+      availableVersions.source,
+    ),
+    loadAllVersions<CommentaryItem>(
+      partId,
+      chapterSlug,
+      "commentary",
+      availableVersions.commentary,
+    ),
+    loadAllVersions<SummaryItem>(
+      partId,
+      chapterSlug,
+      "summary",
+      availableVersions.summary,
+    ),
+  ]);
 
   return {
     sourceVersions: computed(() => availableVersions.source),
     commentaryVersions: computed(() => availableVersions.commentary),
     summaryVersions: computed(() => availableVersions.summary),
-    sourceByVersion: computed(() => data.value?.source ?? {}),
-    commentaryByVersion: computed(() => data.value?.commentary ?? {}),
-    summaryByVersion: computed(() => data.value?.summary ?? {}),
+    sourceByVersion: computed(() => source),
+    commentaryByVersion: computed(() => commentary),
+    summaryByVersion: computed(() => summary),
   };
 };

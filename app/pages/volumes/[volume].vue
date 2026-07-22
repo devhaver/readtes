@@ -15,10 +15,10 @@ const route = useRoute();
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const { toc, versions, localizedTitle } = await useLocalizedToc();
+const { volumes, versions, localizedTitle } = await useLocalizedVolumes();
 
 const slug = route.params.volume as string;
-const resolvedVolume = findVolumeBySlug(toc.value, slug);
+const resolvedVolume = findVolumeBySlug(volumes.value, slug);
 
 if (!resolvedVolume) {
   throw createError({
@@ -28,17 +28,26 @@ if (!resolvedVolume) {
   });
 }
 
+// Only this volume's own parts' files (2-3 per volume) — never the whole
+// corpus, see AGENTS.md "Content model".
+const { parts } = await useLocalizedParts(
+  resolvedVolume.parts.map((part) => part.id),
+);
+
 const volumeTitle = computed(() => localizedTitle(resolvedVolume.title));
 
 const partSections = computed(() =>
   [...resolvedVolume.parts]
     .sort((a, b) => a.number - b.number)
-    .map((part) => ({
-      part,
-      title: localizedTitle(part.title),
-      hasContent: part.chapters.length > 0,
-      groups: groupChaptersByKind(part.chapters),
-    })),
+    .map((part) => {
+      const partFile = parts.value[part.id];
+      return {
+        part,
+        title: localizedTitle(part.title),
+        hasContent: part.chapterCount > 0,
+        groups: partFile ? groupChaptersByKind(partFile.chapters) : [],
+      };
+    }),
 );
 
 const entryKey = (entry: ChapterGroupEntry): string =>

@@ -68,6 +68,7 @@ import {
   buildKmCommentaryItems,
   buildKmSourceSegments,
 } from "./lib/km-transform.ts";
+import { writeTocSplitFiles } from "./lib/toc-splits.ts";
 import { validateContent } from "./validate-content.ts";
 
 const KM_BASE = "https://kabbalahmedia.info";
@@ -456,6 +457,7 @@ export const main = async (argv: string[]): Promise<void> => {
       writeJsonFile(join(contentDir, "versions.json"), versions);
     }
     writeJsonFile(join(contentDir, "toc.json"), toc);
+    writeTocSplitFiles(contentDir, toc, versions);
   }
 
   // --- Coverage report --------------------------------------------------------

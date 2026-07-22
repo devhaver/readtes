@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Toc } from "./shared/types/content";
+import { stripContentChunkPrefetchHints } from "./shared/utils/manifestPrefetch";
 
 // Mirrors `KIND_ORDER` in `app/utils/chapterGrouping.ts` — duplicated
 // (rather than imported) on purpose: this file is type-checked as part of
@@ -141,6 +142,21 @@ export default defineNuxtConfig({
         "/sitemap.xml",
         "/robots.txt",
       ],
+    },
+  },
+  // T11 scaling fix — content-chunk prefetch-link bloat: strip every
+  // `content/parts/**`/`content/toc.parts/**` chunk's prefetch/preload
+  // eligibility from the client manifest before Nitro embeds it for
+  // runtime use, so `vue-bundle-renderer`'s renderer stops emitting a
+  // `<link rel="prefetch">` for (effectively) every chapter's content chunk
+  // on every reader page. See `shared/utils/manifestPrefetch.ts`'s docblock
+  // for the full measurement/mechanism writeup and AGENTS.md "Content
+  // model" > "Known limitation" for the summary. Pure logic lives there
+  // (unit-tested — `tests/unit/manifest-prefetch.spec.ts`) so this hook is
+  // just wiring.
+  hooks: {
+    "build:manifest": (manifest) => {
+      stripContentChunkPrefetchHints(manifest);
     },
   },
   // Non-standard ports so `pnpm dev` never fights other local dev servers

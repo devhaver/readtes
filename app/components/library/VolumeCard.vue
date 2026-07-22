@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import type { LocaleObject } from "@nuxtjs/i18n";
-import type { ContentVersion, TocVolume } from "~~/shared/types/content";
+import type {
+  LanguageAvailability,
+  TocVolumeSkeleton,
+} from "~~/shared/types/content";
 
 const props = defineProps<{
-  volume: TocVolume;
-  versions: ContentVersion[];
+  volume: TocVolumeSkeleton;
 }>();
 
 const { locale, locales, t } = useI18n();
@@ -14,12 +16,17 @@ const active = computed(() => volumeHasContent(props.volume));
 const title = computed(() => localizedText(props.volume.title, locale.value));
 const href = computed(() => localePath(`/volumes/${volumeSlug(props.volume)}`));
 
+// `availableSummary` is precomputed at emit time (`toc.volumes.json` — see
+// AGENTS.md "Content model") from the same algorithm
+// `~/utils/contentAvailability`'s `partLanguageAvailability` implements —
+// this card never needs a part's full `TocChapter[]`/the versions registry
+// just to render its language chips.
 const partSummaries = computed(() =>
   props.volume.parts.map((part) => ({
     part,
     title: localizedText(part.title, locale.value),
-    chapterCount: part.chapters.length,
-    languages: partLanguageAvailability(part, props.versions),
+    chapterCount: part.chapterCount,
+    languages: part.availableSummary,
   })),
 );
 

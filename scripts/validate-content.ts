@@ -4,17 +4,21 @@
  * between the ToC, the version registry, and the chapter/layer files on
  * disk. Run via `pnpm validate:content`.
  */
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   chapterLayerFileSchema,
+  tocPartFileSchema,
   tocSchema,
+  tocVolumesFileSchema,
   versionsFileSchema,
+  type ContentVersion,
   type LayerKind,
   type ParsedChapterLayerFile,
   type Toc,
 } from "../shared/types/content.ts";
+import { deriveTocPartFiles, deriveTocVolumesFile } from "./lib/toc-splits.ts";
 
 export interface ValidationResult {
   errors: string[];
@@ -290,6 +294,111 @@ const checkTocFileCrossReferences = (
   }
 };
 
+/**
+ * Order-independent (for objects; order-dependent for arrays) structural
+ * equality — used to compare a parsed `toc.volumes.json`/`toc.parts/*.json`
+ * against what `deriveTocVolumesFile`/`deriveTocPartFiles` computes fresh
+ * from `toc.json`, without relying on the two sides agreeing on object key
+ * insertion order.
+ */
+const deepEqual = (a: unknown, b: unknown): boolean => {
+  if (a === b) return true;
+  if (
+    typeof a !== "object" ||
+    typeof b !== "object" ||
+    a === null ||
+    b === null
+  ) {
+    return false;
+  }
+  if (Array.isArray(a) !== Array.isArray(b)) return false;
+  if (Array.isArray(a) && Array.isArray(b)) {
+    return a.length === b.length && a.every((item, i) => deepEqual(item, b[i]));
+  }
+  const aRecord = a as Record<string, unknown>;
+  const bRecord = b as Record<string, unknown>;
+  const aKeys = Object.keys(aRecord);
+  const bKeys = Object.keys(bRecord);
+  return (
+    aKeys.length === bKeys.length &&
+    aKeys.every((key) => deepEqual(aRecord[key], bRecord[key]))
+  );
+};
+
+/**
+ * Cross-checks `content/toc.volumes.json` and every `content/toc.parts/*.json`
+ * against what `deriveTocVolumesFile`/`deriveTocPartFiles`
+ * (`scripts/lib/toc-splits.ts`) compute fresh from `toc.json` — the same
+ * derivation both importers and `pnpm emit:toc-splits` use to write these
+ * files. Any drift (missing file, stale file, or content mismatch) is a
+ * validation error: app code trusts these split files are exactly
+ * derivable from `toc.json`, never hand-edited out of sync with it.
+ */
+const checkTocSplitEquivalence = (
+  contentDir: string,
+  toc: Toc,
+  versions: ContentVersion[],
+  errors: string[],
+): void => {
+  const expectedVolumesFile = deriveTocVolumesFile(toc, versions);
+  const volumesPath = join(contentDir, "toc.volumes.json");
+
+  if (!existsSync(volumesPath)) {
+    errors.push(
+      'content/toc.volumes.json: missing — run "pnpm emit:toc-splits" to regenerate it from content/toc.json',
+    );
+  } else {
+    const parsed = tocVolumesFileSchema.safeParse(readJson(volumesPath));
+    if (!parsed.success) {
+      errors.push(...formatZodError("content/toc.volumes.json", parsed.error));
+    } else if (!deepEqual(parsed.data, expectedVolumesFile)) {
+      errors.push(
+        'content/toc.volumes.json: does not match the file derivable from content/toc.json — run "pnpm emit:toc-splits" to regenerate it',
+      );
+    }
+  }
+
+  const expectedPartFiles = deriveTocPartFiles(toc);
+  const expectedFileNames = new Set(
+    expectedPartFiles.map((file) => `${file.part.id}.json`),
+  );
+  const partsDir = join(contentDir, "toc.parts");
+
+  for (const file of expectedPartFiles) {
+    const fileName = `${file.part.id}.json`;
+    const filePath = join(partsDir, fileName);
+
+    if (!existsSync(filePath)) {
+      errors.push(
+        `content/toc.parts/${fileName}: missing — run "pnpm emit:toc-splits" to regenerate it from content/toc.json`,
+      );
+      continue;
+    }
+
+    const parsed = tocPartFileSchema.safeParse(readJson(filePath));
+    if (!parsed.success) {
+      errors.push(
+        ...formatZodError(`content/toc.parts/${fileName}`, parsed.error),
+      );
+    } else if (!deepEqual(parsed.data, file)) {
+      errors.push(
+        `content/toc.parts/${fileName}: does not match the file derivable from content/toc.json — run "pnpm emit:toc-splits" to regenerate it`,
+      );
+    }
+  }
+
+  const existingFileNames = existsSync(partsDir)
+    ? readdirSync(partsDir).filter((name) => name.endsWith(".json"))
+    : [];
+  for (const fileName of existingFileNames) {
+    if (!expectedFileNames.has(fileName)) {
+      errors.push(
+        `content/toc.parts/${fileName}: exists on disk but content/toc.json has no matching part — stale, remove it or run "pnpm emit:toc-splits"`,
+      );
+    }
+  }
+};
+
 export const validateContent = (contentDir: string): ValidationResult => {
   const errors: string[] = [];
 
@@ -315,6 +424,12 @@ export const validateContent = (contentDir: string): ValidationResult => {
 
   if (tocParsed.success) {
     checkTocFileCrossReferences(tocParsed.data, loaded, versionIds, errors);
+    checkTocSplitEquivalence(
+      contentDir,
+      tocParsed.data,
+      versionsParsed.success ? versionsParsed.data : [],
+      errors,
+    );
   }
 
   return { errors };
