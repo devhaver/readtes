@@ -9,12 +9,17 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   compatibilityDate: '2025-07-15',
+  // Non-standard ports so `pnpm dev` never fights other local dev servers
+  // (weburz's Nuxt app on 3000, etc.) — see AGENTS.md "Dev server ports".
+  devServer: {
+    port: 6217,
+  },
   vite: {
     plugins: [tailwindcss()],
-  },
-  eslint: {
-    config: {
-      stylistic: true,
+    server: {
+      ws: {
+        port: 6218,
+      },
     },
   },
   fonts: {

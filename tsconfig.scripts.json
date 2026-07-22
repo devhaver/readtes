@@ -1,0 +1,13 @@
+{
+  // Typechecks scripts/ and tests/ (import/validate tooling, Vitest specs),
+  // which live outside app/ and are not covered by the Nuxt-generated
+  // project references in tsconfig.json. Extends the Nuxt-generated
+  // tsconfig for the same strictness + path aliases (~~, #shared, ...) and
+  // narrows `include` to the tooling/test trees. Run via
+  // `vue-tsc -p tsconfig.scripts.json --noEmit` (see `pnpm typecheck`).
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"],
+  },
+  "include": [".nuxt/nuxt.d.ts", "scripts/**/*.ts", "tests/**/*.ts", "shared/**/*.ts"],
+}
