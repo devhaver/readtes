@@ -112,7 +112,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
         class="flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
         :class="
           activePane === segment.pane
-            ? 'bg-teal text-surface-white'
+            ? 'bg-teal-strong text-surface-white'
             : 'text-(--text-primary) hover:bg-(--surface)'
         "
         @click="setActivePane(segment.pane)"

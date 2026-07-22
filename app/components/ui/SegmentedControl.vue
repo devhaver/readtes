@@ -41,7 +41,7 @@ const emit = defineEmits<{ "update:modelValue": [value: T] }>();
       :class="[
         index > 0 && 'border-s border-(--border)',
         modelValue === option.value
-          ? 'bg-teal text-surface-white'
+          ? 'bg-teal-strong text-surface-white'
           : 'text-(--text-primary) hover:bg-(--surface-raised)',
       ]"
       @click="emit('update:modelValue', option.value)"

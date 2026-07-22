@@ -169,7 +169,7 @@ const transitionDuration = computed(() =>
                   class="rounded-button border border-(--border) px-2.5 py-1 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
                   :class="
                     entry.code === locale
-                      ? 'bg-teal text-surface-white'
+                      ? 'bg-teal-strong text-surface-white'
                       : 'text-(--text-primary) hover:bg-(--surface-raised)'
                   "
                   :aria-current="entry.code === locale ? 'true' : undefined"

@@ -167,7 +167,7 @@ const transitionDuration = computed(() =>
               :key="item.anchorId"
               class="rounded-card border border-(--border) p-3"
             >
-              <p class="mb-1 text-xs font-semibold text-teal">
+              <p class="mb-1 text-xs font-semibold text-(--accent-text)">
                 {{ localizedText(item.label, locale) }}
               </p>
               <div
@@ -176,7 +176,7 @@ const transitionDuration = computed(() =>
               />
               <button
                 type="button"
-                class="mt-2 rounded-button border border-teal px-2.5 py-1 text-xs font-medium text-teal hover:bg-teal hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+                class="mt-2 rounded-button border border-teal px-2.5 py-1 text-xs font-medium text-(--accent-text) hover:bg-teal-strong hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
                 @click="openInCommentary(item)"
               >
                 {{ t("reader.commentarySheet.openInCommentary") }}

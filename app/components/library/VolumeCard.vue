@@ -87,13 +87,13 @@ const languageLabel = (
           }}</span>
           <span
             v-if="languageLabel('he', summary.languages.he)"
-            class="rounded-button border border-teal/50 px-1.5 py-0.5 text-xs text-teal"
+            class="rounded-button border border-teal/50 px-1.5 py-0.5 text-xs text-(--accent-text)"
           >
             {{ languageLabel("he", summary.languages.he) }}
           </span>
           <span
             v-if="languageLabel('en', summary.languages.en)"
-            class="rounded-button border border-teal/50 px-1.5 py-0.5 text-xs text-teal"
+            class="rounded-button border border-teal/50 px-1.5 py-0.5 text-xs text-(--accent-text)"
           >
             {{ languageLabel("en", summary.languages.en) }}
           </span>

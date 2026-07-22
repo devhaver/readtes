@@ -205,7 +205,7 @@ const goToFullCommentary = async () => {
       </p>
       <button
         type="button"
-        class="mt-2 rounded-button border border-teal px-3 py-1.5 text-sm font-medium text-teal hover:bg-teal hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="mt-2 rounded-button border border-teal px-3 py-1.5 text-sm font-medium text-(--accent-text) hover:bg-teal-strong hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
         @click="goToFullCommentary"
       >
         {{ t("reader.studyMode.readFullCommentary") }}

@@ -68,7 +68,7 @@ const goTo = (path: string) => clearError({ redirect: path });
       <div class="flex flex-wrap items-center gap-4">
         <button
           type="button"
-          class="inline-flex items-center gap-2 rounded-button bg-navy-primary px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:bg-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="inline-flex items-center gap-2 rounded-button bg-navy-primary px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:bg-teal-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
           @click="goTo(localePath('/'))"
         >
           {{ t("errors.notFoundBackHome") }}

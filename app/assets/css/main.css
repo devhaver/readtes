@@ -6,6 +6,20 @@
   /* Brand + surface palette (designs/untitled.pen) */
   --color-navy-primary: #003b65;
   --color-teal: #00b6bd;
+  /*
+   * T10 contrast fix (Lighthouse-flagged): plain #00b6bd measures only
+   * 2.49:1 against white/surface-light/surface-warm — nowhere near WCAG
+   * AA's 4.5:1 — in both directions (teal text on a light surface, e.g.
+   * `.tes-anchor`; white text on a teal background, e.g. the segmented
+   * control's active state). #007a7f is the same teal, darkened until it
+   * clears 4.5:1 against every light-mode surface AND against white text
+   * (white-on-#007a7f is 5.13:1, so this same value doubles as the "active
+   * state" background everywhere `bg-teal` previously paired with white
+   * text). --color-teal itself is untouched — it stays the brighter brand
+   * accent for contexts that already pass (teal-on-navy in the hero,
+   * 4.65:1) and for dark-mode text via `--accent-text` below.
+   */
+  --color-teal-strong: #007a7f;
   --color-orange-cta: #f36518;
   --color-green-progress: #8fd123;
   --color-surface-white: #ffffff;
@@ -84,6 +98,14 @@
   --text-primary: var(--color-heading);
   --text-muted: var(--color-muted);
   --border: var(--color-border-subtle);
+  /*
+   * T10 contrast fix: teal-as-text (`.tes-anchor`) needs a different value
+   * per theme, since the surface it sits on flips — --color-teal-strong
+   * (dark enough to clear 4.5:1 on white/surface-light/surface-warm) in
+   * light mode, the brighter --color-teal (already 6.9:1+ on dark
+   * surfaces) in dark mode.
+   */
+  --accent-text: var(--color-teal-strong);
 }
 
 .dark {
@@ -93,6 +115,7 @@
   --text-primary: #f5f5f5;
   --text-muted: #a9b4bd;
   --border: #1f3a52;
+  --accent-text: var(--color-teal);
 }
 
 /*
@@ -137,7 +160,7 @@
   line-height: 1;
   vertical-align: super;
   background: none;
-  color: var(--color-teal);
+  color: var(--accent-text);
   text-decoration: none;
   cursor: pointer;
 }

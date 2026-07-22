@@ -71,7 +71,7 @@ const fold = () => toggleInline(props.anchorId);
         :key="item.anchorId"
         class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
-        <span class="me-1.5 text-xs font-semibold text-teal">{{
+        <span class="me-1.5 text-xs font-semibold text-(--accent-text)">{{
           localizedText(item.label, locale)
         }}</span>
         <span v-html="item.html" />
