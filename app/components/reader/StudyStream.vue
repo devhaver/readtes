@@ -65,6 +65,12 @@ watchEffect(
     if (!container) return;
 
     const expanded = expandedAnchors.value;
+    // Read (without using) `sourceSegments` so this effect also re-runs
+    // after a source-version switch replaces the `v-html` anchor nodes —
+    // otherwise the freshly patched anchors would sit un-synced until the
+    // next `expandedAnchors` change, contradicting the whole point of
+    // this effect.
+    void props.sourceSegments;
     container
       .querySelectorAll<HTMLAnchorElement>("a.tes-anchor[data-anchor]")
       .forEach((anchor) => {

@@ -97,6 +97,35 @@ describe("StudyStream", () => {
     expect(anchor.attributes("aria-expanded")).toBe("false");
   });
 
+  it("re-syncs aria-expanded/aria-controls onto the fresh anchor node after a source-version switch", async () => {
+    const wrapper = await mountSuspended(StudyStream, { props: baseProps });
+
+    await wrapper.find('a.tes-anchor[data-anchor="op-1"]').trigger("click");
+    expect(
+      wrapper
+        .find('a.tes-anchor[data-anchor="op-1"]')
+        .attributes("aria-expanded"),
+    ).toBe("true");
+
+    // A source-version switch replaces the `v-html` markup outright — same
+    // anchor id, but a brand-new DOM node with none of the attributes the
+    // previous node had synced onto it.
+    const switchedSegments: SourceSegment[] = [
+      {
+        n: 1,
+        sefariaRef: "x 1",
+        html: 'Different wording with <a class="tes-anchor" href="#op-1" data-anchor="op-1">א</a> the same anchor.',
+        anchors: ["op-1", "op-2"],
+      },
+      segments[1]!,
+    ];
+    await wrapper.setProps({ sourceSegments: switchedSegments });
+
+    const freshAnchor = wrapper.find('a.tes-anchor[data-anchor="op-1"]');
+    expect(freshAnchor.attributes("aria-expanded")).toBe("true");
+    expect(freshAnchor.attributes("aria-controls")).toBe("op-1");
+  });
+
   it("keeps multiple anchors open at once — opening a second doesn't fold the first", async () => {
     const wrapper = await mountSuspended(StudyStream, { props: baseProps });
 
