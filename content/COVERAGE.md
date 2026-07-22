@@ -27,6 +27,7 @@ skipped, not force-imported.
 
 | Version | Language (KM code) | Chapters imported | Source segments | Commentary items |
 | --- | --- | --- | --- | --- |
+| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2 | 0 | 0 |
 | tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2 | 0 | 0 |
 | ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 0/2 | 0 | 0 |
 | de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 0/2 | 0 | 0 |
@@ -39,6 +40,8 @@ skipped, not force-imported.
 - **de-bb**/part-01/chapter-02: document structure not yet supported by this importer
 - **es-bb**/part-01/chapter-01: document structure not yet supported by this importer
 - **es-bb**/part-01/chapter-02: document structure not yet supported by this importer
+- **pt-bb**/part-01/chapter-01: no docx file for this language
+- **pt-bb**/part-01/chapter-02: no docx file for this language
 - **ru-bb**/part-01/chapter-01: document structure not yet supported by this importer
 - **ru-bb**/part-01/chapter-02: document structure not yet supported by this importer
 - **tr-bb**/part-01/chapter-01: document structure not yet supported by this importer

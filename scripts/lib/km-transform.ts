@@ -19,6 +19,27 @@ import type {
 } from "./km-chapter-parser.ts";
 import type { KmChapterGroundTruth } from "./km-ground-truth.ts";
 
+/**
+ * Discriminated warning kind, so callers (the coverage report's
+ * `unmatchedNumerals` metric in particular) can filter warnings by *what
+ * kind* of alignment mismatch they are instead of substring-matching
+ * human-readable `message` text — two different mismatch kinds can easily
+ * share overlapping wording ("no matching anchor"/"no matching …
+ * counterpart") without meaning the same thing.
+ */
+export type KmWarningKind =
+  | "orphan-km-source-item"
+  | "orphan-he-source-segment"
+  | "unmatched-marker"
+  | "orphan-km-commentary-paragraph"
+  | "orphan-he-commentary-item"
+  | "target-seif-mismatch";
+
+export interface KmWarning {
+  kind: KmWarningKind;
+  message: string;
+}
+
 const dedupeInOrder = (ids: string[]): string[] => [...new Set(ids)];
 
 /**
@@ -34,7 +55,7 @@ const collapseRepeatedSpaces = (html: string): string =>
 
 export interface KmSourceSegmentsResult {
   segments: SourceSegment[];
-  warnings: string[];
+  warnings: KmWarning[];
 }
 
 /**
@@ -49,7 +70,7 @@ export const buildKmSourceSegments = (
   heSegments: SourceSegment[],
   groundTruth: KmChapterGroundTruth,
 ): KmSourceSegmentsResult => {
-  const warnings: string[] = [];
+  const warnings: KmWarning[] = [];
   const heByN = new Map(heSegments.map((segment) => [segment.n, segment]));
   const matchedNs = new Set<number>();
   const segments: SourceSegment[] = [];
@@ -57,9 +78,10 @@ export const buildKmSourceSegments = (
   for (const item of items) {
     const heSegment = heByN.get(item.n);
     if (!heSegment) {
-      warnings.push(
-        `source item ${item.n}: no matching Hebrew ground-truth segment (n=${item.n} not found in he source) — skipped`,
-      );
+      warnings.push({
+        kind: "orphan-km-source-item",
+        message: `source item ${item.n}: no matching Hebrew ground-truth segment (n=${item.n} not found in he source) — skipped`,
+      });
       continue;
     }
     matchedNs.add(item.n);
@@ -69,9 +91,10 @@ export const buildKmSourceSegments = (
       groundTruth.gematriaToAnchorId,
     );
     for (const numeral of unmatchedNumerals) {
-      warnings.push(
-        `source item ${item.n}: marker "(${numeral})" has no matching anchor in this chapter's Hebrew ground truth — left as text`,
-      );
+      warnings.push({
+        kind: "unmatched-marker",
+        message: `source item ${item.n}: marker "(${numeral})" has no matching anchor in this chapter's Hebrew ground truth — left as text`,
+      });
     }
 
     segments.push({
@@ -84,9 +107,10 @@ export const buildKmSourceSegments = (
 
   for (const [n] of heByN) {
     if (!matchedNs.has(n)) {
-      warnings.push(
-        `source: Hebrew ground-truth segment n=${n} has no matching KabbalahMedia item — skipped`,
-      );
+      warnings.push({
+        kind: "orphan-he-source-segment",
+        message: `source: Hebrew ground-truth segment n=${n} has no matching KabbalahMedia item — skipped`,
+      });
     }
   }
 
@@ -96,7 +120,7 @@ export const buildKmSourceSegments = (
 
 export interface KmCommentaryItemsResult {
   items: CommentaryItem[];
-  warnings: string[];
+  warnings: KmWarning[];
 }
 
 /**
@@ -111,7 +135,7 @@ export const buildKmCommentaryItems = (
   paragraphs: KmCommentaryParagraph[],
   groundTruth: KmChapterGroundTruth,
 ): KmCommentaryItemsResult => {
-  const warnings: string[] = [];
+  const warnings: KmWarning[] = [];
   const matchedOrders = new Set<number>();
   const items: CommentaryItem[] = [];
 
@@ -121,15 +145,17 @@ export const buildKmCommentaryItems = (
       order !== undefined ? groundTruth.byOrder.get(order) : undefined;
 
     if (!entry) {
-      warnings.push(
-        `commentary paragraph "(${para.numeral})" (after seif ${para.targetSeif}): no matching anchor in this chapter's Hebrew ground truth — skipped`,
-      );
+      warnings.push({
+        kind: "orphan-km-commentary-paragraph",
+        message: `commentary paragraph "(${para.numeral})" (after seif ${para.targetSeif}): no matching anchor in this chapter's Hebrew ground truth — skipped`,
+      });
       continue;
     }
     if (entry.targetSeif !== para.targetSeif) {
-      warnings.push(
-        `commentary paragraph "(${para.numeral})" -> ${entry.anchorId}: KabbalahMedia places it after seif ${para.targetSeif} but the Hebrew ground truth targets seif ${entry.targetSeif} — trusting the Hebrew ground truth`,
-      );
+      warnings.push({
+        kind: "target-seif-mismatch",
+        message: `commentary paragraph "(${para.numeral})" -> ${entry.anchorId}: KabbalahMedia places it after seif ${para.targetSeif} but the Hebrew ground truth targets seif ${entry.targetSeif} — trusting the Hebrew ground truth`,
+      });
     }
     matchedOrders.add(entry.order);
 
@@ -138,9 +164,10 @@ export const buildKmCommentaryItems = (
       groundTruth.gematriaToAnchorId,
     );
     for (const numeral of unmatchedNumerals) {
-      warnings.push(
-        `commentary ${entry.anchorId}: marker "(${numeral})" has no matching anchor in this chapter's Hebrew ground truth — left as text`,
-      );
+      warnings.push({
+        kind: "unmatched-marker",
+        message: `commentary ${entry.anchorId}: marker "(${numeral})" has no matching anchor in this chapter's Hebrew ground truth — left as text`,
+      });
     }
 
     items.push({
@@ -156,9 +183,10 @@ export const buildKmCommentaryItems = (
 
   for (const [order, entry] of groundTruth.byOrder) {
     if (!matchedOrders.has(order)) {
-      warnings.push(
-        `commentary: Hebrew ground-truth ${entry.anchorId} (order ${order}) has no matching KabbalahMedia paragraph — skipped`,
-      );
+      warnings.push({
+        kind: "orphan-he-commentary-item",
+        message: `commentary: Hebrew ground-truth ${entry.anchorId} (order ${order}) has no matching KabbalahMedia paragraph — skipped`,
+      });
     }
   }
 

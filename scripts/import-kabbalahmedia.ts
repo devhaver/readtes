@@ -59,8 +59,10 @@ import { parseDocBlocks } from "./lib/km-doc-blocks.ts";
 import { buildKmChapterGroundTruth } from "./lib/km-ground-truth.ts";
 import {
   bcp47ForKmLanguage,
+  KM_EXPECTED_LANGUAGES,
   kmVersionId,
   kmVersionTitle,
+  missingKmLanguages,
 } from "./lib/km-language.ts";
 import {
   buildKmCommentaryItems,
@@ -276,6 +278,26 @@ export const main = async (argv: string[]): Promise<void> => {
       (f) => f.mimetype === DOCX_MIMETYPE && f.language !== "he",
     );
 
+    // A KabbalahMedia language genuinely missing a docx for this chapter
+    // (verified against the live API, e.g. `pt`) must still show up in the
+    // coverage report as checked-and-absent, not silently disappear.
+    for (const missing of missingKmLanguages(
+      KM_EXPECTED_LANGUAGES,
+      docFiles.map((f) => f.language),
+    )) {
+      const acc = languages.get(missing) ?? createLanguageAccumulator(missing);
+      languages.set(missing, acc);
+      acc.chapters.push({
+        chapterId,
+        status: "no-file-for-language",
+        sourceSegments: 0,
+        commentaryItems: 0,
+        sourceItemsSkipped: 0,
+        commentaryParagraphsSkipped: 0,
+        unmatchedNumerals: 0,
+      });
+    }
+
     for (const file of docFiles) {
       const acc =
         languages.get(file.language) ??
@@ -312,9 +334,11 @@ export const main = async (argv: string[]): Promise<void> => {
       );
 
       acc.warnings.push(
-        ...sourceResult.warnings.map((w) => `${chapterId} source: ${w}`),
+        ...sourceResult.warnings.map(
+          (w) => `${chapterId} source: ${w.message}`,
+        ),
         ...commentaryResult.warnings.map(
-          (w) => `${chapterId} commentary: ${w}`,
+          (w) => `${chapterId} commentary: ${w.message}`,
         ),
       );
       acc.chapters.push({
@@ -329,7 +353,7 @@ export const main = async (argv: string[]): Promise<void> => {
         unmatchedNumerals: [
           ...sourceResult.warnings,
           ...commentaryResult.warnings,
-        ].filter((w) => w.includes("no matching anchor")).length,
+        ].filter((w) => w.kind === "unmatched-marker").length,
       });
 
       if (sourceResult.segments.length > 0) {

@@ -18,8 +18,10 @@ import {
 import { buildKmChapterGroundTruth } from "../../scripts/lib/km-ground-truth.ts";
 import {
   bcp47ForKmLanguage,
+  KM_EXPECTED_LANGUAGES,
   kmVersionId,
   kmVersionTitle,
+  missingKmLanguages,
 } from "../../scripts/lib/km-language.ts";
 import {
   buildKmCommentaryItems,
@@ -395,7 +397,11 @@ describe("buildKmSourceSegments", () => {
       },
     ]);
     expect(warnings).toEqual([
-      "source: Hebrew ground-truth segment n=2 has no matching KabbalahMedia item — skipped",
+      {
+        kind: "orphan-he-source-segment",
+        message:
+          "source: Hebrew ground-truth segment n=2 has no matching KabbalahMedia item — skipped",
+      },
     ]);
   });
 
@@ -408,11 +414,15 @@ describe("buildKmSourceSegments", () => {
 
     expect(segments).toEqual([]);
     expect(
-      warnings.some((w) => w.includes("n=99 not found in he source")),
+      warnings.some(
+        (w) =>
+          w.kind === "orphan-km-source-item" &&
+          w.message.includes("n=99 not found in he source"),
+      ),
     ).toBe(true);
   });
 
-  it("reports an unmatched marker numeral and still emits the segment with the marker left as text", () => {
+  it("reports an unmatched marker numeral (kind: unmatched-marker) and still emits the segment with the marker left as text", () => {
     const { segments, warnings } = buildKmSourceSegments(
       [{ n: 1, html: "Text with a stray marker (999)." }],
       heSourceFixture,
@@ -421,7 +431,12 @@ describe("buildKmSourceSegments", () => {
 
     expect(segments[0]?.html).toBe("Text with a stray marker (999).");
     expect(segments[0]?.anchors).toEqual([]);
-    expect(warnings.some((w) => w.includes('marker "(999)"'))).toBe(true);
+    expect(
+      warnings.some(
+        (w) =>
+          w.kind === "unmatched-marker" && w.message.includes('marker "(999)"'),
+      ),
+    ).toBe(true);
   });
 });
 
@@ -458,21 +473,32 @@ describe("buildKmCommentaryItems", () => {
       },
     ]);
     expect(
-      warnings.some((w) => w.includes("op-12") && w.includes("skipped")),
+      warnings.some(
+        (w) =>
+          w.kind === "orphan-he-commentary-item" &&
+          w.message.includes("op-12") &&
+          w.message.includes("skipped"),
+      ),
     ).toBe(true);
   });
 
-  it("reports (and skips) a KM paragraph whose numeral has no Hebrew ground-truth match", () => {
+  it("reports (and skips) a KM paragraph whose numeral has no Hebrew ground-truth match (kind: orphan-km-commentary-paragraph)", () => {
     const { items, warnings } = buildKmCommentaryItems(
       [{ numeral: 999, html: "An orphan paragraph.", targetSeif: 1 }],
       groundTruth,
     );
 
     expect(items).toEqual([]);
-    expect(warnings.some((w) => w.includes('"(999)"'))).toBe(true);
+    expect(
+      warnings.some(
+        (w) =>
+          w.kind === "orphan-km-commentary-paragraph" &&
+          w.message.includes('"(999)"'),
+      ),
+    ).toBe(true);
   });
 
-  it("trusts the Hebrew ground truth's targetSeif over KM's placement, but still reports the mismatch", () => {
+  it("trusts the Hebrew ground truth's targetSeif over KM's placement, but still reports the mismatch (kind: target-seif-mismatch)", () => {
     const { items, warnings } = buildKmCommentaryItems(
       [{ numeral: 1, html: "Explanation one.", targetSeif: 5 }],
       groundTruth,
@@ -480,8 +506,38 @@ describe("buildKmCommentaryItems", () => {
 
     expect(items[0]?.targetSeif).toBe(1);
     expect(
-      warnings.some((w) => w.includes("trusting the Hebrew ground truth")),
+      warnings.some(
+        (w) =>
+          w.kind === "target-seif-mismatch" &&
+          w.message.includes("trusting the Hebrew ground truth"),
+      ),
     ).toBe(true);
+  });
+
+  it("distinguishes an unmatched-marker warning from an orphan-paragraph warning (regression: no substring conflation)", () => {
+    const { warnings } = buildKmCommentaryItems(
+      [
+        // Matches ground truth (order 1), but its own text has an unrelated stray marker.
+        {
+          numeral: 1,
+          html: "Explanation with a stray marker (999).",
+          targetSeif: 1,
+        },
+        // Does not match any ground truth at all — an orphan paragraph, not a marker issue.
+        { numeral: 999, html: "An orphan paragraph.", targetSeif: 1 },
+      ],
+      groundTruth,
+    );
+
+    const unmatchedMarkerWarnings = warnings.filter(
+      (w) => w.kind === "unmatched-marker",
+    );
+    const orphanParagraphWarnings = warnings.filter(
+      (w) => w.kind === "orphan-km-commentary-paragraph",
+    );
+
+    expect(unmatchedMarkerWarnings).toHaveLength(1);
+    expect(orphanParagraphWarnings).toHaveLength(1);
   });
 });
 
@@ -507,6 +563,31 @@ describe("km-language", () => {
   it("titles English without a language suffix, and other languages with their native name", () => {
     expect(kmVersionTitle("en")).toBe("Bnei Baruch (KabbalahMedia)");
     expect(kmVersionTitle("ru")).toBe("Bnei Baruch (KabbalahMedia) — Русский");
+  });
+});
+
+describe("missingKmLanguages", () => {
+  it("returns the expected languages absent from what's present, in expected order", () => {
+    expect(
+      missingKmLanguages(
+        ["en", "ru", "tr", "de", "es", "ua", "pt"],
+        ["en", "ru", "de", "es", "ua"],
+      ),
+    ).toEqual(["tr", "pt"]);
+  });
+
+  it("returns an empty array when nothing expected is missing", () => {
+    expect(missingKmLanguages(["en", "ru"], ["ru", "en"])).toEqual([]);
+  });
+
+  it("reconciles KM_EXPECTED_LANGUAGES against a real content_units file list — pt is genuinely absent", () => {
+    // Shape verified against the live KabbalahMedia API for both chapter 1
+    // and chapter 2's content_units: 6 non-Hebrew docx languages, no `pt`.
+    const presentFileLanguages = ["tr", "ru", "de", "es", "ua", "en"];
+
+    expect(
+      missingKmLanguages(KM_EXPECTED_LANGUAGES, presentFileLanguages),
+    ).toEqual(["pt"]);
   });
 });
 
@@ -541,6 +622,43 @@ describe("buildKmCoverageSection", () => {
     expect(section).toContain("1/1");
     expect(section).toContain("5");
     expect(section).toContain("22");
+  });
+
+  it("reports a checked-and-absent language (e.g. pt) explicitly, not silently", () => {
+    const languages: KmLanguageOutcome[] = [
+      {
+        versionId: "pt-bb",
+        kmLanguage: "pt",
+        title: "Bnei Baruch (KabbalahMedia) — Português",
+        chapters: [
+          {
+            chapterId: "part-01/chapter-01",
+            status: "no-file-for-language",
+            sourceSegments: 0,
+            commentaryItems: 0,
+            sourceItemsSkipped: 0,
+            commentaryParagraphsSkipped: 0,
+            unmatchedNumerals: 0,
+          },
+          {
+            chapterId: "part-01/chapter-02",
+            status: "no-file-for-language",
+            sourceSegments: 0,
+            commentaryItems: 0,
+            sourceItemsSkipped: 0,
+            commentaryParagraphsSkipped: 0,
+            unmatchedNumerals: 0,
+          },
+        ],
+        warnings: [],
+      },
+    ];
+
+    const section = buildKmCoverageSection(languages);
+    expect(section).toContain("pt-bb");
+    expect(section).toContain("0/2");
+    expect(section).toContain("no docx file for this language");
+    expect(section).not.toContain("document structure not yet supported");
   });
 });
 
