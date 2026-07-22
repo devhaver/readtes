@@ -39,6 +39,20 @@ const editions = computed(() =>
       {{ t("about.intro") }}
     </p>
 
+    <figure class="mt-10 sm:float-end sm:ms-8 sm:mt-2 sm:w-56">
+      <img
+        src="/images/baal-hasulam.webp"
+        :alt="t('about.portraitAlt')"
+        width="720"
+        height="900"
+        class="w-full rounded-card border border-(--border)"
+        loading="lazy"
+      />
+      <figcaption class="mt-2 text-center text-sm text-(--text-muted)">
+        {{ t("about.portraitCaption") }}
+      </figcaption>
+    </figure>
+
     <section class="mt-12">
       <h2 class="font-display text-2xl text-(--text-primary)">
         {{ t("about.readingModelTitle") }}
