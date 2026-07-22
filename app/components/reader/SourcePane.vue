@@ -4,15 +4,26 @@
 // `app/utils/anchors.ts`) are caught via `useAnchorActivation`'s single
 // delegated listener on the scroll container — see that composable for why
 // it's bound imperatively rather than a template `@click`.
+//
+// `useSeifTapActivation` (T9) is a second, independent delegated listener
+// on the same container: tapping a segment's own paragraph (not one of its
+// anchors) emits `open-seif-commentary`, which the reader page only acts on
+// in mobile panes swipe mode (opening `CommentarySheet`) — see that
+// composable for why the two listeners don't double-fire on an anchor tap.
 import type { SourceSegment } from "~~/shared/types/content";
 
 defineProps<{ segments: SourceSegment[] }>();
+
+const emit = defineEmits<{ "open-seif-commentary": [seifN: number] }>();
 
 const { t } = useI18n();
 const { activateAnchor } = useReaderState();
 const containerRef = useReaderPaneContainer();
 useHighlightedAnchor("source", containerRef);
 useAnchorActivation(containerRef, (id) => activateAnchor(id, "source"));
+useSeifTapActivation(containerRef, (seifN) =>
+  emit("open-seif-commentary", seifN),
+);
 </script>
 
 <template>
@@ -24,7 +35,8 @@ useAnchorActivation(containerRef, (id) => activateAnchor(id, "source"));
       v-for="segment in segments"
       :id="`seif-${segment.n}`"
       :key="segment.n"
-      class="reader-anchor-target scroll-mt-4 text-lg leading-relaxed text-(--text-primary)"
+      :data-seif="segment.n"
+      class="reader-anchor-target scroll-mt-4 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
     >
       <ReaderSourceSegment :segment="segment" />
     </li>

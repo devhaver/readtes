@@ -36,7 +36,7 @@ const groups = computed(() => groupCommentaryBySection(props.items));
           v-for="item in group.items"
           :id="item.anchorId"
           :key="item.anchorId"
-          class="reader-anchor-target scroll-mt-4 rounded-card p-1 leading-relaxed text-(--text-primary)"
+          class="reader-anchor-target scroll-mt-4 rounded-card p-1 text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
         >
           <button
             type="button"

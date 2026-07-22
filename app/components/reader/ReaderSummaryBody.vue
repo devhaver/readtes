@@ -39,10 +39,15 @@ const onMiniTocEntryClick = (anchorId: string) => {
       :key="item.id"
       class="leading-relaxed text-(--text-primary)"
     >
-      <h3 class="font-display text-base text-(--text-primary)">
+      <h3
+        class="font-display text-[length:calc(1rem*var(--reading-scale))] text-(--text-primary)"
+      >
         {{ item.heading }}
       </h3>
-      <div class="mt-1 text-sm text-(--text-muted)" v-html="item.html" />
+      <div
+        class="mt-1 text-[length:calc(0.875rem*var(--reading-scale))] text-(--text-muted)"
+        v-html="item.html"
+      />
     </article>
   </div>
 

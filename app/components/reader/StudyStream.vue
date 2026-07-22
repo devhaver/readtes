@@ -164,7 +164,7 @@ const goToFullCommentary = async () => {
         v-for="segment in sourceSegments"
         :id="`seif-${segment.n}`"
         :key="segment.n"
-        class="reader-anchor-target scroll-mt-24 text-lg leading-relaxed text-(--text-primary)"
+        class="reader-anchor-target scroll-mt-24 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
         <ReaderSourceSegment :segment="segment" />
 

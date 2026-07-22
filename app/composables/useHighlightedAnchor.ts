@@ -9,8 +9,18 @@
  * (the inline `<a class="tes-anchor">` marker); commentary items and the
  * summary mini-toc's `seif-N` source targets use a plain `id="…"` on the
  * item/segment element itself.
+ *
+ * Finding (and highlighting) the target here is also the single source of
+ * truth for `activePane` in mobile panes swipe mode (T9): whichever pane
+ * actually resolves the current anchor calls `setActivePane(paneId)`, so a
+ * source-origin activation correctly lands the swipe track on the
+ * *commentary* slide (where the highlight lands), not back on the source
+ * slide it started from — see `setActivePaneState`'s doc comment. This is a
+ * no-op call in desktop panes mode and study mode (neither reads
+ * `activePane`), so it costs nothing there.
  */
 import type { Ref } from "vue";
+import { prefersReducedMotion } from "~/utils/motion";
 import type { PaneId } from "~/utils/readerAnchorState";
 
 const findAnchorElement = (
@@ -27,10 +37,6 @@ const findAnchorElement = (
     container.querySelector<HTMLElement>(`#${escaped}`)
   );
 };
-
-const prefersReducedMotion = (): boolean =>
-  typeof window !== "undefined" &&
-  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /**
  * Flashes `.is-highlighted` on `el`, then fades it back out over ~2s via
@@ -61,7 +67,8 @@ export const useHighlightedAnchor = (
   paneId: PaneId,
   containerRef: Ref<HTMLElement | null | undefined>,
 ): void => {
-  const { activeAnchor, anchorOrigin, activationSeq } = useReaderState();
+  const { activeAnchor, anchorOrigin, activationSeq, setActivePane } =
+    useReaderState();
 
   // Watches `activationSeq` alongside the anchor id/origin so the highlight
   // re-fires on events that don't change those values themselves: re-
@@ -82,6 +89,7 @@ export const useHighlightedAnchor = (
       const target = findAnchorElement(container, anchorId);
       if (!target) return;
 
+      setActivePane(paneId);
       target.scrollIntoView({
         block: "center",
         behavior: prefersReducedMotion() ? "auto" : "smooth",

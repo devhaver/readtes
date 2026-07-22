@@ -61,7 +61,42 @@
       "readFullCommentary": "קרא את הפירוש המלא",
       "readFullCommentaryHint": "רק פירוש שפתחת מוצג כאן — עיין בכל הפריטים לפרק זה בתצוגת שלוש העמודות המלאה."
     },
-    "progressLabel": "התקדמות בקריאה"
+    "progressLabel": "התקדמות בקריאה",
+    "toolbar": {
+      "preferencesButton": "העדפות קריאה"
+    },
+    "mobilePane": {
+      "label": "חלונית הקורא",
+      "chapter": "פרק",
+      "source": "מקור",
+      "commentary": "פירוש"
+    },
+    "commentarySheet": {
+      "title": "פירוש על סעיף {n}",
+      "openInCommentary": "פתח בפירוש",
+      "empty": "אין פירוש לסעיף זה במהדורה זו.",
+      "close": "סגור"
+    },
+    "prefs": {
+      "title": "העדפות קריאה",
+      "close": "סגור",
+      "fontSize": {
+        "label": "גודל טקסט",
+        "step1": "קטן",
+        "step2": "ברירת מחדל",
+        "step3": "גדול",
+        "step4": "גדול מאוד"
+      },
+      "theme": {
+        "label": "ערכת נושא",
+        "light": "בהיר",
+        "dark": "כהה",
+        "system": "לפי המערכת"
+      },
+      "language": {
+        "label": "שפה"
+      }
+    }
   },
   "home": {
     "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",

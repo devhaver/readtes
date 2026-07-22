@@ -9,9 +9,14 @@
  * `activeAnchor`/`anchorOrigin` and only reacts when it isn't the origin
  * pane.
  *
- * `activePane` exists (even though this task is desktop-first, all three
- * panes always visible) so a later single-pane mobile mode (T8) can plug
- * into the same state without a desktop-only assumption baked in here.
+ * `activePane` is wired by T9's mobile panes swipe mode (`MobileSwipePanes`/
+ * `MobilePanePill`): tab/pill taps and the swipe track's own scroll-sync
+ * call `setActivePane` directly, and `useHighlightedAnchor` also calls it
+ * whenever it actually finds and highlights the current anchor in its own
+ * pane — see `setActivePaneState`'s doc comment for why that, not
+ * `activateAnchorState`'s `activePane: origin`, is what makes a
+ * source-origin activation land on the *commentary* slide. Desktop panes
+ * and study mode never read it.
  */
 import type { InjectionKey, Ref } from "vue";
 import {
@@ -19,6 +24,7 @@ import {
   clearAnchorState,
   initialReaderAnchorState,
   reactivateAnchorState,
+  setActivePaneState,
   toggleInlineAnchorSet,
   type PaneId,
 } from "~/utils/readerAnchorState";
@@ -39,6 +45,12 @@ export interface ReaderState {
   /** Re-fires the highlight/scroll for the *current* anchor without changing it. */
   reactivateAnchor: () => void;
   clearAnchor: () => void;
+  /**
+   * Sets `activePane` directly (mobile swipe track sync + the "found it"
+   * corrective call from `useHighlightedAnchor` — see
+   * `setActivePaneState`). Desktop panes and study mode never call this.
+   */
+  setActivePane: (pane: PaneId) => void;
   /**
    * Study mode's set of anchor ids whose commentary is currently unfolded
    * inline (`InlineCommentary`/`StudyStream`) — panes mode never reads
@@ -105,6 +117,19 @@ const createReaderState = (): ReaderState => {
     );
   };
 
+  const setActivePane = (pane: PaneId) => {
+    const next = setActivePaneState(
+      {
+        activeAnchor: activeAnchor.value,
+        anchorOrigin: anchorOrigin.value,
+        activePane: activePane.value,
+        activationSeq: activationSeq.value,
+      },
+      pane,
+    );
+    activePane.value = next.activePane;
+  };
+
   return {
     activeAnchor,
     anchorOrigin,
@@ -113,6 +138,7 @@ const createReaderState = (): ReaderState => {
     activateAnchor,
     reactivateAnchor,
     clearAnchor,
+    setActivePane,
     expandedAnchors,
     toggleInline,
   };

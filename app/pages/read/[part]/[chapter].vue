@@ -138,6 +138,23 @@ const switchCommentaryToHebrew = () => {
   reactivateAnchor();
 };
 
+// `CommentarySheet` (T9): tapping a source paragraph (not one of its own
+// anchors — `SourcePane`'s `useSeifTapActivation`) opens a sheet listing
+// that seif's commentary items. `useCommentarySheet` owns the open/closed
+// state (and its own "only in mobile panes swipe mode" gate) — shared so
+// `MobilePanePill` can hide itself while the sheet is up.
+const {
+  openSeif: commentarySheetSeif,
+  open: openCommentarySheet,
+  close: closeCommentarySheet,
+} = useCommentarySheet();
+
+const commentarySheetItems = computed(() =>
+  commentarySheetSeif.value === null
+    ? []
+    : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
+);
+
 useSeoMeta({
   title: () => `${chapterTitle.value} · ${t("common.siteName")}`,
 });
@@ -177,7 +194,10 @@ useSeoMeta({
           :meta="sourceMeta"
           @update:model-value="(id) => readerVersions.setVersion('source', id)"
         >
-          <ReaderSourcePane :segments="sourceSegments" />
+          <ReaderSourcePane
+            :segments="sourceSegments"
+            @open-seif-commentary="openCommentarySheet"
+          />
         </ReaderPane>
       </template>
 
@@ -235,5 +255,12 @@ useSeoMeta({
         "
       />
     </template>
+
+    <ReaderCommentarySheet
+      :open="commentarySheetSeif !== null"
+      :seif="commentarySheetSeif"
+      :items="commentarySheetItems"
+      @close="closeCommentarySheet"
+    />
   </div>
 </template>
