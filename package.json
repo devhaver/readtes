@@ -16,6 +16,7 @@
     "test": "vitest run",
     "typecheck": "nuxi typecheck && vue-tsc -p tsconfig.scripts.json --noEmit",
     "validate:content": "tsx scripts/validate-content.ts",
+    "emit:toc-splits": "tsx scripts/emit-toc-splits.ts",
     "import:sefaria": "tsx scripts/import-sefaria.ts",
     "import:kabbalahmedia": "tsx scripts/import-kabbalahmedia.ts"
   },

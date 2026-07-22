@@ -1,0 +1,571 @@
+{
+  "volumes": [
+    {
+      "id": "volume-01",
+      "number": 1,
+      "title": {
+        "en": "Volume 1",
+        "he": "כרך 1"
+      },
+      "parts": [
+        {
+          "id": "part-01",
+          "number": 1,
+          "title": {
+            "en": "Section I",
+            "he": "חלק א׳: צמצום וקו"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section I",
+          "chapterCount": 119,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-01/chapter-01",
+          "lastChapterId": "part-01/answers-topics-51",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 51",
+            "he": "לוח התשובות לעניינים נ״א"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "partial"
+          }
+        },
+        {
+          "id": "part-02",
+          "number": 2,
+          "title": {
+            "en": "Section II",
+            "he": "חלק ב׳: עגולים ויושר"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section II",
+          "chapterCount": 186,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-02/chapter-01",
+          "lastChapterId": "part-02/answers-topics-102",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 102",
+            "he": "לוח התשובות לעניינים ק״ב"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-03",
+          "number": 3,
+          "title": {
+            "en": "Section III",
+            "he": "חלק ג׳: אור ישר ואור חוזר"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section III",
+          "chapterCount": 268,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-03/chapter-01",
+          "lastChapterId": "part-03/answers-topics-135",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 135",
+            "he": "לוח התשובות לעניינים קל״ה"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "volume-02",
+      "number": 2,
+      "title": {
+        "en": "Volume 2",
+        "he": "כרך 2"
+      },
+      "parts": [
+        {
+          "id": "part-04",
+          "number": 4,
+          "title": {
+            "en": "Section IV",
+            "he": "חלק ד׳: עשר הספירות של עקודים"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section IV",
+          "chapterCount": 137,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-04/chapter-01",
+          "lastChapterId": "part-04/answers-topics-57",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 57",
+            "he": "לוח התשובות לעניינים נ״ז"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-05",
+          "number": 5,
+          "title": {
+            "en": "Section V",
+            "he": "חלק ה׳: ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section V",
+          "chapterCount": 266,
+          "kindsPresent": [
+            "chapter",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-05/chapter-01",
+          "lastChapterId": "part-05/answers-topics-160",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 160",
+            "he": "לוח התשובות לעניינים ק״ס"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-06",
+          "number": 6,
+          "title": {
+            "en": "Section VI",
+            "he": "חלק ו׳: עשר הספירות של עולם הנקודים"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section VI",
+          "chapterCount": 195,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-06/chapter-01",
+          "lastChapterId": "part-06/answers-topics-107",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 107",
+            "he": "לוח התשובות לעניינים ק״ז"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "volume-03",
+      "number": 3,
+      "title": {
+        "en": "Volume 3",
+        "he": "כרך 3"
+      },
+      "parts": [
+        {
+          "id": "part-07",
+          "number": 7,
+          "title": {
+            "en": "Section VII",
+            "he": "חלק ז׳: עשר הספירות דז' מלכין קדמאין דמיתו"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section VII",
+          "chapterCount": 231,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-07/chapter-01",
+          "lastChapterId": "part-07/answers-topics-64",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 64",
+            "he": "לוח התשובות לעניינים ס״ד"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-08",
+          "number": 8,
+          "title": {
+            "en": "Section VIII",
+            "he": "חלק ח׳: עשר הספירות של עולם האצילות"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
+          "chapterCount": 245,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-08/chapter-01",
+          "lastChapterId": "part-08/answers-topics-97",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 97",
+            "he": "לוח התשובות לעניינים צ״ז"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "volume-04",
+      "number": 4,
+      "title": {
+        "en": "Volume 4",
+        "he": "כרך 4"
+      },
+      "parts": [
+        {
+          "id": "part-09",
+          "number": 9,
+          "title": {
+            "en": "Section IX",
+            "he": "חלק ט׳: זווגי הספירות"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section IX",
+          "chapterCount": 295,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-09/chapter-01",
+          "lastChapterId": "part-09/answers-topics-78",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 78",
+            "he": "לוח התשובות לעניינים ע״ח"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-10",
+          "number": 10,
+          "title": {
+            "en": "Section X",
+            "he": "חלק י׳: עיבור ראשון דז\"א"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section X",
+          "chapterCount": 344,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-10/chapter-01",
+          "lastChapterId": "part-10/answers-topics-95",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 95",
+            "he": "לוח התשובות לעניינים צ״ה"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "volume-05",
+      "number": 5,
+      "title": {
+        "en": "Volume 5",
+        "he": "כרך 5"
+      },
+      "parts": [
+        {
+          "id": "part-11",
+          "number": 11,
+          "title": {
+            "en": "Section XI",
+            "he": "חלק י״א: תיקון אורות ניצוצין וכלים בעובר ועיבור ב'"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section XI",
+          "chapterCount": 346,
+          "kindsPresent": [
+            "chapter",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-11/chapter-01",
+          "lastChapterId": "part-11/answers-topics-113",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 113",
+            "he": "לוח התשובות לעניינים קי״ג"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-12",
+          "number": 12,
+          "title": {
+            "en": "Section XII",
+            "he": "חלק י״ב: לידה ויניקה של הז\"א"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section XII",
+          "chapterCount": 555,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-12/chapter-01",
+          "lastChapterId": "part-12/answers-topics-110",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 110",
+            "he": "לוח התשובות לעניינים ק״י"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-13",
+          "number": 13,
+          "title": {
+            "en": "Section XIII",
+            "he": "חלק י״ג: תיקוני רישא ודיקנא דא\"א"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
+          "chapterCount": 380,
+          "kindsPresent": [
+            "chapter",
+            "inner-observation",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-13/chapter-01",
+          "lastChapterId": "part-13/answers-topics-34",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 34",
+            "he": "לוח התשובות לעניינים ל״ד"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "volume-06",
+      "number": 6,
+      "title": {
+        "en": "Volume 6",
+        "he": "כרך 6"
+      },
+      "parts": [
+        {
+          "id": "part-14",
+          "number": 14,
+          "title": {
+            "en": "Section XIV",
+            "he": "חלק י״ד: מוחין דגדלות של זעיר אנפין"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
+          "chapterCount": 479,
+          "kindsPresent": [
+            "chapter",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-14/chapter-01",
+          "lastChapterId": "part-14/answers-topics-105",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 105",
+            "he": "לוח התשובות לעניינים ק״ה"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        },
+        {
+          "id": "part-15",
+          "number": 15,
+          "title": {
+            "en": "Section XV",
+            "he": "חלק ט״ו: בנין הנוקבא דז\"א"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section XV",
+          "chapterCount": 529,
+          "kindsPresent": [
+            "chapter",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-15/chapter-01",
+          "lastChapterId": "part-15/answers-topics-168",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 168",
+            "he": "לוח התשובות לעניינים קס״ח"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "partial"
+          }
+        },
+        {
+          "id": "part-16",
+          "number": 16,
+          "title": {
+            "en": "Section XVI",
+            "he": "חלק ט״ז: ג' העולמות בריאה יצירה ועשיה"
+          },
+          "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
+          "chapterCount": 573,
+          "kindsPresent": [
+            "chapter",
+            "questions-terminology",
+            "questions-topics",
+            "answers-terminology",
+            "answers-topics"
+          ],
+          "firstChapterId": "part-16/chapter-01",
+          "lastChapterId": "part-16/answers-topics-46",
+          "firstChapterTitle": {
+            "en": "Chapter 1",
+            "he": "פרק א׳"
+          },
+          "lastChapterTitle": {
+            "en": "List of Answers on Topics 46",
+            "he": "לוח התשובות לעניינים מ״ו"
+          },
+          "availableSummary": {
+            "he": "full",
+            "en": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

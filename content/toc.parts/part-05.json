@@ -1,0 +1,5074 @@
+{
+  "part": {
+    "id": "part-05",
+    "number": 5,
+    "title": {
+      "en": "Section V",
+      "he": "חלק ה׳: ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי"
+    }
+  },
+  "volume": {
+    "id": "volume-02",
+    "number": 2,
+    "title": {
+      "en": "Volume 2",
+      "he": "כרך 2"
+    }
+  },
+  "chapters": [
+    {
+      "id": "part-05/chapter-01",
+      "kind": "chapter",
+      "number": 1,
+      "title": {
+        "en": "Chapter 1",
+        "he": "פרק א׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-02",
+      "kind": "chapter",
+      "number": 2,
+      "title": {
+        "en": "Chapter 2",
+        "he": "פרק ב׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-03",
+      "kind": "chapter",
+      "number": 3,
+      "title": {
+        "en": "Chapter 3",
+        "he": "פרק ג׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-04",
+      "kind": "chapter",
+      "number": 4,
+      "title": {
+        "en": "Chapter 4",
+        "he": "פרק ד׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-05",
+      "kind": "chapter",
+      "number": 5,
+      "title": {
+        "en": "Chapter 5",
+        "he": "פרק ה׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-06",
+      "kind": "chapter",
+      "number": 6,
+      "title": {
+        "en": "Chapter 6",
+        "he": "פרק ו׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-07",
+      "kind": "chapter",
+      "number": 7,
+      "title": {
+        "en": "Chapter 7",
+        "he": "פרק ז׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-08",
+      "kind": "chapter",
+      "number": 8,
+      "title": {
+        "en": "Chapter 8",
+        "he": "פרק ח׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-09",
+      "kind": "chapter",
+      "number": 9,
+      "title": {
+        "en": "Chapter 9",
+        "he": "פרק ט׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-10",
+      "kind": "chapter",
+      "number": 10,
+      "title": {
+        "en": "Chapter 10",
+        "he": "פרק י׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-11",
+      "kind": "chapter",
+      "number": 11,
+      "title": {
+        "en": "Chapter 11",
+        "he": "פרק י״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-12",
+      "kind": "chapter",
+      "number": 12,
+      "title": {
+        "en": "Chapter 12",
+        "he": "פרק י״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-13",
+      "kind": "chapter",
+      "number": 13,
+      "title": {
+        "en": "Chapter 13",
+        "he": "פרק י״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-14",
+      "kind": "chapter",
+      "number": 14,
+      "title": {
+        "en": "Chapter 14",
+        "he": "פרק י״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-15",
+      "kind": "chapter",
+      "number": 15,
+      "title": {
+        "en": "Chapter 15",
+        "he": "פרק ט״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-16",
+      "kind": "chapter",
+      "number": 16,
+      "title": {
+        "en": "Chapter 16",
+        "he": "פרק ט״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-17",
+      "kind": "chapter",
+      "number": 17,
+      "title": {
+        "en": "Chapter 17",
+        "he": "פרק י״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-18",
+      "kind": "chapter",
+      "number": 18,
+      "title": {
+        "en": "Chapter 18",
+        "he": "פרק י״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-19",
+      "kind": "chapter",
+      "number": 19,
+      "title": {
+        "en": "Chapter 19",
+        "he": "פרק י״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-20",
+      "kind": "chapter",
+      "number": 20,
+      "title": {
+        "en": "Chapter 20",
+        "he": "פרק כ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-21",
+      "kind": "chapter",
+      "number": 21,
+      "title": {
+        "en": "Chapter 21",
+        "he": "פרק כ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-22",
+      "kind": "chapter",
+      "number": 22,
+      "title": {
+        "en": "Chapter 22",
+        "he": "פרק כ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-23",
+      "kind": "chapter",
+      "number": 23,
+      "title": {
+        "en": "Chapter 23",
+        "he": "פרק כ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-24",
+      "kind": "chapter",
+      "number": 24,
+      "title": {
+        "en": "Chapter 24",
+        "he": "פרק כ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-25",
+      "kind": "chapter",
+      "number": 25,
+      "title": {
+        "en": "Chapter 25",
+        "he": "פרק כ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-26",
+      "kind": "chapter",
+      "number": 26,
+      "title": {
+        "en": "Chapter 26",
+        "he": "פרק כ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-27",
+      "kind": "chapter",
+      "number": 27,
+      "title": {
+        "en": "Chapter 27",
+        "he": "פרק כ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-28",
+      "kind": "chapter",
+      "number": 28,
+      "title": {
+        "en": "Chapter 28",
+        "he": "פרק כ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-29",
+      "kind": "chapter",
+      "number": 29,
+      "title": {
+        "en": "Chapter 29",
+        "he": "פרק כ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-30",
+      "kind": "chapter",
+      "number": 30,
+      "title": {
+        "en": "Chapter 30",
+        "he": "פרק ל׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-31",
+      "kind": "chapter",
+      "number": 31,
+      "title": {
+        "en": "Chapter 31",
+        "he": "פרק ל״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-32",
+      "kind": "chapter",
+      "number": 32,
+      "title": {
+        "en": "Chapter 32",
+        "he": "פרק ל״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-33",
+      "kind": "chapter",
+      "number": 33,
+      "title": {
+        "en": "Chapter 33",
+        "he": "פרק ל״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-34",
+      "kind": "chapter",
+      "number": 34,
+      "title": {
+        "en": "Chapter 34",
+        "he": "פרק ל״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-35",
+      "kind": "chapter",
+      "number": 35,
+      "title": {
+        "en": "Chapter 35",
+        "he": "פרק ל״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-36",
+      "kind": "chapter",
+      "number": 36,
+      "title": {
+        "en": "Chapter 36",
+        "he": "פרק ל״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-37",
+      "kind": "chapter",
+      "number": 37,
+      "title": {
+        "en": "Chapter 37",
+        "he": "פרק ל״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-38",
+      "kind": "chapter",
+      "number": 38,
+      "title": {
+        "en": "Chapter 38",
+        "he": "פרק ל״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-39",
+      "kind": "chapter",
+      "number": 39,
+      "title": {
+        "en": "Chapter 39",
+        "he": "פרק ל״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-40",
+      "kind": "chapter",
+      "number": 40,
+      "title": {
+        "en": "Chapter 40",
+        "he": "פרק מ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-41",
+      "kind": "chapter",
+      "number": 41,
+      "title": {
+        "en": "Chapter 41",
+        "he": "פרק מ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-42",
+      "kind": "chapter",
+      "number": 42,
+      "title": {
+        "en": "Chapter 42",
+        "he": "פרק מ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-43",
+      "kind": "chapter",
+      "number": 43,
+      "title": {
+        "en": "Chapter 43",
+        "he": "פרק מ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-44",
+      "kind": "chapter",
+      "number": 44,
+      "title": {
+        "en": "Chapter 44",
+        "he": "פרק מ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-45",
+      "kind": "chapter",
+      "number": 45,
+      "title": {
+        "en": "Chapter 45",
+        "he": "פרק מ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-46",
+      "kind": "chapter",
+      "number": 46,
+      "title": {
+        "en": "Chapter 46",
+        "he": "פרק מ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-47",
+      "kind": "chapter",
+      "number": 47,
+      "title": {
+        "en": "Chapter 47",
+        "he": "פרק מ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-48",
+      "kind": "chapter",
+      "number": 48,
+      "title": {
+        "en": "Chapter 48",
+        "he": "פרק מ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-49",
+      "kind": "chapter",
+      "number": 49,
+      "title": {
+        "en": "Chapter 49",
+        "he": "פרק מ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-50",
+      "kind": "chapter",
+      "number": 50,
+      "title": {
+        "en": "Chapter 50",
+        "he": "פרק נ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-51",
+      "kind": "chapter",
+      "number": 51,
+      "title": {
+        "en": "Chapter 51",
+        "he": "פרק נ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-52",
+      "kind": "chapter",
+      "number": 52,
+      "title": {
+        "en": "Chapter 52",
+        "he": "פרק נ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-53",
+      "kind": "chapter",
+      "number": 53,
+      "title": {
+        "en": "Chapter 53",
+        "he": "פרק נ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-54",
+      "kind": "chapter",
+      "number": 54,
+      "title": {
+        "en": "Chapter 54",
+        "he": "פרק נ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-55",
+      "kind": "chapter",
+      "number": 55,
+      "title": {
+        "en": "Chapter 55",
+        "he": "פרק נ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-56",
+      "kind": "chapter",
+      "number": 56,
+      "title": {
+        "en": "Chapter 56",
+        "he": "פרק נ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-57",
+      "kind": "chapter",
+      "number": 57,
+      "title": {
+        "en": "Chapter 57",
+        "he": "פרק נ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-58",
+      "kind": "chapter",
+      "number": 58,
+      "title": {
+        "en": "Chapter 58",
+        "he": "פרק נ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-59",
+      "kind": "chapter",
+      "number": 59,
+      "title": {
+        "en": "Chapter 59",
+        "he": "פרק נ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-60",
+      "kind": "chapter",
+      "number": 60,
+      "title": {
+        "en": "Chapter 60",
+        "he": "פרק ס׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-61",
+      "kind": "chapter",
+      "number": 61,
+      "title": {
+        "en": "Chapter 61",
+        "he": "פרק ס״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/chapter-62",
+      "kind": "chapter",
+      "number": 62,
+      "title": {
+        "en": "Chapter 62",
+        "he": "פרק ס״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/questions-terminology-01",
+      "kind": "questions-terminology",
+      "number": 1,
+      "title": {
+        "en": "List of Questions on Terminology",
+        "he": "לוח השאלות לפירוש המלות"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/questions-topics-01",
+      "kind": "questions-topics",
+      "number": 1,
+      "title": {
+        "en": "List of Questions on Topics",
+        "he": "לוח השאלות לעניינים"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-01",
+      "kind": "answers-terminology",
+      "number": 1,
+      "title": {
+        "en": "List of Answers on Terminology 1",
+        "he": "לוח התשובות לפירוש המלות א׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-02",
+      "kind": "answers-terminology",
+      "number": 2,
+      "title": {
+        "en": "List of Answers on Terminology 2",
+        "he": "לוח התשובות לפירוש המלות ב׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-03",
+      "kind": "answers-terminology",
+      "number": 3,
+      "title": {
+        "en": "List of Answers on Terminology 3",
+        "he": "לוח התשובות לפירוש המלות ג׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-04",
+      "kind": "answers-terminology",
+      "number": 4,
+      "title": {
+        "en": "List of Answers on Terminology 4",
+        "he": "לוח התשובות לפירוש המלות ד׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-05",
+      "kind": "answers-terminology",
+      "number": 5,
+      "title": {
+        "en": "List of Answers on Terminology 5",
+        "he": "לוח התשובות לפירוש המלות ה׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-06",
+      "kind": "answers-terminology",
+      "number": 6,
+      "title": {
+        "en": "List of Answers on Terminology 6",
+        "he": "לוח התשובות לפירוש המלות ו׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-07",
+      "kind": "answers-terminology",
+      "number": 7,
+      "title": {
+        "en": "List of Answers on Terminology 7",
+        "he": "לוח התשובות לפירוש המלות ז׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-08",
+      "kind": "answers-terminology",
+      "number": 8,
+      "title": {
+        "en": "List of Answers on Terminology 8",
+        "he": "לוח התשובות לפירוש המלות ח׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-09",
+      "kind": "answers-terminology",
+      "number": 9,
+      "title": {
+        "en": "List of Answers on Terminology 9",
+        "he": "לוח התשובות לפירוש המלות ט׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-10",
+      "kind": "answers-terminology",
+      "number": 10,
+      "title": {
+        "en": "List of Answers on Terminology 10",
+        "he": "לוח התשובות לפירוש המלות י׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-11",
+      "kind": "answers-terminology",
+      "number": 11,
+      "title": {
+        "en": "List of Answers on Terminology 11",
+        "he": "לוח התשובות לפירוש המלות י״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-12",
+      "kind": "answers-terminology",
+      "number": 12,
+      "title": {
+        "en": "List of Answers on Terminology 12",
+        "he": "לוח התשובות לפירוש המלות י״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-13",
+      "kind": "answers-terminology",
+      "number": 13,
+      "title": {
+        "en": "List of Answers on Terminology 13",
+        "he": "לוח התשובות לפירוש המלות י״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-14",
+      "kind": "answers-terminology",
+      "number": 14,
+      "title": {
+        "en": "List of Answers on Terminology 14",
+        "he": "לוח התשובות לפירוש המלות י״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-15",
+      "kind": "answers-terminology",
+      "number": 15,
+      "title": {
+        "en": "List of Answers on Terminology 15",
+        "he": "לוח התשובות לפירוש המלות ט״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-16",
+      "kind": "answers-terminology",
+      "number": 16,
+      "title": {
+        "en": "List of Answers on Terminology 16",
+        "he": "לוח התשובות לפירוש המלות ט״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-17",
+      "kind": "answers-terminology",
+      "number": 17,
+      "title": {
+        "en": "List of Answers on Terminology 17",
+        "he": "לוח התשובות לפירוש המלות י״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-18",
+      "kind": "answers-terminology",
+      "number": 18,
+      "title": {
+        "en": "List of Answers on Terminology 18",
+        "he": "לוח התשובות לפירוש המלות י״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-19",
+      "kind": "answers-terminology",
+      "number": 19,
+      "title": {
+        "en": "List of Answers on Terminology 19",
+        "he": "לוח התשובות לפירוש המלות י״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-20",
+      "kind": "answers-terminology",
+      "number": 20,
+      "title": {
+        "en": "List of Answers on Terminology 20",
+        "he": "לוח התשובות לפירוש המלות כ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-21",
+      "kind": "answers-terminology",
+      "number": 21,
+      "title": {
+        "en": "List of Answers on Terminology 21",
+        "he": "לוח התשובות לפירוש המלות כ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-22",
+      "kind": "answers-terminology",
+      "number": 22,
+      "title": {
+        "en": "List of Answers on Terminology 22",
+        "he": "לוח התשובות לפירוש המלות כ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-23",
+      "kind": "answers-terminology",
+      "number": 23,
+      "title": {
+        "en": "List of Answers on Terminology 23",
+        "he": "לוח התשובות לפירוש המלות כ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-24",
+      "kind": "answers-terminology",
+      "number": 24,
+      "title": {
+        "en": "List of Answers on Terminology 24",
+        "he": "לוח התשובות לפירוש המלות כ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-25",
+      "kind": "answers-terminology",
+      "number": 25,
+      "title": {
+        "en": "List of Answers on Terminology 25",
+        "he": "לוח התשובות לפירוש המלות כ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-26",
+      "kind": "answers-terminology",
+      "number": 26,
+      "title": {
+        "en": "List of Answers on Terminology 26",
+        "he": "לוח התשובות לפירוש המלות כ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-27",
+      "kind": "answers-terminology",
+      "number": 27,
+      "title": {
+        "en": "List of Answers on Terminology 27",
+        "he": "לוח התשובות לפירוש המלות כ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-28",
+      "kind": "answers-terminology",
+      "number": 28,
+      "title": {
+        "en": "List of Answers on Terminology 28",
+        "he": "לוח התשובות לפירוש המלות כ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-29",
+      "kind": "answers-terminology",
+      "number": 29,
+      "title": {
+        "en": "List of Answers on Terminology 29",
+        "he": "לוח התשובות לפירוש המלות כ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-30",
+      "kind": "answers-terminology",
+      "number": 30,
+      "title": {
+        "en": "List of Answers on Terminology 30",
+        "he": "לוח התשובות לפירוש המלות ל׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-31",
+      "kind": "answers-terminology",
+      "number": 31,
+      "title": {
+        "en": "List of Answers on Terminology 31",
+        "he": "לוח התשובות לפירוש המלות ל״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-32",
+      "kind": "answers-terminology",
+      "number": 32,
+      "title": {
+        "en": "List of Answers on Terminology 32",
+        "he": "לוח התשובות לפירוש המלות ל״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-33",
+      "kind": "answers-terminology",
+      "number": 33,
+      "title": {
+        "en": "List of Answers on Terminology 33",
+        "he": "לוח התשובות לפירוש המלות ל״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-34",
+      "kind": "answers-terminology",
+      "number": 34,
+      "title": {
+        "en": "List of Answers on Terminology 34",
+        "he": "לוח התשובות לפירוש המלות ל״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-35",
+      "kind": "answers-terminology",
+      "number": 35,
+      "title": {
+        "en": "List of Answers on Terminology 35",
+        "he": "לוח התשובות לפירוש המלות ל״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-36",
+      "kind": "answers-terminology",
+      "number": 36,
+      "title": {
+        "en": "List of Answers on Terminology 36",
+        "he": "לוח התשובות לפירוש המלות ל״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-37",
+      "kind": "answers-terminology",
+      "number": 37,
+      "title": {
+        "en": "List of Answers on Terminology 37",
+        "he": "לוח התשובות לפירוש המלות ל״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-38",
+      "kind": "answers-terminology",
+      "number": 38,
+      "title": {
+        "en": "List of Answers on Terminology 38",
+        "he": "לוח התשובות לפירוש המלות ל״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-39",
+      "kind": "answers-terminology",
+      "number": 39,
+      "title": {
+        "en": "List of Answers on Terminology 39",
+        "he": "לוח התשובות לפירוש המלות ל״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-40",
+      "kind": "answers-terminology",
+      "number": 40,
+      "title": {
+        "en": "List of Answers on Terminology 40",
+        "he": "לוח התשובות לפירוש המלות מ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-41",
+      "kind": "answers-terminology",
+      "number": 41,
+      "title": {
+        "en": "List of Answers on Terminology 41",
+        "he": "לוח התשובות לפירוש המלות מ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-terminology-42",
+      "kind": "answers-terminology",
+      "number": 42,
+      "title": {
+        "en": "List of Answers on Terminology 42",
+        "he": "לוח התשובות לפירוש המלות מ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-01",
+      "kind": "answers-topics",
+      "number": 1,
+      "title": {
+        "en": "List of Answers on Topics 1",
+        "he": "לוח התשובות לעניינים א׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-02",
+      "kind": "answers-topics",
+      "number": 2,
+      "title": {
+        "en": "List of Answers on Topics 2",
+        "he": "לוח התשובות לעניינים ב׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-03",
+      "kind": "answers-topics",
+      "number": 3,
+      "title": {
+        "en": "List of Answers on Topics 3",
+        "he": "לוח התשובות לעניינים ג׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-04",
+      "kind": "answers-topics",
+      "number": 4,
+      "title": {
+        "en": "List of Answers on Topics 4",
+        "he": "לוח התשובות לעניינים ד׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-05",
+      "kind": "answers-topics",
+      "number": 5,
+      "title": {
+        "en": "List of Answers on Topics 5",
+        "he": "לוח התשובות לעניינים ה׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-06",
+      "kind": "answers-topics",
+      "number": 6,
+      "title": {
+        "en": "List of Answers on Topics 6",
+        "he": "לוח התשובות לעניינים ו׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-07",
+      "kind": "answers-topics",
+      "number": 7,
+      "title": {
+        "en": "List of Answers on Topics 7",
+        "he": "לוח התשובות לעניינים ז׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-08",
+      "kind": "answers-topics",
+      "number": 8,
+      "title": {
+        "en": "List of Answers on Topics 8",
+        "he": "לוח התשובות לעניינים ח׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-09",
+      "kind": "answers-topics",
+      "number": 9,
+      "title": {
+        "en": "List of Answers on Topics 9",
+        "he": "לוח התשובות לעניינים ט׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-10",
+      "kind": "answers-topics",
+      "number": 10,
+      "title": {
+        "en": "List of Answers on Topics 10",
+        "he": "לוח התשובות לעניינים י׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-11",
+      "kind": "answers-topics",
+      "number": 11,
+      "title": {
+        "en": "List of Answers on Topics 11",
+        "he": "לוח התשובות לעניינים י״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-12",
+      "kind": "answers-topics",
+      "number": 12,
+      "title": {
+        "en": "List of Answers on Topics 12",
+        "he": "לוח התשובות לעניינים י״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-13",
+      "kind": "answers-topics",
+      "number": 13,
+      "title": {
+        "en": "List of Answers on Topics 13",
+        "he": "לוח התשובות לעניינים י״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-14",
+      "kind": "answers-topics",
+      "number": 14,
+      "title": {
+        "en": "List of Answers on Topics 14",
+        "he": "לוח התשובות לעניינים י״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-15",
+      "kind": "answers-topics",
+      "number": 15,
+      "title": {
+        "en": "List of Answers on Topics 15",
+        "he": "לוח התשובות לעניינים ט״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-16",
+      "kind": "answers-topics",
+      "number": 16,
+      "title": {
+        "en": "List of Answers on Topics 16",
+        "he": "לוח התשובות לעניינים ט״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-17",
+      "kind": "answers-topics",
+      "number": 17,
+      "title": {
+        "en": "List of Answers on Topics 17",
+        "he": "לוח התשובות לעניינים י״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-18",
+      "kind": "answers-topics",
+      "number": 18,
+      "title": {
+        "en": "List of Answers on Topics 18",
+        "he": "לוח התשובות לעניינים י״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-19",
+      "kind": "answers-topics",
+      "number": 19,
+      "title": {
+        "en": "List of Answers on Topics 19",
+        "he": "לוח התשובות לעניינים י״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-20",
+      "kind": "answers-topics",
+      "number": 20,
+      "title": {
+        "en": "List of Answers on Topics 20",
+        "he": "לוח התשובות לעניינים כ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-21",
+      "kind": "answers-topics",
+      "number": 21,
+      "title": {
+        "en": "List of Answers on Topics 21",
+        "he": "לוח התשובות לעניינים כ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-22",
+      "kind": "answers-topics",
+      "number": 22,
+      "title": {
+        "en": "List of Answers on Topics 22",
+        "he": "לוח התשובות לעניינים כ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-23",
+      "kind": "answers-topics",
+      "number": 23,
+      "title": {
+        "en": "List of Answers on Topics 23",
+        "he": "לוח התשובות לעניינים כ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-24",
+      "kind": "answers-topics",
+      "number": 24,
+      "title": {
+        "en": "List of Answers on Topics 24",
+        "he": "לוח התשובות לעניינים כ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-25",
+      "kind": "answers-topics",
+      "number": 25,
+      "title": {
+        "en": "List of Answers on Topics 25",
+        "he": "לוח התשובות לעניינים כ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-26",
+      "kind": "answers-topics",
+      "number": 26,
+      "title": {
+        "en": "List of Answers on Topics 26",
+        "he": "לוח התשובות לעניינים כ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-27",
+      "kind": "answers-topics",
+      "number": 27,
+      "title": {
+        "en": "List of Answers on Topics 27",
+        "he": "לוח התשובות לעניינים כ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-28",
+      "kind": "answers-topics",
+      "number": 28,
+      "title": {
+        "en": "List of Answers on Topics 28",
+        "he": "לוח התשובות לעניינים כ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-29",
+      "kind": "answers-topics",
+      "number": 29,
+      "title": {
+        "en": "List of Answers on Topics 29",
+        "he": "לוח התשובות לעניינים כ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-30",
+      "kind": "answers-topics",
+      "number": 30,
+      "title": {
+        "en": "List of Answers on Topics 30",
+        "he": "לוח התשובות לעניינים ל׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-31",
+      "kind": "answers-topics",
+      "number": 31,
+      "title": {
+        "en": "List of Answers on Topics 31",
+        "he": "לוח התשובות לעניינים ל״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-32",
+      "kind": "answers-topics",
+      "number": 32,
+      "title": {
+        "en": "List of Answers on Topics 32",
+        "he": "לוח התשובות לעניינים ל״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-33",
+      "kind": "answers-topics",
+      "number": 33,
+      "title": {
+        "en": "List of Answers on Topics 33",
+        "he": "לוח התשובות לעניינים ל״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-34",
+      "kind": "answers-topics",
+      "number": 34,
+      "title": {
+        "en": "List of Answers on Topics 34",
+        "he": "לוח התשובות לעניינים ל״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-35",
+      "kind": "answers-topics",
+      "number": 35,
+      "title": {
+        "en": "List of Answers on Topics 35",
+        "he": "לוח התשובות לעניינים ל״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-36",
+      "kind": "answers-topics",
+      "number": 36,
+      "title": {
+        "en": "List of Answers on Topics 36",
+        "he": "לוח התשובות לעניינים ל״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-37",
+      "kind": "answers-topics",
+      "number": 37,
+      "title": {
+        "en": "List of Answers on Topics 37",
+        "he": "לוח התשובות לעניינים ל״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-38",
+      "kind": "answers-topics",
+      "number": 38,
+      "title": {
+        "en": "List of Answers on Topics 38",
+        "he": "לוח התשובות לעניינים ל״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-39",
+      "kind": "answers-topics",
+      "number": 39,
+      "title": {
+        "en": "List of Answers on Topics 39",
+        "he": "לוח התשובות לעניינים ל״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-40",
+      "kind": "answers-topics",
+      "number": 40,
+      "title": {
+        "en": "List of Answers on Topics 40",
+        "he": "לוח התשובות לעניינים מ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-41",
+      "kind": "answers-topics",
+      "number": 41,
+      "title": {
+        "en": "List of Answers on Topics 41",
+        "he": "לוח התשובות לעניינים מ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-42",
+      "kind": "answers-topics",
+      "number": 42,
+      "title": {
+        "en": "List of Answers on Topics 42",
+        "he": "לוח התשובות לעניינים מ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-43",
+      "kind": "answers-topics",
+      "number": 43,
+      "title": {
+        "en": "List of Answers on Topics 43",
+        "he": "לוח התשובות לעניינים מ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-44",
+      "kind": "answers-topics",
+      "number": 44,
+      "title": {
+        "en": "List of Answers on Topics 44",
+        "he": "לוח התשובות לעניינים מ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-45",
+      "kind": "answers-topics",
+      "number": 45,
+      "title": {
+        "en": "List of Answers on Topics 45",
+        "he": "לוח התשובות לעניינים מ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-46",
+      "kind": "answers-topics",
+      "number": 46,
+      "title": {
+        "en": "List of Answers on Topics 46",
+        "he": "לוח התשובות לעניינים מ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-47",
+      "kind": "answers-topics",
+      "number": 47,
+      "title": {
+        "en": "List of Answers on Topics 47",
+        "he": "לוח התשובות לעניינים מ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-48",
+      "kind": "answers-topics",
+      "number": 48,
+      "title": {
+        "en": "List of Answers on Topics 48",
+        "he": "לוח התשובות לעניינים מ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-49",
+      "kind": "answers-topics",
+      "number": 49,
+      "title": {
+        "en": "List of Answers on Topics 49",
+        "he": "לוח התשובות לעניינים מ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-50",
+      "kind": "answers-topics",
+      "number": 50,
+      "title": {
+        "en": "List of Answers on Topics 50",
+        "he": "לוח התשובות לעניינים נ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-51",
+      "kind": "answers-topics",
+      "number": 51,
+      "title": {
+        "en": "List of Answers on Topics 51",
+        "he": "לוח התשובות לעניינים נ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-52",
+      "kind": "answers-topics",
+      "number": 52,
+      "title": {
+        "en": "List of Answers on Topics 52",
+        "he": "לוח התשובות לעניינים נ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-53",
+      "kind": "answers-topics",
+      "number": 53,
+      "title": {
+        "en": "List of Answers on Topics 53",
+        "he": "לוח התשובות לעניינים נ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-54",
+      "kind": "answers-topics",
+      "number": 54,
+      "title": {
+        "en": "List of Answers on Topics 54",
+        "he": "לוח התשובות לעניינים נ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-55",
+      "kind": "answers-topics",
+      "number": 55,
+      "title": {
+        "en": "List of Answers on Topics 55",
+        "he": "לוח התשובות לעניינים נ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-56",
+      "kind": "answers-topics",
+      "number": 56,
+      "title": {
+        "en": "List of Answers on Topics 56",
+        "he": "לוח התשובות לעניינים נ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-57",
+      "kind": "answers-topics",
+      "number": 57,
+      "title": {
+        "en": "List of Answers on Topics 57",
+        "he": "לוח התשובות לעניינים נ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-58",
+      "kind": "answers-topics",
+      "number": 58,
+      "title": {
+        "en": "List of Answers on Topics 58",
+        "he": "לוח התשובות לעניינים נ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-59",
+      "kind": "answers-topics",
+      "number": 59,
+      "title": {
+        "en": "List of Answers on Topics 59",
+        "he": "לוח התשובות לעניינים נ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-60",
+      "kind": "answers-topics",
+      "number": 60,
+      "title": {
+        "en": "List of Answers on Topics 60",
+        "he": "לוח התשובות לעניינים ס׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-61",
+      "kind": "answers-topics",
+      "number": 61,
+      "title": {
+        "en": "List of Answers on Topics 61",
+        "he": "לוח התשובות לעניינים ס״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-62",
+      "kind": "answers-topics",
+      "number": 62,
+      "title": {
+        "en": "List of Answers on Topics 62",
+        "he": "לוח התשובות לעניינים ס״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-63",
+      "kind": "answers-topics",
+      "number": 63,
+      "title": {
+        "en": "List of Answers on Topics 63",
+        "he": "לוח התשובות לעניינים ס״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-64",
+      "kind": "answers-topics",
+      "number": 64,
+      "title": {
+        "en": "List of Answers on Topics 64",
+        "he": "לוח התשובות לעניינים ס״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-65",
+      "kind": "answers-topics",
+      "number": 65,
+      "title": {
+        "en": "List of Answers on Topics 65",
+        "he": "לוח התשובות לעניינים ס״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-66",
+      "kind": "answers-topics",
+      "number": 66,
+      "title": {
+        "en": "List of Answers on Topics 66",
+        "he": "לוח התשובות לעניינים ס״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-67",
+      "kind": "answers-topics",
+      "number": 67,
+      "title": {
+        "en": "List of Answers on Topics 67",
+        "he": "לוח התשובות לעניינים ס״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-68",
+      "kind": "answers-topics",
+      "number": 68,
+      "title": {
+        "en": "List of Answers on Topics 68",
+        "he": "לוח התשובות לעניינים ס״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-69",
+      "kind": "answers-topics",
+      "number": 69,
+      "title": {
+        "en": "List of Answers on Topics 69",
+        "he": "לוח התשובות לעניינים ס״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-70",
+      "kind": "answers-topics",
+      "number": 70,
+      "title": {
+        "en": "List of Answers on Topics 70",
+        "he": "לוח התשובות לעניינים ע׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-71",
+      "kind": "answers-topics",
+      "number": 71,
+      "title": {
+        "en": "List of Answers on Topics 71",
+        "he": "לוח התשובות לעניינים ע״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-72",
+      "kind": "answers-topics",
+      "number": 72,
+      "title": {
+        "en": "List of Answers on Topics 72",
+        "he": "לוח התשובות לעניינים ע״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-73",
+      "kind": "answers-topics",
+      "number": 73,
+      "title": {
+        "en": "List of Answers on Topics 73",
+        "he": "לוח התשובות לעניינים ע״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-74",
+      "kind": "answers-topics",
+      "number": 74,
+      "title": {
+        "en": "List of Answers on Topics 74",
+        "he": "לוח התשובות לעניינים ע״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-75",
+      "kind": "answers-topics",
+      "number": 75,
+      "title": {
+        "en": "List of Answers on Topics 75",
+        "he": "לוח התשובות לעניינים ע״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-76",
+      "kind": "answers-topics",
+      "number": 76,
+      "title": {
+        "en": "List of Answers on Topics 76",
+        "he": "לוח התשובות לעניינים ע״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-77",
+      "kind": "answers-topics",
+      "number": 77,
+      "title": {
+        "en": "List of Answers on Topics 77",
+        "he": "לוח התשובות לעניינים ע״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-78",
+      "kind": "answers-topics",
+      "number": 78,
+      "title": {
+        "en": "List of Answers on Topics 78",
+        "he": "לוח התשובות לעניינים ע״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-79",
+      "kind": "answers-topics",
+      "number": 79,
+      "title": {
+        "en": "List of Answers on Topics 79",
+        "he": "לוח התשובות לעניינים ע״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-80",
+      "kind": "answers-topics",
+      "number": 80,
+      "title": {
+        "en": "List of Answers on Topics 80",
+        "he": "לוח התשובות לעניינים פ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-81",
+      "kind": "answers-topics",
+      "number": 81,
+      "title": {
+        "en": "List of Answers on Topics 81",
+        "he": "לוח התשובות לעניינים פ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-82",
+      "kind": "answers-topics",
+      "number": 82,
+      "title": {
+        "en": "List of Answers on Topics 82",
+        "he": "לוח התשובות לעניינים פ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-83",
+      "kind": "answers-topics",
+      "number": 83,
+      "title": {
+        "en": "List of Answers on Topics 83",
+        "he": "לוח התשובות לעניינים פ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-84",
+      "kind": "answers-topics",
+      "number": 84,
+      "title": {
+        "en": "List of Answers on Topics 84",
+        "he": "לוח התשובות לעניינים פ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-85",
+      "kind": "answers-topics",
+      "number": 85,
+      "title": {
+        "en": "List of Answers on Topics 85",
+        "he": "לוח התשובות לעניינים פ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-86",
+      "kind": "answers-topics",
+      "number": 86,
+      "title": {
+        "en": "List of Answers on Topics 86",
+        "he": "לוח התשובות לעניינים פ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-87",
+      "kind": "answers-topics",
+      "number": 87,
+      "title": {
+        "en": "List of Answers on Topics 87",
+        "he": "לוח התשובות לעניינים פ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-88",
+      "kind": "answers-topics",
+      "number": 88,
+      "title": {
+        "en": "List of Answers on Topics 88",
+        "he": "לוח התשובות לעניינים פ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-89",
+      "kind": "answers-topics",
+      "number": 89,
+      "title": {
+        "en": "List of Answers on Topics 89",
+        "he": "לוח התשובות לעניינים פ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-90",
+      "kind": "answers-topics",
+      "number": 90,
+      "title": {
+        "en": "List of Answers on Topics 90",
+        "he": "לוח התשובות לעניינים צ׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-91",
+      "kind": "answers-topics",
+      "number": 91,
+      "title": {
+        "en": "List of Answers on Topics 91",
+        "he": "לוח התשובות לעניינים צ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-92",
+      "kind": "answers-topics",
+      "number": 92,
+      "title": {
+        "en": "List of Answers on Topics 92",
+        "he": "לוח התשובות לעניינים צ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-93",
+      "kind": "answers-topics",
+      "number": 93,
+      "title": {
+        "en": "List of Answers on Topics 93",
+        "he": "לוח התשובות לעניינים צ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-94",
+      "kind": "answers-topics",
+      "number": 94,
+      "title": {
+        "en": "List of Answers on Topics 94",
+        "he": "לוח התשובות לעניינים צ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-95",
+      "kind": "answers-topics",
+      "number": 95,
+      "title": {
+        "en": "List of Answers on Topics 95",
+        "he": "לוח התשובות לעניינים צ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-96",
+      "kind": "answers-topics",
+      "number": 96,
+      "title": {
+        "en": "List of Answers on Topics 96",
+        "he": "לוח התשובות לעניינים צ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-97",
+      "kind": "answers-topics",
+      "number": 97,
+      "title": {
+        "en": "List of Answers on Topics 97",
+        "he": "לוח התשובות לעניינים צ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-98",
+      "kind": "answers-topics",
+      "number": 98,
+      "title": {
+        "en": "List of Answers on Topics 98",
+        "he": "לוח התשובות לעניינים צ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-99",
+      "kind": "answers-topics",
+      "number": 99,
+      "title": {
+        "en": "List of Answers on Topics 99",
+        "he": "לוח התשובות לעניינים צ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-100",
+      "kind": "answers-topics",
+      "number": 100,
+      "title": {
+        "en": "List of Answers on Topics 100",
+        "he": "לוח התשובות לעניינים ק׳"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-101",
+      "kind": "answers-topics",
+      "number": 101,
+      "title": {
+        "en": "List of Answers on Topics 101",
+        "he": "לוח התשובות לעניינים ק״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-102",
+      "kind": "answers-topics",
+      "number": 102,
+      "title": {
+        "en": "List of Answers on Topics 102",
+        "he": "לוח התשובות לעניינים ק״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-103",
+      "kind": "answers-topics",
+      "number": 103,
+      "title": {
+        "en": "List of Answers on Topics 103",
+        "he": "לוח התשובות לעניינים ק״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-104",
+      "kind": "answers-topics",
+      "number": 104,
+      "title": {
+        "en": "List of Answers on Topics 104",
+        "he": "לוח התשובות לעניינים ק״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-105",
+      "kind": "answers-topics",
+      "number": 105,
+      "title": {
+        "en": "List of Answers on Topics 105",
+        "he": "לוח התשובות לעניינים ק״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-106",
+      "kind": "answers-topics",
+      "number": 106,
+      "title": {
+        "en": "List of Answers on Topics 106",
+        "he": "לוח התשובות לעניינים ק״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-107",
+      "kind": "answers-topics",
+      "number": 107,
+      "title": {
+        "en": "List of Answers on Topics 107",
+        "he": "לוח התשובות לעניינים ק״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-108",
+      "kind": "answers-topics",
+      "number": 108,
+      "title": {
+        "en": "List of Answers on Topics 108",
+        "he": "לוח התשובות לעניינים ק״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-109",
+      "kind": "answers-topics",
+      "number": 109,
+      "title": {
+        "en": "List of Answers on Topics 109",
+        "he": "לוח התשובות לעניינים ק״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-110",
+      "kind": "answers-topics",
+      "number": 110,
+      "title": {
+        "en": "List of Answers on Topics 110",
+        "he": "לוח התשובות לעניינים ק״י"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-111",
+      "kind": "answers-topics",
+      "number": 111,
+      "title": {
+        "en": "List of Answers on Topics 111",
+        "he": "לוח התשובות לעניינים קי״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-112",
+      "kind": "answers-topics",
+      "number": 112,
+      "title": {
+        "en": "List of Answers on Topics 112",
+        "he": "לוח התשובות לעניינים קי״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-113",
+      "kind": "answers-topics",
+      "number": 113,
+      "title": {
+        "en": "List of Answers on Topics 113",
+        "he": "לוח התשובות לעניינים קי״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-114",
+      "kind": "answers-topics",
+      "number": 114,
+      "title": {
+        "en": "List of Answers on Topics 114",
+        "he": "לוח התשובות לעניינים קי״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-115",
+      "kind": "answers-topics",
+      "number": 115,
+      "title": {
+        "en": "List of Answers on Topics 115",
+        "he": "לוח התשובות לעניינים קט״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-116",
+      "kind": "answers-topics",
+      "number": 116,
+      "title": {
+        "en": "List of Answers on Topics 116",
+        "he": "לוח התשובות לעניינים קט״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-117",
+      "kind": "answers-topics",
+      "number": 117,
+      "title": {
+        "en": "List of Answers on Topics 117",
+        "he": "לוח התשובות לעניינים קי״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-118",
+      "kind": "answers-topics",
+      "number": 118,
+      "title": {
+        "en": "List of Answers on Topics 118",
+        "he": "לוח התשובות לעניינים קי״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-119",
+      "kind": "answers-topics",
+      "number": 119,
+      "title": {
+        "en": "List of Answers on Topics 119",
+        "he": "לוח התשובות לעניינים קי״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-120",
+      "kind": "answers-topics",
+      "number": 120,
+      "title": {
+        "en": "List of Answers on Topics 120",
+        "he": "לוח התשובות לעניינים ק״כ"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-121",
+      "kind": "answers-topics",
+      "number": 121,
+      "title": {
+        "en": "List of Answers on Topics 121",
+        "he": "לוח התשובות לעניינים קכ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-122",
+      "kind": "answers-topics",
+      "number": 122,
+      "title": {
+        "en": "List of Answers on Topics 122",
+        "he": "לוח התשובות לעניינים קכ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-123",
+      "kind": "answers-topics",
+      "number": 123,
+      "title": {
+        "en": "List of Answers on Topics 123",
+        "he": "לוח התשובות לעניינים קכ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-124",
+      "kind": "answers-topics",
+      "number": 124,
+      "title": {
+        "en": "List of Answers on Topics 124",
+        "he": "לוח התשובות לעניינים קכ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-125",
+      "kind": "answers-topics",
+      "number": 125,
+      "title": {
+        "en": "List of Answers on Topics 125",
+        "he": "לוח התשובות לעניינים קכ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-126",
+      "kind": "answers-topics",
+      "number": 126,
+      "title": {
+        "en": "List of Answers on Topics 126",
+        "he": "לוח התשובות לעניינים קכ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-127",
+      "kind": "answers-topics",
+      "number": 127,
+      "title": {
+        "en": "List of Answers on Topics 127",
+        "he": "לוח התשובות לעניינים קכ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-128",
+      "kind": "answers-topics",
+      "number": 128,
+      "title": {
+        "en": "List of Answers on Topics 128",
+        "he": "לוח התשובות לעניינים קכ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-129",
+      "kind": "answers-topics",
+      "number": 129,
+      "title": {
+        "en": "List of Answers on Topics 129",
+        "he": "לוח התשובות לעניינים קכ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-130",
+      "kind": "answers-topics",
+      "number": 130,
+      "title": {
+        "en": "List of Answers on Topics 130",
+        "he": "לוח התשובות לעניינים ק״ל"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-131",
+      "kind": "answers-topics",
+      "number": 131,
+      "title": {
+        "en": "List of Answers on Topics 131",
+        "he": "לוח התשובות לעניינים קל״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-132",
+      "kind": "answers-topics",
+      "number": 132,
+      "title": {
+        "en": "List of Answers on Topics 132",
+        "he": "לוח התשובות לעניינים קל״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-133",
+      "kind": "answers-topics",
+      "number": 133,
+      "title": {
+        "en": "List of Answers on Topics 133",
+        "he": "לוח התשובות לעניינים קל״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-134",
+      "kind": "answers-topics",
+      "number": 134,
+      "title": {
+        "en": "List of Answers on Topics 134",
+        "he": "לוח התשובות לעניינים קל״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-135",
+      "kind": "answers-topics",
+      "number": 135,
+      "title": {
+        "en": "List of Answers on Topics 135",
+        "he": "לוח התשובות לעניינים קל״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-136",
+      "kind": "answers-topics",
+      "number": 136,
+      "title": {
+        "en": "List of Answers on Topics 136",
+        "he": "לוח התשובות לעניינים קל״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-137",
+      "kind": "answers-topics",
+      "number": 137,
+      "title": {
+        "en": "List of Answers on Topics 137",
+        "he": "לוח התשובות לעניינים קל״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-138",
+      "kind": "answers-topics",
+      "number": 138,
+      "title": {
+        "en": "List of Answers on Topics 138",
+        "he": "לוח התשובות לעניינים קל״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-139",
+      "kind": "answers-topics",
+      "number": 139,
+      "title": {
+        "en": "List of Answers on Topics 139",
+        "he": "לוח התשובות לעניינים קל״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-140",
+      "kind": "answers-topics",
+      "number": 140,
+      "title": {
+        "en": "List of Answers on Topics 140",
+        "he": "לוח התשובות לעניינים ק״מ"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-141",
+      "kind": "answers-topics",
+      "number": 141,
+      "title": {
+        "en": "List of Answers on Topics 141",
+        "he": "לוח התשובות לעניינים קמ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-142",
+      "kind": "answers-topics",
+      "number": 142,
+      "title": {
+        "en": "List of Answers on Topics 142",
+        "he": "לוח התשובות לעניינים קמ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-143",
+      "kind": "answers-topics",
+      "number": 143,
+      "title": {
+        "en": "List of Answers on Topics 143",
+        "he": "לוח התשובות לעניינים קמ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-144",
+      "kind": "answers-topics",
+      "number": 144,
+      "title": {
+        "en": "List of Answers on Topics 144",
+        "he": "לוח התשובות לעניינים קמ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-145",
+      "kind": "answers-topics",
+      "number": 145,
+      "title": {
+        "en": "List of Answers on Topics 145",
+        "he": "לוח התשובות לעניינים קמ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-146",
+      "kind": "answers-topics",
+      "number": 146,
+      "title": {
+        "en": "List of Answers on Topics 146",
+        "he": "לוח התשובות לעניינים קמ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-147",
+      "kind": "answers-topics",
+      "number": 147,
+      "title": {
+        "en": "List of Answers on Topics 147",
+        "he": "לוח התשובות לעניינים קמ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-148",
+      "kind": "answers-topics",
+      "number": 148,
+      "title": {
+        "en": "List of Answers on Topics 148",
+        "he": "לוח התשובות לעניינים קמ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-149",
+      "kind": "answers-topics",
+      "number": 149,
+      "title": {
+        "en": "List of Answers on Topics 149",
+        "he": "לוח התשובות לעניינים קמ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-150",
+      "kind": "answers-topics",
+      "number": 150,
+      "title": {
+        "en": "List of Answers on Topics 150",
+        "he": "לוח התשובות לעניינים ק״נ"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-151",
+      "kind": "answers-topics",
+      "number": 151,
+      "title": {
+        "en": "List of Answers on Topics 151",
+        "he": "לוח התשובות לעניינים קנ״א"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-152",
+      "kind": "answers-topics",
+      "number": 152,
+      "title": {
+        "en": "List of Answers on Topics 152",
+        "he": "לוח התשובות לעניינים קנ״ב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-153",
+      "kind": "answers-topics",
+      "number": 153,
+      "title": {
+        "en": "List of Answers on Topics 153",
+        "he": "לוח התשובות לעניינים קנ״ג"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-154",
+      "kind": "answers-topics",
+      "number": 154,
+      "title": {
+        "en": "List of Answers on Topics 154",
+        "he": "לוח התשובות לעניינים קנ״ד"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-155",
+      "kind": "answers-topics",
+      "number": 155,
+      "title": {
+        "en": "List of Answers on Topics 155",
+        "he": "לוח התשובות לעניינים קנ״ה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-156",
+      "kind": "answers-topics",
+      "number": 156,
+      "title": {
+        "en": "List of Answers on Topics 156",
+        "he": "לוח התשובות לעניינים קנ״ו"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-157",
+      "kind": "answers-topics",
+      "number": 157,
+      "title": {
+        "en": "List of Answers on Topics 157",
+        "he": "לוח התשובות לעניינים קנ״ז"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-158",
+      "kind": "answers-topics",
+      "number": 158,
+      "title": {
+        "en": "List of Answers on Topics 158",
+        "he": "לוח התשובות לעניינים קנ״ח"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-159",
+      "kind": "answers-topics",
+      "number": 159,
+      "title": {
+        "en": "List of Answers on Topics 159",
+        "he": "לוח התשובות לעניינים קנ״ט"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
+      "id": "part-05/answers-topics-160",
+      "kind": "answers-topics",
+      "number": 160,
+      "title": {
+        "en": "List of Answers on Topics 160",
+        "he": "לוח התשובות לעניינים ק״ס"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    }
+  ]
+}

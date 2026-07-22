@@ -112,6 +112,89 @@ export const tocSchema = z.object({
 export type Toc = z.infer<typeof tocSchema>;
 
 // ---------------------------------------------------------------------------
+// Split ToC files (app-facing) — content/toc.volumes.json + content/toc.parts/*.json
+//
+// `content/toc.json` stays the canonical build-time file (importer,
+// `validate-content`, `nuxt.config.ts` prerender routes, the sitemap route
+// all keep reading it) but is 2.9MB+ at full-corpus scale — far too large
+// to bundle into every page's payload. App code (`app/`) must only ever
+// load these two split, app-facing shapes instead — see AGENTS.md "Content
+// model". Both are emitted from `content/toc.json` by
+// `scripts/lib/toc-splits.ts` (invoked by both importers and by
+// `pnpm emit:toc-splits` standalone) and cross-checked against it by
+// `scripts/validate-content.ts`.
+// ---------------------------------------------------------------------------
+
+/** Per-language coverage across a group of chapters (volumes-index badges). */
+export const languageAvailabilitySchema = z.enum(["none", "partial", "full"]);
+export type LanguageAvailability = z.infer<typeof languageAvailabilitySchema>;
+
+const partAvailableSummarySchema = z.object({
+  he: languageAvailabilitySchema,
+  en: languageAvailabilitySchema,
+}) satisfies z.ZodType<Record<"he" | "en", LanguageAvailability>>;
+export type PartAvailableSummary = z.infer<typeof partAvailableSummarySchema>;
+
+/**
+ * One volume's parts, without chapter lists — precomputed at emit time so
+ * the volumes index never needs a part's full `TocChapter[]` just to render
+ * its chapter count / language badges. `firstChapterId`/`lastChapterId` (and
+ * their titles) are in the same kind-then-number reading order
+ * `app/utils/toc.ts`'s `orderedPartChapters` uses, so the reader can link
+ * prev/next across a part boundary without loading the neighbor part's
+ * file. Null when the part has no chapters yet.
+ */
+export const tocPartSkeletonSchema = z.object({
+  id: z.string(),
+  number: z.number().int().positive(),
+  title: localizedTitleSchema,
+  sefariaNode: z.string(),
+  chapterCount: z.number().int().nonnegative(),
+  kindsPresent: z.array(chapterKindSchema),
+  firstChapterId: z.string().nullable(),
+  lastChapterId: z.string().nullable(),
+  firstChapterTitle: localizedTitleSchema.nullable(),
+  lastChapterTitle: localizedTitleSchema.nullable(),
+  availableSummary: partAvailableSummarySchema,
+});
+export type TocPartSkeleton = z.infer<typeof tocPartSkeletonSchema>;
+
+export const tocVolumeSkeletonSchema = z.object({
+  id: z.string(),
+  number: z.number().int().positive(),
+  title: localizedTitleSchema,
+  parts: z.array(tocPartSkeletonSchema),
+});
+export type TocVolumeSkeleton = z.infer<typeof tocVolumeSkeletonSchema>;
+
+/** Shape of `content/toc.volumes.json`. */
+export const tocVolumesFileSchema = z.object({
+  volumes: z.array(tocVolumeSkeletonSchema),
+});
+export type TocVolumesFile = z.infer<typeof tocVolumesFileSchema>;
+
+const tocPartFileIdentitySchema = z.object({
+  id: z.string(),
+  number: z.number().int().positive(),
+  title: localizedTitleSchema,
+});
+export type TocPartFileIdentity = z.infer<typeof tocPartFileIdentitySchema>;
+
+/**
+ * Shape of `content/toc.parts/part-NN.json`: one part's full `TocChapter[]`
+ * (exactly the entries `toc.json` holds for that part today) plus the
+ * part's own identity and its parent volume's — enough for the reader page
+ * and a volume's contents page to render breadcrumbs/SEO from this one file
+ * alone, no `toc.volumes.json` lookup needed for the current part/volume.
+ */
+export const tocPartFileSchema = z.object({
+  part: tocPartFileIdentitySchema,
+  volume: tocPartFileIdentitySchema,
+  chapters: z.array(tocChapterSchema),
+});
+export type TocPartFile = z.infer<typeof tocPartFileSchema>;
+
+// ---------------------------------------------------------------------------
 // Layer items
 // ---------------------------------------------------------------------------
 
