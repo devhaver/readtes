@@ -35,10 +35,12 @@
                   "en-curated"
                 ],
                 "source": [
+                  "en-bb",
                   "en-sefaria-community",
                   "he-jerusalem-1956"
                 ],
                 "commentary": [
+                  "en-bb",
                   "en-sefaria-community",
                   "he-jerusalem-1956"
                 ]
@@ -59,10 +61,12 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "en-bb",
                   "en-sefaria-community",
                   "he-jerusalem-1956"
                 ],
                 "commentary": [
+                  "en-bb",
                   "he-jerusalem-1956",
                   "en-ai"
                 ]

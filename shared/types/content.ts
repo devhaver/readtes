@@ -39,7 +39,13 @@ export const contentVersionSchema = z.object({
   language: z.string(),
   direction: z.enum(["ltr", "rtl"]),
   title: z.string(),
-  license: z.enum(["Public Domain", "CC0", "CC-BY", "unknown"]),
+  license: z.enum([
+    "Public Domain",
+    "CC0",
+    "CC-BY",
+    "Used with permission",
+    "unknown",
+  ]),
   source: z.enum(["sefaria", "kabbalahmedia", "curated", "ai"]),
   sefariaVersionTitle: z.string().optional(),
   /** versionId of the source-language version this was translated from (AI or human). */

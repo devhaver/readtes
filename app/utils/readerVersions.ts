@@ -2,14 +2,16 @@
  * Pure version-default-selection rule for the reader (`useReaderVersions`).
  *
  * Rule: Hebrew UI + a Hebrew version available -> Hebrew. Otherwise, the
- * best English version available -> `en-sefaria-community`, then `en-ai`,
- * then any other English-language version (covers `en-curated`, the only
- * version the summary layer ever has). Falls back to Hebrew if no English
- * version is available at all, then to whatever is first in the list.
+ * best English version available -> `en-bb` (the official Bnei Baruch/
+ * KabbalahMedia translation — preferred English wherever it exists), then
+ * `en-sefaria-community`, then `en-ai`, then any other English-language
+ * version (covers `en-curated`, the only version the summary layer ever
+ * has). Falls back to Hebrew if no English version is available at all,
+ * then to whatever is first in the list.
  */
 import type { ContentVersion } from "~~/shared/types/content";
 
-const ENGLISH_PRIORITY_ORDER = ["en-sefaria-community", "en-ai"];
+const ENGLISH_PRIORITY_ORDER = ["en-bb", "en-sefaria-community", "en-ai"];
 
 export type VersionsById = Map<string, ContentVersion>;
 
