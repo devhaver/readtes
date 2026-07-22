@@ -48,7 +48,7 @@ const onVersionChange = (event: Event) => {
         }}</label>
         <select
           :id="selectId"
-          class="rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary)"
+          class="rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
           :value="modelValue ?? ''"
           @change="onVersionChange"
         >

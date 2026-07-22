@@ -11,6 +11,10 @@ import type { ReaderMode } from "~/utils/readerMode";
 import type { FlattenedChapter } from "~/utils/toc";
 
 defineProps<{
+  // The reader page renders no other heading — this is that page's ONE
+  // `h1` (see AGENTS.md "Accessibility"), visually hidden since the
+  // breadcrumb right below already shows the same title on-screen.
+  chapterTitle: string;
   breadcrumbItems: BreadcrumbItem[];
   prev: FlattenedChapter | null;
   next: FlattenedChapter | null;
@@ -43,6 +47,8 @@ const showPreferences = ref(false);
       isStudyMode && !chromeVisible && '-translate-y-full',
     ]"
   >
+    <h1 class="sr-only">{{ chapterTitle }}</h1>
+
     <div class="flex items-center justify-between gap-3">
       <AppBreadcrumb :items="breadcrumbItems" />
 

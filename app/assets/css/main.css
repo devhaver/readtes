@@ -13,7 +13,19 @@
   --color-surface-warm: #f6f0eb;
   --color-heading: #222222;
   --color-body: #4a4f53;
-  --color-muted: #a4a4a4;
+  /*
+   * T10 contrast fix: the original #a4a4a4 measured 2.49:1 on
+   * --surface-white and 2.21:1 on --surface-warm — both well under WCAG
+   * AA's 4.5:1 for body-size text (this is `--text-muted`, used
+   * extensively as body-size copy: footer attribution, table cells,
+   * chapter-row/coverage meta text). #6c6c6c clears 4.5:1 against every
+   * light-mode surface this token is actually read against (white,
+   * surface-light, surface-warm — 5.25:1 / 4.82:1 / 4.65:1 respectively)
+   * while staying the same neutral gray, just darker — dark mode's own
+   * --text-muted override is untouched (already 6.9–7.1:1, comfortably
+   * AA-compliant).
+   */
+  --color-muted: #6c6c6c;
   --color-border-subtle: #e2e8ec;
   --color-border-emphasis: #cbcbcb;
   --color-error: #ff4242;

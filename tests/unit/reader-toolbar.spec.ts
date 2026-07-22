@@ -40,7 +40,12 @@ const breadcrumbItems = [
 describe("ReaderToolbar", () => {
   it("renders the breadcrumb chain", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
-      props: { breadcrumbItems, prev: null, next: null },
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        breadcrumbItems,
+        prev: null,
+        next: null,
+      },
     });
 
     expect(wrapper.text()).toContain("Six volumes");
@@ -53,7 +58,12 @@ describe("ReaderToolbar", () => {
     const next = chapterEntry("part-01/chapter-02", "Chapter 2");
 
     const wrapper = await mountSuspended(ReaderToolbar, {
-      props: { breadcrumbItems, prev, next },
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        breadcrumbItems,
+        prev,
+        next,
+      },
     });
 
     const links = wrapper.findAll("a");
@@ -73,7 +83,12 @@ describe("ReaderToolbar", () => {
 
   it("disables prev/next at the corpus edges without rendering a link", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
-      props: { breadcrumbItems, prev: null, next: null },
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        breadcrumbItems,
+        prev: null,
+        next: null,
+      },
     });
 
     const readLinks = wrapper
@@ -87,7 +102,12 @@ describe("ReaderToolbar", () => {
 
   it("renders a study/panes mode toggle, reflecting the current mode via aria-pressed", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
-      props: { breadcrumbItems, prev: null, next: null },
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        breadcrumbItems,
+        prev: null,
+        next: null,
+      },
     });
 
     const studyButton = wrapper
@@ -102,7 +122,12 @@ describe("ReaderToolbar", () => {
 
   it("switches the toggle's pressed state when clicked", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
-      props: { breadcrumbItems, prev: null, next: null },
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        breadcrumbItems,
+        prev: null,
+        next: null,
+      },
     });
 
     const studyButton = wrapper
