@@ -58,6 +58,15 @@ tasks:
         task import -- --all --dry-run
     cmd: pnpm import:sefaria {{.CLI_ARGS}}
 
+  import:kabbalahmedia:
+    desc: Import the official Bnei Baruch translation from KabbalahMedia
+    summary: |
+      Run the KabbalahMedia importer. Pass its CLI flags through after `--`,
+      e.g.:
+
+        task import:kabbalahmedia -- --part 1 --chapters chapter-01,chapter-02
+    cmd: pnpm import:kabbalahmedia {{.CLI_ARGS}}
+
   clean:
     desc: Clean up the development environment
     summary: |

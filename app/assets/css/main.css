@@ -18,15 +18,39 @@
   --color-border-emphasis: #cbcbcb;
   --color-error: #ff4242;
 
+  /*
+   * Night-sky pair for the homepage hero (sampled from the hero mock,
+   * Figma node 4:4): --color-navy-night is the deep field the stars sit
+   * on, --color-navy-dusk the lighter nebular mid-tone it breathes
+   * toward. The hero deliberately stays dark in BOTH themes (the book as
+   * an object in the dark, framed by the page around it), so components
+   * may use these raw tokens directly rather than via the semantic layer.
+   */
+  --color-navy-night: #04101e;
+  --color-navy-dusk: #0a2c46;
+
   /* Radii */
   --radius-card: 8px;
   --radius-button: 6px;
   --radius-input: 4px;
 
-  /* Type */
+  /*
+   * Type. Three Hebrew roles, on purpose:
+   *  --font-hebrew          reading Hebrew (source/commentary text, the
+   *                         hero quote) — David Libre, the classic face
+   *                         of printed Hebrew holy books.
+   *  --font-hebrew-display  Hebrew display (the hero title, headings when
+   *                         the UI locale is Hebrew) — Frank Ruhl Libre
+   *                         at 700/900.
+   *  --font-hebrew-sans     Hebrew UI chrome (nav, buttons, labels under
+   *                         /he/) — Heebo; applied via the :lang(he)
+   *                         scoped rules below, never to reading text.
+   */
   --font-body: "Inter", sans-serif;
   --font-display: "Taviraj", serif;
-  --font-hebrew: "Frank Ruhl Libre", serif;
+  --font-hebrew: "David Libre", "Frank Ruhl Libre", serif;
+  --font-hebrew-display: "Frank Ruhl Libre", serif;
+  --font-hebrew-sans: "Heebo", sans-serif;
 }
 
 /*
@@ -151,4 +175,105 @@
 
 [data-reading-scale="4"] {
   --reading-scale: 1.3125;
+}
+
+/*
+ * ---------------------------------------------------------------------
+ * Hebrew type application (see the three-role token comment in @theme).
+ *
+ * Reading Hebrew: anything *explicitly* tagged `lang="he"` — the reader
+ * panes set `:lang="meta.language"` on their content wrappers, and the
+ * homepage hero tags its Hebrew quote/texture the same way — reads in
+ * David Libre. The selector is the exact attribute value on purpose: it
+ * must NOT match the `<html lang="he-IL">` subtree as a whole (that would
+ * drag UI chrome into a book face). Lives in `@layer base` so an explicit
+ * font utility (e.g. `font-hebrew-display`) on the same element still
+ * wins.
+ */
+@layer base {
+  [lang="he"] {
+    font-family: var(--font-hebrew);
+  }
+}
+
+/*
+ * Hebrew UI chrome: under /he/ the whole app shell (`.font-body` on the
+ * layout wrapper, inheriting `lang="he-IL"` from <html>) switches from
+ * Inter — which has no Hebrew glyphs — to Heebo. Deliberately unlayered:
+ * it must beat the `.font-body` utility on that same wrapper element,
+ * while explicitly-tagged reading text and display headings keep their
+ * own faces via the rules/utilities above.
+ */
+.font-body:lang(he) {
+  font-family: var(--font-hebrew-sans);
+}
+
+/*
+ * ---------------------------------------------------------------------
+ * Night-sky atmosphere (homepage hero; portrait treatment shared with
+ * the About page). The hero stays dark in both themes — these read raw
+ * navy tokens, not the semantic layer, on purpose.
+ *
+ * `.tes-starfield`: deep navy field under a faint nebular glow, with two
+ * passes of the same ~1 KB inline-SVG star tile at different scales so
+ * the repeat never reads as a grid.
+ */
+.tes-starfield {
+  background-color: var(--color-navy-night);
+  background-image:
+    radial-gradient(
+      ellipse 90% 75% at 50% 0%,
+      color-mix(in srgb, var(--color-navy-dusk) 85%, var(--color-teal)) 0%,
+      transparent 65%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='86' cy='42' r='0.8' opacity='0.5'/%3E%3Ccircle cx='168' cy='22' r='0.8' opacity='0.9'/%3E%3Ccircle cx='139' cy='96' r='1.0' opacity='0.9'/%3E%3Ccircle cx='19' cy='132' r='1.0' opacity='0.25'/%3E%3Ccircle cx='22' cy='27' r='0.6' opacity='0.5'/%3E%3Ccircle cx='111' cy='212' r='1.0' opacity='0.25'/%3E%3Ccircle cx='35' cy='60' r='0.6' opacity='0.5'/%3E%3Ccircle cx='162' cy='243' r='1.2' opacity='0.7'/%3E%3Ccircle cx='250' cy='16' r='0.8' opacity='0.7'/%3E%3Ccircle cx='220' cy='77' r='0.8' opacity='0.25'/%3E%3Ccircle cx='50' cy='151' r='1.0' opacity='0.5'/%3E%3Ccircle cx='175' cy='112' r='0.7' opacity='0.9'/%3E%3Ccircle cx='83' cy='152' r='0.6' opacity='0.7'/%3E%3Ccircle cx='204' cy='180' r='0.6' opacity='0.35'/%3E%3Ccircle cx='188' cy='77' r='0.8' opacity='0.35'/%3E%3Ccircle cx='14' cy='172' r='0.7' opacity='0.7'/%3E%3Ccircle cx='197' cy='148' r='1.0' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='86' cy='42' r='0.8' opacity='0.5'/%3E%3Ccircle cx='168' cy='22' r='0.8' opacity='0.9'/%3E%3Ccircle cx='139' cy='96' r='1.0' opacity='0.9'/%3E%3Ccircle cx='19' cy='132' r='1.0' opacity='0.25'/%3E%3Ccircle cx='22' cy='27' r='0.6' opacity='0.5'/%3E%3Ccircle cx='111' cy='212' r='1.0' opacity='0.25'/%3E%3Ccircle cx='35' cy='60' r='0.6' opacity='0.5'/%3E%3Ccircle cx='162' cy='243' r='1.2' opacity='0.7'/%3E%3Ccircle cx='250' cy='16' r='0.8' opacity='0.7'/%3E%3Ccircle cx='220' cy='77' r='0.8' opacity='0.25'/%3E%3Ccircle cx='50' cy='151' r='1.0' opacity='0.5'/%3E%3Ccircle cx='175' cy='112' r='0.7' opacity='0.9'/%3E%3Ccircle cx='83' cy='152' r='0.6' opacity='0.7'/%3E%3Ccircle cx='204' cy='180' r='0.6' opacity='0.35'/%3E%3Ccircle cx='188' cy='77' r='0.8' opacity='0.35'/%3E%3Ccircle cx='14' cy='172' r='0.7' opacity='0.7'/%3E%3Ccircle cx='197' cy='148' r='1.0' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:
+    100% 100%,
+    260px 260px,
+    417px 417px;
+  background-position:
+    0 0,
+    0 0,
+    130px 47px;
+}
+
+/*
+ * `.tes-duotone`: the Baal HaSulam portrait treatment — grayscale under a
+ * navy hue-wash (`mix-blend-mode: color`) with an inset navy vignette, so
+ * the photograph sits *inside* the night field instead of pasted onto it.
+ * Pure CSS over the one existing webp; no new binary assets. The
+ * pseudo-elements are z-indexed above the img child (pseudo-elements
+ * otherwise paint in DOM order, i.e. ::before under the image).
+ */
+.tes-duotone {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.tes-duotone > img {
+  display: block;
+  filter: grayscale(1) brightness(0.78) contrast(1.04);
+}
+
+.tes-duotone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  box-shadow: inset 0 0 3.5rem 0.9rem var(--color-navy-night);
+}
+
+.tes-duotone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: color-mix(
+    in srgb,
+    var(--color-navy-primary) 96%,
+    var(--color-teal)
+  );
+  mix-blend-mode: color;
 }
