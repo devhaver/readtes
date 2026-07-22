@@ -137,3 +137,46 @@ describe("breadcrumbFor", () => {
     expect(breadcrumbFor(fixtureToc, "nope")).toBeNull();
   });
 });
+
+describe("volumeSlug", () => {
+  it("builds a plain (non-zero-padded) slug from the volume number", () => {
+    expect(volumeSlug(fixtureToc.volumes[0]!)).toBe("volume-1");
+    expect(volumeSlug(fixtureToc.volumes[1]!)).toBe("volume-2");
+  });
+});
+
+describe("findVolumeBySlug", () => {
+  it("finds a volume by its URL slug", () => {
+    expect(findVolumeBySlug(fixtureToc, "volume-2")).toBe(
+      fixtureToc.volumes[1],
+    );
+  });
+
+  it("returns undefined for an unknown slug", () => {
+    expect(findVolumeBySlug(fixtureToc, "volume-99")).toBeUndefined();
+  });
+});
+
+describe("volumeHasContent", () => {
+  it("is true when at least one part has chapters", () => {
+    expect(volumeHasContent(fixtureToc.volumes[0]!)).toBe(true);
+  });
+
+  it("is false when every part is still empty", () => {
+    const emptyVolume = {
+      ...fixtureToc.volumes[0]!,
+      parts: fixtureToc.volumes[0]!.parts.map((part) => ({
+        ...part,
+        chapters: [],
+      })),
+    };
+
+    expect(volumeHasContent(emptyVolume)).toBe(false);
+  });
+
+  it("is false for a volume with no parts at all", () => {
+    expect(volumeHasContent({ ...fixtureToc.volumes[0]!, parts: [] })).toBe(
+      false,
+    );
+  });
+});
