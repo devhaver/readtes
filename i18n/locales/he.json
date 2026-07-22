@@ -17,7 +17,8 @@
     "volumesLink": "כרכים",
     "themeToggleToDark": "עבור למצב כהה",
     "themeToggleToLight": "עבור למצב בהיר",
-    "languageSwitcherLabel": "החלף שפה"
+    "languageSwitcherLabel": "החלף שפה",
+    "breadcrumbLabel": "פירורי לחם"
   },
   "footer": {
     "attribution": "נוצר על ידי תלמידי בני ברוך אקדמיה לקבלה · טקסטים מקוריים מתוך Sefaria ו-KabbalahMedia.info, בשימוש ברשות"
@@ -27,12 +28,12 @@
     "hebrewOnly": "בעברית בלבד"
   },
   "home": {
+    "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",
+    "browseVolumes": "עיין בשישה הכרכים",
     "heroTitle": "תלמוד עשר הספירות",
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "לימוד עשר הספירות",
-    "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",
     "beginReading": "להתחיל לקרוא",
-    "browseVolumes": "עיין בשישה הכרכים",
     "quoteSource": "תלמוד עשר הספירות, חלק א', פרק א'",
     "howItWorksTitle": "כיצד הקורא הזה פועל",
     "howItWorksSourceTitle": "מקור",
@@ -48,6 +49,29 @@
     "coverageHebrew": "העברית מלאה עבור חלק א' — כל 119 הסעיפים, מתוך מהדורת ירושלים תשט\"ז–תשכ\"ו.",
     "coverageEnglish": "האנגלית חלקית: לשני פרקים יש תרגום מלא, ולעשרת פרקי ההסתכלות הפנימית יש תרגום בסיוע בינה מלאכותית, המסומן ככזה.",
     "coverageMore": "שאר הכרכים מתווספים בהדרגה."
+  },
+  "errors": {
+    "notFoundTitle": "הדף לא נמצא",
+    "notFoundMessage": "דף זה עדיין לא קיים, או שהוא הועבר.",
+    "notFoundBackHome": "חזרה לדף הבית",
+    "genericTitle": "משהו השתבש",
+    "genericMessage": "אירעה שגיאה בלתי צפויה. נסו לרענן, או חזרו לדף הבית."
+  },
+  "volumes": {
+    "indexTitle": "כרכים",
+    "indexDescription": "תלמוד עשר הספירות בשישה כרכים, שישה עשר חלקים — לקריאה כשכבות מיושרות של תקציר, מקור ופירוש.",
+    "comingSoon": "בקרוב",
+    "chapterCount": "{count} פרקים",
+    "partialLanguage": "חלקי",
+    "partComingSoon": "חלק זה טרם נוסף — בקרו שוב בקרוב.",
+    "answersTerminologyCluster": "תשובות — פירוש המלות ({count})",
+    "answersTopicsCluster": "תשובות — עניינים ({count})",
+    "section": {
+      "chapters": "פרקים",
+      "inner-observation": "הסתכלות פנימית",
+      "questions": "שאלות",
+      "answers": "תשובות"
+    }
   },
   "about": {
     "title": "אודות Read TES",
@@ -69,12 +93,5 @@
     "languageLabelHe": "עברית",
     "attributionTitle": "תודות",
     "attributionBody": "טקסטי המקור לקוחים מהספרייה הפתוחה של Sefaria, והשיעורים שהקריאה הזו נשענת עליהם הם מ-KabbalahMedia.info — שניהם בשימוש ברשות."
-  },
-  "errors": {
-    "notFoundTitle": "הדף לא נמצא",
-    "notFoundMessage": "דף זה עדיין לא קיים, או שהוא הועבר.",
-    "notFoundBackHome": "חזרה לדף הבית",
-    "genericTitle": "משהו השתבש",
-    "genericMessage": "אירעה שגיאה בלתי צפויה. נסו לרענן, או חזרו לדף הבית."
   }
 }

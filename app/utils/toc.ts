@@ -77,3 +77,26 @@ export const breadcrumbFor = (
     ? { volume: entry.volume, part: entry.part, chapter: entry.chapter }
     : null;
 };
+
+/**
+ * URL slug for a volume's contents page (`/volumes/<slug>`), e.g.
+ * `volume-1` — independent of the zero-padded `TocVolume.id` (`volume-01`).
+ */
+export const volumeSlug = (volume: TocVolume): string =>
+  `volume-${volume.number}`;
+
+/** Finds a volume by its URL slug (see `volumeSlug`). */
+export const findVolumeBySlug = (
+  toc: Toc,
+  slug: string,
+): TocVolume | undefined =>
+  toc.volumes.find((volume) => volumeSlug(volume) === slug);
+
+/**
+ * Whether a volume has any populated chapters yet — drives the "coming
+ * soon" disabled state on the volumes index page. Data-driven rather than
+ * hardcoded, so a volume flips to "active" automatically once content
+ * lands for any of its parts.
+ */
+export const volumeHasContent = (volume: TocVolume): boolean =>
+  volume.parts.some((part) => part.chapters.length > 0);

@@ -17,7 +17,8 @@
     "volumesLink": "Volumes",
     "themeToggleToDark": "Switch to dark mode",
     "themeToggleToLight": "Switch to light mode",
-    "languageSwitcherLabel": "Switch language"
+    "languageSwitcherLabel": "Switch language",
+    "breadcrumbLabel": "Breadcrumb"
   },
   "footer": {
     "attribution": "Made by students of Bnei Baruch Kabbalah Academy · original texts from Sefaria and KabbalahMedia.info, used with permission"
@@ -27,12 +28,12 @@
     "hebrewOnly": "Hebrew only"
   },
   "home": {
+    "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",
+    "browseVolumes": "Browse the six volumes",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "The Study of the Ten Sefirot",
-    "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",
     "beginReading": "Begin reading",
-    "browseVolumes": "Browse the six volumes",
     "quoteSource": "Talmud Eser Sefirot, Section I, Chapter 1",
     "howItWorksTitle": "How this reader works",
     "howItWorksSourceTitle": "Source",
@@ -48,6 +49,29 @@
     "coverageHebrew": "Hebrew is complete for Part I — all 119 sections, from the 1956 Jerusalem edition.",
     "coverageEnglish": "English is partial: two chapters have a full translation, and all ten Inner Observation chapters have AI-assisted translations, clearly marked as such.",
     "coverageMore": "The remaining volumes are being added over time."
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundMessage": "This page doesn't exist yet, or has moved.",
+    "notFoundBackHome": "Back to home",
+    "genericTitle": "Something went wrong",
+    "genericMessage": "An unexpected error occurred. Try reloading, or head back home."
+  },
+  "volumes": {
+    "indexTitle": "Volumes",
+    "indexDescription": "Talmud Eser Sefirot in six volumes, sixteen parts — read as aligned summary, source, and commentary.",
+    "comingSoon": "Coming soon",
+    "chapterCount": "{count} chapters",
+    "partialLanguage": "partial",
+    "partComingSoon": "This part hasn't been added yet — check back soon.",
+    "answersTerminologyCluster": "Answers — Terminology ({count})",
+    "answersTopicsCluster": "Answers — Topics ({count})",
+    "section": {
+      "chapters": "Chapters",
+      "inner-observation": "Inner Observation",
+      "questions": "Questions",
+      "answers": "Answers"
+    }
   },
   "about": {
     "title": "About Read TES",
@@ -69,12 +93,5 @@
     "languageLabelHe": "Hebrew",
     "attributionTitle": "With thanks",
     "attributionBody": "Source texts are drawn from Sefaria's open library, and the lessons this reading is inspired by are from KabbalahMedia.info — both used with permission."
-  },
-  "errors": {
-    "notFoundTitle": "Page not found",
-    "notFoundMessage": "This page doesn't exist yet, or has moved.",
-    "notFoundBackHome": "Back to home",
-    "genericTitle": "Something went wrong",
-    "genericMessage": "An unexpected error occurred. Try reloading, or head back home."
   }
 }
