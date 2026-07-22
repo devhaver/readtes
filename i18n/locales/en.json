@@ -27,12 +27,54 @@
     "hebrewOnly": "Hebrew only"
   },
   "home": {
+    "heroTitle": "Talmud Eser Sefirot",
+    "heroTitleHebrew": "תלמוד עשר הספירות",
+    "heroSubtitle": "The Study of the Ten Sefirot",
     "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",
-    "browseVolumes": "Browse the six volumes"
+    "beginReading": "Begin reading",
+    "browseVolumes": "Browse the six volumes",
+    "quoteSource": "Talmud Eser Sefirot, Section I, Chapter 1",
+    "howItWorksTitle": "How this reader works",
+    "howItWorksSourceTitle": "Source",
+    "howItWorksSourceHebrew": "תלמוד עשר הספירות",
+    "howItWorksSourceBody": "The numbered paragraphs of the text itself, read straight through, chapter by chapter.",
+    "howItWorksLightTitle": "Inner Light",
+    "howItWorksLightHebrew": "אור פנימי",
+    "howItWorksLightBody": "Line-by-line commentary anchored to individual paragraphs, opening each phrase in turn.",
+    "howItWorksObservationTitle": "Inner Observation",
+    "howItWorksObservationHebrew": "הסתכלות פנימית",
+    "howItWorksObservationBody": "A reflective essay on each chapter's ideas, read as a continuous layer of its own.",
+    "coverageTitle": "Where the text stands",
+    "coverageHebrew": "Hebrew is complete for Part I — all 119 sections, from the 1956 Jerusalem edition.",
+    "coverageEnglish": "English is partial: two chapters have a full translation, and all ten Inner Observation chapters have AI-assisted translations, clearly marked as such.",
+    "coverageMore": "The remaining volumes are being added over time."
+  },
+  "about": {
+    "title": "About Read TES",
+    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baruch Ashlag's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew or in English.",
+    "readingModelTitle": "The reading model",
+    "readingModelBody": "Each chapter is read item by item, the way it is studied in a live lesson: a numbered paragraph of the source text, opened by its Inner Light commentary where one exists, and set beside the chapter's Inner Observation essay as a further layer of reflection. Nothing is paraphrased away — every layer links back to the same paragraph number.",
+    "licensesTitle": "Texts, editions, and licenses",
+    "licensesIntro": "Every text edition on this site is listed below with its language, license, and source.",
+    "licensesTableCaption": "Text editions used in Read TES",
+    "tableHeaderTitle": "Edition",
+    "tableHeaderLanguage": "Language",
+    "tableHeaderLicense": "License",
+    "tableHeaderSource": "Source",
+    "sourceLabelSefaria": "Sefaria",
+    "sourceLabelCurated": "Read TES",
+    "sourceLabelAi": "AI translation",
+    "sourceLabelKabbalahmedia": "KabbalahMedia.info",
+    "languageLabelEn": "English",
+    "languageLabelHe": "Hebrew",
+    "attributionTitle": "With thanks",
+    "attributionBody": "Source texts are drawn from Sefaria's open library, and the lessons this reading is inspired by are from KabbalahMedia.info — both used with permission."
   },
   "errors": {
     "notFoundTitle": "Page not found",
     "notFoundMessage": "This page doesn't exist yet, or has moved.",
-    "notFoundBackHome": "Back to home"
+    "notFoundBackHome": "Back to home",
+    "genericTitle": "Something went wrong",
+    "genericMessage": "An unexpected error occurred. Try reloading, or head back home."
   }
 }
