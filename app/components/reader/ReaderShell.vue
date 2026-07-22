@@ -6,11 +6,11 @@
 // >=1024px: a fixed-viewport CSS grid (`[280px_1fr_1.1fr]`, summary | source
 // | commentary) — the toolbar stays put and each pane scrolls independently
 // within the viewport (see `layouts/reader.vue` for the outer `h-dvh`).
-// <1024px, for this task: the same three panes simply stacked in normal
-// document flow, no fixed height — a later task (T8) replaces this with a
-// real mobile study/panes mode; the state above already doesn't assume a
-// desktop-only shape (`activePane` exists precisely so that task can plug
-// into it).
+// <1024px: the same three panes simply stacked in normal document flow, no
+// fixed height — this is what panes mode falls back to on a narrow
+// viewport when the reader explicitly toggles out of study mode (T8's
+// default there); the state above already doesn't assume a desktop-only
+// shape (`activePane` exists precisely so that mode can plug into it).
 useReaderState();
 </script>
 
@@ -33,7 +33,10 @@ useReaderState();
       >
         <slot name="source" />
       </div>
-      <div class="lg:flex lg:h-full lg:min-h-0 lg:flex-col">
+      <div
+        id="reader-commentary-pane"
+        class="scroll-mt-4 lg:flex lg:h-full lg:min-h-0 lg:flex-col"
+      >
         <slot name="commentary" />
       </div>
     </div>

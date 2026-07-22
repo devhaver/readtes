@@ -47,7 +47,21 @@
     },
     "prevChapter": "הפרק הקודם",
     "nextChapter": "הפרק הבא",
-    "chapterNav": "ניווט בין פרקים"
+    "chapterNav": "ניווט בין פרקים",
+    "mode": {
+      "label": "מצב קריאה",
+      "study": "לימוד",
+      "panes": "עמודות"
+    },
+    "chapterIntro": {
+      "title": "בפרק זה"
+    },
+    "studyMode": {
+      "fold": "קפל",
+      "readFullCommentary": "קרא את הפירוש המלא",
+      "readFullCommentaryHint": "רק פירוש שפתחת מוצג כאן — עיין בכל הפריטים לפרק זה בתצוגת שלוש העמודות המלאה."
+    },
+    "progressLabel": "התקדמות בקריאה"
   },
   "home": {
     "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",
