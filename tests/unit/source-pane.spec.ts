@@ -58,6 +58,41 @@ describe("SourcePane", () => {
     expect(wrapper.text().toLowerCase()).toContain("no source text available");
   });
 
+  it("emits open-seif-commentary when a plain paragraph (not a link) is tapped", async () => {
+    const segments: SourceSegment[] = [
+      { n: 1, sefariaRef: "x 1", html: "Plain paragraph text.", anchors: [] },
+    ];
+
+    const wrapper = await mountSuspended(PaneContainerStub, {
+      slots: { default: () => h(SourcePane, { segments }) },
+    });
+
+    await wrapper.find("#seif-1").trigger("click");
+    expect(
+      wrapper.findComponent(SourcePane).emitted("open-seif-commentary"),
+    ).toEqual([[1]]);
+  });
+
+  it("does not emit open-seif-commentary when a tes-anchor is tapped", async () => {
+    const segments: SourceSegment[] = [
+      {
+        n: 1,
+        sefariaRef: "x 1",
+        html: 'Text with <a class="tes-anchor" href="#op-1" data-anchor="op-1">א</a>.',
+        anchors: ["op-1"],
+      },
+    ];
+
+    const wrapper = await mountSuspended(PaneContainerStub, {
+      slots: { default: () => h(SourcePane, { segments }) },
+    });
+
+    await wrapper.find('a.tes-anchor[data-anchor="op-1"]').trigger("click");
+    expect(
+      wrapper.findComponent(SourcePane).emitted("open-seif-commentary"),
+    ).toBeUndefined();
+  });
+
   it("rewrites a legacy Sefaria site-relative href so the prerender crawler doesn't 404 on it", async () => {
     const segments: SourceSegment[] = [
       {

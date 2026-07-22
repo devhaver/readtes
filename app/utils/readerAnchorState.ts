@@ -71,6 +71,23 @@ export const reactivateAnchorState = (
 });
 
 /**
+ * Sets `activePane` directly, without touching the active anchor or
+ * bumping `activationSeq` — the mobile swipe track's own sync (tab taps,
+ * and the swipe gesture settling on a slide) drives this, as opposed to
+ * `activateAnchorState`'s `activePane: origin`, which reflects where an
+ * anchor activation *started*. `useHighlightedAnchor` calls this with
+ * whichever pane actually resolves and highlights the current
+ * `activeAnchor` — see that composable — so a source-origin anchor
+ * activation ends up correctly landing on the *commentary* slide (where
+ * the highlight actually appears), not back on the source slide it began
+ * on.
+ */
+export const setActivePaneState = (
+  state: ReaderAnchorState,
+  pane: PaneId,
+): ReaderAnchorState => ({ ...state, activePane: pane });
+
+/**
  * Toggles one anchor id in study mode's set of inline-expanded commentary
  * disclosures (`useReaderState().expandedAnchors`) — unlike `activeAnchor`
  * (a single value), several anchors can be unfolded inline at once, so

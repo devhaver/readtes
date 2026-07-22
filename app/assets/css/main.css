@@ -122,3 +122,33 @@
 .reader-anchor-target.is-highlighted-instant {
   background-color: color-mix(in srgb, var(--color-teal) 35%, transparent);
 }
+
+/*
+ * Reading-preferences font-size scale (`useReadingPreferences`,
+ * `ReadingPreferencesModal`) — 4 steps, applied via `data-reading-scale` on
+ * `layouts/reader.vue`'s root. Only elements that explicitly multiply their
+ * own `font-size` by `var(--reading-scale)` (source segments, commentary
+ * items, the summary body — see those components' `text-[length:calc(...)]`
+ * classes) react to this; chrome (the toolbar, nav, buttons) never
+ * references the variable, so it's visually untouched regardless of where
+ * the attribute lives in the tree.
+ */
+:root {
+  --reading-scale: 1;
+}
+
+[data-reading-scale="1"] {
+  --reading-scale: 0.875;
+}
+
+[data-reading-scale="2"] {
+  --reading-scale: 1;
+}
+
+[data-reading-scale="3"] {
+  --reading-scale: 1.125;
+}
+
+[data-reading-scale="4"] {
+  --reading-scale: 1.3125;
+}

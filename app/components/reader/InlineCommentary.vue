@@ -69,7 +69,7 @@ const fold = () => toggleInline(props.anchorId);
       <li
         v-for="item in items"
         :key="item.anchorId"
-        class="leading-relaxed text-(--text-primary)"
+        class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
         <span class="me-1.5 text-xs font-semibold text-teal">{{
           localizedText(item.label, locale)

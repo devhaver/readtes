@@ -85,6 +85,27 @@ describe("reactivateAnchorState", () => {
   });
 });
 
+describe("setActivePaneState", () => {
+  it("sets activePane directly, without touching the active anchor/origin", () => {
+    const active = activateAnchorState(
+      initialReaderAnchorState(),
+      "op-1",
+      "source",
+    );
+    const next = setActivePaneState(active, "commentary");
+
+    expect(next).toEqual({
+      ...active,
+      activePane: "commentary",
+    });
+  });
+
+  it("doesn't bump activationSeq", () => {
+    const next = setActivePaneState(initialReaderAnchorState(), "commentary");
+    expect(next.activationSeq).toBe(0);
+  });
+});
+
 describe("clearAnchorState", () => {
   it("clears the active anchor and its origin, but keeps the active pane", () => {
     const active = activateAnchorState(

@@ -26,3 +26,17 @@ export const groupCommentaryBySection = (
       .filter((item) => item.section === section)
       .sort((a, b) => a.order - b.order),
   })).filter((group) => group.items.length > 0);
+
+/**
+ * The commentary items targeting one source seif, sorted by `order` — powers
+ * `CommentarySheet` (T9): tapping a source paragraph (not one of its own
+ * inline anchors) in mobile panes swipe mode opens a sheet listing whatever
+ * commentary targets that seif, regardless of anchor.
+ */
+export const commentaryItemsForSeif = (
+  items: CommentaryItem[],
+  seifN: number,
+): CommentaryItem[] =>
+  items
+    .filter((item) => item.targetSeif === seifN)
+    .sort((a, b) => a.order - b.order);

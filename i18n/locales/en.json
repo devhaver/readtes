@@ -61,7 +61,42 @@
       "readFullCommentary": "Read the full commentary",
       "readFullCommentaryHint": "Only commentary you've opened shows here — browse every item for this chapter in the full three-pane view."
     },
-    "progressLabel": "Reading progress"
+    "progressLabel": "Reading progress",
+    "toolbar": {
+      "preferencesButton": "Reading preferences"
+    },
+    "mobilePane": {
+      "label": "Reader pane",
+      "chapter": "Chapter",
+      "source": "Source",
+      "commentary": "Commentary"
+    },
+    "commentarySheet": {
+      "title": "Commentary on seif {n}",
+      "openInCommentary": "Open in Commentary",
+      "empty": "No commentary for this seif in this edition.",
+      "close": "Close"
+    },
+    "prefs": {
+      "title": "Reading preferences",
+      "close": "Close",
+      "fontSize": {
+        "label": "Text size",
+        "step1": "Small",
+        "step2": "Default",
+        "step3": "Large",
+        "step4": "Extra large"
+      },
+      "theme": {
+        "label": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      },
+      "language": {
+        "label": "Language"
+      }
+    }
   },
   "home": {
     "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",

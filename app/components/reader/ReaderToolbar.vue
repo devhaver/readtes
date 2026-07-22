@@ -7,6 +7,7 @@
 // together) — panes mode leaves it in normal flow, untouched, exactly as
 // T7 shipped it.
 import type { BreadcrumbItem } from "~/components/app/AppBreadcrumb.vue";
+import type { ReaderMode } from "~/utils/readerMode";
 import type { FlattenedChapter } from "~/utils/toc";
 
 defineProps<{
@@ -21,6 +22,16 @@ const localePath = useLocalePath();
 const { mode, setMode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const isStudyMode = computed(() => mode.value === "study");
+
+const modeOptions = computed(() => [
+  { value: "study" as ReaderMode, label: t("reader.mode.study") },
+  { value: "panes" as ReaderMode, label: t("reader.mode.panes") },
+]);
+
+// Opens `ReadingPreferencesModal` — available from every mode/breakpoint,
+// since it's this component that's always present (as the panes-mode
+// toolbar slot, or directly alongside `StudyStream` in study mode).
+const showPreferences = ref(false);
 </script>
 
 <template>
@@ -35,39 +46,42 @@ const isStudyMode = computed(() => mode.value === "study");
     <div class="flex items-center justify-between gap-3">
       <AppBreadcrumb :items="breadcrumbItems" />
 
-      <div
-        role="group"
-        :aria-label="t('reader.mode.label')"
-        class="flex shrink-0 overflow-hidden rounded-button border border-(--border) text-xs"
-      >
+      <div class="flex shrink-0 items-center gap-2">
         <button
           type="button"
-          :aria-pressed="mode === 'study'"
-          class="px-2.5 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-          :class="
-            mode === 'study'
-              ? 'bg-teal text-surface-white'
-              : 'text-(--text-primary) hover:bg-(--surface-raised)'
-          "
-          @click="setMode('study')"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          :aria-label="t('reader.toolbar.preferencesButton')"
+          @click="showPreferences = true"
         >
-          {{ t("reader.mode.study") }}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <polyline points="4 7 4 4 20 4 20 7" />
+            <line x1="9" y1="20" x2="15" y2="20" />
+            <line x1="12" y1="4" x2="12" y2="20" />
+          </svg>
         </button>
-        <button
-          type="button"
-          :aria-pressed="mode === 'panes'"
-          class="border-s border-(--border) px-2.5 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-          :class="
-            mode === 'panes'
-              ? 'bg-teal text-surface-white'
-              : 'text-(--text-primary) hover:bg-(--surface-raised)'
-          "
-          @click="setMode('panes')"
-        >
-          {{ t("reader.mode.panes") }}
-        </button>
+
+        <UiSegmentedControl
+          :ariaLabel="t('reader.mode.label')"
+          :model-value="mode"
+          :options="modeOptions"
+          @update:model-value="(value) => setMode(value)"
+        />
       </div>
     </div>
+
+    <ReaderReadingPreferencesModal
+      :open="showPreferences"
+      @close="showPreferences = false"
+    />
 
     <nav
       :aria-label="t('reader.chapterNav')"
