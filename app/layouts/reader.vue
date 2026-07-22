@@ -19,6 +19,23 @@
 // it, so setting the attribute this high up never touches chrome (the
 // navbar/toolbar don't reference the variable at all) even though it
 // technically cascades through them too.
+//
+// `h-dvh` (not `min-h-screen`) is deliberate and load-bearing: panes
+// mode's whole "each pane scrolls independently" design (desktop grid
+// *and* T9's mobile swipe track alike) needs this root to have a
+// genuinely bounded height, not just a floor — `ReaderPane`'s own
+// `overflow-y-auto` container only ever gets something to actually clip/
+// scroll against if every ancestor between it and here resolves to a
+// *definite* height (`h-full`/`flex-1 min-h-0`, all the way down through
+// `ReaderShell` and `MobileSwipePanes`' track). `min-h-screen` is only a
+// minimum, so content taller than the viewport would just grow this root
+// (and the whole page) taller instead of clipping/scrolling inside the
+// track — which is exactly the "blank first paint" bug this fixes: the
+// track/slides never got a real height to snap within. Study mode is
+// unaffected: nothing in *its* chain (`ReaderToolbar` + `StudyStream`,
+// no `ReaderShell`) sets `overflow` to anything but the default
+// `visible`, so its content still overflows this box and the page still
+// scrolls normally, exactly as before.
 const { t } = useI18n();
 
 const { mode } = useReaderMode();
@@ -30,7 +47,7 @@ const isStudyMode = computed(() => mode.value === "study");
 <template>
   <div
     :data-reading-scale="scale"
-    class="flex min-h-screen flex-col bg-(--surface) font-body text-(--text-primary)"
+    class="flex h-dvh flex-col bg-(--surface) font-body text-(--text-primary)"
   >
     <a
       href="#main-content"

@@ -45,3 +45,55 @@ export const resolveActivePane = (
 
   return best ?? current;
 };
+
+/**
+ * Minimal `scrollend` polyfill for the IntersectionObserver-only fallback
+ * path (Safari <17.4 — see `MobileSwipePanes`): without this, every ratio
+ * change from `IntersectionObserver` would commit `activePane` immediately,
+ * which fights a live touch-drag (each in-between ratio update "wins"
+ * briefly) and can mis-commit on a multi-slide programmatic jump (the
+ * observer sees the skipped middle slide's ratio pass through on the way to
+ * the real target). `ping()` on every observer callback; `onSettle` fires
+ * once `settleMs` has passed with no further `ping()` — the same
+ * gesture-has-ended semantics the native `scrollend` event gives for free.
+ *
+ * `hasSettled` is the pure piece (the threshold check itself); the timer
+ * wrapper around it is a thin, conventional debounce — unit-tested with
+ * fake timers rather than claimed to be "pure".
+ */
+export const DEFAULT_SETTLE_MS = 100;
+
+export const hasSettled = (
+  elapsedMs: number,
+  settleMs: number = DEFAULT_SETTLE_MS,
+): boolean => elapsedMs >= settleMs;
+
+export interface ScrollSettleTimer {
+  /** Call on every scroll-related event (e.g. each IntersectionObserver callback) — (re)starts the settle countdown. */
+  ping: () => void;
+  /** Cancels any pending settle without firing `onSettle` — for component cleanup. */
+  cancel: () => void;
+}
+
+export const createScrollSettleTimer = (
+  onSettle: () => void,
+  settleMs: number = DEFAULT_SETTLE_MS,
+): ScrollSettleTimer => {
+  let handle: ReturnType<typeof setTimeout> | null = null;
+
+  const cancel = () => {
+    if (handle === null) return;
+    clearTimeout(handle);
+    handle = null;
+  };
+
+  const ping = () => {
+    cancel();
+    handle = setTimeout(() => {
+      handle = null;
+      onSettle();
+    }, settleMs);
+  };
+
+  return { ping, cancel };
+};

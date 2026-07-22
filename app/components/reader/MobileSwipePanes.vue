@@ -25,15 +25,22 @@
 // (scoped to the track as its own `root`) tracks each slide's visibility
 // ratio continuously; `scrollend` (supported by every evergreen browser
 // except Safari <17.4) is the commit point that turns those ratios into an
-// `activePane` update. Where `scrollend` isn't available, the observer's
-// own callback commits directly instead — a little less debounced, but
-// correct in both directions regardless. Tab taps and cross-pane anchor
-// jumps both just set `activePane`; the `watch` below is the only thing
-// that turns that into an actual `scrollIntoView` (via `inline: "start"`,
-// a logical value, so it's RTL-correct without a `dir` check).
+// `activePane` update. Where `scrollend` isn't available, a small settle
+// timer (`createScrollSettleTimer`) polyfills the same "gesture has ended"
+// semantics instead of committing on every single ratio change — see that
+// util's doc comment for why an un-debounced fallback would fight a live
+// touch-drag and mis-commit on a multi-slide programmatic jump. Tab/pill
+// taps and cross-pane anchor jumps both just set `activePane`; the `watch`
+// below is the only thing that turns that into an actual `scrollIntoView`
+// (via `inline: "start"`, a logical value, so it's RTL-correct without a
+// `dir` check) — including on mount, so a fresh load lands snapped to
+// whichever pane is already `activePane` (source, by default) instead of
+// sitting on the DOM-first "summary" slide the browser scrolls to by
+// default with nothing else to say otherwise.
 import { useMediaQuery } from "@vueuse/core";
 import type { Ref } from "vue";
 import {
+  createScrollSettleTimer,
   PANE_ORDER,
   resolveActivePane,
   type PaneVisibilityRatios,
@@ -73,6 +80,11 @@ const commitActivePane = () => {
 
 const onScrollEnd = () => commitActivePane();
 
+// Only actually used on the no-`scrollend` fallback path (see `onIntersect`)
+// — harmless to always create, since `ping()` is simply never called when
+// `usesScrollEnd` is true.
+const settleTimer = createScrollSettleTimer(commitActivePane);
+
 const onIntersect: IntersectionObserverCallback = (entries) => {
   for (const entry of entries) {
     const pane = (entry.target as HTMLElement).dataset.pane as
@@ -80,9 +92,10 @@ const onIntersect: IntersectionObserverCallback = (entries) => {
     if (!pane) continue;
     ratios[pane] = entry.intersectionRatio;
   }
-  // Safari <17.4 fallback: no `scrollend` to debounce on, so the observer
-  // itself is the commit point (see the module doc above).
-  if (!usesScrollEnd) commitActivePane();
+  // Safari <17.4 fallback: no native `scrollend` to key off, so every
+  // observer callback (re)starts the settle timer instead of committing
+  // immediately — see the module doc above and `createScrollSettleTimer`.
+  if (!usesScrollEnd) settleTimer.ping();
 };
 
 const attachTrackListeners = () => {
@@ -106,6 +119,7 @@ const detachTrackListeners = () => {
   observer?.disconnect();
   observer = null;
   trackRef.value?.removeEventListener("scrollend", onScrollEnd);
+  settleTimer.cancel();
 };
 
 watch(
@@ -119,13 +133,31 @@ watch(
 
 onUnmounted(detachTrackListeners);
 
-watch(activePane, (pane) => {
+const scrollToPane = (pane: PaneId, instant: boolean) => {
   if (!isNarrowViewport.value) return;
   slideRefs[pane].value?.scrollIntoView({
-    behavior: prefersReducedMotion() ? "auto" : "smooth",
+    behavior: instant || prefersReducedMotion() ? "auto" : "smooth",
     inline: "start",
     block: "nearest",
   });
+};
+
+// `onMounted`, not an `immediate` watch: template refs are only guaranteed
+// populated once the component has actually mounted, and (unlike
+// `useFocusTrap`'s own `immediate`+`flush: "post"` watch, which reacts to a
+// *prop* flipping true after this component already exists) this needs to
+// run for the very state this component is born into — this *is* the
+// mount. Snaps instantly (no motion to reduce, there's no prior on-screen
+// state to visibly transition away from) to whichever slide is already
+// `activePane` (source, by default) instead of leaving the browser's own
+// "first slide in DOM order" scroll position (summary) silently
+// mismatched against it.
+onMounted(() => {
+  scrollToPane(activePane.value, true);
+});
+
+watch(activePane, (pane) => {
+  scrollToPane(pane, false);
 });
 </script>
 
