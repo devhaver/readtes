@@ -15,6 +15,7 @@ import {
   clearAnchorState,
   initialReaderAnchorState,
   reactivateAnchorState,
+  toggleInlineAnchorSet,
   type PaneId,
 } from "~/utils/readerAnchorState";
 
@@ -34,6 +35,15 @@ export interface ReaderState {
   /** Re-fires the highlight/scroll for the *current* anchor without changing it. */
   reactivateAnchor: () => void;
   clearAnchor: () => void;
+  /**
+   * Study mode's set of anchor ids whose commentary is currently unfolded
+   * inline (`InlineCommentary`/`StudyStream`) — panes mode never reads
+   * this. Several anchors can be open at once, so this is a set, not a
+   * scalar like `activeAnchor`.
+   */
+  expandedAnchors: Ref<ReadonlySet<string>>;
+  /** Opens `anchorId`'s inline disclosure if closed, closes it if open. */
+  toggleInline: (anchorId: string) => void;
 }
 
 const READER_STATE_KEY: InjectionKey<ReaderState> = Symbol("reader-state");
@@ -44,6 +54,7 @@ const createReaderState = (): ReaderState => {
   const anchorOrigin = ref<PaneId | null>(initial.anchorOrigin);
   const activePane = ref<PaneId>(initial.activePane);
   const activationSeq = ref<number>(initial.activationSeq);
+  const expandedAnchors = ref<ReadonlySet<string>>(new Set());
 
   const activateAnchor = (id: string, origin: PaneId) => {
     const next = activateAnchorState(
@@ -83,6 +94,13 @@ const createReaderState = (): ReaderState => {
     anchorOrigin.value = next.anchorOrigin;
   };
 
+  const toggleInline = (anchorId: string) => {
+    expandedAnchors.value = toggleInlineAnchorSet(
+      expandedAnchors.value,
+      anchorId,
+    );
+  };
+
   return {
     activeAnchor,
     anchorOrigin,
@@ -91,6 +109,8 @@ const createReaderState = (): ReaderState => {
     activateAnchor,
     reactivateAnchor,
     clearAnchor,
+    expandedAnchors,
+    toggleInline,
   };
 };
 

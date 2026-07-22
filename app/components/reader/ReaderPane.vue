@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // Generic pane chrome shared by the summary/source/commentary panes: a
-// header (layer title + version <select> when there's more than one + the
-// "AI translated" badge) above a scroll container that carries the
-// version's `dir`/`lang` — the actual pane content (SourcePane etc.) is
-// slotted in, and grabs this container via `useReaderPaneContainer()` for
-// its own `useHighlightedAnchor`.
+// header (`ReaderVersionHeader` — layer title + version <select> when
+// there's more than one + the "AI translated" badge) above a scroll
+// container that carries the version's `dir`/`lang` — the actual pane
+// content (SourcePane etc.) is slotted in, and grabs this container via
+// `useReaderPaneContainer()` for its own `useHighlightedAnchor`.
 import type { ContentVersion } from "~~/shared/types/content";
 
 export interface ReaderVersionOption {
@@ -12,7 +12,7 @@ export interface ReaderVersionOption {
   label: string;
 }
 
-const props = defineProps<{
+defineProps<{
   title: string;
   versionOptions: ReaderVersionOption[];
   modelValue: string | null;
@@ -20,16 +20,6 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
-
-const { t } = useI18n();
-
-const selectId = useId();
-const isAiTranslated = computed(() => props.meta?.source === "ai");
-
-const onVersionChange = (event: Event) => {
-  const value = (event.target as HTMLSelectElement).value;
-  emit("update:modelValue", value);
-};
 
 const containerRef = provideReaderPaneContainer();
 </script>
@@ -39,40 +29,14 @@ const containerRef = provideReaderPaneContainer();
     <header
       class="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-(--border) px-4 py-2.5"
     >
-      <h2
-        class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-      >
-        {{ title }}
-      </h2>
-
-      <div class="flex items-center gap-2">
-        <span
-          v-if="isAiTranslated"
-          class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-orange-cta"
-        >
-          {{ t("reader.aiTranslated") }}
-        </span>
-
-        <template v-if="versionOptions.length > 1">
-          <label :for="selectId" class="sr-only">{{
-            t("reader.versionLabel")
-          }}</label>
-          <select
-            :id="selectId"
-            class="rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary)"
-            :value="modelValue ?? ''"
-            @change="onVersionChange"
-          >
-            <option
-              v-for="option in versionOptions"
-              :key="option.id"
-              :value="option.id"
-            >
-              {{ option.label }}
-            </option>
-          </select>
-        </template>
-      </div>
+      <ReaderVersionHeader
+        :title="title"
+        :version-options="versionOptions"
+        :model-value="modelValue"
+        :meta="meta"
+        class="flex-1"
+        @update:model-value="(value) => emit('update:modelValue', value)"
+      />
 
       <slot name="toast" />
     </header>
