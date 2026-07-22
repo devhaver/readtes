@@ -1,14 +1,17 @@
 import { describe, expect, it } from "vitest";
-import type { Toc } from "~~/shared/types/content";
+import type { ChapterKind, Toc } from "~~/shared/types/content";
 
-const chapter = (id: string, number: number) => ({
+const chapterOf = (id: string, kind: ChapterKind, number: number) => ({
   id,
-  kind: "chapter" as const,
+  kind,
   number,
   title: { en: id, he: id },
   availableLayers: [],
   availableVersions: { summary: [], source: [], commentary: [] },
 });
+
+const chapter = (id: string, number: number) =>
+  chapterOf(id, "chapter", number);
 
 const fixtureToc: Toc = {
   volumes: [
@@ -65,6 +68,83 @@ describe("flattenChapters", () => {
       "part-02/chapter-01",
       "part-03/chapter-01",
     ]);
+  });
+});
+
+describe("flattenChapters — mixed chapter kinds", () => {
+  // Regression coverage: `TocChapter.number` restarts at 1 within each kind
+  // (a real part-01 shape — 2 `chapter`s, 10 `inner-observation`s, 1
+  // `questions-terminology`, 54 `answers-terminology`), so sorting a part's
+  // chapters by `number` alone (the pre-fix behaviour) interleaved kinds —
+  // e.g. `chapter` #1, `inner-observation` #1, and `answers-terminology` #1
+  // all tied at `number: 1` — instead of reading through one kind before
+  // the next. `flattenChapters` must sort by kind (`KIND_ORDER`) first.
+  const mixedKindToc: Toc = {
+    volumes: [
+      {
+        id: "volume-01",
+        number: 1,
+        title: { en: "Volume 1", he: "כרך 1" },
+        parts: [
+          {
+            id: "part-01",
+            number: 1,
+            sefariaNode: "Talmud Eser HaSefirot, Section I",
+            title: { en: "Part 1", he: "חלק 1" },
+            // Authored out of reading order on purpose, to prove the sort
+            // (not incidental array order) produces the right result.
+            chapters: [
+              chapterOf(
+                "part-01/answers-terminology-02",
+                "answers-terminology",
+                2,
+              ),
+              chapterOf("part-01/inner-observation-02", "inner-observation", 2),
+              chapterOf("part-01/chapter-02", "chapter", 2),
+              chapterOf(
+                "part-01/answers-terminology-01",
+                "answers-terminology",
+                1,
+              ),
+              chapterOf(
+                "part-01/questions-terminology-01",
+                "questions-terminology",
+                1,
+              ),
+              chapterOf("part-01/inner-observation-01", "inner-observation", 1),
+              chapterOf("part-01/chapter-01", "chapter", 1),
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
+  it("orders chapters by kind first, then by number within the kind", () => {
+    expect(
+      flattenChapters(mixedKindToc).map((entry) => entry.chapter.id),
+    ).toEqual([
+      "part-01/chapter-01",
+      "part-01/chapter-02",
+      "part-01/inner-observation-01",
+      "part-01/inner-observation-02",
+      "part-01/questions-terminology-01",
+      "part-01/answers-terminology-01",
+      "part-01/answers-terminology-02",
+    ]);
+  });
+
+  it("prevNextChapter crosses from the last `chapter` into `inner-observation`, not into `answers-*`", () => {
+    const { next } = prevNextChapter(mixedKindToc, "part-01/chapter-02");
+    expect(next?.chapter.id).toBe("part-01/inner-observation-01");
+  });
+
+  it("prevNextChapter crosses from `inner-observation` into `questions-terminology`", () => {
+    const { next } = prevNextChapter(
+      mixedKindToc,
+      "part-01/inner-observation-02",
+    );
+    expect(next?.chapter.id).toBe("part-01/questions-terminology-01");
   });
 });
 

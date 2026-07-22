@@ -58,3 +58,67 @@
   --text-muted: #a9b4bd;
   --border: #1f3a52;
 }
+
+/*
+ * Reader anchor chips + cross-pane highlight flash (`useHighlightedAnchor`).
+ *
+ * `.tes-anchor` is Sefaria's inline commentary marker, normalized at import
+ * time (`app/utils/anchors.ts`) into `<a class="tes-anchor" data-anchor="op-N">` —
+ * styled here, unobtrusively: small, teal, superscript-scale, never
+ * shouting over the source text it's inset into.
+ *
+ * `.reader-anchor-target` is the class the reader components apply to their
+ * own jump targets (commentary items, source segments) so the same
+ * highlight-flash rules apply uniformly regardless of which pane it lands
+ * in. The transition lives on the base (unhighlighted) rule so JS can flash
+ * the "on" state instantly (by disabling the transition for one frame) and
+ * let only the fade-OUT animate — see `useHighlightedAnchor`.
+ */
+.tes-anchor,
+.reader-anchor-target {
+  transition:
+    background-color 2000ms ease-out,
+    color 2000ms ease-out;
+  border-radius: 4px;
+}
+
+/*
+ * `.tes-anchor` is applied both to the sanitized `<a>` markers inside source
+ * segment HTML and to the `<button>` commentary-item label chips
+ * (`CommentaryPane`) — the reset properties below only matter for the
+ * latter (a bare `<a>` has none of this chrome to begin with).
+ */
+.tes-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0;
+  padding-inline: 0.15em;
+  font: inherit;
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 1;
+  vertical-align: super;
+  background: none;
+  color: var(--color-teal);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tes-anchor:hover,
+.tes-anchor:focus-visible {
+  text-decoration: underline;
+}
+
+.tes-anchor:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 1px;
+}
+
+.tes-anchor.is-highlighted,
+.tes-anchor.is-highlighted-instant,
+.reader-anchor-target.is-highlighted,
+.reader-anchor-target.is-highlighted-instant {
+  background-color: color-mix(in srgb, var(--color-teal) 35%, transparent);
+}

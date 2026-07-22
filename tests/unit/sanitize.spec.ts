@@ -54,6 +54,29 @@ describe("sanitizeHtml — attribute stripping", () => {
     expect(sanitizeHtml(html)).toBe('<a class="ok">click</a>');
   });
 
+  it("rewrites a Sefaria site-relative href to an absolute sefaria.org link, opened in a new tab", () => {
+    const html =
+      '<a href="/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_55">לתשובה</a>';
+
+    expect(sanitizeHtml(html)).toBe(
+      '<a href="https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_55" target="_blank" rel="noopener noreferrer">לתשובה</a>',
+    );
+  });
+
+  it("leaves an in-page fragment href (#op-N) alone", () => {
+    const html = '<a href="#op-1" class="tes-anchor" data-anchor="op-1">א</a>';
+
+    expect(sanitizeHtml(html)).toBe(
+      '<a href="#op-1" class="tes-anchor" data-anchor="op-1">א</a>',
+    );
+  });
+
+  it("leaves a protocol-relative href (//example.com) alone", () => {
+    const html = '<a href="//example.com/x">link</a>';
+
+    expect(sanitizeHtml(html)).toBe('<a href="//example.com/x">link</a>');
+  });
+
   it("strips all attributes from tags with no allowlisted attributes", () => {
     expect(sanitizeHtml('<b class="x" style="color:red">bold</b>')).toBe(
       "<b>bold</b>",
@@ -144,6 +167,29 @@ describe("sanitizeHtml — nested/malformed tags", () => {
   it("handles a disallowed tag nested inside an allowed one", () => {
     expect(sanitizeHtml('<span class="x"><div>inner</div></span>')).toBe(
       '<span class="x">inner</span>',
+    );
+  });
+});
+
+describe("rewriteLegacySefariaRelativeHrefs", () => {
+  it("rewrites a Sefaria site-relative href already baked into committed content", () => {
+    const html =
+      'מה המה המושגים המושללים. <small>(<a href="/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_55">לתשובה</a>)</small>';
+
+    expect(rewriteLegacySefariaRelativeHrefs(html)).toBe(
+      'מה המה המושגים המושללים. <small>(<a href="https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_55" target="_blank" rel="noopener noreferrer">לתשובה</a>)</small>',
+    );
+  });
+
+  it("leaves an in-page #op-N fragment href alone", () => {
+    const html = '<a class="tes-anchor" href="#op-1" data-anchor="op-1">א</a>';
+
+    expect(rewriteLegacySefariaRelativeHrefs(html)).toBe(html);
+  });
+
+  it("leaves html with no hrefs at all unchanged", () => {
+    expect(rewriteLegacySefariaRelativeHrefs("<b>plain text</b>")).toBe(
+      "<b>plain text</b>",
     );
   });
 });
