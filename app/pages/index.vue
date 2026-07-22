@@ -113,6 +113,7 @@ const layers = computed(() => [
           <div class="tes-duotone">
             <img
               src="/images/baal-hasulam.webp"
+              fetchpriority="high"
               alt=""
               width="720"
               height="900"

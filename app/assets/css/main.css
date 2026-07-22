@@ -218,6 +218,7 @@
  */
 .tes-duotone {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
 }
 
