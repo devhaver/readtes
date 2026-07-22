@@ -24,5 +24,14 @@
     "title": "Read TES Curated Summary",
     "license": "CC-BY",
     "source": "curated"
+  },
+  {
+    "id": "en-ai",
+    "language": "en",
+    "direction": "ltr",
+    "title": "English (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
   }
 ]
