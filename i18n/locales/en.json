@@ -47,7 +47,21 @@
     },
     "prevChapter": "Previous chapter",
     "nextChapter": "Next chapter",
-    "chapterNav": "Chapter navigation"
+    "chapterNav": "Chapter navigation",
+    "mode": {
+      "label": "Reading mode",
+      "study": "Study",
+      "panes": "Panes"
+    },
+    "chapterIntro": {
+      "title": "In this chapter"
+    },
+    "studyMode": {
+      "fold": "Fold",
+      "readFullCommentary": "Read the full commentary",
+      "readFullCommentaryHint": "Only commentary you've opened shows here — browse every item for this chapter in the full three-pane view."
+    },
+    "progressLabel": "Reading progress"
   },
   "home": {
     "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",

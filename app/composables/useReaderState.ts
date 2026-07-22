@@ -1,9 +1,13 @@
 /**
- * The reader's cross-pane anchor sync state, shared by `ReaderShell` and
- * every pane beneath it via provide/inject — no event bus, no cross-pane
- * DOM reach. Each pane's own `useHighlightedAnchor(paneId, containerRef)`
- * watches `activeAnchor`/`anchorOrigin` and only reacts when it isn't the
- * origin pane.
+ * The reader's cross-pane anchor sync state. The actual provider is
+ * `layouts/reader.vue`: its unconditional `useAutoHidingChrome()` call
+ * reaches in and calls `useReaderState()` first, and since that layout
+ * renders as an ancestor of every reader page, that's the instance
+ * `ReaderShell` and every pane beneath it (however deeply slotted) end up
+ * injecting via provide/inject — no event bus, no cross-pane DOM reach.
+ * Each pane's own `useHighlightedAnchor(paneId, containerRef)` watches
+ * `activeAnchor`/`anchorOrigin` and only reacts when it isn't the origin
+ * pane.
  *
  * `activePane` exists (even though this task is desktop-first, all three
  * panes always visible) so a later single-pane mobile mode (T8) can plug
@@ -15,6 +19,7 @@ import {
   clearAnchorState,
   initialReaderAnchorState,
   reactivateAnchorState,
+  toggleInlineAnchorSet,
   type PaneId,
 } from "~/utils/readerAnchorState";
 
@@ -34,6 +39,15 @@ export interface ReaderState {
   /** Re-fires the highlight/scroll for the *current* anchor without changing it. */
   reactivateAnchor: () => void;
   clearAnchor: () => void;
+  /**
+   * Study mode's set of anchor ids whose commentary is currently unfolded
+   * inline (`InlineCommentary`/`StudyStream`) — panes mode never reads
+   * this. Several anchors can be open at once, so this is a set, not a
+   * scalar like `activeAnchor`.
+   */
+  expandedAnchors: Ref<ReadonlySet<string>>;
+  /** Opens `anchorId`'s inline disclosure if closed, closes it if open. */
+  toggleInline: (anchorId: string) => void;
 }
 
 const READER_STATE_KEY: InjectionKey<ReaderState> = Symbol("reader-state");
@@ -44,6 +58,7 @@ const createReaderState = (): ReaderState => {
   const anchorOrigin = ref<PaneId | null>(initial.anchorOrigin);
   const activePane = ref<PaneId>(initial.activePane);
   const activationSeq = ref<number>(initial.activationSeq);
+  const expandedAnchors = ref<ReadonlySet<string>>(new Set());
 
   const activateAnchor = (id: string, origin: PaneId) => {
     const next = activateAnchorState(
@@ -83,6 +98,13 @@ const createReaderState = (): ReaderState => {
     anchorOrigin.value = next.anchorOrigin;
   };
 
+  const toggleInline = (anchorId: string) => {
+    expandedAnchors.value = toggleInlineAnchorSet(
+      expandedAnchors.value,
+      anchorId,
+    );
+  };
+
   return {
     activeAnchor,
     anchorOrigin,
@@ -91,17 +113,31 @@ const createReaderState = (): ReaderState => {
     activateAnchor,
     reactivateAnchor,
     clearAnchor,
+    expandedAnchors,
+    toggleInline,
   };
 };
 
 /**
- * Called by `ReaderShell` (provides a fresh state) and by every pane beneath
- * it (injects the same instance) — whichever component calls this first in
- * a given reader page's tree creates and provides the state.
+ * The real provider is `layouts/reader.vue` (see the module doc above);
+ * `ReaderShell` and every pane beneath it just inject that same instance.
+ * The fresh-instance fallback below only exists for a caller mounted
+ * without that layout as an ancestor (an isolated test, a future misuse)
+ * — since that means the expected provider never ran, it warns in dev so
+ * the mistake doesn't go silent.
  */
 export const useReaderState = (): ReaderState => {
   const existing = inject(READER_STATE_KEY, null);
   if (existing) return existing;
+
+  if (import.meta.dev) {
+    console.warn(
+      "[useReaderState] no provided reader state found in the component " +
+        "tree — creating a fresh instance instead. Expected " +
+        "`layouts/reader.vue` (via its useAutoHidingChrome() call) to have " +
+        "provided one higher up.",
+    );
+  }
 
   const state = createReaderState();
   provide(READER_STATE_KEY, state);

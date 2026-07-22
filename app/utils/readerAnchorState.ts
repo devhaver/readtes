@@ -69,3 +69,25 @@ export const reactivateAnchorState = (
   ...state,
   activationSeq: state.activationSeq + 1,
 });
+
+/**
+ * Toggles one anchor id in study mode's set of inline-expanded commentary
+ * disclosures (`useReaderState().expandedAnchors`) — unlike `activeAnchor`
+ * (a single value), several anchors can be unfolded inline at once, so
+ * this is a set, not a scalar. Always returns a new `Set` instance (never
+ * mutates `expanded` in place) so a plain `ref<Set<string>>` re-render
+ * correctly off a wholesale reassignment, the same immutable-update
+ * approach as the rest of this module.
+ */
+export const toggleInlineAnchorSet = (
+  expanded: ReadonlySet<string>,
+  anchorId: string,
+): Set<string> => {
+  const next = new Set(expanded);
+  if (next.has(anchorId)) {
+    next.delete(anchorId);
+  } else {
+    next.add(anchorId);
+  }
+  return next;
+};

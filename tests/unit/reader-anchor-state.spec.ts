@@ -102,3 +102,29 @@ describe("clearAnchorState", () => {
     });
   });
 });
+
+describe("toggleInlineAnchorSet", () => {
+  it("adds an anchor id that isn't yet expanded", () => {
+    const next = toggleInlineAnchorSet(new Set(), "op-1");
+    expect(next).toEqual(new Set(["op-1"]));
+  });
+
+  it("removes an anchor id that's already expanded (fold)", () => {
+    const next = toggleInlineAnchorSet(new Set(["op-1"]), "op-1");
+    expect(next).toEqual(new Set());
+  });
+
+  it("leaves other expanded anchors untouched — several can be open at once", () => {
+    const next = toggleInlineAnchorSet(new Set(["op-1", "op-2"]), "op-3");
+    expect(next).toEqual(new Set(["op-1", "op-2", "op-3"]));
+
+    const folded = toggleInlineAnchorSet(next, "op-2");
+    expect(folded).toEqual(new Set(["op-1", "op-3"]));
+  });
+
+  it("never mutates the set it was given", () => {
+    const original = new Set(["op-1"]);
+    toggleInlineAnchorSet(original, "op-2");
+    expect(original).toEqual(new Set(["op-1"]));
+  });
+});

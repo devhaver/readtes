@@ -105,3 +105,82 @@ describe("resolveMissingAnchorNotice", () => {
     ).toEqual({ anchorId: "op-9", canSwitchToHebrew: false });
   });
 });
+
+// `resolveAnchorAvailability` is the per-anchor rule `resolveMissingAnchorNotice`
+// itself delegates to — study mode (`StudyStream`) runs this once per
+// anchor in `expandedAnchors` instead of gating on a single global
+// `activeAnchor`/`anchorOrigin`, since several inline disclosures can be
+// open at once, each independently "missing" or not.
+describe("resolveAnchorAvailability", () => {
+  it("is not missing when the currently-displayed version already has the anchor", () => {
+    expect(
+      resolveAnchorAvailability({
+        anchorId: "op-1",
+        displayedItems: [commentaryItem("op-1")],
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: null,
+        hebrewVersionId: HEBREW,
+      }),
+    ).toEqual({ missing: false, canSwitchToHebrew: false });
+  });
+
+  it("is missing, and offers a switch to Hebrew, when Hebrew has the anchor", () => {
+    expect(
+      resolveAnchorAvailability({
+        anchorId: "op-9",
+        displayedItems: [commentaryItem("op-1")],
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: [commentaryItem("op-9")],
+        hebrewVersionId: HEBREW,
+      }),
+    ).toEqual({ missing: true, canSwitchToHebrew: true });
+  });
+
+  it("is missing with no Hebrew switch offered when Hebrew doesn't have it either", () => {
+    expect(
+      resolveAnchorAvailability({
+        anchorId: "op-9",
+        displayedItems: [],
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: null,
+        hebrewVersionId: HEBREW,
+      }),
+    ).toEqual({ missing: true, canSwitchToHebrew: false });
+  });
+
+  it("doesn't offer a switch when Hebrew is already the version being shown", () => {
+    expect(
+      resolveAnchorAvailability({
+        anchorId: "op-9",
+        displayedItems: [],
+        selectedVersionId: HEBREW,
+        hebrewItems: [],
+        hebrewVersionId: HEBREW,
+      }),
+    ).toEqual({ missing: true, canSwitchToHebrew: false });
+  });
+
+  it("checks each anchor independently — several can be open in study mode at once", () => {
+    const displayedItems = [commentaryItem("op-1")];
+
+    expect(
+      resolveAnchorAvailability({
+        anchorId: "op-1",
+        displayedItems,
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: null,
+        hebrewVersionId: HEBREW,
+      }).missing,
+    ).toBe(false);
+
+    expect(
+      resolveAnchorAvailability({
+        anchorId: "op-2",
+        displayedItems,
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: null,
+        hebrewVersionId: HEBREW,
+      }).missing,
+    ).toBe(true);
+  });
+});

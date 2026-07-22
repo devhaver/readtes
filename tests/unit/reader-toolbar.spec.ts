@@ -84,4 +84,40 @@ describe("ReaderToolbar", () => {
     const disabled = wrapper.findAll("[aria-disabled='true']");
     expect(disabled.length).toBe(2);
   });
+
+  it("renders a study/panes mode toggle, reflecting the current mode via aria-pressed", async () => {
+    const wrapper = await mountSuspended(ReaderToolbar, {
+      props: { breadcrumbItems, prev: null, next: null },
+    });
+
+    const studyButton = wrapper
+      .findAll("button")
+      .find((button) => button.text() === "Study");
+    const panesButton = wrapper
+      .findAll("button")
+      .find((button) => button.text() === "Panes");
+    expect(studyButton).toBeTruthy();
+    expect(panesButton).toBeTruthy();
+  });
+
+  it("switches the toggle's pressed state when clicked", async () => {
+    const wrapper = await mountSuspended(ReaderToolbar, {
+      props: { breadcrumbItems, prev: null, next: null },
+    });
+
+    const studyButton = wrapper
+      .findAll("button")
+      .find((button) => button.text() === "Study");
+    const panesButton = wrapper
+      .findAll("button")
+      .find((button) => button.text() === "Panes");
+
+    await studyButton?.trigger("click");
+    expect(studyButton?.attributes("aria-pressed")).toBe("true");
+    expect(panesButton?.attributes("aria-pressed")).toBe("false");
+
+    await panesButton?.trigger("click");
+    expect(panesButton?.attributes("aria-pressed")).toBe("true");
+    expect(studyButton?.attributes("aria-pressed")).toBe("false");
+  });
 });

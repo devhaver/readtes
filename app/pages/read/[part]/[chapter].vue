@@ -46,6 +46,11 @@ const {
 );
 
 const readerVersions = useReaderVersions(entry.chapter, versions.value);
+// Study mode below `lg`, panes at/above it by default — user overrides
+// persist across chapters (`useReaderMode`). Decides which of the two
+// component trees below actually mounts; `ReaderToolbar` (rendered either
+// way) reads the same shared state for its mode-toggle control.
+const { mode } = useReaderMode();
 const versionsById = computed(() => buildVersionsById(versions.value));
 
 const versionOptions = (ids: string[]) =>
@@ -139,67 +144,96 @@ useSeoMeta({
 </script>
 
 <template>
-  <ReaderShell>
-    <template #toolbar>
+  <div class="contents">
+    <ReaderShell v-if="mode === 'panes'">
+      <template #toolbar>
+        <ReaderToolbar
+          :breadcrumb-items="breadcrumbItems"
+          :prev="prev"
+          :next="next"
+        />
+      </template>
+
+      <template #summary>
+        <ReaderPane
+          :title="t('reader.pane.summary')"
+          :version-options="summaryVersionOptions"
+          :model-value="readerVersions.summary.value"
+          :meta="summaryMeta"
+          @update:model-value="(id) => readerVersions.setVersion('summary', id)"
+        >
+          <ReaderSummaryPane
+            :summary-items="summaryItems"
+            :source-segments="sourceSegments"
+          />
+        </ReaderPane>
+      </template>
+
+      <template #source>
+        <ReaderPane
+          :title="t('reader.pane.source')"
+          :version-options="sourceVersionOptions"
+          :model-value="readerVersions.source.value"
+          :meta="sourceMeta"
+          @update:model-value="(id) => readerVersions.setVersion('source', id)"
+        >
+          <ReaderSourcePane :segments="sourceSegments" />
+        </ReaderPane>
+      </template>
+
+      <template #commentary>
+        <ReaderPane
+          :title="t('reader.pane.commentary')"
+          :version-options="commentaryVersionOptions"
+          :model-value="readerVersions.commentary.value"
+          :meta="commentaryMeta"
+          @update:model-value="
+            (id) => readerVersions.setVersion('commentary', id)
+          "
+        >
+          <template v-if="missingAnchorNotice" #toast>
+            <p class="basis-full text-xs text-orange-cta">
+              {{ t("reader.missingAnchor.message") }}
+              <button
+                v-if="missingAnchorNotice.canSwitchToHebrew"
+                type="button"
+                class="ms-1 underline"
+                @click="switchCommentaryToHebrew"
+              >
+                {{ t("reader.missingAnchor.switchToHebrew") }}
+              </button>
+            </p>
+          </template>
+          <ReaderCommentaryPane :items="commentaryItems" />
+        </ReaderPane>
+      </template>
+    </ReaderShell>
+
+    <template v-else>
       <ReaderToolbar
         :breadcrumb-items="breadcrumbItems"
         :prev="prev"
         :next="next"
       />
-    </template>
-
-    <template #summary>
-      <ReaderPane
-        :title="t('reader.pane.summary')"
-        :version-options="summaryVersionOptions"
-        :model-value="readerVersions.summary.value"
-        :meta="summaryMeta"
-        @update:model-value="(id) => readerVersions.setVersion('summary', id)"
-      >
-        <ReaderSummaryPane
-          :summary-items="summaryItems"
-          :source-segments="sourceSegments"
-        />
-      </ReaderPane>
-    </template>
-
-    <template #source>
-      <ReaderPane
-        :title="t('reader.pane.source')"
-        :version-options="sourceVersionOptions"
-        :model-value="readerVersions.source.value"
-        :meta="sourceMeta"
-        @update:model-value="(id) => readerVersions.setVersion('source', id)"
-      >
-        <ReaderSourcePane :segments="sourceSegments" />
-      </ReaderPane>
-    </template>
-
-    <template #commentary>
-      <ReaderPane
-        :title="t('reader.pane.commentary')"
-        :version-options="commentaryVersionOptions"
-        :model-value="readerVersions.commentary.value"
-        :meta="commentaryMeta"
-        @update:model-value="
-          (id) => readerVersions.setVersion('commentary', id)
+      <ReaderStudyStream
+        :source-segments="sourceSegments"
+        :commentary-items="commentaryItems"
+        :summary-items="summaryItems"
+        :source-meta="sourceMeta"
+        :commentary-meta="commentaryMeta"
+        :source-version-options="sourceVersionOptions"
+        :commentary-version-options="commentaryVersionOptions"
+        :source-version="readerVersions.source.value"
+        :commentary-version="readerVersions.commentary.value"
+        :hebrew-items="commentaryByVersion[HEBREW_VERSION_ID]?.items ?? null"
+        :hebrew-version-id="HEBREW_VERSION_ID"
+        @update:source-version="
+          (id: string) => readerVersions.setVersion('source', id)
         "
-      >
-        <template v-if="missingAnchorNotice" #toast>
-          <p class="basis-full text-xs text-orange-cta">
-            {{ t("reader.missingAnchor.message") }}
-            <button
-              v-if="missingAnchorNotice.canSwitchToHebrew"
-              type="button"
-              class="ms-1 underline"
-              @click="switchCommentaryToHebrew"
-            >
-              {{ t("reader.missingAnchor.switchToHebrew") }}
-            </button>
-          </p>
-        </template>
-        <ReaderCommentaryPane :items="commentaryItems" />
-      </ReaderPane>
+        @update:commentary-version="
+          (id: string) => readerVersions.setVersion('commentary', id)
+        "
+      />
     </template>
-  </ReaderShell>
+  </div>
 </template>
