@@ -8,6 +8,7 @@ import type {
   TocPart,
   TocVolume,
 } from "~~/shared/types/content";
+import { KIND_ORDER } from "./chapterGrouping";
 
 export interface FlattenedChapter {
   chapter: TocChapter;
@@ -21,6 +22,21 @@ export interface Breadcrumb {
   chapter: TocChapter;
 }
 
+/**
+ * A part's chapters in true reading order: kind first (`KIND_ORDER` —
+ * chapter, then inner-observation, then questions, then answers), `number`
+ * within a kind second. `TocChapter.number` alone is only unique per kind
+ * (e.g. `chapter` chapters 1-2 and `inner-observation` chapters 1-10 both
+ * start at 1), so sorting by `number` alone would interleave kinds instead
+ * of reading through one before the next.
+ */
+const orderedChapters = (chapters: TocChapter[]): TocChapter[] =>
+  [...chapters].sort(
+    (a, b) =>
+      KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) ||
+      a.number - b.number,
+  );
+
 /** Flattens a `Toc` into every chapter, in volume -> part -> chapter reading order. */
 export const flattenChapters = (toc: Toc): FlattenedChapter[] => {
   const volumes = [...toc.volumes].sort((a, b) => a.number - b.number);
@@ -30,9 +46,7 @@ export const flattenChapters = (toc: Toc): FlattenedChapter[] => {
     const parts = [...volume.parts].sort((a, b) => a.number - b.number);
 
     for (const part of parts) {
-      const chapters = [...part.chapters].sort((a, b) => a.number - b.number);
-
-      for (const chapter of chapters) {
+      for (const chapter of orderedChapters(part.chapters)) {
         flattened.push({ chapter, part, volume });
       }
     }
