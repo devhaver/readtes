@@ -7,6 +7,15 @@
  * too, until overridden again — falling back to the default rule whenever
  * the persisted choice isn't among the current chapter's available
  * versions for that layer.
+ *
+ * Hydration note: `useLocalStorage` reads `localStorage` synchronously in
+ * `setup`, but prerendering has no `localStorage` and always resolves via
+ * `resolveDefaultVersion`. Consulting the persisted prefs immediately would
+ * make a returning visitor's first client render (used for hydration)
+ * diverge from the prerendered HTML - a hydration mismatch + content flash.
+ * `hydrated` gates persisted reads until `onMounted`, so the very first
+ * render (server and client alike) always resolves via the default rule;
+ * the persisted override reconciles in right after mount.
  */
 import { useLocalStorage } from "@vueuse/core";
 import type { ComputedRef } from "vue";
@@ -47,10 +56,19 @@ export const useReaderVersions = (
     ...DEFAULT_PREFS,
   });
 
+  // Gates persisted-preference reads until after mount so the first render
+  // (SSR and the client's pre-mount render alike) always matches the
+  // default-rule resolution baked into the prerendered HTML. See the
+  // module-doc hydration note above.
+  const hydrated = ref(false);
+  onMounted(() => {
+    hydrated.value = true;
+  });
+
   const resolvedFor = (layer: LayerKind): ComputedRef<string | null> =>
     computed(() => {
       const available = chapter.availableVersions[layer];
-      const preferred = prefs.value[layer];
+      const preferred = hydrated.value ? prefs.value[layer] : null;
 
       if (preferred && available.includes(preferred)) return preferred;
       return resolveDefaultVersion(available, locale.value, versionsById.value);

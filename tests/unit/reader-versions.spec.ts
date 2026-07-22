@@ -1,5 +1,7 @@
-import { describe, expect, it } from "vitest";
-import type { ContentVersion } from "~~/shared/types/content";
+import { mountSuspended } from "@nuxt/test-utils/runtime";
+import { beforeEach, describe, expect, it } from "vitest";
+import { defineComponent, nextTick } from "vue";
+import type { ContentVersion, TocChapter } from "~~/shared/types/content";
 
 const versions: ContentVersion[] = [
   {
@@ -93,5 +95,89 @@ describe("resolveDefaultVersion", () => {
 
   it("returns null for an empty list", () => {
     expect(resolveDefaultVersion([], "en", versionsById)).toBeNull();
+  });
+});
+
+describe("useReaderVersions (hydration)", () => {
+  const STORAGE_KEY = "readtes:reader-versions";
+
+  const chapter: TocChapter = {
+    id: "part-01/chapter-01",
+    kind: "chapter",
+    number: 1,
+    title: { en: "Chapter 1", he: "פרק 1" },
+    availableLayers: ["source"],
+    availableVersions: {
+      summary: [],
+      source: ["he-jerusalem-1956", "en-sefaria-community"],
+      commentary: [],
+    },
+  };
+
+  // Default UI locale in tests is "en" (see nuxt.config.ts), so the
+  // default-rule resolution for this chapter's source layer is the English
+  // version — distinct from the Hebrew override persisted below.
+  const SSR_DEFAULT = "en-sefaria-community";
+  const PERSISTED_OVERRIDE = "he-jerusalem-1956";
+
+  const Host = defineComponent({
+    setup() {
+      const readerVersions = useReaderVersions(chapter, versions);
+      // Captured synchronously in `setup`, i.e. before this component's
+      // `onMounted` runs — this is the value the very first render (and,
+      // for a real page load, the prerendered SSR markup) resolves to.
+      const preMountSource = readerVersions.source.value;
+      return { readerVersions, preMountSource };
+    },
+    render: () => null,
+  });
+
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it("resolves to the SSR default before mount, then reconciles to the persisted override after mount", async () => {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        source: PERSISTED_OVERRIDE,
+        commentary: null,
+        summary: null,
+      }),
+    );
+
+    const wrapper = await mountSuspended(Host);
+
+    // The pre-mount value (captured in `setup`, matching what SSR would
+    // have rendered) must equal the default-rule resolution, not the
+    // persisted override — this is the hydration-mismatch guard.
+    expect(wrapper.vm.preMountSource).toBe(SSR_DEFAULT);
+
+    await nextTick();
+
+    // Post-mount, the persisted override reconciles in.
+    expect(wrapper.vm.readerVersions.source.value).toBe(PERSISTED_OVERRIDE);
+  });
+
+  it("still resolves to the default rule post-mount when nothing is persisted", async () => {
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+
+    expect(wrapper.vm.readerVersions.source.value).toBe(SSR_DEFAULT);
+  });
+
+  it("keeps persisting a version choice via setVersion", async () => {
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+
+    wrapper.vm.readerVersions.setVersion("source", PERSISTED_OVERRIDE);
+    await nextTick();
+
+    expect(wrapper.vm.readerVersions.source.value).toBe(PERSISTED_OVERRIDE);
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}")).toEqual({
+      source: PERSISTED_OVERRIDE,
+      commentary: null,
+      summary: null,
+    });
   });
 });
