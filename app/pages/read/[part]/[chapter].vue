@@ -221,7 +221,7 @@ useLocalizedSeo({
           "
         >
           <template v-if="missingAnchorNotice" #toast>
-            <p class="basis-full text-xs text-orange-cta">
+            <p class="basis-full text-xs text-(--warning-text)">
               {{ t("reader.missingAnchor.message") }}
               <button
                 v-if="missingAnchorNotice.canSwitchToHebrew"

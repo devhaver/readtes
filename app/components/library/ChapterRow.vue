@@ -56,7 +56,7 @@ const languages = computed(() =>
       <span class="flex shrink-0 items-center gap-1.5">
         <span
           v-if="languages.aiTranslated"
-          class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-orange-cta"
+          class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-(--warning-text)"
         >
           {{ t("reader.aiTranslated") }}
         </span>

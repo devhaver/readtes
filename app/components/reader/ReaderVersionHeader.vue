@@ -37,7 +37,7 @@ const onVersionChange = (event: Event) => {
     <div class="flex items-center gap-2">
       <span
         v-if="isAiTranslated"
-        class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-orange-cta"
+        class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-(--warning-text)"
       >
         {{ t("reader.aiTranslated") }}
       </span>

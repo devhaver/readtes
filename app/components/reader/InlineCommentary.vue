@@ -37,7 +37,7 @@ const fold = () => toggleInline(props.anchorId);
     <div class="mb-1.5 flex items-center justify-between gap-2">
       <span
         v-if="isAiTranslated"
-        class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-orange-cta"
+        class="rounded-button border border-orange-cta px-1.5 py-0.5 text-xs font-medium text-(--warning-text)"
       >
         {{ t("reader.aiTranslated") }}
       </span>
@@ -53,7 +53,7 @@ const fold = () => toggleInline(props.anchorId);
       </button>
     </div>
 
-    <p v-if="isMissing" class="text-xs text-orange-cta">
+    <p v-if="isMissing" class="text-xs text-(--warning-text)">
       {{ t("reader.missingAnchor.message") }}
       <button
         v-if="canSwitchToHebrew"

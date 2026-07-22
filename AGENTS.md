@@ -283,15 +283,22 @@ id="main-content">` landmark. The reader page's toolbar carries that
   Interactive elements get a `focus-visible:outline focus-visible:outline-2
 focus-visible:outline-teal` (or the token-derived contrast-safe
   variants below) — match this exact utility set rather than inventing a
-  new ring style. Two contrast-driven tokens live in `main.css`:
+  new ring style. Four contrast-driven tokens live in `main.css`:
   `--color-teal-strong` (a darkened teal that clears 4.5:1 against every
   light-mode surface and against white text — use for any "white text on
   a teal background" active/selected state) and the theme-aware
   `--accent-text` semantic variable (teal-strong in light mode, the
   bright `--color-teal` in dark mode — use for teal-colored _text_ sitting
-  directly on the ambient surface, e.g. `.tes-anchor`). Don't reintroduce
-  plain `text-teal`/`bg-teal` for text-on-surface or white-on-teal
-  contexts; both measured under WCAG AA's 4.5:1 there.
+  directly on the ambient surface, e.g. `.tes-anchor`); the same pattern
+  repeats for orange — `--color-orange-cta-strong` (a darkened orange
+  that clears 4.5:1 against every light-mode surface) and the theme-aware
+  `--warning-text` semantic variable (orange-cta-strong in light mode,
+  the brighter `--color-orange-cta` in dark mode, where the original
+  already clears 4.5:1 — use for the "AI translated" badge / missing-
+  anchor notice text). Don't reintroduce plain `text-teal`/`bg-teal` or
+  `text-orange-cta` for text-on-surface or white-on-teal contexts; all
+  measured under WCAG AA's 4.5:1 there. `--color-orange-cta` itself stays
+  fine for non-text uses (badge/notice borders, decorative bullets).
 
 ## Testing
 

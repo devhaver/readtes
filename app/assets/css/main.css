@@ -21,6 +21,21 @@
    */
   --color-teal-strong: #007a7f;
   --color-orange-cta: #f36518;
+  /*
+   * T10 contrast fix (review Finding 1): plain #f36518 measures only
+   * 3.14:1 on white / 2.88:1 on surface-light / 2.78:1 on surface-warm —
+   * used as `text-xs` body text (the "AI translated" badge, the
+   * missing-anchor notice) that needs WCAG AA's 4.5:1. #b34510 is the
+   * same orange, darkened until it clears 4.5:1 against every light-mode
+   * surface (5.56:1 / 5.10:1 / 4.92:1 respectively). --color-orange-cta
+   * itself is untouched — it stays the brighter brand orange for
+   * non-text uses (the badge/notice borders, the about-page bullet,
+   * design-tokens swatch) and for dark-mode text via `--warning-text`
+   * below, where the original already clears 4.5:1 (5.50:1 on
+   * `--surface` #071c2f, 4.74:1 on `--surface-raised` #0f2940 — verified,
+   * not assumed).
+   */
+  --color-orange-cta-strong: #b34510;
   --color-green-progress: #8fd123;
   --color-surface-white: #ffffff;
   --color-surface-light: #f5f5f5;
@@ -106,6 +121,16 @@
    * surfaces) in dark mode.
    */
   --accent-text: var(--color-teal-strong);
+  /*
+   * T10 contrast fix (review Finding 1): orange-as-text (the "AI
+   * translated" badge, the missing-anchor notice) needs a different
+   * value per theme, since the surface it sits on flips —
+   * --color-orange-cta-strong (dark enough to clear 4.5:1 on
+   * white/surface-light/surface-warm) in light mode, the brighter
+   * --color-orange-cta (already 4.5:1+ on both dark surfaces) in dark
+   * mode.
+   */
+  --warning-text: var(--color-orange-cta-strong);
 }
 
 .dark {
@@ -116,6 +141,7 @@
   --text-muted: #a9b4bd;
   --border: #1f3a52;
   --accent-text: var(--color-teal);
+  --warning-text: var(--color-orange-cta);
 }
 
 /*
