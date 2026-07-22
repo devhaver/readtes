@@ -122,11 +122,26 @@ export default defineNuxtConfig({
       },
     },
   },
+  // Weight discipline: every family lists only the weights actually used
+  // (Inter 400/500/600 for body, font-medium and the .tes-anchor chips;
+  // Taviraj 400 incl. italic for the display face and the en hero quote;
+  // Frank Ruhl Libre 700/900 as the Hebrew *display* face only — reading
+  // Hebrew moved to David Libre 400/700, the classic face of printed
+  // Hebrew holy books; Heebo 400/500/700 is the Hebrew UI-chrome sans
+  // under /he/). Keep this list tight — extra weights balloon the
+  // generated `_fonts` payload.
   fonts: {
     families: [
-      { name: "Inter", provider: "google" },
-      { name: "Taviraj", provider: "google" },
-      { name: "Frank Ruhl Libre", provider: "google" },
+      { name: "Inter", provider: "google", weights: [400, 500, 600] },
+      {
+        name: "Taviraj",
+        provider: "google",
+        weights: [400],
+        styles: ["normal", "italic"],
+      },
+      { name: "Frank Ruhl Libre", provider: "google", weights: [700, 900] },
+      { name: "David Libre", provider: "google", weights: [400, 700] },
+      { name: "Heebo", provider: "google", weights: [400, 500, 700] },
     ],
   },
 });
