@@ -7,14 +7,64 @@
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section I 1:1",
-      "html": "<p>הנה קודם שנאצלו הנאצלים ונבראו הנבראים היה <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">א</a> אור פשוט ממלא כל המציאות, ולא היה שום מקום פנוי, אלא הכל היה אור פשוט אחד שוה בהשוואה אחת, הנקרא <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">ב</a> אור אין סוף.</p>",
-      "anchors": ["op-1", "op-2"]
+      "heading": "מבאר ענין הצמצום הא' שנצטמצם אור אין סוף ב\"ה בכדי להאציל הנאצלים ולברוא הנבראים. ובו ה' ענינים: — לפני הצמצום היה אין סוף ממלא כל המציאות",
+      "html": "<span class=\"tes-footnote\" title=\"עץ חיים שער א' ענף ב'.\">*</span>דע כי <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">א</a>טרם שנאצלו הנאצלים ונבראו הנבראים, היה אור <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">ב</a>עליון פשוט <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">ג</a>ממלא כל המציאות. ולא היה שום <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">ד</a>מקום פנוי בבחינת <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">ה</a>אויר ריקני <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">ו</a>וחלל, אלא היה הכל <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">ז</a>ממולא מן אור א\"ס פשוט ההוא, ולא היה <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">ח</a>לו לא בחינת ראש ולא בחינת סוף, אלא הכל היה <a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">ט</a>אור א' פשוט <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">י</a>שוה בהשואה א', והוא הנקרא <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">כ</a>אור א\"ס.",
+      "anchors": [
+        "op-1",
+        "op-2",
+        "op-3",
+        "op-4",
+        "op-5",
+        "op-6",
+        "op-7",
+        "op-8",
+        "op-9",
+        "op-10",
+        "op-11"
+      ]
     },
     {
       "n": 2,
       "sefariaRef": "Talmud Eser HaSefirot, Section I 1:2",
-      "html": "<p>וכשעלה ברצונו הפשוט לברוא העולמות ולהאציל הנאצלים, להוציא לאור שלמות פעולותיו... צמצם את עצמו <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">ג</a> בנקודה האמצעית אשר בו באמת, וסילק עצמו לצדדים סביבותיה.</p>",
-      "anchors": ["op-3"]
+      "heading": "סיבת הבריאה היתה כדי לגלות שמותיו וכינויו.",
+      "html": "וכאשר <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">ל</a>עלה ברצונו הפשוט, לברוא העולמות ולהאציל הנאצלים. להוציא לאור שלימות פעולותיו ושמותיו וכינויו, אשר זאת היה סיבת בריאת העולמות.",
+      "anchors": [
+        "op-12"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 1:3",
+      "heading": "צמצום האור מסביבות נקודה האמצעית",
+      "html": "והנה אז <a class=\"tes-anchor\" href=\"#op-13\" data-anchor=\"op-13\">מ</a>צמצם את עצמו א\"ס <a class=\"tes-anchor\" href=\"#op-14\" data-anchor=\"op-14\">נ</a>בנקודה האמצעית, אשר בו באמצע ממש, וצמצם האור ההוא, <a class=\"tes-anchor\" href=\"#op-15\" data-anchor=\"op-15\">ס</a>ונתרחק אל <a class=\"tes-anchor\" href=\"#op-16\" data-anchor=\"op-16\">ע</a>צדדי סביבות הנקודה האמצעית.",
+      "anchors": [
+        "op-13",
+        "op-14",
+        "op-15",
+        "op-16"
+      ]
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 1:4",
+      "heading": "החלל שנשאר אחר הצמצום היה עגול",
+      "html": "ואז נשאר: <a class=\"tes-anchor\" href=\"#op-17\" data-anchor=\"op-17\">פ</a>מקום פנוי, ואויר, וחלל ריקני, מנקודה האמצעית ממש. והנה <a class=\"tes-anchor\" href=\"#op-18\" data-anchor=\"op-18\">צ</a>הצמצום הזה, היה בהשואה א' בסביבות הנקודה האמצעית ריקנית ההיא, באופן שמקום החלל ההוא, היה <a class=\"tes-anchor\" href=\"#op-19\" data-anchor=\"op-19\">ק</a>עגול מכל סביבותיו בהשואה גמורה, ולא היה בתמונת מרובע בעל זוית נצבת, לפי, שגם א\"ס צמצם עצמו בבחינת עגול, בהשואה א' מכל הצדדים.",
+      "anchors": [
+        "op-17",
+        "op-18",
+        "op-19"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 1:5",
+      "heading": "לפי שאור אין סוף הוא בהשואה, היה הצמצום ג\"כ בהשואה שהוא סוד העגול",
+      "html": "והסבה היתה, לפי שכיון שאור הא\"ס שוה בהשואה גמורה הוכרח ג\"כ, שיצמצם עצמו בהשואה א' מכל הצדדים, ולא שיצמצם עצמו מצד א' יותר משאר צדדים. ונודע בחכמת השיעור שאין תמונה כל כך שוה כמו <a class=\"tes-anchor\" href=\"#op-20\" data-anchor=\"op-20\">ר</a>תמונת העיגול, משא\"כ, <a class=\"tes-anchor\" href=\"#op-21\" data-anchor=\"op-21\">ש</a>בתמונת מרובע בעל זוית נצבת בולטת, וכן <a class=\"tes-anchor\" href=\"#op-22\" data-anchor=\"op-22\">ת</a>תמונת המשולש וכיוצא בשאר התמונות. וע\"כ מוכרח הוא להיות צמצום הא\"ס בבחינת עיגול.",
+      "anchors": [
+        "op-20",
+        "op-21",
+        "op-22"
+      ]
     }
   ]
 }
