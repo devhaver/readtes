@@ -39,15 +39,21 @@ const editions = computed(() =>
       {{ t("about.intro") }}
     </p>
 
+    <!-- Same night-field duotone treatment as the homepage hero, so the
+         portrait reads as one object across the site. -->
     <figure class="mt-10 sm:float-end sm:ms-8 sm:mt-2 sm:w-56">
-      <img
-        src="/images/baal-hasulam.webp"
-        :alt="t('about.portraitAlt')"
-        width="720"
-        height="900"
-        class="w-full rounded-card border border-(--border)"
-        loading="lazy"
-      />
+      <div
+        class="tes-duotone rounded-card border border-(--border) bg-navy-night"
+      >
+        <img
+          src="/images/baal-hasulam.webp"
+          :alt="t('about.portraitAlt')"
+          width="720"
+          height="900"
+          class="w-full"
+          loading="lazy"
+        />
+      </div>
       <figcaption class="mt-2 text-center text-sm text-(--text-muted)">
         {{ t("about.portraitCaption") }}
       </figcaption>
