@@ -57,9 +57,14 @@ export default defineNuxtConfig({
   // scaffolding task; never ship it (or its localized variants — @nuxtjs/i18n
   // seeds every locale's copy of every static page into the prerender crawl,
   // so each locale prefix needs its own rule) in the generated static site.
+  // /read/** doesn't exist yet — volume contents pages and the homepage CTA
+  // link chapters ahead of time; excluding the routes keeps the crawler from
+  // failing the build on them. The reader task removes these.
   routeRules: {
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
+    "/read/**": { prerender: false }, // route lands in T7 — remove exclusion then
+    "/he/read/**": { prerender: false }, // route lands in T7 — remove exclusion then
   },
   nitro: {
     prerender: {
@@ -69,15 +74,6 @@ export default defineNuxtConfig({
       // the crawler to follow) — list every volume explicitly so all six
       // contents pages still ship in the generated static site.
       routes: volumePrerenderRoutes,
-      // A volume's contents page links every chapter to `/read/[part]/[chapter]`
-      // (T7) — real crawlable <a> links, on purpose, not a routeRule
-      // exclusion. Those routes don't exist yet, so the crawler's fetch
-      // 404s; without this, Nitro treats any crawled 404 as fatal and
-      // aborts the whole `generate`. This is a blanket "don't fail the
-      // build over a missing page" policy, not a rule about `/read`
-      // specifically — it stays on after T7 lands too, since a single
-      // broken link shouldn't be able to take down the whole static build.
-      failOnError: false,
     },
   },
   // Non-standard ports so `pnpm dev` never fights other local dev servers

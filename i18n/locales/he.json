@@ -29,12 +29,33 @@
   },
   "home": {
     "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",
-    "browseVolumes": "עיין בשישה הכרכים"
+    "browseVolumes": "עיין בשישה הכרכים",
+    "heroTitle": "תלמוד עשר הספירות",
+    "heroTitleHebrew": "תלמוד עשר הספירות",
+    "heroSubtitle": "לימוד עשר הספירות",
+    "beginReading": "להתחיל לקרוא",
+    "quoteSource": "תלמוד עשר הספירות, חלק א', פרק א'",
+    "howItWorksTitle": "כיצד הקורא הזה פועל",
+    "howItWorksSourceTitle": "מקור",
+    "howItWorksSourceHebrew": "תלמוד עשר הספירות",
+    "howItWorksSourceBody": "הסעיפים הממוספרים של הטקסט עצמו, לקריאה ברצף, פרק אחר פרק.",
+    "howItWorksLightTitle": "אור פנימי",
+    "howItWorksLightHebrew": "אור פנימי",
+    "howItWorksLightBody": "פירוש שורה אחר שורה, המעוגן לסעיפים בודדים ופותח כל ביטוי בתורו.",
+    "howItWorksObservationTitle": "הסתכלות פנימית",
+    "howItWorksObservationHebrew": "הסתכלות פנימית",
+    "howItWorksObservationBody": "מאמר עיוני על רעיונות הפרק, לקריאה כשכבה רציפה בפני עצמה.",
+    "coverageTitle": "היכן עומד הטקסט כיום",
+    "coverageHebrew": "העברית מלאה עבור חלק א' — כל 119 הסעיפים, מתוך מהדורת ירושלים תשט\"ז–תשכ\"ו.",
+    "coverageEnglish": "האנגלית חלקית: לשני פרקים יש תרגום מלא, ולעשרת פרקי ההסתכלות הפנימית יש תרגום בסיוע בינה מלאכותית, המסומן ככזה.",
+    "coverageMore": "שאר הכרכים מתווספים בהדרגה."
   },
   "errors": {
     "notFoundTitle": "הדף לא נמצא",
     "notFoundMessage": "דף זה עדיין לא קיים, או שהוא הועבר.",
-    "notFoundBackHome": "חזרה לדף הבית"
+    "notFoundBackHome": "חזרה לדף הבית",
+    "genericTitle": "משהו השתבש",
+    "genericMessage": "אירעה שגיאה בלתי צפויה. נסו לרענן, או חזרו לדף הבית."
   },
   "volumes": {
     "indexTitle": "כרכים",
@@ -51,5 +72,26 @@
       "questions": "שאלות",
       "answers": "תשובות"
     }
+  },
+  "about": {
+    "title": "אודות Read TES",
+    "intro": "Read TES הוא פרויקט עצמאי לקריאה אינטראקטיבית של תלמוד עשר הספירות — פירושו המכונן של ברוך אשלג על חכמת הקבלה של האר\"י — שנבנה בידי תלמידי בני ברוך אקדמיה לקבלה עבור כל מי שלומד את הטקסט לעומק, בעברית או באנגלית.",
+    "readingModelTitle": "מודל הקריאה",
+    "readingModelBody": "כל פרק נקרא סעיף אחר סעיף, כפי שהוא נלמד בשיעור חי: סעיף ממוספר מתוך טקסט המקור, נפתח על ידי פירוש אור פנימי במקום שבו הוא קיים, ומוצג לצד מאמר ההסתכלות הפנימית של הפרק כשכבת התבוננות נוספת. דבר אינו מתומצת או מושמט — כל שכבה מקושרת חזרה לאותו מספר סעיף.",
+    "licensesTitle": "טקסטים, מהדורות ורישיונות",
+    "licensesIntro": "כל מהדורת טקסט באתר זה מפורטת להלן עם שפתה, רישיונה ומקורה.",
+    "licensesTableCaption": "מהדורות הטקסט בשימוש ב-Read TES",
+    "tableHeaderTitle": "מהדורה",
+    "tableHeaderLanguage": "שפה",
+    "tableHeaderLicense": "רישיון",
+    "tableHeaderSource": "מקור",
+    "sourceLabelSefaria": "Sefaria",
+    "sourceLabelCurated": "Read TES",
+    "sourceLabelAi": "תרגום בינה מלאכותית",
+    "sourceLabelKabbalahmedia": "KabbalahMedia.info",
+    "languageLabelEn": "אנגלית",
+    "languageLabelHe": "עברית",
+    "attributionTitle": "תודות",
+    "attributionBody": "טקסטי המקור לקוחים מהספרייה הפתוחה של Sefaria, והשיעורים שהקריאה הזו נשענת עליהם הם מ-KabbalahMedia.info — שניהם בשימוש ברשות."
   }
 }
