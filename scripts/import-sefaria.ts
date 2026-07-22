@@ -39,6 +39,7 @@ import {
   type PartCoverage,
   type VersionCoverageStat,
 } from "./lib/coverage-report.ts";
+import { createHttpClient, type HttpClient } from "./lib/http-client.ts";
 import {
   alignJaggedArrays,
   normalizeToChapterItemLists,
@@ -50,10 +51,6 @@ import type {
   SefariaLink,
   SefariaV3TextsResponse,
 } from "./lib/sefaria-api-types.ts";
-import {
-  createSefariaHttpClient,
-  type SefariaHttpClient,
-} from "./lib/sefaria-http-client.ts";
 import {
   findMainTextNode,
   findSectionNode,
@@ -146,7 +143,7 @@ const extractVersionText = (
   response.versions.find((v) => v.language === languageCode)?.text;
 
 const fetchWholeNodeText = async (
-  client: SefariaHttpClient,
+  client: HttpClient,
   refBase: string,
   heVersion: ContentVersion,
   enVersion: ContentVersion,
@@ -168,7 +165,7 @@ const fetchWholeNodeText = async (
 };
 
 const fetchLinks = async (
-  client: SefariaHttpClient,
+  client: HttpClient,
   ref: string,
 ): Promise<SefariaLink[]> => {
   const url = `${SEFARIA_BASE}/links/${encodeURIComponent(ref)}`;
@@ -248,7 +245,7 @@ interface ImportPartResult {
 }
 
 const importPart = async (
-  client: SefariaHttpClient,
+  client: HttpClient,
   index: SefariaIndex,
   heVersion: ContentVersion,
   enVersion: ContentVersion,
@@ -608,7 +605,7 @@ export const main = async (argv: string[]): Promise<void> => {
     );
   }
 
-  const client = createSefariaHttpClient({ cacheDir });
+  const client = createHttpClient({ cacheDir });
   const index = await client.getJson<SefariaIndex>(
     `${SEFARIA_BASE}/v2/index/${BOOK_INDEX_TITLE}`,
   );
