@@ -27,23 +27,23 @@ Run `pnpm install` first if not using `task setup`. On the very first
 install, pnpm will print `ERR_PNPM_IGNORED_BUILDS` and stop package build
 scripts short — see the gotcha below before assuming something is broken.
 
-| Command                     | What it does                                                                                                                                                             |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `pnpm install`              | Install dependencies.                                                                                                                                                    |
-| `pnpm dev`                  | Start the Nuxt dev server (port 6217).                                                                                                                                   |
-| `pnpm build`                | Production SSR build (not the deploy target — see `generate`).                                                                                                           |
-| `pnpm generate`             | Static site generation — this is what gets deployed.                                                                                                                     |
-| `pnpm preview`              | Preview the last `build`/`generate` output locally.                                                                                                                      |
-| `pnpm lint`                 | `eslint .`                                                                                                                                                               |
-| `pnpm lint:fix`             | `eslint . --fix`                                                                                                                                                         |
-| `pnpm format`               | `prettier --write .` — formats everything except `.prettierignore` entries.                                                                                              |
-| `pnpm format:check`         | `prettier --check .` — CI/pre-commit check, no writes.                                                                                                                   |
-| `pnpm test`                 | `vitest run`                                                                                                                                                             |
-| `pnpm typecheck`            | `nuxi typecheck` (app/, via `vue-tsc -b`) **and** `vue-tsc -p tsconfig.scripts.json` (`scripts/`, `tests/`, `shared/`, which sit outside Nuxt's own project references). |
-| `pnpm validate:content`     | Validates every file under `content/` (schema + integrity).                                                                                                              |
+| Command                     | What it does                                                                                                                                                                                                                             |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm install`              | Install dependencies.                                                                                                                                                                                                                    |
+| `pnpm dev`                  | Start the Nuxt dev server (port 6217).                                                                                                                                                                                                   |
+| `pnpm build`                | Production SSR build (not the deploy target — see `generate`).                                                                                                                                                                           |
+| `pnpm generate`             | Static site generation — this is what gets deployed.                                                                                                                                                                                     |
+| `pnpm preview`              | Preview the last `build`/`generate` output locally.                                                                                                                                                                                      |
+| `pnpm lint`                 | `eslint .`                                                                                                                                                                                                                               |
+| `pnpm lint:fix`             | `eslint . --fix`                                                                                                                                                                                                                         |
+| `pnpm format`               | `prettier --write .` — formats everything except `.prettierignore` entries.                                                                                                                                                              |
+| `pnpm format:check`         | `prettier --check .` — CI/pre-commit check, no writes.                                                                                                                                                                                   |
+| `pnpm test`                 | `vitest run`                                                                                                                                                                                                                             |
+| `pnpm typecheck`            | `nuxi typecheck` (app/, via `vue-tsc -b`) **and** `vue-tsc -p tsconfig.scripts.json` (`scripts/`, `tests/`, `shared/`, which sit outside Nuxt's own project references).                                                                 |
+| `pnpm validate:content`     | Validates every file under `content/` (schema + integrity).                                                                                                                                                                              |
 | `pnpm emit:toc-splits`      | Regenerates `content/toc.volumes.json` + `content/toc.parts/*.json` from `content/toc.json` (see "Content model"). Both importers call this automatically after writing `toc.json` — run by hand only after a manual edit to `toc.json`. |
-| `pnpm import:sefaria`       | Imports content from Sefaria — see "Sefaria import" below.                                                                                                               |
-| `pnpm import:kabbalahmedia` | Imports the Bnei Baruch/KabbalahMedia English edition (`scripts/import-kabbalahmedia.ts`).                                                                               |
+| `pnpm import:sefaria`       | Imports content from Sefaria — see "Sefaria import" below.                                                                                                                                                                               |
+| `pnpm import:kabbalahmedia` | Imports the Bnei Baruch/KabbalahMedia English edition (`scripts/import-kabbalahmedia.ts`).                                                                                                                                               |
 
 ## Dev server ports
 
@@ -201,7 +201,7 @@ content/
 
 At full-corpus scale `content/toc.json` is 2.9MB+ (16 parts, 5,148+
 chapters). Loading it in `app/` code (the pre-T11 shape) meant Nuxt
-serialized the *entire* ToC into every page's inlined payload — 391KB
+serialized the _entire_ ToC into every page's inlined payload — 391KB
 reader pages, 9-11s/route prerender times, hour-scale `pnpm generate` runs.
 **`app/` code must never import `content/toc.json` directly** — a unit test
 guardrail (`tests/unit/no-full-toc-import.spec.ts`) greps `app/**/*.{ts,vue}`
@@ -215,12 +215,12 @@ directly.
 Instead, `app/` loads two smaller, derived files:
 
 - **`content/toc.volumes.json`** (`TocVolumesFile`, ~17KB total) — every
-  volume's parts, *without* chapter lists. Each part carries `chapterCount`,
+  volume's parts, _without_ chapter lists. Each part carries `chapterCount`,
   `kindsPresent`, `firstChapterId`/`lastChapterId` +
   `firstChapterTitle`/`lastChapterTitle` (in the same kind-then-number
   reading order as `orderedPartChapters`, below), and a precomputed
   `availableSummary: { he, en }` (`LanguageAvailability` — `"none" |
-  "partial" | "full"`) for the volumes index's language chips. Loaded by
+"partial" | "full"`) for the volumes index's language chips. Loaded by
   `useLocalizedVolumes()`.
 - **`content/toc.parts/part-<NN>.json`** (`TocPartFile`) — one part's full
   `TocChapter[]` (exactly what `toc.json` holds for that part) plus the
@@ -239,7 +239,7 @@ wrapping it would re-add the payload-serialization cost this split exists to
 avoid). `app/utils/toc.ts` holds the pure helpers over these two shapes
 (`orderedPartChapters`, `findChapterInPart`, `findVolumeBySlug`,
 `volumeHasContent`, `adjacentParts`, `prevNextChapterLinks` — the last
-crosses a part boundary using the *adjacent* part's
+crosses a part boundary using the _adjacent_ part's
 `firstChapterId`/`lastChapterId` + title from `toc.volumes.json`, never
 loading the neighbor part's full file just to label a nav link).
 
@@ -255,6 +255,27 @@ equivalence check re-derives both files from the committed `toc.json` and
 structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
+
+**Known limitation (unresolved as of the split-ToC change, tracked for a
+follow-up): `useChapterContent`'s `import.meta.glob("../../content/parts/**/*.json")`
+makes every reader page's _built_ (`pnpm generate`/`pnpm build`) output
+prefetch-link nearly every chapter's content chunk**, regardless of which
+chapter it is. Rollup's client manifest records every file a glob matches
+as a "dynamic import" of the module containing the glob; Nitro's renderer
+(`vue-bundle-renderer`) turns every dynamic import of an always-touched
+module into a `<link rel="prefetch">` on every page, with no manifest-side
+or Nuxt-config opt-out (`experimental.prefetchPreloadTags` looks related
+but gates a different, unrelated opt-in feature). Measured on a generated
+`read/part-05/chapter-01` page: 5,212 prefetch links, 373KB of a 391KB
+page (95.4%) — the real rendered content is ~18KB, matching dev mode
+(unaffected — Vite dev doesn't build this manifest) almost exactly. This
+is **not** caused by (and predates) the split-ToC change above — the glob
+is unchanged from before it, only its `useAsyncData` wrapper was removed —
+and full-corpus `pnpm generate` does not currently complete under the
+default heap in this state (OOM'd at 87% of 10,313 routes in one measured
+run). The real fix is splitting that one glob into ~16 part-scoped loader
+modules (dynamically imported by `partId`) so only the current part's own
+chunks get attributed as "touched" per render — not yet done.
 
 ## Sefaria import
 
