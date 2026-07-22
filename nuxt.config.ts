@@ -2,13 +2,49 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxtjs/color-mode"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/i18n",
+  ],
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   colorMode: {
     classSuffix: "",
   },
+  i18n: {
+    strategy: "prefix_except_default",
+    defaultLocale: "en",
+    locales: [
+      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      {
+        code: "he",
+        language: "he-IL",
+        name: "עברית",
+        dir: "rtl",
+        file: "he.json",
+      },
+    ],
+    detectBrowserLanguage: false,
+  },
   compatibilityDate: "2025-07-15",
+  // /design-tokens is a dev-only debug page kept around from the token
+  // scaffolding task; never ship it (or its localized variants — @nuxtjs/i18n
+  // seeds every locale's copy of every static page into the prerender crawl,
+  // so each locale prefix needs its own rule) in the generated static site.
+  // /volumes doesn't exist yet (Task 5) — the homepage links to it ahead of
+  // time, so a crawl-time 404 for it must not fail `nuxt generate`.
+  routeRules: {
+    "/design-tokens": { prerender: false },
+    "/he/design-tokens": { prerender: false },
+  },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   // Non-standard ports so `pnpm dev` never fights other local dev servers
   // (weburz's Nuxt app on 3000, etc.) — see AGENTS.md "Dev server ports".
   devServer: {
