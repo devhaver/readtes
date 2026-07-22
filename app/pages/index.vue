@@ -1,124 +1,39 @@
 <script setup lang="ts">
-// Temporary token demo — proves design tokens, fonts, and dark mode work.
-// Replaced by the real landing page in a later task.
+// Minimal, on-design placeholder home — the real landing page (volume
+// index, search, progress) lands in Task 5. This page only proves the
+// chrome/i18n foundation end to end.
 
-const colorMode = useColorMode();
-
-const toggleColorMode = () => {
-  colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
-};
-
-const colorSwatches = [
-  { name: "navy-primary", class: "bg-navy-primary" },
-  { name: "teal", class: "bg-teal" },
-  { name: "orange-cta", class: "bg-orange-cta" },
-  { name: "green-progress", class: "bg-green-progress" },
-  {
-    name: "surface-white",
-    class: "bg-surface-white border border-border-subtle",
-  },
-  {
-    name: "surface-light",
-    class: "bg-surface-light border border-border-subtle",
-  },
-  {
-    name: "surface-warm",
-    class: "bg-surface-warm border border-border-subtle",
-  },
-  { name: "heading", class: "bg-heading" },
-  { name: "body", class: "bg-body" },
-  { name: "muted", class: "bg-muted" },
-  { name: "border-subtle", class: "bg-border-subtle" },
-  { name: "border-emphasis", class: "bg-border-emphasis" },
-  { name: "error", class: "bg-error" },
-] as const;
-
-const radii = [
-  { name: "radius-card", class: "rounded-card" },
-  { name: "radius-button", class: "rounded-button" },
-  { name: "radius-input", class: "rounded-input" },
-] as const;
+const { t } = useI18n();
+const localePath = useLocalePath();
 </script>
 
 <template>
-  <div class="min-h-screen bg-(--surface) text-(--text-primary) font-body">
-    <header class="bg-navy-primary px-6 py-4 text-surface-white">
-      <div class="mx-auto flex max-w-3xl items-center justify-between">
-        <h1 class="font-display text-2xl">Read TES — Design Token Demo</h1>
-        <button
-          type="button"
-          class="rounded-button border border-surface-white px-3 py-1.5 text-sm"
-          @click="toggleColorMode"
-        >
-          Toggle dark mode ({{ colorMode.value }})
-        </button>
-      </div>
-    </header>
-
-    <main class="mx-auto max-w-3xl space-y-10 px-6 py-10">
-      <section>
-        <h2 class="font-display text-xl text-(--text-primary)">Colours</h2>
-        <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <div
-            v-for="swatch in colorSwatches"
-            :key="swatch.name"
-            class="flex flex-col items-start gap-2"
-          >
-            <div class="h-16 w-full rounded-card" :class="swatch.class" />
-            <span class="text-sm text-(--text-muted)">{{ swatch.name }}</span>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="font-display text-xl text-(--text-primary)">Type</h2>
-        <div class="mt-4 space-y-3">
-          <p class="font-body text-lg">
-            Body / Inter — The quick brown fox jumps over the lazy dog.
-          </p>
-          <p class="font-display text-lg">
-            Display / Taviraj — The quick brown fox jumps over the lazy dog.
-          </p>
-          <p dir="rtl" lang="he" class="font-hebrew text-lg">
-            הקדמה לתלמוד עשר הספירות
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="font-display text-xl text-(--text-primary)">Radii</h2>
-        <div class="mt-4 flex gap-6">
-          <div
-            v-for="radius in radii"
-            :key="radius.name"
-            class="flex flex-col items-center gap-2"
-          >
-            <div
-              class="h-16 w-16 border-2 border-border-emphasis bg-(--surface-raised)"
-              :class="radius.class"
-            />
-            <span class="text-sm text-(--text-muted)">{{ radius.name }}</span>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="font-display text-xl text-(--text-primary)">
-          Semantic surfaces
-        </h2>
-        <div class="mt-4 space-y-3">
-          <div class="rounded-card border border-(--border) bg-(--surface) p-4">
-            --surface
-          </div>
-          <div
-            class="rounded-card border border-(--border) bg-(--surface-raised) p-4"
-          >
-            --surface-raised
-          </div>
-          <p class="text-(--text-primary)">--text-primary</p>
-          <p class="text-(--text-muted)">--text-muted</p>
-        </div>
-      </section>
-    </main>
+  <div
+    class="mx-auto flex max-w-2xl flex-col items-start gap-6 px-4 py-16 sm:px-6"
+  >
+    <h1 class="font-display text-3xl text-(--text-primary) sm:text-4xl">
+      {{ t("common.siteName") }}
+    </h1>
+    <p class="max-w-prose text-lg text-(--text-muted)">
+      {{ t("home.description") }}
+    </p>
+    <NuxtLink
+      :to="localePath('/volumes')"
+      class="inline-flex items-center gap-2 rounded-button bg-navy-primary px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:bg-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+    >
+      {{ t("home.browseVolumes") }}
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-4 w-4 rtl:rotate-180"
+        aria-hidden="true"
+      >
+        <path d="M9 6l6 6-6 6" />
+      </svg>
+    </NuxtLink>
   </div>
 </template>

@@ -1,0 +1,38 @@
+{
+  "common": {
+    "siteName": "Read TES",
+    "brandSubline": "Bnei Baruch · Kabbalah Academy",
+    "sixVolumes": "Six volumes",
+    "volume": "Volume",
+    "part": "Part",
+    "chapter": "Chapter",
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "close": "Close"
+  },
+  "nav": {
+    "primary": "Primary",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "volumesLink": "Volumes",
+    "themeToggleToDark": "Switch to dark mode",
+    "themeToggleToLight": "Switch to light mode",
+    "languageSwitcherLabel": "Switch language"
+  },
+  "footer": {
+    "attribution": "Made by students of Bnei Baruch Kabbalah Academy · original texts from Sefaria and KabbalahMedia.info, used with permission"
+  },
+  "reader": {
+    "aiTranslated": "AI translated",
+    "hebrewOnly": "Hebrew only"
+  },
+  "home": {
+    "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",
+    "browseVolumes": "Browse the six volumes"
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundMessage": "This page doesn't exist yet, or has moved.",
+    "notFoundBackHome": "Back to home"
+  }
+}

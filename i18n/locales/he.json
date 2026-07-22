@@ -1,0 +1,38 @@
+{
+  "common": {
+    "siteName": "Read TES",
+    "brandSubline": "בני ברוך · אקדמיה לקבלה",
+    "sixVolumes": "שישה כרכים",
+    "volume": "כרך",
+    "part": "חלק",
+    "chapter": "פרק",
+    "skipToContent": "דלג לתוכן",
+    "language": "שפה",
+    "close": "סגור"
+  },
+  "nav": {
+    "primary": "ניווט ראשי",
+    "menuOpen": "פתח תפריט",
+    "menuClose": "סגור תפריט",
+    "volumesLink": "כרכים",
+    "themeToggleToDark": "עבור למצב כהה",
+    "themeToggleToLight": "עבור למצב בהיר",
+    "languageSwitcherLabel": "החלף שפה"
+  },
+  "footer": {
+    "attribution": "נוצר על ידי תלמידי בני ברוך אקדמיה לקבלה · טקסטים מקוריים מתוך Sefaria ו-KabbalahMedia.info, בשימוש ברשות"
+  },
+  "reader": {
+    "aiTranslated": "תרגום בינה מלאכותית",
+    "hebrewOnly": "בעברית בלבד"
+  },
+  "home": {
+    "description": "תלמוד עשר הספירות, לקריאה כשכבות מיושרות של תקציר, מקור ופירוש — באנגלית ובעברית.",
+    "browseVolumes": "עיין בשישה הכרכים"
+  },
+  "errors": {
+    "notFoundTitle": "הדף לא נמצא",
+    "notFoundMessage": "דף זה עדיין לא קיים, או שהוא הועבר.",
+    "notFoundBackHome": "חזרה לדף הבית"
+  }
+}
