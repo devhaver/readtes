@@ -24,7 +24,7 @@ export interface ValidationResult {
   errors: string[];
 }
 
-interface LoadedChapterFile {
+export interface LoadedChapterFile {
   /** Path to the file, relative to the content root — used in error messages. */
   relativePath: string;
   /** `<partId>/<chapterSlug>`, derived from the file's directory. */
@@ -162,6 +162,112 @@ const checkSourceHtmlAnchorsConsistency = (
             `${relativePath}: seif ${segment.n} html contains anchor "${id}" not listed in its anchors[]`,
           );
         }
+      }
+    }
+  }
+};
+
+const arraysEqual = <T>(left: T[], right: T[]): boolean =>
+  left.length === right.length &&
+  left.every((value, index) => value === right[index]);
+
+/**
+ * A translated layer must remain structurally aligned with the registered
+ * source version it names. Translation may change prose, but never the
+ * identities the reader uses to align layers and commentary.
+ */
+export const checkTranslatedVersionIntegrity = (
+  versions: ContentVersion[],
+  loaded: LoadedChapterFile[],
+  errors: string[],
+): void => {
+  const versionsById = new Map(
+    versions.map((version) => [version.id, version]),
+  );
+  const filesByIdentity = new Map(
+    loaded.map((entry) => [
+      `${entry.chapterDirId}|${entry.file.layer}|${entry.file.versionId}`,
+      entry,
+    ]),
+  );
+
+  for (const version of versions) {
+    if (!version.translatedFrom) continue;
+
+    if (!versionsById.has(version.translatedFrom)) {
+      errors.push(
+        `versions.json: translated version "${version.id}" references unknown translatedFrom version "${version.translatedFrom}"`,
+      );
+      continue;
+    }
+
+    for (const translated of loaded.filter(
+      (entry) => entry.file.versionId === version.id,
+    )) {
+      const source = filesByIdentity.get(
+        `${translated.chapterDirId}|${translated.file.layer}|${version.translatedFrom}`,
+      );
+
+      if (!source) {
+        errors.push(
+          `${translated.relativePath}: translated version "${version.id}" has no same-layer "${version.translatedFrom}" counterpart for chapter "${translated.chapterDirId}"`,
+        );
+        continue;
+      }
+
+      if (
+        translated.file.layer === "source" &&
+        source.file.layer === "source"
+      ) {
+        const translatedItems = translated.file.items;
+        const sourceItems = source.file.items;
+        if (translatedItems.length !== sourceItems.length) {
+          errors.push(
+            `${translated.relativePath}: translated source has ${translatedItems.length} item(s), but "${version.translatedFrom}" has ${sourceItems.length}`,
+          );
+          continue;
+        }
+
+        translatedItems.forEach((item, index) => {
+          const sourceItem = sourceItems[index];
+          if (
+            !sourceItem ||
+            item.n !== sourceItem.n ||
+            item.sefariaRef !== sourceItem.sefariaRef ||
+            !arraysEqual(item.anchors, sourceItem.anchors)
+          ) {
+            errors.push(
+              `${translated.relativePath}: translated source item ${index + 1} does not preserve "${version.translatedFrom}" n, sefariaRef, and anchors`,
+            );
+          }
+        });
+      }
+
+      if (
+        translated.file.layer === "commentary" &&
+        source.file.layer === "commentary"
+      ) {
+        const translatedItems = translated.file.items;
+        const sourceItems = source.file.items;
+        if (translatedItems.length !== sourceItems.length) {
+          errors.push(
+            `${translated.relativePath}: translated commentary has ${translatedItems.length} item(s), but "${version.translatedFrom}" has ${sourceItems.length}`,
+          );
+          continue;
+        }
+
+        translatedItems.forEach((item, index) => {
+          const sourceItem = sourceItems[index];
+          if (
+            !sourceItem ||
+            item.anchorId !== sourceItem.anchorId ||
+            item.targetSeif !== sourceItem.targetSeif
+          ) {
+            errors.push(
+              `${translated.relativePath}: translated commentary item ${index + 1} does not preserve "${version.translatedFrom}" anchorId and targetSeif`,
+            );
+          }
+        });
       }
     }
   }
@@ -421,6 +527,9 @@ export const validateContent = (contentDir: string): ValidationResult => {
 
   checkSourceHtmlAnchorsConsistency(loaded, errors);
   checkAnchorCommentaryIntegrity(loaded, errors);
+  if (versionsParsed.success) {
+    checkTranslatedVersionIntegrity(versionsParsed.data, loaded, errors);
+  }
 
   if (tocParsed.success) {
     checkTocFileCrossReferences(tocParsed.data, loaded, versionIds, errors);

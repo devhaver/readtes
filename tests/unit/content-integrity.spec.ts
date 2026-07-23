@@ -1,6 +1,11 @@
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { validateContent } from "../../scripts/validate-content.ts";
+import {
+  checkTranslatedVersionIntegrity,
+  validateContent,
+  type LoadedChapterFile,
+} from "../../scripts/validate-content.ts";
+import type { ContentVersion } from "../../shared/types/content.ts";
 
 const contentDir = join(process.cwd(), "content");
 const fixturesDir = join(process.cwd(), "tests/fixtures/content-integrity");
@@ -78,5 +83,107 @@ describe("content integrity — toc.volumes.json / toc.parts equivalence", () =>
         e.startsWith("content/toc.parts/part-99.json: exists on disk but"),
       ),
     ).toBe(true);
+  });
+});
+
+describe("content integrity — translated versions", () => {
+  const versions: ContentVersion[] = [
+    {
+      id: "he-source",
+      language: "he",
+      direction: "rtl",
+      title: "Hebrew",
+      license: "Public Domain",
+      source: "sefaria",
+    },
+    {
+      id: "en-translation",
+      language: "en",
+      direction: "ltr",
+      title: "English",
+      license: "CC0",
+      source: "ai",
+      translatedFrom: "he-source",
+    },
+  ];
+  const sourceFile = (
+    versionId: string,
+    overrides: Partial<{
+      n: number;
+      sefariaRef: string;
+      anchors: string[];
+    }> = {},
+  ): LoadedChapterFile => ({
+    relativePath: `parts/part-01/chapters/chapter-01/source.${versionId}.json`,
+    chapterDirId: "part-01/chapter-01",
+    file: {
+      chapterId: "part-01/chapter-01",
+      layer: "source",
+      versionId,
+      items: [
+        {
+          n: overrides.n ?? 1,
+          sefariaRef: overrides.sefariaRef ?? "TES 1:1",
+          html: "<p>Text</p>",
+          anchors: overrides.anchors ?? ["op-1"],
+        },
+      ],
+    },
+  });
+
+  it("accepts a structurally aligned translation", () => {
+    const errors: string[] = [];
+
+    checkTranslatedVersionIntegrity(
+      versions,
+      [sourceFile("he-source"), sourceFile("en-translation")],
+      errors,
+    );
+
+    expect(errors).toEqual([]);
+  });
+
+  it("rejects an unknown translatedFrom version", () => {
+    const errors: string[] = [];
+
+    checkTranslatedVersionIntegrity(
+      [{ ...versions[1]!, translatedFrom: "missing-source" }],
+      [sourceFile("en-translation")],
+      errors,
+    );
+
+    expect(errors).toContain(
+      'versions.json: translated version "en-translation" references unknown translatedFrom version "missing-source"',
+    );
+  });
+
+  it("rejects a missing same-layer source counterpart", () => {
+    const errors: string[] = [];
+
+    checkTranslatedVersionIntegrity(
+      versions,
+      [sourceFile("en-translation")],
+      errors,
+    );
+
+    expect(errors[0]).toContain('has no same-layer "he-source" counterpart');
+  });
+
+  it.each([
+    ["n", { n: 2 }],
+    ["sefariaRef", { sefariaRef: "TES 1:2" }],
+    ["anchors", { anchors: ["op-2"] }],
+  ])("rejects changed source %s identity", (_label, overrides) => {
+    const errors: string[] = [];
+
+    checkTranslatedVersionIntegrity(
+      versions,
+      [sourceFile("he-source"), sourceFile("en-translation", overrides)],
+      errors,
+    );
+
+    expect(errors[0]).toContain(
+      'does not preserve "he-source" n, sefariaRef, and anchors',
+    );
   });
 });
