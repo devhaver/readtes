@@ -69,7 +69,7 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "none"
+            "en": "partial"
           }
         },
         {
@@ -101,7 +101,7 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "none"
+            "en": "partial"
           }
         }
       ]
@@ -174,7 +174,7 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "none"
+            "en": "full"
           }
         },
         {
@@ -206,7 +206,7 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "none"
+            "en": "partial"
           }
         }
       ]

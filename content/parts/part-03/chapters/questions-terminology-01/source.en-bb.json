@@ -1,0 +1,614 @@
+{
+  "chapterId": "part-03/questions-terminology-01",
+  "layer": "source",
+  "versionId": "en-bb",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 1",
+      "html": "What is an organ, organs",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 2",
+      "html": "What is a light of departure",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 3",
+      "html": "What is a diminishing light",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 4",
+      "html": "What is the light of the face",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 5",
+      "html": "What is a light of consequence",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 6",
+      "html": "What are separate letters",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 7",
+      "html": "What are connected letters",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 8",
+      "html": "What is an Ozen [ear]",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 9",
+      "html": "What is posterior",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 10",
+      "html": "What is lower Ima",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 11",
+      "html": "What is middle‎",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 12",
+      "html": "What is a mirror‎",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 13",
+      "html": "What is Arich Anpin",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 14",
+      "html": "What is AT [pronounced ET]‎‎",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 15",
+      "html": "What is Bohu‎",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 16",
+      "html": "What is a house [hall]‎‎",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 17",
+      "html": "What is breaching ‎‎",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 18",
+      "html": "What is creation‎",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 19",
+      "html": "What is flesh‎",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 20",
+      "html": "What is a Guf‎",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 21",
+      "html": "What is Galgalta‎",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 22",
+      "html": "What are tendons",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 23",
+      "html": "What are four forms‎",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 24",
+      "html": "What is speech‎",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 25",
+      "html": "What is in passing",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 26",
+      "html": "What is a narrow path",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 27",
+      "html": "What is a wide path",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 28",
+      "html": "What is separation",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 29",
+      "html": "What is vapor",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 30",
+      "html": "What is departing vapor",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 31",
+      "html": "What is Filled HaVaYaH",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 32",
+      "html": "What is simple HaVaYaH",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 33",
+      "html": "What is a hall",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 34",
+      "html": "What is an upper hall",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 35",
+      "html": "What is striking",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 36",
+      "html": "What is a look",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 37",
+      "html": "What is a second look",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 38",
+      "html": "What is departure",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 39",
+      "html": "What is distancing",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 40",
+      "html": "What is clothing",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 41",
+      "html": "What is sparkling",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 42",
+      "html": "What is coarseness",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 43",
+      "html": "What is expansion",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 44",
+      "html": "What is the second expansion",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 45",
+      "html": "What is a tail for the lions",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 46",
+      "html": "What is Zeir Anpin",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 47",
+      "html": "What is a Hotem [nose]‎",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 48",
+      "html": "What is substance",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 49",
+      "html": "What is a seal",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 50",
+      "html": "What is a window",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 51",
+      "html": "What is engraving",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 52",
+      "html": "What are basic elements",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 53",
+      "html": "What is Yetzira",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 54",
+      "html": "What is a chair",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 55",
+      "html": "What is potential",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 56",
+      "html": "What are complete vessels",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 57",
+      "html": "What is a throne",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 58",
+      "html": "What is Keter",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 59",
+      "html": "What is a garment",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 60",
+      "html": "What is marrow",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 61",
+      "html": "What is from her and within her",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 62",
+      "html": "What is complete clothing",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 63",
+      "html": "What is a screen",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 64",
+      "html": "What is a blocked screen",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 65",
+      "html": "What is a place of darkness",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 66",
+      "html": "What is nesting",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 67",
+      "html": "What is a spark of the created being",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 68",
+      "html": "What is a small spark",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 69",
+      "html": "What is Nefesh",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 70",
+      "html": "What is a narrow foramen",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 71",
+      "html": "What is a point",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 72",
+      "html": "What is Neshama",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 73",
+      "html": "What is adjacent",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 74",
+      "html": "What is a Sefira",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 75",
+      "html": "What is a world",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 76",
+      "html": "What are Eynaim [eyes]‎‎",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 77",
+      "html": "What is the self of the light",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 78",
+      "html": "What is Assiya",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 79",
+      "html": "What is Atik",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 80",
+      "html": "What is Peh [mouth]",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 81",
+      "html": "What is actual",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 82",
+      "html": "What is separation",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 83",
+      "html": "What is Partzuf",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 84",
+      "html": "What is form",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 85",
+      "html": "What is very narrow",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 86",
+      "html": "What is the holy of holies",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 87",
+      "html": "What is nesting",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 88",
+      "html": "What are Klipot [shells]‎",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 89",
+      "html": "What is sight",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 90",
+      "html": "What is Rosh",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 91",
+      "html": "What is the head for the foxes",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 92",
+      "html": "What is a quarter blood",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 93",
+      "html": "What is Ruach",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 94",
+      "html": "What is thin Ruach",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 95",
+      "html": "What is a square",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 96",
+      "html": "What is smell",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 97",
+      "html": "What is breaking",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 98",
+      "html": "What is a root",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 99",
+      "html": "What is sound",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 100",
+      "html": "What are roots of the vessels",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Terminology 101",
+      "html": "What is Tohu",
+      "anchors": []
+    }
+  ]
+}
