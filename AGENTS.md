@@ -43,7 +43,7 @@ scripts short — see the gotcha below before assuming something is broken.
 | `pnpm validate:content`     | Validates every file under `content/` (schema + integrity).                                                                                                                                                                              |
 | `pnpm emit:toc-splits`      | Regenerates `content/toc.volumes.json` + `content/toc.parts/*.json` from `content/toc.json` (see "Content model"). Both importers call this automatically after writing `toc.json` — run by hand only after a manual edit to `toc.json`. |
 | `pnpm import:sefaria`       | Imports content from Sefaria — see "Sefaria import" below.                                                                                                                                                                               |
-| `pnpm import:kabbalahmedia` | Imports the Bnei Baruch/KabbalahMedia English edition (`scripts/import-kabbalahmedia.ts`).                                                                                                                                               |
+| `pnpm import:kabbalahmedia` | Imports Bnei Baruch/KabbalahMedia translations (`scripts/import-kabbalahmedia.ts`) — see "KabbalahMedia import" below.                                                                                                                   |
 
 ## Dev server ports
 
@@ -324,6 +324,37 @@ duplicated) before exiting.
   console) at the end of every non-dry-run import — per part × layer ×
   version, how many of the part's resolved chapters got text, and how many
   total segments/commentary items. Commit it alongside the imported content.
+
+## KabbalahMedia import
+
+`pnpm import:kabbalahmedia (--part <N> | --all) [--dry-run]`
+(`scripts/import-kabbalahmedia.ts`, run via `tsx`) imports official Bnei
+Baruch translations as `<language>-bb` versions. It walks the TES collection
+from KabbalahMedia's verified `sqdata` collection root, rather than keeping a
+per-chapter uid list. The CLI is deliberately strict: one of `--part` or
+`--all` is required; unknown, duplicate, conflicting, and valueless flags
+fail before any network request.
+
+- **HTTP hygiene**: it uses the shared cached client and the same descriptive
+  User-Agent, ≥600ms real-request interval, and retry/fail-fast policy as the
+  Sefaria importer. Cache entries live in `.superpowers/import-cache/`.
+- **Supported document dialects**: numbered per-chapter leaves are aligned to
+  Hebrew source/commentary ground truth; whole-part chapter documents are
+  positionally split into source-only chapter files; combined terminology and
+  topics Q&A tables write question and answer chapters positionally. Source
+  and commentary are written only when the relevant alignment is verified.
+- **Safe boundaries**: whole-part Ohr Pnimi/commentary is intentionally not
+  written — there is no reliable Hebrew/Sefaria commentary target for it.
+  Inner Observation and unmapped Cause/Consequence-style leaves are reported
+  and skipped, never guessed. Parts 9–15 have no non-Hebrew KabbalahMedia
+  files and remain explicit coverage absences.
+- **Output and validation**: a non-dry run updates layer files,
+  `versions.json`, `toc.json`, and derived ToC splits, then runs
+  `validateContent`. Only `--all` rewrites the KabbalahMedia-owned section of
+  `content/COVERAGE.md`; a scoped `--part` run prints its coverage but leaves
+  the committed full-corpus report intact. `--dry-run` performs
+  discovery/parsing and prints coverage without writing or validating a
+  changed tree.
 
 ## SSG / SEO (T10)
 

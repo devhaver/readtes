@@ -22,6 +22,7 @@ const NATIVE_LANGUAGE_NAMES: Record<string, string> = {
   tr: "Türkçe",
   ua: "Українська",
   pt: "Português",
+  fr: "Français",
 };
 
 /** `"Bnei Baruch (KabbalahMedia)"` for English, `"… — <native name>"` for everything else. */
@@ -52,6 +53,7 @@ export const KM_EXPECTED_LANGUAGES: readonly string[] = [
   "es",
   "ua",
   "pt",
+  "fr",
 ];
 
 /**

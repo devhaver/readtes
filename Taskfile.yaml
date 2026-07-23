@@ -61,10 +61,12 @@ tasks:
   import:kabbalahmedia:
     desc: Import the official Bnei Baruch translation from KabbalahMedia
     summary: |
-      Run the KabbalahMedia importer. Pass its CLI flags through after `--`,
-      e.g.:
+      Run the KabbalahMedia importer for one part or the full corpus. Pass
+      its CLI flags through after `--`; exactly one of `--part <N>` or
+      `--all` is required, and `--dry-run` makes no file changes, e.g.:
 
-        task import:kabbalahmedia -- --part 1 --chapters chapter-01,chapter-02
+        task import:kabbalahmedia -- --part 1 --dry-run
+        task import:kabbalahmedia -- --all
     cmd: pnpm import:kabbalahmedia {{.CLI_ARGS}}
 
   clean:

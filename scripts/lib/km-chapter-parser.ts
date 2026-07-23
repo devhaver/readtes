@@ -67,6 +67,25 @@ export interface KmChapterStructure {
   commentaryParagraphs: KmCommentaryParagraph[];
 }
 
+/**
+ * True when a document has at least one numbered `h5` item — the minimum
+ * shape `groupKmChapterBlocks` needs to produce any source items at all.
+ * Used by the whole-part-doc dialect (source-only: it never requires an
+ * `h6` commentary section to exist).
+ */
+export const hasNumberedKmItems = (blocks: DocBlock[]): boolean =>
+  blocks.some(
+    (b) => b.tag === "h5" && matchLeadingNumber(b.html) !== undefined,
+  );
+
+/**
+ * True when a document has at least one numbered `h5` item *and* at least
+ * one `h6` (commentary-section) heading — the shape the per-chapter dialect
+ * (source + gematria-numbered commentary) requires.
+ */
+export const isSupportedKmStructure = (blocks: DocBlock[]): boolean =>
+  hasNumberedKmItems(blocks) && blocks.some((b) => b.tag === "h6");
+
 const appendHtml = (base: string, addition: string): string =>
   base.length > 0 ? `${base} ${addition}` : addition;
 
