@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// The six volumes, shelf-style — Volume 1 is the only one with content so
-// far (see `volumeHasContent` in `~/utils/toc`), the rest render disabled
-// with a "coming soon" label until later import tasks populate them.
+// Load the lightweight volume skeleton without chapter lists so this index
+// stays small across the complete corpus.
 
 const { t } = useI18n();
 const localePath = useLocalePath();

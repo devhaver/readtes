@@ -33,8 +33,32 @@ tasks:
 
       Should be run before committing changes.
     cmds:
-      - pnpm lint
-      - pnpm format:check
+      - task: lint
+      - task: format:check
+
+  lint:
+    desc: Lint the source code
+    cmd: pnpm lint
+
+  lint:fix:
+    desc: Fix automatically repairable lint issues
+    cmd: pnpm lint:fix
+
+  format:
+    desc: Format the source tree
+    cmd: pnpm format
+
+  format:check:
+    desc: Check source formatting without changing files
+    cmd: pnpm format:check
+
+  typecheck:
+    desc: Type-check the app, scripts, tests, and shared code
+    cmd: pnpm typecheck
+
+  validate:content:
+    desc: Validate content schemas and cross-file integrity
+    cmd: pnpm validate:content
 
   test:
     desc: Run the entire test suite
@@ -47,6 +71,18 @@ tasks:
     summary: |
       Run Nuxt's static site generation — this is what gets deployed.
     cmd: pnpm generate
+
+  check:
+    desc: Run the complete pre-commit verification suite
+    summary: |
+      Run every required quality gate: linting, formatting, type-checking,
+      content validation, unit tests, and static site generation.
+    cmds:
+      - task: qa
+      - task: typecheck
+      - task: validate:content
+      - task: test
+      - task: generate
 
   import:
     desc: Import content from Sefaria

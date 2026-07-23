@@ -21,7 +21,7 @@
     "breadcrumbLabel": "Breadcrumb"
   },
   "footer": {
-    "attribution": "Made by students of Bnei Baruch Kabbalah Academy · original texts from Sefaria and KabbalahMedia.info, used with permission"
+    "attribution": "Made by students of Bnei Baruch Kabbalah Academy"
   },
   "reader": {
     "aiTranslated": "AI translated",
@@ -117,9 +117,9 @@
     "howItWorksObservationHebrew": "הסתכלות פנימית",
     "howItWorksObservationBody": "A reflective essay on each chapter's ideas, read as a continuous layer of its own.",
     "coverageTitle": "Where the text stands",
-    "coverageHebrew": "Hebrew is complete for Part I — all 119 sections, from the 1956 Jerusalem edition.",
-    "coverageEnglish": "English is partial: two chapters have a full translation, and all ten Inner Observation chapters have AI-assisted translations, clearly marked as such.",
-    "coverageMore": "The remaining volumes are being added over time."
+    "coverageHebrew": "The complete Hebrew corpus is available from the 1956 Jerusalem edition.",
+    "coverageEnglish": "English coverage varies by part and edition; official and AI-assisted translations are clearly labeled.",
+    "coverageMore": "Browse the volumes to see the available layers and editions for each section."
   },
   "errors": {
     "notFoundTitle": "Page not found",

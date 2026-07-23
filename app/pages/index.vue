@@ -113,7 +113,7 @@ const layers = computed(() => [
       >
         <!-- Portrait: duotone, rising out of the hero's bottom edge -->
         <div
-          class="hero-portrait order-2 -mb-px w-44 justify-self-center sm:order-1 sm:w-full sm:justify-self-auto"
+          class="hero-portrait hero-enter-portrait order-2 -mb-px w-44 justify-self-center sm:order-1 sm:w-full sm:justify-self-auto"
         >
           <div class="tes-duotone">
             <img
@@ -129,7 +129,9 @@ const layers = computed(() => [
         </div>
 
         <!-- Content -->
-        <div class="order-1 py-12 text-surface-white sm:order-2 sm:py-16">
+        <div
+          class="hero-enter-content order-1 py-12 text-surface-white sm:order-2 sm:py-16"
+        >
           <!-- inline-block shrink-wraps the RTL run so the lockup sits at
                the content column's inline-start instead of drifting to the
                paragraph box's far edge -->
@@ -216,11 +218,16 @@ const layers = computed(() => [
           {{ t("home.howItWorksTitle") }}
         </h2>
         <div class="mt-6 grid gap-6 sm:grid-cols-3">
-          <div
-            v-for="layer in layers"
+          <article
+            v-for="(layer, index) in layers"
             :key="layer.title"
-            class="rounded-card border border-(--border) bg-(--surface) p-6"
+            class="layer-card relative overflow-hidden rounded-card border border-(--border) bg-(--surface) p-6 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-teal-strong/45 hover:shadow-lg"
+            :style="{ '--layer-index': index }"
           >
+            <span
+              aria-hidden="true"
+              class="absolute inset-block-0 inset-inline-start-0 w-1 bg-teal-strong"
+            />
             <p
               class="font-hebrew text-sm text-(--text-muted)"
               dir="rtl"
@@ -234,7 +241,7 @@ const layers = computed(() => [
             <p class="mt-2 text-sm text-(--text-muted)">
               {{ layer.body }}
             </p>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -329,5 +336,51 @@ const layers = computed(() => [
     black 58%,
     transparent 87%
   );
+}
+
+.hero-enter-content {
+  animation: hero-content-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-enter-portrait {
+  animation: hero-portrait-in 750ms 100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.layer-card {
+  animation: layer-card-in 520ms calc(180ms + var(--layer-index, 0) * 90ms)
+    cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hero-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes hero-portrait-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) scale(0.98);
+  }
+}
+
+@keyframes layer-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter-content,
+  .hero-enter-portrait,
+  .layer-card {
+    animation: none;
+  }
+
+  .layer-card:hover {
+    transform: none;
+  }
 }
 </style>
