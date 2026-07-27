@@ -11,7 +11,7 @@ const options = [
 describe("SegmentedControl", () => {
   it("renders a button per option, in order", async () => {
     const wrapper = await mountSuspended(SegmentedControl, {
-      props: { modelValue: "a", options, ariaLabel: "Pick one" },
+      props: { modelValue: "a", options, accessibleLabel: "Pick one" },
     });
 
     expect(wrapper.findAll("button").map((b) => b.text())).toEqual([
@@ -23,7 +23,7 @@ describe("SegmentedControl", () => {
 
   it("marks only the current value's button as pressed", async () => {
     const wrapper = await mountSuspended(SegmentedControl, {
-      props: { modelValue: "b", options, ariaLabel: "Pick one" },
+      props: { modelValue: "b", options, accessibleLabel: "Pick one" },
     });
 
     const buttons = wrapper.findAll("button");
@@ -34,7 +34,7 @@ describe("SegmentedControl", () => {
 
   it("emits update:modelValue with the clicked option's value", async () => {
     const wrapper = await mountSuspended(SegmentedControl, {
-      props: { modelValue: "a", options, ariaLabel: "Pick one" },
+      props: { modelValue: "a", options, accessibleLabel: "Pick one" },
     });
 
     await wrapper.findAll("button")[2]?.trigger("click");
@@ -43,7 +43,7 @@ describe("SegmentedControl", () => {
 
   it("labels the group with the given aria-label", async () => {
     const wrapper = await mountSuspended(SegmentedControl, {
-      props: { modelValue: "a", options, ariaLabel: "Pick one" },
+      props: { modelValue: "a", options, accessibleLabel: "Pick one" },
     });
 
     expect(wrapper.find('[role="group"]').attributes("aria-label")).toBe(

@@ -27,6 +27,21 @@ export default withNuxt({
       ],
     },
   })
+  // These reader components render only importer-normalized or
+  // sanitizeHtml-processed content. Keep v-html forbidden everywhere else.
+  .append({
+    files: [
+      "app/components/reader/CommentaryPane.vue",
+      "app/components/reader/CommentarySheet.vue",
+      "app/components/reader/InlineCommentary.vue",
+      "app/components/reader/ReaderSourceSegment.vue",
+      "app/components/reader/ReaderSummaryBody.vue",
+    ],
+    name: "reader/trusted-html",
+    rules: {
+      "vue/no-v-html": "off",
+    },
+  })
   // Add accessibility config and rules
   .append(
     // Include the recommended preset

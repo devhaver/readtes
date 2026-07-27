@@ -16,6 +16,10 @@ const localeHead = useLocaleHead();
 // tags. The cast (via `useHead`'s own parameter type, not `any`) bridges
 // that gap; the values themselves are exactly `useLocaleHead`'s
 // documented return shape.
+// Icons, the manifest and theme-color are static and locale-independent, so
+// they live in `nuxt.config.ts`'s `app.head` rather than here — Unhead merges
+// the two sources. This file stays limited to what `useLocaleHead` derives
+// per route.
 useHead((() => ({
   htmlAttrs: { ...localeHead.value.htmlAttrs },
   link: localeHead.value.link,
