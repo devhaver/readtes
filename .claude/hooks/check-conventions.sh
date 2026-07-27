@@ -20,9 +20,12 @@ fi
 [ -n "$f" ] || exit 0
 [ -f "$f" ] || exit 0
 
-# Only app/ source files. Everything else is out of scope for these two rules.
+# Only app/ source files inside THIS project. Without the project-dir guard a
+# project hook reaches into any repo — or the home directory — that the session
+# happens to touch.
+root=${CLAUDE_PROJECT_DIR:-$PWD}
 case "$f" in
-  */app/*.vue | */app/*.css | app/*.vue | app/*.css) ;;
+  "$root"/app/*.vue | "$root"/app/*.css | app/*.vue | app/*.css) ;;
   *) exit 0 ;;
 esac
 

@@ -26,7 +26,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.tool_response.filePath // .tool_input.file_path // empty' | { read -r f; [ -n \"$f\" ] && pnpm exec prettier --write --ignore-unknown \"$f\"; } >/dev/null 2>&1 || true",
+            "command": "jq -r '.tool_response.filePath // .tool_input.file_path // empty' | { read -r f; case \"$f\" in \"$CLAUDE_PROJECT_DIR\"/*) pnpm exec prettier --write --ignore-unknown \"$f\";; esac; } >/dev/null 2>&1 || true",
             "timeout": 30,
             "statusMessage": "Formatting"
           },
