@@ -129,7 +129,7 @@ const layers = computed(() => [
 
       <div
         dir="ltr"
-        class="relative mx-auto grid max-w-6xl items-end gap-x-10 px-4 sm:grid-cols-[17rem_minmax(0,1fr)] sm:px-6 lg:grid-cols-[20rem_minmax(0,1fr)]"
+        class="relative mx-auto grid max-w-7xl items-end gap-x-10 px-4 sm:grid-cols-[17rem_minmax(0,1fr)] sm:px-6 lg:grid-cols-[20rem_minmax(0,1fr)]"
       >
         <!-- Portrait: duotone, rising out of the hero's bottom edge -->
         <div
@@ -159,7 +159,7 @@ const layers = computed(() => [
         <!-- Content -->
         <div
           :dir="locale === 'he' ? 'rtl' : 'ltr'"
-          class="hero-enter-content order-1 py-12 text-surface-white sm:order-2 sm:py-16"
+          class="hero-copy hero-enter-content order-1 py-12 text-surface-white sm:order-2 sm:py-16"
         >
           <!-- inline-block shrink-wraps the RTL run so the lockup sits at
                the content column's inline-start instead of drifting to the
@@ -360,6 +360,23 @@ const layers = computed(() => [
   text-align: center;
 }
 
+/*
+ * Physical padding-right, not padding-inline-end. The plate is pinned to the
+ * physical right in both directions, so the copy needs to clear it on that
+ * same side regardless of writing direction — a logical property would move
+ * the gutter to the left under RTL and let the Hebrew, which right-aligns,
+ * run straight across the drawing.
+ */
+.hero-copy {
+  padding-right: 0;
+}
+
+@media (min-width: 48rem) {
+  .hero-copy {
+    padding-right: clamp(13rem, 17vw, 21rem);
+  }
+}
+
 .hero-circles {
   inset-block-start: 50%;
   /*
@@ -367,8 +384,11 @@ const layers = computed(() => [
    * Hebrew annotations are already RTL, so mirroring it would flip the
    * handwriting. Everything that is layout in this file stays logical.
    */
-  right: 2.5rem;
-  width: clamp(15rem, 20vw, 24rem);
+  /* Same gutter as the content grid (max-w-7xl + px-6), so the plate's right
+     margin matches the portrait's left one instead of hugging the viewport
+     edge. Tracks the capped frame, so it stays aligned on wide monitors. */
+  right: calc(max(0px, (100% - 80rem) / 2) + 1.5rem);
+  width: clamp(14rem, 18vw, 22rem);
   height: auto;
   /* Fully inside the frame — at negative offsets the vessel sketches on the
      plate's right edge were being clipped. Held back from full strength so
