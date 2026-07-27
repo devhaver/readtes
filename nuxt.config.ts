@@ -115,11 +115,10 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   colorMode: {
     classSuffix: "",
-    // Three themes, not two. `sepia` is a first-class light theme (warm
-    // paper for long reading), not a variant of light — it defines the same
-    // eight semantic tokens in main.css. Listing it here is what lets
-    // color-mode persist it and emit the `.sepia` class.
-    themes: ["light", "dark", "sepia"],
+    // Three themes: light, sepia, dark. There is deliberately no `themes`
+    // list — this version of @nuxtjs/color-mode has no such option, and none
+    // is needed: `classSuffix: ""` puts the bare preference value on <html>,
+    // so any value with a matching token block in main.css just works.
     fallback: "light",
   },
   i18n: {
