@@ -3,3 +3,6 @@ pnpm-lock.yaml
 .output
 content/
 .claude/
+
+# Symlink to AGENTS.md — formatting the target once is enough
+.github/copilot-instructions.md
