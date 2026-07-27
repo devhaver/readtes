@@ -292,7 +292,15 @@ const layers = computed(() => [
   font-size: 1.0625rem;
   line-height: 2.1;
   text-align: justify;
-  color: color-mix(in srgb, var(--color-surface-white) 9%, transparent);
+  /*
+   * This layer sits directly behind the headline and body copy (it spans
+   * 34%–96% of the inline axis, and the content column starts around 37%).
+   * At a legible opacity the Hebrew reads as *text competing with the copy*
+   * rather than as atmosphere. Two changes keep it subliminal: a lower
+   * alpha, and a small blur so the glyphs never resolve into words.
+   */
+  color: color-mix(in srgb, var(--color-surface-white) 5%, transparent);
+  filter: blur(1.1px);
   pointer-events: none;
   transform: translateY(calc(var(--hero-drift, 0) * 0.045px));
   mask-image: linear-gradient(
@@ -317,12 +325,18 @@ const layers = computed(() => [
 
 .hero-circles {
   inset-block-start: 50%;
-  inset-inline-end: -7rem;
-  width: clamp(22rem, 30vw, 28rem);
+  /*
+   * Was -7rem, which pushed roughly a third of the diagram past the
+   * section's overflow-hidden edge — the igulim read as clipped rather than
+   * as a full figure, and the kav ran off the top. Sits inside the frame
+   * now, slightly smaller so it still clears the content column.
+   */
+  inset-inline-end: -1.5rem;
+  width: clamp(19rem, 26vw, 25rem);
   aspect-ratio: 1;
   transform: translateY(calc(-50% + var(--hero-drift, 0) * 0.09px));
   color: color-mix(in srgb, var(--color-teal) 24%, var(--color-surface-white));
-  opacity: 0.34;
+  opacity: 0.42;
 }
 
 /*
@@ -331,6 +345,15 @@ const layers = computed(() => [
  * needs no per-direction override.
  */
 .hero-portrait {
+  /*
+   * The radial mask fades the sides and top but is fully opaque along the
+   * bottom edge (the gradient is centred there), so wherever the image ends
+   * you get a hard horizontal cut — which read as a pasted-on cutout rather
+   * than a figure rising out of the night field. Overshooting the section's
+   * bottom edge moves that cut off-screen; the section is overflow-hidden,
+   * so the crop happens at the boundary and never in open space.
+   */
+  margin-block-end: -2.5rem;
   mask-image: radial-gradient(
     130% 118% at 50% 100%,
     black 58%,
