@@ -34,3 +34,8 @@ coverage
 
 # go-task cache/checksum state
 .task/
+
+# Claude Code — share settings.json, keep personal/machine state local.
+# worktrees/ holds throwaway agent checkouts (each a full node_modules).
+.claude/settings.local.json
+.claude/worktrees/
