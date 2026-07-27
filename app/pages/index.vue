@@ -19,16 +19,24 @@ const openingLine: Record<string, string> = {
 
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);
 
-// The typographic texture layer: the actual opening of Chapter 1 from the
-// 1956 Jerusalem edition (source.he-jerusalem-1956.json, items 1–3),
-// inline anchor letters and footnote stars stripped. Hardcoded as plain
-// strings — importing the chapter JSON here would ship the whole file in
-// the client bundle for what is a purely decorative layer.
-const heroTexture = [
-  "מבאר ענין הצמצום הא' שנצטמצם אור אין סוף ב\"ה בכדי להאציל הנאצלים ולברוא הנבראים. ובו ה' ענינים: — לפני הצמצום היה אין סוף ממלא כל המציאות",
-  "דע כי טרם שנאצלו הנאצלים ונבראו הנבראים, היה אור עליון פשוט ממלא כל המציאות. ולא היה שום מקום פנוי בבחינת אויר ריקני וחלל, אלא היה הכל ממולא מן אור א\"ס פשוט ההוא, ולא היה לו לא בחינת ראש ולא בחינת סוף, אלא הכל היה אור א' פשוט שוה בהשואה א', והוא הנקרא אור א\"ס.",
-  "וכאשר עלה ברצונו הפשוט, לברוא העולמות ולהאציל הנאצלים. להוציא לאור שלימות פעולותיו ושמותיו וכינויו, אשר זאת היה סיבת בריאת העולמות.",
-  'והנה אז צמצם את עצמו א"ס בנקודה האמצעית, אשר בו באמצע ממש, וצמצם האור ההוא, ונתרחק אל צדדי סביבות הנקודה האמצעית.',
+// A handful of brighter stars that twinkle individually, over the two
+// repeating tile layers in `.tes-starfield`. Same data-driven approach as the
+// fireflies in the chatpatka home page: one keyframe set, per-star custom
+// properties, no per-star CSS. Coprime-ish durations so they never resolve
+// into a visible pulse together.
+const stars = [
+  { x: 9, y: 22, size: 2.4, dur: 4.3, delay: 0 },
+  { x: 17, y: 68, size: 1.8, dur: 6.1, delay: 1.4 },
+  { x: 26, y: 12, size: 2.0, dur: 5.2, delay: 2.7 },
+  { x: 34, y: 84, size: 1.6, dur: 7.4, delay: 0.6 },
+  { x: 48, y: 18, size: 2.6, dur: 5.8, delay: 3.1 },
+  { x: 57, y: 74, size: 1.7, dur: 4.9, delay: 1.9 },
+  { x: 66, y: 30, size: 2.1, dur: 6.6, delay: 0.3 },
+  { x: 73, y: 62, size: 1.9, dur: 5.5, delay: 2.2 },
+  { x: 82, y: 16, size: 2.8, dur: 7.1, delay: 1.1 },
+  { x: 88, y: 78, size: 1.7, dur: 4.6, delay: 3.4 },
+  { x: 94, y: 42, size: 2.2, dur: 6.3, delay: 0.9 },
+  { x: 41, y: 52, size: 1.5, dur: 8.2, delay: 2.5 },
 ];
 
 // Subtle scroll parallax on the two decorative layers (transform-only, so
@@ -97,20 +105,22 @@ const layers = computed(() => [
            viewport: past ~1920px they would otherwise drift to the far edges
            and leave the composition strung out across the middle. The night
            field itself stays full-bleed. -->
-      <div aria-hidden="true" class="hero-frame absolute inset-0">
-        <!-- Chapter 1 as texture: real text, purely atmospheric -->
-        <div
-          aria-hidden="true"
-          lang="he"
-          dir="rtl"
-          class="hero-texture absolute hidden select-none sm:block"
-        >
-          <p class="hero-texture-heading">{{ heroTexture[0] }}</p>
-          <p v-for="line in heroTexture.slice(1)" :key="line.slice(0, 24)">
-            {{ line }}
-          </p>
-        </div>
+      <div aria-hidden="true" class="hero-stars absolute inset-0">
+        <span
+          v-for="(s, i) in stars"
+          :key="i"
+          class="hero-star absolute"
+          :style="{
+            '--star-x': `${s.x}%`,
+            '--star-y': `${s.y}%`,
+            '--star-size': `${s.size}px`,
+            '--star-dur': `${s.dur}s`,
+            '--star-delay': `${s.delay}s`,
+          }"
+        />
+      </div>
 
+      <div aria-hidden="true" class="hero-frame absolute inset-0">
         <!--
         The ARI's own Tzimtzum plate (Figma node 109:3) — the drawn figure
         with its annotations and vessel sketches, not an SVG approximation
@@ -338,51 +348,45 @@ const layers = computed(() => [
   justify-content: flex-end;
 }
 
+/*
+ * Brighter individual stars over the tiled field. Opacity + scale only, both
+ * compositor-friendly; the glow is a static box-shadow that rides along
+ * rather than being re-rendered.
+ */
+.hero-stars {
+  pointer-events: none;
+}
+
+.hero-star {
+  top: var(--star-y);
+  left: var(--star-x);
+  inline-size: var(--star-size);
+  block-size: var(--star-size);
+  border-radius: 50%;
+  background: var(--color-surface-white);
+  box-shadow: 0 0 calc(var(--star-size) * 2.5) calc(var(--star-size) * 0.4)
+    color-mix(in srgb, var(--color-surface-white) 45%, transparent);
+  opacity: 0.35;
+  animation: hero-star-twinkle var(--star-dur) ease-in-out var(--star-delay)
+    infinite;
+}
+
+@keyframes hero-star-twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
 .hero-frame {
   inline-size: min(100%, 120rem);
   margin-inline: auto;
   pointer-events: none;
-}
-
-.hero-texture {
-  /* Physical on purpose: this is the book's own page set as artwork, already
-     RTL Hebrew. Mirroring it just moves the block for no reason. */
-  inset-block: 0;
-  left: 30%;
-  right: 24%;
-  padding-block-start: 3.5rem;
-  font-size: 1.0625rem;
-  line-height: 2.1;
-  text-align: justify;
-  /*
-   * This layer sits directly behind the headline and body copy (it spans
-   * 34%–96% of the inline axis, and the content column starts around 37%).
-   * At a legible opacity the Hebrew reads as *text competing with the copy*
-   * rather than as atmosphere. Two changes keep it subliminal: a lower
-   * alpha, and a small blur so the glyphs never resolve into words.
-   */
-  color: color-mix(in srgb, var(--color-surface-white) 5%, transparent);
-  filter: blur(1.1px);
-  pointer-events: none;
-  transform: translateY(calc(var(--hero-drift, 0) * 0.045px));
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 12%,
-    black 62%,
-    transparent 96%
-  );
-}
-
-.hero-texture p + p {
-  margin-block-start: 1.4em;
-}
-
-.hero-texture-heading {
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.9;
-  text-align: center;
 }
 
 /*
@@ -473,8 +477,15 @@ const layers = computed(() => [
 @media (prefers-reduced-motion: reduce) {
   .hero-enter-content,
   .hero-enter-portrait,
+  .hero-star,
   .layer-card {
     animation: none;
+  }
+
+  /* Held at a legible steady brightness rather than hidden — they are part
+     of the composition, only their motion is the problem. */
+  .hero-star {
+    opacity: 0.55;
   }
 
   .layer-card:hover {
