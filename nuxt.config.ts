@@ -115,6 +115,11 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   colorMode: {
     classSuffix: "",
+    // Three themes: light, sepia, dark. There is deliberately no `themes`
+    // list — this version of @nuxtjs/color-mode has no such option, and none
+    // is needed: `classSuffix: ""` puts the bare preference value on <html>,
+    // so any value with a matching token block in main.css just works.
+    fallback: "light",
   },
   i18n: {
     strategy: "prefix_except_default",

@@ -161,6 +161,39 @@ html {
   color: var(--text-primary);
 }
 
+/*
+ * Theme-change crossfade.
+ *
+ * Without this every switch is instant for surfaces — only the eight
+ * elements carrying `transition-colors` animate, so light<->dark *looks*
+ * like it fades (those elements shift a lot) while sepia appears to snap.
+ * The inconsistency was accidental, not by design.
+ *
+ * Applied via a class that app.vue adds for the duration of the change
+ * rather than living on `*` permanently: a standing universal transition
+ * would also animate hover and focus states everywhere, and on a reader
+ * page with thousands of nodes that is a real cost for no benefit.
+ */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    fill 220ms ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition *,
+  .theme-transition *::before,
+  .theme-transition *::after {
+    transition: none !important;
+  }
+}
+
 /* Match form controls, scrollbars and caret to the active theme. */
 :root {
   color-scheme: light;
@@ -168,6 +201,53 @@ html {
 
 .dark {
   color-scheme: dark;
+}
+
+/*
+ * Sepia: a warm-paper reading theme, sitting alongside light and dark rather
+ * than between them. It is a *light* theme — `color-scheme: light` so form
+ * controls and scrollbars match — but with the blue pulled out of every
+ * surface and near-black text replaced by ink brown.
+ *
+ * Contrast measured, not eyeballed (AA needs 4.5:1 for text):
+ *   text-primary on surface   11.03:1
+ *   text-primary on reading   11.63:1
+ *   text-muted   on surface    5.70:1
+ *   accent-text  on surface    5.43:1
+ *   warning-text on surface    4.73:1
+ *
+ * --accent-text needs its own value here. --color-teal-strong (#007a7f) is
+ * tuned for white and only reaches 4.36:1 on warm paper — under the bar. A
+ * slightly deeper teal clears it while staying on-brand.
+ */
+.sepia {
+  --surface: #f4ecd9;
+  --surface-raised: #ebe0c9;
+  --surface-reading: #f8f2e4;
+  --text-primary: #3b2f24;
+  --text-muted: #6a5947;
+  --border: #d9cbb2;
+  --accent-text: #006a6e;
+  --warning-text: var(--color-orange-cta-strong);
+}
+
+.sepia {
+  color-scheme: light;
+
+  /*
+   * Neutralise Tailwind's built-in `.sepia` filter utility.
+   *
+   * @nuxtjs/color-mode is configured with `classSuffix: ""`, so the theme
+   * class on <html> is the bare preference value — and "sepia" happens to be
+   * a Tailwind utility (`filter: sepia(100%)`), which Tailwind emits because
+   * the literal string appears in our source. The result was a sepia filter
+   * over the whole document: every surface, image and the navy header all
+   * pushed to olive-brown, on top of the token changes above.
+   *
+   * This rule is unlayered and so beats the utility's `@layer`. The
+   * html-filter assertion in tests/unit/app-theme-toggle.spec.ts guards it.
+   */
+  filter: none;
 }
 
 /*
