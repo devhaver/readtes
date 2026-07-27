@@ -76,7 +76,7 @@ const showPreferences = ref(false);
         </button>
 
         <UiSegmentedControl
-          :ariaLabel="t('reader.mode.label')"
+          :accessible-label="t('reader.mode.label')"
           :model-value="mode"
           :options="modeOptions"
           @update:model-value="(value) => setMode(value)"

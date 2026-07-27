@@ -76,6 +76,34 @@ const siteUrl = (
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // Static, locale-independent document head. Per-route canonical, hreflang
+  // and og:* come from `useLocaleHead` in app.vue and `useLocalizedSeo` on
+  // each page; Unhead merges all three.
+  //
+  // Before this, the app declared no icons at all — the scaffold's
+  // favicon.ico was served only by /favicon.ico convention, and iOS, Android
+  // and every bookmark surface got nothing.
+  app: {
+    head: {
+      link: [
+        // Browsers that support SVG icons prefer it, and it carries its own
+        // prefers-color-scheme handling. The .ico (16/32/48) is the fallback
+        // and what a bookmarks bar uses.
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        {
+          rel: "apple-touch-icon",
+          href: "/apple-touch-icon.png",
+          sizes: "180x180",
+        },
+        { rel: "manifest", href: "/site.webmanifest" },
+      ],
+      // Navy browser chrome on Android and iOS Safari, matching the header.
+      // Literal hex is unavoidable in a meta value; the token it mirrors is
+      // --color-navy-primary in app/assets/css/main.css.
+      meta: [{ name: "theme-color", content: "#003b65" }],
+    },
+  },
   modules: [
     "@nuxt/eslint",
     "@nuxt/fonts",
@@ -160,7 +188,7 @@ export default defineNuxtConfig({
     },
   },
   // Non-standard ports so `pnpm dev` never fights other local dev servers
-  // (weburz's Nuxt app on 3000, etc.) — see AGENTS.md "Dev server ports".
+  // on the default range — see AGENTS.md "Dev server ports".
   devServer: {
     port: 6217,
   },

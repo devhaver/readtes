@@ -131,7 +131,7 @@ const transitionDuration = computed(() =>
                 {{ t("reader.prefs.fontSize.label") }}
               </h3>
               <UiSegmentedControl
-                :ariaLabel="t('reader.prefs.fontSize.label')"
+                :accessible-label="t('reader.prefs.fontSize.label')"
                 :model-value="fontSizeValue"
                 :options="fontSizeOptions"
                 @update:model-value="onFontSizeChange"
@@ -145,7 +145,7 @@ const transitionDuration = computed(() =>
                 {{ t("reader.prefs.theme.label") }}
               </h3>
               <UiSegmentedControl
-                :ariaLabel="t('reader.prefs.theme.label')"
+                :accessible-label="t('reader.prefs.theme.label')"
                 :model-value="themeValue"
                 :options="themeOptions"
                 @update:model-value="onThemeChange"

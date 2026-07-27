@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Read TES">
+  <!--
+    The ARI's tzimtzum: the infinite light withdrawing to leave a vacant
+    round space at the centre. Two rings and a void, which is all that
+    survives at 16px — the hero's fuller diagram has no chance at that size.
+    Navy --color-navy-primary ground, teal --color-teal rings.
+  -->
+  <style>
+    .ground { fill: #003b65; }
+    .ring   { fill: none; stroke: #00b6bd; stroke-width: 4; }
+    /* Lift the teal slightly on dark chrome, where the navy recedes. */
+    @media (prefers-color-scheme: dark) {
+      .ground { fill: #04101e; }
+      .ring   { stroke: #2ad4da; }
+    }
+  </style>
+  <rect class="ground" width="64" height="64" rx="14" />
+  <circle class="ring" cx="32" cy="32" r="22" />
+  <circle class="ring" cx="32" cy="32" r="11" stroke-width="3.5" />
+</svg>

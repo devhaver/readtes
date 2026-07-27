@@ -7,11 +7,6 @@
 // switcher, `MobilePanePill`, is visually a different, bespoke pill+icon
 // treatment — see that component — so it doesn't reuse this one.)
 //
-// `ariaLabel` (not `aria-label`) is deliberate: `aria-label`/`data-*`
-// attribute names are special-cased in Vue's prop resolution for template
-// type-checking, so binding `:aria-label` here doesn't reliably resolve to
-// this declared prop the way `:model-value` resolves to `modelValue` —
-// bind it as `:ariaLabel` at every call site instead.
 export interface SegmentedControlOption<T extends string> {
   value: T;
   label: string;
@@ -20,7 +15,7 @@ export interface SegmentedControlOption<T extends string> {
 defineProps<{
   modelValue: T;
   options: SegmentedControlOption<T>[];
-  ariaLabel: string;
+  accessibleLabel: string;
 }>();
 
 const emit = defineEmits<{ "update:modelValue": [value: T] }>();
@@ -29,7 +24,7 @@ const emit = defineEmits<{ "update:modelValue": [value: T] }>();
 <template>
   <div
     role="group"
-    :aria-label="ariaLabel"
+    :aria-label="accessibleLabel"
     class="flex shrink-0 overflow-hidden rounded-button border border-(--border) text-xs"
   >
     <button
