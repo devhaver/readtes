@@ -1,10 +1,10 @@
 <script setup lang="ts">
-// Reading-first landing page. The hero implements Figma node 180:182: a
-// photographic composition — night field, the printed page of Chapter 1,
-// the ARI's own Tzimtzum diagram, and the Baal HaSulam portrait — under a
-// navy scrim that carries the overlaid copy. Assets live in
-// public/images/hero/. It stays dark in BOTH themes: the book as an object
-// in the dark, framed by the page around it.
+// Reading-first landing page. The hero recreates the approved mock's
+// atmosphere (Figma node 4:4): a navy night field, the Baal HaSulam
+// portrait duotone-blended at the inline-start, the book's own opening
+// page as a faint typographic texture, and the ARI's Tzimtzum circles
+// sketched at the inline-end. It stays dark in BOTH themes — the book as
+// an object in the dark, framed by the page around it.
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
@@ -18,6 +18,18 @@ const openingLine: Record<string, string> = {
 };
 
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);
+
+// The typographic texture layer: the actual opening of Chapter 1 from the
+// 1956 Jerusalem edition (source.he-jerusalem-1956.json, items 1–3),
+// inline anchor letters and footnote stars stripped. Hardcoded as plain
+// strings — importing the chapter JSON here would ship the whole file in
+// the client bundle for what is a purely decorative layer.
+const heroTexture = [
+  "מבאר ענין הצמצום הא' שנצטמצם אור אין סוף ב\"ה בכדי להאציל הנאצלים ולברוא הנבראים. ובו ה' ענינים: — לפני הצמצום היה אין סוף ממלא כל המציאות",
+  "דע כי טרם שנאצלו הנאצלים ונבראו הנבראים, היה אור עליון פשוט ממלא כל המציאות. ולא היה שום מקום פנוי בבחינת אויר ריקני וחלל, אלא היה הכל ממולא מן אור א\"ס פשוט ההוא, ולא היה לו לא בחינת ראש ולא בחינת סוף, אלא הכל היה אור א' פשוט שוה בהשואה א', והוא הנקרא אור א\"ס.",
+  "וכאשר עלה ברצונו הפשוט, לברוא העולמות ולהאציל הנאצלים. להוציא לאור שלימות פעולותיו ושמותיו וכינויו, אשר זאת היה סיבת בריאת העולמות.",
+  'והנה אז צמצם את עצמו א"ס בנקודה האמצעית, אשר בו באמצע ממש, וצמצם האור ההוא, ונתרחק אל צדדי סביבות הנקודה האמצעית.',
+];
 
 // Subtle scroll parallax on the two decorative layers (transform-only, so
 // no layout shift). Skipped entirely under prefers-reduced-motion — the
@@ -76,139 +88,155 @@ const layers = computed(() => [
 
 <template>
   <div>
-    <!--
-      Hero: the composition alone, as designed (Figma node 180:182) — night
-      field, the printed page of Chapter 1, the ARI's own Tzimtzum diagram,
-      and the portrait. No copy sits on it; the words live in their own band
-      below, so nothing has to fight a photograph for contrast.
-    -->
-    <section
-      ref="heroEl"
-      aria-hidden="true"
-      class="tes-starfield relative h-[clamp(17rem,46vw,40rem)] overflow-hidden"
-    >
-      <img
-        src="/images/hero/night-field.webp"
-        alt=""
-        width="1440"
-        height="737"
-        fetchpriority="high"
-        class="hero-night absolute inset-0 size-full object-cover"
-      />
-
-      <img
-        src="/images/hero/page-scan.webp"
-        alt=""
-        width="1848"
-        height="616"
-        loading="lazy"
-        decoding="async"
-        class="hero-page absolute hidden sm:block"
-      />
-
-      <img
-        src="/images/hero/tzimtzum.webp"
-        alt=""
-        width="722"
-        height="593"
-        loading="lazy"
-        decoding="async"
-        class="hero-diagram absolute hidden md:block"
-      />
-
-      <img
-        src="/images/hero/baal-hasulam.webp"
-        srcset="
-          /images/hero/baal-hasulam-540.webp  540w,
-          /images/hero/baal-hasulam.webp     1080w
-        "
-        sizes="(min-width: 640px) 30vw, 46vw"
-        alt=""
-        width="1080"
-        height="1350"
-        decoding="async"
-        class="hero-portrait hero-enter-portrait absolute"
-      />
-
-      <div class="hero-scrim absolute inset-0" />
-    </section>
-
-    <!-- The words, on the page surface rather than over the photograph. -->
-    <section class="mx-auto max-w-5xl px-4 pt-10 sm:px-6 sm:pt-14">
-      <div class="hero-enter-content">
-        <!-- inline-block shrink-wraps the RTL run so the lockup sits at the
-             column's inline-start instead of drifting to the paragraph
-             box's far edge -->
-        <p
-          v-if="locale !== 'he'"
-          class="inline-block font-hebrew-display text-2xl font-bold text-(--text-muted) sm:text-3xl"
-          dir="rtl"
+    <!-- Hero: full-bleed night field, deliberately dark in both themes -->
+    <section ref="heroEl" class="tes-starfield relative overflow-hidden">
+      <!-- Decorative layers are positioned against this capped frame, not the
+           viewport: past ~1920px they would otherwise drift to the far edges
+           and leave the composition strung out across the middle. The night
+           field itself stays full-bleed. -->
+      <div aria-hidden="true" class="hero-frame absolute inset-0">
+        <!-- Chapter 1 as texture: real text, purely atmospheric -->
+        <div
+          aria-hidden="true"
           lang="he"
+          dir="rtl"
+          class="hero-texture absolute hidden select-none sm:block"
         >
-          {{ t("home.heroTitleHebrew") }}
-        </p>
-        <h1
-          class="mt-1 max-w-2xl text-4xl text-(--text-primary) sm:text-5xl"
-          :class="
-            locale === 'he' ? 'font-hebrew-display font-black' : 'font-display'
-          "
-        >
-          {{ t("home.heroTitle") }}
-        </h1>
-        <p
-          class="mt-1 text-xl text-(--text-muted) sm:text-2xl"
-          :class="
-            locale === 'he' ? 'font-hebrew-display font-bold' : 'font-display'
-          "
-        >
-          {{ t("home.heroSubtitle") }}
-        </p>
-        <p class="mt-5 max-w-prose text-lg text-(--text-muted)">
-          {{ t("home.description") }}
-        </p>
-
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <NuxtLink
-            :to="localePath('/read/part-01/chapter-01')"
-            class="inline-flex items-center gap-2 rounded-button bg-navy-primary px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:bg-teal-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-strong"
-          >
-            {{ t("home.beginReading") }}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-4 w-4 rtl:rotate-180"
-              aria-hidden="true"
-            >
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </NuxtLink>
-          <NuxtLink
-            :to="localePath('/volumes')"
-            class="inline-flex items-center gap-2 rounded-button border border-(--border) px-5 py-2.5 text-sm font-medium text-(--text-primary) transition-colors hover:border-teal-strong hover:text-(--accent-text) focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-strong"
-          >
-            {{ t("home.browseVolumes") }}
-          </NuxtLink>
+          <p class="hero-texture-heading">{{ heroTexture[0] }}</p>
+          <p v-for="line in heroTexture.slice(1)" :key="line.slice(0, 24)">
+            {{ line }}
+          </p>
         </div>
 
-        <blockquote
-          class="mt-10 max-w-xl border-s-2 border-teal-strong/60 ps-5"
-          :dir="locale === 'he' ? 'rtl' : 'ltr'"
+        <!--
+        The ARI's own Tzimtzum plate (Figma node 109:3) — the drawn figure
+        with its annotations and vessel sketches, not an SVG approximation
+        of it. Deliberately NOT mirrored under RTL: it is a scanned artwork
+        whose Hebrew annotations already read right-to-left, so flipping it
+        would reverse the handwriting.
+      -->
+        <img
+          aria-hidden="true"
+          src="/images/tzimtzum-diagram.webp"
+          alt=""
+          width="722"
+          height="593"
+          loading="lazy"
+          decoding="async"
+          class="hero-circles absolute hidden md:block"
+        />
+      </div>
+
+      <div
+        dir="ltr"
+        class="relative mx-auto grid max-w-6xl items-end gap-x-10 px-4 sm:grid-cols-[17rem_minmax(0,1fr)] sm:px-6 lg:grid-cols-[20rem_minmax(0,1fr)]"
+      >
+        <!-- Portrait: duotone, rising out of the hero's bottom edge -->
+        <div
+          class="hero-portrait hero-enter-portrait order-2 -mb-6 w-52 justify-self-center sm:order-1 sm:-mb-8 sm:w-full sm:justify-self-auto"
         >
+          <!--
+            Full-resolution cut-out (Figma node 117:724) at the same display
+            size as before. The duotone wash existed to prop up a 24KB crop;
+            over this source it only flattens the face.
+          -->
+          <img
+            src="/images/baal-hasulam.webp"
+            srcset="
+              /images/baal-hasulam-540.webp  540w,
+              /images/baal-hasulam.webp     1080w
+            "
+            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 17rem, 13rem"
+            fetchpriority="high"
+            alt=""
+            width="1080"
+            height="1350"
+            decoding="async"
+            class="w-full"
+          />
+        </div>
+
+        <!-- Content -->
+        <div
+          :dir="locale === 'he' ? 'rtl' : 'ltr'"
+          class="hero-enter-content order-1 py-12 text-surface-white sm:order-2 sm:py-16"
+        >
+          <!-- inline-block shrink-wraps the RTL run so the lockup sits at
+               the content column's inline-start instead of drifting to the
+               paragraph box's far edge -->
           <p
-            class="text-xl text-(--text-primary)"
-            :class="locale === 'he' ? 'font-hebrew' : 'font-display italic'"
-            :lang="locale === 'he' ? 'he' : undefined"
+            v-if="locale !== 'he'"
+            class="inline-block font-hebrew-display text-2xl font-bold text-surface-white/85 sm:text-3xl"
+            dir="rtl"
+            lang="he"
           >
-            “{{ quote }}”
+            {{ t("home.heroTitleHebrew") }}
           </p>
-          <cite class="mt-2 block text-sm text-(--text-muted) not-italic">
-            {{ t("home.quoteSource") }}
-          </cite>
-        </blockquote>
+          <h1
+            class="mt-1 max-w-2xl text-4xl sm:text-5xl"
+            :class="
+              locale === 'he'
+                ? 'font-hebrew-display font-black'
+                : 'font-display'
+            "
+          >
+            {{ t("home.heroTitle") }}
+          </h1>
+          <p
+            class="mt-1 text-xl text-surface-white/70 sm:text-2xl"
+            :class="
+              locale === 'he' ? 'font-hebrew-display font-bold' : 'font-display'
+            "
+          >
+            {{ t("home.heroSubtitle") }}
+          </p>
+          <p class="mt-5 max-w-prose text-lg text-surface-white/75">
+            {{ t("home.description") }}
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <NuxtLink
+              :to="localePath('/read/part-01/chapter-01')"
+              class="inline-flex items-center gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+            >
+              {{ t("home.beginReading") }}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4 rtl:rotate-180"
+                aria-hidden="true"
+              >
+                <path d="M9 6l6 6-6 6" />
+              </svg>
+            </NuxtLink>
+            <NuxtLink
+              :to="localePath('/volumes')"
+              class="inline-flex items-center gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+            >
+              {{ t("home.browseVolumes") }}
+            </NuxtLink>
+          </div>
+
+          <blockquote
+            class="mt-10 max-w-xl border-s-2 border-teal/60 ps-5"
+            :dir="locale === 'he' ? 'rtl' : 'ltr'"
+          >
+            <p
+              class="text-xl"
+              :class="locale === 'he' ? 'font-hebrew' : 'font-display italic'"
+              :lang="locale === 'he' ? 'he' : undefined"
+            >
+              “{{ quote }}”
+            </p>
+            <cite class="mt-2 block text-sm text-surface-white/60 not-italic">
+              {{ t("home.quoteSource") }}
+            </cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 
@@ -279,97 +307,88 @@ const layers = computed(() => [
 
 <style scoped>
 /*
- * NOTE ON PHYSICAL PROPERTIES — a deliberate, narrow exception.
- *
- * This project's rule is logical properties only, because Hebrew RTL is
- * first-class and layout must mirror. The four rules below use top/left/
- * right on purpose: they position layers of a *fixed artwork* (Figma node
- * 180:182), not a layout. The page scan is already Hebrew set RTL, and the
- * portrait belongs at the composition's left in both locales — mirroring
- * only shuffled the picture around to no benefit. Everything that is
- * actually layout, including all the copy below the hero, stays logical.
- *
  * Layout-only styles for the hero's decorative layers; the shared
  * atmosphere pieces (.tes-starfield, .tes-duotone) live in main.css.
  * Colors come from tokens. The two drift transforms read --hero-drift,
  * set from the scroll position in <script> — absent (reduced motion, or
  * before hydration) the calc() falls back to 0 and the layers hold still.
  */
-.hero-night {
-  /* Behind everything. object-cover so the 1440x737 source fills any ratio.
-     Full strength: the plate is a luminous nebula and dimming it flattens
-     the whole composition to navy. */
-  z-index: 0;
+.hero-frame {
+  inline-size: min(100%, 120rem);
+  margin-inline: auto;
+  pointer-events: none;
 }
 
-/*
- * The printed page, positioned as in the comp: reading column toward the
- * inline-start half, rising with the drift. Masked at every edge so it reads
- * as a page emerging from the dark rather than a rectangle pasted on.
- */
-.hero-page {
-  z-index: 1;
-  top: 3%;
-  left: 5%;
-  width: clamp(32rem, 62vw, 68rem);
-  height: auto;
-  opacity: 0.95;
+.hero-texture {
+  /* Physical on purpose: this is the book's own page set as artwork, already
+     RTL Hebrew. Mirroring it just moves the block for no reason. */
+  inset-block: 0;
+  left: 30%;
+  right: 24%;
+  padding-block-start: 3.5rem;
+  font-size: 1.0625rem;
+  line-height: 2.1;
+  text-align: justify;
+  /*
+   * This layer sits directly behind the headline and body copy (it spans
+   * 34%–96% of the inline axis, and the content column starts around 37%).
+   * At a legible opacity the Hebrew reads as *text competing with the copy*
+   * rather than as atmosphere. Two changes keep it subliminal: a lower
+   * alpha, and a small blur so the glyphs never resolve into words.
+   */
+  color: color-mix(in srgb, var(--color-surface-white) 5%, transparent);
+  filter: blur(1.1px);
   pointer-events: none;
   transform: translateY(calc(var(--hero-drift, 0) * 0.045px));
-  mask-image: radial-gradient(118% 102% at 50% 45%, black 44%, transparent 88%);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 62%,
+    transparent 96%
+  );
 }
 
-/* The ARI's own diagram, at the inline-end, clear of the content column. */
-.hero-diagram {
-  z-index: 2;
-  /* right: 3rem keeps the vessel sketches on the right of the plate inside
-     the frame — at 1rem they clipped off the edge. */
-  top: 46%;
-  right: 3rem;
-  width: clamp(19rem, 30vw, 32rem);
+.hero-texture p + p {
+  margin-block-start: 1.4em;
+}
+
+.hero-texture-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.hero-circles {
+  inset-block-start: 50%;
+  /*
+   * Physical `right` on purpose. This is artwork, not layout — the plate's
+   * Hebrew annotations are already RTL, so mirroring it would flip the
+   * handwriting. Everything that is layout in this file stays logical.
+   */
+  right: 2.5rem;
+  width: clamp(15rem, 20vw, 24rem);
   height: auto;
-  pointer-events: none;
+  /* Fully inside the frame — at negative offsets the vessel sketches on the
+     plate's right edge were being clipped. Held back from full strength so
+     it doesn't compete with the body copy it sits beside. */
+  opacity: 0.7;
   transform: translateY(calc(-50% + var(--hero-drift, 0) * 0.09px));
 }
 
 /*
- * Legibility scrim. `to right` is deliberately physical-agnostic here: it is
- * expressed in logical terms via the RTL override below, so the dense end
- * always falls under the content column in both directions.
- */
-.hero-scrim {
-  /*
-   * Was a heavy navy gradient carrying overlaid copy. The copy moved below
-   * the image, so the gradient only muted the nebula and the plate. All that
-   * remains is a short fade so the section doesn't end on a hard edge.
-   */
-  z-index: 3;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    transparent 86%,
-    color-mix(in srgb, var(--surface) 30%, transparent) 100%
-  );
-}
-
-/*
- * The portrait melts into the night on every side except the bottom edge
- * it rises from — a direction-agnostic radial mask, so the RTL mirror
- * needs no per-direction override.
+ * No mask. The source (Figma node 117:724) is a true cut-out — its top
+ * corners are fully transparent — so the alpha channel already does the
+ * blending. The radial mask that used to live here was centred at the
+ * bottom, which meant it faded hardest at the TOP: it erased the crown of
+ * the hat and left a visible boxy falloff around him. It existed to hide
+ * the hard edges of the old 24KB rectangular crop, which no longer exists.
  */
 .hero-portrait {
-  /*
-   * Absolutely placed in the composition now, not a grid cell: inline-start,
-   * taller than the frame so it bleeds off the bottom edge, which the
-   * section clips. The radial mask melts every other side into the night.
-   */
-  z-index: 2;
-  bottom: -6%;
-  left: 0;
-  width: clamp(12rem, 34vw, 31rem);
-  height: auto;
-  pointer-events: none;
-  mask-image: radial-gradient(104% 96% at 50% 88%, black 42%, transparent 80%);
+  filter: drop-shadow(
+    0 0 2.5rem color-mix(in srgb, var(--color-navy-night) 70%, transparent)
+  );
 }
 
 .hero-enter-content {
