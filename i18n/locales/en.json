@@ -146,7 +146,7 @@
   },
   "about": {
     "title": "About Read TES",
-    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baruch Ashlag's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew or in English.",
+    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baal HaSulam's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew or in English.",
     "readingModelTitle": "The reading model",
     "readingModelBody": "Each chapter is read item by item, the way it is studied in a live lesson: a numbered paragraph of the source text, opened by its Inner Light commentary where one exists, and set beside the chapter's Inner Observation essay as a further layer of reflection. Nothing is paraphrased away — every layer links back to the same paragraph number.",
     "licensesTitle": "Texts, editions, and licenses",
@@ -170,7 +170,7 @@
   "seo": {
     "ogImageAlt": "Read TES — an open book beside the ARI's Tzimtzum circles, on a night-field background",
     "home": {
-      "description": "A free, bilingual reading of Talmud Eser Sefirot — Baruch Ashlag's foundational Kabbalah text — laid out as aligned summary, source, and commentary, in English and Hebrew."
+      "description": "A free, bilingual reading of Talmud Eser Sefirot — Baal HaSulam's foundational Kabbalah text — laid out as aligned summary, source, and commentary, in English and Hebrew."
     },
     "about": {
       "description": "What Read TES is, how its three reading layers work, and the licenses and sources behind every text edition on the site."

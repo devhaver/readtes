@@ -145,6 +145,32 @@
 }
 
 /*
+ * Paint the page canvas.
+ *
+ * Both themes define --surface, but nothing was applying it: html and body
+ * computed to rgba(0,0,0,0), so the browser's default white showed through
+ * anywhere a region didn't paint its own background. In dark mode that put
+ * a white band under the reader's content with dark-mode text on top of it
+ * — the study view appeared to "end" mid-chapter.
+ *
+ * Set on html rather than body: background propagates body -> canvas only
+ * when html has none of its own, and here neither did.
+ */
+html {
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+/* Match form controls, scrollbars and caret to the active theme. */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/*
  * Reader anchor chips + cross-pane highlight flash (`useHighlightedAnchor`).
  *
  * `.tes-anchor` is Sefaria's inline commentary marker, normalized at import
