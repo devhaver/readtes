@@ -23,9 +23,11 @@ are starting cold:
   "generated with" footers, no "written by" notes in code, comments, or docs.
   The single exception is the `en-ai` translation version, which **must** be
   badged "AI translated" in the UI.
-- **Sandboxed agents cannot reach `/var/run/docker.sock`.** Anything needing
-  Docker or Testcontainers will fail. Write such tests, but do not run them —
-  say so in your summary and leave them for a human to run outside.
+- **Docker is available** — verified reachable from an agent shell on
+  2026-07-27 (`docker run` and `docker compose` both work; Compose v5.3.0).
+  An earlier version of this file claimed the socket was unreachable; that is
+  no longer true. Build and run containers rather than handing them over
+  untested. If a sandbox _does_ block it, say so instead of assuming.
 - **Run the gates.** Don't claim a change is done without `task check`
   passing (see "Definition of done").
 - **Flag mismatches, never guess.** If this file disagrees with the code, or
@@ -63,7 +65,8 @@ the same name.
 
 | Task                     | What it does                                                   |
 | ------------------------ | -------------------------------------------------------------- |
-| `task dev`               | `setup` then `pnpm dev` — dev server at http://localhost:6217  |
+| `task dev`               | Dev server in Docker — http://localhost:6217                   |
+| `task dev:host`          | Dev server on the host, no container — same ports              |
 | `task setup`             | `pnpm install --frozen-lockfile`                               |
 | `task check`             | The full gate — see "Definition of done"                       |
 | `task qa`                | `pnpm lint && pnpm format:check`                               |
@@ -71,6 +74,9 @@ the same name.
 | `task generate`          | Static site generation — this is what gets deployed            |
 | `task import -- <flags>` | `pnpm import:sefaria <flags>`, e.g. `task import -- --part 1`  |
 | `task clean`             | Remove `.nuxt`, `.output`, `coverage`, `node_modules`, `.task` |
+| `task docker:prod`       | Build + serve the static output via nginx — :6219              |
+| `task docker:build`      | Build both images without starting anything                    |
+| `task docker:clean`      | Remove this project's containers, volumes, images              |
 
 Other pnpm scripts: `build` (SSR build, not the deploy target), `preview`,
 `lint:fix`, `format`, `typecheck` (`nuxi typecheck` **and** `vue-tsc -p
@@ -86,6 +92,27 @@ stops build scripts short — that's expected; see the `tes-pnpm-setup` skill.
 **6218** (`vite.server.ws.port`), instead of the Nuxt defaults, so it never
 collides with another local dev server. Use these ports when referencing the
 dev server directly (proxies, browser automation) rather than guessing 3000.
+
+## Docker
+
+`Dockerfile` is multi-stage: `base` (node 24 + pnpm pinned to the
+`packageManager` field) → `deps` → `development` / `build` → `production`.
+
+- **`deps` installs with `--ignore-scripts`.** This package's postinstall is
+  `nuxt prepare`, which needs `nuxt.config.ts` and the source tree; neither
+  exists at that layer. Every downstream stage runs `nuxt prepare` itself.
+- **`PNPM_HOME=/pnpm` is load-bearing.** pnpm's store goes to
+  `$PNPM_HOME/store`, which is what the `--mount=type=cache` targets. Without
+  it the cache mount is a silent no-op and every build re-downloads.
+- **`production` is nginx, not node.** `nuxt generate` emits static files with
+  no server entrypoint, so there is nothing for `node .output/server/index.mjs`
+  to run. `docker/nginx.conf` handles the 404 status, immutable asset caching,
+  and gzip.
+- **`NUXT_PUBLIC_SITE_URL` is a build arg**, baked into every absolute URL. A
+  static site has no runtime config to correct it afterwards.
+- Dev bind-mounts the whole repo root with anonymous volumes shadowing
+  `node_modules` and `.nuxt` — the host's are glibc, the container is
+  alpine/musl.
 
 ## Code conventions
 
@@ -180,7 +207,8 @@ All of it must pass before committing.
   (path-scoped, auto-loading) and `.agents/skills/` on demand. The ~15 lines
   of invariants duplicated between the two files are deliberate: each tool
   needs them always-on, and neither reads the other's file. Change both.
-- **`GEMINI.md`, `.cursorrules`, `.github/copilot-instructions.md`** —
-  symlinks to this file. Their tools now read `AGENTS.md` natively, so these
-  are redundancy for older versions, not the primary mechanism. Never
-  replace them with copies.
+- **`.github/copilot-instructions.md`** — a symlink to this file, kept
+  because VS Code Copilot still prefers that path. `GEMINI.md` and
+  `.cursorrules` were removed: Gemini CLI and Cursor both read `AGENTS.md`
+  natively now, and Cursor has deprecated `.cursorrules` outright. Never
+  replace the remaining symlink with a copy.

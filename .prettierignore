@@ -4,7 +4,5 @@ pnpm-lock.yaml
 content/
 .claude/
 
-# Symlinks to AGENTS.md — formatting the target once is enough
-GEMINI.md
-.cursorrules
+# Symlink to AGENTS.md — formatting the target once is enough
 .github/copilot-instructions.md

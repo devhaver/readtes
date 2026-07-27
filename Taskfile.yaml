@@ -2,14 +2,29 @@ version: "3"
 
 tasks:
   dev:
-    desc: Setup the development environment and spin up the dev server
+    desc: Spin up the dev server in Docker (http://localhost:6217)
     summary: |
-      Start the development environment with hot-reloading.
+      Start the development environment with hot-reloading, in a container.
 
-      The dev server binds to the non-standard port 6217 (not 3000) so it
-      never collides with other local Nuxt dev servers (e.g. weburz on
-      3000) — see "Dev server ports" in AGENTS.md. It will be accessible
-      at http://localhost:6217.
+      The working tree is bind-mounted, so edits reload normally. node_modules
+      and .nuxt stay container-local — the host's are built for glibc, the
+      container is alpine/musl, and sharing them produces native-module errors
+      that look like Nuxt bugs.
+
+      The dev server binds to the non-standard port 6217 (not 3000), with
+      Vite's HMR socket on 6218, so it never collides with another local dev
+      server — see "Dev server ports" in AGENTS.md.
+
+      Use `task dev:host` to run it directly on the host instead.
+    cmds:
+      - docker compose up dev
+
+  dev:host:
+    desc: Spin up the dev server on the host, without Docker
+    summary: |
+      Same ports as `task dev`, running straight from your local pnpm install.
+      Faster startup; requires pnpm 11 and Node 24+ locally. Don't run this and
+      `task dev` at the same time — they both bind 6217.
     deps:
       - task: setup
     cmds:
@@ -126,3 +141,28 @@ tasks:
         done
         test ! -d ./node_modules
       - rm -rf ./.task
+
+  docker:prod:
+    desc: Build and serve the generated static site (http://localhost:6219)
+    summary: |
+      Runs `nuxt generate` inside the image and serves .output/public with
+      nginx. Use this to verify the real deploy artifact — 404 status codes,
+      cache headers, the prerendered sitemap — which `pnpm preview` does not
+      exercise the same way.
+
+      Set NUXT_PUBLIC_SITE_URL to bake the correct absolute URLs; it defaults
+      to https://readtes.org and cannot be changed after the build.
+    cmds:
+      - docker compose build prod
+      - docker compose up prod
+
+  docker:build:
+    desc: Build both Docker images without starting anything
+    cmd: docker compose build
+
+  docker:clean:
+    desc: Remove this project's containers, volumes, and images
+    summary: |
+      Docker-only teardown. `task clean` handles host-side build artifacts;
+      this handles everything Docker created.
+    cmd: docker compose down --remove-orphans --volumes --rmi all

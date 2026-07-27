@@ -1,0 +1,34 @@
+# Build outputs and caches — 900MB+ combined, none of it belongs in context.
+node_modules
+.output
+.nuxt
+.nitro
+.cache
+dist
+coverage
+.task
+.superpowers
+
+# VCS and agent config
+.git
+.github
+.claude
+.agents
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+.idea
+.fleet
+*.log
+logs
+
+# NOT ignored, deliberately:
+#   content/   (54MB) — `nuxt generate` reads it and nuxt.config.ts parses
+#                       content/toc.json at config load, so the build fails
+#                       without it.
+#   designs/   — og-card.html is the source for the committed social card.

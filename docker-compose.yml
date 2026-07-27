@@ -1,0 +1,53 @@
+services:
+  # Development — hot reload against the working tree.
+  dev:
+    build:
+      context: .
+      target: development
+    container_name: readtes-dev
+    image: readtes:dev
+    ports:
+      - "6217:6217" # dev server
+      - "6218:6218" # Vite HMR websocket
+    volumes:
+      # Whole-root bind rather than weburz's per-directory list: readtes has
+      # eight top-level source dirs and content/ is the main edit loop, so an
+      # explicit list goes stale the first time someone adds a directory.
+      - type: bind
+        source: .
+        target: /app
+
+      # Anonymous volumes shadowing the host's copies. The host tree is built
+      # for glibc under WSL; the container is alpine/musl, so sharing
+      # node_modules gives you native-module errors that look like Nuxt bugs.
+      - /app/node_modules
+      - /app/.nuxt
+    environment:
+      - NODE_ENV=development
+      - NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-http://localhost:6217}
+    restart: unless-stopped
+
+  # Production — serves the generated static site, for verifying the real
+  # artifact (404 status, cache headers, prerendered sitemap) before deploy.
+  prod:
+    build:
+      context: .
+      target: production
+      args:
+        # Baked in at build time; a static site has no runtime config.
+        NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-https://readtes.org}
+    container_name: readtes-prod
+    image: readtes:prod
+    ports:
+      - "6219:80"
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
+        reservations:
+          cpus: "0.5"
+          memory: 512M
