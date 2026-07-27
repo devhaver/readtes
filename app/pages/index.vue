@@ -89,7 +89,10 @@ const layers = computed(() => [
 <template>
   <div>
     <!-- Hero: full-bleed night field, deliberately dark in both themes -->
-    <section ref="heroEl" class="tes-starfield relative overflow-hidden">
+    <section
+      ref="heroEl"
+      class="tes-starfield hero-section relative overflow-hidden"
+    >
       <!-- Decorative layers are positioned against this capped frame, not the
            viewport: past ~1920px they would otherwise drift to the far edges
            and leave the composition strung out across the middle. The night
@@ -313,6 +316,18 @@ const layers = computed(() => [
  * set from the scroll position in <script> — absent (reduced motion, or
  * before hydration) the calc() falls back to 0 and the layers hold still.
  */
+/*
+ * The hero's height was whatever the copy happened to need, and Hebrew sets
+ * more compactly than English — 462px against 526px at 1440. Because the
+ * portrait is bottom-anchored and bleeds past the edge, that shorter section
+ * cropped more of him off, which read as the image being a different size
+ * between languages. It never was: both render at exactly 320x400. A floor
+ * keeps the frame identical whatever the copy does.
+ */
+.hero-section {
+  min-block-size: clamp(26rem, 38vw, 34rem);
+}
+
 .hero-frame {
   inline-size: min(100%, 120rem);
   margin-inline: auto;
