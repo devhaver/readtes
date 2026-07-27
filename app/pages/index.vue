@@ -326,6 +326,16 @@ const layers = computed(() => [
  */
 .hero-section {
   min-block-size: clamp(26rem, 38vw, 34rem);
+  /*
+   * The min-height above can exceed what the copy needs. Without this the
+   * grid stays at the top of the section and the bottom-aligned portrait
+   * floats, with starfield showing beneath his coat. Ending the flex column
+   * puts the grid's bottom on the section's bottom, so he still rises out of
+   * the edge.
+   */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero-frame {
@@ -388,7 +398,7 @@ const layers = computed(() => [
 
 @media (min-width: 48rem) {
   .hero-copy {
-    padding-right: clamp(13rem, 17vw, 21rem);
+    padding-right: clamp(15rem, 23vw, 27rem);
   }
 }
 
