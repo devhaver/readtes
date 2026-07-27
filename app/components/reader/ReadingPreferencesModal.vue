@@ -45,6 +45,7 @@ const onFontSizeChange = (value: string) => {
 
 const themeOptions = computed<SegmentedControlOption<string>[]>(() => [
   { value: "light", label: t("reader.prefs.theme.light") },
+  { value: "sepia", label: t("reader.prefs.theme.sepia") },
   { value: "dark", label: t("reader.prefs.theme.dark") },
   { value: "system", label: t("reader.prefs.theme.system") },
 ]);

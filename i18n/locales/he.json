@@ -17,6 +17,7 @@
     "volumesLink": "כרכים",
     "themeToggleToDark": "עבור למצב כהה",
     "themeToggleToLight": "עבור למצב בהיר",
+    "themeToggleToSepia": "עבור למצב ספיה",
     "languageSwitcherLabel": "החלף שפה",
     "breadcrumbLabel": "פירורי לחם"
   },
@@ -90,6 +91,7 @@
       "theme": {
         "label": "ערכת נושא",
         "light": "בהיר",
+        "sepia": "ספיה",
         "dark": "כהה",
         "system": "לפי המערכת"
       },

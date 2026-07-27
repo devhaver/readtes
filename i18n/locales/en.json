@@ -17,6 +17,7 @@
     "volumesLink": "Volumes",
     "themeToggleToDark": "Switch to dark mode",
     "themeToggleToLight": "Switch to light mode",
+    "themeToggleToSepia": "Switch to sepia mode",
     "languageSwitcherLabel": "Switch language",
     "breadcrumbLabel": "Breadcrumb"
   },
@@ -90,6 +91,7 @@
       "theme": {
         "label": "Theme",
         "light": "Light",
+        "sepia": "Sepia",
         "dark": "Dark",
         "system": "System"
       },

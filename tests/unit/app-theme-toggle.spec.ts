@@ -11,23 +11,38 @@ describe("AppThemeToggle", () => {
     expect(button.attributes("aria-label")).toBeTruthy();
   });
 
-  it("toggles the color mode preference and flips the accessible name on click", async () => {
+  it("cycles light -> sepia -> dark -> light and renames itself each step", async () => {
     const colorMode = useColorMode();
     colorMode.preference = "light";
     await nextTick();
 
     const wrapper = await mountSuspended(AppThemeToggle);
-    const initialLabel = wrapper.get("button").attributes("aria-label");
+    const labels = [wrapper.get("button").attributes("aria-label")];
 
-    await wrapper.get("button").trigger("click");
+    for (const expected of ["sepia", "dark", "light"]) {
+      await wrapper.get("button").trigger("click");
+      expect(colorMode.preference).toBe(expected);
+      labels.push(wrapper.get("button").attributes("aria-label"));
+    }
 
-    expect(colorMode.preference).toBe("dark");
-    expect(wrapper.get("button").attributes("aria-label")).not.toBe(
-      initialLabel,
-    );
-
-    await wrapper.get("button").trigger("click");
-
+    // Back where it started after a full lap.
     expect(colorMode.preference).toBe("light");
+    // Each of the three states announces a different destination, so a
+    // screen-reader user can tell where the next press goes.
+    expect(new Set(labels.slice(0, 3)).size).toBe(3);
+  });
+
+  it("enters the cycle from the resolved value when the preference is 'system'", async () => {
+    const colorMode = useColorMode();
+    colorMode.preference = "system";
+    await nextTick();
+
+    const wrapper = await mountSuspended(AppThemeToggle);
+    await wrapper.get("button").trigger("click");
+
+    // "system" isn't a cycle member; it must land on a real theme rather
+    // than staying put or throwing.
+    expect(["light", "sepia", "dark"]).toContain(colorMode.preference);
+    expect(colorMode.preference).not.toBe("system");
   });
 });
