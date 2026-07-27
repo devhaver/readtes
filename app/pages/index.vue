@@ -19,25 +19,31 @@ const openingLine: Record<string, string> = {
 
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);
 
-// A handful of brighter stars that twinkle individually, over the two
-// repeating tile layers in `.tes-starfield`. Same data-driven approach as the
-// fireflies in the chatpatka home page: one keyframe set, per-star custom
-// properties, no per-star CSS. Coprime-ish durations so they never resolve
-// into a visible pulse together.
-const stars = [
-  { x: 9, y: 22, size: 2.4, dur: 4.3, delay: 0 },
-  { x: 17, y: 68, size: 1.8, dur: 6.1, delay: 1.4 },
-  { x: 26, y: 12, size: 2.0, dur: 5.2, delay: 2.7 },
-  { x: 34, y: 84, size: 1.6, dur: 7.4, delay: 0.6 },
-  { x: 48, y: 18, size: 2.6, dur: 5.8, delay: 3.1 },
-  { x: 57, y: 74, size: 1.7, dur: 4.9, delay: 1.9 },
-  { x: 66, y: 30, size: 2.1, dur: 6.6, delay: 0.3 },
-  { x: 73, y: 62, size: 1.9, dur: 5.5, delay: 2.2 },
-  { x: 82, y: 16, size: 2.8, dur: 7.1, delay: 1.1 },
-  { x: 88, y: 78, size: 1.7, dur: 4.6, delay: 3.4 },
-  { x: 94, y: 42, size: 2.2, dur: 6.3, delay: 0.9 },
-  { x: 41, y: 52, size: 1.5, dur: 8.2, delay: 2.5 },
-];
+// Twinkling stars over the two tile layers in `.tes-starfield`. Same
+// data-driven idea as the fireflies in chatpatka's home page — one keyframe
+// set, per-star custom properties — but there are enough of them, popping
+// briefly rather than fading smoothly, that the sky actually sparkles.
+//
+// Positions come from a seeded LCG rather than Math.random(): the list has to
+// be byte-identical on the server and the client or hydration mismatches, and
+// a fixed seed also means the layout never shifts between builds.
+const makeStars = (count: number) => {
+  let seed = 20241127;
+  const next = () => {
+    seed = (seed * 1664525 + 1013904223) % 4294967296;
+    return seed / 4294967296;
+  };
+  return Array.from({ length: count }, () => ({
+    x: +(next() * 98 + 1).toFixed(2),
+    y: +(next() * 92 + 2).toFixed(2),
+    size: +(next() * 1.9 + 1.1).toFixed(2),
+    // 2.2-5.2s: short enough to read as a twinkle, long enough not to strobe.
+    dur: +(next() * 3 + 2.2).toFixed(2),
+    delay: +(next() * 6).toFixed(2),
+  }));
+};
+
+const stars = makeStars(54);
 
 // Subtle scroll parallax on the two decorative layers (transform-only, so
 // no layout shift). Skipped entirely under prefers-reduced-motion — the
@@ -366,20 +372,25 @@ const layers = computed(() => [
   background: var(--color-surface-white);
   box-shadow: 0 0 calc(var(--star-size) * 2.5) calc(var(--star-size) * 0.4)
     color-mix(in srgb, var(--color-surface-white) 45%, transparent);
-  opacity: 0.35;
-  animation: hero-star-twinkle var(--star-dur) ease-in-out var(--star-delay)
+  opacity: 0.12;
+  animation: hero-star-twinkle var(--star-dur) ease-out var(--star-delay)
     infinite;
 }
 
 @keyframes hero-star-twinkle {
   0%,
+  58%,
   100% {
-    opacity: 0.2;
-    transform: scale(0.85);
+    opacity: 0.12;
+    transform: scale(0.7);
   }
-  50% {
+  72% {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.35);
+  }
+  86% {
+    opacity: 0.3;
+    transform: scale(0.9);
   }
 }
 
