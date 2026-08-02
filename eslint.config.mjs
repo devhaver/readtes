@@ -34,6 +34,7 @@ export default withNuxt({
       "app/components/reader/CommentaryPane.vue",
       "app/components/reader/CommentarySheet.vue",
       "app/components/reader/InlineCommentary.vue",
+      "app/components/reader/OriginalStream.vue",
       "app/components/reader/ReaderSourceSegment.vue",
       "app/components/reader/ReaderSummaryBody.vue",
     ],

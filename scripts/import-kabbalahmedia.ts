@@ -96,8 +96,15 @@ import {
 import { parseDocBlocks } from "./lib/km-doc-blocks.ts";
 import { buildKmChapterGroundTruth } from "./lib/km-ground-truth.ts";
 import {
+  buildHeChapterContent,
+  matchHeChapterHeading,
+  parseHeChapterBody,
+  parseHeDocBlocks,
+} from "./lib/km-he-whole-part-parser.ts";
+import {
   bcp47ForKmLanguage,
   KM_EXPECTED_LANGUAGES,
+  kmVersionDirection,
   kmVersionId,
   kmVersionTitle,
   missingKmLanguages,
@@ -280,12 +287,27 @@ const collectKmDocFilesByLanguage = async (
   return byLanguage;
 };
 
+/**
+ * `KM_EXPECTED_LANGUAGES` minus `"he"` — every non-Hebrew dialect below
+ * fetches its docx files from a content unit that never carries a Hebrew
+ * file (Hebrew only ever lives on a part's own PART node — see
+ * `processHebrewWholePartDialect`), so reconciling those dialects' file
+ * listings against the full expected set would always report `"he"` as
+ * missing there too, clashing with the outcome the dedicated Hebrew pass
+ * records for the same chapters. Hebrew's own presence/absence is checked
+ * and recorded exclusively by that dedicated pass.
+ */
+const KM_EXPECTED_NON_HE_LANGUAGES = KM_EXPECTED_LANGUAGES.filter(
+  (language) => language !== "he",
+);
+
 const recordMissingLanguages = (
   languages: Map<string, LanguageAccumulator>,
+  expectedLanguages: readonly string[],
   presentLanguages: Iterable<string>,
   targetChapterIds: string[],
 ): void => {
-  for (const missing of missingKmLanguages(KM_EXPECTED_LANGUAGES, [
+  for (const missing of missingKmLanguages(expectedLanguages, [
     ...presentLanguages,
   ])) {
     const acc = getAcc(languages, missing);
@@ -353,7 +375,12 @@ const recordUnsupportedDialect = async (
     .filter((file) => file.mimetype === DOCX_MIMETYPE && file.language !== "he")
     .map((file) => file.language);
 
-  recordMissingLanguages(languages, presentLanguages, targetChapterIds);
+  recordMissingLanguages(
+    languages,
+    KM_EXPECTED_NON_HE_LANGUAGES,
+    presentLanguages,
+    targetChapterIds,
+  );
   for (const language of presentLanguages) {
     const acc = getAcc(languages, language);
     for (const chapterId of targetChapterIds) {
@@ -389,6 +416,7 @@ const processLeafChapterDialect = async (
   );
   recordMissingLanguages(
     languages,
+    KM_EXPECTED_NON_HE_LANGUAGES,
     docFiles.map((file) => file.language),
     [chapterId],
   );
@@ -493,16 +521,19 @@ const processLeafChapterDialect = async (
 // Dialect 2: whole-part doc, source-only, order-aligned (Parts 5-8, 16)
 // ---------------------------------------------------------------------------
 
-const processWholePartDialect = async (
+/**
+ * One pseudo ground-truth entry per target chapter that already has a
+ * Hebrew source segment on disk, keyed by that chapter's own 1-based
+ * `number` — the input `buildOrderAlignedGroundSegments` needs to align a
+ * whole-part doc's numbered items positionally. Shared by both whole-part
+ * dialects (the non-Hebrew one below, and the dedicated Hebrew one) since
+ * both align against the same existing Hebrew ground truth.
+ */
+const buildWholePartGroundEntries = (
   partId: string,
-  candidateUids: string[],
   targetChapters: TocChapter[],
-  languages: Map<string, LanguageAccumulator>,
-  client: HttpClient,
-): Promise<void> => {
-  if (targetChapters.length === 0 || candidateUids.length === 0) return;
-
-  const groundEntries = targetChapters
+): { number: number; sefariaRef: string }[] =>
+  targetChapters
     .map((chapter) => {
       const dir = chapterDirFor(partId, chapter.id.split("/")[1] as string);
       const heSegments = readHeSourceSegmentsOptional(dir);
@@ -513,6 +544,17 @@ const processWholePartDialect = async (
     .filter((entry): entry is { number: number; sefariaRef: string } =>
       Boolean(entry),
     );
+
+const processWholePartDialect = async (
+  partId: string,
+  candidateUids: string[],
+  targetChapters: TocChapter[],
+  languages: Map<string, LanguageAccumulator>,
+  client: HttpClient,
+): Promise<void> => {
+  if (targetChapters.length === 0 || candidateUids.length === 0) return;
+
+  const groundEntries = buildWholePartGroundEntries(partId, targetChapters);
   const groundSegments = buildOrderAlignedGroundSegments(groundEntries);
   const emptyGroundTruth = buildKmChapterGroundTruth([]);
   const targetChapterIds = targetChapters.map((c) => c.id);
@@ -524,6 +566,7 @@ const processWholePartDialect = async (
   );
   recordMissingLanguages(
     languages,
+    KM_EXPECTED_NON_HE_LANGUAGES,
     docFilesByLanguage.keys(),
     targetChapterIds,
   );
@@ -620,6 +663,165 @@ const processWholePartDialect = async (
 };
 
 // ---------------------------------------------------------------------------
+// Dialect 2b: whole-part Hebrew doc (Parts 1-5 — verified against the live
+// API; Parts 6-16 have no Hebrew docx at all).
+// ---------------------------------------------------------------------------
+
+const HE_KM_LANGUAGE = "he";
+
+/**
+ * Hebrew's KabbalahMedia distribution is different from every other
+ * language this importer handles: it is never attached to a per-chapter
+ * content unit, only to a part's own PART-node `_full.docx`. Unlike
+ * dialect 2 above, this doesn't depend on whether the part also has
+ * per-chapter "Chapter N" leaves — Parts 1-4 have those leaves, but their
+ * Hebrew docx still lives only on the PART node — so this always runs for
+ * a part's "chapter"-kind chapters, checking the PART node directly rather
+ * than trying the leaf/whole-part-leaf candidates dialect 2 prefers.
+ * Absence (no PART node, no Hebrew file on it, or a 404) is recorded just
+ * like every other checked-and-absent language, never silently skipped.
+ * Written as the additive `he-bb` version, alongside — never replacing —
+ * the existing Sefaria-sourced `he-jerusalem-1956` ground truth these same
+ * chapters already have on disk.
+ *
+ * This document has no heading tags at all — its own dedicated dialect
+ * (`km-he-whole-part-parser.ts`) reads chapter/seif/commentary structure,
+ * anchors, and their Ohr Pnimi links entirely out of the docx's own text
+ * conventions (chapter-heading paragraphs, a per-chapter topic list, "אור
+ * פנימי" section headings, and inline single-Hebrew-letter anchor markers
+ * — see that module's own doc comment for the full, API-verified shape
+ * and its page-break-interleaving quirk). It deliberately never reads a
+ * chapter's existing `he-jerusalem-1956` ground truth and never stamps a
+ * `sefariaRef` on anything it writes — this dialect's output must be
+ * identical whether or not Sefaria-imported content exists on disk at
+ * all. Verified end-to-end for Part 1; a part/chapter whose structure
+ * doesn't resolve cleanly (chapter-heading count, topic-list count or
+ * order, or an anchor with no matching Ohr Pnimi entry) is reported
+ * `unmatched`/`structure-unsupported` rather than force-parsed — see the
+ * module doc for exactly which parts that currently affects.
+ */
+const processHebrewWholePartDialect = async (
+  partId: string,
+  partUid: string,
+  targetChapters: TocChapter[],
+  languages: Map<string, LanguageAccumulator>,
+  client: HttpClient,
+): Promise<void> => {
+  if (targetChapters.length === 0) return;
+
+  const acc = getAcc(languages, HE_KM_LANGUAGE);
+  const targetChapterIds = targetChapters.map((c) => c.id);
+  const recordAbsent = (status: KmChapterOutcome["status"]): void => {
+    for (const chapterId of targetChapterIds) {
+      acc.chapters.push({ chapterId, status, ...zeroCounts });
+    }
+  };
+
+  let unit: KmContentUnit;
+  try {
+    unit = await client.getJson<KmContentUnit>(
+      `${KM_BASE}/backend/content_units/${partUid}`,
+    );
+  } catch (error) {
+    if (error instanceof HttpClientError && error.status === 404) {
+      recordAbsent("no-file-for-language");
+      return;
+    }
+    throw error;
+  }
+
+  const heFile = (unit.files ?? []).find(
+    (file) =>
+      file.mimetype === DOCX_MIMETYPE && file.language === HE_KM_LANGUAGE,
+  );
+  if (!heFile) {
+    recordAbsent("no-file-for-language");
+    return;
+  }
+
+  console.log(
+    `Fetching ${partId} Hebrew whole-part doc (KabbalahMedia file ${heFile.id})...`,
+  );
+  const blocks = parseHeDocBlocks(
+    await client.getText(`${KM_BASE}/assets/api/doc2html/${heFile.id}`),
+  );
+
+  const sortedChapters = [...targetChapters].sort(
+    (a, b) => a.number - b.number,
+  );
+  const headingIndices: number[] = [];
+  for (
+    let i = 0;
+    i < blocks.length && headingIndices.length < sortedChapters.length;
+    i += 1
+  ) {
+    const block = blocks[i] as (typeof blocks)[number];
+    if (block.tag !== "p") continue;
+    const number = matchHeChapterHeading(block.text);
+    if (number === undefined) continue;
+    const expectedNumber = (sortedChapters[headingIndices.length] as TocChapter)
+      .number;
+    if (number !== expectedNumber) continue;
+    headingIndices.push(i);
+  }
+
+  if (headingIndices.length !== sortedChapters.length) {
+    acc.warnings.push(
+      `${partId} Hebrew whole-part: found ${headingIndices.length} chapter heading(s), expected ${sortedChapters.length}`,
+    );
+    recordAbsent("structure-unsupported");
+    return;
+  }
+
+  for (let index = 0; index < sortedChapters.length; index += 1) {
+    const chapter = sortedChapters[index] as TocChapter;
+
+    const startIndex = (headingIndices[index] as number) + 1;
+    const parsed = parseHeChapterBody(blocks, startIndex);
+    if (!parsed.ok) {
+      acc.warnings.push(`${chapter.id} Hebrew whole-part: ${parsed.reason}`);
+      acc.chapters.push({
+        chapterId: chapter.id,
+        status: "unmatched",
+        ...zeroCounts,
+      });
+      continue;
+    }
+
+    const { segments, items, warnings } = buildHeChapterContent(parsed);
+    acc.warnings.push(
+      ...warnings.map((w) => `${chapter.id} Hebrew whole-part: ${w}`),
+    );
+
+    if (segments.length === 0 && items.length === 0) {
+      acc.chapters.push({
+        chapterId: chapter.id,
+        status: "unmatched",
+        ...zeroCounts,
+      });
+      continue;
+    }
+
+    acc.chapters.push({
+      chapterId: chapter.id,
+      status: "imported",
+      sourceSegments: segments.length,
+      commentaryItems: items.length,
+      sourceItemsSkipped: 0,
+      commentaryParagraphsSkipped: 0,
+      unmatchedNumerals: 0,
+    });
+
+    if (segments.length > 0) {
+      acc.sourceByChapter.set(chapter.id, { segments });
+    }
+    if (items.length > 0) {
+      acc.commentaryByChapter.set(chapter.id, { items });
+    }
+  }
+};
+
+// ---------------------------------------------------------------------------
 // Dialect 3: combined Q&A table doc (questions-* single chapter, answers-* N chapters)
 // ---------------------------------------------------------------------------
 
@@ -673,6 +875,7 @@ const processQaDialect = async (
   );
   recordMissingLanguages(
     languages,
+    KM_EXPECTED_NON_HE_LANGUAGES,
     docFilesByLanguage.keys(),
     targetChapterIds,
   );
@@ -893,6 +1096,17 @@ const processPart = async (
     );
   }
 
+  // Dialect 2b: whole-part Hebrew doc — always checked against the PART
+  // node itself, regardless of whether this part has per-chapter leaves
+  // (Parts 1-4 do; their Hebrew docx still lives only on the PART node).
+  await processHebrewWholePartDialect(
+    partId,
+    treePart.id,
+    chapterKindChapters,
+    languages,
+    client,
+  );
+
   // Dialect 2: whole-part doc — only when this part has no per-chapter leaves at all.
   // A "whole-part" leaf (named identically to the part) is tried before the
   // PART node's own files: verified against the live API, a part can have
@@ -1107,7 +1321,7 @@ export const main = async (argv: string[]): Promise<void> => {
       const version: ContentVersion = {
         id: acc.versionId,
         language: bcp47ForKmLanguage(acc.kmLanguage),
-        direction: "ltr",
+        direction: kmVersionDirection(acc.kmLanguage),
         title: acc.title,
         license: "Used with permission",
         source: "kabbalahmedia",

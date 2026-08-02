@@ -22,7 +22,7 @@ describe("home page", () => {
     const wrapper = await mountSuspended(IndexPage);
     const text = wrapper.text();
 
-    expect(text).toContain("Source");
+    expect(text).toContain("The Ari's Text");
     expect(text).toContain("Inner Light");
     expect(text).toContain("Inner Observation");
   });

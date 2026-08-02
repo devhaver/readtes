@@ -30,6 +30,7 @@ const isStudyMode = computed(() => mode.value === "study");
 const modeOptions = computed(() => [
   { value: "study" as ReaderMode, label: t("reader.mode.study") },
   { value: "panes" as ReaderMode, label: t("reader.mode.panes") },
+  { value: "original" as ReaderMode, label: t("reader.mode.original") },
 ]);
 
 // Opens `ReadingPreferencesModal` — available from every mode/breakpoint,

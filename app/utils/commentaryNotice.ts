@@ -72,9 +72,8 @@ export const resolveMissingAnchorNotice = (params: {
   const { activeAnchor, anchorOrigin } = params;
 
   // Only a source-originated click is "found nothing in this edition" — a
-  // summary-pane mini-toc jump targets a `seif-N` source id, not a
-  // commentary anchor, and a commentary-originated click can't be missing
-  // from its own pane.
+  // commentary-originated click can't be missing from its own pane, and
+  // Inner Observation never activates an anchor at all (it carries none).
   if (anchorOrigin !== "source") return null;
   if (!activeAnchor || !isCommentaryAnchor(activeAnchor)) return null;
 

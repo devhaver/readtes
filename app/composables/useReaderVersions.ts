@@ -1,12 +1,17 @@
 /**
  * Per-layer version selection state for the reader: which version of the
- * source/commentary/summary layer is currently shown. Defaults follow
+ * source/commentary layer is currently shown. Defaults follow
  * `resolveDefaultVersion` (`~/utils/readerVersions`); the user's last choice
  * persists via `localStorage`, keyed per LAYER (not per chapter) — picking
  * Hebrew source once keeps defaulting to Hebrew source on later chapters
  * too, until overridden again — falling back to the default rule whenever
  * the persisted choice isn't among the current chapter's available
  * versions for that layer.
+ *
+ * No `summary` field: the summary layer no longer has a version-switching
+ * UI anywhere (exactly 1 file exists across the whole corpus — the reader
+ * no longer loads or renders it at all, see `useChapterContent`), so
+ * there's nothing to persist a preference for.
  *
  * Hydration note: `useLocalStorage` reads `localStorage` synchronously in
  * `setup`, but prerendering has no `localStorage` and always resolves via
@@ -23,26 +28,21 @@ import {
   buildVersionsById,
   resolveDefaultVersion,
 } from "~/utils/readerVersions";
-import type {
-  ContentVersion,
-  LayerKind,
-  TocChapter,
-} from "~~/shared/types/content";
+import type { ContentVersion, TocChapter } from "~~/shared/types/content";
 
-type ReaderVersionPrefs = Record<LayerKind, string | null>;
+type ReaderLayerKind = "source" | "commentary";
+type ReaderVersionPrefs = Record<ReaderLayerKind, string | null>;
 
 const STORAGE_KEY = "readtes:reader-versions";
 const DEFAULT_PREFS: ReaderVersionPrefs = {
   source: null,
   commentary: null,
-  summary: null,
 };
 
 export interface ReaderVersions {
   source: ComputedRef<string | null>;
   commentary: ComputedRef<string | null>;
-  summary: ComputedRef<string | null>;
-  setVersion: (layer: LayerKind, versionId: string) => void;
+  setVersion: (layer: ReaderLayerKind, versionId: string) => void;
 }
 
 export const useReaderVersions = (
@@ -65,7 +65,7 @@ export const useReaderVersions = (
     hydrated.value = true;
   });
 
-  const resolvedFor = (layer: LayerKind): ComputedRef<string | null> =>
+  const resolvedFor = (layer: ReaderLayerKind): ComputedRef<string | null> =>
     computed(() => {
       const available = chapter.availableVersions[layer];
       const preferred = hydrated.value ? prefs.value[layer] : null;
@@ -74,14 +74,13 @@ export const useReaderVersions = (
       return resolveDefaultVersion(available, locale.value, versionsById.value);
     });
 
-  const setVersion = (layer: LayerKind, versionId: string) => {
+  const setVersion = (layer: ReaderLayerKind, versionId: string) => {
     prefs.value = { ...prefs.value, [layer]: versionId };
   };
 
   return {
     source: resolvedFor("source"),
     commentary: resolvedFor("commentary"),
-    summary: resolvedFor("summary"),
     setVersion,
   };
 };

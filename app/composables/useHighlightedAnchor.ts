@@ -6,9 +6,8 @@
  * and flashes a fading highlight.
  *
  * Anchor grammar per the content model: source uses `[data-anchor="id"]`
- * (the inline `<a class="tes-anchor">` marker); commentary items and the
- * summary mini-toc's `seif-N` source targets use a plain `id="…"` on the
- * item/segment element itself.
+ * (the inline `<a class="tes-anchor">` marker); commentary items use a
+ * plain `id="…"` on the item element itself.
  *
  * Finding (and highlighting) the target here is also the single source of
  * truth for `activePane` in mobile panes swipe mode (T9): whichever pane
@@ -20,6 +19,7 @@
  * `activePane`), so it costs nothing there.
  */
 import type { Ref } from "vue";
+import { flashAnchorHighlight } from "~/utils/anchorHighlight";
 import { prefersReducedMotion } from "~/utils/motion";
 import type { PaneId } from "~/utils/readerAnchorState";
 
@@ -36,31 +36,6 @@ const findAnchorElement = (
     container.querySelector<HTMLElement>(`[data-anchor="${escaped}"]`) ??
     container.querySelector<HTMLElement>(`#${escaped}`)
   );
-};
-
-/**
- * Flashes `.is-highlighted` on `el`, then fades it back out over ~2s via
- * the CSS transition defined on `.reader-anchor-target` (see main.css).
- * Disabling the transition while applying the "on" state (then re-enabling
- * it a frame later, right before removing the class) makes the highlight
- * appear instantly and only the fade-out animate — a plain class toggle
- * would animate the fade-IN too.
- */
-const flashHighlight = (el: HTMLElement) => {
-  if (prefersReducedMotion()) {
-    el.classList.add("is-highlighted-instant");
-    setTimeout(() => el.classList.remove("is-highlighted-instant"), 900);
-    return;
-  }
-
-  el.style.transition = "none";
-  el.classList.add("is-highlighted");
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      el.style.transition = "";
-      el.classList.remove("is-highlighted");
-    });
-  });
 };
 
 export const useHighlightedAnchor = (
@@ -94,7 +69,7 @@ export const useHighlightedAnchor = (
         block: "center",
         behavior: prefersReducedMotion() ? "auto" : "smooth",
       });
-      flashHighlight(target);
+      flashAnchorHighlight(target);
     },
     { flush: "post" },
   );

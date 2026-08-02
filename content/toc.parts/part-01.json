@@ -36,11 +36,13 @@
         "source": [
           "en-bb",
           "en-sefaria-community",
+          "he-bb",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb",
           "en-sefaria-community",
+          "he-bb",
           "he-jerusalem-1956"
         ]
       }
@@ -62,11 +64,13 @@
         "source": [
           "en-bb",
           "en-sefaria-community",
+          "he-bb",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-ai",
           "en-bb",
+          "he-bb",
           "he-jerusalem-1956"
         ]
       }
@@ -285,6 +289,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -324,6 +329,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -343,6 +349,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -362,6 +369,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -381,6 +389,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -400,6 +409,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -419,6 +429,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -438,6 +449,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -457,6 +469,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -476,6 +489,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -495,6 +509,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -514,6 +529,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -533,6 +549,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -552,6 +569,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -571,6 +589,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -590,6 +609,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -609,6 +629,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -628,6 +649,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -647,6 +669,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -666,6 +689,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -685,6 +709,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -704,6 +729,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -723,6 +749,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -742,6 +769,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -761,6 +789,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -780,6 +809,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -799,6 +829,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -818,6 +849,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -837,6 +869,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -856,6 +889,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -875,6 +909,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -894,6 +929,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -913,6 +949,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -932,6 +969,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -951,6 +989,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -970,6 +1009,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -989,6 +1029,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1008,6 +1049,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1027,6 +1069,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1046,6 +1089,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1065,6 +1109,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1084,6 +1129,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1103,6 +1149,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1122,6 +1169,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1141,6 +1189,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1160,6 +1209,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1179,6 +1229,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1198,6 +1249,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1217,6 +1269,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1236,6 +1289,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1255,6 +1309,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1274,6 +1329,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1293,6 +1349,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1312,6 +1369,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []
@@ -1331,6 +1389,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": []

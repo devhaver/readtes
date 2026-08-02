@@ -12,30 +12,38 @@
  */
 import type { PaneId } from "./readerAnchorState";
 
-/** Reading order of the three swipe slides — also the DOM order `MobileSwipePanes` renders them in (see that component for why RTL must not reverse it). */
+/**
+ * Reading order of the swipe slides — also the DOM order `MobileSwipePanes`
+ * renders them in (see that component for why RTL must not reverse it).
+ * Inner Observation is absent for five parts (see AGENTS.md / the content
+ * model skill), so callers pass their own `order` (this full list, or it
+ * filtered down to `["source", "commentary"]`) rather than this module
+ * assuming all three always exist.
+ */
 export const PANE_ORDER: readonly PaneId[] = [
-  "summary",
   "source",
   "commentary",
+  "inner-observation",
 ];
 
 export type PaneVisibilityRatios = Partial<Record<PaneId, number>>;
 
 /**
- * Picks whichever pane has the highest intersection ratio; `PANE_ORDER`
- * breaks ties (e.g. mid-swipe, two slides straddling the midpoint at equal
- * ratios) so the result never flip-flops on equal input. Returns `current`
+ * Picks whichever pane has the highest intersection ratio; `order` breaks
+ * ties (e.g. mid-swipe, two slides straddling the midpoint at equal ratios)
+ * so the result never flip-flops on equal input. Returns `current`
  * unchanged when every ratio is zero/absent — nothing has been observed as
  * visible yet, so there's nothing to switch to.
  */
 export const resolveActivePane = (
   ratios: PaneVisibilityRatios,
   current: PaneId,
+  order: readonly PaneId[] = PANE_ORDER,
 ): PaneId => {
   let best: PaneId | null = null;
   let bestRatio = 0;
 
-  for (const pane of PANE_ORDER) {
+  for (const pane of order) {
     const ratio = ratios[pane] ?? 0;
     if (ratio > bestRatio) {
       bestRatio = ratio;

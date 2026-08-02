@@ -1,17 +1,22 @@
 <script setup lang="ts">
-// Panes mode's mobile experience (T9): below `lg` the three panes (from
-// `ReaderShell`'s summary/source/commentary slots) become a CSS
+// Panes mode's mobile experience (T9): below `lg` the panes (from
+// `ReaderShell`'s source/commentary/inner-observation slots) become a CSS
 // scroll-snap horizontal track with a floating pane-switcher pill
 // (`MobilePanePill`, fixed near the bottom of the viewport — not a top tab
-// bar) instead of T7's plain stacked column. At/above `lg` this renders the
+// bar) instead of a plain stacked column. At/above `lg` this renders the
 // exact same grid `ReaderShell` always has — deliberately the SAME markup
 // (just without the `lg:` breakpoint prefixes that make it a track below
-// it), so the three slot instances are never duplicated: each pane mounts
-// once, and is never unmounted switching between the grid and the track,
-// or between slides within the track. Per-pane scroll position surviving a
+// it), so the slot instances are never duplicated: each pane mounts once,
+// and is never unmounted switching between the grid and the track, or
+// between slides within the track. Per-pane scroll position surviving a
 // pill-tap/swipe switch falls out of that for free — nothing here ever
 // re-mounts the panes, so each one's own `ReaderPane` scroll container
 // just keeps whatever scroll offset it already had.
+//
+// `hasInnerObservation`: five parts have no Inner Observation content at
+// all (see AGENTS.md / the content model skill) — for those, this renders
+// two panes/slides (Source, Inner Light) instead of three, both in the
+// desktop grid (`gridColsClass`) and in the mobile track/pill (`paneOrder`).
 //
 // RTL: the track is a plain `flex` row (no explicit `flex-row`, and no
 // reordering of the three slides) — `dir="rtl"` on `<html>` (the `he`
@@ -35,15 +40,15 @@
 // (via `inline: "start"`, a logical value, so it's RTL-correct without a
 // `dir` check) — including on mount, so a fresh load lands snapped to
 // whichever pane is already `activePane` (source, by default) instead of
-// sitting on the DOM-first "summary" slide the browser scrolls to by
-// default with nothing else to say otherwise.
+// sitting on the DOM-first slide the browser scrolls to by default with
+// nothing else to say otherwise.
 //
 // `[contain:layout]` on the track + `min-w-0` on every slide (mobile-only —
 // both reset back to none/auto at `lg:`) are load-bearing, not decoration:
 // on a REAL mobile viewport (`isMobile`/touch emulation — a plain desktop-
-// sized headless viewport does not reproduce this), the three slides laid
-// out side by side (summary|source|commentary, 3x the device width) are
-// real boxes at real coordinates even though the track's own
+// sized headless viewport does not reproduce this), the slides laid out
+// side by side (source|commentary|inner-observation, up to 3x the device
+// width) are real boxes at real coordinates even though the track's own
 // `overflow-x-auto` clips/scrolls them — and mobile browsers' "widen the
 // layout viewport to fit content that doesn't fit" heuristic doesn't
 // respect that clipping the way desktop overflow scrolling does. Left
@@ -70,6 +75,8 @@ import { prefersReducedMotion } from "~/utils/motion";
 import type { PaneId } from "~/utils/readerAnchorState";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 
+const props = defineProps<{ hasInnerObservation: boolean }>();
+
 const { activePane, setActivePane } = useReaderState();
 
 // Same breakpoint `useReaderMode` uses for its own viewport default — this
@@ -79,15 +86,23 @@ const { activePane, setActivePane } = useReaderState();
 const isNarrowViewport = useMediaQuery(STUDY_MODE_MEDIA_QUERY);
 
 const trackRef = ref<HTMLElement | null>(null);
-const summaryRef = ref<HTMLElement | null>(null);
 const sourceRef = ref<HTMLElement | null>(null);
 const commentaryRef = ref<HTMLElement | null>(null);
+const innerObservationRef = ref<HTMLElement | null>(null);
 
 const slideRefs: Record<PaneId, Ref<HTMLElement | null>> = {
-  summary: summaryRef,
   source: sourceRef,
   commentary: commentaryRef,
+  "inner-observation": innerObservationRef,
 };
+
+// The pane order actually present for this chapter's part — see the module
+// doc above for why Inner Observation can be absent.
+const paneOrder = computed<PaneId[]>(() =>
+  props.hasInnerObservation
+    ? [...PANE_ORDER]
+    : PANE_ORDER.filter((pane) => pane !== "inner-observation"),
+);
 
 const ratios: PaneVisibilityRatios = reactive({});
 const usesScrollEnd = typeof window !== "undefined" && "onscrollend" in window;
@@ -95,7 +110,7 @@ const usesScrollEnd = typeof window !== "undefined" && "onscrollend" in window;
 let observer: IntersectionObserver | null = null;
 
 const commitActivePane = () => {
-  const next = resolveActivePane(ratios, activePane.value);
+  const next = resolveActivePane(ratios, activePane.value, paneOrder.value);
   if (next !== activePane.value) setActivePane(next);
 };
 
@@ -126,7 +141,7 @@ const attachTrackListeners = () => {
     root: trackRef.value,
     threshold: [0, 0.25, 0.5, 0.75, 1],
   });
-  for (const pane of PANE_ORDER) {
+  for (const pane of paneOrder.value) {
     const el = slideRefs[pane].value;
     if (el) observer.observe(el);
   }
@@ -171,8 +186,8 @@ const scrollToPane = (pane: PaneId, instant: boolean) => {
 // mount. Snaps instantly (no motion to reduce, there's no prior on-screen
 // state to visibly transition away from) to whichever slide is already
 // `activePane` (source, by default) instead of leaving the browser's own
-// "first slide in DOM order" scroll position (summary) silently
-// mismatched against it.
+// "first slide in DOM order" scroll position silently mismatched against
+// it.
 onMounted(() => {
   scrollToPane(activePane.value, true);
 });
@@ -180,21 +195,27 @@ onMounted(() => {
 watch(activePane, (pane) => {
   scrollToPane(pane, false);
 });
+
+// Three comparable-width columns when Inner Observation is present — all
+// three now carry substantial running prose (unlike the old 280px summary
+// rail, which was really just a chapter navigator), so equal thirds keeps
+// Source and Inner Light paired at the same width (the aligned reading
+// pair, the reader's core feature) while giving Inner Observation the same
+// real estate as reference material, not a cramped side column. Equal
+// halves for the two-pane case, for the same reason.
+const gridColsClass = computed(() =>
+  props.hasInnerObservation
+    ? "lg:grid-cols-[1fr_1fr_1fr]"
+    : "lg:grid-cols-[1fr_1fr]",
+);
 </script>
 
 <template>
   <div
     ref="trackRef"
-    class="flex min-h-0 w-full flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain [contain:layout] lg:grid lg:snap-none lg:grid-cols-[280px_1fr_1.1fr] lg:gap-0 lg:overflow-hidden lg:[contain:none]"
+    class="flex min-h-0 w-full flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain [contain:layout] lg:grid lg:snap-none lg:gap-0 lg:overflow-hidden lg:[contain:none]"
+    :class="gridColsClass"
   >
-    <div
-      id="reader-summary-pane"
-      ref="summaryRef"
-      data-pane="summary"
-      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always lg:border-e lg:border-(--border)"
-    >
-      <slot name="summary" />
-    </div>
     <div
       id="reader-source-pane"
       ref="sourceRef"
@@ -208,10 +229,20 @@ watch(activePane, (pane) => {
       ref="commentaryRef"
       data-pane="commentary"
       class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always scroll-mt-4"
+      :class="hasInnerObservation && 'lg:border-e lg:border-(--border)'"
     >
       <slot name="commentary" />
     </div>
+    <div
+      v-if="hasInnerObservation"
+      id="reader-inner-observation-pane"
+      ref="innerObservationRef"
+      data-pane="inner-observation"
+      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always scroll-mt-4"
+    >
+      <slot name="inner-observation" />
+    </div>
   </div>
 
-  <ReaderMobilePanePill />
+  <ReaderMobilePanePill :has-inner-observation="hasInnerObservation" />
 </template>

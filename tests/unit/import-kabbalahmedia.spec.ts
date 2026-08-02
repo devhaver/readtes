@@ -27,6 +27,7 @@ import { buildKmChapterGroundTruth } from "../../scripts/lib/km-ground-truth.ts"
 import {
   bcp47ForKmLanguage,
   KM_EXPECTED_LANGUAGES,
+  kmVersionDirection,
   kmVersionId,
   kmVersionTitle,
   missingKmLanguages,
@@ -740,6 +741,13 @@ describe("km-language", () => {
   it("titles English without a language suffix, and other languages with their native name", () => {
     expect(kmVersionTitle("en")).toBe("Bnei Baruch (KabbalahMedia)");
     expect(kmVersionTitle("ru")).toBe("Bnei Baruch (KabbalahMedia) — Русский");
+    expect(kmVersionTitle("he")).toBe("Bnei Baruch (KabbalahMedia) — עברית");
+  });
+
+  it("directions Hebrew rtl and every other language ltr", () => {
+    expect(kmVersionDirection("he")).toBe("rtl");
+    expect(kmVersionDirection("en")).toBe("ltr");
+    expect(kmVersionDirection("ru")).toBe("ltr");
   });
 });
 
@@ -757,14 +765,16 @@ describe("missingKmLanguages", () => {
     expect(missingKmLanguages(["en", "ru"], ["ru", "en"])).toEqual([]);
   });
 
-  it("reconciles KM_EXPECTED_LANGUAGES against a real content_units file list — pt and fr are genuinely absent", () => {
+  it("reconciles KM_EXPECTED_LANGUAGES against a real content_units file list — pt, fr, and he are genuinely absent", () => {
     // Shape verified against the live KabbalahMedia API for both chapter 1
-    // and chapter 2's content_units: 6 non-Hebrew docx languages, no `pt`/`fr`.
+    // and chapter 2's content_units: 6 non-Hebrew docx languages, no
+    // `pt`/`fr` — and no `he` either, since Hebrew is never attached to a
+    // per-chapter content unit (only to a part's own PART node).
     const presentFileLanguages = ["tr", "ru", "de", "es", "ua", "en"];
 
     expect(
       missingKmLanguages(KM_EXPECTED_LANGUAGES, presentFileLanguages),
-    ).toEqual(["pt", "fr"]);
+    ).toEqual(["pt", "fr", "he"]);
   });
 });
 

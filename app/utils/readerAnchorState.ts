@@ -4,8 +4,14 @@
  * rules are unit-testable without mounting anything.
  */
 
-/** The three aligned reader panes an anchor can originate from / target. */
-export type PaneId = "summary" | "source" | "commentary";
+/**
+ * The reader panes an anchor can originate from / target. Only "source" and
+ * "commentary" ever actually activate an anchor — Inner Observation carries
+ * no anchors at all (see `useInnerObservationContent`) — but it still needs
+ * a `PaneId` of its own so it counts as a swipeable slide in mobile panes
+ * mode (`~/utils/mobilePaneSync`).
+ */
+export type PaneId = "source" | "commentary" | "inner-observation";
 
 export interface ReaderAnchorState {
   activeAnchor: string | null;

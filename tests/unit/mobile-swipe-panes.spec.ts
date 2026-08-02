@@ -1,5 +1,5 @@
 // Thin wiring coverage for `MobileSwipePanes` over the tested pure
-// `resolveActivePane` (`mobile-pane-sync.spec.ts`): renders the three slides
+// `resolveActivePane` (`mobile-pane-sync.spec.ts`): renders the slides
 // with their `data-pane` markers, and confirms `activePane` changes drive a
 // `scrollIntoView` call on the matching slide once the narrow-viewport
 // media query matches. The reverse direction — a real swipe gesture
@@ -29,16 +29,22 @@ const stubMatchMedia = (matches: boolean) => {
 };
 
 const Host = defineComponent({
-  setup() {
+  props: { hasInnerObservation: { type: Boolean, default: true } },
+  setup(props) {
     const state = useReaderState();
-    return { state };
+    return { state, props };
   },
   render() {
-    return h(MobileSwipePanes, null, {
-      summary: () => h("div", { id: "summary-content" }, "Summary"),
-      source: () => h("div", { id: "source-content" }, "Source"),
-      commentary: () => h("div", { id: "commentary-content" }, "Commentary"),
-    });
+    return h(
+      MobileSwipePanes,
+      { hasInnerObservation: this.props.hasInnerObservation },
+      {
+        source: () => h("div", { id: "source-content" }, "Source"),
+        commentary: () => h("div", { id: "commentary-content" }, "Commentary"),
+        "inner-observation": () =>
+          h("div", { id: "inner-observation-content" }, "Observation"),
+      },
+    );
   },
 });
 
@@ -52,12 +58,25 @@ describe("MobileSwipePanes", () => {
     stubMatchMedia(true);
     const wrapper = await mountSuspended(Host);
 
-    expect(wrapper.find('[data-pane="summary"]').exists()).toBe(true);
     expect(wrapper.find('[data-pane="source"]').exists()).toBe(true);
     expect(wrapper.find('[data-pane="commentary"]').exists()).toBe(true);
-    expect(wrapper.text()).toContain("Summary");
+    expect(wrapper.find('[data-pane="inner-observation"]').exists()).toBe(true);
     expect(wrapper.text()).toContain("Source");
     expect(wrapper.text()).toContain("Commentary");
+    expect(wrapper.text()).toContain("Observation");
+  });
+
+  it("renders only two slides when the part has no Inner Observation", async () => {
+    stubMatchMedia(true);
+    const wrapper = await mountSuspended(Host, {
+      props: { hasInnerObservation: false },
+    });
+
+    expect(wrapper.find('[data-pane="source"]').exists()).toBe(true);
+    expect(wrapper.find('[data-pane="commentary"]').exists()).toBe(true);
+    expect(wrapper.find('[data-pane="inner-observation"]').exists()).toBe(
+      false,
+    );
   });
 
   it("scrolls the matching slide into view when activePane changes on a narrow viewport", async () => {

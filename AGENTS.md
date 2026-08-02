@@ -1,9 +1,11 @@
 # Read TES — Agent Notes
 
-Read TES is a static (SSG) web app for reading _Talmud Eser Sefirot_ as three
-aligned text layers (summary / source / commentary), multilingual including
-Hebrew RTL, fully self-contained — no runtime APIs, everything ships as a
-prerendered static site.
+Read TES is a static (SSG) web app for reading _Talmud Eser Sefirot_ in its
+three-part study structure: the Ari's source text, Baal HaSulam's _Ohr Pnimi_
+(Inner Light) explanation, and _Histaklut Pnimit_ (Inner Observation) as the
+deeper part-level explanation. It is multilingual including Hebrew RTL and
+fully self-contained — no runtime APIs, everything ships as a prerendered
+static site.
 
 ## Operating brief — read this first
 
@@ -167,7 +169,7 @@ app/
     app/                App-shell components (header, nav, footer, …)
     ui/                 Generic/presentational primitives (button, card, …)
     library/            Text-library browsing components (index, search, …)
-    reader/             Reader-view components (aligned summary/source/commentary layers)
+    reader/             Reader components (Ari / Inner Light / Inner Observation)
   composables/          useX composables (includes useLocalizedSeo — per-page SEO meta)
   utils/                Plain helper functions (non-composable)
   layouts/              Nuxt layouts (default, reader)

@@ -1,7 +1,9 @@
 /**
  * Pure default-resolution rule for the reader's mode toggle
  * (`useReaderMode`): study (single scrolling stream, commentary folds in
- * inline) vs panes (the T7 three-aligned-panes layout).
+ * inline), panes (the aligned Source/Inner Light/Inner Observation columns),
+ * or original (KabbalahMedia's own single-column, one-node-at-a-time
+ * presentation — an explicit user override only, see below).
  *
  * Viewport is unknowable during prerendering/SSR (there is no `window`),
  * and re-checking it in the very first client render (used for hydration)
@@ -20,8 +22,13 @@
  * existing prerendered HTML, and mobile visitors see that same markup for
  * one frame before JS swaps them into study mode, instead of any route's
  * static output changing shape.
+ *
+ * "original" never comes from `prefersStudyViewport` — there is no viewport
+ * this resolves to on its own, it only ever wins as a persisted `override`
+ * (below), the same way "study"/"panes" can. A visitor who has never picked
+ * it therefore never sees it, on any viewport.
  */
-export type ReaderMode = "study" | "panes";
+export type ReaderMode = "study" | "panes" | "original";
 
 /** Matches Tailwind's `lg` breakpoint (1024px) — study mode below it, panes at/above. */
 export const STUDY_MODE_MEDIA_QUERY = "(max-width: 1023.98px)";

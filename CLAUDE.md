@@ -1,7 +1,7 @@
 # Read TES — Claude context
 
-Static (SSG) Nuxt 4 app for reading _Talmud Eser Sefirot_ as three aligned text
-layers (summary / source / commentary), multilingual with first-class Hebrew
+Static (SSG) Nuxt 4 app for reading _Talmud Eser Sefirot_ as the Ari's text,
+Inner Light, and Inner Observation, multilingual with first-class Hebrew
 RTL. No runtime APIs — everything prerenders.
 
 ## Always-on rules

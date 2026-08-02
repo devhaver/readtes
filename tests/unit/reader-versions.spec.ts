@@ -160,7 +160,6 @@ describe("useReaderVersions (hydration)", () => {
       JSON.stringify({
         source: PERSISTED_OVERRIDE,
         commentary: null,
-        summary: null,
       }),
     );
 
@@ -195,7 +194,6 @@ describe("useReaderVersions (hydration)", () => {
     expect(JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}")).toEqual({
       source: PERSISTED_OVERRIDE,
       commentary: null,
-      summary: null,
     });
   });
 });
