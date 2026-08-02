@@ -1,0 +1,176 @@
+{
+  "chapterId": "part-03/chapter-05",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "<strong> Every upper Partzuf is called Emanator:</strong> Every upper Partzuf is called Emanator in relation to the Partzuf below it, because the Partzufim emerged one from another in the phase of cause and effect from the beginning of the line until the end of Assiya, such that every Partzuf is emanated by the one above it."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "<strong> The four phases:</strong> All these are the secret of the four phases mentioned above in the words of the ARI (Part 3, Chapter 1, Item 4), namely, that at the very outset Ein Sof expanded to make vessels through four phases, until it met the screen in the vessel of Malchut, and so on — see there. And these four phases carry many names, because there is no small detail in the whole of existence that is not arranged according to those phases, and likewise the whole of existence together is arranged by them, being the four worlds Atzilut, Beria, Yetzira, Assiya, which comprise all of existence. And understand indeed that although the order of the four phases is inscribed in every detail throughout existence, this does not mean that all the details are therefore equal; rather, each detail has its own particular value, according to the measure of its vessel of reception."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:3",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "<strong> This matter of inclusion:</strong> This matter of inclusion comes about by the reason of the refinement of the screen, which occurs necessarily at every single degree, as written in the Inner Observation (Part 2, Chapter 7, Item 72, Sub Header, \"And so that\") — see there the whole passage."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:4",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "<strong> The light of Hochma:</strong> This is the light of Hochma, and it is also called the light of Haya. And the light of Yechida corresponds to Keter, which is the phase of Emanator. And likewise the brain within the bone corresponds to Keter."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:5",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "<strong> That which comprises the four phases:</strong> That is, that which comprises the four phases, namely the second phase of Keter, as written below (Chapter 6, Item 2), which is the root for the expansion of the four phases. And the light of Keter is called by the name Yechida."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:6",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "<strong> The intermediate phase:</strong> That is, the second phase within Keter is regarded as intermediate between the upper degree and the lower degree, namely between the phase of Emanator and the phase of the emanated being; every upper thing is always regarded as the phase of Emanator in relation to what is below it, as written above (Chapter 5, Item 1) — see there."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:7",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "<strong> Between the Creator and the created being:</strong> He speaks here of the two worlds Atzilut and Beria: Atzilut is called Creator, and the four phases that are in the world of Beria in general are called the created being; and likewise in every particular in the world of Beria there are four phases, as above. And the souls of the righteous are influenced from Atzilut to Beria, as is known, and this is what the ARI writes: \"between the Creator, blessed be He, and the created being, which is the phase that comprises spirituality\" — that is, there is an intermediate phase between the Creator, blessed be He, and Keter, which is the light of Yechida that comprises the whole spirituality of man, namely the spirituality of man mentioned above in the words of the ARI (Item 1), called Nefesh, Ruach, Neshama, Haya; and Yechida, which is the secret of their Keter, comprises them all, as above in the passage nearby."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:8",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "<strong> The Yechida of the Patriarchs is the chariot:</strong> That is, the Yechida of the Patriarchs is the chariot for that intermediate phase which is between the Creator, blessed be He, and the Yechida that is in them. Chariot means resting-upon, in the likeness of a rider who rests upon the chariot fitted to him; so does the Godliness rest upon the Patriarchs."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:9",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong> Great and small are not to be taken literally:</strong> And understand that the meaning is not, God forbid, imagined greatness and smallness, but rather it concerns the absence of attainment, for a thing that is not attained is called very small. Also, do not mistake the name spark and interpret it literally, as though it were an imagined spark of fire, God forbid; rather, spark means reflected light (see the Inner Observation, Part 2, Item 2), for direct light is called by the name lights, and reflected light is called by the name sparks — remember this."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:10",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong> This refers to phase four:</strong> This refers to phase four, which is Malchut."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "11"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:11",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong> The spark of the Creator and the spark of the created being:</strong> That is, in Keter, which is the secret of Yechida. And the spark of the Creator is the secret of Ein Sof, blessed be He. And the spark of the created being is the secret of the Keter of the degree, called GAR, the head of the degree, which itself has four phases of direct and reflected light, into which Ein Sof expanded for the coupling by striking that raises reflected light and clothes the direct light from below upward, whereby the roots of vessels were made (as above in the Inner Observation, Part 2, Item 202, Sub Header, \"And behold it has been clarified\") — see there. All this is called by the name spark of the created being, or Yechida. And it is called \"spark\" after the ascending reflected light, in which the spark of the Creator is clothed, as written above. And this is what the ARI writes, \"and this spark is clothed by the power of another, created spark\" — understand this well."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "12"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:12",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong> Roots of the four phases:</strong> For the clothing of Ein Sof in the ascending reflected light does not make complete vessels, but only roots for vessels; and this is what the ARI writes, \"roots of the four phases\" — understand this."
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "13"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:13",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong> Nefesh is clothed in Malchut:</strong> You already know that Nefesh is clothed in Malchut, Ruach in ZA, Neshama in Bina, and Haya in Hochma, so that those vessels are the secret of the four phases mentioned, as in the words of the ARI (Part 3, Chapter 1, Item 4)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "14"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:5:14",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "<strong> Nefesh itself has four phases:</strong> For even Nefesh has by itself four phases — Hochma and Bina, Tifferet and Malchut (HB TM) — which expand from Malchut herself; and the Nefesh within Nefesh is clothed in the phase of Malchut of Malchut."
+    }
+  ]
+}
