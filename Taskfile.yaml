@@ -81,6 +81,14 @@ tasks:
       Run the Vitest unit test suite.
     cmd: pnpm test
 
+  test:e2e:
+    desc: Run browser acceptance tests against the generated site
+    summary: |
+      Serve .output from `pnpm generate` and exercise the core reader journey
+      in Chromium. Install the browser once with
+      `pnpm exec playwright install chromium` when running on a new machine.
+    cmd: pnpm test:e2e
+
   generate:
     desc: Statically generate the site
     summary: |
@@ -98,6 +106,7 @@ tasks:
       - task: validate:content
       - task: test
       - task: generate
+      - task: test:e2e
 
   import:
     desc: Import content from Sefaria

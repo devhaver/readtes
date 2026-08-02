@@ -73,6 +73,7 @@ the same name.
 | `task check`             | The full gate — see "Definition of done"                       |
 | `task qa`                | `pnpm lint && pnpm format:check`                               |
 | `task test`              | `vitest run`                                                   |
+| `task test:e2e`          | Playwright against the generated production artifact           |
 | `task generate`          | Static site generation — this is what gets deployed            |
 | `task import -- <flags>` | `pnpm import:sefaria <flags>`, e.g. `task import -- --part 1`  |
 | `task clean`             | Remove `.nuxt`, `.output`, `coverage`, `node_modules`, `.task` |
@@ -191,10 +192,11 @@ task check
 ```
 
 Runs every gate: `qa` (lint + format:check), `typecheck`, `validate:content`,
-`test`, and `generate`. Without go-task:
+`test`, `generate`, and the Playwright browser acceptance suite. Without
+go-task:
 
 ```
-pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnpm test && pnpm generate
+pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnpm test && pnpm generate && pnpm test:e2e
 ```
 
 All of it must pass before committing.
