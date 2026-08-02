@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Generic pane chrome shared by the summary/source/commentary panes: a
+// Generic pane chrome shared by the Source/Inner Light/Inner Observation panes: a
 // header (`ReaderVersionHeader` — layer title + version <select> when
 // there's more than one + the "AI translated" badge) above a scroll
 // container that carries the version's `dir`/`lang` — the actual pane

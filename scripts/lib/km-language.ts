@@ -23,6 +23,7 @@ const NATIVE_LANGUAGE_NAMES: Record<string, string> = {
   ua: "Українська",
   pt: "Português",
   fr: "Français",
+  he: "עברית",
 };
 
 /** `"Bnei Baruch (KabbalahMedia)"` for English, `"… — <native name>"` for everything else. */
@@ -35,15 +36,27 @@ export const kmVersionTitle = (kmLanguage: string): string => {
 export const kmVersionId = (kmLanguage: string): string =>
   `${bcp47ForKmLanguage(kmLanguage)}-bb`;
 
+/** `"rtl"` for Hebrew, `"ltr"` for every other KabbalahMedia language. */
+export const kmVersionDirection = (kmLanguage: string): "ltr" | "rtl" =>
+  kmLanguage === "he" ? "rtl" : "ltr";
+
 /**
  * The full set of KabbalahMedia language codes this importer expects a
- * chapter to *potentially* have a docx file for (the task brief's set,
- * `he` excluded — Hebrew is the ground truth already on disk, never
- * re-imported from KabbalahMedia). Reconciling a chapter's actual files
- * against this list is what lets a genuine absence (e.g. no `pt` file for
- * either chapter, verified against the live API) show up explicitly in
- * the coverage report as checked-and-absent, rather than silently vanish
- * because nothing was ever iterated for it.
+ * chapter to *potentially* have a docx file for. `he` is included, but its
+ * distribution is different from every other language here: it is never
+ * attached to a per-chapter content unit, only to a part's own PART-node
+ * `_full.docx` (verified against the live API for Parts 1-5; Parts 6-16
+ * have no Hebrew docx at all) — see the importer's dedicated whole-part
+ * Hebrew pass, which checks and records `he`'s presence/absence per part
+ * rather than per chapter. It is imported as the additive `he-bb` version,
+ * alongside — never replacing — the existing Sefaria-sourced
+ * `he-jerusalem-1956` ground truth.
+ *
+ * Reconciling a chapter's actual files against this list is what lets a
+ * genuine absence (e.g. no `pt` file for either chapter, verified against
+ * the live API) show up explicitly in the coverage report as
+ * checked-and-absent, rather than silently vanish because nothing was ever
+ * iterated for it.
  */
 export const KM_EXPECTED_LANGUAGES: readonly string[] = [
   "en",
@@ -54,6 +67,7 @@ export const KM_EXPECTED_LANGUAGES: readonly string[] = [
   "ua",
   "pt",
   "fr",
+  "he",
 ];
 
 /**

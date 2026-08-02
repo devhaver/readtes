@@ -58,6 +58,40 @@ describe("resolveReaderMode", () => {
       }),
     ).toBe("study");
   });
+
+  it("resolves to original only as a persisted override — never from the viewport on its own", () => {
+    expect(
+      resolveReaderMode({
+        hydrated: true,
+        override: "original",
+        prefersStudyViewport: true,
+      }),
+    ).toBe("original");
+
+    expect(
+      resolveReaderMode({
+        hydrated: true,
+        override: "original",
+        prefersStudyViewport: false,
+      }),
+    ).toBe("original");
+
+    // No override at all never resolves to "original", on any viewport.
+    expect(
+      resolveReaderMode({
+        hydrated: true,
+        override: null,
+        prefersStudyViewport: true,
+      }),
+    ).not.toBe("original");
+    expect(
+      resolveReaderMode({
+        hydrated: true,
+        override: null,
+        prefersStudyViewport: false,
+      }),
+    ).not.toBe("original");
+  });
 });
 
 describe("useReaderMode (hydration)", () => {
@@ -151,5 +185,24 @@ describe("useReaderMode (hydration)", () => {
     const returning = await mountSuspended(Host);
     await nextTick();
     expect(returning.vm.readerMode.mode.value).toBe("panes");
+  });
+
+  it("switches to and persists Original mode as an explicit override, on any viewport", async () => {
+    // A narrow viewport would otherwise resolve to "study" — Original must
+    // still win once explicitly set.
+    stubMatchMedia(true);
+
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+    expect(wrapper.vm.readerMode.mode.value).toBe("study");
+
+    wrapper.vm.readerMode.setMode("original");
+    await nextTick();
+    expect(wrapper.vm.readerMode.mode.value).toBe("original");
+
+    const returning = await mountSuspended(Host);
+    expect(returning.vm.preMountMode).toBe(FIXED_PREMOUNT_MODE);
+    await nextTick();
+    expect(returning.vm.readerMode.mode.value).toBe("original");
   });
 });

@@ -22,13 +22,16 @@ const stubNarrowViewport = () => {
 // this host establishes both (the same provide/inject singletons the
 // reader page normally provides) so the test can drive them directly.
 const Host = defineComponent({
-  setup() {
+  props: { hasInnerObservation: { type: Boolean, default: true } },
+  setup(props) {
     const state = useReaderState();
     const sheet = useCommentarySheet();
-    return { state, sheet };
+    return { state, sheet, props };
   },
   render() {
-    return h(MobilePanePill);
+    return h(MobilePanePill, {
+      hasInnerObservation: this.props.hasInnerObservation,
+    });
   },
 });
 
@@ -37,15 +40,27 @@ describe("MobilePanePill", () => {
     vi.unstubAllGlobals();
   });
 
-  it("renders a tablist with three tabs, labelled Chapter/Source/Commentary", async () => {
+  it("renders a tablist with three tabs, labelled Ari/Inner Light/Inner Observation", async () => {
     const wrapper = await mountSuspended(Host);
 
     expect(wrapper.find('[role="tablist"]').exists()).toBe(true);
     const tabs = wrapper.findAll('[role="tab"]');
     expect(tabs.map((tab) => tab.text())).toEqual([
-      "Chapter",
-      "Source",
-      "Commentary",
+      "The Ari's Text",
+      "Inner Light",
+      "Inner Observation",
+    ]);
+  });
+
+  it("drops the Inner Observation tab when the part has none", async () => {
+    const wrapper = await mountSuspended(Host, {
+      props: { hasInnerObservation: false },
+    });
+
+    const tabs = wrapper.findAll('[role="tab"]');
+    expect(tabs.map((tab) => tab.text())).toEqual([
+      "The Ari's Text",
+      "Inner Light",
     ]);
   });
 
@@ -53,8 +68,8 @@ describe("MobilePanePill", () => {
     const wrapper = await mountSuspended(Host);
 
     const tabs = wrapper.findAll('[role="tab"]');
-    expect(tabs[0]?.attributes("aria-selected")).toBe("false");
-    expect(tabs[1]?.attributes("aria-selected")).toBe("true");
+    expect(tabs[0]?.attributes("aria-selected")).toBe("true");
+    expect(tabs[1]?.attributes("aria-selected")).toBe("false");
     expect(tabs[2]?.attributes("aria-selected")).toBe("false");
   });
 
@@ -62,8 +77,8 @@ describe("MobilePanePill", () => {
     const wrapper = await mountSuspended(Host);
 
     const tabs = wrapper.findAll('[role="tab"]');
-    expect(tabs[0]?.attributes("tabindex")).toBe("-1");
-    expect(tabs[1]?.attributes("tabindex")).toBe("0");
+    expect(tabs[0]?.attributes("tabindex")).toBe("0");
+    expect(tabs[1]?.attributes("tabindex")).toBe("-1");
     expect(tabs[2]?.attributes("tabindex")).toBe("-1");
   });
 
@@ -71,9 +86,11 @@ describe("MobilePanePill", () => {
     const wrapper = await mountSuspended(Host);
 
     const tabs = wrapper.findAll('[role="tab"]');
-    expect(tabs[0]?.attributes("aria-controls")).toBe("reader-summary-pane");
-    expect(tabs[1]?.attributes("aria-controls")).toBe("reader-source-pane");
-    expect(tabs[2]?.attributes("aria-controls")).toBe("reader-commentary-pane");
+    expect(tabs[0]?.attributes("aria-controls")).toBe("reader-source-pane");
+    expect(tabs[1]?.attributes("aria-controls")).toBe("reader-commentary-pane");
+    expect(tabs[2]?.attributes("aria-controls")).toBe(
+      "reader-inner-observation-pane",
+    );
   });
 
   it("sets activePane on tab click", async () => {
@@ -81,7 +98,7 @@ describe("MobilePanePill", () => {
 
     const commentaryTab = wrapper
       .findAll('[role="tab"]')
-      .find((tab) => tab.text() === "Commentary");
+      .find((tab) => tab.text() === "Inner Light");
     await commentaryTab?.trigger("click");
 
     expect(wrapper.vm.state.activePane.value).toBe("commentary");
@@ -91,15 +108,15 @@ describe("MobilePanePill", () => {
     const wrapper = await mountSuspended(Host);
 
     const tabs = wrapper.findAll('[role="tab"]');
-    await tabs[1]?.trigger("keydown", { key: "ArrowRight" });
+    await tabs[0]?.trigger("keydown", { key: "ArrowRight" });
     expect(wrapper.vm.state.activePane.value).toBe("commentary");
 
-    await wrapper.findAll('[role="tab"]')[2]?.trigger("keydown", {
+    await wrapper.findAll('[role="tab"]')[1]?.trigger("keydown", {
       key: "ArrowRight",
     });
-    expect(wrapper.vm.state.activePane.value).toBe("summary");
+    expect(wrapper.vm.state.activePane.value).toBe("inner-observation");
 
-    await wrapper.findAll('[role="tab"]')[0]?.trigger("keydown", {
+    await wrapper.findAll('[role="tab"]')[2]?.trigger("keydown", {
       key: "ArrowLeft",
     });
     expect(wrapper.vm.state.activePane.value).toBe("commentary");
@@ -109,13 +126,13 @@ describe("MobilePanePill", () => {
     const wrapper = await mountSuspended(Host);
 
     const tabs = wrapper.findAll('[role="tab"]');
-    await tabs[1]?.trigger("keydown", { key: "End" });
-    expect(wrapper.vm.state.activePane.value).toBe("commentary");
+    await tabs[0]?.trigger("keydown", { key: "End" });
+    expect(wrapper.vm.state.activePane.value).toBe("inner-observation");
 
     await wrapper.findAll('[role="tab"]')[2]?.trigger("keydown", {
       key: "Home",
     });
-    expect(wrapper.vm.state.activePane.value).toBe("summary");
+    expect(wrapper.vm.state.activePane.value).toBe("source");
   });
 
   it("hides itself while the commentary sheet is open", async () => {

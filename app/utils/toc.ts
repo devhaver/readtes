@@ -50,6 +50,61 @@ export const findChapterInPart = (
   partFile.chapters.find((chapter) => chapter.id === chapterId);
 
 /**
+ * A part's `inner-observation` kind chapters only, in section order (by
+ * `number` — every chapter here shares the one kind, so there's no
+ * kind-interleaving concern `orderedPartChapters` exists for). Powers the
+ * Inner Observation pane/mobile slide: absent entirely for five parts (5,
+ * 11, 14, 15, 16 — confirmed against KabbalahMedia's own source, not a gap
+ * in our import), present but never chapter-scoped for the rest — see
+ * `useInnerObservationContent`.
+ */
+export const innerObservationChaptersInPart = (
+  chapters: TocChapter[],
+): TocChapter[] =>
+  chapters
+    .filter((chapter) => chapter.kind === "inner-observation")
+    .sort((a, b) => a.number - b.number);
+
+/** Original mode's Prev/Next pagination position within a part. */
+export interface PartPaginationPosition {
+  /** 1-based position of the current chapter within the part's ToC order. */
+  index: number;
+  total: number;
+  prev: TocChapter | null;
+  next: TocChapter | null;
+}
+
+/**
+ * Original mode reproduces KabbalahMedia's own single-column pager
+ * ("◀ Prev. | N/M | Next ▶"), paginating through one part's chapters in ToC
+ * order (`orderedPartChapters`) — every chapter/questions/answers/inner-
+ * observation "node" the part has, not just its main `chapter`-kind ones.
+ *
+ * NOTE: `orderedPartChapters` sorts kind-then-number via the single global
+ * `KIND_ORDER` (`~/utils/chapterGrouping`), which only matches
+ * KabbalahMedia's own physical ordering for parts 1-3 — it interleaves each
+ * question table with its matching answer table per-part for the rest.
+ * Fixing that needs a per-part order recorded by the importer, which is out
+ * of scope here; this just consumes whatever order `orderedPartChapters`
+ * already produces.
+ */
+export const partPaginationPosition = (
+  chapters: TocChapter[],
+  chapterId: string,
+): PartPaginationPosition | null => {
+  const ordered = orderedPartChapters(chapters);
+  const index = ordered.findIndex((chapter) => chapter.id === chapterId);
+  if (index === -1) return null;
+
+  return {
+    index: index + 1,
+    total: ordered.length,
+    prev: index > 0 ? (ordered[index - 1] ?? null) : null,
+    next: index < ordered.length - 1 ? (ordered[index + 1] ?? null) : null,
+  };
+};
+
+/**
  * URL slug for a volume's contents page (`/volumes/<slug>`), e.g.
  * `volume-1` — independent of the zero-padded volume id (`volume-01`).
  */

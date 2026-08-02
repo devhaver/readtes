@@ -22,6 +22,14 @@
  * Takes the chapter's `availableVersions` as a plain argument (rather than
  * re-resolving the toc internally) so this composable's first statement is
  * its own logic, independent of how the caller resolved the chapter.
+ *
+ * Only loads the `source`/`commentary` layers — the reader no longer has a
+ * summary pane (the layer is effectively dead: exactly 1 file exists across
+ * the whole corpus) and `useInnerObservationContent` covers the part-scoped
+ * Inner Observation reference pane separately, so nothing here needs the
+ * `summary` layer any more. `loadLayerFile` is exported for that composable
+ * to reuse — same per-file lazy chunk map, not a second `import.meta.glob`
+ * over the same files.
  */
 import type { ComputedRef } from "vue";
 import type {
@@ -30,7 +38,6 @@ import type {
   LayerItem,
   LayerKind,
   SourceSegment,
-  SummaryItem,
   TocChapter,
 } from "~~/shared/types/content";
 
@@ -57,7 +64,7 @@ const findLoader = (
   return key ? chapterLayerModules[key] : undefined;
 };
 
-const loadLayerFile = async <T extends LayerItem>(
+export const loadLayerFile = async <T extends LayerItem>(
   partId: string,
   chapterSlug: string,
   layer: LayerKind,
@@ -94,15 +101,11 @@ const loadAllVersions = async <T extends LayerItem>(
 export interface ChapterContent {
   sourceVersions: ComputedRef<string[]>;
   commentaryVersions: ComputedRef<string[]>;
-  summaryVersions: ComputedRef<string[]>;
   sourceByVersion: ComputedRef<
     Record<string, ChapterLayerFile<SourceSegment> | null>
   >;
   commentaryByVersion: ComputedRef<
     Record<string, ChapterLayerFile<CommentaryItem> | null>
-  >;
-  summaryByVersion: ComputedRef<
-    Record<string, ChapterLayerFile<SummaryItem> | null>
   >;
 }
 
@@ -111,7 +114,7 @@ export const useChapterContent = async (
   chapterSlug: string,
   availableVersions: AvailableVersions,
 ): Promise<ChapterContent> => {
-  const [source, commentary, summary] = await Promise.all([
+  const [source, commentary] = await Promise.all([
     loadAllVersions<SourceSegment>(
       partId,
       chapterSlug,
@@ -124,20 +127,12 @@ export const useChapterContent = async (
       "commentary",
       availableVersions.commentary,
     ),
-    loadAllVersions<SummaryItem>(
-      partId,
-      chapterSlug,
-      "summary",
-      availableVersions.summary,
-    ),
   ]);
 
   return {
     sourceVersions: computed(() => availableVersions.source),
     commentaryVersions: computed(() => availableVersions.commentary),
-    summaryVersions: computed(() => availableVersions.summary),
     sourceByVersion: computed(() => source),
     commentaryByVersion: computed(() => commentary),
-    summaryByVersion: computed(() => summary),
   };
 };

@@ -58,6 +58,15 @@ export const hebrewNumeral = (n: number): string =>
   withPunctuation(letterSequence(n));
 
 /**
+ * The same standard-construction letter sequence as `hebrewNumeral`, but
+ * without geresh/gershayim punctuation (e.g. `bareHebrewOrdinal(11) ===
+ * 'יא'`) — the form KabbalahMedia's Hebrew whole-part docx uses for its
+ * own `"א."`/`"ב."`/`"יא."` topic-list markers (see
+ * `km-he-whole-part-parser.ts`).
+ */
+export const bareHebrewOrdinal = (n: number): string => letterSequence(n);
+
+/**
  * Standard gematria (numeric) value of each Hebrew letter, final forms
  * included (a final letter has the same value as its regular form).
  *

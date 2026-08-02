@@ -1,0 +1,548 @@
+{
+  "chapterId": "part-07/questions-terminology-01",
+  "layer": "source",
+  "versionId": "en-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 1",
+      "html": "What is Achor be Achor [back to back]?",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 2",
+      "html": "What is Achor be Panim [back to face]?",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 3",
+      "html": "What is light that emerges outward?",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 4",
+      "html": "What is light that becomes coarse?",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 5",
+      "html": "What are letters?",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 6",
+      "html": "What is the posterior of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 7",
+      "html": "What is the posterior of the Nukva?",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 8",
+      "html": "What is the posterior of Aba?",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 9",
+      "html": "What is the posterior of AVI [Aba ve Ima]?",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 10",
+      "html": "What is the posterior of Ima that fell?",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 11",
+      "html": "What is the complete posterior of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 12",
+      "html": "What is the complete posterior of the Nukva?",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 13",
+      "html": "What is grip?",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 14",
+      "html": "What are BDK HYH?",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 15",
+      "html": "What is nullification?",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 16",
+      "html": "What are sortings?",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 17",
+      "html": "What are the two lower thirds of Tifferet?",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 18",
+      "html": "What are Gevurot?",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 19",
+      "html": "What is “great”?",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 20",
+      "html": "What is Gadlut [greatness/adulthood]?",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 21",
+      "html": "What is the Guf [body] of Aba?",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 22",
+      "html": "What is the Guf [body] of Ima?",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 23",
+      "html": "What is the Guf [body] of Israel Saba?",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 24",
+      "html": "What is the Guf [body] of Tvuna?",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 25",
+      "html": "What is the completion of the building of the posterior?",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 26",
+      "html": "What is complete adhesion?",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 27",
+      "html": "What are judgments?",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 28",
+      "html": "What are strong judgments?",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 29",
+      "html": "What is the gaze of the face?",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 30",
+      "html": "What is the enlargement of half the posterior?",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 31",
+      "html": "What are the five Hassadim and the five Gevurot?",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 32",
+      "html": "What is the diminution of light?",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 33",
+      "html": "What is the look of the eyes of AVI [Aba ve Ima]?",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 34",
+      "html": "What is the look of the eyes of YESHSUT [Israel Saba ve Tvuna]?",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 35",
+      "html": "What is the raising of MAN?",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 36",
+      "html": "What is the adhesion of Panim be Panim [face to face]?",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 37",
+      "html": "What is the adhesion of the shells?",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 38",
+      "html": "What is the expansion of the five Gevurot?",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 39",
+      "html": "What is “refined”?",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 40",
+      "html": "What is Chad Samcha [one support]?",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 41",
+      "html": "What is the vitality of the shells?",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 42",
+      "html": "What are the hosts of Malchut?",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 43",
+      "html": "What are the parts of the Nukva?",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 44",
+      "html": "What is half the posterior?",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 45",
+      "html": "What is a half wall?",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 46",
+      "html": "What is the lower half of Tifferet?",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 47",
+      "html": "What is the upper half of Tifferet?",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 48",
+      "html": "What is the drop that grows the child?",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 49",
+      "html": "What is the Yenika [nursing] of the shells?",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 50",
+      "html": "What are YESHSUT [Israel Saba ve Tvuna]?",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 51",
+      "html": "What is the power of the shells?",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 52",
+      "html": "What is the generality of Bina and Tvuna?",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 53",
+      "html": "What is the generality of the five Hassadim and the five Gevurot?",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 54",
+      "html": "What is “revealed”?",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 55",
+      "html": "What are Mochin?",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 56",
+      "html": "What is death?",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 57",
+      "html": "What is the death of the kings?",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 58",
+      "html": "What is “covered”?",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 59",
+      "html": "What are MAN?",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 60",
+      "html": "What is the screen of Bina?",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 61",
+      "html": "What is “mixed with the shells”?",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 62",
+      "html": "What is the place of the grip of the shells?",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 63",
+      "html": "What is the place of BYA?",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 64",
+      "html": "What is the place of the Rosh [head]?",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 65",
+      "html": "What is Nehiro Dakik [a thin illumination]?",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 66",
+      "html": "What are the sparks that were extinguished?",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 67",
+      "html": "What are the sparks that were not sorted?",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 68",
+      "html": "What are the strong sparks?",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 69",
+      "html": "What is a fall?",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 70",
+      "html": "What is dross?",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 71",
+      "html": "What is the coarsening in the posterior?",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 72",
+      "html": "What is the Tree of Knowledge of good and evil?",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 73",
+      "html": "What is Panim be Panim [face to face]?",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 74",
+      "html": "What are Palgei de Gufa [the halves of the Guf]?",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 75",
+      "html": "What is the face of the male?",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 76",
+      "html": "What is the face of the female?",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 77",
+      "html": "What is Panim be Achor [face to back]?",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 78",
+      "html": "What is waste?",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 79",
+      "html": "What is “small”?",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 80",
+      "html": "What is Katnut [smallness/infancy]?",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 81",
+      "html": "What are complete shells?",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 82",
+      "html": "What is the shell of Noga?",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 83",
+      "html": "What is some adhesion?",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 84",
+      "html": "What is some breaking?",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 85",
+      "html": "What is some correction?",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 86",
+      "html": "What is a connection?",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 87",
+      "html": "What is Reisha de AVI [the Rosh of Aba ve Ima]?",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 88",
+      "html": "What are Reishaihu de YESHSUT [the Roshim of Israel Saba ve Tvuna]?",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 89",
+      "html": "What is the breaking of the vessels?",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 90",
+      "html": "What is the upper third of Tifferet?",
+      "anchors": []
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 /**
- * Pure helpers over `SourceSegment[]` for the reader's source pane and the
- * summary pane's heading-mini-toc fallback.
+ * Pure helpers over `SourceSegment[]` for the reader's source pane and
+ * `ReaderSummaryBody`'s heading-mini-toc fallback.
  */
 import type { SourceSegment } from "~~/shared/types/content";
 
-/** DOM id a source segment renders with — the mini-toc's jump target (`activateAnchor`). */
+/** DOM id a source segment renders with — the mini-toc's jump target. */
 export const sourceSegmentAnchorId = (n: number): string => `seif-${n}`;
 
 const LEADING_SEIF_NUMBER_RE = /^(\d+)\.\s*/;
@@ -33,12 +33,13 @@ export interface MiniTocEntry {
 }
 
 /**
- * Builds the summary pane's fallback mini-table-of-contents from a source
- * version's segments: one entry per segment, labelled by its `heading` where
- * the version has one (only chapters 1-2's Hebrew edition do, currently),
- * falling back to a generic "Seif N" label otherwise — so the entry list is
- * never shorter than the chapter's own seif count, and the summary pane is
- * never an empty box even for a chapter with no `heading` data at all.
+ * Builds `ReaderSummaryBody`'s fallback mini-table-of-contents from a
+ * source version's segments: one entry per segment, labelled by its
+ * `heading` where the version has one (only chapters 1-2's Hebrew edition
+ * do, currently), falling back to a generic "Seif N" label otherwise — so
+ * the entry list is never shorter than the chapter's own seif count, and
+ * the mini-toc is never an empty box even for a chapter with no `heading`
+ * data at all.
  */
 export const sourceMiniTocEntries = (
   segments: SourceSegment[],

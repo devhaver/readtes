@@ -200,7 +200,8 @@ export type TocPartFile = z.infer<typeof tocPartFileSchema>;
 
 export const sourceSegmentSchema = z.object({
   n: z.number().int().positive(),
-  sefariaRef: z.string(),
+  /** Optional: KabbalahMedia's Hebrew whole-part dialect derives structure entirely from the docx and has no Sefaria reference to copy — see `km-he-whole-part-parser.ts`. Every Sefaria-imported version still populates this. */
+  sefariaRef: z.string().optional(),
   heading: z.string().optional(),
   html: z.string(),
   anchors: z.array(z.string()),
@@ -211,7 +212,8 @@ export const commentaryItemSchema = z.object({
   anchorId: z.string(),
   order: z.number().int().positive(),
   label: localizedTitleSchema,
-  sefariaRef: z.string(),
+  /** Optional — see `sourceSegmentSchema.sefariaRef`. */
+  sefariaRef: z.string().optional(),
   targetSeif: z.number().int().positive(),
   section: z.enum(["ohr-pnimi", "histaklut-pnimit"]),
   html: z.string(),

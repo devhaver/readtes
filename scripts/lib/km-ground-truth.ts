@@ -52,6 +52,11 @@ export const buildKmChapterGroundTruth = (
         `buildKmChapterGroundTruth: gematria value ${value} maps to both "${existing}" and "${item.anchorId}" — ambiguous marker scheme, refusing to guess`,
       );
     }
+    if (item.sefariaRef === undefined) {
+      throw new Error(
+        `buildKmChapterGroundTruth: commentary item "${item.anchorId}" has no sefariaRef — this ground truth is only ever built from Sefaria-imported chapters`,
+      );
+    }
     gematriaToAnchorId.set(value, item.anchorId);
     gematriaToOrder.set(value, item.order);
 

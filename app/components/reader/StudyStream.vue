@@ -141,7 +141,7 @@ const goToFullCommentary = async () => {
       />
       <ReaderVersionHeader
         v-if="commentaryVersionOptions.length > 1"
-        :title="t('reader.pane.commentary')"
+        :title="t('reader.pane.innerLight')"
         :version-options="commentaryVersionOptions"
         :model-value="commentaryVersion"
         :meta="commentaryMeta"

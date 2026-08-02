@@ -2,13 +2,18 @@
 // The chapter's curated summary when it has one — most chapters don't
 // (only chapter-01 does, so far): falls back to the chapter's `heading`s
 // extracted from its source segments as a mini table-of-contents, so this
-// is never an empty box. Each mini-toc entry jumps to that seif (`seif-N`,
-// `useHighlightedAnchor` on `SourcePane`/`StudyStream`).
+// is never an empty box. Each mini-toc entry jumps to that seif (`seif-N`).
 //
-// Extracted from `SummaryPane` (T7) so `ChapterIntro` (T8, study mode's
-// collapsible intro card) renders the exact same summary-or-mini-toc body
-// instead of duplicating it — `SummaryPane` and `ChapterIntro` differ only
-// in the chrome wrapped around this (a pane column vs a `<details>` card).
+// Used by both `ChapterIntro` (study mode's collapsible intro card, above
+// the reading stream) and `SourcePane` (panes mode's own collapsible
+// `<details>`, above its segment list) — always rendered in the same
+// container as the `seif-N` targets it jumps to, so a plain local
+// `scrollIntoView` + highlight flash is all a mini-toc click needs; unlike
+// a real cross-pane anchor activation, there's no other pane's
+// `useHighlightedAnchor` that needs to react to this jump, so it doesn't
+// go through `useReaderState`'s shared anchor-sync state at all.
+import { flashAnchorHighlight } from "~/utils/anchorHighlight";
+import { prefersReducedMotion } from "~/utils/motion";
 import type { SourceSegment, SummaryItem } from "~~/shared/types/content";
 
 const props = defineProps<{
@@ -17,7 +22,6 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
-const { activateAnchor } = useReaderState();
 
 const hasSummary = computed(() => props.summaryItems.length > 0);
 
@@ -28,7 +32,14 @@ const miniToc = computed(() =>
 );
 
 const onMiniTocEntryClick = (anchorId: string) => {
-  activateAnchor(anchorId, "summary");
+  const target = document.getElementById(anchorId);
+  if (!target) return;
+
+  target.scrollIntoView({
+    block: "center",
+    behavior: prefersReducedMotion() ? "auto" : "smooth",
+  });
+  flashAnchorHighlight(target);
 };
 </script>
 

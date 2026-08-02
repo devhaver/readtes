@@ -1,8 +1,10 @@
 /**
  * Provides a `ReaderPane`'s scroll container element to whatever pane
- * content (`SourcePane`/`CommentaryPane`/`SummaryPane`) it wraps, so those
- * components can pass it to `useHighlightedAnchor` without `ReaderPane`
- * needing to know anything about anchor highlighting itself.
+ * content (`SourcePane`/`CommentaryPane`) it wraps, so those components can
+ * pass it to `useHighlightedAnchor` without `ReaderPane` needing to know
+ * anything about anchor highlighting itself. `InnerObservationPane` is also
+ * wrapped in a `ReaderPane`, but never calls this — it never participates
+ * in anchor sync (see that component).
  */
 import type { InjectionKey, Ref } from "vue";
 

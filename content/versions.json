@@ -41,5 +41,13 @@
     "title": "Bnei Baruch (KabbalahMedia)",
     "license": "Used with permission",
     "source": "kabbalahmedia"
+  },
+  {
+    "id": "he-bb",
+    "language": "he",
+    "direction": "rtl",
+    "title": "Bnei Baruch (KabbalahMedia) — עברית",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
   }
 ]

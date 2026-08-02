@@ -28,9 +28,9 @@
     "aiTranslated": "AI translated",
     "hebrewOnly": "Hebrew only",
     "pane": {
-      "summary": "Summary",
-      "source": "Source",
-      "commentary": "Commentary"
+      "source": "The Ari's Text",
+      "innerLight": "Inner Light",
+      "innerObservation": "Inner Observation"
     },
     "versionLabel": "Edition",
     "commentarySection": {
@@ -40,6 +40,7 @@
     "commentaryEmpty": "No commentary available for this chapter yet.",
     "sourceEmpty": "No source text available for this chapter yet.",
     "summaryEmpty": "No summary available for this chapter yet.",
+    "innerObservationEmpty": "No Inner Observation available for this chapter yet.",
     "miniTocTitle": "In this chapter",
     "seifLabel": "Seif {n}",
     "missingAnchor": {
@@ -52,7 +53,13 @@
     "mode": {
       "label": "Reading mode",
       "study": "Study",
-      "panes": "Panes"
+      "panes": "Panes",
+      "original": "Original"
+    },
+    "original": {
+      "prev": "Prev.",
+      "next": "Next",
+      "pagination": "Chapter pagination"
     },
     "chapterIntro": {
       "title": "In this chapter"
@@ -68,9 +75,9 @@
     },
     "mobilePane": {
       "label": "Reader pane",
-      "chapter": "Chapter",
-      "source": "Source",
-      "commentary": "Commentary"
+      "source": "The Ari's Text",
+      "innerLight": "Inner Light",
+      "innerObservation": "Inner Observation"
     },
     "commentarySheet": {
       "title": "Commentary on seif {n}",
@@ -101,7 +108,7 @@
     }
   },
   "home": {
-    "description": "Talmud Eser Sefirot, read as aligned summary, source, and commentary — in English and Hebrew.",
+    "description": "Talmud Eser Sefirot, read through the Ari's text, Inner Light, and Inner Observation — in English and Hebrew.",
     "browseVolumes": "Browse the six volumes",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -109,15 +116,15 @@
     "beginReading": "Begin reading",
     "quoteSource": "Talmud Eser Sefirot, Section I, Chapter 1",
     "howItWorksTitle": "How this reader works",
-    "howItWorksSourceTitle": "Source",
-    "howItWorksSourceHebrew": "תלמוד עשר הספירות",
-    "howItWorksSourceBody": "The numbered paragraphs of the text itself, read straight through, chapter by chapter.",
+    "howItWorksSourceTitle": "The Ari's Text",
+    "howItWorksSourceHebrew": "כתבי האר״י",
+    "howItWorksSourceBody": "The Ari's numbered source passages, presented chapter by chapter exactly where Baal HaSulam explains them.",
     "howItWorksLightTitle": "Inner Light",
     "howItWorksLightHebrew": "אור פנימי",
-    "howItWorksLightBody": "Line-by-line commentary anchored to individual paragraphs, opening each phrase in turn.",
+    "howItWorksLightBody": "Baal HaSulam's direct explanation, anchored phrase by phrase to the Ari's text.",
     "howItWorksObservationTitle": "Inner Observation",
     "howItWorksObservationHebrew": "הסתכלות פנימית",
-    "howItWorksObservationBody": "A reflective essay on each chapter's ideas, read as a continuous layer of its own.",
+    "howItWorksObservationBody": "Baal HaSulam's deeper, systematic explanation for the part, read as a continuous work of its own.",
     "coverageTitle": "Where the text stands",
     "coverageHebrew": "The complete Hebrew corpus is available from the 1956 Jerusalem edition.",
     "coverageEnglish": "English coverage varies by part and edition; official and AI-assisted translations are clearly labeled.",
@@ -132,7 +139,7 @@
   },
   "volumes": {
     "indexTitle": "Volumes",
-    "indexDescription": "Talmud Eser Sefirot in six volumes, sixteen parts — read as aligned summary, source, and commentary.",
+    "indexDescription": "Talmud Eser Sefirot in six volumes and sixteen parts — the Ari's text with Inner Light and Inner Observation.",
     "comingSoon": "Coming soon",
     "chapterCount": "{count} chapters",
     "partialLanguage": "partial",
@@ -150,7 +157,7 @@
     "title": "About Read TES",
     "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baal HaSulam's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew or in English.",
     "readingModelTitle": "The reading model",
-    "readingModelBody": "Each chapter is read item by item, the way it is studied in a live lesson: a numbered paragraph of the source text, opened by its Inner Light commentary where one exists, and set beside the chapter's Inner Observation essay as a further layer of reflection. Nothing is paraphrased away — every layer links back to the same paragraph number.",
+    "readingModelBody": "The reader follows the structure of Talmud Eser Sefirot itself: the Ari's numbered text, Baal HaSulam's Inner Light explanation anchored directly to it, and Inner Observation as the deeper systematic explanation for the part. Inner Observation is continuous rather than paragraph-linked, so it remains an independent reading pane.",
     "licensesTitle": "Texts, editions, and licenses",
     "licensesIntro": "Every text edition on this site is listed below with its language, license, and source.",
     "licensesTableCaption": "Text editions used in Read TES",
@@ -172,7 +179,7 @@
   "seo": {
     "ogImageAlt": "Read TES — an open book beside the ARI's Tzimtzum circles, on a night-field background",
     "home": {
-      "description": "A free, bilingual reading of Talmud Eser Sefirot — Baal HaSulam's foundational Kabbalah text — laid out as aligned summary, source, and commentary, in English and Hebrew."
+      "description": "A free, bilingual reading of Talmud Eser Sefirot — the Ari's text with Baal HaSulam's Inner Light and Inner Observation explanations, in English and Hebrew."
     },
     "about": {
       "description": "What Read TES is, how its three reading layers work, and the licenses and sources behind every text edition on the site."
@@ -181,10 +188,10 @@
       "description": "The six volumes and sixteen parts of Talmud Eser Sefirot, browsable chapter by chapter."
     },
     "volume": {
-      "description": "The parts and chapters of {title}, with their summary, source, and commentary layers."
+      "description": "The parts and chapters of {title}, with the Ari's text, Inner Light, and Inner Observation."
     },
     "chapter": {
-      "description": "{chapter} of {part} — read side by side with its Inner Light commentary and Inner Observation essay."
+      "description": "{chapter} of {part} — the Ari's text beside its Inner Light explanation and the part's Inner Observation."
     },
     "notFound": {
       "description": "This page doesn't exist yet, or has moved — find your way back to Read TES's volumes or home page."

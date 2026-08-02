@@ -4,7 +4,7 @@
 
 # Read TES
 
-**Read _Talmud Eser Sefirot_ the way it's studied — summary, source, and commentary side by side.**
+**Read _Talmud Eser Sefirot_ the way it is studied — the Ari's text, Inner Light, and Inner Observation side by side.**
 
 [![Nuxt](https://img.shields.io/badge/Nuxt-4.5-00DC82?logo=nuxt&logoColor=white)](https://nuxt.com)
 [![Vue](https://img.shields.io/badge/Vue-3.5-4FC08D?logo=vuedotjs&logoColor=white)](https://vuejs.org)
@@ -25,16 +25,17 @@ systematic exposition of Kabbalah — six volumes, sixteen parts, **5,148
 chapters**. It is hard to read linearly, because each passage of the ARI's
 source text is meant to be read alongside its commentary.
 
-Read TES presents three aligned layers at once:
+Read TES presents the work's three-part study structure at once:
 
-| Layer          | What it is                                                   |
-| -------------- | ------------------------------------------------------------ |
-| **Summary**    | A plain-language orientation to the chapter                  |
-| **Source**     | The ARI's text, with numbered `seif` anchors                 |
-| **Commentary** | _Ohr Pnimi_ and _Histaklut Pnimit_, anchored to those `seif` |
+| Layer                 | What it is                                                          |
+| --------------------- | ------------------------------------------------------------------- |
+| **The Ari's text**    | The numbered source passages explained by Baal HaSulam              |
+| **Inner Light**       | _Ohr Pnimi_, Baal HaSulam's explanation anchored to the Ari's words |
+| **Inner Observation** | _Histaklut Pnimit_, the deeper systematic explanation for the part  |
 
-Anchors are bidirectional: tap a marker in the source and the matching
-commentary scrolls into view, and the reverse.
+Anchors between the Ari's text and Inner Light are bidirectional: tap a marker
+in either pane and its counterpart scrolls into view. Inner Observation is a
+continuous, part-level study text and therefore reads independently.
 
 **Hebrew is first-class, not an afterthought.** RTL layout, Hebrew display and
 reading faces with proper glyph subsets, and logical CSS properties throughout —

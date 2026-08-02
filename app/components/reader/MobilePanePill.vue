@@ -8,13 +8,18 @@
 // `CommentarySheet` is open (`useCommentarySheet`), so the two floating
 // surfaces never overlap.
 //
+// `hasInnerObservation`: five parts have no Inner Observation content at
+// all (see AGENTS.md / the content model skill) — `segments` drops that
+// tab entirely rather than rendering an empty/disabled one, matching
+// `MobileSwipePanes`' own two-vs-three-slide rendering.
+//
 // `role="tablist"`/`role="tab"`: each segment both reflects and jumps to
-// one of the three swipe slides, which is close enough to the ARIA "Tabs"
+// one of the swipe slides, which is close enough to the ARIA "Tabs"
 // pattern to reuse it — `aria-selected`, `aria-controls` (pointing at each
 // slide's own id in `MobileSwipePanes`), and roving-tabindex Left/Right/
 // Home/End navigation, per the APG tabs pattern. The slides themselves
 // aren't marked up as `role="tabpanel"` — a deliberate relaxation, since
-// unlike classic tabs all three stay mounted and simply differ in scroll
+// unlike classic tabs all slides stay mounted and simply differ in scroll
 // position, not shown/hidden visibility.
 //
 // RTL: plain reading-order markup, no manual reordering — `dir="rtl"`
@@ -30,23 +35,29 @@ interface Segment {
   controls: string;
 }
 
-const SEGMENTS: Segment[] = [
-  {
-    pane: "summary",
-    labelKey: "reader.mobilePane.chapter",
-    controls: "reader-summary-pane",
-  },
-  {
-    pane: "source",
-    labelKey: "reader.mobilePane.source",
-    controls: "reader-source-pane",
-  },
-  {
-    pane: "commentary",
-    labelKey: "reader.mobilePane.commentary",
-    controls: "reader-commentary-pane",
-  },
-];
+const props = defineProps<{ hasInnerObservation: boolean }>();
+
+const SOURCE_SEGMENT: Segment = {
+  pane: "source",
+  labelKey: "reader.mobilePane.source",
+  controls: "reader-source-pane",
+};
+const INNER_LIGHT_SEGMENT: Segment = {
+  pane: "commentary",
+  labelKey: "reader.mobilePane.innerLight",
+  controls: "reader-commentary-pane",
+};
+const INNER_OBSERVATION_SEGMENT: Segment = {
+  pane: "inner-observation",
+  labelKey: "reader.mobilePane.innerObservation",
+  controls: "reader-inner-observation-pane",
+};
+
+const segments = computed<Segment[]>(() =>
+  props.hasInnerObservation
+    ? [SOURCE_SEGMENT, INNER_LIGHT_SEGMENT, INNER_OBSERVATION_SEGMENT]
+    : [SOURCE_SEGMENT, INNER_LIGHT_SEGMENT],
+);
 
 const { t } = useI18n();
 const { activePane, setActivePane } = useReaderState();
@@ -61,8 +72,8 @@ const setTabRef = (
 };
 
 const focusTabAt = (index: number) => {
-  const wrapped = (index + SEGMENTS.length) % SEGMENTS.length;
-  const segment = SEGMENTS[wrapped];
+  const wrapped = (index + segments.value.length) % segments.value.length;
+  const segment = segments.value[wrapped];
   if (!segment) return;
   tabRefs.value[wrapped]?.focus();
   setActivePane(segment.pane);
@@ -84,7 +95,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
       break;
     case "End":
       event.preventDefault();
-      focusTabAt(SEGMENTS.length - 1);
+      focusTabAt(segments.value.length - 1);
       break;
   }
 };
@@ -101,7 +112,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
       class="pointer-events-auto flex items-center gap-1 rounded-full border border-(--border) bg-(--surface-raised) p-1 shadow-lg"
     >
       <button
-        v-for="(segment, index) in SEGMENTS"
+        v-for="(segment, index) in segments"
         :key="segment.pane"
         :ref="(el) => setTabRef(el, index)"
         type="button"
@@ -119,22 +130,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
         @keydown="onKeydown($event, index)"
       >
         <svg
-          v-if="segment.pane === 'summary'"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
-          aria-hidden="true"
-        >
-          <line x1="4" y1="6" x2="20" y2="6" />
-          <line x1="4" y1="12" x2="20" y2="12" />
-          <line x1="4" y1="18" x2="14" y2="18" />
-        </svg>
-        <svg
-          v-else-if="segment.pane === 'source'"
+          v-if="segment.pane === 'source'"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -148,7 +144,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
           <path d="M20 5c-2.5-1-5-1-8 0v14c3-1 5.5-1 8 0Z" />
         </svg>
         <svg
-          v-else
+          v-else-if="segment.pane === 'commentary'"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -159,6 +155,22 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
           aria-hidden="true"
         >
           <path d="M4 5h16v10H8l-4 4Z" />
+        </svg>
+        <svg
+          v-else
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-4 w-4 shrink-0"
+          aria-hidden="true"
+        >
+          <path
+            d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"
+          />
+          <circle cx="12" cy="12" r="2.5" />
         </svg>
         <span>{{ t(segment.labelKey) }}</span>
       </button>

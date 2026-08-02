@@ -43,16 +43,16 @@ describe("activateAnchorState", () => {
     });
   });
 
-  it("handles a summary-origin seif jump", () => {
+  it("handles an inner-observation-origin activation", () => {
     const next = activateAnchorState(
       initialReaderAnchorState(),
-      "seif-3",
-      "summary",
+      "op-3",
+      "inner-observation",
     );
 
-    expect(next.activeAnchor).toBe("seif-3");
-    expect(next.anchorOrigin).toBe("summary");
-    expect(next.activePane).toBe("summary");
+    expect(next.activeAnchor).toBe("op-3");
+    expect(next.anchorOrigin).toBe("inner-observation");
+    expect(next.activePane).toBe("inner-observation");
   });
 
   it("bumps activationSeq even when re-activating the same id/origin", () => {

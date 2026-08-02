@@ -1,8 +1,11 @@
 <script setup lang="ts">
-// The reader: three aligned layers (summary | source | commentary) for one
-// chapter, with two-way anchor sync. Resolves the chapter from its part's
-// `content/toc.parts/<partId>.json` by route params — an unknown part or
-// chapter 404s, the same way `/volumes/[volume]` does.
+// The reader: Source | Inner Light | Inner Observation for one chapter (two
+// panes when the part has no Inner Observation — see below), with two-way
+// anchor sync between Source and Inner Light. Inner Observation is
+// part-scoped and never anchor-synced — see `useInnerObservationContent`.
+// Resolves the chapter from its part's `content/toc.parts/<partId>.json` by
+// route params — an unknown part or chapter 404s, the same way
+// `/volumes/[volume]` does.
 definePageMeta({
   layout: "reader",
   // Full remount on every param change (not just on prop update) so the
@@ -12,7 +15,7 @@ definePageMeta({
 });
 
 const route = useRoute();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
 const partId = route.params.part as string;
@@ -46,17 +49,30 @@ const HEBREW_VERSION_ID = "he-jerusalem-1956";
 const {
   sourceVersions,
   commentaryVersions,
-  summaryVersions,
   sourceByVersion,
   commentaryByVersion,
-  summaryByVersion,
 } = await useChapterContent(partId, chapterSlug, chapter.availableVersions);
 
+// Inner Observation isn't a per-chapter layer file — it lives in the part's
+// own `kind: "inner-observation"` chapters (see AGENTS.md / the content
+// model skill), so it's loaded once per part rather than per chapter, and
+// is identical no matter which chapter of the part is open. Five parts have
+// none at all — `hasInnerObservation` drives the two-vs-three-pane layout.
+const innerObservationChapters = innerObservationChaptersInPart(
+  partFile.chapters,
+);
+const hasInnerObservation = innerObservationChapters.length > 0;
+const {
+  versions: innerObservationVersionIds,
+  sections: innerObservationRawSections,
+} = await useInnerObservationContent(partId, innerObservationChapters);
+
 const readerVersions = useReaderVersions(chapter, versions.value);
-// Study mode below `lg`, panes at/above it by default — user overrides
-// persist across chapters (`useReaderMode`). Decides which of the two
-// component trees below actually mounts; `ReaderToolbar` (rendered either
-// way) reads the same shared state for its mode-toggle control.
+// Study mode below `lg`, panes at/above it by default — original is an
+// explicit user override only, never viewport-resolved (`useReaderMode`).
+// User overrides persist across chapters. Decides which of the three
+// component trees below actually mounts; `ReaderToolbar` (rendered in every
+// mode) reads the same shared state for its mode-toggle control.
 const { mode } = useReaderMode();
 const versionsById = computed(() => buildVersionsById(versions.value));
 
@@ -72,8 +88,8 @@ const sourceVersionOptions = computed(() =>
 const commentaryVersionOptions = computed(() =>
   versionOptions(commentaryVersions.value),
 );
-const summaryVersionOptions = computed(() =>
-  versionOptions(summaryVersions.value),
+const innerObservationVersionOptions = computed(() =>
+  versionOptions(innerObservationVersionIds.value),
 );
 
 const metaFor = (versionId: string | null) =>
@@ -81,7 +97,6 @@ const metaFor = (versionId: string | null) =>
 
 const sourceMeta = computed(() => metaFor(readerVersions.source.value));
 const commentaryMeta = computed(() => metaFor(readerVersions.commentary.value));
-const summaryMeta = computed(() => metaFor(readerVersions.summary.value));
 
 const sourceFile = computed(() =>
   readerVersions.source.value
@@ -93,17 +108,53 @@ const commentaryFile = computed(() =>
     ? (commentaryByVersion.value[readerVersions.commentary.value] ?? null)
     : null,
 );
-const summaryFile = computed(() =>
-  readerVersions.summary.value
-    ? (summaryByVersion.value[readerVersions.summary.value] ?? null)
-    : null,
-);
 
 const sourceSegments = computed(() => sourceFile.value?.items ?? []);
 const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
-const summaryItems = computed(() => summaryFile.value?.items ?? []);
+
+// Inner Observation has no persisted version preference of its own (unlike
+// source/commentary via `useReaderVersions`) — there's exactly one pane for
+// it, so nothing needs remembering across chapters; it just follows the
+// same locale-aware default rule, recomputed whenever the part's available
+// versions load.
+const innerObservationVersion = ref<string | null>(null);
+watch(
+  innerObservationVersionIds,
+  (ids) => {
+    if (
+      innerObservationVersion.value &&
+      ids.includes(innerObservationVersion.value)
+    ) {
+      return;
+    }
+    innerObservationVersion.value = resolveDefaultVersion(
+      ids,
+      locale.value,
+      versionsById.value,
+    );
+  },
+  { immediate: true },
+);
+
+const innerObservationMeta = computed(() =>
+  metaFor(innerObservationVersion.value),
+);
+const innerObservationSections = computed(() =>
+  innerObservationRawSections.value.map((section) => ({
+    chapterId: section.chapterId,
+    title: section.title,
+    items: innerObservationVersion.value
+      ? (section.itemsByVersion[innerObservationVersion.value]?.items ?? [])
+      : [],
+  })),
+);
 
 const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
+
+// Original mode's own Prev/Next pagination, scoped to this part's ToC order
+// (distinct from `prev`/`next` above, which cross part/volume boundaries) —
+// see `partPaginationPosition` for the `KIND_ORDER` caveat this inherits.
+const originalPagination = partPaginationPosition(partFile.chapters, chapterId);
 
 const chapterTitle = computed(() => localizedTitle(chapter.title));
 
@@ -177,7 +228,10 @@ useLocalizedSeo({
 
 <template>
   <div class="contents">
-    <ReaderShell v-if="mode === 'panes'">
+    <ReaderShell
+      v-if="mode === 'panes'"
+      :has-inner-observation="hasInnerObservation"
+    >
       <template #toolbar>
         <ReaderToolbar
           :chapter-title="chapterTitle"
@@ -185,21 +239,6 @@ useLocalizedSeo({
           :prev="prev"
           :next="next"
         />
-      </template>
-
-      <template #summary>
-        <ReaderPane
-          :title="t('reader.pane.summary')"
-          :version-options="summaryVersionOptions"
-          :model-value="readerVersions.summary.value"
-          :meta="summaryMeta"
-          @update:model-value="(id) => readerVersions.setVersion('summary', id)"
-        >
-          <ReaderSummaryPane
-            :summary-items="summaryItems"
-            :source-segments="sourceSegments"
-          />
-        </ReaderPane>
       </template>
 
       <template #source>
@@ -219,7 +258,7 @@ useLocalizedSeo({
 
       <template #commentary>
         <ReaderPane
-          :title="t('reader.pane.commentary')"
+          :title="t('reader.pane.innerLight')"
           :version-options="commentaryVersionOptions"
           :model-value="readerVersions.commentary.value"
           :meta="commentaryMeta"
@@ -243,9 +282,21 @@ useLocalizedSeo({
           <ReaderCommentaryPane :items="commentaryItems" />
         </ReaderPane>
       </template>
+
+      <template v-if="hasInnerObservation" #inner-observation>
+        <ReaderPane
+          :title="t('reader.pane.innerObservation')"
+          :version-options="innerObservationVersionOptions"
+          :model-value="innerObservationVersion"
+          :meta="innerObservationMeta"
+          @update:model-value="(id) => (innerObservationVersion = id)"
+        >
+          <ReaderInnerObservationPane :sections="innerObservationSections" />
+        </ReaderPane>
+      </template>
     </ReaderShell>
 
-    <template v-else>
+    <template v-else-if="mode === 'study'">
       <ReaderToolbar
         :chapter-title="chapterTitle"
         :breadcrumb-items="breadcrumbItems"
@@ -255,7 +306,7 @@ useLocalizedSeo({
       <ReaderStudyStream
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"
-        :summary-items="summaryItems"
+        :summary-items="[]"
         :source-meta="sourceMeta"
         :commentary-meta="commentaryMeta"
         :source-version-options="sourceVersionOptions"
@@ -270,6 +321,22 @@ useLocalizedSeo({
         @update:commentary-version="
           (id: string) => readerVersions.setVersion('commentary', id)
         "
+      />
+    </template>
+
+    <template v-else>
+      <ReaderToolbar
+        :chapter-title="chapterTitle"
+        :breadcrumb-items="breadcrumbItems"
+        :prev="prev"
+        :next="next"
+      />
+      <ReaderOriginalStream
+        :source-segments="sourceSegments"
+        :commentary-items="commentaryItems"
+        :source-meta="sourceMeta"
+        :commentary-meta="commentaryMeta"
+        :pagination="originalPagination"
       />
     </template>
 

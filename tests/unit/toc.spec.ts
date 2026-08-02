@@ -252,3 +252,59 @@ describe("prevNextChapterLinks", () => {
     });
   });
 });
+
+describe("innerObservationChaptersInPart", () => {
+  it("returns only inner-observation chapters, sorted by number", () => {
+    const chapters: TocChapter[] = [
+      chapterOf("part-01/chapter-01", "chapter", 1),
+      chapterOf("part-01/inner-observation-02", "inner-observation", 2),
+      chapterOf("part-01/inner-observation-01", "inner-observation", 1),
+      chapterOf("part-01/questions-terminology-01", "questions-terminology", 1),
+    ];
+
+    expect(innerObservationChaptersInPart(chapters).map((c) => c.id)).toEqual([
+      "part-01/inner-observation-01",
+      "part-01/inner-observation-02",
+    ]);
+  });
+
+  it("is empty for a part with no Inner Observation at all", () => {
+    const chapters: TocChapter[] = [
+      chapterOf("part-05/chapter-01", "chapter", 1),
+    ];
+    expect(innerObservationChaptersInPart(chapters)).toEqual([]);
+  });
+});
+
+describe("partPaginationPosition", () => {
+  const chapters: TocChapter[] = [
+    chapterOf("part-01/chapter-01", "chapter", 1),
+    chapterOf("part-01/chapter-02", "chapter", 2),
+    chapterOf("part-01/inner-observation-01", "inner-observation", 1),
+  ];
+
+  it("returns the 1-based index, total, and neighboring chapters", () => {
+    expect(partPaginationPosition(chapters, "part-01/chapter-02")).toEqual({
+      index: 2,
+      total: 3,
+      prev: chapters[0],
+      next: chapters[2],
+    });
+  });
+
+  it("has a null prev at the part's first chapter", () => {
+    expect(partPaginationPosition(chapters, "part-01/chapter-01")?.prev).toBe(
+      null,
+    );
+  });
+
+  it("has a null next at the part's last chapter", () => {
+    expect(
+      partPaginationPosition(chapters, "part-01/inner-observation-01")?.next,
+    ).toBe(null);
+  });
+
+  it("returns null for an unknown chapter id", () => {
+    expect(partPaginationPosition(chapters, "nope")).toBeNull();
+  });
+});

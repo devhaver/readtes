@@ -40,11 +40,11 @@ describe("resolveMissingAnchorNotice", () => {
     ).toBeNull();
   });
 
-  it("is null for a summary-origin seif-N jump (not a commentary anchor)", () => {
+  it("is null for a non-source-origin activation (e.g. Inner Observation, which carries no anchors)", () => {
     expect(
       resolveMissingAnchorNotice({
-        activeAnchor: "seif-3",
-        anchorOrigin: "summary",
+        activeAnchor: "op-3",
+        anchorOrigin: "inner-observation",
         displayedItems: [],
         selectedVersionId: "en-sefaria-community",
         hebrewItems: null,

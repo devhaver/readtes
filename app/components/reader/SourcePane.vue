@@ -10,6 +10,13 @@
 // anchors) emits `open-seif-commentary`, which the reader page only acts on
 // in mobile panes swipe mode (opening `CommentarySheet`) — see that
 // composable for why the two listeners don't double-fire on an anchor tap.
+//
+// The collapsible mini-toc above the segment list used to be its own
+// separate pane (`SummaryPane`, now deleted — the summary layer it also
+// covered is effectively dead, exactly 1 file exists across the whole
+// corpus). It's real navigation, so it moved here rather than disappearing:
+// `ChapterIntro`'s own `<details>` pattern, reused as-is (study mode already
+// renders the identical body above its stream) rather than duplicated.
 import type { SourceSegment } from "~~/shared/types/content";
 
 defineProps<{ segments: SourceSegment[] }>();
@@ -27,21 +34,22 @@ useSeifTapActivation(containerRef, (seifN) =>
 </script>
 
 <template>
-  <ol
-    v-if="segments.length > 0"
-    class="mx-auto flex max-w-[65ch] flex-col gap-6"
-  >
-    <li
-      v-for="segment in segments"
-      :id="`seif-${segment.n}`"
-      :key="segment.n"
-      :data-seif="segment.n"
-      class="reader-anchor-target scroll-mt-4 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
-    >
-      <ReaderSourceSegment :segment="segment" />
-    </li>
-  </ol>
-  <p v-else class="text-sm text-(--text-muted)">
-    {{ t("reader.sourceEmpty") }}
-  </p>
+  <div class="mx-auto flex max-w-[65ch] flex-col gap-6">
+    <ReaderChapterIntro :summary-items="[]" :source-segments="segments" />
+
+    <ol v-if="segments.length > 0" class="flex flex-col gap-6">
+      <li
+        v-for="segment in segments"
+        :id="`seif-${segment.n}`"
+        :key="segment.n"
+        :data-seif="segment.n"
+        class="reader-anchor-target scroll-mt-4 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+      >
+        <ReaderSourceSegment :segment="segment" />
+      </li>
+    </ol>
+    <p v-else class="text-sm text-(--text-muted)">
+      {{ t("reader.sourceEmpty") }}
+    </p>
+  </div>
 </template>
