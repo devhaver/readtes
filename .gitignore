@@ -25,6 +25,8 @@ logs
 
 # Test coverage
 coverage
+playwright-report
+test-results
 
 # Written automatically by @nuxt/test-utils on first vitest run
 .nuxtrc

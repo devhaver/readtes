@@ -37,8 +37,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install browser
+        run: pnpm exec playwright install --with-deps chromium
+
       - name: Run full project gate
         run: pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnpm test && pnpm generate
+
+      - name: Run browser acceptance tests
+        run: pnpm test:e2e
 
       - name: Retain deployable static site
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
