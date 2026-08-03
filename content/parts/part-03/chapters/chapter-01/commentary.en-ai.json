@@ -1,0 +1,380 @@
+{
+  "chapterId": "part-03/chapter-01",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "There are five worlds, called: Adam Kadmon, Atzilut, Beria, Yetzira, Assiya. And \"world\" (olam) is from the language of concealment (he'elem), for the light of Ein Sof concealed itself in them, each time more, as the ARI explains ahead."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "See Table of Answers, part 2, item 56."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "See Table of Answers, part 1, item 25."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "That is, the very beginning of everything in each and every world."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:5",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "See Table of Answers, part 2, item 14."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:6",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Its meaning is ungraspable, and it is called Ein Sof, to hint that the Sefira of Malchut, which concludes and cuts off all the degrees (see Table of Answers, part 1, item 40), does not make any conclusion or cutoff here on the upper light at all; rather, on the contrary, in it the bestowal of the light begins."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:7",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Expansion indicates a coarsening of the light, more than what it was in the Emanator, for otherwise, by what would that light exit the category of Emanator, to be called by the name expansion of the light from Him outward. And this matter of coarsening is a disparity of form that the light acquires from its coming into the category of an emanated being, as written above (in Inner Observation part 2, item 5, s.v. \"and behold,\" so understand it)."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:8",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "See above, Inner Observation part 2, item 5, s.v. \"and behold.\""
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:9",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "This teaches us that the vessels are offspring of the light itself, for the light, in the way of its expansion for the reception of the emanated being, descends in four phases, HB ZON, until it causes in the emanated being the will to receive, which will, being phase four, is the primary vessel of the emanated being, and it is the coarseness that the light attained in the way of its expansion. However, the first three phases are only causes, for phase four to be revealed. And the matter of the necessity and order of these four phases was explained in the previous parts, and there is no need to elaborate on them now (see Ohr Penimi part 1, chapter 1, item 50, s.v. \"and the reason\")."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:10",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Clothing means like concealment, for the garment conceals the one wearing it; only, it is for the sake of its will to be revealed, since without the correction of this concealment it cannot be revealed, hence it conceals itself in it and is revealed through it. And such a correction is always called by the name garment or clothing. Thus a garment serves two purposes: concealment and revelation. And in our matter too, since it is impossible for the lower ones to attain the light without a vessel, therefore the light clothes itself and conceals itself in the vessel, so that the lower one can attain it through that vessel in which it clothes itself. Understand this well."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "11"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:11",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "That is, after the light had already expanded in the first three phases, called Hochma, Bina, ZA, and after it finished its expansion in ZA, it reached expansion into phase four, called Malchut. And before the light expanded in the previous three phases, it was impossible for it to expand in Malchut, since they are causes of one another in the way of cause and consequence."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "12"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:12",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "For the power of restriction rides upon phase four, and because of this there is no power in phase four, which is the lowest of them all, to receive light. (See Table of Answers, part 1, item 81, and see part 1, chapter 2, item 2.)"
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "13"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:13",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Namely phase four, which is called Malchut. And it teaches us here to distinguish that the vessel of Malchut and the screen within it are two distinct matters: for the vessel of Malchut is the light that coarsened into phase four as above, upon which the power of restriction rides as above; and the screen and curtain upon it were corrected in it afterward. (See Table of Answers, part 2, item 43.)"
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "14"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:14",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Screen and curtain are one and the same thing; that is, there was made there a restraining power, like a partition guarding above Malchut, so that the upper light would not break through into it. (See Table of Answers, part 2, item 43.)"
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "15"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:15",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "That is, this screen, besides its guarding of Malchut as above, has yet another purpose: it separates between the world of Atzilut and the rest of the worlds."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "16"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:16",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "The meeting of the light of Ein Sof with the screen is likened to two hard things, one of which wishes to break into the boundary of the other, and the other stands firm against it with all its strength and prevents it from gaining anything of its territory; such a meeting is termed striking. This is unlike the meeting of liquids, which do not prevent one another from gaining territory, and mix together, hence striking is not understood of them. Likewise with two soft things, their striking is not felt so much, because they yield to one another, entering a little into each other's territory, pressing slightly upon its outer shell. Not so with hard things, where neither permits the other to be moved even a bit from its territory; thus their meeting is understood as the category of striking.<br>Now, since the whole essence of the restriction was on the side of the emanated being, and not at all on the side of the Emanator, therefore the light of Ein Sof is not concerned at all by that restriction that exists in Malchut, but continues to descend and expand also within Malchut. And it is also understood that it descends there in potential, this being because Ein Sof, before the restriction, used to fill there also phase four (as written above, part 1, chapter 1, in Ohr Penimi item 20 and item 50, s.v. \"and behold,\" so understand it), and therefore it has no reason to change its way, and it always descends to fill also the vessel of Malchut with His light. However, the screen and the curtain made in Malchut restrain it and cut off the light, and do not allow it to expand within it even a bit; hence it is understood that \"then the light of Ein Sof, which expands until there, struck against that screen\" (see Table of Answers, part 2, item 43)."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "17"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:17",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "This has already been explained above, in the adjacent passage."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "18"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:18",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "That is, that measure of light that was fit to be received in Malchut, and was not received because of the restraining of the screen, all of that measure returned and rose upward, and clothed all three phases of the upper light, namely up to Hochma, which is considered the \"place\" of this reflected light, as will be written below. And so the ARI wrote: \"it returned to rise in the secret of reflected light upward, to its place.\" (See part 2, Inner Observation, item 62.)"
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "19"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:19",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "For the rising of the reflected light and its clothing of the upper light from below upward, as above, makes the category of vessels upon the upper light."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:20",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "That is, after the reflected light rises upward as above, it follows that the light of Ein Sof clothes itself in this reflected light, in the secret of the self clothed in vessels."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "21"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:21",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Namely, up to the screen that is in the vessel of Malchut, for the screen turned it back upward and did not allow it to expand further, as above."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "22"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:22",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "That is to say, that the restraining power in the screen did not act at all on the Sefirot of Atzilut that are above Malchut, but only from Malchut downward, and therefore the light of Ein Sof expands as far as the screen in Malchut within the category of Atzilut without any restraint at all. Not so the light of Ein Sof that sparkles and passes through the screen and downward, which is found to be diminished all the more because of this cause, and is no longer considered the very self of the light of Ein Sof, as will be written ahead."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "23"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:23",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "This coarseness has already been explained, that it is not revealed in the light all at once, being the opposite of the light, but rather it cascades and descends from the refined toward the coarse a little, and afterward to coarser than it, until it comes to the fullness of coarseness, which is called phase four or Malchut. And these four phases are called: Hochma, Bina, ZA, and Malchut. And they must be found in every emanated being. And the reason, the necessity, and the definition of these four phases have already been explained well above (in part 1, chapter 1, item 50, s.v. \"and the reason,\" and in Inner Observation part 2, s.v. \"and in order to give\"); read it there for the whole continuation, upon which I rely and which I do not bring here, because of the length, even though it is very necessary here in every single word."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "24"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:24",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Every world and every Partzuf, wherever it may be, must receive its bestowal from Ein Sof, and therefore the indwelling of Ein Sof attributed to a world or to a Partzuf is called the Keter of the world and the Keter of the Partzuf, and is also called by the name Emanator to that world. And so it is written, \"and behold, the Keter that is in Atzilut, Ein Sof shines in it.\" That is, that there the indwelling of Ein Sof, in its relation to the world of Atzilut, and therefore it is called Keter of Ein Sof, or Emanator."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "25"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:25",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "The expansion of the light of Ein Sof drawn from Keter first into the world is called by the name light of Hochma. And it must be that a will to receive the light is included at once in that light of Hochma, for otherwise the light of Ein Sof would not be termed as expanding, as explained (in Inner Observation part 2, s.v. \"now,\" read it there). However, this will to receive is not considered so much a disparity of form and coarseness, because this will to receive reached it from an upper power, namely from Keter, for the will to bestow that is in Keter necessarily obligates the will to receive that is in Hochma. And so the ARI wrote, \"that Hochma receives through Keter.\" That is, that the aspect of reception that is in Hochma reached it through Keter, and by its power, and therefore the coarseness due to this will to receive is very slight. And it is called phase one."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "26"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:26",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Meaning, that Hochma tends to coarsen in the way of its expansion, for at the completion of its expansion, the will grows stronger in it, and it draws the light of Hassadim from Ein Sof, and distances itself from the light of Hochma, as explained at length above (part 1, chapter 1, item 50, s.v. \"and the reason\"). And since this intensification came about by the power of its own arousal, and not by an upper power, therefore this will is considered to be a slight coarseness, greater than the coarseness in Hochma. And therefore, necessarily, through this change it separated from Hochma into a distinct phase, and is called by the name Bina or phase two. And so the ARI wrote, \"that Bina received the light of Ein Sof through distancing,\" for the coarseness of the aforesaid phase two is called by the name \"distancing,\" because it distanced itself from receiving the light of Hochma, in order to receive the light of Hassadim, as explained above. And nevertheless, this intensification of the will is not considered a complete coarseness, because it is of the aspect of the will to bestow, and the equivalence of form with the Emanator, as written above (part 1, chapter 1, item 50, s.v. \"and the reason\"); however, it is coarser than phase one, because in phase one all the will in it is not its own, but comes through Keter as above, whereas phase two has already, through its own intensification, brought about the will within it, and therefore phase two, which is at any rate the root for the complete will to receive, is thereby considered coarser than phase one. Understand this well."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "27"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:27",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "That is, after Bina was aroused to draw the light of Hassadim from the Emanator, it is found to distance itself from the light of Hochma, for otherwise it could not have received the light of Hassadim: for the light of Hochma is drawn by the will to receive, and the light of Hassadim is drawn by the will to bestow (as written in part 1, chapter 1, item 50, s.v. \"and the reason\"), and therefore phase one and phase two are opposite to one another from the very beginning of their emanation. And so the ARI wrote, \"for now Ein Sof is far from her and she can receive it,\" meaning, that it distanced itself and became a third degree from Ein Sof, intermediate between Bina and Ein Sof, and went out from it, for now that it has distanced the light of Hochma, and became a third degree, since Hochma is phase one and second to Ein Sof, and Bina is phase two and third to Ein Sof, now it can receive the light of Hassadim that it drew, whereas if it had not distanced itself to a third degree it could not have received, as explained. And one must know that the word \"far\" is a term for the diminution of the attainment of Hochma, in the secret of the verse \"I said I would be wise, but it was far from me.\" This too is a secret, as is \"and his sister stood far off.\" This is not the place to elaborate on this."
+    },
+    {
+      "anchorId": "op-28",
+      "order": 28,
+      "label": {
+        "he": "ו",
+        "en": "28"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:28",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Meaning: for Bina too tends to coarsen at the completion of its expansion, and this is for the reason that it distanced from itself the light of Hochma, and it is known that the light of Hochma is the primary vitality and self of the emanated being, and therefore at the completion of its expansion the will to receive the illumination of Hochma into the light of Hassadim grew stronger in it. And since the entire difference between spiritual beings is only due to disparity of form, therefore this new illumination went out, namely the light of Hassadim within which is the illumination of Hochma, and acquired a name of its own, namely the name Zeir Anpin. And it is called so, because the light of Hochma is termed light of \"face,\" in the secret of the verse \"a man's wisdom lights up his face,\" and since it has only an illumination from Hochma, but its essence is only the light of Hassadim of Bina, it is therefore called Zeir Anpin, meaning small of face, that is, only a slight measure of the light of Hochma. Understand this.<br>It is also called phase three. And the coarseness in it is called a window and a narrow hole, for it was explained above (part 2, chapter 2, Ohr Penimi item 70) that a screen that comes in an upper one because of the inclusion of the lower one in it is called by the name window, because there are no judgments in it, only a cause for illumination, like a window, so understand it. And since all coarseness and screens in Atzilut come about because of inclusion of Beria-Yetzira-Assiya within it, therefore the coarseness of ZA is called by the name window for the illumination of Gadlut, and by the name narrow hole for the illumination of Katnut. But phase two is not even called a window, but rather distancing."
+    },
+    {
+      "anchorId": "op-29",
+      "order": 29,
+      "label": {
+        "he": "ז",
+        "en": "29"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:29",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "That is, that it does not have that distancing from Hochma that Bina has, as above, because the entire difference between it and Bina is that it has an illumination from the light of Hochma. And so the ARI wrote, \"but it is near,\" meaning that it has no distancing."
+    },
+    {
+      "anchorId": "op-30",
+      "order": 30,
+      "label": {
+        "he": "ח",
+        "en": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:30",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "That is, the expansion of the light of Bina into phase three, which is ZA, does not cause distancing, but rather, on the contrary, causes nearness to Hochma, as above. And it has already been explained above that \"near\" and \"far\" are definitions pertaining to Hochma."
+    },
+    {
+      "anchorId": "op-31",
+      "order": 31,
+      "label": {
+        "he": "ט",
+        "en": "31"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:31",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Meaning, after the three phases of coarseness had expanded in their fullness until the completion of the expansion of ZA, then a will to receive was aroused in its complete measure fit for reception. \"And this is called: phase four, or Malchut, or Nukva of ZA (see above Ohr Penimi part 1, chapter 1, item 30, s.v. \"and now\"), and in it was the restriction, as above (part 1, chapter 1, item 40), in such a way that from the restriction onward, this phase four no longer receives the light of Ein Sof, and therefore the aspect of coarseness in it is called \"distancing.\" And it too has two degrees, window and narrow hole, like ZA, in that the bestowal of Gadlut is called window, and the bestowal of Katnut is called narrow hole. And there is a great difference between the distancing of phase two and the distancing of phase four, for the distancing of phase two is a distancing by will, in the secret of \"for He delights in mercy,\" that it desires Hassadim and not Hochma. But the distancing of phase four is a distancing by compulsion, namely because of the screen that was corrected in phase four."
+    }
+  ]
+}
