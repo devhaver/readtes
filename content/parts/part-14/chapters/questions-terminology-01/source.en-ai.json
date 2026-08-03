@@ -1,0 +1,872 @@
+{
+  "chapterId": "part-14/questions-terminology-01",
+  "layer": "source",
+  "versionId": "en-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 1",
+      "html": "What is the father of the fathers [Av laAvot]?",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 2",
+      "html": "What is the light that comes through the hairs?",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 3",
+      "html": "What is the light that passes through small apertures?",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 4",
+      "html": "What are the double lights?",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 5",
+      "html": "What are the compressed lights?",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 6",
+      "html": "What is the essential surrounding light of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 7",
+      "html": "What is the root surrounding light of the Nukva?",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 8",
+      "html": "What is an inner light that came out and became a surrounding light?",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 9",
+      "html": "What are the wide paths?",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 10",
+      "html": "What is the inheritance [Achsanta] of Aba and Ima?",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 11",
+      "html": "What is \"no Daat, no Bina\"?",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 12",
+      "html": "What is \"no Bina, no Daat\"?",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 13",
+      "html": "What are the two kinds of influence?",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 14",
+      "html": "What are the two coronets?",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 15",
+      "html": "What is the elongated aspect?",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 16",
+      "html": "What is the Bina that was included in Hochma?",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 17",
+      "html": "What is the Bina called the firmament?",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 18",
+      "html": "What is the protrusion of light at the nape?",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 19",
+      "html": "What is a free man [Ben Chorin]?",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 20",
+      "html": "What are the children, life, and sustenance?",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 21",
+      "html": "What is Benjamin?",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 22",
+      "html": "What is \"the created one returned to become a member\"?",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 23",
+      "html": "What is blessing?",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 24",
+      "html": "What is the upper Garden of Eden?",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 25",
+      "html": "What is the lower Garden of Eden?",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 26",
+      "html": "What is a beard raised upward?",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 27",
+      "html": "What is a beard lowered downward?",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 28",
+      "html": "What is the Daat of ZA in the head?",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 29",
+      "html": "What is the Daat that comes out of the upper Eden?",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 30",
+      "html": "What is the Daat that separates between Arich Anpin and ZA?",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 31",
+      "html": "What is the Daat of the Nukva between her shoulders?",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 32",
+      "html": "What is the breath coming out of the nose of Arich Anpin?",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 33",
+      "html": "What is the breath coming out of the mouth of Arich Anpin?",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 34",
+      "html": "What is the enlargement of the posteriors?",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 35",
+      "html": "What is the HaVaYaH behind the shoulders of Arich Anpin?",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 36",
+      "html": "What is the bringing out of the sun from its sheath?",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 37",
+      "html": "What are the loan and the borrowing?",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 38",
+      "html": "What is the renewal of the souls?",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 39",
+      "html": "What is the inclusion of Aba and Ima in the Mazal?",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 40",
+      "html": "What is the inclusion of the throat at the end of the cheeks of the head?",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 41",
+      "html": "What is the sparkling of the Mochin outward?",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 42",
+      "html": "What are the six aspects in the Mochin of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 43",
+      "html": "What are the six aspects in the Mochin of the Nukva?",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 44",
+      "html": "What are the six Tikunim of the beard of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 45",
+      "html": "What are the seven Tikunim of the skull of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 46",
+      "html": "What are merit and the Mazal?",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 47",
+      "html": "What is his head erect and the beard raised upward?",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 48",
+      "html": "What is the lower beard of Arich Anpin?",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 49",
+      "html": "What is the lower beard of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 50",
+      "html": "What is the nose, equal in gematria to Samech-Gimel?",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 51",
+      "html": "What is the Life of the worlds?",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 52",
+      "html": "What is \"Chai Chai\"?",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 53",
+      "html": "What is the renewal of old souls?",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 54",
+      "html": "What is freedom?",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 55",
+      "html": "What is the Hochma in the secret of Daat?",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 56",
+      "html": "What is the Hochma of the thirty-two paths?",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 57",
+      "html": "What is the Hochma included in the twenty-two letters and the ten sayings?",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 58",
+      "html": "What is the ancient Hochma?",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 59",
+      "html": "What is the sun in its sheath?",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 60",
+      "html": "What is the first Hesed of ZA, called Abraham?",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 61",
+      "html": "What are the nine Tikunim of the beard of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 62",
+      "html": "What are the drops drawn from Hochma and Bina?",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 63",
+      "html": "What are the lower nine of the additions of Rachel?",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 64",
+      "html": "What is the Yod of Adonai?",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 65",
+      "html": "What is the Yod that spreads here and there and becomes a Dalet?",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 66",
+      "html": "What is the Yod at the beginning and the Yod at the end of Yahadonai?",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 67",
+      "html": "What are the twelve Mazalot?",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 68",
+      "html": "What are the thirteen covenants?",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 69",
+      "html": "What are the thirteen Tikunim of the beard of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 70",
+      "html": "What is Joseph?",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 71",
+      "html": "What are the twenty-two letters and the ten sayings?",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 72",
+      "html": "What is he who bends his head downward, and his beard is lowered?",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 73",
+      "html": "What is the revealed power of the male?",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 74",
+      "html": "What is the hidden power of the female?",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 75",
+      "html": "What are the stars?",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 76",
+      "html": "What is the bride of Moses?",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 77",
+      "html": "What is the entry of the Holy One, blessed be He, into the Garden of Eden?",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 78",
+      "html": "What is the bending of the head downward?",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 79",
+      "html": "What is the bending of the head in the aspect of the Mazal Vnakke?",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 80",
+      "html": "What is Leah growing and Rachel diminishing?",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 81",
+      "html": "What is neither erect nor bent?",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 82",
+      "html": "What is the spring of the well?",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 83",
+      "html": "What are the springs and the streams?",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 84",
+      "html": "What are the Mochin of birth?",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 85",
+      "html": "What is the Mazal?",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 86",
+      "html": "What are the Mazalot?",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 87",
+      "html": "What is the Mazal Notzer?",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 88",
+      "html": "What is the Mazal Vnakke?",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 89",
+      "html": "What is the filling of the beard?",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 90",
+      "html": "What is the Malchut of Ima that is not included in the Mochin of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 91",
+      "html": "What is the source of the well?",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 92",
+      "html": "What is the returning surrounding light?",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 93",
+      "html": "What are the inclusive Lamed-Mem surrounding lights of ZA?",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 94",
+      "html": "What is subjugated to Hesed and Gevura?",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 95",
+      "html": "What is illumination [Nehiru]?",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 96",
+      "html": "What are the illumination and the sparkling of the river that comes out of Eden?",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 97",
+      "html": "What is the river that comes out of Eden?",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 98",
+      "html": "What is the river that spreads to its sides?",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 99",
+      "html": "What is the sparkling?",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 100",
+      "html": "What is the root point of Rachel?",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 101",
+      "html": "What are the new souls?",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 102",
+      "html": "What are the new souls in Achor beAchor?",
+      "anchors": []
+    },
+    {
+      "n": 103,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 103",
+      "html": "What are the new souls in Panim bePanim?",
+      "anchors": []
+    },
+    {
+      "n": 104,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 104",
+      "html": "What is the path that is unknown?",
+      "anchors": []
+    },
+    {
+      "n": 105,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 105",
+      "html": "What is the upper Eden?",
+      "anchors": []
+    },
+    {
+      "n": 106,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 106",
+      "html": "What is the lower Eden?",
+      "anchors": []
+    },
+    {
+      "n": 107,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 107",
+      "html": "What is the coronet of Gevura?",
+      "anchors": []
+    },
+    {
+      "n": 108,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 108",
+      "html": "What is the coronet of Hesed?",
+      "anchors": []
+    },
+    {
+      "n": 109,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 109",
+      "html": "What are the first and second Iburim?",
+      "anchors": []
+    },
+    {
+      "n": 110,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 110",
+      "html": "What is the third Ibur?",
+      "anchors": []
+    },
+    {
+      "n": 111,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 111",
+      "html": "What is the world that is concealed?",
+      "anchors": []
+    },
+    {
+      "n": 112,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 112",
+      "html": "What is the world that is revealed?",
+      "anchors": []
+    },
+    {
+      "n": 113,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 113",
+      "html": "What is delight?",
+      "anchors": []
+    },
+    {
+      "n": 114,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 114",
+      "html": "What is the essence of the upper one?",
+      "anchors": []
+    },
+    {
+      "n": 115,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 115",
+      "html": "What is the essence of the upper one through clothing?",
+      "anchors": []
+    },
+    {
+      "n": 116,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 116",
+      "html": "What is the essence of the upper one without a garment?",
+      "anchors": []
+    },
+    {
+      "n": 117,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 117",
+      "html": "What are the heels of Leah in the Keter of Rachel?",
+      "anchors": []
+    },
+    {
+      "n": 118,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 118",
+      "html": "What is the foreskin that covers the Yesod?",
+      "anchors": []
+    },
+    {
+      "n": 119,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 119",
+      "html": "What is the inwardness of the Hochma in the secret of Daat?",
+      "anchors": []
+    },
+    {
+      "n": 120,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 120",
+      "html": "What is \"the righteous one who perished\"?",
+      "anchors": []
+    },
+    {
+      "n": 121,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 121",
+      "html": "What is the righteous one that comes out of her?",
+      "anchors": []
+    },
+    {
+      "n": 122,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 122",
+      "html": "What is the righteous one that enters her?",
+      "anchors": []
+    },
+    {
+      "n": 123,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 123",
+      "html": "What is Zion?",
+      "anchors": []
+    },
+    {
+      "n": 124,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 124",
+      "html": "What is the side [Tzela]?",
+      "anchors": []
+    },
+    {
+      "n": 125,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 125",
+      "html": "What are existence and establishment?",
+      "anchors": []
+    },
+    {
+      "n": 126,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 126",
+      "html": "What is the knot of the Tefillin of the head?",
+      "anchors": []
+    },
+    {
+      "n": 127,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 127",
+      "html": "What are Rachel and Leah?",
+      "anchors": []
+    },
+    {
+      "n": 128,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 128",
+      "html": "What are the tops of the shoulders of Arich Anpin?",
+      "anchors": []
+    },
+    {
+      "n": 129,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 129",
+      "html": "What is the firmament?",
+      "anchors": []
+    },
+    {
+      "n": 130,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 130",
+      "html": "What is the upper firmament in the secret of Bina?",
+      "anchors": []
+    },
+    {
+      "n": 131,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 131",
+      "html": "What is the borrowing of the vessels of Leah from Rachel?",
+      "anchors": []
+    },
+    {
+      "n": 132,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 132",
+      "html": "What is the borrowing of the vessels of Rachel from Leah?",
+      "anchors": []
+    },
+    {
+      "n": 133,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 133",
+      "html": "What are the narrow paths?",
+      "anchors": []
+    },
+    {
+      "n": 134,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 134",
+      "html": "What is the root of Rachel and its foundation?",
+      "anchors": []
+    },
+    {
+      "n": 135,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 135",
+      "html": "What is the dominion of Malchut?",
+      "anchors": []
+    },
+    {
+      "n": 136,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 136",
+      "html": "What are the three foreskins?",
+      "anchors": []
+    },
+    {
+      "n": 137,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 137",
+      "html": "What are the sun and the moon hidden?",
+      "anchors": []
+    },
+    {
+      "n": 138,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 138",
+      "html": "What are the hairs more material than the breath of the mouth?",
+      "anchors": []
+    },
+    {
+      "n": 139,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 139",
+      "html": "What are the delights in MAN and MAD?",
+      "anchors": []
+    },
+    {
+      "n": 140,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 140",
+      "html": "What are the delights in the souls?",
+      "anchors": []
+    },
+    {
+      "n": 141,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 141",
+      "html": "What is an addition and not the essence?",
+      "anchors": []
+    },
+    {
+      "n": 142,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 142",
+      "html": "What is an addition of power?",
+      "anchors": []
+    },
+    {
+      "n": 143,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 143",
+      "html": "What is Tifferet in the aspect of its being by itself?",
+      "anchors": []
+    },
+    {
+      "n": 144,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XIV, List of Questions on Terminology 144",
+      "html": "What are the delicacies of kings?",
+      "anchors": []
+    }
+  ]
+}
