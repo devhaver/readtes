@@ -149,6 +149,9 @@ tasks:
           sleep 1
         done
         test ! -d ./node_modules
+      # Project-local pnpm store — the dev container can leave one here
+      # (root-owned) when it can't use $PNPM_HOME; it's a cache, never source.
+      - rm -rf ./.pnpm-store
       - rm -rf ./.task
 
   docker:prod:

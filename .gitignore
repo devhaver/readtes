@@ -9,6 +9,11 @@ dist
 # Node dependencies
 node_modules
 
+# pnpm content-addressable store — can land in the repo root when the
+# dev container (running as root in the bind-mounted tree) falls back to a
+# project-local store instead of PNPM_HOME.
+.pnpm-store/
+
 # Logs
 logs
 *.log
