@@ -179,6 +179,30 @@ prerendered sitemap — before shipping:
 task docker:prod         # http://localhost:6219
 ```
 
+### Cloudflare Pages
+
+| Setting                | Value            |
+| ---------------------- | ---------------- |
+| Build command          | `pnpm generate`  |
+| Build output directory | `.output/public` |
+| `NODE_VERSION`         | `24`             |
+
+pnpm 11 is picked up automatically on Cloudflare's v2/v3 build system via
+corepack and the `packageManager` field in `package.json` — no separate pnpm
+install step needed.
+
+Environment variables (Pages project → Settings → Environment variables):
+
+| Variable                       | Required | Effect                                                                         |
+| ------------------------------ | -------- | ------------------------------------------------------------------------------ |
+| `NUXT_PUBLIC_SITE_URL`         | Yes      | Baked into every canonical link, hreflang alternate, `og:url`, and the sitemap |
+| `NUXT_PUBLIC_UMAMI_SRC`        | No       | Umami script `src` — set together with the website ID to enable analytics      |
+| `NUXT_PUBLIC_UMAMI_WEBSITE_ID` | No       | Umami `data-website-id` — leave both unset for no analytics tag                |
+
+`public/_headers` ships with the generated output and gives `/_nuxt/*` and
+`/_fonts/*` (content-hashed filenames only) immutable caching automatically —
+no Pages-side configuration needed.
+
 ---
 
 ## Working on this

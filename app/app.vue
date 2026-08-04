@@ -50,6 +50,21 @@ useHead((() => ({
   link: localeHead.value.link,
   meta: localeHead.value.meta,
 })) as unknown as Parameters<typeof useHead>[0]);
+
+// Umami analytics, env-gated. Both values are baked in at `pnpm generate`
+// time from `NUXT_PUBLIC_UMAMI_SRC`/`NUXT_PUBLIC_UMAMI_WEBSITE_ID` (see the
+// `runtimeConfig.public` comment in nuxt.config.ts for why a static site
+// only ever sets these at build time) and default to empty strings, so a
+// deploy that doesn't set them emits no script at all — local, dev and CI
+// builds stay clean. Kept as its own `useHead` call rather than folded into
+// the one above: that one is purely `useLocaleHead`'s per-route output,
+// this is static and conditional.
+const { umamiSrc, umamiWebsiteId } = useRuntimeConfig().public;
+if (umamiSrc && umamiWebsiteId) {
+  useHead({
+    script: [{ defer: true, src: umamiSrc, "data-website-id": umamiWebsiteId }],
+  });
+}
 </script>
 
 <template>
