@@ -18,11 +18,19 @@ describe("isContentChunkId", () => {
     expect(isContentChunkId("../content/toc.parts/part-01.json")).toBe(true);
   });
 
+  it("matches the per-part content-loader glob-map modules (T13)", () => {
+    expect(isContentChunkId("app/utils/content-loaders/part-16.ts")).toBe(true);
+    expect(isContentChunkId("utils/content-loaders/part-01.ts")).toBe(true);
+  });
+
   it("does not match app-code chunk ids", () => {
     expect(isContentChunkId("app/composables/useChapterContent.ts")).toBe(
       false,
     );
     expect(isContentChunkId("app/pages/read/[part]/[chapter].vue")).toBe(false);
+    // The dispatcher stays prefetchable — it's a tiny static map, not one of
+    // the heavy per-part glob-map modules its entries lazily import.
+    expect(isContentChunkId("app/utils/content-loaders/index.ts")).toBe(false);
   });
 
   it("does not match content/toc.volumes.json (not a per-chapter/part chunk)", () => {
