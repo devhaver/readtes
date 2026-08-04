@@ -77,6 +77,7 @@ use the underlying `pnpm` scripts of the same name.
 | `task test`            | Vitest suite (47 spec files)                                      |
 | `task generate`        | Static site generation — this is the deploy artifact              |
 | `task dev:host`        | Dev server on the host, no container                              |
+| `task prod`            | Build the SSR bundle + serve with the Nitro Node server (`:6219`) |
 | `task docker:prod`     | Build + serve the real static output via nginx (`:6219`)          |
 | `task import -- --all` | Re-import the corpus from Sefaria                                 |
 | `task clean`           | Remove build artifacts and dependencies                           |
@@ -164,8 +165,15 @@ to correct it afterwards.
 NUXT_PUBLIC_SITE_URL=https://your-domain task generate
 ```
 
-To check the real artifact — 404 status codes, cache headers, the prerendered
-sitemap — before shipping:
+To run the real production server (SSR via the Nitro Node server, the same
+shape weburz uses) — 404 status codes, prerendered sitemap, live rendering:
+
+```bash
+task prod                # http://localhost:6219
+```
+
+To check the static deploy artifact — 404 status codes, cache headers, the
+prerendered sitemap — before shipping:
 
 ```bash
 task docker:prod         # http://localhost:6219

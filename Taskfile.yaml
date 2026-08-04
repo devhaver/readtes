@@ -154,6 +154,23 @@ tasks:
       - rm -rf ./.pnpm-store
       - rm -rf ./.task
 
+  prod:
+    desc: Build the SSR bundle and serve it with the Nitro Node server (http://localhost:6219)
+    summary: |
+      Builds `.output/server/index.mjs` (`nuxt build`) and serves it with
+      `node`, the same production shape weburz uses. Use this to verify the
+      real production server — SSR rendering, 404s, prerendered sitemap —
+      instead of a static-file preview.
+
+      Set NUXT_PUBLIC_SITE_URL to bake the correct absolute URLs; it defaults
+      to https://readtes.org and cannot be changed after the build.
+
+      The build needs a large Node heap: the full-corpus SSR bundle is bigger
+      than V8's default, so this task sets --max-old-space-size=8192.
+    cmds:
+      - NODE_OPTIONS="--max-old-space-size=8192" NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://readtes.org} pnpm build
+      - NODE_ENV=production HOST=0.0.0.0 PORT=6219 pnpm start
+
   docker:prod:
     desc: Build and serve the generated static site (http://localhost:6219)
     summary: |
