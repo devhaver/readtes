@@ -2,6 +2,7 @@ import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defineComponent, h } from "vue";
 import MobilePanePill from "~/components/reader/MobilePanePill.vue";
+import type { PaneId } from "~/utils/readerAnchorState";
 
 // `useCommentarySheet().open()` only opens on a narrow viewport (see that
 // composable) — stub `matchMedia` to report one, the same pattern
@@ -22,16 +23,19 @@ const stubNarrowViewport = () => {
 // this host establishes both (the same provide/inject singletons the
 // reader page normally provides) so the test can drive them directly.
 const Host = defineComponent({
-  props: { hasInnerObservation: { type: Boolean, default: true } },
+  props: {
+    panes: {
+      type: Array as () => PaneId[],
+      default: () => ["source", "commentary", "inner-observation"],
+    },
+  },
   setup(props) {
     const state = useReaderState();
     const sheet = useCommentarySheet();
     return { state, sheet, props };
   },
   render() {
-    return h(MobilePanePill, {
-      hasInnerObservation: this.props.hasInnerObservation,
-    });
+    return h(MobilePanePill, { panes: this.props.panes });
   },
 });
 
@@ -54,7 +58,7 @@ describe("MobilePanePill", () => {
 
   it("drops the Inner Observation tab when the part has none", async () => {
     const wrapper = await mountSuspended(Host, {
-      props: { hasInnerObservation: false },
+      props: { panes: ["source", "commentary"] satisfies PaneId[] },
     });
 
     const tabs = wrapper.findAll('[role="tab"]');
@@ -62,6 +66,26 @@ describe("MobilePanePill", () => {
       "The Ari's Text",
       "Inner Light",
     ]);
+  });
+
+  it("drops the Inner Light tab when the chapter has no commentary edition", async () => {
+    const wrapper = await mountSuspended(Host, {
+      props: { panes: ["source", "inner-observation"] satisfies PaneId[] },
+    });
+
+    const tabs = wrapper.findAll('[role="tab"]');
+    expect(tabs.map((tab) => tab.text())).toEqual([
+      "The Ari's Text",
+      "Inner Observation",
+    ]);
+  });
+
+  it("does not render at all for a single-pane chapter — nothing to switch between", async () => {
+    const wrapper = await mountSuspended(Host, {
+      props: { panes: ["source"] satisfies PaneId[] },
+    });
+
+    expect(wrapper.find('[role="tablist"]').exists()).toBe(false);
   });
 
   it("reflects the shared activePane via aria-selected, defaulting to source", async () => {

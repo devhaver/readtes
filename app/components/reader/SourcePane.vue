@@ -51,5 +51,11 @@ useSeifTapActivation(containerRef, (seifN) =>
     <p v-else class="text-sm text-(--text-muted)">
       {{ t("reader.sourceEmpty") }}
     </p>
+
+    <!-- Absent-layer footnotes (`LayerAbsenceNote`) — rendered by the page
+         when a whole layer has no edition for this chapter, so the absence
+         is explained where the reader is actually looking instead of by a
+         dead pane. -->
+    <slot name="footnote" />
   </div>
 </template>

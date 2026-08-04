@@ -8,10 +8,11 @@
 // `CommentarySheet` is open (`useCommentarySheet`), so the two floating
 // surfaces never overlap.
 //
-// `hasInnerObservation`: five parts have no Inner Observation content at
-// all (see AGENTS.md / the content model skill) — `segments` drops that
-// tab entirely rather than rendering an empty/disabled one, matching
-// `MobileSwipePanes`' own two-vs-three-slide rendering.
+// `panes`: the panes that actually exist for this chapter (from
+// `resolveReaderPanes` via `MobileSwipePanes`) — `segments` renders a tab
+// per existing pane rather than empty/disabled ones, matching
+// `MobileSwipePanes`' own slide rendering. With a single pane there is
+// nothing to switch between, so the pill doesn't render at all.
 //
 // `role="tablist"`/`role="tab"`: each segment both reflects and jumps to
 // one of the swipe slides, which is close enough to the ARIA "Tabs"
@@ -35,28 +36,28 @@ interface Segment {
   controls: string;
 }
 
-const props = defineProps<{ hasInnerObservation: boolean }>();
+const props = defineProps<{ panes: PaneId[] }>();
 
-const SOURCE_SEGMENT: Segment = {
-  pane: "source",
-  labelKey: "reader.mobilePane.source",
-  controls: "reader-source-pane",
-};
-const INNER_LIGHT_SEGMENT: Segment = {
-  pane: "commentary",
-  labelKey: "reader.mobilePane.innerLight",
-  controls: "reader-commentary-pane",
-};
-const INNER_OBSERVATION_SEGMENT: Segment = {
-  pane: "inner-observation",
-  labelKey: "reader.mobilePane.innerObservation",
-  controls: "reader-inner-observation-pane",
+const SEGMENT_BY_PANE: Record<PaneId, Segment> = {
+  source: {
+    pane: "source",
+    labelKey: "reader.mobilePane.source",
+    controls: "reader-source-pane",
+  },
+  commentary: {
+    pane: "commentary",
+    labelKey: "reader.mobilePane.innerLight",
+    controls: "reader-commentary-pane",
+  },
+  "inner-observation": {
+    pane: "inner-observation",
+    labelKey: "reader.mobilePane.innerObservation",
+    controls: "reader-inner-observation-pane",
+  },
 };
 
 const segments = computed<Segment[]>(() =>
-  props.hasInnerObservation
-    ? [SOURCE_SEGMENT, INNER_LIGHT_SEGMENT, INNER_OBSERVATION_SEGMENT]
-    : [SOURCE_SEGMENT, INNER_LIGHT_SEGMENT],
+  props.panes.map((pane) => SEGMENT_BY_PANE[pane]),
 );
 
 const { t } = useI18n();
@@ -103,7 +104,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
 
 <template>
   <div
-    v-if="!isSheetOpen"
+    v-if="!isSheetOpen && segments.length > 1"
     class="pointer-events-none fixed inset-x-0 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-30 flex justify-center lg:hidden"
   >
     <div

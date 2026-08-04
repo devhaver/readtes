@@ -12,6 +12,7 @@ import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defineComponent, h, nextTick } from "vue";
 import MobileSwipePanes from "~/components/reader/MobileSwipePanes.vue";
+import type { PaneId } from "~/utils/readerAnchorState";
 
 const stubMatchMedia = (matches: boolean) => {
   vi.stubGlobal(
@@ -29,7 +30,12 @@ const stubMatchMedia = (matches: boolean) => {
 };
 
 const Host = defineComponent({
-  props: { hasInnerObservation: { type: Boolean, default: true } },
+  props: {
+    panes: {
+      type: Array as () => PaneId[],
+      default: () => ["source", "commentary", "inner-observation"],
+    },
+  },
   setup(props) {
     const state = useReaderState();
     return { state, props };
@@ -37,7 +43,7 @@ const Host = defineComponent({
   render() {
     return h(
       MobileSwipePanes,
-      { hasInnerObservation: this.props.hasInnerObservation },
+      { panes: this.props.panes },
       {
         source: () => h("div", { id: "source-content" }, "Source"),
         commentary: () => h("div", { id: "commentary-content" }, "Commentary"),
@@ -69,7 +75,7 @@ describe("MobileSwipePanes", () => {
   it("renders only two slides when the part has no Inner Observation", async () => {
     stubMatchMedia(true);
     const wrapper = await mountSuspended(Host, {
-      props: { hasInnerObservation: false },
+      props: { panes: ["source", "commentary"] satisfies PaneId[] },
     });
 
     expect(wrapper.find('[data-pane="source"]').exists()).toBe(true);
@@ -77,6 +83,36 @@ describe("MobileSwipePanes", () => {
     expect(wrapper.find('[data-pane="inner-observation"]').exists()).toBe(
       false,
     );
+  });
+
+  it("renders no commentary slide when the chapter has no commentary edition", async () => {
+    stubMatchMedia(true);
+    const wrapper = await mountSuspended(Host, {
+      props: { panes: ["source", "inner-observation"] satisfies PaneId[] },
+    });
+
+    expect(wrapper.find('[data-pane="source"]').exists()).toBe(true);
+    expect(wrapper.find('[data-pane="commentary"]').exists()).toBe(false);
+    expect(wrapper.find('[data-pane="inner-observation"]').exists()).toBe(true);
+  });
+
+  it("snaps a stale activePane back to source when its pane is absent", async () => {
+    stubMatchMedia(true);
+    const wrapper = await mountSuspended(Host, {
+      props: { panes: ["source"] satisfies PaneId[] },
+    });
+
+    // The shared reader state persists across chapter navigations — this
+    // simulates arriving from a chapter where Inner Light existed and was
+    // active. The guard watch is on `paneOrder`, so drive it via props.
+    wrapper.vm.state.setActivePane("source");
+    await wrapper.setProps({
+      panes: ["source", "commentary"] satisfies PaneId[],
+    });
+    wrapper.vm.state.setActivePane("commentary");
+    await wrapper.setProps({ panes: ["source"] satisfies PaneId[] });
+
+    expect(wrapper.vm.state.activePane.value).toBe("source");
   });
 
   it("scrolls the matching slide into view when activePane changes on a narrow viewport", async () => {

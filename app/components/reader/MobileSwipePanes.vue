@@ -13,10 +13,12 @@
 // re-mounts the panes, so each one's own `ReaderPane` scroll container
 // just keeps whatever scroll offset it already had.
 //
-// `hasInnerObservation`: five parts have no Inner Observation content at
-// all (see AGENTS.md / the content model skill) — for those, this renders
-// two panes/slides (Source, Inner Light) instead of three, both in the
+// `panes`: the panes that actually exist for this chapter, from
+// `resolveReaderPanes` — Inner Light is absent for ~99.5% of chapters and
+// five parts have no Inner Observation at all (see that util's docblock),
+// so this renders one, two, or three panes/slides accordingly, both in the
 // desktop grid (`gridColsClass`) and in the mobile track/pill (`paneOrder`).
+// A layer that doesn't exist gets no slide at all — never an empty column.
 //
 // RTL: the track is a plain `flex` row (no explicit `flex-row`, and no
 // reordering of the three slides) — `dir="rtl"` on `<html>` (the `he`
@@ -67,7 +69,6 @@ import { useMediaQuery } from "@vueuse/core";
 import type { Ref } from "vue";
 import {
   createScrollSettleTimer,
-  PANE_ORDER,
   resolveActivePane,
   type PaneVisibilityRatios,
 } from "~/utils/mobilePaneSync";
@@ -75,7 +76,7 @@ import { prefersReducedMotion } from "~/utils/motion";
 import type { PaneId } from "~/utils/readerAnchorState";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 
-const props = defineProps<{ hasInnerObservation: boolean }>();
+const props = defineProps<{ panes: PaneId[] }>();
 
 const { activePane, setActivePane } = useReaderState();
 
@@ -96,12 +97,21 @@ const slideRefs: Record<PaneId, Ref<HTMLElement | null>> = {
   "inner-observation": innerObservationRef,
 };
 
-// The pane order actually present for this chapter's part — see the module
-// doc above for why Inner Observation can be absent.
-const paneOrder = computed<PaneId[]>(() =>
-  props.hasInnerObservation
-    ? [...PANE_ORDER]
-    : PANE_ORDER.filter((pane) => pane !== "inner-observation"),
+// The pane order actually present for this chapter — see the module doc
+// above for why Inner Light and Inner Observation can each be absent.
+const paneOrder = computed<PaneId[]>(() => props.panes);
+
+// `activePane` persists across chapter navigations (shared reader state) —
+// arriving on a chapter whose pane set no longer contains it (e.g. Inner
+// Light was active, the next chapter has none) would leave the pill with no
+// selected tab and the track scrolled to a slide that no longer exists.
+// Snap back to Source, which every chapter has.
+watch(
+  paneOrder,
+  (panes) => {
+    if (!panes.includes(activePane.value)) setActivePane("source");
+  },
+  { immediate: true },
 );
 
 const ratios: PaneVisibilityRatios = reactive({});
@@ -196,17 +206,21 @@ watch(activePane, (pane) => {
   scrollToPane(pane, false);
 });
 
-// Three comparable-width columns when Inner Observation is present — all
-// three now carry substantial running prose (unlike the old 280px summary
-// rail, which was really just a chapter navigator), so equal thirds keeps
+// Three comparable-width columns when all three panes exist — all three
+// carry substantial running prose (unlike the old 280px summary rail,
+// which was really just a chapter navigator), so equal thirds keeps
 // Source and Inner Light paired at the same width (the aligned reading
 // pair, the reader's core feature) while giving Inner Observation the same
 // real estate as reference material, not a cramped side column. Equal
-// halves for the two-pane case, for the same reason.
+// halves for two panes, for the same reason; a single remaining pane just
+// takes the full row (its content caps its own reading measure — see
+// `SourcePane`'s `max-w-[65ch]` column).
 const gridColsClass = computed(() =>
-  props.hasInnerObservation
+  paneOrder.value.length === 3
     ? "lg:grid-cols-[1fr_1fr_1fr]"
-    : "lg:grid-cols-[1fr_1fr]",
+    : paneOrder.value.length === 2
+      ? "lg:grid-cols-[1fr_1fr]"
+      : "lg:grid-cols-[1fr]",
 );
 </script>
 
@@ -220,21 +234,26 @@ const gridColsClass = computed(() =>
       id="reader-source-pane"
       ref="sourceRef"
       data-pane="source"
-      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always lg:border-e lg:border-(--border)"
+      class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always"
+      :class="paneOrder.length > 1 && 'lg:border-e lg:border-(--border)'"
     >
       <slot name="source" />
     </div>
     <div
+      v-if="paneOrder.includes('commentary')"
       id="reader-commentary-pane"
       ref="commentaryRef"
       data-pane="commentary"
       class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always scroll-mt-4"
-      :class="hasInnerObservation && 'lg:border-e lg:border-(--border)'"
+      :class="
+        paneOrder.includes('inner-observation') &&
+        'lg:border-e lg:border-(--border)'
+      "
     >
       <slot name="commentary" />
     </div>
     <div
-      v-if="hasInnerObservation"
+      v-if="paneOrder.includes('inner-observation')"
       id="reader-inner-observation-pane"
       ref="innerObservationRef"
       data-pane="inner-observation"
@@ -244,5 +263,5 @@ const gridColsClass = computed(() =>
     </div>
   </div>
 
-  <ReaderMobilePanePill :has-inner-observation="hasInnerObservation" />
+  <ReaderMobilePanePill :panes="paneOrder" />
 </template>

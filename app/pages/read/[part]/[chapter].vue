@@ -53,6 +53,13 @@ const {
   commentaryByVersion,
 } = await useChapterContent(partId, chapterSlug, chapter.availableVersions);
 
+// Static per chapter (from the ToC's `availableVersions`, identical on
+// server and client, so no hydration divergence): whether an Inner Light
+// pane exists at all. ~99.5% of chapters have no commentary in any edition
+// — see `resolveReaderPanes` — and those get no pane, just the
+// `LayerAbsenceNote` footnote in the Source pane.
+const hasCommentary = chapter.availableVersions.commentary.length > 0;
+
 // Inner Observation isn't a per-chapter layer file — it lives in the part's
 // own `kind: "inner-observation"` chapters (see AGENTS.md / the content
 // model skill), so it's loaded once per part rather than per chapter, and
@@ -62,6 +69,7 @@ const innerObservationChapters = innerObservationChaptersInPart(
   partFile.chapters,
 );
 const hasInnerObservation = innerObservationChapters.length > 0;
+const panes = resolveReaderPanes({ hasCommentary, hasInnerObservation });
 const {
   versions: innerObservationVersionIds,
   sections: innerObservationRawSections,
@@ -140,13 +148,19 @@ const innerObservationMeta = computed(() =>
   metaFor(innerObservationVersion.value),
 );
 const innerObservationSections = computed(() =>
-  innerObservationRawSections.value.map((section) => ({
-    chapterId: section.chapterId,
-    title: section.title,
-    items: innerObservationVersion.value
-      ? (section.itemsByVersion[innerObservationVersion.value]?.items ?? [])
-      : [],
-  })),
+  innerObservationRawSections.value
+    .map((section) => ({
+      chapterId: section.chapterId,
+      title: section.title,
+      items: innerObservationVersion.value
+        ? (section.itemsByVersion[innerObservationVersion.value]?.items ?? [])
+        : [],
+    }))
+    // A section whose *selected* version has no items would render as a
+    // bare heading with nothing under it — drop it; the sections that do
+    // have text in this version carry the pane. (If none do, the pane
+    // falls back to `innerObservationEmpty`.)
+    .filter((section) => section.items.length > 0),
 );
 
 const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
@@ -228,10 +242,7 @@ useLocalizedSeo({
 
 <template>
   <div class="contents">
-    <ReaderShell
-      v-if="mode === 'panes'"
-      :has-inner-observation="hasInnerObservation"
-    >
+    <ReaderShell v-if="mode === 'panes'" :panes="panes">
       <template #toolbar>
         <ReaderToolbar
           :chapter-title="chapterTitle"
@@ -252,11 +263,15 @@ useLocalizedSeo({
           <ReaderSourcePane
             :segments="sourceSegments"
             @open-seif-commentary="openCommentarySheet"
-          />
+          >
+            <template v-if="!hasCommentary" #footnote>
+              <ReaderLayerAbsenceNote />
+            </template>
+          </ReaderSourcePane>
         </ReaderPane>
       </template>
 
-      <template #commentary>
+      <template v-if="hasCommentary" #commentary>
         <ReaderPane
           :title="t('reader.pane.innerLight')"
           :version-options="commentaryVersionOptions"
