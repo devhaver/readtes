@@ -196,8 +196,10 @@ const goToFullCommentary = async () => {
       {{ t("reader.sourceEmpty") }}
     </p>
 
+    <ReaderLayerAbsenceNote v-if="!hasCommentaryLayer" />
+
     <section
-      v-if="hasCommentaryLayer"
+      v-else
       class="mt-10 rounded-card border border-(--border) p-4 text-center"
     >
       <p class="text-sm text-(--text-muted)">

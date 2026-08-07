@@ -8,12 +8,13 @@
 // `useReaderState` itself for the fresh-instance fallback (and dev warning)
 // if that provider is ever missing.
 //
-// `hasInnerObservation`: five parts have no Inner Observation content at
-// all (see AGENTS.md / the content model skill) — the reader page only
-// passes an `#inner-observation` slot when it does, giving a two-column
-// layout instead of three for those parts. Just forwarded to
-// `MobileSwipePanes`, which owns the actual two-vs-three-pane rendering
-// (both the desktop grid and the mobile swipe track/pill).
+// `panes`: the panes that actually exist for this chapter, from
+// `resolveReaderPanes` — Inner Light is absent for ~99.5% of chapters
+// (Sefaria's Ohr Penimi digitization stops early) and five parts have no
+// Inner Observation at all, so the layout is one, two, or three columns
+// accordingly rather than ever rendering an empty pane. Just forwarded to
+// `MobileSwipePanes`, which owns the actual rendering (both the desktop
+// grid and the mobile swipe track/pill).
 //
 // The pane layout itself lives in `MobileSwipePanes` (T9): >=1024px, a
 // fixed-viewport CSS grid — the toolbar stays put and each pane scrolls
@@ -23,7 +24,11 @@
 // of a plain stacked column — see that component for why it's the same
 // markup (just without the `lg:` grid override) rather than a second,
 // duplicate rendering of the panes.
-defineProps<{ hasInnerObservation: boolean }>();
+import type { PaneId } from "~/utils/readerAnchorState";
+
+const props = defineProps<{ panes: PaneId[] }>();
+
+const hasPane = (pane: PaneId) => props.panes.includes(pane);
 
 useReaderState();
 </script>
@@ -34,14 +39,14 @@ useReaderState();
       <slot name="toolbar" />
     </div>
 
-    <ReaderMobileSwipePanes :has-inner-observation="hasInnerObservation">
+    <ReaderMobileSwipePanes :panes="panes">
       <template #source>
         <slot name="source" />
       </template>
-      <template #commentary>
+      <template v-if="hasPane('commentary')" #commentary>
         <slot name="commentary" />
       </template>
-      <template v-if="hasInnerObservation" #inner-observation>
+      <template v-if="hasPane('inner-observation')" #inner-observation>
         <slot name="inner-observation" />
       </template>
     </ReaderMobileSwipePanes>
