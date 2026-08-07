@@ -146,6 +146,14 @@ export default defineNuxtConfig({
       // standard public-runtime-config env override) — see the `siteUrl`
       // comment above for what derives from this.
       siteUrl,
+      // Umami analytics, both empty by default. There is no runtime config
+      // on a static site — Cloudflare Pages serves prerendered HTML, so
+      // these are only ever settable at `pnpm generate` time via
+      // `NUXT_PUBLIC_UMAMI_SRC`/`NUXT_PUBLIC_UMAMI_WEBSITE_ID` and get baked
+      // into the output. Empty means "no analytics": local/dev/CI builds
+      // stay clean, and app.vue only emits the script tag when both are set.
+      umamiSrc: "",
+      umamiWebsiteId: "",
     },
   },
   compatibilityDate: "2025-07-15",

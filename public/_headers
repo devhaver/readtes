@@ -1,0 +1,9 @@
+# Cloudflare Pages reads this file from the deploy root (this directory is
+# copied verbatim into `.output/public` by `pnpm generate`). Both dirs below
+# contain only content-hashed filenames — Vite chunks under /_nuxt/, @nuxt/fonts
+# subsets under /_fonts/ — so a new deploy always ships new paths and it is
+# safe to cache them forever.
+/_nuxt/*
+  Cache-Control: public, max-age=31536000, immutable
+/_fonts/*
+  Cache-Control: public, max-age=31536000, immutable
