@@ -47,9 +47,21 @@ export interface PrefetchableManifestEntry {
   dynamicImports?: string[];
 }
 
-/** Matches a manifest entry's key/src, or a `dynamicImports` target id. */
+/**
+ * Matches a manifest entry's key/src, or a `dynamicImports` target id.
+ *
+ * `utils/content-loaders/part-` covers the 16 per-part glob-map modules the
+ * T13 split introduced (see `useChapterContent`'s docblock): each map is a
+ * dynamic import of `useChapterContent`'s always-touched chunk, so without
+ * this the renderer prefetches all 16 maps (~1.4MB, the whole corpus's
+ * path→thunk tables) on every reader page — the same disease T11 fixed for
+ * the content chunks themselves, one level up. Each page still loads its
+ * own part's map on demand via the dispatcher's `import()`.
+ */
 export const isContentChunkId = (id: string): boolean =>
-  id.includes("content/parts/") || id.includes("content/toc.parts/");
+  id.includes("content/parts/") ||
+  id.includes("content/toc.parts/") ||
+  id.includes("utils/content-loaders/part-");
 
 /**
  * Mutates `manifest` in place: clears `prefetch`/`preload` on every

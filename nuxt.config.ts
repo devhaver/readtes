@@ -157,24 +157,35 @@ export default defineNuxtConfig({
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
   },
-  nitro: {
-    prerender: {
-      // The volumes index is reachable by crawling the homepage's link to
-      // it, but each `/volumes/[volume]` page's own link only exists for
-      // Volume 1 (the rest render disabled/"coming soon", with no <a> for
-      // the crawler to follow) — list every volume explicitly so all six
-      // contents pages still ship in the generated static site. Reader
-      // routes are listed explicitly for the same reason (see
-      // `readerPrerenderRoutes` above) — the crawler alone would miss most
-      // of the answers-terminology/answers-topics clusters.
-      routes: [
-        ...volumePrerenderRoutes,
-        ...readerPrerenderRoutes,
-        // Nitro server routes (`server/routes/`) with no `<a>` anywhere for
-        // the crawler to find — need the same explicit treatment.
-        "/sitemap.xml",
-        "/robots.txt",
-      ],
+  // T12 scaling fix — dev-only route-rules matcher bloat: Nuxt turns every
+  // explicit `nitro.prerender.routes` entry into a client route rule, and
+  // the resulting matcher (`virtual:nuxt:.nuxt/route-rules.mjs`) is an
+  // unminified 3.5MB module the dev server serves to the browser on *every*
+  // page load — dev never prerenders, so none of this is needed there.
+  // `$production` is a Nuxt env override key that only applies when
+  // `NODE_ENV=production`, which `nuxi generate`/`nuxi build` set and `nuxi
+  // dev` does not, so the 20,634-entry route list still reaches the actual
+  // static build while `pnpm dev` never pays for it.
+  $production: {
+    nitro: {
+      prerender: {
+        // The volumes index is reachable by crawling the homepage's link to
+        // it, but each `/volumes/[volume]` page's own link only exists for
+        // Volume 1 (the rest render disabled/"coming soon", with no <a> for
+        // the crawler to follow) — list every volume explicitly so all six
+        // contents pages still ship in the generated static site. Reader
+        // routes are listed explicitly for the same reason (see
+        // `readerPrerenderRoutes` above) — the crawler alone would miss most
+        // of the answers-terminology/answers-topics clusters.
+        routes: [
+          ...volumePrerenderRoutes,
+          ...readerPrerenderRoutes,
+          // Nitro server routes (`server/routes/`) with no `<a>` anywhere for
+          // the crawler to find — need the same explicit treatment.
+          "/sitemap.xml",
+          "/robots.txt",
+        ],
+      },
     },
   },
   // T11 scaling fix — content-chunk prefetch-link bloat: strip every
