@@ -198,6 +198,13 @@ build machines Nitro detects the Cloudflare environment and switches to its
 `cloudflare_pages` preset, which emits the static site to `dist/` and merges
 the committed `public/_headers` with its own generated `_headers`/`_redirects`.
 
+The generated artifact is ~15,600 files — comfortably under Cloudflare Pages'
+free-plan 20,000-file deployment cap. Two build-time measures keep it there:
+payload extraction is disabled (`experimental.payloadExtraction: false`), so
+routes ship no per-page `_payload.json`, and the per-chapter content JSON is
+bundled one chunk per chapter (`vite.build.rollupOptions.output.manualChunks`)
+instead of one chunk per JSON file.
+
 pnpm 11 is picked up automatically on Cloudflare's v2/v3 build system via
 corepack and the `packageManager` field in `package.json` — no separate pnpm
 install step needed.
