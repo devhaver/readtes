@@ -226,6 +226,37 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          // T14 scaling fix — one Rollup chunk per content JSON file (the
+          // `import.meta.glob` in `app/utils/content-loaders/part-NN.ts`
+          // emits ~10,356 of them) is what puts the artifact at 31,096
+          // files total, over Cloudflare Pages' 20,000 cap. Every JSON
+          // belonging to one chapter is always fetched together
+          // (`useChapterContent` loads all of a chapter's layer/version
+          // files up front — see its docblock), so grouping per chapter
+          // changes zero runtime behavior. `manualChunks` must return
+          // `undefined` for everything else so Vite's default chunking is
+          // untouched. Matched on the module id without query string
+          // (Rollup ids carry no query here anyway, defensive). Content
+          // JSON outside a chapter dir groups per part.
+          manualChunks(id) {
+            const cleanId = id.split("?")[0] as string;
+            const chapterMatch =
+              /content\/parts\/(part-\d+)\/chapters\/([^/]+)\//.exec(cleanId);
+            if (chapterMatch) {
+              return `content-${chapterMatch[1]}-${chapterMatch[2]}`;
+            }
+            const partMatch = /content\/parts\/(part-\d+)\//.exec(cleanId);
+            if (partMatch) {
+              return `content-${partMatch[1]}`;
+            }
+            return undefined;
+          },
+        },
+      },
+    },
     server: {
       ws: {
         port: 6218,
