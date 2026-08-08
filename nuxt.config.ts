@@ -71,7 +71,7 @@ const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
 // producing a double slash — this is the single normalization point, so
 // no call site needs its own `.replace(/\/$/, "")` footgun-guard.
 const siteUrl = (
-  process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.org"
+  process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.com"
 ).replace(/\/$/, "");
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
