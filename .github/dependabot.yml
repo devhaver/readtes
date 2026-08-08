@@ -1,0 +1,31 @@
+# Dependabot: weekly grouped dependency PRs, run through the same `task check`
+# CI gate as every other branch.
+version: 2
+updates:
+  - package-ecosystem: "npm" # covers pnpm via package.json + pnpm-lock.yaml
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      # One PR for all compatible bumps keeps the review load at one gate run
+      # per week instead of one per package.
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # TypeScript 7 breaks vue-tsc, @typescript-eslint, and
+      # openapi-typescript — majors here are upgraded deliberately, together.
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "vue-tsc"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      actions:
+        patterns:
+          - "*"
