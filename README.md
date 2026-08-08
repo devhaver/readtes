@@ -187,10 +187,23 @@ task docker:prod         # http://localhost:6219
 | Build output directory | `dist`          |
 | `NODE_VERSION`         | `24`            |
 
+Unlike this org's server-rendered Nuxt apps (which deploy with `pnpm build`),
+this site ships as fully prerendered static output — the Pages build command
+must be `pnpm generate`. A `nuxt build` here would try to bundle the entire
+corpus into a server worker, which OOMs on Pages' build machines and would
+deploy an unverified SSR site.
+
 The output directory is `dist` (not the local `.output/public`): on Pages'
 build machines Nitro detects the Cloudflare environment and switches to its
 `cloudflare_pages` preset, which emits the static site to `dist/` and merges
 the committed `public/_headers` with its own generated `_headers`/`_redirects`.
+
+The generated artifact is ~15,600 files — comfortably under Cloudflare Pages'
+free-plan 20,000-file deployment cap. Two build-time measures keep it there:
+payload extraction is disabled (`experimental.payloadExtraction: false`), so
+routes ship no per-page `_payload.json`, and the per-chapter content JSON is
+bundled one chunk per chapter (`vite.build.rollupOptions.output.manualChunks`)
+instead of one chunk per JSON file.
 
 pnpm 11 is picked up automatically on Cloudflare's v2/v3 build system via
 corepack and the `packageManager` field in `package.json` — no separate pnpm
@@ -198,11 +211,12 @@ install step needed.
 
 Environment variables (Pages project → Settings → Environment variables):
 
-| Variable                       | Required | Effect                                                                         |
-| ------------------------------ | -------- | ------------------------------------------------------------------------------ |
-| `NUXT_PUBLIC_SITE_URL`         | Yes      | Baked into every canonical link, hreflang alternate, `og:url`, and the sitemap |
-| `NUXT_PUBLIC_UMAMI_SRC`        | No       | Umami script `src` — set together with the website ID to enable analytics      |
-| `NUXT_PUBLIC_UMAMI_WEBSITE_ID` | No       | Umami `data-website-id` — leave both unset for no analytics tag                |
+| Variable                       | Required | Effect                                                                                                                    |
+| ------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `NUXT_PUBLIC_SITE_URL`         | Yes      | Baked into every canonical link, hreflang alternate, `og:url`, and the sitemap                                            |
+| `NODE_OPTIONS`                 | Yes      | `--max-old-space-size=6144` — prerendering ~20k routes needs more than Node's default ~4 GB heap on Pages' build machines |
+| `NUXT_PUBLIC_UMAMI_SRC`        | No       | Umami script `src` — set together with the website ID to enable analytics                                                 |
+| `NUXT_PUBLIC_UMAMI_WEBSITE_ID` | No       | Umami `data-website-id` — leave both unset for no analytics tag                                                           |
 
 `public/_headers` ships with the generated output and gives `/_nuxt/*` and
 `/_fonts/*` (content-hashed filenames only) immutable caching automatically —

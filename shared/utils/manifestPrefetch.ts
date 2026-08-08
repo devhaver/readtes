@@ -40,10 +40,13 @@
  * entire point of splitting content into per-chapter chunks).
  */
 
-/** The subset of a `vue-bundle-renderer` manifest entry this mutates. */
+/**
+ * The subset of a `vue-bundle-renderer` manifest entry this mutates.
+ */
 export interface PrefetchableManifestEntry {
   prefetch?: boolean;
   preload?: boolean;
+  name?: string;
   dynamicImports?: string[];
 }
 
@@ -57,11 +60,29 @@ export interface PrefetchableManifestEntry {
  * path→thunk tables) on every reader page — the same disease T11 fixed for
  * the content chunks themselves, one level up. Each page still loads its
  * own part's map on demand via the dispatcher's `import()`.
+ *
+ * `content-part-` covers the T14 merged chunks (one per chapter, see the
+ * `manualChunks` function in `nuxt.config.ts`): once Rollup groups a
+ * chapter's JSON files into one chunk, the manifest entry loses the
+ * `content/parts/...` source path — its key becomes the opaque emitted file
+ * id (`_-XXXXXX.js`) and only the entry `name` keeps the `content-part-`
+ * marker (`content-part-14-answers-terminology-141`). Both the entry-key
+ * check and the per-entry `dynamicImports` filter consult the name via
+ * `entryHasContentName` so the strip keeps covering the merged chunks.
  */
 export const isContentChunkId = (id: string): boolean =>
   id.includes("content/parts/") ||
   id.includes("content/toc.parts/") ||
-  id.includes("utils/content-loaders/part-");
+  id.includes("utils/content-loaders/part-") ||
+  id.startsWith("content-part-");
+
+/**
+ * True when an entry's `name` claims it is one of the T14 merged
+ * per-chapter content chunks (their manifest keys are opaque file ids, so
+ * the name is the only reliable marker — see `isContentChunkId`).
+ */
+const entryHasContentName = (name: string | undefined): boolean =>
+  name !== undefined && isContentChunkId(name);
 
 /**
  * Mutates `manifest` in place: clears `prefetch`/`preload` on every
@@ -74,12 +95,12 @@ export const stripContentChunkPrefetchHints = <
   manifest: Record<string, T>,
 ): Record<string, T> => {
   for (const [key, entry] of Object.entries(manifest)) {
-    if (isContentChunkId(key)) {
+    if (isContentChunkId(key) || entryHasContentName(entry.name)) {
       entry.prefetch = false;
       entry.preload = false;
     }
     entry.dynamicImports = entry.dynamicImports?.filter(
-      (id) => !isContentChunkId(id),
+      (id) => !isContentChunkId(id) && !entryHasContentName(manifest[id]?.name),
     );
   }
 
