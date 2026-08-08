@@ -551,8 +551,20 @@ describe("toc-builder", () => {
       10,
     );
     expect(title).toEqual({
-      en: "Histaklut Penimit 3",
+      en: "Histaklut Pnimit 3",
       he: "הסתכלות פנימית ג׳",
+    });
+  });
+
+  it("siblingChapterTitle normalizes Sefaria's 'Penimit' transliteration to 'Pnimit'", () => {
+    const title = siblingChapterTitle(
+      { title: "Histaklut Penimit", heTitle: "הסתכלות פנימית" },
+      1,
+      1,
+    );
+    expect(title).toEqual({
+      en: "Histaklut Pnimit",
+      he: "הסתכלות פנימית",
     });
   });
 

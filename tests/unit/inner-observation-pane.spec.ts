@@ -9,14 +9,14 @@ describe("InnerObservationPane", () => {
     const sections: InnerObservationSectionView[] = [
       {
         chapterId: "part-01/inner-observation-01",
-        title: { en: "Histaklut Penimit 1", he: "הסתכלות פנימית א׳" },
+        title: { en: "Histaklut Pnimit 1", he: "הסתכלות פנימית א׳" },
         items: [
           { n: 1, sefariaRef: "x 1", html: "First section.", anchors: [] },
         ],
       },
       {
         chapterId: "part-01/inner-observation-02",
-        title: { en: "Histaklut Penimit 2", he: "הסתכלות פנימית ב׳" },
+        title: { en: "Histaklut Pnimit 2", he: "הסתכלות פנימית ב׳" },
         items: [
           { n: 1, sefariaRef: "x 2", html: "Second section.", anchors: [] },
         ],
@@ -28,12 +28,12 @@ describe("InnerObservationPane", () => {
     });
 
     const text = wrapper.text();
-    expect(text).toContain("Histaklut Penimit 1");
+    expect(text).toContain("Histaklut Pnimit 1");
     expect(text).toContain("First section.");
-    expect(text).toContain("Histaklut Penimit 2");
+    expect(text).toContain("Histaklut Pnimit 2");
     expect(text).toContain("Second section.");
     expect(text.indexOf("First section.")).toBeLessThan(
-      text.indexOf("Histaklut Penimit 2"),
+      text.indexOf("Histaklut Pnimit 2"),
     );
   });
 
@@ -41,7 +41,7 @@ describe("InnerObservationPane", () => {
     const sections: InnerObservationSectionView[] = [
       {
         chapterId: "part-01/inner-observation-01",
-        title: { en: "Histaklut Penimit 1", he: "א" },
+        title: { en: "Histaklut Pnimit 1", he: "א" },
         items: [{ n: 1, sefariaRef: "x 1", html: "Text.", anchors: [] }],
       },
     ];
