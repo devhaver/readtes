@@ -49,7 +49,7 @@ const containerRef = provideReaderPaneContainer();
 
     <div
       ref="containerRef"
-      class="min-h-0 flex-1 overflow-y-auto px-4 py-4"
+      class="min-h-0 flex-1 overflow-y-auto px-4 pt-4 pb-24 lg:pb-4"
       :dir="meta?.direction ?? 'ltr'"
       :lang="meta?.language"
     >

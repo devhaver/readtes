@@ -55,15 +55,22 @@ export const resolveActivePane = (
 };
 
 /**
- * Minimal `scrollend` polyfill for the IntersectionObserver-only fallback
- * path (Safari <17.4 — see `MobileSwipePanes`): without this, every ratio
- * change from `IntersectionObserver` would commit `activePane` immediately,
- * which fights a live touch-drag (each in-between ratio update "wins"
- * briefly) and can mis-commit on a multi-slide programmatic jump (the
- * observer sees the skipped middle slide's ratio pass through on the way to
- * the real target). `ping()` on every observer callback; `onSettle` fires
- * once `settleMs` has passed with no further `ping()` — the same
+ * Minimal `scrollend` polyfill used as the single commit debounce for pane
+ * switching (see `MobileSwipePanes`): it fires `onSettle` once `settleMs`
+ * has passed with no further `ping()`, giving the same
  * gesture-has-ended semantics the native `scrollend` event gives for free.
+ *
+ * The native `scrollend` event itself cannot be the commit button: it fires
+ * the instant the gesture stops, one rendering step ahead of the final
+ * `IntersectionObserver` ratio batch, so resolving `activePane` at that
+ * moment would reuse the pre-swipe ratios and leave the pill stuck on the
+ * stale tab (there is no later scroll event to re-commit). Debouncing the
+ * observer callbacks instead means the commit always happens after the
+ * settled frame's ratios have been observed.
+ *
+ * `ping()` on every observer callback; also called from the `scrollend`
+ * listener (an extra early ping, harmless — it just restarts the same
+ * countdown).
  *
  * `hasSettled` is the pure piece (the threshold check itself); the timer
  * wrapper around it is a thin, conventional debounce — unit-tested with
