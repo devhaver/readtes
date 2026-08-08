@@ -8,7 +8,7 @@ description: Static-generation and SEO wiring — siteUrl runtime config, canoni
 - **`runtimeConfig.public.siteUrl`** (`nuxt.config.ts`) is the single source
   of truth for every absolute URL the app emits — canonical links, hreflang
   alternates, `og:url`/`og:image`, `sitemap.xml`, `robots.txt`'s `Sitemap:`
-  line. Default `https://readtes.org` (no domain is deployed yet);
+  line. Default `https://readtes.com` (the production domain);
   override at build time with `NUXT_PUBLIC_SITE_URL` (Nuxt's standard
   public-runtime-config env convention). `i18n.baseUrl` is wired from the
   same value, so `useLocaleHead()` emits absolute alternates.

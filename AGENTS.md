@@ -210,7 +210,7 @@ All of it must pass before committing.
 
 GitHub Actions runs the same gate for every pull request and push to `main`.
 Successful `main` builds retain `.output/public` as a seven-day deployment
-artifact built with `NUXT_PUBLIC_SITE_URL=https://readtes.org`.
+artifact built with `NUXT_PUBLIC_SITE_URL=https://readtes.com`.
 
 ## Instruction files
 

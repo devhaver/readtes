@@ -8,7 +8,7 @@ import {
   sitemapPaths,
 } from "../../shared/utils/sitemap";
 
-const SITE_URL = "https://readtes.org";
+const SITE_URL = "https://readtes.com";
 const realToc = toc as Toc;
 
 const allChapterIds = realToc.volumes.flatMap((volume) =>
