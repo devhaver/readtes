@@ -219,7 +219,7 @@ task-specific reference that loads on demand. The short version:
 
 ## License
 
-The code in this repository is **not yet licensed** — no `LICENSE` file has been
-chosen, so default copyright applies. Text content is licensed per version; see
-the table above. The Bnei Baruch / KabbalahMedia translations are used with
-permission and are not covered by any repository-wide license.
+The code in this repository is licensed under the **MIT License** — see
+`LICENSE`. Text content is licensed per version; see the table above. The Bnei
+Baruch / KabbalahMedia translations are used with permission and are not
+covered by the repository-wide license.
