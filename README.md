@@ -181,11 +181,16 @@ task docker:prod         # http://localhost:6219
 
 ### Cloudflare Pages
 
-| Setting                | Value            |
-| ---------------------- | ---------------- |
-| Build command          | `pnpm generate`  |
-| Build output directory | `.output/public` |
-| `NODE_VERSION`         | `24`             |
+| Setting                | Value           |
+| ---------------------- | --------------- |
+| Build command          | `pnpm generate` |
+| Build output directory | `dist`          |
+| `NODE_VERSION`         | `24`            |
+
+The output directory is `dist` (not the local `.output/public`): on Pages'
+build machines Nitro detects the Cloudflare environment and switches to its
+`cloudflare_pages` preset, which emits the static site to `dist/` and merges
+the committed `public/_headers` with its own generated `_headers`/`_redirects`.
 
 pnpm 11 is picked up automatically on Cloudflare's v2/v3 build system via
 corepack and the `packageManager` field in `package.json` — no separate pnpm
