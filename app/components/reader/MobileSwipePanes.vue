@@ -30,20 +30,24 @@
 // Sync is geometry-based, not `scrollLeft`-arithmetic — see
 // `~/utils/mobilePaneSync`'s doc comment for why. An `IntersectionObserver`
 // (scoped to the track as its own `root`) tracks each slide's visibility
-// ratio continuously; `scrollend` (supported by every evergreen browser
-// except Safari <17.4) is the commit point that turns those ratios into an
-// `activePane` update. Where `scrollend` isn't available, a small settle
-// timer (`createScrollSettleTimer`) polyfills the same "gesture has ended"
-// semantics instead of committing on every single ratio change — see that
-// util's doc comment for why an un-debounced fallback would fight a live
-// touch-drag and mis-commit on a multi-slide programmatic jump. Tab/pill
-// taps and cross-pane anchor jumps both just set `activePane`; the `watch`
-// below is the only thing that turns that into an actual `scrollIntoView`
-// (via `inline: "start"`, a logical value, so it's RTL-correct without a
-// `dir` check) — including on mount, so a fresh load lands snapped to
-// whichever pane is already `activePane` (source, by default) instead of
-// sitting on the DOM-first slide the browser scrolls to by default with
-// nothing else to say otherwise.
+// ratio continuously; the commit point is a short settle debounce
+// (`createScrollSettleTimer`) fed by every observer callback — NOT the
+// native `scrollend` event itself. `scrollend` fires the instant the
+// gesture stops, which is one rendering step ahead of the observer's final
+// ratio batch; resolving `activePane` from the ratios available at that
+// moment resolves the *pre-swipe* layout (stale "source: 1") and there is
+// no later scroll event to trigger a re-commit — the pill stays stuck on
+// the old tab with the track showing another slide. The settlement timer
+// instead fires once ~`settleMs` after the last ratio change, by which
+// point the final (settled) frame has been observed, so the commit always
+// resolves the post-swipe layout. Tab/pill taps and cross-pane anchor
+// jumps both just set `activePane`; the `watch` below is the only thing
+// that turns that into an actual `scrollIntoView` (via `inline: "start"`,
+// a logical value, so it's RTL-correct without a `dir` check) — including
+// on mount, so a fresh load lands snapped to whichever pane is already
+// `activePane` (source, by default) instead of sitting on the DOM-first
+// slide the browser scrolls to by default with nothing else to say
+// otherwise.
 //
 // `[contain:layout]` on the track + `min-w-0` on every slide (mobile-only —
 // both reset back to none/auto at `lg:`) are load-bearing, not decoration:
@@ -115,7 +119,6 @@ watch(
 );
 
 const ratios: PaneVisibilityRatios = reactive({});
-const usesScrollEnd = typeof window !== "undefined" && "onscrollend" in window;
 
 let observer: IntersectionObserver | null = null;
 
@@ -124,11 +127,14 @@ const commitActivePane = () => {
   if (next !== activePane.value) setActivePane(next);
 };
 
-const onScrollEnd = () => commitActivePane();
+const onScrollEnd = () => settleTimer.ping();
 
-// Only actually used on the no-`scrollend` fallback path (see `onIntersect`)
-// — harmless to always create, since `ping()` is simply never called when
-// `usesScrollEnd` is true.
+// The settle timer is the one commit path for every browser (see the module
+// doc above for why `scrollend` itself can't be the commit point). `ping()`
+// is called on every observer callback — whenever the settled scroll
+// position differs from the current one, the timer fires `commitActivePane`
+// once the ratios have stabilised, and `settleMs` of continued movement
+// keeps pushing the commit out until the gesture truly stops.
 const settleTimer = createScrollSettleTimer(commitActivePane);
 
 const onIntersect: IntersectionObserverCallback = (entries) => {
@@ -138,14 +144,13 @@ const onIntersect: IntersectionObserverCallback = (entries) => {
     if (!pane) continue;
     ratios[pane] = entry.intersectionRatio;
   }
-  // Safari <17.4 fallback: no native `scrollend` to key off, so every
-  // observer callback (re)starts the settle timer instead of committing
-  // immediately — see the module doc above and `createScrollSettleTimer`.
-  if (!usesScrollEnd) settleTimer.ping();
+  settleTimer.ping();
 };
 
 const attachTrackListeners = () => {
   if (typeof IntersectionObserver === "undefined" || !trackRef.value) return;
+
+  detachTrackListeners();
 
   observer = new IntersectionObserver(onIntersect, {
     root: trackRef.value,
@@ -156,9 +161,7 @@ const attachTrackListeners = () => {
     if (el) observer.observe(el);
   }
 
-  if (usesScrollEnd) {
-    trackRef.value.addEventListener("scrollend", onScrollEnd);
-  }
+  trackRef.value.addEventListener("scrollend", onScrollEnd);
 };
 
 const detachTrackListeners = () => {
@@ -168,14 +171,27 @@ const detachTrackListeners = () => {
   settleTimer.cancel();
 };
 
-watch(
-  isNarrowViewport,
-  (narrow) => {
-    detachTrackListeners();
-    if (narrow) attachTrackListeners();
-  },
-  { immediate: true, flush: "post" },
-);
+// Not `immediate` + `flush: "post"`: it would run during the module's first
+// `setup`, a full render step before `trackRef` is bound, and
+// `attachTrackListeners`' `!trackRef.value` guard would silently no-op —
+// the observer (and with it, the entire swipe-to-pane sync) would never
+// attach. `onMounted` below is the guaranteed-`trackRef`-ready first
+// attach point; this watcher handles viewport changeovers after that.
+watch(isNarrowViewport, (narrow) => {
+  detachTrackListeners();
+  if (narrow) attachTrackListeners();
+});
+
+onMounted(() => {
+  if (isNarrowViewport.value) attachTrackListeners();
+
+  // Snaps instantly (no motion to reduce, there's no prior on-screen
+  // state to visibly transition away from) to whichever slide is already
+  // `activePane` (source, by default) instead of leaving the browser's own
+  // "first slide in DOM order" scroll position silently mismatched against
+  // it.
+  scrollToPane(activePane.value, true);
+});
 
 onUnmounted(detachTrackListeners);
 

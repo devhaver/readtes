@@ -15,6 +15,16 @@ import type { SefariaIndexNode } from "./sefaria-api-types.ts";
 
 type LocalizedTitle = Record<string, string>;
 
+/**
+ * Sefaria's own index titles spell the inner-observation layer "Histaklut
+ * Penimit"; this site's transliteration is "Pnimit" (matching the
+ * `histaklut-pnimit` section id everywhere else). Normalize display
+ * titles on write so re-imports can never drift the corpus back to the
+ * Sefaria spelling — refs and provenance keep Sefaria's original strings.
+ */
+const normalizeEnTitle = (title: string): string =>
+  title.replace(/Penimit/g, "Pnimit");
+
 /** Stable display/sort order for chapter kinds within a part. */
 const KIND_ORDER: ChapterKind[] = [
   "chapter",
@@ -68,7 +78,7 @@ export const mainChapterTitle = (number: number): LocalizedTitle => ({
 /**
  * Title for a sibling-node chapter. When a node produces exactly one
  * chapter (e.g. a flat "List of Questions..." node), its own index title
- * is used verbatim; when it produces several (e.g. 10 Histaklut Penimit
+ * is used verbatim; when it produces several (e.g. 10 Histaklut Pnimit
  * chapters), each is numbered off the node's title.
  */
 export const siblingChapterTitle = (
@@ -77,9 +87,9 @@ export const siblingChapterTitle = (
   totalInKind: number,
 ): LocalizedTitle =>
   totalInKind === 1
-    ? { en: node.title, he: node.heTitle }
+    ? { en: normalizeEnTitle(node.title), he: node.heTitle }
     : {
-        en: `${node.title} ${number}`,
+        en: `${normalizeEnTitle(node.title)} ${number}`,
         he: `${node.heTitle} ${hebrewNumeral(number)}`,
       };
 

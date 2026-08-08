@@ -80,6 +80,11 @@ describe("sitemap URL builder", () => {
     const xml = renderSitemapXml(entries);
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>');
+    // The stylesheet PI comes straight after the declaration so browsers
+    // render the sitemap as a styled table instead of raw XML.
+    expect(xml).toContain(
+      '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap-style.xsl"?>',
+    );
     expect(xml).toContain(
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
     );

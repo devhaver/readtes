@@ -28,7 +28,7 @@ const aiTranslatedChapter: TocChapter = {
   id: "part-01/inner-observation-01",
   kind: "inner-observation",
   number: 1,
-  title: { en: "Histaklut Penimit 1", he: "הסתכלות פנימית א׳" },
+  title: { en: "Histaklut Pnimit 1", he: "הסתכלות פנימית א׳" },
   availableLayers: ["source"],
   availableVersions: {
     summary: [],

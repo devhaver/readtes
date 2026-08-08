@@ -50,9 +50,13 @@ const languageLabel = (
 </script>
 
 <template>
+  <!-- The stretched link (`after:absolute after:inset-0`, see the title
+       link below) makes the WHOLE card clickable — the volume list is the
+       page's whole purpose, so clicking anywhere on the card should open
+       its contents page, not just the title line. -->
   <div
-    class="flex overflow-hidden rounded-card border border-(--border) bg-(--surface) shadow-sm"
-    :class="{ 'opacity-60': !active }"
+    class="relative flex overflow-hidden rounded-card border border-(--border) bg-(--surface) shadow-sm transition-colors"
+    :class="{ 'hover:border-teal/60': active, 'opacity-60': !active }"
   >
     <div
       class="flex w-14 shrink-0 items-center justify-center bg-navy-primary font-display text-2xl text-surface-white sm:w-16"
@@ -67,7 +71,7 @@ const languageLabel = (
           <NuxtLink
             v-if="active"
             :to="href"
-            class="rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="after:absolute after:inset-0 rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
           >
             {{ title }}
           </NuxtLink>
