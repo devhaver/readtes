@@ -157,6 +157,14 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2025-07-15",
+  // T14 scaling fix — artifact is over Cloudflare Pages' 20,000-file limit
+  // without this: `experimental.payloadExtraction` emits one `_payload.json`
+  // per prerendered route (10,314 extra files). Safe here because chapter
+  // text is deliberately NOT loaded through `useAsyncData` —
+  // `useChapterContent`/`useLocalizedParts` ride statically bundled JSON
+  // modules via direct `await import()`, so the payload carries only
+  // incidental route state, duplicated per route.
+  experimental: { payloadExtraction: false },
   // /design-tokens is a dev-only debug page kept around from the token
   // scaffolding task; never ship it (or its localized variants — @nuxtjs/i18n
   // seeds every locale's copy of every static page into the prerender crawl,
