@@ -127,10 +127,36 @@ test.describe("mobile reader", () => {
     await modes.getByRole("button", { name: "Panes" }).click();
     const paneTabs = page.getByRole("tablist", { name: "Reader pane" });
     await expect(paneTabs).toBeVisible();
+    const trackScrollLeft = () =>
+      page.evaluate(
+        () =>
+          document.querySelector("#reader-source-pane")?.parentElement
+            ?.scrollLeft ?? 0,
+      );
+
+    // Pill tap moves the track (regression: a tap used to flip
+    // aria-selected without scrolling the track at all on some engines).
     await paneTabs.getByRole("tab", { name: "Inner Light" }).click();
     await expect(
       paneTabs.getByRole("tab", { name: "Inner Light" }),
     ).toHaveAttribute("aria-selected", "true");
     await expect(page.locator("#reader-commentary-pane")).toBeInViewport();
+    await expect.poll(trackScrollLeft).toBeGreaterThan(0);
+
+    // Swipe to the last slide, then tap back — the tap must scroll the
+    // track even while the swipe's settle timer is still pending.
+    await page.evaluate(() => {
+      const track = document.querySelector(
+        "#reader-source-pane",
+      )?.parentElement;
+      track?.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+    });
+    await expect.poll(trackScrollLeft).toBeGreaterThan(0);
+    await paneTabs.getByRole("tab", { name: "The Ari's Text" }).click();
+    await expect(
+      paneTabs.getByRole("tab", { name: "The Ari's Text" }),
+    ).toHaveAttribute("aria-selected", "true");
+    await expect(page.locator("#reader-source-pane")).toBeInViewport();
+    await expect.poll(trackScrollLeft).toBe(0);
   });
 });

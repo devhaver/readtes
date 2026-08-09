@@ -1,7 +1,8 @@
 // Thin wiring coverage for `MobileSwipePanes` over the tested pure
 // `resolveActivePane` (`mobile-pane-sync.spec.ts`): renders the slides
 // with their `data-pane` markers, and confirms `activePane` changes drive a
-// `scrollIntoView` call on the matching slide once the narrow-viewport
+// direct `scrollTo` on the track (not the slide's `scrollIntoView` — see
+// the component's `scrollToPane` comment for why) once the narrow-viewport
 // media query matches. The reverse direction — a real swipe gesture
 // settling on a slide via `IntersectionObserver`/`scrollend` — needs a
 // manual pass on an actual device/browser: happy-dom's `IntersectionObserver`
@@ -57,7 +58,7 @@ const Host = defineComponent({
 describe("MobileSwipePanes", () => {
   beforeEach(() => {
     vi.unstubAllGlobals();
-    Element.prototype.scrollIntoView = vi.fn();
+    Element.prototype.scrollTo = vi.fn();
   });
 
   it("renders all three slides with their data-pane marker, always mounted", async () => {
@@ -115,7 +116,7 @@ describe("MobileSwipePanes", () => {
     expect(wrapper.vm.state.activePane.value).toBe("source");
   });
 
-  it("scrolls the matching slide into view when activePane changes on a narrow viewport", async () => {
+  it("scrolls the track to the matching slide when activePane changes on a narrow viewport", async () => {
     stubMatchMedia(true);
     const wrapper = await mountSuspended(Host);
     await nextTick();
@@ -123,7 +124,7 @@ describe("MobileSwipePanes", () => {
     wrapper.vm.state.setActivePane("commentary");
     await nextTick();
 
-    expect(Element.prototype.scrollIntoView).toHaveBeenCalled();
+    expect(Element.prototype.scrollTo).toHaveBeenCalled();
   });
 
   it("never auto-scrolls on a wide (desktop grid) viewport", async () => {
@@ -134,6 +135,6 @@ describe("MobileSwipePanes", () => {
     wrapper.vm.state.setActivePane("commentary");
     await nextTick();
 
-    expect(Element.prototype.scrollIntoView).not.toHaveBeenCalled();
+    expect(Element.prototype.scrollTo).not.toHaveBeenCalled();
   });
 });

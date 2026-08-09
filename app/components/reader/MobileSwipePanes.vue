@@ -41,13 +41,13 @@
 // instead fires once ~`settleMs` after the last ratio change, by which
 // point the final (settled) frame has been observed, so the commit always
 // resolves the post-swipe layout. Tab/pill taps and cross-pane anchor
-// jumps both just set `activePane`; the `watch` below is the only thing
-// that turns that into an actual `scrollIntoView` (via `inline: "start"`,
-// a logical value, so it's RTL-correct without a `dir` check) — including
-// on mount, so a fresh load lands snapped to whichever pane is already
-// `activePane` (source, by default) instead of sitting on the DOM-first
-// slide the browser scrolls to by default with nothing else to say
-// otherwise.
+// jumps both just set `activePane`; the `watch` on it is the only thing
+// that turns that into an actual track scroll (`scrollToPane` — a direct
+// `track.scrollTo`, see its own comment for why not `scrollIntoView`),
+// including on mount, so a fresh load lands snapped to whichever pane is
+// already `activePane` (source, by default) instead of sitting on the
+// DOM-first slide the browser scrolls to by default with nothing else to
+// say otherwise.
 //
 // `[contain:layout]` on the track + `min-w-0` on every slide (mobile-only —
 // both reset back to none/auto at `lg:`) are load-bearing, not decoration:
@@ -197,26 +197,27 @@ onUnmounted(detachTrackListeners);
 
 const scrollToPane = (pane: PaneId, instant: boolean) => {
   if (!isNarrowViewport.value) return;
-  slideRefs[pane].value?.scrollIntoView({
+  const track = trackRef.value;
+  const slide = slideRefs[pane].value;
+  if (!track || !slide) return;
+
+  // Scroll the track directly instead of `slide.scrollIntoView()`: the
+  // track is a `contain: layout` scroll-snap container (see the module doc
+  // above — both properties are load-bearing on real mobile browsers), and
+  // WebKit's `scrollIntoView` resolution through that combination is
+  // unreliable — on touch devices a pill tap can end up scrolling nothing
+  // at all. Computing the target ourselves is geometry, so it behaves
+  // identically in every engine and RTL is handled by the fact that
+  // `getBoundingClientRect().left` is already a physical coordinate.
+  const target =
+    Math.round(
+      slide.getBoundingClientRect().left - track.getBoundingClientRect().left,
+    ) + track.scrollLeft;
+  track.scrollTo({
+    left: target,
     behavior: instant || prefersReducedMotion() ? "auto" : "smooth",
-    inline: "start",
-    block: "nearest",
   });
 };
-
-// `onMounted`, not an `immediate` watch: template refs are only guaranteed
-// populated once the component has actually mounted, and (unlike
-// `useFocusTrap`'s own `immediate`+`flush: "post"` watch, which reacts to a
-// *prop* flipping true after this component already exists) this needs to
-// run for the very state this component is born into — this *is* the
-// mount. Snaps instantly (no motion to reduce, there's no prior on-screen
-// state to visibly transition away from) to whichever slide is already
-// `activePane` (source, by default) instead of leaving the browser's own
-// "first slide in DOM order" scroll position silently mismatched against
-// it.
-onMounted(() => {
-  scrollToPane(activePane.value, true);
-});
 
 watch(activePane, (pane) => {
   scrollToPane(pane, false);
