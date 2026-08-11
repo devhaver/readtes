@@ -64,6 +64,19 @@ describe("groupCommentaryBySection", () => {
   it("returns an empty array for no items", () => {
     expect(groupCommentaryBySection([])).toEqual([]);
   });
+
+  it("interleaves unanchored items among anchored ones strictly by order, not grouped to either end", () => {
+    const items = [
+      item("op-1", 1, "ohr-pnimi", 1),
+      unanchoredItem("op-2", 2, "ohr-pnimi"),
+      item("op-3", 3, "ohr-pnimi", 2),
+      unanchoredItem("op-4", 4, "ohr-pnimi"),
+    ];
+
+    expect(
+      groupCommentaryBySection(items)[0]?.items.map((i) => i.anchorId),
+    ).toEqual(["op-1", "op-2", "op-3", "op-4"]);
+  });
 });
 
 describe("commentaryItemsForSeif", () => {
@@ -107,5 +120,76 @@ describe("commentaryItemsForSeif", () => {
       "op-1",
     ]);
     expect(commentaryItemsForSeif(items, 9)).toEqual([]);
+  });
+});
+
+describe("isAnchoredCommentaryItem", () => {
+  it("is true for an item with targetSeif", () => {
+    expect(isAnchoredCommentaryItem(item("op-1", 1, "ohr-pnimi", 1))).toBe(
+      true,
+    );
+  });
+
+  it("is false for an item without targetSeif", () => {
+    expect(
+      isAnchoredCommentaryItem(unanchoredItem("op-1", 1, "ohr-pnimi")),
+    ).toBe(false);
+  });
+});
+
+describe("hasAnchoredCommentaryItems / hasUnanchoredCommentaryItems", () => {
+  it("anchored-only chapter: has anchored, has no unanchored", () => {
+    const items = [
+      item("op-1", 1, "ohr-pnimi", 1),
+      item("op-2", 2, "ohr-pnimi", 2),
+    ];
+
+    expect(hasAnchoredCommentaryItems(items)).toBe(true);
+    expect(hasUnanchoredCommentaryItems(items)).toBe(false);
+  });
+
+  it("unanchored-only chapter: has no anchored, has unanchored", () => {
+    const items = [
+      unanchoredItem("op-1", 1, "ohr-pnimi"),
+      unanchoredItem("op-2", 2, "ohr-pnimi"),
+    ];
+
+    expect(hasAnchoredCommentaryItems(items)).toBe(false);
+    expect(hasUnanchoredCommentaryItems(items)).toBe(true);
+  });
+
+  it("mixed chapter: has both", () => {
+    const items = [
+      item("op-1", 1, "ohr-pnimi", 1),
+      unanchoredItem("op-2", 2, "ohr-pnimi"),
+    ];
+
+    expect(hasAnchoredCommentaryItems(items)).toBe(true);
+    expect(hasUnanchoredCommentaryItems(items)).toBe(true);
+  });
+
+  it("empty chapter (no commentary at all): has neither", () => {
+    expect(hasAnchoredCommentaryItems([])).toBe(false);
+    expect(hasUnanchoredCommentaryItems([])).toBe(false);
+  });
+});
+
+describe("unanchoredCommentaryItems", () => {
+  it("selects only unanchored items, sorted by order", () => {
+    const items = [
+      unanchoredItem("op-3", 3, "ohr-pnimi"),
+      item("op-2", 2, "ohr-pnimi", 1),
+      unanchoredItem("op-1", 1, "ohr-pnimi"),
+    ];
+
+    expect(unanchoredCommentaryItems(items).map((i) => i.anchorId)).toEqual([
+      "op-1",
+      "op-3",
+    ]);
+  });
+
+  it("returns an empty array for an anchored-only chapter", () => {
+    const items = [item("op-1", 1, "ohr-pnimi", 1)];
+    expect(unanchoredCommentaryItems(items)).toEqual([]);
   });
 });

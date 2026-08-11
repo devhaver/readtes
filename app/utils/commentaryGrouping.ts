@@ -40,3 +40,41 @@ export const commentaryItemsForSeif = (
   items
     .filter((item) => item.targetSeif === seifN)
     .sort((a, b) => a.order - b.order);
+
+/**
+ * Anchored/unanchored is the same `targetSeif`-presence distinction
+ * `validate-content.ts` and the content-model doc comment use (issue #79):
+ * an item WITH `targetSeif` names an exact source seif and round-trips with
+ * a `tes-anchor` marker there; an item WITHOUT one belongs to a known
+ * chapter with no known seif — see `commentaryItemSchema`'s doc comment in
+ * `shared/types/content.ts`.
+ */
+export const isAnchoredCommentaryItem = (item: CommentaryItem): boolean =>
+  item.targetSeif !== undefined;
+
+/**
+ * Whether ANY item in this set is anchored — the gate every per-seif
+ * affordance (`CommentarySheet`'s open, `StudyStream`'s inline disclosures)
+ * must key off, so a chapter whose commentary is entirely unanchored never
+ * opens an empty "no commentary for this seif" surface (issue #79).
+ */
+export const hasAnchoredCommentaryItems = (items: CommentaryItem[]): boolean =>
+  items.some(isAnchoredCommentaryItem);
+
+/** Whether this set has at least one unanchored item — drives the pane's "not yet aligned" notice and study mode's own unanchored section. */
+export const hasUnanchoredCommentaryItems = (
+  items: CommentaryItem[],
+): boolean => items.some((item) => !isAnchoredCommentaryItem(item));
+
+/**
+ * The unanchored items in this set, sorted by `order` (the reading order —
+ * see `commentaryItemSchema`'s doc comment). Powers study mode's own
+ * titled, collapsed-by-default section for commentary that can't be
+ * anchored inline to a source seif (`StudyStream`).
+ */
+export const unanchoredCommentaryItems = (
+  items: CommentaryItem[],
+): CommentaryItem[] =>
+  items
+    .filter((item) => !isAnchoredCommentaryItem(item))
+    .sort((a, b) => a.order - b.order);
