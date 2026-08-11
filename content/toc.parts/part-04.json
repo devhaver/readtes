@@ -8,11 +8,11 @@
     }
   },
   "volume": {
-    "id": "volume-02",
-    "number": 2,
+    "id": "volume-01",
+    "number": 1,
     "title": {
-      "en": "Volume 2",
-      "he": "כרך 2"
+      "en": "Volume 1",
+      "he": "כרך 1"
     }
   },
   "chapters": [

@@ -31,6 +31,12 @@ Don't delete or weaken these to make a change pass — fix the change:
   `stripContentChunkPrefetchHints` in `shared/utils/manifestPrefetch.ts`,
   the fix that keeps generated pages from carrying thousands of prefetch
   links. See `tes-content-model`.
+- `tests/unit/volume-grouping.spec.ts` — pins the volume -> part grouping in
+  `content/toc.volumes.json` to Bnei Baruch's published edition (Vol 1 =
+  parts 1-4, 2 = 5-7, 3 = 8-10, 4 = 11-12, 5 = 13-14, 6 = 15-16). Sefaria
+  groups the same parts differently and we shipped that by accident once;
+  regroup `content/toc.json` and re-run `pnpm emit:toc-splits` rather than
+  editing the expectation.
 
 ## Definition of done
 

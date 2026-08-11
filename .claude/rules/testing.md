@@ -12,6 +12,7 @@ paths:
   with `mountSuspended` from `@nuxt/test-utils/runtime` — plain `mount` won't
   resolve auto-imports or async setup.
 - **Some specs are architectural guardrails, not unit tests**:
-  `no-full-toc-import`, `content-integrity`, `manifest-prefetch`, `sitemap`.
+  `no-full-toc-import`, `content-integrity`, `manifest-prefetch`, `sitemap`,
+  `volume-grouping`.
   If one fails, fix the change — never weaken or delete the spec to make it
   pass.
