@@ -262,4 +262,132 @@ describe("content integrity — translated versions", () => {
       'does not preserve "he-source" n, sefariaRef, and anchors',
     );
   });
+
+  it("still applies the strict index-aligned check to a chapter not passed in consolidatedQaChapterIds, even with a subset translation", () => {
+    const errors: string[] = [];
+    const sourceTwoItems: LoadedChapterFile = {
+      relativePath: "parts/part-01/chapters/chapter-01/source.he-source.json",
+      chapterDirId: "part-01/chapter-01",
+      file: {
+        chapterId: "part-01/chapter-01",
+        layer: "source",
+        versionId: "he-source",
+        items: [
+          { n: 1, sefariaRef: "TES 1:1", html: "<p>1</p>", anchors: [] },
+          { n: 2, sefariaRef: "TES 1:2", html: "<p>2</p>", anchors: [] },
+        ],
+      },
+    };
+
+    checkTranslatedVersionIntegrity(
+      versions,
+      [sourceTwoItems, sourceFile("en-translation")], // only 1 item — legal for a Q&A chapter, not for an ordinary one
+      errors,
+      new Set(), // empty: this chapter is not in the consolidated-QA scope
+    );
+
+    expect(errors[0]).toContain(
+      'translated source has 1 item(s), but "he-source" has 2',
+    );
+  });
+});
+
+describe("content integrity — Q&A subset translations (issue #91)", () => {
+  it("accepts a translation covering only some answers, matched by n", () => {
+    const { errors } = validateContent(join(fixturesDir, "qa-subset-valid"));
+
+    expect(nonBoilerplateErrors(errors)).toEqual([]);
+  });
+
+  it("fires when a translated item's n has no counterpart in the source", () => {
+    const { errors } = validateContent(join(fixturesDir, "qa-subset-orphan"));
+
+    expect(errors).toContain(
+      'parts/part-01/chapters/answers-terminology-01/source.v2.json: translated source item n=99 (Fixture 99:1) has no counterpart in "v1"',
+    );
+  });
+
+  it("fires when a translated item's n matches but sefariaRef disagrees", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "qa-subset-identity-mismatch"),
+    );
+
+    expect(errors).toContain(
+      'parts/part-01/chapters/answers-terminology-01/source.v2.json: translated source item n=1 does not preserve "v1" sefariaRef and anchors',
+    );
+  });
+
+  it("does not relax the check for an ordinary chapter kind, even when it happens to be a subset", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "qa-subset-scoping-ordinary-chapter"),
+    );
+
+    expect(errors).toContain(
+      'parts/part-01/chapters/chapter-01/source.v2.json: translated source has 1 item(s), but "v1" has 2',
+    );
+  });
+
+  it("disambiguates several same-n items (an answer broken into several segments) by sefariaRef", () => {
+    const errors: string[] = [];
+    const versions: ContentVersion[] = [
+      {
+        id: "he-source",
+        language: "he",
+        direction: "rtl",
+        title: "Hebrew",
+        license: "Public Domain",
+        source: "sefaria",
+      },
+      {
+        id: "en-translation",
+        language: "en",
+        direction: "ltr",
+        title: "English",
+        license: "CC0",
+        source: "ai",
+        translatedFrom: "he-source",
+      },
+    ];
+    const source: LoadedChapterFile = {
+      relativePath:
+        "parts/part-01/chapters/answers-terminology-01/source.he-source.json",
+      chapterDirId: "part-01/answers-terminology-01",
+      file: {
+        chapterId: "part-01/answers-terminology-01",
+        layer: "source",
+        versionId: "he-source",
+        items: [
+          { n: 5, sefariaRef: "TES 5:1", html: "<p>part 1</p>", anchors: [] },
+          { n: 5, sefariaRef: "TES 5:2", html: "<p>part 2</p>", anchors: [] },
+        ],
+      },
+    };
+    const translated: LoadedChapterFile = {
+      relativePath:
+        "parts/part-01/chapters/answers-terminology-01/source.en-translation.json",
+      chapterDirId: "part-01/answers-terminology-01",
+      file: {
+        chapterId: "part-01/answers-terminology-01",
+        layer: "source",
+        versionId: "en-translation",
+        items: [
+          {
+            n: 5,
+            sefariaRef: "TES 5:2",
+            html: "<p>translated part 2</p>",
+            anchors: [],
+          },
+        ],
+      },
+    };
+
+    checkTranslatedVersionIntegrity(
+      versions,
+      [source, translated],
+      errors,
+      new Set(["part-01/answers-terminology-01"]),
+    );
+
+    expect(errors).toEqual([]);
+  });
 });
