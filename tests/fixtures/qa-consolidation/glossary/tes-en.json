@@ -1,0 +1,28 @@
+{
+  "$schema": "https://readtes.com/schemas/glossary.json",
+  "generatedFrom": {
+    "sourceVersion": "he-jerusalem-1956",
+    "referenceVersion": "en-bb",
+    "repoPath": "content/parts",
+    "generatedOn": "2026-01-01",
+    "method": "fixture — not a real derivation",
+    "alignedFilePairs": 0,
+    "alignedChapters": 0,
+    "alignedItemPairs": 0,
+    "unalignedFallbackChapters": 0,
+    "itemLevelFailureRatePct": 0,
+    "fileLevelFailureRatePct": 0,
+    "hebrewCharsAligned": 0,
+    "englishCharsAligned": 0,
+    "partsCovered": [],
+    "partsNotCovered": ["part-01"]
+  },
+  "alignedChapterCount": 0,
+  "usage": "Fixture glossary — empty on purpose, only present so validateContent's glossary check has something to derive against.",
+  "entryCount": 0,
+  "entries": [],
+  "conventions": [],
+  "inconsistencies": [],
+  "knownGaps": [],
+  "revisions": []
+}

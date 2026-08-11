@@ -1,0 +1,19 @@
+[
+  {
+    "id": "v1",
+    "language": "he",
+    "direction": "rtl",
+    "title": "Fixture Source",
+    "license": "Public Domain",
+    "source": "sefaria"
+  },
+  {
+    "id": "v2",
+    "language": "en",
+    "direction": "ltr",
+    "title": "Fixture Translation",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "v1"
+  }
+]

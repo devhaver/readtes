@@ -1,0 +1,28 @@
+[
+  {
+    "id": "he-jerusalem-1956",
+    "language": "he",
+    "direction": "rtl",
+    "title": "ירושלים, תשט\"ז–תשכ\"ו",
+    "license": "Public Domain",
+    "source": "sefaria",
+    "sefariaVersionTitle": "Jerusalem, 1956-1966"
+  },
+  {
+    "id": "en-ai",
+    "language": "en",
+    "direction": "ltr",
+    "title": "English (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "en-bb",
+    "language": "en",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia)",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
+  }
+]
