@@ -5,8 +5,8 @@
 // Always visible while this mode is active: it does not participate in
 // study mode's auto-hiding chrome (that mechanism doesn't run in panes
 // mode at all — see `useAutoHidingChrome`), and hides only while
-// `CommentarySheet` is open (`useCommentarySheet`), so the two floating
-// surfaces never overlap.
+// `CommentarySheet` (`useCommentarySheet`) or the Contents panel
+// (`useContentsPanel`) is open, so no two floating surfaces ever overlap.
 //
 // `panes`: the panes that actually exist for this chapter (from
 // `resolveReaderPanes` via `MobileSwipePanes`) — `segments` renders a tab
@@ -63,6 +63,7 @@ const segments = computed<Segment[]>(() =>
 const { t } = useI18n();
 const { activePane, setActivePane } = useReaderState();
 const { isOpen: isSheetOpen } = useCommentarySheet();
+const { isOpen: isContentsOpen } = useContentsPanel();
 
 const tabRefs = ref<(HTMLElement | null)[]>([]);
 const setTabRef = (
@@ -104,7 +105,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
 
 <template>
   <div
-    v-if="!isSheetOpen && segments.length > 1"
+    v-if="!isSheetOpen && !isContentsOpen && segments.length > 1"
     class="pointer-events-none fixed inset-x-0 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-30 flex justify-center lg:hidden"
   >
     <div

@@ -290,6 +290,13 @@ const commentarySheetItems = computed(() =>
     : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
 );
 
+// `ReaderContentsPanel` (T90): the toolbar's Contents button opens the
+// whole volumes -> parts tree. `useContentsPanel` owns the open/closed
+// state (provide/inject singleton, same shape as `useCommentarySheet`
+// above) so `MobilePanePill` can hide itself while it's open — called here
+// so it's provided by this page, an ancestor of both.
+useContentsPanel();
+
 const partTitle = computed(() => localizedTitle(partFile.part.title));
 
 useLocalizedSeo({
@@ -310,6 +317,9 @@ useLocalizedSeo({
         <ReaderToolbar
           :chapter-title="chapterTitle"
           :breadcrumb-items="breadcrumbItems"
+          :volumes="volumes"
+          :current-volume-id="partFile.volume.id"
+          :current-part-id="partFile.part.id"
           :prev="prev"
           :next="next"
         />
@@ -390,6 +400,9 @@ useLocalizedSeo({
       <ReaderToolbar
         :chapter-title="chapterTitle"
         :breadcrumb-items="breadcrumbItems"
+        :volumes="volumes"
+        :current-volume-id="partFile.volume.id"
+        :current-part-id="partFile.part.id"
         :prev="prev"
         :next="next"
       />
@@ -420,6 +433,9 @@ useLocalizedSeo({
       <ReaderToolbar
         :chapter-title="chapterTitle"
         :breadcrumb-items="breadcrumbItems"
+        :volumes="volumes"
+        :current-volume-id="partFile.volume.id"
+        :current-part-id="partFile.part.id"
         :prev="prev"
         :next="next"
       />

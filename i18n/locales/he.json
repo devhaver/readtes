@@ -81,7 +81,15 @@
     },
     "progressLabel": "התקדמות בקריאה",
     "toolbar": {
-      "preferencesButton": "העדפות קריאה"
+      "preferencesButton": "העדפות קריאה",
+      "contentsButton": "תוכן העניינים"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "עיינו בכל הפרקים"
+    },
+    "contents": {
+      "title": "תוכן העניינים",
+      "close": "סגור"
     },
     "mobilePane": {
       "label": "חלונית הקורא",
