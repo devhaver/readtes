@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-13/chapter-02",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ז' תיקונים יש בהאי רישא וכו':</b> דהיינו מהארת ז\"ת דעתיק המאירים בהם. שהם ז\"ס חג\"ת נהי\"מ ופירושם יתבאר להלן."
+    }
+  ]
+}

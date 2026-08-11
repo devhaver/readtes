@@ -25,7 +25,8 @@
         "he": "פרק א׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -33,7 +34,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -45,7 +48,8 @@
         "he": "פרק ב׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -53,7 +57,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -65,7 +71,8 @@
         "he": "פרק ג׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -73,7 +80,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -125,7 +134,8 @@
         "he": "פרק ו׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -133,7 +143,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -145,7 +157,8 @@
         "he": "פרק ז׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -153,7 +166,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -165,7 +180,8 @@
         "he": "פרק ח׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -173,7 +189,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -185,7 +203,8 @@
         "he": "פרק ט׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -193,7 +212,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -205,7 +226,8 @@
         "he": "פרק י׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -213,7 +235,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -225,7 +249,8 @@
         "he": "פרק י״א"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -233,7 +258,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -245,7 +272,8 @@
         "he": "פרק י״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -253,7 +281,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -265,7 +295,8 @@
         "he": "פרק י״ג"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -273,7 +304,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -285,7 +318,8 @@
         "he": "פרק י״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -293,7 +327,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -325,7 +361,8 @@
         "he": "פרק ט״ז"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -333,7 +370,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -345,7 +384,8 @@
         "he": "פרק י״ז"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -353,7 +393,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -385,7 +427,8 @@
         "he": "פרק י״ט"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -393,7 +436,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -405,7 +450,8 @@
         "he": "פרק כ׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -413,7 +459,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -425,7 +473,8 @@
         "he": "פרק כ״א"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -433,7 +482,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -445,7 +496,8 @@
         "he": "פרק כ״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -453,7 +505,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -485,7 +539,8 @@
         "he": "פרק כ״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -493,7 +548,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -505,7 +562,8 @@
         "he": "פרק כ״ה"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -513,7 +571,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -525,7 +585,8 @@
         "he": "פרק כ״ו"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -533,7 +594,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -545,7 +608,8 @@
         "he": "פרק כ״ז"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -553,7 +617,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -565,7 +631,8 @@
         "he": "פרק כ״ח"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -573,7 +640,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -605,7 +674,8 @@
         "he": "פרק ל׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -613,7 +683,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -665,7 +737,8 @@
         "he": "פרק ל״ג"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -673,7 +746,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -685,7 +760,8 @@
         "he": "פרק ל״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -693,7 +769,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -705,7 +783,8 @@
         "he": "פרק ל״ה"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -713,7 +792,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -725,7 +806,8 @@
         "he": "פרק ל״ו"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -733,7 +815,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -745,7 +829,8 @@
         "he": "פרק ל״ז"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -753,7 +838,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -765,7 +852,8 @@
         "he": "פרק ל״ח"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -773,7 +861,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -805,7 +895,8 @@
         "he": "פרק מ׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -813,7 +904,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -845,7 +938,8 @@
         "he": "פרק מ״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -853,7 +947,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -885,7 +981,8 @@
         "he": "פרק מ״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -893,7 +990,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -925,7 +1024,8 @@
         "he": "פרק מ״ו"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -933,7 +1033,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -985,7 +1087,8 @@
         "he": "פרק מ״ט"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -993,7 +1096,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1005,7 +1110,8 @@
         "he": "פרק נ׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1013,7 +1119,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1025,7 +1133,8 @@
         "he": "פרק נ״א"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1033,7 +1142,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1045,7 +1156,8 @@
         "he": "פרק נ״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1053,7 +1165,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1065,7 +1179,8 @@
         "he": "פרק נ״ג"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1073,7 +1188,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1165,7 +1282,8 @@
         "he": "פרק נ״ח"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1173,7 +1291,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1205,7 +1325,8 @@
         "he": "פרק ס׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1213,7 +1334,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1225,7 +1348,8 @@
         "he": "פרק ס״א"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1233,7 +1357,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1245,7 +1371,8 @@
         "he": "פרק ס״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1253,7 +1380,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1285,7 +1414,8 @@
         "he": "פרק ס״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1293,7 +1423,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1325,7 +1457,8 @@
         "he": "פרק ס״ו"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1333,7 +1466,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1345,7 +1480,8 @@
         "he": "פרק ס״ז"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1353,7 +1489,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1365,7 +1503,8 @@
         "he": "פרק ס״ח"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1373,7 +1512,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1385,7 +1526,8 @@
         "he": "פרק ס״ט"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1393,7 +1535,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1445,7 +1589,8 @@
         "he": "פרק ע״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1453,7 +1598,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1465,7 +1612,8 @@
         "he": "פרק ע״ג"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1473,7 +1621,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1565,7 +1715,8 @@
         "he": "פרק ע״ח"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1573,7 +1724,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1645,7 +1798,8 @@
         "he": "פרק פ״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1653,7 +1807,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -1885,7 +2041,8 @@
         "he": "פרק צ״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -1893,7 +2050,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2005,7 +2164,8 @@
         "he": "פרק ק׳"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2013,7 +2173,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2025,7 +2187,8 @@
         "he": "פרק ק״א"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2033,7 +2196,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2045,7 +2210,8 @@
         "he": "פרק ק״ב"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2053,7 +2219,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2065,7 +2233,8 @@
         "he": "פרק ק״ג"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2073,7 +2242,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2085,7 +2256,8 @@
         "he": "פרק ק״ד"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2093,7 +2265,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2105,7 +2279,8 @@
         "he": "פרק ק״ה"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2113,7 +2288,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2125,7 +2302,8 @@
         "he": "פרק ק״ו"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2133,7 +2311,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2145,7 +2325,8 @@
         "he": "פרק ק״ז"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2153,7 +2334,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2165,7 +2348,8 @@
         "he": "פרק ק״ח"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2173,7 +2357,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {
@@ -2185,7 +2371,8 @@
         "he": "פרק ק״ט"
       },
       "availableLayers": [
-        "source"
+        "source",
+        "commentary"
       ],
       "availableVersions": {
         "summary": [],
@@ -2193,7 +2380,9 @@
           "en-ai",
           "he-jerusalem-1956"
         ],
-        "commentary": []
+        "commentary": [
+          "he-jerusalem-1956"
+        ]
       }
     },
     {

@@ -258,27 +258,35 @@ export const checkTranslatedVersionIntegrity = (
         translated.file.layer === "commentary" &&
         source.file.layer === "commentary"
       ) {
+        // A translation may legitimately cover a SUBSET of the source's
+        // items: the unanchored import (#79) regrows a chapter's Hebrew
+        // commentary with previously-discarded items, and their
+        // translations arrive later (#87). What is never legitimate is a
+        // translated item with no source counterpart, or one whose
+        // identity (anchorId → order/targetSeif) disagrees with its
+        // counterpart — count equality was only ever a proxy for that.
         const translatedItems = translated.file.items;
-        const sourceItems = source.file.items;
-        if (translatedItems.length !== sourceItems.length) {
-          errors.push(
-            `${translated.relativePath}: translated commentary has ${translatedItems.length} item(s), but "${version.translatedFrom}" has ${sourceItems.length}`,
-          );
-          continue;
-        }
+        const sourceById = new Map(
+          source.file.items.map((item) => [item.anchorId, item]),
+        );
 
-        translatedItems.forEach((item, index) => {
-          const sourceItem = sourceItems[index];
+        for (const item of translatedItems) {
+          const sourceItem = sourceById.get(item.anchorId);
+          if (!sourceItem) {
+            errors.push(
+              `${translated.relativePath}: translated commentary item "${item.anchorId}" has no counterpart in "${version.translatedFrom}"`,
+            );
+            continue;
+          }
           if (
-            !sourceItem ||
-            item.anchorId !== sourceItem.anchorId ||
+            item.order !== sourceItem.order ||
             item.targetSeif !== sourceItem.targetSeif
           ) {
             errors.push(
-              `${translated.relativePath}: translated commentary item ${index + 1} does not preserve "${version.translatedFrom}" anchorId and targetSeif`,
+              `${translated.relativePath}: translated commentary item "${item.anchorId}" does not preserve "${version.translatedFrom}" order and targetSeif`,
             );
           }
-        });
+        }
       }
     }
   }

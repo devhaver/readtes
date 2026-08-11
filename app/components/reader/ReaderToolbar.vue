@@ -77,6 +77,8 @@ const {
           type="button"
           class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
           :aria-label="t('reader.toolbar.contentsButton')"
+          aria-haspopup="dialog"
+          :aria-expanded="showContents"
           @click="openContents"
         >
           <svg

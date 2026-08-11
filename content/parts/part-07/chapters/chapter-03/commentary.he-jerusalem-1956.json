@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-07/chapter-03",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:3",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:3:1",
+      "section": "ohr-pnimi",
+      "html": "<b>שבעה מלכים הם עשרה</b>: כלומר, כי לא לבד שז\"ת חג\"ת נהי\"ם של הקטנות כוללים ג\"כ ע\"ס, דהיינו ע\"ס שבכל אחת יש בה חג\"ת נהי\"ם, אלא עוד היה בהם זווג דגדלות שיש בהם ג\"ר ממש, דהיינו גם חב\"ד. כמ\"ש להלן."
+    }
+  ]
+}

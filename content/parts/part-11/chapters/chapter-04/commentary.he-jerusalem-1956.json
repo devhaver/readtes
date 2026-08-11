@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-11/chapter-04",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 11:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 11:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ואבא מכסה ומלביש צד ימין</b> וכו': עי' לעיל דף תתקל\"ט אות קל\"ח."
+    }
+  ]
+}

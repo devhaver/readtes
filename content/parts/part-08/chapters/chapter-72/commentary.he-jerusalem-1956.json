@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-72",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:1",
+      "section": "ohr-pnimi",
+      "html": "<b>מב\"ן לקח אבא ו\"ק דחכמה דב\"ן וכו'</b>: וצריכים להבין היטב הטעם של סדר התחלקות הזה דמ\"ה וב\"ן בין או\"א עלאין לישסו\"ת, וכבר ביארנו את זה לעיל (דף תרנ\"ד ד\"ה ובאמת) ומשם תדרשנו."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ה' קצוות דבינה דב\"ן שהם ג' תחתונות נה\"י</b>: צ\"ל, גבורה ת\"ת וג' תחתונות נה\"י."
+    }
+  ]
+}

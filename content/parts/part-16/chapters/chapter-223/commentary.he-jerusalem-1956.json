@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>עתיק דבריאה היא נקודת מלכות דאצילות.</b> כבר נתבאר זה לעיל א' תתקע\"ט ד\"ה ולכאורה. ועוד יתבאר להלן דף ב' י\"ב ד\"ה הג\"ר."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ומתלבשת כג\"ר של ו\"ק דא\"א שהם חג\"ת המגולים.</b> כבר נתבאר לעיל בדיבור הסמוך, כי אלו חג\"ת דא\"א לא באו לבריאה אלא בבחינת לבוש של נה\"י דעתיק, וע\"כ נעשו גם עתה ללבוש לעתיק דבריאה. ע\"ש."
+    }
+  ]
+}

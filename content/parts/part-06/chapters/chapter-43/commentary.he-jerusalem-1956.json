@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>תחת מקום המלכות דאצילות לגמרי</b>: כלומר תחת הנקודת הצמצום החדשה, ששם מסתיים בחינת האצילות ומתחיל מקום העלמין דפרודא. כנ\"ל."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>מקומם פנוי תחת ספירת הבינה</b>. כי הג\"ר שהם כח\"ב נתקיימו ורק המלכים שמבינה ולמטה נשברו, <b>(נא)</b> ונשאר מקומם פנוי. אשר במקום הזה הוא עמידת עולם האצילות אחר התיקון."
+    }
+  ]
+}

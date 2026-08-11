@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-45",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:1",
+      "section": "ohr-pnimi",
+      "html": "<b>אני ישנה נגד ה' אחרונה כי בביטול אור הנקודים אני ישנה</b>: כי עיקר שבירת הכלים היה מבחינת ה' אחרונה, ומזה נמשך לה סוד השינה, וע\"כ נרמז השינה בה' אחרונה."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>חכמה היא ה' ראשונה וכו' והנקודות הם חכמה</b>. כמ\"ש לעיל (דף תל\"ב ד\"ה כשתמנה. וד\"ה אות יוד בדף תל\"ג). שהאורות שעלו למ\"ן מנה\"י דא\"ק, הם כוללים כל הנקודות דס\"ג, שהם מחכמה ולמטה עם הזו\"ן דא\"ק. ונודע שהפרצוף נקרא על שם ספירה העליונה, וע\"כ מכונים הנקודות בשם חכמה."
+    }
+  ]
+}

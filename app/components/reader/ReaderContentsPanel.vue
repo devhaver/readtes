@@ -138,7 +138,10 @@ const transitionDuration = computed(() =>
                 "
                 @click="close"
               >
-                {{ t("common.volume") }} {{ volume.number }} ·
+                <!-- Volume titles in toc.volumes.json are literally
+                     "Volume N" / "כרך N", so rendering label AND title
+                     reads "Volume 1 · Volume 1" — the localized title
+                     alone carries everything. -->
                 {{ localizedText(volume.title, locale) }}
               </NuxtLink>
 

@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-15/chapter-04",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>בזמנים הרבה נתקנת ונתגדלת מעט מעט.</b> והם בכללות ז' זמנים שנתבארו בחלק ט' דף תתל\"ב תשובה מ'. עש\"ה."
+    }
+  ]
+}
