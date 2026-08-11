@@ -32,6 +32,10 @@ export const NATIVE_LANGUAGE_NAMES: Record<string, string> = {
   es: "Español",
   tr: "Türkçe",
   hi: "हिन्दी",
+  // RTL like Hebrew — a future fa version entry in versions.json must carry
+  // direction: "rtl"; the reader panes take direction from the version
+  // registry, so nothing else needs special-casing.
+  fa: "فارسی",
 };
 
 export const nativeLanguageName = (language: string): string =>

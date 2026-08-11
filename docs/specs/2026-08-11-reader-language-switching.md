@@ -38,7 +38,9 @@ Phase 1 is written to be generic over language, so phase 2 adds content
 and i18n locale entries without touching reader code.
 
 Target language set for phase 2: Hebrew, English, Bulgarian, German,
-Russian, French, Spanish, Turkish, Hindi.
+Russian, French, Spanish, Turkish, Hindi, Persian (fa — RTL, like
+Hebrew; the version registry's `direction` field already carries this
+per-version, so the reader needs no special-casing).
 
 ## Resolution rule
 
