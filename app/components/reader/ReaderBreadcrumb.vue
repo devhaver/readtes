@@ -62,15 +62,15 @@ const volumeContentsLink = computed(() =>
 
 <template>
   <nav :aria-label="t('nav.breadcrumbLabel')" class="text-sm">
-    <ol class="flex flex-wrap items-center gap-1.5 text-(--text-muted)">
-      <li class="flex items-center gap-1.5">
+    <ol class="tes-breadcrumb-list">
+      <li class="tes-breadcrumb-item">
         <ReaderBreadcrumbMenu
           :trigger-label="items[0]?.label ?? t('common.sixVolumes')"
           :items="volumeItems"
         />
         <span aria-hidden="true">/</span>
       </li>
-      <li v-if="items[1]" class="flex items-center gap-1.5">
+      <li v-if="items[1]" class="tes-breadcrumb-item">
         <ReaderBreadcrumbMenu
           :trigger-label="items[1].label"
           :items="partItems"

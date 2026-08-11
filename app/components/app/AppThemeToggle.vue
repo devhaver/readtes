@@ -44,59 +44,32 @@ const cycleColorMode = () => {
 <template>
   <button
     type="button"
-    class="inline-flex h-9 w-9 items-center justify-center rounded-button text-surface-white transition-colors hover:bg-surface-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+    class="tes-focus-ring inline-flex h-9 w-9 items-center justify-center rounded-button text-surface-white transition-colors hover:bg-surface-white/10"
     :aria-label="label"
     :title="label"
     @click="cycleColorMode"
   >
-    <!-- Sun — currently light -->
-    <svg
-      v-if="current === 'light'"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="h-5 w-5"
+    <!-- Three structurally distinct spans, NOT one span with a dynamic
+         class: prerendered HTML always says "light" (SSR can't read the
+         persisted preference), and Vue does not patch a class-only
+         mismatch at hydration — a returning dark/sepia visitor would keep
+         the sun icon until their first click. The v-if chain forces the
+         structural hydration bail-out that re-renders the right icon,
+         which is exactly how the original three-SVG version behaved. -->
+    <span
+      v-if="current === 'dark'"
+      class="tes-icon tes-icon-theme-dark h-5 w-5"
       aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="4" />
-      <path
-        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
-      />
-    </svg>
-
-    <!-- Open book — currently sepia, the reading theme -->
-    <svg
+    />
+    <span
       v-else-if="current === 'sepia'"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="h-5 w-5"
+      class="tes-icon tes-icon-theme-sepia h-5 w-5"
       aria-hidden="true"
-    >
-      <path d="M12 7c-1.8-1.3-4-2-6.5-2H3v13h2.5c2.5 0 4.7.7 6.5 2" />
-      <path d="M12 7c1.8-1.3 4-2 6.5-2H21v13h-2.5c-2.5 0-4.7.7-6.5 2" />
-      <path d="M12 7v13" />
-    </svg>
-
-    <!-- Moon — currently dark -->
-    <svg
+    />
+    <span
       v-else
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="h-5 w-5"
+      class="tes-icon tes-icon-theme-light h-5 w-5"
       aria-hidden="true"
-    >
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
-    </svg>
+    />
   </button>
 </template>

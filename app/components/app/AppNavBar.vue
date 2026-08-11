@@ -21,41 +21,26 @@ const closeMobileMenu = () => {
       <div class="flex items-center gap-3">
         <button
           type="button"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-button hover:bg-surface-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal sm:hidden"
+          class="tes-focus-ring inline-flex h-9 w-9 items-center justify-center rounded-button hover:bg-surface-white/10 sm:hidden"
           :aria-label="mobileMenuOpen ? t('nav.menuClose') : t('nav.menuOpen')"
           aria-controls="mobile-nav"
           :aria-expanded="mobileMenuOpen"
           @click="toggleMobileMenu"
         >
-          <svg
-            v-if="!mobileMenuOpen"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            class="h-5 w-5"
+          <span
+            class="tes-icon h-5 w-5"
+            :class="
+              mobileMenuOpen
+                ? 'tes-icon-hamburger-close'
+                : 'tes-icon-hamburger-open'
+            "
             aria-hidden="true"
-          >
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg
-            v-else
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            class="h-5 w-5"
-            aria-hidden="true"
-          >
-            <path d="M6 6 18 18M18 6 6 18" />
-          </svg>
+          />
         </button>
 
         <NuxtLink
           :to="localePath('/')"
-          class="flex items-baseline gap-2 rounded-button focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="tes-focus-ring flex items-baseline gap-2 rounded-button"
           @click="closeMobileMenu"
         >
           <span class="font-display text-xl tracking-wide">{{
@@ -71,16 +56,10 @@ const closeMobileMenu = () => {
         :aria-label="t('nav.primary')"
         class="hidden items-center gap-6 sm:flex"
       >
-        <NuxtLink
-          :to="localePath('/volumes')"
-          class="text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-        >
+        <NuxtLink :to="localePath('/volumes')" class="tes-navbar-link">
           {{ t("nav.volumesLink") }}
         </NuxtLink>
-        <NuxtLink
-          :to="localePath('/glossary')"
-          class="text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-        >
+        <NuxtLink :to="localePath('/glossary')" class="tes-navbar-link">
           {{ t("nav.glossaryLink") }}
         </NuxtLink>
       </nav>
@@ -98,14 +77,14 @@ const closeMobileMenu = () => {
     >
       <NuxtLink
         :to="localePath('/volumes')"
-        class="block rounded-button py-2 text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="tes-navbar-link-mobile"
         @click="closeMobileMenu"
       >
         {{ t("nav.volumesLink") }}
       </NuxtLink>
       <NuxtLink
         :to="localePath('/glossary')"
-        class="block rounded-button py-2 text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="tes-navbar-link-mobile"
         @click="closeMobileMenu"
       >
         {{ t("nav.glossaryLink") }}

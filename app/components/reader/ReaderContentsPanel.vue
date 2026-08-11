@@ -99,23 +99,11 @@ const transitionDuration = computed(() =>
           </h2>
           <button
             type="button"
-            class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-muted) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="tes-focus-ring inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-muted) hover:bg-(--surface-raised)"
             :aria-label="t('reader.contents.close')"
             @click="close"
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-4 w-4"
-              aria-hidden="true"
-            >
-              <line x1="6" y1="6" x2="18" y2="18" />
-              <line x1="6" y1="18" x2="18" y2="6" />
-            </svg>
+            <span class="tes-icon tes-icon-close h-4 w-4" aria-hidden="true" />
           </button>
         </div>
 
@@ -127,7 +115,7 @@ const transitionDuration = computed(() =>
             <li v-for="volume in sortedVolumes" :key="volume.id">
               <NuxtLink
                 :to="localePath(`/volumes/${volumeSlug(volume)}`)"
-                class="rounded-button font-display text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+                class="tes-contents-volume-link"
                 :class="
                   volume.id === currentVolumeId
                     ? 'font-semibold text-(--accent-text)'
@@ -150,7 +138,7 @@ const transitionDuration = computed(() =>
                   <NuxtLink
                     v-if="part.firstChapterId"
                     :to="localePath(`/read/${part.firstChapterId}`)"
-                    class="block rounded-button px-2 py-1 text-sm hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+                    class="tes-contents-part-link"
                     :class="
                       part.id === currentPartId
                         ? 'font-semibold text-(--accent-text)'
@@ -164,10 +152,7 @@ const transitionDuration = computed(() =>
                     {{ t("common.part") }} {{ part.number }} ·
                     {{ localizedText(part.title, locale) }}
                   </NuxtLink>
-                  <span
-                    v-else
-                    class="block px-2 py-1 text-sm text-(--text-muted) opacity-60"
-                  >
+                  <span v-else class="tes-contents-part-disabled">
                     {{ t("common.part") }} {{ part.number }} ·
                     {{ localizedText(part.title, locale) }}
                     ({{ t("volumes.comingSoon") }})

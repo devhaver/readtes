@@ -86,14 +86,12 @@ const statusMessage = computed(() => {
       data-testid="inner-observation-skeleton"
     >
       <div v-for="section in 2" :key="section" class="flex flex-col gap-4">
-        <div
-          class="h-3 w-1/3 animate-pulse rounded-full bg-(--border) motion-reduce:animate-none"
-        />
+        <div class="tes-skeleton-line w-1/3" />
         <div class="flex flex-col gap-3">
           <div
             v-for="line in 4"
             :key="line"
-            class="h-3 animate-pulse rounded-full bg-(--border) motion-reduce:animate-none"
+            class="tes-skeleton-line"
             :class="line === 4 ? 'w-2/3' : 'w-full'"
           />
         </div>
@@ -123,9 +121,7 @@ const statusMessage = computed(() => {
         :key="section.chapterId"
         class="flex flex-col gap-4"
       >
-        <h3
-          class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-        >
+        <h3 class="tes-eyebrow">
           {{ localizedText(section.title, locale) }}
         </h3>
 
@@ -133,7 +129,7 @@ const statusMessage = computed(() => {
           <li
             v-for="segment in section.items"
             :key="segment.n"
-            class="text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+            class="tes-seif-lg"
           >
             <ReaderSourceSegment :segment="segment" />
           </li>

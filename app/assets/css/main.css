@@ -346,6 +346,305 @@ html {
 
 /*
  * ---------------------------------------------------------------------
+ * Component classes (issue #92: "page chrome diet").
+ *
+ * Every class below replaces a `class="…"` utility STRING that was
+ * repeated verbatim across multiple rendered elements — a seif <li>, a
+ * toolbar button, a pane header, a breadcrumb/menu link — measured on a
+ * built chapter page where class attributes alone were 39% of the page's
+ * bytes and that overhead repeats on all ~10,300 reader pages. Each one
+ * uses `@apply` rather than hand-written declarations so the resulting
+ * CSS tracks Tailwind's own utility values exactly (no drift if the
+ * theme scale ever changes) — this file otherwise favours plain CSS with
+ * design-token `var()`s (see `.tes-anchor` etc. above), but these classes
+ * are direct stand-ins for utility-class STRINGS, so reproducing them via
+ * Tailwind's own pipeline is the fidelity-safe choice. One-off strings
+ * (used at a single call site) are deliberately left as inline utilities
+ * — only strings repeated across several call sites are collapsed here.
+ */
+
+/* The project's one focus-ring treatment (see the tes-seo-ssg skill's
+   accessibility conventions) — was `focus-visible:outline
+   focus-visible:outline-2 focus-visible:outline-teal` at nearly every
+   interactive element in the reader chrome, nav, and breadcrumb. */
+.tes-focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* Skip-to-content link — identical in both layouts, so identical on
+   every page in the site. */
+.tes-skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-navy-primary focus:px-4 focus:py-2 focus:text-surface-white focus:outline focus:outline-2 focus:outline-teal;
+}
+
+/*
+ * Seif (source-segment) list items — `SourcePane`, `StudyStream`,
+ * `InnerObservationPane` all render source segments at the "large" size,
+ * `CommentaryPane` (and `StudyStream`'s unanchored-commentary list) at
+ * the "medium" size. `reader-anchor-target`/`scroll-mt-*` stay separate
+ * utilities at the call site — they vary (StudyStream's sticky toolbar
+ * needs a taller `scroll-mt`; InnerObservationPane never anchor-syncs at
+ * all) so folding them in here would force every caller into one shape.
+ */
+.tes-seif-lg {
+  @apply text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary);
+}
+
+.tes-seif-md {
+  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary);
+}
+
+/* `CommentaryPane`'s own item `<li>` — same "medium" seif sizing as
+   `.tes-seif-md`, plus its own scroll-margin/card treatment, on every
+   commentary item in the corpus (the single highest-repetition string on
+   a commentary-heavy chapter page). `reader-anchor-target` stays a
+   separate token in the class list (not folded in here) since it's a
+   shared cross-pane hook, identical to how `SourcePane`/`StudyStream`
+   apply it next to their own seif classes. */
+.tes-commentary-item {
+  /* No border-radius here on purpose: the highlight flash's 4px radius
+     comes from `.reader-anchor-target` above. The original markup carried
+     `rounded-card` as a utility, which LOST to that unlayered rule — an
+     unlayered `rounded-card` in this class would win instead and silently
+     change the flash radius 4px -> 8px. */
+  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4 p-1;
+}
+
+/* The seif-number chip (`ReaderSourceSegment`) — one per source segment,
+   so its repetition count matches the corpus's segment count. */
+.tes-seif-chip {
+  @apply me-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-(--surface-raised) px-1 align-middle text-xs tabular-nums text-(--text-muted);
+}
+
+/* Full-height flex column: `ReaderShell`'s own root plus each
+   `ReaderPane`'s root share this exact shape (up to 4x per panes-mode
+   page: the shell once, one pane each for Source/Inner Light/Inner
+   Observation). */
+.tes-pane-shell {
+  @apply flex h-full min-h-0 flex-col;
+}
+
+/* `ReaderPane`'s header bar / scrollable body — one of each per pane
+   (Source, Inner Light, Inner Observation), so up to 3x per panes-mode
+   page. */
+.tes-pane-header {
+  @apply flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-(--border) px-4 py-2.5;
+}
+
+.tes-pane-body {
+  @apply min-h-0 flex-1 overflow-y-auto px-4 pt-4 pb-24 lg:pb-4;
+}
+
+/* The small uppercase "eyebrow" heading style: pane titles
+   (`ReaderPaneHeader`), the chapter-intro disclosure label
+   (`ChapterIntro`), and commentary/summary section headings
+   (`CommentaryPane`, `StudyStream`, `ReaderSummaryBody`). */
+.tes-eyebrow {
+  @apply font-display text-sm tracking-wide text-(--text-muted) uppercase;
+}
+
+/* Toolbar icon buttons — `ReaderToolbar`'s Contents/Preferences buttons.
+   (`ReaderContentsPanel`'s close button deliberately keeps its own inline
+   classes: muted text + `tes-focus-ring`, not this recipe.) */
+.tes-icon-btn {
+  @apply inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `ReaderPaneHeader`'s per-layer language <select> — up to 3x per
+   panes-mode page. */
+.tes-lang-select {
+  @apply rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `ReaderPaneHeader`'s provenance badge — the tone-specific
+   border/text-color classes stay conditional (`:class`) at the call
+   site, since only one tone ever renders per badge. */
+.tes-provenance-badge {
+  @apply rounded-button border px-1.5 py-0.5 text-xs font-medium;
+}
+
+/* `MobilePanePill`'s per-pane tab — the selected/unselected tint stays
+   conditional at the call site. */
+.tes-pill-tab {
+  @apply flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `ReaderToolbar`'s prev/next chapter links, and their disabled
+   (corpus-edge) state. */
+.tes-chapter-nav-link {
+  @apply inline-flex min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-chapter-nav-disabled {
+  @apply inline-flex items-center gap-1.5 px-2 py-1 text-(--text-muted) opacity-50;
+}
+
+/* Breadcrumb chrome, shared by `AppBreadcrumb` and `ReaderBreadcrumb`. */
+.tes-breadcrumb-list {
+  @apply flex flex-wrap items-center gap-1.5 text-(--text-muted);
+}
+
+.tes-breadcrumb-item {
+  @apply flex items-center gap-1.5;
+}
+
+.tes-breadcrumb-link {
+  @apply rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `ReaderBreadcrumbMenu`'s disclosure trigger. */
+.tes-breadcrumb-menu-trigger {
+  @apply inline-flex items-center gap-1 rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* Dropdown-menu link rows — `ReaderBreadcrumbMenu`'s panel items. */
+/* NOTE: these classes are unlayered, so their `color` beats ANY utility a
+   call site adds (`text-(--accent-text)` conditionals included). If a call
+   site ever needs a color override, move the color out of the class or
+   layer it. */
+.tes-menu-link {
+  @apply block px-3 py-2 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-menu-link-disabled {
+  @apply block px-3 py-2 text-sm text-(--text-muted) opacity-60;
+}
+
+/* `ReaderContentsPanel`'s volume/part tree links. */
+.tes-contents-volume-link {
+  @apply rounded-button font-display text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-contents-part-link {
+  @apply block rounded-button px-2 py-1 text-sm hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-contents-part-disabled {
+  @apply block px-2 py-1 text-sm text-(--text-muted) opacity-60;
+}
+
+/* `AppNavBar`'s primary links — desktop row and the mobile disclosure. */
+.tes-navbar-link {
+  @apply text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-navbar-link-mobile {
+  @apply block rounded-button py-2 text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `<details>` disclosure summary — `ChapterIntro`'s chapter-intro card
+   and `StudyStream`'s unanchored-commentary section share this exact
+   trigger + chevron pair. */
+.tes-disclosure-summary {
+  @apply flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-disclosure-chevron {
+  @apply text-(--text-muted) transition-transform group-open:rotate-180;
+}
+
+/* `ReaderSummaryBody`'s mini-toc entry buttons. */
+.tes-minitoc-link {
+  @apply rounded-button px-2 py-1 text-start text-sm text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `InnerObservationPane`'s pending-state skeleton line — width stays a
+   plain utility at the call site (`w-full`/`w-2/3`/`w-1/3`). */
+.tes-skeleton-line {
+  @apply h-3 animate-pulse rounded-full bg-(--border) motion-reduce:animate-none;
+}
+
+/*
+ * ---------------------------------------------------------------------
+ * Toolbar/nav icons (issue #92, part 2 — the 8-9 inline `<svg>`s repeated
+ * on every reader page). CSS `mask-image` rather than an inline
+ * `<symbol>`+`<use>` sprite: this site is fully static (`pnpm generate`
+ * prerenders one independent HTML file per route, no server-side
+ * includes), so a `<symbol>` sprite defined in `app.vue` gets duplicated
+ * byte-for-byte into every one of the ~10,300 built files — measured on
+ * a real page, that fixed cost (~3.1 KB for 12 icons) exceeds the
+ * per-icon savings until a page uses ~19 icons, and no page here uses
+ * more than 9. A mask lives here instead, in `main.css` — ONE shared,
+ * already-cached file referenced by every page via its `<link
+ * rel="stylesheet">`, not duplicated per page — so the one-time cost is
+ * paid once for the whole site (~4.4 KB total, this block) and every
+ * call site shrinks to a bare
+ * `<span class="tes-icon tes-icon-NAME h-5 w-5" aria-hidden="true" />`
+ * (no `viewBox`/`stroke`/`fill` presentation attributes repeated per
+ * element). `background-color: currentColor` is what a mask paints
+ * with, so hover tints and dark/sepia mode keep working exactly like the
+ * inline SVGs' `stroke="currentColor"` did, off the same tokens — masks
+ * key off the referenced image's ALPHA channel (not luminance) when, as
+ * here, `mask-image` points at a standalone image rather than an inline
+ * `<mask>` element, so the shapes' fill colour below (`black`) is
+ * arbitrary and never rendered; only their opacity matters.
+ * `--tes-icon-url` de-duplicates each data URI to one copy per icon
+ * (prefixed and unprefixed `mask-image` would otherwise repeat it).
+ */
+.tes-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  mask-image: var(--tes-icon-url);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: var(--tes-icon-url);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.tes-icon-hamburger-open {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3Cpath d=%22M4 6h16M4 12h16M4 18h16%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-hamburger-close {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3Cpath d=%22M6 6 18 18M18 6 6 18%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-theme-light {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%224%22/%3E%3Cpath d=%22M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-theme-sepia {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%22M12 7c-1.8-1.3-4-2-6.5-2H3v13h2.5c2.5 0 4.7.7 6.5 2%22/%3E%3Cpath d=%22M12 7c1.8-1.3 4-2 6.5-2H21v13h-2.5c-2.5 0-4.7.7-6.5 2%22/%3E%3Cpath d=%22M12 7v13%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-theme-dark {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%22M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-contents {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cline x1=%224%22 y1=%226%22 x2=%2220%22 y2=%226%22/%3E%3Cline x1=%224%22 y1=%2212%22 x2=%2214%22 y2=%2212%22/%3E%3Cline x1=%224%22 y1=%2218%22 x2=%2217%22 y2=%2218%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-preferences {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%224 7 4 4 20 4 20 7%22/%3E%3Cline x1=%229%22 y1=%2220%22 x2=%2215%22 y2=%2220%22/%3E%3Cline x1=%2212%22 y1=%224%22 x2=%2212%22 y2=%2220%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-chevron-down {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%226 9 12 15 18 9%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-close {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cline x1=%226%22 y1=%226%22 x2=%2218%22 y2=%2218%22/%3E%3Cline x1=%226%22 y1=%2218%22 x2=%2218%22 y2=%226%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-pane-source {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%22M4 5c2.5-1 5-1 8 0v14c-3-1-5.5-1-8 0Z%22/%3E%3Cpath d=%22M20 5c-2.5-1-5-1-8 0v14c3-1 5.5-1 8 0Z%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-pane-commentary {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%22M4 5h16v10H8l-4 4Z%22/%3E%3C/svg%3E");
+}
+
+.tes-icon-pane-inner-observation {
+  --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%22M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%222.5%22/%3E%3C/svg%3E");
+}
+
+/*
+ * ---------------------------------------------------------------------
  * Hebrew type application (see the three-role token comment in @theme).
  *
  * Reading Hebrew: anything *explicitly* tagged `lang="he"` — the reader

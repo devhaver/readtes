@@ -12,17 +12,13 @@ const { t } = useI18n();
 
 <template>
   <nav :aria-label="t('nav.breadcrumbLabel')" class="text-sm">
-    <ol class="flex flex-wrap items-center gap-1.5 text-(--text-muted)">
+    <ol class="tes-breadcrumb-list">
       <li
         v-for="(item, index) in items"
         :key="item.to ?? item.label"
-        class="flex items-center gap-1.5"
+        class="tes-breadcrumb-item"
       >
-        <NuxtLink
-          v-if="item.to"
-          :to="item.to"
-          class="rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-        >
+        <NuxtLink v-if="item.to" :to="item.to" class="tes-breadcrumb-link">
           {{ item.label }}
         </NuxtLink>
         <span v-else class="text-(--text-primary)" aria-current="page">{{

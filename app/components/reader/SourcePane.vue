@@ -43,7 +43,7 @@ useSeifTapActivation(containerRef, (seifN) =>
         :id="`seif-${segment.n}`"
         :key="segment.n"
         :data-seif="segment.n"
-        class="reader-anchor-target scroll-mt-4 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+        class="reader-anchor-target tes-seif-lg scroll-mt-4"
       >
         <ReaderSourceSegment :segment="segment" />
       </li>
