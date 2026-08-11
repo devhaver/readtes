@@ -32,13 +32,28 @@ content/
   anchor id `op-N`, where `N` is `data-order` (continuous per chapter). See
   `app/utils/anchors.ts` (`extractAnchors`, `normalizeAnchors`) and
   `app/utils/sanitizeHtml.ts` for the HTML transforms involved.
+- **Commentary items are anchored or unanchored** (issue #79). An item
+  _with_ `targetSeif` is anchored — attached to a specific seif via a
+  Sefaria Links entry. An item _without_ `targetSeif` is **unanchored**:
+  its chapter is known (from the Ohr Penimi ref structure) but its seif is
+  not, because Sefaria has no link data for most of the book. Unanchored
+  items carry digit labels (`"1"`, `"2"`, … in both languages — the printed
+  Hebrew letters restart per seif, which is unknowable), keep the
+  `op-<order>` anchorId as identity, render in reading order with a
+  "not yet aligned" note, and never participate in per-seif affordances or
+  anchor sync. A chapter may mix both. Upgrading unanchored → anchored (via
+  a KabbalahMedia-derived mapping, issue #81) is an in-place edit.
 - **`pnpm validate:content`** (`scripts/validate-content.ts`, run via
   `tsx`) Zod-validates every JSON file under `content/`, then cross-checks
-  integrity: every source segment's `anchors[]` has a matching
-  `CommentaryItem.anchorId` in some commentary version of the same chapter;
-  every `CommentaryItem.targetSeif` exists as a source segment `n`; every
-  `toc.json` `availableVersions` entry has a corresponding file on disk, and
-  vice versa; and (see "Split ToC" below) `toc.volumes.json` +
+  integrity: every source segment's `anchors[]` has a matching **anchored**
+  `CommentaryItem.anchorId` in some commentary version of the same chapter
+  (an unanchored item must never be named by a source anchor); every
+  **anchored** item's `targetSeif` exists as a source segment `n`; every
+  item, anchored or not, has `anchorId === "op-<order>"` (the id is bound
+  as DOM id and Vue key, and for unanchored items no round-trip check can
+  catch a malformed one), unique per-file `order`, and non-empty `html`;
+  every `toc.json` `availableVersions` entry has a corresponding file on
+  disk, and vice versa; and (see "Split ToC" below) `toc.volumes.json` +
   `toc.parts/*.json` are exactly derivable from `toc.json`.
   `tests/unit/content-integrity.spec.ts` runs the same check over the
   committed tree as part of `pnpm test`.

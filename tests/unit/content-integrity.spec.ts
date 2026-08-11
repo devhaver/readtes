@@ -95,6 +95,22 @@ describe("content integrity — unanchored commentary items", () => {
     );
   });
 
+  it("fires when a commentary item's anchorId breaks the op-<order> grammar", () => {
+    // anchorId is bound as DOM id and Vue :key in the reader; for an
+    // unanchored item no round-trip check can ever catch a malformed or
+    // wrong-order id, so the grammar itself is enforced.
+    const { errors } = validateContent(
+      join(fixturesDir, "anchor-id-grammar-mismatch"),
+    );
+
+    expect(errors).toContain(
+      'parts/part-01/chapters/chapter-01/commentary.v1.json: commentary item anchorId "banana" does not match its order — expected "op-1"',
+    );
+    expect(errors).toContain(
+      'parts/part-01/chapters/chapter-01/commentary.v1.json: commentary item anchorId "op-99" does not match its order — expected "op-2"',
+    );
+  });
+
   it("fires when a source anchor names an unanchored item's anchorId", () => {
     const { errors } = validateContent(
       join(fixturesDir, "source-anchor-targets-unanchored"),

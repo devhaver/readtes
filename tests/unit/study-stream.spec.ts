@@ -295,12 +295,22 @@ describe("StudyStream", () => {
         unanchoredCommentaryItem("op-2", 2),
       ];
 
+      const heJerusalem: ContentVersion = {
+        id: "he-jerusalem-1956",
+        language: "he",
+        direction: "rtl",
+        title: "ירושלים",
+        license: "Public Domain",
+        source: "sefaria",
+      };
+
       const wrapper = await mountSuspended(StudyStream, {
         props: {
           ...baseProps,
           sourceSegments: unanchoredOnlySegments,
           commentaryItems: unanchoredItems,
           hebrewItems: unanchoredItems,
+          commentaryMeta: heJerusalem,
         },
       });
 
@@ -315,6 +325,13 @@ describe("StudyStream", () => {
       // No dead per-seif inline-disclosure triggers: no source anchor
       // markers exist for unanchored items to hang off of.
       expect(wrapper.find("a.tes-anchor").exists()).toBe(false);
+
+      // The item lists carry the commentary VERSION's direction/language —
+      // Hebrew commentary must not lay out LTR inside an English UI. The
+      // note above them is UI copy and deliberately does not.
+      const list = section?.find("ol");
+      expect(list?.attributes("dir")).toBe("rtl");
+      expect(list?.attributes("lang")).toBe("he");
     });
 
     it("a mixed chapter reaches unanchored items via the section AND keeps anchored items inline, without duplicating either", async () => {

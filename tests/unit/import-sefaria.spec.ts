@@ -773,16 +773,12 @@ describe("coverage-report: mergeSefariaCoverage", () => {
     // BYTE-level preservation, not substring presence: the KM chunk —
     // including the blank line that precedes it in the committed file's
     // convention — must survive exactly as it stood.
-    const kmChunk = existing.slice(
-      existing.indexOf("## KabbalahMedia import"),
-    );
+    const kmChunk = existing.slice(existing.indexOf("## KabbalahMedia import"));
     expect(merged.endsWith(kmChunk)).toBe(true);
     // The replaced part keeps its original separator bytes toward KM: the
     // stale section ended with "\n\n" before the KM heading, so the fresh
     // section must too.
-    expect(merged).toContain(
-      "## Section I (`part-01`)",
-    );
+    expect(merged).toContain("## Section I (`part-01`)");
     const sectionStart = merged.indexOf("## Section I (`part-01`)");
     const kmStart = merged.indexOf("## KabbalahMedia import");
     expect(sectionStart).toBeLessThan(kmStart);

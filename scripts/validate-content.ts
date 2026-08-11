@@ -379,6 +379,17 @@ const checkCommentaryItemBasics = (
           `${relativePath}: commentary item "${item.anchorId}" (order ${item.order}) has empty html`,
         );
       }
+
+      // The `op-<order>` identity is load-bearing, not decorative: anchorId
+      // is bound as the DOM id and Vue :key in the reader and resolved by
+      // lookup in `commentaryNotice`. For an unanchored item no round-trip
+      // check can ever catch a malformed or duplicated anchorId, so the
+      // grammar is enforced here for every item, anchored or not.
+      if (item.anchorId !== `op-${item.order}`) {
+        errors.push(
+          `${relativePath}: commentary item anchorId "${item.anchorId}" does not match its order — expected "op-${item.order}"`,
+        );
+      }
     }
 
     for (const [order, count] of orderCounts) {

@@ -263,7 +263,14 @@ const goToFullCommentary = async () => {
             {{ t(`reader.commentarySection.${group.section}`) }}
           </h3>
 
-          <ol class="flex flex-col gap-4">
+          <!-- The items carry the commentary VERSION's language (Hebrew for
+               he-jerusalem-1956), not the UI locale's — without dir/lang the
+               Hebrew text would lay out LTR inside an English UI. -->
+          <ol
+            class="flex flex-col gap-4"
+            :dir="commentaryMeta?.direction ?? 'ltr'"
+            :lang="commentaryMeta?.language"
+          >
             <li
               v-for="item in group.items"
               :key="item.anchorId"
