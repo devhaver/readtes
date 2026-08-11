@@ -78,10 +78,6 @@ const innerObservationChapters = innerObservationChaptersInPart(
 );
 const hasInnerObservation = innerObservationChapters.length > 0;
 const panes = resolveReaderPanes({ hasCommentary, hasInnerObservation });
-const {
-  versions: innerObservationVersionIds,
-  sections: innerObservationRawSections,
-} = await useInnerObservationContent(partId, innerObservationChapters);
 
 const readerVersions = useReaderVersions(chapter, versions.value);
 // Study mode below `lg`, panes at/above it by default — original is an
@@ -90,6 +86,28 @@ const readerVersions = useReaderVersions(chapter, versions.value);
 // component trees below actually mounts; `ReaderToolbar` (rendered in every
 // mode) reads the same shared state for its mode-toggle control.
 const { mode } = useReaderMode();
+
+// Deliberately not awaited and deliberately not server-rendered: the bodies
+// load in the browser, from the part's own content chunks, once per part
+// rather than being inlined into every chapter page's HTML — see
+// `useInnerObservationContent`. Only `versions` (ToC-derived, so identical
+// on both sides of hydration) is available during prerendering.
+//
+// Must stay *below* `useReaderMode()` above: the gate reads `mode`, which
+// only resolves to the real viewport in `useReaderMode`'s own `onMounted`,
+// and mounted hooks fire in registration order. Panes mode is the only one
+// of the three that renders an Inner Observation pane at all, so on a phone
+// (study by default) this is the difference between fetching the part's
+// whole essay set and fetching none of it.
+const {
+  versions: innerObservationVersions,
+  sections: innerObservationRawSections,
+  state: innerObservationState,
+} = useInnerObservationContent(
+  partId,
+  innerObservationChapters,
+  () => mode.value === "panes",
+);
 const versionsById = computed(() => buildVersionsById(versions.value));
 
 const versionOptions = (ids: string[]) =>
@@ -105,7 +123,7 @@ const commentaryVersionOptions = computed(() =>
   versionOptions(commentaryVersions.value),
 );
 const innerObservationVersionOptions = computed(() =>
-  versionOptions(innerObservationVersionIds.value),
+  versionOptions(innerObservationVersions.value),
 );
 
 const metaFor = (versionId: string | null) =>
@@ -135,7 +153,7 @@ const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
 // versions load.
 const innerObservationVersion = ref<string | null>(null);
 watch(
-  innerObservationVersionIds,
+  innerObservationVersions,
   (ids) => {
     if (
       innerObservationVersion.value &&
@@ -314,7 +332,11 @@ useLocalizedSeo({
           :meta="innerObservationMeta"
           @update:model-value="(id) => (innerObservationVersion = id)"
         >
-          <ReaderInnerObservationPane :sections="innerObservationSections" />
+          <ReaderInnerObservationPane
+            :sections="innerObservationSections"
+            :state="innerObservationState"
+            @reload="reloadNuxtApp({ force: true })"
+          />
         </ReaderPane>
       </template>
     </ReaderShell>
