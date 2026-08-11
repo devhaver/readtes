@@ -2,27 +2,29 @@
  * The two ways Inner Observation can be missing must never read the same:
  *
  * - parts 5, 11, 14, 15 and 16 (2,193 chapters) have none because Baal
- *   HaSulam wrote none — Sefaria's index, his own 262 Hebrew cross-references
- *   and Bnei Baruch's published contents listing all agree;
+ *   HaSulam wrote none — Sefaria's index and Bnei Baruch's published
+ *   contents listing both say so, and his own Hebrew cross-references
+ *   corroborate it (see `content/COVERAGE.md` for the evidence and its
+ *   limits);
  * - every other part has one, and an edition that carries no text for it yet
  *   is an ordinary coverage gap.
  *
- * The last case in this file is a guardrail, not a unit test: it pins the
- * derivation (`resolveInnerObservationAbsence` reads the part's own
- * `kind: "inner-observation"` chapter count) to the evidence, so a future
- * import that drops or adds Inner Observation chapters fails here rather
- * than silently telling readers what the author did or didn't write.
+ * On those five parts the Inner Light footnote ("not digitized in any
+ * edition yet") renders directly above the Inner Observation one, so the two
+ * sentences are asserted here to stay coherent side by side rather than
+ * having one deny what the other says.
+ *
+ * The last case is a guardrail, not a unit test: it pins the derivation (the
+ * page reads the part's own `kind: "inner-observation"` chapter count) to the
+ * evidence, so a future import that drops or adds Inner Observation chapters
+ * fails here rather than silently telling readers what the author did or
+ * didn't write.
  */
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import InnerObservationPane from "~/components/reader/InnerObservationPane.vue";
 import LayerAbsenceNote from "~/components/reader/LayerAbsenceNote.vue";
-import {
-  INNER_OBSERVATION_ABSENCE_MESSAGE_KEYS,
-  resolveInnerObservationAbsence,
-} from "~/utils/readerPanes";
 import type { Toc } from "~~/shared/types/content";
 
 interface ReaderCatalog {
@@ -54,25 +56,8 @@ const PARTS_WITHOUT_INNER_OBSERVATION = [
   "part-16",
 ];
 
-describe("resolveInnerObservationAbsence", () => {
-  it("reports a part with no Inner Observation chapters as never written", () => {
-    expect(resolveInnerObservationAbsence(0)).toBe("never-written");
-  });
-
-  it("reports a part that has Inner Observation chapters as an edition gap", () => {
-    expect(resolveInnerObservationAbsence(1)).toBe("not-in-this-edition");
-    expect(resolveInnerObservationAbsence(15)).toBe("not-in-this-edition");
-  });
-});
-
 describe("Inner Observation absence copy", () => {
   it("states the two absences with different sentences", () => {
-    const neverWritten =
-      INNER_OBSERVATION_ABSENCE_MESSAGE_KEYS["never-written"];
-    const notInThisEdition =
-      INNER_OBSERVATION_ABSENCE_MESSAGE_KEYS["not-in-this-edition"];
-
-    expect(neverWritten).not.toBe(notInThisEdition);
     expect(en.reader.innerObservationNeverWritten).not.toBe(
       en.reader.innerObservationEmpty,
     );
@@ -90,19 +75,19 @@ describe("Inner Observation absence copy", () => {
     expect(he.reader.innerObservationNeverWritten).toContain("הסתכלות פנימית");
   });
 
-  it("gives the pane's empty state different copy per absence", async () => {
-    const neverWritten = await mountSuspended(InnerObservationPane, {
-      props: { sections: [], absence: "never-written" as const },
-    });
-    const notInThisEdition = await mountSuspended(InnerObservationPane, {
-      props: { sections: [], absence: "not-in-this-edition" as const },
-    });
-
-    expect(neverWritten.text()).not.toBe(notInThisEdition.text());
-    expect(neverWritten.text()).toContain(
-      en.reader.innerObservationNeverWritten,
+  it("does not contradict the Inner Light footnote it renders beside", () => {
+    // Inner Light is an undigitized text; Inner Observation, where there is
+    // none, is not. The never-written sentence therefore has to rule out a
+    // digitization gap rather than make a claim about the edition at large,
+    // which would deny the note directly above it on parts 5/11/14/15/16.
+    expect(en.reader.innerLightAbsent).toMatch(/digitized/i);
+    expect(en.reader.innerObservationNeverWritten).toMatch(
+      /not a digitization gap/i,
     );
-    expect(notInThisEdition.text()).toContain(en.reader.innerObservationEmpty);
+    expect(he.reader.innerLightAbsent).toContain("דיגיטציה");
+    expect(he.reader.innerObservationNeverWritten).toContain(
+      "אין זה פער דיגיטציה",
+    );
   });
 
   it("states the never-written case in the Source pane footnote, distinct from the Inner Light one", async () => {

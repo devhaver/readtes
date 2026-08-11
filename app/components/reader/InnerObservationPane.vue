@@ -10,7 +10,6 @@
 // scroll, hence no `id`s on its segments (a section's own seif numbering
 // restarts at 1, so ids here would collide with the Source pane's).
 import type { LocalizedText } from "~/utils/localization";
-import type { InnerObservationAbsence } from "~/utils/readerPanes";
 import type { SourceSegment } from "~~/shared/types/content";
 
 export interface InnerObservationSectionView {
@@ -19,24 +18,15 @@ export interface InnerObservationSectionView {
   items: SourceSegment[];
 }
 
-const props = defineProps<{
-  sections: InnerObservationSectionView[];
-  /**
-   * Why an empty `sections` would be empty — decides which absence sentence
-   * the reader gets. In the page this is always `not-in-this-edition` (a
-   * part with no Inner Observation at all gets no pane, just the footnote
-   * in the Source pane), but the pane states whichever it is handed rather
-   * than assuming, so the "not yet" wording can never reach a part that has
-   * none.
-   */
-  absence: InnerObservationAbsence;
-}>();
+// This pane renders only for a part that HAS an Inner Observation
+// (`resolveReaderPanes` drops it otherwise), so its empty state is always
+// the ordinary coverage gap — the selected edition carries no text for it
+// yet. A part with none at all never reaches here; it gets
+// `ReaderLayerAbsenceNote`'s `inner-observation` footnote instead, whose
+// sentence says the text was never written rather than "not yet".
+defineProps<{ sections: InnerObservationSectionView[] }>();
 
 const { t, locale } = useI18n();
-
-const absenceMessage = computed(() =>
-  t(INNER_OBSERVATION_ABSENCE_MESSAGE_KEYS[props.absence]),
-);
 </script>
 
 <template>
@@ -64,6 +54,6 @@ const absenceMessage = computed(() =>
     </section>
   </div>
   <p v-else class="text-sm leading-relaxed text-(--text-muted)">
-    {{ absenceMessage }}
+    {{ t("reader.innerObservationEmpty") }}
   </p>
 </template>

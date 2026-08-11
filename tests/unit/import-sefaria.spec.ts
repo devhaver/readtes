@@ -647,6 +647,7 @@ describe("coverage-report: buildCoverageMarkdown", () => {
         warnings: [
           'section "Talmud Eser HaSefirot, Section I": unknown sibling node "Foo" — no ChapterKind mapping, skipped entirely',
         ],
+        innerObservationChapters: 10,
       },
     ]);
 
@@ -655,6 +656,7 @@ describe("coverage-report: buildCoverageMarkdown", () => {
     expect(markdown).toContain("| source | en-sefaria-community | 1 | 2 | 5 |");
     expect(markdown).toContain("no text for 1 chapter(s) — part-01/chapter-02");
     expect(markdown).toContain('unknown sibling node "Foo"');
+    expect(markdown).not.toContain("No Inner Observation (Histaklut Pnimit)");
     expect(markdown).not.toMatch(/\d{4}-\d{2}-\d{2}T/); // no ISO timestamp anywhere
   });
 
@@ -667,10 +669,89 @@ describe("coverage-report: buildCoverageMarkdown", () => {
     expect(markdown).toContain("not yet imported");
   });
 
+  it("qualifies the cross-reference evidence rather than claiming it proves the absence", () => {
+    const markdown = buildCoverageMarkdown([]);
+
+    // The census is corroboration with a demonstrated false negative
+    // (part 12), and two of the five parts carry no reference at all —
+    // COVERAGE.md has to say both, not round them off.
+    expect(markdown).toContain("corroborates but cannot prove");
+    expect(markdown).toContain("Part 12");
+    expect(markdown).toContain(
+      "Parts 15 and 16 contain no such reference at all",
+    );
+  });
+
+  it("says so in the part's own section when a part has no Inner Observation to import", () => {
+    const part = {
+      partId: "part-05",
+      partTitle: "Section V",
+      stats: [],
+      warnings: [],
+    };
+
+    const withNone = buildCoverageMarkdown([
+      { ...part, innerObservationChapters: 0 },
+    ]);
+    const withSome = buildCoverageMarkdown([
+      { ...part, innerObservationChapters: 3 },
+    ]);
+
+    expect(withNone).toContain("**No Inner Observation (Histaklut Pnimit).**");
+    expect(withNone).toContain("absent from the work, not from the import");
+    expect(withSome).not.toContain("No Inner Observation (Histaklut Pnimit)");
+  });
+
   it("is a pure function of its input (calling it twice with the same input is byte-identical)", () => {
     const input = [
-      { partId: "part-01", partTitle: "Section I", stats: [], warnings: [] },
+      {
+        partId: "part-01",
+        partTitle: "Section I",
+        stats: [],
+        warnings: [],
+        innerObservationChapters: 10,
+      },
     ];
     expect(buildCoverageMarkdown(input)).toBe(buildCoverageMarkdown(input));
+  });
+});
+
+describe("coverage-report: the committed content/COVERAGE.md", () => {
+  // Guardrail, not a unit test. `pnpm import:sefaria` needs the network and
+  // hours, so the committed report is edited by re-deriving its generated
+  // prose rather than re-running the import. This fails if the generator's
+  // wording and the committed file ever drift apart.
+  const committed = readFileSync(join(process.cwd(), "content/COVERAGE.md"), {
+    encoding: "utf-8",
+  });
+  const firstSection = committed.search(/^## .+ \(`part-\d\d`\)$/m);
+
+  it("carries the generator's current preamble verbatim", () => {
+    expect(firstSection).toBeGreaterThan(0);
+    expect(committed.slice(0, firstSection).trimEnd()).toBe(
+      buildCoverageMarkdown([]).trimEnd(),
+    );
+  });
+
+  it("carries the per-part note in each of the five parts with no Inner Observation", () => {
+    const sections = committed
+      .slice(firstSection)
+      .split(/^## /m)
+      .filter((section) => /^.+ \(`part-\d\d`\)/.test(section));
+
+    const withNote = sections
+      .filter((section) =>
+        section.includes("**No Inner Observation (Histaklut Pnimit).**"),
+      )
+      .map((section) => /\(`(part-\d\d)`\)/.exec(section)?.[1]);
+
+    expect(sections).toHaveLength(16);
+    expect(withNote).toEqual([
+      "part-05",
+      "part-11",
+      "part-14",
+      "part-15",
+      "part-16",
+    ]);
   });
 });
