@@ -42,6 +42,18 @@ Russian, French, Spanish, Turkish, Hindi, Persian (fa — RTL, like
 Hebrew; the version registry's `direction` field already carries this
 per-version, so the reader needs no special-casing).
 
+## Amendment (2026-08-11, owner): panes offer two languages, not ten
+
+With ten target languages, the per-pane switcher does NOT list every
+language that has text. Language is chosen once at the site level (the
+locale switcher); each pane then offers at most **the parent language and
+Hebrew** — the reader's only in-reading question is "translation or
+original?". When a chapter+layer lacks the parent language, the default
+chain's fallback is shown honestly (its own name + badge) with Hebrew
+still offered. A Hebrew-locale reader sees no pane switcher at all.
+Resolution chains, badges, and persistence shape are unchanged — only the
+offered set narrows. Tracked as issue #94.
+
 ## Resolution rule
 
 Per chapter, per layer, per language — resolve the first available:
