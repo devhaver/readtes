@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<b>מטי ולא מטי, ואלו הב' בחי' נקראים התפשטות והסתלקות שבהם יושלמו הד' בחינות</b>: היינו ד' האותיות של שם הוי\"ה, כי אלו הב' בחינות של התפשטות והסתלקות דהתפ\"א דעקודים, שהביא לעיל אות י\"ט, הם ב' האותיות י' ה' של הויה. ואלו ב' בחינות של התפשטות והסתלקות שבהתפ\"ב דעקודים הנקראים מטי ולא מטי, הם ב' אותיות ו' ה' של הויה. כמ\"ש הרב לפנינו."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>מטי האור תוך כלי דכתר וכו':</b> יתבאר לקמן."
+    }
+  ]
+}

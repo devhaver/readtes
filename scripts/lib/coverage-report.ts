@@ -13,6 +13,14 @@ export interface VersionCoverageStat {
   segments: number;
   /** Chapter ids that were attempted for this version but ended up with zero segments. */
   emptyChapterIds: string[];
+  /**
+   * Commentary only: how many of `segments` are anchored (`targetSeif`
+   * present) vs unanchored (known chapter, unknown seif — issue #79's
+   * "imported unanchored" items). `undefined` for `layer: "source"`, which
+   * has no such distinction.
+   */
+  anchoredItems?: number;
+  unanchoredItems?: number;
 }
 
 export interface PartCoverage {
@@ -50,6 +58,32 @@ const emptyChapterNotes = (stats: VersionCoverageStat[]): string[] =>
         `- **${s.layer}/${s.versionId}**: no text for ${s.emptyChapterIds.length} chapter(s) — ${s.emptyChapterIds.join(", ")}`,
     );
 
+/**
+ * Distinguishes, for each commentary version, the three states a chapter's
+ * Ohr Penimi coverage can be in: **anchored** (targetSeif known),
+ * **unanchored** (imported — known chapter, unknown seif, issue #79), and
+ * **genuinely absent** (no commentary item at all — the `emptyChapterIds`
+ * count from the table above). An unanchored count must never be read as
+ * anchored coverage, so it always gets its own line rather than folding into
+ * "Chapters w/ text".
+ */
+const commentaryAnchoringNotes = (stats: VersionCoverageStat[]): string[] =>
+  stats
+    .filter(
+      (s) =>
+        s.layer === "commentary" &&
+        s.anchoredItems !== undefined &&
+        s.unanchoredItems !== undefined,
+    )
+    .map((s) => {
+      const absentChapters = s.chaptersTotal - s.chaptersWithText;
+      return (
+        `- **commentary/${s.versionId}**: ${s.anchoredItems} anchored item(s), ` +
+        `${s.unanchoredItems} unanchored item(s) — ${absentChapters} of ` +
+        `${s.chaptersTotal} chapter(s) have no commentary at all (genuinely absent)`
+      );
+    });
+
 export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
   const sections = parts.map((part) => {
     const lines = [
@@ -71,6 +105,11 @@ export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
     const notes = emptyChapterNotes(part.stats);
     if (notes.length > 0) {
       lines.push("", "**Empty-version chapters:**", ...notes);
+    }
+
+    const anchoringNotes = commentaryAnchoringNotes(part.stats);
+    if (anchoringNotes.length > 0) {
+      lines.push("", "**Commentary anchoring:**", ...anchoringNotes);
     }
 
     if (part.warnings.length > 0) {

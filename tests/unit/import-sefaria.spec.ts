@@ -510,16 +510,26 @@ describe("transform: buildCommentaryItems", () => {
     ]);
   });
 
-  it("skips an item that has text but no matching links entry (no targetSeif available)", () => {
+  it("imports an item unanchored when it has text but no matching links entry (no targetSeif available)", () => {
     const { items, warnings } = buildCommentaryItems(
       chapterRef,
       ["orphan text, no link for this order"],
       [],
       "he",
     );
-    expect(items).toEqual([]);
+    expect(items).toEqual([
+      {
+        anchorId: "op-1",
+        order: 1,
+        label: { he: "1", en: "1" },
+        sefariaRef: "Ohr Penimi on Talmud Eser HaSefirot 1:1:1",
+        section: "ohr-pnimi",
+        html: "orphan text, no link for this order",
+      },
+    ]);
+    expect(items[0]).not.toHaveProperty("targetSeif");
     expect(warnings).toEqual([
-      `${chapterRef}: commentary item order 1 (he) has text but no links entry for it — skipped`,
+      `${chapterRef}: commentary item order 1 (he) has text but no links entry for it — imported unanchored`,
     ]);
   });
 });

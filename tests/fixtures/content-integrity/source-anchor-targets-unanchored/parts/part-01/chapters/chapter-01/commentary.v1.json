@@ -1,0 +1,14 @@
+{
+  "chapterId": "part-01/chapter-01",
+  "layer": "commentary",
+  "versionId": "v1",
+  "items": [
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": { "en": "2", "he": "2" },
+      "section": "ohr-pnimi",
+      "html": "<p>Unanchored item that a source segment wrongly names.</p>"
+    }
+  ]
+}

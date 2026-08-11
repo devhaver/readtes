@@ -25,7 +25,7 @@ describe("content integrity — negative fixtures", () => {
     );
 
     expect(errors).toContain(
-      'parts/part-01/chapters/chapter-01/source.v1.json: anchor "op-2" (seif 1) has no matching CommentaryItem.anchorId in any commentary version of chapter "part-01/chapter-01"',
+      'parts/part-01/chapters/chapter-01/source.v1.json: anchor "op-2" (seif 1) has no matching anchored CommentaryItem.anchorId in any commentary version of chapter "part-01/chapter-01"',
     );
   });
 
@@ -52,6 +52,66 @@ describe("content integrity — negative fixtures", () => {
 
     expect(errors).toContain(
       'content/parts/part-01/chapters/chapter-01/source.v1.json: exists on disk but is not listed in toc.json\'s availableVersions.source for chapter "part-01/chapter-01"',
+    );
+  });
+});
+
+// These fixtures don't carry `toc.volumes.json` / `toc.parts/*.json` /
+// `glossary/tes-en.json` — irrelevant to what's under test here — so ignore
+// the boilerplate "missing, run the emit script" errors those produce and
+// assert on the commentary/anchor checks specifically.
+const nonBoilerplateErrors = (errors: string[]): string[] =>
+  errors.filter(
+    (error) =>
+      !error.startsWith("content/toc.volumes.json:") &&
+      !error.startsWith("content/toc.parts/") &&
+      !error.startsWith("content/glossary/"),
+  );
+
+describe("content integrity — unanchored commentary items", () => {
+  it("accepts a chapter whose only commentary item is unanchored (no targetSeif)", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "unanchored-item-valid"),
+    );
+
+    expect(nonBoilerplateErrors(errors)).toEqual([]);
+  });
+
+  it("accepts a chapter mixing an anchored item and an unanchored item", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "mixed-chapter-valid"),
+    );
+
+    expect(nonBoilerplateErrors(errors)).toEqual([]);
+  });
+
+  it("fires when two unanchored items in the same file duplicate an order", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "unanchored-duplicate-order"),
+    );
+
+    expect(errors).toContain(
+      "parts/part-01/chapters/chapter-01/commentary.v1.json: order 1 is used by 2 commentary items — order must be unique per file",
+    );
+  });
+
+  it("fires when a source anchor names an unanchored item's anchorId", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "source-anchor-targets-unanchored"),
+    );
+
+    expect(errors).toContain(
+      'parts/part-01/chapters/chapter-01/source.v1.json: anchor "op-2" (seif 1) has no matching anchored CommentaryItem.anchorId in any commentary version of chapter "part-01/chapter-01"',
+    );
+  });
+
+  it("fires when a commentary item's html is empty", () => {
+    const { errors } = validateContent(
+      join(fixturesDir, "commentary-empty-html"),
+    );
+
+    expect(errors).toContain(
+      'parts/part-01/chapters/chapter-01/commentary.v1.json: commentary item "op-1" (order 1) has empty html',
     );
   });
 });

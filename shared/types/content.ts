@@ -208,13 +208,40 @@ export const sourceSegmentSchema = z.object({
 });
 export type SourceSegment = z.infer<typeof sourceSegmentSchema>;
 
+/**
+ * A commentary item is one of two kinds, distinguished by whether
+ * `targetSeif` is present:
+ *
+ * - **Anchored** (`targetSeif` present): names the exact source segment
+ *   (`SourceSegment.n`) it comments on, and round-trips with a `tes-anchor`
+ *   marker in some source version of the same chapter — `anchorId` must
+ *   appear in a source segment's `anchors[]`, and `targetSeif` must name a
+ *   seif that exists. `validate-content.ts`'s `checkAnchorCommentaryIntegrity`
+ *   enforces both directions for every anchored item.
+ * - **Unanchored** (`targetSeif` absent): belongs to a known chapter, but no
+ *   seif-level mapping is known for it — e.g. Ohr Penimi commentary Sefaria
+ *   has text for but no Links API entry to attach it with (issue #79).
+ *   `anchorId` still follows the `op-<order>` grammar as a stable identity —
+ *   the grammar is unchanged, there is simply no matching marker in the
+ *   source — and `label` is the plain-digit rendering of `order` in both
+ *   languages ("1", "2", …), never invented per-seif letters. Unanchored
+ *   items are excluded from the anchor round-trip checks (no `targetSeif` to
+ *   verify, and no source `anchors[]` entry may ever name one), but
+ *   `validate-content.ts` still requires `order` to be positive and unique
+ *   per file and `html` to be non-empty.
+ *
+ * A chapter may legitimately mix anchored and unanchored items — sections
+ * 2-3 have partial link coverage, so some seifim are attached and others
+ * aren't.
+ */
 export const commentaryItemSchema = z.object({
   anchorId: z.string(),
   order: z.number().int().positive(),
   label: localizedTitleSchema,
   /** Optional — see `sourceSegmentSchema.sefariaRef`. */
   sefariaRef: z.string().optional(),
-  targetSeif: z.number().int().positive(),
+  /** See the doc comment on `commentaryItemSchema` for anchored vs unanchored. */
+  targetSeif: z.number().int().positive().optional(),
   section: z.enum(["ohr-pnimi", "histaklut-pnimit"]),
   html: z.string(),
 });

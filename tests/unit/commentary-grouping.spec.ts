@@ -16,6 +16,19 @@ const item = (
   html: `item ${anchorId}`,
 });
 
+/** An unanchored item: known chapter, unknown seif — no `targetSeif`. */
+const unanchoredItem = (
+  anchorId: string,
+  order: number,
+  section: CommentaryItem["section"],
+): CommentaryItem => ({
+  anchorId,
+  order,
+  label: { en: String(order), he: String(order) },
+  section,
+  html: `item ${anchorId}`,
+});
+
 describe("groupCommentaryBySection", () => {
   it("groups Ohr Pnimi items under 'ohr-pnimi', sorted by order", () => {
     const items = [item("op-2", 2, "ohr-pnimi"), item("op-1", 1, "ohr-pnimi")];
@@ -82,5 +95,17 @@ describe("commentaryItemsForSeif", () => {
       "hp-1",
       "op-1",
     ]);
+  });
+
+  it("never matches an unanchored item (no targetSeif), for any seif", () => {
+    const items = [
+      unanchoredItem("op-9", 9, "ohr-pnimi"),
+      item("op-1", 1, "ohr-pnimi", 1),
+    ];
+
+    expect(commentaryItemsForSeif(items, 1).map((i) => i.anchorId)).toEqual([
+      "op-1",
+    ]);
+    expect(commentaryItemsForSeif(items, 9)).toEqual([]);
   });
 });

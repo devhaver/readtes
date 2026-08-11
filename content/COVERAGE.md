@@ -128,7 +128,7 @@ no qualitative signal either way.
 | --- | --- | --- | --- | --- |
 | source | he-jerusalem-1956 | 266 | 266 | 484 |
 | source | en-sefaria-community | 0 | 266 | 0 |
-| commentary | he-jerusalem-1956 | 0 | 62 | 0 |
+| commentary | he-jerusalem-1956 | 52 | 62 | 149 |
 | commentary | en-sefaria-community | 0 | 62 | 0 |
 
 **No Inner Observation (Histaklut Pnimit).** Baal HaSulam wrote none
@@ -138,8 +138,12 @@ does and does not establish.
 
 **Empty-version chapters:**
 - **source/en-sefaria-community**: no text for 266 chapter(s) — part-05/chapter-01, part-05/chapter-02, part-05/chapter-03, part-05/chapter-04, part-05/chapter-05, part-05/chapter-06, part-05/chapter-07, part-05/chapter-08, part-05/chapter-09, part-05/chapter-10, part-05/chapter-11, part-05/chapter-12, part-05/chapter-13, part-05/chapter-14, part-05/chapter-15, part-05/chapter-16, part-05/chapter-17, part-05/chapter-18, part-05/chapter-19, part-05/chapter-20, part-05/chapter-21, part-05/chapter-22, part-05/chapter-23, part-05/chapter-24, part-05/chapter-25, part-05/chapter-26, part-05/chapter-27, part-05/chapter-28, part-05/chapter-29, part-05/chapter-30, part-05/chapter-31, part-05/chapter-32, part-05/chapter-33, part-05/chapter-34, part-05/chapter-35, part-05/chapter-36, part-05/chapter-37, part-05/chapter-38, part-05/chapter-39, part-05/chapter-40, part-05/chapter-41, part-05/chapter-42, part-05/chapter-43, part-05/chapter-44, part-05/chapter-45, part-05/chapter-46, part-05/chapter-47, part-05/chapter-48, part-05/chapter-49, part-05/chapter-50, part-05/chapter-51, part-05/chapter-52, part-05/chapter-53, part-05/chapter-54, part-05/chapter-55, part-05/chapter-56, part-05/chapter-57, part-05/chapter-58, part-05/chapter-59, part-05/chapter-60, part-05/chapter-61, part-05/chapter-62, part-05/questions-terminology-01, part-05/questions-topics-01, part-05/answers-terminology-01, part-05/answers-terminology-02, part-05/answers-terminology-03, part-05/answers-terminology-04, part-05/answers-terminology-05, part-05/answers-terminology-06, part-05/answers-terminology-07, part-05/answers-terminology-08, part-05/answers-terminology-09, part-05/answers-terminology-10, part-05/answers-terminology-11, part-05/answers-terminology-12, part-05/answers-terminology-13, part-05/answers-terminology-14, part-05/answers-terminology-15, part-05/answers-terminology-16, part-05/answers-terminology-17, part-05/answers-terminology-18, part-05/answers-terminology-19, part-05/answers-terminology-20, part-05/answers-terminology-21, part-05/answers-terminology-22, part-05/answers-terminology-23, part-05/answers-terminology-24, part-05/answers-terminology-25, part-05/answers-terminology-26, part-05/answers-terminology-27, part-05/answers-terminology-28, part-05/answers-terminology-29, part-05/answers-terminology-30, part-05/answers-terminology-31, part-05/answers-terminology-32, part-05/answers-terminology-33, part-05/answers-terminology-34, part-05/answers-terminology-35, part-05/answers-terminology-36, part-05/answers-terminology-37, part-05/answers-terminology-38, part-05/answers-terminology-39, part-05/answers-terminology-40, part-05/answers-terminology-41, part-05/answers-terminology-42, part-05/answers-topics-01, part-05/answers-topics-02, part-05/answers-topics-03, part-05/answers-topics-04, part-05/answers-topics-05, part-05/answers-topics-06, part-05/answers-topics-07, part-05/answers-topics-08, part-05/answers-topics-09, part-05/answers-topics-10, part-05/answers-topics-11, part-05/answers-topics-12, part-05/answers-topics-13, part-05/answers-topics-14, part-05/answers-topics-15, part-05/answers-topics-16, part-05/answers-topics-17, part-05/answers-topics-18, part-05/answers-topics-19, part-05/answers-topics-20, part-05/answers-topics-21, part-05/answers-topics-22, part-05/answers-topics-23, part-05/answers-topics-24, part-05/answers-topics-25, part-05/answers-topics-26, part-05/answers-topics-27, part-05/answers-topics-28, part-05/answers-topics-29, part-05/answers-topics-30, part-05/answers-topics-31, part-05/answers-topics-32, part-05/answers-topics-33, part-05/answers-topics-34, part-05/answers-topics-35, part-05/answers-topics-36, part-05/answers-topics-37, part-05/answers-topics-38, part-05/answers-topics-39, part-05/answers-topics-40, part-05/answers-topics-41, part-05/answers-topics-42, part-05/answers-topics-43, part-05/answers-topics-44, part-05/answers-topics-45, part-05/answers-topics-46, part-05/answers-topics-47, part-05/answers-topics-48, part-05/answers-topics-49, part-05/answers-topics-50, part-05/answers-topics-51, part-05/answers-topics-52, part-05/answers-topics-53, part-05/answers-topics-54, part-05/answers-topics-55, part-05/answers-topics-56, part-05/answers-topics-57, part-05/answers-topics-58, part-05/answers-topics-59, part-05/answers-topics-60, part-05/answers-topics-61, part-05/answers-topics-62, part-05/answers-topics-63, part-05/answers-topics-64, part-05/answers-topics-65, part-05/answers-topics-66, part-05/answers-topics-67, part-05/answers-topics-68, part-05/answers-topics-69, part-05/answers-topics-70, part-05/answers-topics-71, part-05/answers-topics-72, part-05/answers-topics-73, part-05/answers-topics-74, part-05/answers-topics-75, part-05/answers-topics-76, part-05/answers-topics-77, part-05/answers-topics-78, part-05/answers-topics-79, part-05/answers-topics-80, part-05/answers-topics-81, part-05/answers-topics-82, part-05/answers-topics-83, part-05/answers-topics-84, part-05/answers-topics-85, part-05/answers-topics-86, part-05/answers-topics-87, part-05/answers-topics-88, part-05/answers-topics-89, part-05/answers-topics-90, part-05/answers-topics-91, part-05/answers-topics-92, part-05/answers-topics-93, part-05/answers-topics-94, part-05/answers-topics-95, part-05/answers-topics-96, part-05/answers-topics-97, part-05/answers-topics-98, part-05/answers-topics-99, part-05/answers-topics-100, part-05/answers-topics-101, part-05/answers-topics-102, part-05/answers-topics-103, part-05/answers-topics-104, part-05/answers-topics-105, part-05/answers-topics-106, part-05/answers-topics-107, part-05/answers-topics-108, part-05/answers-topics-109, part-05/answers-topics-110, part-05/answers-topics-111, part-05/answers-topics-112, part-05/answers-topics-113, part-05/answers-topics-114, part-05/answers-topics-115, part-05/answers-topics-116, part-05/answers-topics-117, part-05/answers-topics-118, part-05/answers-topics-119, part-05/answers-topics-120, part-05/answers-topics-121, part-05/answers-topics-122, part-05/answers-topics-123, part-05/answers-topics-124, part-05/answers-topics-125, part-05/answers-topics-126, part-05/answers-topics-127, part-05/answers-topics-128, part-05/answers-topics-129, part-05/answers-topics-130, part-05/answers-topics-131, part-05/answers-topics-132, part-05/answers-topics-133, part-05/answers-topics-134, part-05/answers-topics-135, part-05/answers-topics-136, part-05/answers-topics-137, part-05/answers-topics-138, part-05/answers-topics-139, part-05/answers-topics-140, part-05/answers-topics-141, part-05/answers-topics-142, part-05/answers-topics-143, part-05/answers-topics-144, part-05/answers-topics-145, part-05/answers-topics-146, part-05/answers-topics-147, part-05/answers-topics-148, part-05/answers-topics-149, part-05/answers-topics-150, part-05/answers-topics-151, part-05/answers-topics-152, part-05/answers-topics-153, part-05/answers-topics-154, part-05/answers-topics-155, part-05/answers-topics-156, part-05/answers-topics-157, part-05/answers-topics-158, part-05/answers-topics-159, part-05/answers-topics-160
-- **commentary/he-jerusalem-1956**: no text for 62 chapter(s) — part-05/chapter-01, part-05/chapter-02, part-05/chapter-03, part-05/chapter-04, part-05/chapter-05, part-05/chapter-06, part-05/chapter-07, part-05/chapter-08, part-05/chapter-09, part-05/chapter-10, part-05/chapter-11, part-05/chapter-12, part-05/chapter-13, part-05/chapter-14, part-05/chapter-15, part-05/chapter-16, part-05/chapter-17, part-05/chapter-18, part-05/chapter-19, part-05/chapter-20, part-05/chapter-21, part-05/chapter-22, part-05/chapter-23, part-05/chapter-24, part-05/chapter-25, part-05/chapter-26, part-05/chapter-27, part-05/chapter-28, part-05/chapter-29, part-05/chapter-30, part-05/chapter-31, part-05/chapter-32, part-05/chapter-33, part-05/chapter-34, part-05/chapter-35, part-05/chapter-36, part-05/chapter-37, part-05/chapter-38, part-05/chapter-39, part-05/chapter-40, part-05/chapter-41, part-05/chapter-42, part-05/chapter-43, part-05/chapter-44, part-05/chapter-45, part-05/chapter-46, part-05/chapter-47, part-05/chapter-48, part-05/chapter-49, part-05/chapter-50, part-05/chapter-51, part-05/chapter-52, part-05/chapter-53, part-05/chapter-54, part-05/chapter-55, part-05/chapter-56, part-05/chapter-57, part-05/chapter-58, part-05/chapter-59, part-05/chapter-60, part-05/chapter-61, part-05/chapter-62
+- **commentary/he-jerusalem-1956**: no text for 10 chapter(s) — part-05/chapter-03, part-05/chapter-04, part-05/chapter-06, part-05/chapter-19, part-05/chapter-32, part-05/chapter-33, part-05/chapter-34, part-05/chapter-48, part-05/chapter-50, part-05/chapter-59
 - **commentary/en-sefaria-community**: no text for 62 chapter(s) — part-05/chapter-01, part-05/chapter-02, part-05/chapter-03, part-05/chapter-04, part-05/chapter-05, part-05/chapter-06, part-05/chapter-07, part-05/chapter-08, part-05/chapter-09, part-05/chapter-10, part-05/chapter-11, part-05/chapter-12, part-05/chapter-13, part-05/chapter-14, part-05/chapter-15, part-05/chapter-16, part-05/chapter-17, part-05/chapter-18, part-05/chapter-19, part-05/chapter-20, part-05/chapter-21, part-05/chapter-22, part-05/chapter-23, part-05/chapter-24, part-05/chapter-25, part-05/chapter-26, part-05/chapter-27, part-05/chapter-28, part-05/chapter-29, part-05/chapter-30, part-05/chapter-31, part-05/chapter-32, part-05/chapter-33, part-05/chapter-34, part-05/chapter-35, part-05/chapter-36, part-05/chapter-37, part-05/chapter-38, part-05/chapter-39, part-05/chapter-40, part-05/chapter-41, part-05/chapter-42, part-05/chapter-43, part-05/chapter-44, part-05/chapter-45, part-05/chapter-46, part-05/chapter-47, part-05/chapter-48, part-05/chapter-49, part-05/chapter-50, part-05/chapter-51, part-05/chapter-52, part-05/chapter-53, part-05/chapter-54, part-05/chapter-55, part-05/chapter-56, part-05/chapter-57, part-05/chapter-58, part-05/chapter-59, part-05/chapter-60, part-05/chapter-61, part-05/chapter-62
+
+**Commentary anchoring:**
+- **commentary/he-jerusalem-1956**: 0 anchored item(s), 149 unanchored item(s) — 10 of 62 chapter(s) have no commentary at all (genuinely absent)
+- **commentary/en-sefaria-community**: 0 anchored item(s), 0 unanchored item(s) — 62 of 62 chapter(s) have no commentary at all (genuinely absent)
 
 **Warnings:**
 - commentary link "Ohr Penimi on Talmud Eser HaSefirot 5:1:1" is missing inline_reference data-order/data-label — skipped
@@ -291,155 +295,155 @@ does and does not establish.
 - commentary link "Ohr Penimi on Talmud Eser HaSefirot 5:9:3" is missing inline_reference data-order/data-label — skipped
 - commentary link "Ohr Penimi on Talmud Eser HaSefirot 5:9:4" is missing inline_reference data-order/data-label — skipped
 - commentary link "Ohr Penimi on Talmud Eser HaSefirot 5:9:5" is missing inline_reference data-order/data-label — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:1: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 7 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 7 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 8 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:7: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:7: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:8: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:11: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:11: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:11: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:13: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:16: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:16: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:17: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:18: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:18: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:20: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:20: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:21: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:22: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:23: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:23: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:24: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:24: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:25: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:25: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:26: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:27: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:28: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:29: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:29: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:29: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:30: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:30: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:36: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:36: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:36: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:37: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:37: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:39: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:39: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:39: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:40: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:40: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:42: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 7 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:44: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:45: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:46: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:46: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:46: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:47: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:47: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 5 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 6 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:52: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:53: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:54: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:54: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 4 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:56: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:56: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:56: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:57: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:58: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:60: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:60: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:60: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:61: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:61: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 1 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 2 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 3 (he) has text but no links entry for it — skipped
-- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 4 (he) has text but no links entry for it — skipped
+- Ohr Penimi on Talmud Eser HaSefirot 5:1: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:2: commentary item order 7 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 7 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:5: commentary item order 8 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:7: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:7: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:8: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:9: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:10: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:11: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:11: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:11: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:12: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:13: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:14: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:15: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:16: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:16: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:17: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:18: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:18: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:20: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:20: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:21: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:22: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:23: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:23: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:24: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:24: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:25: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:25: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:26: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:27: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:28: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:29: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:29: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:29: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:30: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:30: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:31: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:35: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:36: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:36: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:36: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:37: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:37: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:38: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:39: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:39: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:39: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:40: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:40: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:41: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:42: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:43: commentary item order 7 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:44: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:45: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:46: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:46: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:46: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:47: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:47: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 5 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:49: commentary item order 6 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:51: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:52: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:53: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:54: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:54: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:55: commentary item order 4 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:56: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:56: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:56: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:57: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:58: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:60: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:60: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:60: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:61: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:61: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 1 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 2 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 3 (he) has text but no links entry for it — imported unanchored
+- Ohr Penimi on Talmud Eser HaSefirot 5:62: commentary item order 4 (he) has text but no links entry for it — imported unanchored
 ## Section VI (`part-06`)
 
 | Layer | Version | Chapters w/ text | Chapters total | Segments |
