@@ -32,6 +32,13 @@ jobs:
       NUXT_PUBLIC_SITE_URL: https://readtes.com
       # Full-corpus prerender needs headroom beyond the default heap.
       NODE_OPTIONS: --max-old-space-size=6144
+      # Umami analytics, env-gated: both empty (unset repo variables) means
+      # the site ships with analytics off — same behaviour as a local build.
+      # Set the two repository variables (Settings → Secrets and variables →
+      # Actions → Variables) to enable it; they are public values that end
+      # up in the shipped HTML, so Variables (not Secrets) is the right home.
+      NUXT_PUBLIC_UMAMI_SRC: ${{ vars.NUXT_PUBLIC_UMAMI_SRC }}
+      NUXT_PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.NUXT_PUBLIC_UMAMI_WEBSITE_ID }}
 
     steps:
       - name: Check out repository
