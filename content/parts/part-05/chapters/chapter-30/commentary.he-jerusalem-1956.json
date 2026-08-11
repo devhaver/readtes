@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<b>הסתכלות ראיתה והבטתה באור עקודים הנקראים נפש:</b> הפה דראש נקרא נפש כמ\"ש לפנינו. והתפשטות האור מכונה בשם הסתכלות והבטה. ולפיכך התפשטות אור העליון אל המסך שבכלי מלכות לזווג דהכאה, מכונה בשם הסתכלות והבטה בהנפש, דהיינו במסך שבמלכות כמ\"ש לפנינו."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>המאציל רואה ומביט בנפש הנקרא את.</b> כמ\"ש בדיבור הסמוך, שהמסך שבכלי מלכות מכונה נפש ומכונה את. כמ\"ש הרב באר היטב, לעיל (ח\"ג פ\"ג אות ג' עש\"ה)."
+    }
+  ]
+}

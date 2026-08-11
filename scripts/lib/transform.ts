@@ -205,12 +205,6 @@ export const buildCommentaryItems = (
 
     const order = index + 1;
     const link = linksByOrder.get(order);
-    if (!link) {
-      warnings.push(
-        `${chapterRef}: commentary item order ${order} (${language}) has text but no links entry for it — skipped`,
-      );
-      return;
-    }
 
     let text = raw;
     if (language === "en") {
@@ -223,14 +217,38 @@ export const buildCommentaryItems = (
       text = stripped.text;
     }
 
+    const html = sanitizeHtml(normalizeAnchors(text));
+    const sefariaRef = ohrPenimiItemRef(chapterRef, order);
+
+    if (!link) {
+      // No Links API entry for this order: known chapter, unknown seif.
+      // Import it anyway rather than discarding real Ohr Penimi text — as
+      // an unanchored item, excluded from the anchor round-trip checks.
+      // `label` is the plain order digits in both languages (never invented
+      // per-seif Hebrew letters — the printed letters restart per seif and
+      // we do not know the seif).
+      warnings.push(
+        `${chapterRef}: commentary item order ${order} (${language}) has text but no links entry for it — imported unanchored`,
+      );
+      items.push({
+        anchorId: `op-${order}`,
+        order,
+        label: { he: String(order), en: String(order) },
+        sefariaRef,
+        section: "ohr-pnimi",
+        html,
+      });
+      return;
+    }
+
     items.push({
       anchorId: `op-${order}`,
       order,
       label: { he: link.heLabel, en: String(order) },
-      sefariaRef: ohrPenimiItemRef(chapterRef, order),
+      sefariaRef,
       targetSeif: link.targetSeif,
       section: "ohr-pnimi",
-      html: sanitizeHtml(normalizeAnchors(text)),
+      html,
     });
   });
 
