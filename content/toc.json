@@ -11587,17 +11587,7 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "volume-02",
-      "number": 2,
-      "title": {
-        "en": "Volume 2",
-        "he": "כרך 2"
-      },
-      "parts": [
+        },
         {
           "id": "part-04",
           "number": 4,
@@ -14372,7 +14362,17 @@
               }
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "volume-02",
+      "number": 2,
+      "title": {
+        "en": "Volume 2",
+        "he": "כרך 2"
+      },
+      "parts": [
         {
           "id": "part-05",
           "number": 5,
@@ -23614,17 +23614,7 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "volume-03",
-      "number": 3,
-      "title": {
-        "en": "Volume 3",
-        "he": "כרך 3"
-      },
-      "parts": [
+        },
         {
           "id": "part-07",
           "number": 7,
@@ -28255,7 +28245,17 @@
               }
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "volume-03",
+      "number": 3,
+      "title": {
+        "en": "Volume 3",
+        "he": "כרך 3"
+      },
+      "parts": [
         {
           "id": "part-08",
           "number": 8,
@@ -33166,17 +33166,7 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "volume-04",
-      "number": 4,
-      "title": {
-        "en": "Volume 4",
-        "he": "כרך 4"
-      },
-      "parts": [
+        },
         {
           "id": "part-09",
           "number": 9,
@@ -45982,11 +45972,11 @@
       ]
     },
     {
-      "id": "volume-05",
-      "number": 5,
+      "id": "volume-04",
+      "number": 4,
       "title": {
-        "en": "Volume 5",
-        "he": "כרך 5"
+        "en": "Volume 4",
+        "he": "כרך 4"
       },
       "parts": [
         {
@@ -64030,7 +64020,17 @@
               }
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "volume-05",
+      "number": 5,
+      "title": {
+        "en": "Volume 5",
+        "he": "כרך 5"
+      },
+      "parts": [
         {
           "id": "part-13",
           "number": 13,
@@ -71641,17 +71641,7 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "volume-06",
-      "number": 6,
-      "title": {
-        "en": "Volume 6",
-        "he": "כרך 6"
-      },
-      "parts": [
+        },
         {
           "id": "part-14",
           "number": 14,
@@ -81242,7 +81232,17 @@
               }
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "volume-06",
+      "number": 6,
+      "title": {
+        "en": "Volume 6",
+        "he": "כרך 6"
+      },
+      "parts": [
         {
           "id": "part-15",
           "number": 15,

@@ -80,7 +80,7 @@ Instead, `app/` loads two smaller, derived files:
   `import.meta.glob` over `content/toc.parts/*.json` keyed by part id (same
   style as `useChapterContent`'s glob over `content/parts/**`) — a reader
   page loads only its own part; a volume's contents page loads only that
-  volume's 2-3 parts.
+  volume's parts (2-4 of them, see "Volume grouping" below).
 
 Both composables do a direct `await import()` of the statically bundled
 JSON — **no `useAsyncData`** (same reasoning as `useChapterContent`: server
@@ -105,6 +105,45 @@ equivalence check re-derives both files from the committed `toc.json` and
 structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
+
+## Volume grouping — Bnei Baruch's, not Sefaria's
+
+The sixteen parts are fixed; how they group into six volumes is an editorial
+choice and the two upstreams disagree. This site reproduces the **Bnei
+Baruch** edition:
+
+| Volume | 1          | 2       | 3        | 4      | 5      | 6      |
+| ------ | ---------- | ------- | -------- | ------ | ------ | ------ |
+| Parts  | 1, 2, 3, 4 | 5, 6, 7 | 8, 9, 10 | 11, 12 | 13, 14 | 15, 16 |
+
+Sefaria groups the same parts differently (Vol 1 = parts 1-3, …) and we
+shipped its arrangement by accident until #85. The grouping lives **only**
+in `content/toc.json`'s volume nesting — part ids, chapter ids and every
+`/read/...` URL are independent of it. Change it there and re-run `pnpm
+emit:toc-splits`; never hand-edit the derived files.
+
+`tests/unit/volume-grouping.spec.ts` pins it, checked against
+`tests/fixtures/km-tree/tes-collection.json` — a trimmed slice of Bnei
+Baruch's own `kabbalahmedia.info/backend/sqdata` COLLECTION -> VOLUME ->
+PART tree, read through `extractKmTesTree` (`scripts/lib/km-tree.ts`), the
+same walker the KabbalahMedia importer uses. The spec's docblock carries the
+regeneration command and states what the fixture does and does not prove.
+
+**No redirects were added for the #85 regroup, deliberately.** All six
+`/volumes/volume-N` URLs exist both before and after; none was added,
+removed or renamed. Only the _contents_ of those pages changed, and the
+change is not a rename in disguise — old volume 3 held parts 7 and 8, which
+now sit in volumes 2 and 3 respectively, so no old volume URL has a single
+new home to point at. Redirecting `/volumes/volume-3` anywhere would break a
+URL that is still valid and still the right destination. Verified
+2026-08-11 (`curl -sSL -o /dev/null -w '%{http_code}'
+https://readtes.com/volumes/volume-1` -> `200`, and the fetched HTML still
+listed Parts 1, 2, 3): the site **is** live, and its `robots.txt` serves
+`User-agent: *` / `Allow: /` and advertises the sitemap (only AI-training
+crawlers are disallowed). So this is not an "it isn't published yet, so it
+doesn't matter" argument. Whether search engines have actually indexed the
+volume URLs was **not** determined — the conclusion above does not depend on
+it, because what a stale index costs here is a recrawl, not a broken link.
 
 ## Content-chunk prefetch-link stripping
 

@@ -1,0 +1,156 @@
+{
+  "sources": [
+    {
+      "id": "xtKmrbb9",
+      "parent_id": "bs",
+      "type": "COLLECTION",
+      "name": "Study of the Ten Sefirot",
+      "children": [
+        {
+          "id": "e2jgBKLL",
+          "parent_id": "xtKmrbb9",
+          "type": "VOLUME",
+          "name": "Vol. 1",
+          "children": [
+            {
+              "id": "9xNFLSSp",
+              "parent_id": "e2jgBKLL",
+              "type": "PART",
+              "name": "Part 1"
+            },
+            {
+              "id": "XlukqLH8",
+              "parent_id": "e2jgBKLL",
+              "type": "PART",
+              "name": "Part 2"
+            },
+            {
+              "id": "AerA1hNN",
+              "parent_id": "e2jgBKLL",
+              "type": "PART",
+              "name": "Part 3"
+            },
+            {
+              "id": "1kDKQxJb",
+              "parent_id": "e2jgBKLL",
+              "type": "PART",
+              "name": "Part 4"
+            }
+          ]
+        },
+        {
+          "id": "SoWJRPDf",
+          "parent_id": "xtKmrbb9",
+          "type": "VOLUME",
+          "name": "Vol. 2",
+          "children": [
+            {
+              "id": "o5lXptLo",
+              "parent_id": "SoWJRPDf",
+              "type": "PART",
+              "name": "Part 5"
+            },
+            {
+              "id": "eNwJXy4s",
+              "parent_id": "SoWJRPDf",
+              "type": "PART",
+              "name": "Part 6"
+            },
+            {
+              "id": "ahipVtPu",
+              "parent_id": "SoWJRPDf",
+              "type": "PART",
+              "name": "Part 7"
+            }
+          ]
+        },
+        {
+          "id": "cJfmz0It",
+          "parent_id": "xtKmrbb9",
+          "type": "VOLUME",
+          "name": "Vol. 3",
+          "children": [
+            {
+              "id": "Pscnn3pP",
+              "parent_id": "cJfmz0It",
+              "type": "PART",
+              "name": "Part 8"
+            },
+            {
+              "id": "Lfu7W3CD",
+              "parent_id": "cJfmz0It",
+              "type": "PART",
+              "name": "Part 9"
+            },
+            {
+              "id": "n03vXCJl",
+              "parent_id": "cJfmz0It",
+              "type": "PART",
+              "name": "Part 10"
+            }
+          ]
+        },
+        {
+          "id": "vFzrs05u",
+          "parent_id": "xtKmrbb9",
+          "type": "VOLUME",
+          "name": "Vol. 4",
+          "children": [
+            {
+              "id": "UGcGGSpP",
+              "parent_id": "vFzrs05u",
+              "type": "PART",
+              "name": "Part 11"
+            },
+            {
+              "id": "NpLQT0LX",
+              "parent_id": "vFzrs05u",
+              "type": "PART",
+              "name": "Part 12"
+            }
+          ]
+        },
+        {
+          "id": "lwWdDYpb",
+          "parent_id": "xtKmrbb9",
+          "type": "VOLUME",
+          "name": "Vol. 5",
+          "children": [
+            {
+              "id": "AUArdCkH",
+              "parent_id": "lwWdDYpb",
+              "type": "PART",
+              "name": "Part 13"
+            },
+            {
+              "id": "tit6XNAo",
+              "parent_id": "lwWdDYpb",
+              "type": "PART",
+              "name": "Part 14"
+            }
+          ]
+        },
+        {
+          "id": "QryM4tO1",
+          "parent_id": "xtKmrbb9",
+          "type": "VOLUME",
+          "name": "Vol. 6",
+          "children": [
+            {
+              "id": "FaKUG7ru",
+              "parent_id": "QryM4tO1",
+              "type": "PART",
+              "name": "Part 15"
+            },
+            {
+              "id": "mW6eON0z",
+              "parent_id": "QryM4tO1",
+              "type": "PART",
+              "name": "Part 16"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
