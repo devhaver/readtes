@@ -39,13 +39,20 @@ useSeifTapActivation(containerRef, (seifN) =>
 
     <ol v-if="segments.length > 0" class="flex flex-col gap-6">
       <li
-        v-for="segment in segments"
-        :id="`seif-${segment.n}`"
-        :key="segment.n"
+        v-for="(segment, index) in segments"
+        :id="
+          isContinuationSegment(segments, index)
+            ? undefined
+            : `seif-${segment.n}`
+        "
+        :key="sourceSegmentKey(segment, index)"
         :data-seif="segment.n"
         class="reader-anchor-target tes-seif-lg scroll-mt-4"
       >
-        <ReaderSourceSegment :segment="segment" />
+        <ReaderSourceSegment
+          :segment="segment"
+          :continuation="isContinuationSegment(segments, index)"
+        />
       </li>
     </ol>
     <p v-else class="text-sm text-(--text-muted)">

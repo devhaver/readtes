@@ -42,11 +42,52 @@ describe("sourceSegmentAnchorId", () => {
   });
 });
 
+describe("isContinuationSegment", () => {
+  // Issue #91: a consolidated answer split across several Sefaria
+  // sub-items shares one `n` — the second (and later) segment(s) render as
+  // continuations, without their own `id="seif-N"` anchor or seif chip.
+  const segments = [
+    { n: 1, sefariaRef: "x 1:1", html: "", anchors: [] },
+    { n: 2, sefariaRef: "x 2:1", html: "", anchors: [] },
+    { n: 2, sefariaRef: "x 2:2", html: "", anchors: [] },
+    { n: 2, sefariaRef: "x 2:3", html: "", anchors: [] },
+    { n: 3, sefariaRef: "x 3:1", html: "", anchors: [] },
+  ];
+
+  it("is false for the first segment of a run", () => {
+    expect(isContinuationSegment(segments, 0)).toBe(false);
+    expect(isContinuationSegment(segments, 1)).toBe(false);
+    expect(isContinuationSegment(segments, 4)).toBe(false);
+  });
+
+  it("is true for every later segment sharing the same n", () => {
+    expect(isContinuationSegment(segments, 2)).toBe(true);
+    expect(isContinuationSegment(segments, 3)).toBe(true);
+  });
+});
+
+describe("sourceSegmentKey", () => {
+  it("uses sefariaRef when present, even across a same-n pair", () => {
+    const first = { n: 2, sefariaRef: "x 2:1", html: "", anchors: [] };
+    const second = { n: 2, sefariaRef: "x 2:2", html: "", anchors: [] };
+
+    expect(sourceSegmentKey(first, 1)).toBe("x 2:1");
+    expect(sourceSegmentKey(second, 2)).toBe("x 2:2");
+    expect(sourceSegmentKey(first, 1)).not.toBe(sourceSegmentKey(second, 2));
+  });
+
+  it("falls back to n + index when sefariaRef is absent", () => {
+    const segment = { n: 5, html: "", anchors: [] };
+
+    expect(sourceSegmentKey(segment, 3)).toBe("5-3");
+  });
+});
+
 describe("sourceMiniTocEntries", () => {
   const seifLabel = (n: number) => `Seif ${n}`;
 
   it("uses each segment's heading when it has one", () => {
-    const entries = sourceMiniTocEntries(
+    const { entries } = sourceMiniTocEntries(
       [
         {
           n: 1,
@@ -73,7 +114,7 @@ describe("sourceMiniTocEntries", () => {
   });
 
   it("falls back to a generic seif label when a segment has no heading", () => {
-    const entries = sourceMiniTocEntries(
+    const { entries } = sourceMiniTocEntries(
       [{ n: 1, sefariaRef: "x 1", html: "", anchors: [] }],
       seifLabel,
     );
@@ -82,7 +123,7 @@ describe("sourceMiniTocEntries", () => {
   });
 
   it("falls back for a blank/whitespace-only heading too", () => {
-    const entries = sourceMiniTocEntries(
+    const { entries } = sourceMiniTocEntries(
       [{ n: 1, sefariaRef: "x 1", heading: "   ", html: "", anchors: [] }],
       seifLabel,
     );
@@ -90,8 +131,8 @@ describe("sourceMiniTocEntries", () => {
     expect(entries).toEqual([{ anchorId: "seif-1", label: "Seif 1" }]);
   });
 
-  it("never shorter than the segment count, even with zero headings", () => {
-    const entries = sourceMiniTocEntries(
+  it("never shorter than the distinct seif count, even with zero headings", () => {
+    const { entries, total } = sourceMiniTocEntries(
       [
         { n: 1, sefariaRef: "x 1", html: "", anchors: [] },
         { n: 2, sefariaRef: "x 2", html: "", anchors: [] },
@@ -101,5 +142,60 @@ describe("sourceMiniTocEntries", () => {
     );
 
     expect(entries).toHaveLength(3);
+    expect(total).toBe(3);
+  });
+
+  it("collapses a continuation segment into its first segment's entry", () => {
+    // Issue #91: a consolidated answer split across several segments
+    // shares one `n` — only the first gets a mini-toc entry, since only it
+    // carries the `id="seif-N"` DOM anchor.
+    const { entries, total } = sourceMiniTocEntries(
+      [
+        { n: 1, sefariaRef: "x 1:1", html: "", anchors: [] },
+        { n: 2, sefariaRef: "x 2:1", html: "", anchors: [] },
+        { n: 2, sefariaRef: "x 2:2", html: "", anchors: [] },
+        { n: 3, sefariaRef: "x 3:1", html: "", anchors: [] },
+      ],
+      seifLabel,
+    );
+
+    expect(entries.map((entry) => entry.anchorId)).toEqual([
+      "seif-1",
+      "seif-2",
+      "seif-3",
+    ]);
+    expect(total).toBe(3);
+  });
+
+  it("caps entries at MINI_TOC_LIMIT and reports the true total as truncated", () => {
+    const segments = Array.from({ length: MINI_TOC_LIMIT + 10 }, (_, i) => ({
+      n: i + 1,
+      sefariaRef: `x ${i + 1}`,
+      html: "",
+      anchors: [],
+    }));
+
+    const { entries, truncated, total } = sourceMiniTocEntries(
+      segments,
+      seifLabel,
+    );
+
+    expect(entries).toHaveLength(MINI_TOC_LIMIT);
+    expect(truncated).toBe(true);
+    expect(total).toBe(MINI_TOC_LIMIT + 10);
+  });
+
+  it("is not truncated at exactly MINI_TOC_LIMIT distinct seifim", () => {
+    const segments = Array.from({ length: MINI_TOC_LIMIT }, (_, i) => ({
+      n: i + 1,
+      sefariaRef: `x ${i + 1}`,
+      html: "",
+      anchors: [],
+    }));
+
+    const { entries, truncated } = sourceMiniTocEntries(segments, seifLabel);
+
+    expect(entries).toHaveLength(MINI_TOC_LIMIT);
+    expect(truncated).toBe(false);
   });
 });

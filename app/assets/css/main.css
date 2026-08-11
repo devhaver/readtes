@@ -416,6 +416,14 @@ html {
   @apply me-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-(--surface-raised) px-1 align-middle text-xs tabular-nums text-(--text-muted);
 }
 
+/* A continuation segment's own html (`ReaderSourceSegment`, issue #91): no
+   chip precedes it, so this puts it on its own line, indented to the width
+   a chip + its `me-2` gap would have taken (h-5 + me-2 = 1.75rem = `ms-7`)
+   — reading as more of the paragraph above rather than a fresh seif. */
+.tes-seif-continuation {
+  @apply block ms-7;
+}
+
 /* Full-height flex column: `ReaderShell`'s own root plus each
    `ReaderPane`'s root share this exact shape (up to 4x per panes-mode
    page: the shell once, one pane each for Source/Inner Light/Inner

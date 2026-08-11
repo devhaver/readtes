@@ -1,20 +1,30 @@
 /**
  * Derives `content/toc.volumes.json` and `content/toc.parts/part-NN.json`
  * (the app-facing split ToC — see AGENTS.md "Content model") from
- * `content/toc.json`, and writes them to disk. A pure local transform: this
- * never touches the network, only the already-in-memory/on-disk `toc.json`.
+ * `content/toc.json`, and writes them to disk. Never touches the network —
+ * only `toc.json`/`versions.json`, already in memory or read from disk, plus
+ * (see `itemCountFor` below) the committed content of the specific
+ * `answers-*` chapters `toc.json` itself names, to compute their
+ * `TocChapter.itemCount`.
  *
  * Called by both importers right after they write `toc.json`, and by
  * `scripts/emit-toc-splits.ts` standalone (`pnpm emit:toc-splits`) to
  * regenerate the split files from a `toc.json` edited by hand. Idempotent:
- * running it twice against unchanged `toc.json`/`versions.json` produces a
- * byte-identical tree.
+ * running it twice against unchanged `toc.json`/`versions.json`/content
+ * produces a byte-identical tree.
  *
  * `deriveTocVolumesFile`/`deriveTocPartFiles` are also the reference
  * implementation `scripts/validate-content.ts`'s equivalence check compares
  * the committed split files against.
  */
-import { mkdirSync, readdirSync, unlinkSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  unlinkSync,
+  writeFileSync,
+} from "node:fs";
 import { dirname, join } from "node:path";
 import type {
   ChapterKind,
@@ -26,6 +36,57 @@ import type {
   TocPartFile,
   TocVolumesFile,
 } from "../../shared/types/content.ts";
+import { chapterLayerFileSchema } from "../../shared/types/content.ts";
+import { isConsolidatedQaKind } from "./qa-consolidation.ts";
+
+/**
+ * The canonical Hebrew source is complete for every list chapter in the
+ * corpus (checked against the full committed tree) — preferred over any
+ * other version so `itemCountFor` reads the fullest available item set.
+ * Falls back to the chapter's first available source version (sorted, for
+ * determinism) on the off chance a future chapter lacks it.
+ */
+const CANONICAL_SOURCE_VERSION_ID = "he-jerusalem-1956";
+
+/**
+ * The highest `n` a consolidated `answers-*` chapter's own committed source
+ * carries — see `TocChapter.itemCount`. Reads straight off disk rather than
+ * `toc.json` because no ToC-level field records it otherwise: consolidation
+ * (#91) folded what used to be one-chapter-per-answer (and so one
+ * `TocChapter.number` per answer) into a single chapter, which lost that
+ * per-answer accounting entirely. Returns `undefined` for a chapter with no
+ * source versions at all (nothing to read).
+ */
+const itemCountFor = (
+  contentDir: string,
+  partId: string,
+  chapter: TocChapter,
+): number | undefined => {
+  const sourceVersions = chapter.availableVersions.source;
+  if (sourceVersions.length === 0) return undefined;
+
+  const versionId = sourceVersions.includes(CANONICAL_SOURCE_VERSION_ID)
+    ? CANONICAL_SOURCE_VERSION_ID
+    : [...sourceVersions].sort()[0]!;
+
+  const slug = chapter.id.split("/")[1] as string;
+  const filePath = join(
+    contentDir,
+    "parts",
+    partId,
+    "chapters",
+    slug,
+    `source.${versionId}.json`,
+  );
+  if (!existsSync(filePath)) return undefined;
+
+  const file = chapterLayerFileSchema.parse(
+    JSON.parse(readFileSync(filePath, "utf-8")),
+  );
+  if (file.layer !== "source") return undefined;
+
+  return file.items.reduce((highest, item) => Math.max(highest, item.n), 0);
+};
 
 /**
  * Stable display/reading order for chapter kinds within a part. Duplicated
@@ -128,12 +189,27 @@ export const deriveTocVolumesFile = (
   })),
 });
 
-export const deriveTocPartFiles = (toc: Toc): TocPartFile[] =>
+/**
+ * `contentDir` is only ever consulted for `answers-*` chapters — see
+ * `itemCountFor`. Every other chapter's `TocChapter` passes through
+ * untouched, same as before.
+ */
+export const deriveTocPartFiles = (
+  toc: Toc,
+  contentDir: string,
+): TocPartFile[] =>
   toc.volumes.flatMap((volume) =>
     volume.parts.map((part) => ({
       part: { id: part.id, number: part.number, title: part.title },
       volume: { id: volume.id, number: volume.number, title: volume.title },
-      chapters: part.chapters,
+      chapters: part.chapters.map((chapter) =>
+        isConsolidatedQaKind(chapter.kind)
+          ? {
+              ...chapter,
+              itemCount: itemCountFor(contentDir, part.id, chapter),
+            }
+          : chapter,
+      ),
     })),
   );
 
@@ -155,7 +231,7 @@ export const writeTocSplitFiles = (
   const volumesFile = deriveTocVolumesFile(toc, versions);
   writeJsonFile(join(contentDir, "toc.volumes.json"), volumesFile);
 
-  const partFiles = deriveTocPartFiles(toc);
+  const partFiles = deriveTocPartFiles(toc, contentDir);
   const partsDir = join(contentDir, "toc.parts");
   const expectedFileNames = new Set(
     partFiles.map((file) => `${file.part.id}.json`),

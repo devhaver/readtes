@@ -50,6 +50,42 @@ describe("ReaderSummaryBody", () => {
     expect(wrapper.text()).toContain("Seif 2");
   });
 
+  it("collapses a continuation segment (same n) into one mini-toc entry", async () => {
+    // Issue #91: a consolidated answer split across several segments
+    // shares one `n` — the mini-toc must not list it twice.
+    const wrapper = await mountSuspended(ReaderSummaryBody, {
+      props: {
+        summaryItems: [],
+        sourceSegments: [
+          { n: 1, sefariaRef: "x 1:1", html: "", anchors: [] },
+          { n: 1, sefariaRef: "x 1:2", html: "", anchors: [] },
+          { n: 2, sefariaRef: "x 2:1", html: "", anchors: [] },
+        ],
+      },
+    });
+
+    expect(wrapper.findAll("button")).toHaveLength(2);
+  });
+
+  it("summarizes past MINI_TOC_LIMIT distinct seifim instead of listing them all", async () => {
+    const longChapter: SourceSegment[] = Array.from(
+      { length: MINI_TOC_LIMIT + 5 },
+      (_, i) => ({
+        n: i + 1,
+        sefariaRef: `x ${i + 1}`,
+        html: "",
+        anchors: [],
+      }),
+    );
+
+    const wrapper = await mountSuspended(ReaderSummaryBody, {
+      props: { summaryItems: [], sourceSegments: longChapter },
+    });
+
+    expect(wrapper.findAll("button")).toHaveLength(MINI_TOC_LIMIT);
+    expect(wrapper.text()).toContain("…and 5 more");
+  });
+
   it("is never an empty box, even with no summary and no source segments", async () => {
     const wrapper = await mountSuspended(ReaderSummaryBody, {
       props: { summaryItems: [], sourceSegments: [] },

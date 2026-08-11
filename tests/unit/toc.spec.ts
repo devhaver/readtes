@@ -19,8 +19,13 @@ const chapter = (id: string, number: number) =>
 
 describe("orderedPartChapters", () => {
   it("orders chapters by kind first, then by number within the kind", () => {
+    // A part's `chapter`/`inner-observation` kinds still hold several
+    // `TocChapter`s each (numbered rows) — `answers-terminology` holds
+    // exactly one post-consolidation (issue #91), so it exercises the
+    // kind-ordering half of the sort without a "number within kind" case
+    // of its own; that half is already covered above by `chapter`/
+    // `inner-observation`.
     const chapters: TocChapter[] = [
-      chapterOf("part-01/answers-terminology-02", "answers-terminology", 2),
       chapterOf("part-01/inner-observation-02", "inner-observation", 2),
       chapterOf("part-01/chapter-02", "chapter", 2),
       chapterOf("part-01/answers-terminology-01", "answers-terminology", 1),
@@ -36,7 +41,6 @@ describe("orderedPartChapters", () => {
       "part-01/inner-observation-02",
       "part-01/questions-terminology-01",
       "part-01/answers-terminology-01",
-      "part-01/answers-terminology-02",
     ]);
   });
 });

@@ -6,7 +6,17 @@
 // item; this owns only the segment's own content.
 import type { SourceSegment } from "~~/shared/types/content";
 
-const props = defineProps<{ segment: SourceSegment }>();
+const props = defineProps<{
+  segment: SourceSegment;
+  /**
+   * True when this segment is a later part of the same answer/seif as the
+   * one before it (issue #91: `isContinuationSegment`) — renders without
+   * its own seif chip, since `segment.n` would just repeat the segment
+   * above it, and indented to read as a continuation of that paragraph
+   * rather than a fresh one.
+   */
+  continuation?: boolean;
+}>();
 
 // Two passes over Sefaria's Questions <-> Answers cross-references, in
 // this order:
@@ -40,8 +50,12 @@ const displayHtml = computed(() =>
 </script>
 
 <template>
-  <span class="tes-seif-chip" aria-hidden="true">
+  <span v-if="!continuation" class="tes-seif-chip" aria-hidden="true">
     {{ segment.n }}
   </span>
-  <span ref="crossRefRoot" v-html="displayHtml" />
+  <span
+    ref="crossRefRoot"
+    :class="continuation ? 'tes-seif-continuation' : undefined"
+    v-html="displayHtml"
+  />
 </template>

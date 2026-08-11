@@ -76,6 +76,18 @@ export const tocChapterSchema = z.object({
   title: localizedTitleSchema,
   availableLayers: z.array(layerKindSchema),
   availableVersions: availableVersionsSchema,
+  /**
+   * `answers-terminology`/`answers-topics` only (issue #91's consolidated
+   * list chapters): the highest `n` its canonical source version's items
+   * carry. The corpus keeps a list chapter's `n` values contiguous from 1
+   * (checked against the full committed tree), so this doubles as the
+   * count of individually addressable `#seif-N` answers. Only ever set on
+   * `content/toc.parts/*.json` chapters — `scripts/lib/toc-splits.ts`
+   * computes it by reading the chapter's own committed content, so
+   * `content/toc.json`'s chapters never carry it. `sefariaCrossRefTarget`
+   * is what reads it — see that module.
+   */
+  itemCount: z.number().int().positive().optional(),
 });
 export type TocChapter = z.infer<typeof tocChapterSchema>;
 

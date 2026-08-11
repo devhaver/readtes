@@ -51,6 +51,7 @@
     "innerObservationReload": "Reload the page",
     "innerObservationNeverWritten": "Baal HaSulam wrote no Inner Observation (Histaklut Pnimit) for this part — eleven of the sixteen parts have one, and this is not among them. There is no text here for an edition to carry, so this is not a digitization gap.",
     "miniTocTitle": "In this chapter",
+    "miniTocTruncated": "…and {count} more — scroll down to read them all.",
     "seifLabel": "Seif {n}",
     "missingAnchor": {
       "message": "Not available in this language.",
@@ -226,10 +227,10 @@
     "chapterKind": {
       "chapter": "Chapter {n}",
       "inner-observation": "Inner Observation {n}",
-      "questions-terminology": "Questions — Terminology {n}",
-      "questions-topics": "Questions — Topics {n}",
-      "answers-terminology": "Answers — Terminology {n}",
-      "answers-topics": "Answers — Topics {n}"
+      "questions-terminology": "Questions — Terminology",
+      "questions-topics": "Questions — Topics",
+      "answers-terminology": "Answers — Terminology",
+      "answers-topics": "Answers — Topics"
     },
     "layerSummary": "Summary",
     "emptyTitle": "No term matches.",

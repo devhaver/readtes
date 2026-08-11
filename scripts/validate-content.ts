@@ -641,7 +641,7 @@ const checkTocSplitEquivalence = (
     }
   }
 
-  const expectedPartFiles = deriveTocPartFiles(toc);
+  const expectedPartFiles = deriveTocPartFiles(toc, contentDir);
   const expectedFileNames = new Set(
     expectedPartFiles.map((file) => `${file.part.id}.json`),
   );

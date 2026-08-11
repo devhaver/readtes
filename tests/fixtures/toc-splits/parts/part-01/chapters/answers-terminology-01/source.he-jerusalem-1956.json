@@ -1,0 +1,32 @@
+{
+  "chapterId": "part-01/answers-terminology-01",
+  "layer": "source",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 1:1",
+      "html": "<p>Answer one.</p>",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 2:1",
+      "html": "<p>Answer two, part one.</p>",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 2:2",
+      "html": "<p>Answer two, part two.</p>",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 3:1",
+      "html": "<p>Answer three.</p>",
+      "anchors": []
+    }
+  ]
+}

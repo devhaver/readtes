@@ -1,3 +1,4 @@
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   tocPartFileSchema,
@@ -9,6 +10,9 @@ import {
   deriveTocPartFiles,
   deriveTocVolumesFile,
 } from "../../scripts/lib/toc-splits.ts";
+
+/** A trimmed `answers-terminology-01` chapter — see `deriveTocPartFiles`'s own tests below. */
+const contentDir = join(process.cwd(), "tests/fixtures/toc-splits");
 
 const versions: ContentVersion[] = [
   {
@@ -182,7 +186,7 @@ describe("deriveTocVolumesFile", () => {
 });
 
 describe("deriveTocPartFiles", () => {
-  const results = deriveTocPartFiles(fixtureToc);
+  const results = deriveTocPartFiles(fixtureToc, contentDir);
 
   it("emits one file per part, each validating against tocPartFileSchema", () => {
     expect(results.map((r) => r.part.id)).toEqual([
@@ -216,5 +220,81 @@ describe("deriveTocPartFiles", () => {
       number: 2,
       title: { en: "Volume 2", he: "כרך 2" },
     });
+  });
+});
+
+describe("deriveTocPartFiles — answers-* itemCount", () => {
+  // `tests/fixtures/toc-splits/parts/part-01/chapters/answers-terminology-01/`
+  // holds a trimmed source file: items n=1, 2, 2, 3 — the highest `n` is 3,
+  // and the repeated n=2 (issue #91: an answer split across segments) must
+  // not inflate it to 4.
+  const qaToc: Toc = {
+    volumes: [
+      {
+        id: "volume-01",
+        number: 1,
+        title: { en: "Volume 1", he: "כרך 1" },
+        parts: [
+          {
+            id: "part-01",
+            number: 1,
+            sefariaNode: "Talmud Eser HaSefirot, Section I",
+            title: { en: "Part 1", he: "חלק 1" },
+            chapters: [
+              {
+                id: "part-01/answers-terminology-01",
+                kind: "answers-terminology",
+                number: 1,
+                title: {
+                  en: "List of Answers on Terminology",
+                  he: "לוח התשובות לפירוש המלות",
+                },
+                availableLayers: ["source"],
+                availableVersions: {
+                  summary: [],
+                  source: ["he-jerusalem-1956"],
+                  commentary: [],
+                },
+              },
+              {
+                id: "part-01/answers-topics-01",
+                kind: "answers-topics",
+                number: 1,
+                title: {
+                  en: "List of Answers on Topics",
+                  he: "לוח התשובות לענינים",
+                },
+                availableLayers: [],
+                availableVersions: { summary: [], source: [], commentary: [] },
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
+  const results = deriveTocPartFiles(qaToc, contentDir);
+  const chapters = results[0]?.chapters ?? [];
+
+  it("reads the highest n off the chapter's own committed source", () => {
+    const answers = chapters.find(
+      (c) => c.id === "part-01/answers-terminology-01",
+    );
+    expect(answers?.itemCount).toBe(3);
+  });
+
+  it("is undefined for a consolidated chapter with no source versions", () => {
+    const topics = chapters.find((c) => c.id === "part-01/answers-topics-01");
+    expect(topics?.itemCount).toBeUndefined();
+  });
+
+  it("leaves non-consolidated chapter kinds without an itemCount", () => {
+    const part01 = deriveTocPartFiles(fixtureToc, contentDir).find(
+      (r) => r.part.id === "part-01",
+    );
+    expect(
+      part01?.chapters.find((c) => c.id === "part-01/chapter-01")?.itemCount,
+    ).toBeUndefined();
   });
 });

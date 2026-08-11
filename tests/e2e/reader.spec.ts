@@ -109,6 +109,37 @@ test("serves the Hebrew reader with RTL panes", async ({ page }) => {
   ).toBeVisible();
 });
 
+test.describe("Q&A cross-references (issue #91)", () => {
+  test("resolves an answer's 'to the question' link to the consolidated questions chapter", async ({
+    page,
+  }) => {
+    // Answer chapters were consolidated into one `answers-<subject>-01`
+    // chapter per part, items addressed by `#seif-N` — this is the closed
+    // Questions <-> Answers loop (#78) still resolving internally against
+    // that shape, not falling back to the sefaria.org new-tab link.
+    await page.goto("/he/read/part-01/answers-terminology-01");
+    await waitForHydration(page);
+
+    const source = page.locator("#reader-source-pane");
+    const firstSeif = source.locator("li[data-seif]").first();
+    await expect(firstSeif).toHaveAttribute("data-seif", "1");
+
+    const toQuestion = firstSeif.getByRole("link", { name: "לשאלה" });
+    await expect(toQuestion).toHaveAttribute(
+      "href",
+      "/he/read/part-01/questions-terminology-01#seif-1",
+    );
+
+    await toQuestion.click();
+    await expect(page).toHaveURL(
+      "/he/read/part-01/questions-terminology-01#seif-1",
+    );
+    await expect(
+      page.locator("#reader-source-pane li[data-seif='1']"),
+    ).toBeVisible();
+  });
+});
+
 test.describe("mobile reader", () => {
   test.use({
     viewport: { width: 390, height: 844 },
