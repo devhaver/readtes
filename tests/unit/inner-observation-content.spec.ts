@@ -1,6 +1,6 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import { describe, expect, it, vi } from "vitest";
-import { defineComponent, nextTick } from "vue";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { defineComponent, nextTick, ref } from "vue";
 import type {
   ChapterLayerFile,
   SourceSegment,
@@ -9,8 +9,10 @@ import type {
 
 // `useInnerObservationContent` reuses `useChapterContent`'s per-file lazy
 // loader; stubbing it keeps this spec about *when* the bodies are fetched
-// (never during setup/SSR, once per part after mount) rather than about the
-// committed corpus.
+// (never during setup/SSR, once per part after mount, never at all while the
+// pane's mode isn't showing) rather than about the committed corpus. The
+// "essay text never reaches server-rendered HTML" invariant is guarded
+// against the real corpus in `inner-observation-not-prerendered.spec.ts`.
 const { loadLayerFile } = vi.hoisted(() => ({ loadLayerFile: vi.fn() }));
 
 vi.mock("~/composables/useChapterContent", () => ({ loadLayerFile }));
@@ -37,6 +39,11 @@ const innerObservationChapter = (
   availableVersions: { summary: [], source: sourceVersions, commentary: [] },
 });
 
+const resolveTo = (partId: string) =>
+  loadLayerFile.mockImplementation((_partId, chapterSlug, _layer, versionId) =>
+    Promise.resolve(layerFile(`${partId}/${chapterSlug}`, versionId)),
+  );
+
 // A microtask flush deep enough for the composable's `onMounted` handler
 // (an `await` per section, plus one per version inside it) to settle.
 const flush = async () => {
@@ -44,14 +51,18 @@ const flush = async () => {
   await nextTick();
 };
 
-const mountHost = async (partId: string, chapters: TocChapter[]) => {
+const mountHost = async (
+  partId: string,
+  chapters: TocChapter[],
+  enabled?: () => boolean,
+) => {
   const Host = defineComponent({
     setup() {
-      const content = useInnerObservationContent(partId, chapters);
+      const content = useInnerObservationContent(partId, chapters, enabled);
       // Captured synchronously in `setup` — i.e. what the prerendered HTML
       // and the client's hydrating render both resolve to.
       const preMount = {
-        pending: content.pending.value,
+        state: content.state.value,
         sections: content.sections.value,
         loads: loadLayerFile.mock.calls.length,
       };
@@ -62,6 +73,13 @@ const mountHost = async (partId: string, chapters: TocChapter[]) => {
 
   return await mountSuspended(Host);
 };
+
+// Every test asserts on call counts, and the composable's per-part cache is
+// module-level; a fresh mock per test (plus a part id used nowhere else)
+// keeps each one independent of the ones above it.
+beforeEach(() => {
+  loadLayerFile.mockReset();
+});
 
 describe("innerObservationVersionIds", () => {
   it("unions the ToC's source versions across sections, in first-seen order", () => {
@@ -86,10 +104,7 @@ describe("innerObservationVersionIds", () => {
 
 describe("useInnerObservationContent (hydration)", () => {
   it("fetches no bodies during setup, then loads them after mount", async () => {
-    loadLayerFile.mockImplementation(
-      (_partId, chapterSlug, _layer, versionId) =>
-        Promise.resolve(layerFile(`part-90/${chapterSlug}`, versionId)),
-    );
+    resolveTo("part-90");
 
     const chapters = [
       innerObservationChapter("part-90/inner-observation-01", [
@@ -105,7 +120,7 @@ describe("useInnerObservationContent (hydration)", () => {
     expect(wrapper.vm.preMount.sections).toEqual([]);
     // ...and the pane is told it's pending, not empty, so it can't flash the
     // "no Inner Observation" message before the bodies arrive.
-    expect(wrapper.vm.preMount.pending).toBe(true);
+    expect(wrapper.vm.preMount.state).toBe("pending");
 
     // Versions come from the ToC, so the pane's version <select> is
     // identical on both sides of hydration even with no bodies loaded.
@@ -113,7 +128,7 @@ describe("useInnerObservationContent (hydration)", () => {
 
     await flush();
 
-    expect(wrapper.vm.content.pending.value).toBe(false);
+    expect(wrapper.vm.content.state.value).toBe("ready");
     expect(wrapper.vm.content.sections.value).toEqual([
       {
         chapterId: "part-90/inner-observation-01",
@@ -129,11 +144,7 @@ describe("useInnerObservationContent (hydration)", () => {
   });
 
   it("loads a part's bodies once and reuses them across its chapters", async () => {
-    loadLayerFile.mockClear();
-    loadLayerFile.mockImplementation(
-      (_partId, chapterSlug, _layer, versionId) =>
-        Promise.resolve(layerFile(`part-91/${chapterSlug}`, versionId)),
-    );
+    resolveTo("part-91");
 
     const chapters = [
       innerObservationChapter("part-91/inner-observation-01", ["en-bb"]),
@@ -156,8 +167,11 @@ describe("useInnerObservationContent (hydration)", () => {
     );
   });
 
-  it("settles into the empty state when a body chunk fails to load", async () => {
-    loadLayerFile.mockClear();
+  // Regression guard for the state this change makes newly reachable: before
+  // it, the bodies were in the prerendered HTML and could not fail. A cached
+  // document that outlives its hashed chunks (redeploy) 404s them, and the
+  // pane must not answer that with "this part has no Inner Observation".
+  it("reports a failed load distinctly from an empty part", async () => {
     loadLayerFile.mockRejectedValue(new Error("chunk load failed"));
 
     const wrapper = await mountHost("part-92", [
@@ -165,17 +179,73 @@ describe("useInnerObservationContent (hydration)", () => {
     ]);
     await flush();
 
-    expect(wrapper.vm.content.pending.value).toBe(false);
+    expect(wrapper.vm.content.state.value).toBe("failed");
+    expect(wrapper.vm.content.state.value).not.toBe("ready");
     expect(wrapper.vm.content.sections.value).toEqual([]);
   });
 
-  it("is never pending for a part with no Inner Observation chapters", async () => {
-    loadLayerFile.mockClear();
+  it("evicts a rejected load so the next mount re-attempts it", async () => {
+    const chapters = [
+      innerObservationChapter("part-94/inner-observation-01", ["en-bb"]),
+    ];
 
+    loadLayerFile.mockRejectedValue(new Error("chunk load failed"));
+    const first = await mountHost("part-94", chapters);
+    await flush();
+    expect(first.vm.content.state.value).toBe("failed");
+
+    // Caching the rejection would strand every later chapter of the part on
+    // the failed state even once the fetch would succeed.
+    resolveTo("part-94");
+    const second = await mountHost("part-94", chapters);
+    await flush();
+
+    expect(second.vm.content.state.value).toBe("ready");
+    expect(second.vm.content.sections.value).toHaveLength(1);
+  });
+
+  it("is ready, not pending, for a part with no Inner Observation chapters", async () => {
     const wrapper = await mountHost("part-93", []);
     await flush();
 
-    expect(wrapper.vm.content.pending.value).toBe(false);
+    expect(wrapper.vm.content.state.value).toBe("ready");
     expect(loadLayerFile).not.toHaveBeenCalled();
+  });
+});
+
+describe("useInnerObservationContent (mode gate)", () => {
+  it("fetches nothing while the pane's mode isn't showing", async () => {
+    resolveTo("part-95");
+
+    const wrapper = await mountHost(
+      "part-95",
+      [innerObservationChapter("part-95/inner-observation-01", ["en-bb"])],
+      () => false,
+    );
+    await flush();
+
+    // Study and original modes render no Inner Observation pane at all, so
+    // on a phone this is a whole part's essays not fetched.
+    expect(loadLayerFile).not.toHaveBeenCalled();
+    expect(wrapper.vm.content.state.value).toBe("pending");
+  });
+
+  it("loads as soon as the reader switches into the pane's mode", async () => {
+    resolveTo("part-96");
+
+    const showing = ref(false);
+    const wrapper = await mountHost(
+      "part-96",
+      [innerObservationChapter("part-96/inner-observation-01", ["en-bb"])],
+      () => showing.value,
+    );
+    await flush();
+    expect(loadLayerFile).not.toHaveBeenCalled();
+
+    showing.value = true;
+    await flush();
+
+    expect(loadLayerFile).toHaveBeenCalledTimes(1);
+    expect(wrapper.vm.content.state.value).toBe("ready");
   });
 });

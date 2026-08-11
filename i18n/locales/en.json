@@ -43,6 +43,9 @@
     "summaryEmpty": "No summary available for this chapter yet.",
     "innerObservationEmpty": "No Inner Observation available for this chapter yet.",
     "innerObservationLoading": "Loading Inner Observation…",
+    "innerObservationLoaded": "Inner Observation loaded.",
+    "innerObservationFailed": "Inner Observation could not be loaded.",
+    "innerObservationReload": "Reload the page",
     "miniTocTitle": "In this chapter",
     "seifLabel": "Seif {n}",
     "missingAnchor": {

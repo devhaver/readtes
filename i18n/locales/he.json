@@ -43,6 +43,9 @@
     "summaryEmpty": "אין עדיין תקציר זמין לפרק זה.",
     "innerObservationEmpty": "אין עדיין הסתכלות פנימית זמינה לפרק זה.",
     "innerObservationLoading": "טוען הסתכלות פנימית…",
+    "innerObservationLoaded": "ההסתכלות הפנימית נטענה.",
+    "innerObservationFailed": "לא ניתן היה לטעון את ההסתכלות הפנימית.",
+    "innerObservationReload": "טען מחדש את הדף",
     "miniTocTitle": "בפרק זה",
     "seifLabel": "סעיף {n}",
     "missingAnchor": {
