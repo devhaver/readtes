@@ -77,6 +77,12 @@ const closeMobileMenu = () => {
         >
           {{ t("nav.volumesLink") }}
         </NuxtLink>
+        <NuxtLink
+          :to="localePath('/glossary')"
+          class="text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        >
+          {{ t("nav.glossaryLink") }}
+        </NuxtLink>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -96,6 +102,13 @@ const closeMobileMenu = () => {
         @click="closeMobileMenu"
       >
         {{ t("nav.volumesLink") }}
+      </NuxtLink>
+      <NuxtLink
+        :to="localePath('/glossary')"
+        class="block rounded-button py-2 text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        @click="closeMobileMenu"
+      >
+        {{ t("nav.glossaryLink") }}
       </NuxtLink>
     </div>
   </header>

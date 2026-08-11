@@ -1,0 +1,3185 @@
+{
+  "meta": {
+    "sourceVersion": "en-bb (Bnei Baruch / KabbalahMedia official English)",
+    "referenceVersion": "he-jerusalem-1956",
+    "generatedOn": "2026-07-27",
+    "method": "Every chapter+layer that has both a he-jerusalem-1956 and an en-bb file was paired. Items were aligned positionally and the alignment was validated by requiring the (n, order, anchorId) key sequence to be identical on both sides. Candidate English renderings were mined by lift scoring of 1-3 gram frequencies inside the subset of aligned items containing a given Hebrew term, then each candidate was confirmed by reading real aligned pairs. Every citation below was extracted programmatically from the aligned corpus, not written by hand.",
+    "alignedChapters": 737,
+    "alignedItemPairs": 1448,
+    "entryCount": 125,
+    "partsCovered": [
+      "part-01",
+      "part-02",
+      "part-03",
+      "part-05",
+      "part-06"
+    ],
+    "partsNotCovered": [
+      "part-04",
+      "part-07",
+      "part-08",
+      "part-09",
+      "part-10",
+      "part-11",
+      "part-12",
+      "part-13",
+      "part-14",
+      "part-15",
+      "part-16"
+    ]
+  },
+  "entries": [
+    {
+      "id": "or",
+      "he": "אור",
+      "canonicalEn": "light",
+      "strategy": "translate",
+      "heItemCount": 449,
+      "alignedItemCount": 441,
+      "coveragePct": 98,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "light",
+          "occurrences": 1250
+        },
+        {
+          "en": "Light (title case, in section names)",
+          "occurrences": 7
+        }
+      ],
+      "note": "Never transliterated as Ohr. Capitalised only inside the section names 'Inner Light' / 'Inner Observation'.",
+      "citationCount": 3
+    },
+    {
+      "id": "orot",
+      "he": "אורות",
+      "canonicalEn": "lights",
+      "strategy": "translate",
+      "heItemCount": 153,
+      "alignedItemCount": 149,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "lights",
+          "occurrences": 242
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "or-elyon",
+      "he": "אור עליון",
+      "canonicalEn": "upper light",
+      "strategy": "translate",
+      "heItemCount": 79,
+      "alignedItemCount": 79,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "upper light",
+          "occurrences": 124
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "kli",
+      "he": "כלי",
+      "canonicalEn": "vessel",
+      "strategy": "translate",
+      "heItemCount": 296,
+      "alignedItemCount": 293,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "vessel/vessels",
+          "occurrences": 754
+        }
+      ],
+      "note": "Translated, not transliterated. 'Kli' occurs once in the whole en-bb corpus.",
+      "citationCount": 3
+    },
+    {
+      "id": "kelim",
+      "he": "כלים",
+      "canonicalEn": "vessels",
+      "strategy": "translate",
+      "heItemCount": 159,
+      "alignedItemCount": 157,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "vessels",
+          "occurrences": 273
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "kli-kabbala",
+      "he": "כלי קבלה",
+      "canonicalEn": "vessel of reception",
+      "strategy": "translate",
+      "heItemCount": 25,
+      "alignedItemCount": 23,
+      "coveragePct": 92,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "vessels of reception",
+          "occurrences": 20
+        },
+        {
+          "en": "vessel of reception",
+          "occurrences": 12
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "masach",
+      "he": "מסך",
+      "canonicalEn": "screen",
+      "strategy": "translate",
+      "heItemCount": 145,
+      "alignedItemCount": 142,
+      "coveragePct": 98,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "screen",
+          "occurrences": 296
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "aviut",
+      "he": "עביות",
+      "canonicalEn": "coarseness",
+      "strategy": "translate",
+      "heItemCount": 98,
+      "alignedItemCount": 95,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "coarseness",
+          "occurrences": 160
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "av",
+      "he": "עב",
+      "canonicalEn": "coarse",
+      "strategy": "translate",
+      "heItemCount": 15,
+      "alignedItemCount": 11,
+      "coveragePct": 73,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "coarse/coarser",
+          "occurrences": 20
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "zakut",
+      "he": "זכות",
+      "canonicalEn": "refinement",
+      "strategy": "translate",
+      "heItemCount": 6,
+      "alignedItemCount": 6,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03"
+      ],
+      "variants": [
+        {
+          "en": "refinement",
+          "occurrences": 10
+        }
+      ],
+      "note": "Collides with הזדככות, also 'refinement'. See inconsistencies.",
+      "citationCount": 3
+    },
+    {
+      "id": "zach",
+      "he": "זך",
+      "canonicalEn": "refined",
+      "strategy": "translate",
+      "heItemCount": 18,
+      "alignedItemCount": 17,
+      "coveragePct": 94,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "refined",
+          "occurrences": 22
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hizdakchut",
+      "he": "הזדככות",
+      "canonicalEn": "refinement",
+      "strategy": "translate",
+      "heItemCount": 56,
+      "alignedItemCount": 53,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "refine/refines/refined (verb)",
+          "occurrences": 53
+        },
+        {
+          "en": "refinement (noun)",
+          "occurrences": 44
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "reshimo",
+      "he": "רשימו",
+      "canonicalEn": "record",
+      "strategy": "translate",
+      "heItemCount": 59,
+      "alignedItemCount": 58,
+      "coveragePct": 98,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "record",
+          "occurrences": 71
+        },
+        {
+          "en": "records",
+          "occurrences": 42
+        }
+      ],
+      "note": "Always translated. 'Reshimo'/'Reshimot' never appear in en-bb.",
+      "citationCount": 3
+    },
+    {
+      "id": "zivug",
+      "he": "זווג",
+      "canonicalEn": "coupling",
+      "strategy": "translate",
+      "heItemCount": 120,
+      "alignedItemCount": 118,
+      "coveragePct": 98,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "coupling",
+          "occurrences": 181
+        }
+      ],
+      "note": "Hebrew is spelled זווג (defective) throughout this corpus; זיווג does not occur.",
+      "citationCount": 3
+    },
+    {
+      "id": "hakaa",
+      "he": "הכאה",
+      "canonicalEn": "striking",
+      "strategy": "translate",
+      "heItemCount": 25,
+      "alignedItemCount": 24,
+      "coveragePct": 96,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "striking",
+          "occurrences": 32
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "zivug-dehakaa",
+      "he": "זווג דהכאה",
+      "canonicalEn": "coupling by striking",
+      "strategy": "translate",
+      "heItemCount": 18,
+      "alignedItemCount": 18,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "coupling by striking",
+          "occurrences": 21
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "olam",
+      "he": "עולם",
+      "canonicalEn": "world",
+      "strategy": "translate",
+      "heItemCount": 101,
+      "alignedItemCount": 87,
+      "coveragePct": 86,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "world/worlds",
+          "occurrences": 173
+        },
+        {
+          "en": "Olam",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "tzimtzum",
+      "he": "צמצום",
+      "canonicalEn": "restriction",
+      "strategy": "translate",
+      "heItemCount": 70,
+      "alignedItemCount": 68,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "restriction",
+          "occurrences": 125
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "kav",
+      "he": "קו",
+      "canonicalEn": "line",
+      "strategy": "translate",
+      "heItemCount": 29,
+      "alignedItemCount": 29,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "line",
+          "occurrences": 45
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "igulim",
+      "he": "עיגולים",
+      "canonicalEn": "circles",
+      "strategy": "translate",
+      "heItemCount": 41,
+      "alignedItemCount": 41,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02"
+      ],
+      "variants": [
+        {
+          "en": "circles",
+          "occurrences": 64
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "igul",
+      "he": "עיגול",
+      "canonicalEn": "circle",
+      "strategy": "translate",
+      "heItemCount": 12,
+      "alignedItemCount": 9,
+      "coveragePct": 75,
+      "attestedInParts": [
+        "part-01",
+        "part-02"
+      ],
+      "variants": [
+        {
+          "en": "circle",
+          "occurrences": 16
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "yosher",
+      "he": "יושר",
+      "canonicalEn": "straightness",
+      "strategy": "translate",
+      "heItemCount": 30,
+      "alignedItemCount": 30,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02"
+      ],
+      "variants": [
+        {
+          "en": "straightness",
+          "occurrences": 47
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "histaklut-pnimit",
+      "he": "הסתכלות פנימית",
+      "canonicalEn": "Inner Observation",
+      "strategy": "translate",
+      "heItemCount": 110,
+      "alignedItemCount": 91,
+      "coveragePct": 83,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Inner Observation",
+          "occurrences": 93
+        }
+      ],
+      "note": "Name of Baal HaSulam's second commentary layer. Title case, both words capitalised (one stray 'Inner observation').",
+      "citationCount": 3
+    },
+    {
+      "id": "histaklut",
+      "he": "הסתכלות",
+      "canonicalEn": "look",
+      "strategy": "translate",
+      "heItemCount": 16,
+      "alignedItemCount": 13,
+      "coveragePct": 81,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "look/looking",
+          "occurrences": 18
+        }
+      ],
+      "note": "As a technical term (Malchut looking at the light) it is 'a look' / 'looking', NOT 'observation'.",
+      "citationCount": 3
+    },
+    {
+      "id": "or-pnimi",
+      "he": "אור פנימי",
+      "canonicalEn": "inner light",
+      "strategy": "translate",
+      "heItemCount": 230,
+      "alignedItemCount": 189,
+      "coveragePct": 82,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Inner Light (commentary title)",
+          "occurrences": 172
+        },
+        {
+          "en": "inner light (the term)",
+          "occurrences": 10
+        }
+      ],
+      "note": "Two senses: the title of Baal HaSulam's first commentary layer (Title Case) and the technical term (lower case).",
+      "citationCount": 3
+    },
+    {
+      "id": "or-makif",
+      "he": "אור מקיף",
+      "canonicalEn": "surrounding light",
+      "strategy": "translate",
+      "heItemCount": 17,
+      "alignedItemCount": 14,
+      "coveragePct": 82,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "surrounding light",
+          "occurrences": 14
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "or-yashar",
+      "he": "אור ישר",
+      "canonicalEn": "direct light",
+      "strategy": "translate",
+      "heItemCount": 70,
+      "alignedItemCount": 68,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "direct light",
+          "occurrences": 108
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "or-hozer",
+      "he": "אור חוזר",
+      "canonicalEn": "reflected light",
+      "strategy": "translate",
+      "heItemCount": 103,
+      "alignedItemCount": 99,
+      "coveragePct": 96,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "reflected light",
+          "occurrences": 170
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hitlabshut",
+      "he": "התלבשות",
+      "canonicalEn": "clothing",
+      "strategy": "translate",
+      "heItemCount": 82,
+      "alignedItemCount": 81,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "clothe/clothes/clothed",
+          "occurrences": 112
+        },
+        {
+          "en": "clothing (noun)",
+          "occurrences": 67
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "bitush",
+      "he": "ביטוש",
+      "canonicalEn": "clash",
+      "strategy": "translate",
+      "heItemCount": 5,
+      "alignedItemCount": 5,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "clash",
+          "occurrences": 5
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "neetzal",
+      "he": "נאצל",
+      "canonicalEn": "emanated being",
+      "strategy": "translate",
+      "heItemCount": 65,
+      "alignedItemCount": 65,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "emanated",
+          "occurrences": 122
+        },
+        {
+          "en": "emanated being",
+          "occurrences": 82
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "maatzil",
+      "he": "מאציל",
+      "canonicalEn": "Emanator",
+      "strategy": "translate",
+      "heItemCount": 36,
+      "alignedItemCount": 27,
+      "coveragePct": 75,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "Emanator",
+          "occurrences": 65
+        },
+        {
+          "en": "emanator (lower case)",
+          "occurrences": 6
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hishtalshelut",
+      "he": "השתלשלות",
+      "canonicalEn": "cascading",
+      "strategy": "translate",
+      "heItemCount": 11,
+      "alignedItemCount": 10,
+      "coveragePct": 91,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "cascading",
+          "occurrences": 4
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "siba-mesubav",
+      "he": "סבה ומסובב",
+      "canonicalEn": "cause and consequence",
+      "strategy": "translate",
+      "heItemCount": 10,
+      "alignedItemCount": 9,
+      "coveragePct": 90,
+      "attestedInParts": [
+        "part-02",
+        "part-03"
+      ],
+      "variants": [
+        {
+          "en": "cause and consequence",
+          "occurrences": 7
+        },
+        {
+          "en": "cause and effect",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "behina",
+      "he": "בחינה",
+      "canonicalEn": "phase",
+      "strategy": "translate",
+      "heItemCount": 369,
+      "alignedItemCount": 284,
+      "coveragePct": 77,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "phase",
+          "occurrences": 659
+        },
+        {
+          "en": "discernment",
+          "occurrences": 9
+        }
+      ],
+      "note": "en-bb also uses 'discernment' for הבחן/הבחנה (the act of discerning), never for בחינה as a level.",
+      "citationCount": 3
+    },
+    {
+      "id": "dalet-behinot",
+      "he": "ד' בחינות",
+      "canonicalEn": "four phases",
+      "strategy": "translate",
+      "heItemCount": 38,
+      "alignedItemCount": 35,
+      "coveragePct": 92,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "four phases",
+          "occurrences": 43
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "behina-dalet",
+      "he": "בחי\"ד",
+      "canonicalEn": "phase four",
+      "strategy": "translate",
+      "heItemCount": 97,
+      "alignedItemCount": 92,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "phase four",
+          "occurrences": 159
+        }
+      ],
+      "note": "Phase ordinals are spelled out as words: phase one / two / three / four.",
+      "citationCount": 3
+    },
+    {
+      "id": "shevira",
+      "he": "שבירה",
+      "canonicalEn": "breaking",
+      "strategy": "translate",
+      "heItemCount": 5,
+      "alignedItemCount": 3,
+      "coveragePct": 60,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "breaking",
+          "occurrences": 3
+        },
+        {
+          "en": "broken",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "tikkun",
+      "he": "תיקון",
+      "canonicalEn": "correction",
+      "strategy": "translate",
+      "heItemCount": 19,
+      "alignedItemCount": 19,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "correction",
+          "occurrences": 26
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hitpashtut",
+      "he": "התפשטות",
+      "canonicalEn": "expansion",
+      "strategy": "translate",
+      "heItemCount": 95,
+      "alignedItemCount": 94,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "expansion",
+          "occurrences": 122
+        },
+        {
+          "en": "expand/expands/expanded",
+          "occurrences": 81
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "histalkut",
+      "he": "הסתלקות",
+      "canonicalEn": "departure",
+      "strategy": "translate",
+      "heItemCount": 92,
+      "alignedItemCount": 83,
+      "coveragePct": 90,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "departure",
+          "occurrences": 95
+        },
+        {
+          "en": "departed",
+          "occurrences": 31
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "madrega",
+      "he": "מדרגה",
+      "canonicalEn": "degree",
+      "strategy": "translate",
+      "heItemCount": 112,
+      "alignedItemCount": 103,
+      "coveragePct": 92,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "degree/degrees",
+          "occurrences": 158
+        },
+        {
+          "en": "level",
+          "occurrences": 27
+        }
+      ],
+      "note": "Careful: קומה is 'level'; מדרגה is 'degree'. Both appear together.",
+      "citationCount": 3
+    },
+    {
+      "id": "koma",
+      "he": "קומה",
+      "canonicalEn": "level",
+      "strategy": "translate",
+      "heItemCount": 53,
+      "alignedItemCount": 50,
+      "coveragePct": 94,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "level",
+          "occurrences": 103
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "shoresh",
+      "he": "שורש",
+      "canonicalEn": "root",
+      "strategy": "translate",
+      "heItemCount": 83,
+      "alignedItemCount": 80,
+      "coveragePct": 96,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "root/roots",
+          "occurrences": 162
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ratzon-lekabel",
+      "he": "רצון לקבל",
+      "canonicalEn": "will to receive",
+      "strategy": "translate",
+      "heItemCount": 34,
+      "alignedItemCount": 31,
+      "coveragePct": 91,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03"
+      ],
+      "variants": [
+        {
+          "en": "will to receive",
+          "occurrences": 75
+        },
+        {
+          "en": "desire to receive",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ratzon-lehashpia",
+      "he": "רצון להשפיע",
+      "canonicalEn": "will to bestow",
+      "strategy": "translate",
+      "heItemCount": 29,
+      "alignedItemCount": 28,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "bestow/bestowal",
+          "occurrences": 53
+        },
+        {
+          "en": "will to bestow",
+          "occurrences": 15
+        },
+        {
+          "en": "give/giving",
+          "occurrences": 4
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "shinui-tzura",
+      "he": "שינוי צורה",
+      "canonicalEn": "disparity of form",
+      "strategy": "translate",
+      "heItemCount": 29,
+      "alignedItemCount": 26,
+      "coveragePct": 90,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "disparity of form",
+          "occurrences": 46
+        },
+        {
+          "en": "change of form",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hashvaat-tzura",
+      "he": "השתוות הצורה",
+      "canonicalEn": "equivalence of form",
+      "strategy": "translate",
+      "heItemCount": 18,
+      "alignedItemCount": 15,
+      "coveragePct": 83,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "equivalence",
+          "occurrences": 19
+        },
+        {
+          "en": "equivalence of form",
+          "occurrences": 15
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "pnimiut",
+      "he": "פנימיות",
+      "canonicalEn": "internality",
+      "strategy": "translate",
+      "heItemCount": 15,
+      "alignedItemCount": 13,
+      "coveragePct": 87,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "internality",
+          "occurrences": 13
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hitzoniut",
+      "he": "חיצוניות",
+      "canonicalEn": "externality",
+      "strategy": "translate",
+      "heItemCount": 7,
+      "alignedItemCount": 6,
+      "coveragePct": 86,
+      "attestedInParts": [
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "externality",
+          "occurrences": 7
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "halal",
+      "he": "חלל",
+      "canonicalEn": "space",
+      "strategy": "translate",
+      "heItemCount": 10,
+      "alignedItemCount": 10,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "space",
+          "occurrences": 18
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "makom-panui",
+      "he": "מקום פנוי",
+      "canonicalEn": "vacant place",
+      "strategy": "translate",
+      "heItemCount": 5,
+      "alignedItemCount": 4,
+      "coveragePct": 80,
+      "attestedInParts": [
+        "part-01"
+      ],
+      "variants": [
+        {
+          "en": "vacant place",
+          "occurrences": 6
+        }
+      ],
+      "citationCount": 2
+    },
+    {
+      "id": "atzmut",
+      "he": "עצמות",
+      "canonicalEn": "self",
+      "strategy": "translate",
+      "heItemCount": 47,
+      "alignedItemCount": 40,
+      "coveragePct": 85,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "self",
+          "occurrences": 57
+        },
+        {
+          "en": "essence",
+          "occurrences": 6
+        }
+      ],
+      "note": "עצמותו ית' → 'His self'. 'Essence' is reserved for מהות.",
+      "citationCount": 3
+    },
+    {
+      "id": "boreh",
+      "he": "בורא",
+      "canonicalEn": "Creator",
+      "strategy": "translate",
+      "heItemCount": 4,
+      "alignedItemCount": 4,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-03"
+      ],
+      "variants": [
+        {
+          "en": "the Creator",
+          "occurrences": 8
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "taamim",
+      "he": "טעמים",
+      "canonicalEn": "tastes",
+      "strategy": "translate",
+      "heItemCount": 17,
+      "alignedItemCount": 13,
+      "coveragePct": 76,
+      "attestedInParts": [
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "tastes",
+          "occurrences": 19
+        }
+      ],
+      "note": "Only attested in Part 6.",
+      "citationCount": 3
+    },
+    {
+      "id": "nekudot",
+      "he": "נקודות",
+      "canonicalEn": "Nekudot",
+      "strategy": "transliterate",
+      "heItemCount": 29,
+      "alignedItemCount": 26,
+      "coveragePct": 90,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "dots",
+          "occurrences": 29
+        },
+        {
+          "en": "Nekudot",
+          "occurrences": 14
+        }
+      ],
+      "note": "Genuinely split in en-bb. See inconsistencies.",
+      "citationCount": 3
+    },
+    {
+      "id": "otiot",
+      "he": "אותיות",
+      "canonicalEn": "letters",
+      "strategy": "translate",
+      "heItemCount": 36,
+      "alignedItemCount": 35,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-01",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "letters",
+          "occurrences": 73
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hassadim",
+      "he": "חסדים",
+      "canonicalEn": "Hassadim",
+      "strategy": "transliterate",
+      "heItemCount": 30,
+      "alignedItemCount": 30,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Hassadim",
+          "occurrences": 67
+        },
+        {
+          "en": "mercy",
+          "occurrences": 3
+        }
+      ],
+      "note": "אור דחסדים → 'light of Hassadim'.",
+      "citationCount": 3
+    },
+    {
+      "id": "sefira",
+      "he": "ספירה",
+      "canonicalEn": "Sefira",
+      "strategy": "transliterate",
+      "heItemCount": 35,
+      "alignedItemCount": 34,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Sefira",
+          "occurrences": 60
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "sefirot",
+      "he": "ספירות",
+      "canonicalEn": "Sefirot",
+      "strategy": "transliterate",
+      "heItemCount": 80,
+      "alignedItemCount": 79,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Sefirot",
+          "occurrences": 188
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "eser-sefirot",
+      "he": "עשר ספירות / ע\"ס",
+      "canonicalEn": "ten Sefirot",
+      "strategy": "transliterate",
+      "heItemCount": 89,
+      "alignedItemCount": 86,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "ten Sefirot (lower-case ten)",
+          "occurrences": 180
+        },
+        {
+          "en": "Ten Sefirot",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "partzuf",
+      "he": "פרצוף",
+      "canonicalEn": "Partzuf",
+      "strategy": "transliterate",
+      "heItemCount": 125,
+      "alignedItemCount": 125,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Partzuf",
+          "occurrences": 223
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "partzufim",
+      "he": "פרצופים",
+      "canonicalEn": "Partzufim",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 31,
+      "alignedItemCount": 31,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Partzufim",
+          "occurrences": 39
+        },
+        {
+          "en": "Partzufim [pl. of Partzuf]",
+          "occurrences": 4
+        }
+      ],
+      "note": "First occurrence in an item is glossed 'Partzufim [pl. of Partzuf]'.",
+      "citationCount": 3
+    },
+    {
+      "id": "rosh",
+      "he": "ראש",
+      "canonicalEn": "Rosh",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 148,
+      "alignedItemCount": 142,
+      "coveragePct": 96,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Rosh",
+          "occurrences": 240
+        },
+        {
+          "en": "head",
+          "occurrences": 9
+        },
+        {
+          "en": "Rosh [head]",
+          "occurrences": 5
+        }
+      ],
+      "note": "Glossed '[head]' on first use in an item.",
+      "citationCount": 3
+    },
+    {
+      "id": "toch",
+      "he": "תוך",
+      "canonicalEn": "Toch",
+      "strategy": "transliterate",
+      "heItemCount": 3,
+      "alignedItemCount": 3,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "Toch",
+          "occurrences": 3
+        }
+      ],
+      "note": "Only transliterated when it is the technical middle third of a Partzuf. As the ordinary preposition תוך/בתוך it is 'inside'/'within'.",
+      "citationCount": 3
+    },
+    {
+      "id": "sof",
+      "he": "סוף",
+      "canonicalEn": "Sof",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 8,
+      "alignedItemCount": 8,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-03",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "Sof",
+          "occurrences": 26
+        },
+        {
+          "en": "end",
+          "occurrences": 7
+        },
+        {
+          "en": "Sof [end/conclusion]",
+          "occurrences": 1
+        }
+      ],
+      "note": "Distinct from אין סוף → 'Ein Sof'. Glossed '[end]' / '[end/conclusion]' on first use.",
+      "citationCount": 3
+    },
+    {
+      "id": "guf",
+      "he": "גוף",
+      "canonicalEn": "Guf",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 68,
+      "alignedItemCount": 65,
+      "coveragePct": 96,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Guf",
+          "occurrences": 103
+        },
+        {
+          "en": "body",
+          "occurrences": 6
+        },
+        {
+          "en": "Guf [body]",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ein-sof",
+      "he": "אין סוף / א\"ס",
+      "canonicalEn": "Ein Sof",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 78,
+      "alignedItemCount": 77,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Ein Sof",
+          "occurrences": 166
+        },
+        {
+          "en": "Ein Sof [infinity]",
+          "occurrences": 1
+        }
+      ],
+      "note": "א\"ס ב\"ה → 'Ein Sof'; the ב\"ה honorific is always dropped.",
+      "citationCount": 3
+    },
+    {
+      "id": "atzilut",
+      "he": "אצילות",
+      "canonicalEn": "Atzilut",
+      "strategy": "transliterate",
+      "heItemCount": 52,
+      "alignedItemCount": 38,
+      "coveragePct": 73,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Atzilut",
+          "occurrences": 96
+        },
+        {
+          "en": "emanation (process sense)",
+          "occurrences": 10
+        }
+      ],
+      "note": "Two senses. The world -> 'Atzilut'; the act of emanating (סדר אצילות העולמות) -> 'emanation', lower case.",
+      "citationCount": 3
+    },
+    {
+      "id": "beria",
+      "he": "בריאה",
+      "canonicalEn": "Beria",
+      "strategy": "transliterate",
+      "heItemCount": 33,
+      "alignedItemCount": 31,
+      "coveragePct": 94,
+      "attestedInParts": [
+        "part-01",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Beria",
+          "occurrences": 68
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "yetzira",
+      "he": "יצירה",
+      "canonicalEn": "Yetzira",
+      "strategy": "transliterate",
+      "heItemCount": 15,
+      "alignedItemCount": 15,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Yetzira",
+          "occurrences": 27
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "assiya",
+      "he": "עשיה",
+      "canonicalEn": "Assiya",
+      "strategy": "transliterate",
+      "heItemCount": 17,
+      "alignedItemCount": 16,
+      "coveragePct": 94,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Assiya",
+          "occurrences": 20
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "abya",
+      "he": "אבי\"ע",
+      "canonicalEn": "ABYA",
+      "strategy": "acronym",
+      "heItemCount": 3,
+      "alignedItemCount": 3,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "ABYA",
+          "occurrences": 3
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "adam-kadmon",
+      "he": "אדם קדמון / א\"ק",
+      "canonicalEn": "Adam Kadmon / AK",
+      "strategy": "acronym",
+      "heItemCount": 90,
+      "alignedItemCount": 90,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "AK",
+          "occurrences": 113
+        },
+        {
+          "en": "Adam Kadmon",
+          "occurrences": 13
+        }
+      ],
+      "note": "Spelled out in Parts 1-2, abbreviated 'AK' from Part 3 on. See inconsistencies.",
+      "citationCount": 3
+    },
+    {
+      "id": "keter",
+      "he": "כתר",
+      "canonicalEn": "Keter",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 270,
+      "alignedItemCount": 269,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Keter",
+          "occurrences": 554
+        },
+        {
+          "en": "Keter [crown]",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hochma",
+      "he": "חכמה",
+      "canonicalEn": "Hochma",
+      "strategy": "transliterate",
+      "heItemCount": 208,
+      "alignedItemCount": 205,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Hochma",
+          "occurrences": 464
+        },
+        {
+          "en": "wisdom",
+          "occurrences": 11
+        }
+      ],
+      "note": "'wisdom' is used only for חכמה in the phrase 'wisdom of Kabbalah' (חכמת הקבלה).",
+      "citationCount": 3
+    },
+    {
+      "id": "bina",
+      "he": "בינה",
+      "canonicalEn": "Bina",
+      "strategy": "transliterate",
+      "heItemCount": 169,
+      "alignedItemCount": 168,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Bina",
+          "occurrences": 339
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hesed",
+      "he": "חסד",
+      "canonicalEn": "Hesed",
+      "strategy": "transliterate",
+      "heItemCount": 69,
+      "alignedItemCount": 68,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "Hesed",
+          "occurrences": 142
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "gevura",
+      "he": "גבורה",
+      "canonicalEn": "Gevura",
+      "strategy": "transliterate",
+      "heItemCount": 36,
+      "alignedItemCount": 36,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-05"
+      ],
+      "variants": [
+        {
+          "en": "Gevura",
+          "occurrences": 65
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "tifferet",
+      "he": "תפארת",
+      "canonicalEn": "Tifferet",
+      "strategy": "transliterate",
+      "heItemCount": 44,
+      "alignedItemCount": 43,
+      "coveragePct": 98,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Tifferet",
+          "occurrences": 75
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "netzah",
+      "he": "נצח",
+      "canonicalEn": "Netzah",
+      "strategy": "transliterate",
+      "heItemCount": 31,
+      "alignedItemCount": 30,
+      "coveragePct": 97,
+      "attestedInParts": [
+        "part-02",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Netzah",
+          "occurrences": 59
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hod",
+      "he": "הוד",
+      "canonicalEn": "Hod",
+      "strategy": "transliterate",
+      "heItemCount": 36,
+      "alignedItemCount": 36,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Hod",
+          "occurrences": 77
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "yesod",
+      "he": "יסוד",
+      "canonicalEn": "Yesod",
+      "strategy": "transliterate",
+      "heItemCount": 78,
+      "alignedItemCount": 74,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Yesod",
+          "occurrences": 148
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "malchut",
+      "he": "מלכות",
+      "canonicalEn": "Malchut",
+      "strategy": "transliterate",
+      "heItemCount": 214,
+      "alignedItemCount": 212,
+      "coveragePct": 99,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Malchut",
+          "occurrences": 350
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "galgalta",
+      "he": "גלגלתא",
+      "canonicalEn": "Galgalta",
+      "strategy": "transliterate",
+      "heItemCount": 11,
+      "alignedItemCount": 8,
+      "coveragePct": 73,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Galgalta",
+          "occurrences": 8
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ab",
+      "he": "ע\"ב",
+      "canonicalEn": "AB",
+      "strategy": "acronym",
+      "heItemCount": 56,
+      "alignedItemCount": 53,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "AB",
+          "occurrences": 79
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "sag",
+      "he": "ס\"ג",
+      "canonicalEn": "SAG",
+      "strategy": "acronym",
+      "heItemCount": 98,
+      "alignedItemCount": 98,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "SAG",
+          "occurrences": 149
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ma",
+      "he": "מ\"ה",
+      "canonicalEn": "MA",
+      "strategy": "acronym",
+      "heItemCount": 29,
+      "alignedItemCount": 26,
+      "coveragePct": 90,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "MA",
+          "occurrences": 34
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "bon",
+      "he": "ב\"ן",
+      "canonicalEn": "BON",
+      "strategy": "acronym",
+      "heItemCount": 26,
+      "alignedItemCount": 26,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "BON",
+          "occurrences": 33
+        }
+      ],
+      "note": "Note: BON, not BAN. Paired as 'MA and BON'.",
+      "citationCount": 3
+    },
+    {
+      "id": "nekudim",
+      "he": "נקודים",
+      "canonicalEn": "Nekudim",
+      "strategy": "transliterate",
+      "heItemCount": 62,
+      "alignedItemCount": 62,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Nekudim",
+          "occurrences": 87
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "gar",
+      "he": "ג\"ר",
+      "canonicalEn": "GAR",
+      "strategy": "acronym",
+      "heItemCount": 75,
+      "alignedItemCount": 75,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "GAR",
+          "occurrences": 146
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "zat",
+      "he": "ז\"ת",
+      "canonicalEn": "ZAT",
+      "strategy": "acronym",
+      "heItemCount": 19,
+      "alignedItemCount": 19,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "ZAT",
+          "occurrences": 31
+        },
+        {
+          "en": "ZAT [Seven lower Sefirot]",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "vak",
+      "he": "ו\"ק",
+      "canonicalEn": "VAK",
+      "strategy": "acronym",
+      "heItemCount": 49,
+      "alignedItemCount": 49,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "VAK",
+          "occurrences": 111
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "khb",
+      "he": "כח\"ב",
+      "canonicalEn": "KHB",
+      "strategy": "acronym",
+      "heItemCount": 20,
+      "alignedItemCount": 20,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "KHB",
+          "occurrences": 21
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hgt",
+      "he": "חג\"ת",
+      "canonicalEn": "HGT",
+      "strategy": "acronym",
+      "heItemCount": 17,
+      "alignedItemCount": 17,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "HGT",
+          "occurrences": 27
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "nhy",
+      "he": "נה\"י",
+      "canonicalEn": "NHY",
+      "strategy": "acronym",
+      "heItemCount": 21,
+      "alignedItemCount": 21,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "NHY",
+          "occurrences": 36
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "zon",
+      "he": "זו\"ן",
+      "canonicalEn": "ZON",
+      "strategy": "acronym",
+      "heItemCount": 119,
+      "alignedItemCount": 119,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "ZON",
+          "occurrences": 210
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "za",
+      "he": "ז\"א",
+      "canonicalEn": "ZA",
+      "strategy": "acronym",
+      "heItemCount": 43,
+      "alignedItemCount": 41,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "ZA",
+          "occurrences": 49
+        },
+        {
+          "en": "Zeir Anpin",
+          "occurrences": 13
+        }
+      ],
+      "note": "Spelled out in Parts 1-3, abbreviated from Part 5 on.",
+      "citationCount": 3
+    },
+    {
+      "id": "aa",
+      "he": "א\"א",
+      "canonicalEn": "AA",
+      "strategy": "acronym",
+      "heItemCount": 8,
+      "alignedItemCount": 8,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-02",
+        "part-03"
+      ],
+      "variants": [
+        {
+          "en": "Arich Anpin",
+          "occurrences": 7
+        },
+        {
+          "en": "AA",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "nukva",
+      "he": "נוקבא",
+      "canonicalEn": "Nukva",
+      "strategy": "transliterate",
+      "heItemCount": 20,
+      "alignedItemCount": 20,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Nukva",
+          "occurrences": 35
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ahap",
+      "he": "אח\"פ",
+      "canonicalEn": "AHP",
+      "strategy": "acronym",
+      "heItemCount": 25,
+      "alignedItemCount": 25,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "AHP",
+          "occurrences": 32
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "achoraim",
+      "he": "אחורים",
+      "canonicalEn": "posterior",
+      "strategy": "translate",
+      "heItemCount": 26,
+      "alignedItemCount": 26,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "posterior",
+          "occurrences": 49
+        },
+        {
+          "en": "back",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "einayim",
+      "he": "עינים",
+      "canonicalEn": "Einayim",
+      "strategy": "transliterate",
+      "heItemCount": 50,
+      "alignedItemCount": 47,
+      "coveragePct": 94,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Einayim",
+          "occurrences": 61
+        },
+        {
+          "en": "Eynaim",
+          "occurrences": 9
+        }
+      ],
+      "note": "Genuinely split. See inconsistencies.",
+      "citationCount": 3
+    },
+    {
+      "id": "nikvey-einayim",
+      "he": "נקבי עינים",
+      "canonicalEn": "Nikvey Einayim",
+      "strategy": "transliterate",
+      "heItemCount": 21,
+      "alignedItemCount": 21,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Nikvey Einayim",
+          "occurrences": 32
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "peh",
+      "he": "פה",
+      "canonicalEn": "Peh",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 22,
+      "alignedItemCount": 21,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Peh",
+          "occurrences": 22
+        },
+        {
+          "en": "Peh [mouth]",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hotem",
+      "he": "חוטם",
+      "canonicalEn": "Hotem",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 6,
+      "alignedItemCount": 6,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Hotem",
+          "occurrences": 7
+        },
+        {
+          "en": "Hotem [nose]",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "ozen",
+      "he": "אזן",
+      "canonicalEn": "Ozen",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 14,
+      "alignedItemCount": 13,
+      "coveragePct": 93,
+      "attestedInParts": [
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Ozen",
+          "occurrences": 14
+        },
+        {
+          "en": "Ozen [ear]",
+          "occurrences": 1
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "tabur",
+      "he": "טבור",
+      "canonicalEn": "Tabur",
+      "strategy": "transliterate",
+      "heItemCount": 35,
+      "alignedItemCount": 35,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Tabur",
+          "occurrences": 55
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "parsa",
+      "he": "פרסא",
+      "canonicalEn": "Parsa",
+      "strategy": "transliterate",
+      "heItemCount": 29,
+      "alignedItemCount": 29,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Parsa",
+          "occurrences": 42
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "sium",
+      "he": "סיום",
+      "canonicalEn": "Sium",
+      "strategy": "transliterate",
+      "heItemCount": 24,
+      "alignedItemCount": 20,
+      "coveragePct": 83,
+      "attestedInParts": [
+        "part-01",
+        "part-02",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Sium",
+          "occurrences": 33
+        },
+        {
+          "en": "conclusion",
+          "occurrences": 5
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "katnut",
+      "he": "קטנות",
+      "canonicalEn": "Katnut",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 11,
+      "alignedItemCount": 9,
+      "coveragePct": 82,
+      "attestedInParts": [
+        "part-01",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Katnut",
+          "occurrences": 10
+        },
+        {
+          "en": "Katnut [smallness/infancy]",
+          "occurrences": 2
+        },
+        {
+          "en": "smallness",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "gadlut",
+      "he": "גדלות",
+      "canonicalEn": "Gadlut",
+      "strategy": "transliterate-with-gloss",
+      "heItemCount": 18,
+      "alignedItemCount": 14,
+      "coveragePct": 78,
+      "attestedInParts": [
+        "part-01",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Gadlut",
+          "occurrences": 17
+        },
+        {
+          "en": "Gadlut [greatness/adulthood]",
+          "occurrences": 5
+        },
+        {
+          "en": "greatness",
+          "occurrences": 5
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "mochin",
+      "he": "מוחין",
+      "canonicalEn": "Mochin",
+      "strategy": "transliterate",
+      "heItemCount": 4,
+      "alignedItemCount": 4,
+      "coveragePct": 100,
+      "attestedInParts": [
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Mochin",
+          "occurrences": 4
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "nrnhy",
+      "he": "נרנח\"י (נפש/רוח/נשמה/חיה/יחידה)",
+      "canonicalEn": "Nefesh, Ruach, Neshama, Haya, Yechida",
+      "strategy": "transliterate",
+      "heItemCount": 18,
+      "alignedItemCount": 15,
+      "coveragePct": 83,
+      "attestedInParts": [
+        "part-02",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "Neshama",
+          "occurrences": 12
+        },
+        {
+          "en": "Yechida",
+          "occurrences": 8
+        },
+        {
+          "en": "Nefesh",
+          "occurrences": 6
+        },
+        {
+          "en": "Ruach",
+          "occurrences": 5
+        },
+        {
+          "en": "Haya",
+          "occurrences": 3
+        },
+        {
+          "en": "NRNHY",
+          "occurrences": 2
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "havayah",
+      "he": "הויה",
+      "canonicalEn": "HaVaYaH",
+      "strategy": "transliterate",
+      "heItemCount": 22,
+      "alignedItemCount": 21,
+      "coveragePct": 95,
+      "attestedInParts": [
+        "part-01",
+        "part-03",
+        "part-05",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "HaVaYaH",
+          "occurrences": 41
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hey-tataa",
+      "he": "ה\"ת",
+      "canonicalEn": "bottom Hey",
+      "strategy": "translate",
+      "heItemCount": 62,
+      "alignedItemCount": 50,
+      "coveragePct": 81,
+      "attestedInParts": [
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "bottom Hey",
+          "occurrences": 88
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "hey-rishona",
+      "he": "ה\"ר",
+      "canonicalEn": "first Hey",
+      "strategy": "translate",
+      "heItemCount": 19,
+      "alignedItemCount": 9,
+      "coveragePct": 47,
+      "attestedInParts": [
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "first Hey",
+          "occurrences": 11
+        }
+      ],
+      "citationCount": 3
+    },
+    {
+      "id": "klipot",
+      "he": "קליפות",
+      "canonicalEn": "shells",
+      "strategy": "translate",
+      "heItemCount": 4,
+      "alignedItemCount": 3,
+      "coveragePct": 75,
+      "attestedInParts": [
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "shells",
+          "occurrences": 3
+        },
+        {
+          "en": "Klipot",
+          "occurrences": 1
+        },
+        {
+          "en": "Klipot [shells]",
+          "occurrences": 1
+        }
+      ],
+      "note": "Mostly translated 'shells'; transliterated 'Klipot [shells]' once (as a question headword).",
+      "citationCount": 3
+    },
+    {
+      "id": "kabbalah",
+      "he": "חכמת הקבלה",
+      "canonicalEn": "the wisdom of Kabbalah",
+      "strategy": "translate",
+      "heItemCount": 4,
+      "alignedItemCount": 3,
+      "coveragePct": 75,
+      "attestedInParts": [
+        "part-01"
+      ],
+      "variants": [
+        {
+          "en": "wisdom of Kabbalah",
+          "occurrences": 3
+        }
+      ],
+      "citationCount": 2
+    },
+    {
+      "id": "harav",
+      "he": "הרב",
+      "canonicalEn": "the ARI",
+      "strategy": "translate",
+      "heItemCount": 21,
+      "alignedItemCount": 13,
+      "coveragePct": 62,
+      "attestedInParts": [
+        "part-01",
+        "part-03",
+        "part-06"
+      ],
+      "variants": [
+        {
+          "en": "the ARI",
+          "occurrences": 19
+        }
+      ],
+      "note": "In TES 'הרב' denotes the ARI (author of the quoted Etz Chaim text), and en-bb renders it 'the ARI', never 'the Rav'.",
+      "citationCount": 3
+    },
+    {
+      "id": "akudim",
+      "he": "עקודים",
+      "canonicalEn": "Akudim",
+      "strategy": "transliterate",
+      "note": "Always capitalised. 'world of Akudim', 'Keter of Akudim'.",
+      "attestation": "attested",
+      "citationCount": 1
+    },
+    {
+      "id": "ohr-hozer-abbrev",
+      "he": "או\"ח",
+      "canonicalEn": "reflected light",
+      "strategy": "acronym",
+      "note": "The abbreviation expands to the same rendering as אור חוזר — never transliterated as 'Ohr Hozer'.",
+      "attestation": "attested",
+      "citationCount": 2
+    },
+    {
+      "id": "ohr-yashar-abbrev",
+      "he": "או\"י",
+      "canonicalEn": "direct light",
+      "strategy": "acronym",
+      "note": "Matches אור ישר. Added in v2 — was absent from v1.",
+      "attestation": "attested",
+      "citationCount": 1
+    },
+    {
+      "id": "reshimot-plural",
+      "he": "רשימות",
+      "canonicalEn": "records",
+      "strategy": "translate",
+      "note": "Plural of רשימו → record.",
+      "attestation": "attested",
+      "citationCount": 1
+    },
+    {
+      "id": "bitushim-plural",
+      "he": "בטישות",
+      "canonicalEn": "clashes",
+      "strategy": "translate",
+      "note": "Derived from the locked singular ביטוש → clash. Not attested; flag any use for review.",
+      "attestation": "DERIVED — zero aligned occurrences in en-bb",
+      "citationCount": 0
+    }
+  ],
+  "conventions": [
+    {
+      "id": "item-markers-gematria",
+      "topic": "Inline item markers / anchor labels",
+      "rule": "A Hebrew letter used as an inline marker (א׳, ב׳ … ק, ר, ש, ת) is rendered as its gematria value in Arabic numerals: א→1 … ט→9, י→10, כ→20, ל→30, מ→40, נ→50, ס→60, ע→70, פ→80, צ→90, ק→100, ר→200, ש→300, ת→400. Never keep the Hebrew letter, never renumber sequentially.",
+      "evidence": "51 marker pairs across the four chapters that carry anchors; 51/51 follow the gematria mapping with no exception.",
+      "examples": [
+        {
+          "chapterId": "part-01/chapter-01",
+          "layer": "source",
+          "he": "וכאשר לעלה ברצונו הפשוט (marker ל on op-12)",
+          "en": "When it arose in His simple will 30"
+        },
+        {
+          "chapterId": "part-01/chapter-01",
+          "layer": "source",
+          "he": "תמונת המשולש (marker ת on op-22)",
+          "en": "the image of the triangle 400"
+        }
+      ]
+    },
+    {
+      "id": "commentary-lemma",
+      "topic": "Commentary items",
+      "rule": "Every en-bb commentary item opens with a bolded lemma quoting the source phrase it comments on, followed by a colon: '<strong> Upper, simple light:</strong> It refers to …'. The Hebrew commentary item has NO lemma — it is identified only by its anchor. A translation run must synthesise the lemma from the aligned source text.",
+      "evidence": "51/51 en-bb commentary items begin with <strong>…</strong>; 0/51 Hebrew commentary items do.",
+      "examples": [
+        {
+          "chapterId": "part-01/chapter-01",
+          "layer": "commentary",
+          "he": "היינו האור המתפשט מעצמות הבורא יתברך.",
+          "en": "<strong> Upper, simple light:</strong> It refers to the light that expands from the Creator Himself."
+        },
+        {
+          "chapterId": "part-01/chapter-02",
+          "layer": "commentary",
+          "he": "היינו בחינה ראשונה מד' הבחינות כנ\"ל בדיבור הסמוך.",
+          "en": "<strong> The upper beginning of the line is extended from Ein Sof Himself:</strong> Meaning the first phase of the four phases (see above item)."
+        }
+      ]
+    },
+    {
+      "id": "nav-links-dropped",
+      "topic": "Navigation links",
+      "rule": "The Sefaria cross-links '(לשאלה)' (to the question) and '(לתשובה)' (to the answer) that open/close Table-of-Questions and Table-of-Answers items are dropped entirely. They have no English rendering.",
+      "evidence": "663 occurrences of each in the Hebrew of aligned items; zero English counterparts anywhere in en-bb.",
+      "examples": [
+        {
+          "chapterId": "part-02/answers-terminology-23",
+          "layer": "source",
+          "he": "(לשאלה) זווג דהכאה (ח\"ב הסת\"פ י\"ח) פעולת המסך…",
+          "en": "The act of the screen, which detains and conceals the light…"
+        },
+        {
+          "chapterId": "part-01/questions-topics-01",
+          "layer": "source",
+          "he": "מהו גמר התיקון. (לתשובה)",
+          "en": "What is the end of correction?"
+        }
+      ]
+    },
+    {
+      "id": "answer-headword-dropped",
+      "topic": "Table-of-Answers items",
+      "rule": "The bolded Hebrew headword that opens a Table-of-Answers item is NOT repeated in English — the item begins directly with the definition body. The head-position citation that follows the headword is either moved to the very end of the item or dropped; it is never left in first position.",
+      "evidence": "243 aligned answer items follow the '(לשאלה) <b>headword</b> (citation)<br>body' shape. Of the 189 that carry a citation, 124 (66%) move it to the end and 65 (34%) drop it; 0 keep it at the start.",
+      "examples": [
+        {
+          "chapterId": "part-03/answers-terminology-36",
+          "layer": "source",
+          "he": "(לשאלה) <b>הסתכלות</b> (ח\"ג פי\"ב אות א')<br>התפשטות אור א\"ס ב\"ה לזווג דהכאה במסך…",
+          "en": "The expansion of the light of Ein Sof for coupling by striking in the screen … or look. (Part 3, Chapter 12, item 1)"
+        },
+        {
+          "chapterId": "part-02/answers-terminology-64",
+          "layer": "source",
+          "he": "(לשאלה) <b>ראש</b> (ח\"ג פ\"ו)<br>ט\"ס של אור עליון…",
+          "en": "The nine Sefirot of the upper light that expand to a coupling by striking … are called the “Rosh” [head] of the degree…"
+        }
+      ]
+    },
+    {
+      "id": "question-punctuation",
+      "topic": "Table-of-Questions items",
+      "rule": "Hebrew question items end with a full stop; en-bb renders them as English questions ending in '?'. Where a citation is appended the question mark is usually dropped and the item ends with the closing parenthesis.",
+      "evidence": "663 aligned question items: 477 end in '?', 65 end in ')', 13 end in '.', 108 end without terminal punctuation.",
+      "examples": [
+        {
+          "chapterId": "part-01/questions-topics-01",
+          "layer": "source",
+          "he": "מהו החומר הראשון של כל נאצל. (לתשובה)",
+          "en": "What is the first substance of every emanated being?"
+        },
+        {
+          "chapterId": "part-02/questions-terminology-01",
+          "layer": "source",
+          "he": "מהו זווג דהכאה. (לתשובה)",
+          "en": "What is coupling by striking (Part Two, Inner Observation, 18)"
+        }
+      ]
+    },
+    {
+      "id": "abbreviation-expansion",
+      "topic": "Citation abbreviations",
+      "rule": "Hebrew citation abbreviations are expanded to English words, never transliterated: ח\"א/ח\"ב/ח\"ג/ח\"ו → Part 1/2/3/6 (see inconsistency 'part-numbering'); פ\"א / פרק א' → Chapter 1; או\"פ → Inner Light; הסת\"פ / הסתכלות פנימית → Inner Observation; אות + gematria → item/Item + Arabic numeral; דף + gematria → page/Item + Arabic numeral; עי' תשובה + gematria → see answer + Arabic numeral; שם → ibid. / (There); בדיבור הסמוך → (previous item) / (in the above item) / (see above item); ד\"ה X → Sub Header, “X” (Part 5) or dropped elsewhere. All Hebrew letter-numerals become Arabic numerals.",
+      "evidence": "Verified pair by pair across the aligned parenthetical citations in all five parts.",
+      "examples": [
+        {
+          "chapterId": "part-01/answers-topics-48",
+          "layer": "source",
+          "he": "(או\"פ ח\"א פ\"א ק')",
+          "en": "(Inner Light, Part 1, Chap 1, item 100)"
+        },
+        {
+          "chapterId": "part-03/answers-terminology-16",
+          "layer": "source",
+          "he": "(ח\"ג פ\"ה אות א')",
+          "en": "(Part 3, Chapter 5, item 1)"
+        },
+        {
+          "chapterId": "part-02/answers-topics-102",
+          "layer": "source",
+          "he": "(עי' תשובה מ\"ג)",
+          "en": "(See answer 43)"
+        },
+        {
+          "chapterId": "part-05/answers-terminology-10",
+          "layer": "source",
+          "he": "(דף ש\"ד אות ט\"ו ובאו\"פ ד\"ה חלקים)",
+          "en": "(Item 15, and Inner Light, Sub Header, “Parts”)"
+        }
+      ]
+    },
+    {
+      "id": "honorifics-dropped",
+      "topic": "Honorifics and pious formulae",
+      "rule": "ב\"ה (ברוך הוא) after א\"ס is always dropped: 'א\"ס ב\"ה' → 'Ein Sof'. ית' / יתברך is dropped or absorbed into 'His'/'Him'. ח\"ו (חס ושלום) becomes the adverb 'whatsoever' in negative clauses, or is dropped — it is never rendered 'God forbid'. ע\"ש / עש\"ה (עיין שם) is usually dropped. ז\"ל / זצ\"ל do not occur anywhere in the aligned Hebrew, so no rendering is attested for them.",
+      "evidence": "79 occurrences of ב\"ה in the aligned Hebrew; 0 occurrences of 'blessed' in en-bb. 206 occurrences of ית' with no dedicated English token. 12 rows with ח\"ו; those rendered use 'whatsoever'.",
+      "examples": [
+        {
+          "chapterId": "part-01/answers-topics-13",
+          "layer": "source",
+          "he": "אע\"פ שבחינה ד' שבא\"ס ב\"ה צמצמה את עצמה",
+          "en": "Although phase four in Ein Sof restricted herself"
+        },
+        {
+          "chapterId": "part-01/chapter-01",
+          "layer": "commentary",
+          "he": "אין הכוונה על אויר גשמי ח\"ו",
+          "en": "This does not refer to corporeal air whatsoever."
+        }
+      ]
+    },
+    {
+      "id": "harav-is-ari",
+      "topic": "Author references",
+      "rule": "In TES, 'הרב' means the ARI (Isaac Luria), the author of the quoted Etz Chaim text. en-bb always renders it 'the ARI'; 'the Rav' never occurs. Baal HaSulam, the commentator, is not named in the running text.",
+      "evidence": "'the ARI' 19 occurrences, 'the Rav' 0.",
+      "examples": [
+        {
+          "chapterId": "part-01/chapter-01",
+          "layer": "commentary",
+          "he": "וז\"ש הרב, אשר אור העליון הנמשך מעצמותו ית'…",
+          "en": "The ARI writes that the upper light that is extended from His self…"
+        },
+        {
+          "chapterId": "part-03/answers-terminology-31",
+          "layer": "source",
+          "he": "כמ\"ש הרב בע\"ח שער י\"ח פ\"א",
+          "en": "As written by the ARI, the root of the lights and their essence are the four simple letters of HaVaYaH"
+        }
+      ]
+    },
+    {
+      "id": "gloss-brackets",
+      "topic": "Transliteration glosses",
+      "rule": "A transliterated term is followed by a square-bracketed English gloss on its first appearance in an item, then used bare: 'Rosh [head]', 'Guf [body]', 'Sof [end/conclusion]', 'Ein Sof [infinity]', 'Katnut [smallness/infancy]', 'Gadlut [greatness/adulthood]', 'Partzufim [pl. of Partzuf]', 'Klipot [shells]', 'Peh [mouth]', 'Hotem [nose]', 'Ozen [ear]', 'Nekudot [dots]', 'RTS [Rosh-Toch-Sof]'. The gloss is optional and is used sparsely — do not gloss on every occurrence.",
+      "evidence": "All bracketed glosses in en-bb were enumerated; the list above is exhaustive for the technical vocabulary.",
+      "examples": [
+        {
+          "chapterId": "part-01/chapter-01",
+          "layer": "source",
+          "he": "מן אור א\"ס פשוט ההוא",
+          "en": "with that simple light of Ein Sof [infinity]"
+        },
+        {
+          "chapterId": "part-02/answers-terminology-02",
+          "layer": "source",
+          "he": "וכל כלי קבלה שבפרצופים",
+          "en": "All the vessels of reception in the Partzufim [pl. of Partzuf]"
+        }
+      ]
+    },
+    {
+      "id": "phase-ordinals",
+      "topic": "Numbers in prose",
+      "rule": "בחינה א'/ב'/ג'/ד' and בחי\"א…בחי\"ד are 'phase one', 'phase two', 'phase three', 'phase four' — ordinals spelled as words, lower-case 'phase'. Digits are not used ('phase 4' never occurs). 'ten Sefirot' likewise keeps 'ten' as a lower-case word.",
+      "evidence": "'phase four' 159 occurrences vs 'phase 4' 0; 'ten Sefirot' 213 vs 'Ten Sefirot' 1.",
+      "examples": [
+        {
+          "chapterId": "part-01/answers-topics-12",
+          "layer": "source",
+          "he": "כח העיכוב שנעשה על בחינה ד' לאחר הצמצום",
+          "en": "a detaining force that was placed on phase four after the restriction"
+        },
+        {
+          "chapterId": "part-02/answers-terminology-25",
+          "layer": "source",
+          "he": "ע\"ס הנמשכות ממסך ולמטה",
+          "en": "The ten Sefirot that are extended from the screen and below"
+        }
+      ]
+    },
+    {
+      "id": "feminine-malchut",
+      "topic": "Grammatical gender",
+      "rule": "Malchut, בחינה ד' (phase four) and the Nukva keep Hebrew feminine grammar in English: 'she', 'her', 'herself'. Do not neuter them to 'it'.",
+      "evidence": "35 'Malchut … she/her' contexts, 18 'phase four … she/her' contexts, 13 'herself'.",
+      "examples": [
+        {
+          "chapterId": "part-02/answers-terminology-02",
+          "layer": "source",
+          "he": "והיא אינה מקבלתו, מסבת המסך המעכב אותו",
+          "en": "which she does not receive because of the screen that detains it"
+        },
+        {
+          "chapterId": "part-01/answers-topics-13",
+          "layer": "source",
+          "he": "אע\"פ שבחינה ד' שבא\"ס ב\"ה צמצמה את עצמה",
+          "en": "Although phase four in Ein Sof restricted herself"
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "topic": "Typography",
+      "rule": "en-bb uses curly typographic quotes (“ ”, ’) for quoted terms and never straight ASCII quotes. Bracketed glosses use square brackets. Hebrew letters appear in English only inside letter glosses such as 'Vav [ו]'.",
+      "evidence": "330 curly opening double quotes, 0 straight double quotes, 21 curly apostrophes; 32 Hebrew characters total, all inside letter glosses.",
+      "examples": [
+        {
+          "chapterId": "part-02/answers-terminology-23",
+          "layer": "source",
+          "he": "הנה פעולה זו מכונה \"זווג דהכאה\"",
+          "en": "is called coupling by striking … On the one hand, it “strikes” the light"
+        },
+        {
+          "chapterId": "part-02/answers-terminology-53",
+          "layer": "source",
+          "he": "ומכונה ע\"כ פנימיות הכלי",
+          "en": "is therefore called the “internality” of the vessel"
+        }
+      ]
+    },
+    {
+      "id": "layer-names",
+      "topic": "Commentary layer names",
+      "rule": "אור פנימי as the name of Baal HaSulam's first commentary layer is 'Inner Light' in Title Case; the same words in lower case ('inner light') are the technical term for the light clothed inside a vessel. הסתכלות פנימית is 'Inner Observation'. Keep the case distinction — it is the only thing separating the layer name from the term.",
+      "evidence": "'Inner Light' 226, 'inner light' (the term) 10; 'Inner Observation' 106.",
+      "examples": [
+        {
+          "chapterId": "part-02/answers-terminology-05",
+          "layer": "source",
+          "he": "(לשאלה) אור פנימי (ח\"ב פ\"א או\"פ מ') הוא האור המלובש בכלי.",
+          "en": "Inner light is the light that is clothed in the vessel."
+        },
+        {
+          "chapterId": "part-05/answers-topics-40",
+          "layer": "source",
+          "he": "מכח הביטוש דאו\"מ ואו\"פ",
+          "en": "because of the clash of surrounding light and inner light"
+        }
+      ]
+    }
+  ],
+  "knownGaps": [
+    "en-bb covers 737 of the 5,148 Hebrew source chapters (14%) and only 4 of the 25 Hebrew commentary chapters. Parts 4 and 7-16 have no en-bb text at all, so no terminology from those parts is evidenced here.",
+    "Coverage is dominated by the Tables of Questions and Answers, which are terminological by nature. Only 6 running chapters (part-01/chapter-01, part-01/chapter-02, part-03/chapter-03, part-05/chapter-32 and their commentary layers) are aligned, so prose-level style evidence is much thinner than term-level evidence.",
+    "Terms requested in the brief but not evidenced strongly enough to lock: תע\"ס and אדר\"ז do not occur in the aligned Hebrew at all; ס\"ה occurs once; זצ\"ל occurs zero times, so no honorific rendering is attested for it.",
+    "עיבור, יניקה, דבקות, תגין each occur in 1-3 aligned items — too thin to lock and therefore omitted rather than guessed.",
+    "The 9 fallback chapters were aligned only at whole-chapter granularity, so citations drawn from them (marked 'whole-chapter (item counts differ)') are weaker evidence than item-level ones.",
+    "Frequency counts in `variants` are occurrence counts inside the subset of aligned items whose Hebrew matches the term's pattern; they are not corpus-wide counts and a single item can contribute several.",
+    "The en-ai version was deliberately not mined. It was only checked against the finished glossary; see the audit reported alongside this file."
+  ]
+}

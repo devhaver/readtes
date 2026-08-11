@@ -7,8 +7,12 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import type { z } from "zod";
 import {
   chapterLayerFileSchema,
+  glossaryCitationsFileSchema,
+  glossaryFileSchema,
+  glossaryIndexFileSchema,
   tocPartFileSchema,
   tocSchema,
   tocVolumesFileSchema,
@@ -18,6 +22,13 @@ import {
   type ParsedChapterLayerFile,
   type Toc,
 } from "../shared/types/content.ts";
+import {
+  deriveGlossaryCitationsFile,
+  deriveGlossaryIndexFile,
+  GLOSSARY_CITATIONS_FILE_NAME,
+  GLOSSARY_FILE_NAME,
+  GLOSSARY_INDEX_FILE_NAME,
+} from "./lib/glossary-splits.ts";
 import { deriveTocPartFiles, deriveTocVolumesFile } from "./lib/toc-splits.ts";
 
 export interface ValidationResult {
@@ -505,6 +516,112 @@ const checkTocSplitEquivalence = (
   }
 };
 
+/**
+ * Validates `content/glossary/tes-en.json`, cross-checks that every chapter
+ * it cites actually exists in `toc.json` (its citations become links on
+ * `/glossary`, so a stale `chapterId` would ship a 404), and cross-checks
+ * the two derived split files against what
+ * `deriveGlossaryIndexFile`/`deriveGlossaryCitationsFile`
+ * (`scripts/lib/glossary-splits.ts`) compute fresh from it — the same
+ * derivation `pnpm emit:glossary-splits` uses to write them. Same contract
+ * as `checkTocSplitEquivalence`: app code trusts the split files are
+ * exactly derivable from the canonical one.
+ */
+const checkGlossary = (
+  contentDir: string,
+  tocChapterIds: Set<string>,
+  errors: string[],
+): void => {
+  const glossaryDir = join(contentDir, "glossary");
+  const glossaryPath = join(glossaryDir, GLOSSARY_FILE_NAME);
+
+  if (!existsSync(glossaryPath)) {
+    errors.push(`content/glossary/${GLOSSARY_FILE_NAME}: missing`);
+    return;
+  }
+
+  const parsed = glossaryFileSchema.safeParse(readJson(glossaryPath));
+  if (!parsed.success) {
+    errors.push(
+      ...formatZodError(`content/glossary/${GLOSSARY_FILE_NAME}`, parsed.error),
+    );
+    return;
+  }
+  const glossary = parsed.data;
+
+  if (glossary.entryCount !== glossary.entries.length) {
+    errors.push(
+      `content/glossary/${GLOSSARY_FILE_NAME}: entryCount is ${glossary.entryCount} but there are ${glossary.entries.length} entries`,
+    );
+  }
+
+  const seenIds = new Set<string>();
+  for (const entry of glossary.entries) {
+    if (seenIds.has(entry.id)) {
+      errors.push(
+        `content/glossary/${GLOSSARY_FILE_NAME}: duplicate entry id "${entry.id}"`,
+      );
+    }
+    seenIds.add(entry.id);
+
+    for (const citation of entry.citations) {
+      if (
+        citation.chapterId !== undefined &&
+        !tocChapterIds.has(citation.chapterId)
+      ) {
+        errors.push(
+          `content/glossary/${GLOSSARY_FILE_NAME}: entry "${entry.id}" cites chapter "${citation.chapterId}", which does not exist in toc.json`,
+        );
+      }
+    }
+  }
+
+  for (const convention of glossary.conventions) {
+    for (const example of convention.examples) {
+      if (!tocChapterIds.has(example.chapterId)) {
+        errors.push(
+          `content/glossary/${GLOSSARY_FILE_NAME}: convention "${convention.id}" quotes chapter "${example.chapterId}", which does not exist in toc.json`,
+        );
+      }
+    }
+  }
+
+  const expected: [string, unknown, z.ZodType][] = [
+    [
+      GLOSSARY_INDEX_FILE_NAME,
+      deriveGlossaryIndexFile(glossary),
+      glossaryIndexFileSchema,
+    ],
+    [
+      GLOSSARY_CITATIONS_FILE_NAME,
+      deriveGlossaryCitationsFile(glossary),
+      glossaryCitationsFileSchema,
+    ],
+  ];
+
+  for (const [fileName, expectedFile, schema] of expected) {
+    const filePath = join(glossaryDir, fileName);
+
+    if (!existsSync(filePath)) {
+      errors.push(
+        `content/glossary/${fileName}: missing — run "pnpm emit:glossary-splits" to regenerate it from ${GLOSSARY_FILE_NAME}`,
+      );
+      continue;
+    }
+
+    const parsedFile = schema.safeParse(readJson(filePath));
+    if (!parsedFile.success) {
+      errors.push(
+        ...formatZodError(`content/glossary/${fileName}`, parsedFile.error),
+      );
+    } else if (!deepEqual(parsedFile.data, expectedFile)) {
+      errors.push(
+        `content/glossary/${fileName}: does not match the file derivable from ${GLOSSARY_FILE_NAME} — run "pnpm emit:glossary-splits" to regenerate it`,
+      );
+    }
+  }
+};
+
 export const validateContent = (contentDir: string): ValidationResult => {
   const errors: string[] = [];
 
@@ -537,6 +654,17 @@ export const validateContent = (contentDir: string): ValidationResult => {
       contentDir,
       tocParsed.data,
       versionsParsed.success ? versionsParsed.data : [],
+      errors,
+    );
+    checkGlossary(
+      contentDir,
+      new Set(
+        tocParsed.data.volumes.flatMap((volume) =>
+          volume.parts.flatMap((part) =>
+            part.chapters.map((chapter) => chapter.id),
+          ),
+        ),
+      ),
       errors,
     );
   }

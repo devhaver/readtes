@@ -15,6 +15,7 @@
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "volumesLink": "Volumes",
+    "glossaryLink": "Glossary",
     "themeToggleToDark": "Switch to dark mode",
     "themeToggleToLight": "Switch to light mode",
     "themeToggleToSepia": "Switch to sepia mode",
@@ -177,6 +178,57 @@
     "portraitAlt": "Portrait of Rav Yehuda Ashlag, Baal HaSulam",
     "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — author of Talmud Eser Sefirot"
   },
+  "glossary": {
+    "title": "Glossary",
+    "titleHebrew": "מונחים",
+    "lede": "{count} terms of Talmud Eser Sefirot, and the English the official edition actually uses for each one.",
+    "evidence": "Every term here was read off the {chapters} chapters where the 1956 Jerusalem Hebrew and the Bnei Baruch English could be laid side by side, item against item — {items} aligned pairs in all.",
+    "languageNote": "The Hebrew is quoted from the 1956 Jerusalem edition, the English from the Bnei Baruch edition. Notes and rules describe the English, and are written in English.",
+    "coverageParts": "Parts {parts} of sixteen",
+    "coverageStripDescription": "The English edition covers parts {parts} of the sixteen parts of Talmud Eser Sefirot.",
+    "filtersLabel": "Find a term",
+    "searchLabel": "Search terms",
+    "searchPlaceholder": "Search {count} terms — Hebrew or English",
+    "strategyFilterLabel": "Filter by how the term crosses into English",
+    "termsLabel": "Terms",
+    "resultCount": "Showing {shown} of {total} terms",
+    "strategy": {
+      "translate": "Translated",
+      "transliterate": "Transliterated",
+      "transliterate-with-gloss": "Transliterated with a gloss",
+      "acronym": "Acronym"
+    },
+    "attestedIn": "Attested in parts {parts}.",
+    "attestedNowhere": "Not attested in any aligned part.",
+    "variantsTitle": "What the edition writes",
+    "variantsHint": "Counts are occurrences inside the aligned passages, not across the whole book.",
+    "citationsTitle": "Read off",
+    "citationsLoading": "Loading passages…",
+    "citationsFailed": "The passages could not be loaded.",
+    "citationsRetry": "Try again",
+    "citationChapter": "Part {part} · {chapter}",
+    "chapterKind": {
+      "chapter": "Chapter {n}",
+      "inner-observation": "Inner Observation {n}",
+      "questions-terminology": "Questions — Terminology {n}",
+      "questions-topics": "Questions — Topics {n}",
+      "answers-terminology": "Answers — Terminology {n}",
+      "answers-topics": "Answers — Topics {n}"
+    },
+    "layerSummary": "Summary",
+    "emptyTitle": "No term matches.",
+    "emptyBody": "Try another spelling, in Hebrew or English — quotation marks inside acronyms are ignored.",
+    "clearFilters": "Clear filters",
+    "conventionsTitle": "How the English is set",
+    "conventionsIntro": "Rules the official edition follows beyond single words — how item markers, commentary openings, citations and honorifics are handled — each with the evidence behind it.",
+    "conventionEvidenceLabel": "Evidence:",
+    "limitsTitle": "Where the evidence stops",
+    "limitsIntro": "This glossary is only as wide as the English edition. Read these before leaning on a count.",
+    "methodTitle": "How the glossary was built",
+    "methodSource": "English edition",
+    "methodReference": "Hebrew reference",
+    "methodGeneratedOn": "Compiled"
+  },
   "seo": {
     "ogImageAlt": "Read TES — an open book beside the ARI's Tzimtzum circles, on a night-field background",
     "home": {
@@ -187,6 +239,9 @@
     },
     "volumesIndex": {
       "description": "The six volumes and sixteen parts of Talmud Eser Sefirot, browsable chapter by chapter."
+    },
+    "glossary": {
+      "description": "Every term in Talmud Eser Sefirot — or, kli, masach, tzimtzum — with the English the official edition uses, the renderings it varies between, and the passages each one was read off."
     },
     "volume": {
       "description": "The parts and chapters of {title}, with the Ari's text, Inner Light, and Inner Observation."

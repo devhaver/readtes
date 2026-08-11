@@ -177,3 +177,61 @@ such an id out of every entry's own `dynamicImports` list. Functionality is
 untouched — these chunks still load on demand via the glob's own dynamic
 `import()` the moment a page actually needs one; they were never
 legitimately prefetchable at this scale.
+
+## Glossary (`content/glossary/`) — same split-then-verify scheme
+
+`content/glossary/tes-en.json` is the canonical terminology artifact: 125
+terms mined from the 737 chapters where a `he-jerusalem-1956` file and an
+`en-bb` file could be aligned item-by-item, each with the canonical English,
+the renderings the official edition actually used (with counts), and
+Hebrew/English citation pairs. It carries `generatedFrom`, `usage`,
+`conventions`, `inconsistencies`, `knownGaps` and `revisions` alongside
+`entries`. Schemas: `glossaryFileSchema` and friends in
+`shared/types/content.ts`.
+
+It is 307KB, and ~72% of that is `citations` — so it is **build-time only**,
+exactly like `toc.json`, and `app/` code must never import it. Two derived,
+app-facing files are committed beside it:
+
+- **`tes-en.index.json`** (77KB on disk, 50KB minified) — `meta` (flattened provenance),
+  every entry minus its citations plus a `citationCount`, `conventions`, and
+  `knownGaps`. Loaded up front by `useGlossaryIndex()`. `inconsistencies`,
+  `usage` and `revisions` are deliberately dropped: apparatus for the
+  translation run, not for a reader.
+- **`tes-en.citations.json`** (216KB on disk, 150KB minified) — the citation pairs keyed by entry
+  id. Loaded by `useGlossaryCitations()`'s `loadCitations()` on the first
+  time a reader opens a term, never with the page.
+
+Both are direct `await import()` of statically bundled JSON — **no
+`useAsyncData`**, same reasoning as `useLocalizedVolumes`. Both are matched
+by `isContentChunkId` (`shared/utils/manifestPrefetch.ts`) so neither is
+prefetch-eligible on any page, including `/glossary` itself.
+
+**Who emits them**: `scripts/lib/glossary-splits.ts`
+(`deriveGlossaryIndexFile`/`deriveGlossaryCitationsFile`, pure;
+`writeGlossarySplitFiles`, I/O), run standalone by
+`pnpm emit:glossary-splits` (`scripts/emit-glossary-splits.ts`). Unlike the
+ToC splits, no importer regenerates these — the canonical glossary is
+hand-audited, so run the emit script yourself after editing it.
+`scripts/validate-content.ts`'s `checkGlossary` re-derives both files and
+structurally compares them against what is on disk, so they can never
+silently go stale; it also fails if any `chapterId` cited by an entry or
+quoted by a convention is absent from `toc.json` (those become links on
+`/glossary`).
+
+Guardrails: `tests/unit/glossary-payload.spec.ts` (no `app/` import of the
+canonical file, no static import of either split file, citations stay behind
+`loadCitations()`), `tests/unit/glossary-splits.spec.ts` (the derivation).
+
+**`/glossary` is the site's heaviest HTML document, deliberately.** All 125
+terms and all 13 house rules are server-rendered: a glossary that browser
+find-in-page cannot search, or that needs JavaScript to read, is not a
+reference. The cost is paid in markup discipline instead — the row and the
+attestation strip are styled from namespaced, _unscoped_ CSS rather than
+utility classes, because every character of a `class` attribute and every
+`data-v-…=""` scope marker is multiplied by 125 in the prerendered file.
+Measured with `wrapper.html()` over the mounted page, comments stripped:
+342,276 chars before that change, 190,618 after (per row 2,008 → 880).
+`tests/unit/glossary-page-weight.spec.ts` is that measurement, kept as a
+budget. If you add markup to `GlossaryEntryRow.vue`, add it to the style
+block, not to a `class` attribute.

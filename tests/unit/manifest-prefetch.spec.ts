@@ -18,6 +18,18 @@ describe("isContentChunkId", () => {
     expect(isContentChunkId("../content/toc.parts/part-01.json")).toBe(true);
   });
 
+  it("matches both split glossary chunk ids", () => {
+    // The 216KB citations chunk must load when a reader opens a term, not
+    // speculatively — and neither file belongs in any other page's
+    // dependency set. See `app/composables/useGlossaryCitations.ts`.
+    expect(isContentChunkId("../content/glossary/tes-en.index.json")).toBe(
+      true,
+    );
+    expect(isContentChunkId("../content/glossary/tes-en.citations.json")).toBe(
+      true,
+    );
+  });
+
   it("matches the per-part content-loader glob-map modules (T13)", () => {
     expect(isContentChunkId("app/utils/content-loaders/part-16.ts")).toBe(true);
     expect(isContentChunkId("utils/content-loaders/part-01.ts")).toBe(true);

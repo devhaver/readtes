@@ -216,8 +216,8 @@ export default defineNuxtConfig({
     },
   },
   // T11 scaling fix — content-chunk prefetch-link bloat: strip every
-  // `content/parts/**`/`content/toc.parts/**` chunk's prefetch/preload
-  // eligibility from the client manifest before Nitro embeds it for
+  // `content/parts/**`/`content/toc.parts/**`/`content/glossary/**` chunk's
+  // prefetch/preload eligibility from the client manifest before Nitro embeds it for
   // runtime use, so `vue-bundle-renderer`'s renderer stops emitting a
   // `<link rel="prefetch">` for (effectively) every chapter's content chunk
   // on every reader page. See `shared/utils/manifestPrefetch.ts`'s docblock
