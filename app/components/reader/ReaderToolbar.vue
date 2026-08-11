@@ -9,6 +9,7 @@
 import type { BreadcrumbItem } from "~/components/app/AppBreadcrumb.vue";
 import type { ReaderMode } from "~/utils/readerMode";
 import type { ChapterLink } from "~/utils/toc";
+import type { TocVolumeSkeleton } from "~~/shared/types/content";
 
 defineProps<{
   // The reader page renders no other heading — this is that page's ONE
@@ -16,6 +17,9 @@ defineProps<{
   // breadcrumb right below already shows the same title on-screen.
   chapterTitle: string;
   breadcrumbItems: BreadcrumbItem[];
+  volumes: TocVolumeSkeleton[];
+  currentVolumeId: string;
+  currentPartId: string;
   prev: ChapterLink | null;
   next: ChapterLink | null;
 }>();
@@ -37,6 +41,16 @@ const modeOptions = computed(() => [
 // since it's this component that's always present (as the panes-mode
 // toolbar slot, or directly alongside `StudyStream` in study mode).
 const showPreferences = ref(false);
+
+// The Contents panel (T90): provide/inject singleton, same as
+// `useCommentarySheet` — the reader page calls this first, so
+// `MobilePanePill` (a sibling, not a descendant, of this toolbar) injects
+// the same instance to hide itself while the panel is open.
+const {
+  isOpen: showContents,
+  open: openContents,
+  close: closeContents,
+} = useContentsPanel();
 </script>
 
 <template>
@@ -51,9 +65,36 @@ const showPreferences = ref(false);
     <h1 class="sr-only">{{ chapterTitle }}</h1>
 
     <div class="flex items-center justify-between gap-3">
-      <AppBreadcrumb :items="breadcrumbItems" />
+      <ReaderBreadcrumb
+        :items="breadcrumbItems"
+        :volumes="volumes"
+        :current-volume-id="currentVolumeId"
+        :current-part-id="currentPartId"
+      />
 
       <div class="flex shrink-0 items-center gap-2">
+        <button
+          type="button"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          :aria-label="t('reader.toolbar.contentsButton')"
+          @click="openContents"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="14" y2="12" />
+            <line x1="4" y1="18" x2="17" y2="18" />
+          </svg>
+        </button>
+
         <button
           type="button"
           class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
@@ -88,6 +129,14 @@ const showPreferences = ref(false);
     <ReaderReadingPreferencesModal
       :open="showPreferences"
       @close="showPreferences = false"
+    />
+
+    <ReaderContentsPanel
+      :open="showContents"
+      :volumes="volumes"
+      :current-volume-id="currentVolumeId"
+      :current-part-id="currentPartId"
+      @close="closeContents"
     />
 
     <nav

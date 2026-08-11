@@ -79,7 +79,15 @@
     },
     "progressLabel": "Reading progress",
     "toolbar": {
-      "preferencesButton": "Reading preferences"
+      "preferencesButton": "Reading preferences",
+      "contentsButton": "Contents"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "Browse all chapters"
+    },
+    "contents": {
+      "title": "Contents",
+      "close": "Close"
     },
     "mobilePane": {
       "label": "Reader pane",
