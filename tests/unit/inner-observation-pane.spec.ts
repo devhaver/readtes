@@ -60,4 +60,41 @@ describe("InnerObservationPane", () => {
 
     expect(wrapper.text().toLowerCase()).toContain("no inner observation");
   });
+
+  // The bodies are client-loaded (see `useInnerObservationContent`), so
+  // "nothing here yet" is the state every first paint starts in — it must
+  // not read as "this part has none".
+  it("shows a labelled skeleton, not the empty state, while the bodies are pending", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections: [], pending: true },
+    });
+
+    const skeleton = wrapper.find('[data-testid="inner-observation-skeleton"]');
+    expect(skeleton.exists()).toBe(true);
+    expect(skeleton.attributes("role")).toBe("status");
+    expect(skeleton.attributes("aria-label")?.toLowerCase()).toContain(
+      "loading",
+    );
+    expect(wrapper.text().toLowerCase()).not.toContain("no inner observation");
+  });
+
+  it("drops the skeleton once the sections arrive", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: {
+        pending: false,
+        sections: [
+          {
+            chapterId: "part-01/inner-observation-01",
+            title: { en: "Histaklut Pnimit 1", he: "א" },
+            items: [{ n: 1, sefariaRef: "x 1", html: "Text.", anchors: [] }],
+          },
+        ] satisfies InnerObservationSectionView[],
+      },
+    });
+
+    expect(
+      wrapper.find('[data-testid="inner-observation-skeleton"]').exists(),
+    ).toBe(false);
+    expect(wrapper.text()).toContain("Text.");
+  });
 });

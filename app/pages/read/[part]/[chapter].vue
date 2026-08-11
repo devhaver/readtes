@@ -70,10 +70,16 @@ const innerObservationChapters = innerObservationChaptersInPart(
 );
 const hasInnerObservation = innerObservationChapters.length > 0;
 const panes = resolveReaderPanes({ hasCommentary, hasInnerObservation });
+// Deliberately not awaited and deliberately not server-rendered: the bodies
+// load in the browser, from the part's own content chunks, once per part
+// rather than being inlined into every chapter page's HTML — see
+// `useInnerObservationContent`. Only `versions` (ToC-derived, so identical
+// on both sides of hydration) is available during prerendering.
 const {
-  versions: innerObservationVersionIds,
+  versions: innerObservationVersions,
   sections: innerObservationRawSections,
-} = await useInnerObservationContent(partId, innerObservationChapters);
+  pending: innerObservationPending,
+} = useInnerObservationContent(partId, innerObservationChapters);
 
 const readerVersions = useReaderVersions(chapter, versions.value);
 // Study mode below `lg`, panes at/above it by default — original is an
@@ -97,7 +103,7 @@ const commentaryVersionOptions = computed(() =>
   versionOptions(commentaryVersions.value),
 );
 const innerObservationVersionOptions = computed(() =>
-  versionOptions(innerObservationVersionIds.value),
+  versionOptions(innerObservationVersions.value),
 );
 
 const metaFor = (versionId: string | null) =>
@@ -127,7 +133,7 @@ const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
 // versions load.
 const innerObservationVersion = ref<string | null>(null);
 watch(
-  innerObservationVersionIds,
+  innerObservationVersions,
   (ids) => {
     if (
       innerObservationVersion.value &&
@@ -306,7 +312,10 @@ useLocalizedSeo({
           :meta="innerObservationMeta"
           @update:model-value="(id) => (innerObservationVersion = id)"
         >
-          <ReaderInnerObservationPane :sections="innerObservationSections" />
+          <ReaderInnerObservationPane
+            :sections="innerObservationSections"
+            :pending="innerObservationPending"
+          />
         </ReaderPane>
       </template>
     </ReaderShell>

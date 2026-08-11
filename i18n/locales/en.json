@@ -42,6 +42,7 @@
     "sourceEmpty": "No source text available for this chapter yet.",
     "summaryEmpty": "No summary available for this chapter yet.",
     "innerObservationEmpty": "No Inner Observation available for this chapter yet.",
+    "innerObservationLoading": "Loading Inner Observation…",
     "miniTocTitle": "In this chapter",
     "seifLabel": "Seif {n}",
     "missingAnchor": {
