@@ -1,0 +1,78 @@
+# Deploys the prerendered static site to GitHub Pages on every push to main.
+#
+# Hosting decision (2026-08-11): GitHub Pages stores the site (1GB limit, no
+# file-count cap — fits the full multi-language corpus, unlike Cloudflare
+# Pages' 20,000-file free tier), with Cloudflare in front via DNS for CDN
+# caching, redirect rules, and custom headers. `public/_headers` is a
+# Cloudflare Pages artifact that GitHub Pages ignores; header behaviour is
+# configured in Cloudflare instead.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NUXT_PUBLIC_SITE_URL: https://readtes.com
+      # Full-corpus prerender needs headroom beyond the default heap.
+      NODE_OPTIONS: --max-old-space-size=6144
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate static site
+        run: pnpm generate
+
+      # The Actions-based Pages deploy serves the artifact verbatim (no
+      # Jekyll pass), but the marker costs nothing and guards the
+      # underscore-prefixed /_nuxt and /_fonts dirs against any future
+      # branch-based deployment mode.
+      - name: Add .nojekyll
+        run: touch .output/public/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .output/public
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
