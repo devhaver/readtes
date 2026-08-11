@@ -6,8 +6,8 @@
  * Three things the pure half can't know, all supplied from the reader
  * page's own part file via `provideCrossRefChapters`:
  *
- * - **Whether the target chapter actually exists.** A ref that doesn't
- *   match a real chapter id keeps today's external sefaria.org link. This
+ * - **Whether the target chapters actually exist.** A ref that doesn't
+ *   match real chapter ids keeps today's external sefaria.org link. This
  *   is load-bearing, not defensive: Nitro's prerender crawler follows
  *   internal links, so a route guessed from string parsing alone becomes a
  *   404 in the generated site. Chapter ids are part-qualified
@@ -15,6 +15,9 @@
  *   open one can never resolve against this set either — which is what
  *   keeps the offset below from being applied across a part boundary. (No
  *   ref in the corpus does that: all 6,885 point inside their own part.)
+ *   A question ref has to clear *both* ids `sefariaCrossRefTarget` asks
+ *   for — see `SefariaCrossRefTarget.requiredChapterIds` for why its
+ *   `#seif-N` half is checked through the paired answer chapter.
  * - **How far Sefaria's topics numbering is offset from ours** — the
  *   part's terminology answer count, read off the ToC rather than
  *   hardcoded. See `SefariaCrossRef.number` for what goes wrong without
@@ -26,8 +29,14 @@
  *
  * Without a provider (a component mounted outside the reader page), no ref
  * resolves and every link is left exactly as the content holds it.
+ *
+ * The second half of "stays on this site" is `crossRefRoot`: the rewritten
+ * links are plain `<a href>` inside `v-html`, invisible to `<NuxtLink>`, so
+ * without a delegated click handler every one of them would be a full
+ * document reload — the whole reader torn down and rebuilt, worse for the
+ * reader than the tab to sefaria.org this replaces.
  */
-import type { InjectionKey } from "vue";
+import type { InjectionKey, Ref } from "vue";
 import type { SefariaCrossRef } from "~/utils/sefariaCrossRefs";
 import type { TocChapter } from "~~/shared/types/content";
 
@@ -40,6 +49,24 @@ const CROSS_REF_CONTEXT_KEY: InjectionKey<CrossRefContext> =
   Symbol("cross-ref-context");
 
 /**
+ * How many terminology answers the part has, as the *highest* chapter
+ * number rather than the number of chapters. Both give 54 for a complete
+ * `answers-terminology-01..54`, but a part missing one chapter mid-run
+ * would silently shrink a count — and every topics ref in that part would
+ * then land one chapter off, on a real-but-wrong chapter that the
+ * existence check below would happily link (see `SefariaCrossRef.number`).
+ * The maximum can't drift that way.
+ */
+const terminologyAnswerOffset = (chapters: TocChapter[]): number =>
+  chapters.reduce(
+    (highest, chapter) =>
+      chapter.kind === "answers-terminology" && chapter.number > highest
+        ? chapter.number
+        : highest,
+    0,
+  );
+
+/**
  * Called once by the reader page, with the chapters of the part it has
  * loaded. Plain values, not refs: the page fully remounts on every param
  * change (`definePageMeta({ key })`), so this never has to change under a
@@ -48,23 +75,46 @@ const CROSS_REF_CONTEXT_KEY: InjectionKey<CrossRefContext> =
 export const provideCrossRefChapters = (chapters: TocChapter[]): void => {
   provide(CROSS_REF_CONTEXT_KEY, {
     chapterIds: new Set(chapters.map((chapter) => chapter.id)),
-    topicsOffset: chapters.filter(
-      (chapter) => chapter.kind === "answers-terminology",
-    ).length,
+    topicsOffset: terminologyAnswerOffset(chapters),
   });
 };
 
+const CROSS_REF_LINK_SELECTOR = `a[${CROSS_REF_LINK_ATTR}]`;
+
+/**
+ * A click the browser should keep for itself: anything with a modifier
+ * (open in a new tab/window, download), a non-primary button, or a click
+ * something upstream already handled. Middle clicks reach browsers as
+ * `auxclick` rather than `click` and never get here at all; the button
+ * check covers the ones that still send both.
+ */
+const isPlainLeftClick = (event: MouseEvent): boolean =>
+  event.button === 0 &&
+  !event.defaultPrevented &&
+  !event.metaKey &&
+  !event.ctrlKey &&
+  !event.shiftKey &&
+  !event.altKey;
+
 export const useLinkedCrossRefs = (): {
   linkCrossRefs: (html: string) => string;
+  crossRefRoot: Ref<HTMLElement | null>;
 } => {
   const localePath = useLocalePath();
+  const router = useRouter();
+  const nuxtApp = useNuxtApp();
   const context = inject(CROSS_REF_CONTEXT_KEY, null);
 
   const internalHref = (ref: SefariaCrossRef): string | null => {
     if (!context) return null;
 
     const target = sefariaCrossRefTarget(ref, context.topicsOffset);
-    if (!target || !context.chapterIds.has(target.chapterId)) return null;
+    if (
+      !target ||
+      !target.requiredChapterIds.every((id) => context.chapterIds.has(id))
+    ) {
+      return null;
+    }
 
     return `${localePath(target.path)}${target.hash}`;
   };
@@ -72,5 +122,58 @@ export const useLinkedCrossRefs = (): {
   const linkCrossRefs = (html: string): string =>
     context ? linkInternalSefariaCrossRefs(html, internalHref) : html;
 
-  return { linkCrossRefs };
+  /**
+   * Nuxt's own scroll behaviour takes the *window* to the fragment, which
+   * is what study and original mode need but not panes mode, where the
+   * seif lives inside the source pane's own scroll container.
+   * `scrollIntoView` walks every scrollable ancestor, the way the
+   * browser's native fragment navigation did before this handler took the
+   * click. Waits for `page:finish` because the reader page resolves its
+   * chapter content asynchronously, so the seif isn't in the DOM when
+   * `router.push` settles; the hash check keeps a navigation that never
+   * finished from scrolling some later page instead.
+   */
+  const scrollToHash = (hash: string): void => {
+    nuxtApp.hooks.hookOnce("page:finish", () => {
+      void nextTick(() => {
+        if (router.currentRoute.value.hash !== hash) return;
+        document
+          .getElementById(hash.slice(1))
+          ?.scrollIntoView({ block: "start" });
+      });
+    });
+  };
+
+  const onContainerClick = (event: MouseEvent) => {
+    if (!isPlainLeftClick(event)) return;
+
+    const target = event.target as HTMLElement | null;
+    const href = target
+      ?.closest<HTMLAnchorElement>(CROSS_REF_LINK_SELECTOR)
+      ?.getAttribute("href");
+    if (!href) return;
+
+    event.preventDefault();
+
+    const hashIndex = href.indexOf("#");
+    if (hashIndex !== -1) scrollToHash(href.slice(hashIndex));
+    void router.push(href);
+  };
+
+  const crossRefRoot = ref<HTMLElement | null>(null);
+
+  // Bound imperatively rather than as a template `@click`, for the same
+  // reason `useAnchorActivation` is: the listener belongs on the plain
+  // element wrapping the `v-html`, and the actual interactive elements are
+  // the `<a>` tags inside it — which keyboard-activate natively, sending
+  // the very `click` this handles.
+  watchEffect((onCleanup) => {
+    const container = crossRefRoot.value;
+    if (!container) return;
+
+    container.addEventListener("click", onContainerClick);
+    onCleanup(() => container.removeEventListener("click", onContainerClick));
+  });
+
+  return { linkCrossRefs, crossRefRoot };
 };

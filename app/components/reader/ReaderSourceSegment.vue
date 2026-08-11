@@ -8,20 +8,27 @@ import type { SourceSegment } from "~~/shared/types/content";
 
 const props = defineProps<{ segment: SourceSegment }>();
 
-// Two passes over Sefaria's Questions <-> Answers cross-references, and
-// the order between them is load-bearing:
+// Two passes over Sefaria's Questions <-> Answers cross-references, in
+// this order:
 //
 // 1. `rewriteLegacySefariaRelativeHrefs` first, normalizing any
 //    still-site-relative `href="/Talmud_..."` (content committed before
 //    `sanitizeHtml` did this at import time) to an absolute sefaria.org
-//    link. It rewrites *every* site-relative href to sefaria.org, so it
-//    has to run before anything internal exists, not after — see
-//    `app/utils/sanitizeHtml.ts`.
+//    link. It rewrites *every* site-relative href to sefaria.org, so the
+//    day some content does hold one, running it after step 2 would undo
+//    that ref's internal link — see `app/utils/sanitizeHtml.ts`. Nothing
+//    in the committed corpus is site-relative today (measured: all 6,885
+//    refs are absolute), so this pass is a no-op against it; the ordering
+//    is what keeps it that way rather than a live dependency.
 // 2. `linkCrossRefs` then maps each ref onto this site's own chapter
 //    route, in the reader's locale, for the chapters that exist here. A
 //    ref it declines keeps the external new-tab link step 1 left it with
 //    — see `useLinkedCrossRefs`.
-const { linkCrossRefs } = useLinkedCrossRefs();
+//
+// `crossRefRoot` goes on the element holding that html: those internal
+// links are raw `<a href>` inside `v-html`, so the reader's router only
+// gets to handle them through the delegated click listener that ref binds.
+const { linkCrossRefs, crossRefRoot } = useLinkedCrossRefs();
 
 const displayHtml = computed(() =>
   linkCrossRefs(
@@ -39,5 +46,5 @@ const displayHtml = computed(() =>
   >
     {{ segment.n }}
   </span>
-  <span v-html="displayHtml" />
+  <span ref="crossRefRoot" v-html="displayHtml" />
 </template>

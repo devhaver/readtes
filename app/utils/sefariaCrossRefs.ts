@@ -11,7 +11,7 @@
  * it onto the chapter it names *here*, and swapping the hrefs in a
  * segment's already-sanitized html. It never decides on its own that a
  * target exists — `linkInternalSefariaCrossRefs`'s caller supplies the
- * internal href, and only for a chapter it has actually seen in the ToC
+ * internal href, and only for chapters it has actually seen in the ToC
  * (`useLinkedCrossRefs`). That matters beyond tidiness: Nitro's prerender
  * crawler follows internal links, so an href built optimistically from
  * string parsing alone would turn every unmatched ref into a 404 in the
@@ -129,8 +129,24 @@ export const parseSefariaCrossRef = (href: string): SefariaCrossRef | null => {
 
 /** Where a parsed ref points on this site. */
 export interface SefariaCrossRefTarget {
-  /** Chapter id to check for existence, e.g. `part-09/answers-topics-01`. */
-  chapterId: string;
+  /**
+   * Every chapter id that must exist here before this link may go internal
+   * — the caller links only when it has seen *all* of them in the ToC.
+   *
+   * An answer ref needs the one chapter it lands on. A question ref needs
+   * two: the questions chapter that holds the seif, *and* the answer
+   * chapter of the same number. The second one is not the target — it is
+   * the only evidence available at render time that the seif exists at
+   * all. The ToC carries chapter ids, not per-chapter item counts, so
+   * `#seif-N` cannot be checked directly; the apparatus is a pairing
+   * (question N <-> answer chapter N throughout the corpus), so a missing
+   * answer chapter N is exactly where a question N may also be missing —
+   * Part 1's 55 terminology questions against 54 answer chapters being the
+   * known break. Erring toward the external link there is what issue #78
+   * asks for: an unmatched number falls back rather than pointing at a
+   * fragment that isn't on the page.
+   */
+  requiredChapterIds: string[];
   /** Unprefixed route for that chapter — feed it through `useLocalePath()`. */
   path: string;
   /** `#seif-N` for a question ref, `""` for an answer ref. */
@@ -145,8 +161,8 @@ export interface SefariaCrossRefTarget {
  * it applies to topics refs only. Returns `null` when the translated
  * number isn't a plausible one (a topics ref numbered at or below the
  * offset, or a zero) — the caller then leaves the external link alone. The
- * returned chapter id is only a *candidate*: it says nothing about whether
- * that chapter exists, which is the caller's job to check.
+ * returned ids are only *candidates*: they say nothing about whether those
+ * chapters exist, which is the caller's job to check.
  */
 export const sefariaCrossRefTarget = (
   ref: SefariaCrossRef,
@@ -156,15 +172,20 @@ export const sefariaCrossRefTarget = (
     ref.subject === "topics" ? ref.number - topicsOffset : ref.number;
   if (number < 1) return null;
 
-  const chapterId =
-    ref.apparatus === "answers"
-      ? `${ref.partId}/answers-${ref.subject}-${padId(number)}`
-      : `${ref.partId}/questions-${ref.subject}-01`;
+  const answerChapterId = `${ref.partId}/answers-${ref.subject}-${padId(number)}`;
+  if (ref.apparatus === "answers") {
+    return {
+      requiredChapterIds: [answerChapterId],
+      path: `/read/${answerChapterId}`,
+      hash: "",
+    };
+  }
 
+  const questionsChapterId = `${ref.partId}/questions-${ref.subject}-01`;
   return {
-    chapterId,
-    path: `/read/${chapterId}`,
-    hash: ref.apparatus === "answers" ? "" : `#seif-${number}`,
+    requiredChapterIds: [questionsChapterId, answerChapterId],
+    path: `/read/${questionsChapterId}`,
+    hash: `#seif-${number}`,
   };
 };
 
@@ -177,6 +198,15 @@ const HREF_ATTR_RE = /\shref="([^"]*)"/i;
  * place, not spawn a tab.
  */
 const OFFSITE_ATTRS_RE = /\s(?:target|rel)="[^"]*"/gi;
+
+/**
+ * Marks an anchor this pass made internal. These links live inside
+ * `v-html`, so they can never be `<NuxtLink>`s — this attribute is what
+ * lets the reader's delegated click handler (`useLinkedCrossRefs`) pick
+ * them out of the surrounding content markup and route them client-side
+ * instead of letting the browser reload the whole document.
+ */
+export const CROSS_REF_LINK_ATTR = "data-cross-ref";
 
 /**
  * Rewrites every recognized Sefaria Q&A cross-reference in an
@@ -205,5 +235,5 @@ export const linkInternalSefariaCrossRefs = (
     if (!internalHref) return full;
 
     const rest = attrs.replace(HREF_ATTR_RE, "").replace(OFFSITE_ATTRS_RE, "");
-    return `<a href="${internalHref}"${rest}>`;
+    return `<a href="${internalHref}" ${CROSS_REF_LINK_ATTR}${rest}>`;
   });

@@ -155,20 +155,26 @@ describe("sefariaCrossRefTarget", () => {
     expect(
       sefariaCrossRefTarget(ref(refHref("I", "Answers", "Terminology", 1)), 54),
     ).toEqual({
-      chapterId: "part-01/answers-terminology-01",
+      requiredChapterIds: ["part-01/answers-terminology-01"],
       path: "/read/part-01/answers-terminology-01",
       hash: "",
     });
   });
 
   it("targets a seif of the single questions chapter", () => {
+    // Two required ids, not one: the ToC has no per-chapter item count, so
+    // the paired answer chapter is what stands in for "seif 12 is really
+    // there" — see `SefariaCrossRefTarget.requiredChapterIds`.
     expect(
       sefariaCrossRefTarget(
         ref(refHref("I", "Questions", "Terminology", 12)),
         54,
       ),
     ).toEqual({
-      chapterId: "part-01/questions-terminology-01",
+      requiredChapterIds: [
+        "part-01/questions-terminology-01",
+        "part-01/answers-terminology-12",
+      ],
       path: "/read/part-01/questions-terminology-01",
       hash: "#seif-12",
     });
@@ -181,7 +187,7 @@ describe("sefariaCrossRefTarget", () => {
     expect(
       sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Topics", 106)), 105),
     ).toEqual({
-      chapterId: "part-09/answers-topics-01",
+      requiredChapterIds: ["part-09/answers-topics-01"],
       path: "/read/part-09/answers-topics-01",
       hash: "",
     });
@@ -194,7 +200,10 @@ describe("sefariaCrossRefTarget", () => {
         105,
       ),
     ).toEqual({
-      chapterId: "part-09/questions-topics-01",
+      requiredChapterIds: [
+        "part-09/questions-topics-01",
+        "part-09/answers-topics-78",
+      ],
       path: "/read/part-09/questions-topics-01",
       hash: "#seif-78",
     });
@@ -205,15 +214,15 @@ describe("sefariaCrossRefTarget", () => {
       sefariaCrossRefTarget(
         ref(refHref("IX", "Answers", "Terminology", 12)),
         105,
-      )?.chapterId,
-    ).toBe("part-09/answers-terminology-12");
+      )?.requiredChapterIds,
+    ).toEqual(["part-09/answers-terminology-12"]);
   });
 
   it("keeps three-digit chapter numbers unpadded", () => {
     expect(
       sefariaCrossRefTarget(ref(refHref("XII", "Answers", "Topics", 251)), 149)
-        ?.chapterId,
-    ).toBe("part-12/answers-topics-102");
+        ?.requiredChapterIds,
+    ).toEqual(["part-12/answers-topics-102"]);
   });
 
   it("returns null when the offset would leave nothing to point at", () => {
@@ -230,11 +239,22 @@ describe("sefariaCrossRefTarget", () => {
 });
 
 describe("linkInternalSefariaCrossRefs", () => {
+  /** Resolves only against a fixed set of chapter ids, as the reader does. */
+  const resolveAgainst =
+    (chapterIds: string[], topicsOffset = 0) =>
+    (parsed: SefariaCrossRef) => {
+      const existing = new Set(chapterIds);
+      const target = sefariaCrossRefTarget(parsed, topicsOffset);
+      return target && target.requiredChapterIds.every((id) => existing.has(id))
+        ? `${target.path}${target.hash}`
+        : null;
+    };
+
   it("replaces a resolved answer link, dropping its new-tab attributes", () => {
     const html = `מהו אור. <small>(<a href="${refHref("I", "Answers", "Terminology", 1)}" target="_blank" rel="noopener noreferrer">לתשובה</a>)</small>`;
 
     expect(linkInternalSefariaCrossRefs(html, alwaysResolve)).toBe(
-      'מהו אור. <small>(<a href="/read/part-01/answers-terminology-01">לתשובה</a>)</small>',
+      'מהו אור. <small>(<a href="/read/part-01/answers-terminology-01" data-cross-ref>לתשובה</a>)</small>',
     );
   });
 
@@ -242,7 +262,27 @@ describe("linkInternalSefariaCrossRefs", () => {
     const html = `<small>(<a href="${refHref("I", "Questions", "Terminology", 1)}" target="_blank" rel="noopener noreferrer">לשאלה</a>)</small> <b>אור</b>`;
 
     expect(linkInternalSefariaCrossRefs(html, alwaysResolve)).toBe(
-      '<small>(<a href="/read/part-01/questions-terminology-01#seif-1">לשאלה</a>)</small> <b>אור</b>',
+      '<small>(<a href="/read/part-01/questions-terminology-01#seif-1" data-cross-ref>לשאלה</a>)</small> <b>אור</b>',
+    );
+  });
+
+  it("marks every link it made internal, and nothing else", () => {
+    // `data-cross-ref` is what the reader's delegated click handler keys
+    // off to route these client-side instead of reloading the document —
+    // an external fallback must never carry it.
+    const html = [
+      `<a href="${refHref("I", "Answers", "Terminology", 1)}">1</a>`,
+      `<a href="${refHref("I", "Answers", "Terminology", 55)}">55</a>`,
+    ].join(" ");
+
+    const linked = linkInternalSefariaCrossRefs(
+      html,
+      resolveAgainst(["part-01/answers-terminology-01"]),
+    );
+
+    expect(linked.match(/data-cross-ref/g)).toHaveLength(1);
+    expect(linked).toContain(
+      '<a href="/read/part-01/answers-terminology-01" data-cross-ref>',
     );
   });
 
@@ -254,37 +294,55 @@ describe("linkInternalSefariaCrossRefs", () => {
         const target = sefariaCrossRefTarget(parsed, 0);
         return target && `/he${target.path}${target.hash}`;
       }),
-    ).toBe('<a href="/he/read/part-01/answers-topics-02">לתשובה</a>');
+    ).toBe(
+      '<a href="/he/read/part-01/answers-topics-02" data-cross-ref>לתשובה</a>',
+    );
   });
 
   it("keeps the external link when the target chapter does not exist", () => {
     // Part 1 has 55 terminology questions but only 54 answer chapters — a
     // "to the answer" link for question 55 has nowhere to go on this site.
-    const existing = new Set(["part-01/answers-terminology-54"]);
     const html = `<a href="${refHref("I", "Answers", "Terminology", 55)}" target="_blank" rel="noopener noreferrer">לתשובה</a>`;
 
     expect(
-      linkInternalSefariaCrossRefs(html, (parsed) => {
-        const target = sefariaCrossRefTarget(parsed, 0);
-        return target && existing.has(target.chapterId) ? target.path : null;
-      }),
+      linkInternalSefariaCrossRefs(
+        html,
+        resolveAgainst(["part-01/answers-terminology-54"]),
+      ),
+    ).toBe(html);
+  });
+
+  it("keeps the external link when the seif's own answer chapter is missing", () => {
+    // The questions chapter exists, so the chapter half of the target
+    // resolves — but nothing here says it runs as far as seif 55, and the
+    // missing answer chapter is the corpus saying it may not. A fragment
+    // that isn't on the page would scroll nowhere, silently.
+    const html = `<a href="${refHref("I", "Questions", "Terminology", 55)}" target="_blank" rel="noopener noreferrer">לשאלה</a>`;
+
+    expect(
+      linkInternalSefariaCrossRefs(
+        html,
+        resolveAgainst([
+          "part-01/questions-terminology-01",
+          "part-01/answers-terminology-54",
+        ]),
+      ),
     ).toBe(html);
   });
 
   it("still links the refs around an unmatched one", () => {
-    const existing = new Set(["part-01/answers-terminology-54"]);
     const html = [
       `<a href="${refHref("I", "Answers", "Terminology", 54)}">54</a>`,
       `<a href="${refHref("I", "Answers", "Terminology", 55)}">55</a>`,
     ].join(" ");
 
     expect(
-      linkInternalSefariaCrossRefs(html, (parsed) => {
-        const target = sefariaCrossRefTarget(parsed, 0);
-        return target && existing.has(target.chapterId) ? target.path : null;
-      }),
+      linkInternalSefariaCrossRefs(
+        html,
+        resolveAgainst(["part-01/answers-terminology-54"]),
+      ),
     ).toBe(
-      `<a href="/read/part-01/answers-terminology-54">54</a> <a href="${refHref("I", "Answers", "Terminology", 55)}">55</a>`,
+      `<a href="/read/part-01/answers-terminology-54" data-cross-ref>54</a> <a href="${refHref("I", "Answers", "Terminology", 55)}">55</a>`,
     );
   });
 
@@ -311,7 +369,7 @@ describe("linkInternalSefariaCrossRefs", () => {
     const html = `<a class="x" href="${refHref("I", "Answers", "Topics", 2)}" target="_blank">לתשובה</a>`;
 
     expect(linkInternalSefariaCrossRefs(html, alwaysResolve)).toBe(
-      '<a href="/read/part-01/answers-topics-02" class="x">לתשובה</a>',
+      '<a href="/read/part-01/answers-topics-02" data-cross-ref class="x">לתשובה</a>',
     );
   });
 });

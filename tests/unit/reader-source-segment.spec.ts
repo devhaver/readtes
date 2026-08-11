@@ -1,12 +1,14 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import { describe, expect, it } from "vitest";
-import { defineComponent, h } from "vue";
+import { describe, expect, it, vi } from "vitest";
+import { h } from "vue";
+import type { Router } from "vue-router";
 import ReaderSourceSegment from "~/components/reader/ReaderSourceSegment.vue";
 import type {
   ChapterKind,
   SourceSegment,
   TocChapter,
 } from "~~/shared/types/content";
+import CrossRefChapterPage from "./fixtures/CrossRefChapterPage.vue";
 
 const SEFARIA_ORIGIN = "https://www.sefaria.org";
 
@@ -33,24 +35,41 @@ const chapter = (id: string): TocChapter => ({
   },
 });
 
-/**
- * Stands in for the reader page: all `ReaderSourceSegment` needs from it is
- * the chapter list of the part currently open.
- */
-const PartChaptersProvider = (chapterIds: string[]) =>
-  defineComponent({
-    setup(_, { slots }) {
-      provideCrossRefChapters(chapterIds.map(chapter));
-      return () => h("div", slots.default?.());
-    },
-  });
+const segmentSlot = (html: string) => ({
+  default: () => h(ReaderSourceSegment, { segment: segment(html) }),
+});
 
 const mountSegment = async (html: string, chapterIds: string[]) =>
-  mountSuspended(PartChaptersProvider(chapterIds), {
-    slots: {
-      default: () => h(ReaderSourceSegment, { segment: segment(html) }),
-    },
+  mountSuspended(CrossRefChapterPage, {
+    props: { chapters: chapterIds.map(chapter) },
+    slots: segmentSlot(html),
   });
+
+/**
+ * Stubs the app's own router — the one `useLinkedCrossRefs` pushes to — so
+ * a click's navigation is observable without actually navigating. Reset
+ * explicitly: every mount in this file shares one router instance, so
+ * `spyOn` hands back the spy an earlier test already installed on it.
+ */
+const stubPush = (wrapper: { vm: unknown }) =>
+  vi
+    .spyOn((wrapper.vm as { $router: Router }).$router, "push")
+    .mockReset()
+    .mockResolvedValue(undefined);
+
+const clickLink = (
+  wrapper: { get: (selector: string) => { element: Element } },
+  init: MouseEventInit = {},
+): MouseEvent => {
+  const event = new MouseEvent("click", {
+    bubbles: true,
+    cancelable: true,
+    button: 0,
+    ...init,
+  });
+  wrapper.get("a").element.dispatchEvent(event);
+  return event;
+};
 
 describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
   it("links a question's 'to the answer' at that answer's own chapter", async () => {
@@ -63,6 +82,7 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
     expect(link.attributes("href")).toBe(
       "/read/part-01/answers-terminology-01",
     );
+    expect(link.attributes("data-cross-ref")).toBe("");
     expect(link.attributes("target")).toBeUndefined();
     expect(link.attributes("rel")).toBeUndefined();
   });
@@ -70,7 +90,7 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
   it("links an answer's 'to the question' at the questions chapter's seif", async () => {
     const wrapper = await mountSegment(
       `${crossRefLink("Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_12", "לשאלה")} אור`,
-      ["part-01/questions-terminology-01"],
+      ["part-01/questions-terminology-01", "part-01/answers-terminology-12"],
     );
 
     expect(wrapper.get("a").attributes("href")).toBe(
@@ -78,10 +98,10 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
     );
   });
 
-  it("offsets a topics ref by the part's own terminology answer count", async () => {
+  it("offsets a topics ref by the part's own terminology answers", async () => {
     // A three-terminology-answer part: Sefaria numbers its topics answers
     // from 4, this site's chapters from 1. Nothing here is hardcoded — the
-    // offset is counted off the provided chapter list.
+    // offset is read off the provided chapter list.
     const wrapper = await mountSegment(
       crossRefLink(
         "Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_5",
@@ -99,6 +119,29 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
 
     expect(wrapper.get("a").attributes("href")).toBe(
       "/read/part-01/answers-topics-02",
+    );
+  });
+
+  it("takes that offset from the highest terminology answer, not how many there are", async () => {
+    // Same part with `answers-terminology-03` missing: a count would say 3
+    // and shift every topics ref one chapter down, onto a real chapter the
+    // existence check would happily link. The highest number still says 4.
+    const wrapper = await mountSegment(
+      crossRefLink(
+        "Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_5",
+        "לתשובה",
+      ),
+      [
+        "part-01/answers-terminology-01",
+        "part-01/answers-terminology-02",
+        "part-01/answers-terminology-04",
+        "part-01/answers-topics-01",
+        "part-01/answers-topics-02",
+      ],
+    );
+
+    expect(wrapper.get("a").attributes("href")).toBe(
+      "/read/part-01/answers-topics-01",
     );
   });
 
@@ -131,8 +174,27 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
     expect(link.attributes("href")).toBe(
       `${SEFARIA_ORIGIN}/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Terminology_55`,
     );
+    expect(link.attributes("data-cross-ref")).toBeUndefined();
     expect(link.attributes("target")).toBe("_blank");
     expect(link.attributes("rel")).toBe("noopener noreferrer");
+  });
+
+  it("keeps a question ref external when its own answer chapter is missing", async () => {
+    // The questions chapter is right there, but nothing in the ToC says it
+    // runs as far as seif 55 — and part 1's missing 55th answer is the
+    // corpus saying it may not. Linking would give a fragment that scrolls
+    // nowhere; the external link still answers the reader.
+    const wrapper = await mountSegment(
+      crossRefLink(
+        "Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_55",
+        "לשאלה",
+      ),
+      ["part-01/questions-terminology-01", "part-01/answers-terminology-54"],
+    );
+
+    expect(wrapper.get("a").attributes("href")).toBe(
+      `${SEFARIA_ORIGIN}/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_55`,
+    );
   });
 
   it("keeps a ref that names another part external", async () => {
@@ -150,23 +212,16 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
   });
 
   it("keeps a Hebrew reader in the Hebrew locale", async () => {
-    const wrapper = await mountSuspended(
-      PartChaptersProvider(["part-01/answers-terminology-01"]),
-      {
-        route: "/he/read/part-01/questions-terminology-01",
-        slots: {
-          default: () =>
-            h(ReaderSourceSegment, {
-              segment: segment(
-                crossRefLink(
-                  "Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Terminology_1",
-                  "לתשובה",
-                ),
-              ),
-            }),
-        },
-      },
-    );
+    const wrapper = await mountSuspended(CrossRefChapterPage, {
+      props: { chapters: [chapter("part-01/answers-terminology-01")] },
+      route: "/he/read/part-01/questions-terminology-01",
+      slots: segmentSlot(
+        crossRefLink(
+          "Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Terminology_1",
+          "לתשובה",
+        ),
+      ),
+    });
 
     expect(wrapper.get("a").attributes("href")).toBe(
       "/he/read/part-01/answers-terminology-01",
@@ -185,5 +240,78 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
     expect(wrapper.get("a").attributes("href")).toBe(
       `${SEFARIA_ORIGIN}/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Terminology_1`,
     );
+  });
+});
+
+describe("ReaderSourceSegment — cross-reference clicks", () => {
+  const answerRefHtml = crossRefLink(
+    "Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Terminology_1",
+    "לתשובה",
+  );
+
+  it("routes an internal cross-reference instead of reloading the document", async () => {
+    // These links are raw `<a href>` inside `v-html`, so nothing makes them
+    // SPA navigations except this handler: left alone, every one of them
+    // tears the reader down and rebuilds it from the network.
+    const wrapper = await mountSegment(answerRefHtml, [
+      "part-01/answers-terminology-01",
+    ]);
+    const push = stubPush(wrapper);
+
+    const event = clickLink(wrapper);
+
+    expect(event.defaultPrevented).toBe(true);
+    expect(push).toHaveBeenCalledWith("/read/part-01/answers-terminology-01");
+  });
+
+  it("carries the seif fragment into the routed navigation", async () => {
+    const wrapper = await mountSegment(
+      crossRefLink(
+        "Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_12",
+        "לשאלה",
+      ),
+      ["part-01/questions-terminology-01", "part-01/answers-terminology-12"],
+    );
+    const push = stubPush(wrapper);
+
+    clickLink(wrapper);
+
+    expect(push).toHaveBeenCalledWith(
+      "/read/part-01/questions-terminology-01#seif-12",
+    );
+  });
+
+  it.each([
+    ["ctrl", { ctrlKey: true }],
+    ["meta", { metaKey: true }],
+    ["shift", { shiftKey: true }],
+    ["alt", { altKey: true }],
+    ["middle-button", { button: 1 }],
+  ])("leaves a %s click to the browser", async (_label, init) => {
+    const wrapper = await mountSegment(answerRefHtml, [
+      "part-01/answers-terminology-01",
+    ]);
+    const push = stubPush(wrapper);
+
+    const event = clickLink(wrapper, init);
+
+    expect(event.defaultPrevented).toBe(false);
+    expect(push).not.toHaveBeenCalled();
+  });
+
+  it("never intercepts a link that stayed external", async () => {
+    const wrapper = await mountSegment(
+      crossRefLink(
+        "Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Terminology_55",
+        "לתשובה",
+      ),
+      ["part-01/answers-terminology-54"],
+    );
+    const push = stubPush(wrapper);
+
+    const event = clickLink(wrapper);
+
+    expect(event.defaultPrevented).toBe(false);
+    expect(push).not.toHaveBeenCalled();
   });
 });
