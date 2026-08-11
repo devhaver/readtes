@@ -24,7 +24,7 @@ describe("InnerObservationPane", () => {
     ];
 
     const wrapper = await mountSuspended(InnerObservationPane, {
-      props: { sections },
+      props: { sections, absence: "not-in-this-edition" as const },
     });
 
     const text = wrapper.text();
@@ -47,15 +47,15 @@ describe("InnerObservationPane", () => {
     ];
 
     const wrapper = await mountSuspended(InnerObservationPane, {
-      props: { sections },
+      props: { sections, absence: "not-in-this-edition" as const },
     });
 
     expect(wrapper.find("#seif-1").exists()).toBe(false);
   });
 
-  it("shows an empty-state message when the part has no Inner Observation sections", async () => {
+  it("shows the edition-gap message when the selected edition has no sections (per-absence copy: inner-observation-absence.spec.ts)", async () => {
     const wrapper = await mountSuspended(InnerObservationPane, {
-      props: { sections: [] },
+      props: { sections: [], absence: "not-in-this-edition" as const },
     });
 
     expect(wrapper.text().toLowerCase()).toContain("no inner observation");

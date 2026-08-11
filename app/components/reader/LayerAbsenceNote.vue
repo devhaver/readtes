@@ -7,7 +7,32 @@
 // the commentary went. Styled as an aside/footnote (muted, hairline top
 // border), not an alert — an absent 1950s digitization is a property of the
 // corpus, not an error state.
+//
+// Two layers go absent this way and they must not read the same. Inner
+// Light is a digitization gap ("not yet"). Inner Observation, when a part
+// has none, is a fact about what Baal HaSulam wrote — so this note only
+// ever states the `never-written` case for it; a part that *has* an Inner
+// Observation still gets its own pane, and that pane's empty state carries
+// the "not in this edition yet" wording (see `InnerObservationAbsence`).
+const props = withDefaults(
+  defineProps<{ layer?: "inner-light" | "inner-observation" }>(),
+  { layer: "inner-light" },
+);
+
 const { t } = useI18n();
+
+const NOTE_COPY = {
+  "inner-light": {
+    titleKey: "reader.pane.innerLight",
+    messageKey: "reader.innerLightAbsent",
+  },
+  "inner-observation": {
+    titleKey: "reader.pane.innerObservation",
+    messageKey: INNER_OBSERVATION_ABSENCE_MESSAGE_KEYS["never-written"],
+  },
+} as const;
+
+const copy = computed(() => NOTE_COPY[props.layer]);
 </script>
 
 <template>
@@ -15,10 +40,10 @@ const { t } = useI18n();
     <h3
       class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
     >
-      {{ t("reader.pane.innerLight") }}
+      {{ t(copy.titleKey) }}
     </h3>
     <p class="mt-1 text-sm leading-relaxed text-(--text-muted)">
-      {{ t("reader.innerLightAbsent") }}
+      {{ t(copy.messageKey) }}
     </p>
   </aside>
 </template>

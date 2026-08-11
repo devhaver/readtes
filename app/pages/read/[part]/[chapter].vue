@@ -64,11 +64,16 @@ const hasCommentary = chapter.availableVersions.commentary.length > 0;
 // own `kind: "inner-observation"` chapters (see AGENTS.md / the content
 // model skill), so it's loaded once per part rather than per chapter, and
 // is identical no matter which chapter of the part is open. Five parts have
-// none at all — `hasInnerObservation` drives the two-vs-three-pane layout.
+// none at all, because Baal HaSulam wrote none for them — one derivation
+// from the part's own chapters drives both the two-vs-three-pane layout and
+// which absence the reader is told about (`InnerObservationAbsence`).
 const innerObservationChapters = innerObservationChaptersInPart(
   partFile.chapters,
 );
-const hasInnerObservation = innerObservationChapters.length > 0;
+const innerObservationAbsence = resolveInnerObservationAbsence(
+  innerObservationChapters.length,
+);
+const hasInnerObservation = innerObservationAbsence !== "never-written";
 const panes = resolveReaderPanes({ hasCommentary, hasInnerObservation });
 const {
   versions: innerObservationVersionIds,
@@ -159,7 +164,8 @@ const innerObservationSections = computed(() =>
     // A section whose *selected* version has no items would render as a
     // bare heading with nothing under it — drop it; the sections that do
     // have text in this version carry the pane. (If none do, the pane
-    // falls back to `innerObservationEmpty`.)
+    // states the `not-in-this-edition` absence — this pane only renders for
+    // parts that do have an Inner Observation.)
     .filter((section) => section.items.length > 0),
 );
 
@@ -264,8 +270,12 @@ useLocalizedSeo({
             :segments="sourceSegments"
             @open-seif-commentary="openCommentarySheet"
           >
-            <template v-if="!hasCommentary" #footnote>
-              <ReaderLayerAbsenceNote />
+            <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
+              <ReaderLayerAbsenceNote v-if="!hasCommentary" />
+              <ReaderLayerAbsenceNote
+                v-if="!hasInnerObservation"
+                layer="inner-observation"
+              />
             </template>
           </ReaderSourcePane>
         </ReaderPane>
@@ -306,7 +316,10 @@ useLocalizedSeo({
           :meta="innerObservationMeta"
           @update:model-value="(id) => (innerObservationVersion = id)"
         >
-          <ReaderInnerObservationPane :sections="innerObservationSections" />
+          <ReaderInnerObservationPane
+            :sections="innerObservationSections"
+            :absence="innerObservationAbsence"
+          />
         </ReaderPane>
       </template>
     </ReaderShell>

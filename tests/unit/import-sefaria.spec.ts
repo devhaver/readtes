@@ -658,6 +658,15 @@ describe("coverage-report: buildCoverageMarkdown", () => {
     expect(markdown).not.toMatch(/\d{4}-\d{2}-\d{2}T/); // no ISO timestamp anywhere
   });
 
+  it("separates 'not written' from 'not yet imported' in its preamble, so an empty row is never read as a missing text", () => {
+    const markdown = buildCoverageMarkdown([]);
+
+    expect(markdown).toContain("## Not written vs. not yet imported");
+    expect(markdown).toContain("parts 5, 11, 14, 15 and 16");
+    expect(markdown).toContain("not written");
+    expect(markdown).toContain("not yet imported");
+  });
+
   it("is a pure function of its input (calling it twice with the same input is byte-identical)", () => {
     const input = [
       { partId: "part-01", partTitle: "Section I", stats: [], warnings: [] },
