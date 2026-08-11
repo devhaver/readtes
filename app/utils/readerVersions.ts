@@ -105,6 +105,37 @@ export const languagesAvailable = (
   });
 };
 
+/**
+ * The languages a pane OFFERS — at most two (issue #94, owner decision):
+ * the reader's parent language (the UI locale) and Hebrew, the original.
+ * Language is chosen once at the site level; the only in-reading question
+ * is "translation or original?".
+ *
+ * When the chapter+layer has no text in the parent language, the slot is
+ * taken by whatever `resolveDefaultLanguage` actually falls back to (en,
+ * then he, then first available), so the switcher always names the
+ * language genuinely on screen — never a dead entry, never a lie. For a
+ * Hebrew UI locale (or a fallback that IS Hebrew) the set collapses to
+ * one and the pane header hides its control entirely.
+ */
+export const paneLanguageOptions = (
+  available: string[],
+  uiLocale: string,
+  versionsById: VersionsById,
+): string[] => {
+  const languages = languagesAvailable(available, versionsById);
+  if (languages.length === 0) return [];
+
+  const parent = languages.includes(uiLocale)
+    ? uiLocale
+    : resolveDefaultLanguage(available, uiLocale, versionsById);
+
+  const options: string[] = [];
+  if (parent && parent !== "he") options.push(parent);
+  if (languages.includes("he")) options.push("he");
+  return options;
+};
+
 export const resolveDefaultLanguage = (
   available: string[],
   uiLocale: string,

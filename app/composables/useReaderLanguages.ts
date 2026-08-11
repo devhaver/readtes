@@ -29,6 +29,7 @@ import { useLocalStorage } from "@vueuse/core";
 import type { ComputedRef } from "vue";
 import {
   buildVersionsById,
+  paneLanguageOptions,
   resolveDefaultLanguage,
   resolveVersionForLanguage,
 } from "~/utils/readerVersions";
@@ -75,8 +76,19 @@ export const useReaderLanguages = (
       const available = chapter.availableVersions[layer];
       const preferred = hydrated.value ? prefs.value[layer] : null;
 
+      // The preference is honoured only within the pane's OFFERED set
+      // (parent language + Hebrew, issue #94) — not merely "any language
+      // with text". Otherwise a preference persisted under one UI locale
+      // (say, en) would surface under another (/he) as a selection the
+      // switcher doesn't even list, binding the control to a value with
+      // no matching option.
       if (
         preferred &&
+        paneLanguageOptions(
+          available,
+          locale.value,
+          versionsById.value,
+        ).includes(preferred) &&
         resolveVersionForLanguage(available, preferred, versionsById.value)
       ) {
         return preferred;
