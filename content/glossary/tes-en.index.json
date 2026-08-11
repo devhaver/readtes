@@ -2947,7 +2947,7 @@
       "evidence": "663 occurrences of each in the Hebrew of aligned items; zero English counterparts anywhere in en-bb.",
       "examples": [
         {
-          "chapterId": "part-02/answers-terminology-23",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "(לשאלה) זווג דהכאה (ח\"ב הסת\"פ י\"ח) פעולת המסך…",
           "en": "The act of the screen, which detains and conceals the light…"
@@ -2967,13 +2967,13 @@
       "evidence": "243 aligned answer items follow the '(לשאלה) <b>headword</b> (citation)<br>body' shape. Of the 189 that carry a citation, 124 (66%) move it to the end and 65 (34%) drop it; 0 keep it at the start.",
       "examples": [
         {
-          "chapterId": "part-03/answers-terminology-36",
+          "chapterId": "part-03/answers-terminology-01",
           "layer": "source",
           "he": "(לשאלה) <b>הסתכלות</b> (ח\"ג פי\"ב אות א')<br>התפשטות אור א\"ס ב\"ה לזווג דהכאה במסך…",
           "en": "The expansion of the light of Ein Sof for coupling by striking in the screen … or look. (Part 3, Chapter 12, item 1)"
         },
         {
-          "chapterId": "part-02/answers-terminology-64",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "(לשאלה) <b>ראש</b> (ח\"ג פ\"ו)<br>ט\"ס של אור עליון…",
           "en": "The nine Sefirot of the upper light that expand to a coupling by striking … are called the “Rosh” [head] of the degree…"
@@ -3007,25 +3007,25 @@
       "evidence": "Verified pair by pair across the aligned parenthetical citations in all five parts.",
       "examples": [
         {
-          "chapterId": "part-01/answers-topics-48",
+          "chapterId": "part-01/answers-topics-01",
           "layer": "source",
           "he": "(או\"פ ח\"א פ\"א ק')",
           "en": "(Inner Light, Part 1, Chap 1, item 100)"
         },
         {
-          "chapterId": "part-03/answers-terminology-16",
+          "chapterId": "part-03/answers-terminology-01",
           "layer": "source",
           "he": "(ח\"ג פ\"ה אות א')",
           "en": "(Part 3, Chapter 5, item 1)"
         },
         {
-          "chapterId": "part-02/answers-topics-102",
+          "chapterId": "part-02/answers-topics-01",
           "layer": "source",
           "he": "(עי' תשובה מ\"ג)",
           "en": "(See answer 43)"
         },
         {
-          "chapterId": "part-05/answers-terminology-10",
+          "chapterId": "part-05/answers-terminology-01",
           "layer": "source",
           "he": "(דף ש\"ד אות ט\"ו ובאו\"פ ד\"ה חלקים)",
           "en": "(Item 15, and Inner Light, Sub Header, “Parts”)"
@@ -3039,7 +3039,7 @@
       "evidence": "79 occurrences of ב\"ה in the aligned Hebrew; 0 occurrences of 'blessed' in en-bb. 206 occurrences of ית' with no dedicated English token. 12 rows with ח\"ו; those rendered use 'whatsoever'.",
       "examples": [
         {
-          "chapterId": "part-01/answers-topics-13",
+          "chapterId": "part-01/answers-topics-01",
           "layer": "source",
           "he": "אע\"פ שבחינה ד' שבא\"ס ב\"ה צמצמה את עצמה",
           "en": "Although phase four in Ein Sof restricted herself"
@@ -3065,7 +3065,7 @@
           "en": "The ARI writes that the upper light that is extended from His self…"
         },
         {
-          "chapterId": "part-03/answers-terminology-31",
+          "chapterId": "part-03/answers-terminology-01",
           "layer": "source",
           "he": "כמ\"ש הרב בע\"ח שער י\"ח פ\"א",
           "en": "As written by the ARI, the root of the lights and their essence are the four simple letters of HaVaYaH"
@@ -3085,7 +3085,7 @@
           "en": "with that simple light of Ein Sof [infinity]"
         },
         {
-          "chapterId": "part-02/answers-terminology-02",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "וכל כלי קבלה שבפרצופים",
           "en": "All the vessels of reception in the Partzufim [pl. of Partzuf]"
@@ -3099,13 +3099,13 @@
       "evidence": "'phase four' 159 occurrences vs 'phase 4' 0; 'ten Sefirot' 213 vs 'Ten Sefirot' 1.",
       "examples": [
         {
-          "chapterId": "part-01/answers-topics-12",
+          "chapterId": "part-01/answers-topics-01",
           "layer": "source",
           "he": "כח העיכוב שנעשה על בחינה ד' לאחר הצמצום",
           "en": "a detaining force that was placed on phase four after the restriction"
         },
         {
-          "chapterId": "part-02/answers-terminology-25",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "ע\"ס הנמשכות ממסך ולמטה",
           "en": "The ten Sefirot that are extended from the screen and below"
@@ -3119,13 +3119,13 @@
       "evidence": "35 'Malchut … she/her' contexts, 18 'phase four … she/her' contexts, 13 'herself'.",
       "examples": [
         {
-          "chapterId": "part-02/answers-terminology-02",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "והיא אינה מקבלתו, מסבת המסך המעכב אותו",
           "en": "which she does not receive because of the screen that detains it"
         },
         {
-          "chapterId": "part-01/answers-topics-13",
+          "chapterId": "part-01/answers-topics-01",
           "layer": "source",
           "he": "אע\"פ שבחינה ד' שבא\"ס ב\"ה צמצמה את עצמה",
           "en": "Although phase four in Ein Sof restricted herself"
@@ -3139,13 +3139,13 @@
       "evidence": "330 curly opening double quotes, 0 straight double quotes, 21 curly apostrophes; 32 Hebrew characters total, all inside letter glosses.",
       "examples": [
         {
-          "chapterId": "part-02/answers-terminology-23",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "הנה פעולה זו מכונה \"זווג דהכאה\"",
           "en": "is called coupling by striking … On the one hand, it “strikes” the light"
         },
         {
-          "chapterId": "part-02/answers-terminology-53",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "ומכונה ע\"כ פנימיות הכלי",
           "en": "is therefore called the “internality” of the vessel"
@@ -3159,13 +3159,13 @@
       "evidence": "'Inner Light' 226, 'inner light' (the term) 10; 'Inner Observation' 106.",
       "examples": [
         {
-          "chapterId": "part-02/answers-terminology-05",
+          "chapterId": "part-02/answers-terminology-01",
           "layer": "source",
           "he": "(לשאלה) אור פנימי (ח\"ב פ\"א או\"פ מ') הוא האור המלובש בכלי.",
           "en": "Inner light is the light that is clothed in the vessel."
         },
         {
-          "chapterId": "part-05/answers-topics-40",
+          "chapterId": "part-05/answers-topics-01",
           "layer": "source",
           "he": "מכח הביטוש דאו\"מ ואו\"פ",
           "en": "because of the clash of surrounding light and inner light"

@@ -2,12 +2,900 @@
   "chapterId": "part-12/answers-terminology-01",
   "layer": "source",
   "versionId": "he-jerusalem-1956",
-  "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 1:1",
       "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>א' דמילוי ה' שצורתה יו\"ד.</b><br>האותיות של השמות, רומזות על הכלים ובחי' העביות שבהם, אשר אור העליון מזדווג ומתלבש בהם. ואותיות השם בפשוט, רומזות על בחינת העביות דכתר, שעדיין אין שם הכר עביות בפועל, אלא בחינת שורש לבד, וע\"כ האור המלובש שם הוא אור הנפש לבד, כי אור הנפש מתלבש בכלי דכתר כנודע. ואם האותיות הן במילואים, מורים שכבר יש שם הכר עביות בפועל, שעליה מזדווג אור העליון, ומוציא שם הע\"ס המתיחסות למדת העביות ההיא.",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 2:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>א' דמילוי הא של אלקים שצורתה יו\"ד</b><br>עי' לעיל תשובה א'. (שם)",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 3:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אבות</b><br>החו\"ג הם אבות לזו\"ן, כנודע. גם נודע שזו\"ן דה\"ח הם נ\"ה, וחג\"ת הם כה\"ב דה\"ח. ולפיכך, נקראים החג\"ת אבות, להיותם בחי' כח\"ב, וכן בגדלות הם נעשים לחב\"ד, וחו\"ב נקראים אבות. ונה\"י שהם בחי' זו\"ן, נקראים בנים. א' ק\"ל אות ט).",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 4:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אבנים</b><br>בעת הלידה, כשאו\"א מתמעטים לבחינת כלים אמצעים דהיינו לבחי\"א, ומסתלקים הג\"ר, ונשארים בנפש רוח, שאז מסתלקים אורות דנפש מנה\"י ועולים בחג\"ת, ואור הרוח עולה בחב\"ד, הנה נבחנים נה\"י משום זה לאבנים, משום שנשארו כלים ריקים בלי אורות. (א' ק\"ל אות ח').",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 5:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אודם שבהולד</b><br>בחינת העביות שבכלים, שעליה נעשה הזווג עם אור העליון, נקראת בשם אודם, דהיינו הה\"ג דאמא הממותקים במדת הרחמים, בסוד עלית ה\"ת לעינים. כנודע.",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 6:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אורות תחתונים נכנסים תחלה</b><br>מתחלה נבררים הכלים היותר זכים ואח\"כ נבררים הכלים העבים, כנודע. וכיון שאין העליון משפיע אלא בדבר העב יותר, כלומר, שכל שהמסך עב ביותר הוא מוציא קומה יותר גבוהה, נמצא כי מתחלה בעת שלא נברר אלא בחי' עביות דשורש לא יצא שם אלא קומת מלכות, שהיא קומת נה\"י הנקראת עיבור. ואח\"כ לעת לידה, שנתגלה שם עביות דבחי\"א, הוציא קומת רוח, הנקרא יניקה, וכו' כנודע. הרי שאורות תחתונים יוצאים מתחלה ואח\"כ האורות העליונים (דף א' קצ\"ז אות קצ\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 7:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אחורים דאהיה</b><br>לבושי מוחין דז\"א, הם מאחורים של השם אהי\"ה. והטעם, כי בעת הזווג להוציא המוחין דז\"א, נעשים תמיד או\"א וישסו\"ת לפרצוף אחד. וישסו\"ת אינם עולים אז בשם זולת או\"א בלבד. ונודע, כי השמות של או\"א הם הוי\"ה אהי\"ה. ואלו הלבושי מוחין הם בחינת או\"ח, העולה מהמסך ומלביש הע\"ס דאו\"י, אשר בחינת דאו\"ח הזה יורד ומלביש המוחין גם בעת כניסתם בז\"א. כנודע. וכיון שהמסך הוא מבחינת אמא עלאה, שנקראת אהי\"ה, ע\"כ נבחנים הלבושים ההם לבחינת אחורים דאהי\"ה. ומה שהם רק מבחינת האחורים, הוא משום כי אין העליון משפיע אל התחתון אלא מבחינת האחורים שלו. וכיון שיש בהם ע\"ס, ע\"כ הם עשר שמות אהי\"ה, ואהי\"ה באחורים עולה ד\"ם, וה\"ס עשרה דמים. (א' קמ\"ג אות נ\"ה).",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 8:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אבסדראיו ואדריו</b><br>אדרין פירושם: חדרים פנימים ואכסדראין, פירושם: חדרים חיצונים והם כינוים לחג\"ת נה\"י דז\"א. כי בחג\"ת, החסדים מכוסים, שפירושו, שאפילו בעת שיש הארת חכמה בחסדים, מ\"מ נגנזת שם ואינה מתגלית. וע\"כ נבחנים חג\"ת לפנימים, ששם הארת חכמה בסתר ואינה נראית לחוץ. ונה\"י דז\"א, דהיינו מחזה ולמטה. נבחנים לחדרים חיצונים, כי בעת שיש הארת חכמה בחסדים, הם יוצאים ומתגלים שם. וע\"ש הגילוי הזו דהארת חכמה, נבחנים לחדרים חיצונים. (א' רכ\"ב אות רמ\"ד.)",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 9:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>א) אל מימינא ומ\"י בשמאלא ה' באמצע</b><br>א\"ל, הוא שם המורה על חסדים, ומ\"י רומז על גבורות, והזווג הוא תמיד בקו אמצעי. ולכן נבחנים המוחין דיניקה, אשר שם א\"ל הוא בדד ימין, ששמה החסדים. ושם מ\"י הוא בקו שמאל ששמה הגבורות, ובחי' הזווג שהיא באמצע, היא בבינה שהיא ה' דאלקים, כי י\"ה דאלקים הם חו\"ב. כנודע. כי אין במוחין דיניקה אלא חסדים וגבורות, וז\"א מקבלם דרך הקצוות, שמשם אל שבימין, מקבל ה\"ח, ומשם מ\"י שהוא בשמאל, מקבל ה\"ג. (א' רל\"ז אות רפ\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 10:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אלהים בפשוט</b><br>השמות בפשוטם, רומזים על בחינת עביות דכתר לבד, שהיא בחינת שורש הכלים. ונבחנים לכלים דכתר. והאור שבהם נבחן לאור הנפש. כנ\"ל בתשובה א', ע\"ש. ובחינת הקטנות דמוחין דיניקה, שאין שם אלא נפש דרוח ונפש דנפש, נבחנים משום זה השמות שהם באותיו פשוטים. (אלף קנ\"ט אות ק\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 11:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אלקים במילוי יו\"ד</b><br>מוח החכמה דז\"א, בעת הגדלות דיניקה, הוא בחינת אלקים במילוי יודין. כלומר, שה' דאלקים היא במילוי י', כזה: אלף למד הי יור מם. והוא משום שבחי' החכמה היא עדיין מטרם צמצום ב', שע\"ז רומזת המילוי יודין,:נ\"ל דף תס\"ג תשובה א'. ע\"ש (א' רל\"ד אות רע\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 12:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אלקים במילוי אלפין</b><br>עי' לעיל תשובה א', א' רל\"ד אות רע\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 13:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אלקים במילוי ההין</b><br>כיון שבבחינת יניקה אין מצב דחו\"ב אלא פב\"א, שבינה לא הסירה עוד אחורים שלה כלפי החכמה כנודע. ע\"כ נבחן מוח הבינה שהוא אלקים במילוי ההין, כזה: אלף, למד, הה, יוד, מם. והוא כי מילוי ההין מורה על בחי' אחורים (א' רל\"ד אות רע\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 14:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אלם מאלקים</b><br>דיבור, פירושו זווג, הנעשה בפה דראש, דהיינו על העביות המתוקנת בכלי המלכות דראש. והנה ע\"י בירור דאבא, נעשה ז\"א אל\"ם סתם, כי מוריד ל\"ב מלכיות הכלולות בו מעת הנקודים, שהם מבחינת צמצום א', ואז נעשה אלם. כי אינו מוכשר עוד לשום זווג, כי אין בו עוד שום עביות. אכן ע\"י הארת ה\"ג דאמא, שה\"ס ל\"ב מלכיות חדשות ממותקות מבחינת צמצום ב'. אע\"פ שגם עתה עוד אינו ראוי לזווג, להיותו עוד בבחינת עובר, והארת ה\"ג דאמא היא עדיין בבחינת שורש העביות שאינו ראוי לזווג, והיא עוד בבחינת אלם, אמנם נעשה על ידה בחינת אל\"ם מן אלקים, כלומר, שמשורש הארת ה\"ג האלו, תתגלה בו אח\"כ בימי יניקה השם אלקים, וע\"כ נבחנים אלו הארת ה\"ג שהם כבר ג' אותיות אל\"ם מן שם אלקים, שאינו חסר לו אלא י\"ה המתגלים ע\"י יניקה. (א' רכ\"ב אות רמ\"ו. ד\"ה וזה אמרו).",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 15:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אריכת רגלין דאמא</b><br>הנה עצמותו של ז\"א בא מז\"ת דנקודים, שלא היה בהם רק כלים דחב\"ד חג\"ת עד החזה, ומחזה ולמטה כבר היו מתחת הפרסא דאצילות והיו לבי\"ע. והגם שבעת הגדלות נתבטל הפרסא, וגם הכלים שמחזה ומטה נתחברו לאצילות, אמנם תכף היה בהם שביה\"כ, ואפילו כלים דפנים, שהם מחזה ולמעלה ג\"כ נשברו. כנודע.",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 16:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אהיה דיודין דאלפין ודההין</b><br>קומת אמא עלאה נחלקת לרת\"ס: חב\"ד, חג\"ת, נה\"י. ואהיה במילוי יודין בי\"ה שלה, שהם חב\"ד, בהיותה מקבלת מבחינה שכנגדה בס\"ג דא\"ק שמטבור ולמעלה, ששם עוד לא הושרש צמצום הב', שהוא בחינת אלפין. ואהי\"ה דאלפין הוא בחג\"ת שלה, המקבלת מבחי' שכנגדה מלמטה מטבור דא\"ק, ששם כבר הושרש צמצום הב', וע\"כ המילואים באלפין. כנ\"ל דף תס\"ג תשובה א'. ואהיה דההין הם בנה\"י שלה, שהם בחינת אחורים, שמילואם בההין. (א' ק\"ס אות ק\"ה א' קס\"ב אות קי\"א).",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 17:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ב' דדין דאבא</b><br>הנה בחינת הדדים, נעשו ע\"י עלית נו\"ה דא\"א, לחיבור אל חג\"ת דאו\"א בעת העיבור, כנורע. ונבחן שש\"ע דנצח עלה לאבא, ובו כלול ג\"כ ש\"ע דהוד, ומהם נעשו דדים לאבא. וש\"ע דהוד עלה לאמא, שבו נכלל גם הנצח, ומהם נעשו דדים לאמא. (א' קמ\"ט אות ע\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 18:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בהדי הוצא לקי כרבא</b><br>משל הוא על ספירת הנצח דז\"א, הנחשב לאמיתו על עיקר גוף הז\"א שאין לחיצונים אחיזה בו, ועכ\"ז נעשה בו אחיזה לחיצונים משום התחלפות האורות שהיה בע\"ב דא\"ק, שאור החכמה עלה ונתלבש בכתר, ואור הבינה בכלי דחכמה, וכו', עד שאור ההוד נתלבש בכלי דנצח, וכו'. וע\"י התחלפות זו שאור ההוד, שהוא בחי' המלכות נתלבש בכלי דנצח, נעשה לחיצונים אחיזה גם בכלי דנצח. עי' לקמן תשובה ק\"ז. (א' ק\"ל אות ט').",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 19:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בנים</b><br>עי' תשובה ג' (א' ק\"ל אות ט').",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 20:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בקיעה לרוחבו</b><br>ענין בקיעה, פירושו, שיש שם מקום זווג, שהמסך מעלה או\"ח ומלביש הע\"ס דאו\"י ממטה למעלה, ע\"י עיכובו על האור עליון, כנודע, אכן ע\"י כח הזווג, נבקע כח העיכוב אשר בהמסך, והוא מתפשט גם ממעלה למטה לע\"ס מיניה וביה באותו הכמות שהלביש ממטה למעלה, וע\"כ נבחן זה לבקיעה, כי כח העיכוב שבהמסך נתבקע.",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 21:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בקיעה לאורכו</b><br>ע'י לעיל תשובה כ'. (א' קנ\"ד אוח פ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 22:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בקיעה ממש</b><br>יש ענין בקיעה רק לשעת הזווג, כמו ענין הפרסא בגו מעוהי, ושאר הפרסאות. ויש בקיעה ממש, שנשאר שם מקום זווג בקביעות, כמו הבקיעה שבפה דראש. ובחינת הלידה הוא דרך פה דראש דישסו\"ת, ששם מקום יסוד דכללות או\"א וישסו\"ת, כנודע. וע\"כ נחשב לבקיעה ממש. (א' קכ\"ח אות ו').",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 23:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ד' פרקין בחג\"ת.</b><br>בעת עיבור ב' דקטנות, דהיינו הבא לאחר ב' שנים דיניקה, הנה אז ע\"י הארת הזווג יורדת ה' תתאה בעינים ומעלים אח\"פ דז\"א אל הפרצוף, ונשלם הז\"א בנה\"י שלו, דהיינו בש\"ת לכל ספירה וספירה שלו, כנודע. ועכ\"ז עוד השלישים התחתונים אינם עולים בשם, משום שמצב הזווג הזה דאו\"א הוא בבחי' פב\"א, ואין הארת חכמה יכולה עוד להתגלות, מחמת אחורים דאמא, כנודע. וע\"כ נבחן אז, שהשיג רק בחינת ג\"ר דרוח, וו\"ק דגדלות, שהם בחינת נפש רוח דנשמה. ונמצא, שאור הרוח מתלבש בשלישים עליונים, ואור הנפש בשלישים אמצעים והשלישים התחתונים עדיין ריקנים מאור. ולפיכך אין יותר מב\"ש בכל מדרגה מרת\"ס, שהם: ב\"ש בחב\"ד וב\"ש בחג\"ת, וב\"ש בנה\"י, כי כל אחת חסרה שליש תחתון שלה. גם נודע שכל זמן שאין בכלים דחב\"ד רק אור הרוח, הם נבחנים רק לבחינת חג\"ת. ולפי\"ז נמצא, שבחינת הג\"ר דרוח המתלבשים בכלים דחב\"ד, אינם עושים אותם לבחינת חב\"ד, אלא רק לבחינת חג\"ת, להיותם בחינת רוח. הרי שיש לו ב' בחינות חג\"ת, כי ג\"ר דרוח מתלבשים בכלים דחב\"ד, וו\"ק דרוח מתלבשים בכלים דחג\"ת, והם רק ד' שלישים, כי הן לכלים דחב\"ד, והן לכלים דחג\"ת חסרים שליש תחתון, וכן לכלים דנה\"י. ונמצא שיש עתה בכלים דחג\"ת ד' שלישים, ב' שלישים בג\"ר דרוח בכ\"א מהם. ב\"ש לו\"ק דרוח בכל אחד מהם. וכן ב\"ש בכלים דנפש בכל אחד מהם. (א' קצ\"ט אות קצ\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 24:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דדים</b><br>בחינת הדדים היא בחי' אמצעית בין תחתון לעליון, אשר יש שם יחס אל התחתון גם בשעה שאינו ראוי לעלות ולהלביש במקום העליון. ויש דדי בהמה, ויש דדי אדם. כי בעת זווג או\"א להוציא את הז\"א, צריכים להיות בקומת ע\"ב, וכיון שאין לאו\"א בקביעות אלא קומת ס\"ג, שהיא בחינת ו\"ק דע\"ב, כי ע\"כ הם מלבישים לא\"א מגרון ולמטה, דהיינו רק לחג\"ת נה\"י דא\"א. לכן בעת הזווג דנשיקין דא\"א, הנמשך מהארת הזווג דע\"ב ס\"ג דא\"ק, נמשך אור חדש דבקע לפרסא דאצילות, וב\"ש תחתונים דעתיק, העומדים בבי\"ע עולים למקום נה\"י דא\"א, ונה\"י דא\"א עם ב\"ש אמצעים דעתיק שבתוכם עולים לחג\"ת דא\"א, וחג\"ת דא\"א עם ב\"ש עליונים דנו\"ה דעתיק, עולים לג\"ר דא\"א. ואז גם או\"א המלבישים לחג\"ת דא\"א בקביעות, עולים גם הם לג\"ר דא\"א, ומשיגים קומת ע\"ב כמו ג\"ר דא\"א. כנודע, והנה אז נבחן, שששה כלים חג\"ת נה\"י דא\"א, נגדלו ונעשו לעשרה כלים: חב\"ד חג\"ת נה\"י, בשביל או\"א. ע\"ד שנתבאר בו\"ק דז\"א לעת גדלותו. ונמצא שהפרקים העליונים והאמצעים דחג\"ת דא\"א, נעשו לחב\"ד לאו\"א, ושלישים תחתונים דחג\"ת דא\"א, עם השלישים העליונים דנה\"י דא\"א, נעשו לחג\"ת לאו\"א. וד' השלישים דנה\"י דא\"א לנה\"י דאו\"א. וקומה זו משמשת לאו\"א בכל משך חדשי העיבור עד זמן לידה. והנך מוצא כאן, ב' מיני עליות: א' שב\"ש דעתיק שמקומם בקביעות הוא בבי\"ע, עלו עתה ונעשו לבחינת למטה מטבור דא\"א דאצילות. ועליה ב' היא, כי ב' פרקים עליונים דנו\"ה של א\"א, נתעלו ונעשו לבחינת חג\"ת דאו\"א. ואח\"כ לאחר לידתו של ז\"א, שאו\"א חזרו לבחינת הקביעות שלהם, דהיינו לקומת ס\"ג, מ\"מ נשארו בהם בחינות רשימות מאותם ב\"פ עליונים דנו\"ה דא\"א, בתוך החג\"ת שלהם, מעת היותם בקומת ע\"ב, וכן נשארו רשימות ב\"ש תחתונים דנו\"ה דעתיק בתוך המלכות דא\"א, גם אחר הלידה שכבר חזרו ב\"ש תחתונים דעתיק לבי\"ע.",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 25:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דוה</b><br>ספירת הוד היא בחינת העביות והמלכות דז\"א כנודע. והנה בעת שהיא מתוקנת במסך והתיקונים כראוי, הנה ממנה כל הוד הפרצוף, כי במדת האו\"ח שהיא מעלית נמדדת כל קומת הפרצוף ושבחו. אמנם בעת שהיא חסרת התיקונים, הנה לא לבד שהפרצוף נעדר מכל אור, נמצאת עוד נהפכת למשחית ח\"ו, כי החיצונים נאחזים בהפרצוף, וזה הרמז, והודי נהפך עלי למשחית, גם זה הרמז שאותיות הו\"ד נהפכים להיות דו\"ה. דהיינו לרמז על ההפכיות הנ\"ל. (א' קל\"ז אות כ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 26:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דוחק גדול</b><br>כי הולד נסגר ברחם אמו ע\"י ב' הדלתות דקטנות וגדלות, שעושים ם' סתומה, כמבואר בחלק ט'. ולעת לידה, בסבת התעוררות הולד לינק ממעלה למטה, חוזרת ומתעוררת הקטנות דאמא דעלית ה\"ת לעינים, שאח\"פ שלה חוזרים ונופלים ממדרגתה שה\"ס צינון נה\"י שלה, שעי\"ז חוזר הדלת וציר דקטנות למקומה והולד יוצא משם ונולד. וענין זה של החזרת הקטנות, נבחן לדוחק גדול כלפי אמא. אמנם לולא חזרת הקטנות לא היו נפתחים הדלתות, וז\"א לא היה יכול להולד ולצאת משם. וע\"כ אין ז\"א נולד אלא ע\"י דוחק גדול. (א' קכ\"ח אות ו').",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 27:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דחיה</b><br>ענין הלידה בא, ע\"י הכר העביות דז\"א, שהיא משונה מבחינת אמא, כי בשעה שנעשה הזווג בעת הלידה על בחי\"א, שז\"א נכלל בזווג הזה, הנה מתחדשת בו אז עביות של עצמו מבחי' זו, כמ\"ש בפרצופי א\"ק, וניכר בחי' הגוף שבו, ואז נבחן שנפרד ממנה, כי הכר שינוי הצורה הוא המפריד בין הרוחנים. כנודע. והמשך התפעלות שינוי הצורה בז\"א, עד שניכר עביות שלו, נבחן בשם דחיה. כי הולכת ומתפעלת בו, עד שמפרישהו לחוץ. (אלף קכ\"ח אות ד').",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 28:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דחית האורות למטה</b><br>האורות החדשים כשנכנסים לפרצוף הם דוחים את האורות הקטנים מהם למטה. למשל, כשיש אור הנפש בפרצוף, הוא מתלבש בכלי דכתר, ואח\"כ בבוא אור הרוח הוא דוחה את אור הנפש לכלי דחכמה, והרוח מתלבש בכלי דכתר. וכן בבוא אור הנשמה, הוא דוחה את אור הרוח מכלים דכתר והוא מתלבש בו. וכו' עד\"ז כנודע. (א' ר\"ב אות קצ\"ז).",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 29:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם הלידה</b><br>נודע, כי במ\"ן דז\"א העולים לאו\"א, נכללים בהם כל הפרצופים שלמטה ממנו עד עשיה. כמ\"ש דף א' קל\"ט אות מ'. ונברר ממ\"ן אלו בחדשי העיבור, כל השייך לז\"א עצמו, וכל הנשאר במ\"ן הללו, שהם שייכים לנוקבא, ולפרצופי בי\"ע הם יוצאים משם בבחינת דם לידה. (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 30:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם בהמקור</b><br>דם פירושו, בחינת העביות שבמלכות שעליה שורה הצמצום, שלא לקבל מאור העליון, וע\"כ הוא דוממת מלקבל האור, ונקראת משום זה דם. וכשהעביות היא במקומה בנה\"י, נבחן הדם במקור, שהדין שורה עליה. אמנם כשעולה אל חג\"ת, שאין מקומה שם, היא נמתקת שם ומתהפכת לחלב. (א' קס\"א אות ק\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 31:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם טמא</b><br>הנה במ\"ן דז\"א שעלו לעיבור לאו\"א, נכללים בהם כל הפרצופים שלמטה ממנו, ואחר שנברר כל השייך לז\"א, יוצאים השאר בסוד דם לידה. כנ\"ל בתשובה כ\"ט. אמנם גם מבחינת ז\"א אינו נברר כל הבחינות, כי בחינת העביות דהוד, לא נברר כי אם בחי' השורש של העביות הזו ושאר בחי' נבררים אח\"כ ע\"י החלב, וכן היסוד והמלכות, הנמשכים מההוד.",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 32:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם שאינו טמא</b><br>הבחינה הב' של הסיגים, שהם אלו השייכים לנוקבא ולפרצופי בי\"ע, היוצאים בסוד דם לידה, הם נבחנים לדם שאינו טמא, כי הגם שהם פסולת בערך ז\"א, אמנם עדיין נברר מהם לקדושה לצורך שאר הפרצופים, ורק הבחינה הג' הנ\"ל בתשובה ל\"א, שהם הנשארים אחר המלכות דעשיה, הם נקראים דם טמא, להיותם חלקם של הקליפות. (א' קל\"ט אות מ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 33:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם מתהפך לחלב</b><br>הבחינה הא' של הסיגים, הנ\"ל בתשובה ל\"א. שהם בחי' הוד יסוד ומלכות שבו, שלא נבררו בעת העיבור, הם אינם יוצאים לחוץ עם הלידה, אלא שהם עולים לחג\"ת ונהפכו שם לחלב. (א' קל\"ז אות ל\"ב. א' ק\"מ אות מ\"ד א' קמ\"ב אות נ\"א) עי' להלן בתשובה ל\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 34:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם מזוקק וברור</b><br>הנה ע\"י עלית התחתון למ\"ן אל העליון, והתכללותו בזווג אשר שם, נמצא עביות התחתון מתתקן במסך דעליון, שעי\"ז נעשה גם הוא ראוי לזווג. וענין השגת המסך אשר העביות דתחתון משיג, נבחן שהוא נעשה בזה מזוקק וברור, כי המסך שמקבל מזקק אל העביות ומתקנו באופן שנעשה ראוי לזווג.",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 35:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דת\"י שבבן ט' שנים ויום אהד</b><br>בן ט' ויום א', עוד אין לו בחי' יסוד בקו אמצעי, אלא רק דעת ות\"ת לבד. כי בו' שנים ויום א' נכנס עטרת יסוד דתבונה, בדעת דז\"א, ואז הת\"ת ויסוד דז\"א עדיין ריקנים מאור. ובשנה הט' ויום א' נכנס היסוד דתבונה, בדעת דז\"א, ודוחה את עטרת יסוד דתבונה, למקום ת\"ת דז\"א, ונמצא עתה שיש לו אור גם בת\"ת עד החזה, כי ירדה שם עטרת דיסוד תבונה אבל מחזה ולמטה, הוא עוד ריקן מאור. אלא אחר כך, לאחר ט' ויום א' יורדים החסדים ליסוד דז\"א. (א' קס\"ח אות קכ\"ז).",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 36:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דאלקים בציור ד\"י</b><br>ב' תיקונים עיקרים ז\"א מקבל מאו\"א לעת העיבור, שהם בירור ע\"י ל\"ב נה\"ח דאבא, המברר לרפ\"ח ניצוצין שלו, נקיים וטהורים מכל בחי' עביות ודין. ואחר כך מקבל תיקון על ידי אמא, שמאירה לו הארת ה\"ג מנ' שערי בינה שלה, שהם בחי' העביות דה\"ת בעינים, שה\"ת כבר ממותקת במדת הרחמים דאמא.",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 37:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דאלקים בציור ד\"ו</b><br>עי' תשובה ל\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 38:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' שבין הדדים שנעשתה לצנור</b><br>ה' זו שבין הדדין הוא מקום הזווג שבחג\"ת דאו\"א עצמם, וז\"ס שנעשתה לצנור המריק שפע לקצוות, כי הזווג שבקו אמצעי הוא המשפיע לקצוות שהם הדדין. והיא ה<b>ה'</b>  דאלקים שהיא בחינת הבינה שרק היא מראה תיקונה בימי היניקה, כנ\"ל בת' ל\"ו. אמנם הז\"א מקבל המוחין דרך הקצוות כי ה\"ח הוא מקבל מדד ימין, וה\"ג מקבל מדד שמאל. (א' רל\"ח אות רפ\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 39:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דהוד שנעשתה לקוף</b><br>הוד היא המלכות דז\"א, דהיינו התכללות המלכות בז\"א, בבחינת עטרת יסוד שלו, והיא נבנית ע\"י ז\"א לפרצוף שלם. וה' דהוד, היא בחינת כתר מלכות והיא בחינת הכלי דפנים על המלכות, מזמן הנקודים, כי ז\"ת דנקודים מבחינת הכלים דפנים, דהיינו שממעלה לפרסא דבי\"ע, הם רק כח\"ב חג\"ת עד החזה, ונקודת החזה היא המלכות דז\"ת דנקודים. ואח\"כ בימי גדלות דנקודים, שנתפשטה כל ספירה מז\"ת עד לעשיה, נמצא שגם נקודת החזה שהיא בחינת כתר של המלכות, נתפשטה לפרצוף שלם עד עשיה, ונמצאים כל ט\"ת שלה הם בחינת אחורים, שקבלה ממטה לפרסא דאצילות. ולפי שכלים אלו דאחורים דמלכות דנקודים, לא חזרו לה בעת התיקון, ע\"כ יש לחיצונים אחיזה גדולה בה, כי יש להם אחיזה בכל ט\"ת שלה. וז\"ס ה' דהוד שנתארכה ונעשתה לקוף, שרומז על התפשטות ט\"ת דמלכות למטה מן השורה, דהיינו למטה מפרסא דאצילות בעת שביה\"כ, אשר הרשימה דהתפשטות הזו נשארת גם עתה בכתר שלה, שבגלל זה מתאחזים בה החיצונים, בסוד ורגליה יורדות מות. (א' קל\"ז אות ל').",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 40:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דמים טמאים</b><br>דמים פירושם, בחינות עביות הכלולות במלכות דז\"א, שהם הוד יסוד מלכות, שלא נבררו ולא נתקנו בהתכללות הזווג דעיבור, אלא מבחינת השורש בלבד, וע\"כ הם נחשבים עוד לסיגים ודמים בלי בירור. והנה בעביות זו דהוד יש ב' בחינות: א' מה ששייך לנוקבא שבגופו דז\"א, הנקרא ה\"ח, ואלו הם ה' דמים טהורים, כי אינם יוצאים עם הלידה, אלא נשארים במעי אמו, ולאט לאט בסדר המדרגה, הם עולים לחג\"ת דאמא, ששם הזווג דבחי\"א שמוציא קומת ה\"ח, והעביות נכללת במסך ההוא דאמא, ומשם יונק אותם ז\"א בבחינת חלב, והחלב ההוא שה\"ס עביות מתוקן במסך, יורד בז\"א, ושוב מתהפך בו לדם צלול ומזוקק וברור. כנודע, שפירושו שגם הוא יכול להזדווג עליהם, להשיג קומת חסדים, כפי הכמות ואיכות שיצאו עליהם, בהתכללות הזווג באמא. הרי שה' דמים דבחינת הנוקבא שבגופו דז\"א הכלולים בעביות דהוד יסוד ומלכות, שלא נתבררו בעיבור, הם בחינת דם טהור לגמרי, כי מתהפכים ונעשים לה\"ח, שהם קומת הז\"א.",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 41:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דמים טהורים</b><br>עי' תשובה מ'.",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 42:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הארה להעלות מ\"ן</b><br>אין ז\"א יכול לעלות למ\"ן לצורך עיבור ג', שהוא מוחין דהולדה, מטרם שהוא נשלם בכל המוחין דקטנות, הבאים בעיבור הב' שלאחר ב' שנים דיניקה. וע\"כ צריכים מקודם להמשיך לו, כל המוחין דקטנות דעיבור ב', ואז יכול ז\"א לעלות למ\"ן למוחין דהולדה. והמשכה זו דמוחין דקטנות דעיבור ב' נקראת בשם המשכת הארה כדי שיוכל ז\"א לעלות למ\"ן (א' קפ\"ג אות קע\"א).",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 43:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הגדלה</b><br>הגדלה פירושה, התלבשות האורות בכלים, ועיקר השם הזה מורה על הגדלת השלישים התחתונים דכלים הבאים לעת הגדלות, אמנם גם כל בחינת התלבשות האורות בכלים נקרא הגדלה. דהיינו אפילו בביאת אור הנפש אל הפרצוף, שהוא מתלבש בכלים דחב\"ד, נקרא שנגדלו אז כלים דחב\"ד, אבל הכלים דחג\"ת נה\"י לא נגדלו עתה, כי לא קבלו שום אור. ואח\"כ בבוא אור הרוח נבחן שהוא דוחה לאור הנפש אל הכלים דחג\"ת, והרוח מתלבש בכלים דחב\"ד, ונבחן עתה שגם הכלים דחג\"ת נגדלו, כי אור הנפש ירד ונתלבש בהם. וכו' עד\"ז. (א' קנ\"ד אות פ\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 44:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הגדלת אברים</b><br>אחר עיבור ב' שה\"ת יורדת מעינים, ונחזרים אח\"פ לז\"א, ונשלם בכל ט\"ס דכלים, נבחן שנגדל בכל אבריו, כי השיג השלישים התחתונים שהיו חסרים בכל ספירה וספירה שלו. אמנם עדיין אינם עולים בשם מטרם שמשיג הגדלות דעיבור הג', כי עד אז אינם מקבלים עוד אור, אלא אחר שמשיג אור הנשמה בעיבור ג', אז הנשמה דוחה לאור הרוח אל הכלים דחג\"ת, ומתלבשת בחב\"ד, וכן אור הרוח דוחה לאור הנפש לכלים דנה\"י כדי להתלבש בעצמו בחג\"ת, ונמצאים גם השלישים התחתונים שמשיגים אור. אמנם מטרם זה, נמצא אור הרוח בכלים דחב\"ד, ואור הנפש בכלים דחג\"ת, וכלים דנה\"י ריקנים מאור. וע\"כ אפילו לאחר עיבור ב', שכבר יש לו נה\"י חדשים, אינם עולים בשם להיותם בלי שום אור. (א' קנ\"ה אות צ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 45:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הגדלה ממשית</b><br>הנה האורות המתלבשים בהכלים הנמצאים, מגדילים אותם. וזה נקרא בשמ הגדלה סתם. (עי' אות מ\"ג.) אמנם השלמת השלישים התחתונים דכלים, הבאה ע\"י אריכת רגלים דאמא, אשר נה\"י שלה מתחלקים לט' פרקים, וחשלימים לכל ספירה מט\"ס דז\"א, את שליש התחתון החסר שם, כנודע. זה נקרא בשם הגדלה ממשית, כי נה\"י דאמא מתערבים עם כל אבר ואבר דז\"א, ונעשה להשלמת ש\"ת שלו דאורות, וש\"ע דכלים כנודע. (א' קס\"ג אות קי\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 46:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>המסו</b><br>עי' להלן אות קל\"ז. (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 47:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>השאלה</b><br>נה\"י דאמא המתלבשים בבחינת לבושי מוחין תוך ז\"א, נבחנים שהאורות נמצאים בהכלים בדרך שאלה. לפי שהכלים הם דאמא, אלא שנשאלים לשימוש האורות דז\"א. (א' קל\"א אות י\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 48:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התחלקות הדעת לאדרין ואכסדראין</b><br>בעת הגדלות דז\"א, לאחר העיבור ג' הנה אז יש זווג במוח הדעת שלו, המעלה או\"ח עד החכמה, ומוציא הארתו לחוץ אל הבינה, ואז מקבל הדעת הארת חכמה, בתוך החסדים שלו, וכן מתהפך ממעלה למטה ומשפיע אותה הקומה אל הגוף. ואז מתחלק הדעת לאדרין ואכסדראין, כי חג\"ת שהם בחי' אדרין, שפירושם חדרים פנימים, הוא משפיע בחינת חסדים מכוסים, כי הארת חכמה אינה מתגלית עד החזה דז\"א, אלא רק מחזה ולמטה, הנקרא אכסדראין, שפירושים חדרים חיצונים, ששם מתגלה ההארת החכמה שבדעת. וז\"ש בזוהר, שהדעת מתפשט אל הגוף וממלא אדרין ואכסדראין דגופא. דהיינו שמתחלק לב' בחינות כמבואר. (א' רכ\"ב אות רמ\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 49:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התכללות הפרצופין</b><br>הנה הפרצוף דעובר הז\"א, מתחלת לידתו, עוד אין לו קומת נה\"י בשלימות, אלא רק נה\"י דנה\"י. פירוש שהט\"ס שלו שהם בקומת נה\"י, אין שם בכל ספירה רק שליש א' משיעורו. כי בקו ימין שהוא חח\"נ, יש לו בהם, רק השלישים התחתונים, שהם: נצח דחכמה, ונצח דחסד, ונצח דנצח. וכן בקו שמאל בג\"ה, יש לו רק הוד דבינה, והוד דגבורה, והוד דהוד. וכן בקו אמצעי דת\"י, יש לו יסוד דדעת, ויסוד דת\"ת, ויסוד דיסוד.",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 50:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התפשטות כח החלב לז\"ת</b><br>ע\"י כ\"ד חדשי יניקה, ז\"א משיג ו\"ק דרוח, שהם מתלבשים בכלים דחב\"ד. ואח\"כ ע\"י עיבור ב', הוא משיג ג\"ר דרוח. כנודע. ואז נבחן שג\"ר דרוח דוחים את הו\"ק למטה לז\"ת דגוף, והם מתלבשים בחב\"ד, ואז מקבלים הז\"ת אל כח החלב דכ\"ד חדשי יניקה, דהיינו בחינת ו\"ק דרוח. (א' קנ\"ד אות פ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 51:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התפשטות ל\"ב נתיבות החכמה</b><br>נודע, שבחינת אבא, היא מטרם צמצום ב', להיותה מקבלת מבחינה שכנגדה בע\"ב דא\"ק, ששם עוד שולט צמצום הא', כי צמצום הב' מתחיל רק למטה מטבור דס\"ג דא\"ק. וע\"כ טפת המיין דוכרין הנכללים בז\"א, גורמים לו התגלות ע\"ס בשלמות שמורידים הה\"ת מעינים שלו, ומשפיעים בו הארת חכמה, ואז נבחן של\"ב נתיבות החכמה נתפשטו במוחין דז\"א. אמנם הם באים לו בג' בחינות: א' הוא לעת העיבור, בבחינת טפת הזרע, שאח\"כ נקלטת בעיבור במעי אמו ונעלמת שם. ואז נבחן שאין עוד שום התפשטות לל\"ב נתיבות החכמה. וכן בכ\"ד חדשי היניקה, עוד אין לו שום הכר, כי אז נבחנת רק בסוד הציור דה' דאלקים הימיני בסוד ד\"י. כנ\"ל באות ל\"ו. ע\"ש. ותחלת גילוי הוא בעובר ב' שלאחר ב' שנים דיניקה, שאז הוא משיג הה\"ח דאבא, הנקראים פנימים ומקיפים דאבא דקטנות. ואז מתגלה ל\"ב נתיבות החכמה, בסוד ע\"ב בימינא, ורי\"ו בשמאלא וכ\"ו בקו אמצעי. כמ\"ש להלן בתשובה קמ\"ג. אמנם עדיין אין זה נחשב להתפשטות גמור של ל\"ב נתיבות החכמה, עד לאחר עיבור ג', שאז הם מתגלים במוחין שלו, ומתפשטים אל הגוף ע\"י הדעת הממלא לאדרין ואכדראין דגופא. (א' רכ\"ט אות רס\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 52:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התפשטות נ' שערי בינה</b><br>ה\"ג דאמא, נקראות נ' שערי בינה. כי כל גבורה כלולה מעשר, והן נ'. ונקראות שערים, על שם היסוד דאמא. ויש בהן ג' בחינות: א' הוא בימי העיבור, שאז היא מאירה לז\"א את ה\"ג שלה, בבחינת שורש העביות, ואז עוד אין לה\"ג דאמא שום התפשטות בז\"א, כי בשורש אין עביות ניכרת כנודע. ב' ביניקה, שמתפשטים נ' שערי הבינה מבחינת הקטנות שבהם. ג', בגדלות שהם מתפשטים בשלימות. (א' רכ\"ט אות רס\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 53:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג דחצות לילה</b><br>בלילה אחר ברכת המפיל נסתלקה כל המוחין דז\"א, ואפילו המקיפים דאמא, ולא נשאר בו אלא קיסטא דחיי, דהיינו דוגמת המוחין דב' שנים של היניקה, שהם: נפש דנפש ונפש דרוח, וע\"י ק\"ש שעל המטה, נמשך הזווג דחצות לילה בבחינת עיבור הב' דקטנות, הנקרא ביאה קדמאה לעשותה כלי, שע\"י הזווג הזה מוחזרים אח\"פ לפרצוף, ונשלם בעשרה כלים וכן ג\"ר דרוח וו\"ק דגדלות דאמא. (אות קמ\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 54:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג דק\"ש שעל המטה</b><br>עי' תשובה נ\"ג. (א' קע\"ג אות ק\"מ וקמ\"ב וקמ\"ד. א' קע\"ט אות קס\"א).",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 55:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_55\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג דק\"ש דקרבנות</b><br>המוחין שקבל בזווג דחצות, הם מסתלקים בגמר הלילה, ונשאר ז\"א שוב רק בנפש הרוח, כמו בלילה קודם חצות. ולפיכך הוא צריך מחדש לעיבור ב' דקטנות שלאחר ב' שנים דיניקה, הנקרא ביאה קדמאה. וזווג זה נעשה ע\"י ק\"ש דקרבנות. ויש בזווג זה ד' בחינות: א' היא גדלות ה\"ג דאמא, הנקרא מקיפים דאמא. ב' היא ו\"ק דה\"ח דאבא, הנקרא פנימים דאבא, ג' היא גדלות ה\"ח דאבא, הנקרא מקיפים דאבא, ד' היא ו\"ק דגדלות דאמא. וכל ד' הבחינות האלו נעשות ע\"י עיבור ב' ההוא, שהוא בא ע\"י זווג או\"א פב\"א. שפירושו, שעדיין לא הפסיקה אמא את האחורים שלה המכסה על הארת חכמה.",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 56:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_56\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג דק\"ש דיוצר</b><br>אחר שז\"א כבר נשלם בכל הד' מדרגות דעיבור ב', ע\"י ק\"ש של הקרבנות, כנ\"ל בתשובה נ\"ה. שאז כבר הוא בבחינת ט' שנים ויום א'. הנה הוא ראוי לעלות למ\"ן לעיבור ב' דגדלות, שנקרא עיבור ג', שהוא לבחינת מוחין דהולדה. ועיבור הג' הזה נעשה בק\"ש דיוצר.",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 57:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_57\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג דק\"ש דערבית</b><br>אחר היום מסתלקים כל הה\"ח דאבא, כי אין זמנם של החסדים אלא ביום ולא בלילה, שהם בחינת הפנימים ומקיפים דקטנות דאבא, ולא נשאר מהמוחין דיום, אלא בחינת הגדלות דה\"ג דאמא, שנקרא מקיפים דאמא דקטנות, ולפיכך אחר שנסתלקו החסדים כולם, צריכים לחזור ולעורר העלית מ\"ן לעיבור ב' דקטנות מחדש לתפלת ערבית.",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 58:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_58\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חו\"ב דיניקה</b><br>בחינת אור הרוח שז\"א משיג בעת היניקה, הוא דוחה את אור הנפש דעיבור לכלים דחג\"ת, והוא עצמו מתלבש בכלים דחב\"ד. ונמצא שבחי' חו\"ב דיניקה, הוא רק אור הרוח לבד. וזה הכלל, שכל אור חדש הבא לפרצוף הוא מתלבש בכלים העליונים, ודוחה האור שהיה שם מקודם לכן. אל הכלים שלמטה. (א' קנ\"ד אות פ\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 59:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_59\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ח\"י חדשי יניקה</b><br>ת\"ת דא\"א כלול מן י\"ח גבולים. כי חציו העליון יש בו ו' גבולים, בו\"ק שבו המלובשים באו\"א. וחציו התחתון כלול מי\"ב גבולי אלכסון כמ\"ש להלן בתשובה ס\"ה. ובכדי שז\"א יכלול בתוכו י\"ח גבולים הללו, הוא נבחן שיונק ח\"י חודש. ולמ\"ד שהם כ\"ד חודש, הוא סובר, שגם חציו העליון כלול מי\"ב גבולי אלכסון. אחר שהוא נכלל בחציו התחתון. כי בעת עלית נה\"י לחג\"ת דא\"א, נכלל חציו התחתון מחציו העליון, ויש בתחתון עצמו ב' בחינות הת\"ת הנ\"ל, וכיון שחציו העליון כלול בתחתון, כבר גם בו יש י\"ב גבולים כמו חציו התחתון. (א' רכ\"ט אות רס\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 60:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_60\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חיות בהשאלה</b><br>עי' תשובה מ\"ז (א' קל\"א אות י\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 61:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_61\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חיצון</b><br>עי' תשובה קכ\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 62:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_62\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חלב</b><br>בעת הלידה, שהדלת דקטנות חוזרת לשליטה, מכח עלית ה\"ת לעינים, שישסו\"ת יורדים ומתמעטים לבחינת ו\"ק, ונסתלקו מהם הג\"ר, כנודע. (עי' תשובה כ\"ו) ולא נשאר שם אלא אורות דרוח נפש, אשר אז עולה שוב אור הרוח לכלים דחב\"ד, ואור הנפש שהיה בנה\"י, עולה לכלים דחג\"ת, הנה עולה עמו ג\"כ, בחי' העביות דהוד יסוד ומלכות שלא נבררו, ונכללים בהזווג החדש דחג\"ת, שהוא בחי\"א, ומקבלים בחינת מסך מתוקן דבחי\"א מתוך התכללות בזווג ההוא, ואז נעשו לחלב, כי קומת החסדים היוצאים שם על בחי\"א, נבחנים לחלב. וכשז\"א יונק ומקבל לתוכו החלב הזה, הוא משיג בחינת העביות דהוד יסוד מלכות, המתוקנים במסך דעליון, וגם הוא עצמו, נעשה בסופו ראוי להזדווג עליה, ויוצא בו קומת ה\"ח וה\"ג. ולפיכך נחשב החלב שהוא יונק, לבחינת האודם שבו, כי נעשים בו לבחינת עביות מתוקנת במסך דבחי\"א. וכל עביות הנמשכת מאמא, נבחנת לאודם, כי בינה דצמצום ב' מכונה ארץ אדום, כנודע. (א' קס\"א אות ק\"ח. אלף קל\"ז אות ל\"ב. א' קמ\"ד אות נ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 63:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_63\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חלב ודם</b><br>חלב (בצירי תחת הח') שהוא השומן, נמשך מטפת מ\"ד דאבא. ודם, נמשך מטפת מ\"ן של הנקבה. ומשניהם נבנה ז\"א והן קריבין לגבוה. (א' קס\"ב אות ק\"י).",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 64:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_64\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>טבורא דלבא</b><br>מקום נקודת החזה, נקרא טבורא דלבא. (א' ק\"נ אות ע\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 65:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_65\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>י\"ב גבולי אלכסון</b><br>נודע, שה\"ח הנקראים חג\"ת נ\"ה, הם כנגד ה' הבחינות כח\"ב זו\"ן, ונמצא שעיקר ז\"א הוא נצח לבד. ומצד שמוחותיו מאו\"א, שהם מקבלים מבחינה שכנגדם בע\"ב דא\"ק, שבו נתחלפו הספירות, שבא אור חכמה בכלי דכתר וכו', ונמצא אור הנצח שעלה לת\"ת, וע\"כ נבחן עיקר ז\"א לת\"ת דה\"ח, ובחינות חסד וגבורה שבו, הוא מכח התכללותו בעליונים, ונה\"י שבו הוא מכח התכללות המלכות בו. הרי, שת\"ת כולל כל הו\"ק ונודע, שע\"י עלית ה\"ת לעינים, נעשה קו שמאלי בכל הספירות. כי עצם הספירות נבחנות לקו ימין, ובחינת עביות המלכות שנכללה בכל ספירה וספירה עד העינים נבחנת לקו שמאל. ולפי\"ז נמצא, שיש ב' בחי' ו\"ק, בז\"א, א' דקו ימין, והב' דקו שמאל, והם מכונים י\"ב גבולי אלכסון. כי כל בחינה יש לה גבול בפני עצמה. ונקראים אלכסון, משום, שהתכללות ב' ההין שנעשה בעלית ה\"ת לעינים, מכונה אלכסון, כי נעשה בהם קו מהפנים אל האחור, כי ב' נקודות עושים בחי' קו, ולהיות הנקודה העליונה דבחינת פנים, מה\"ר והנקודה התחתונה מבחינת אחורים, דהיינו מה\"ת, ע\"כ מובנות כמו אלכסון. ההולך מפנים לאחור. וז\"ס שהפרסא גו מעוהי שהוא השורש של עליה זו, היא עומדת באלכסונא, כנורע. (אלף רכ\"ט אות רס\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 66:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_66\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>י\"ה דאלקים</b><br>התפשטות דל\"ב נתיבות החכמה תוך נ' שערי בינה, דהיינו בבחינת הקטנות, שאין עוד גילוי אלא לבחינת ה\"ג דקטנות דאמא, הנה זה נבחן, לבחינת י\"ה דאלקים. כי הקטנות דאמא הוא השם אלקים, ובחי' יוד היא טפת מ\"ד דאבא הכלולה בה, וה' היא בחינת הכר הה\"ג דקטנות שנתגלה בז\"א על ידיה. אמנם בבחי' עיבור ז\"א, שאז אין עוד התפשטות אפילו לנ' שערי בינה דקטנות, כי העביות היא בבחינת שורש, נבחן שעוד לא נתגלה שם כי אם אותיות אל\"ם מאלקים, ולא י\"ה המורים על התפשטות הנ\"ל. עי' תשובה י\"ד. (דף א' רכ\"ה אות רנ\"ג. ובאו\"פ ד\"ה אל\"ם).",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 67:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_67\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יניקה אמיתית</b><br>עי' תשובה כ\"ד, שנתבאר שם, ב' מיני יניקות דז\"א, כי אחר שהשיג נפש דרוח מאו\"א בעת הלידה, ונולד, הנה נפל לבי\"ע, ונמצא שנאבד ממנו הנפש רוח דאצילות שהשיג בעת העיבור ובסופו. ואז ע\"י יניקה מדדי בהמה, חוזר לו בחינת הנפש דאצילות מזמן העיבור. וע\"י יניקה מדדי אדם, הוא משיג בחינת הרוח. עש\"ה. והנה היניקה מדדי בהמה אינה נחשבת לחידוש בז\"א. כי קנה עוד אותו אור הנפש בעת העיבור, ועתה אינה אלא החזרה בלבד. וכל החידוש שהוא קונה בעת היניקה הוא רק על אור הרוח, שלא הספיק כלל לקבלו בעת הלידה, כי תכף נפל לבי\"ע. וע\"כ עיקר היניקה וחידושו, נבחן רק על בחינת היניקה מדדי אדם, שהוא יונק מדדי הבינה. (א' קל\"ג אות י\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 68:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_68\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יניקת נה\"י מהשדים</b><br>אחר ביאת הגדלות דיניקה, דהיינו בז' שנים שלאחר עיבור ב', הנה אז מתלבשים ג\"ר דרוח, בכלים דחב\"ד, ובחינת ו\"ק דיניקה יורדים לחג\"ת נה\"י. כי ג\"ר דרוח דוחים הקטנות למטה. ונבחן אז, שבחינת החלב של יניקה דכ\"ד חודש, ירדה ונתלבשה בנה\"י ונמצא עתה, שנה\"י דז\"א יונקים מדדי אמא, כלומר שמקבלים המוחין האלו דיניקה דכ\"ד חודש.",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 69:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_69\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ירידת הקטנות למטה</b><br>כל אור חדש מקובל רק בכלים העליונים דפרצוף, בחב\"ד שלו, ואור הקטן ממנו שהיה שם מקודם לכן, יורד למטה. וע\"כ בביאת אור הגדלות נמצא שהוא דוחה את הקטנות מכלים העליונים למטה. (א' ר\"ב אות קצ\"ז).",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 70:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_70\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ירך יעקב</b><br>עי' תשובה ס\"ה, שנתבאר, כי עיקר ז\"א הוא הנצח, וחג\"ת שלו הוא מהעליונים, והוד מתחתונים, שהיא המלכות. וכל אחיזת הס\"א יכול להיות רק במלכות, ולא בז\"א עצמו, ולכן הס\"א יכול להתאחז בהוד דז\"א, להיותה מהתכללות המלכות בו, ולא מנצח שהוא בחינת ז\"א עצמו.",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 71:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_71\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כבד</b><br>הכלי הפנימי ששם משכן אור הנפש, נקרא כבד. והוא עומד נגד ג\"ש עליונים דנה\"י. (א' ר\"י אות רט\"ז ורי\"ז ור\"כ).",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 72:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_72\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כ\"ד גבולים</b><br>ת\"ת הוא העיקר דה\"ח, (כנ\"ל אות ס\"ה.) והנה ת\"ת דא\"א, יש בו ב' בחינות דה\"ח, כי בחציו העליון הוא בתכלית השלימות, והוא שייך לחלקו של או\"א. ובחציו התחתון כבר שייך לחלקו של ז\"א. שז\"א אינו כל כך בשלמות. גם מחציו ולמעלה הוא בבחינת חסדים מכוסים. ומחציו ולמטה הוא בבחינת חסדים מגולים.",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 73:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_73\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כ\"ד חדשי יניקה</b><br>עי' תשובה ע\"ב. (שם).",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 74:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_74\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כלים חיצונים דאו\"א</b><br>כשאו\"א מזדווגים לצורך ז\"א מבחינת עביות דכתר, הנשאר בהם מעת עיבור שלהם עצמם, הוא נבחן שהזווג הוא מבחינת כלים חיצונים. כלומר, מבחינת פרצוף העיבור שלהם עצמם, שהוא פרצוף חיצון שלהם. וקומת הזווג הזה היא קומת נה\"י. וכשמזדווגים מבחי' עביות דבחי\"א, שנשאר בהם מבחינת פרצוף היניקה שלהם נבחן שהזווג הוא מבחינת כלים אמצעים שלהם, כי פרצוף היניקה הוא פרצוף תיכוני. כי ג' פרצופים הם: פרצוף דגדלות בפנימיות כולם, ועליו מלביש פרצוף דיניקה, ועליו מלביש פרצוף העיבור. (א' קנ\"ט אות ק\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 75:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_75\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כלים פנימיים דאו\"א</b><br>כשאו\"א מזדווגים מבחי\"ב ומבחי\"ג דעביות, דהיינו מבחי' הגדלות שלהם, נבחן שהזווג הוא מכלים פנימים שלהם. כלומר מבחינת פרצוף הפנימית שלהם. עי' תשובה ע\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 76:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_76\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כלים עליונים נגדלים תחלה</b><br>זה הכלל, שהעליון משפיע בדבר העב יותר והתחתון מקבל רק בכלים הזכים יותר. פירוש: כי מדת הקומה היוצאת ע\"י הזווג עם אור העליון, הוא תלוי בריבוי העביות, שכל שהמסך מבחינה יותר עבה כן קומת האור יותר גדולה, כנודע. אמנם כשהאור מתקבל בתחתון הוא מקובל בכלים הזכים יותר, דהיינו בכלים החב\"ד, כי כל שהכלי יותר זך, יש לו השתוות ביותר עם האור שיוכל להלבישו. ולפיכך בעת שבא אור הנפש בפרציף הוא מקובל בחב\"ד הפרצוף, שהם הכלים היותר זכים, ונמצא מהכלים העליונים נגדלים תחלה שהם חב\"ד, אבל חג\"ת נה\"י הם עוד בלי אור. אלא אח\"כ כשבא גם אור הרוח אל הפרצוף, הנה הרוח דוחה את אור הנפש מכלים דחב\"ד, לכלים דחג\"ת. והוא עצמו מתלבש בכלים דחב\"ד. ונמצא עתה שגם כלים דחג\"ת נגדלו, כי נתלבש בהם עתה אור הנפש. אבל כלים דנה\"י עוד לא נגדלו כלום, והם עדיין בלי אור. עד שבא אור הנשמה, שאז הנשמה דוחה את אור הרוח מכלים דחב\"ד, לכלים דחג\"ת, כדי להתלבש בעצמו בחב\"ד, וכן אור הרוח דוחה לאור הנפש לכלים דנה\"י, כדי להתלבש בעצמו בכלים דחג\"ת. ונמצא שנגדלו גם הכלים התחתונים דנה\"י. הרי, כי תמיד כלים העליונים נגדלים תחילה. (א' קצ\"ז אות קצ\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 77:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_77\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כללות</b><br>בעת שכבר נכנס מדת עביות מתוקנת במסך הראוי תוך הפרצוף, אלא שעוד הוא מחוסר זווג עליה, משום איזו סבה, נבחן שהמוחין נגמרים בו מבחינת הכללות שבו, כי כבר נגמרו כל תיקוניו, ואינו מחוסר אלא זווג. (א' רי\"ט אות רלח).",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 78:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_78\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כתר דז\"א</b><br>כתר דז\"א אינו בכלל המוחין שלו, כי הן הכלי והן האור אינם מבחינתו עצמו אלא מעליון שלו. והוא מטעם, כי המוחין דז\"א נמשכים בעיקר מאו\"א, המתיחסים לע\"ב דא\"ק, שבו נתחלפו האורות ובא החכמה בכלי דכתר, והבינה בכלי דחכמה, וכו', ואור הכתר נשאר בפה דעליון, ולא נתפשט אל הפרצוף (כנ\"ל בחלק ה' דף רצ\"א אות ב' עש\"ה כל ההמשך, כי כל המובא שם בענין הארת הכתר נוהג ג\"כ בכתר דז\"א.) הרי שמבחינת ע\"ב, דא\"ק הן הכלי אינו מבחינת ע\"ב, אלא שהוא בחינת הפה דעליון, כי שם עומד הכתר שלו, והן האור אינו שייך לו, כי ע\"ב הוא מעביות דבחי\"ג, וכתר הוא מבחי\"ד, עש\"ה באו\"פ. ועד\"ז הוא בז\"א, כי המוחין שלו מתיחסים אליו, כנודע.",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 79:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_79\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>לב</b><br>הכלי שבו משכן אור הרוח, נקרא לב. והוא עומד בחג\"ת. (א' ר\"י אות רט\"ז ורי\"ז ורי\"ח ור\"כ).",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 80:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_80\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ל\"ב אלקים דמעשה בראשית</b><br>נודע שהתפשטות הראשונה של הל\"ב נתיבות החכמה ונ' שערי בינה, היא בבחינת יניקה דז\"א, אמנם נבחן כאן שלבנ\"ה הם מאירים תוך נ' שערי בינה, כלומר, שבחינתם עצמם דלבנ\"ה אינה מתגלה, אלא תוך העלם והתלבשות דנ' שערי בינה. ומבחינה זו נקראים נ' שערי הבינה בשם ל\"ב אלקים להיות הבינה, שנקראת אלקים, מגלה מתוכה בחינת ל\"ב נתיבות החכמה. (עי' לעיל תשובה נ\"א.) ולעת הגדלות דז\"א, אז מתגלים ל\"ב נתיבות החכמה מבחינתם עצמם, ואז הם נקראים ל\"ב הויות. (א' רכ\"ז אות רנ\"ח.)",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 81:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_81\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ל\"ב נתיבות החמה</b><br>עי' תשובה נ\"א.",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 82:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_82\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ל\"ב שנים</b><br>מכח התפשטות ל\"ב נתיבות תוך נ' שערי בינה, (כנ\"ל בתשובה פ') מכח זה נצמחים ל\"ב השנים בעת היניקה, שהם בחינת הגילוי שנ' שערי בינה מגלים מתוכם את ל\"ב נתיבות החכמה. (א' רכ\"ח אות רנ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 83:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_83\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>לבר מגופא</b><br>כל ספירה כלולה מע\"ס, כנודע ויש הפרש גדול כאן. כי בבחינת עצמה של הספירה, וכן במה שכלולה מעליונים ממנה, היא סובלת מכל הכחות והצמצומים שבהם, כי כל הכחות שבעליונים שולטים בהכרח בתחתונים מהם. אמנם ממה שהספירה כלולה מתחתונים היא כלולה רק מבחינת אורותיהם בלבד, אבל לא מהכוחות והצמצומים שבתחתונים. כי זה הכלל שכל מסך וצמצום אינו יכול להתעלות למעלה ממקום יציאתו אף משהו.",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 84:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_84\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>לידה</b><br>בשעה שהוכר עביות דגופא דז\"א שהיא משונה מבחינת אמא, נבחן עם זה, שנולד ויצא לחוץ. כי כמו שהגשמיים נפרדים זה מזה בשינוי מקום, כן הרוחניים נפרדים זה מזה מתוך שינוי צורה הנופל ביניהם. (א' קכ\"ז אות א' ואות ו').",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 85:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_85\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מגולים</b><br>מילוי ולבוש ענינם אחד, כי כל תחתון יוצא במקום החסרון דעליון, וממלא אותו באורותיו, כמ\"ש באורך אצל פרצופי א\"ק, וע\"כ נבחן התחתון לבחינת מילוי דעליון ולבחינת לבוש לעליון.",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 86:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_86\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוח</b><br>הכלי שבו מלובשת הנשמה נקרא מוח. והוא עומד בג\"ר. (א' ר\"י אות רט\"ז רי\"ח ורי\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 87:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_87\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דאלקים</b><br>מוחין דז\"א הבאים מעיבור הא', ומעיבור הב' שלאחר ב' שנים דיניקה, עד היותו בן ט' שנים ויום א', הם כולם מוחין בשמות דאלקים. אלא המוחין הבאים אחר עיבור ג' שלאחר ט' שנים ויום א', הם מוחין דשמות הויות. (א' רכ\"א אות רמ\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 88:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_88\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דבן ד' שנים</b><br>מוחין דבן ד' שנים, הם: פנימים ומקיפים דאמא דקטנות, שהם הקטנות דה\"ג עם הגדלות דה\"ג, וכן בחינת נו\"ה של הפנימים דאבא דקטנות, שהנצח דה\"ח דאבא מלובש בחכמה דז\"א, והוד דה\"ח מלובש בבינה דז\"א וכלי הדעת עדיין ריקן מאור. (א' קס\"ו אות קכ\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 89:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_89\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דבן ו' ויום א'</b><br>מוחין דבן ו' שנים ויום א', הם פנימים ומקיפים דאמא. וכל הפנימים דאבא דקטנות, שהם חג\"ת נו\"ה. ואז יורדים נו\"ה דה\"ח מחו\"ב אל חסד וגבורה דז\"א, וחג\"ת דה\"ח מתלבשים בחב\"ד דז\"א. ואז יש לו מקצת דעת, כי ת\"ת דה\"ח דאבא מלובש עתה תוך דעת דז\"א. והוא עונת הפעוטות שמקחן מקח במטלטלים. כי ו\"ק נקראים מטלטלים, בהיותם מטולטלים מרחמים לדין ומדין לרחמים. ואלו הה\"ח דאבא מלובשים תוך הכלים דנה\"י דתבובה, בתוך ה' פרקים תחתונים שלה, כי חג\"ת דה\"ח דאבא מלובשים תוך ב\"פ אמצעים דנו\"ה שלה, ובפרק עטרת יסוד שלה. ונו\"ה דה\"ח דאבא מלובשים תוך ב\"ש תחתונים דנו\"ה שלה. (א' קס\"ז אות קכ\"ה).",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 90:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_90\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דבן ט' ויום א'</b><br>מוחין דבן ט' שנים ויום א'. הם פנימים ומקיפים דאמא דקטנות ופנימים ומקיפים דאבא דקטנות. כי אז יורדים ג\"ר דה\"ח, שהם בחינת ל\"מ דצלם דה\"ח, שהם ג\"ר: חב\"ד. ואז דוחין חג\"ת דה\"ח מכלים דחב\"ד דז\"א, אל כלים דחג\"ת, ומתלבשים בכלים דחב\"ד. וכן חג\"ת דה\"ח דוחים נו\"ה מחו\"ג אל כלים דנו\"ה דז\"א, והם מתלבשים בחג\"ת. ומקיפים אלו דאבא, מלובשים תוך ג\"ש עליונים דנה\"י דתבונה. ועתה נשלם ז\"א בט\"ס שלו מבחינת אור הרוח. והוא ראוי עתה לעלות למ\"ן למוחין דהולדה. (א' קס\"ח אות קכ\"ז וק\"ל).",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 91:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_91\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מחין דגדלות</b><br>מוחין שז\"א מקבל ע\"י עליתו למ\"ן אחר היותו בן ט' שנים ויום א' הנקרא עיבור ג', נחשבים למוחין דהולדה, כי ע\"י גם הזו\"ן חוזרים פב\"פ, וראוים להולדת נשמות. והם הנקראים מוחין דגדלות. (א' קנ\"ו אות צ\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 92:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_92\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דהולדה</b><br>עי' תשובה צ\"א (א' קנ\"ה אות פ\"ז).",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 93:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_93\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דכללות</b><br>עי' תשובה ע\"ז. (א' רי\"ט אות רל\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 94:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_94\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מוחין דקטנות</b><br>כל המוחין הבאים בעיבור א' ובעיבור ב' עד היותו בן ט' שנים ויום א', נקראים מוחין דקטנות. מלבד ו\"ק דגדלות אמא, שהוא ג\"כ מקבל בעיבור ב'. אמנם ו\"ק דגדלות אלו, הם כמעט בערך אחד עם ג\"ר דמוחין דקטנות. (א' קע\"ט אות קס\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 95:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_95\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מזונות</b><br>בחינת המזונות של הפרצוף מחויבים להיות תמיד ממדרגה שלמעלה מפרצוף עצמו, כי המזונות אלו מכשירים אותו לעלות שם ולהלבישה בקביעות, עי' תשובה כ\"ד. (א' קמ\"ד אות ס').",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 96:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_96\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מחצית הפרצוף ממש</b><br>נקודת החזה שבפרצוף נחשב למחציתו ממש. כי ב' סיומים יש: א' מצד קו האמצעי, והוא בחינת הסיום לאורות וב' מצד הקצוות והוא סיום לבחינת הכלים. והנה מצד הכלים מסתיים מחצית הפרצוף במקום הטבור. אמנם אינה נחשב למחציתו ממש, כי עיקר ההבחן בפרצוף הוא מבחינת האורות שבו. וע\"כ רק בסיום דקו האמצעי, שהוא במקום החזה, שם נחשב סיום מחצית הפרצוף. (א' ק\"נ אות ע\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 97:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_97\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מטלטלין</b><br>הו\"ק נקראים מטלטלין. מטעם, כי כל עוד שאין בחינת ג\"ר בפרצוף הם מטולטלים מדין לרחמים. ומרחמים לדין. (א' קס\"ז אות קכ\"ה).",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 98:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_98\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מ\"י</b><br>בינה נקראת מ\"י. בסו\"ה שאו מרום עיניכם וראו מי ברא אלה. כמ\"ש בזוהר בראשית בתחלתו. (א' קל\"א אות י\"א).",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 99:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_99\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מקום הריון</b><br>עיקר התיקון הנרצה בעיבור, הוא להאירו מבחינת עביות דצמצום ב', מסוד עלית ה\"ת לעינים, הנקרא מילוי דאלפין. כנודע. ולפיכך נבחן מקום הריון בשליש תחתון דת\"ת דאמא, המקבל מבחינה שנגדו מס\"ג דא\"ק מטבור ולמטה, ששם מלבישים ג\"ר דנקודים. שבהם הותחל שורש זה דעלית ה\"ת בעינים. ולפיכך מכונה מקום זה בטן, או מקום הריון. (א' קכ\"ח אות ה').",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 100:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_100\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מקיפים דל\"ס דצלם</b><br>קומת ע\"ס דמוחין היוצאת בעליון לצורך התחתון, נחלקת לפנימים ומקיפים, שהפנימים נקראים צ' דצלם, שפירושו ו\"ק דמוחין ההם, ומקיפים נקראים ל\"ם דצלם שפירושו ג\"ר דע\"ס ההם. (א' קנ\"ח אוח צ\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 101:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_101\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מקיפים דקטנות אבא</b><br>בחינת ג\"ר דה\"ח הבאים בג' השנים מן ו' ויום א', עד ט' ויום א', הם נקראים מקיפים דקטנות אבא. (א' קפ\"ו אות קע\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 102:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_102\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מקיפים דקטנות אמא</b><br>ג\"ר דה\"ג שמקבל תכף בעת עלותו לעיבור ב' אחר שני שנים דיניקה, נקראים מקיפים דקטנות אמא, כי הה\"ג מתיחסים למוחין דאמא, וה\"ח מתיחסים למוחין דאבא. (שם).",
+      "anchors": []
+    },
+    {
+      "n": 103,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 103:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_103\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נו\"ה לבר מגופא</b><br>עי' תשובה פ\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 104,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 104:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_104\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ניקוי הפסולת</b><br>עביות שבמ\"ן דתחתון, העולה ונכללת בזווג הפרצוף העליון, מתבררת ומתתקנת שם, שפירושו, שהעביות משגת בחינת המסך מעליון שאז התחתון עצמו ראוי לזווג. וע\"כ הכל תלוי במדת המסך המשמש בזווג ההוא דעליון, שאם למשל המסך הוא דבחי\"א, אינו נברר מעביות בעת ההיא אלא בחי\"א, והשאר יוצא בבחי' פסולת, כי המסך לא תיקן אותו. ולכן נבחן תיקון ההוא בשם ניקוי הפסולת, כי אותו הכמות שהמסך קולט ממנה, הוא מתנקה וראוי לזווג. (א' קמ\"ה אות ס\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 105,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 105:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_105\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נ' שערי בינה</b><br>עי' לעיל תשובה נ\"ב.",
+      "anchors": []
+    },
+    {
+      "n": 106,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 106:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_106\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ני שערי בינה שבז\"א</b><br>נודע, שנ' שערי בינה, פירושם ה\"ג דאמא, כי כל אחת כלולה מעשר הם ג'. ובהיותם בקטנות הם נ' חסר א', דהיינו רק מ\"ט שערים, וזה מורה שהם חסר ראש וג\"ר, אלא שהם רק ז\"ת. וכל אחת כלולה מכולן הרי ז\"פ ז' שהם מ\"ט. ואלו המ\"ט שערים מתפשטים בז\"א בעת קטנותו. ובגדלות מתפשט בו גם שער הנ', שהוא ג\"ר שלהם. וזה השער הנ' שזוכה בעת גדלותו, הוא בכח הלבושים דאמא עלאה, שמקבל מימי עיבורו, שהם עשרה לבושים לה\"ח וה\"ח שלו, הנקראים עשרה שמות אהי\"ה. (א' קמ\"ג אות נ\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 107,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 107:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_107\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נצח ישראל</b><br>עי' תשובה ע'.",
+      "anchors": []
+    },
+    {
+      "n": 108,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 108:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_108\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סובל</b><br>נודע, ששינוי הצורה מרחיקה הרוחניים זה מזה, ולפיכך אחר שהעובר מתעבה וניכר עביותו שהוא משונה מאמו נבחן שכלים דאמא אינם סובלים אותו עוד, ומפרידים אותו מהם והוא יוצא לחוץ (אלף קכ\"ח אות ו').",
+      "anchors": []
+    },
+    {
+      "n": 109,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 109:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_109\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סיגים בלתי גמורים</b><br>עי' לעיל בתשובה ל\"א, שג' מיני סיגים הם: א' השייכים עוד לבחינת ז\"א עצמו, שהם השירים דהוד יסוד מלכות, והם אינם יוצאים בסוד דם לידה. אלא עולים לחג\"ת ומתהפכים לחלב. ב', הם שירים הנשארים אחר בירורי ז\"א, שהם נחשבים לו לפסולת, ומ\"מ הם נבררים ונעשה מהם נוקבא דז\"א, וכל פרצופי קדושה דבי\"ע, ואלו יוצאים לחוץ בסוד דם לידה, אבל הם דם טהור, כי מהם נבררים הפרצופים כולם שלמטה מז\"א. והם שנקראים \"סיגים בלתי גמורים\". כי הם נבררים עוד לצד הקדושה, כמבואר. גם הם נקראים \"סיגים דח' ספירות ראשונות\" כלומר השירים הנשארים מבחינת ח\"ס ראשונות דז\"א מכתר עד נצח, שבשירים אלו אין עוד לז\"א שום חלק בהם, כי אלו ח' הספירות דז\"א נבררו לגמרי, ומה שנשאר מהם נחשב לו לפסולת, וע\"כ הם יוצאים בסוד דם הלידה. אמנם השירים דג\"ס הוד יסוד מלכות דז\"א, הם נחשבים לבחינה א', ואינם יוצאים בדם הלידה. כנ\"ל.",
+      "anchors": []
+    },
+    {
+      "n": 110,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 110:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_110\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סיגים גמורים</b><br>עי' תשובה ק\"ט (א' קל\"ט אות מ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 111,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 111:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_111\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סיגים דח' ספירות ראשונות</b><br>עי' תשובה ק\"ט. (א' קל\"ז אות ל\"א).",
+      "anchors": []
+    },
+    {
+      "n": 112,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 112:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_112\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סתומים</b><br>אחורים דיסוד אמא המתפשטים עד החזה דז\"א, הם סותמים הה\"ח ואינם מניחים אותם להתפשט מחזה ולמטה, ונבחנים אז הה\"ח שהם סתומים שם. כי אין התפשטות החסדים מחזה ולמטה אלא בעת שהם מגולים בהארת חכמה, והאחורים דאמא מעכבים על הארת חכמה, כנודע. (א' קס\"ח אות קכ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 113,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 113:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_113\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עולמות ונשמות</b><br>ב' זווגים יש באו\"א, א' הוא זווג להחיות העולמות, והיינו כל עוד שאמא היא באחורים לאבא, בסוד כי חפץ חסד הוא, והיא ממשכת מאבא חסדים בלי הארת חכמה. ב' הוא זווג דהולדת נשמות, וזהו רק לאחר שאמא הפסיקה אחורים שלה. וחוזרת פב\"פ עם אבא. ועולמות הנמשכים מזווג א', פירושם חיצוניות הספירות. ונשמות הבאים מהזווג הב', פירושם, פנימיות הספירות. והוא מטעם, שאין אור החכמה יכול להתלבש בפרצוף זולתי בהתלבשותו באור דחסדים, הרי שאור החסדים הם חיצוניות ולבוש לאור הנשמות שהם בהארת חכמה. ונמצא שמזווג א' דאו\"א נמשכים החיצוניות והלבושים, ומזווג ב' דאו\"א, נמשכים הפנימיות המתלבש בהם דהיינו הנשמות, שהם בהארת חכמה, ובזה תבין ענין ג' הפרצופים המתלבשים זה תוך זה, הנקראים חיצון, תיכון פנימי. אשר החיצון והתיכון, הם בחינות עולמות, ונמשכים מזווג הא'. והפנימי הוא בחינת נשמות, ונמשך מזווג הב' הנ\"ל. (א' רי\"ב אות רכ\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 114,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 114:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_114\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עונת איש גמור</b><br>ענות איש גמור, הוא אחר היותר בן י\"ג ויום א', שאז משיג המוחין דהולדה.",
+      "anchors": []
+    },
+    {
+      "n": 115,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 115:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_115\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עונת בן ט' ויום א'</b><br>עי' תשובה צ'. (שם).",
+      "anchors": []
+    },
+    {
+      "n": 116,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 116:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_116\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עונת בן י\"ח</b><br>עונת בן י\"ח היא אחר שקבל ה<b>ל'</b>  דצלם דבחינת המוחין דהולדה. כמ\"ש במקומו. (שם).",
+      "anchors": []
+    },
+    {
+      "n": 117,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 117:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_117\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עונת הפעוטות</b><br>עי' לעיל בתשובה פ\"ט. (שם).",
+      "anchors": []
+    },
+    {
+      "n": 118,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 118:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_118\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור א'</b><br>בעיבור א' מתקנים בחזרה בחי' הקטנות דז\"א דנקודים, שהם ו' הכלים: חב\"ד, חג\"ת, ונקודת החזה, בקומת נה\"י, שהוא אור הנפש. ונקרא ג' גו ג', כי רק ג' כלים עליונים נגדלים בעיבור, וג' תחתונים כלולים בהם. ובגמר העיבור לעת לידה, מזדווגים או\"א במסך דבחי\"א, מבחינת הכלים האמצעים שלהם, ויוצאת קומת הרוח לז\"א, אלא ז\"א אינו יכול לקבלה עתה, כי נולד תכף ונופל לבי\"ע. ואובד גם בחינת הנפש דאצילות. ועל ידי יניקתו שם מב\"ש תחתונים דעתיק, שהניחו רשימתם בנהי\"מ דא\"א דאצילות, הוא חוזר וקונה הנפש דאצילות שמזמן העיבור, ועולה מבי\"ע ומלביש לנה\"י דא\"א דאצילות. (א' קנ\"ב אות פ\"ה) עי' לעיל תשובה כ\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 119,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 119:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_119\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור ב'</b><br>עיבור ב', משלים הכלים שמחזה ולמטה, החסרים לו אחר כל התיקון דעיבור הא'. כי בעיבור א' לא נתקנו אלא הכלים דפנים, שהם בחינת גו\"ע, שמבחינת תיקון קוים הם נקראים חב\"ד חג\"ת עד החזה. כנ\"ל בתשובה קי\"ח. והוא חסר אח\"פ, שהם תנה\"י שמחזה ולמטה. ואלו נשלמים לו בעיבור ב' ע\"י אריכת רגלים דאמא, שיורדת ה\"ת מעינים, ומחזירים אח\"פ דז\"א למקומם ואז נשלמים עשרה כלים, ועיבור ב' זה ה\"ס ביאה קדמאה הנזכר באו\"א ובזו\"ן, כדי לעשותה כלי.",
+      "anchors": []
+    },
+    {
+      "n": 120,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 120:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_120\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור ג'</b><br>אחר היותו בן ט' שנים ויום א', שכבר קבל כל ד' המדרגות הבאות ע\"י עיבור ב', אז עולה למ\"ן לצורך מוחין דהולדה, הנקרא עיבור ג'. או עיבור ב' דגדלות. וזהו ע\"י העלאת מ\"ן לאו\"א מבחינת אחורים שלהם שנפלו מחלוקה הג' דנקודים, ממ\"ן ד<b>ו'</b>  ונקודה,שקבלו מיסוד דא\"ק. שאז הפסיקה אמא אחורים שלה וחזרה עם אבא פב\"פ, מבחינה זו יצאו שם ד' קומות מבחינת או\"א עלאין,וד' קומות מבחינת ישסו\"ת. ולפי השיעור שז\"א מעלה מאחורים אלו, כן יגדלו המוחין שמקבל על ידיהם. ועובר ג' הזה נקרא בהרבה מקומות, בשם עיבור ב' ג\"כ, והוא כי לעיבור ב' שלאחר ב' שנים דיניקה, קורא בשם עיבור ב' דקטנות. ולעיבור ג' זה, הבא לאחר ט' ויום א', הוא קורא עיבור ב' דגדלות. והוא דבר המובן מענינו. (א' קנ\"ב אות פ\"ו. א' קנ\"ו אות צ\"ב. קנ\"ט אות ק\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 121,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 121:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_121\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עכירת הדם</b><br>עביות שבכלי דזווג, שהם כלים דנה\"י, נקראת בשם דם. וכל עוד שלא נתקנו במסך דעליון, נבחן שהם עכורים, כי הרצון לקבל בלי מסך, הוא חלקם של הקליפות, כנודע. וכשהם מתתקנים ע\"י העליון ומשיגים כח המסך, אז נבחן שנעשו ברורים ומזוקקים, באופן שהם ראוים לזווג עם אור העליון. (א' קמ\"ה אות ס\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 122,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 122:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_122\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עכירו דמיין</b><br>הבחינות דה\"ת מצמצום א', שהן אינן יכולות לקבל בחינת הקפאון דיסוד אבא העושה לז\"א בבחינת רקיע. (עי' תשובה ל\"ז.) שהם כלולים במ\"ן דז\"א, נבחנים לעכירו דמיין. (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 123,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 123:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_123\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עליונים דכלים נגדלים תחלה</b><br>עי' תשובה ע\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 124,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 124:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_124\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עלמא דדכורא</b><br>בינה נקראת עלמא דדכורא, ביחס נה\"י שלה המתלבשים בז\"א, שהוא זכר. (א' קל\"א אות י\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 125,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 125:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_125\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עשרה דמים</b><br>ז\"א כולל ה\"ח וה\"ג, כי מבחינת חסד החמישי שהוא הוד יוצאים ה\"ג, להיותו בחינת המלכות דה\"ח, כנודע. וביחס הנוקבא הנפרדת דז\"א, נקרא ז\"א רק בחינת ה\"ח לבד, ונוקבא כולה ה\"ס ה\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 126,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 126:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_126\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנימי</b><br>ג' פרצופים הם: פרצוף העיבור שהוא קומת נה\"י. ופרצוף יניקה שהוא קומת חג\"ת. ופרצוף גדלות שהוא קומת חב\"ד. והם מתלבשים זה בתוך זה. פרצוף הגדלות מתלבש מחזה ולמטה, תוך פרצוף היניקה, ופרצוף היניקה מתלבש מחזה ולמטה, תוך פרצוף העיבור. ונמצא פרצוף הגדלות לפנים מכולם, וע\"כ נקרא פנימי. ופרצוף העיבור לחוץ מכולם, וע\"כ נקרא חצון. ופרצוף דיניקה באמצעם, וע\"כ נק' תיכון. (א' ר\"י אות רי\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 127,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 127:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_127\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנימיות דקטנות אבא</b><br>ו\"ק דה\"ח, שז\"א מקבל מבן ב' שנים עד שנת הו' יום א', הם נקראים פנימים דקטנות אבא. עי' אות קי\"ט. (א' קפ\"ו אות קע\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 128,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 128:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_128\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנימיות דקטנות אמא</b><br>נ\"ר דרוח שז\"א מקבל בשני שנים דיניקה, נקראים פנימים דקטנות אמא. עי' אות קי\"ט. (א' קפ\"ד אות קע\"ב וקע\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 129,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 129:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_129\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנימיות וחצוניות</b><br>ג' פירושים יש בענין פנימיות וחיצוניות: א', ע\"פ הבחן הזווגים, דאו\"א, לפי החלוקות דנקודים כנ\"ל באות קי\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 130,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 130:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_130\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פסיעה לבר</b><br>כבר נתבאר בחלק ט' דף תתמ\"א תשובה צ'. ע\"ש. (א' קמ\"ו אות ס\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 131,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 131:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_131\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פעוטות</b><br>עי' לעיל תשובה פ\"ט. (א' קס\"ז אות קכ\"ה).",
+      "anchors": []
+    },
+    {
+      "n": 132,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 132:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_132\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ציור הולד</b><br>ציור הולד, נעשה ע\"י בחינת אודם דאמא, שהם בחינת עביות והמסכים שהזווג נעשה עליהם, שהם מעמידים הקומה ומסיימים לכל אבר ואבר דז\"א בצורתו (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 133,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 133:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_133\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צינון</b><br>בהסתלקות האורות מהכלים נבחן שהכלים נצטננו ע\"ש שחדלו מלפעול פעולתם. (א' ק\"ל אות ח').",
+      "anchors": []
+    },
+    {
+      "n": 134,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 134:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_134\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צירי</b><br>בינה נקראת צירי, ע\"ש שכל האברים דז\"א מקבלים צורתם ע\"י המסך העביות שלה. (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 135,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 135:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_135\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צר</b><br>השפעה מרובה דחסדים, מכונה בשם הרחבה, או רוחב, וצמצום החסדים מכונה בשם צר. אבל צמצום חכמה מכונה בשם קצר. והשפעתה בשם ארוך. (א' קכ\"ח אות ו').",
+      "anchors": []
+    },
+    {
+      "n": 136,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 136:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_136\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קיסטא דחיי</b><br>אי אפשר לז\"א שיהיה לו מוחין פחותים מפנימים דאמא דקטנות, שהם בחינת נ\"ר דרוח, שהוא משיג בב' שנים דיניקה, והם הנקרא קסטא דחיי, שפירושו מדת החיים. כי המוחין שלמעלה מבחינה זו, אינם בו מדת החיים, אלא רק בחינת תוספת הרוחה, שאינם מחייבים להיות קביעות והם אצלו בעובר ושב לפי הזכות של התחתונים. (א' קמ\"ח אות ע\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 137,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 137:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_137\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קפאון</b><br>נודע, שבחינת יסוד דאבא הוא צר מחסדים ואריך בחכמה. כי חוסר חסדים מכונה צר, (עי' תשובה קל\"ה) ומבחינה זו דצר, נקרא אור קפאון. בסו\"ה אור יקרות וקפאון. שאע\"פ שהוא אור יקרות דחכמה. מ\"מ הוא בבחינת קפאון וצינון מחוסר חסדים. ולפיכך, הארה זו דיסוד דאבא, מכונה בשם המסו המקפיא את החלב כדי שיתגבן ויעשה גבינה. כי בהיות הנקבה בבחינת קצר ורחב, שפירושו קצר מהארת חכמה, ורחב בחסדים, נמצא טפת האודם שלה, שאינו חסר אלא בחי' האריך דאבא, כדי לתקן את בחינת הקצר שבה, וע\"כ אינו מתוקן מטפת האודם שלה אלא אותו השיעור שאור הקפאון דאבא מקפיא ממנה, כי רק זה השיעור נשלם בבחינת אריך דאבא, שהיא כל חיות הולד, כנודע שאור אבא הוא בחינת חיה. ולפיכך חביב אור הקפאון הזה דאבא, כי אינו מתחבר בבנין הולד אלא אותו השיעור שנקפא על ידו. וז\"ס הדם היוצא בעת הלידה, כי הוא ממ\"ן דז\"א ואודם דאמא שאור הקפאון דאבא לא הגיע אליהם ולא הקפיא אותם, וע\"כ הם לחים ואדומים, כי לא נתחברו בבנין הולד. ועל שם זה נקרא ז\"א רקיע, דהיינו על שם קבלתו הקפאון דאבא. והבן זה. (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 138,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 138:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_138\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ראש הקטן</b><br>ראש דקטן הוא אור הרוח בכלים דחב\"ד. ורק בערך הכלים הוא ראש, אמנם העיקר הם האורות, וע\"כ חב\"ד נבחנים רק לחג\"ת, וראש הקטן אינו אלא חג\"ת כי הכלים המלבישים לאור הרוח נקראים חג\"ת. (א' קס\"ד אות קי\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 139,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 139:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_139\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ראשית</b><br>חכמה דז\"א נקראת ראשית. והוא מטעם, כי אור החכמה שלו מתלבש בכלי דכתר שלו. כי אין חכמה מתלבשת בכלי דחכמה אלא רק בא\"א, הנמשך מבחי' שכנגדו מפרצוף גלגלתא דא\"ק. אבל או\"א, החכמה מתלבשת בכתר שלהם, מפני שהם נמשכים מבחי' שנגדם מע\"ב דא\"ק, שבו נתחלפו האורות. ובאה חכמה בכלי דכתר ואור הבינה בחכמה. ולכן ז\"א, שמצד המוחין שלו נמשך בעיקר מאו\"א, הנה גם בו מתלבשת החכמה בכלי דכתר, ונמצא אצלו החכמה ראשית הפרצוף. (א' קס\"ג אות קי\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 140,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 140:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_140\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רגל קוף הארוך</b><br>עי' תשובה ל\"ט. (א' קל\"ז אות ל').",
+      "anchors": []
+    },
+    {
+      "n": 141,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 141:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_141\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רקיע</b><br>עי' תשובה קל\"ז (א' קל\"ג אות כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 142,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 142:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_142\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שאלה</b><br>עי' תשובה מ\"ז.",
+      "anchors": []
+    },
+    {
+      "n": 143,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 143:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_143\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שדי בדגש</b><br>יש שד\"י בדגש והוא שם קדוש, ויש שדי ברפה, והוא בחינת שדים ליניקה. בסו\"ה בין שדי ילין. וביאורם הוא: כי דרכו של אבא שהוא ע\"ב, להאיר חסדים מכוסים בחג\"ת, וחסדים מגולים רק בנה\"י. כנודע. ואם הזווג דאו\"א הוא בכלים האמצעים, שהם חג\"ת, ועדיין אין שם כלים דנה\"י, באים ב' ההארות שם בזה אחר זה בסוד מטלטלין, שהם מטולטלין מרחמים לדין ומדין לרחמים. כי בשעה שהאורות דחסדים מכוסים באחורים דאמא, אז הם בבחי' הרחמים, בהרחבה מרובה דחסדים. ואם מתגלה בהם הארת ע\"ב, נעשה בהם סיתום חסדים שהוא מדת הדין, כי נעשו מחוסרי השפע. והוא משום שליטת אחורים דאמא שם. כי אין מקום הגילוי דהארת ע\"ב אלא מחזה ולמטה אחר סיום דיסוד אמא. כנודע.",
+      "anchors": []
+    },
+    {
+      "n": 144,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 144:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_144\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שדי ברפה</b><br>עי' לעיל בתשובה קמ\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 145,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 145:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_145\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שדים</b><br>דדים נקראים על שם קומת החסדים הנמשכת מהדדים. ושדים הם נקרא על שם הארת ע\"ב המתחילה להתגלות משם, בסוד ע\"ב רי\"ו וכ\"ו שבגימטריא שד\"י. כנ\"ל בתשובה קמ\"ג. (א' ר\"מ אות רפ\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 146,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 146:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_146\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שקר אין לו רגלים</b><br>עי' לעיל תשובה ע'.",
+      "anchors": []
+    },
+    {
+      "n": 147,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 147:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_147\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תחתונים דאורות נכנסים תחלה</b><br>עי' לעיל תשובה ו'.",
+      "anchors": []
+    },
+    {
+      "n": 148,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 148:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_148\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תיכון</b><br>עי' לעיל תשובה קכ\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 149,
+      "sefariaRef": "Talmud Eser HaSefirot, Section XII, List of Answers on Terminology 149:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_XII,_List_of_Questions_on_Terminology_149\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תורה</b><br>המוחין דז\"א נקרא בשם תורה. והוא בסוד מ\"ש ז\"ל, נובלות חכמה של מעלה תורה, ונובלות בינה של מעלה שכינה. פירוש: כי פירות לפני גמר בישולם, נקראו נובלות. ונודע ששביה\"כ היתה מפני שהכלים היו קטנים, אבל לעתיד בגמר התיקון, אחר שנתגדלו הכלים בעולם התיקון, אז ישובו בי\"ע להיות אצילות, כמו שהיה מטרם שביה\"כ, בסוד דמטי רגלין ברגלין, כנודע. הרי שהשבירה היתה מפני שקבלו הכלים אל האורות הגדולים מטרם שנתגדלו כל צרכם. וע\"כ דומה זה לנובלות. ונודע שאחורים דאבא שנתבטלו בעת שביה\"כ, הנה מהם באים כל המוחין דז\"א הרי שנובלות חכמה שלמעלה שהוא האחוריים דאבא שנתבטלו, מהם נמשכים המוחין דז\"א שנקרא תורה, ומאחורים דישסו\"ת, נעשו כל המוחין של הנוקבא דז\"א, וישסו\"ת הם בינה, הרי שנובלות בינה שלמעלה, שכינה. (א' קל\"א אות י\"א).",
       "anchors": []
     }
   ]

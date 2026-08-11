@@ -2,12 +2,330 @@
   "chapterId": "part-01/answers-terminology-01",
   "layer": "source",
   "versionId": "he-jerusalem-1956",
-  "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 1:1",
       "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור</b> (ח\"א הסת\"פ אות י\"ח)<br>היינו כל המקובל בעולמות בבחינת \"יש מיש\", שזהו כולל הכל, חוץ מחומר הכלים. עי' אות ב' ואות כ\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 2:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור וכלי</b> (ח\"א או\"פ ו')<br>הרצון לקבל שבנאצל נקרא כלי, והשפע שמקבל נקרא אור.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 3:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור עגול</b> (או\"פ ח\"א פ\"א ק')<br>הוא אור שאינו עושה הבחן מדרגות.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 4:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור פשוט</b> (או\"פ ח\"א פ\"א ל')<br>הוא אור הכולל בתוכו את הכלי עד בלי להבחין בין האור לכלי.",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 5:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור חכמה</b> (או\"פ ח\"א פ\"א נ')<br>הוא אור הנמשך לנאצל בהתפשטות א', שהיא כללות חיותו ועצמותו של הנאצל.",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 6:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור דחסדים</b> (ח\"א או\"פ פ\"א ה')<br>הוא אור מלביש על אור החכמה ונמשך לנאצל עם התגברות א'.",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 7:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אויר ריקני</b> (ח\"א או\"פ פ\"א ה')<br>הוא אור דחסדים בטרם שמלביש על אור דחכמה.",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 8:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אח\"כ</b> (ח\"א הסת\"פ ל\"ד)<br>היינו המסובב מכח בחינה הקודמתו, עי' אות כ'.",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 9:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אמצעית</b> (ח\"א ב')<br>עי' אות ל\"ט.",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 10:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אחד</b> (ח\"א פ\"ב או\"פ א')<br>האור העליון המתפשט מעצמותו ית' הוא אחד ופשוט כמו עצמותו, וכמו שהוא בא\"ס ב\"ה כן הוא אפילו בעולם העשיה, בלי שינוי ותוספת צורה כל שהיא ח\"ו, ע\"כ נקרא אחד.",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 11:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בורא</b> (ח\"א הסת\"פ י\"ח)<br>השם בורא מתיחד רק על החידוש דהיינו המצאת \"יש מאין\", שהיא בחינת חומר של הכלים בלבד, המוגדר בבחינת ה\"רצון לקבל\" שבכל מהות, שבהכרח לא היה זה בעצמותו ית' בטרם הבריאה.",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 12:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דבקות</b> (ח\"א פ\"א או\"פ ל')<br>היא השואת הצורה, המקרבת הרוחניים ומדביקתם זה בזה, ושינוי הצורה מרחיקם זה מזה.",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 13:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>השואה</b> (ח\"א א')<br>אם אין הכר של הבחן כל שהוא בין ד' המדרגות של הרצון לקבל, נאמר שהן בהשואה אחת.",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 14:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התפשטות</b> (ח\"א פ\"א או\"פ א')<br>אור היוצא מכלל מאציל ובא לבחינת נאצל מכונה בשם \"התפשטות\" האור. ובאמת האור העליון אינו מתפעל משום זה, בדומה למדליק נר מנר שאין הראשון חסר, אלא על שם קבלת הנאצל מכנים אותו כן.",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 15:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זך</b> (ח\"א פ\"א או\"פ צ')<br>בחינה א' שברצון לקבל נבחנת לזכה ביותר מג' הבחינות שלאחריה.",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 16:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זמן</b> (ח\"א הסת\"פ ל\"ד)<br>הוא סכום מסוים של בחינות המשתלשלות זו מזו ומסובכות זו בזו בסדר סיבה ומסובב, כגון ימים חדשים ושנים.",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 17:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חשך</b> (ח\"א הסת\"פ כ\"ד)<br>בחינה ד' שברצון, שאינה מקבלת לתוכה האור העליון מכח הצמצום, נבחנת לשורש החושך.",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 18:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חכמה</b> (ח\"א או\"פ פ\"א נ')<br>היא אור עצמות חיותו של הנאצל. עי' אות ה'.",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 19:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חלל</b> (ח\"א א')<br>בחינה ד' שברצון שנתרוקנה מאור: הנה נבחנת לחושך ביחס לאור. וביחס לכלי נבחנת ל\"חלל\", כי בחינה ד' בעצמותה לא נחסרה מהנאצל בסיבת הצמצום, אלא שישנה בו בבחינת חלל ריקני בלי אור.",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 20:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>טרם ואח\"כ</b> (ח\"א הסת\"פ ל\"ד)<br>כשמדברים מיחסי סיבה ומסובב של הנאצלים, מבטאים הסיבה במלה \"טרם\", ואת מסובב הסיבה ההיא מבטאים במלה אח\"כ. עי' אות ט\"ז.",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 21:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יחיד ומיוחד</b> (ח\"א הסת\"פ א')<br>\"יחיד\" מורה על האור העליון, אשר מאיר ושולט בכל ריבוי המדרגות המשונות זו מזו עד כדי להפכן ולהשוותן לצורתו היחידה. \"מיוחד\" מורה על גמר שליטתו זאת, כלומר, אחר שכבר השווה והחזיר את צורתן לבחינת יחיד כמוהו. עי' אות יו\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 22:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יחוד</b> (ח\"א פ\"א או\"פ ו')<br>ב' בחינות משונות שהשוו צורתן זו לזו, נמצאות מתיחדות לבחינה אחת. עי' אות י\"ב.",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 23:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ימין ושמאל</b><br>מדרגה תחתונה עולה לפעמים לקומה שוה עם העליונה ממנה בעת שהעליונה צריכה אליה להשלמתה עצמה, אז נבחנת התחתונה לבחי' שמאל והעליונה לבחינת ימין.",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 24:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יוצר</b> (ח\"א הסת\"פ י\"ח)<br>השם \"יוצר\" מתיחד על השפעת האור לעולמות, שזה כולל כל המציאות חוץ מהחומר של הכלים. ע' לעיל אות י\"א ואות א'.",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 25:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כלי</b> (ח\"א פ\"א או\"פ ו')<br>הרצון לקבל שבנאצל הוא הכלי שלו.",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 26:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>למעלה</b> (ח\"א פ\"א או\"פ פ\"ב ג')<br>השואת הצורה של התחתון אל העליון היא עליה \"למעלה\".",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 27:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מאציל</b><br>כל סיבה נקראת \"מאציל\" אל המדרגה המסובבת ממנה. והשם מאציל כולל את המשכת האור וגם הכלי המקבל לאור.",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 28:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מחצבת הנשמה</b> (ח\"א הסת\"פ ט\"ו)<br>בחינת הרצון לקבל שהוטבעה בנשמות, היא המבדילה אותן ו\"חוצבת\" אותן מן האור העליון, כי שינוי הצורה הוא המבדיל ברוחניים (כנ\"ל אות י\"ב). וענין דבר מחצבת הנשמה, היא בחינת מעבר שבין עולם האצילות לעולם הבריאה, שיתבאר במקומו.",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 29:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מטה</b> (ח\"א פ\"ב או\"פ ג')<br>הפחות במעלה מחברו נבחן שהוא למטה מחברו.",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 30:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מיוחד</b><br>עי' לעיל במלה יחיד.",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 31:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מלכות דא\"ס</b> (ח\"א הסת\"פ י\"ד)<br>היא בחינת הרצון לקבל הנמצא בהכרח שם.",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 32:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ממעלה למטה</b> (ח\"א פ\"ב או\"פ ג')<br>היינו מבחינה א' עד בחינה ד': כי בחינה ד' שנשארה בלי אור נבחנת למטה מכל המדרגות, וכל שהרצון לקבל שלו קלוש יותר נבחן ליותר עליון עד שבחינה א' נבחנת שהיא למעלה מכולם.",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 33:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ממלא</b> (ח\"א א')<br>שאין שם בחינת חסרון כל שהוא, ולא יצוייר להוסיף שם משהו לשלימות.",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 34:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מעלה מטה</b> (ח\"א פ\"ב או\"פ ג')<br>החשוב ביותר נבחן לבחינת \"מעלה\", והגרוע לבחינת \"מטה\".",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 35:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מקום</b> (ח\"א הסת\"פ י\"א)<br>הרצון לקבל שבנאצל הוא ה\"מקום\" אל כל השפע והאור שבו.",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 36:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מרובע</b> (ח\"א פ\"א ר')<br>המדרגה הכוללת בתוכה כל ד' הבחינות שברצון.",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 37:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>משולש</b> (ח\"א פ\"א או\"פ ת')<br>הוא מדרגה שבה רק ג' הבחינות הראשונות של הרצון.",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 38:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נוגע</b> (ח\"א פ\"ב או\"פ ה')<br>אם שינוי צורתה של המדרגה מן השורש אינו ניכר כל כך עד להפרידה מהשורש, נבחנת שהיא \"נוגע\" בשורש. והוא הדבר בין מדרגה לחברתה.",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 39:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נקודה אמצעית</b> (ח\"א פ\"א או\"פ נ')<br>בחינה ד' שבא\"ס ב\"ה נקראת כן, על שם אחדותה עם אור א\"ס ב\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 40:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סוף</b> (ח\"א פ\"א או\"פ כ')<br>הסוף וסיום של כל נאצל נעשה ע\"י כח העיכוב שבבחי' ד', שהאור העליון פוסק מלהאיר שם משום שאינה מקבלתו.",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 41:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עגול</b> (ח\"א פ\"א או\"פ ק')<br>אם אין הבחן מעלה מטה בין ד' הבחינות שברצון לקבל נבחן ל\"עגול\" (דהיינו בדומה לתמונה עגולה גשמית, שאין הבחן מעלה ומטה נוהג בה). וד' הבחינות מכונות משום זה, ד' עגולים כדוריים זה בתוך זה, שאי אפשר להכיר ולהבחין ביניהם בחינות מעלה ומטה.",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 42:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עליון</b> (ח\"א פ\"ב או\"פ ג')<br>היינו החשוב יותר.",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 43:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פרוד</b> (ח\"א הסת\"פ י\"ב)<br>ב' מדרגות שאין ביניהן השתוות הצורה משום צד, נבחנות לנפרדות זו מזו לגמרי.",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 44:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנוי</b> (ח\"א פ\"א או\"פ ד')<br>הוא מקום המוכן לקבל תיקונים ושלימות.",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 45:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פשוט</b> (ח\"א פ\"א או\"פ ט')<br>שאין בו הבחן מדרגות וצדדים.",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 46:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צמצום</b> (ח\"א פ\"א או\"פ מ')<br>הכובש את רצונו. כלומר, המעכב את עצמו ואינו מקבל אעפ\"י שמשתוקק מאד לקבל, נקרא שמצמצם עצמו.",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 47:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קו</b> (ח\"א פ\"ב או\"פ א')<br>מורה שיש בו הבחן מעלה ומטה מה שלא היה מקודם לו, גם מורה, שהארתו מועטת מאד בערך הקודם.",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 48:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קרוב</b> (ח\"א פ\"א או\"פ ג')<br>כל שצורתו קרובה ושוה יותר לחברו, נבחן לקרוב אליו ביותר.",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 49:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ראש</b> (ח\"א פ\"א או\"פ ד')<br>אותו החלק שבנאצל המשתוה ביותר לצורת השורש, נקרא \"ראש\".",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 50:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רוח</b> (ח\"א פ\"א או\"פ ה')<br>אור החסדים נקרא רוח.",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 51:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רצון</b><br>עי' אות מ\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 52:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שם</b> (ח\"א הסת\"פ ה')<br>השמות הקדושים המה ביאורים, איך האורות המרומזים בהם באים בהשגה באופן, שהשם של המדרגה מבאר דרכי ההשגה שבאותה מדרגה.",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 53:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תוך</b> (ח\"א פ\"א או\"פ נ')<br>המקבל בתוכו, נבחן שהאור מדוד ומוגבל בכלי. והמקבל מחוצה לו, נבחן שאינו עושה שום גבול על האור שמקבל.",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I, List of Answers on Terminology 54:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_I,_List_of_Questions_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תנועה</b> (ח\"א הסת\"פ ל\"ג)<br>כל חידוש צורה נבחן לתנועה רוחנית, על שם שנבדלה מן הצורה הקודמת ויצאה בשם לעצמה. בדומה לחלק הנבדל מדבר גשמי שמתנענע ויוצא לו ממקומו הקדום.",
       "anchors": []
     }
   ]

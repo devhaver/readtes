@@ -2,12 +2,636 @@
   "chapterId": "part-09/answers-terminology-01",
   "layer": "source",
   "versionId": "he-jerusalem-1956",
-  "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 1:1",
       "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אודם</b><br>האודם ה\"ס ה\"ג שביסוד אמא. עי' תשובה נ\"ה. (תשפ\"ז אות פ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 2:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אוירא דכיא</b><br>הוא בחינת רוחא קדמאה. עי' תשובה צ\"ח (תשמ\"ז אות כ')",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 3:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אורות זכרים</b><br>אם האורות המקובלים בהפרצוף אינם נחלשים כלום מחמת ביאתם ממעלה למטה, והם נמצאים למטה בכל שלימותם כמו שהיו למעלה במקום יציאתם, הם נבחנים לאורות זכרים. אמנם אם נחלשים בביאתם למטה, דהיינו שעוברים דרך מסך, הם נבחנים לאורות נקבות. (תשנ\"ח אות ל\"ז.)",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 4:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אורות עליה</b><br>כשם שע\"י זווג דהכאה המסך מעלה או\"ח ומלביש עה\"ס דאו\"י ממטה למעלה, כן מתפשט המסך לע\"ס מניה וביה ומלביש עה\"ס ממעלה למטה, כנודע, והנה האורות המלובשים באו\"ח ממטה למעלה, מכונים אורות עליה. והאורות המלובשים בהתפשטות המסך שממעלה למטה, מכונים אורות ירידה. (תשע\"ח אות ס\"ח)",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 5:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אשא דכיא</b><br>הה\"ג שביסוד אמא המלובש בדעת ז\"א, מכונה אשא דכיא. (תשמ\"ז אות כ')",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 6:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אש נכפפת</b><br>הגבורות בשעה שהן על שלימותן נקראות מאורי האש, על דרך שהחסדים נקראים מאורי האור. ואז נמצאות הגבורות במעלה יתירה על החסדים, בסו\"ה אשת חיל עטרת בעלה. ולגודל מעלתן, אם עדיין הפרצוף בבחינת קטנות, הוא מחויב לקבלן רק ממטה למעלה, דהיינו בהתלבשות דרך עליה, באופן שלא יעברו בהתפשטות המסך, ממנו ולמטה כדרך התלבשות בגוף. כי בעת שמקבל אותן ממעלה למטה, הן מזיקות לו. ואז נקראות הגבורות ההן בשם אש נכפפת, כלומר, כי תחת ששמשו מקודם ממטה למעלה, נכפפו ובאו ממעלה למטה. וז\"ס אש נכפפת שהזיקה. (תשע\"ח אות ס\"ח)",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 7:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אשת חיל עטרת בעלה</b><br>הגבורות שהן בבחינות המוחין דגדלות, הן משובחות יותר מהחסדים וה\"ס אשת חיל עטרת בעלה. (תשס\"א אות מ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 8:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>באר</b><br>היסוד דנוקבא, מכונה בשם באר. שיורה על בחינת המסך המתוקן שם, שע\"י זווג, הוא מעלה או\"ח ממטה למעלה, כדמיון הבאר המעלה מים מתתא לעילא. עי' אות נ\"ב. (תש\"צ אות פ\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 9:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בולט</b><br>השמות בולט ושוקע, משתמשים רק בבחינות היסודות דדו\"נ. כי המה מתבטאים כן לתפישת דבר דק מאד. והוא, כי ע\"י עלית נה\"י לחג\"ת שנעשה בעת העיבור, קבלה מלכות את מדת היסוד. עי' תשובה סה, שפירושו שאותה צורת העביות שיש ביסוד, באה במלכות, באופן שצורתם שוה. וז\"ס שנשתנה מקום הזווג שהיה בפרצופי א\"ק במקום המלכות, כלומר, שהמסך והעביות היו מתוקנים בפרצופי א\"ק רק בכלי המלכות, כנודע. וכאן אין עוד המסך מתוקן במקום המלכות. כי אם במקום היסוד, ועל שם זה נקרא היסוד בשם ברית. עי' תשובה כ'. ואפילו בפרצוף המלכות עצמה, אין הזווג במקום המלכות שלה אלא רק במקום היסוד שלה. כי נעשה שינוי מקום, מחמת עלית נה\"י לחג\"ת שהיה בעיבור כל פרצופי אצילות.",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 10:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בוצינא דקרדינותא</b><br>בוצינא, פירושו נר. קרדינותא פירושו חושך. כלומר, נר המאיר מבחינת החושך שבו. שזה רומז על המסך המתוקן בנקודת המלכות, הסובלת בתוכה את כח הצמצום, שעם המסך הזה היא מעלית או\"ח וממשיכה ומלבישה את כל האורות שבפרצוף. כנודע. ושורשה של הבוצינא דקרדינותא, הוא מבחינת נקודה תחת יסוד דז\"א, שנקראת עטרת היסוד. כנודע. אמנם בשעת הגדלות דז\"א, נבחן מקום הבוצינא דקרדינותא, במקום פי החזה דז\"א. וטעם הדבר הוא, כי בעת גדלות מתעלים חג\"ת ונעשו לחב\"ד, ונה\"י לחג\"ת, ויוצאים בו נה\"י חדשים. ואז נמצא שהיסוד עלה ונעשה ממנו שליש עליון דת\"ת. ואז נמצא נקודת המלכות הדבוקה בהיסוד, שם בסיומא של היסוד, שהיא עומדת בפי החזה.",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 11:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ביאה קדמאה</b><br>כל פעם שעולים מ\"ן מאיזו מדרגה הם מחויבים לעלות מתחלה לעלי עליון שלהם, דהיינו למדרגה הג' שלמעלה מהם. ושם נעשה עליהם זווג הראשון. ומשם הם יורדים עם העליון למקומו למטה, ונעשה עליהם בהעליון שלהם זווג הב', הנקרא זווג דעיבור. וזה נוהג בכל מיני עליות מ\"ן שבעולם, הן בעת יציאתם מהקליפות, שאז העליון מעלה אותם, והן בעת שכבר יש להם נפש רוח, שאז התחתון מעצמו עולה לעליון, נוהג תמיד הכלל הנ\"ל: שמתחלה מחויבים לעלות לעלי עליון לקבל שם זווג הא', ואח\"כ באים בהעליון שלהם עצמו בזווג הב' להתעבר. ועל שם זה, מכונה זווג הא' בשם ביאה קדמאה, שפירושו, זווג הא', שאז עדיין אין מקבלים ציור של עובר. וזווג הב' מכונה ביאה שניה. שכאן הם מקבלים הציור דעובר. וז\"ס שאין האשה מתעברת מביאה ראשונה. (תשל\"ח אות ז' ותשמ\"ד אות י\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 12:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ביאה שניה</b><br>ביאה שניה, היא בחינת זווג הב', הנעשה על המ\"ן בבואם עם העליון שלהם למקומו דעליון. ומזווג הזה מקבל המ\"ן הציור של העיבור שלו. עי' תשובה י\"א (תשמ\"ד אות י\"ג).",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 13:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בכור נוטל פי שנים</b><br>עי' תשובה י\"א שנתבאר שם, שבביאה קדמאה הנעשה בעלי עליון, שאז עלו המ\"ן מהקליפות, הנה עדיין לא נעשו בהם שום ציור. ע\"ש. אמנם כיון שהם דבוקים באח\"פ דעליון, עי' תשובה ס\"ט. נמצא הזווג שיצא שם בעלי עליון לצורך העליון, יצא ג\"כ על התוספת מ\"ן דתחתון הדבוקים בהעליון. וע\"כ נבחן, שיש בזווג הזה ב' קומות של ע\"ס: א' היא קומת ע\"ס שיצאו על בחינת מ\"ן דעליון גופיה. וב', היא קומת ע\"ס שיצאה על תוספת המ\"ן של התחתון הדבוק במ\"ן דעליון בעת הזווג. אמנם התחתון עדיין אינו יכול להנות ולהלביש כלום לקומת ע\"ס שיצאו על המ\"ן שלו, כי עוד אין לו שום ציור, כי עוד לא קבל אפילו בחינת עיבור. לכן נוטל העליון את חלקו בתוכו בבחינת פקדון, כל עוד שאינו ראוי לקבלם. ונמצא אשר העליון נטל פי שנים מזווג הזה. כי נטל ב' חלקים: חלקו עצמו. וחלק של התחתון. וז\"ס בכור נוטל פי שנים. והטעם שהעליון נקרא בכור. עי' תשובה ט\"ו (תשמ\"ג אות י\"ב, ותת\"ג אות ק\"א).",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 14:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בן</b><br>כל תחתון נבחן לבן של העליון שלו, דהיינו מאותו היחס שהוא מסובב ממנו. (תשל\"ד אות ג').",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 15:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בן בכור</b><br>כמו שהעליון נבחן לאב אל התחתון, להיותו הסבה לאצילותו, והתחתון מסובב הימנו. כן יש בחינה אחת בהעליון, שמצד בחינה ההיא, נבחן רק לאח אל התחתון, שפירושו, שאינו מסובב בזה מהעליון, אלא התחתון עם העליון שניהם יחד מסובבים מן העלי עליון. וכיון ששניהם מסובבים מסבה אחת ביחד, הרי הם נחשבים בזה רק לאחים בני אב אחד.",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 16:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בני זו\"ן</b><br>הנשמות הן נבחנות לבני זו\"ן, להיותן בחינת התחתון להם, ומשתלשלות מהם. (תשל\"ד אות ד').",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 17:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בנין הצלע</b><br>בעת שאין בהנוקבא אלא בחינת גו\"ע לבד, שה\"ת בעינים שלה, אשר אז היא דבוקה אב\"א עם ז\"א בכותל אחד, הרי היא נחשבת לצלע של ז\"א, דהיינו לחלק מגופו, כי דבוקה בו, ושניהם משמשים בכותל אחד. אלא אחר עלית מ\"ן דז\"א לאו\"א, כי מעלה החכמה וחסדים שבו להם למ\"ן ומזווג לאו\"א, אז יורדת טפת הזווג דע\"ב, ומורידה ה\"ת מעינים של הנוקבא, שבזה מוחזרים תיכף אח\"פ שלה לבנין גופה, ומשגת בזה בחינות אחורים שלימים דאח\"פ מבחינת עצמה, ואז היא ננסרת ונפרדת מז\"א ונעשית לפרצוף בפני עצמה. (תשע\"א אות נ\"ז ואות נ\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 18:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בקיעת נקב באחור חזה</b><br>נודע, כי אין בז\"א משורשו אלא ששה כלים שהם חג\"ת נה\"י, שהם סוד הקומה דבחי\"א, הנקראת ה\"ח, בדומה לה' הבחינות כח\"ב זו\"ן דאור חכמה. ונבחנים החג\"ת להג\"ר דה\"ח, דהיינו לראש. והנה\"י לבחינת הגוף דה\"ח, שהם במקום זו\"ן דה' בחינות כח\"ב זו\"ן, כנודע. ולפיכך נבחן בעת הקטנות דז\"א, בעוד שחג\"ת משמשים לו לראש, אשר הפה של ראשו, הוא במקום החזה, כלומר בסיום שליש עליון של הת\"ת, ובאמת נבחן אז לגוף בלי ראש, כי אין ראש אלא מבחינת ג\"ר דחכמה. ולפיכך בשעת תשלום בנין הפרצוף שלו, דהיינו אחר שמחזיר את אח\"פ הנופלים, למדרגתו כבתחלה. עולים חג\"ת דקטנות ונעשים לחב\"ד. ועולים נה\"י דקטנות ונעשים לחג\"ת, ואח\"פ החדשים שהוחזרו למדרגתו נעשים לו נה\"י חדשים. ובזה נשלם בנין פרצופו על היכנו. ולפיכך אין לז\"א שום נקב בהחזה שלו, אע\"פ שבשעת הקטנות היה שם הפה שלו, אמנם כל ענין פה הזה שהיה לו בחזה, הוא מכח עלית ה\"ת לעינים בשעת עיבורו, שהנה\"י שלו נכללו בחג\"ת, ונכללה ה\"ת במקום החזה שלו, דהיינו שנקבע שמה מקום המסך והצמצום, וע\"כ משם ולמעלה יצאו לו הע\"ס שממטה למעלה. כי ע\"כ נבחן החזה לפה דראש, שהוא בחינת מלכות דראש, כנודע. ולפיכך עתה בגדלות שירדה ה\"ת מעינים, ואח\"פ מבחינת בינה חזרו לבנין גופו, והשיג המסך דבחי\"ב, נמצא שאותו הפה דבחי\"א, שהיה לו במקום החזה, חזר ונסתם, כי ירדה הה\"ת משם. ובאה לבחינת אזן, כנודע.",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 19:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בקיעת כל מחיצות</b><br>בעת קטנות הנוקבא, שהיא דבוקה עמו בכותל אחד, נמצאת הנוקבא מקבלת האורות שבז\"א, דרך נקב לבד, ואין כל האורות דז\"א מושפעים לה, כי אז היו מתבטלים כל המחיצות שביניהם, וחזרו שניהם כמו גוף אחד, אלא האורות אינם בוקעים המחיצה שביניהם, כי רק בוקעים ועוברים דרך נקב, שפירושו, כפי המדה שהיתה לז\"א בעת קטנותו, שאז גם הוא היה מקבל במדתו של הנקב הזה, עי' תשובה י\"ח. (תשע\"ז אות ס\"ז).",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 20:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ברית</b><br>מקום הזווג של אור העליון שהוא במקום המסך והעביות המעלה או\"ח, מכונה בשם ברית. והוא בחינת היסוד, שמכח עלית נה\"י לחג\"ת שהיה בעיבור דכל פרצוף, קבלה המלכות לצורת היסוד ונעשית כמדתו. ומאז נתעלה מקום הזווג אל היסוד (עי' תשובה ט') ועל שם זה קנה היסוד את השם ברית. וכיון שיש ד' בחינות עביות בהמסך, ע\"כ נבחן ששיעור דגופא הוא ד' בריתות, כי אז קונה כל מדתו. וזסו\"ה ומספר את רובע ישראל, כי היסוד קבל לתוכו את בחינת המסך והעביות שהיה מתוקן מקודם בכלי מלכות, דהיינו בפרצופי א\"ק, כנודע. וע\"כ הוא המוציא כל הקומות של הנשמות, שהן רביעותיהן וטפת הזרע של ז\"א הנקרא ישראל. וכן הוא אפילו בהנוקבא דז\"א, שמקום הזווג נשתנה גם בה לבחינת היסוד שבה, ולא במקום המלכות, שהיא בחינת עטרת היסוד שלה. (תשס\"ט אות נ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 21:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ברית רובע הוא</b><br>עי' תשובה כ' שם.",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 22:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גבורות דב\"ן דמ\"ה</b><br>אבא סתם נק' מ\"ה, ויש לו נוקבא שבגופו, דהיינו צד הב\"ן שבו, והוא הז\"ת דחכמה דנקודים, והוא בחינות הגבורות שבו. ומכונה תמיד בדברי הרב גבורות דב\"ן דמ\"ה דאבא. כלומר, הגבורות שהן ב\"ן של אבא, שבעצמו הוא בחינת מ\"ה. (תת\"ה אות ק\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 23:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גבורות דב\"ן דב\"ן</b><br>אמא סתם נקראת ב\"ן, אבל היא כוללת מ\"ה וב\"ן, שהם בינה ומלכות דבינה דמ\"ה. וצד ב\"ן שבה היא ה\"ת דבינה דב\"ן, דהיינו מן גבורה ולמטה דבינה דנקודים. וכשאומר, גבורות דב\"ן דב\"ן שבאמא פירושן, הגבורות שהן ב\"ן שבאמא, שנקראת בעצמה ג\"כ ב\"ן. שם.",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 24:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גבורות זכרים</b><br>אם הגבורות הן בבחינות ג\"ר, נקראות גבורות זכרים, ואם הן חסרי ג\"ר, נקראות גבורות נקבות. ומכ\"ש בשעה שעוד שאינן בבחינת זווג לגמרי, שנקראות גבורות נקבות. (תשנ\"ט אות מ')",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 25:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גבורות נקבות</b><br>גבורות נקבות, פירושן, שעוברות דרך מסך והן מחוסרי ג\"ר, עי' תשובה כ\"ד. (שם)",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 26:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ד' בריתות</b><br>ד' בחינות עביות שבמסך, בשעת זווגן עם אור העליון הן נקראות ד' בריתות. עי' תשובה כ' (תשס\"ט אות נ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 27:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דורמיטא</b><br>אחר שהפרצוף עולה בסוד מ\"ן, להעליון שלו, שאז מסתלקים המוחין שבו ובאין להעליון, נבחן שהפרצוף נשאר למטה בבחינת דורמיטא שפירושה שינה, והוא משום שלא נסתלקו ממנו לגמרי, אלא שהשאירו בו קצת חיות, בשיעור האדם שישן, שאינו נבחן למת לגמרי, כי יש בו עוד שיעור מסוים של חיות. (תת\"ח אות ק\"ו ודף תת\"י אות ק\"ח)",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 28:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דלת וציר א'</b><br>כדי להבין בחינות דלת וציר הנעשים ביסוד דנוקבא. צריכים להבין היטב מדת היסוד. כי נודע, שבזמן העיבור, קבלה המלכות למדתו של היסוד, כמו שכתב הרב בדף תשס\"ט אות נ\"ב. וכבר ידעת, ששורש היסוד נצטייר ביסוד דע\"ב דא\"ק, שאור המלכות נתלבש שם בכלי דיסוד, ונצטייר שם בבחינת צר ואריך: צר, מאור דחסדים, מחמת הזדככות המסך דבחי\"א שהיתה בכלי דהוד, ונשאר בלי חסדים. אבל עדיין היה אריך בחכמה, שקומת חכמה נקראת אריך. והוא מחמת שהיא שם בבחינת ע\"ב וכולו חכמה. אמנם אפילו סיתום דחסדים האמור, היה בו לתועלת גדול כי ע\"כ, בשעת צמצום ב' שנכללה ה\"ת בכל ספירה וספירה, מחמת עלית ה\"ת בעינים, כנודע. לא נתרשם היסוד מכח העליה הזאת, מחמת שעיקר התרשמות ה\"ת בהספירות בסוד קו שמאל בכל ספירה, כנודע, היה זה מחמת, שבכל מקום בואה של ה\"ת היה האור מסתלק משם, ובכח הזה נתרשמה שם, והיתה לקו שמאל של הספירה. משא\"כ כלי היסוד, כיון שממקורו היה בסיתום גדול מחסדים, ועלית מלכות וה\"ת דרך בו, לא גרמה שום פעולה חדשה, כי היה מחוסר כל אור בלאו הכי, ע\"כ הוא נשאר נקי מצמצום ב' בעת הזאת. ולא עוד, אלא אפילו בזמן שביה\"כ, שכח הצמצום ב' שהיה בהפרסא גרם להסתלקות האור ולמיתת המלכים, הנה לא נגע ולא פגע כלום בכלי דיסוד מבחינת שורשו הנ\"ל. ואע\"פ שגם הכלי דיסוד נשבר יחד עם שאר המלכים, אבל לא כולו, כי בחינת הגבורה הנ\"ל הנמשכת שם מע\"ב היא נשארה בחיים. כמ\"ש הרב בע\"ח שער ח' פ\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 29:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דלת וציר ב'</b><br>מבחינות כ\"ב האותיות שקבלה הנוקבא מז\"א בעת הקטנות, מהן נתקנו דלת וציר הא' שביסוד שבה. ומכ\"ב האותיות שקבלה הנוקבא מאמא שלא ע\"י ז\"א, מהם נעשו דלת וציר הב'. עי' תשובה כ\"ח. (דף תש\"צ אות פ\"ז ודף תשצ\"ד ד\"ה וזה אמרו והרי. ודף תשצ\"ה אות צ\"ג)",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 30:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דם נדת</b><br>כי המ\"ן, שהם בחינות גו\"ע דתחתון המקבלים תיקונם בכלים דיסוד ורחם דעליון, שהם בחינות אח\"פ דעליון שהוחזרו בגדלות. הנה יש ביסוד ורחם אלו, ב' חותמות: א', מז\"א, שבו נעשה לתחום, שה\"ס מדת החקיקה שביסוד, עי' תשובה ט'. שזה נעשה שם בסוד אש נכפפת. וב', היא בחינת החותם בסוד שהוא אותיות חומת, שה\"ס השמירה מבחינת אח\"פ דגדלות שהוחזרו אליה, המקבלתם עם נה\"י דאמא, שה\"ס נה\"י החדשים שיצאו באמא, מכח התכללות הנוקבא שם בעת שקבלה מאמא בחינת המוחין דגדלות שלה. כנודע, שהם חוזרים אל הנוקבא, בבחינת לבוש אל המוחין שלה, אע\"פ שהכלים ההם מאמא, אמנם מיחס האורות שבהם, הרי הם שייכים אל הנוקבא כי הם בחינת הקומה השייכת רק להנוקבא, ולא לאמא. ולפיכך הארת ג' אהי\"ה שבנה\"י דאמא, היא בגימטריא חותם, שחותם זה, ה\"ס החומה ושמירה הבאה שם מהמוחין דגדלות. וחותם ב' הזה, אינו מדת שקיעה, כמו החותם הא' אלא הוא מדת בליטה, (עי' תשובה ט') שז\"ס עטרת יסוד דנוקבא, שהיא רק בחינת בליטה, והבן היטב.",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 31:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דרך ירידה</b><br>כשאורות מתפשטים ממעלה למטה בהפרצוף, כי המסך שממטה למעלה מתפשט מיניה וביה לע\"ס ומתלבש בבחינת גוף, כנודע. הנה אז נבחנים האורות, שהם בדרך ירידה. מטעם שתלוים במדת גדלה של העביות, וכפי מדת גדלה של העביות, דהיינו לפי עומק השקיעה, כן גודל קומתו של האור, הרי שהאורות יורדים עד השולים של השקיעה, ונמצא שלפי עומק ירידתם, כן גובה קומתם. (עי' תשובה ט') לכן שמות דרכם של האורות הוא דרך ירידה. (תע\"ז אות ס\"ז).",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 32:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דרך עליה</b><br>כשהאורות מתלבשים רק באור החוזר העולה ממטה למעלה, ואינם מתפשטים עם המסך למטה (עי' תשובה ל\"א) נבחן דרך התלבשות זו, בשם, דרך עליה. (שם).",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 33:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הארת הגבורות</b><br>טרם שהגבורות קבלו את שלימותן דהיינו הג\"ר שלהן, הן נחשבות רק להארת הגבורות ולא לעצמות שלהן. (תשמ\"ג אות י\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 34:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דמים טהורים</b><br>אין כל הבחינות מ\"ן שעלו בסוד הזווג דעיבור יכולות להתברר שם, כי בהכרח יש חלקים שעדיין לא הגיע זמן הבירור שלהם, אלא שצריכים להתברר ע\"י אורות דיניקה, או ע\"י אורות דגדלות, וע\"כ נמצאים השורשים שלהן, מונחים שם בבחינת דוממים, כלומר, שאינם מתחברים עם האורות והכלים של הולד, ויש בהן שיעורים, כי חלק מהן, מתהפכות לחלב, ומתבררות ע\"י מוחין דיניקה, ויש בהם חלקים, שתיקונם עוד רחוק לגמרי, והם מחויבים לצאת משם לגמרי, ולחזור לחיצונים, כמ\"ש השיעורים האלו במקומם. ולפיכך כללות כולם נחלקים לב' בחינות. א', הן ה' דמים טמאים, וב', הן ה' דמים טהורים. וענין התחלקותם, הוא ע\"פ השורשים של ב' מיני מ\"ן שישנם שם ביסוד דנוקבא. כי יש שם מ\"ן המקובלים לה מן ז\"א, מעת הקטנות. הבאים בעיקר מבחינת המסך דנה\"י דא\"ק, מסוד ה<b>ו</b> ' והנקודה שהשפיע אל היסודות דאו\"א דנקודים, שהם שורשי זו\"ן כנודע. והמ\"ן הב' הם מה שקבלה מאמא, הבאים מבחינת המסך של הס\"ג דא\"ק, מסוד האור דהסתכלות עינים שבנקודים. שמהם נעשו רק ג' הפרצופים הראשונים דאצילות, והם נקראים, בחינות מנצפ\"ך הב' שקבלה שלא ע\"י ז\"א, אלא מאמא. ומהם אין בחינות פסולת מסתנן עד שיחזרו ויתלבשו בחיצונים. משום שהם בחינות כלים דבינה, כי ס\"ג כולו הוא בחינת בינה, וע\"כ אחר שנבררו או קבלו איזה תיקון, שוב אינו נאבד מהם, להיותם משורשם בלי צמצום כלל. משא\"כ המנצפ\"ך הא' דז\"א, שהן מבחינת ה\"ת בעצם, ואע\"פ שקבלו בהן מבחינת ה\"ר, בסוד חיבור מדת הרחמים בדין, מ\"מ כל עוד שאינן מקבלות בירורן השלם, יכולות להתקלקל ולחזור וליפול לתוך הקליפות, בבחינת ה' דמים טמאים. (תשפ\"א אות ע\"ד ודף תשפ\"ו אות פ')",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 35:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה' דמים טמאים</b><br>עי' תשובה ל\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 36:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה\"ת דהוי\"ה</b><br>בעוד שנוקבא דז\"א נמצאת עמו אב\"א, ודבוקים בכותל אחד, היא מכונה בשם ה\"ת דהוי\"ה, כי דבוקה עם ה<b>ו</b> ' דהויה בהשם שלו. ואח\"כ בזמן הגדלות אחר שננסרה ממנו, והיתה לפרצוף נבדל בפני עצמה, אז היא נקראת בשם מיוחד לפ\"ע, דהיינו אדנ\"י או אלהים. (תשס\"ט אות נ\"ג)",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 37:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ו' זעירא</b><br>ת\"ת נקראת <b>ו</b> ' גדולה, או <b>ו</b> ' עם ראש, והוא להיותה קומת בחי\"א, הכלולה חג\"ת נה\"י, שחג\"ת הם בחינת כח\"ב דחסדים, והוא הראש שלו, ולפיכך, נבחן ת\"ת ל<b>ו</b> ' עם ראש. אבל יסוד הוא בחינת קומת אור המלכות, דהיינו קומת נה\"י בחסרון חג\"ת, וע\"כ נבחן ל<b>ו</b> ' זעירא בלי ראש, כי חג\"ת שה\"ס ראש חסר לו. (תשס\"ו אות נ')",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 38:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג א'</b><br>זווג א' שנעשה על המ\"ן, פירושו, הביאה קדמאה, שעושה בהעליון כלי ורוחא קדמאה, אשר המ\"ן, שהם גו\"ע של התחתון הנמצאים עם העליון שלהם באותו הביאה והזווג, אינם יכולים לקבל משם אפילו הציור דעובר, משום שהזווג הזה נעשה בעלי עליון שלהם, והם צריכים לצאת דרך המדרגה, שהוא ע\"י הזווג שבהעליון שלהם, וע\"כ אינם מקבלים בחינת העיבור עד ביאה וזווג הב' הנעשה במדרגת העליון, ואז מקבלים הציור דעובר. עי' תשובה י\"א (תשל\"ה אות ו' ואות ז')",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 39:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג ב'</b><br>עי' תשובה ל\"ח.",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 40:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ז' זמנים דנוקבא</b><br>א' הוא, מזמן הנקודים קודם התיקון, שאז היתה נקודה תחת היסוד, שאז היה בה כח הדין, ועוד לא קבלה המיתוקים דמדת הרחמים. וע\"כ נבחן מקומה, לפי מדרגת אצילות של עה\"ס דאור ישר, שהיא תחת היסוד דז\"א. הזמן הב' הוא, בזמן העיבור הא' דתיקון ז\"א, שאז נכללת בקו האמצעי בב' המדות: שהן ת\"ת ויסוד מכח עלית נה\"י לחג\"ת, ונמצאים שלשתם, ת\"ת ויסוד ומלכות, נכללים זה בזה, ושם נשלמה הנוקבא במדת היסוד. ג' הוא, ביניקה דז\"א, שנתפשטו נה\"י מתוך חג\"ת, כי ז\"א השיג ע\"י היניקה בחינת המסך דבחי\"א שהם הכלים דחג\"ת, ואז קנתה הנוקבא מדת ת\"ת, בסוד עשר נקודות, שפירושן עביות דמסך דבחי\"א, המעלה או\"ח בקומת חג\"ת, שבכח אוה\"ח הזה מתלבשות עה\"ס דקומת חג\"ת בהפרצוף דז\"א. ונבחנת ע\"כ גם קומת הנוקבא שוה אליו, מחמת שבאו\"ח שלה הוא נמדד. אלא שמבחינת הנוקבא ביחסה עצמה, אין כאן אלא בחינת הנקודות של קומת הת\"ת, כלומר בחינת המסך עם העביות שבו, שנקראים נקודות. ד' הוא, בגדלות דז\"א, שאז הנוקבא נשרשת בדעת שלו, כלומר, שהמסך והעביות שבו מעלים או\"ח עד לבחינות ע\"ס דג\"ר דנשמה, ששם בחינת חב\"ד, ואז מקבלת הנוקבא בחינת המסך של בחי\"ב, ומשמשת ביסוד דראש שנקרא דעת. והנה בד' הזמנים האלו לא הגיע עוד שום תיקון לפרצופה עצמה של הנוקבא, כי כל אלו הד' הזמנים היו הגדלת הנוקבא שבגופו דז\"א, שבכל מדרגה ומדרגה היא נמצאת בקומה שוה אליו, אלא היא בחינת המסך ועביות וכל בחינת אוה\"ח שבהמדרגה, שכל זה מכונה בשם ב\"ן. והז\"א הוא בחינת הקומה עצמה דאור ישר שבהמדרגה, שכל זה נקרא בשם מ\"ה, אשר מ\"ה וב\"ן אלו, הם באמת גוף אחד ממש, שאי אפשר להתגלות שום מדרגה זולתם, וע\"כ אין זה כלל בחינת הנוקבא ממש, אלא הנוקבא מקבלת אח\"כ כל השורשים שלה מבחינת הנוקבא שבגופו דז\"א, כמ\"ש במקומו, וע\"כ אנו מחשבים את העליות של הנוקבא שבגופו דז\"א, גם לבחינות שורשי תיקונים אל הנוקבא הנפרדת דז\"א, דהיינו מדרגתה עצמה, ממה שהיתה שם קומה מיוחדת לפני עצמה, בזמן הנקודים.",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 41:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זכרים</b><br>אם הפרצוף מקבל האורות מהעליון, והאורות מקובלים בתוכו, בכל אותה השלימות שהיו להם למעלה, במקום יציאתם בהעליון, אז הוא נבחן לזכר. (תשנ\"ח אות ל\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 42:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג מיניה וביה</b><br>אם הפרצוף מזדווג עם הנוקבא שבגופו, ולא בנוקבא נפרדת ממנו, הרי זה מכונה זווג מיניה וביה: \"מיניה\" סובב על צד הזכר שבו ו\"ביה\" סובב על צד הנוקבא שבו. (תשנ\"ה אות ל\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 43:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג נשיקין</b><br>זווג דנשיקין הוא זווג המתקן את הג\"ר של הפרצוף, ונמשך מאור חדש דבקע לפרסא, ויצא דרך הטבור דא\"ק, והאיר לג\"ר דנקודים. אבל ז\"ת דנקודים עדיין לא קבלו תיקונן, עד שירד האור דרך היסוד דא\"ק, והאיר ליסודות דאו\"א דנקודים. וזווג הזה שהיה לצורך ז\"ת, מכונה זווג דיסודות. ומשם ואילך נוהגים ב' זווגים אלו: א', לתיקון ג\"ר, וב', לתיקון ז\"ת. גם זווג הא' מכונה פעם זווג רוחני, או זווג עליון. והב' נקרא זווג תחתון. (תשמ\"ה אות ט\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 44:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג עליון</b><br>עי' תשובה מ\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 45:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג תחתון</b><br>עי' תשובה מ\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 46:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חותם</b><br>ב' חותמות יש ביסוד דנוקבא: אחד בבחינת שקיעה, וב', בבחינת בליטה. א' הוא הארת הגבורות שהיא מקבלת מז\"א, וחותם הזה ה\"ס תחום. ב', היא מקבלת מאמא, וחותם הזה הוא חומת, כלומר, חומת שמירה. וזה היא מקבלת מג' לבושי נה\"י דאמא הבאים עם המוחין שלה, שהם ג' שמות אהיה, שהם בגימטריא חותם, עי' תשובה ל'. (תשפ\"ג אות ע\"ח ודף תשצ\"ח אות צ\"ו)",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 47:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חותם נקרא נדת</b><br>עי' תשובה ל'.",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 48:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חיצוניות</b><br>ד' מלכים יצאו בעולם הנקודים מד' הקומות דאו\"א, מבחינת מחזה ולמעלה. שהם דעת וחג\"ת. וד' מלכים יצאו שם מד' הקומות דישסו\"ת מבחינת מחזה ולמטה, שהם ב\"ש ת\"ת תחתונים, ונהי\"מ. וע\"כ נחלקת ג\"כ בחינת תיקונם באצילות: שתיקון המלכים שמחזה ולמעלה, נקרא פנימיות. ותיקון המלכים שמחזה ולמטה נקרא חיצוניות. (תשמ\"ט אות כ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 49:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חלק מרוחא קדמאה</b><br>ב' חלקים נבחנים בהאי רוחא דשדי בה בעלה בביאה קדמאה: א' הוא, מה שיצא שם על בחינת המסך של האשה עצמה, שזהו חלקה לבנינה עצמה. ב', מה שיצא שם על תוספת המ\"ן של התחתון, הדבוקים באח\"פ שלה. וזהו חלקו של התחתון, אשר המה אצלה בפקדון, כל עוד שאין התחתון עצמו מוכשר לקבל את כללות הקומה ההיא שיצאה שם, והיא נותנת לו לשיעורים, בדרך המדרגות, מתחלה נפש, ואח\"כ רוח, עד שמשלים לו נרנח\"י דנפש, ואח\"כ נותנת לו סדרי מדרגות הרוח, עד שמסלקת כל קומתו של התחתון מה שיצא על המ\"ן שלו בביאה קדמאה. ואז נפסק לה אורח כנשים, כי אין לה עוד מה להוליד, ולא נשאר בה כי אם חלקה עצמה, שהיא כל החיות שלה. ואם גם זה החיות נסתלק ממנה היא מתה, בסו\"ה בצאת נפשה כי מתה. עי' תשובה י\"א. (תשמ\"ה אות ט\"ו)",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 50:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חסדים דמ\"ה דמ\"ה</b><br>אבא סתם נקרא מ\"ה. וחסדים דמ\"ה דמ\"ה שבאבא, פירושם, החסדים שהם מ\"ה של אבא, המכונה מ\"ה סתם. והם בחינות חכמה וז\"א דבינה דמ\"ה. (תת\"ה אות ק\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 51:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חסדים דמ\"ה דב\"ן</b><br>אמא סתם נקראת ב\"ן, וע\"כ צד מ\"ה שבה, נקרא חסדים דמ\"ה דב\"ן דאמא, שפירושו, החסדים שהם מ\"ה דאמא, הנקראת ב\"ן סתם. והם בחינות בינה ומלכות דבינה דמ\"ה. (שם)",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 52:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חצי שיעור ו'</b><br>ת\"ת, שהוא חג\"ת, נקרא <b>ו</b> ' עם ראש, להיותו קומה דבחי\"א, שיש בה חג\"ת נה\"י, שחג\"ת הם בחינת כח\"ב דחסדים, וע\"כ הם בחינת ראש, ונה\"י שבו, הם בחינת גוף. אבל היסוד, שהוא קומת נה\"י לבד, וחסר בחינת חג\"ת, ע\"כ הוא נבחן ל<b>ו</b> ' קטיעה, שאין לה ראש. כי חסר לו בחינת הה\"ח דחג\"ת, אלא שיש לו רק בחינת כללות לבד מהם, שהיא קומת מלכות לבד, כנודע. ונבחן ג\"כ לחצי שיעור של ה<b>ו</b> ' הגדולה, כי נה\"י הם חצי פרצוף דז\"א הכולל ו\"ק. (תשמ\"ז, אות כ')",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 53:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חפירה</b><br>עי' תשובה ט'.",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 54:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חקיקה</b><br>עי' תשובה ט'.",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 55:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_55\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>טפה</b><br>כי אינו ממשיך מהמוחין אלא בסוד הזווג לשעתו, ותיכף מפסיק אותו, אלא שמספיק רק לקבלת הנוקבא, והנוקבא ממשכת להגדיל את הטפה ההיא בהארותיה, וכיון שהיסוד אינו ממשיך בהארותיו, ע\"כ נבחן הארתו, שהיא בסוד טפה. (תשנ\"ו אות ל\"ה)",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 56:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_56\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>טפת אודם</b><br>אמא מזריע האודם שבהולד, והוא בחינות המ\"ן שלה, שהם בחינת גו\"ע דתחתון, שעלו ונבררו מהקליפות, ועדיין ה\"ת בעינים שלהם, דהיינו כח הצמצום והדינים. והם נקראים ג\"כ ה\"ג, להיותם בחינת ב\"ן וגבורות. והאב מזריע הלובן שבהולד, שהוא בחינת האורות היוצאים על הזווג של התכללות המ\"ן והעביות שלהם תוך המסך דקטנות של או\"א. והאורות האלו, הם טפת מ\"ד, ונקראים ה\"ח. באופן שחלק אמא בהזווג ההוא, הוא בחינת המסך דקטנות דבחינת עובר של עצמה, אשר שמה נכללת העביות של המ\"ן שהם הה\"ג, וחלקו של אבא הוא, המשכת האור העליון, המכה בהמסך והעביות שבמסך דאמא, ומב' אלה נבנה הולד. (תשפ\"ז אות פ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 57:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_57\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>טפת לובן</b><br>עי' תשובה נ\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 58:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_58\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יוד נקודות</b><br>המסך והעביות, הגורמים הכאת האור בהם, הם נקראים בשם נקודות, והיינו רק מטרם שבאים בסוד הזווג. ומשום שהמה ראוים להעלות או\"ח ולהמשיך קומה של ע\"ס, ע\"כ הם מכונים יוד נקודות. (תשע\"ב אות ס\"א)",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 59:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_59\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יין המשמח</b><br>בחינות ה\"ג, שהן בחינות של ב\"ן, שיצאו ונבררו מתוך הקליפות, וחזרו ונתחברו בבנין האצילות, נבחן שגורמות שם שמחה גדולה, וע\"כ מכונות הגבורות ההן, בשם יין המשמח. בדומה לאדם שנאבד לו הון רב וחזר ומצאו. (תשפ\"א אות ע\"ג)",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 60:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_60\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יין מתהפך לדם</b><br>הנה כל עלית מ\"ן, היא ע\"י תפלות ומעשים טובים של התחתונים. ואם התחתונים חוזרים לסורם אח\"כ, הנה הם גורמים, שאותם המ\"ן שכבר נבררו ונתחברו לקדושה, בסוד יין המשמח, (עי' תשובה נ\"ט) הנה עתה גורמים העונות שחוזרים ונופלים מהקדושה להקליפות, ומתהפכים שם לדם, שהוא מזון החיצונים עי' תשובה ל'. (תשפ\"א אות ע\"ג ודף תשפ\"ו אות פ')",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 61:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_61\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ירושלים</b><br>בחינת יסוד החיצון של המלכות, נקראת בשם ירושלים. וגם בחינת העטרה שבה נקראת בשם ירושלים. שהיא נקודת המלכות דנוקבא. (תש\"פ אות ע\"א ודף תשצ\"ח אות צ\"ה)",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 62:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_62\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כלי המעלה מ\"ן</b><br>בהיות שאח\"פ דכל מדרגה, נפלו למדרגה תחתונה ממנה, נמצאו מדרגות גו\"ע דתחתון, עם אח\"פ של העליון, דבוקות תמיד זה בזה, הן בשעת הקטנות דעליון, הן בשעת הגדלות של העליון. כי בשעה, שהעליון מעלה אח\"פ שלו, נמצא בהכרח שגם גו\"ע דתחתון עולים עמו. ולפיכך נבחנים אח\"פ דכל מדרגה, שהמה בחינת כלי המעלה המ\"ן דתחתון, דהיינו בחינות גו\"ע שלו, לטעם היותם דבוקים בו תמיד. אלא רק בשעת גדלות התחתון, דהיינו שהוא עצמו משיג אח\"פ שלו, ונשלם גם הוא בע\"ס, אז הוא מתפרד לעצמו במדרגתו לפרצוף נבדל מן העליון. (אות י\"ג ואות כ\"א)",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 63:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_63\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כ\"ב אותיות</b><br>אותיות פירושן כלים. וכ\"כ אותיות הן כוללות כל בנין של הפרצוף, כמו שכ\"ב אותיות שבכתב, כוללות כל החכמות שבעולם, כי ע\"י צירופיהן של כ\"ב האותיות אפשר לבאר כל החכמות שבעולם. כן הדבר בענין הכלים של הפרצוף, שהכלים ההם מסוגלים לקבל ולהשפיע כל אורותיהם ע\"י הזווגים של הכלים שבהם, כי הזווגים שבהספירות יש להם דמיון עם הצרופים של האלפא ביתא. והבן. (אות פ\"ה)",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 64:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_64\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כ\"ז אותיות</b><br>כשאנו מבחינים לדבר גם מבחינות המ\"ן, דהיינו בחינת המסך ועביות של בחינת כ\"ב אותיות הן כ\"ז, כי הן נבחנות בה' אותיות הסיום שנקראות מנצפ\"ך. כי המסך והעביות שבהן הן כחות התחום והסיום המעכב על אור העליון מלעבור על התחום שלהן, כי זה הוא כח הצמצום הרוכב עליהן, שמכח זה יש הכאה ביניהן, ומולידות או\"ח, שהוא הממשיך והמלביש לאו\"י. כנודע. ולפיכך אלו ה' אותיות מנצפ\"ך, הן השרשים והמוצאות של כל כ\"ב האותיות, כי כל הכלים אינם, רק התפשטות המסך מניה וביה לעשרה כלים כנודע, בסוד התפשטות המלכות של ראש לגוף בפרצופי א\"ק. הרי שכ\"ב האותיות הן תולדות של המנצפ\"ך, שה\"ס ה' מוצאות שבפה הפרצוף, שעל ידי ה' מוצאות אלו נולדים גם מתבטאים כל כ\"ב האותיות שבהמדבר. ויש סוד בזה, שבכתב, באות ה' אותיות מנפצ\"ך בסיום המלות. אבל בעל פה, הן מוצאות והתחלות אל כ\"ב האותיות. ולפיכך יש ביחד כ\"ז אותיות באלפא ביתא.",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 65:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_65\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מדת היסוד</b><br>המלכות נקראה בשם רביעית, בסו\"ה רביעית ההין. והוא מטעם שהיא אות רביעי דשם בן ד', ועיקר הטעם הוא כי \"רביעי\" הוא מלשון זווג, ולפי שמקום הזווג הוא בהנוקבא, ע\"כ נקראת בשם רביעית. ונודע, שבעולם התיקון, נעשה היסוד בחינת המקום לזווג, תחת המלכות שבפרצופי א\"ק. ע\"כ קבל היסוד ג\"כ שם הזה, ונקרא רובע. בסו\"ה ומספר את רובע ישראל. ויש עוד טעם, כי שיעור דגופא, ד' בריתות, כלומר שיש בו ד' מקומות הזווג, בסוד ד' בחינות העביות אשר בהמסך, וע\"כ נבחן כל יסוד לבחינת רובע. כי אין הפרצוף נשלם אלא עד שתהיה בו ד' בחינות הזווג בשלימות, שהן: קומת נה\"י, וקומת חג\"ת, וקומת חב\"ד דנשמה, וקומת חב\"ד דחיה, ואז נשלם. כנודע וע\"כ מדת היסוד דכל קומה נבחנת לרובע א' של שלימות הגוף. (דף תשס\"ט אות נ\"ב).",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 66:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_66\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מדת הת\"ת</b><br>מדת הת\"ת היא ד' בריתות, כי אין שלימות לז\"א פחות מזה. כי כל זמן שאין לו מוחין דחיה, נבחן לחסר, ואינו ראוי להוליד. וז\"ס דשיעורא דגופא ד' בריתות הוא כלומר, שיהיה לו ד' קומות, שהן נמשכות לו בסוד ד' היסודות. כנ\"ל תשובה ס\"ה (שם)",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 67:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_67\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מחיצות</b><br>הכלים, דהיינו הגוף של הפרצוף, באים מהתפשטות המסך של פרצוף ההוא, ולפיכך מוגדר כל פרצוף בבחינות מחיצות לעצמו, דהיינו לפי מדת העביות שבהמסך, אם מבחי\"א אם מבחי\"ב וכדומה, ואין למשל, פרצוף דבחי\"א יכול לקבל משהו מן פרצוף דבחי\"ב, משום שמחיצות של בחי\"ב שבהכלים דגופו מעכבים עליו. וכל ההבדל שבין המדרגות ניכר רק בהמחיצות האלו, כלומר שבהם שולטים הגבולות והעביות, המוסתעפים מבחינת המסך דאותו פרצוף (תשע\"ז אות ס\"ז וס\"ח) הכולל של כ\"ב האותיות דכל פרצוף, נמצא ביסוד דאותו הפרצוף, דהיינו בהמסך אשר שם, שממנו נולדו ויצאו כ\"ב האותיות שלו. והן מצוירות שם בציור של <b>ד</b> ' אחת, בסוד דלת וציר. (עי' תשובה כ\"ח) שהציר כולל בתוכו ב' ההין מחוברות יחד, שמהן מתפשטות ב' ווין, ויש ציר ודלת א' דז\"א, מעת הקטנות. ויש ציר ודלת ב' מצד אמא מעת הגדלות. ובשעת גדלות כשמשגת את דלת וציר הב', נמצאות ב' הדלתות מתחברות זו עם זו בצורת <b>ם</b> ' סתומה. הסוגרות בעד העובר, שלא יוכל לצאת משם לחוץ. וכח הסגירה הזה נמצא בהווין שהן בחינת היסוד עצמו, כי עתה בשעת הגדלות, שכבר ירדה הה\"ת מן הציר, שה\"ס הצמצום וכח הדין שהיה שם. לא נשאר עוד שם שום עביות רק מן היסוד, עצמו, משורשו שביסוד דע\"ב, והוא מסיים לכל אורות שבנוקבא, אפילו בבחינות חסדים שבה, בסוד שכחו נמשך מיסוד דע\"ב, ואמא עד הוד אתפשטותה. ואורות דחסדים דאמא, נפסקים ואינם נוגעים בו. וע\"כ הוא סוגר ממנו ולמעלה ביסוד דאמא, שאפילו משהו חסדים אינם עוברים דרכו. ולפיכך מכונה זה <b>ם</b> ' סתומה, כי הד' ווין אשר שם מתחברות יחד וסותמות החסדים, שמיסוד דאמא והלאה, שלא יתפשטו אף משהו. וכיון שכל הסתומה הזאת נעשית מכח הארת יסוד דע\"ב, שבהכלי שלו לא שלטה בחינת הקטנות דה\"ת בעינים, ולא בחינת השבירה, כנ\"ל בתשובה כ\"ח. ע\"כ היא שמירה מעולה ביותר מפני כחות הדין והחיצונים, שאין להם שום אפשרות לינק מכחות הדין שישנם שם בהולד עצמו. והבן. (אות פ\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 68:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_68\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מ\"ם סתומה</b><br>עי' תשובה ס\"ז.",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 69:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_69\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מ\"ן</b><br>מ\"ן, פירושם, גלגלתא ועינים של התחתון, שהיו דבוקים במדרגה אחת עם אח\"פ דעליון הנפולים, וע\"כ בשעת גדלותו של העליון, שכבר השיב לעצמו את אח\"פ שלו הנפולים, ונעשו לנה\"י חדישים שלו, הנה בהכרח שנמצא בהם גם גו\"ע דתחתון, והם הנבחנים שם בבחינות מ\"ן. באופן שכל פרצוף שכבר השיג בחינת הגדלות שלו, יש לו גו\"ע דתחתון שלו דבוקים בנה\"י שלו, ומשמשים אליו למ\"ן.",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 70:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_70\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מנצפ\"ך</b><br>בחינות מסך ועביות דפרצוף שנשארו בו מזמן הקטנות שלו, הם מכונים בשם מנצפ\"ך. ובשם הזה אנו מבדילים בין המ\"ן של התחתון, שהם דבוקים באח\"פ דפרצוף הנוקבא, לבין המ\"ן דהנוקבא עצמה, הנשארים בה מעת עיבור של עצמה. כי המ\"ן דתחתון מחויבים להכלל בהמסך דעיבור של הנוקבא עצמה, ואז הם מקבלים קומת העיבור, וע\"כ המ\"ן דעיבור נכללים במנצפ\"ך דנוקבא, שהנוקבא מעלה אותם למ\"ן אל הז\"א, ואז נבנה גם העיבור בהמ\"ן שלו, והוא מקבל קומתו. שז\"ס שאוכל מה שאמו אוכלת. וז\"ס עובר ירך אמו הוא, כי המ\"ן של העובר מתכללים במנצפ\"ך שלה, ואין להם הכר לעצמם. ועי' בתשובה ס\"ט. (אות ע\"ג)",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 71:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_71\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מנצפ\"ך א'</b><br>עי' תשובה א', יש ב' מיני מנצפ\"ך בהנוקבא, א', מזמן הקטנות שלה, שהן בחינות גבורות ודינים, מפאת הה\"ת שבעינים שלהם, הגורמת חסרון ג\"ר. ויש מנצפ\"ך מזמן של הגדלות דנוקבא, דהיינו שכבר ירדה הה\"ת מהעינים שלה. ומנצפ\"ך אלו הן גבורות ממותקות, והן חשובות יותר מהחסדים. ומנצפ\"ך הא', הנוקבא מקבלת מז\"א. ומנצפ\"ך הב', מקבלת מאמא. (אות ע\"ג ואות צ\"ה)",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 72:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_72\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מנצפ\"ך ב'</b><br>עי' בתשובה ע\"א.",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 73:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_73\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נסירה</b><br>בעת קטנות, הנוקבא דבוקה באחורים דז\"א, וכותל דז\"א, שהוא בחינת אחורים דז\"א מעת קטנותו, משמש ג\"כ להנוקבא. אלא ע\"י המוחין שהיא משגת מאמא, המורידים הה\"ת מעינים שלה, היא מחזרת אליה אח\"פ שלה, שהמה נעשים לה לנה\"י חדשים, הנעשים אחורים אליה, ואז ננסרים ונפרשים זו\"ן זה מזה, כי יש לה אחורים משל עצמה. (אות י\"ג ואות צ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 74:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_74\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נער חסר ה'</b><br>בעת שמקבלת הציר ודלת ומנצפ\"ך דז\"א, שהם דינים (עי' תשובה כ\"ח.) אז נקראת נער חסר ה'. (אות צ\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 75:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_75\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נער עם ה'</b><br>אחר שקבלה הדלת וציר ומנצפ\"ך ב' מאמא, שלא ע\"י ז\"א. שהם גבורות ממותקות, נקראת הנוקבא, נערה עם ה' הרומזת לה' גבורות הממותקות. (שם)",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 76:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_76\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נפש המלכות</b><br>אחר שהנוקבא משגת כל הגדלות שלה, דהיינו ע\"ב ס\"ג מ\"ה וב\"ן שלה, אז נבחנת בנפש שלמה. וראויה להוליד. (אות י\"א י\"ד)",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 77:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_77\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נקבה</b><br>מלכות דאצילות נקראת בשם נקבה, להיותה מקבלת אורותיה מז\"א דרך נקב החזה. עי' תשובה י\"ח. כי האורות העוברים דרך מסך ונקב, המה נחלשים ומתמעטים. עי' אות ג' ויש טעם ב'. שהיא ר\"ת של ד' זמנים שבה, שהם: נערה, קטנה, בוגרת, ה' תתאה. (תשנ\"ט אות ל\"ט ודף תשס\"א אות מ\"ד).",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 78:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_78\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נקודה תחת יסוד</b><br>הנקודה שמתחת היסוד, היא שורש המלכות דז\"א, הנמצאת תחת ו\"ק שלו. ומשם עלתה ונכללה בכל קו אמצעי דז\"א, בבחינת נוקבא שבגופו, ואח\"כ הנוקבא הנפרדת דז\"א, לוקחת כל אותה ההתכללות. (דף תשע\"ה ד\"ה אחורים)",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 79:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_79\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נשמות אנשים זכרים</b><br>נשמות הנוצרות מהגבורות הבאות עם המ\"ד מז\"א, הן נשמות אנשים זכרים. (אות מ\"ב)",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 80:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_80\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סליק ברעותא</b><br>הזווג הנעשה על בחינת מסך שאין בו אלא עביות דבחינת כתר, שהיא רק בחינת השורש של עביות, נקרא זווג דרעותא, או סליק ברעותא. משום שהכתר הוא שורש לכל הרצונות שבד' הבחינות, כנודע. (אות א'.)",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 81:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_81\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ע\"ב קד\"ם</b><br>אח\"פ הנפולים דכל פרצוף, המוחזרים לו בעת הגדלות, ע\"י הארת הזווג דע\"ב ס\"ג, ונעשים לאחורים שלו, דהיינו לנה\"י חדשים, המה מרומזים בהגימטריא ע\"ב קד\"ם, שהוא בחינת ב' אחורים דראש וגוף: אשר הוי\"ה פשוטה היא בחינת ראש, שהריבוע והאחורים שלה, דהיינו י' י\"ה יה\"ו יהו\"ה, בגימטריא ע\"ב. והוי\"ה במילוי ב\"ן, היא בחינת גוף, והאחורים שלה המרומזים בהריבוע, דהיינו: יוד, יוד ה\"ה, יוד ה\"ה ו\"ו, יוד ה\"ה ו\"ו ה\"ה, בגימטריא קד\"ם, שביחד הם בגימטריא רי\"ו. והם הכלי המעלה מ\"ן הבא עם הביאה קדמאה. (אות י')",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 82:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_82\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עובי הקו</b><br>בעת העיבור, כשנכללו נה\"י בחג\"ת אלו באלו, נתעבה הקו האמצעי יותר מהקצוות. שהם רק נכפלו אבל בקו האמצעי נכללו ג' בחינות אלו באלו, שהן: ת\"ת, יסוד, ומלכות. ונודע שעביות, פירושה, גבורות ודינים. עי' תשובה כ\"ח. (דף תשס\"ד אות מ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 83:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_83\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור א'</b><br>העיבור שהוא לעצם מציאותו של הפרצוף, נקרא עיבור א'. והעיבור שהוא רק לתוספות טובה, דהיינו לתוספות מוחין, ולא לעצמות הפרצוף, נקרא עיבור ב'. (אות ל\"ג ואות מ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 84:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_84\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור ב'</b><br>עי' תשובה פ\"ג.",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 85:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_85\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור ט' וז' חודש</b><br>בפנימיות, אפילו עיבור א' הוא ט' חודש, כי נה\"י נכללים בחג\"ת וחג\"ת בחב\"ד, הרי ט' בחינות. ועיבור ב' דמוחין בפנימיות, נמשך מבחינת עתיק, דהיינו ז\"ת דעתיק המלובשות בגלגלתא דא\"א. ומתוך שאין השגה בחסד דעתיק, ע\"כ אין כאן אלא ו' חודש, דהיינו ז' חודש למקוטעין. (אות כ\"ו וכ\"ח)",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 86:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_86\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיבור י\"ב וט' חודש</b><br>עיבור א', הוא בחינת התכללות נה\"י בחג\"ת, שהם ו' בחינות. ויש שם ו' בחינות אלו מאו\"א, וו' בחינות מא\"א, שהן י\"ב בחינות. וכאן העיקר הוא א\"א. ובעיבור ב' יש התכללות נה\"י בחג\"ת, ושניהם בחב\"ד הרי ט' בחינות. וכאן עיקרן הוא רק מאו\"א. וחודש פירושו, חידוש בחינה. וב' עיבורים אלו הם בבחינת חיצוניות הפרצוף. (אות כ\"ד)",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 87:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_87\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיטרא דגבורה</b><br>היא ה\"ג השייכות להנוקבא, שהן בחינת ב\"ן. (אות ע\"ו)",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 88:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_88\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עיטרא דחסדים</b><br>היא ה' חסדים: חג\"ת נ\"ה המקבילים לה' הבחינות כח\"ב זו\"ן. (אות מ\"א)",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 89:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_89\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עצמות הגבורות</b><br>מטרם שהגבורות באות בזווג עם החסדים, שעוד אין להן בחינת ג\"ר, הן נקראות הארת הגבורות ולא עצמות, וכשמשיגות בחינת ג\"ר שלהן ע\"י הזווג עם החסדים, אז נבחנות לעצמות הגבורות. (אות ק\"ג)",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 90:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_90\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פסיעה לבר</b><br>בהיות הכלי דיסוד משורשו בע\"ב דא\"ק, מחוסר לגמרי מה\"ח, אע\"פ שיש בו משלימות החכמה, נבחן שהוא מחוץ להתפשטות של הבינה, כי הבינה רק עד הוד אתפשטותה, וכל מקורו דהיסוד הוא רק מהתפשטות אבא, עם בחינת הארת חכמה, ע\"ד שהיה לו בפרצוף ע\"ב דא\"ק. לפיכך כשז\"א הוא בעיבור, אין הארת אמא מגעת להתפשט אל הכלי דיסוד שלו. ונבחן שהוא בבחינת פסיעה לבר. אמנם היסוד נכלל בת\"ת, ומשם מקבל הוא, אבל המלכות הנכללת בעיקר בהיסוד נמצאת שקבלה את מדתו, והמלכות שבעיבור נמצאת משום זה, בבחינת פסיעה מלבר. (תשס\"ו אות נ').",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 91:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_91\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ציון</b><br>בחינת היסוד דנוקבא הפנימי, הנחתם מכ\"ז אותיות דאמא, נקרא בשם ציון. (אות ע\"א)",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 92:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_92\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צלם</b><br>כשהמוחין מושפעים מהעליון אל התחתון, הם מקבלים עמם לבושים מבחינת הכלים דעליון. והלבושים ההם, מכונים צל\"ם: הצ' היא בחינות נה\"י, והל' היא בחינות חג\"ת, וה<b>ם</b> ' היא בחינות כחב\"ד. (אות ס\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 93:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_93\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צלע</b><br>בעת שהנוקבא דבוקה אב\"א באחורי חזה דז\"א, היא נקראת צלע. כי דבוקה בגוף שלו, ושניהם משמשים בכותל אחד. (אות נ\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 94:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_94\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קיסטא דחיותא</b><br>כשהפרצוף עולה למ\"ן, הוא נשאר במקומו. בהסתלקות המוחין, ואז נבחן, שנשאר בו בחינת קסטא דחיותא. שפירושה, רשימה מן המוחין שלו, שהיא בחינת הקיום שלו. בדומה בערך, לאדם ישן, שעם הסתלקות כל הכחות ממנו, מ\"מ אינו נבחן למת, אלא שיש בו קצת חיות, באופן שהוא מוכשר שיחזור כל חיותו בעת שינער משנתו. כן הרשימה הזו, שנקראת קסטא דחיותא, היא החוזרת ומקבלת המוחין שלו כולם, בעת שהמוחין יחזרו לו מהעליון. (תת\"י אות ק\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 95:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_95\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קצת חיות</b><br>בהאי רוחא קדמאה דנטלה הנוקבא בביאה קדמאה, יש ב' חלקים: א', השייך לבנינה עצמה, וב', מה ששייך להבנים שלה. עי' תשובה י\"ג. ותשובה מ\"ט. ואחר שהבנים כבר נטלו כל חלקם מהאי רוחא קדמאה, הנה נשאר בה עוד החלק של עצמה, והחלק הזה מכונה קצת חיות. (תשמ\"ה אות ט\"ו).",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 96:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_96\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רביע ת\"ת</b><br>עי' תשובה ס\"ה. ותשובה כ\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 97:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_97\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רובע ישראל</b><br>עי' תשובה ס\"ה. ותשובה כ\"ו.",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 98:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_98\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רוחא דשדי בגווה</b><br>בעת שז\"א ונוקבא עולים למ\"ן לאו\"א עלאין, שאז מזדווגים שם בהיכל או\"א, בפעם הא' אחר הנסירה, אז נותן לה רוחא, שהוא בחינת עצמות הגבורות של הנוקבא, דהיינו בחינת ג\"ר שלה, ומשלים את נפשה, ונשלמת בע\"ב ס\"ג מ\"ה ב\"ן שלה. וזהו נקרא רוחא דשדי בה בעלה בביאה קדמאה. וביאה קדמאה זו היא זווג פב\"פ של הזו\"ן. אמנם כלפי בחינתם עצמם נבחן הביאה הקדמאה זאת, בבחינת זווג אב\"א, להיותם משמשים בהכלים דאו\"א, כלומר, שהם אז נכללים בהזווג דאו\"א גופייהו, והם עצמם אינם עולים בשם. להיותם נכללים באו\"א בסוד מ\"ן. וע\"כ נבחן באמת הזווג הזה על שם או\"א, אלא בהיות שאו\"א אינם מזדווגים על בחינות מ\"ן של עצמם, רק במ\"ן של זו\"ן, ע\"כ נבחן לזווג פב\"פ דזו\"ן, כי הזווג נעשה על מ\"ן שלהם ולא על מ\"ן דאו\"א. והבן היטב. (אות ק\"ה)",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 99:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_99\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רוחא קדמאה</b><br>עי' תשובה צ\"ח.",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 100:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_100\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רי\"ו</b><br>הכלים דאח\"פ המושבים להפרצוף לעת גדלות, נבחנים בשם הגימטריא של רי\"ו, כי להיותם בחינת אחורים נבחנים בריבוע השמות, ולהיותם בחינות הכלים הישנים מנקודים. נבחנים להוי\"ה במילוי ב\"ן, והריבוע דהוי\"ה פשוטה ומליאה דמילוי ב\"ן, הם ע\"ב קד\"ם, שבגימטריא רי\"ו. עי' תשובה פ\"א. ובחינות האורות שבהם, הם מהוי\"ה של ע\"ב, כי אין ה\"ת יורדת ממקומה להעלות את אח\"פ הנפולים, זולת ע\"י טפת הזווג מע\"ב, כנודע, וע\"כ נבחנים האורות שבהם שהם ג' ע\"ב: המתלבשים באלו אח\"פ המוחזרים, וג' פעמים ע\"ב, הם ג\"כ בגימטריא רי\"ו. (אות י' וי\"ז)",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 101:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_101\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שוקע</b><br>עי' תשובה ט'.",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 102:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_102\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שינה</b><br>כשהפרצוף עולה בסוד מ\"ן, נבחן. במקומו עצמו, בסוד שינה, שפירושו, הסתלקות המוחין, באופן שנשאר בתוכו בחינת קסטא דחיותא. עי' תשובה צ\"ד (תת\"ט אות ק\"ו ותת\"י אות ק\"ח).",
+      "anchors": []
+    },
+    {
+      "n": 103,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 103:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_103\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שליש מדת היסוד</b><br>בכל ספירה יש ג' שלישים. שהם בחינות גו\"ע וג\"ר דבינה, כנודע, כי רק אלה נשארים למעלה מצמצום ב'. ואח\"פ דכל מדרגה נפלו למטה ממנה. והם עיקר עצמות המדרגה, כי אח\"פ המוחזרים בעת גדלות, אינם נחשבים לעיקר בהפרצוף, אלא רק בחינות תוספות. לבד מהכלי דיסוד שלא יכלה לקבל מג\"ר דבינה, משום דבינה רק עד הוד התפשטותה. כנודע. וע\"כ נצטרף לו השליש תחתון מסוד המלכות. ונעשה לו עטרת שלו. וזוהי המתקה הראשונה של המלכות, שנעשה לחלק של עצמות היסוד, דהיינו לשליש תחתון שלו. (תשס\"ב אות מ\"ו ודף תשס\"ג ד\"ה ולפיכך).",
+      "anchors": []
+    },
+    {
+      "n": 104,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 104:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_104\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שמרי יין</b><br>כדמיון היין, שאחר שמסננים אותו נשאר אחריו השמרים ההכרחים אליו. כן בבירורים של הספירות שאחר הבירורים, נשאר תמיד פסולת שאינה ראויה להתברר באותה המדרגה. והיא חוזרת לתערובות הקליפות בסוד שמרי היין. עי' תשובה ל\"ד. (אות ע\"ג)",
+      "anchors": []
+    },
+    {
+      "n": 105,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 105:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_105\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שש נקודות</b><br>בעיבור אין נגלה בו אלא ג' נקודות. שהן נה\"י, כי חג\"ת אין להם בחינות עביות ומסך, וע\"כ המה מתלבשים ומתכללים בתוך ג' הנקודות דנה\"י. אבל ביניקה הוא קונה העביות דבחי\"א, שאז העביות ההיא כוללת שש נקודות, שהן, חג\"ת נה\"י. וזכור כאן כי נקודות פירושן עביות של מסך, שהיא מזדווגת בהכאה עם אור העליון ומוציאה מדת הקומה. (אות נ\"ג ואות נ\"ה)",
       "anchors": []
     }
   ]

@@ -2,12 +2,258 @@
   "chapterId": "part-05/answers-terminology-01",
   "layer": "source",
   "versionId": "he-jerusalem-1956",
-  "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 1:1",
       "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור דק וחלש</b> (דף שי\"ג אות כ\"ט ובאו\"פ שם)<br>קומת האור היוצא על מסך מעביות דבחי\"א, מכונה אור דק וחלש, משום שאינו ממשיך כלום מבחינת ג\"ר.",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 2:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור המובחר</b> (דף שמ\"ח אות נ' ובאו\"פ שם)<br>ב' בחינות אורות כלולים בכל רשימו: א' שארית מאו\"י, ב' היא שארית מאו\"ח, ששארית דאו\"י מלובשת בו. וחלק דאו\"י מהרשימו, מכונה אור המובחר שבו, וחלק מאו\"ח של הרשימו מכונה אור הגרע שבו.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 3:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור מחודש</b> (דף ש\"נ אות נ\"ב)<br>האור הנמשך על ידי זווג דהכאה, ובא אל הפרצוף, נקרא אור מחודש, והאורות שישנם בהפרצוף מעת התפ\"א, שהן הרשימות שהניחו האורות שם אחר הסתלקותם, הן מכונות אורות ראשונים.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 4:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אורות ראשנים</b><br>עיין תשובה ג'.",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 5:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אחור</b> (דף ש\"ד אות ט\"ו ובאו\"פ שם)<br>בחינה שאינה פועלת בכלי, אם להשפיע או לקבל, מכונה בשם אחור או אחורים.",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 6:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אלפין</b> (דף שנ\"ג אות נ\"ו ובאו\"פ ד\"ה ביודין)<br>שיעור קומה היוצא בעיקר על עביות דבחי\"א, מכונה בשם הוי\"ה דאלפין.",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 7:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>את</b> (דף שי\"ג אות ל' ובאו\"פ)<br>המלכות נקראת א\"ת שרומז על כולל אלפא ביתא מא' עד ת'. והוא, להיות המלכות שורשם של כ\"ב אותיות ומטעם זה מכונים הכלים בשם אותיות.",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 8:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ב' מרחקים</b><br>(דף שכ\"ו):",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 9:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הארה לבדה</b> (דף ש\"כ אות ל\"ה)<br>נתינת אורות בהספירות מזו לזו היא ע\"י הזדככות המסך, שמתחלה באים כל האורות כלולים במסך דבחינה ג' לכלי דכתר, ואחר שנזדככה העביות דבחי\"ג לבחי\"ב, שקומה ההיא אינה ראויה לכתר, נותן אותה לחכמה, וכן אחר שנזדככה בחי\"ב לבחי\"א, שהקומה ההיא אינה ראויה לחכמה, אז נותן אותה לבינה. וכו' עד\"ז. ויש בחינת נתינת אורות מספירה אל ספירה ע\"י זווג והולדה, וזה מכונה בשם הארה, ולא בשם נתינת אורות.",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 10:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הבטה</b> (דף ש\"ד אות ט\"ו ובאו\"פ ד\"ה חלקים)<br>השפעת או קבלת הספירה מחברתה, מכונה בשם הבטה, שמביטות זו לזו.",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 11:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ה\"ה</b> (דף ש\"י אות כ\"ה ובאו\"פ ד\"ה המתבאר)<br>הסתלקות הכללי דהתפ\"א, מכונה בשם ה' ראשונה של שם הוי\"ה, והסתלקות הכללי של התפ\"ב, מכונה בשם ה' אחרונה דהוי\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 12:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ההין</b> (דף שנ\"ג ובאו\"פ ד\"ה ביודין)<br>שיעור קומה של בחינת מלכות מכונה בשם הוי\"ה דמילוי ההי\"ן.",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 13:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הכנה לקבל</b> (דף רצ\"ו באו\"פ ד\"ה הכנה)<br>כשיש מסך מתוקן בהפרצוף במדת עביות הראויה לזווג ולהמשיך את האור העליון, אז נבחן הפרצוף שיש בו \"הכנה לקבל\" את האור העליון.",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 14:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הסתכלות דרך אחור</b> (דף ש\"ו באו\"פ ד\"ה מסתכל)<br>כשנתבטל הפנים של הכלי, ועדיין הוא מקבל דרך אחוריו, למשל אחר שנתבטלה העביות דבחי\"ד, והוא מקבל הארה דבחי\"ג מהבחינה העליונה ממנו לתוך בחי\"ג שלו, נבחן שמסתכל באור העליון דרך אחוריו, כי בחינה ג' נבחנת לאחור כלפי בחי\"ד. עי' פנים ואחור דמסך.",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 15:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הסתלקות א'</b> (דף שנ\"ז אות ס')<br>הוא הסתלקות האורות להמאציל שנעשה בפעם הראשונה בהעולמות שהוא בפרצוף הכתר דא\"ק.",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 16:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הסתלקות ב' (שם)</b><br>היא הסתלקות השניה שנעשה בעולמות שהיא בפרצוף חכמה דא\"ק.",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 17:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התהפכות פנים למטה</b> (דף ש\"ה באו\"פ ד\"ה ואז הכלי)<br>היותר עב שבדופן הכלי מכונה פנים, משום שהזווג העליון נעשה עליו, והאור נמשך על ידו, אבל החלק שאינו עב כל כך, מכונה אחור, משום שהוא אינו פועל בהכלי. ואם האו\"פ מסתלק מהכלי והכלי מקבל אור מקומה נמוכה, שאין קומה זו מתאימה לפי מדת העביות שבכלי הנה אז יקובל האור ההוא בהחלק שאינו עב כל כך, המתאים לאותה קומה ונמצא עתה שהופך פניו למטה, שהחלק העב שבכלי מתבטל, ואחוריו למעלה, כי החלק האחור שבכלי נעשה עתה למקבל האור. למשל אם הכלי הוא של בחי\"ד, והאו\"פ דבחי\"ד נסתלק, והכלי מקבל אור מבחי\"ג הסמוכה לו, הנה אין הכלי מקבל אותו אלא בהחלק שאינו עב כל כך שנקרא אחור הכלי, דהיינו בעביות דבחי\"ג שישנה שם, ונמצא האחור נעשה לפנים של הכלי, ומדת הפנים שבו שמקודם, מתבטלת, ואינה פועלת עתה כלום בהכלי, וזה מכונה שהפך פניו למטה.",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 18:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התכללות</b> (דף שנ\"ז באו\"פ ד\"ה אמנם)<br>ב' אורות מב' בחינות יוכלו פעמים להכלל ולהתיחד זה בזה, ומקבלים הארה זה מזה כמו בחינה א'. וזה יצויר בג' אופנים: או ששניהם בלי כלים, דהיינו זו\"ן שעולים אל הראש ונכללים שם בב' הזווגים. או ששניהם בב' כלים, דהיינו בהתפ\"ב, שזו\"ן נכללים שם בהארת כתר וחכמה בהיותם בב' כלים דבחינת כתר. או בהבחינה הב' של התפשטות, שנקראת פרצוף הבינה דא\"ק, שזו\"ן דכתר יש להם שם רק כלי א' ומקבלים הארה זה מזה.",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 19:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התפשטות א'</b><br>התפשטות יורה ירידת האור ממעלה למטה להתלבשות בכלים, וכל התפשטות מכונה בשם גוף. והתפ\"א היינו הגוף דפרצוף כתר דא\"ק, שהוא הגוף הא' שבעולמות.",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 20:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התפשטות ב'</b><br>הוא גוף דפרצוף חכמה דא\"ק, שנקרא פרצוף ע\"ב דא\"ק. ויש עוד בחינה שניה של התפ\"ב, שהיא פרצוף הבינה דא\"ק, שנקראת פרצוף ם\"ג דא\"ק.",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 21:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יודין</b> (דף שנ\"ג באו\"פ ד\"ה ביודין)<br>שיעור עביות דבחי\"ג ובחי\"ב, מכונה בשם יודין.",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 22:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יוד יציאות והכנסות</b> (דף ש\"ח אות כ\"ב)<br>כשנכנסו האורות בכלים דהתפ\"ב היו באים בדרך מטי ולא מטי, שמתחלה באו כלם לכתר, ואחר דלא מטי בכתר באו בחכמה, ואחר דלא מטי בחכמה באו בבינה, וכו' עד\"ז. וע\"כ עשו האורות יוד יציאות ויוד הכנסות עד שהגיע האור למלכות.",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 23:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>י\"ו</b><br>י' מרמזת לבחינות הנקודות של התפ\"א, דהיינו על התפשטות האורות שמחכמה ולמטה אשר שם. וו' מרמזת לבחינות הנקודות דהתפ\"ב, שהוא ג\"כ מחכמה ולמטה. אבל על התפשטות אור הכתר דהתפ\"א והתפ\"ב, אין שום רמז עליה בד' אותיות הוי\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 24:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ירידת המדרגה</b> (דף ש' אות י')<br>בהתפ\"ב, שאור הכתר לא חזר שם אלא שנשאר בפה, וע\"כ בא אור החכמה ונתלבש בכלי דכתר, ואור בינה בכלי דחכמה, וכו', נמצא שכתר ירד למדרגת חכמה, וחכמה ירדה אל מדרגת בינה, וכו'.",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 25:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כללות</b><br>(עי' התכללות)",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 26:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כתר דשורשים</b> (דף רצ\"ב אות ג')<br>ע\"ס של ראש, נבחנות לשורשים אל ע\"ס של הגוף. וכתר דראש הוא כתר דשורשים.",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 27:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כתר הענפים (שם)</b><br>אור כתר של ע\"ס דגוף נקרא כתר של הענפים.",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 28:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מטי ולא מטי</b><br>מטי מורה: התפשטות אור העליון אל הספירה. לא מטי מורה: הסתלקות האור מהספירה.",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 29:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מלוי</b> (דף שנ\"ג אות נ\"ו)<br>מדת עביות שיש במסך אשר בכלי, שהזווג העליון נעשה עליו, מכונה בשם מילוי. משום שהכלי מתמלא אור בסבתו.",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 30:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מלכות דשורשים</b> (דף רצ\"ב אות ג')<br>מלכות של ראש מכונה מלכות של השורשים, כי כל ע\"ס דראש נקראים שורשים.",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 31:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נתינת אורות</b> (דף שכ\"א אות ל\"ז ובאו\"פ ד\"ה כל)<br>ענין נתינת אורות מספירה לספירה, הוא ע\"י הזדככות המסך, שמתחלה באו כל האורות לכלי דכתר, וכשנזדככה בחי\"ג של כתר לבחי\"ב, נתנה האורות לחכמה, וכשנזדככה, עביות דחכמה מבחי\"ב לבחי\"א, נתנה האורות לכלי דבינה, וכו' עד\"ז, עד שהגיע האור אל מלכות. ויש עוד ענין של השפעת אורות הנולדים ע\"י זווג, וניתנים מספירה לחברתה, והם מכונים בשם הארות לבד. עי' הארה לבדה.",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 32:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סוד הסתלקות</b> (דף שנ\"ד אות נ\"ט)<br>יש בחינת רשימו שהאור שלה עומד לחזור להפרצוף. ויש בחינת רשימו שהאור שלה לא יחזור עוד אל הפרצוף לעולם, וע\"כ מכנים אותה שהיא בסוד הסתלקות. כלומר שהאור שנסתלק ממנה לא יחזור להפרצוף.",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 33:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ענפי הפה</b> (דף רצ\"א אות א')<br>ע\"ס דגוף הן התפשטות מלכות של ראש, כי מלכות דראש מתפשטת מינה ובאה לע\"ס ממעלה למטה, שהן נקראות גוף, כנודע. וע\"כ, נמצאות הספירה דגוף שהן ענפי הפה, שהיא מלכות דראש.",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 34:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנים</b><br>מקום הכלי המיוחד להשפעה או לקבלה מכונה בשם פנים.",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 35:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנים ואחור דכלי</b> (דף שכ\"ה באו\"פ ד\"ה ופירוש)<br>כל כלי מיוחד להשפעת ג\"ר, או להשפעת ו\"ק. ואם הכלי משפעת ג\"ר, הרי מקום השפעת ג\"ר הוא הפנים שלו, ומקום השפעת ו\"ק, הוא האחור שלו. ואם הכלי משפעת ו\"ק, הנה מקום השפעת ו\"ק, הוא הפנים שלו, והשפעת ג\"ר הוא האחור שלו.",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 36:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנים ואחור דמסך</b> (דף ש\"ה באו\"פ ד\"ה כי ידעת)<br>הבחינה היותר עבה שבהמסך, הוא צד הפנים שבו. והבחינה שאינה עבה כל כך, היא בחינת האחור שבו.",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 37:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פשוט בלי מלוי</b> (דף שנ\"ד אות נ\"ח)<br>כשמזדכך המסך מעביותו ונפסק הזווג ממנו, ונסתלק האור מהכלי אז נבחנות האותיות שהן בלי מילוי. כי הכלים הם האותיות, והמילוי היא מדת העביות שבמסך, וכיון שנזדכך מעביות, הרי הוא חסר המילוי.",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 38:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צריך לאמו</b> (דף שכ\"ג ובאו\"פ ד\"ה הז')<br>אור חסד שבכלי דבינה נבחן לאור דק וחלש, להיותו מבחינת זווג דעביות דבחי\"א, שאין בו מהארת ג\"ר, שהוא עצמותו וחיותו של כל אור. ולכן הוא מוכרח להשאר בכלי דבינה כל זמן שאינו משיג הארת חכמה, כדי שיינק ג\"ר מבחינת כלי דבינה, וע\"כ הוא מכונה שצריך לאמו דהיינו בינה. וכשמשיג הארת חכמה, נבחון שהשיג את גדלותו ואינו צריך יותר לאמו בינה.",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 39:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ראיית עינים</b> (דף שי\"ג אות ל')<br>אור העליון המתפשט לזווג דהכאה מכונה בשם ראיה, מלשון הכתוב, וירא אלקים את האור כי טוב. ורומז על אור החכמה, שהוא עצמות האור ישר המתפשט מא\"ס ב\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 40:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שורשי ספירות</b> (דף שנ\"ד אות נ\"ט)<br>הרשימו שאין האור שלה עתיד לחזור אל הפרצוף, דהיינו למשל אור הכתר שנשאר נעלם מתחת מלכות של ראש, ואינו יורד עוד בחזרה אל הגוף בהתפ\"ב, אלא רק הרשימו שלו היא המשמשת בכלי דכתר במקומו. הנה אור הכתר הזה שנשאר למעלה, נבחן שם לשורש קבוע, שמאיר משם אל הרשימו שלו.",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 41:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שורש למעלה</b> (דף רצ\"ז אות ט')<br>ע\"ס דראש נבחנות לשורשים אל ע\"ס דגוף.",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section V, List of Answers on Terminology 42:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_V,_List_of_Questions_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>שורשים עליונים</b> (דף רנ\"ו אות מ')<br>הם ע\"ס דראש כנ\"ל אות מ'.",
       "anchors": []
     }
   ]

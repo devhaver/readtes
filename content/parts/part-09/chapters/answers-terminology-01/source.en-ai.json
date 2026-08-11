@@ -2,12 +2,636 @@
   "chapterId": "part-09/answers-terminology-01",
   "layer": "source",
   "versionId": "en-ai",
-  "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 1:1",
       "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Odem [redness]</b><br>The Odem is the five Gevurot [judgments] in Yesod of Ima. See Answer 55. (p. 787, Item 82)",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 2:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Avira Dachya [pure air]</b><br>It is the discernment of the Rucha Kadma'a [first spirit]. See Answer 98. (p. 747, Item 20)",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 3:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Orot Zecharim [male Lights]</b><br>If the Lights received in the Partzuf are not weakened at all by their coming from above downward, and they are present below in all their completeness, as they were above at the place of their exit, they are discerned as male Lights. But if they are weakened in their coming below — that is, they pass through a Masach [screen] — they are discerned as female Lights. (p. 758, Item 37.)",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 4:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Orot Aliyah [Lights of ascent]</b><br>Just as through the Zivug de Hakaa [coupling by striking] the Masach [screen] raises Ohr Chozer [Returning Light] and clothes the ten Sefirot of Ohr Yashar [Direct Light] from below upward, so the Masach spreads into ten Sefirot from itself and within itself and clothes the ten Sefirot from above downward, as is known. The Lights clothed in the Ohr Chozer from below upward are called Lights of ascent [Orot Aliyah], and the Lights clothed in the spreading of the Masach from above downward are called Lights of descent [Orot Yeridah]. (p. 778, Item 68)",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 5:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Esha Dachya [pure fire]</b><br>The five Gevurot [judgments] in Yesod of Ima that are clothed in the Daat of ZA are called Esha Dachya. (p. 747, Item 20)",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 6:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Esh Nichpefet [bent fire]</b><br>The Gevurot [judgments], when they are in their completeness, are called luminaries of fire [Me'orei HaEsh], in the way that the Hasadim [mercies] are called luminaries of light [Me'orei HaOhr]. Then the Gevurot stand at a level above the Hasadim, in the secret of the verse \"a woman of valor is the crown of her husband.\" And because of the greatness of their level, if the Partzuf is still in the discernment of Katnut [smallness], it must receive them only from below upward — that is, in clothing by way of ascent — so that they do not pass into the spreading of the Masach [screen], from it downward, in the way of clothing in a Guf [body]. For when it receives them from above downward, they harm it. Then those Gevurot are called \"bent fire\" [Esh Nichpefet]; that is, instead of serving as before from below upward, they were bent and came from above downward. This is the meaning of the bent fire that harmed. (p. 778, Item 68)",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 7:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Eshet Chayil Ateret Ba'alah [\"a woman of valor is the crown of her husband\"]</b><br>The Gevurot [judgments] that are in the discernment of the Mochin of Gadlut [greatness] are more praised than the Hasadim [mercies], and this is the secret of \"a woman of valor is the crown of her husband.\" (p. 761, Item 42)",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 8:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Be'er [well]</b><br>The Yesod of the Nukva [female] is called a well. This indicates the discernment of the Masach [screen] that is corrected there, which, through a Zivug [coupling], raises Ohr Chozer [Returning Light] from below upward — like a well that raises water from below upward. See Item 52. (p. 790, Item 87)",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 9:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bolet [protruding]</b><br>The names Bolet [protruding] and Shokea [sunken] are used only regarding the discernments of the Yesodot of the male and female. They are expressed in this way to convey a very subtle matter, namely: through the ascent of NHY to CHaGaT that took place at the time of the Ibur [conception], Malchut received the measure of Yesod — see Answer 65 — meaning that the very form of Aviut [thickness] that is in Yesod came into Malchut, so that their forms became equal. This is the secret of the change of the place of the Zivug [coupling], which in the Partzufim of AK was in the place of Malchut; that is, the Masach [screen] and the Aviut were corrected in the Partzufim of AK only in the vessel of Malchut, as is known. But here the Masach is no longer corrected in the place of Malchut, but in the place of Yesod, and for this reason Yesod is called Brit [covenant] — see Answer 20. And even in the Partzuf of Malchut herself, the Zivug is not in the place of her Malchut but only in the place of her Yesod. For a change of place occurred, due to the ascent of NHY to CHaGaT that took place in the Ibur of all the Partzufim of Atzilut.",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 10:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Botzina de Kardinuta [lamp of darkness]</b><br>Botzina means a lamp; Kardinuta means darkness. That is, a lamp that shines from the discernment of the darkness within it. This alludes to the Masach [screen] corrected in the point of Malchut, which bears within it the power of the Tzimtzum [restriction]; with this Masach she raises Ohr Chozer [Returning Light] and extends and clothes all the Lights in the Partzuf, as is known. The root of the Botzina de Kardinuta is from the discernment of the point under the Yesod of ZA, called Ateret HaYesod [the crown of Yesod], as is known. However, at the time of the Gadlut [greatness] of ZA, the place of the Botzina de Kardinuta is discerned at the place of the opening of the Chazeh [chest] of ZA. The reason is that at the time of Gadlut, CHaGaT rise and become CHaBaD, and NHY become CHaGaT, and new NHY come out in him. Then Yesod is found to have risen and become the upper third of Tifferet, and the point of Malchut, which cleaves to the Yesod, is found there at the ending of the Yesod, standing at the opening of the Chazeh.",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 11:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bi'ah Kadma'a [first coming]</b><br>Every time MAN [Mayin Nukvin] rise from some degree, they must first rise to the one above their upper one — that is, to the third degree above them — and there the first Zivug [coupling] is made upon them. From there they descend with their upper one to its place below, and a second Zivug is made upon them in their own upper one, called the Zivug of Ibur [conception]. This conduct applies to every kind of ascent of MAN in the world: whether at the time of their exit from the Klipot [shells], when the upper one raises them, or at the time when they already have Nefesh-Ruach, when the lower one rises to the upper one by itself — the above rule always applies: first they must rise to the one above the upper one to receive the first Zivug there, and afterwards they come into their own upper one for the second Zivug, to be conceived. For this reason the first Zivug is called Bi'ah Kadma'a, meaning the first coming, in which they do not yet receive the form of an embryo [Ubar]; and the second Zivug is called the second coming [Bi'ah Shniya], in which they receive the form of the embryo. This is the secret of the saying that a woman does not conceive from the first coming. (p. 738, Item 7; and p. 744, Item 13).",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 12:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bi'ah Shniya [second coming]</b><br>The second coming is the discernment of the second Zivug [coupling], made upon the MAN [Mayin Nukvin] when they come with their upper one to the upper one's place. From this Zivug the MAN receive the form of their Ibur [conception]. See Answer 11 (p. 744, Item 13).",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 13:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bechor Notel Pi Shnayim [the firstborn takes a double portion]</b><br>See Answer 11, where it is explained that in the Bi'ah Kadma'a [first coming], made in the one above the upper one, when the MAN [Mayin Nukvin] rose from the Klipot [shells], no form had yet been made in them; see there. However, since they cleave to the AHP of the upper one — see Answer 69 — the Zivug [coupling] that came out there in the one above the upper one, for the sake of the upper one, came out also upon the added MAN of the lower one that cleaves to the upper one. Therefore it is discerned that in this Zivug there are two levels of ten Sefirot: the first is the level of ten Sefirot that came out upon the discernment of the MAN of the upper one itself; the second is the level of ten Sefirot that came out upon the added MAN of the lower one, which cleaves to the MAN of the upper one at the time of the Zivug. But the lower one cannot yet enjoy or clothe anything of the level of ten Sefirot that came out upon its own MAN, since it has no form yet, not having received even the discernment of Ibur [conception]. Therefore the upper one takes the lower one's portion into itself as a deposit, so long as the lower one is not fit to receive it. Thus the upper one has taken a double portion from this Zivug, for it took two parts: its own part and the part of the lower one. This is the secret of \"the firstborn takes a double portion.\" As to why the upper one is called the firstborn, see Answer 15 (p. 743, Item 12; and p. 803, Item 101).",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 14:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Ben [son]</b><br>Every lower one is discerned as a son of its upper one — that is, in that respect in which it is caused by it. (p. 734, Item 3).",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 15:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Ben Bechor [firstborn son]</b><br>Just as the upper one is discerned as a father to the lower one, being the cause of its emanation, with the lower one caused by it — so there is one discernment in the upper one from whose perspective it is discerned only as a brother to the lower one. This means that in this respect the lower one is not caused by the upper one; rather, the lower one and the upper one are both together caused by the one above the upper one. And since both are caused together by a single cause, in this they are considered only brothers, sons of one father.",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 16:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bnei ZON [sons of ZON]</b><br>The souls [Neshamot] are discerned as sons of ZON [Zeir Anpin and Nukva], being the discernment of the lower one to them, and cascading from them. (p. 734, Item 4).",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 17:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Binyan HaTzela [the building of the rib]</b><br>When there is in the Nukva [female] only the discernment of Galgalta ve Eynaim alone, with the lower Hey in her Eynaim [eyes] — and she then cleaves back-to-back [Achor be Achor] with ZA in a single wall — she is considered a rib [Tzela] of ZA, that is, a part of his body, for she cleaves to him and both serve in one wall. But after the ascent of the MAN [Mayin Nukvin] of ZA to AVI — for he raises the Chochma and Hasadim in him to them as MAN, and causes AVI to couple — the drop of the Zivug of AB then descends and brings the lower Hey down from the Eynaim of the Nukva. By this her AHP immediately return to the building of her body, and she thereby attains complete discernments of Achoraim [posterior] of AHP of her own. Then she is sawn off [Nisseret] and parted from ZA and becomes a Partzuf in her own right. (p. 771, Items 57 and 58).",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 18:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bekiat Nekev beAchor Chazeh [piercing of an opening at the back of the chest]</b><br>It is known that from his root, ZA has only six vessels, which are CHaGaT NHY — the secret of the level of Bechina Aleph [the first discernment], called the five Hasadim [mercies], corresponding to the five discernments KaCHaB ZON of the Light of Chochma. The CHaGaT are discerned as the first three of the five Hasadim, that is, as a Rosh [head], and the NHY as the discernment of the Guf [body] of the five Hasadim, standing in the place of ZON of the five discernments KaCHaB ZON, as is known. Therefore, at the time of the Katnut [smallness] of ZA, while CHaGaT serve him as a Rosh, the Peh [mouth] of his Rosh is discerned at the place of the Chazeh [chest], that is, at the ending of the upper third of Tifferet. In truth, he is then discerned as a body without a Rosh, for there is no Rosh except from the discernment of the first three of Chochma. Therefore, at the completion of the building of his Partzuf — that is, after he returns his fallen AHP to his degree as at first — the CHaGaT of Katnut rise and become CHaBaD, the NHY of Katnut rise and become CHaGaT, and the new AHP that were returned to his degree become new NHY for him. With this, the building of his Partzuf is completed as it should be. Therefore ZA has no opening [Nekev] in his Chazeh, even though at the time of Katnut his Peh was there. For the whole matter of that Peh he had at the Chazeh comes from the power of the ascent of the lower Hey to the Eynaim [eyes] at the time of his Ibur [conception], when his NHY were included in CHaGaT and the lower Hey was included at the place of his Chazeh — that is, the place of the Masach [screen] and the Tzimtzum [restriction] was fixed there, and hence from there upward his ten Sefirot came out from below upward. For this reason the Chazeh is discerned as the Peh of the Rosh, being the discernment of Malchut of the Rosh, as is known. And therefore now, in Gadlut [greatness], when the lower Hey descended from the Eynaim and the AHP of the discernment of Bina returned to the building of his body, and he attained the Masach of Bechina Bet [the second discernment], that Peh of Bechina Aleph that he had at the place of the Chazeh was closed up again, for the lower Hey descended from there and came to the discernment of the Ozen [ear], as is known.",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 19:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Bekiat Kol Mechitzot [piercing of all partitions]</b><br>At the time of the Katnut [smallness] of the Nukva, when she cleaves to him in a single wall, the Nukva receives the Lights in ZA only through an opening [Nekev], and not all the Lights of ZA are imparted to her — for then all the partitions between them would be annulled, and the two of them would become again like one body. Rather, the Lights do not pierce the partition between them, but pierce and pass only by way of an opening; meaning, according to the measure that ZA himself had at the time of his Katnut, when he too would receive in the measure of that opening. See Answer 18. (p. 777, Item 67).",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 20:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Brit [covenant]</b><br>The place of the Zivug [coupling] of the Upper Light — which is at the place of the Masach [screen] and the Aviut [thickness] that raises Ohr Chozer [Returning Light] — is called Brit [covenant]. It is the discernment of Yesod: by force of the ascent of NHY to CHaGaT that took place in the Ibur [conception] of every Partzuf, Malchut received the form of the Yesod and became like its measure. From then on the place of the Zivug rose to the Yesod (see Answer 9), and on this account the Yesod acquired the name Brit. And since there are four discernments of Aviut in the Masach, the measure of the Guf [body] is discerned as four Britot [covenants], for then it acquires its full measure. This is the secret of the verse \"and the number of the fourth part of Israel,\" for the Yesod received into itself the discernment of the Masach and the Aviut that had previously been corrected in the vessel of Malchut — that is, in the Partzufim of AK, as is known. Therefore it is what brings out all the levels of the souls, which are their \"fourths\" [Reviot] and the seminal drop of ZA, who is called Israel. And so it is even in the Nukva of ZA: the place of the Zivug changed in her too, to the discernment of the Yesod in her, and not in the place of Malchut, which is the discernment of her Ateret HaYesod [crown of Yesod]. (p. 769, Item 52)",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 21:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Brit Rova Hu [it is the covenant of the fourth part]</b><br>See Answer 20 there.",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 22:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Gevurot de BON de MA</b><br>Aba, plainly, is called MA, and he has a Nukva [female] in his body — that is, the BON side in him, which is the seven lower Sefirot of Chochma of Nekudim, the discernment of the Gevurot [judgments] in him. In the words of the Rav it is always called \"Gevurot de BON de MA of Aba\"; that is, the Gevurot that are the BON of Aba, who is himself the discernment of MA. (p. 805, Item 102)",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 23:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Gevurot de BON de BON</b><br>Ima, plainly, is called BON, but she includes MA and BON, which are Bina and Malchut of Bina of MA. The BON side in her is the lower Hey of Bina of BON, that is, from Gevura downward of Bina of Nekudim. And when it says \"Gevurot de BON de BON in Ima,\" the meaning is: the Gevurot [judgments] that are the BON in Ima, who is herself also called BON. There.",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 24:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Gevurot Zecharim [male Gevurot]</b><br>If the Gevurot [judgments] are in the discernment of the first three [GaR], they are called male Gevurot; and if they lack the first three, they are called female Gevurot. All the more so when they are not yet in a discernment of Zivug [coupling] at all — then they are called female Gevurot. (p. 759, Item 40)",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 25:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Gevurot Nekevot [female Gevurot]</b><br>Female Gevurot [judgments] means that they pass through a Masach [screen] and lack the first three [GaR]. See Answer 24. (There)",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 26:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Dalet Britot [four covenants]</b><br>The four discernments of Aviut [thickness] in the Masach [screen], at the time of their Zivug [coupling] with the Upper Light, are called four Britot [covenants]. See Answer 20 (p. 769, Item 52)",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 27:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Dormita [slumber]</b><br>After the Partzuf rises, in the secret of MAN [Mayin Nukvin], to its upper one — when the Mochin in it depart and come to the upper one — the Partzuf is discerned as remaining below in a state of Dormita, which means sleep. This is because the Mochin did not depart from it entirely, but left in it a little vitality, in the measure of a person asleep, who is not considered entirely dead, for a certain measure of vitality is still in him. (p. 808, Item 106; and p. 810, Item 108)",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 28:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Delet ve Tzir Aleph [a door and one hinge]</b><br>In order to understand the discernments of the door [Delet] and the hinge [Tzir] that are made in the Yesod of the Nukva, we must understand well the quality of the Yesod. It is known that at the time of the Ibur [conception], Malchut received the measure of the Yesod, as the Rav wrote on p. 769, Item 52. And you already know that the root of the Yesod was formed in the Yesod of AB of AK, where the Light of Malchut clothed in the vessel of Yesod and was formed there in a discernment of narrow and long [Tzar ve Arich]: narrow in the Light of Hasadim [mercies], because of the refining of the Masach [screen] of Bechina Aleph that took place in the vessel of Hod, so that it remained without Hasadim; but still long in Chochma, for the level of Chochma is called \"long,\" since there it is in the discernment of AB, which is entirely Chochma. Yet even that blocking of Hasadim was of great benefit. For therefore, at the time of Tzimtzum Bet [the second restriction], when the lower Hey was included in each and every Sefira due to the ascent of the lower Hey to the Eynaim [eyes], as is known, the Yesod was not marked by that ascent. This is because the main marking of the lower Hey in the Sefirot — in the secret of the left line in every Sefira, as is known — came about because wherever the lower Hey came, the Light would depart from there; by this power she was marked there and became the left line of that Sefira. Not so the vessel of Yesod: since from its source it stood in a great blocking of Hasadim, the passing of Malchut and the lower Hey through it caused no new action, for it lacked all Light in any case; hence it remained clean of Tzimtzum Bet at that time. Moreover, even at the time of the breaking of the vessels, when the power of Tzimtzum Bet in the Parsa caused the departure of the Light and the death of the kings [Melachim], it did not touch or harm the vessel of Yesod at all, from the aspect of its root mentioned above. And although the vessel of Yesod was also broken together with the rest of the kings, it was not broken entirely, for the aforementioned discernment of Gevura extended there from AB remained alive, as the Rav writes in Etz Chaim, Gate 8, Chapter 4.",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 29:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Delet ve Tzir Bet [a door and a second hinge]</b><br>From the discernments of the twenty-two letters that the Nukva received from ZA at the time of Katnut [smallness], the first door [Delet] and hinge [Tzir] in her Yesod were corrected; and from the twenty-two letters that the Nukva received from Ima, not through ZA, the second door and hinge were made. See Answer 28. (p. 790, Item 87; p. 794, the paragraph beginning \"VeZeh Amro VaHarei\"; and p. 795, Item 93)",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 30:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Dam Nidah [menstrual blood]</b><br>The MAN [Mayin Nukvin] — which are the discernments of Galgalta ve Eynaim of the lower one, receiving their correction in the vessels of the Yesod and womb [Rechem] of the upper one, which are the discernments of the AHP of the upper one that were returned in Gadlut [greatness] — have in that Yesod and womb two seals [Chotamot]. The first, from ZA, by which it became a boundary, which is the secret of the measure of engraving in the Yesod — see Answer 9 — made there in the secret of the bent fire [Esh Nichpefet]. The second is the discernment of the seal [Chotam] in the secret that its letters also spell Chomat [wall], which is the secret of the guarding from the discernment of the AHP of Gadlut that were returned to her, which she receives with the NHY of Ima — the secret of the new NHY that came out in Ima by the power of the inclusion of the Nukva there, at the time she received from Ima the discernment of her Mochin of Gadlut. As is known, these return to the Nukva as a clothing for her Mochin; and although those vessels are from Ima, from the respect of the Lights in them they belong to the Nukva, for they are the discernment of the level that pertains only to the Nukva and not to Ima. Therefore the illumination of the three names Ehyeh in the NHY of Ima is Chotam [seal] in Gematria; and this seal is the secret of the wall and the guarding that come there from the Mochin of Gadlut. And this second seal is not a measure of sinking [Shekia], like the first seal, but a measure of protrusion [Blita] (see Answer 9); and this is the secret of the Ateret Yesod [crown of Yesod] of the Nukva, which is only a discernment of protrusion — and understand this well.",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 31:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Derech Yerida [way of descent]</b><br>When the Lights spread from above downward in the Partzuf — for the Masach [screen], which is from below upward, spreads from itself and within itself into ten Sefirot and clothes in the discernment of a Guf [body], as is known — the Lights are then discerned as being in the way of descent. This is because they depend on the measure of the greatness of the Aviut [thickness]; and according to the measure of the greatness of the Aviut — that is, according to the depth of the sinking — so is the height of the level of the Light. Thus the Lights descend to the very bottom of the sinking, and according to the depth of their descent, so is the height of their level (see Answer 9). Therefore the name of this way of the Lights is the way of descent. (p. 777, Item 67).",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 32:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Derech Aliyah [way of ascent]</b><br>When the Lights clothe only in the Ohr Chozer [Returning Light] that rises from below upward, and do not spread with the Masach [screen] downward (see Answer 31), this way of clothing is discerned by the name \"way of ascent.\" (There).",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 33:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>He'arat HaGevurot [illumination of the Gevurot]</b><br>Before the Gevurot [judgments] have received their completeness — that is, their first three [GaR] — they are considered only an illumination of the Gevurot, and not their essence. (p. 743, Item 12)",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 34:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Hey Damim Tehorim [five pure bloods]</b><br>Not all the discernments of MAN [Mayin Nukvin] that rose in the secret of the Zivug of Ibur [conception] can be clarified there, for necessarily there are parts whose time of clarification has not yet arrived, but which must be clarified through the Lights of Yenika [suckling] or through the Lights of Gadlut [greatness]. Therefore their roots lie there in a still state — that is, they do not join with the Lights and vessels of the newborn. And there are measures in them: part of them turn into milk and are clarified through the Mochin of Yenika; and there are parts in them whose correction is still altogether distant, and they must leave there entirely and return to the outer ones [Chitzonim], as these measures are explained in their place. Therefore the whole of them divides into two discernments: the first are the five impure bloods, and the second are the five pure bloods. Their division follows the roots of the two kinds of MAN that are there in the Yesod of the Nukva. For there are MAN received by her from ZA from the time of Katnut [smallness], coming mainly from the discernment of the Masach [screen] of NHY of AK, from the secret of the <b>Vav</b> and the point that it imparted to the Yesodot of AVI of Nekudim, which are the roots of ZON, as is known. And the second MAN are what she received from Ima, coming from the discernment of the Masach of SAG of AK, from the secret of the Light of the looking of the eyes [Histaklut Eynaim] in Nekudim, from which only the first three Partzufim of Atzilut were made; and they are called the discernments of the second MaNTzePaCh, which she received not through ZA but from Ima. From these, no refuse is strained off such as would return and clothe in the outer ones, because they are discernments of vessels of Bina — for SAG is entirely the discernment of Bina — and therefore, after they have been clarified or have received some correction, it is never again lost from them, since from their root they are without any Tzimtzum [restriction] at all. Not so the first MaNTzePaCh of ZA, which are in essence from the discernment of the lower Hey; although they received in them from the discernment of the upper Hey, in the secret of the joining of the quality of mercy with judgment, still, so long as they have not received their complete clarification, they can be spoiled and fall back into the Klipot [shells], in the discernment of the five impure bloods. (p. 781, Item 74; and p. 786, Item 80)",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 35:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Hey Damim Teme'im [five impure bloods]</b><br>See Answer 34.",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 36:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The lower Hey of HaVaYaH</b><br>While the Nukva of ZA is with him back-to-back [Achor be Achor], and they cleave in a single wall, she is called by the name \"the lower Hey of HaVaYaH,\" for she cleaves to the <b>Vav</b> of HaVaYaH in his name. Afterwards, at the time of Gadlut [greatness], after she has been sawn off from him and become a separate Partzuf in her own right, she is called by a special name of her own, namely ADNI or Elokim. (p. 769, Item 53)",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 37:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Vav Ze'ira [small Vav]</b><br>Tifferet is called the great <b>Vav</b>, or a Vav with a head [Rosh], because it is the level of Bechina Aleph, comprised of CHaGaT NHY, where the CHaGaT are the discernment of KaCHaB of Hasadim [mercies] — its Rosh; therefore Tifferet is discerned as a Vav with a Rosh. But Yesod is the discernment of the level of the Light of Malchut — that is, the level of NHY lacking CHaGaT; therefore it is discerned as a small <b>Vav</b> without a Rosh, for it lacks the CHaGaT, which are the secret of the Rosh. (p. 766, Item 50)",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 38:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zivug Aleph [first coupling]</b><br>The first Zivug [coupling] made upon the MAN [Mayin Nukvin] means the Bi'ah Kadma'a [first coming], which makes in the upper one a vessel and the Rucha Kadma'a [first spirit]. The MAN — which are the Galgalta ve Eynaim of the lower one, present with their upper one in that coming and Zivug — cannot receive from there even the form of an embryo [Ubar], because this Zivug is made in the one above their upper one, and they must come out by way of the degree — that is, through the Zivug in their own upper one. Therefore they do not receive the discernment of Ibur [conception] until the second coming and Zivug, made in the degree of the upper one; and then they receive the form of the embryo. See Answer 11 (p. 735, Items 6 and 7)",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 39:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zivug Bet [second coupling]</b><br>See Answer 38.",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 40:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zayin Zemanim de Nukva [seven times of the Nukva]</b><br>The first is from the time of Nekudim before the correction, when she was a point under the Yesod; then the power of judgment [Din] was in her, and she had not yet received the sweetenings of the quality of mercy. Therefore her place is discerned according to the degree of emanation of the ten Sefirot of Ohr Yashar [Direct Light], which is under the Yesod of ZA. The second time is at the time of the first Ibur [conception] of the correction of ZA, when she is included in the middle line in the two measures, which are Tifferet and Yesod, by the power of the ascent of NHY to CHaGaT; the three of them — Tifferet, Yesod, and Malchut — are found included in one another, and there the Nukva was completed in the measure of the Yesod. The third is in the Yenika [suckling] of ZA, when the NHY spread out from within the CHaGaT — for through the Yenika, ZA attained the discernment of the Masach [screen] of Bechina Aleph, which are the vessels of CHaGaT — and then the Nukva acquired the measure of Tifferet, in the secret of the ten points [Nekudot], meaning the Aviut [thickness] of the Masach of Bechina Aleph, which raises Ohr Chozer [Returning Light] at the level of CHaGaT; by the power of this Ohr Chozer, the ten Sefirot of the level of CHaGaT clothe in the Partzuf of ZA. Hence the level of the Nukva, too, is discerned as equal to his, since it is measured by her Ohr Chozer. However, from the respect of the Nukva in herself, there is here only the discernment of the points of the level of Tifferet — that is, the discernment of the Masach with the Aviut in it, which are called points. The fourth is in the Gadlut [greatness] of ZA, when the Nukva is rooted in his Daat; that is, the Masach and Aviut in him raise Ohr Chozer up to the discernment of the ten Sefirot of the first three of Neshama, where the discernment of CHaBaD is; then the Nukva receives the discernment of the Masach of Bechina Bet and serves in the Yesod of the Rosh, called Daat. Now in these four times, no correction has yet reached the Partzuf of the Nukva herself, for all these four times were the growth of the Nukva that is in the body of ZA, who at every degree is found at a level equal to him; she is the discernment of the Masach and Aviut and every discernment of the Ohr Chozer in the degree — all of which is called by the name BON — while ZA is the discernment of the level itself of Ohr Yashar in the degree, all of which is called by the name MA. These MA and BON are in truth literally one body, for no degree can be revealed without both of them. Hence this is not at all the discernment of the actual Nukva; rather, the Nukva afterwards receives all her roots from the discernment of the Nukva in the body of ZA, as is written in its place. Therefore we also count the ascents of the Nukva in the body of ZA as discernments of the roots of corrections for the separated Nukva of ZA — that is, her own degree, from what she was there as a distinct level before herself at the time of Nekudim.",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 41:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zecharim [males]</b><br>If the Partzuf receives the Lights from the upper one, and the Lights are received within it in all that completeness they had above, at the place of their exit in the upper one, then it is discerned as a male. (p. 758, Item 37)",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 42:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zivug Minei uVei [coupling from itself and within itself]</b><br>If the Partzuf couples with the Nukva [female] in its own body, and not with a Nukva separated from it, this is called a Zivug Minei uVei: \"Minei\" [from itself] refers to the male side in it, and \"Bei\" [within itself] refers to the Nukva side in it. (p. 755, Item 32)",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 43:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zivug Neshikin [coupling of kisses]</b><br>The Zivug of kisses is a Zivug [coupling] that corrects the first three [GaR] of the Partzuf. It is drawn from the new Light that pierced the Parsa, came out through the Tabur [navel] of AK, and illuminated the first three of Nekudim. But the seven lower Sefirot of Nekudim did not receive their correction until the Light descended through the Yesod of AK and illuminated the Yesodot of AVI of Nekudim; and this Zivug, which was for the sake of the seven lower ones, is called the Zivug of Yesodot. From then on these two Zivugim apply: the first, for the correction of the first three; and the second, for the correction of the seven lower ones. The first Zivug is also sometimes called the spiritual Zivug, or the upper Zivug; and the second is called the lower Zivug. (p. 745, Item 16)",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 44:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zivug Elyon [upper coupling]</b><br>See Answer 43.",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 45:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zivug Tachton [lower coupling]</b><br>See Answer 43.",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 46:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chotam [seal]</b><br>There are two seals [Chotamot] in the Yesod of the Nukva: one in a discernment of sinking [Shekia], and the second in a discernment of protrusion [Blita]. The first is the illumination of the Gevurot that she receives from ZA, and this seal is the secret of a boundary [Techum]. The second she receives from Ima, and this seal is Chomat — that is, a wall of guarding. She receives this from the three clothings of NHY of Ima that come with her Mochin, which are the three names Ehyeh, which are Chotam [seal] in Gematria. See Answer 30. (p. 783, Item 78; and p. 798, Item 96)",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 47:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chotam Nikra Nidat [the seal is called Nidah]</b><br>See Answer 30.",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 48:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chitzoniyut [exteriority]</b><br>Four kings [Melachim] came out in the world of Nekudim from the four levels of AVI, from the discernment of the Chazeh [chest] and above, which are Daat and CHaGaT. And four kings came out there from the four levels of YESHSUT, from the discernment of the Chazeh and below, which are the two lower thirds of Tifferet, and NHYM. Therefore the discernment of their correction in Atzilut is likewise divided: the correction of the kings from the Chazeh and above is called interiority [Pnimiyut], and the correction of the kings from the Chazeh and below is called exteriority [Chitzoniyut]. (p. 749, Item 22)",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 49:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chelek me Rucha Kadma'a [a part of the first spirit]</b><br>Two parts are discerned in that spirit which her husband casts into her in the first coming [Bi'ah Kadma'a]: the first is what came out there upon the discernment of the Masach [screen] of the wife herself, which is her part, for her own building. The second is what came out there upon the added MAN [Mayin Nukvin] of the lower one, which cleave to her AHP; this is the lower one's part, which is with her as a deposit so long as the lower one itself is not fit to receive the whole of that level which came out there. And she gives it to him by measures, by way of the degrees: first Nefesh, then Ruach, until she completes for him the NRNCHY of Nefesh, and then gives him the orders of the degrees of Ruach — until she hands over the whole level of the lower one, all that came out upon his MAN in the first coming. Then the way of women ceases for her, for she has nothing more to bring forth, and nothing remains in her but her own part, which is all her vitality. And if this vitality too departs from her, she dies — in the secret of the verse \"as her soul was departing, for she died.\" See Answer 11. (p. 745, Item 15)",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 50:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Hasadim de MA de MA</b><br>Aba, plainly, is called MA. And \"Hasadim de MA de MA in Aba\" means: the Hasadim [mercies] that are the MA of Aba, who is called MA plainly. They are the discernments of Chochma and ZA of Bina of MA. (p. 805, Item 102)",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 51:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Hasadim de MA de BON</b><br>Ima, plainly, is called BON; therefore the MA side in her is called \"Hasadim de MA de BON of Ima,\" meaning: the Hasadim [mercies] that are the MA of Ima, who is called BON plainly. They are the discernments of Bina and Malchut of Bina of MA. (There)",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 52:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chatzi Shiur Vav [half the measure of the Vav]</b><br>Tifferet, which is CHaGaT, is called a <b>Vav</b> with a head [Rosh], being a level of Bechina Aleph, in which there are CHaGaT NHY — where the CHaGaT are the discernment of KaCHaB of Hasadim [mercies], and hence are the discernment of a Rosh, and the NHY in it are the discernment of a Guf [body]. But Yesod, which is a level of NHY alone and lacks the discernment of CHaGaT, is discerned as a cut-off <b>Vav</b>, which has no head; for it lacks the discernment of the five Hasadim of CHaGaT, and has only the discernment of their collectivity alone, which is the level of Malchut alone, as is known. It is likewise discerned as half the measure of the great <b>Vav</b>, for the NHY are half the Partzuf of ZA, which comprises the six extremities. (p. 747, Item 20)",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 53:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chafira [digging]</b><br>See Answer 9.",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 54:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Chakika [engraving]</b><br>See Answer 9.",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 55:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_55\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Tipa [drop]</b><br>For he extends from the Mochin only in the secret of the momentary Zivug [coupling], and immediately stops it, giving only enough for the reception of the Nukva [female]; and the Nukva goes on enlarging that drop with her illuminations. And since the Yesod does not continue extending with his illuminations, his illumination is discerned as being in the secret of a drop. (p. 756, Item 35)",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 56:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_56\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Tipat Odem [red drop]</b><br>Ima [mother] sows the redness in the newborn, which is the discernment of her MAN [Mayin Nukvin], being the discernment of GE [Galgalta ve Eynaim] of the lower one that rose and were clarified out of the Klipot [shells], while the lower Hey is still in their Eynaim — that is, the force of the Tzimtzum [restriction] and the Dinim [judgments]. They are also called five Gevurot, being the discernment of BON and Gevurot. And the father sows the whiteness in the newborn, which is the discernment of the Lights that emerge upon the Zivug of the incorporation of the MAN and their Aviut [coarseness] within the Masach [screen] of Katnut [smallness] of AVI [Aba ve Ima]. These Lights are the drop of MAD [Mayin Duchrin, male waters], and are called five Hassadim. Thus, Ima's share in that Zivug is the discernment of the Masach of Katnut of her own embryo state, in which the Aviut of the MAN — the five Gevurot — is incorporated; and Aba's share is the extension of the upper Light, which strikes the Masach and the Aviut in Ima's Masach. From these two the newborn is built. (p. 787, Item 82)",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 57:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_57\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Tipat Loven [white drop]</b><br>See Answer 56.",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 58:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_58\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Yod Nekudot [ten points]</b><br>The Masach and the Aviut, which cause the striking of the Light in them, are called Nekudot [points] — that is, only before they come into the secret of the Zivug. And since they are fit to raise Ohr Hozer [reflected Light] and to extend a level of ten Sefirot, they are called Yod [ten] Nekudot. (p. 772, Item 61)",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 59:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_59\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Wine that gladdens</b><br>The discernments of the five Gevurot, which are discernments of BON, that came out and were clarified from within the Klipot and were joined once more into the building of Atzilut, are deemed to cause great joy there; therefore those Gevurot are called \"the wine that gladdens\" — like a man who lost a great fortune and found it again. (p. 781, Item 73)",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 60:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_60\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Wine turning into blood</b><br>Every raising of MAN is through the prayers and good deeds of the lower ones. And if the lower ones afterwards return to their bad ways, they cause that those very MAN, which had already been clarified and joined to the Kedusha [holiness] in the secret of the wine that gladdens (see Answer 59), now — through the sins — fall back from the Kedusha to the Klipot, and turn there into blood, which is the nourishment of the outer ones; see Answer 30. (p. 781, Item 73; and p. 786, Item 80)",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 61:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_61\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Jerusalem</b><br>The discernment of the outer Yesod of Malchut is called Jerusalem. And the discernment of the Atara [crown] in her is also called Jerusalem, being the point of Malchut of the Nukva. (p. 780, Item 71; and p. 798, Item 95)",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 62:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_62\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The vessel that raises MAN</b><br>Since the AHP [Awzen, Hotem, Peh] of each degree fell to the degree below it, the GE of the lower one and the AHP of the upper one are found always cleaved to one another, both during the Katnut of the upper one and during the Gadlut [adulthood] of the upper one. For when the upper one raises its AHP, the GE of the lower one necessarily rise along with it. Therefore the AHP of each degree are discerned as the vessel that raises the MAN of the lower one — that is, its GE — since they are always cleaved to it. Only at the time of the lower one's Gadlut — that is, when it itself attains its own AHP and it, too, is completed with ten Sefirot — does it then part by itself, in its own degree, into a Partzuf distinct from the upper one. (Items 13 and 21)",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 63:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_63\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Twenty-two letters</b><br>Otiot [letters] means Kelim [vessels]. And twenty-two letters comprise the whole building of the Partzuf, just as the twenty-two letters of writing comprise all the wisdoms in the world, for by the combinations of the twenty-two letters every wisdom in the world can be expounded. So it is with the Kelim of the Partzuf: those Kelim are capable of receiving and bestowing all their Lights through the Zivugim of the Kelim in them, for the Zivugim in the Sefirot bear resemblance to the combinations of the alphabet. Understand this. (Item 85)",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 64:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_64\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Twenty-seven letters</b><br>When we come to speak also of the discernments of the MAN — that is, the Masach and Aviut of the discernment of the twenty-two letters — they are twenty-seven, for they are discerned in the five final letters, called MANTZEPACH. For the Masach and the Aviut in them are the forces of limit and ending that hold the upper Light back from passing beyond their boundary, this being the force of the Tzimtzum that rides upon them, by which there is a striking between them, begetting Ohr Hozer, which extends and clothes the Ohr Yashar [direct Light], as is known. Therefore these five letters MANTZEPACH are the roots and the origins of all twenty-two letters, for all the Kelim are nothing but the spreading of the Masach from within itself into ten Kelim, as is known, in the secret of the spreading of the Malchut of the Rosh into the Guf in the Partzufim of AK [Adam Kadmon]. Thus the twenty-two letters are offspring of the MANTZEPACH, which is the secret of the five origins in the mouth of the Partzuf, through which all twenty-two letters of speech are born and also pronounced. And there is a secret in this: in writing, the five letters MANTZEPACH come at the ends of words; but in speech they are origins and beginnings of the twenty-two letters. Hence together there are twenty-seven letters in the alphabet.",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 65:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_65\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The measure of the Yesod</b><br>The Malchut is called Revi'it [a fourth], in the secret of the verse \"a fourth of a hin.\" This is because she is the fourth letter of the four-letter Name; and the principal reason is that \"fourth\" carries the meaning of Zivug, and since the place of the Zivug is in the Nukva, she is called Revi'it. And it is known that in the world of Tikun [correction], the Yesod was made the place for the Zivug, in place of the Malchut in the Partzufim of AK. Therefore the Yesod, too, received this name, and is called Rova [a fourth part], in the secret of the verse \"and the number of the fourth part of Israel.\" And there is another reason: the measure of the Guf is four covenants — meaning there are in it four places of Zivug, in the secret of the four discernments of Aviut in the Masach — and therefore every Yesod is discerned as one fourth. For the Partzuf is not completed until it has the four discernments of the Zivug in completeness, namely: the level of NHY, the level of HGT, the level of HBD of Neshama, and the level of HBD of Chaya; and then it is completed, as is known. Therefore the measure of the Yesod of every level is discerned as one quarter of the completeness of the Guf. (p. 769, Item 52)",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 66:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_66\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The measure of the Tifferet</b><br>The measure of the Tifferet is four covenants, for ZA [Zeir Anpin] has no completeness with less than that. For as long as he has no Mochin of Chaya, he is discerned as lacking, and is not fit to beget. And this is the secret of \"the measure of the Guf is four covenants\" — meaning that he should have four levels, which are extended to him in the secret of the four Yesodot, as above in Answer 65. (There)",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 67:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_67\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Mechitzot [partitions]</b><br>The Kelim — that is, the Guf of the Partzuf — come from the spreading of the Masach of that Partzuf; therefore every Partzuf is bounded with partitions of its own, that is, according to the measure of the Aviut in the Masach, whether of Behina Aleph or of Behina Bet and so forth. A Partzuf of Behina Aleph, for example, cannot receive anything from a Partzuf of Behina Bet, because the partitions of Behina Bet in the Kelim of its Guf hold it back. And the whole difference between the degrees is recognized only in these partitions — that is, in them govern the limits and the Aviut that branch out from the discernment of the Masach of that Partzuf. (p. 777, Items 67 and 68) The sum of the twenty-two letters of each Partzuf is found in the Yesod of that Partzuf — that is, in the Masach there, from which its twenty-two letters were born and came out. And they are drawn there in the form of a single <b>Dalet</b>, in the secret of door and hinge (see Answer 28), where the hinge contains two Heys joined together, from which two Vavs spread out. There is a first hinge and door of ZA, from the time of Katnut; and there is a second hinge and door from the side of Ima, from the time of Gadlut. And at the time of Gadlut, when she attains the second door and hinge, the two doors join one another in the form of a closed <b>Mem</b>, which closes about the embryo so that it cannot go out from there. And this closing force is in the Vavs, which are the discernment of the Yesod itself. For now, at the time of Gadlut, when the lower Hey has already descended from the hinge — which is the secret of the Tzimtzum and the force of Din that were there — no Aviut remains there any longer except from the Yesod itself, from its root in the Yesod of AB; and it ends all the Lights in the Nukva, even the discernments of Hassadim in her, in the secret of its force being drawn from the Yesod of AB, while \"Ima spreads only as far as Hod.\" And the Lights of Hassadim of Ima stop, and do not touch it. Therefore it closes, from itself and upward, in the Yesod of Ima, so that not even the least of the Hassadim pass through it. And for this it is called a closed <b>Mem</b>: the four Vavs there join together and seal off the Hassadim from the Yesod of Ima onward, that they spread not even a little. And since all this closure is made by the force of the illumination of the Yesod of AB — in whose Kli neither the discernment of Katnut of the lower Hey in the Eynaim nor the discernment of the breaking governed, as above in Answer 28 — it is therefore a most excellent guard against the forces of Din and the outer ones, which have no possibility whatever of sucking from the forces of Din that are there in the newborn itself. Understand this. (Item 87)",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 68:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_68\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Closed Mem</b><br>See Answer 67.",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 69:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_69\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>MAN [Mayin Nukvin]</b><br>MAN means the Galgalta ve Eynaim of the lower one, which were cleaved in one degree with the fallen AHP of the upper one. Therefore, at the time of the upper one's Gadlut, when it has already returned its fallen AHP to itself and they have become its new NHY, the GE of the lower one are necessarily found in them as well, and there they are discerned as the discernment of MAN. Thus, every Partzuf that has already attained its discernment of Gadlut has the GE of its lower one cleaved to its NHY, serving it as MAN.",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 70:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_70\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>MANTZEPACH</b><br>The discernments of Masach and Aviut of a Partzuf that remained in it from the time of its Katnut are called MANTZEPACH. And by this name we distinguish between the MAN of the lower one, which are cleaved to the AHP of the Partzuf of the Nukva, and the MAN of the Nukva herself, which remain in her from the time of her own Ibur [conception]. For the MAN of the lower one must be incorporated in the Masach of the Ibur of the Nukva herself, and then they receive the level of the Ibur; hence the MAN of the Ibur are incorporated in the MANTZEPACH of the Nukva, and the Nukva raises them as MAN to ZA, and then the embryo, too, is built in its own MAN, and receives its level. This is the secret of \"it eats what its mother eats,\" and this is the secret of \"the embryo is its mother's thigh,\" for the MAN of the embryo are incorporated in her MANTZEPACH, and have no recognition of their own. See Answer 69. (Item 73)",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 71:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_71\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>First MANTZEPACH</b><br>See Answer 1. There are two kinds of MANTZEPACH in the Nukva: the first, from the time of her Katnut, being discernments of Gevurot and Dinim, on account of the lower Hey in their Eynaim, which causes the lack of GAR. And there is MANTZEPACH from the time of the Nukva's Gadlut — that is, when the lower Hey has already descended from her Eynaim; and these MANTZEPACH are sweetened Gevurot, and they are more important than the Hassadim. The first MANTZEPACH the Nukva receives from ZA; and the second MANTZEPACH she receives from Ima. (Items 73 and 95)",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 72:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_72\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Second MANTZEPACH</b><br>See Answer 71.",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 73:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_73\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Nesira [sawing apart]</b><br>At the time of Katnut, the Nukva is cleaved to the Achoraim [back] of ZA, and the wall of ZA — which is the discernment of the Achoraim of ZA from the time of his Katnut — serves the Nukva as well. But through the Mochin that she attains from Ima, which bring the lower Hey down from her Eynaim, she returns her AHP to herself, and they become new NHY for her, which are made into Achoraim for her. And then ZON are sawed apart and separated from one another, for she has Achoraim of her own. (Items 13 and 92)",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 74:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_74\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Na'ar lacking a Hey</b><br>When she receives the hinge and door and MANTZEPACH of ZA, which are Dinim (see Answer 28), she is then called Na'ar [lad], lacking a Hey. (Item 97)",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 75:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_75\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Na'arah with a Hey</b><br>After she has received the door and hinge and the second MANTZEPACH from Ima, not by way of ZA — which are sweetened Gevurot — the Nukva is called Na'arah [maiden], with a Hey, alluding to the five sweetened Gevurot. (There)",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 76:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_76\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Nefesh of Malchut</b><br>After the Nukva attains all her Gadlut — that is, her AB, SAG, MA, and BON — she is then discerned as a complete Nefesh, and is fit to beget. (Items 11, 14)",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 77:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_77\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Nekeva [female]</b><br>Malchut of Atzilut is called by the name Nekeva, because she receives her Lights from ZA through the hole [Nekev] of the chest — see Answer 18 — for Lights that pass through a Masach and a hole are weakened and diminished; see Item 3. And there is a second reason: it is the initials of her four times, which are: Na'arah [maiden], Ketana [little one], Bogeret [mature one], and the lower Hey. (p. 759, Item 39; and p. 761, Item 44)",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 78:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_78\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The point below the Yesod</b><br>The point below the Yesod is the root of the Malchut of ZA, found beneath his six ends. From there it rose and was incorporated in the whole of the middle line of ZA, in the discernment of the Nukva in his Guf; and afterwards the separate Nukva of ZA takes all of that incorporation. (p. 775, beginning \"Achoraim\")",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 79:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_79\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Souls of male men</b><br>The souls formed from the Gevurot that come with the MAD from ZA are souls of male men. (Item 42)",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 80:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_80\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Salik beRe'uta</b><br>The Zivug made on a discernment of Masach in which there is only Aviut of the discernment of Keter — which is only the root discernment of Aviut — is called a Zivug of Re'uta [desire], or Salik beRe'uta [\"it arose in the desire\"]. This is because the Keter is root to all the desires in the four discernments, as is known. (Item 1)",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 81:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_81\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>AB KDM</b><br>The fallen AHP of every Partzuf, which are returned to it at the time of Gadlut through the illumination of the Zivug of AB-SAG and become its Achoraim — that is, its new NHY — are alluded to in the Gematria AB KDM, which is the discernment of the two Achoraim of Rosh and Guf. For the simple HaVaYaH is the discernment of the Rosh, whose square and Achoraim — Yod; Yod-Hey; Yod-Hey-Vav; Yod-Hey-Vav-Hey — are AB [72] in Gematria. And HaVaYaH with the filling of BON is the discernment of the Guf, whose Achoraim, alluded to in the square — Yod; Yod, Hey-Hey; Yod, Hey-Hey, Vav-Vav; Yod, Hey-Hey, Vav-Vav, Hey-Hey — are KDM [144] in Gematria. Together they are RIV [216] in Gematria. And they are the vessel that raises the MAN, which comes with the first coming. (Item 10)",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 82:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_82\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The thickness of the line</b><br>At the time of the Ibur, when NHY were incorporated in HGT, these in those, the middle line grew thicker than the extremes; for those were merely doubled, while in the middle line three discernments were incorporated in one another, namely: Tifferet, Yesod, and Malchut. And it is known that Aviut [thickness] means Gevurot and Dinim; see Answer 28. (p. 764, Item 49)",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 83:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_83\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>First Ibur</b><br>The Ibur [conception] that is for the very existence of the Partzuf is called the first Ibur. And the Ibur that is only for an addition of good — that is, for an addition of Mochin, and not for the essence of the Partzuf — is called the second Ibur. (Items 33 and 49)",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 84:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_84\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Second Ibur</b><br>See Answer 83.",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 85:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_85\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Ibur of nine and of seven months</b><br>In interiority, even the first Ibur is nine months, for NHY are incorporated in HGT, and HGT in HBD — thus nine discernments. And the second Ibur, of the Mochin, in interiority, is drawn from the discernment of Atik — that is, the seven lower ones of Atik that are clothed in the Galgalta of AA [Arich Anpin]. And since there is no attainment in the Hesed of Atik, there are only six months here — that is, seven incomplete months. (Items 26 and 28)",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 86:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_86\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Ibur of twelve and of nine months</b><br>The first Ibur is the discernment of the incorporation of NHY in HGT, which are six discernments. And there are these six discernments from AVI, and six discernments from AA, which are twelve discernments; and here the principal one is AA. And in the second Ibur there is the incorporation of NHY in HGT, and both of them in HBD — thus nine discernments; and here their principal is only from AVI. And \"month\" means the renewal of a discernment. These two Iburim are in the discernment of the exteriority of the Partzuf. (Item 24)",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 87:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_87\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Itra de Gevura [crown of Gevura]</b><br>It is the five Gevurot belonging to the Nukva, which are the discernment of BON. (Item 76)",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 88:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_88\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Itra de Hassadim [crown of Hassadim]</b><br>It is the five Hassadim — HGT NH — corresponding to the five discernments KHB ZON. (Item 41)",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 89:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_89\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>The essence of the Gevurot</b><br>Before the Gevurot come into a Zivug with the Hassadim, while they still have no discernment of GAR, they are called \"illumination of the Gevurot,\" and not \"essence.\" And when they attain their discernment of GAR through the Zivug with the Hassadim, they are then discerned as the essence of the Gevurot. (Item 103)",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 90:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_90\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Pesia leVar [a step outward]</b><br>Since the Kli of the Yesod, from its root in AB of AK, is entirely lacking the five Hassadim — although it has of the completeness of Hochma — it is discerned as being outside the spreading of Bina; for Bina \"spreads only as far as Hod,\" and the whole source of the Yesod is only from the spreading of Aba, with a discernment of illumination of Hochma, in the way it had in the Partzuf AB of AK. Therefore, when ZA is in Ibur, the illumination of Ima does not reach to spread to his Kli of Yesod, and it is discerned as being a step outward. However, the Yesod is incorporated in the Tifferet, and from there it receives; but the Malchut, which is incorporated principally in the Yesod, is found to have received his measure, and the Malchut in the Ibur is therefore found in the discernment of a step from outside. (p. 766, Item 50)",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 91:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_91\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Zion</b><br>The discernment of the inner Yesod of the Nukva, sealed from the twenty-seven letters of Ima, is called by the name Zion. (Item 71)",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 92:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_92\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Tzelem</b><br>When the Mochin are bestowed from the upper one to the lower one, they receive with them clothings from the discernment of the Kelim of the upper one. And those clothings are called Tzelem: the <b>Tzadi</b> is the discernments of NHY, the <b>Lamed</b> is the discernments of HGT, and the <b>Mem</b> is the discernments of KHBD. (Item 67)",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 93:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_93\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Tzela [rib]</b><br>When the Nukva is cleaved back-to-back to the back of the chest of ZA, she is called Tzela [rib], for she is cleaved to his Guf, and the two of them use one wall. (Item 57)",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 94:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_94\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Kista de Chayuta</b><br>When the Partzuf rises as MAN, it remains in its place with the departure of the Mochin; and then it is discerned that there remains in it a discernment of Kista de Chayuta, meaning a Reshimo [record] of its Mochin, which is its discernment of subsistence. It is roughly like a sleeping man: with the departure of all the powers from him, he is nonetheless not deemed dead, but there is a little vitality in him, such that he is fit to have all his vitality return to him when he stirs from his sleep. So this Reshimo, called Kista de Chayuta, is what receives back all his Mochin at the time when the Mochin return to him from the upper one. (p. 810, Item 108)",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 95:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_95\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>A little vitality</b><br>In that first Rucha [spirit] that the Nukva took in the first coming there are two parts: the first, belonging to her own building; and the second, what belongs to her sons — see Answer 13, and Answer 49. And after the sons have already taken all their share of that first Rucha, there still remains in her the part that is her own; and this part is called \"a little vitality.\" (p. 745, Item 15)",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 96:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_96\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Revia Tifferet [fourth of Tifferet]</b><br>See Answer 65, and Answer 26.",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 97:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_97\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Rova Israel [fourth part of Israel]</b><br>See Answer 65, and Answer 26.",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 98:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_98\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Rucha deShadi beGava [the spirit he casts into her]</b><br>When ZA and Nukva rise as MAN to the upper AVI — for then they couple there in the palace of AVI, the first time after the Nesira — he then gives her a Rucha [spirit], which is the discernment of the essence of the Gevurot of the Nukva, that is, her discernment of GAR, and it completes her Nefesh, and she is completed in her AB, SAG, MA, and BON. And this is called the Rucha that her husband casts into her in the first coming. And this first coming is a face-to-face Zivug of ZON. However, with respect to their own discernment, this first coming is discerned as a back-to-back Zivug, since they serve in the Kelim of AVI — that is, they are then included in the Zivug of AVI themselves, and they themselves are not called by name, being included in AVI in the secret of MAN. Therefore this Zivug is in truth reckoned in the name of AVI; but since AVI do not couple upon discernments of MAN of their own, but upon the MAN of ZON, it is discerned as a face-to-face Zivug of ZON, for the Zivug is made upon their MAN, and not upon MAN of AVI. Understand this well. (Item 105)",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 99:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_99\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Rucha Kadma'a [first spirit]</b><br>See Answer 98.",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 100:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_100\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>RIV [216]</b><br>The Kelim of AHP that are returned to the Partzuf at the time of Gadlut are discerned by the name of the Gematria RIV [216]. For being a discernment of Achoraim, they are discerned by the square of the Names; and being the discernment of the old Kelim from Nekudim, they are discerned as HaVaYaH with the filling of BON — and the square of the simple HaVaYaH together with the full one filled with BON is AB KDM, which in Gematria is RIV. See Answer 81. And the discernments of the Lights in them are from the HaVaYaH of AB, for the lower Hey does not descend from her place to raise the fallen AHP except through the drop of the Zivug from AB, as is known. Therefore the Lights in them are discerned as three times AB, which clothe in these returned AHP; and three times AB is likewise RIV in Gematria. (Items 10 and 17)",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 101:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_101\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Shokea [sinking]</b><br>See Answer 9.",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 102:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_102\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Shena [sleep]</b><br>When the Partzuf rises in the secret of MAN, it is discerned, in its own place, as being in the secret of sleep — meaning the departure of the Mochin, in such a way that there remains within it a discernment of Kista de Chayuta. See Answer 94. (p. 809, Item 106; and p. 810, Item 108)",
+      "anchors": []
+    },
+    {
+      "n": 103,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 103:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_103\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>A third of the measure of the Yesod</b><br>In every Sefira there are three thirds, which are the discernments of GE and GAR of Bina, as is known, for only these remained above Tzimtzum Bet [the second restriction], while the AHP of every degree fell below it. And they are the main essence of the degree, for the AHP that are returned at the time of Gadlut are not counted as principal in the Partzuf, but only as discernments of addition — except for the Kli of the Yesod, which could not receive from the GAR of Bina, because Bina \"spreads only as far as Hod,\" as is known. Therefore the lower third of the secret of the Malchut was joined to it, and became its own Atara [crown]. And this is the first sweetening of the Malchut, in that it became a part of the essence of the Yesod, namely its lower third. (p. 762, Item 46; and p. 763, beginning \"Therefore\")",
+      "anchors": []
+    },
+    {
+      "n": 104,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 104:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_104\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Dregs of wine</b><br>Like wine: after it is strained, there remain behind it the dregs that necessarily accompany it. So it is in the clarifications of the Sefirot: after the clarifications there always remains refuse that is not fit to be clarified at that degree, and it returns to the mixture of the Klipot, in the secret of the dregs of the wine. See Answer 34. (Item 73)",
+      "anchors": []
+    },
+    {
+      "n": 105,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IX, List of Answers on Terminology 105:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_IX,_List_of_Questions_on_Terminology_105\" target=\"_blank\" rel=\"noopener noreferrer\">to the question</a>)</small> <b>Six Nekudot [points]</b><br>In the Ibur, only three Nekudot are revealed in it, which are NHY; for HGT have no discernments of Aviut and Masach, and therefore they clothe and are incorporated within the three Nekudot of NHY. But at Yenika [suckling] it acquires the Aviut of Behina Aleph, and then that Aviut comprises six Nekudot, which are HGT NHY. And remember here that Nekudot means the Aviut of a Masach, which couples by striking with the upper Light and brings out the measure of the level. (Items 53 and 55)",
       "anchors": []
     }
   ]

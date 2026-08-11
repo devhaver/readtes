@@ -2,12 +2,402 @@
   "chapterId": "part-04/answers-terminology-01",
   "layer": "source",
   "versionId": "en-ai",
-  "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 1:1",
       "html": "At the time of the refinement of the screen from phase to phase — for example, from phase four to phase three, where the coupling by striking is made in phase three — the illumination of the coupling then descends from phase three into phase four, which is empty of its light, and this illumination is called “descending reflected light.” (Part 4, Chapter 4, Item 32)",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 2:1",
+      "html": "The generality of the light that is rejected from the Tabur downward of every Partzuf, by reason of the coupling by striking in the screen in Malchut of the Rosh [head] of the Partzuf, is called “surrounding light.”",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 3:1",
+      "html": "The four levels — Hochma, Bina, ZA and Malchut — that emerge through the coupling at the time of the refinement are called “light that comes by way of return.” The reason is that the lights are then going and departing, and the couplings that are made are made only because the upper light does not cease shining even for a moment; hence it is found coupling with the screen at the degrees at which it comes in the course of its refining. They are therefore not considered lights of mercy, which are called direct light, but a discernment of judgement, which is called reflected light. (Part 4, Chapter 3, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 4:1",
+      "html": "The force of the screen and the reflected light in it, which are in the vessel of Malchut, is called “the light of Malchut.” The refined light of the record of Malchut is likewise called the light of Malchut. (Part 4, Chapter 4, Item 32)",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 5:1",
+      "html": "After the departure of the ten Sefirot of direct light from within the ten Sefirot of reflected light that clothed them, the reflected light remains below in the discernment of “coarse and gross light,” since they are empty of light. Their coarseness is then revealed and they are recognised as a vessel. Indeed, before the direct light expanded out of the reflected light, the two of them were as though mixed with one another. (Part 4, Chapter 6, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 6:1",
+      "html": "The first expansion, from Malchut of the Rosh [head] of AK downward to Malchut of the Guf [body] of AK, is called “Akudim.” The reason is that all ten Sefirot are bound [Akudot] there in a single vessel, that of Malchut, for the remaining first nine Sefirot did not yet have vessels. It is the discernment of direct light and of mercy, and it is called the first light. (Part 4, Chapter 3, Item 9)",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 7:1",
+      "html": "The lights of Akudim, after they departed, left records behind them within the places where they had been. And they are direct light, like the generality of their light. (Part 4, Chapter 3, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 8:1",
+      "html": "See “the falling sparks.” (Part 4, Chapter 3, Item 11)",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 9:1",
+      "html": "That part of the vessel which is designated neither for reception nor for bestowal is called “posterior.” And see “by way of the posterior.” (Part 4, Chapter 3, Item 6)",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 10:1",
+      "html": "When the screen of phase four was refined and the level of Keter departed from there, leaving phase four in darkness without light, this force of judgement is called “posterior.” And it remains engraved there in the vessel of phase four until it receives its correction. And so with all the levels. (Part 4, Chapter 3, Item 6)",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 11:1",
+      "html": "Malchut is called “the mirror that does not shine” for two reasons. The first, because the light of Malchut left no record after its departure, as the other lights did. The second, because in the second expansion the lights were exchanged: the light of Hochma came into the vessel of Keter, and the light of Bina into the vessel of Hochma, and so forth, until the light of Malchut came into the vessel of ZA, and the vessel of Malchut remained without light. (Part 4, Chapter 4, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 12:1",
+      "html": "After the light has departed from the vessel, and before it receives its correction so as to be fit once more for the clothing of the light, the vessel is then discerned in the state of “nullification,” resembling a vessel that has been made void of its use. (Part 4, Chapter 4, Item 7)",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 13:1",
+      "html": "The matter of the clothing of the lights in vessels must be first in the discernment of “potential” and afterwards in the discernment of “actuality.” The discernment of the clothing of the ten Sefirot in potential is called Rosh [head], and the discernment of the clothing of the ten Sefirot in actuality is called “Guf [body].” (Part 4, Chapter 1, Inner Light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 14:1",
+      "html": "The expansion of the light and its departure afterwards “cause the existence of a vessel.” (Part 4, Chapter 1, Item 9)",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 15:1",
+      "html": "Since the light is limited and measured only by the measure of the coarseness of the screen — for according to the magnitude of the coarseness, so is the magnitude of the level of the light — the coarseness is therefore discerned as the vessel and the receptacle for the light. And for this reason the discernment of coarseness is discerned as the wall of the vessel, for the whole of the vessel is nothing but its walls. And the four phases in the coarseness are discerned as four shells in the thickness of the wall, clothing one upon the other, which are discerned as internality and externality. For the greatest coarseness in the wall of the vessel, which is the one that draws and the one that measures the abundance, is discerned as the internality of the vessel, and the remaining phases that are more refined than it are discerned as the externality of the vessel. And if there is coarseness of phase four there, she is the internality of the vessel, and phase three is externality to her, and phase two is externality upon phase three, and phase one is externality upon phase two. And all of them together are called the wall. (Part 4, Chapter 5, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 16:1",
+      "html": "The external phases in the wall of the vessel (see “wall”) are also called the posterior of the vessel. For only the internal side of the vessel is discerned as shining, because the light is limited and bound in it; but the externality, which does not serve to draw the light, is discerned as not shining and is called posterior. Therefore the levels that emerge upon the screen at the time of its refining are said to emerge “by way of the posterior,” for these emerge upon the three phases that are more refined than phase four, which are externality to her, and they are thus found to emerge by way of the externality and the posterior of phase four. (Part 4, Chapter 3, Item 6)",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 17:1",
+      "html": "In the light of Hassadim there are two sides: right and left. For an abundance of Hassadim is called the right side, and a restriction of Hassadim is called the left side. And they are called “sides” to teach that the two of them are equal in their rank, after the likeness of two sides of one level. For just as there are important corrections in the abundance of Hassadim, so there are important corrections in the restriction of Hassadim. And the place where the abundance is revealed through the joining of the two sides together is called “by way of the sides.” (Part 4, Chapter 5, Item 1)",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 18:1",
+      "html": "The five phases KHB, ZA and Malchut are sometimes discerned by the name “five Hassadim.” That is, in a place where there is no light of Hochma in the GAR, KHB, but only the light of Hassadim alone, the five phases are then called the five Hassadim: HGT, Netzah and Hod. (Part 4, Chapter 6, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 19:1",
+      "html": "The five Hassadim mentioned above in Item 18, which are called HGT NH, are in truth the five phases KHB, ZA and Malchut. But because there is no light of Hochma in the first three phases, only the light of Hassadim, they are called HGT NH, which indicates that the three phases KHB of ZA are in the light of Hassadim alone, while its own discernment is called Netzah, and the inclusion of Malchut in ZA is called Hod. They are therefore called “the five ends,” to teach that each end indicates a particular one of the five phases KHB ZON of direct light that are included in ZA, in the manner explained. Indeed, Yesod of ZA is not a distinct end, for there are no more than five phases of direct light, as above; rather, Yesod of ZA is the discernment of the inclusion of all five ends together. Thus these five phases are found twice in ZA: first in particularity, where each phase is separate in itself as a particular end, and these are called HGT NH; second in generality, where they are all included together and mixed one with another, and this is called Yesod of ZA. (Part 4, Chapter 6, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 20:1",
+      "html": "All the measures and the quantities and the multiplicity of forms in the light come from the coarseness in the screen and from its refining, for it then brings out levels in forms that differ from one another, as is known. This is therefore called “the limitation of the light.” (Part 4, Chapter 1, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 21:1",
+      "html": "The detaining force in the screen of Malchut of the Rosh [head], which detains the upper light from expanding into Malchut — this detaining is only in “potential” and not in “actuality,” for even the clothing upon the first nine Sefirot that are there is likewise only a clothing in “potential.” And both the clothing and the rejection of the light are revealed in “actuality” only in the Guf [body]. (Part 3, Chapter 12, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 22:1",
+      "html": "The limitation of the screen in Malchut of the Rosh [head] is only in the discernment of “potential,” and it is not revealed in actuality except in the screen in Malchut of the Guf [body], which is called Tabur. See Item 26. (Part 3, Chapter 12, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 23:1",
+      "html": "See Part 3, answer 36.",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 24:1",
+      "html": "See Part 3, answer 37.",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 25:1",
+      "html": "See “limitation in potential.”",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 26:1",
+      "html": "Everything that takes place in the coupling by striking of the upper light in the screen in Malchut of the Rosh [head] — namely the rejection of the light from Malchut downward, and the clothing of the light upon the first nine Sefirot from Malchut upward — is not revealed there in actuality, but only in the screen in Malchut of the Guf [body], which is called Tabur: from the Tabur downward the light is rejected, and in the first nine Sefirot from the Tabur upward it clothes. (Part 4, Chapter 1, Inner Light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 27:1",
+      "html": "When the light longs for equivalence of form, to be refined like the Emanator, and is therefore found wanting to depart from its clothing in the vessels, this departure is called “longing for its source.” And this matter is drawn through the striking of inner light and surrounding light one against the other. And you must understand that the intention is not upon the upper light in its self, but upon the ten Sefirot of direct light, which are already in the discernment of a shared relation between the light and its garment — for it is on this account that they are called Sefirot. Indeed, of the self of the upper light we have no utterance or word at all, for there is no attainment of light without a garment or a vessel. (Part 4, Chapter 3, Item 10)",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 28:1",
+      "html": "The departure of the light, which is caused by the refining of the screen, is called a “return” to the Emanator — that is, to Malchut of the Rosh [head], which is the Emanator of the ten Sefirot that are called Guf [body]. For through their ascent there they are found to be renewed and to expand a second time, in the discernment of the second expansion. And in this way with every new expansion, which emerges only through the return of the lights to the Emanator, so that every return of lights to the Emanator is in order to bring about a new Partzuf. (Part 4, Chapter 3, Item 1)",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 29:1",
+      "html": "See “the five Hassadim.” And the five ends, which are HGT NH of ZA, are the five phases KHB ZON of direct light; and because of the lack of the light of Hochma in the GAR of ZA they are only five Hassadim. Indeed, Yesod of ZA is not counted among the five Hassadim, for there are no more than five phases; rather, Yesod is the discernment of the inclusion of the five phases together and of their mixing one with another. It is not a particular end that would be discerned as a “particular Hesed” of the five Hassadim. (Part 4, Chapter 6, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 30:1",
+      "html": "See “wall.” For the externality and the internality in the wall of the vessel are considered two halves of the wall of the vessel. That is, the half of the “thickness of the wall” that is the coarser is called the internality of the vessel, and it serves the inner light; and the half of the coarseness in the wall that is not so coarse is called the externality of the vessel, and it serves the surrounding light. (Part 4, Chapter 5, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 31:1",
+      "html": "Malchut of the Guf [body], from which the limitation and the rejection of the light in actuality begin, is called “Tabur.” (Part 4, Chapter 1, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 32:1",
+      "html": "The expansion of the light from above downward — that is, from the Peh [mouth] of AK to the Tabur — is called “tastes,” from the language of “and the palate tastes food.” (Part 4, Chapter 3, Item 11)",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 33:1",
+      "html": "See “by way of the sides,” in Item 17.",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 34:1",
+      "html": "In the ten Sefirot of the Rosh [head] the Sefirot are not discernible; they are only the discernment of the “force of the ten Sefirot,” which means a root — like the seed, which is the root of the tree, and yet the tree is not discernible in it. See Part 2, answer 55. (Part 4, Chapter 1, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 35:1",
+      "html": "The half of the outer thickness of the wall in the vessel serves the surrounding light. See “half the thickness of the wall,” Item 30. (Part 4, Chapter 5, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 36:1",
+      "html": "Phase four of direct light, which is the discernment of coarseness, upon which the restriction was made so that she would not receive in her great measure, is called “the vessel of Malchut.” (Part 3, Chapter 1, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 37:1",
+      "html": "In Yesod of ZA there is a generality of all five ends, HGT NH, of ZA. See “the five ends,” Item 19. (Part 4, Chapter 6, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 38:1",
+      "html": "A minute illumination, which does not suffice to give relief but only suffices to sustain the form of the vessel upon its base — this illumination is called “to enliven the vessel.” (Part 4, Chapter 2, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 39:1",
+      "html": "Before the light clothes in vessels it is called “the upper whiteness,” which indicates that there is no colour in it at all, for all the colours come only from the side of the vessels. (Part 4, Chapter 1, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 40:1",
+      "html": "Malchut of the Rosh [head] is discerned as the Emanator with respect to the ten Sefirot that are called Guf [body]. And likewise every upper degree, with respect to the one below it, is called “Emanator.” (Part 4, Chapter 3, Item 4)",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 41:1",
+      "html": "When the light is held and dependent upon the measure of coarseness in the vessel, so that it can expand there neither less nor more than the measure of coarseness in it, it is said to be “limited” within the vessel. And see “the limitation of the light” in Item 20. (Part 4, Chapter 5, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 42:1",
+      "html": "See Part 4, Chapter 1, Item 3.",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 43:1",
+      "html": "When lights cleave to one another by reason of the equivalence of their form to one another, this is called the joining of the lights. But if there is a disparity of form between them, and yet they join because of some bond between them that equalises them together, this is called being “mixed together.” For the disparity of form between them does not let them cleave together into one in actuality; rather, a difference necessarily remains between them. Indeed, the equality of rank that they have acquired mixes them one with another, until the poor is not discernible before the rich. For example, direct light that is clothed in reflected light: since the direct light cannot shine in the least except according to the magnitude of the reflected light, they are for this reason discerned as being mixed together, for the coarseness in the reflected light has the same rank and importance as the refinement in the direct light. Therefore the coarseness and the refinement are mixed one with the other, and the disparity of form between them is not discernible. (Part 4, Chapter 6, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 44:1",
+      "html": "The ten Sefirot of the Guf [body] are always called “receivers,” for the light reaches them from above downward. (Part 4, Chapter 3, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 45:1",
+      "html": "Malchut of the Rosh [head] is considered “the source of the lights,” by reason of the reflected light that she raises and with which she clothes the ten Sefirot of the Rosh, and she brings them into the Guf [body]. (Part 4, Chapter 6, Item 15)",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 46:1",
+      "html": "Illuminations whose way is to be extinguished, and which are destined to be awakened and to kindle and to shine again as at first, are called “sparks.” For they resemble the sparks that remain after a fire, or those that fly out from under the hammer in a craftsman’s hand: although they appear to be going out, they are nevertheless liable to kindle into a great and terrible flame. And the said illuminations do not occur except in reflected light. (Part 4, Chapter 3, Item 10)",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 47:1",
+      "html": "When the illumination of the coupling that is made at the time of the refining of the screen descends from the upper phase to the lower phase that is empty of her light — as, for example, when the screen was refined from phase three to phase two and phase three was emptied of her light — then the illumination of the coupling descends from phase two into the empty phase three. And since the record that remains in phase three is opposite to the descending illumination, they therefore strike and clash one against the other. Indeed, the descending reflected light prevails over the record, whose coupling has already ceased, and the reflected light descends into the vessel, and the record, which cannot be together with it in one subject, departs from there. And this illumination of the coupling that descends into the empty vessel is called “the falling sparks.” The reason is that very soon the coupling ceases from phase two as well and rises to phase one, as is known, and the illuminations are found to be extinguished, and the record returns and descends to its vessel. For now the descending reflected light has no rank whatsoever over the record, since both of them are found after the departure of their coupling; and since the light of the record is incomparably greater than the descending reflected light, the record therefore now prevails over them and nullifies the illumination of the sparks that fall to its vessel, so that it can clothe there. And this matter is called striking and clashing, for at one time the descending reflected light prevails and at another time the record prevails, as explained. (Part 4, Chapter 3, Item 11)",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 48:1",
+      "html": "The four levels that emerge through the coupling by striking at the time of the refining of the screen are called “Nekudot,” and they are called reflected light, since they are judgement. (Part 4, Chapter 3, Item 11)",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 49:1",
+      "html": "Every Partzuf is divided in two. The one is from Malchut of the Guf [body] upward, where all the lights stand, and it is therefore called anterior. And the second part is from Malchut of the Guf downward, from which the direct light is rejected and does not shine, and it is therefore called posterior. Indeed, there is a discernment of illumination that passes over from the anterior side of the Partzuf and shines to the posterior side of the Partzuf, and the manner of this illumination is called “by way of surroundings.” For by way of straightness the part of the Partzuf that is from the Tabur downward cannot receive the light, as above, but only by way of surroundings, which is a particular correction that will be explained in its place. (Part 4, Chapter 5, Item 1)",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 50:1",
+      "html": "“Bearing” means a place where the vessel is fit to clothe the light and yet does not clothe it, by reason of its own choosing. It is a very subtle matter, and it is said only of the ten Sefirot of the Rosh [head], where there is no clothing in actuality, as above (see “clothing in potential”). And it would never occur to anyone that the vessels of the Guf [body] are more fit for the clothing of the lights than the vessels of the Rosh, and yet there is no clothing in the Rosh but only in the Guf. The reason is that the reflected light of the Rosh does not bear the discernment of clothing, since it stands in the discernment of from below upward, and this standing is a discernment of opposition to the clothing, so that it does not bear the clothing. Understand this well. (Part 4, Chapter 1, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 51:1",
+      "html": "When the screen begins to be refined from phase to phase — for example, from phase four to phase three — there is a discernment to be made there of the continuation of the refining: that is, before it reaches the point of coarseness in phase three, when the Partzuf is entirely without light, for the coupling in phase four has already ceased and it has not yet reached the coupling of phase three. And there is a discernment of “the end of the ascent”: that is, after it has completed the refining from all the coarseness of phase four and has reached the coarseness of phase three, where the upper light, which does not cease even for a moment, is found coupling in her and brings out a new level of Hochma. For now the light has returned to expand in the Partzuf as before, but in a level of Hochma, which is lower than the previous level. (Part 4, Chapter 6, Item 21)",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 52:1",
+      "html": "All the matter of the receptacle of the vessel is the coarseness in it, as is known. Therefore the four phases of coarseness are discerned as surrounding one another, and together they make the wall of the vessel; and the one that is coarser than its fellow is the more internal of the two. (See “half the thickness of the wall,” Item 30.) (Part 4, Chapter 5, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 53:1",
+      "html": "See “the return of the lights to the Emanator,” Item 28. (Part 4, Chapter 2, Item 4)",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 54:1",
+      "html": "That is, through the refining of the screen from phase four to phase three. (ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 55:1",
+      "html": "That is, through the refining of the screen from phase three to phase two. (ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 56:1",
+      "html": "That is, through the refining of the screen from phase two to phase one. (ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 57:1",
+      "html": "That is, through the refining from phase one to the phase of Keter. (ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 58:1",
+      "html": "That is, through the refining from the phase of Keter to the phase of Malchut of the Rosh [head], where there is nothing whatsoever of coarseness from above downward. Her form is then equalised with Malchut of the Rosh, and she is included there. (ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 59:1",
+      "html": "Malchut of the Rosh [head], where the coarseness of the screen serves from below upward, is called “Peh [mouth].” (Part 4, Chapter 1, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 60:1",
+      "html": "When the light is bestowed so as to be held and to clothe according to the measure of the magnitude of the coarseness in the screen, this is called “their faces downward,” for the turning of the lights is to come and to clothe in the coarseness, which is called downward. (Part 4, Chapter 3, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 61:1",
+      "html": "At the time of the refining of the screen, when the couplings go on being made each time in the more refined phase, until the coupling ceases altogether, this is called “their faces upward” — meaning that they depart and turn themselves from the coarseness toward the refinement. For from above downward means from refinement to coarseness, and from below upward means from coarseness to refinement. (Part 4, Chapter 3, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 62:1",
+      "html": "The clothing and the rejection that are activated in the coupling by striking in Malchut of the Rosh [head] are not revealed there, but only in Malchut of the Guf [body], which is called Tabur: the clothing is made from the Tabur upward, and the rejection of the light is made from the Tabur downward. Therefore the place of clothing in the Guf is called “anterior,” and the place from which the light is rejected is called “posterior.” (Part 4, Chapter 5, Item 1)",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 63:1",
+      "html": "“Spoiling in order to correct” means that to one who does not know the great correction that is made here, it appears to be a spoiling; whereas had he known the operation that is performed in it, he would see that this spoiling is wholly nothing but correction, and that there never was any discernment of spoiling here at all. This resembles a fool who sees a tailor take a fine piece of cloth and cut it to pieces: because he does not know and does not understand the operation that is being performed here, he wonders to himself that the tailor is spoiling so fine a piece of cloth. Had he known the craft, he certainly would not have entertained the thought that there is even a trace of spoiling here, but that from its beginning to its end there is nothing here but correction alone. Understand this well. (Part 4, Chapter 4, Item 8)",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 64:1",
+      "html": "Through the clothing of the light in the vessel, several discernments were made in the light out of the shared relation of the light and the vessel. And if the light departs from there, all those forms and discernments that were there before the departure nevertheless remain, and not the least of them is lacking; and this remaining is called “the imprint of a seal.” For such is the nature of a seal: if it is laid upon wax, it leaves there its whole form, in all its particulars and its letters, without the least lacking. (Part 4, Chapter 2, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 65:1",
+      "html": "See “the imprint of a seal,” Item 64. And know that this record, which the lights leave of themselves after their departure, is the seed and the root for the birth of a second Partzuf from it. For so does every consequence emerge and come to be born through its cause; and in this way all the illuminations in the worlds are drawn to the lower ones. And they themselves pass from the cause to the consequence that is born of them, after the likeness of the spark of soul that passes from the father to the son and remains fixed in the soul of the son and never departs from him — as was explained in Inner Light, Part 4, Chapter 2, Item 3. Understand this and remember it, for it is the key by which to understand what obliges the consequence to cascade from its cause, throughout the whole cascading of the emergence of the Partzufim [pl. of Partzuf] and the worlds one from another, from beginning to end. (Part 4, Chapter 2, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV, List of Answers on Terminology 66:1",
+      "html": "See “the falling sparks,” Item 47. It was explained there that since the descending reflected light that enters the empty vessel now comes from the illumination of the coupling that is made in the upper phase, while the record in that vessel is from after the departure of the coupling, the reflected light therefore prevails over the record and descends into the vessel, and the record is compelled to rise from there above the vessel. And this illumination, which the record shines to the vessel while it is above the vessel, is called “Tagin [crownlets].” (Part 4, Chapter 3, Item 11)",
       "anchors": []
     }
   ]
