@@ -32,11 +32,16 @@ Don't delete or weaken these to make a change pass — fix the change:
   the fix that keeps generated pages from carrying thousands of prefetch
   links. See `tes-content-model`.
 - `tests/unit/volume-grouping.spec.ts` — pins the volume -> part grouping in
-  `content/toc.volumes.json` to Bnei Baruch's published edition (Vol 1 =
-  parts 1-4, 2 = 5-7, 3 = 8-10, 4 = 11-12, 5 = 13-14, 6 = 15-16). Sefaria
-  groups the same parts differently and we shipped that by accident once;
-  regroup `content/toc.json` and re-run `pnpm emit:toc-splits` rather than
-  editing the expectation.
+  `content/toc.volumes.json` to Bnei Baruch's published edition. The
+  expectation is not written into the spec: it is derived from
+  `tests/fixtures/km-tree/tes-collection.json` (a trimmed slice of Bnei
+  Baruch's own `kabbalahmedia.info/backend/sqdata` VOLUME -> PART tree) via
+  `extractKmTesTree`, so the test checks the committed data against the
+  publisher rather than against itself. Sefaria groups the same parts
+  differently and we shipped that by accident once; regroup
+  `content/toc.json` and re-run `pnpm emit:toc-splits` rather than editing
+  either side. The fixture is a snapshot — its regeneration command and the
+  limits of what it proves are in the spec's own docblock.
 
 ## Definition of done
 
