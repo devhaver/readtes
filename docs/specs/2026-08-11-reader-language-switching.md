@@ -37,10 +37,14 @@ Restated:
 Phase 1 is written to be generic over language, so phase 2 adds content
 and i18n locale entries without touching reader code.
 
-Target language set for phase 2: Hebrew, English, Bulgarian, German,
-Russian, French, Spanish, Turkish, Hindi, Persian (fa — RTL, like
-Hebrew; the version registry's `direction` field already carries this
-per-version, so the reader needs no special-casing).
+Target language set for phase 2, in canonical order: Hebrew, English,
+Bulgarian, German, Russian, French, Spanish, Turkish, Hindi, Persian,
+Chinese, Italian, Japanese. Persian is RTL like Hebrew — the version
+registry's `direction` field already carries this per-version, so the
+reader needs no special-casing. Chinese and Japanese need a font
+decision: the site's subsetted webfonts carry no CJK glyphs, and CJK
+webfonts are 5-15MB+ — system font stacks for those locales are the
+expected answer, decided at phase-2 implementation.
 
 ## Amendment (2026-08-11, owner): panes offer two languages, not ten
 
