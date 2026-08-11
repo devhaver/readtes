@@ -118,13 +118,21 @@ const {
 const versionsById = computed(() => buildVersionsById(versions.value));
 
 const sourceLanguageOptions = computed(() =>
-  languagesAvailable(sourceVersions.value, versionsById.value),
+  paneLanguageOptions(sourceVersions.value, locale.value, versionsById.value),
 );
 const commentaryLanguageOptions = computed(() =>
-  languagesAvailable(commentaryVersions.value, versionsById.value),
+  paneLanguageOptions(
+    commentaryVersions.value,
+    locale.value,
+    versionsById.value,
+  ),
 );
 const innerObservationLanguageOptions = computed(() =>
-  languagesAvailable(innerObservationVersions.value, versionsById.value),
+  paneLanguageOptions(
+    innerObservationVersions.value,
+    locale.value,
+    versionsById.value,
+  ),
 );
 
 const metaFor = (versionId: string | null) =>

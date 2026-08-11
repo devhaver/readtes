@@ -27,9 +27,12 @@ const or: GlossaryIndexEntry = {
 
 const citations: GlossaryCitation[] = [
   {
-    chapterId: "part-03/answers-terminology-13",
+    // Issue #91: every `answers-*`/`questions-*` citation's `chapterId`
+    // targets the single consolidated `-01` chapter for its kind — the
+    // actual answer number lives in `item` (below), not the chapterId.
+    chapterId: "part-03/answers-terminology-01",
     layer: "source",
-    item: "item 1",
+    item: "item 13",
     he: "פרצוף הכתר נקרא אריך אנפין",
     en: "Partzuf Keter is called Arich Anpin",
   },
@@ -166,10 +169,15 @@ describe("GlossaryEntryRow", () => {
 
     const link = wrapper.get("figcaption a");
     expect(link.attributes("href")).toBe(
-      "/read/part-03/answers-terminology-13",
+      "/read/part-03/answers-terminology-01",
     );
     expect(link.text()).toContain("Part 3");
-    expect(link.text()).toContain("Answers — Terminology 13");
+    // No numeral on the link label itself (issue #91: the consolidated
+    // chapter's own number is always 1, never the real answer number) —
+    // the actual answer is the adjacent "item 13" text, asserted below.
+    expect(link.text()).toContain("Answers — Terminology");
+    expect(link.text()).not.toContain("Answers — Terminology 1");
+    expect(wrapper.get("figcaption").text()).toContain("item 13");
   });
 
   it("renders a citation's two languages with their own dir/lang", async () => {

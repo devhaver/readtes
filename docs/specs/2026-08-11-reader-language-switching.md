@@ -37,8 +37,26 @@ Restated:
 Phase 1 is written to be generic over language, so phase 2 adds content
 and i18n locale entries without touching reader code.
 
-Target language set for phase 2: Hebrew, English, Bulgarian, German,
-Russian, French, Spanish, Turkish, Hindi.
+Target language set for phase 2, in canonical order: Hebrew, English,
+Bulgarian, German, Russian, French, Spanish, Turkish, Hindi, Persian,
+Chinese, Italian, Japanese. Persian is RTL like Hebrew — the version
+registry's `direction` field already carries this per-version, so the
+reader needs no special-casing. Chinese and Japanese need a font
+decision: the site's subsetted webfonts carry no CJK glyphs, and CJK
+webfonts are 5-15MB+ — system font stacks for those locales are the
+expected answer, decided at phase-2 implementation.
+
+## Amendment (2026-08-11, owner): panes offer two languages, not ten
+
+With ten target languages, the per-pane switcher does NOT list every
+language that has text. Language is chosen once at the site level (the
+locale switcher); each pane then offers at most **the parent language and
+Hebrew** — the reader's only in-reading question is "translation or
+original?". When a chapter+layer lacks the parent language, the default
+chain's fallback is shown honestly (its own name + badge) with Hebrew
+still offered. A Hebrew-locale reader sees no pane switcher at all.
+Resolution chains, badges, and persistence shape are unchanged — only the
+offered set narrows. Tracked as issue #94.
 
 ## Resolution rule
 

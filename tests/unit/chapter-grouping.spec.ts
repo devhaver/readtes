@@ -5,6 +5,7 @@ const chapter = (
   id: string,
   kind: ChapterKind,
   number: number,
+  itemCount?: number,
 ): TocChapter => ({
   id,
   kind,
@@ -12,6 +13,7 @@ const chapter = (
   title: { en: id, he: id },
   availableLayers: [],
   availableVersions: { summary: [], source: [], commentary: [] },
+  itemCount,
 });
 
 describe("groupChaptersByKind", () => {
@@ -48,11 +50,12 @@ describe("groupChaptersByKind", () => {
     ]);
   });
 
-  it("collapses answers-terminology into a single cluster with a count and the first chapter", () => {
+  it("clusters the single consolidated answers-terminology chapter, counted by its itemCount", () => {
+    // Issue #91: a part holds exactly one `answers-terminology` `TocChapter`
+    // now — the cluster's `count` has to come from `itemCount` (the real
+    // answer count), since the chapter array itself is always length 1.
     const chapters: TocChapter[] = [
-      chapter("part-01/answers-terminology-03", "answers-terminology", 3),
-      chapter("part-01/answers-terminology-01", "answers-terminology", 1),
-      chapter("part-01/answers-terminology-02", "answers-terminology", 2),
+      chapter("part-01/answers-terminology-01", "answers-terminology", 1, 54),
     ];
 
     const sections = groupChaptersByKind(chapters);
@@ -62,17 +65,16 @@ describe("groupChaptersByKind", () => {
       {
         type: "cluster",
         kind: "answers-terminology",
-        count: 3,
-        firstChapter: chapters[1],
+        count: 54,
+        firstChapter: chapters[0],
       },
     ]);
   });
 
   it("clusters answers-terminology and answers-topics independently within the answers section", () => {
     const chapters: TocChapter[] = [
-      chapter("part-01/answers-terminology-01", "answers-terminology", 1),
-      chapter("part-01/answers-terminology-02", "answers-terminology", 2),
-      chapter("part-01/answers-topics-01", "answers-topics", 1),
+      chapter("part-01/answers-terminology-01", "answers-terminology", 1, 54),
+      chapter("part-01/answers-topics-01", "answers-topics", 1, 51),
     ];
 
     const sections = groupChaptersByKind(chapters);
@@ -82,14 +84,32 @@ describe("groupChaptersByKind", () => {
       {
         type: "cluster",
         kind: "answers-terminology",
-        count: 2,
+        count: 54,
         firstChapter: chapters[0],
       },
       {
         type: "cluster",
         kind: "answers-topics",
+        count: 51,
+        firstChapter: chapters[1],
+      },
+    ]);
+  });
+
+  it("falls back to the chapter count when itemCount is absent (no source version to read it from)", () => {
+    const chapters: TocChapter[] = [
+      chapter("part-01/answers-terminology-01", "answers-terminology", 1),
+    ];
+
+    const sections = groupChaptersByKind(chapters);
+    const answers = sections.find((s) => s.section === "answers");
+
+    expect(answers?.entries).toEqual([
+      {
+        type: "cluster",
+        kind: "answers-terminology",
         count: 1,
-        firstChapter: chapters[2],
+        firstChapter: chapters[0],
       },
     ]);
   });

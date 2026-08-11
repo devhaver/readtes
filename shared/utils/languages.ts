@@ -32,6 +32,16 @@ export const NATIVE_LANGUAGE_NAMES: Record<string, string> = {
   es: "Español",
   tr: "Türkçe",
   hi: "हिन्दी",
+  // RTL like Hebrew — a future fa version entry in versions.json must carry
+  // direction: "rtl"; the reader panes take direction from the version
+  // registry, so nothing else needs special-casing.
+  fa: "فارسی",
+  // Simplified script assumed for zh (Bnei Baruch's Chinese materials use
+  // it); a Traditional edition would be a separate zh-Hant entry, not a
+  // change to this one.
+  zh: "中文",
+  it: "Italiano",
+  ja: "日本語",
 };
 
 export const nativeLanguageName = (language: string): string =>

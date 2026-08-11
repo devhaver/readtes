@@ -1,0 +1,20 @@
+{
+  "chapterId": "part-01/answers-terminology-01",
+  "layer": "source",
+  "versionId": "v2",
+  "sefariaRef": "Fixture, List of Answers on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Fixture 1:1",
+      "html": "Translated answer one.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Fixture 3:1",
+      "html": "Translated answer three.",
+      "anchors": []
+    }
+  ]
+}

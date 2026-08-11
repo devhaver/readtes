@@ -45,6 +45,11 @@ import {
   alignJaggedArrays,
   normalizeToChapterItemLists,
 } from "./lib/jagged-array.ts";
+import {
+  consolidateAnswerSegments,
+  CONSOLIDATED_QA_KINDS,
+  type AnswerUnitSegments,
+} from "./lib/qa-consolidation.ts";
 import type {
   SefariaIndex,
   SefariaIndexNode,
@@ -385,6 +390,100 @@ const importPart = async (
     });
   };
 
+  /**
+   * Consolidates a whole `answers-terminology`/`answers-topics` sibling
+   * node's per-answer units (issue #91) into the single `<kind>-01` chapter
+   * every version of the node writes to — every answer's segments carry
+   * `n` reset to that answer's own ordinal (`consolidateAnswerSegments`,
+   * shared with `migrate-consolidate-qa.ts`), `sefariaRef`/`html`/`anchors`
+   * verbatim. Returns the one `ChapterUnit` the toc-building pass below
+   * treats identically to a "normal" (non-consolidated) sibling node whose
+   * node produced only one chapter.
+   */
+  const processConsolidatedAnswerUnits = (
+    kind: ChapterKind,
+    node: SefariaIndexNode,
+    refBase: string,
+    perAnswerUnits: ChapterUnit[],
+  ): ChapterUnit => {
+    const heUnits: AnswerUnitSegments[] = [];
+    const enUnits: AnswerUnitSegments[] = [];
+
+    for (const unit of perAnswerUnits) {
+      const he = buildSourceSegments(
+        node,
+        unit.chapterRef,
+        unit.heItems,
+        false,
+      );
+      const en =
+        unit.enItems.length > 0
+          ? buildSourceSegments(node, unit.chapterRef, unit.enItems, false)
+          : { segments: [], droppedAnchors: [] };
+
+      for (const dropped of [...he.droppedAnchors, ...en.droppedAnchors]) {
+        warnings.push(
+          `${dropped.sefariaRef}: dropped inline marker for commentator "${dropped.commentator}" (order ${dropped.order}) — not Ohr Penimi`,
+        );
+      }
+
+      heUnits.push({ number: unit.number, segments: he.segments });
+      if (en.segments.length > 0) {
+        enUnits.push({ number: unit.number, segments: en.segments });
+      }
+    }
+
+    const heItems = consolidateAnswerSegments(heUnits);
+    const enItems = consolidateAnswerSegments(enUnits);
+
+    const chapterId = `${part.id}/${chapterSlug(kind, 1)}`;
+    const dir = chapterDirFor(part.id, chapterSlug(kind, 1));
+    const planned: PlannedWrite[] = [];
+
+    if (heItems.length > 0) {
+      planned.push({ layer: "source", versionId: heVersion.id });
+      if (!dryRun) {
+        writeLayerFile(join(dir, `source.${heVersion.id}.json`), {
+          chapterId,
+          layer: "source",
+          versionId: heVersion.id,
+          sefariaRef: refBase,
+          items: heItems,
+        });
+      }
+    }
+    if (enItems.length > 0) {
+      planned.push({ layer: "source", versionId: enVersion.id });
+      if (!dryRun) {
+        writeLayerFile(join(dir, `source.${enVersion.id}.json`), {
+          chapterId,
+          layer: "source",
+          versionId: enVersion.id,
+          sefariaRef: refBase,
+          items: enItems,
+        });
+      }
+    }
+
+    const consolidatedUnit: ChapterUnit = {
+      kind,
+      number: 1,
+      chapterId,
+      chapterRef: refBase,
+      heItems: [],
+      enItems: [],
+    };
+
+    plannedByChapter.set(chapterId, planned);
+    entries.push({
+      unit: consolidatedUnit,
+      sourceHe: heItems.length,
+      sourceEn: enItems.length,
+    });
+
+    return consolidatedUnit;
+  };
+
   for (const unit of mainUnits) {
     processSourceOnlyUnit(unit, mainNode, true);
 
@@ -488,8 +587,25 @@ const importPart = async (
       siblingText.he,
       siblingText.en,
     );
-    siblingUnitsByKind.set(kind, { node: siblingNode, units: siblingUnits });
 
+    if (CONSOLIDATED_QA_KINDS.includes(kind)) {
+      // Issue #91: the per-answer units this node's own Sefaria addressing
+      // resolves to (one per printed answer) merge into one consolidated
+      // chapter, never written as N separate chapters.
+      const consolidatedUnit = processConsolidatedAnswerUnits(
+        kind,
+        siblingNode,
+        siblingRefBase,
+        siblingUnits,
+      );
+      siblingUnitsByKind.set(kind, {
+        node: siblingNode,
+        units: [consolidatedUnit],
+      });
+      continue;
+    }
+
+    siblingUnitsByKind.set(kind, { node: siblingNode, units: siblingUnits });
     for (const unit of siblingUnits) {
       processSourceOnlyUnit(unit, siblingNode, false);
     }

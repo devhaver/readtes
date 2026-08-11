@@ -20,6 +20,7 @@ import {
   type ContentVersion,
   type LayerKind,
   type ParsedChapterLayerFile,
+  type SourceSegment,
   type Toc,
 } from "../shared/types/content.ts";
 import {
@@ -29,6 +30,7 @@ import {
   GLOSSARY_FILE_NAME,
   GLOSSARY_INDEX_FILE_NAME,
 } from "./lib/glossary-splits.ts";
+import { CONSOLIDATED_QA_KINDS } from "./lib/qa-consolidation.ts";
 import { deriveTocPartFiles, deriveTocVolumesFile } from "./lib/toc-splits.ts";
 
 export interface ValidationResult {
@@ -183,14 +185,115 @@ const arraysEqual = <T>(left: T[], right: T[]): boolean =>
   left.every((value, index) => value === right[index]);
 
 /**
+ * The strict, index-aligned check every ordinary "source" translation must
+ * satisfy: same item count, same `n`/`sefariaRef`/`anchors` at every index.
+ */
+const checkSourceIndexAligned = (
+  translated: LoadedChapterFile,
+  source: LoadedChapterFile,
+  translatedFrom: string,
+  errors: string[],
+): void => {
+  if (translated.file.layer !== "source" || source.file.layer !== "source") {
+    return;
+  }
+  const translatedItems = translated.file.items;
+  const sourceItems = source.file.items;
+
+  if (translatedItems.length !== sourceItems.length) {
+    errors.push(
+      `${translated.relativePath}: translated source has ${translatedItems.length} item(s), but "${translatedFrom}" has ${sourceItems.length}`,
+    );
+    return;
+  }
+
+  translatedItems.forEach((item, index) => {
+    const sourceItem = sourceItems[index];
+    if (
+      !sourceItem ||
+      item.n !== sourceItem.n ||
+      item.sefariaRef !== sourceItem.sefariaRef ||
+      !arraysEqual(item.anchors, sourceItem.anchors)
+    ) {
+      errors.push(
+        `${translated.relativePath}: translated source item ${index + 1} does not preserve "${translatedFrom}" n, sefariaRef, and anchors`,
+      );
+    }
+  });
+};
+
+/**
+ * The relaxed check for a consolidated `answers-terminology`/`answers-topics`
+ * chapter (issue #91): a translation may legitimately cover a SUBSET of the
+ * source's items — the merge unions whatever per-answer chapters each
+ * version originally had (`en-bb` never covered every answer), so a
+ * translated file can be shorter than its source without that being a data
+ * problem. What is never legitimate is a translated item with no source
+ * counterpart, or one whose identity disagrees with its counterpart — count
+ * equality was only ever a proxy for that (mirrors how the commentary check
+ * below already relaxed for the same reason, issue #79/#87).
+ *
+ * Identity here is `n` (the answer number `consolidateAnswerSegments` reset
+ * every item to) — usually unique per file, but the rare answer broken into
+ * several segments shares one `n` across several items, disambiguated by
+ * `sefariaRef` (unique per item; `data-order`-derived and never renumbered).
+ */
+const checkSourceConsolidatedQaSubset = (
+  translated: LoadedChapterFile,
+  source: LoadedChapterFile,
+  translatedFrom: string,
+  errors: string[],
+): void => {
+  if (translated.file.layer !== "source" || source.file.layer !== "source") {
+    return;
+  }
+
+  const sourceByN = new Map<number, SourceSegment[]>();
+  for (const item of source.file.items) {
+    const list = sourceByN.get(item.n) ?? [];
+    list.push(item);
+    sourceByN.set(item.n, list);
+  }
+
+  for (const item of translated.file.items) {
+    const candidates = sourceByN.get(item.n) ?? [];
+    const match =
+      candidates.length <= 1
+        ? candidates[0]
+        : candidates.find((c) => c.sefariaRef === item.sefariaRef);
+
+    if (!match) {
+      errors.push(
+        `${translated.relativePath}: translated source item n=${item.n} (${item.sefariaRef ?? "no sefariaRef"}) has no counterpart in "${translatedFrom}"`,
+      );
+      continue;
+    }
+    if (
+      item.sefariaRef !== match.sefariaRef ||
+      !arraysEqual(item.anchors, match.anchors)
+    ) {
+      errors.push(
+        `${translated.relativePath}: translated source item n=${item.n} does not preserve "${translatedFrom}" sefariaRef and anchors`,
+      );
+    }
+  }
+};
+
+/**
  * A translated layer must remain structurally aligned with the registered
  * source version it names. Translation may change prose, but never the
  * identities the reader uses to align layers and commentary.
+ *
+ * `consolidatedQaChapterIds` narrowly scopes the subset-allowance above to
+ * exactly the chapters issue #91 consolidated (`answers-terminology`/
+ * `answers-topics`) — every other chapter, including the always-whole
+ * `questions-*` chapters, keeps the strict index-aligned check.
  */
 export const checkTranslatedVersionIntegrity = (
   versions: ContentVersion[],
   loaded: LoadedChapterFile[],
   errors: string[],
+  consolidatedQaChapterIds: Set<string> = new Set(),
 ): void => {
   const versionsById = new Map(
     versions.map((version) => [version.id, version]),
@@ -230,28 +333,21 @@ export const checkTranslatedVersionIntegrity = (
         translated.file.layer === "source" &&
         source.file.layer === "source"
       ) {
-        const translatedItems = translated.file.items;
-        const sourceItems = source.file.items;
-        if (translatedItems.length !== sourceItems.length) {
-          errors.push(
-            `${translated.relativePath}: translated source has ${translatedItems.length} item(s), but "${version.translatedFrom}" has ${sourceItems.length}`,
+        if (consolidatedQaChapterIds.has(translated.chapterDirId)) {
+          checkSourceConsolidatedQaSubset(
+            translated,
+            source,
+            version.translatedFrom,
+            errors,
           );
-          continue;
+        } else {
+          checkSourceIndexAligned(
+            translated,
+            source,
+            version.translatedFrom,
+            errors,
+          );
         }
-
-        translatedItems.forEach((item, index) => {
-          const sourceItem = sourceItems[index];
-          if (
-            !sourceItem ||
-            item.n !== sourceItem.n ||
-            item.sefariaRef !== sourceItem.sefariaRef ||
-            !arraysEqual(item.anchors, sourceItem.anchors)
-          ) {
-            errors.push(
-              `${translated.relativePath}: translated source item ${index + 1} does not preserve "${version.translatedFrom}" n, sefariaRef, and anchors`,
-            );
-          }
-        });
       }
 
       if (
@@ -545,7 +641,7 @@ const checkTocSplitEquivalence = (
     }
   }
 
-  const expectedPartFiles = deriveTocPartFiles(toc);
+  const expectedPartFiles = deriveTocPartFiles(toc, contentDir);
   const expectedFileNames = new Set(
     expectedPartFiles.map((file) => `${file.part.id}.json`),
   );
@@ -712,11 +808,31 @@ export const validateContent = (contentDir: string): ValidationResult => {
 
   const loaded = loadChapterFiles(contentDir, errors);
 
+  // Scoped narrowly to the chapters issue #91 actually consolidated — every
+  // other chapter (including `questions-*`, always a single whole-node
+  // chapter with no subset history) keeps the strict alignment check.
+  const consolidatedQaChapterIds = tocParsed.success
+    ? new Set(
+        tocParsed.data.volumes.flatMap((volume) =>
+          volume.parts.flatMap((part) =>
+            part.chapters
+              .filter((chapter) => CONSOLIDATED_QA_KINDS.includes(chapter.kind))
+              .map((chapter) => chapter.id),
+          ),
+        ),
+      )
+    : new Set<string>();
+
   checkSourceHtmlAnchorsConsistency(loaded, errors);
   checkAnchorCommentaryIntegrity(loaded, errors);
   checkCommentaryItemBasics(loaded, errors);
   if (versionsParsed.success) {
-    checkTranslatedVersionIntegrity(versionsParsed.data, loaded, errors);
+    checkTranslatedVersionIntegrity(
+      versionsParsed.data,
+      loaded,
+      errors,
+      consolidatedQaChapterIds,
+    );
   }
 
   if (tocParsed.success) {

@@ -165,6 +165,55 @@ describe("resolveVersionForLanguage", () => {
   });
 });
 
+describe("paneLanguageOptions (issue #94 — parent language + Hebrew only)", () => {
+  it("offers exactly the parent language and Hebrew when both have text", () => {
+    expect(
+      paneLanguageOptions(
+        ["he-jerusalem-1956", "en-bb", "ru-bb"],
+        "en",
+        versionsById,
+      ),
+    ).toEqual(["en", "he"]);
+    // Russian text exists but is not offered — the reader chose English at
+    // the site level, so the pane's only question is translation/original.
+    expect(
+      paneLanguageOptions(
+        ["he-jerusalem-1956", "en-bb", "ru-bb"],
+        "ru",
+        versionsById,
+      ),
+    ).toEqual(["ru", "he"]);
+  });
+
+  it("substitutes the resolved fallback when the parent language has no text", () => {
+    // A Russian reader on a chapter with only Hebrew + English: the default
+    // chain resolves English, so the pane offers what is actually shown.
+    expect(
+      paneLanguageOptions(["he-jerusalem-1956", "en-ai"], "ru", versionsById),
+    ).toEqual(["en", "he"]);
+  });
+
+  it("collapses to Hebrew alone for a Hebrew locale — the header then hides its control", () => {
+    expect(
+      paneLanguageOptions(["he-jerusalem-1956", "en-bb"], "he", versionsById),
+    ).toEqual(["he"]);
+  });
+
+  it("collapses to Hebrew alone when Hebrew is the only text", () => {
+    expect(
+      paneLanguageOptions(["he-jerusalem-1956"], "en", versionsById),
+    ).toEqual(["he"]);
+  });
+
+  it("offers a lone translation without Hebrew when Hebrew is absent", () => {
+    expect(paneLanguageOptions(["en-ai"], "en", versionsById)).toEqual(["en"]);
+  });
+
+  it("returns empty for no available versions", () => {
+    expect(paneLanguageOptions([], "en", versionsById)).toEqual([]);
+  });
+});
+
 describe("languagesAvailable", () => {
   it("lists distinct languages with Hebrew first, then English, then the rest alphabetically", () => {
     expect(

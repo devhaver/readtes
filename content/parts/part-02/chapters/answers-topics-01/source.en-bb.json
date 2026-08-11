@@ -2,12 +2,618 @@
   "chapterId": "part-02/answers-topics-01",
   "layer": "source",
   "versionId": "en-bb",
-  "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 1:1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 1:1",
       "html": "Ein Sof is the origin of the vessels of circles, since these vessels were already included in Ein Sof, but they were not apparent there, as in “He is one and His name, One.” (Part Two, Inner Observation, Item 52)",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 2:1",
+      "html": "After the restriction, when the light of Ein Sof departed from all four phases, there still remains a record in each and every phase; a kind of the light of Ein Sof that was in it prior to the restriction. (Part Two, Chapter Two, Inner light, Item 80)",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 3:1",
+      "html": "It indicates that there is no other distinction there besides that of cause and consequence (see answer 22). (Part Two, Inner Observation, Item 53)",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 4:1",
+      "html": "Because there is no recognition whatsoever of a vessel in Ein Sof. (Inner Observation, ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 5:1",
+      "html": "Ein Sof is the root to all the lights in the worlds. (Part Two, Chapter One, Inner light, Item 4)",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 6:1",
+      "html": "The circles are the roots of all the vessels in the worlds. (Part Two, Chapter One, Inner light, Item 80)",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 7:1",
+      "html": "Phase four, called Malchut, is the origin of the reflected light. Part Two, (Inner Observation, Item 66)",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 8:1",
+      "html": "In the beginning, the lights emerged in three phases one below the other. These three phases are not regarded as vessels before phase four appears, as she alone is regarded as a vessel. Thus, the vessels are a consequence of the lights. (Part Two, Inner Observation, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 9:1",
+      "html": "In the order of the emanation of the worlds from above downward, completeness always precedes and causes the appearance of incompleteness. This is how the degrees cascade from one another: Each lower degree is inferior to the higher one until the appearance of this world, the most corrupted of all. (Part Two, Inner light, Chapter One, Item 200)",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 10:1",
+      "html": "The screen is the first source of a power of control in the worlds. (Part Two, Chapter One, Inner light, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 11:1",
+      "html": "It is a consequence of the first restriction. (Part Two, Chapter One, Inner light, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 12:1",
+      "html": "Two causes preceded the screen: the restriction and the arrival of the light. This is because the screen appears only when the upper light comes and touches phase four (see answer 43).",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 13:1",
+      "html": "The circles are the origin of the vessels of straightness because Malchut of the circles drew the light of the line, and out of her power, the screen was made. (Part Two, Inner Observation, Item 56)",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 14:1",
+      "html": "From the vessels of straightness, and they themselves, cannot draw light from Ein Sof since there are no screen and coarseness in them. (Part Two, Chapter One, Inner light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 15:1",
+      "html": "Through the force of the screen that is impressed in them without carrying the coarseness in it. This above-mentioned impression of the screen is called the “windows of the circles.” (Part Two, Chapter Two, Inner light, Item 70)",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 16:1",
+      "html": "Because there is no screen in the circles. (Part Two, Chapter One, Inner light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 17:1",
+      "html": "See answer 85",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 18:1",
+      "html": "The light of the line that the circles received caused in them a recognition of degrees of one below the other, where windows were made in them from the impression of the screen, and all the degrees of the line also emerged in circles. (Part Two, Chapter Two, Inner light, Item 90)",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 19:1",
+      "html": "The vessels of the circles are on the same level as the Rosh of every Sefira in the vessels of straightness that are above the screen. Because of this, they are considered to be in the place of the Rosh of the Sefira, and do not expand at all below the Rosh of the straightness. The vessels below the Rosh are below the screen of the Malchut of the Rosh, and the coarseness controls them. For this reason, they are below the circles, since lower means coarser. There are no screen and coarseness in the circles. Hence, the Guf of each Sefira is devoid of circles, in a way that all ten Sefirot of Keter of the circles clothe the ten Sefirot of the Rosh of the Keter of straightness, and the ten Sefirot of the Guf of Keter are vacant from the circles. Also, the ten Sefirot of Hochma of the circles clothe the ten Sefirot of the Rosh of Hochma of straightness, and so on by the same way. It turns out that the Guf of straightness separates each two Sefirot of circles, and there is no connection between the Sefirot of the circles. This is why they need the line to connect them. (Part Two, Chapter One, Inner light, Item 3)",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 20:1",
+      "html": "The difference between them is only in the screen: It exists in the straightness and not in the circles. (Part Two, Chapter One, Inner Light, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 21:1",
+      "html": "See answer 43",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 22:1",
+      "html": "They are the phase of the light of Ruach. (Part Two, Chapter Two, Inner Light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 23:1",
+      "html": "See answer 34",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 24:1",
+      "html": "From the perspective of the vessels, the circles are better than the straightness because there are no screen and coarseness in the vessels of the circles, and there are screen and coarseness in the vessels of straightness. Also, the vessels of the circles precede the straightness. (Part Two, Chapter One, Inner Light, Item 2)",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 25:1",
+      "html": "From the perspective of the lights, the straightness is better than the circles, because the Sefirot of straightness draw upper light and bestow upon the circles. The lights of straightness are called the “lights of Ruach” and the lights of circles are called the “light of Nefesh.” (Part Two, Chapter Two, Inner Light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 26:1",
+      "html": "External means refined, and you find that the more it is external, the better it is and the more it is in equivalence of form with Ein Sof. (Inner Observation, Item 7)",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 27:1",
+      "html": "Inner means coarser, meaning having a greater yearning. For this reason, it also draws a greater measure of light, and the level of reflected light that it pushes back is also greater. (Inner Observation, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 28:1",
+      "html": "Because its phase four has no coarseness that is fit to draw the upper light. In that sense, it is regarded as the most refined of all the worlds (See answer 55). (Inner Observation, Item 13)",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 29:1",
+      "html": "When the upper light reached and touched phase four in order to expand within it, it caused the force of the screen to appear immediately to stop it, and to push that light back. (Inner Observation, Item 18)",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 30:1",
+      "html": "When the upper light reached phase four and touched it in order to expand in it, the force of the restriction was awakened, which is a screen to stop it and push it back. (Inner Observation, Item 56)",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 31:1",
+      "html": "Because the reflected light that the screen raises is only the same measure of light that wanted to expand to the measure of coarseness in phase four, meaning the measure of its yearning and drawing of the upper light. If there is great coarseness, meaning phase four in phase four, the light that wants to expand in phase four is also great. If the coarseness is small, meaning only phase one in phase four, the light that wants to expand in phase four is also very small. You find that the measure of the level of reflected light in the screen and the measure of coarseness in phase four are one and the same. (Inner Observation, Item 60)",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 32:1",
+      "html": "Even though there are only three phases in the light of the line, still, its vessels of reception are only due to phase four. However, phase four itself does not receive light. (Inner Observation, Item 16)",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 33:1",
+      "html": "There are two movements of ten Sefirot in each degree: The first move is from above downward, beginning in Keter and ending in Malchut. They are called “ten Sefirot of direct light.” The second move is from below upward, beginning in Malchut and ending in Keter. They are called “ten Sefirot of reflected light.” (Inner Observation, Item 104)",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 34:1",
+      "html": "Because this entire light belonged specifically to phase four. It intended to clothe in phase four, if the screen did not push it back. For this reason, it became a phase of reception instead of phase four. (Inner Observation, Item 21)",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 35:1",
+      "html": "By the measure of light that would have come into phase four had the screen not pushed it back. (Inner Observation, Item 60)",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 36:1",
+      "html": "Reflected light is nothing more than a light that was intended for phase four, which is Malchut. Because Malchut did not receive this light within her, this light became a garment and a receptacle for all nine Sefirot above her. Thus, Malchut is the origin for all the ten Sefirot of the reflected light and is therefore regarded as the Keter of the reflected light. (Inner Observation, Item 102)",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 37:1",
+      "html": "See answer 101",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 38:1",
+      "html": "See answer 101",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 39:1",
+      "html": "The coarseness in a screen is the measure of the yearning in it. Therefore, acquiring and clothing the inner light in a Partzuf intensifies the surrounding light and refines the coarseness in the screen. (Inner Observation, Item 74)",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 40:1",
+      "html": "Since there is no screen and coarseness in the Sefirot of the circles, they do not have a vessel that draws the upper light. Instead, they receive their lights through the vessels of straightness. Therefore, their lights are regarded as “light of Nefesh.” This means that there is no bestowal in this light, but only for their own needs. (Inner Observation, Item 95)",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 41:1",
+      "html": "Because the vessels of straightness have a screen and coarseness, they are fit to draw the upper light and bestow upon others. A light that has bestowal in it is called a “light of Ruach” or “male light.” (Part Two, Chapter Two, Inner Light, Item 30)",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 42:1",
+      "html": "GAR are clean with respect to the coarseness of the screen, since the screen and Malchut are the last phase in them, and no coarseness ever rises to them because coarseness can never rise above its own place, not even a bit. Know that the first three, namely KHB, are the Rosh of a degree that has complete ten Sefirot in it (See answer 13). (Part Two, Chapter One, Inner Light, Item 90)",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 43:1",
+      "html": "Each and every Sefira is considered to have a Rosh, called GAR, and a Guf, called ZAT (See answer 64). The Sefira Keter has GAR and ZAT. Likewise, Hochma has GAR and ZAT, and so does Bina, and so on. The position of each ten Sefirot GAR and ZAT of circles is only in the place of the Rosh and GAR of straightness since the ten Sefirot of circles of the Sefira Keter revolve only around the GAR of Keter of straightness, and ZAT of Keter of straightness are vacant of circles (see Item 89). Also, every ten Sefirot of Hochma of circles revolve solely around the GAR of Hochma of straightness, and ZAT of Hochma of straightness are vacant of circles, and so are all of them. (Part Two, Chapter One, Inner Light, Item 90)",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 44:1",
+      "html": "Because both have no coarseness of the screen at all (see answer 89). (Part Two, Chapter One, Inner Light, Item 90)",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 45:1",
+      "html": "It is as the measure of ZAT of the Sefira of straightness that separates between one circle and the other. ZAT of Keter of straightness separate between the ten Sefirot of the circle of Keter and the circle of Hochma; ZAT of the Sefira Hochma of straightness separate between the ten Sefirot of the circle of Hochma and the circle of Bina, and so on (see answer 89). (Part Two, Chapter One, Inner Light, Item 90)",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 46:1",
+      "html": "See answer 89",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 47:1",
+      "html": "Because the lights preceded the vessels (See answer 13), and the reflected light that ascends from below upward and clothes them is not regarded as actual vessels, but as roots of vessels, and we do not have attainment in the light without a vessel (See answer 21).",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 48:1",
+      "html": "There are inner GAR and ZAT even in the GAR of the degree, and engaging in the ZAT of the GAR is also permitted. (Part Two, Chapter Two, Inner Light, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 49:1",
+      "html": "Because they are GAR, for this reason, all ten Sefirot of the circles are positioned in the place of GAR of straightness (See answer 13).",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 50:1",
+      "html": "The root of the four phases is called Keter. Phase one is called Hochma and phase two, Bina. Phase three is called Tifferet, or Zeir Anpin, which consists of six Sefirot of its own: Hesed, Gevura, Tifferet, Netzah, Hod, Yesod. Phase four is called Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 51:1",
+      "html": "It means that phase four, meaning Malchut, does not receive anything from the upper light after the restriction. However, because of the merit of the reflected light in her, she is considered just as important as the rest of the Sefirot, and they are “ten and not nine,” and “ten and not eleven.” He also tells us that you should not think that there is any form of reception of upper light in phase four. If there were, Malchut would be regarded as two Sefirot: Malchut of direct light, and Malchut of reflected light. That would bring the number of Sefirot to eleven. For this reason, the text warns us, “ten and not eleven,” because Malchut receives nothing of the direct light.",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 52:1",
+      "html": "Because it is opposite from the root. The form of the root is only to bestow, and that of phase four is only to receive. Two opposites cannot stem from one another by way of cause and consequence, but rather through a gradual, slow cascading of the degree, since the root is only the cause of phase one, the closest to it, phase one of phase two, and phase two of phase three. After phase three, it is possible for phase four to be revealed. (Inner Observation, Chapter One, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 53:1",
+      "html": "Because coarseness is the vessel of drawing, and the primary vessel of reception, through the reflected light that rises from it. For this reason, the coarseness in the vessel is regarded as its internality. The lesser the coarseness, the more external it is considered, and that which is completely refined in it is regarded as completely external (See answer 55). (Inner Observation, Chapter One, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 54:1",
+      "html": "This can be likened to the thickness of the wall of a vessel that is made of four layers one around the other, so the abundance in the vessel touches only its internality, meaning the innermost layer in the vessel. (Inner Observation, Chapter One, Item 5)",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 55:1",
+      "html": "By the measure of reflected light that the screen in that degree or world raises. (Inner Observation, Chapter Six, Item 65)",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 56:1",
+      "html": "The vessels of reception of all four phases are actually only phase four. The other three phases do not have any form of drawing or reception in them. Consequently, when phase four restricted herself from receiving, the first three phases remained without vessels of reception, too, and therefore, their lights departed, too. (Inner Observation, Chapter Two, Item 16)",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 57:1",
+      "html": "The first is the substance itself of the vessel, meaning the measure of its coarseness. The second is the force of restriction that is placed on phase four in the coarseness in her. The third is the screen in it (See answer 43). There are two inner discernments we must make in the first discernment: The first is the first substance in her, regarded as the Malchut of the previous degree, which is considered her cause and emanator. This is discerned primarily before the light reached the emanated degree. The second is the substance itself of the emanated degree, after all the light intended to reach that degree has come to it. (Inner Observation, Chapter Three, Items 24, 27)",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 58:1",
+      "html": "The first is what is regarded as Malchut of the upper one. The second is what is regarded as the substance of the emanated degree itself (see answer 127).",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 59:1",
+      "html": "As long as the emanated degree does not receive the light that is intended for it, it is named after the Malchut of the degree above it (see answer 127).",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 60:1",
+      "html": "When the emanated degree acquires its own light, from that moment it is regarded as having left the Malchut of the upper one, called Emanator, and to have come into its own authority (see answer 127).",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 61:1",
+      "html": "Coerced reception is called “not possible.” It relates primarily to the light of Hochma or the illumination of Hochma, which is regarded as the self and vitality of the Partzuf, from which it is “not possible for the Partzuf to part,” like a person who must maintain his sustenance and existence. (Inner Observation, Chapter Four, Item 46)",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 62:1",
+      "html": "Yearning is regarded as intending, for when one yearns to receive something, we say that one’s heart is greatly intending to draw it, for the yearning is felt in the heart, and the intention is also in the heart. This is so only when he lacks the light. When he has light, it is called “not intending.” (Inner Observation, Chapter Four, Item 43)",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 63:1",
+      "html": "Only the light of Hochma is intended for phase one. It is the vitality and the self of the Partzuf, which is why it is regarded as not possible, since it is must receive its sustenance and self, and compelled reception is not reception. It is also discerned that no yearning for light of Hochma is revealed in her because yearning appears only when he does not have that light, and he yearns to obtain it, and not when he is filled with this light. (Inner Observation, Chapter Four, Item 43)",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 64:1",
+      "html": "Phase two is an intensification of the desire to bestow, by which she draws the light of Hassadim. She does not have to make this intensification whatsoever, and it was possible for her to completely separate herself from it. This is why it is called “possible” (ibid.) However, she is still regarded as not intending because this above-mentioned yearning must only be for the light of Hochma, and not for the light of Hassadim, since the desire for the light of Hassadim is not considered coarseness since the restriction was done only on the light of Hochma, and not at all on the light of Hassadim. Hence, the yearning for the light of Hassadim is not considered an intention. (ibid.)",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 65:1",
+      "html": "Phase three is the extension of illumination of Hochma in the light of Hassadim that Bina drew. This extension is called “not possible” because the illumination of Hochma is a mandatory reception for the Partzuf. It is considered intending because this extension was done when the illumination of Hochma was absent, which is why there was yearning there.",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 66:1",
+      "html": "Because there was already illumination of Hochma in phase three, she did not have to perform a new intensification for the light of Hochma itself because the illumination of Hochma alone is quite sufficient for her sustenance. This is why this extension is regarded as possible, meaning it was possible to become separated from it. She is regarded as intending because she lacked that light of Hochma itself that she drew, and she had a great yearning when she drew it.",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 67:1",
+      "html": "Because a vessel is not complete unless it has a yearning to receive. This is revealed only under two conditions: possible and intending (See answer 136).",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 68:1",
+      "html": "The rule is that the upper light does not stop shining for the emanated beings even for a moment. Wherever a proper vessel of extension is revealed, the upper light immediately shines there. Therefore, after the extension of phase four within phase four was filled, she engendered a form of a new vessel of extension, in which there is the coarseness of phase three in phase four, and it, too, was instantly filled with the upper light. Afterwards, when a new form of coarseness, of phase two within phase four, was emanated and emerged from it, it, too, was instantly filled with the upper light, and this is always so.",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 69:1",
+      "html": "Because the upper light is always in a state of complete rest, without any innovation of form. In spirituality, innovation is regarded as movement, and any innovation of form that is done as an expansion of the upper light is through the force of extension that is revealed only in the emanated being (See Part One, answer 64). Even this expansion of upper light is like lighting one candle from another, while the first is not lessened whatsoever. Thus, only that part of the expansion of the upper light that the emanated being received is regarded as receiving a new form, a common relation between the vessel and the light that is clothed in it. However, the upper light itself is not lessened at all, and noting is innovated in it by this expansion that has reached the emanated being.",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 70:1",
+      "html": "The difference is truly from one end to the other, since bestowal of the upper light requires that there be a great measure of coarseness in the Partzuf, the greatest measure in reality, for then it draws the greatest and most complete light. Its complete opposite is the clothing of the upper light in the vessels, since the greatest and most complete light clothes only in the most refined vessel that can exist in reality. Hence, we must always discern the two above matters in every Partzuf: The bestowal measured in the additional coarseness is regarded as internal and external, and reception and clothing in the vessels are regarded as upper one and lower one. Thus, the greatest Partzuf in reality should also be the most internal, meaning the coarsest of all the Partzufim in reality. At the same time, it should be the highest of all the Partzufim in reality, meaning the most refined of all the Partzufim in reality, since they are two separate vessels: one to draw the light, and the other to receive the light (See answers 55, 141).",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 71:1",
+      "html": "The upper light is captured in the Partzuf only to the extent of the reflected light that rises from the screen in the Partzuf, and its measure depends on the measure of the coarseness that there is in phase four (See answers 101 and 2). For this reason, the giver needs the excessive coarseness in the lower one. Conversely, the receiver needs the most refined vessel, so that the light may clothe in it, meaning to have equivalence of form between the light and the vessel as the disparity of form between them removes the light from the vessels (See answers 16 and 140).",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 72:1",
+      "html": "See answer 139",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 73:1",
+      "html": "The upper light necessarily contains a desire to bestow. This desire is regarded as the last phase incorporated in the upper light. This part, meaning the above-said desire to bestow, is inverted and becomes an extension of the light of phase one. This extension of light is certainly an innovation of form in the above desire to bestow. This is why it is considered to have split in itself, exited from the desire to bestow, and became phase one of the will to receive. That is, it emerged from the state of Emanator into the state of emanated being, since disparity of form separates and distances the spirituals from one another. However, the abovementioned distinction of “part” does not diminish the state of “all” whatsoever. Instead, it is as lighting one candle from another candle without the first being lessened in any way.",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 74:1",
+      "html": "When we discern only the substance in the vessels, we define them as “four phases.” When we want to include the records in each and every vessel, too, we define them as KHB ZON.",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 75:1",
+      "html": "First, the small ones enter, then the great ones, beginning with Nefesh, then Ruach, etc., up to Yechida (See answer 48).",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 76:1",
+      "html": "The more important vessels grow first, then the small vessels, beginning with Keter, then Hochma, etc., through the vessel of Malchut, which comes last.",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 77:1",
+      "html": "Malchut of the upper one becomes the Keter of the lower one. In other words, the will to bestow in the upper one becomes the first substance of the lower one (See answer 143).",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 78:1",
+      "html": "The root of the four phases is called the Keter of the ten Sefirot of direct light in the degree. Malchut in the degree is regarded as the Keter of the ten Sefirot of reflected light in the degree.",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 79:1",
+      "html": "Had it been transient and exchangeable, it would not have been eternal. This is simple.",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 80:1",
+      "html": "In the ten Sefirot of direct light, since any light is extended only from Ein Sof. Therefore, the lower one must pass through all its upper ones in a manner of cause and consequence until it reaches the bottom consequence, for which the light was intended. And since the light does not become absent in place A when it passes to place B, all the lights that pass through the upper one become fixed in it.",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 81:1",
+      "html": "In the ten Sefirot of reflected light, in which Malchut is regarded as the root and the Keter (See answer 148), all the parts of reflected light that clothe her upper ones pass through her from below upward. For this reason, every lower one is regarded as containing all the parts of reflected light that belong to the Sefirot above it.",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 82:1",
+      "html": "The incorporation of the Sefirot in one another until each one consists of ten, and ten from ten indefinitely, is by the two directions of the ten Sefirot of direct light and ten Sefirot of reflected light in each degree (See answer 20). We must find the key to easily find the changes in the order of the inner ten Sefirot in a Sefira only through incorporation and are not from its self. Hence, remember three facts that you may always use. For example, if you want to know the ten Sefirot incorporated in Bina, the first fact is that there are two Sefirot in her self, which are Bina of direct light and Hod of reflected light. Second, count the Sefirot from her down to Yesod. These are the direct light in her, meaning HGT NHY that pass through her from above downward. Third, count the Sefirot from her up to Keter, which are two, Yesod and Malchut, and know her Sefirot of reflected light that pass through her from below upward. Now think: Two Sefirot of her self, six of direct light, and two of reflected light are ten. Think of every Sefira in this way, and you will know all the phases incorporated in her with a single scan.",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 83:1",
+      "html": "Nine of direct light, from Keter to Yesod, and one of reflected light, meaning only Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 84:1",
+      "html": "Eight of direct light, from Hochma to Yesod. They clothe the more refined vessels, meaning the light of Hochma in the vessel of Keter, etc., and two of reflected light, Yesod and Malchut, which clothe the vessels Yesod and Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 85:1",
+      "html": "Seven of direct light, from Bina and below. Here, too, the light of Bina is in the vessel of Keter, etc., through the light of Yesod in the vessel of Netzah, and three of reflected light—Hod, Yesod and Malchut—in the vessels of Hod, Yesod and Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 86:1",
+      "html": "Six of direct light, from Hesed to Yesod, and four of reflected light, from Netzah to Malchut. The reflected light of Netzah is in the vessel of Netzah, etc.",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 87:1",
+      "html": "Five of direct light, from Gevura to Yesod, and five of reflected light, from Tifferet to Malchut. They clothe as above, meaning direct light in the more refined vessels, and reflected light, each in its appropriate vessel.",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 88:1",
+      "html": "Four of direct light, from Tifferet to Yesod, and six of reflected light, from Gevura to Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 89:1",
+      "html": "Three of direct light, from Netzah to Yesod, and seven of reflected light, from Hesed to Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 90:1",
+      "html": "Two of direct light, from Hod to Yesod, and eight of reflected light, from Bina to Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 91:1",
+      "html": "One of direct light, from Yesod, and nine of reflected light, from Hochma to Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 92:1",
+      "html": "Only ten Sefirot of reflected light, without any direct light.",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 93:1",
+      "html": "Nine of direct light, from Keter to Yesod, and one of reflected light, meaning Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 94:1",
+      "html": "Eight of direct light, from Hochma to Malchut, and two of reflected light, Yesod and Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 95:1",
+      "html": "Seven of direct light, from Bina to Malchut, and three of reflected light, from Hod to Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 96:1",
+      "html": "Six of direct light, from Hesed to Yesod, and four of reflected light, from Netzah to Malchut.",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 97:1",
+      "html": "First, we must understand the inner ten Sefirot contained in the general Netzah. They are three of direct light—the light of Netzah, clothing the vessel of Keter of the general Netzah, the light of Hod, in the vessel of Hochma of the general Netzah, and the light of Yesod in the vessel of Bina. Now, take the inner Hochma of the general Netzah, which also necessarily contains ten Sefirot through the eight Sefirot of direct light that pass through her from above downward, even in those that have only reflected light, since when the Sefirot were incorporated, the Sefirot of direct light always shine into the Sefirot in which there is reflected light. However, the eight Sefirot of direct light that passed from Hochma downward, are not regarded as light of Hochma, but as light of Hod, since the light of Hod is clothed in the vessel of Hochma in the general Netzah. Thus, in the ten Sefirot of Hochma of Netzah, there are now only passing lights of direct light from Hochma of Hod downward. Hochma of Hod is in the vessel of Keter, Bina of Hod in Hochma, and Hesed of Hod in Bina. Gevura of Hod is in Hesed, and Tifferet of Hod in Gevura. Thus, we find that there is direct light from the light of Tifferet of Hod in Gevura of Hochma of Netzah. Now let us take that Gevura of Hochma of Netzah, which was necessarily incorporated with ten inner Sefirot, as well—from direct light that passes through her from above downward, and from the reflected light that passes through her from below upward—so there are five Sefirot of direct light from Gevura downward in her. However, this is not at all the light of Gevura, but the five lower phases of the light of Tifferet of Hod, which clothe the more refined vessels. It follows that the light Gevura of Tifferet of Hod clothes the vessel of Keter of Gevura of Hochma of Netzah. Also, the light of Tifferet of Tifferet of Hod clothes the vessel of Hochma of Gevura of Hochma of Netzah. The light of Netzah of Tifferet of Hod is in the vessel of Bina of Gevura of Hochma of Netzah, and the light of Hod of Tifferet of Hod clothes in the vessel of Hesed of Gevura of Hochma of Netzah, and the light of Yesod of Tifferet of Hod clothes in the vessel of Gevura of Gevura of Hochma of Netzah. There are five additional Sefirot of reflected light that clothe according to the vessels, as they always do.",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 98:1",
+      "html": "Initially, when you take Bina of Hod, it has only reflected light without direct light. However, the direct light of the adjacent degree, namely the light of Yesod, shines in it. Consequently, this Bina, too, is incorporated with the lights that pass through it, which are seven of direct light from Bina downward. Because the light in it reforms him is only the light of Yesod of direct light, the direct light in it begins from Bina of Yesod downward. The light of Bina of Yesod clothes the vessel of Keter, etc., and the light of Hod of Yesod clothes the vessel of Tifferet of Bina of the general Hod. Afterwards, when you take the inner Tifferet of Bina of Hod, which also contains ten Sefirot, there are four of direct light there, from Tifferet downward, which clothe in the higher vessels, meaning Tifferet of Yesod of Yesod in the vessel of Keter, Netzah of Yesod of Yesod in the vessel of Hochma, Hod of Yesod of Yesod in the vessel of Bina, and Yesod of Yesod of Yesod in the vessel of Hesed. In addition, there are six phases of reflected light that pass through it from below upward, from Gevura to Malchut, clothing according to the vessels as they always do.",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 99:1",
+      "html": "Initially, when you take Yesod of Keter, its ten Sefirot have only the light of Yesod in the vessel of Keter, and the rest are reflected light. Also, if you take Netzah of Yesod of Keter, there is only reflected light there. However, the light of Yesod of direct light that stands in Keter shines there, and Netzah of Yesod of Keter is regarded as the direct light of Yesod. When it consists of ten Sefirot, it has three lights NHY of direct light from it and below through Yesod. They pass from above downward from Yesod of direct light. Netzah of Yesod clothes in the vessel of Keter, Hod of Yesod in the vessel of Hochma, Yesod of Yesod in the vessel of Bina, and the seven of reflected light HGT NHYM according to the vessels.",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 100:1",
+      "html": "There is only reflected light there, since anything that is extended from Malchut has only reflected light.",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 101:1",
+      "html": "This is the rule: The more important lights clothe in the more refined vessels, and the lesser ones clothe in the lesser vessels. Thus, in the Sefira Keter, Malchut of reflected light clothes in Malchut of Keter. In the Sefira f Hochma, the eight Sefirot of direct light, which are HB-HGT-NHY, clothe in the vessels KHB HGT, Netzah and Hod, while Yesod and Malchut of reflected light clothe in Yesod and Malchut there. In the Sefira Bina, the seven Sefirot or direct light, Bina and HGT NHY, clothe in the vessels KHB HGT, Netzah, and Hod, Yesod, and Malchut of reflected light clothe in Hod, Yesod, and Malchut there, etc., in the same way.",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Topics 102:1",
+      "html": "There are ten causes here, which are as follows: The cause of all the causes is Ein Sof. It is the cause of the four phases, in a way that they will become apparent after the restriction of the light. However, no vessel is discerned in Ein Sof itself. Rather, it is all light. Indeed, only from the lower one, meaning from the world of restriction, will the upper one be studied. Second cause: The first three phases are caused by one another. They are regarded as the cause for revealing the possibility of the greatest craving for equivalence of form in phase four, called Malchut of Ein Sof. Third cause: Malchut of Ein Sof is the cause of Keter of the world of restriction, since that craving to yearn for the greatest equivalence of form that Malchut of Ein Sof acquired is regarded as disparity of form in Malchut of Ein Sof. By this, it is distinguished from Malchut of Ein Sof and emerges with its own name outside of that Malchut, and it is called Keter of the world of restriction (See answer 32). Fourth cause: This Keter is the cause of the first restriction because it expanded once more down to phase four in it (See answer 38), and then restricted that will to receive, and the light departed. Fifth cause: The departure of the light that is done after the restriction is the cause of the appearance of the vessels of the ten Sefirot of circles (See answer 72). Sixth cause: The vessel of Malchut of circles, meaning phase four in them, is the cause of the drawing of the upper light once more from Ein Sof (See answers 83 and 138). Seventh cause: The upper light that was drawn once more is the cause of the appearance of the force of the screen in the vessel of Malchut (See answer 43). Eighth cause: The screen is the cause of the ten Sefirot of reflected light that rise from it and above up to the Keter of direct light. They are called the Rosh of AK (See answer 101). Ninth cause: The reflected light that rises from the screen is the cause of the appearance of the vessels of straightness. In other words, it gives the force of expansion in phase four so she may expand by herself into ten Sefirot from her and within her down to Malchut of Malchut. Tenth cause: The above-mentioned phase four, which received the force of expansion through the reflected light, is the cause of the ten Sefirot of the vessels of Adam Kadmon, which are called the Guf of Adam Kadmon down to his Malchut (See answer 11).",
       "anchors": []
     }
   ]

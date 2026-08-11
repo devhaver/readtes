@@ -1,0 +1,76 @@
+{
+  "volumes": [
+    {
+      "id": "volume-1",
+      "number": 1,
+      "title": { "en": "Volume 1", "he": "כרך א׳" },
+      "parts": [
+        {
+          "id": "part-01",
+          "number": 1,
+          "sefariaNode": "Talmud Eser HaSefirot, Section I",
+          "title": { "en": "Section I", "he": "חלק א׳" },
+          "chapters": [
+            {
+              "id": "part-01/chapter-01",
+              "kind": "chapter",
+              "number": 1,
+              "title": { "en": "Chapter 1", "he": "פרק א׳" },
+              "availableLayers": ["source"],
+              "availableVersions": {
+                "summary": [],
+                "source": ["he-jerusalem-1956"],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/answers-terminology-01",
+              "kind": "answers-terminology",
+              "number": 1,
+              "title": {
+                "en": "List of Answers on Terminology 1",
+                "he": "לוח התשובות לפירוש המלות א׳"
+              },
+              "availableLayers": ["source"],
+              "availableVersions": {
+                "summary": [],
+                "source": ["en-ai", "en-bb", "he-jerusalem-1956"],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/answers-terminology-02",
+              "kind": "answers-terminology",
+              "number": 2,
+              "title": {
+                "en": "List of Answers on Terminology 2",
+                "he": "לוח התשובות לפירוש המלות ב׳"
+              },
+              "availableLayers": ["source"],
+              "availableVersions": {
+                "summary": [],
+                "source": ["en-ai", "he-jerusalem-1956"],
+                "commentary": []
+              }
+            },
+            {
+              "id": "part-01/answers-terminology-03",
+              "kind": "answers-terminology",
+              "number": 3,
+              "title": {
+                "en": "List of Answers on Terminology 3",
+                "he": "לוח התשובות לפירוש המלות ג׳"
+              },
+              "availableLayers": ["source"],
+              "availableVersions": {
+                "summary": [],
+                "source": ["en-ai", "en-bb", "he-jerusalem-1956"],
+                "commentary": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,12 +2,426 @@
   "chapterId": "part-02/answers-terminology-01",
   "layer": "source",
   "versionId": "he-jerusalem-1956",
-  "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 1",
+  "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology",
   "items": [
     {
       "n": 1,
       "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 1:1",
       "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אדם קדמון</b> (ח\"ב פ\"א או\"פ ת')<br>הוא עולם הראשון המקבל מא\"ס ב\"ה, ונקרא ג\"כ קו אחד, שנמשך תיכף אחר הצמצום מא\"ס ב\"ה עד סמוך לעוה\"ז. השם של אדם, מיוחס רק על ספירות דיושר, שבעולם הראשון, שהוא אור הרוח, שפירושו אור השפעה, ולא על ספירות דעגולים שבו, שאין בהם אלא אור נפש בלבד, שפירושו אור של קבלה לעצמם, בלי יכולת להשפיע לזולתם. והוא השורש, לבחינת אדם שבעוה\"ז.",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 2:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור חוזר</b> (ח\"ב הסת\"פ ע\"ט)<br>הוא האור שאינו מקובל בבחי\"ד. פירוש, שהוא האור המיוחד למלא את בחי\"ד והיא אינה מקבלתו, מסבת המסך המעכב אותו, ומחזירו לאחוריו. ופעולה זו, מכונה בשם זווג דהכאה (עי' הת\"פ ח\"ב אות כ\"ב ד\"ה והנה). וכל כלי קבלה שבפרצופים, מהצמצום ואילך, נמשכים מאו\"ח הזה, שהוא משמש להם, במקום בחי\"ד שבא\"ס ב\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 3:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור ישר</b> (ח\"ב הסת\"פ צ\"ד)<br>הוא האור העליון הנמשך מא\"ס ב\"ה, ומושפע בפרצופים, שמאחר הצמצום ואילך. והוא מכונה כן, להורות, שאינו מושפע בכלים דעגולים, וכן בכל מדרגות שאין בהן כלום מעביות דבחי\"ד, זולת בספירות דיושר בלבד, על פי הכלל, אשר משפיע אינו משפיע זולת בדבר העב יותר, שהוא העביות שבבחי\"ד.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 4:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור מקיף</b> (ח\"ב פ\"א או\"פ מ')<br>הוא אור המיועד להתלבש במדרגה, אלא שמתעכב מחמת איזה גבול שבה. ויש בשם זה שתי משמעויות: א' שהוא הארה רחוקה. ב' שהוא הארה בטוחה, כלומר, שסוף סוף עתידה להתלבש שמה, כי האור \"מקיף\" עליה מסביב, ואין מניח לה שום מקום שתמלט ממנו, עד שתהיה ראויה לקבלתו בשלימות.",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 5:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אור פנימי</b> (ח\"ב פ\"א או\"פ מ')<br>הוא האור המלובש בכלי.",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 6:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>אורך</b> (ח\"ב פ\"ב או\"פ אות ד' ד\"ה היינו)<br>המרחק שבין ב' הקצוות שבמדרגה, כלומר, מבחינה הזכה יותר, עד לבחינה העבה יותר, מכונה בשם \"אורך\", כי כן הוא גם אורך המדומה הגשמי, שרומז על השטח שבין קצהו העליון לקצהו התחתון.",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 7:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בינה</b> (ח\"ב פ\"א או\"פ ר')<br>ההתבוננות בדרכי גורם ונמשך, כדי לברר כל התוצאות הנולדות ויוצאות מאיזה דבר, מכונה בשם \"בינה\".",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 8:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>בלתי דבוק</b> (ח\"ב ג')<br>השואת הצורה שבין ב' רוחנים, היא דביקות, ושינוי צורה שביניהם עושה אותם \"בלתי דבוק\" זב\"ז.",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 9:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גבול</b> (ח\"ב הסת\"פ ע\"ט)<br>המסך שבכל מדרגה, מודד ועושה \"גבול\" על המדרגה, בקומת האו\"ח שהמסך מעלה (עי' לעיל אות ב') במדת עביותו, כי מסך בחי\"ג מגביל קומת המדרגה, שלא תשיג אור כתר. ומסך דבחי\"ב מגבילה גם מאור חכמה וכו'.",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 10:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גג</b> (ח\"ב פ\"א או\"פ א' שניה)<br>הוא כתר שבכל מדרגה. וכן בספירות ובעולמות.",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 11:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גוף</b> (ח\"ב פ\"א או\"פ צ')<br>כלי קבלה אמיתיים שבכל מדרגה, המתפשטים מכח או\"ח שבמסך, ממנו ולמטה, נקראים \"גוף\" המדרגה, להיותם קודמים מהאורות. לאפוקי האורות המתפשטים לזווג דהכאה על המסך, שהם קודמים לכלים.",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 12:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גלגל</b> (ח\"ב ב')<br>ספירות דעגולים מכובים בשם \"גלגלים\", להיות האורות מתעגלים בהם, כלומר. שאי אפשר להכיר בהם זכות ועביות.",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 13:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ג\"ר</b> (ח\"ב פ\"א או\"פ צ')<br>הן אורות שקדמו לכלים, המלובשים באו\"ח העולה להם ממסך ממנו ולמעלה, דהיינו ג' ספירות ראשונות: כתר, חכמה, בינה, או שמכונים ראש של הפרצוף.",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 14:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>גשמיות</b><br>כל המדומה והמוחש בחמשת החושים, או שתופס מקום וזמן, מכונה בשם \"גשמיות\".",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 15:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>דרך העברה</b> (ח\"ב פ\"א או\"פ ד' שניה)<br>האורות הנמשכים מא\"ס ב\"ה אל הספירות התחתונות, המה עוברים בהכרח דרך הספירות העליונות, ומתוך שאין הרוחני נעדר ממקום א', בהיותו עובר למקום ב', אלא נשאר קיים, גם במקום א' וגם במקום ב', וע\"כ אנו מבחינים בכל ספירה ב' מיני אורות: אורות של בחינתן עצמן, ואורות שנשארו בהן, \"דרך מעבר\".",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 16:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הארה מרחוק</b> (ח\"ב פ\"א או\"פ מ')<br>ההארה הפועלת בפרצוף, בשעה שאין לו לפרצוף כלי קבלה לאור ההוא, נקראת בשם \"הארה מרחוק\", שהמשמעות, אשר יש מרחק ושינוי רב, בין האור, ובין כלים של הפרצוף המיוחסים לאותו אור, אשר ע\"כ אין הכלים מוכשרים לקבל האור ההוא ולהלבישו, אלא מקבלים ממנו הארה מרחוק.",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 17:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הזדככות המסך</b> (ח\"ב הסת\"פ ע\"ד)<br>היא הזדככות העביות שבבחי\"ד. להיות קומתו של האו\"ח, שהמסך מעלה ומלביש על האור ישר, תלוי במדת גדלה של העביות שבבחי\"ד (עי' לעיל אות ב', או\"ח), שפירושו גודל השתוקקות שבה, לכן אחר שמדרגה נתמלאה, באור שלה שהמשיכה, מתגבר האו\"מ ומזכך את המסך עד איזה שיעור של מדת ההשתוקקות. וזהו מכונה שנזדככה מעביותה שהיתה בה, ונקרא ג\"כ בשם \"הזדככות המסך\".",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 18:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הרחקה גמורה</b> (ח\"ב ח')<br>כששינוי הצורה, גדול כל כך עד שמגיע להפכיות הצורה, הקצה אל הקצה, הוא מכונה \"הרחקה גמורה\".",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 19:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>הרכנת הראש</b> (ח\"ב פ\"ב או\"פ ג')<br>כשאורות דז\"ת, משמשים גם בראש שנקרא ג\"ר, כי האורות דג\"ר הראוים לראש, חסרים שמה, מכונה \"הרכנת ראש\". כלומר, שהראש מושפל למדרגה שוה עם הז\"ת שנקראות גוף.",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 20:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התכללות הספירות</b> (ח\"ב הסת\"פ צ\"ז)<br>הספירות נכללות זו מזו ב\"דרך מעבר\" (עי' לעיל תשובה ט\"ו), ובהיות שהע\"ס דאור ישר, הנמשכות מכתר עד מלכות, אי אפשר שיופיעו במדרגה, זולת בהתלבשותן בע\"ס דאו\"ח, הנמשכות ועולות ממלכות עד כתר, הנה אין לך ספירה מהן, שלא תהינה בה ב' ספירות מבחינת עצמה: אחת דאור ישר, ואחת דאור חוזר. ועוד שמונה ספירות, שנתכללו בה בדרך מעבר, שמקצתן עברו בה בדרך מעבר ממעלה למטה, ומקצתן עברו בה דרך מעבר ממטה למעלה.",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 21:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>התקשרות</b> (ח\"ב פ\"א או\"פ כ')<br>ענין התלבשות ע\"ס דראש המדרגה בע\"ס דאו\"ח, העולות ממלכות ממטה למעלה, מכונה בשם \"התקשרות\", מטעם, שנבחן כאן שהאורות קודמים לכלים, שאין עביות עולה עם או\"ח הזה למעלה ממקומו, שהוא מלכות, אפילו משהו. ולפיכך, אין ע\"ס דאו\"ח הללו, נחשבות לכלים גמורים, הראוים להתלבשות העצמות בהם. וע\"כ, מכונה התלבשות ההיא, רק בשם \"התקשרות\", כלומר, שהאור הישר מתקשר ושורה על הפרצוף, על ידי ע\"ס דאו\"ח אלו, אע\"פ שאינו מתלבש ממש בהם. והתלבשות אור ישר בכלים, אינו אמור אלא באו\"ח המתפשט למטה ממסך אשר עביות של המלכות דראש, יכולה להתפשט ולרדת ולהלביש את הע\"ס דאור ישר הבאות בו.",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 22:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זה תוך זה</b> (ח\"ב פ\"ב או\"פ מ')<br>פירושו, זה מסובב מזה. כי עיגול חיצון מתבאר, שהוא הסבה והגורם, לעגול הפנימי שבתוכו, המסובב והנמשך מהחיצון, באופן, אשר \"זה תוך זה\", מראה על היחס של \"סבה ומסובב\" דהיינו \"עילה ועלול\" שיש בהם.",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 23:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זווג דהכאה</b> (ח\"ב הסת\"פ י\"ח)<br>פעולת המסך, המעכב והמעלים את האור מבחי\"ד, ומדחה את אור השייך לה, אל אחוריו לשורשו, הנה פעולה זו מכונה \"זווג דהכאה\", שהוראת השם הזה מורה, שפעולה זו נושאת בתוכה, ב' ענינים הפכיים: כי מצד אחד \"מכה\" באור, שפירושו שדוחה ומעלים אותו מלהאיר. ומהצד השני \"מזדווג\" עם האור, שפירושו, שגורם לו רביה והרחבה יתירה, שהרי שיעור אור זה הנעלם ונדחה מבחי\"ד, נהפך לאור מגולה גדול המלביש לאור ישר, שנקרא או\"ח, שבלעדו, אי אפשר כלל לאור א\"ס ב\"ה, שיתלבש בפרצוף.",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 24:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>זעיר אנפין, ז\"א</b> (ח\"ב הסת\"פ י\"ג)<br>זעיר אנפין, פירושו, פנים מוקטן, כי אור חכמה מכונה \"אור פנים\", בסו\"ה חכמת אדם תאיר פניו, ועל שם זה, נקרא פרצוף הכתר הכללי שבעולם אצילות, בשם \"אריך אנפין\", שפירושו, פנים גדולים, מטעם שיש בו עצם אור חכמה. ולפיכך, בחי\"ג, אשר עצמותה, היא רק אור חסדים הנמשך מבינה, אלא שיש בו גם הארה מחכמה, אבל אינו עצמות אור חכמה, הוא מכונה משום זה, פנים מוקטן, דהיינו \"זעיר אנפין\", כי אור פנים שלו, מוקטן וממועט בערך בחי\"א.",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 25:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ז\"ת, ז\"ס תחתונות</b> (ח\"ב פ\"א או\"פ צ')<br>ע\"ס הנמשכות ממסך ולמטה, מכונות בשם גוף או \"ז\"ת\" (עי' לעיל תשובה י\"א). כי בערך, שכל הפרצוף נבחן לפעמים, לעשר ספירות בלבד, יהיו ג' ספירות ראשונות כח\"ב, בראש של פרצוף ו\"ז\"ת\" שהן חג\"ת נהי\"ם בגוף של הפרצוף.",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 26:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חומר</b> (ח\"ב הסת\"פ מ')<br>העביות שבפרצוף מבחי\"ד שברצון (עי' עביות, לקמן אות נ\"ג) מכונה, בשם \"חומר\" של פרצוף. והוא שם מושאל מחומר גשמי מדומה, שיש בו ג' קוטרים: אורך, רוחב, ועומק. וששה קצוות: מעלה, מטה, מזרח, מערב, צפון, דרום.",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 27:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חיה</b> (ח\"ב פ\"ב או\"פ ו')<br>היא אור חכמה, בסו\"ה החכמה תחיה את בעליה.",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 28:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חיצוניות</b> (ח\"ב הסת\"פ ו')<br>הזך יותר שבכל כלי נבחן ל\"חיצוניות\" הכלי, והוא בחינת כלי, לאו\"מ המאיר בו מרחוק.",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 29:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חכמה</b> (ח\"ב פ\"א או\"פ ר')<br>ידיעת התוצאות התכליתיים, מכל פרטים שישנם בכל מציאות, נקראת בשם \"חכמה\".",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 30:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>חלון</b> (ח\"ב פ\"ב או\"פ ע')<br>הכח מבחינת עביות המסך, הנבחן בע\"ס דראש מדרגה או בע\"ס דעגולים, הנה כח עביות זה המתפעל בהם עם האו\"ח העולה אליהם ממסך, נקרא בשם \"חלון\". פירוש: כי או\"ח הנדחה מבחי\"ד מחמת עביותה, נעשה לבחינת כלי קבלה לאור העליון, במקום בחי\"ד שהיתה כלי קבלה בא\"ס ב\"ה. והוא מטעם, שהאו\"ח הוא באמת כלול מעביות דבחי\"ד, מחמת שהיא המשיכה אותו אצלה מא\"ס ב\"ה (עי' הסת\"פ ח\"ב אות ע\"ט ד\"ה וזה). אמנם אין עביות זו ניכרת, רק בכלים דגוף, להיותם מתפשטים, ממטה למסך, דהיינו למטה מבחי\"ד של ע\"ס דראש, וע\"כ עביות דבחי\"ד שבמסך שולטת בהם, ולפיכך, נחשבים לכלים גמורים, להתלבשות האור העליון בהם. משא\"כ בע\"ס דראש, שהן בהכרח למעלה מבחי\"ד שלהן, אלא שאו\"ח עולה אליהן ממטה למעלה, ואין עביות דבחי\"ד שבמסך יכולה להתכלל ולעלות עם האו\"ח, למעלה ממקומה, לט\"ס ראשונות ממנה, ולפיכך, אין האו\"ח הזה נעשה שם לבחינת כלים גמורים, אלא לבחינת שרשים לכלים בלבד. וע\"כ נקראת התלבשות ט\"ס באו\"ח זה, רק בשם התקשרות (עי' לעיל אות כ\"א). ועם כל זה, כלפי ט\"ס דראש, נבחן גם האו\"ח הזה, לבחינת \"כח של עביות\", כי על כן נעשה לכח התקשרות, עכ\"פ, להתפיס אותם בנאצל. והנה כח זה מכונה בשם \"חלון\", כי בכניסת או\"ח ואו\"י להאיר את הכלים הזכים דעגולים, שאין בהם הכר של עביות כל עיקר, הרי כח של עביות שיש באו\"ח, הוא שפל בהרבה מהם, וע\"כ פחות ומשפיל את דופני הכלים דעגולים, \"דרך כניסתו בהם\". בדומה, לנקב וחור שישנו בחדר, שהוא פחת וחסרון בכותל החדר, אמנם הוא דרך כניסה לאור השמש. וכן כאן, הפחת והחסרון שנעשה בדופני הכלים דעגולים, מכח עביות שבאו\"ח, אינו נחשב בהם כלל לחסרון, אלא לחלון, כי זולתו לא היה להם שום אור, שהרי אינם מקבלים שום אור, אלא דרך הקו, בכח מסך שבו.",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 31:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יחידה</b> (ח\"ב פ\"ב או\"פ ו')<br>אור המלובש בספירת כתר נקרא בשם \"יחידה\".",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 32:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>יציאה לחוץ</b> (ח\"ב הסת\"פ נ\"ט)<br>השתנות צורה המושגת ברוחני, מכונה בשם \"יציאה לחוץ\" הימנו. להיות שינוי הצורה המתהווה בחלק מפרצוף, נבחן, שחלק זה יצא מפרצוף ולחוץ, ע\"ד מדליק מנר לנר ואין הראשון חסר, כי אין העדר ברוחני. וא\"כ נמצא, כי כשמתחיל החלק לשנות צורתו, הנה יחד עם השתנות זו, מתחיל להתפרד מפרצוף, ולצאת לחוץ מפרצוף לרשות חדשה בפני עצמו. באפן, שהשתנות הצורה ו\"יציאה לחוץ\" היינו הך הם.",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 33:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ירידה</b> (ח\"ב פ\"א או\"פ ה' שניה)<br>התעבות, פירושה \"ירידה\", כלומר שירד ממדרגתו. והזדככות, פירושה עליה, כי נתעלה בהשואת הצורה לא\"ס ב\"ה, וזה הכלל, כל הזך יותר הוא עליון יותר, וכל העב יותר הוא תחתון יותר.",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 34:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ישר</b> (ח\"ב פ\"א או\"פ ה')<br>כשאור עליון, יורד לכלים שיש בהם מעביות דבחי\"ד, שפירושו השתוקקות, שהרי ממשיכה אותו בהשתוקקותה, נבחן, שהאור יורד \"ביושר\", כלומר, בהתאם גמור למדת העביות והשתוקקות שבה. בדומה לדבר כבד, הנופל לארץ מלמעלה, הריהו נופל בקו ישר גמור מלמעלה למטה, ובמרוצה גדולה, מחמת כח המושך שיש בארץ אליו, משא\"כ אם דבר קל נופל לארץ, שאין שם מקום לפעולת כח המושך עליו, אז הוא מתעגל באויר, באטיות, עד שנח עליה. כן הדבר כאן, כי בכלים שאין בהם עביות, כמו כלים דעגולים, נבחן, שהאור הבא לשם בכח הספירות דיושר, הוא מתעגל, כי אין שם עביות, שפירושו השתוקקות, אשר ימשיכו אליהם בכח המשכה. משא\"כ בכלים דיושר, שיש שם עביות, הממשיך את האור בכח גדול, נמצא האור יורד במרוצה ביושר מדויק, בדומה לקו \"ישר\".",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 35:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>כתר</b> (ח\"ב פ\"א או\"פ ר')<br>השראת השורש על המדרגה, נקרא בשם כתר, מלשון מכתיר, שפירושו מסבב, להיותו הזך יותר מכל המדרגה, ונמצא משום זה, מסבב על הפרצוף כולו ממעל לו.",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 36:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>לאט לאט</b> (ח\"ב פ\"א או\"פ ו')<br>המשכת אורות בסדר המדרגה, בסדר סבה ומסובב, מכונה \"לאט לאט\".",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 37:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מחבר</b> (ח\"ב פ\"א או\"פ ל')<br>מלכות דעליון נעשה כתר לתחתון, ולפיכך, נמצאת מלכות \"מחברת\" כל עליון עם תחתון שלו, כלומר, שנעשתה ביניהם השואת הצורה. ועי\"ז נעשה \"חיבור\" בין כל המדרגות, מעולם אדם קדמון עד סוף עשיה. וענין זה, נוהג בכלים דיושר שנקראים קו, ולא בכלים דעגולים. ולפיכך, כל חיבור העיגולים זה בזה נעשה ע\"י הקו.",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 38:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מימי אור</b> (ח\"ב פ\"א או\"פ ד')<br>האור היורד ממדרגתו, מכונה בשם מים או \"מימי אור\".",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 39:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מלכות</b> (ח\"ב פ\"א או\"פ ר')<br>בחינה אחרונה נקראת \"מלכות\", על שם, שממנה נמשכת בחינת הנהגה בתקיפות ובשליטה מוחלטת, כדוגמת מוראה של מלכות.",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 40:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ממעלה למטה</b> (ח\"ב הסת\"פ ב/ק\"ב)<br>אור המתפשט בכלים בסדר מדרגה, מזך אל עב, מכונה \"ממעלה למטה\". ואור זה נקרא אור ישר.",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 41:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ממטה למעלה</b> (ח\"ב הסת\"פ ק\"ג)<br>אור הנמשך בסדר מדרגה, מעב אל זך ממנו עד לזך ביותר, נקרא \"ממטה למעלה\". ואור זה נקרא בשם או\"ח.",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 42:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מסבב</b><br>גורם לגילוי מדרגה, מכונה שמסבב אותה. והוא מלשון סבה ומסובב, כי סבה פירושו גורם, ומסובב, פירושו, שנמשך ונולד מאותו הגורם והסבה.",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 43:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מסך</b> (ח\"ג ב')<br>\"כח צמצום\", המתעורר בנאצל כלפי אור עליון, להפסיק אותו על דרכו מלרדת לבחי\"ד, דהיינו, שברגע שמגיע ונוגע בבחי\"ד, תיכף מתעורר הכח ההוא, ומכה בו ודוחה אותו לאחוריו, הנה הכח הזה נקרא \"מסך\". וצריך שתבחין ההפרש, בין בחינת מסך שיש בנאצל, לבין בחינת צמצום שבו, שהם ב' ענינים נבדלים לגמרי. כי כח צמצום שנעשה על בחי\"ד, הוא מכוון כלפי הכלי שבנאצל, שהיא השתוקקות לקבל, שפירושו כי מחמת הרצון להשואת הצורה למאציל עיכב עצמו מלקבל בשעת ההשתוקקות לקבל, כי השתוקקות שבו שנקראת בחי\"ד, היא כח עליון, שאין הנאצל יכול לבטלו או למעטו במקצת, אלא שיכול לעכב עצמו, שלא לרצות לקבל, אע\"פ שמשתוקק מאד. וכח העיכוב הזה, שורה תמיד על בחי\"ד שבנאצל, מלבד, בשעה שממשיך אור חדש, אז מחויב בהכרח לבטל את כח העכוב, דהיינו הצמצום שבו, ומתגלה בו השתוקקות אחר האור העליון, שבזה כחו יפה להמשיך אליו את האור. וכאן, מתחילה פעולתו של מסך שבנאצל, כי כל השתוקקות ממשיכה אור עליון בשלימות, כמו שהיה בא\"ס ב\"ה, להיותו כח עליון, שאין שום שליטה לתחתון למעט אותו כנ\"ל, ולפיכך יורד האור כדי למלא הבחי\"ד. אמנם באותו רגע, שהאור נוגע בבחי\"ד, תיכף מתעורר ה\"מסך\", ומכה באור ומחזירו לאחוריו, כנ\"ל, ונמצא בזה, שמקבל רק אור של ג' בחינות, ובחי\"ד אינה מקבלתו, והנך רואה, שפעולת המסך אינה נוהגת, רק בשעת ביאת אור בלבד, אחר שנתבטל כח צמצום לשעתו, כדי להמשיך אור חדש, כמבואר. ופעולת צמצום אמנם, היא תמידית, לעכב את עצמו שלא להמשיך אור, הרי שצמצום ומסך הם ב' בחינות נפרדות זו מזו לגמרי, ותדע שמסך הוא תולדה מצמצום.",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 44:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מקיף</b> (ח\"ב פ\"א או\"פ מ')<br>עי' תשובה ד'.",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 45:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>מתבטל</b> (ח\"ב פ\"א או\"פ י')<br>כששני רוחניים שוים בצורתם לגמרי, מבלי שינוי כל שהוא, אז חוזרים לאחד ממש, וקטן \"מתבטל\" בגדול.",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 46:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נמשך</b> (ח\"ב פ\"א או\"פ צ')<br>ירידת אור בכח עביות, שפירושה בכח השתוקקות שיש בנאצל, נקראת \"נמשך\" או המשכה.",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 47:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נפש</b> (ח\"ב הסת\"פ צ\"ה)<br>אור שאינו בא אל פרצוף בבחינת השפעה מאור א\"ס ב\"ה, אלא הוא מקבל ממדרגה עליונה ממנו הסמוכה לו, נקרא בשם אור נפש או אור נקבה.",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 48:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נרנח\"י</b> (ח\"ב הסת\"פ פ\"ז)<br>כלים שבעשר ספירות, נקראים כח\"ב זו\"ן. ואורות שבע\"ס, נקראים \"נפש רוח נשמה חיה יחידה\". וטעם קריאתם מתתא לעילא, דהיינו נרנח\"י, ולא מעילא לתתא, דהיינו, יחנר\"ן, הוא משום, דסדר כניסת האורות בפרצוף כן הוא, דהיינו מתחילה נפש, ואח\"כ רוח וכו', שהוא בהיפך מכלים, ששם נגלה מתחילה כתר, ואח\"כ חכמה, וכו', עד מלכות שהיא לבסוף.",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 49:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>נשמה</b> (ח\"ב פ\"ב או\"פ ו')<br>האור המתלבש בכלי דבינה, נקרא בשם \"נשמה\". ונקרא כן, מלשון נשימה, להיות נשמה בחינת מקור לז\"א שהוא בחינת אור רוח, הנושם משם חיותו, על דרך עליה וירידה, בסו\"ה והחיות רצוא ושוב, ומלשון הכתוב ויפח באפיו נשמת חיים, והבן.",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 50:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סובב</b><br>גורם לגילוי מדרגה, מכונה בשם סובב למדרגה ההיא.",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 51:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סיום</b> (ח\"ב פ\"א או\"פ ז' שניה)<br>בחי\"ד נקראת סוף או \"סיום\", להיותה מפסקת אור העליון שלא יתפשט אליה, ומסיימת ע\"כ את המדרגה.",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 52:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>סמוך</b> (ח\"ב ב')<br>קרבת הצורה לחבירו מכונה \"סמוך\" לחבירו.",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 53:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עביות</b> (ח\"ב הסת\"פ ה')<br>גדלות הרצון לקבל בהשתוקקות גדולה, נקרא \"עביות\" מרובה, והשתוקקות מועטת נקראת \"עביות\" מועטת. והיא בחינת כלי המשכת השפע שבכל פרצוף, ומכונה ע\"כ פנימיות הכלי.",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 54:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עובר</b> (ח\"ב פ\"ב או\"פ ד' שניה)<br>הארת מדרגה תחתונה, מחויבת לעבור דרך העליונה ממנה, כלומר כיון שהתחתונה מסובבת ויוצאת מן העליונה, נחשבת כמו שעוברת דרך העליונה. וכיון שעוברת דרך העליונה, הרי נקבעת שמה, ונקראת שמה אור \"עובר\", ואינה זזה משם, אלא בחינת ענף ממנה יוצא, ובא למקומו, דהיינו לתחתונה, בדומה למדליק נר מנר ואין הראשון חסר. ועד\"ז תבין כל העתקת האורות מדרגא לדרגא. כי אין האור נעדר ממקומו הא' בביאתו למקום ב', כדדך הגשמיים, אלא כמבואר.",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 55:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_55\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עליון ותחתון</b> (ח\"ב הסת\"פ ב/פ\"ו)<br>ב' הבחנות עקריות יש לנו להבחין בכל פרצוף, שהן, בחינת כלי המשכת שפע שבו, ובחינת כלי קבלת שפע שבו. והן הפכיות זו לזו מקצה אל הקצה, כי מדת גדלו של שפע תלויה במדת עביות של כלי המשכה, כי אור הגדול יותר שבפרצוף הנקרא יחידה, צריך לכלי המשכה העב יותר, דהיינו מבחי\"ד שבבחי\"ד. והיפוכו בחינת כלי קבלה, כי האור הגדול יותר הנקרא יחידה אינו מתלבש זולת בכלי הזך יותר. ולפיכך, כשאנו מבחינים כלי המשכת השפע, אנו מבחינים אותם תחת השמות פנימיות וחיצוניות, וכל כלי הפנימי יותר הוא עב יותר, וממשיך קומה גדולה ביותר כנ\"ל, וכל החיצון יותר הוא זך יותר, וממשיך קומה קטנה ביותר. וכשאנו מבחינים בחינת כלי קבלת האורות שבפרצוף, אנו מכנים אותם בשמות \"עליון ותחתון\", אשר כל העליון יותר הוא זך יותר, ומלובשת בו קומה גדולה ביותר, וכל התחתון יותר, הוא עב יותר, ומלובשת בו קומה קטנה ביותר.",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 56:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_56\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>עצמות</b> (ח\"ב פ\"ב או\"פ ב')<br>אור חכמה נקרא \"עצמות\", משום שהוא עצמותו וחיותו של נאצל.",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 57:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_57\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנימיות</b> (ח\"ב הסת\"פ ב/פו)<br>בחינת עביות שבפרצוף, נקרא \"פנימיות\" שלו, להיותן מקום המשכת השפע.",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 58:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_58\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>פנימיות וחיצוניות</b><br>עי' תשובה נ\"ה.",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 59:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_59\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>צנור</b> (ח\"ב פ\"א או\"פ ב')<br>כלים דיושר מכונים בשם \"צנורות\", להיותם ממשיכים ומגבילים את האור בגבולים שבהם, כמו צנור המגביל את המים העוברים בתוכם.",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 60:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_60\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קו</b> (ח\"ב פ\"א או\"פ ב')<br>עשר ספירות של כלים דיושר, מבחינת כלים שלהן נקראות צנור, ומבחינת האור הנמצא בהן נקראות קו. ורק עשר ספירות דעולם אדם קדמון מכונות בשם קו אחד, משא\"כ עולם האצילות יש בעשר ספירות שבו ג' קוין.",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 61:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_61\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קומה זקופה</b> (ח\"ב פ\"ב או\"פ ג')<br>בשעה שאורות דראש מלובשים בכלים של ראש, מכונה פרצוף \"שקומתו זקופה\".",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 62:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_62\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קצבה</b> (ח\"ב פ\"א או\"פ ע')<br>או\"ח בשיעור מדתו עצמו, עושה \"קצבה\" על האור העליון, משום, שהאור אינו שורה בנאצל, זולת ע\"י הלבשתו של או\"ח.",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 63:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_63\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>קרקע</b> (ח\"ב פ\"ב או\"פ א')<br>מלכות של כל מדרגה או של עולם, מכונה בשם קרקע של עולם, או של מדרגה.",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 64:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_64\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>ראש</b> (ח\"ג פ\"ו)<br>ט\"ס של אור עליון, המתפשטות לזווג דהכאה על מסך שבמלכות להעלות או\"ח, נקראות \"ראש\" מדרגה, משום שאורות אלו קודמים למסך ואו\"ח, ואין עביות המסך יכולה לעלות אליהם. (עי' תשובה כ\"א).",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 65:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_65\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רוח</b> (ח\"ב ד')<br>האור המתלבש בכלי דז\"א, נקרא \"רוח\" משום שדרכו לעלות אל בינה, לשאוב שפע, ולרדת למלכות, להשפיע בה. כדוגמת הרוח הרצוא ושוב. (עיין תשובה מ\"ט).",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 66:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_66\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רוחניות</b><br>מלת רוחניות המובאת בספרי הקבלה, משמעותה שהיא מופשטת מכל המקרים הגשמיים, דהיינו מקום וזמן ודמיון וכו'. ולפעמים מורה רק על בחינת האור העליון שבכלי. אע\"פ שגם כלי הוא רוחני מכל התנאים.",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 67:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_67\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>רחוק</b> (ח\"ב פ\"א או\"פ מ')<br>השתנות צורה, בשיעור מרובה ביותר.",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 68:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_68\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תחילת התפשטות</b> (ח\"ב פ\"א או\"פ ז')<br>שורש של כל התפשטות אור, מכונה \"תחילת התפשטות\" או כתר.",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 69:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_69\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תיכף</b> (ח\"ב פ\"א או\"פ ו')<br>אור יורד בלי השתלשלות על סדר מדרגות של ד' בחינות, כי אין בו יותר מבחינה אחת מהן, מכונה שיורד תיכף, ואם משתלשל על סדר בחינות, נקרא \"לאט לאט\".",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Answers on Terminology 70:1",
+      "html": "<small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Questions_on_Terminology_70\" target=\"_blank\" rel=\"noopener noreferrer\">לשאלה</a>)</small> <b>תכלית כולם</b> (ח\"ב פ\"א או\"פ ז')<br>בחינה אחרונה שבכל מדרגות, דהיינו בחי\"ד שבבחי\"ד, מכונה תכלית כולם, להיותה עבה שבכולם, המכונה סוף, ומשום שכל המדרגות באות רק לתקן אותה.",
       "anchors": []
     }
   ]
