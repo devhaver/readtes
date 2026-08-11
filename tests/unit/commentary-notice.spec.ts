@@ -13,6 +13,15 @@ const commentaryItem = (anchorId: string): CommentaryItem => ({
   html: "…",
 });
 
+/** An unanchored item: known chapter, unknown seif — no `targetSeif` (issue #79). */
+const unanchoredItem = (anchorId: string): CommentaryItem => ({
+  anchorId,
+  order: 1,
+  label: { en: "1", he: "1" },
+  section: "ohr-pnimi",
+  html: "…",
+});
+
 describe("resolveMissingAnchorNotice", () => {
   it("is null when no anchor is active", () => {
     expect(
@@ -103,6 +112,39 @@ describe("resolveMissingAnchorNotice", () => {
         hebrewVersionId: HEBREW,
       }),
     ).toEqual({ anchorId: "op-9", canSwitchToHebrew: false });
+  });
+
+  // Issue #79: an unanchored-only chapter's commentary must not spuriously
+  // trigger this notice. In practice this can never happen structurally —
+  // `activeAnchor`/`anchorOrigin: "source"` only ever comes from a real
+  // `tes-anchor` marker in the source HTML, and `validate-content.ts`
+  // forbids a source `anchors[]` entry from ever naming an unanchored item
+  // — but these tests pin that guarantee down explicitly rather than
+  // relying on it only being true by construction elsewhere.
+  it("is null for an unanchored item's own anchorId activated from the commentary pane (not source-origin)", () => {
+    expect(
+      resolveMissingAnchorNotice({
+        activeAnchor: "op-3",
+        anchorOrigin: "commentary",
+        displayedItems: [unanchoredItem("op-3")],
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: [unanchoredItem("op-3")],
+        hebrewVersionId: HEBREW,
+      }),
+    ).toBeNull();
+  });
+
+  it("ignores unanchored items already shown when deciding whether a source-origin anchor is missing", () => {
+    expect(
+      resolveMissingAnchorNotice({
+        activeAnchor: "op-1",
+        anchorOrigin: "source",
+        displayedItems: [commentaryItem("op-1"), unanchoredItem("op-3")],
+        selectedVersionId: "en-sefaria-community",
+        hebrewItems: null,
+        hebrewVersionId: HEBREW,
+      }),
+    ).toBeNull();
   });
 });
 

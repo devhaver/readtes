@@ -6,6 +6,7 @@
 // equivalent panes-mode cross-pane behaviour this reuses
 // (`useAnchorActivation`/`useHighlightedAnchor`).
 import { mountSuspended } from "@nuxt/test-utils/runtime";
+import type { VueWrapper } from "@vue/test-utils";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import StudyStream from "~/components/reader/StudyStream.vue";
 import type {
@@ -39,6 +40,18 @@ const commentaryItem = (anchorId: string): CommentaryItem => ({
   targetSeif: 1,
   section: "ohr-pnimi",
   html: `Commentary for ${anchorId}.`,
+});
+
+/** An unanchored item: known chapter, unknown seif — no `targetSeif` (issue #79). */
+const unanchoredCommentaryItem = (
+  anchorId: string,
+  order: number,
+): CommentaryItem => ({
+  anchorId,
+  order,
+  label: { en: String(order), he: String(order) },
+  section: "ohr-pnimi",
+  html: `Unanchored commentary ${anchorId}.`,
 });
 
 // Only op-1 has an item in the currently-selected (English) commentary
@@ -243,5 +256,95 @@ describe("StudyStream", () => {
       props: { ...baseProps, commentaryLanguageOptions: [] },
     });
     expect(wrapper.text()).not.toContain("Read the full commentary");
+  });
+
+  // `ReaderChapterIntro`'s own mini-toc disclosure is also a `<details>`, so
+  // these tests pick out the unanchored-commentary section specifically by
+  // its title rather than assuming it's the only (or the first) `<details>`
+  // on the page.
+  const findUnanchoredSection = (wrapper: VueWrapper) =>
+    wrapper
+      .findAll("details")
+      .find((details) => details.text().includes("More commentary"));
+
+  describe("unanchored commentary reachability (issue #79)", () => {
+    it("regression: an anchored-only chapter renders no unanchored section", async () => {
+      const wrapper = await mountSuspended(StudyStream, { props: baseProps });
+
+      expect(findUnanchoredSection(wrapper)).toBeUndefined();
+      expect(wrapper.text()).not.toContain("not yet matched");
+    });
+
+    it("an unanchored-only chapter reaches its commentary via a titled, collapsed-by-default section after the source stream", async () => {
+      const unanchoredOnlySegments: SourceSegment[] = [
+        {
+          n: 1,
+          sefariaRef: "x 1",
+          html: "First segment, no anchors.",
+          anchors: [],
+        },
+        {
+          n: 2,
+          sefariaRef: "x 2",
+          html: "Second segment, no anchors.",
+          anchors: [],
+        },
+      ];
+      const unanchoredItems = [
+        unanchoredCommentaryItem("op-1", 1),
+        unanchoredCommentaryItem("op-2", 2),
+      ];
+
+      const wrapper = await mountSuspended(StudyStream, {
+        props: {
+          ...baseProps,
+          sourceSegments: unanchoredOnlySegments,
+          commentaryItems: unanchoredItems,
+          hebrewItems: unanchoredItems,
+        },
+      });
+
+      const section = findUnanchoredSection(wrapper);
+      expect(section).toBeDefined();
+      // Collapsed by default — no `open` attribute.
+      expect(section?.attributes("open")).toBeUndefined();
+      expect(section?.text()).toContain("not yet matched");
+      expect(section?.text()).toContain("Unanchored commentary op-1.");
+      expect(section?.text()).toContain("Unanchored commentary op-2.");
+
+      // No dead per-seif inline-disclosure triggers: no source anchor
+      // markers exist for unanchored items to hang off of.
+      expect(wrapper.find("a.tes-anchor").exists()).toBe(false);
+    });
+
+    it("a mixed chapter reaches unanchored items via the section AND keeps anchored items inline, without duplicating either", async () => {
+      const mixedItems = [
+        commentaryItem("op-1"),
+        unanchoredCommentaryItem("op-9", 9),
+      ];
+
+      const wrapper = await mountSuspended(StudyStream, {
+        props: {
+          ...baseProps,
+          commentaryItems: mixedItems,
+          hebrewItems: mixedItems,
+        },
+      });
+
+      // Unanchored item reachable via the titled section straight away.
+      const section = findUnanchoredSection(wrapper);
+      expect(section).toBeDefined();
+      expect(section?.text()).toContain("Unanchored commentary op-9.");
+
+      // Anchored item stays inline-only (folded until tapped) — not
+      // duplicated into the unanchored section.
+      expect(section?.text()).not.toContain("Commentary for op-1");
+      expect(wrapper.text()).not.toContain("Commentary for op-1");
+      await wrapper.find('a.tes-anchor[data-anchor="op-1"]').trigger("click");
+      expect(wrapper.text()).toContain("Commentary for op-1");
+      expect(findUnanchoredSection(wrapper)?.text()).not.toContain(
+        "Commentary for op-1",
+      );
+    });
   });
 });

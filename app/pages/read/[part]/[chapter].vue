@@ -266,6 +266,24 @@ const {
   close: closeCommentarySheet,
 } = useCommentarySheet();
 
+// The sheet is a per-seif affordance, so it must key off ANCHORED items
+// only (issue #79): a chapter whose currently-displayed commentary has no
+// anchored item at all (either no commentary, or commentary that's entirely
+// unanchored) could never show anything for ANY seif — opening it anyway
+// would just be an empty sheet on every tap, chapter-wide. That's noisier
+// than silently doing nothing: `CommentaryPane` already carries the honest
+// "not yet aligned" note for a reader who does open the commentary pane, so
+// a modal repeating that on every paragraph tap would add nothing but
+// friction.
+const hasAnchoredCommentary = computed(() =>
+  hasAnchoredCommentaryItems(commentaryItems.value),
+);
+
+const handleOpenSeifCommentary = (seifN: number) => {
+  if (!hasAnchoredCommentary.value) return;
+  openCommentarySheet(seifN);
+};
+
 const commentarySheetItems = computed(() =>
   commentarySheetSeif.value === null
     ? []
@@ -309,7 +327,7 @@ useLocalizedSeo({
         >
           <ReaderSourcePane
             :segments="sourceSegments"
-            @open-seif-commentary="openCommentarySheet"
+            @open-seif-commentary="handleOpenSeifCommentary"
           >
             <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
               <ReaderLayerAbsenceNote v-if="!hasCommentary" />

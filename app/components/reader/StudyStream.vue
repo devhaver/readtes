@@ -35,7 +35,7 @@ const emit = defineEmits<{
   "update:commentaryLanguage": [value: string];
 }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const { activateAnchor, toggleInline, expandedAnchors } = useReaderState();
 const { setMode } = useReaderMode();
 
@@ -92,8 +92,28 @@ watchEffect(
 const isExpanded = (anchorId: string): boolean =>
   expandedAnchors.value.has(anchorId);
 
+// Keys off ANCHORED items only, by construction: `anchorId` here always
+// comes from a source segment's own `anchors[]` (below), and
+// `validate-content.ts` requires every entry there to resolve to an
+// anchored commentary item (issue #79) — an unanchored item's `op-<order>`
+// id is never a source segment's anchor, so it can never surface through
+// this inline-disclosure path.
 const commentaryItemsForAnchor = (anchorId: string): CommentaryItem[] =>
   props.commentaryItems.filter((item) => item.anchorId === anchorId);
+
+// Commentary that has no seif to unfold inline under (issue #79: known
+// chapter, unknown seif) still needs to be reachable in study mode — it
+// gets its own titled, collapsed-by-default section after the source
+// stream instead (mobile screen economy: a reader who never opens it never
+// pays for it). Grouped by section the same way `CommentaryPane` groups the
+// full pane, so a chapter with unanchored items in both Ohr Pnimi and
+// Histaklut Pnimit still gets a labelled heading for each.
+const unanchoredGroups = computed(() =>
+  groupCommentaryBySection(unanchoredCommentaryItems(props.commentaryItems)),
+);
+const hasUnanchoredCommentary = computed(
+  () => unanchoredGroups.value.length > 0,
+);
 
 const canSwitchToHebrewFor = (anchorId: string): boolean =>
   resolveAnchorAvailability({
@@ -207,6 +227,57 @@ const goToFullCommentary = async () => {
     <p v-else class="text-sm text-(--text-muted)">
       {{ t("reader.sourceEmpty") }}
     </p>
+
+    <details
+      v-if="hasUnanchoredCommentary"
+      class="group mt-6 rounded-card border border-(--border) bg-(--surface-reading)"
+    >
+      <summary
+        class="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      >
+        <span
+          class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
+        >
+          {{ t("reader.studyMode.unalignedCommentaryTitle") }}
+        </span>
+        <span
+          aria-hidden="true"
+          class="text-(--text-muted) transition-transform group-open:rotate-180"
+          >⌄</span
+        >
+      </summary>
+
+      <div class="flex flex-col gap-6 px-4 pb-4">
+        <p class="text-sm text-(--text-muted)">
+          {{ t("reader.commentaryNotAligned") }}
+        </p>
+
+        <section
+          v-for="group in unanchoredGroups"
+          :key="group.section"
+          class="flex flex-col gap-4"
+        >
+          <h3
+            class="font-display text-xs tracking-wide text-(--text-muted) uppercase"
+          >
+            {{ t(`reader.commentarySection.${group.section}`) }}
+          </h3>
+
+          <ol class="flex flex-col gap-4">
+            <li
+              v-for="item in group.items"
+              :key="item.anchorId"
+              class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+            >
+              <span class="me-1.5 text-xs font-semibold text-(--accent-text)">
+                {{ localizedText(item.label, locale) }}
+              </span>
+              <span v-html="item.html" />
+            </li>
+          </ol>
+        </section>
+      </div>
+    </details>
 
     <ReaderLayerAbsenceNote v-if="!hasCommentaryLayer" />
 
