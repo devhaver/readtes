@@ -10,8 +10,9 @@
  * AGENTS.md / the content model skill). Rendering a pane for an absent
  * layer produced a full-height empty column — this list is what lets the
  * layout collapse to two panes or a single centered reading column
- * instead, with `ReaderLayerAbsenceNote` carrying the "not digitized yet"
- * explanation inside the Source pane.
+ * instead, with `ReaderLayerAbsenceNote` carrying the explanation inside
+ * the Source pane. The two absences are different in kind and must not read
+ * the same to a reader — see `ReaderLayerAbsenceNote`'s docblock.
  *
  * Source is unconditionally present: every chapter in the corpus has a
  * Hebrew source text at minimum (`validate:content` enforces the file's

@@ -47,6 +47,7 @@
     "innerObservationLoaded": "ההסתכלות הפנימית נטענה.",
     "innerObservationFailed": "לא ניתן היה לטעון את ההסתכלות הפנימית.",
     "innerObservationReload": "טען מחדש את הדף",
+    "innerObservationNeverWritten": "בעל הסולם לא כתב הסתכלות פנימית לחלק זה — לאחד עשר מתוך שישה עשר החלקים יש הסתכלות פנימית, וחלק זה אינו נמנה עמם. אין כאן טקסט שמהדורה כלשהי יכולה לכלול, ולכן אין זה פער דיגיטציה.",
     "miniTocTitle": "בפרק זה",
     "seifLabel": "סעיף {n}",
     "missingAnchor": {

@@ -47,6 +47,7 @@
     "innerObservationLoaded": "Inner Observation loaded.",
     "innerObservationFailed": "Inner Observation could not be loaded.",
     "innerObservationReload": "Reload the page",
+    "innerObservationNeverWritten": "Baal HaSulam wrote no Inner Observation (Histaklut Pnimit) for this part — eleven of the sixteen parts have one, and this is not among them. There is no text here for an edition to carry, so this is not a digitization gap.",
     "miniTocTitle": "In this chapter",
     "seifLabel": "Seif {n}",
     "missingAnchor": {

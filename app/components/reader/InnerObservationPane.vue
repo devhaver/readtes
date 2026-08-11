@@ -39,6 +39,14 @@ export interface InnerObservationSectionView {
   items: SourceSegment[];
 }
 
+// This pane renders only for a part that HAS an Inner Observation
+// (`resolveReaderPanes` drops it otherwise), so its `"ready"`-with-no-sections
+// state is always the ordinary coverage gap — the selected edition carries no
+// text for it yet. A part with none at all never reaches here; it gets
+// `ReaderLayerAbsenceNote`'s `inner-observation` footnote instead, whose
+// sentence says the text was never written rather than "not yet". A failed
+// load is its own `"failed"` state below, so the empty sentence never stands
+// in for "we could not fetch it".
 const props = withDefaults(
   defineProps<{
     sections: InnerObservationSectionView[];
