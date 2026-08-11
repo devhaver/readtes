@@ -44,6 +44,14 @@ if (!chapter) {
   });
 }
 
+// Lets every source segment beneath this page turn Sefaria's Questions <->
+// Answers cross-references into internal links. The part's own chapter
+// list is what makes that safe (a ref with no chapter here stays external,
+// so the prerender crawler never meets a dead internal route) and what
+// makes it correct (Sefaria's topics numbering is offset by the part's
+// terminology answer count) — see `useLinkedCrossRefs`.
+provideCrossRefChapters(partFile.chapters);
+
 const HEBREW_VERSION_ID = "he-jerusalem-1956";
 
 const {

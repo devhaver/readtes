@@ -8,13 +8,26 @@ import type { SourceSegment } from "~~/shared/types/content";
 
 const props = defineProps<{ segment: SourceSegment }>();
 
-// `rewriteLegacySefariaRelativeHrefs` patches a data quirk in already-
-// committed content: some Questions/Answers chapters' Hebrew source has
-// Sefaria's own site-relative cross-reference links (`href="/Talmud_..."`),
-// which don't resolve on this site — see `app/utils/sanitizeHtml.ts`.
+// Two passes over Sefaria's Questions <-> Answers cross-references, and
+// the order between them is load-bearing:
+//
+// 1. `rewriteLegacySefariaRelativeHrefs` first, normalizing any
+//    still-site-relative `href="/Talmud_..."` (content committed before
+//    `sanitizeHtml` did this at import time) to an absolute sefaria.org
+//    link. It rewrites *every* site-relative href to sefaria.org, so it
+//    has to run before anything internal exists, not after — see
+//    `app/utils/sanitizeHtml.ts`.
+// 2. `linkCrossRefs` then maps each ref onto this site's own chapter
+//    route, in the reader's locale, for the chapters that exist here. A
+//    ref it declines keeps the external new-tab link step 1 left it with
+//    — see `useLinkedCrossRefs`.
+const { linkCrossRefs } = useLinkedCrossRefs();
+
 const displayHtml = computed(() =>
-  rewriteLegacySefariaRelativeHrefs(
-    stripLeadingSeifNumber(props.segment.html, props.segment.n),
+  linkCrossRefs(
+    rewriteLegacySefariaRelativeHrefs(
+      stripLeadingSeifNumber(props.segment.html, props.segment.n),
+    ),
   ),
 );
 </script>
