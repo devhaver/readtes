@@ -46,14 +46,14 @@ Detailed reference lives in [Agent Skills](https://agentskills.io) under
 `.agents/skills/`, loaded only when a task needs them. Read the matching
 skill before working in these areas:
 
-| Skill                      | Read it when working on                                      |
-| -------------------------- | ------------------------------------------------------------ |
-| `tes-content-model`        | `content/`, schemas, ToC splits, anchors, `validate:content` |
-| `tes-import-sefaria`       | `scripts/import-sefaria.ts`                                  |
-| `tes-import-kabbalahmedia` | `scripts/import-kabbalahmedia.ts`                            |
-| `tes-seo-ssg`              | SEO, sitemap, canonical, prerender, fonts, contrast tokens   |
-| `tes-testing`              | `tests/unit/`, Vitest setup, guardrail specs                 |
-| `tes-pnpm-setup`           | A fresh clone or install failing                             |
+| Skill                      | Read it when working on                                               |
+| -------------------------- | --------------------------------------------------------------------- |
+| `tes-content-model`        | `content/`, schemas, ToC/glossary splits, anchors, `validate:content` |
+| `tes-import-sefaria`       | `scripts/import-sefaria.ts`                                           |
+| `tes-import-kabbalahmedia` | `scripts/import-kabbalahmedia.ts`                                     |
+| `tes-seo-ssg`              | SEO, sitemap, canonical, prerender, fonts, contrast tokens            |
+| `tes-testing`              | `tests/unit/`, Vitest setup, guardrail specs                          |
+| `tes-pnpm-setup`           | A fresh clone or install failing                                      |
 
 `.claude/skills/` holds symlinks to these same directories, because Claude
 Code reads only `.claude/skills/`. Edit the file under `.agents/skills/` —
@@ -88,7 +88,7 @@ V8's default heap; `task prod` sets this), `preview`, `start` (run the built
 `.output/server/index.mjs`), `lint:fix`, `format`, `typecheck` (`nuxi
 typecheck` **and** `vue-tsc -p tsconfig.scripts.json` for
 `scripts/`/`tests/`/`shared/`), `validate:content`, `emit:toc-splits`,
-`import:kabbalahmedia`.
+`emit:glossary-splits`, `import:kabbalahmedia`.
 
 A first `pnpm install` in a fresh clone prints `ERR_PNPM_IGNORED_BUILDS` and
 stops build scripts short — that's expected; see the `tes-pnpm-setup` skill.

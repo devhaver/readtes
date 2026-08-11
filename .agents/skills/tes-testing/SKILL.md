@@ -25,6 +25,9 @@ Don't delete or weaken these to make a change pass — fix the change:
 - `tests/unit/no-full-toc-import.spec.ts` — greps `app/**/*.{ts,vue}` for a
   quoted import of `content/toc.json` and fails if one appears. `app/` code
   must use the split ToC files instead; see `tes-content-model`.
+- `tests/unit/glossary-payload.spec.ts` — keeps the 307KB glossary out of
+  `app/`, both split files behind a dynamic `import()`, and the ~200KB
+  citations chunk behind `loadCitations()`. See `tes-content-model`.
 - `tests/unit/sitemap.spec.ts` — covers the pure URL-list builder in
   `shared/utils/sitemap.ts`. See the `tes-seo-ssg` skill.
 - `tests/unit/manifest-prefetch.spec.ts` — covers

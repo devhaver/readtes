@@ -292,3 +292,201 @@ export const chapterLayerFileSchema = z.discriminatedUnion("layer", [
   summaryLayerFileSchema,
 ]);
 export type ParsedChapterLayerFile = z.infer<typeof chapterLayerFileSchema>;
+
+// ---------------------------------------------------------------------------
+// Glossary — content/glossary/tes-en.json (+ its two app-facing split files)
+//
+// `tes-en.json` is the canonical, hand-audited terminology artifact: every
+// entry was mined from the 737 chapters where a `he-jerusalem-1956` file and
+// an `en-bb` file could be aligned item-by-item. It is 307KB, and ~77% of
+// that is `citations` — the aligned Hebrew/English excerpt pairs that
+// evidence each term. Loading all of it just to render a browsable term list
+// would be the `toc.json` mistake again, one directory over, so the same
+// split-then-verify scheme applies: `scripts/lib/glossary-splits.ts` derives
+// `tes-en.index.json` (everything but the citations) and
+// `tes-en.citations.json` (only the citations, keyed by entry id), and
+// `scripts/validate-content.ts` re-derives both and fails on any drift.
+// ---------------------------------------------------------------------------
+
+/**
+ * How the official English edition carries a Hebrew term across:
+ * `translate` — it becomes an English word ("אור" → "light");
+ * `transliterate` — the Hebrew word stays, in Latin letters ("מלכות" →
+ * "Malchut"); `transliterate-with-gloss` — same, with a parenthesised
+ * English gloss on first use; `acronym` — a Hebrew acronym becomes a Latin
+ * initialism ("ז\"א" → "ZA").
+ */
+export const glossaryStrategySchema = z.enum([
+  "translate",
+  "transliterate",
+  "transliterate-with-gloss",
+  "acronym",
+]);
+export type GlossaryStrategy = z.infer<typeof glossaryStrategySchema>;
+
+/** One English rendering the aligned en-bb corpus actually used, with its count. */
+export const glossaryVariantSchema = z.object({
+  en: z.string(),
+  occurrences: z.number().int().nonnegative(),
+});
+export type GlossaryVariant = z.infer<typeof glossaryVariantSchema>;
+
+/**
+ * One aligned Hebrew/English excerpt pair evidencing a term.
+ * `chapterId`/`layer`/`item` are absent on the handful of v2 entries whose
+ * evidence was quoted from an unaligned fallback chapter (`attestation:
+ * "attested"`), so a citation without a `chapterId` renders as a quotation
+ * with no chapter link rather than a broken one.
+ */
+export const glossaryCitationSchema = z.object({
+  chapterId: z.string().optional(),
+  layer: layerKindSchema.optional(),
+  /** Free text, e.g. `"item 1"` or `"op-10 (order 10)"`. */
+  item: z.string().optional(),
+  he: z.string(),
+  en: z.string(),
+});
+export type GlossaryCitation = z.infer<typeof glossaryCitationSchema>;
+
+/**
+ * The per-term fields shared by the canonical file and the split index —
+ * everything except `citations`, which the index replaces with a count.
+ */
+const glossaryEntryBaseShape = {
+  id: z.string(),
+  he: z.string(),
+  canonicalEn: z.string(),
+  strategy: glossaryStrategySchema,
+  /** Absent on the five v2 entries that carry `attestation` instead of frequency stats. */
+  heItemCount: z.number().int().nonnegative().optional(),
+  alignedItemCount: z.number().int().nonnegative().optional(),
+  coveragePct: z.number().int().min(0).max(100).optional(),
+  attestedInParts: z.array(z.string()).optional(),
+  variants: z.array(glossaryVariantSchema).optional(),
+  note: z.string().optional(),
+  /** `"attested"`, or a sentence explaining a derived (unattested) form. */
+  attestation: z.string().optional(),
+};
+
+export const glossaryEntrySchema = z.object({
+  ...glossaryEntryBaseShape,
+  citations: z.array(glossaryCitationSchema),
+});
+export type GlossaryEntry = z.infer<typeof glossaryEntrySchema>;
+
+/** A house rule the English edition follows, with the evidence for it. */
+export const glossaryConventionSchema = z.object({
+  id: z.string(),
+  topic: z.string(),
+  rule: z.string(),
+  evidence: z.string(),
+  examples: z.array(
+    z.object({
+      chapterId: z.string(),
+      layer: layerKindSchema,
+      he: z.string(),
+      en: z.string(),
+    }),
+  ),
+});
+export type GlossaryConvention = z.infer<typeof glossaryConventionSchema>;
+
+/** A place the official edition contradicts itself, and the form this project locks. */
+export const glossaryInconsistencySchema = z.object({
+  id: z.string(),
+  topic: z.string(),
+  split: z.array(
+    z.object({
+      form: z.string(),
+      occurrences: z.number().int().nonnegative(),
+      whereMostly: z.string().optional(),
+    }),
+  ),
+  diagnosis: z.string(),
+  recommendation: z.string(),
+  affects: z.array(z.string()),
+});
+export type GlossaryInconsistency = z.infer<typeof glossaryInconsistencySchema>;
+
+/** How the glossary was produced — the corpus it was read off and how well it aligned. */
+export const glossaryProvenanceSchema = z.object({
+  sourceVersion: z.string(),
+  referenceVersion: z.string(),
+  repoPath: z.string(),
+  generatedOn: z.string(),
+  method: z.string(),
+  alignedFilePairs: z.number().int().nonnegative(),
+  alignedChapters: z.number().int().nonnegative(),
+  alignedItemPairs: z.number().int().nonnegative(),
+  unalignedFallbackChapters: z.number().int().nonnegative(),
+  itemLevelFailureRatePct: z.number(),
+  fileLevelFailureRatePct: z.number(),
+  hebrewCharsAligned: z.number().int().nonnegative(),
+  englishCharsAligned: z.number().int().nonnegative(),
+  partsCovered: z.array(z.string()),
+  partsNotCovered: z.array(z.string()),
+});
+export type GlossaryProvenance = z.infer<typeof glossaryProvenanceSchema>;
+
+/** Shape of `content/glossary/tes-en.json` — the canonical, build-time file. */
+export const glossaryFileSchema = z.object({
+  $schema: z.string(),
+  generatedFrom: glossaryProvenanceSchema,
+  alignedChapterCount: z.number().int().nonnegative(),
+  usage: z.string(),
+  entryCount: z.number().int().nonnegative(),
+  entries: z.array(glossaryEntrySchema),
+  conventions: z.array(glossaryConventionSchema),
+  inconsistencies: z.array(glossaryInconsistencySchema),
+  knownGaps: z.array(z.string()),
+  revisions: z.array(
+    z.object({
+      version: z.string(),
+      date: z.string(),
+      reason: z.string(),
+      added: z.array(z.string()),
+    }),
+  ),
+});
+export type GlossaryFile = z.infer<typeof glossaryFileSchema>;
+
+/** A term in the app-facing index: everything but the citations, plus their count. */
+export const glossaryIndexEntrySchema = z.object({
+  ...glossaryEntryBaseShape,
+  citationCount: z.number().int().nonnegative(),
+});
+export type GlossaryIndexEntry = z.infer<typeof glossaryIndexEntrySchema>;
+
+/**
+ * Shape of `content/glossary/tes-en.index.json` — the ~35KB file the
+ * glossary page loads up front. `inconsistencies`, `usage` and `revisions`
+ * are deliberately not carried across: they are apparatus for the
+ * translation run, not for a reader (the per-entry `variants` already say
+ * "the edition also writes it this way", where it is actually useful).
+ */
+export const glossaryIndexFileSchema = z.object({
+  meta: z.object({
+    sourceVersion: z.string(),
+    referenceVersion: z.string(),
+    generatedOn: z.string(),
+    method: z.string(),
+    alignedChapters: z.number().int().nonnegative(),
+    alignedItemPairs: z.number().int().nonnegative(),
+    entryCount: z.number().int().nonnegative(),
+    partsCovered: z.array(z.string()),
+    partsNotCovered: z.array(z.string()),
+  }),
+  entries: z.array(glossaryIndexEntrySchema),
+  conventions: z.array(glossaryConventionSchema),
+  knownGaps: z.array(z.string()),
+});
+export type GlossaryIndexFile = z.infer<typeof glossaryIndexFileSchema>;
+
+/**
+ * Shape of `content/glossary/tes-en.citations.json` — the ~200KB bulk,
+ * keyed by entry id, imported only when a reader opens a term.
+ */
+export const glossaryCitationsFileSchema = z.object({
+  citations: z.record(z.string(), z.array(glossaryCitationSchema)),
+});
+export type GlossaryCitationsFile = z.infer<typeof glossaryCitationsFileSchema>;

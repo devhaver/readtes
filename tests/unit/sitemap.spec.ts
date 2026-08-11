@@ -16,11 +16,12 @@ const allChapterIds = realToc.volumes.flatMap((volume) =>
 );
 
 describe("sitemap URL builder", () => {
-  it("includes the three static top-level pages", () => {
+  it("includes the four static top-level pages", () => {
     const paths = sitemapPaths(realToc);
 
     expect(paths).toContain("/");
     expect(paths).toContain("/about");
+    expect(paths).toContain("/glossary");
     expect(paths).toContain("/volumes");
   });
 
@@ -64,7 +65,7 @@ describe("sitemap URL builder", () => {
     );
     const entries = buildSitemapEntries(realToc, SITE_URL);
 
-    expect(entries).toHaveLength(3 + realToc.volumes.length + chapterCount);
+    expect(entries).toHaveLength(4 + realToc.volumes.length + chapterCount);
   });
 
   it("builds the home path's alternates as / and /he (no trailing /he/)", () => {

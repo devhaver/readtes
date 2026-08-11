@@ -61,6 +61,14 @@ export interface PrefetchableManifestEntry {
  * the content chunks themselves, one level up. Each page still loads its
  * own part's map on demand via the dispatcher's `import()`.
  *
+ * `content/glossary/` covers the two split glossary files
+ * (`tes-en.index.json`, `tes-en.citations.json`). Only `/glossary` imports
+ * them, so they should never reach another page's dependency set to begin
+ * with — but the 197KB citations file is exactly the kind of payload that
+ * must not become a silent prefetch on every page if that ever changes, and
+ * even on `/glossary` itself the citations chunk is meant to load when a
+ * reader opens a term, not before.
+ *
  * `content-part-` covers the T14 merged chunks (one per chapter, see the
  * `manualChunks` function in `nuxt.config.ts`): once Rollup groups a
  * chapter's JSON files into one chunk, the manifest entry loses the
@@ -73,6 +81,7 @@ export interface PrefetchableManifestEntry {
 export const isContentChunkId = (id: string): boolean =>
   id.includes("content/parts/") ||
   id.includes("content/toc.parts/") ||
+  id.includes("content/glossary/") ||
   id.includes("utils/content-loaders/part-") ||
   id.startsWith("content-part-");
 
