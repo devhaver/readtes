@@ -100,6 +100,24 @@ describe("OriginalStream", () => {
     ).toBe(true);
   });
 
+  it("gives every seif its own `seif-N` id, so a `#seif-N` cross-reference lands", async () => {
+    // Panes and study mode both carry these ids; original mode is a full
+    // reading mode a reader can be persistently in, and a Questions/Answers
+    // link targets `…#seif-N` (`useLinkedCrossRefs`) whichever mode is up.
+    const wrapper = await mountSuspended(OriginalStream, {
+      props: {
+        sourceSegments: segments,
+        commentaryItems: [],
+        sourceMeta: null,
+        commentaryMeta: null,
+        pagination: null,
+      },
+    });
+
+    expect(wrapper.find("#seif-1").exists()).toBe(true);
+    expect(wrapper.find("#seif-2").text()).toContain("Second seif.");
+  });
+
   it("renders no pager at all when there's no pagination position (unknown chapter)", async () => {
     const wrapper = await mountSuspended(OriginalStream, {
       props: {

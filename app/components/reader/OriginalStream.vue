@@ -53,10 +53,16 @@ const hasCommentary = computed(() => props.commentaryItems.length > 0);
       :dir="sourceMeta?.direction ?? 'ltr'"
       :lang="sourceMeta?.language"
     >
+      <!-- `id="seif-N"` for the same reason `SourcePane`/`StudyStream`
+           carry it: a Questions/Answers cross-reference lands on
+           `…#seif-N` (`useLinkedCrossRefs`), and a reader whose standing
+           mode override is original must arrive at the seif here too, not
+           at an unscrolled page. -->
       <li
         v-for="segment in sourceSegments"
+        :id="`seif-${segment.n}`"
         :key="segment.n"
-        class="text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+        class="scroll-mt-24 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
         <ReaderSourceSegment :segment="segment" />
       </li>
