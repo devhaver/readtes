@@ -11,7 +11,7 @@
  * `main.css`'s `--reading-scale` rules), so it becomes the provider;
  * `ReadingPreferencesModal`'s later call just injects that same instance.
  *
- * Hydration note (same shape as `useReaderMode`/`useReaderVersions`):
+ * Hydration note (same shape as `useReaderMode`/`useReaderLanguages`):
  * `useLocalStorage` reads `localStorage` synchronously in `setup`, but
  * prerendering has no `localStorage` and always renders at the default
  * scale. Consulting the persisted value immediately would make a returning

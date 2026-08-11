@@ -8,7 +8,7 @@
  * Viewport is unknowable during prerendering/SSR (there is no `window`),
  * and re-checking it in the very first client render (used for hydration)
  * would diverge from that prerendered markup — the same hydration hazard
- * `useReaderVersions` documents for persisted version prefs. The fix here
+ * `useReaderLanguages` documents for persisted language prefs. The fix here
  * is the same shape: `resolveReaderMode` always returns the fixed,
  * viewport-independent `FIXED_PREMOUNT_MODE` until `hydrated` is true, so
  * SSR output and the client's pre-mount render are always identical byte
