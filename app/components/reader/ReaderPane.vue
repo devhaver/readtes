@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // Generic pane chrome shared by the Source/Inner Light/Inner Observation panes: a
-// header (`ReaderVersionHeader` — layer title + version <select> when
-// there's more than one + the "AI translated" badge) above a scroll
-// container that carries the version's `dir`/`lang` — the actual pane
-// content (SourcePane etc.) is slotted in, and grabs this container via
-// `useReaderPaneContainer()` for its own `useHighlightedAnchor`.
+// header (`ReaderPaneHeader` — layer title + language <select> when
+// there's more than one + the provenance badge) above a scroll
+// container that carries the resolved version's `dir`/`lang` — the actual
+// pane content (SourcePane etc.) is slotted in, and grabs this container
+// via `useReaderPaneContainer()` for its own `useHighlightedAnchor`.
 //
 // Bounded height + internal scroll are unconditional (not `lg:`-gated):
 // since T9, `MobileSwipePanes` gives every pane a bounded height below
@@ -13,14 +13,10 @@
 // behaves like an independently-scrolling column.
 import type { ContentVersion } from "~~/shared/types/content";
 
-export interface ReaderVersionOption {
-  id: string;
-  label: string;
-}
-
 defineProps<{
   title: string;
-  versionOptions: ReaderVersionOption[];
+  /** Language codes in display order; the header hides its select when length <= 1. */
+  languageOptions: string[];
   modelValue: string | null;
   meta: ContentVersion | null;
 }>();
@@ -35,9 +31,9 @@ const containerRef = provideReaderPaneContainer();
     <header
       class="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-(--border) px-4 py-2.5"
     >
-      <ReaderVersionHeader
+      <ReaderPaneHeader
         :title="title"
-        :version-options="versionOptions"
+        :language-options="languageOptions"
         :model-value="modelValue"
         :meta="meta"
         class="flex-1"

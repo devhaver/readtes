@@ -2,8 +2,8 @@
 // The signature mobile reading experience (T8): source segments flow as a
 // single reading stream — commentary comes to the reader inline instead of
 // living in a separate pane the reader has to juggle. Default mode below
-// the `lg` breakpoint (`useReaderMode`); reuses the exact same version
-// selection (`ReaderVersionHeader`), seif rendering (`ReaderSourceSegment`)
+// the `lg` breakpoint (`useReaderMode`); reuses the exact same language
+// selection (`ReaderPaneHeader`), seif rendering (`ReaderSourceSegment`)
 // and anchor-activation behaviour (`useAnchorActivation`) as panes mode's
 // `SourcePane`, rather than duplicating any of it.
 import type {
@@ -19,18 +19,20 @@ const props = defineProps<{
   summaryItems: SummaryItem[];
   sourceMeta: ContentVersion | null;
   commentaryMeta: ContentVersion | null;
-  sourceVersionOptions: { id: string; label: string }[];
-  commentaryVersionOptions: { id: string; label: string }[];
-  sourceVersion: string | null;
-  commentaryVersion: string | null;
+  sourceLanguageOptions: string[];
+  commentaryLanguageOptions: string[];
+  sourceLanguage: string | null;
+  commentaryLanguage: string | null;
+  /** The resolved commentary version id — for the "not in this edition" notice. */
+  commentaryVersionId: string | null;
   /** The chapter's `he-jerusalem-1956` commentary items, if it has that version — for the inline "switch to Hebrew" notice. */
   hebrewItems: CommentaryItem[] | null;
   hebrewVersionId: string;
 }>();
 
 const emit = defineEmits<{
-  "update:sourceVersion": [value: string];
-  "update:commentaryVersion": [value: string];
+  "update:sourceLanguage": [value: string];
+  "update:commentaryLanguage": [value: string];
 }>();
 
 const { t } = useI18n();
@@ -97,22 +99,22 @@ const canSwitchToHebrewFor = (anchorId: string): boolean =>
   resolveAnchorAvailability({
     anchorId,
     displayedItems: props.commentaryItems,
-    selectedVersionId: props.commentaryVersion,
+    selectedVersionId: props.commentaryVersionId,
     hebrewItems: props.hebrewItems,
     hebrewVersionId: props.hebrewVersionId,
   }).canSwitchToHebrew;
 
 // Unlike panes mode's single global `missingAnchorNotice`, several inline
-// disclosures can be open at once — switching commentary edition just
+// disclosures can be open at once — switching commentary language just
 // updates the shared `commentaryItems` prop these all read from, so no
 // `reactivateAnchor()`-style re-trigger is needed here: every open
 // `InlineCommentary` re-renders off plain prop reactivity.
 const switchToHebrew = () => {
-  emit("update:commentaryVersion", props.hebrewVersionId);
+  emit("update:commentaryLanguage", "he");
 };
 
 const hasCommentaryLayer = computed(
-  () => props.commentaryVersionOptions.length > 0,
+  () => props.commentaryLanguageOptions.length > 0,
 );
 
 /** Switches to panes mode and scrolls straight to its commentary column — see `ReaderShell`'s `#reader-commentary-pane`. */
@@ -131,21 +133,23 @@ const goToFullCommentary = async () => {
     class="mx-auto flex max-w-[65ch] flex-col px-4 py-6 sm:px-6"
   >
     <div class="mb-4 flex flex-col gap-2">
-      <ReaderVersionHeader
-        v-if="sourceVersionOptions.length > 1"
+      <ReaderPaneHeader
+        v-if="sourceLanguageOptions.length > 1"
         :title="t('reader.pane.source')"
-        :version-options="sourceVersionOptions"
-        :model-value="sourceVersion"
+        :language-options="sourceLanguageOptions"
+        :model-value="sourceLanguage"
         :meta="sourceMeta"
-        @update:model-value="(value) => emit('update:sourceVersion', value)"
+        @update:model-value="(value) => emit('update:sourceLanguage', value)"
       />
-      <ReaderVersionHeader
-        v-if="commentaryVersionOptions.length > 1"
+      <ReaderPaneHeader
+        v-if="commentaryLanguageOptions.length > 1"
         :title="t('reader.pane.innerLight')"
-        :version-options="commentaryVersionOptions"
-        :model-value="commentaryVersion"
+        :language-options="commentaryLanguageOptions"
+        :model-value="commentaryLanguage"
         :meta="commentaryMeta"
-        @update:model-value="(value) => emit('update:commentaryVersion', value)"
+        @update:model-value="
+          (value) => emit('update:commentaryLanguage', value)
+        "
       />
     </div>
 

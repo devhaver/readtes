@@ -51,13 +51,11 @@ const baseProps = {
   summaryItems: [],
   sourceMeta: null,
   commentaryMeta: null,
-  sourceVersionOptions: [],
-  commentaryVersionOptions: [
-    { id: "en-sefaria-community", label: "English" },
-    { id: HEBREW, label: "Hebrew" },
-  ],
-  sourceVersion: null,
-  commentaryVersion: "en-sefaria-community",
+  sourceLanguageOptions: [],
+  commentaryLanguageOptions: ["he", "en"],
+  sourceLanguage: null,
+  commentaryLanguage: "en",
+  commentaryVersionId: "en-sefaria-community",
   hebrewItems,
   hebrewVersionId: HEBREW,
 };
@@ -138,7 +136,7 @@ describe("StudyStream", () => {
     expect(wrapper.text()).toContain("Not available in this edition");
   });
 
-  it("shows the inline missing-anchor notice with a one-click Hebrew switch, and emits the version change", async () => {
+  it("shows the inline missing-anchor notice with a one-click Hebrew switch, and emits the language change", async () => {
     const wrapper = await mountSuspended(StudyStream, { props: baseProps });
 
     await wrapper.find('a.tes-anchor[data-anchor="op-2"]').trigger("click");
@@ -151,7 +149,7 @@ describe("StudyStream", () => {
 
     await switchButton?.trigger("click");
 
-    expect(wrapper.emitted("update:commentaryVersion")).toEqual([[HEBREW]]);
+    expect(wrapper.emitted("update:commentaryLanguage")).toEqual([["he"]]);
   });
 
   it("doesn't offer a Hebrew switch once Hebrew is already selected", async () => {
@@ -159,7 +157,8 @@ describe("StudyStream", () => {
       props: {
         ...baseProps,
         commentaryItems: [],
-        commentaryVersion: HEBREW,
+        commentaryLanguage: "he",
+        commentaryVersionId: HEBREW,
         hebrewItems: [],
       },
     });
@@ -193,7 +192,7 @@ describe("StudyStream", () => {
 
   it("hides the 'read the full commentary' link when the chapter has no commentary layer", async () => {
     const wrapper = await mountSuspended(StudyStream, {
-      props: { ...baseProps, commentaryVersionOptions: [] },
+      props: { ...baseProps, commentaryLanguageOptions: [] },
     });
     expect(wrapper.text()).not.toContain("Read the full commentary");
   });

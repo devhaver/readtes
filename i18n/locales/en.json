@@ -32,7 +32,8 @@
       "innerLight": "Inner Light",
       "innerObservation": "Inner Observation"
     },
-    "versionLabel": "Edition",
+    "languageLabel": "Language",
+    "sefariaTranslated": "Sefaria translation",
     "commentarySection": {
       "ohr-pnimi": "Inner Light",
       "histaklut-pnimit": "Inner Observation"

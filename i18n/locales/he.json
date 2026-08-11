@@ -32,7 +32,8 @@
       "innerLight": "אור פנימי",
       "innerObservation": "הסתכלות פנימית"
     },
-    "versionLabel": "מהדורה",
+    "languageLabel": "שפה",
+    "sefariaTranslated": "תרגום ספריא",
     "commentarySection": {
       "ohr-pnimi": "אור פנימי",
       "histaklut-pnimit": "הסתכלות פנימית"

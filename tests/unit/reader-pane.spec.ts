@@ -23,12 +23,12 @@ const aiMeta: ContentVersion = {
 };
 
 describe("ReaderPane", () => {
-  it("sets dir/lang on the scroll container from the version metadata", async () => {
+  it("sets dir/lang on the scroll container from the resolved version metadata", async () => {
     const wrapper = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
-        versionOptions: [],
-        modelValue: "he-jerusalem-1956",
+        languageOptions: [],
+        modelValue: "he",
         meta: hebrewMeta,
       },
     });
@@ -42,8 +42,8 @@ describe("ReaderPane", () => {
     const wrapper = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
-        versionOptions: [],
-        modelValue: "en-ai",
+        languageOptions: [],
+        modelValue: "en",
         meta: aiMeta,
       },
     });
@@ -55,8 +55,8 @@ describe("ReaderPane", () => {
     const wrapper = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
-        versionOptions: [],
-        modelValue: "he-jerusalem-1956",
+        languageOptions: [],
+        modelValue: "he",
         meta: hebrewMeta,
       },
     });
@@ -64,12 +64,12 @@ describe("ReaderPane", () => {
     expect(wrapper.text()).not.toContain("AI translated");
   });
 
-  it("only renders the version <select> when there's more than one version", async () => {
+  it("only renders the language <select> when there's more than one language", async () => {
     const single = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
-        versionOptions: [{ id: "he-jerusalem-1956", label: "Hebrew" }],
-        modelValue: "he-jerusalem-1956",
+        languageOptions: ["he"],
+        modelValue: "he",
         meta: hebrewMeta,
       },
     });
@@ -78,31 +78,25 @@ describe("ReaderPane", () => {
     const multiple = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
-        versionOptions: [
-          { id: "he-jerusalem-1956", label: "Hebrew" },
-          { id: "en-ai", label: "English (AI)" },
-        ],
-        modelValue: "he-jerusalem-1956",
+        languageOptions: ["he", "en"],
+        modelValue: "he",
         meta: hebrewMeta,
       },
     });
     expect(multiple.find("select").exists()).toBe(true);
   });
 
-  it("emits update:modelValue when the version <select> changes", async () => {
+  it("emits update:modelValue when the language <select> changes", async () => {
     const wrapper = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
-        versionOptions: [
-          { id: "he-jerusalem-1956", label: "Hebrew" },
-          { id: "en-ai", label: "English (AI)" },
-        ],
-        modelValue: "he-jerusalem-1956",
+        languageOptions: ["he", "en"],
+        modelValue: "he",
         meta: hebrewMeta,
       },
     });
 
-    await wrapper.find("select").setValue("en-ai");
-    expect(wrapper.emitted("update:modelValue")).toEqual([["en-ai"]]);
+    await wrapper.find("select").setValue("en");
+    expect(wrapper.emitted("update:modelValue")).toEqual([["en"]]);
   });
 });
