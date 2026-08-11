@@ -23,7 +23,7 @@ const props = defineProps<{
   commentaryLanguageOptions: string[];
   sourceLanguage: string | null;
   commentaryLanguage: string | null;
-  /** The resolved commentary version id — for the "not in this edition" notice. */
+  /** The resolved commentary version id — for the "not in this language" notice. */
   commentaryVersionId: string | null;
   /** The chapter's `he-jerusalem-1956` commentary items, if it has that version — for the inline "switch to Hebrew" notice. */
   hebrewItems: CommentaryItem[] | null;
@@ -133,8 +133,16 @@ const goToFullCommentary = async () => {
     class="mx-auto flex max-w-[65ch] flex-col px-4 py-6 sm:px-6"
   >
     <div class="mb-4 flex flex-col gap-2">
+      <!--
+        Rendered on layer EXISTENCE, never on how many languages the layer
+        offers. `ReaderPaneHeader` hides its own `<select>` at one language,
+        but it also carries the provenance badge — and "AI translated" is
+        the project's one mandatory label. Gating the whole header on
+        `languageOptions.length > 1` would take the badge down with the
+        switcher the moment a layer is single-language (an English-only
+        chapter, which issues #79/#87 will create).
+      -->
       <ReaderPaneHeader
-        v-if="sourceLanguageOptions.length > 1"
         :title="t('reader.pane.source')"
         :language-options="sourceLanguageOptions"
         :model-value="sourceLanguage"
@@ -142,7 +150,7 @@ const goToFullCommentary = async () => {
         @update:model-value="(value) => emit('update:sourceLanguage', value)"
       />
       <ReaderPaneHeader
-        v-if="commentaryLanguageOptions.length > 1"
+        v-if="hasCommentaryLayer"
         :title="t('reader.pane.innerLight')"
         :language-options="commentaryLanguageOptions"
         :model-value="commentaryLanguage"

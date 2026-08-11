@@ -5,7 +5,7 @@
 // missing-anchor notice pattern (`resolveAnchorAvailability`,
 // `~/utils/commentaryNotice`) inline instead of as a toast, since several
 // of these can be open at once and each needs its own "not in this
-// edition" check independent of the others.
+// language" check independent of the others.
 import type { CommentaryItem, ContentVersion } from "~~/shared/types/content";
 
 const props = defineProps<{

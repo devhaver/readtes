@@ -137,6 +137,32 @@ describe("resolveVersionForLanguage", () => {
     ).toBeNull();
     expect(resolveVersionForLanguage([], "en", versionsById)).toBeNull();
   });
+
+  // A chain id matched by string alone would resolve to a version
+  // `languagesAvailable` never lists, and the pane `<select>` would then
+  // hold a value with no matching `<option>` — showing one language while
+  // rendering another. Both functions must read the same registry.
+  it("ignores a chain id with no registry entry, rather than trusting the name", () => {
+    const registryMiss = buildVersionsById(
+      versions.filter((version) => version.id !== "en-bb"),
+    );
+
+    expect(
+      resolveVersionForLanguage(["en-bb", "en-ai"], "en", registryMiss),
+    ).toBe("en-ai");
+    expect(resolveVersionForLanguage(["en-bb"], "en", registryMiss)).toBeNull();
+  });
+
+  it("never resolves to a language the switcher would not offer", () => {
+    const registryMiss = buildVersionsById(
+      versions.filter((version) => version.id !== "en-bb"),
+    );
+    const available = ["he-jerusalem-1956", "en-bb"];
+
+    const offered = languagesAvailable(available, registryMiss);
+    expect(offered).toEqual(["he"]);
+    expect(resolveVersionForLanguage(available, "en", registryMiss)).toBeNull();
+  });
 });
 
 describe("languagesAvailable", () => {

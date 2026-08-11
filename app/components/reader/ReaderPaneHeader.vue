@@ -8,6 +8,12 @@
 // `resolveVersionForLanguage` picks the edition, so the only thing worth
 // telling them is when the text they're reading isn't the official Bnei
 // Baruch translation. Hebrew is never badged — it is the original.
+//
+// This component owns the "only one language, no switcher" case itself
+// (the `<select>` is what disappears, not the header) so that callers
+// render it on layer EXISTENCE alone. The badge and the switcher have
+// different lifetimes on purpose: "AI translated" is the project's one
+// mandatory label, and a single-language layer must still carry it.
 import type { ContentVersion } from "~~/shared/types/content";
 
 const props = defineProps<{
@@ -25,6 +31,15 @@ const emit = defineEmits<{ "update:modelValue": [value: string] }>();
 const { t } = useI18n();
 
 const selectId = useId();
+
+// Panes mode mounts up to three of these on one page, and the site-locale
+// switcher is a fourth "Language" control in the same document — so the
+// bare word would leave a screen-reader user with four identically-named
+// controls and no way to tell which pane each drives. The layer title is
+// already a prop; it goes in the accessible name.
+const languageLabel = computed(() =>
+  t("reader.paneLanguageLabel", { pane: props.title }),
+);
 
 const provenance = computed(() => {
   const meta = props.meta;
@@ -65,9 +80,7 @@ const onLanguageChange = (event: Event) => {
       </span>
 
       <template v-if="languageOptions.length > 1">
-        <label :for="selectId" class="sr-only">{{
-          t("reader.languageLabel")
-        }}</label>
+        <label :for="selectId" class="sr-only">{{ languageLabel }}</label>
         <select
           :id="selectId"
           class="rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"

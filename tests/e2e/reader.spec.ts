@@ -55,14 +55,19 @@ test("serves the aligned English reader and synchronizes Ari anchors", async ({
   await expect(innerLight.locator("#op-1")).toHaveClass(/is-highlighted/);
 });
 
-test("switches editions, identifies AI text, and supports themes", async ({
+test("switches languages, identifies AI text, and supports themes", async ({
   page,
 }) => {
   await page.goto(CHAPTER_PATH);
   await waitForHydration(page);
 
+  // The pane switcher lists LANGUAGES, and each pane's control is named
+  // after its own layer — panes mode mounts three of them on this page, so
+  // a bare "Language" would be ambiguous for both Playwright and a screen
+  // reader. The resolved edition (here `he-jerusalem-1956`) is never a
+  // control, only the `lang`/`dir` it produces.
   const source = page.locator("#reader-source-pane");
-  await source.getByLabel("Edition").selectOption("he-jerusalem-1956");
+  await source.getByLabel("Language: The Ari's Text").selectOption("he");
   await expect(source.locator('[lang="he"][dir="rtl"]')).toBeVisible();
 
   const html = page.locator("html");

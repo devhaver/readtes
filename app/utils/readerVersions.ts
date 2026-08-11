@@ -12,6 +12,13 @@
  */
 import type { ContentVersion } from "~~/shared/types/content";
 
+/**
+ * Re-exported so the pane header can auto-import it alongside the rest of
+ * this module. The table itself lives in `shared/` because `nuxt.config.ts`
+ * labels the UI-locale switcher from the same data.
+ */
+export { nativeLanguageName } from "~~/shared/utils/languages";
+
 export type VersionsById = Map<string, ContentVersion>;
 
 /**
@@ -34,29 +41,28 @@ const LANGUAGE_VERSION_CHAINS: Record<string, string[]> = {
  */
 const LANGUAGE_DISPLAY_ORDER = ["he", "en"];
 
-/** Native-language names — identical in every UI locale, hence not i18n keys. */
-const NATIVE_LANGUAGE_NAMES: Record<string, string> = {
-  he: "עברית",
-  en: "English",
-  bg: "Български",
-  de: "Deutsch",
-  ru: "Русский",
-  fr: "Français",
-  es: "Español",
-  tr: "Türkçe",
-  hi: "हिन्दी",
-  pt: "Português",
-  uk: "Українська",
-};
-
 export const buildVersionsById = (versions: ContentVersion[]): VersionsById =>
   new Map(versions.map((version) => [version.id, version]));
 
 export const versionChainForLanguage = (language: string): string[] =>
   LANGUAGE_VERSION_CHAINS[language] ?? [`${language}-bb`, `${language}-ai`];
 
-export const nativeLanguageName = (language: string): string =>
-  NATIVE_LANGUAGE_NAMES[language] ?? language;
+/**
+ * The registry is the only authority on what language an id is in — the
+ * chain is just a preference order within an already-confirmed language.
+ * Matching a chain id by string alone would let this function return an id
+ * that `languagesAvailable` (which reads the registry) never offers, and
+ * the pane's `<select>` would then be bound to a language with no matching
+ * `<option>` — silently displaying a different language than the one in
+ * state. `validate:content` already rejects unregistered ids in
+ * `availableVersions`, so this is belt-and-braces; it costs one map lookup
+ * and removes the divergence as a possibility rather than as a policy.
+ */
+const isInLanguage = (
+  id: string,
+  language: string,
+  versionsById: VersionsById,
+): boolean => versionsById.get(id)?.language === language;
 
 export const resolveVersionForLanguage = (
   available: string[],
@@ -64,11 +70,15 @@ export const resolveVersionForLanguage = (
   versionsById: VersionsById,
 ): string | null => {
   for (const preferred of versionChainForLanguage(language)) {
-    if (available.includes(preferred)) return preferred;
+    if (
+      available.includes(preferred) &&
+      isInLanguage(preferred, language, versionsById)
+    )
+      return preferred;
   }
 
   return (
-    available.find((id) => versionsById.get(id)?.language === language) ?? null
+    available.find((id) => isInLanguage(id, language, versionsById)) ?? null
   );
 };
 

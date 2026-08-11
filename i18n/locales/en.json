@@ -32,7 +32,7 @@
       "innerLight": "Inner Light",
       "innerObservation": "Inner Observation"
     },
-    "languageLabel": "Language",
+    "paneLanguageLabel": "Language: {pane}",
     "sefariaTranslated": "Sefaria translation",
     "commentarySection": {
       "ohr-pnimi": "Inner Light",
@@ -46,7 +46,7 @@
     "miniTocTitle": "In this chapter",
     "seifLabel": "Seif {n}",
     "missingAnchor": {
-      "message": "Not available in this edition.",
+      "message": "Not available in this language.",
       "switchToHebrew": "Switch to Hebrew"
     },
     "prevChapter": "Previous chapter",
@@ -84,7 +84,7 @@
     "commentarySheet": {
       "title": "Commentary on seif {n}",
       "openInCommentary": "Open in Commentary",
-      "empty": "No commentary for this seif in this edition.",
+      "empty": "No commentary for this seif in this language.",
       "close": "Close"
     },
     "prefs": {

@@ -194,7 +194,7 @@ const breadcrumbItems = computed(() => [
   },
 ]);
 
-// "Not available in this edition" toast for the commentary pane: a source
+// "Not available in this language" toast for the commentary pane: a source
 // anchor was activated, but the commentary version currently shown has
 // nothing for it.
 const { activeAnchor, anchorOrigin, reactivateAnchor } = useReaderState();

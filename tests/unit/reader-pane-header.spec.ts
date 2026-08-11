@@ -48,6 +48,19 @@ describe("ReaderPaneHeader provenance badge", () => {
     expect(wrapper.text()).not.toContain("Sefaria translation");
   });
 
+  // CLAUDE.md: the `en-ai` badge is the one place AI attribution is
+  // mandatory. It must not be collateral damage of a switcher that has
+  // nothing to switch between — see the StudyStream counterpart of this
+  // test, which is the case that actually regressed.
+  it("still badges an AI translation when there is only one language and no select", async () => {
+    const wrapper = await mountHeader(
+      version({ id: "en-ai", language: "en", source: "ai" }),
+      ["en"],
+    );
+    expect(wrapper.find("select").exists()).toBe(false);
+    expect(wrapper.text()).toContain("AI translated");
+  });
+
   it("never badges Hebrew — it is the original, not a translation", async () => {
     const wrapper = await mountHeader(
       version({
@@ -79,6 +92,20 @@ describe("ReaderPaneHeader language select", () => {
       ["en"],
     );
     expect(wrapper.find("select").exists()).toBe(false);
+  });
+
+  // Panes mode mounts three of these at once, plus the site-locale
+  // switcher — a bare "Language" would leave a screen-reader user unable
+  // to tell which pane a control drives.
+  it("names the control after its own pane, not just 'Language'", async () => {
+    const wrapper = await mountHeader(
+      version({ id: "en-bb", language: "en", source: "kabbalahmedia" }),
+    );
+    const label = wrapper.find("label");
+    expect(label.text()).toBe("Language: The Ari's Text");
+    expect(label.attributes("for")).toBe(
+      wrapper.find("select").attributes("id"),
+    );
   });
 
   it("emits the chosen language code", async () => {

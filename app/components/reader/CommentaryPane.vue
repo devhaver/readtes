@@ -2,7 +2,7 @@
 // Renders a chapter's commentary items, grouped under "Inner Light"
 // (Ohr Pnimi) / "Inner Observation" (Histaklut Pnimit) section headings —
 // only the groups that actually have items render (see
-// `groupCommentaryBySection`). The "not available in this edition" toast
+// `groupCommentaryBySection`). The "not available in this language" toast
 // for a source anchor missing from this version lives in the reader page
 // (via `ReaderPane`'s `#toast` slot), not here — this component only
 // renders whatever items it's given.
