@@ -9,7 +9,8 @@
  *
  * Direct `await import()`, no `useAsyncData` — see `useLocalizedVolumes`'s
  * docblock for why. The reader page calls this with a single part id; a
- * volume's contents page calls it with that volume's 2-3 part ids.
+ * volume's contents page calls it with that volume's part ids (2-4 of them
+ * in the Bnei Baruch grouping).
  *
  * A requested part id with no matching file resolves to `undefined` in the
  * returned map (never a throw) — callers 404 on a missing part themselves,

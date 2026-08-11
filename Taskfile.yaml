@@ -99,7 +99,8 @@ tasks:
     desc: Run the complete pre-commit verification suite
     summary: |
       Run every required quality gate: linting, formatting, type-checking,
-      content validation, unit tests, and static site generation.
+      content validation, unit tests, static site generation, and the
+      Playwright end-to-end suite against the generated artifact.
     cmds:
       - task: qa
       - task: typecheck

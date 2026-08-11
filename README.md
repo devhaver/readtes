@@ -126,6 +126,13 @@ reader pages and hour-scale builds. App code reads `toc.volumes.json` (~17 KB)
 and one `toc.parts/part-NN.json` at a time instead. A unit test fails the suite
 if anything under `app/` imports the full file again.
 
+**The glossary is split the same way.** `content/glossary/tes-en.json` — 125
+terms of TES with the English the official edition uses for each, read off the
+737 chapters where the Hebrew and English align — is 307 KB, roughly seventy
+percent of it citation excerpts. `/glossary` loads a derived 77 KB index up
+front and fetches the 216 KB of excerpts only when a reader opens a term.
+Neither chunk is prefetchable, so no other page pays for it.
+
 ```
 app/           Components, composables, pages, layouts
 content/       Committed JSON corpus + schemas

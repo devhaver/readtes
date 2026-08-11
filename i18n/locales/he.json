@@ -15,6 +15,7 @@
     "menuOpen": "פתח תפריט",
     "menuClose": "סגור תפריט",
     "volumesLink": "כרכים",
+    "glossaryLink": "מילון מונחים",
     "themeToggleToDark": "עבור למצב כהה",
     "themeToggleToLight": "עבור למצב בהיר",
     "themeToggleToSepia": "עבור למצב ספיה",
@@ -32,7 +33,8 @@
       "innerLight": "אור פנימי",
       "innerObservation": "הסתכלות פנימית"
     },
-    "versionLabel": "מהדורה",
+    "paneLanguageLabel": "שפה: {pane}",
+    "sefariaTranslated": "תרגום ספריא",
     "commentarySection": {
       "ohr-pnimi": "אור פנימי",
       "histaklut-pnimit": "הסתכלות פנימית"
@@ -42,10 +44,15 @@
     "sourceEmpty": "אין עדיין טקסט מקור זמין לפרק זה.",
     "summaryEmpty": "אין עדיין תקציר זמין לפרק זה.",
     "innerObservationEmpty": "אין עדיין הסתכלות פנימית זמינה לפרק זה.",
+    "innerObservationLoading": "טוען הסתכלות פנימית…",
+    "innerObservationLoaded": "ההסתכלות הפנימית נטענה.",
+    "innerObservationFailed": "לא ניתן היה לטעון את ההסתכלות הפנימית.",
+    "innerObservationReload": "טען מחדש את הדף",
+    "innerObservationNeverWritten": "בעל הסולם לא כתב הסתכלות פנימית לחלק זה — לאחד עשר מתוך שישה עשר החלקים יש הסתכלות פנימית, וחלק זה אינו נמנה עמם. אין כאן טקסט שמהדורה כלשהי יכולה לכלול, ולכן אין זה פער דיגיטציה.",
     "miniTocTitle": "בפרק זה",
     "seifLabel": "סעיף {n}",
     "missingAnchor": {
-      "message": "לא זמין במהדורה זו.",
+      "message": "לא זמין בשפה זו.",
       "switchToHebrew": "עבור לעברית"
     },
     "prevChapter": "הפרק הקודם",
@@ -83,7 +90,7 @@
     "commentarySheet": {
       "title": "פירוש על סעיף {n}",
       "openInCommentary": "פתח בפירוש",
-      "empty": "אין פירוש לסעיף זה במהדורה זו.",
+      "empty": "אין פירוש לסעיף זה בשפה זו.",
       "close": "סגור"
     },
     "prefs": {
@@ -177,6 +184,57 @@
     "portraitAlt": "דיוקנו של הרב יהודה אשלג, בעל הסולם",
     "portraitCaption": "הרב יהודה אשלג (1884–1954), בעל הסולם — מחבר תלמוד עשר הספירות"
   },
+  "glossary": {
+    "title": "מילון מונחים",
+    "titleHebrew": "מונחים",
+    "lede": "{count} מונחים מתלמוד עשר הספירות, והמילה האנגלית שבה המהדורה הרשמית באמת נוקטת עבור כל אחד מהם.",
+    "evidence": "כל מונח כאן נקרא מתוך {chapters} הפרקים שבהם ניתן להעמיד את העברית של מהדורת ירושלים תשט״ז ואת האנגלית של בני ברוך זו מול זו, אות מול אות — {items} צמדים מיושרים בסך הכול.",
+    "languageNote": "העברית מצוטטת ממהדורת ירושלים תשט״ז והאנגלית ממהדורת בני ברוך. ההערות והכללים מתארים את הנוסח האנגלי, ולכן כתובים באנגלית.",
+    "coverageParts": "חלקים {parts} מתוך שישה עשר",
+    "coverageStripDescription": "המהדורה האנגלית מכסה את חלקים {parts} מתוך שישה עשר חלקי תלמוד עשר הספירות.",
+    "filtersLabel": "חיפוש מונח",
+    "searchLabel": "חיפוש מונחים",
+    "searchPlaceholder": "חיפוש בין {count} מונחים — בעברית או באנגלית",
+    "strategyFilterLabel": "סינון לפי אופן המעבר לאנגלית",
+    "termsLabel": "מונחים",
+    "resultCount": "מוצגים {shown} מתוך {total} מונחים",
+    "strategy": {
+      "translate": "מתורגם",
+      "transliterate": "בתעתיק",
+      "transliterate-with-gloss": "בתעתיק עם ביאור",
+      "acronym": "ראשי תיבות"
+    },
+    "attestedIn": "מתועד בחלקים {parts}.",
+    "attestedNowhere": "אינו מתועד באף חלק מיושר.",
+    "variantsTitle": "כיצד המהדורה כותבת",
+    "variantsHint": "המספרים הם היקרויות בתוך הקטעים המיושרים בלבד, ולא בכל הספר.",
+    "citationsTitle": "נקרא מתוך",
+    "citationsLoading": "טוען קטעים…",
+    "citationsFailed": "לא ניתן היה לטעון את הקטעים.",
+    "citationsRetry": "נסו שוב",
+    "citationChapter": "חלק {part} · {chapter}",
+    "chapterKind": {
+      "chapter": "פרק {n}",
+      "inner-observation": "הסתכלות פנימית {n}",
+      "questions-terminology": "שאלות — פירוש המלות {n}",
+      "questions-topics": "שאלות — עניינים {n}",
+      "answers-terminology": "תשובות — פירוש המלות {n}",
+      "answers-topics": "תשובות — עניינים {n}"
+    },
+    "layerSummary": "תקציר",
+    "emptyTitle": "אין מונח מתאים.",
+    "emptyBody": "נסו איות אחר, בעברית או באנגלית — גרשיים בתוך ראשי תיבות אינם משפיעים על החיפוש.",
+    "clearFilters": "נקה סינון",
+    "conventionsTitle": "כיצד נערך הנוסח האנגלי",
+    "conventionsIntro": "כללים שהמהדורה הרשמית נוהגת בהם מעבר למילים בודדות — סימוני אותיות, פתיחת דברי הפירוש, ציטוטים ותארי כבוד — כל אחד עם הראיה שמאחוריו.",
+    "conventionEvidenceLabel": "ראיה:",
+    "limitsTitle": "היכן הראיות נגמרות",
+    "limitsIntro": "המילון רחב בדיוק כרוחב המהדורה האנגלית. קראו את אלה לפני שנשענים על מספר כלשהו.",
+    "methodTitle": "כיצד נבנה המילון",
+    "methodSource": "מהדורה אנגלית",
+    "methodReference": "מקור עברי",
+    "methodGeneratedOn": "נערך בתאריך"
+  },
   "seo": {
     "ogImageAlt": "Read TES — ספר פתוח לצד עיגולי הצמצום של האר\"י, על רקע שדה כוכבים לילי",
     "home": {
@@ -187,6 +245,9 @@
     },
     "volumesIndex": {
       "description": "שישה הכרכים ושישה עשר החלקים של תלמוד עשר הספירות, לעיון פרק אחר פרק."
+    },
+    "glossary": {
+      "description": "כל המונחים בתלמוד עשר הספירות — אור, כלי, מסך, צמצום — עם התרגום האנגלי שבו נוקטת המהדורה הרשמית, הגרסאות שבהן היא מתחלפת, והקטעים שמהם נקרא כל אחד."
     },
     "volume": {
       "description": "החלקים והפרקים של {title}, עם כתבי האר״י, אור פנימי והסתכלות פנימית."

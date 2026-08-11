@@ -8,7 +8,11 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import StudyStream from "~/components/reader/StudyStream.vue";
-import type { CommentaryItem, SourceSegment } from "~~/shared/types/content";
+import type {
+  CommentaryItem,
+  ContentVersion,
+  SourceSegment,
+} from "~~/shared/types/content";
 
 const HEBREW = "he-jerusalem-1956";
 
@@ -38,7 +42,7 @@ const commentaryItem = (anchorId: string): CommentaryItem => ({
 });
 
 // Only op-1 has an item in the currently-selected (English) commentary
-// version — op-2 is "missing in this edition" but present in Hebrew.
+// version — op-2 is "missing in this language" but present in Hebrew.
 const commentaryItems: CommentaryItem[] = [commentaryItem("op-1")];
 const hebrewItems: CommentaryItem[] = [
   commentaryItem("op-1"),
@@ -51,13 +55,11 @@ const baseProps = {
   summaryItems: [],
   sourceMeta: null,
   commentaryMeta: null,
-  sourceVersionOptions: [],
-  commentaryVersionOptions: [
-    { id: "en-sefaria-community", label: "English" },
-    { id: HEBREW, label: "Hebrew" },
-  ],
-  sourceVersion: null,
-  commentaryVersion: "en-sefaria-community",
+  sourceLanguageOptions: [],
+  commentaryLanguageOptions: ["he", "en"],
+  sourceLanguage: null,
+  commentaryLanguage: "en",
+  commentaryVersionId: "en-sefaria-community",
   hebrewItems,
   hebrewVersionId: HEBREW,
 };
@@ -135,15 +137,15 @@ describe("StudyStream", () => {
     await wrapper.find('a.tes-anchor[data-anchor="op-2"]').trigger("click");
 
     expect(wrapper.text()).toContain("Commentary for op-1");
-    expect(wrapper.text()).toContain("Not available in this edition");
+    expect(wrapper.text()).toContain("Not available in this language");
   });
 
-  it("shows the inline missing-anchor notice with a one-click Hebrew switch, and emits the version change", async () => {
+  it("shows the inline missing-anchor notice with a one-click Hebrew switch, and emits the language change", async () => {
     const wrapper = await mountSuspended(StudyStream, { props: baseProps });
 
     await wrapper.find('a.tes-anchor[data-anchor="op-2"]').trigger("click");
 
-    expect(wrapper.text()).toContain("Not available in this edition");
+    expect(wrapper.text()).toContain("Not available in this language");
     const switchButton = wrapper
       .findAll("button")
       .find((button) => button.text() === "Switch to Hebrew");
@@ -151,7 +153,7 @@ describe("StudyStream", () => {
 
     await switchButton?.trigger("click");
 
-    expect(wrapper.emitted("update:commentaryVersion")).toEqual([[HEBREW]]);
+    expect(wrapper.emitted("update:commentaryLanguage")).toEqual([["he"]]);
   });
 
   it("doesn't offer a Hebrew switch once Hebrew is already selected", async () => {
@@ -159,14 +161,15 @@ describe("StudyStream", () => {
       props: {
         ...baseProps,
         commentaryItems: [],
-        commentaryVersion: HEBREW,
+        commentaryLanguage: "he",
+        commentaryVersionId: HEBREW,
         hebrewItems: [],
       },
     });
 
     await wrapper.find('a.tes-anchor[data-anchor="op-1"]').trigger("click");
 
-    expect(wrapper.text()).toContain("Not available in this edition");
+    expect(wrapper.text()).toContain("Not available in this language");
     expect(
       wrapper.findAll("button").some((b) => b.text() === "Switch to Hebrew"),
     ).toBe(false);
@@ -186,6 +189,50 @@ describe("StudyStream", () => {
     expect(matches).toHaveLength(2);
   });
 
+  // CLAUDE.md names the "AI translated" badge as the project's one
+  // mandatory label. Study mode is the default below `lg`, and it used to
+  // render the whole pane header — badge included — only when the layer
+  // offered more than one language, so an English-only chapter (what
+  // issues #79/#87 create) would have shown AI text with no attribution.
+  // The badge must survive the switcher's absence.
+  describe("mandatory AI-translated badge", () => {
+    const enAi: ContentVersion = {
+      id: "en-ai",
+      language: "en",
+      direction: "ltr",
+      title: "English (AI translation)",
+      license: "CC0",
+      source: "ai",
+    };
+
+    it("badges an AI-translated source layer that offers only one language", async () => {
+      const wrapper = await mountSuspended(StudyStream, {
+        props: {
+          ...baseProps,
+          sourceMeta: enAi,
+          sourceLanguageOptions: ["en"],
+          sourceLanguage: "en",
+        },
+      });
+
+      expect(wrapper.text()).toContain("AI translated");
+    });
+
+    it("badges an AI-translated commentary layer that offers only one language", async () => {
+      const wrapper = await mountSuspended(StudyStream, {
+        props: {
+          ...baseProps,
+          commentaryMeta: enAi,
+          commentaryLanguageOptions: ["en"],
+          commentaryLanguage: "en",
+          commentaryVersionId: "en-ai",
+        },
+      });
+
+      expect(wrapper.text()).toContain("AI translated");
+    });
+  });
+
   it("offers the 'read the full commentary' link when the chapter has a commentary layer", async () => {
     const wrapper = await mountSuspended(StudyStream, { props: baseProps });
     expect(wrapper.text()).toContain("Read the full commentary");
@@ -193,7 +240,7 @@ describe("StudyStream", () => {
 
   it("hides the 'read the full commentary' link when the chapter has no commentary layer", async () => {
     const wrapper = await mountSuspended(StudyStream, {
-      props: { ...baseProps, commentaryVersionOptions: [] },
+      props: { ...baseProps, commentaryLanguageOptions: [] },
     });
     expect(wrapper.text()).not.toContain("Read the full commentary");
   });

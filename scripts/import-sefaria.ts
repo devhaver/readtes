@@ -567,6 +567,9 @@ const importPart = async (
       partTitle: tocPart.title.en ?? part.id,
       stats,
       warnings,
+      innerObservationChapters: tocPart.chapters.filter(
+        (c) => c.kind === "inner-observation",
+      ).length,
     },
   };
 };

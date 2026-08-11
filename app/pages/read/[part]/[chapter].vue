@@ -10,7 +10,7 @@ definePageMeta({
   layout: "reader",
   // Full remount on every param change (not just on prop update) so the
   // 404 check below always re-runs against the new ids, and so
-  // `useReaderVersions`' locale-dependent defaults are recomputed fresh.
+  // `useReaderLanguages`' locale-dependent defaults are recomputed fresh.
   key: (route) => route.fullPath,
 });
 
@@ -44,6 +44,14 @@ if (!chapter) {
   });
 }
 
+// Lets every source segment beneath this page turn Sefaria's Questions <->
+// Answers cross-references into internal links. The part's own chapter
+// list is what makes that safe (a ref with no chapter here stays external,
+// so the prerender crawler never meets a dead internal route) and what
+// makes it correct (Sefaria's topics numbering is offset by the part's
+// terminology answer count) — see `useLinkedCrossRefs`.
+provideCrossRefChapters(partFile.chapters);
+
 const HEBREW_VERSION_ID = "he-jerusalem-1956";
 
 const {
@@ -64,84 +72,120 @@ const hasCommentary = chapter.availableVersions.commentary.length > 0;
 // own `kind: "inner-observation"` chapters (see AGENTS.md / the content
 // model skill), so it's loaded once per part rather than per chapter, and
 // is identical no matter which chapter of the part is open. Five parts have
-// none at all — `hasInnerObservation` drives the two-vs-three-pane layout.
+// none at all, because Baal HaSulam wrote none for them — the same count
+// drives the two-vs-three-pane layout and the `inner-observation` footnote
+// that tells the reader so (see `ReaderLayerAbsenceNote`).
 const innerObservationChapters = innerObservationChaptersInPart(
   partFile.chapters,
 );
 const hasInnerObservation = innerObservationChapters.length > 0;
 const panes = resolveReaderPanes({ hasCommentary, hasInnerObservation });
-const {
-  versions: innerObservationVersionIds,
-  sections: innerObservationRawSections,
-} = await useInnerObservationContent(partId, innerObservationChapters);
 
-const readerVersions = useReaderVersions(chapter, versions.value);
+const readerLanguages = useReaderLanguages(chapter, versions.value);
 // Study mode below `lg`, panes at/above it by default — original is an
 // explicit user override only, never viewport-resolved (`useReaderMode`).
 // User overrides persist across chapters. Decides which of the three
 // component trees below actually mounts; `ReaderToolbar` (rendered in every
 // mode) reads the same shared state for its mode-toggle control.
 const { mode } = useReaderMode();
+
+// Deliberately not awaited and deliberately not server-rendered: the bodies
+// load in the browser, from the part's own content chunks, once per part
+// rather than being inlined into every chapter page's HTML — see
+// `useInnerObservationContent`. Only `versions` (ToC-derived, so identical
+// on both sides of hydration) is available during prerendering.
+//
+// The gate reads `mode`, which only resolves to the real viewport once
+// `useReaderMode`'s `onMounted` has flipped its `hydrated` flag. That has
+// already happened by the time this page's own `onMounted` runs — not
+// because of hook registration order (this page only *injects* the shared
+// state; `layouts/reader.vue` is the provide owner and registers the hook),
+// but because the page has top-level `await`s and is therefore
+// Suspense-wrapped, so its layout ancestor mounts first.
+//
+// Panes mode is the only one of the three that renders an Inner Observation
+// pane at all, so on a phone (study by default) this gate is the difference
+// between fetching the part's whole essay set and fetching none of it.
+const {
+  versions: innerObservationVersions,
+  sections: innerObservationRawSections,
+  state: innerObservationState,
+} = useInnerObservationContent(
+  partId,
+  innerObservationChapters,
+  () => mode.value === "panes",
+);
 const versionsById = computed(() => buildVersionsById(versions.value));
 
-const versionOptions = (ids: string[]) =>
-  ids.map((id) => ({
-    id,
-    label: versionsById.value.get(id)?.title ?? id,
-  }));
-
-const sourceVersionOptions = computed(() =>
-  versionOptions(sourceVersions.value),
+const sourceLanguageOptions = computed(() =>
+  languagesAvailable(sourceVersions.value, versionsById.value),
 );
-const commentaryVersionOptions = computed(() =>
-  versionOptions(commentaryVersions.value),
+const commentaryLanguageOptions = computed(() =>
+  languagesAvailable(commentaryVersions.value, versionsById.value),
 );
-const innerObservationVersionOptions = computed(() =>
-  versionOptions(innerObservationVersionIds.value),
+const innerObservationLanguageOptions = computed(() =>
+  languagesAvailable(innerObservationVersions.value, versionsById.value),
 );
 
 const metaFor = (versionId: string | null) =>
   versionId ? (versionsById.value.get(versionId) ?? null) : null;
 
-const sourceMeta = computed(() => metaFor(readerVersions.source.value));
-const commentaryMeta = computed(() => metaFor(readerVersions.commentary.value));
+const sourceMeta = computed(() => metaFor(readerLanguages.sourceVersion.value));
+const commentaryMeta = computed(() =>
+  metaFor(readerLanguages.commentaryVersion.value),
+);
 
 const sourceFile = computed(() =>
-  readerVersions.source.value
-    ? (sourceByVersion.value[readerVersions.source.value] ?? null)
+  readerLanguages.sourceVersion.value
+    ? (sourceByVersion.value[readerLanguages.sourceVersion.value] ?? null)
     : null,
 );
 const commentaryFile = computed(() =>
-  readerVersions.commentary.value
-    ? (commentaryByVersion.value[readerVersions.commentary.value] ?? null)
+  readerLanguages.commentaryVersion.value
+    ? (commentaryByVersion.value[readerLanguages.commentaryVersion.value] ??
+      null)
     : null,
 );
 
 const sourceSegments = computed(() => sourceFile.value?.items ?? []);
 const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
 
-// Inner Observation has no persisted version preference of its own (unlike
-// source/commentary via `useReaderVersions`) — there's exactly one pane for
-// it, so nothing needs remembering across chapters; it just follows the
-// same locale-aware default rule, recomputed whenever the part's available
+// Inner Observation has no persisted language preference of its own
+// (unlike source/commentary via `useReaderLanguages`) — there's exactly
+// one pane for it, so nothing needs remembering across chapters; it just
+// follows the same default rule, recomputed whenever the part's available
 // versions load.
-const innerObservationVersion = ref<string | null>(null);
+const innerObservationLanguage = ref<string | null>(null);
 watch(
-  innerObservationVersionIds,
+  innerObservationVersions,
   (ids) => {
     if (
-      innerObservationVersion.value &&
-      ids.includes(innerObservationVersion.value)
+      innerObservationLanguage.value &&
+      resolveVersionForLanguage(
+        ids,
+        innerObservationLanguage.value,
+        versionsById.value,
+      )
     ) {
       return;
     }
-    innerObservationVersion.value = resolveDefaultVersion(
+    innerObservationLanguage.value = resolveDefaultLanguage(
       ids,
       locale.value,
       versionsById.value,
     );
   },
   { immediate: true },
+);
+
+const innerObservationVersion = computed(() =>
+  innerObservationLanguage.value
+    ? resolveVersionForLanguage(
+        innerObservationVersions.value,
+        innerObservationLanguage.value,
+        versionsById.value,
+      )
+    : null,
 );
 
 const innerObservationMeta = computed(() =>
@@ -159,7 +203,8 @@ const innerObservationSections = computed(() =>
     // A section whose *selected* version has no items would render as a
     // bare heading with nothing under it — drop it; the sections that do
     // have text in this version carry the pane. (If none do, the pane
-    // falls back to `innerObservationEmpty`.)
+    // falls back to `innerObservationEmpty` — the honest wording there,
+    // since this pane only renders for parts that do have one.)
     .filter((section) => section.items.length > 0),
 );
 
@@ -183,7 +228,7 @@ const breadcrumbItems = computed(() => [
   },
 ]);
 
-// "Not available in this edition" toast for the commentary pane: a source
+// "Not available in this language" toast for the commentary pane: a source
 // anchor was activated, but the commentary version currently shown has
 // nothing for it.
 const { activeAnchor, anchorOrigin, reactivateAnchor } = useReaderState();
@@ -193,20 +238,20 @@ const missingAnchorNotice = computed(() =>
     activeAnchor: activeAnchor.value,
     anchorOrigin: anchorOrigin.value,
     displayedItems: commentaryItems.value,
-    selectedVersionId: readerVersions.commentary.value,
+    selectedVersionId: readerLanguages.commentaryVersion.value,
     hebrewItems: commentaryByVersion.value[HEBREW_VERSION_ID]?.items ?? null,
     hebrewVersionId: HEBREW_VERSION_ID,
   }),
 );
 
-// Switching versions doesn't change `activeAnchor`/`anchorOrigin` (the
+// Switching languages doesn't change `activeAnchor`/`anchorOrigin` (the
 // anchor being looked for is the same one), so `useHighlightedAnchor`'s
 // change-based watch wouldn't otherwise re-fire once the Hebrew commentary
 // item — previously absent — renders. `reactivateAnchor` bumps the shared
 // activation sequence so the commentary pane re-runs its scroll/highlight
 // against the newly-rendered item.
 const switchCommentaryToHebrew = () => {
-  readerVersions.setVersion("commentary", HEBREW_VERSION_ID);
+  readerLanguages.setLanguage("commentary", "he");
   reactivateAnchor();
 };
 
@@ -255,17 +300,23 @@ useLocalizedSeo({
       <template #source>
         <ReaderPane
           :title="t('reader.pane.source')"
-          :version-options="sourceVersionOptions"
-          :model-value="readerVersions.source.value"
+          :language-options="sourceLanguageOptions"
+          :model-value="readerLanguages.source.value"
           :meta="sourceMeta"
-          @update:model-value="(id) => readerVersions.setVersion('source', id)"
+          @update:model-value="
+            (language) => readerLanguages.setLanguage('source', language)
+          "
         >
           <ReaderSourcePane
             :segments="sourceSegments"
             @open-seif-commentary="openCommentarySheet"
           >
-            <template v-if="!hasCommentary" #footnote>
-              <ReaderLayerAbsenceNote />
+            <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
+              <ReaderLayerAbsenceNote v-if="!hasCommentary" />
+              <ReaderLayerAbsenceNote
+                v-if="!hasInnerObservation"
+                layer="inner-observation"
+              />
             </template>
           </ReaderSourcePane>
         </ReaderPane>
@@ -274,11 +325,11 @@ useLocalizedSeo({
       <template v-if="hasCommentary" #commentary>
         <ReaderPane
           :title="t('reader.pane.innerLight')"
-          :version-options="commentaryVersionOptions"
-          :model-value="readerVersions.commentary.value"
+          :language-options="commentaryLanguageOptions"
+          :model-value="readerLanguages.commentary.value"
           :meta="commentaryMeta"
           @update:model-value="
-            (id) => readerVersions.setVersion('commentary', id)
+            (language) => readerLanguages.setLanguage('commentary', language)
           "
         >
           <template v-if="missingAnchorNotice" #toast>
@@ -301,12 +352,18 @@ useLocalizedSeo({
       <template v-if="hasInnerObservation" #inner-observation>
         <ReaderPane
           :title="t('reader.pane.innerObservation')"
-          :version-options="innerObservationVersionOptions"
-          :model-value="innerObservationVersion"
+          :language-options="innerObservationLanguageOptions"
+          :model-value="innerObservationLanguage"
           :meta="innerObservationMeta"
-          @update:model-value="(id) => (innerObservationVersion = id)"
+          @update:model-value="
+            (language) => (innerObservationLanguage = language)
+          "
         >
-          <ReaderInnerObservationPane :sections="innerObservationSections" />
+          <ReaderInnerObservationPane
+            :sections="innerObservationSections"
+            :state="innerObservationState"
+            @reload="reloadNuxtApp({ force: true })"
+          />
         </ReaderPane>
       </template>
     </ReaderShell>
@@ -324,17 +381,19 @@ useLocalizedSeo({
         :summary-items="[]"
         :source-meta="sourceMeta"
         :commentary-meta="commentaryMeta"
-        :source-version-options="sourceVersionOptions"
-        :commentary-version-options="commentaryVersionOptions"
-        :source-version="readerVersions.source.value"
-        :commentary-version="readerVersions.commentary.value"
+        :source-language-options="sourceLanguageOptions"
+        :commentary-language-options="commentaryLanguageOptions"
+        :source-language="readerLanguages.source.value"
+        :commentary-language="readerLanguages.commentary.value"
+        :commentary-version-id="readerLanguages.commentaryVersion.value"
         :hebrew-items="commentaryByVersion[HEBREW_VERSION_ID]?.items ?? null"
         :hebrew-version-id="HEBREW_VERSION_ID"
-        @update:source-version="
-          (id: string) => readerVersions.setVersion('source', id)
+        @update:source-language="
+          (language: string) => readerLanguages.setLanguage('source', language)
         "
-        @update:commentary-version="
-          (id: string) => readerVersions.setVersion('commentary', id)
+        @update:commentary-language="
+          (language: string) =>
+            readerLanguages.setLanguage('commentary', language)
         "
       />
     </template>

@@ -60,4 +60,92 @@ describe("InnerObservationPane", () => {
 
     expect(wrapper.text().toLowerCase()).toContain("no inner observation");
   });
+
+  // The bodies are client-loaded (see `useInnerObservationContent`), so
+  // "nothing here yet" is the state every first paint starts in — it must
+  // not read as "this part has none".
+  it("shows a decorative skeleton, not the empty state, while the bodies are pending", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections: [], state: "pending" },
+    });
+
+    const skeleton = wrapper.find('[data-testid="inner-observation-skeleton"]');
+    expect(skeleton.exists()).toBe(true);
+    // The pulsing bars carry no information a screen reader wants; the
+    // persistent live region below announces the state instead.
+    expect(skeleton.attributes("aria-hidden")).toBe("true");
+    expect(wrapper.text().toLowerCase()).not.toContain("no inner observation");
+  });
+
+  it("drops the skeleton once the sections arrive", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: {
+        state: "ready",
+        sections: [
+          {
+            chapterId: "part-01/inner-observation-01",
+            title: { en: "Histaklut Pnimit 1", he: "א" },
+            items: [{ n: 1, sefariaRef: "x 1", html: "Text.", anchors: [] }],
+          },
+        ] satisfies InnerObservationSectionView[],
+      },
+    });
+
+    expect(
+      wrapper.find('[data-testid="inner-observation-skeleton"]').exists(),
+    ).toBe(false);
+    expect(wrapper.text()).toContain("Text.");
+  });
+
+  // A `role="status"` that only exists while the skeleton does announces the
+  // wait and never its end. This one outlives every state change, so the
+  // arrival (or failure) of the bodies is what gets announced.
+  it("keeps one polite live region across every state, so completion is announced", async () => {
+    const sections: InnerObservationSectionView[] = [
+      {
+        chapterId: "part-01/inner-observation-01",
+        title: { en: "Histaklut Pnimit 1", he: "א" },
+        items: [{ n: 1, sefariaRef: "x 1", html: "Text.", anchors: [] }],
+      },
+    ];
+
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections: [], state: "pending" },
+    });
+
+    const status = () =>
+      wrapper.find('[data-testid="inner-observation-status"]');
+    expect(status().attributes("role")).toBe("status");
+    expect(status().attributes("aria-live")).toBe("polite");
+    expect(status().text().toLowerCase()).toContain("loading");
+
+    await wrapper.setProps({ sections, state: "ready" });
+
+    // Same element, new text — that is what a live region announces.
+    expect(status().exists()).toBe(true);
+    expect(status().text().toLowerCase()).toContain("loaded");
+
+    await wrapper.setProps({ sections: [], state: "failed" });
+    expect(status().text().toLowerCase()).toContain("could not be loaded");
+  });
+
+  // The whole point of the third state: a chunk that 404s under a cached
+  // document must never render as "this part has no Inner Observation".
+  it("shows a distinct failed state with a recovery action, never the empty message", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections: [], state: "failed" },
+    });
+
+    const failed = wrapper.find('[data-testid="inner-observation-failed"]');
+    expect(failed.exists()).toBe(true);
+    expect(wrapper.text().toLowerCase()).not.toContain("no inner observation");
+    expect(
+      wrapper.find('[data-testid="inner-observation-skeleton"]').exists(),
+    ).toBe(false);
+
+    // A page reload, not an in-place retry — a failed `import()` stays failed
+    // in the module map for the life of the document (see the composable).
+    await failed.find("button").trigger("click");
+    expect(wrapper.emitted("reload")).toHaveLength(1);
+  });
 });

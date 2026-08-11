@@ -73,11 +73,18 @@ const isSafeHref = (href: string): boolean => !/^\s*javascript:/i.test(href);
  * Sefaria's own site-relative cross-reference links — e.g. a "List of
  * Questions" item linking to its answer:
  * `href="/Talmud_Eser_HaSefirot,_Section_I,_List_of_Answers_on_Topics_55"`.
- * That path doesn't exist on this site (only `#op-N`/`#seif-N` in-page
- * fragments do) — Nitro's prerender crawler would otherwise follow it as an
- * internal route and 404. Rewritten to an absolute sefaria.org link instead
- * of stripped, since it's a genuinely useful cross-reference for the
- * reader, just not one this site can serve itself.
+ * Those paths are Sefaria's routes, not ours, so they are stored absolute:
+ * left site-relative they would read as internal routes here, and Nitro's
+ * prerender crawler would follow them into 404s.
+ *
+ * This is a canonicalization, no longer the last word on where such a link
+ * goes. The full corpus is imported now, so most of these refs *do* name a
+ * chapter this site serves — the reader maps the ones it can resolve back
+ * onto our own route at render time (`app/utils/sefariaCrossRefs.ts` and
+ * `useLinkedCrossRefs`), leaving the absolute link committed here as the
+ * fallback for a ref with no chapter of ours behind it. Keep this rewrite:
+ * it is what guarantees the stored form can never itself be mistaken for
+ * an internal route, whether or not the render-time mapping recognizes it.
  */
 const SEFARIA_ORIGIN = "https://www.sefaria.org";
 const isSiteRelativeHref = (href: string): boolean =>
@@ -188,6 +195,11 @@ const LEGACY_SITE_RELATIVE_HREF_RE = /href="(\/[^"#][^"]*)"/g;
  * a full re-parse of the html — the reader renders import-sanitized html
  * as-is (see `SourcePane`), this is a one-off patch for pre-existing
  * content, not a general render-time re-sanitization pass.
+ *
+ * Runs *before* the reader's own cross-reference pass, never after: this
+ * one sends every site-relative href to sefaria.org, which would undo the
+ * internal links `useLinkedCrossRefs` has just made — see
+ * `ReaderSourceSegment`.
  */
 export const rewriteLegacySefariaRelativeHrefs = (html: string): string =>
   html.replace(LEGACY_SITE_RELATIVE_HREF_RE, (full, path: string) =>

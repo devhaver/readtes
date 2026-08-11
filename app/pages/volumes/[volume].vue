@@ -28,8 +28,8 @@ if (!resolvedVolume) {
   });
 }
 
-// Only this volume's own parts' files (2-3 per volume) — never the whole
-// corpus, see AGENTS.md "Content model".
+// Only this volume's own parts' files (2-4 per volume in the Bnei Baruch
+// grouping) — never the whole corpus, see AGENTS.md "Content model".
 const { parts } = await useLocalizedParts(
   resolvedVolume.parts.map((part) => part.id),
 );

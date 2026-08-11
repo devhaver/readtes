@@ -80,7 +80,7 @@ Instead, `app/` loads two smaller, derived files:
   `import.meta.glob` over `content/toc.parts/*.json` keyed by part id (same
   style as `useChapterContent`'s glob over `content/parts/**`) — a reader
   page loads only its own part; a volume's contents page loads only that
-  volume's 2-3 parts.
+  volume's parts (2-4 of them, see "Volume grouping" below).
 
 Both composables do a direct `await import()` of the statically bundled
 JSON — **no `useAsyncData`** (same reasoning as `useChapterContent`: server
@@ -105,6 +105,45 @@ equivalence check re-derives both files from the committed `toc.json` and
 structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
+
+## Volume grouping — Bnei Baruch's, not Sefaria's
+
+The sixteen parts are fixed; how they group into six volumes is an editorial
+choice and the two upstreams disagree. This site reproduces the **Bnei
+Baruch** edition:
+
+| Volume | 1          | 2       | 3        | 4      | 5      | 6      |
+| ------ | ---------- | ------- | -------- | ------ | ------ | ------ |
+| Parts  | 1, 2, 3, 4 | 5, 6, 7 | 8, 9, 10 | 11, 12 | 13, 14 | 15, 16 |
+
+Sefaria groups the same parts differently (Vol 1 = parts 1-3, …) and we
+shipped its arrangement by accident until #85. The grouping lives **only**
+in `content/toc.json`'s volume nesting — part ids, chapter ids and every
+`/read/...` URL are independent of it. Change it there and re-run `pnpm
+emit:toc-splits`; never hand-edit the derived files.
+
+`tests/unit/volume-grouping.spec.ts` pins it, checked against
+`tests/fixtures/km-tree/tes-collection.json` — a trimmed slice of Bnei
+Baruch's own `kabbalahmedia.info/backend/sqdata` COLLECTION -> VOLUME ->
+PART tree, read through `extractKmTesTree` (`scripts/lib/km-tree.ts`), the
+same walker the KabbalahMedia importer uses. The spec's docblock carries the
+regeneration command and states what the fixture does and does not prove.
+
+**No redirects were added for the #85 regroup, deliberately.** All six
+`/volumes/volume-N` URLs exist both before and after; none was added,
+removed or renamed. Only the _contents_ of those pages changed, and the
+change is not a rename in disguise — old volume 3 held parts 7 and 8, which
+now sit in volumes 2 and 3 respectively, so no old volume URL has a single
+new home to point at. Redirecting `/volumes/volume-3` anywhere would break a
+URL that is still valid and still the right destination. Verified
+2026-08-11 (`curl -sSL -o /dev/null -w '%{http_code}'
+https://readtes.com/volumes/volume-1` -> `200`, and the fetched HTML still
+listed Parts 1, 2, 3): the site **is** live, and its `robots.txt` serves
+`User-agent: *` / `Allow: /` and advertises the sitemap (only AI-training
+crawlers are disallowed). So this is not an "it isn't published yet, so it
+doesn't matter" argument. Whether search engines have actually indexed the
+volume URLs was **not** determined — the conclusion above does not depend on
+it, because what a stale index costs here is a recrawl, not a broken link.
 
 ## Content-chunk prefetch-link stripping
 
@@ -138,3 +177,61 @@ such an id out of every entry's own `dynamicImports` list. Functionality is
 untouched — these chunks still load on demand via the glob's own dynamic
 `import()` the moment a page actually needs one; they were never
 legitimately prefetchable at this scale.
+
+## Glossary (`content/glossary/`) — same split-then-verify scheme
+
+`content/glossary/tes-en.json` is the canonical terminology artifact: 125
+terms mined from the 737 chapters where a `he-jerusalem-1956` file and an
+`en-bb` file could be aligned item-by-item, each with the canonical English,
+the renderings the official edition actually used (with counts), and
+Hebrew/English citation pairs. It carries `generatedFrom`, `usage`,
+`conventions`, `inconsistencies`, `knownGaps` and `revisions` alongside
+`entries`. Schemas: `glossaryFileSchema` and friends in
+`shared/types/content.ts`.
+
+It is 307KB, and ~72% of that is `citations` — so it is **build-time only**,
+exactly like `toc.json`, and `app/` code must never import it. Two derived,
+app-facing files are committed beside it:
+
+- **`tes-en.index.json`** (77KB on disk, 50KB minified) — `meta` (flattened provenance),
+  every entry minus its citations plus a `citationCount`, `conventions`, and
+  `knownGaps`. Loaded up front by `useGlossaryIndex()`. `inconsistencies`,
+  `usage` and `revisions` are deliberately dropped: apparatus for the
+  translation run, not for a reader.
+- **`tes-en.citations.json`** (216KB on disk, 150KB minified) — the citation pairs keyed by entry
+  id. Loaded by `useGlossaryCitations()`'s `loadCitations()` on the first
+  time a reader opens a term, never with the page.
+
+Both are direct `await import()` of statically bundled JSON — **no
+`useAsyncData`**, same reasoning as `useLocalizedVolumes`. Both are matched
+by `isContentChunkId` (`shared/utils/manifestPrefetch.ts`) so neither is
+prefetch-eligible on any page, including `/glossary` itself.
+
+**Who emits them**: `scripts/lib/glossary-splits.ts`
+(`deriveGlossaryIndexFile`/`deriveGlossaryCitationsFile`, pure;
+`writeGlossarySplitFiles`, I/O), run standalone by
+`pnpm emit:glossary-splits` (`scripts/emit-glossary-splits.ts`). Unlike the
+ToC splits, no importer regenerates these — the canonical glossary is
+hand-audited, so run the emit script yourself after editing it.
+`scripts/validate-content.ts`'s `checkGlossary` re-derives both files and
+structurally compares them against what is on disk, so they can never
+silently go stale; it also fails if any `chapterId` cited by an entry or
+quoted by a convention is absent from `toc.json` (those become links on
+`/glossary`).
+
+Guardrails: `tests/unit/glossary-payload.spec.ts` (no `app/` import of the
+canonical file, no static import of either split file, citations stay behind
+`loadCitations()`), `tests/unit/glossary-splits.spec.ts` (the derivation).
+
+**`/glossary` is the site's heaviest HTML document, deliberately.** All 125
+terms and all 13 house rules are server-rendered: a glossary that browser
+find-in-page cannot search, or that needs JavaScript to read, is not a
+reference. The cost is paid in markup discipline instead — the row and the
+attestation strip are styled from namespaced, _unscoped_ CSS rather than
+utility classes, because every character of a `class` attribute and every
+`data-v-…=""` scope marker is multiplied by 125 in the prerendered file.
+Measured with `wrapper.html()` over the mounted page, comments stripped:
+342,276 chars before that change, 190,618 after (per row 2,008 → 880).
+`tests/unit/glossary-page-weight.spec.ts` is that measurement, kept as a
+budget. If you add markup to `GlossaryEntryRow.vue`, add it to the style
+block, not to a `class` attribute.

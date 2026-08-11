@@ -6,10 +6,10 @@
 // "warm paper" token + the Hebrew reading face (`lang="he"` -> David Libre,
 // see main.css) match the rest of the reader's own printed-book styling.
 //
-// No version selectors and no click-to-highlight wiring here at all — the
-// source/commentary content is whatever the reader's own standing version
+// No language selectors and no click-to-highlight wiring here at all — the
+// source/commentary content is whatever the reader's own standing language
 // preference already resolved to (shared with study/panes mode via
-// `useReaderVersions`), just rendered plainly. The inline `tes-anchor`
+// `useReaderLanguages`), just rendered plainly. The inline `tes-anchor`
 // markers inside the source HTML itself are left as inert same-page hash
 // links (a click jumps to that footnote's `id` below, the same way a
 // printed book's superscript reference does) rather than wired up to any
@@ -53,10 +53,16 @@ const hasCommentary = computed(() => props.commentaryItems.length > 0);
       :dir="sourceMeta?.direction ?? 'ltr'"
       :lang="sourceMeta?.language"
     >
+      <!-- `id="seif-N"` for the same reason `SourcePane`/`StudyStream`
+           carry it: a Questions/Answers cross-reference lands on
+           `…#seif-N` (`useLinkedCrossRefs`), and a reader whose standing
+           mode override is original must arrive at the seif here too, not
+           at an unscrolled page. -->
       <li
         v-for="segment in sourceSegments"
+        :id="`seif-${segment.n}`"
         :key="segment.n"
-        class="text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+        class="scroll-mt-24 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
         <ReaderSourceSegment :segment="segment" />
       </li>

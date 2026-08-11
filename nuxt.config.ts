@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Toc } from "./shared/types/content";
+import { nativeLanguageName } from "./shared/utils/languages";
 import { stripContentChunkPrefetchHints } from "./shared/utils/manifestPrefetch";
 
 // Mirrors `KIND_ORDER` in `app/utils/chapterGrouping.ts` — duplicated
@@ -59,10 +60,12 @@ const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
   ),
 );
 
-// There is no deployed domain yet — every absolute URL the app emits
-// (canonical links, og:url/og:image, hreflang alternates, sitemap.xml,
-// robots.txt) derives from this single value, so a real domain only ever
-// needs to be set in one place. `runtimeConfig.public.siteUrl` below is
+// Every absolute URL the app emits (canonical links, og:url/og:image,
+// hreflang alternates, sitemap.xml, robots.txt) derives from this single
+// value, so the domain only ever needs to be set in one place. The default
+// below is the live production domain — https://readtes.com is deployed and
+// crawlable (verified 2026-08-11), so treat changes that move published URLs
+// as changes real crawlers will see. `runtimeConfig.public.siteUrl` below is
 // what app code reads at runtime (`useRuntimeConfig().public.siteUrl`);
 // `i18n.baseUrl` needs the same literal at Nuxt-config-evaluation time so
 // `useLocaleHead()` can emit absolute hreflang/canonical/og:url tags.
@@ -124,12 +127,20 @@ export default defineNuxtConfig({
   i18n: {
     strategy: "prefix_except_default",
     defaultLocale: "en",
+    // `name` is the native language name — same fact the reader's per-pane
+    // language `<select>` renders, so both read `shared/utils/languages.ts`
+    // rather than each keeping their own copy of "English"/"עברית".
     locales: [
-      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      {
+        code: "en",
+        language: "en-US",
+        name: nativeLanguageName("en"),
+        file: "en.json",
+      },
       {
         code: "he",
         language: "he-IL",
-        name: "עברית",
+        name: nativeLanguageName("he"),
         dir: "rtl",
         file: "he.json",
       },
@@ -169,6 +180,14 @@ export default defineNuxtConfig({
   // scaffolding task; never ship it (or its localized variants — @nuxtjs/i18n
   // seeds every locale's copy of every static page into the prerender crawl,
   // so each locale prefix needs its own rule) in the generated static site.
+  //
+  // No `redirect` rules live here, and the #85 volume regroup deliberately
+  // did not add any: every `/volumes/volume-N` URL exists both before and
+  // after that change, only the parts each one lists moved, and the moves
+  // don't form a rename (old volume 3's parts 7 and 8 now sit in volumes 2
+  // and 3), so no old volume URL has a single new home. See the
+  // `tes-content-model` skill, "Volume grouping", for the full reasoning —
+  // read it before adding a redirect for a volume URL.
   routeRules: {
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
@@ -186,10 +205,11 @@ export default defineNuxtConfig({
     nitro: {
       prerender: {
         // The volumes index is reachable by crawling the homepage's link to
-        // it, but each `/volumes/[volume]` page's own link only exists for
-        // Volume 1 (the rest render disabled/"coming soon", with no <a> for
-        // the crawler to follow) — list every volume explicitly so all six
-        // contents pages still ship in the generated static site. Reader
+        // it, and each `/volumes/[volume]` card renders as an <a> only while
+        // `volumeHasContent` holds (an empty volume renders a disabled
+        // "coming soon" card with no <a> for the crawler to follow) — list
+        // every volume explicitly so all six contents pages ship in the
+        // generated static site whatever the content coverage is. Reader
         // routes are listed explicitly for the same reason (see
         // `readerPrerenderRoutes` above) — the crawler alone would miss most
         // of the answers-terminology/answers-topics clusters.
@@ -205,8 +225,8 @@ export default defineNuxtConfig({
     },
   },
   // T11 scaling fix — content-chunk prefetch-link bloat: strip every
-  // `content/parts/**`/`content/toc.parts/**` chunk's prefetch/preload
-  // eligibility from the client manifest before Nitro embeds it for
+  // `content/parts/**`/`content/toc.parts/**`/`content/glossary/**` chunk's
+  // prefetch/preload eligibility from the client manifest before Nitro embeds it for
   // runtime use, so `vue-bundle-renderer`'s renderer stops emitting a
   // `<link rel="prefetch">` for (effectively) every chapter's content chunk
   // on every reader page. See `shared/utils/manifestPrefetch.ts`'s docblock

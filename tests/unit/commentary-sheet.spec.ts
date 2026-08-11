@@ -67,13 +67,13 @@ describe("CommentarySheet", () => {
     wrapper.unmount();
   });
 
-  it("shows an empty state when the seif has no commentary in this edition", async () => {
+  it("shows an empty state when the seif has no commentary in this language", async () => {
     const wrapper = await mountSuspended(ReaderStateHost, {
       props: { open: true, seif: 3, items: [] },
     });
 
     expect(document.body.textContent).toContain(
-      "No commentary for this seif in this edition.",
+      "No commentary for this seif in this language.",
     );
     wrapper.unmount();
   });
