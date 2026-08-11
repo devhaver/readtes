@@ -135,25 +135,17 @@ onClickOutside(rootRef, close);
     <button
       ref="buttonRef"
       type="button"
-      class="inline-flex items-center gap-1 rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      class="tes-breadcrumb-menu-trigger"
       :aria-expanded="isOpen"
       :aria-controls="panelId"
       @click="toggle"
       @keydown="onTriggerKeydown"
     >
       {{ triggerLabel }}
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="h-3 w-3 shrink-0"
+      <span
+        class="tes-icon tes-icon-chevron-down h-3 w-3 shrink-0"
         aria-hidden="true"
-      >
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
+      />
     </button>
 
     <div
@@ -168,24 +160,21 @@ onClickOutside(rootRef, close);
             <NuxtLink
               v-if="item.to"
               :to="item.to"
-              class="block px-3 py-2 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+              class="tes-menu-link"
               :class="item.current && 'font-semibold text-(--accent-text)'"
               :aria-current="item.current ? 'true' : undefined"
               @click="onItemClick"
             >
               {{ item.label }}
             </NuxtLink>
-            <span
-              v-else
-              class="block px-3 py-2 text-sm text-(--text-muted) opacity-60"
-            >
+            <span v-else class="tes-menu-link-disabled">
               {{ item.label }}
             </span>
           </li>
           <li v-if="footerItem" class="border-t border-(--border)">
             <NuxtLink
               :to="footerItem.to"
-              class="block px-3 py-2 text-sm text-(--accent-text) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+              class="tes-focus-ring block px-3 py-2 text-sm text-(--accent-text) hover:bg-(--surface-raised)"
               @click="onItemClick"
             >
               {{ footerItem.label }}

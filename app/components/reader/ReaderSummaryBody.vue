@@ -63,16 +63,14 @@ const onMiniTocEntryClick = (anchorId: string) => {
   </div>
 
   <nav v-else-if="miniToc.length > 0" :aria-label="t('reader.miniTocTitle')">
-    <h3
-      class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-    >
+    <h3 class="tes-eyebrow">
       {{ t("reader.miniTocTitle") }}
     </h3>
     <ol class="mt-3 flex flex-col gap-1">
       <li v-for="entry in miniToc" :key="entry.anchorId">
         <button
           type="button"
-          class="rounded-button px-2 py-1 text-start text-sm text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="tes-minitoc-link"
           @click="onMiniTocEntryClick(entry.anchorId)"
         >
           {{ entry.label }}

@@ -19,19 +19,11 @@ const { t } = useI18n();
   <details
     class="group mb-6 rounded-card border border-(--border) bg-(--surface-reading)"
   >
-    <summary
-      class="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-    >
-      <span
-        class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-      >
+    <summary class="tes-disclosure-summary">
+      <span class="tes-eyebrow">
         {{ t("reader.chapterIntro.title") }}
       </span>
-      <span
-        aria-hidden="true"
-        class="text-(--text-muted) transition-transform group-open:rotate-180"
-        >⌄</span
-      >
+      <span aria-hidden="true" class="tes-disclosure-chevron">⌄</span>
     </summary>
 
     <div class="px-4 pb-4">

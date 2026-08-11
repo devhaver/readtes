@@ -60,16 +60,14 @@ const onLanguageChange = (event: Event) => {
 
 <template>
   <div class="flex flex-wrap items-center justify-between gap-2">
-    <h2
-      class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-    >
+    <h2 class="tes-eyebrow">
       {{ title }}
     </h2>
 
     <div class="flex items-center gap-2">
       <span
         v-if="provenance"
-        class="rounded-button border px-1.5 py-0.5 text-xs font-medium"
+        class="tes-provenance-badge"
         :class="
           provenance.tone === 'warning'
             ? 'border-orange-cta text-(--warning-text)'
@@ -83,7 +81,7 @@ const onLanguageChange = (event: Event) => {
         <label :for="selectId" class="sr-only">{{ languageLabel }}</label>
         <select
           :id="selectId"
-          class="rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="tes-lang-select"
           :value="modelValue ?? ''"
           @change="onLanguageChange"
         >

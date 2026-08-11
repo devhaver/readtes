@@ -34,6 +34,8 @@ interface Segment {
   pane: PaneId;
   labelKey: string;
   controls: string;
+  /** This pane's `.tes-icon-*` mask class (`main.css`). */
+  iconClass: string;
 }
 
 const props = defineProps<{ panes: PaneId[] }>();
@@ -43,16 +45,19 @@ const SEGMENT_BY_PANE: Record<PaneId, Segment> = {
     pane: "source",
     labelKey: "reader.mobilePane.source",
     controls: "reader-source-pane",
+    iconClass: "tes-icon-pane-source",
   },
   commentary: {
     pane: "commentary",
     labelKey: "reader.mobilePane.innerLight",
     controls: "reader-commentary-pane",
+    iconClass: "tes-icon-pane-commentary",
   },
   "inner-observation": {
     pane: "inner-observation",
     labelKey: "reader.mobilePane.innerObservation",
     controls: "reader-inner-observation-pane",
+    iconClass: "tes-icon-pane-inner-observation",
   },
 };
 
@@ -122,7 +127,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
         :aria-selected="activePane === segment.pane"
         :aria-controls="segment.controls"
         :tabindex="activePane === segment.pane ? 0 : -1"
-        class="flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="tes-pill-tab"
         :class="
           activePane === segment.pane
             ? 'bg-teal-strong text-surface-white'
@@ -131,49 +136,11 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
         @click="setActivePane(segment.pane)"
         @keydown="onKeydown($event, index)"
       >
-        <svg
-          v-if="segment.pane === 'source'"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
+        <span
+          class="tes-icon h-4 w-4 shrink-0"
+          :class="segment.iconClass"
           aria-hidden="true"
-        >
-          <path d="M4 5c2.5-1 5-1 8 0v14c-3-1-5.5-1-8 0Z" />
-          <path d="M20 5c-2.5-1-5-1-8 0v14c3-1 5.5-1 8 0Z" />
-        </svg>
-        <svg
-          v-else-if="segment.pane === 'commentary'"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
-          aria-hidden="true"
-        >
-          <path d="M4 5h16v10H8l-4 4Z" />
-        </svg>
-        <svg
-          v-else
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
-          aria-hidden="true"
-        >
-          <path
-            d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"
-          />
-          <circle cx="12" cy="12" r="2.5" />
-        </svg>
+        />
         <span>{{ t(segment.labelKey) }}</span>
       </button>
     </div>

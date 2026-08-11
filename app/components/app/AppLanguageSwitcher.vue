@@ -16,7 +16,7 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
       v-for="entry in availableLocales"
       :key="entry.code"
       :to="switchLocalePath(entry.code)"
-      class="rounded-button px-2 py-1 text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      class="tes-focus-ring rounded-button px-2 py-1 text-sm transition-colors"
       :class="
         entry.code === locale
           ? 'font-medium text-teal'

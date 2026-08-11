@@ -196,7 +196,7 @@ const goToFullCommentary = async () => {
         v-for="segment in sourceSegments"
         :id="`seif-${segment.n}`"
         :key="segment.n"
-        class="reader-anchor-target scroll-mt-24 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+        class="reader-anchor-target tes-seif-lg scroll-mt-24"
       >
         <ReaderSourceSegment :segment="segment" />
 
@@ -232,19 +232,11 @@ const goToFullCommentary = async () => {
       v-if="hasUnanchoredCommentary"
       class="group mt-6 rounded-card border border-(--border) bg-(--surface-reading)"
     >
-      <summary
-        class="flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-      >
-        <span
-          class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-        >
+      <summary class="tes-disclosure-summary">
+        <span class="tes-eyebrow">
           {{ t("reader.studyMode.unalignedCommentaryTitle") }}
         </span>
-        <span
-          aria-hidden="true"
-          class="text-(--text-muted) transition-transform group-open:rotate-180"
-          >⌄</span
-        >
+        <span aria-hidden="true" class="tes-disclosure-chevron">⌄</span>
       </summary>
 
       <div class="flex flex-col gap-6 px-4 pb-4">
@@ -274,7 +266,7 @@ const goToFullCommentary = async () => {
             <li
               v-for="item in group.items"
               :key="item.anchorId"
-              class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+              class="tes-seif-md"
             >
               <span class="me-1.5 text-xs font-semibold text-(--accent-text)">
                 {{ localizedText(item.label, locale) }}
@@ -297,7 +289,7 @@ const goToFullCommentary = async () => {
       </p>
       <button
         type="button"
-        class="mt-2 rounded-button border border-teal px-3 py-1.5 text-sm font-medium text-(--accent-text) hover:bg-teal-strong hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="tes-focus-ring mt-2 rounded-button border border-teal px-3 py-1.5 text-sm font-medium text-(--accent-text) hover:bg-teal-strong hover:text-surface-white"
         @click="goToFullCommentary"
       >
         {{ t("reader.studyMode.readFullCommentary") }}
