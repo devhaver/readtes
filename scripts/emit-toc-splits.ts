@@ -3,7 +3,9 @@
  * `content/toc.parts/part-NN.json` from the committed `content/toc.json` +
  * `content/versions.json`. `pnpm emit:toc-splits`.
  *
- * A pure local transform — never touches the network. Both importers
+ * A local transform — never touches the network, though it does read the
+ * committed content of `answers-*` chapters to compute their `itemCount`
+ * (see `scripts/lib/toc-splits.ts`). Both importers
  * (`import-sefaria.ts`, `import-kabbalahmedia.ts`) call the same
  * `writeTocSplitFiles` helper (`scripts/lib/toc-splits.ts`) directly after
  * they rewrite `toc.json`, so this script only needs running by hand after

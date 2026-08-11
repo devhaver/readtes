@@ -1,9 +1,12 @@
 /**
  * Groups a part's chapters for display on a volume's contents page: main
  * chapters first, then Inner Observation (Histaklut Penimit), then the
- * Questions lists, then the Answers lists — clustered, since a part can
- * have 100+ tiny "answer" chapters that must not render as 100 rows (see
- * AGENTS.md "Unknown sibling nodes" / the Sefaria import coverage notes).
+ * Questions lists, then the Answers lists — `answers-*` rendered as a
+ * single clustered row with the real answer count in parens, rather than
+ * the misleading "chapter 1" a plain row would show now that issue #91
+ * folded every answer of a kind into one `…-01` chapter (`sorted.length`
+ * is always 1 post-consolidation — see `TocChapter.itemCount`, which is
+ * what the cluster's `count` actually comes from).
  */
 import type { ChapterKind, TocChapter } from "~~/shared/types/content";
 
@@ -45,7 +48,7 @@ export const KIND_ORDER: ChapterKind[] = [
   "answers-topics",
 ];
 
-/** Kinds compact enough in a typical part (1-2 chapters) to render as individual rows. */
+/** Kinds that render as one clustered row (count + link to the first chapter) rather than one row per chapter — see `groupChaptersByKind`'s doc comment. */
 type ClusteredKind = "answers-terminology" | "answers-topics";
 const CLUSTERED_KINDS = new Set<ChapterKind>([
   "answers-terminology",
@@ -75,7 +78,9 @@ export interface ChapterGroupSection {
 /**
  * Groups a part's chapters into display sections. Every kind keeps its
  * chapters in `number` order; `answers-terminology`/`answers-topics` are
- * collapsed into a single cluster entry each (count + link to the first).
+ * collapsed into a single cluster entry each (count + link to the first —
+ * "first" still matters even though there's only ever one `TocChapter` of
+ * these kinds now, since it's what the cluster row links to).
  */
 export const groupChaptersByKind = (
   chapters: TocChapter[],
@@ -103,7 +108,11 @@ export const groupChaptersByKind = (
         entries.push({
           type: "cluster",
           kind: kind as ClusteredKind,
-          count: sorted.length,
+          // `firstChapter.itemCount` is the real answer count (issue #91);
+          // `sorted.length` (always 1 post-consolidation) is only a
+          // fallback for the edge case of no source version to read it
+          // from at all — see `itemCountFor` in `scripts/lib/toc-splits.ts`.
+          count: firstChapter.itemCount ?? sorted.length,
           firstChapter,
         });
       }

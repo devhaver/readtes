@@ -11,30 +11,27 @@
  * it onto the chapter it names *here*, and swapping the hrefs in a
  * segment's already-sanitized html. It never decides on its own that a
  * target exists — `linkInternalSefariaCrossRefs`'s caller supplies the
- * internal href, and only for chapters it has actually seen in the ToC
+ * internal href, and only for chapters/items it has actually seen
  * (`useLinkedCrossRefs`). That matters beyond tidiness: Nitro's prerender
  * crawler follows internal links, so an href built optimistically from
  * string parsing alone would turn every unmatched ref into a 404 in the
  * generated site.
  *
- * Ref shapes handled, all four of them:
+ * Ref shapes handled, all four of them (issue #91: every answer chapter of a
+ * kind consolidated into the single `…-01` chapter that kind's questions
+ * already lived in, so answers and questions now share one shape):
  *
  *   …,_Section_<ROMAN>,_List_of_Answers_on_Terminology_<N>
- *     -> part-<NN>/answers-terminology-<NN>
+ *     -> part-<NN>/answers-terminology-01#seif-<N>
  *   …,_Section_<ROMAN>,_List_of_Answers_on_Topics_<N>
- *     -> part-<NN>/answers-topics-<NN - topicsOffset>
+ *     -> part-<NN>/answers-topics-01#seif-<N - topicsOffset>
  *   …,_Section_<ROMAN>,_List_of_Questions_on_Terminology_<N>
  *     -> part-<NN>/questions-terminology-01#seif-<N>
  *   …,_Section_<ROMAN>,_List_of_Questions_on_Topics_<N>
  *     -> part-<NN>/questions-topics-01#seif-<N - topicsOffset>
  *
- * Two asymmetries in there, both real, neither a parsing bug:
- *
- * - **Answers are chapters, questions are seifim.** Each answer is its own
- *   chapter, while all questions of a kind live as items inside a single
- *   chapter — so a question ref targets a `#seif-N` fragment (this site's
- *   own convention — see `sourceSegmentAnchorId`) of `…-01`.
- * - **Topics refs are offset** — see `SefariaCrossRef.number`.
+ * One asymmetry remains, and it's real, not a parsing bug: **topics refs are
+ * offset** — see `SefariaCrossRef.number`.
  */
 
 /**
@@ -132,24 +129,31 @@ export interface SefariaCrossRefTarget {
   /**
    * Every chapter id that must exist here before this link may go internal
    * — the caller links only when it has seen *all* of them in the ToC.
-   *
    * An answer ref needs the one chapter it lands on. A question ref needs
-   * two: the questions chapter that holds the seif, *and* the answer
-   * chapter of the same number. The second one is not the target — it is
-   * the only evidence available at render time that the seif exists at
-   * all. The ToC carries chapter ids, not per-chapter item counts, so
-   * `#seif-N` cannot be checked directly; the apparatus is a pairing
-   * (question N <-> answer chapter N throughout the corpus), so a missing
-   * answer chapter N is exactly where a question N may also be missing —
-   * Part 1's 55 terminology questions against 54 answer chapters being the
-   * known break. Erring toward the external link there is what issue #78
-   * asks for: an unmatched number falls back rather than pointing at a
-   * fragment that isn't on the page.
+   * two: the questions chapter that holds the seif, and the answers
+   * chapter `answerItem` names — checked here only for its own existence;
+   * whether it actually holds item `answerItem.n` is `answerItem`'s job.
    */
   requiredChapterIds: string[];
+  /**
+   * The (chapter, item number) pair whose *item-level* existence is this
+   * ref's real guardrail, for both apparatuses (issue #91) — always a spot
+   * in the `answers-<subject>-01` chapter, checked against that chapter's
+   * `TocChapter.itemCount`. For an answer ref this *is* the target; for a
+   * question ref it is only evidence, the same pairing #78 always used
+   * (question N <-> answer N throughout the corpus), just re-checked at
+   * item granularity now that consolidation folded the per-answer chapters
+   * `requiredChapterIds` used to check into one — a missing answer N is
+   * exactly where a question N may also be missing, Part 1's 55
+   * terminology questions against 54 answers being the known break. Erring
+   * toward the external link there is what issue #78 asks for: an
+   * unconfirmed target falls back rather than pointing at a fragment that
+   * isn't on the page.
+   */
+  answerItem: { chapterId: string; n: number };
   /** Unprefixed route for that chapter — feed it through `useLocalePath()`. */
   path: string;
-  /** `#seif-N` for a question ref, `""` for an answer ref. */
+  /** `#seif-N` for both an answer and a question ref (issue #91: answers are `#seif-N` items too now). */
   hash: string;
 }
 
@@ -161,8 +165,8 @@ export interface SefariaCrossRefTarget {
  * it applies to topics refs only. Returns `null` when the translated
  * number isn't a plausible one (a topics ref numbered at or below the
  * offset, or a zero) — the caller then leaves the external link alone. The
- * returned ids are only *candidates*: they say nothing about whether those
- * chapters exist, which is the caller's job to check.
+ * returned ids/item are only *candidates*: they say nothing about whether
+ * that chapter or item actually exists, which is the caller's job to check.
  */
 export const sefariaCrossRefTarget = (
   ref: SefariaCrossRef,
@@ -172,18 +176,22 @@ export const sefariaCrossRefTarget = (
     ref.subject === "topics" ? ref.number - topicsOffset : ref.number;
   if (number < 1) return null;
 
-  const answerChapterId = `${ref.partId}/answers-${ref.subject}-${padId(number)}`;
+  const answerChapterId = `${ref.partId}/answers-${ref.subject}-01`;
+  const answerItem = { chapterId: answerChapterId, n: number };
+
   if (ref.apparatus === "answers") {
     return {
       requiredChapterIds: [answerChapterId],
+      answerItem,
       path: `/read/${answerChapterId}`,
-      hash: "",
+      hash: `#seif-${number}`,
     };
   }
 
   const questionsChapterId = `${ref.partId}/questions-${ref.subject}-01`;
   return {
     requiredChapterIds: [questionsChapterId, answerChapterId],
+    answerItem,
     path: `/read/${questionsChapterId}`,
     hash: `#seif-${number}`,
   };

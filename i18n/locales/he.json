@@ -51,6 +51,7 @@
     "innerObservationReload": "טען מחדש את הדף",
     "innerObservationNeverWritten": "בעל הסולם לא כתב הסתכלות פנימית לחלק זה — לאחד עשר מתוך שישה עשר החלקים יש הסתכלות פנימית, וחלק זה אינו נמנה עמם. אין כאן טקסט שמהדורה כלשהי יכולה לכלול, ולכן אין זה פער דיגיטציה.",
     "miniTocTitle": "בפרק זה",
+    "miniTocTruncated": "ועוד {count} נוספים — גללו למטה כדי לקרוא את כולם.",
     "seifLabel": "סעיף {n}",
     "missingAnchor": {
       "message": "לא זמין בשפה זו.",
@@ -226,10 +227,10 @@
     "chapterKind": {
       "chapter": "פרק {n}",
       "inner-observation": "הסתכלות פנימית {n}",
-      "questions-terminology": "שאלות — פירוש המלות {n}",
-      "questions-topics": "שאלות — עניינים {n}",
-      "answers-terminology": "תשובות — פירוש המלות {n}",
-      "answers-topics": "תשובות — עניינים {n}"
+      "questions-terminology": "שאלות — פירוש המלות",
+      "questions-topics": "שאלות — עניינים",
+      "answers-terminology": "תשובות — פירוש המלות",
+      "answers-topics": "תשובות — עניינים"
     },
     "layerSummary": "תקציר",
     "emptyTitle": "אין מונח מתאים.",

@@ -157,12 +157,20 @@ export const glossaryAttestationTicks = (
 
 /**
  * The `chapterId` on a citation, split into the pieces a human-readable
- * label needs (`"part-03/answers-terminology-13"` → part 3, kind
- * `answers-terminology`, chapter 13). Derived from the id alone on purpose:
- * the real titles live in `content/toc.parts/*.json`, and pulling five of
- * those in to label a handful of citations would cost more than the whole
- * glossary index. Returns `null` for an id that doesn't parse, so the
- * citation renders unlabelled rather than half-labelled.
+ * label needs (`"part-03/chapter-13"` → part 3, kind `chapter`, chapter
+ * 13). Derived from the id alone on purpose: the real titles live in
+ * `content/toc.parts/*.json`, and pulling five of those in to label a
+ * handful of citations would cost more than the whole glossary index.
+ * Returns `null` for an id that doesn't parse, so the citation renders
+ * unlabelled rather than half-labelled.
+ *
+ * `chapterNumber` is only meaningful for `chapter`/`inner-observation`
+ * ids — a `questions-*`/`answers-*` id is always `…-01` post-consolidation
+ * (issue #91: one chapter holds every question/answer of its kind per
+ * part), so `chapterNumber` there is always `1` and carries no real
+ * information; `GlossaryQuotePair`'s label for those four kinds omits it
+ * (`i18n/locales/*.json`'s `glossary.chapterKind`), leaning on the
+ * citation's own `item` field (e.g. `"item 13"`) for the actual number.
  */
 export interface GlossaryCitationTarget {
   partNumber: number;

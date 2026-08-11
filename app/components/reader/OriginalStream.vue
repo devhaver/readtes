@@ -59,12 +59,19 @@ const hasCommentary = computed(() => props.commentaryItems.length > 0);
            mode override is original must arrive at the seif here too, not
            at an unscrolled page. -->
       <li
-        v-for="segment in sourceSegments"
-        :id="`seif-${segment.n}`"
-        :key="segment.n"
+        v-for="(segment, index) in sourceSegments"
+        :id="
+          isContinuationSegment(sourceSegments, index)
+            ? undefined
+            : `seif-${segment.n}`
+        "
+        :key="sourceSegmentKey(segment, index)"
         class="scroll-mt-24 text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
-        <ReaderSourceSegment :segment="segment" />
+        <ReaderSourceSegment
+          :segment="segment"
+          :continuation="isContinuationSegment(sourceSegments, index)"
+        />
       </li>
     </ol>
     <p v-else class="text-sm text-(--text-muted)">

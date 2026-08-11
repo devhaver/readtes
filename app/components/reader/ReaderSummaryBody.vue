@@ -62,12 +62,15 @@ const onMiniTocEntryClick = (anchorId: string) => {
     </article>
   </div>
 
-  <nav v-else-if="miniToc.length > 0" :aria-label="t('reader.miniTocTitle')">
+  <nav
+    v-else-if="miniToc.entries.length > 0"
+    :aria-label="t('reader.miniTocTitle')"
+  >
     <h3 class="tes-eyebrow">
       {{ t("reader.miniTocTitle") }}
     </h3>
     <ol class="mt-3 flex flex-col gap-1">
-      <li v-for="entry in miniToc" :key="entry.anchorId">
+      <li v-for="entry in miniToc.entries" :key="entry.anchorId">
         <button
           type="button"
           class="tes-minitoc-link"
@@ -77,6 +80,13 @@ const onMiniTocEntryClick = (anchorId: string) => {
         </button>
       </li>
     </ol>
+    <p v-if="miniToc.truncated" class="mt-2 text-sm text-(--text-muted)">
+      {{
+        t("reader.miniTocTruncated", {
+          count: miniToc.total - miniToc.entries.length,
+        })
+      }}
+    </p>
   </nav>
 
   <p v-else class="text-sm text-(--text-muted)">

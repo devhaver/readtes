@@ -193,12 +193,19 @@ const goToFullCommentary = async () => {
       :lang="sourceMeta?.language"
     >
       <li
-        v-for="segment in sourceSegments"
-        :id="`seif-${segment.n}`"
-        :key="segment.n"
+        v-for="(segment, index) in sourceSegments"
+        :id="
+          isContinuationSegment(sourceSegments, index)
+            ? undefined
+            : `seif-${segment.n}`
+        "
+        :key="sourceSegmentKey(segment, index)"
         class="reader-anchor-target tes-seif-lg scroll-mt-24"
       >
-        <ReaderSourceSegment :segment="segment" />
+        <ReaderSourceSegment
+          :segment="segment"
+          :continuation="isContinuationSegment(sourceSegments, index)"
+        />
 
         <div v-for="anchorId in segment.anchors" :key="anchorId" class="mt-3">
           <Transition

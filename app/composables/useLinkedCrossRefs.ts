@@ -6,23 +6,25 @@
  * Three things the pure half can't know, all supplied from the reader
  * page's own part file via `provideCrossRefChapters`:
  *
- * - **Whether the target chapters actually exist.** A ref that doesn't
- *   match real chapter ids keeps today's external sefaria.org link. This
- *   is load-bearing, not defensive: Nitro's prerender crawler follows
- *   internal links, so a route guessed from string parsing alone becomes a
- *   404 in the generated site. Chapter ids are part-qualified
- *   (`part-09/answers-topics-01`), so a ref naming any part other than the
- *   open one can never resolve against this set either — which is what
- *   keeps the offset below from being applied across a part boundary. (No
- *   ref in the corpus does that: all 6,885 point inside their own part.)
- *   A question ref has to clear *both* ids `sefariaCrossRefTarget` asks
- *   for — see `SefariaCrossRefTarget.requiredChapterIds` for why its
- *   `#seif-N` half is checked through the paired answer chapter.
+ * - **Whether the target chapters, and target items, actually exist.** A
+ *   ref that doesn't match a real chapter — or a real item inside it —
+ *   keeps today's external sefaria.org link. This is load-bearing, not
+ *   defensive: Nitro's prerender crawler follows internal links, so a route
+ *   guessed from string parsing alone becomes a 404 in the generated site.
+ *   Chapter ids are part-qualified (`part-09/answers-topics-01`), so a ref
+ *   naming any part other than the open one can never resolve against this
+ *   set either — which is what keeps the offset below from being applied
+ *   across a part boundary. (No ref in the corpus does that: all 6,885
+ *   point inside their own part.) A question ref has to clear *both* ids
+ *   `sefariaCrossRefTarget` asks for, plus the item check — see
+ *   `SefariaCrossRefTarget.answerItem` for why that's checked through the
+ *   paired answer chapter's own item, issue #91's consolidation having
+ *   folded what used to be one chapter per answer into one chapter per kind.
  * - **How far Sefaria's topics numbering is offset from ours** — the
  *   part's terminology answer count, read off the ToC rather than
  *   hardcoded. See `SefariaCrossRef.number` for what goes wrong without
  *   it; an existence check alone would *not* catch it, since the
- *   un-offset number usually names a real-but-wrong chapter.
+ *   un-offset number usually names a real-but-wrong item.
  * - **The active locale.** `useLocalePath()` keeps a reader who is on
  *   `/he/read/…` in Hebrew instead of dropping them onto the default
  *   locale's copy of the chapter.
@@ -42,6 +44,8 @@ import type { TocChapter } from "~~/shared/types/content";
 
 interface CrossRefContext {
   chapterIds: ReadonlySet<string>;
+  /** `answers-*` chapter id -> its `TocChapter.itemCount` (issue #91). Absent entries never resolve internally. */
+  itemCounts: ReadonlyMap<string, number>;
   topicsOffset: number;
 }
 
@@ -49,22 +53,15 @@ const CROSS_REF_CONTEXT_KEY: InjectionKey<CrossRefContext> =
   Symbol("cross-ref-context");
 
 /**
- * How many terminology answers the part has, as the *highest* chapter
- * number rather than the number of chapters. Both give 54 for a complete
- * `answers-terminology-01..54`, but a part missing one chapter mid-run
- * would silently shrink a count — and every topics ref in that part would
- * then land one chapter off, on a real-but-wrong chapter that the
- * existence check below would happily link (see `SefariaCrossRef.number`).
- * The maximum can't drift that way.
+ * How many terminology answers the part has, as the consolidated
+ * `answers-terminology-01` chapter's own `itemCount` — absent (0) if the
+ * part has no such chapter or `itemCount` wasn't computed for it (no source
+ * version to read). See `TocChapter.itemCount` for why this can't be
+ * derived from chapter numbers any more, post-#91.
  */
 const terminologyAnswerOffset = (chapters: TocChapter[]): number =>
-  chapters.reduce(
-    (highest, chapter) =>
-      chapter.kind === "answers-terminology" && chapter.number > highest
-        ? chapter.number
-        : highest,
-    0,
-  );
+  chapters.find((chapter) => chapter.kind === "answers-terminology")
+    ?.itemCount ?? 0;
 
 /**
  * Called once by the reader page, with the chapters of the part it has
@@ -75,6 +72,11 @@ const terminologyAnswerOffset = (chapters: TocChapter[]): number =>
 export const provideCrossRefChapters = (chapters: TocChapter[]): void => {
   provide(CROSS_REF_CONTEXT_KEY, {
     chapterIds: new Set(chapters.map((chapter) => chapter.id)),
+    itemCounts: new Map(
+      chapters
+        .filter((chapter) => chapter.itemCount !== undefined)
+        .map((chapter) => [chapter.id, chapter.itemCount as number]),
+    ),
     topicsOffset: terminologyAnswerOffset(chapters),
   });
 };
@@ -113,6 +115,11 @@ export const useLinkedCrossRefs = (): {
       !target ||
       !target.requiredChapterIds.every((id) => context.chapterIds.has(id))
     ) {
+      return null;
+    }
+
+    const itemCount = context.itemCounts.get(target.answerItem.chapterId);
+    if (itemCount === undefined || target.answerItem.n > itemCount) {
       return null;
     }
 
