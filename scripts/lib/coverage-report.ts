@@ -50,35 +50,40 @@ const emptyChapterNotes = (stats: VersionCoverageStat[]): string[] =>
         `- **${s.layer}/${s.versionId}**: no text for ${s.emptyChapterIds.length} chapter(s) — ${s.emptyChapterIds.join(", ")}`,
     );
 
-export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
-  const sections = parts.map((part) => {
-    const lines = [
-      `## ${part.partTitle} (\`${part.partId}\`)`,
+/** Renders one part's own `## <title> (\`part-NN\`)` section — the unit each
+ * Sefaria import run owns and may replace, leaving sibling part sections
+ * (and the entirely separate KabbalahMedia section) untouched. */
+const buildPartSection = (part: PartCoverage): string => {
+  const lines = [
+    `## ${part.partTitle} (\`${part.partId}\`)`,
+    "",
+    table(part.stats),
+  ];
+
+  if (part.innerObservationChapters === 0) {
+    lines.push(
       "",
-      table(part.stats),
-    ];
+      "**No Inner Observation (Histaklut Pnimit).** Baal HaSulam wrote none",
+      "for this part; it is absent from the work, not from the import. See",
+      '"Not written vs. not yet imported" above for the evidence and what it',
+      "does and does not establish.",
+    );
+  }
 
-    if (part.innerObservationChapters === 0) {
-      lines.push(
-        "",
-        "**No Inner Observation (Histaklut Pnimit).** Baal HaSulam wrote none",
-        "for this part; it is absent from the work, not from the import. See",
-        '"Not written vs. not yet imported" above for the evidence and what it',
-        "does and does not establish.",
-      );
-    }
+  const notes = emptyChapterNotes(part.stats);
+  if (notes.length > 0) {
+    lines.push("", "**Empty-version chapters:**", ...notes);
+  }
 
-    const notes = emptyChapterNotes(part.stats);
-    if (notes.length > 0) {
-      lines.push("", "**Empty-version chapters:**", ...notes);
-    }
+  if (part.warnings.length > 0) {
+    lines.push("", "**Warnings:**", ...part.warnings.map((w) => `- ${w}`));
+  }
 
-    if (part.warnings.length > 0) {
-      lines.push("", "**Warnings:**", ...part.warnings.map((w) => `- ${w}`));
-    }
+  return lines.join("\n");
+};
 
-    return lines.join("\n");
-  });
+export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
+  const sections = parts.map(buildPartSection);
 
   return [
     "# Import coverage",
@@ -133,4 +138,101 @@ export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
     ...sections,
     "",
   ].join("\n");
+};
+
+// ---------------------------------------------------------------------------
+// Section-scoped merge into an existing content/COVERAGE.md
+// ---------------------------------------------------------------------------
+
+/**
+ * A splice boundary is a `## ` heading that carries a backtick-quoted id,
+ * e.g. `## Section I (\`part-01\`)` or
+ * `## KabbalahMedia import (\`kabbalahmedia\`)`. The preamble's own
+ * `## Not written vs. not yet imported` heading has no such id, so it is
+ * never mistaken for an addressable section and stays part of the preamble
+ * it belongs to — otherwise re-parsing a merged file would peel it off and
+ * duplicate it on every subsequent merge.
+ */
+const ADDRESSABLE_HEADING_RE = /^## .*\(`([^`]+)`\)/;
+
+const sectionId = (section: string): string | undefined => {
+  const headingLine = section.split("\n", 1)[0] ?? "";
+  return ADDRESSABLE_HEADING_RE.exec(headingLine)?.[1];
+};
+
+/** Sefaria only ever owns `part-NN` sections; a matched id outside that
+ * shape (e.g. `kabbalahmedia`) belongs to a different importer. */
+const sectionPartId = (section: string): string | undefined => {
+  const id = sectionId(section);
+  return id !== undefined && /^part-\d+$/.test(id) ? id : undefined;
+};
+
+/** Splits `markdown` into an ordered list of top-level addressable sections,
+ * each starting at its own `## ... (\`id\`)` heading and running to the next
+ * one (or EOF). Everything before the first addressable heading — including
+ * any id-less `## ` headings such as the preamble's own subsections — is
+ * dropped; callers that need the preamble regenerate it separately. */
+const splitAddressableSections = (markdown: string): string[] => {
+  const match = /^## .*\(`[^`]+`\)/m.exec(markdown);
+  if (!match) return [];
+  const rest = markdown.slice(match.index);
+  return rest.split(/\n(?=## .*\(`[^`]+`\))/).map((section) => section.trim());
+};
+
+/**
+ * Splices this run's part sections into `existing` (the current committed
+ * `content/COVERAGE.md`, or `undefined` on a first run), touching only:
+ *
+ * - the shared preamble (through "Not written vs. not yet imported"), which
+ *   is a pure function of no per-run data, so always safe to regenerate, and
+ * - the `## <title> (\`part-NN\`)` section of each part in `touchedParts`,
+ *   replaced in place if it already exists or inserted in numeric part
+ *   order if it's new.
+ *
+ * Every other top-level section — sibling Sefaria parts this run didn't
+ * touch (a scoped `--part` run), and the entirely separate KabbalahMedia
+ * section — is preserved byte-for-byte, in its original position. This is
+ * what lets `pnpm import:sefaria --part N` and `pnpm import:kabbalahmedia`
+ * both own disjoint regions of the same file without clobbering each other.
+ */
+export const mergeSefariaCoverage = (
+  existing: string | undefined,
+  touchedParts: PartCoverage[],
+): string => {
+  const preamble = buildCoverageMarkdown([]).trimEnd();
+
+  const touchedByPartId = new Map(
+    touchedParts.map((part) => [part.partId, buildPartSection(part)]),
+  );
+
+  const sections = splitAddressableSections(existing ?? "");
+
+  for (let i = 0; i < sections.length; i += 1) {
+    const partId = sectionPartId(sections[i] as string);
+    if (partId === undefined) continue;
+    const replacement = touchedByPartId.get(partId);
+    if (replacement === undefined) continue;
+    sections[i] = replacement;
+    touchedByPartId.delete(partId);
+  }
+
+  const newParts = [...touchedByPartId.entries()].sort(([a], [b]) =>
+    a.localeCompare(b),
+  );
+  for (const [partId, section] of newParts) {
+    let insertAt = sections.length;
+    for (let i = 0; i < sections.length; i += 1) {
+      const existingPartId = sectionPartId(sections[i] as string);
+      if (
+        existingPartId === undefined ||
+        existingPartId.localeCompare(partId) > 0
+      ) {
+        insertAt = i;
+        break;
+      }
+    }
+    sections.splice(insertAt, 0, section);
+  }
+
+  return `${[preamble, ...sections].filter((s) => s.length > 0).join("\n\n")}\n`;
 };

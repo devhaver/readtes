@@ -36,6 +36,7 @@ import {
 } from "./lib/chapter-units.ts";
 import {
   buildCoverageMarkdown,
+  mergeSefariaCoverage,
   type PartCoverage,
   type VersionCoverageStat,
 } from "./lib/coverage-report.ts";
@@ -647,13 +648,20 @@ export const main = async (argv: string[]): Promise<void> => {
     writeTocSplitFiles(contentDir, updatedToc, versions);
   }
 
-  const coverageMarkdown = buildCoverageMarkdown(
-    results.map((r) => r.coverage),
-  );
+  const touchedCoverage = results.map((r) => r.coverage);
+  const coverageMarkdown = buildCoverageMarkdown(touchedCoverage);
   console.log(`\n${coverageMarkdown}`);
 
   if (!args.dryRun) {
-    writeFileSync(join(contentDir, "COVERAGE.md"), coverageMarkdown, "utf-8");
+    const coveragePath = join(contentDir, "COVERAGE.md");
+    const existingCoverage = existsSync(coveragePath)
+      ? readFileSync(coveragePath, "utf-8")
+      : undefined;
+    writeFileSync(
+      coveragePath,
+      mergeSefariaCoverage(existingCoverage, touchedCoverage),
+      "utf-8",
+    );
 
     const { errors } = validateContent(contentDir);
     if (errors.length > 0) {

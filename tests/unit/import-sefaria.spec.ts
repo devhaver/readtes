@@ -5,7 +5,11 @@ import {
   buildChapterUnits,
   chapterSlug,
 } from "../../scripts/lib/chapter-units.ts";
-import { buildCoverageMarkdown } from "../../scripts/lib/coverage-report.ts";
+import {
+  buildCoverageMarkdown,
+  mergeSefariaCoverage,
+  type PartCoverage,
+} from "../../scripts/lib/coverage-report.ts";
 import { extractLeadingHeading } from "../../scripts/lib/heading.ts";
 import { hebrewNumeral } from "../../scripts/lib/hebrew-numerals.ts";
 import {
@@ -713,6 +717,130 @@ describe("coverage-report: buildCoverageMarkdown", () => {
       },
     ];
     expect(buildCoverageMarkdown(input)).toBe(buildCoverageMarkdown(input));
+  });
+});
+
+describe("coverage-report: mergeSefariaCoverage", () => {
+  const part = (partId: string, partTitle: string): PartCoverage => ({
+    partId,
+    partTitle,
+    stats: [],
+    warnings: [],
+    innerObservationChapters: 1,
+  });
+
+  it("creates a whole file (preamble + touched part sections) when none exists yet", () => {
+    const merged = mergeSefariaCoverage(undefined, [
+      part("part-01", "Section I"),
+    ]);
+
+    expect(merged).toContain("# Import coverage");
+    expect(merged).toContain("## Not written vs. not yet imported");
+    expect(merged).toContain("## Section I (`part-01`)");
+    expect(merged.trimEnd()).not.toMatch(/\n\n\n/);
+  });
+
+  it("a full write (--all) preserves a sibling importer's section byte-for-byte", () => {
+    const existing = [
+      "# Import coverage",
+      "",
+      "stale preamble text",
+      "",
+      "## Section I (`part-01`)",
+      "",
+      "stale part-01 body",
+      "",
+      "## KabbalahMedia import (`kabbalahmedia`)",
+      "",
+      "km body untouched",
+      "",
+    ].join("\n");
+
+    const merged = mergeSefariaCoverage(existing, [
+      part("part-01", "Section I"),
+    ]);
+
+    expect(merged).toContain("## KabbalahMedia import (`kabbalahmedia`)");
+    expect(merged).toContain("km body untouched");
+    expect(merged).not.toContain("stale part-01 body");
+    expect(merged).not.toContain("stale preamble text");
+    // KM's section stays after Sefaria's, not spliced in the middle.
+    expect(merged.indexOf("Section I (`part-01`)")).toBeLessThan(
+      merged.indexOf("KabbalahMedia import"),
+    );
+  });
+
+  it("a scoped --part write updates only that part's section, preserving sibling parts", () => {
+    const existing = [
+      "# Import coverage",
+      "",
+      "## Section I (`part-01`)",
+      "",
+      "part-01 body",
+      "",
+      "## Section II (`part-02`)",
+      "",
+      "part-02 body",
+      "",
+      "## Section III (`part-03`)",
+      "",
+      "part-03 body",
+      "",
+    ].join("\n");
+
+    const merged = mergeSefariaCoverage(existing, [
+      part("part-02", "Section II"),
+    ]);
+
+    expect(merged).toContain("part-01 body");
+    expect(merged).toContain("part-03 body");
+    expect(merged).not.toContain("part-02 body"); // replaced, not merely present
+    expect(merged).toContain("## Section II (`part-02`)");
+    // Order preserved: I, II, III.
+    expect(merged.indexOf("part-01")).toBeLessThan(merged.indexOf("part-02"));
+    expect(merged.indexOf("part-02")).toBeLessThan(merged.indexOf("part-03"));
+  });
+
+  it("inserts a new part's section in numeric order among existing sections", () => {
+    const existing = [
+      "# Import coverage",
+      "",
+      "## Section I (`part-01`)",
+      "",
+      "part-01 body",
+      "",
+      "## Section III (`part-03`)",
+      "",
+      "part-03 body",
+      "",
+      "## KabbalahMedia import (`kabbalahmedia`)",
+      "",
+      "km body",
+      "",
+    ].join("\n");
+
+    const merged = mergeSefariaCoverage(existing, [
+      part("part-02", "Section II"),
+    ]);
+
+    expect(merged.indexOf("part-01")).toBeLessThan(merged.indexOf("part-02"));
+    expect(merged.indexOf("part-02")).toBeLessThan(merged.indexOf("part-03"));
+    expect(merged.indexOf("part-03")).toBeLessThan(
+      merged.indexOf("KabbalahMedia import"),
+    );
+  });
+
+  it("is idempotent: merging the same touched parts twice is byte-identical", () => {
+    const once = mergeSefariaCoverage(undefined, [
+      part("part-01", "Section I"),
+      part("part-02", "Section II"),
+    ]);
+    const twice = mergeSefariaCoverage(once, [
+      part("part-01", "Section I"),
+      part("part-02", "Section II"),
+    ]);
+
+    expect(twice).toBe(once);
   });
 });
 
