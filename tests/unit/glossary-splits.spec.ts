@@ -1,6 +1,9 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   glossaryCitationsFileSchema,
+  glossaryFileSchema,
   glossaryIndexFileSchema,
   type GlossaryFile,
 } from "~~/shared/types/content";
@@ -170,12 +173,32 @@ describe("deriveGlossaryCitationsFile", () => {
 });
 
 describe("glossary split derivation", () => {
-  it("is idempotent", () => {
-    expect(deriveGlossaryIndexFile(fixture)).toEqual(
-      deriveGlossaryIndexFile(fixture),
+  /**
+   * The claim in `glossary-splits.ts` is not "a pure function returns equal
+   * values" — it is that re-running `pnpm emit:glossary-splits` against an
+   * unchanged `tes-en.json` leaves `git diff` empty. That needs the real
+   * canonical file and the real serialization, byte for byte, key order and
+   * trailing newline included, so that is what this checks.
+   *
+   * The `glossaryFileSchema.parse` is not decoration: it is what
+   * `emit-glossary-splits.ts` does, and it is what normalises key order to
+   * the schema's declaration order. Derive straight off `JSON.parse` and the
+   * output differs from what is committed — same data, different byte
+   * stream, a permanent phantom diff.
+   */
+  it("re-derives the committed split files byte for byte", () => {
+    const glossaryDir = join(process.cwd(), "content", "glossary");
+    const read = (name: string) =>
+      readFileSync(join(glossaryDir, name), "utf-8");
+    const serialize = (data: unknown) => `${JSON.stringify(data, null, 2)}\n`;
+
+    const canonical = glossaryFileSchema.parse(JSON.parse(read("tes-en.json")));
+
+    expect(serialize(deriveGlossaryIndexFile(canonical))).toBe(
+      read("tes-en.index.json"),
     );
-    expect(deriveGlossaryCitationsFile(fixture)).toEqual(
-      deriveGlossaryCitationsFile(fixture),
+    expect(serialize(deriveGlossaryCitationsFile(canonical))).toBe(
+      read("tes-en.citations.json"),
     );
   });
 });

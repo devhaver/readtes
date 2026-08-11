@@ -6,9 +6,9 @@
  * only the already-on-disk canonical glossary.
  *
  * Same shape as `toc-splits.ts`, and for the same reason. The canonical
- * glossary is 307KB and ~77% of it is `citations` — the aligned
+ * glossary is 307KB and ~72% of it is `citations` — the aligned
  * Hebrew/English excerpt pairs evidencing each term. A reader browsing 125
- * terms needs the terms, not 358 excerpt pairs, so the index carries
+ * terms needs the terms, not 363 excerpt pairs, so the index carries
  * everything but the citations (plus a `citationCount`) and the citations
  * ride in their own file, imported only when a term is opened.
  *

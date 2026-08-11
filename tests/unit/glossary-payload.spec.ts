@@ -1,6 +1,6 @@
 /**
  * Guardrail, same class as `no-full-toc-import.spec.ts`: the glossary must
- * cost bytes only on `/glossary`, and its 200KB of citation excerpts must
+ * cost bytes only on `/glossary`, and its 216KB of citation excerpts must
  * cost bytes only once someone opens a term.
  *
  * Three ways that regresses, all of which look fine in review:

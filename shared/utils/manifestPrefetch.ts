@@ -64,7 +64,7 @@ export interface PrefetchableManifestEntry {
  * `content/glossary/` covers the two split glossary files
  * (`tes-en.index.json`, `tes-en.citations.json`). Only `/glossary` imports
  * them, so they should never reach another page's dependency set to begin
- * with — but the 197KB citations file is exactly the kind of payload that
+ * with — but the 216KB citations file is exactly the kind of payload that
  * must not become a silent prefetch on every page if that ever changes, and
  * even on `/glossary` itself the citations chunk is meant to load when a
  * reader opens a term, not before.

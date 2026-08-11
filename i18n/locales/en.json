@@ -204,6 +204,8 @@
     "variantsHint": "Counts are occurrences inside the aligned passages, not across the whole book.",
     "citationsTitle": "Read off",
     "citationsLoading": "Loading passages…",
+    "citationsFailed": "The passages could not be loaded.",
+    "citationsRetry": "Try again",
     "citationChapter": "Part {part} · {chapter}",
     "chapterKind": {
       "chapter": "Chapter {n}",
@@ -213,17 +215,13 @@
       "answers-terminology": "Answers — Terminology {n}",
       "answers-topics": "Answers — Topics {n}"
     },
-    "layer": {
-      "source": "The Ari's Text",
-      "commentary": "Inner Light",
-      "summary": "Summary"
-    },
+    "layerSummary": "Summary",
     "emptyTitle": "No term matches.",
     "emptyBody": "Try another spelling, in Hebrew or English — quotation marks inside acronyms are ignored.",
     "clearFilters": "Clear filters",
     "conventionsTitle": "How the English is set",
     "conventionsIntro": "Rules the official edition follows beyond single words — how item markers, commentary openings, citations and honorifics are handled — each with the evidence behind it.",
-    "conventionEvidence": "Evidence: {evidence}",
+    "conventionEvidenceLabel": "Evidence:",
     "limitsTitle": "Where the evidence stops",
     "limitsIntro": "This glossary is only as wide as the English edition. Read these before leaning on a count.",
     "methodTitle": "How the glossary was built",

@@ -72,7 +72,7 @@ const chapterLabel = computed(() => {
         </svg>
       </NuxtLink>
       <span v-if="layer" class="text-(--text-muted)">
-        {{ t(`glossary.layer.${layer}`) }}
+        {{ t(GLOSSARY_LAYER_LABEL_KEYS[layer]) }}
       </span>
       <span v-if="item" class="text-(--text-muted)" dir="ltr" lang="en">
         {{ item }}

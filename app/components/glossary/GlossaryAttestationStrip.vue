@@ -12,6 +12,13 @@
  *
  * Purely decorative in the accessibility tree — the caller passes the same
  * fact as a sentence in `description`, which is what a screen reader gets.
+ *
+ * Geometry and lit/unlit state ride on attributes rather than utility
+ * classes, and the style block is deliberately unscoped, because seven of
+ * these elements are server-rendered inside each of 125 prerendered rows —
+ * a scope marker plus a long class string on every tick is a real fraction
+ * of the document. `tests/unit/glossary-page-weight.spec.ts` holds the line.
+ * Every selector is namespaced, so nothing here reaches outside the page.
  */
 import type { GlossaryAttestationTick } from "~/utils/glossary";
 
@@ -27,32 +34,50 @@ withDefaults(
 </script>
 
 <template>
-  <span class="inline-flex items-center gap-1">
+  <span class="glossary-strip" :data-size="size === 'lg' ? 'lg' : undefined">
     <span class="sr-only">{{ description }}</span>
-    <span
-      aria-hidden="true"
-      class="inline-flex items-end"
-      :class="size === 'lg' ? 'gap-1' : 'gap-0.5'"
-    >
+    <span aria-hidden="true" class="glossary-ticks">
       <span
         v-for="tick in ticks"
         :key="tick.partId"
-        class="glossary-tick block rounded-[1px]"
-        :class="[
-          size === 'lg' ? 'h-4 w-1.5' : 'h-2.5 w-1',
-          tick.attested ? 'is-attested' : 'is-absent',
-        ]"
+        class="glossary-tick"
+        :data-lit="tick.attested ? '' : undefined"
       />
     </span>
   </span>
 </template>
 
-<style scoped>
-.glossary-tick.is-attested {
+<style>
+.glossary-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.glossary-ticks {
+  display: inline-flex;
+  align-items: end;
+  gap: 0.125rem;
+}
+
+.glossary-strip[data-size="lg"] .glossary-ticks {
+  gap: 0.25rem;
+}
+
+.glossary-tick {
+  display: block;
+  inline-size: 0.25rem;
+  block-size: 0.625rem;
+  border-radius: 1px;
+  background-color: var(--border);
+}
+
+.glossary-tick[data-lit] {
   background-color: var(--accent-text);
 }
 
-.glossary-tick.is-absent {
-  background-color: var(--border);
+.glossary-strip[data-size="lg"] .glossary-tick {
+  inline-size: 0.375rem;
+  block-size: 1rem;
 }
 </style>

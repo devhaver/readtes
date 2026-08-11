@@ -3,7 +3,7 @@
  * via a direct `await import()` and exposes it as `computed()` refs.
  *
  * The canonical `content/glossary/tes-en.json` is 307KB and must never be
- * imported from `app/` — ~77% of it is the citation excerpt pairs, which
+ * imported from `app/` — ~72% of it is the citation excerpt pairs, which
  * only matter once a reader opens a term. This file is the derived index
  * (terms, variants, conventions, gaps; no citations, see
  * `scripts/lib/glossary-splits.ts`); `useGlossaryCitations` fetches the

@@ -9,6 +9,17 @@
  * evidence prerender into the page's HTML (so they are readable without
  * JavaScript and indexable), while staying collapsed so 13 rules cost 13
  * lines of a reader's screen instead of three screenfuls.
+ *
+ * Every string that comes out of the glossary artifact here — the topic, the
+ * rule and the evidence — is English prose describing the English edition
+ * (`glossary.languageNote` says so on the page). Under `/he` the document is
+ * `dir="rtl"`, and several rules quote Hebrew fragments inline (the item
+ * markers rule lists `א׳, ב׳ … ק, ר, ש, ת`; the nav-links rule quotes
+ * `'(לשאלה)'`), so without an explicit `dir="ltr" lang="en"` the bidi
+ * algorithm reorders their brackets, slashes and trailing punctuation. Each
+ * of the three is tagged individually rather than the whole panel, because
+ * the labels around them are translated and must stay in the page's
+ * direction.
  */
 import type { GlossaryConvention } from "~~/shared/types/content";
 
@@ -28,7 +39,11 @@ const { t } = useI18n();
         <summary
           class="flex cursor-pointer list-none items-center gap-3 px-4 py-3 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal sm:px-6"
         >
-          <span class="min-w-0 flex-1 text-sm text-(--text-primary)">
+          <span
+            class="min-w-0 flex-1 text-sm text-(--text-primary)"
+            dir="ltr"
+            lang="en"
+          >
             {{ convention.topic }}
           </span>
           <svg
@@ -46,15 +61,16 @@ const { t } = useI18n();
         </summary>
 
         <div class="px-4 pb-6 sm:px-6">
-          <p class="max-w-prose text-sm/relaxed text-(--text-primary)">
+          <p
+            class="max-w-prose text-sm/relaxed text-(--text-primary)"
+            dir="ltr"
+            lang="en"
+          >
             {{ convention.rule }}
           </p>
           <p class="mt-2 max-w-prose text-xs/relaxed text-(--text-muted)">
-            {{
-              t("glossary.conventionEvidence", {
-                evidence: convention.evidence,
-              })
-            }}
+            {{ t("glossary.conventionEvidenceLabel") }}
+            <span dir="ltr" lang="en">{{ convention.evidence }}</span>
           </p>
           <ul v-if="convention.examples.length > 0" class="mt-4 space-y-4">
             <li v-for="(example, index) in convention.examples" :key="index">

@@ -5,11 +5,18 @@
  *
  * Payload discipline (see AGENTS.md "Content model"): the canonical
  * `content/glossary/tes-en.json` is 307KB and is build-time only. This page
- * loads the derived ~35KB index via `useGlossaryIndex()`, and the ~200KB of
- * citation excerpts only when a reader opens their first term
- * (`useGlossaryCitations()`). Neither chunk is prefetchable — both are
- * stripped in `shared/utils/manifestPrefetch.ts` — so no other page in the
- * site pays a byte for this one.
+ * loads the derived 77KB index via `useGlossaryIndex()` (50KB once
+ * minified, 11.5KB gzipped from there), and the 216KB of citation excerpts
+ * only when a reader
+ * opens their first term (`useGlossaryCitations()`). Neither chunk is
+ * prefetchable — both are stripped in `shared/utils/manifestPrefetch.ts` —
+ * so no other page in the site pays a byte for this one.
+ *
+ * All 125 rows and all 13 house rules are server-rendered rather than
+ * paged or virtualised: a glossary that cannot be found with the browser's
+ * own find-in-page, or read without JavaScript, is not a reference. That
+ * makes this the site's heaviest document by design, so the row markup is
+ * written for bytes (see the style block in `GlossaryEntryRow.vue`).
  */
 import {
   filteredGlossaryEntries,
@@ -23,7 +30,9 @@ import type { GlossaryStrategy } from "~~/shared/types/content";
 const { t, locale } = useI18n();
 
 const { meta, entries, conventions, knownGaps } = await useGlossaryIndex();
-const { citationsFor, hasLoaded, loadCitations } = useGlossaryCitations();
+const { citationsFor, hasFailed, hasLoaded, loadCitations } =
+  useGlossaryCitations();
+const { formatDate } = useFormattedDate();
 
 const query = ref("");
 const strategy = ref<GlossaryStrategy | null>(null);
@@ -187,7 +196,13 @@ useLocalizedSeo({
         </div>
       </section>
 
-      <section class="mt-6" :aria-label="t('glossary.termsLabel')">
+      <!-- The heading is visually redundant next to the lookup bar, but the
+           125 term rows are `h3`s: without it the document jumps h1 → h3,
+           which is a real outline break for anyone navigating by heading. -->
+      <section class="mt-6" aria-labelledby="glossary-terms-heading">
+        <h2 id="glossary-terms-heading" class="sr-only">
+          {{ t("glossary.termsLabel") }}
+        </h2>
         <p class="text-xs text-(--text-muted)" aria-live="polite">
           {{
             t("glossary.resultCount", {
@@ -207,7 +222,9 @@ useLocalizedSeo({
             :entry="entry"
             :parts-covered="meta.partsCovered"
             :citations="hasLoaded ? citationsFor(entry.id) : null"
+            :citations-failed="hasFailed"
             @open="loadCitations"
+            @retry="loadCitations"
           />
         </ul>
 
@@ -299,7 +316,7 @@ useLocalizedSeo({
                 </dt>
                 <dd class="text-(--text-primary)">
                   <time :datetime="meta.generatedOn">{{
-                    meta.generatedOn
+                    formatDate(meta.generatedOn)
                   }}</time>
                 </dd>
               </div>

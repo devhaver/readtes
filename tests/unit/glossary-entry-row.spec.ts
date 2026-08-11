@@ -59,6 +59,21 @@ describe("GlossaryEntryRow", () => {
     expect(english.attributes("dir")).toBe("ltr");
   });
 
+  /**
+   * The ledger only works if the English hugs the crossing mark under /he as
+   * well as under /en. `text-align: start` on a `dir="ltr"` span resolves
+   * against the span's own direction, so on its own the English drifts to the
+   * far end of the flexible grid track under RTL; the wrapper is a flex box
+   * that inherits the *page's* direction and pins it back. Structural, so a
+   * regression is a deleted element rather than a silent CSS change.
+   */
+  it("wraps the English in a direction-inheriting box so it stays beside the crossing under rtl", async () => {
+    const wrapper = await mountRow();
+
+    expect(wrapper.get('.glossary-row-en > [lang="en"]').text()).toBe("light");
+    expect(wrapper.get('.glossary-row-he > [lang="he"]').text()).toBe("אור");
+  });
+
   it("marks the crossing rule with the entry's strategy", async () => {
     const wrapper = await mountRow();
 
@@ -74,12 +89,26 @@ describe("GlossaryEntryRow", () => {
     expect(wrapper.find("#glossary-entry-or").exists()).toBe(false);
   });
 
+  /**
+   * The panel is `v-if`, not `v-show`, so while the row is collapsed there is
+   * no element with that id anywhere in the document — 125 dangling
+   * `aria-controls` targets is a broken accessibility tree, not a hint.
+   */
+  it("names no aria-controls target while the panel it would name does not exist", async () => {
+    const wrapper = await mountRow();
+
+    expect(wrapper.get("button").attributes("aria-controls")).toBeUndefined();
+  });
+
   it("expands on click and emits open so the page can fetch the citations chunk", async () => {
     const wrapper = await mountRow();
 
     await wrapper.get("button").trigger("click");
 
     expect(wrapper.get("button").attributes("aria-expanded")).toBe("true");
+    expect(wrapper.get("button").attributes("aria-controls")).toBe(
+      "glossary-entry-or",
+    );
     expect(wrapper.find("#glossary-entry-or").exists()).toBe(true);
     expect(wrapper.emitted("open")).toHaveLength(1);
   });
@@ -109,6 +138,26 @@ describe("GlossaryEntryRow", () => {
 
     expect(wrapper.text()).toContain("Loading passages");
     expect(wrapper.find("figure").exists()).toBe(false);
+  });
+
+  /**
+   * Without this the failure mode is a row that says "Loading passages…"
+   * forever, because `hasLoaded` never flips and nothing else ever renders.
+   */
+  it("replaces the loading line with a message and a retry when the chunk failed", async () => {
+    const wrapper = await mountRow({ citationsFailed: true });
+    await wrapper.get("button").trigger("click");
+
+    expect(wrapper.text()).not.toContain("Loading passages");
+    expect(wrapper.text()).toContain("The passages could not be loaded.");
+
+    const retry = wrapper
+      .findAll("button")
+      .find((button) => button.text() === "Try again");
+    expect(retry).toBeTruthy();
+
+    await retry!.trigger("click");
+    expect(wrapper.emitted("retry")).toHaveLength(1);
   });
 
   it("links a citation to the chapter it was read off", async () => {

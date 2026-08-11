@@ -12,9 +12,18 @@
  * The chip next to it names the same fact in words; the rule is what makes
  * it scannable down 125 rows.
  *
- * Citations arrive as a prop rather than being fetched here: they live in a
- * separate ~200KB chunk (`useGlossaryCitations`) that the page loads once,
- * on the first open, for every row.
+ * Citations arrive as props rather than being fetched here: they live in a
+ * separate 216KB chunk (`useGlossaryCitations`) that the page loads once,
+ * on the first open, for every row. `citations === null` means "not here
+ * yet"; `citationsFailed` distinguishes "still arriving" from "the chunk
+ * never came", which is the difference between a spinner and a retry.
+ *
+ * The collapsed row is rendered 125 times into the prerendered HTML, so its
+ * markup is written for bytes rather than for the usual utility-class
+ * house style: the repeated class strings, the chevron and the row's own
+ * geometry live in the style block below instead of in `class` attributes.
+ * That is the whole reason this file hand-writes CSS — see the note over
+ * `.glossary-row`.
  */
 import {
   glossaryAttestationTicks,
@@ -25,15 +34,20 @@ import type {
   GlossaryIndexEntry,
 } from "~~/shared/types/content";
 
-const props = defineProps<{
-  entry: GlossaryIndexEntry;
-  /** Part ids the English edition covers at all — the attestation strip's axis. */
-  partsCovered: string[];
-  /** `null` until the citations chunk has loaded. */
-  citations: GlossaryCitation[] | null;
-}>();
+const props = withDefaults(
+  defineProps<{
+    entry: GlossaryIndexEntry;
+    /** Part ids the English edition covers at all — the attestation strip's axis. */
+    partsCovered: string[];
+    /** `null` until the citations chunk has loaded. */
+    citations: GlossaryCitation[] | null;
+    /** True once the citations chunk has failed to load, so rows can offer a retry. */
+    citationsFailed?: boolean;
+  }>(),
+  { citationsFailed: false },
+);
 
-const emit = defineEmits<{ open: [] }>();
+const emit = defineEmits<{ open: []; retry: [] }>();
 
 const { t } = useI18n();
 
@@ -67,34 +81,31 @@ const variantShares = computed(() =>
 </script>
 
 <template>
-  <li class="border-t border-(--border) first:border-t-0">
+  <li class="glossary-row-item">
     <h3>
       <button
         type="button"
-        class="group flex w-full flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3 text-start transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal sm:grid sm:grid-cols-[10rem_1.75rem_minmax(0,1fr)_auto] sm:px-6"
+        class="glossary-row"
         :aria-expanded="isOpen"
-        :aria-controls="panelId"
+        :aria-controls="isOpen ? panelId : undefined"
         @click="toggle"
       >
         <!--
-          The Hebrew hugs the crossing rule rather than the page edge, so
-          every rule and every English term lands on the same two vertical
-          lines down all 125 rows — the ledger effect the page is built on.
-          `justify-end` is resolved against the *page's* direction (this
-          wrapper inherits it), while the term inside keeps its own
-          `dir="rtl"`, so the two agree under both locales.
+          The Hebrew hugs the crossing rule rather than the page edge, and the
+          English hugs it from the other side, so every rule and every English
+          term lands on the same two vertical lines down all 125 rows — the
+          ledger effect the page is built on. Both wrappers are flex boxes
+          that inherit the *page's* direction, so `end` (Hebrew) and `start`
+          (English) resolve toward the crossing under both locales, while the
+          terms inside keep their own `dir`. Without the English wrapper the
+          `dir="ltr"` span aligns against its own direction and, under /he,
+          drifts to the far side of the flexible track.
         -->
-        <span class="flex min-w-0 sm:justify-end">
-          <!-- `break-words` is the safety valve for the one entry that spells
-               its acronym out in full (נרנח״י) — without it that term runs
-               out of its column and past the card's edge. -->
-          <span
-            class="min-w-0 font-hebrew text-2xl leading-tight break-words text-(--text-primary)"
-            dir="rtl"
-            lang="he"
-          >
-            {{ entry.he }}
-          </span>
+        <span class="glossary-row-he">
+          <!-- `overflow-wrap` is the safety valve for the one entry that
+               spells its acronym out in full (נרנח״י) — without it that term
+               runs out of its column and past the card's edge. -->
+          <span class="glossary-term" dir="rtl" lang="he">{{ entry.he }}</span>
         </span>
 
         <span
@@ -103,33 +114,21 @@ const variantShares = computed(() =>
           :data-strategy="entry.strategy"
         />
 
-        <span class="min-w-0 text-lg text-(--text-primary)" dir="ltr" lang="en">
-          {{ entry.canonicalEn }}
+        <span class="glossary-row-en">
+          <span class="glossary-canonical" dir="ltr" lang="en">{{
+            entry.canonicalEn
+          }}</span>
         </span>
 
-        <span
-          class="ms-auto flex shrink-0 items-center gap-2 text-xs text-(--text-muted)"
-        >
+        <span class="glossary-row-meta">
           <GlossaryAttestationStrip
             :ticks="ticks"
             :description="attestationDescription"
           />
-          <span class="hidden sm:inline">{{
+          <span class="glossary-row-strategy">{{
             t(`glossary.strategy.${entry.strategy}`)
           }}</span>
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-4 w-4 transition-transform"
-            :class="isOpen && 'rotate-180'"
-            aria-hidden="true"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+          <span aria-hidden="true" class="glossary-chevron" />
         </span>
       </button>
     </h3>
@@ -194,7 +193,22 @@ const variantShares = computed(() =>
         >
           {{ t("glossary.citationsTitle") }}
         </h4>
-        <p v-if="citations === null" class="mt-2 text-sm text-(--text-muted)">
+        <div v-if="citationsFailed" class="mt-2">
+          <p class="text-sm text-(--warning-text)">
+            {{ t("glossary.citationsFailed") }}
+          </p>
+          <button
+            type="button"
+            class="mt-2 rounded-button border border-(--border) px-3 py-1.5 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            @click="emit('retry')"
+          >
+            {{ t("glossary.citationsRetry") }}
+          </button>
+        </div>
+        <p
+          v-else-if="citations === null"
+          class="mt-2 text-sm text-(--text-muted)"
+        >
           {{ t("glossary.citationsLoading") }}
         </p>
         <ul v-else class="mt-2 space-y-4">
@@ -213,7 +227,137 @@ const variantShares = computed(() =>
   </li>
 </template>
 
-<style scoped>
+<style>
+/*
+ * Unscoped on purpose, and hand-written rather than composed from utility
+ * classes, for one measured reason: this row is server-rendered 125 times,
+ * so every character in a `class` attribute and every `data-v-…=""` scope
+ * marker is paid 125 times over in the prerendered document. Rewriting the
+ * row this way took it from 2,008 rendered characters to 880 and the page
+ * from 342,276 to 190,618 — measured by
+ * `tests/unit/glossary-page-weight.spec.ts`, which also keeps it there.
+ * Naming everything `glossary-*` keeps the unscoped rules from reaching
+ * anything else.
+ *
+ * All colours are design tokens; all box properties are logical.
+ */
+.glossary-row-item {
+  border-block-start: 1px solid var(--border);
+}
+
+.glossary-row-item:first-child {
+  border-block-start: 0;
+}
+
+.glossary-row {
+  display: flex;
+  inline-size: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  text-align: start;
+  transition: background-color 150ms ease;
+}
+
+.glossary-row:hover {
+  background-color: var(--surface-raised);
+}
+
+/*
+ * Byte-for-byte the ring the rest of the site draws with
+ * `focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal
+ * focus-visible:-outline-offset-2` — the same computed style, written out
+ * because the class string is what costs 125 times over.
+ */
+.glossary-row:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: -2px;
+}
+
+/* Tailwind's `sm` breakpoint, matched by hand — see the note above. */
+@media (min-width: 40rem) {
+  .glossary-row {
+    display: grid;
+    grid-template-columns: 10rem 1.75rem minmax(0, 1fr) auto;
+    padding-inline: 1.5rem;
+  }
+}
+
+.glossary-row-he {
+  display: flex;
+  min-inline-size: 0;
+}
+
+.glossary-row-en {
+  display: flex;
+  min-inline-size: 0;
+}
+
+@media (min-width: 40rem) {
+  .glossary-row-he {
+    justify-content: end;
+  }
+}
+
+.glossary-term {
+  min-inline-size: 0;
+  font-family: var(--font-hebrew);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  color: var(--text-primary);
+}
+
+.glossary-canonical {
+  min-inline-size: 0;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--text-primary);
+}
+
+.glossary-row-meta {
+  display: flex;
+  margin-inline-start: auto;
+  flex: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--text-muted);
+}
+
+.glossary-row-strategy {
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .glossary-row-strategy {
+    display: inline;
+  }
+}
+
+/*
+ * The disclosure chevron, drawn with `clip-path` rather than shipped as an
+ * inline `<svg>` 125 times. `clip-path` percentages resolve against the box,
+ * not against the writing direction, so the mark points down under both
+ * locales without a physical property anywhere.
+ */
+.glossary-chevron {
+  display: block;
+  flex: none;
+  inline-size: 0.85rem;
+  block-size: 0.85rem;
+  background-color: currentColor;
+  clip-path: polygon(14% 30%, 50% 66%, 86% 30%, 100% 44%, 50% 94%, 0 44%);
+  transition: transform 150ms ease;
+}
+
+.glossary-row[aria-expanded="true"] .glossary-chevron {
+  transform: rotate(180deg);
+}
+
 /*
  * The crossing mark. Four stroke styles for the four ways a Hebrew term
  * reaches English — the whole point is that it reads as one continuous
@@ -271,8 +415,8 @@ const variantShares = computed(() =>
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .transition-transform,
-  .transition-colors {
+  .glossary-row,
+  .glossary-chevron {
     transition: none;
   }
 }

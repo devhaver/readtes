@@ -298,7 +298,7 @@ export type ParsedChapterLayerFile = z.infer<typeof chapterLayerFileSchema>;
 //
 // `tes-en.json` is the canonical, hand-audited terminology artifact: every
 // entry was mined from the 737 chapters where a `he-jerusalem-1956` file and
-// an `en-bb` file could be aligned item-by-item. It is 307KB, and ~77% of
+// an `en-bb` file could be aligned item-by-item. It is 307KB, and ~72% of
 // that is `citations` — the aligned Hebrew/English excerpt pairs that
 // evidence each term. Loading all of it just to render a browsable term list
 // would be the `toc.json` mistake again, one directory over, so the same
@@ -458,7 +458,7 @@ export const glossaryIndexEntrySchema = z.object({
 export type GlossaryIndexEntry = z.infer<typeof glossaryIndexEntrySchema>;
 
 /**
- * Shape of `content/glossary/tes-en.index.json` — the ~35KB file the
+ * Shape of `content/glossary/tes-en.index.json` — the 77KB file the
  * glossary page loads up front. `inconsistencies`, `usage` and `revisions`
  * are deliberately not carried across: they are apparatus for the
  * translation run, not for a reader (the per-entry `variants` already say
@@ -483,7 +483,7 @@ export const glossaryIndexFileSchema = z.object({
 export type GlossaryIndexFile = z.infer<typeof glossaryIndexFileSchema>;
 
 /**
- * Shape of `content/glossary/tes-en.citations.json` — the ~200KB bulk,
+ * Shape of `content/glossary/tes-en.citations.json` — the 216KB bulk,
  * keyed by entry id, imported only when a reader opens a term.
  */
 export const glossaryCitationsFileSchema = z.object({

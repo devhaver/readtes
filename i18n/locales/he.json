@@ -204,6 +204,8 @@
     "variantsHint": "המספרים הם היקרויות בתוך הקטעים המיושרים בלבד, ולא בכל הספר.",
     "citationsTitle": "נקרא מתוך",
     "citationsLoading": "טוען קטעים…",
+    "citationsFailed": "לא ניתן היה לטעון את הקטעים.",
+    "citationsRetry": "נסו שוב",
     "citationChapter": "חלק {part} · {chapter}",
     "chapterKind": {
       "chapter": "פרק {n}",
@@ -213,17 +215,13 @@
       "answers-terminology": "תשובות — פירוש המלות {n}",
       "answers-topics": "תשובות — עניינים {n}"
     },
-    "layer": {
-      "source": "כתבי האר״י",
-      "commentary": "אור פנימי",
-      "summary": "תקציר"
-    },
+    "layerSummary": "תקציר",
     "emptyTitle": "אין מונח מתאים.",
     "emptyBody": "נסו איות אחר, בעברית או באנגלית — גרשיים בתוך ראשי תיבות אינם משפיעים על החיפוש.",
     "clearFilters": "נקה סינון",
     "conventionsTitle": "כיצד נערך הנוסח האנגלי",
     "conventionsIntro": "כללים שהמהדורה הרשמית נוהגת בהם מעבר למילים בודדות — סימוני אותיות, פתיחת דברי הפירוש, ציטוטים ותארי כבוד — כל אחד עם הראיה שמאחוריו.",
-    "conventionEvidence": "ראיה: {evidence}",
+    "conventionEvidenceLabel": "ראיה:",
     "limitsTitle": "היכן הראיות נגמרות",
     "limitsIntro": "המילון רחב בדיוק כרוחב המהדורה האנגלית. קראו את אלה לפני שנשענים על מספר כלשהו.",
     "methodTitle": "כיצד נבנה המילון",

@@ -19,7 +19,7 @@ describe("isContentChunkId", () => {
   });
 
   it("matches both split glossary chunk ids", () => {
-    // The 200KB citations chunk must load when a reader opens a term, not
+    // The 216KB citations chunk must load when a reader opens a term, not
     // speculatively — and neither file belongs in any other page's
     // dependency set. See `app/composables/useGlossaryCitations.ts`.
     expect(isContentChunkId("../content/glossary/tes-en.index.json")).toBe(

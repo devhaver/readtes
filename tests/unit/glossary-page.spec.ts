@@ -1,5 +1,6 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it } from "vitest";
+import { formatIsoDate } from "~/composables/useFormattedDate";
 import GlossaryPage from "~/pages/glossary.vue";
 import glossaryIndex from "~~/content/glossary/tes-en.index.json";
 
@@ -103,5 +104,37 @@ describe("glossary page", () => {
 
     expect(wrapper.findAll("h1")).toHaveLength(1);
     expect(wrapper.get("h1").text()).toBe("Glossary");
+  });
+
+  /**
+   * The 125 term rows are `h3`s and the two closing sections are `h2`s, so
+   * without a heading over the term list the outline reads h1 → h3 → h2 —
+   * an axe `heading-order` violation that no per-component lint rule can
+   * see, because the levels are split across three files.
+   */
+  it("never skips a heading level, in document order", async () => {
+    const wrapper = await mountSuspended(GlossaryPage);
+    const levels = wrapper
+      .findAll("h1, h2, h3, h4")
+      .map((heading) => Number(heading.element.tagName.slice(1)));
+
+    expect(levels[0]).toBe(1);
+    for (const [index, level] of levels.entries()) {
+      if (index === 0) continue;
+      expect(level).toBeLessThanOrEqual(levels[index - 1]! + 1);
+    }
+  });
+
+  it("renders the compiled-on date in the reader's language, not as a raw ISO string", async () => {
+    const wrapper = await mountSuspended(GlossaryPage);
+    const compiled = wrapper.get("time");
+
+    expect(compiled.attributes("datetime")).toBe(
+      glossaryIndex.meta.generatedOn,
+    );
+    expect(compiled.text()).not.toBe(glossaryIndex.meta.generatedOn);
+    expect(compiled.text()).toBe(
+      formatIsoDate(glossaryIndex.meta.generatedOn, "en-US"),
+    );
   });
 });

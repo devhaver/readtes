@@ -27,27 +27,47 @@ export const GLOSSARY_STRATEGIES: GlossaryStrategy[] = [
 ];
 
 /**
- * Hebrew terminology is written with gershayim/geresh inside acronyms
- * (`ז"א`, `בחי"ד`, `או"ח`), and nobody types those when searching. Strips
- * every quote-shaped mark and collapses whitespace so `זא` finds `ז"א`, and
- * lowercases so the English side is caseless. Applied to both the query and
- * the searched text, so the two are always compared in the same normal form.
+ * Every quote-shaped mark the two sides of this glossary can be typed with.
+ * Hebrew terminology carries geresh/gershayim inside acronyms (`ז"א`,
+ * `בחי"ד`, `או"ח`) — sometimes as the real punctuation U+05F3/U+05F4,
+ * sometimes as an ASCII apostrophe or double quote — and English pasted out
+ * of a PDF arrives with typographic quotes (U+2018/U+2019/U+201C/U+201D).
+ * Nobody types any of them into a search box, so all of them are stripped.
+ *
+ * Pulled out of the replace call and given a name because these characters
+ * are near-indistinguishable inline in a source file: the first version of
+ * this class listed `׳` and `״` twice each and no typographic quotes at all,
+ * and read as correct. `tests/unit/glossary.spec.ts` covers each group.
+ */
+const QUOTE_MARKS = /["'`׳״‘’“”]/g;
+
+/**
+ * Strips every quote-shaped mark and collapses whitespace so `זא` finds
+ * `ז"א`, and lowercases so the English side is caseless. Applied to both the
+ * query and the searched text, so the two are always compared in the same
+ * normal form.
  */
 export const normalizedGlossaryText = (value: string): string =>
-  value
-    .toLowerCase()
-    .replace(/["'׳״`׳״]/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
+  value.toLowerCase().replace(QUOTE_MARKS, "").replace(/\s+/g, " ").trim();
 
 /**
  * The one string an entry is searched against: its Hebrew, its canonical
  * English, every attested variant, its id (a romanization for most terms)
- * and its note. Built once per entry by `filteredGlossaryEntries` rather
- * than per keystroke.
+ * and its note.
+ *
+ * Memoized on the entry object itself. Entries come from a statically
+ * imported JSON module, so the 125 objects are identical across every
+ * recompute and each string is built exactly once for the lifetime of the
+ * page rather than once per entry per keystroke. A `WeakMap` so a caller
+ * that builds entries on the fly (the specs do) doesn't leak them.
  */
-const searchableText = (entry: GlossaryIndexEntry): string =>
-  normalizedGlossaryText(
+const searchableTextCache = new WeakMap<GlossaryIndexEntry, string>();
+
+const searchableText = (entry: GlossaryIndexEntry): string => {
+  const cached = searchableTextCache.get(entry);
+  if (cached !== undefined) return cached;
+
+  const text = normalizedGlossaryText(
     [
       entry.he,
       entry.canonicalEn,
@@ -56,6 +76,10 @@ const searchableText = (entry: GlossaryIndexEntry): string =>
       ...(entry.variants ?? []).map((variant) => variant.en),
     ].join(" "),
   );
+
+  searchableTextCache.set(entry, text);
+  return text;
+};
 
 export interface GlossaryFilter {
   /** Raw, un-normalized user input. Empty means "no text filter". */
@@ -169,6 +193,22 @@ export const glossaryCitationTarget = (
     kind,
     chapterNumber: Number(match[3]),
   };
+};
+
+/**
+ * i18n key naming each layer a citation can come from.
+ *
+ * Points at the reader's own pane labels rather than carrying a glossary
+ * copy: "The Ari's Text" and "Inner Light" are the same two strings the
+ * reader puts at the top of its panes, and a third copy would be a third
+ * thing to keep in step when the wording changes. `summary` has no reader
+ * label to borrow (no pane renders that layer), so it keeps the one key the
+ * glossary owns.
+ */
+export const GLOSSARY_LAYER_LABEL_KEYS: Record<LayerKind, string> = {
+  source: "reader.pane.source",
+  commentary: "reader.pane.innerLight",
+  summary: "glossary.layerSummary",
 };
 
 /**

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   filteredGlossaryEntries,
+  GLOSSARY_LAYER_LABEL_KEYS,
   GLOSSARY_STRATEGIES,
   glossaryAttestationTicks,
   glossaryCitationTarget,
@@ -9,6 +10,8 @@ import {
   normalizedGlossaryText,
   partNumberFromId,
 } from "~/utils/glossary";
+import en from "~~/i18n/locales/en.json";
+import he from "~~/i18n/locales/he.json";
 import type { GlossaryIndexEntry } from "~~/shared/types/content";
 
 const entry = (
@@ -64,6 +67,14 @@ describe("normalizedGlossaryText", () => {
 
   it("lowercases and collapses whitespace", () => {
     expect(normalizedGlossaryText("  Upper   LIGHT ")).toBe("upper light");
+  });
+
+  it("strips the typographic quotes a reader gets from pasting out of a PDF", () => {
+    expect(normalizedGlossaryText("“upper light”")).toBe("upper light");
+    expect(normalizedGlossaryText("‘Ohr’")).toBe("ohr");
+    // The real U+05F3/U+05F4 punctuation, not the ASCII stand-ins above.
+    expect(normalizedGlossaryText("ז״א")).toBe("זא");
+    expect(normalizedGlossaryText("ב׳")).toBe("ב");
   });
 });
 
@@ -246,5 +257,30 @@ describe("glossaryVariantShares", () => {
 
   it("returns an empty list for an entry with no variants", () => {
     expect(glossaryVariantShares([])).toEqual([]);
+  });
+});
+
+describe("GLOSSARY_LAYER_LABEL_KEYS", () => {
+  /**
+   * Guardrail against a third copy of "The Ari's Text" / "Inner Light": the
+   * glossary borrows the reader's pane labels instead of carrying its own
+   * `glossary.layer.*` block.
+   */
+  it("borrows the reader's own pane labels rather than duplicating them", () => {
+    expect(GLOSSARY_LAYER_LABEL_KEYS.source).toBe("reader.pane.source");
+    expect(GLOSSARY_LAYER_LABEL_KEYS.commentary).toBe("reader.pane.innerLight");
+  });
+
+  it("resolves to a real string in both locales, for every layer", () => {
+    for (const layer of ["source", "commentary", "summary"] as const) {
+      const path = GLOSSARY_LAYER_LABEL_KEYS[layer].split(".");
+      expect(en).toHaveProperty(path);
+      expect(he).toHaveProperty(path);
+    }
+  });
+
+  it("leaves no glossary-owned copy of the layer names behind", () => {
+    expect(en.glossary).not.toHaveProperty("layer");
+    expect(he.glossary).not.toHaveProperty("layer");
   });
 });
