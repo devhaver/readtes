@@ -27,10 +27,8 @@ const containerRef = provideReaderPaneContainer();
 </script>
 
 <template>
-  <section class="flex h-full min-h-0 flex-col">
-    <header
-      class="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b border-(--border) px-4 py-2.5"
-    >
+  <section class="tes-pane-shell">
+    <header class="tes-pane-header">
       <ReaderPaneHeader
         :title="title"
         :language-options="languageOptions"
@@ -45,7 +43,7 @@ const containerRef = provideReaderPaneContainer();
 
     <div
       ref="containerRef"
-      class="min-h-0 flex-1 overflow-y-auto px-4 pt-4 pb-24 lg:pb-4"
+      class="tes-pane-body"
       :dir="meta?.direction ?? 'ltr'"
       :lang="meta?.language"
     >

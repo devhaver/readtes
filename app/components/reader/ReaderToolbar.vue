@@ -75,48 +75,25 @@ const {
       <div class="flex shrink-0 items-center gap-2">
         <button
           type="button"
-          class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="tes-icon-btn"
           :aria-label="t('reader.toolbar.contentsButton')"
           aria-haspopup="dialog"
           :aria-expanded="showContents"
           @click="openContents"
         >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-5 w-5"
-            aria-hidden="true"
-          >
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="14" y2="12" />
-            <line x1="4" y1="18" x2="17" y2="18" />
-          </svg>
+          <span class="tes-icon tes-icon-contents h-5 w-5" aria-hidden="true" />
         </button>
 
         <button
           type="button"
-          class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="tes-icon-btn"
           :aria-label="t('reader.toolbar.preferencesButton')"
           @click="showPreferences = true"
         >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-5 w-5"
+          <span
+            class="tes-icon tes-icon-preferences h-5 w-5"
             aria-hidden="true"
-          >
-            <polyline points="4 7 4 4 20 4 20 7" />
-            <line x1="9" y1="20" x2="15" y2="20" />
-            <line x1="12" y1="4" x2="12" y2="20" />
-          </svg>
+          />
         </button>
 
         <UiSegmentedControl
@@ -148,16 +125,12 @@ const {
       <NuxtLink
         v-if="prev"
         :to="localePath(`/read/${prev.id}`)"
-        class="inline-flex min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="tes-chapter-nav-link"
       >
         <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
         <span class="truncate">{{ localizedText(prev.title, locale) }}</span>
       </NuxtLink>
-      <span
-        v-else
-        aria-disabled="true"
-        class="inline-flex items-center gap-1.5 px-2 py-1 text-(--text-muted) opacity-50"
-      >
+      <span v-else aria-disabled="true" class="tes-chapter-nav-disabled">
         <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
         {{ t("reader.prevChapter") }}
       </span>
@@ -165,16 +138,12 @@ const {
       <NuxtLink
         v-if="next"
         :to="localePath(`/read/${next.id}`)"
-        class="inline-flex min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-end text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="tes-chapter-nav-link text-end"
       >
         <span class="truncate">{{ localizedText(next.title, locale) }}</span>
         <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
       </NuxtLink>
-      <span
-        v-else
-        aria-disabled="true"
-        class="inline-flex items-center gap-1.5 px-2 py-1 text-(--text-muted) opacity-50"
-      >
+      <span v-else aria-disabled="true" class="tes-chapter-nav-disabled">
         {{ t("reader.nextChapter") }}
         <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
       </span>

@@ -40,10 +40,7 @@ const displayHtml = computed(() =>
 </script>
 
 <template>
-  <span
-    class="me-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-(--surface-raised) px-1 align-middle text-xs tabular-nums text-(--text-muted)"
-    aria-hidden="true"
-  >
+  <span class="tes-seif-chip" aria-hidden="true">
     {{ segment.n }}
   </span>
   <span ref="crossRefRoot" v-html="displayHtml" />

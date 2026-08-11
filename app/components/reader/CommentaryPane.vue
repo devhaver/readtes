@@ -44,9 +44,7 @@ const hasUnanchoredItems = computed(() =>
       :key="group.section"
       class="flex flex-col gap-4"
     >
-      <h3
-        class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-      >
+      <h3 class="tes-eyebrow">
         {{ t(`reader.commentarySection.${group.section}`) }}
       </h3>
 
@@ -55,7 +53,7 @@ const hasUnanchoredItems = computed(() =>
           v-for="item in group.items"
           :id="item.anchorId"
           :key="item.anchorId"
-          class="reader-anchor-target scroll-mt-4 rounded-card p-1 text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+          class="reader-anchor-target tes-commentary-item"
         >
           <button
             v-if="isAnchoredCommentaryItem(item)"

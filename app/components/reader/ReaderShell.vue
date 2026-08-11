@@ -34,7 +34,7 @@ useReaderState();
 </script>
 
 <template>
-  <div class="flex h-full min-h-0 flex-col">
+  <div class="tes-pane-shell">
     <div class="shrink-0">
       <slot name="toolbar" />
     </div>
