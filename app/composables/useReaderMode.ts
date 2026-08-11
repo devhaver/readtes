@@ -5,7 +5,7 @@
  * `ReaderShell`/`ReaderToolbar`/`StudyStream`) creates and provides the
  * state; every later call in that tree injects the same instance.
  *
- * Hydration note (mirrors `useReaderVersions`): viewport is unknowable
+ * Hydration note (mirrors `useReaderLanguages`): viewport is unknowable
  * during prerendering, so consulting it (or the persisted override) for
  * the very first client render would make that render diverge from the
  * prerendered HTML it's hydrating — a mismatch. `resolveReaderMode`

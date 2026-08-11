@@ -1,10 +1,10 @@
 /**
- * Resolves the commentary pane's "not available in this edition" notice: a
+ * Resolves the commentary pane's "not available in this language" notice: a
  * source anchor was activated, but the commentary version currently shown
  * doesn't have an item for it (e.g. the chapter's English commentary is
  * missing, or doesn't cover that anchor). Pure and testable independent of
  * the DOM — `useHighlightedAnchor` finding no matching element would work
- * too, but can't distinguish "not in this edition" from "not mounted yet".
+ * too, but can't distinguish "not in this language" from "not mounted yet".
  */
 import type { CommentaryItem } from "~~/shared/types/content";
 import type { PaneId } from "./readerAnchorState";
@@ -71,7 +71,7 @@ export const resolveMissingAnchorNotice = (params: {
 }): MissingAnchorNotice | null => {
   const { activeAnchor, anchorOrigin } = params;
 
-  // Only a source-originated click is "found nothing in this edition" — a
+  // Only a source-originated click is "found nothing in this language" — a
   // commentary-originated click can't be missing from its own pane, and
   // Inner Observation never activates an anchor at all (it carries none).
   if (anchorOrigin !== "source") return null;

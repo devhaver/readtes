@@ -6,10 +6,10 @@
 // "warm paper" token + the Hebrew reading face (`lang="he"` -> David Libre,
 // see main.css) match the rest of the reader's own printed-book styling.
 //
-// No version selectors and no click-to-highlight wiring here at all — the
-// source/commentary content is whatever the reader's own standing version
+// No language selectors and no click-to-highlight wiring here at all — the
+// source/commentary content is whatever the reader's own standing language
 // preference already resolved to (shared with study/panes mode via
-// `useReaderVersions`), just rendered plainly. The inline `tes-anchor`
+// `useReaderLanguages`), just rendered plainly. The inline `tes-anchor`
 // markers inside the source HTML itself are left as inert same-page hash
 // links (a click jumps to that footnote's `id` below, the same way a
 // printed book's superscript reference does) rather than wired up to any

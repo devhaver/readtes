@@ -33,7 +33,8 @@
       "innerLight": "אור פנימי",
       "innerObservation": "הסתכלות פנימית"
     },
-    "versionLabel": "מהדורה",
+    "paneLanguageLabel": "שפה: {pane}",
+    "sefariaTranslated": "תרגום ספריא",
     "commentarySection": {
       "ohr-pnimi": "אור פנימי",
       "histaklut-pnimit": "הסתכלות פנימית"
@@ -51,7 +52,7 @@
     "miniTocTitle": "בפרק זה",
     "seifLabel": "סעיף {n}",
     "missingAnchor": {
-      "message": "לא זמין במהדורה זו.",
+      "message": "לא זמין בשפה זו.",
       "switchToHebrew": "עבור לעברית"
     },
     "prevChapter": "הפרק הקודם",
@@ -89,7 +90,7 @@
     "commentarySheet": {
       "title": "פירוש על סעיף {n}",
       "openInCommentary": "פתח בפירוש",
-      "empty": "אין פירוש לסעיף זה במהדורה זו.",
+      "empty": "אין פירוש לסעיף זה בשפה זו.",
       "close": "סגור"
     },
     "prefs": {

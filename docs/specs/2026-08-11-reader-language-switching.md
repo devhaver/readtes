@@ -53,6 +53,13 @@ Per chapter, per layer, per language — resolve the first available:
 Generic form: **official Bnei Baruch translation, else a human
 translation, else the AI one; in Hebrew, the original always wins.**
 
+The chain is a preference order _within_ a language, never evidence of
+what language an id is in — the version registry is the only authority on
+that. Resolution confirms a candidate's registry language before returning
+it, so it can never return an edition whose language the switcher does not
+offer; otherwise the pane's `<select>` could hold a value with no matching
+`<option>` and display one language while rendering another.
+
 Hebrew resolves to `he-jerusalem-1956` in practice — it covers all 5,148
 chapters, so `he-bb`'s 2 chapters never surface. It stays in the chain
 rather than being special-cased, so the rule reads the same in every
@@ -90,6 +97,14 @@ Shown in the pane header where the edition `<select>` sits today.
 The "AI translated" badge is a project requirement, not a nicety — it is
 the single place AI attribution is mandatory.
 
+Consequently the badge is **never** gated on how many languages a layer
+offers. The pane header hides its own `<select>` at one language, but the
+header itself renders whenever the layer exists — in panes mode and in
+study mode alike. Gating the header on `languageOptions.length > 1` would
+take the badge down with the switcher for any English-only chapter, which
+issues #79/#87 will create. `tests/unit/study-stream.spec.ts` and
+`tests/unit/reader-pane-header.spec.ts` both fail if it is reintroduced.
+
 ## URLs
 
 **No change required.** Routes are already `/read/[part]/[chapter]` with
@@ -110,6 +125,44 @@ unaffected.
 | `app/pages/read/[part]/[chapter].vue`           | `versionOptions` → `languageOptions`; the Inner Observation version `ref` + `watch` becomes a language ref; `switchCommentaryToHebrew` sets language `he`.                                     |
 | `i18n/locales/{en,he}.json`                     | `reader.versionLabel` "Edition" → `reader.languageLabel` "Language"; add native language names; add `reader.sefariaTranslated`.                                                                |
 | `tests/unit/reader-versions.spec.ts`            | Rewrite against the language chain.                                                                                                                                                            |
+| File                                            | Change                                                                                                                                                                                                    |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `app/utils/readerVersions.ts`                   | `resolveDefaultVersion` → `resolveVersionForLanguage(available, language, versionsById)` + `languagesAvailable(available, versionsById)`. Chain table above replaces `ENGLISH_PRIORITY_ORDER`.            |
+| `app/composables/useReaderVersions.ts`          | → `useReaderLanguages`. Same provide/persist/hydrate shape; stores a language code; exposes resolved version ids.                                                                                         |
+| `app/components/reader/ReaderVersionHeader.vue` | → `ReaderPaneHeader.vue`. `<select>` lists languages; badge per the provenance table.                                                                                                                     |
+| `app/components/reader/ReaderPane.vue`          | Prop rename `versionOptions` → `languageOptions`; passes through to the header.                                                                                                                           |
+| `app/components/reader/StudyStream.vue`         | Same prop/event rename — it renders the header inline for source + commentary.                                                                                                                            |
+| `app/pages/read/[part]/[chapter].vue`           | `versionOptions` → `languageOptions`; the Inner Observation version `ref` + `watch` becomes a language ref; `switchCommentaryToHebrew` sets language `he`.                                                |
+| `shared/utils/languages.ts`                     | **New.** `NATIVE_LANGUAGE_NAMES` + `nativeLanguageName()` — see "Native language names" below.                                                                                                            |
+| `nuxt.config.ts`                                | `i18n.locales[].name` reads `nativeLanguageName()` instead of its own literals.                                                                                                                           |
+| `i18n/locales/{en,he}.json`                     | `reader.versionLabel` "Edition" → `reader.paneLanguageLabel` "Language: {pane}"; add `reader.sefariaTranslated`; retire "edition" from `reader.missingAnchor.message` and `reader.commentarySheet.empty`. |
+| `tests/unit/reader-versions.spec.ts`            | Rewrite against the language chain.                                                                                                                                                                       |
+
+### Native language names
+
+Originally specced into `i18n/locales/{en,he}.json`. **Changed during
+implementation** — a native name is the same string in every UI locale, so
+a message catalog is the wrong home: it would mean N identical copies of
+"עברית" with nothing to translate, growing with every phase-2 locale. They
+live in `shared/utils/languages.ts` instead, which `nuxt.config.ts` also
+reads for `i18n.locales[].name`, so the UI-locale switcher and the reader's
+per-pane switcher cannot drift on what a language is called. Contents are
+exactly the phase-2 target set above.
+
+`Intl.DisplayNames` was considered and rejected: the site prerenders in
+Node and hydrates in the browser, and their ICU/CLDR versions are
+independent — a name that differs between them is a hydration mismatch.
+
+### Switcher labelling
+
+Panes mode mounts up to three of these switchers on one page, and
+`AppLanguageSwitcher` is a fourth language control in the same document.
+Each pane's `<select>` is therefore named after its own layer
+(`reader.paneLanguageLabel`, e.g. "Language: The Ari's Text"), not the bare
+word "Language". Both catalogs keep the placeholder in the same position —
+`tests/unit/i18n-catalog.spec.ts` compares compiled message ASTs, so
+"{pane} language" in one locale and "שפת {pane}" in the other is a parity
+failure.
 
 `resolveMissingAnchorNotice` and its "Switch to Hebrew" affordance keep
 working — it already targets `HEBREW_VERSION_ID` and now sets a language
@@ -140,6 +193,15 @@ tagged").
 
 Definition of done is the project's own gate: `task check` — lint,
 format:check, typecheck, validate:content, test, generate.
+`tests/e2e/reader.spec.ts` switches the source pane by **language**
+(`selectOption("he")`) via the pane-specific accessible name. The edition
+id is never a value the test — or the reader — can select.
+
+Definition of done is the project's own gate: `task check` — lint,
+format:check, typecheck, validate:content, test, generate. `check`
+includes `test:e2e`, so a stale pane-switcher selector in
+`tests/e2e/reader.spec.ts` fails the gate and CI, not just the browser
+suite.
 
 ## Accepted trade-off
 

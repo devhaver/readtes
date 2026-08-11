@@ -169,12 +169,15 @@ const loadPartSections = (
  * mode settles beyond "not before this component is mounted".
  *
  * Note for callers gating on `mode`: `useReaderMode` only consults the
- * viewport in its own `onMounted`, so call this composable *after*
- * `useReaderMode()` in setup. Mounted hooks run in registration order, so
- * doing it the other way round would evaluate `enabled` against the fixed
- * pre-mount mode ("panes") and load on every viewport regardless. The watch
- * makes that a lost optimisation rather than a bug, but the ordering is
- * what makes the gate actually do anything.
+ * viewport in its own `onMounted`. In the reader page that hook belongs to
+ * `layouts/reader.vue` (the provide owner) rather than to the page, and the
+ * page is Suspense-wrapped by its own top-level `await`s, so the layout has
+ * already mounted and settled the mode before the page's `onMounted` runs —
+ * the gate reads a real viewport value, not the fixed pre-mount default.
+ * Do not rely on setup-call ordering for this; a caller that mounts before
+ * whoever owns `useReaderMode`'s hook would evaluate `enabled` against the
+ * pre-mount mode ("panes") and load on every viewport. The watch below makes
+ * that a lost optimisation rather than a bug.
  */
 export const useInnerObservationContent = (
   partId: string,

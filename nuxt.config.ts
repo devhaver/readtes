@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Toc } from "./shared/types/content";
+import { nativeLanguageName } from "./shared/utils/languages";
 import { stripContentChunkPrefetchHints } from "./shared/utils/manifestPrefetch";
 
 // Mirrors `KIND_ORDER` in `app/utils/chapterGrouping.ts` — duplicated
@@ -126,12 +127,20 @@ export default defineNuxtConfig({
   i18n: {
     strategy: "prefix_except_default",
     defaultLocale: "en",
+    // `name` is the native language name — same fact the reader's per-pane
+    // language `<select>` renders, so both read `shared/utils/languages.ts`
+    // rather than each keeping their own copy of "English"/"עברית".
     locales: [
-      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      {
+        code: "en",
+        language: "en-US",
+        name: nativeLanguageName("en"),
+        file: "en.json",
+      },
       {
         code: "he",
         language: "he-IL",
-        name: "עברית",
+        name: nativeLanguageName("he"),
         dir: "rtl",
         file: "he.json",
       },
