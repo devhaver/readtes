@@ -1,0 +1,14 @@
+{
+  "chapterId": "part-01/chapter-01",
+  "layer": "commentary",
+  "versionId": "v1",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": { "en": "1", "he": "1" },
+      "section": "ohr-pnimi",
+      "html": "   "
+    }
+  ]
+}
