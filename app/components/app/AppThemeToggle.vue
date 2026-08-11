@@ -49,9 +49,26 @@ const cycleColorMode = () => {
     :title="label"
     @click="cycleColorMode"
   >
+    <!-- Three structurally distinct spans, NOT one span with a dynamic
+         class: prerendered HTML always says "light" (SSR can't read the
+         persisted preference), and Vue does not patch a class-only
+         mismatch at hydration — a returning dark/sepia visitor would keep
+         the sun icon until their first click. The v-if chain forces the
+         structural hydration bail-out that re-renders the right icon,
+         which is exactly how the original three-SVG version behaved. -->
     <span
-      class="tes-icon h-5 w-5"
-      :class="`tes-icon-theme-${current}`"
+      v-if="current === 'dark'"
+      class="tes-icon tes-icon-theme-dark h-5 w-5"
+      aria-hidden="true"
+    />
+    <span
+      v-else-if="current === 'sepia'"
+      class="tes-icon tes-icon-theme-sepia h-5 w-5"
+      aria-hidden="true"
+    />
+    <span
+      v-else
+      class="tes-icon tes-icon-theme-light h-5 w-5"
       aria-hidden="true"
     />
   </button>

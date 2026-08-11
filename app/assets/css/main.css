@@ -402,7 +402,12 @@ html {
    shared cross-pane hook, identical to how `SourcePane`/`StudyStream`
    apply it next to their own seif classes. */
 .tes-commentary-item {
-  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4 rounded-card p-1;
+  /* No border-radius here on purpose: the highlight flash's 4px radius
+     comes from `.reader-anchor-target` above. The original markup carried
+     `rounded-card` as a utility, which LOST to that unlayered rule — an
+     unlayered `rounded-card` in this class would win instead and silently
+     change the flash radius 4px -> 8px. */
+  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4 p-1;
 }
 
 /* The seif-number chip (`ReaderSourceSegment`) — one per source segment,
@@ -438,8 +443,9 @@ html {
   @apply font-display text-sm tracking-wide text-(--text-muted) uppercase;
 }
 
-/* Toolbar icon buttons — `ReaderToolbar`'s Contents/Preferences buttons,
-   `ReaderContentsPanel`'s close button. */
+/* Toolbar icon buttons — `ReaderToolbar`'s Contents/Preferences buttons.
+   (`ReaderContentsPanel`'s close button deliberately keeps its own inline
+   classes: muted text + `tes-focus-ring`, not this recipe.) */
 .tes-icon-btn {
   @apply inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
@@ -492,6 +498,10 @@ html {
 }
 
 /* Dropdown-menu link rows — `ReaderBreadcrumbMenu`'s panel items. */
+/* NOTE: these classes are unlayered, so their `color` beats ANY utility a
+   call site adds (`text-(--accent-text)` conditionals included). If a call
+   site ever needs a color override, move the color out of the class or
+   layer it. */
 .tes-menu-link {
   @apply block px-3 py-2 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
