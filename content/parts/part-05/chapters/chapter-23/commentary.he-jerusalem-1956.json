@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>י' ו' הם ב' בחינות התפשטות, ה' ה' הם ב' בחינות הסתלקות:</b> כי התפשטות הא' הוא סוד יוד, והתפשטות הב' ה\"ס ו'. והסתלקות הא' ה\"ס ה' ראשונה, והסתלקות הב' ה\"ס ה' אחרונה. כמ\"ש לפנינו."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>הויה אינו מתחיל אלא מחכמה ולמטה.</b> כנודע, שהיוד ה\"ס חכמה. ו' ה\"ס ז\"א. וה' ראשונה, ה\"ס בינה. וה' אחרונה ה\"ס מלכות. אבל הכתר, אינו מרומז בד' האותיות, זולת בקוצו של יוד. והוא מטעם שמבאר כאן הרב לקמן."
+    }
+  ]
+}

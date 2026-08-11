@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>מלכות נגלית לבדה לא נמצאת בא\"א וכו' וכן בעתיק יומין</b>: כמו שנתבאר בדיבור הסמוך (דף תרי\"ג ד\"ה ותדע) כי ה\"ת דמ\"ה נגנזה בראש דעתיק,ואין עצמותה מתגלה בכל האצילות. עש\"ה."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>נתגלית המלכות מסוד האי רישא עלאה מכולהו דלא אתיידע וכו'</b>: שהוא נקרא ראש דעתיק יומין, שהוא הראש הא' דאצילות, ושם נגנזה הה\"ת, כנ\"ל. והארתה מתגלית במלכות של עולם האצילות, דהיינו במלכות שנעשית לפרצוף גמור לנוקבא דז\"א."
+    }
+  ]
+}

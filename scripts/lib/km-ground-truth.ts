@@ -39,6 +39,11 @@ export const buildKmChapterGroundTruth = (
   const byOrder = new Map<number, KmCommentaryGroundTruthEntry>();
 
   for (const item of heCommentaryItems) {
+    // Ground truth only ever aligns against anchored items — an unanchored
+    // item (no targetSeif) has nothing for a KM `(N)` marker to match
+    // against, so it is simply never a candidate.
+    if (item.targetSeif === undefined) continue;
+
     const heLabel = item.label.he;
     if (heLabel === undefined) {
       throw new Error(

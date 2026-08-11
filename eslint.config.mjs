@@ -37,6 +37,7 @@ export default withNuxt({
       "app/components/reader/OriginalStream.vue",
       "app/components/reader/ReaderSourceSegment.vue",
       "app/components/reader/ReaderSummaryBody.vue",
+      "app/components/reader/StudyStream.vue",
     ],
     name: "reader/trusted-html",
     rules: {

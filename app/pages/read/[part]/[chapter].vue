@@ -266,11 +266,36 @@ const {
   close: closeCommentarySheet,
 } = useCommentarySheet();
 
+// The sheet is a per-seif affordance, so it must key off ANCHORED items
+// only (issue #79): a chapter whose currently-displayed commentary has no
+// anchored item at all (either no commentary, or commentary that's entirely
+// unanchored) could never show anything for ANY seif — opening it anyway
+// would just be an empty sheet on every tap, chapter-wide. That's noisier
+// than silently doing nothing: `CommentaryPane` already carries the honest
+// "not yet aligned" note for a reader who does open the commentary pane, so
+// a modal repeating that on every paragraph tap would add nothing but
+// friction.
+const hasAnchoredCommentary = computed(() =>
+  hasAnchoredCommentaryItems(commentaryItems.value),
+);
+
+const handleOpenSeifCommentary = (seifN: number) => {
+  if (!hasAnchoredCommentary.value) return;
+  openCommentarySheet(seifN);
+};
+
 const commentarySheetItems = computed(() =>
   commentarySheetSeif.value === null
     ? []
     : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
 );
+
+// `ReaderContentsPanel` (T90): the toolbar's Contents button opens the
+// whole volumes -> parts tree. `useContentsPanel` owns the open/closed
+// state (provide/inject singleton, same shape as `useCommentarySheet`
+// above) so `MobilePanePill` can hide itself while it's open — called here
+// so it's provided by this page, an ancestor of both.
+useContentsPanel();
 
 const partTitle = computed(() => localizedTitle(partFile.part.title));
 
@@ -292,6 +317,9 @@ useLocalizedSeo({
         <ReaderToolbar
           :chapter-title="chapterTitle"
           :breadcrumb-items="breadcrumbItems"
+          :volumes="volumes"
+          :current-volume-id="partFile.volume.id"
+          :current-part-id="partFile.part.id"
           :prev="prev"
           :next="next"
         />
@@ -309,7 +337,7 @@ useLocalizedSeo({
         >
           <ReaderSourcePane
             :segments="sourceSegments"
-            @open-seif-commentary="openCommentarySheet"
+            @open-seif-commentary="handleOpenSeifCommentary"
           >
             <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
               <ReaderLayerAbsenceNote v-if="!hasCommentary" />
@@ -372,6 +400,9 @@ useLocalizedSeo({
       <ReaderToolbar
         :chapter-title="chapterTitle"
         :breadcrumb-items="breadcrumbItems"
+        :volumes="volumes"
+        :current-volume-id="partFile.volume.id"
+        :current-part-id="partFile.part.id"
         :prev="prev"
         :next="next"
       />
@@ -402,6 +433,9 @@ useLocalizedSeo({
       <ReaderToolbar
         :chapter-title="chapterTitle"
         :breadcrumb-items="breadcrumbItems"
+        :volumes="volumes"
+        :current-volume-id="partFile.volume.id"
+        :current-part-id="partFile.part.id"
         :prev="prev"
         :next="next"
       />

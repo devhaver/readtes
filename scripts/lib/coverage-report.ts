@@ -13,6 +13,14 @@ export interface VersionCoverageStat {
   segments: number;
   /** Chapter ids that were attempted for this version but ended up with zero segments. */
   emptyChapterIds: string[];
+  /**
+   * Commentary only: how many of `segments` are anchored (`targetSeif`
+   * present) vs unanchored (known chapter, unknown seif — issue #79's
+   * "imported unanchored" items). `undefined` for `layer: "source"`, which
+   * has no such distinction.
+   */
+  anchoredItems?: number;
+  unanchoredItems?: number;
 }
 
 export interface PartCoverage {
@@ -50,35 +58,71 @@ const emptyChapterNotes = (stats: VersionCoverageStat[]): string[] =>
         `- **${s.layer}/${s.versionId}**: no text for ${s.emptyChapterIds.length} chapter(s) — ${s.emptyChapterIds.join(", ")}`,
     );
 
-export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
-  const sections = parts.map((part) => {
-    const lines = [
-      `## ${part.partTitle} (\`${part.partId}\`)`,
-      "",
-      table(part.stats),
-    ];
-
-    if (part.innerObservationChapters === 0) {
-      lines.push(
-        "",
-        "**No Inner Observation (Histaklut Pnimit).** Baal HaSulam wrote none",
-        "for this part; it is absent from the work, not from the import. See",
-        '"Not written vs. not yet imported" above for the evidence and what it',
-        "does and does not establish.",
+/**
+ * Distinguishes, for each commentary version, the three states a chapter's
+ * Ohr Penimi coverage can be in: **anchored** (targetSeif known),
+ * **unanchored** (imported — known chapter, unknown seif, issue #79), and
+ * **genuinely absent** (no commentary item at all — the `emptyChapterIds`
+ * count from the table above). An unanchored count must never be read as
+ * anchored coverage, so it always gets its own line rather than folding into
+ * "Chapters w/ text".
+ */
+const commentaryAnchoringNotes = (stats: VersionCoverageStat[]): string[] =>
+  stats
+    .filter(
+      (s) =>
+        s.layer === "commentary" &&
+        s.anchoredItems !== undefined &&
+        s.unanchoredItems !== undefined,
+    )
+    .map((s) => {
+      const absentChapters = s.chaptersTotal - s.chaptersWithText;
+      return (
+        `- **commentary/${s.versionId}**: ${s.anchoredItems} anchored item(s), ` +
+        `${s.unanchoredItems} unanchored item(s) — ${absentChapters} of ` +
+        `${s.chaptersTotal} chapter(s) have no commentary at all (genuinely absent)`
       );
-    }
+    });
 
-    const notes = emptyChapterNotes(part.stats);
-    if (notes.length > 0) {
-      lines.push("", "**Empty-version chapters:**", ...notes);
-    }
+/** Renders one part's own `## <title> (\`part-NN\`)` section — the unit each
+ * Sefaria import run owns and may replace, leaving sibling part sections
+ * (and the entirely separate KabbalahMedia section) untouched. */
+const buildPartSection = (part: PartCoverage): string => {
+  const lines = [
+    `## ${part.partTitle} (\`${part.partId}\`)`,
+    "",
+    table(part.stats),
+  ];
 
-    if (part.warnings.length > 0) {
-      lines.push("", "**Warnings:**", ...part.warnings.map((w) => `- ${w}`));
-    }
+  if (part.innerObservationChapters === 0) {
+    lines.push(
+      "",
+      "**No Inner Observation (Histaklut Pnimit).** Baal HaSulam wrote none",
+      "for this part; it is absent from the work, not from the import. See",
+      '"Not written vs. not yet imported" above for the evidence and what it',
+      "does and does not establish.",
+    );
+  }
 
-    return lines.join("\n");
-  });
+  const notes = emptyChapterNotes(part.stats);
+  if (notes.length > 0) {
+    lines.push("", "**Empty-version chapters:**", ...notes);
+  }
+
+  const anchoringNotes = commentaryAnchoringNotes(part.stats);
+  if (anchoringNotes.length > 0) {
+    lines.push("", "**Commentary anchoring:**", ...anchoringNotes);
+  }
+
+  if (part.warnings.length > 0) {
+    lines.push("", "**Warnings:**", ...part.warnings.map((w) => `- ${w}`));
+  }
+
+  return lines.join("\n");
+};
+
+export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
+  const sections = parts.map(buildPartSection);
 
   return [
     "# Import coverage",
@@ -133,4 +177,126 @@ export const buildCoverageMarkdown = (parts: PartCoverage[]): string => {
     ...sections,
     "",
   ].join("\n");
+};
+
+// ---------------------------------------------------------------------------
+// Section-scoped merge into an existing content/COVERAGE.md
+// ---------------------------------------------------------------------------
+
+/**
+ * A splice boundary is a `## ` heading that carries a backtick-quoted id,
+ * e.g. `## Section I (\`part-01\`)` or
+ * `## KabbalahMedia import (\`kabbalahmedia\`)`. The preamble's own
+ * `## Not written vs. not yet imported` heading has no such id, so it is
+ * never mistaken for an addressable section and stays part of the preamble
+ * it belongs to — otherwise re-parsing a merged file would peel it off and
+ * duplicate it on every subsequent merge.
+ */
+const ADDRESSABLE_HEADING_RE = /^## .*\(`([^`]+)`\)/;
+
+const sectionId = (section: string): string | undefined => {
+  const headingLine = section.split("\n", 1)[0] ?? "";
+  return ADDRESSABLE_HEADING_RE.exec(headingLine)?.[1];
+};
+
+/** Sefaria only ever owns `part-NN` sections; a matched id outside that
+ * shape (e.g. `kabbalahmedia`) belongs to a different importer. */
+const sectionPartId = (section: string): string | undefined => {
+  const id = sectionId(section);
+  return id !== undefined && /^part-\d+$/.test(id) ? id : undefined;
+};
+
+/** Splits `markdown` into an ordered list of top-level addressable sections,
+ * each starting at its own `## ... (\`id\`)` heading and running to the next
+ * one (or EOF). Everything before the first addressable heading — including
+ * any id-less `## ` headings such as the preamble's own subsections — is
+ * dropped; callers that need the preamble regenerate it separately. */
+const splitAddressableSections = (markdown: string): string[] => {
+  const match = /^## .*\(`[^`]+`\)/m.exec(markdown);
+  if (!match) return [];
+  const rest = markdown.slice(match.index);
+  // Lookahead split, no trim: each chunk keeps its own trailing newlines.
+  // The committed file is deliberately NOT uniform — Sefaria part sections
+  // abut with a single "\n" while the KabbalahMedia section is preceded by a
+  // blank line — so preserving a section byte-for-byte means preserving the
+  // separator bytes it carries, not re-imposing one convention on rejoin.
+  return rest.split(/(?=^## .*\(`[^`]+`\))/m);
+};
+
+/** The trailing-newline run a section chunk carries (its separator bytes). */
+const trailingNewlines = (section: string): string => {
+  const match = /\n*$/.exec(section);
+  return match ? match[0] : "";
+};
+
+/**
+ * Splices this run's part sections into `existing` (the current committed
+ * `content/COVERAGE.md`, or `undefined` on a first run), touching only:
+ *
+ * - the shared preamble (through "Not written vs. not yet imported"), which
+ *   is a pure function of no per-run data, so always safe to regenerate, and
+ * - the `## <title> (\`part-NN\`)` section of each part in `touchedParts`,
+ *   replaced in place if it already exists or inserted in numeric part
+ *   order if it's new.
+ *
+ * Every other top-level section — sibling Sefaria parts this run didn't
+ * touch (a scoped `--part` run), and the entirely separate KabbalahMedia
+ * section — is preserved byte-for-byte, in its original position. This is
+ * what lets `pnpm import:sefaria --part N` and `pnpm import:kabbalahmedia`
+ * both own disjoint regions of the same file without clobbering each other.
+ */
+export const mergeSefariaCoverage = (
+  existing: string | undefined,
+  touchedParts: PartCoverage[],
+): string => {
+  const sections = splitAddressableSections(existing ?? "");
+  // First run (or an existing file with nothing addressable): emit the whole
+  // file through the one true writer so both paths share one convention.
+  if (sections.length === 0) {
+    return buildCoverageMarkdown(
+      [...touchedParts].sort((a, b) => a.partId.localeCompare(b.partId)),
+    );
+  }
+
+  const preamble = buildCoverageMarkdown([]).trimEnd();
+
+  const touchedByPartId = new Map(
+    touchedParts.map((part) => [part.partId, buildPartSection(part)]),
+  );
+
+  for (let i = 0; i < sections.length; i += 1) {
+    const partId = sectionPartId(sections[i] as string);
+    if (partId === undefined) continue;
+    const replacement = touchedByPartId.get(partId);
+    if (replacement === undefined) continue;
+    // Keep the old chunk's separator bytes so an untouched neighbour's
+    // surroundings stay byte-identical (a replaced part-16 keeps the blank
+    // line that separates it from the KabbalahMedia section, a replaced
+    // part-07 keeps its single newline).
+    sections[i] = replacement + trailingNewlines(sections[i] as string);
+    touchedByPartId.delete(partId);
+  }
+
+  const newParts = [...touchedByPartId.entries()].sort(([a], [b]) =>
+    a.localeCompare(b),
+  );
+  for (const [partId, section] of newParts) {
+    let insertAt = sections.length;
+    for (let i = 0; i < sections.length; i += 1) {
+      const existingPartId = sectionPartId(sections[i] as string);
+      if (
+        existingPartId === undefined ||
+        existingPartId.localeCompare(partId) > 0
+      ) {
+        insertAt = i;
+        break;
+      }
+    }
+    // New sections use the Sefaria sibling convention: a single "\n"
+    // separator, matching what buildCoverageMarkdown emits between parts.
+    sections.splice(insertAt, 0, `${section}\n`);
+  }
+
+  const body = sections.join("");
+  return `${preamble}\n\n${body.endsWith("\n") ? body : `${body}\n`}`;
 };

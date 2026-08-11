@@ -36,6 +36,7 @@ import {
 } from "./lib/chapter-units.ts";
 import {
   buildCoverageMarkdown,
+  mergeSefariaCoverage,
   type PartCoverage,
   type VersionCoverageStat,
 } from "./lib/coverage-report.ts";
@@ -236,8 +237,10 @@ interface ChapterCoverageEntry {
   unit: ChapterUnit;
   sourceHe: number;
   sourceEn: number;
-  commentaryHe?: number;
-  commentaryEn?: number;
+  commentaryHeAnchored?: number;
+  commentaryHeUnanchored?: number;
+  commentaryEnAnchored?: number;
+  commentaryEnUnanchored?: number;
 }
 
 interface ImportPartResult {
@@ -440,8 +443,18 @@ const importPart = async (
     plannedByChapter.set(unit.chapterId, planned);
     const entry = entries.find((e) => e.unit.chapterId === unit.chapterId);
     if (entry) {
-      entry.commentaryHe = heResult.items.length;
-      entry.commentaryEn = enResult.items.length;
+      entry.commentaryHeAnchored = heResult.items.filter(
+        (item) => item.targetSeif !== undefined,
+      ).length;
+      entry.commentaryHeUnanchored = heResult.items.filter(
+        (item) => item.targetSeif === undefined,
+      ).length;
+      entry.commentaryEnAnchored = enResult.items.filter(
+        (item) => item.targetSeif !== undefined,
+      ).length;
+      entry.commentaryEnUnanchored = enResult.items.filter(
+        (item) => item.targetSeif === undefined,
+      ).length;
     }
   }
 
@@ -543,20 +556,43 @@ const importPart = async (
     };
   };
 
+  /**
+   * Commentary coverage distinguishes the three states an item can be in:
+   * anchored, unanchored (imported — issue #79), and genuinely absent (a
+   * chapter with neither, surfaced via `emptyChapterIds` above). Anchored
+   * and unanchored are reported separately so "imported unanchored" never
+   * masquerades as fully-anchored coverage.
+   */
+  const commentaryVersionStat = (
+    version: ContentVersion,
+    universe: ChapterCoverageEntry[],
+    anchoredFor: (entry: ChapterCoverageEntry) => number,
+    unanchoredFor: (entry: ChapterCoverageEntry) => number,
+  ): VersionCoverageStat => {
+    const countFor = (e: ChapterCoverageEntry) =>
+      anchoredFor(e) + unanchoredFor(e);
+    const stat = versionStat("commentary", version, universe, countFor);
+    return {
+      ...stat,
+      anchoredItems: universe.reduce((sum, e) => sum + anchoredFor(e), 0),
+      unanchoredItems: universe.reduce((sum, e) => sum + unanchoredFor(e), 0),
+    };
+  };
+
   const stats: VersionCoverageStat[] = [
     versionStat("source", heVersion, allUnits, (e) => e.sourceHe),
     versionStat("source", enVersion, allUnits, (e) => e.sourceEn),
-    versionStat(
-      "commentary",
+    commentaryVersionStat(
       heVersion,
       chapterKindUnits,
-      (e) => e.commentaryHe ?? 0,
+      (e) => e.commentaryHeAnchored ?? 0,
+      (e) => e.commentaryHeUnanchored ?? 0,
     ),
-    versionStat(
-      "commentary",
+    commentaryVersionStat(
       enVersion,
       chapterKindUnits,
-      (e) => e.commentaryEn ?? 0,
+      (e) => e.commentaryEnAnchored ?? 0,
+      (e) => e.commentaryEnUnanchored ?? 0,
     ),
   ];
 
@@ -647,13 +683,20 @@ export const main = async (argv: string[]): Promise<void> => {
     writeTocSplitFiles(contentDir, updatedToc, versions);
   }
 
-  const coverageMarkdown = buildCoverageMarkdown(
-    results.map((r) => r.coverage),
-  );
+  const touchedCoverage = results.map((r) => r.coverage);
+  const coverageMarkdown = buildCoverageMarkdown(touchedCoverage);
   console.log(`\n${coverageMarkdown}`);
 
   if (!args.dryRun) {
-    writeFileSync(join(contentDir, "COVERAGE.md"), coverageMarkdown, "utf-8");
+    const coveragePath = join(contentDir, "COVERAGE.md");
+    const existingCoverage = existsSync(coveragePath)
+      ? readFileSync(coveragePath, "utf-8")
+      : undefined;
+    writeFileSync(
+      coveragePath,
+      mergeSefariaCoverage(existingCoverage, touchedCoverage),
+      "utf-8",
+    );
 
     const { errors } = validateContent(contentDir);
     if (errors.length > 0) {

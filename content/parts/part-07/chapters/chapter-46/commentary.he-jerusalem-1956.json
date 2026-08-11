@@ -1,0 +1,41 @@
+{
+  "chapterId": "part-07/chapter-46",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:46",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:46:1",
+      "section": "ohr-pnimi",
+      "html": "<b>הנצח והמשיך ה\"ח בגופא דיש\"ס</b>: כמ\"ש לעיל אצל או\"א, שמ\"ן של זו\"ן אינם ממשיכים אלא חו\"ג ע\"ש, וכן כאן, כי אותם המ\"ן שהיו באו\"א עלאין ירדו אח\"כ לבחינת הזווג דישסו\"ת. וכבר נתבאר שבחינת ע\"ס דגוף המתפשטות מגופא דישראל סבא, באות במלך הנצח."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:46:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>שניהן מלך אחד בלבד</b>: כי שניהם יצאו מבחינת גופא דישסו\"ת, דהיינו ממסך דבחי\"ב. כנ\"ל. וע\"כ הם קומה אחת ומלך אחד."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "3",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:46:3",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ירדו גם אחורים דתבונה וחזרו יש\"ס ותבונה אב\"א</b>: כי כשמתו מלכי נו\"ה, נזדכך המסך מבחי\"ב לבחי\"א וחזרה ה\"ת בעינים, ואז חזרו אב\"א דהיינו לבחינות אחורים דאמא עלאה כדי להגן על החסרון ג\"ר שבהם, כנ\"ל."
+    }
+  ]
+}

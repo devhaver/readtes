@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-272",
+  "layer": "commentary",
+  "versionId": "he-jerusalem-1956",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:1",
+      "section": "ohr-pnimi",
+      "html": "<b>היות ז\"מ תחת כל בחי' בבינה בז\"א ובמלכות.</b> עיקר הבחינה הוא כלים דפנים, גו\"ע בראש, וחג\"ת עד החזה בגוף, ותחת להם הם הכלים דאחורים, שהם חצי בינה וז\"א ומלכות הן בראש והן בגוף, ונבחנים לז\"מ, שהם ז\"ת."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ובסיום כל אחד ממנה, ובג\"ת שלהם, באחורים, כי זה נקרא תחת:</b> החצי בינה וז\"א ומלכות דגוף וראש, נקראים בכל אלו השמות: ז\"מ, ז\"ת, סיום, ג\"ת, ואחורים, ותחת. וכנגדם הכלים דפנים, נקראים הם עיקר הבחינה, ונקראים ג\"ר או ז\"ר."
+    }
+  ]
+}

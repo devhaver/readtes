@@ -40,6 +40,7 @@
       "histaklut-pnimit": "Inner Observation"
     },
     "commentaryEmpty": "No commentary available for this chapter yet.",
+    "commentaryNotAligned": "This commentary hasn't been matched to individual seifim yet — items are shown in reading order.",
     "innerLightAbsent": "The Inner Light (Ohr Pnimi) commentary for this chapter has not been digitized in any edition yet.",
     "sourceEmpty": "No source text available for this chapter yet.",
     "summaryEmpty": "No summary available for this chapter yet.",
@@ -75,11 +76,20 @@
     "studyMode": {
       "fold": "Fold",
       "readFullCommentary": "Read the full commentary",
-      "readFullCommentaryHint": "Only commentary you've opened shows here — browse every item for this chapter in the full three-pane view."
+      "readFullCommentaryHint": "Only commentary you've opened shows here — browse every item for this chapter in the full three-pane view.",
+      "unalignedCommentaryTitle": "More commentary (not yet matched to seifim)"
     },
     "progressLabel": "Reading progress",
     "toolbar": {
-      "preferencesButton": "Reading preferences"
+      "preferencesButton": "Reading preferences",
+      "contentsButton": "Contents"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "Browse all chapters"
+    },
+    "contents": {
+      "title": "Contents",
+      "close": "Close"
     },
     "mobilePane": {
       "label": "Reader pane",

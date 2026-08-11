@@ -2,6 +2,7 @@ import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it } from "vitest";
 import ReaderToolbar from "~/components/reader/ReaderToolbar.vue";
 import type { ChapterLink } from "~/utils/toc";
+import type { TocVolumeSkeleton } from "~~/shared/types/content";
 
 const chapterLink = (id: string, title: string): ChapterLink => ({
   id,
@@ -14,12 +15,42 @@ const breadcrumbItems = [
   { label: "Part 1 · Chapter 1" },
 ];
 
+const volumes: TocVolumeSkeleton[] = [
+  {
+    id: "volume-01",
+    number: 1,
+    title: { en: "Volume 1", he: "כרך 1" },
+    parts: [
+      {
+        id: "part-01",
+        number: 1,
+        title: { en: "Part 1", he: "חלק 1" },
+        sefariaNode: "Talmud Eser HaSefirot, Section I",
+        chapterCount: 1,
+        kindsPresent: ["chapter"],
+        firstChapterId: "part-01/chapter-01",
+        lastChapterId: "part-01/chapter-01",
+        firstChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        lastChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
+        availableSummary: { he: "full", en: "none" },
+      },
+    ],
+  },
+];
+
+const baseProps = {
+  breadcrumbItems,
+  volumes,
+  currentVolumeId: "volume-01",
+  currentPartId: "part-01",
+};
+
 describe("ReaderToolbar", () => {
   it("renders the breadcrumb chain", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {
         chapterTitle: "Part 1 · Chapter 1",
-        breadcrumbItems,
+        ...baseProps,
         prev: null,
         next: null,
       },
@@ -30,11 +61,27 @@ describe("ReaderToolbar", () => {
     expect(wrapper.text()).toContain("Part 1 · Chapter 1");
   });
 
+  it("renders a Contents button with an accessible name", async () => {
+    const wrapper = await mountSuspended(ReaderToolbar, {
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        ...baseProps,
+        prev: null,
+        next: null,
+      },
+    });
+
+    const contentsButton = wrapper
+      .findAll("button")
+      .find((button) => button.attributes("aria-label") === "Contents");
+    expect(contentsButton).toBeTruthy();
+  });
+
   it("renders exactly one <h1> containing the chapter title", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {
         chapterTitle: "Part 1 · Chapter 1",
-        breadcrumbItems,
+        ...baseProps,
         prev: null,
         next: null,
       },
@@ -52,7 +99,7 @@ describe("ReaderToolbar", () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {
         chapterTitle: "Part 1 · Chapter 1",
-        breadcrumbItems,
+        ...baseProps,
         prev,
         next,
       },
@@ -77,7 +124,7 @@ describe("ReaderToolbar", () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {
         chapterTitle: "Part 1 · Chapter 1",
-        breadcrumbItems,
+        ...baseProps,
         prev: null,
         next: null,
       },
@@ -96,7 +143,7 @@ describe("ReaderToolbar", () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {
         chapterTitle: "Part 1 · Chapter 1",
-        breadcrumbItems,
+        ...baseProps,
         prev: null,
         next: null,
       },
@@ -116,7 +163,7 @@ describe("ReaderToolbar", () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {
         chapterTitle: "Part 1 · Chapter 1",
-        breadcrumbItems,
+        ...baseProps,
         prev: null,
         next: null,
       },

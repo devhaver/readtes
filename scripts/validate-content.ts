@@ -258,32 +258,50 @@ export const checkTranslatedVersionIntegrity = (
         translated.file.layer === "commentary" &&
         source.file.layer === "commentary"
       ) {
+        // A translation may legitimately cover a SUBSET of the source's
+        // items: the unanchored import (#79) regrows a chapter's Hebrew
+        // commentary with previously-discarded items, and their
+        // translations arrive later (#87). What is never legitimate is a
+        // translated item with no source counterpart, or one whose
+        // identity (anchorId → order/targetSeif) disagrees with its
+        // counterpart — count equality was only ever a proxy for that.
         const translatedItems = translated.file.items;
-        const sourceItems = source.file.items;
-        if (translatedItems.length !== sourceItems.length) {
-          errors.push(
-            `${translated.relativePath}: translated commentary has ${translatedItems.length} item(s), but "${version.translatedFrom}" has ${sourceItems.length}`,
-          );
-          continue;
-        }
+        const sourceById = new Map(
+          source.file.items.map((item) => [item.anchorId, item]),
+        );
 
-        translatedItems.forEach((item, index) => {
-          const sourceItem = sourceItems[index];
+        for (const item of translatedItems) {
+          const sourceItem = sourceById.get(item.anchorId);
+          if (!sourceItem) {
+            errors.push(
+              `${translated.relativePath}: translated commentary item "${item.anchorId}" has no counterpart in "${version.translatedFrom}"`,
+            );
+            continue;
+          }
           if (
-            !sourceItem ||
-            item.anchorId !== sourceItem.anchorId ||
+            item.order !== sourceItem.order ||
             item.targetSeif !== sourceItem.targetSeif
           ) {
             errors.push(
-              `${translated.relativePath}: translated commentary item ${index + 1} does not preserve "${version.translatedFrom}" anchorId and targetSeif`,
+              `${translated.relativePath}: translated commentary item "${item.anchorId}" does not preserve "${version.translatedFrom}" order and targetSeif`,
             );
           }
-        });
+        }
       }
     }
   }
 };
 
+/**
+ * The anchor round-trip: every source segment's `anchors[]` entry must
+ * resolve to an **anchored** `CommentaryItem.anchorId` (an unanchored item
+ * shares the `op-<order>` grammar but has no matching marker in the source,
+ * so it may never be a source anchor's target), and every anchored item's
+ * `targetSeif` must name a seif that exists. Unanchored items (no
+ * `targetSeif`) are skipped on the commentary side — there is nothing to
+ * round-trip — but see `checkCommentaryItemBasics` for the checks that
+ * still apply to them.
+ */
 const checkAnchorCommentaryIntegrity = (
   loaded: LoadedChapterFile[],
   errors: string[],
@@ -301,10 +319,15 @@ const checkAnchorCommentaryIntegrity = (
       (e) => e.file.layer === "commentary",
     );
 
-    const commentaryAnchorIds = new Set(
+    // Only anchored items (targetSeif defined) are eligible round-trip
+    // targets — an unanchored item's anchorId must never be named by a
+    // source segment's anchors[].
+    const anchoredCommentaryAnchorIds = new Set(
       commentaryFiles.flatMap((e) =>
         e.file.layer === "commentary"
-          ? e.file.items.map((item) => item.anchorId)
+          ? e.file.items
+              .filter((item) => item.targetSeif !== undefined)
+              .map((item) => item.anchorId)
           : [],
       ),
     );
@@ -318,9 +341,9 @@ const checkAnchorCommentaryIntegrity = (
       if (entry.file.layer !== "source") continue;
       for (const segment of entry.file.items) {
         for (const anchorId of segment.anchors) {
-          if (!commentaryAnchorIds.has(anchorId)) {
+          if (!anchoredCommentaryAnchorIds.has(anchorId)) {
             errors.push(
-              `${entry.relativePath}: anchor "${anchorId}" (seif ${segment.n}) has no matching CommentaryItem.anchorId in any commentary version of chapter "${chapterDirId}"`,
+              `${entry.relativePath}: anchor "${anchorId}" (seif ${segment.n}) has no matching anchored CommentaryItem.anchorId in any commentary version of chapter "${chapterDirId}"`,
             );
           }
         }
@@ -330,11 +353,58 @@ const checkAnchorCommentaryIntegrity = (
     for (const entry of commentaryFiles) {
       if (entry.file.layer !== "commentary") continue;
       for (const item of entry.file.items) {
+        if (item.targetSeif === undefined) continue;
         if (!sourceSeifNumbers.has(item.targetSeif)) {
           errors.push(
             `${entry.relativePath}: anchor "${item.anchorId}" targets seif ${item.targetSeif}, which does not exist in any source version of chapter "${chapterDirId}"`,
           );
         }
+      }
+    }
+  }
+};
+
+/**
+ * Checks that apply to every commentary item regardless of anchored vs
+ * unanchored: `order` unique per file (distinct from "positive", which the
+ * schema already enforces), and `html` non-empty. These never relax for
+ * unanchored items — they are the minimum an unanchored item still has to
+ * satisfy once it opts out of the anchor round-trip above.
+ */
+const checkCommentaryItemBasics = (
+  loaded: LoadedChapterFile[],
+  errors: string[],
+): void => {
+  for (const { relativePath, file } of loaded) {
+    if (file.layer !== "commentary") continue;
+
+    const orderCounts = new Map<number, number>();
+    for (const item of file.items) {
+      orderCounts.set(item.order, (orderCounts.get(item.order) ?? 0) + 1);
+
+      if (item.html.trim().length === 0) {
+        errors.push(
+          `${relativePath}: commentary item "${item.anchorId}" (order ${item.order}) has empty html`,
+        );
+      }
+
+      // The `op-<order>` identity is load-bearing, not decorative: anchorId
+      // is bound as the DOM id and Vue :key in the reader and resolved by
+      // lookup in `commentaryNotice`. For an unanchored item no round-trip
+      // check can ever catch a malformed or duplicated anchorId, so the
+      // grammar is enforced here for every item, anchored or not.
+      if (item.anchorId !== `op-${item.order}`) {
+        errors.push(
+          `${relativePath}: commentary item anchorId "${item.anchorId}" does not match its order — expected "op-${item.order}"`,
+        );
+      }
+    }
+
+    for (const [order, count] of orderCounts) {
+      if (count > 1) {
+        errors.push(
+          `${relativePath}: order ${order} is used by ${count} commentary items — order must be unique per file`,
+        );
       }
     }
   }
@@ -644,6 +714,7 @@ export const validateContent = (contentDir: string): ValidationResult => {
 
   checkSourceHtmlAnchorsConsistency(loaded, errors);
   checkAnchorCommentaryIntegrity(loaded, errors);
+  checkCommentaryItemBasics(loaded, errors);
   if (versionsParsed.success) {
     checkTranslatedVersionIntegrity(versionsParsed.data, loaded, errors);
   }

@@ -40,6 +40,7 @@
       "histaklut-pnimit": "הסתכלות פנימית"
     },
     "commentaryEmpty": "אין עדיין פירוש זמין לפרק זה.",
+    "commentaryNotAligned": "הפירוש הזה עדיין לא הותאם לסעיפים בודדים — הפריטים מוצגים לפי סדר הקריאה.",
     "innerLightAbsent": "פירוש אור פנימי לפרק זה טרם עבר דיגיטציה באף מהדורה.",
     "sourceEmpty": "אין עדיין טקסט מקור זמין לפרק זה.",
     "summaryEmpty": "אין עדיין תקציר זמין לפרק זה.",
@@ -75,11 +76,20 @@
     "studyMode": {
       "fold": "קפל",
       "readFullCommentary": "קרא את הפירוש המלא",
-      "readFullCommentaryHint": "רק פירוש שפתחת מוצג כאן — עיין בכל הפריטים לפרק זה בתצוגת שלוש העמודות המלאה."
+      "readFullCommentaryHint": "רק פירוש שפתחת מוצג כאן — עיין בכל הפריטים לפרק זה בתצוגת שלוש העמודות המלאה.",
+      "unalignedCommentaryTitle": "עוד פירוש (טרם הותאם לסעיפים)"
     },
     "progressLabel": "התקדמות בקריאה",
     "toolbar": {
-      "preferencesButton": "העדפות קריאה"
+      "preferencesButton": "העדפות קריאה",
+      "contentsButton": "תוכן העניינים"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "עיינו בכל הפרקים"
+    },
+    "contents": {
+      "title": "תוכן העניינים",
+      "close": "סגור"
     },
     "mobilePane": {
       "label": "חלונית הקורא",
