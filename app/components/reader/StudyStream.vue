@@ -243,7 +243,10 @@ const goToFullCommentary = async () => {
         <span class="tes-eyebrow">
           {{ t("reader.studyMode.unalignedCommentaryTitle") }}
         </span>
-        <span aria-hidden="true" class="tes-disclosure-chevron">⌄</span>
+        <span
+          aria-hidden="true"
+          class="tes-icon tes-icon-chevron-down tes-disclosure-chevron h-4 w-4"
+        />
       </summary>
 
       <div class="flex flex-col gap-6 px-4 pb-4">

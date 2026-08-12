@@ -547,6 +547,11 @@ html {
   @apply flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
 
+/* Pairs with `.tes-icon .tes-icon-chevron-down` at the call site, not a
+   typographic glyph: `⌄` (U+2304) renders at wildly different weights and
+   baselines across the font stack — heavy and low next to the eyebrow it
+   sits beside. `color` here is what the mask paints with, since `.tes-icon`
+   sets `background-color: currentColor`. */
 .tes-disclosure-chevron {
   @apply text-(--text-muted) transition-transform group-open:rotate-180;
 }
