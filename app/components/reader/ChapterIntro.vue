@@ -23,7 +23,10 @@ const { t } = useI18n();
       <span class="tes-eyebrow">
         {{ t("reader.chapterIntro.title") }}
       </span>
-      <span aria-hidden="true" class="tes-disclosure-chevron">⌄</span>
+      <span
+        aria-hidden="true"
+        class="tes-icon tes-icon-chevron-down tes-disclosure-chevron h-4 w-4"
+      />
     </summary>
 
     <div class="px-4 pb-4">

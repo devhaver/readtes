@@ -35,7 +35,7 @@ describe("ReaderSummaryBody", () => {
 
     expect(wrapper.text()).toContain("Before restriction: the simple light");
     // The mini-toc must not also render alongside a real summary.
-    expect(wrapper.text()).not.toContain("In this chapter");
+    expect(wrapper.find("nav").exists()).toBe(false);
   });
 
   it("falls back to a heading mini-toc when there's no summary layer", async () => {
@@ -43,7 +43,14 @@ describe("ReaderSummaryBody", () => {
       props: { summaryItems: [], sourceSegments },
     });
 
-    expect(wrapper.text()).toContain("In this chapter");
+    // The name is the `<nav>`'s accessible label, never visible text: the
+    // only host (`ChapterIntro`) already prints "In this chapter" in its
+    // `<summary>`, directly above this. Rendering it again produced the
+    // heading twice, one line apart.
+    expect(wrapper.find("nav").attributes("aria-label")).toBe(
+      "In this chapter",
+    );
+    expect(wrapper.text()).not.toContain("In this chapter");
     expect(wrapper.text()).toContain("Before restriction");
     // Segment 2 has no `heading` — falls back to a generic seif label so the
     // mini-toc entry count still matches the segment count.

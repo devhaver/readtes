@@ -4,9 +4,14 @@
 // extracted from its source segments as a mini table-of-contents, so this
 // is never an empty box. Each mini-toc entry jumps to that seif (`seif-N`).
 //
-// Used by both `ChapterIntro` (study mode's collapsible intro card, above
-// the reading stream) and `SourcePane` (panes mode's own collapsible
-// `<details>`, above its segment list) — always rendered in the same
+// Rendered only by `ChapterIntro`, which both study mode (above the reading
+// stream) and `SourcePane` (above its segment list) mount. That host's
+// `<summary>` already shows "In this chapter", so the mini-toc carries NO
+// visible heading of its own — it would render directly beneath an
+// identical one. The name survives as the `<nav>`'s `aria-label`, which is
+// what a screen reader announces for the landmark anyway.
+//
+// It is always rendered in the same
 // container as the `seif-N` targets it jumps to, so a plain local
 // `scrollIntoView` + highlight flash is all a mini-toc click needs; unlike
 // a real cross-pane anchor activation, there's no other pane's
@@ -66,10 +71,7 @@ const onMiniTocEntryClick = (anchorId: string) => {
     v-else-if="miniToc.entries.length > 0"
     :aria-label="t('reader.miniTocTitle')"
   >
-    <h3 class="tes-eyebrow">
-      {{ t("reader.miniTocTitle") }}
-    </h3>
-    <ol class="mt-3 flex flex-col gap-1">
+    <ol class="flex flex-col gap-1">
       <li v-for="entry in miniToc.entries" :key="entry.anchorId">
         <button
           type="button"
