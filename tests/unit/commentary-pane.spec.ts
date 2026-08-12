@@ -46,14 +46,55 @@ const unanchoredItem: CommentaryItem = {
 };
 
 describe("CommentaryPane", () => {
-  it("renders items under their section heading", async () => {
+  it("renders the section's items", async () => {
     const wrapper = await mountSuspended(PaneContainerStub, {
       slots: { default: () => h(CommentaryPane, { items }) },
     });
 
-    expect(wrapper.text()).toContain("Inner Light");
     expect(wrapper.text()).toContain("First commentary item");
     expect(wrapper.text()).toContain("Second commentary item");
+  });
+
+  describe("section heading", () => {
+    it("omits it for an Ohr Pnimi-only chapter, whose pane header already says it", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      expect(wrapper.text()).not.toContain("Inner Light");
+    });
+
+    it("keeps it when the section is not what the pane header says", async () => {
+      const histaklut = items.map((item) => ({
+        ...item,
+        section: "histaklut-pnimit" as const,
+      }));
+
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items: histaklut }) },
+      });
+
+      expect(wrapper.text()).toContain("Inner Observation");
+    });
+
+    it("keeps it when a chapter carries both sections, which must be told apart", async () => {
+      const bothSections = [
+        ...items,
+        {
+          ...items[0]!,
+          anchorId: "op-9",
+          order: 9,
+          section: "histaklut-pnimit" as const,
+        },
+      ];
+
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items: bothSections }) },
+      });
+
+      expect(wrapper.text()).toContain("Inner Light");
+      expect(wrapper.text()).toContain("Inner Observation");
+    });
   });
 
   it("shows an empty-state message when the chapter has no commentary", async () => {
@@ -133,6 +174,105 @@ describe("CommentaryPane", () => {
       expect(wrapper.find("button.tes-anchor").exists()).toBe(false);
       expect(wrapper.find("#op-3").exists()).toBe(true);
       expect(wrapper.text()).toContain("3");
+    });
+  });
+  describe("seif grouping", () => {
+    /** Two seifim: seif 1 carries op-1/op-2, seif 2 carries op-3. */
+    const acrossTwoSeifim: CommentaryItem[] = [
+      ...items,
+      {
+        anchorId: "op-3",
+        order: 3,
+        label: { en: "3", he: "\u05d2" },
+        sefariaRef: "x 3",
+        targetSeif: 2,
+        section: "ohr-pnimi",
+        html: "Third commentary item",
+      },
+    ];
+
+    it("heads each group with its seif number, not the items' running order", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      expect(wrapper.find(".tes-commentary-seif-heading").text()).toBe(
+        "Seif 1",
+      );
+    });
+
+    it("renders every seif in the chapter at once, ascending", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items: acrossTwoSeifim }) },
+      });
+
+      expect(
+        wrapper
+          .findAll(".tes-commentary-seif-heading")
+          .map((heading) => heading.text()),
+      ).toEqual(["Seif 1", "Seif 2"]);
+      expect(wrapper.find("#op-1").exists()).toBe(true);
+      expect(wrapper.find("#op-3").exists()).toBe(true);
+    });
+
+    it("gives the unanchored items their own trailing group", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: {
+          default: () =>
+            h(CommentaryPane, { items: [...items, unanchoredItem] }),
+        },
+      });
+
+      expect(
+        wrapper
+          .findAll(".tes-commentary-seif-heading")
+          .map((heading) => heading.text()),
+      ).toEqual(["Seif 1", "Not matched to a seif"]);
+    });
+  });
+
+  describe("collapsible groups", () => {
+    it("opens every group by default — nothing is hidden on arrival", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      const groups = wrapper.findAll("details");
+      expect(groups.length).toBeGreaterThan(0);
+      for (const group of groups) {
+        expect((group.element as HTMLDetailsElement).open).toBe(true);
+      }
+    });
+
+    it("makes the seif heading the group's own summary, so it toggles it", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      const heading = wrapper.find(".tes-commentary-seif-heading");
+      expect(heading.element.tagName).toBe("SUMMARY");
+      expect(heading.element.parentElement?.tagName).toBe("DETAILS");
+    });
+
+    it("keeps the seif number readable as a heading inside the summary", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      expect(wrapper.find(".tes-commentary-seif-heading h4").text()).toBe(
+        "Seif 1",
+      );
+    });
+
+    it("keeps a collapsed group's items in the document, for in-page find", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      const group = wrapper.find("details").element as HTMLDetailsElement;
+      group.open = false;
+
+      expect(wrapper.find("#op-1").exists()).toBe(true);
     });
   });
 });

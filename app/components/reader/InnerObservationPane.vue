@@ -69,7 +69,7 @@ const statusMessage = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-8">
+  <div class="tes-prose-column">
     <p
       role="status"
       aria-live="polite"
@@ -116,14 +116,27 @@ const statusMessage = computed(() => {
     </div>
 
     <div v-else-if="sections.length > 0" class="flex flex-col gap-8">
-      <section
+      <!-- Collapsible for the same reason the commentary pane's seif groups
+           are: this pane concatenates EVERY inner-observation chapter in the
+           part into one column, so it is the longest continuous run of text
+           in the reader. Folding a finished section is the only way to keep
+           the rest reachable without scrolling past it. Open by default, and
+           not persisted — see `CommentaryPane`'s note. -->
+      <details
         v-for="section in sections"
         :key="section.chapterId"
-        class="flex flex-col gap-4"
+        class="group flex flex-col gap-4"
+        open
       >
-        <h3 class="tes-eyebrow">
-          {{ localizedText(section.title, locale) }}
-        </h3>
+        <summary class="tes-prose-section-heading">
+          <h3 class="tes-eyebrow">
+            {{ localizedText(section.title, locale) }}
+          </h3>
+          <span
+            aria-hidden="true"
+            class="tes-icon tes-icon-chevron-down tes-disclosure-chevron h-4 w-4"
+          />
+        </summary>
 
         <ol v-if="section.items.length > 0" class="flex flex-col gap-6">
           <li
@@ -131,10 +144,10 @@ const statusMessage = computed(() => {
             :key="segment.n"
             class="tes-seif-lg"
           >
-            <ReaderSourceSegment :segment="segment" />
+            <ReaderSourceSegment :segment="segment" split-paragraphs />
           </li>
         </ol>
-      </section>
+      </details>
     </div>
 
     <p v-else class="text-sm text-(--text-muted)">

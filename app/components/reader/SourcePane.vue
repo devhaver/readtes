@@ -19,7 +19,7 @@
 // renders the identical body above its stream) rather than duplicated.
 import type { SourceSegment } from "~~/shared/types/content";
 
-defineProps<{ segments: SourceSegment[] }>();
+const props = defineProps<{ segments: SourceSegment[] }>();
 
 const emit = defineEmits<{ "open-seif-commentary": [seifN: number] }>();
 
@@ -28,6 +28,10 @@ const { activateAnchor } = useReaderState();
 const containerRef = useReaderPaneContainer();
 useHighlightedAnchor("source", containerRef);
 useAnchorActivation(containerRef, (id) => activateAnchor(id, "source"));
+// Reports which seif the reader is on into the shared `useCurrentSeif`, so
+// the commentary pane's followed view can scope itself to it. Read-only:
+// this never scrolls anything, and only this pane holds `[data-seif]`.
+useTrackedSeifPosition(containerRef, () => props.segments);
 useSeifTapActivation(containerRef, (seifN) =>
   emit("open-seif-commentary", seifN),
 );

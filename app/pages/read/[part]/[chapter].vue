@@ -298,6 +298,12 @@ const commentarySheetItems = computed(() =>
     : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
 );
 
+// `useCurrentSeif`: the source pane measures which seif the reader is on and
+// the commentary pane's followed view reads it. Called here, ahead of
+// `ReaderShell`, so this page is the provider both panes inject — neither
+// can see the other's scroll container on its own.
+useCurrentSeif();
+
 // `ReaderContentsPanel` (T90): the toolbar's Contents button opens the
 // whole volumes -> parts tree. `useContentsPanel` owns the open/closed
 // state (provide/inject singleton, same shape as `useCommentarySheet`

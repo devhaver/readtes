@@ -16,6 +16,18 @@ const props = defineProps<{
    * rather than a fresh one.
    */
   continuation?: boolean;
+  /**
+   * Renders the segment's html as separate paragraphs, split on its `<br>`s
+   * (`splitProseParagraphs`), instead of one continuous run.
+   *
+   * Opt-in rather than always-on because it only fits segments that ARE
+   * long-form prose: the Inner Observation essays, whose segments average
+   * 1,423 characters and reach 5,347 with no headings and no block
+   * structure at all — a genuine wall. A chapter seif is a short numbered
+   * unit whose occasional `<br>` is a line break inside one thought, and
+   * breaking it into paragraphs would misrepresent it as several.
+   */
+  splitParagraphs?: boolean;
 }>();
 
 // Two passes over Sefaria's Questions <-> Answers cross-references, in
@@ -47,13 +59,27 @@ const displayHtml = computed(() =>
     ),
   ),
 );
+
+const paragraphs = computed(() => splitProseParagraphs(displayHtml.value));
 </script>
 
 <template>
   <span v-if="!continuation" class="tes-seif-chip" aria-hidden="true">
     {{ segment.n }}
   </span>
+  <!-- One `crossRefRoot` per rendered branch: the ref binds to whichever
+       element actually renders, and `useLinkedCrossRefs` only ever needs the
+       one root containing this segment's `v-html` links. -->
+  <div v-if="splitParagraphs" ref="crossRefRoot" class="tes-prose-block">
+    <p
+      v-for="(paragraph, index) in paragraphs"
+      :key="index"
+      class="tes-prose-paragraph"
+      v-html="paragraph"
+    />
+  </div>
   <span
+    v-else
     ref="crossRefRoot"
     :class="continuation ? 'tes-seif-continuation' : undefined"
     v-html="displayHtml"
