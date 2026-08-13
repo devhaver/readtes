@@ -298,6 +298,17 @@ const commentarySheetItems = computed(() =>
     : commentaryItemsForSeif(commentaryItems.value, commentarySheetSeif.value),
 );
 
+// The marker each anchor is printed with in the source version currently on
+// screen. Every surface that labels a commentary item uses this in
+// preference to the item's own `label`, so the number the reader clicks in
+// the Ari's text is the number they land on — see `anchorMarkersFromSegments`
+// for why the two differ in the first place (issue #96: Bnei Baruch's own
+// printed English marks the text with gematria values but numbers the notes
+// sequentially, and the corpus reproduces both faithfully).
+const anchorMarkers = computed(() =>
+  anchorMarkersFromSegments(sourceSegments.value),
+);
+
 // `useCurrentSeif`: the source pane measures which seif the reader is on and
 // the commentary pane's followed view reads it. Called here, ahead of
 // `ReaderShell`, so this page is the provider both panes inject — neither
@@ -387,7 +398,10 @@ useLocalizedSeo({
               </button>
             </p>
           </template>
-          <ReaderCommentaryPane :items="commentaryItems" />
+          <ReaderCommentaryPane
+            :items="commentaryItems"
+            :anchor-markers="anchorMarkers"
+          />
         </ReaderPane>
       </template>
 
@@ -466,6 +480,7 @@ useLocalizedSeo({
       :open="commentarySheetSeif !== null"
       :seif="commentarySheetSeif"
       :items="commentarySheetItems"
+      :anchor-markers="anchorMarkers"
       @close="closeCommentarySheet"
     />
   </div>

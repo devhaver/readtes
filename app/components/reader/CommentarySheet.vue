@@ -24,6 +24,8 @@ const props = defineProps<{
   open: boolean;
   seif: number | null;
   items: CommentaryItem[];
+  /** `anchorId` -> the marker the source text prints — see `anchorMarkersFromSegments` (issue #96). */
+  anchorMarkers?: ReadonlyMap<string, string>;
 }>();
 
 const emit = defineEmits<{ close: [] }>();
@@ -168,7 +170,10 @@ const transitionDuration = computed(() =>
               class="rounded-card border border-(--border) p-3"
             >
               <p class="mb-1 text-xs font-semibold text-(--accent-text)">
-                {{ localizedText(item.label, locale) }}
+                {{
+                  props.anchorMarkers?.get(item.anchorId) ??
+                  localizedText(item.label, locale)
+                }}
               </p>
               <div
                 class="text-sm leading-relaxed text-(--text-primary)"

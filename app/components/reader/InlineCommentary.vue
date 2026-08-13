@@ -14,6 +14,8 @@ const props = defineProps<{
   items: CommentaryItem[];
   meta: ContentVersion | null;
   canSwitchToHebrew: boolean;
+  /** `anchorId` -> the marker the source text prints — see `anchorMarkersFromSegments` (issue #96). */
+  anchorMarkers?: ReadonlyMap<string, string>;
 }>();
 
 const emit = defineEmits<{ "switch-to-hebrew": [] }>();
@@ -72,6 +74,7 @@ const fold = () => toggleInline(props.anchorId);
         class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
       >
         <span class="me-1.5 text-xs font-semibold text-(--accent-text)">{{
+          props.anchorMarkers?.get(item.anchorId) ??
           localizedText(item.label, locale)
         }}</span>
         <span v-html="item.html" />

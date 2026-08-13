@@ -137,6 +137,14 @@ const hasCommentaryLayer = computed(
   () => props.commentaryLanguageOptions.length > 0,
 );
 
+// The marker each anchor is printed with in the source text these
+// disclosures unfold beneath — see `anchorMarkersFromSegments` (issue #96).
+// Study mode puts note and marker within a line of each other, so a
+// disagreement between them is unmissable here.
+const anchorMarkers = computed(() =>
+  anchorMarkersFromSegments(props.sourceSegments),
+);
+
 /** Switches to panes mode and scrolls straight to its commentary column — see `ReaderShell`'s `#reader-commentary-pane`. */
 const goToFullCommentary = async () => {
   setMode("panes");
@@ -223,6 +231,7 @@ const goToFullCommentary = async () => {
                   :items="commentaryItemsForAnchor(anchorId)"
                   :meta="commentaryMeta"
                   :can-switch-to-hebrew="canSwitchToHebrewFor(anchorId)"
+                  :anchor-markers="anchorMarkers"
                   @switch-to-hebrew="switchToHebrew"
                 />
               </div>

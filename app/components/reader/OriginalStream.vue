@@ -33,6 +33,18 @@ const props = defineProps<{
 const { t, locale } = useI18n();
 
 const hasCommentary = computed(() => props.commentaryItems.length > 0);
+
+// Label each note with the marker the source text above it actually prints,
+// falling back to the item's stored label — the two disagree in the English
+// editions and both are faithful (issue #96). This mode shows both texts on
+// one page, so a disagreement is at its most visible here.
+const anchorMarkers = computed(() =>
+  anchorMarkersFromSegments(props.sourceSegments),
+);
+
+const markerFor = (item: CommentaryItem): string =>
+  anchorMarkers.value.get(item.anchorId) ??
+  localizedText(item.label, locale.value);
 </script>
 
 <template>
@@ -97,9 +109,7 @@ const hasCommentary = computed(() => props.commentaryItems.length > 0);
           :key="item.anchorId"
           class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
         >
-          <span class="font-medium"
-            >{{ localizedText(item.label, locale) }}.</span
-          >
+          <span class="font-medium">{{ markerFor(item) }}.</span>
           <span v-html="item.html" />
         </li>
       </ol>

@@ -275,4 +275,53 @@ describe("CommentaryPane", () => {
       expect(wrapper.find("#op-1").exists()).toBe(true);
     });
   });
+  describe("marker text (issue #96)", () => {
+    it("prints the marker the source text shows, not the item's stored label", async () => {
+      // Bnei Baruch's English marks the 11th note "(20)" in the Ari's text
+      // while numbering it "11" in the commentary list. The reader clicks
+      // "20", so "20" is what they must land on.
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: {
+          default: () =>
+            h(CommentaryPane, {
+              items,
+              anchorMarkers: new Map([
+                ["op-1", "20"],
+                ["op-2", "30"],
+              ]),
+            }),
+        },
+      });
+
+      expect(
+        wrapper.findAll(".tes-commentary-marker").map((m) => m.text()),
+      ).toEqual(["20", "30"]);
+    });
+
+    it("falls back to the stored label for an anchor the source does not print", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: {
+          default: () =>
+            h(CommentaryPane, {
+              items,
+              anchorMarkers: new Map([["op-1", "20"]]),
+            }),
+        },
+      });
+
+      expect(
+        wrapper.findAll(".tes-commentary-marker").map((m) => m.text()),
+      ).toEqual(["20", "2"]);
+    });
+
+    it("uses the stored label throughout when given no markers at all", async () => {
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items }) },
+      });
+
+      expect(
+        wrapper.findAll(".tes-commentary-marker").map((m) => m.text()),
+      ).toEqual(["1", "2"]);
+    });
+  });
 });

@@ -453,18 +453,26 @@ html {
  * load-bearing, not decoration: a transparent sticky heading has the list's
  * own text sliding visibly under it.
  */
+/* The transparent inline-start border is reserved on EVERY heading, not just
+   the current one, so `.is-current` colouring it in shifts nothing. */
 .tes-commentary-seif-heading {
-  @apply sticky top-0 z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) py-2 text-sm font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply sticky top-0 z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 text-sm font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
 
 /*
- * The seif the reader is currently on in the source pane (`useCurrentSeif`).
- * Colour only — no movement, no scrolling, no hiding: the whole chapter's
- * commentary is always rendered, and this is the quiet cross-pane link
- * between the two columns' numbers, not a mode.
+ * The seif the source pane is currently scrolled to (`useCurrentSeif`).
+ *
+ * An edge bar, not just coloured text: colour alone read as "selected" —
+ * with every group collapsed and the source pane at the top, a lone teal
+ * "Seif 1" looks like a choice the reader made rather than a report of
+ * where the other column is. A margin rule is the conventional shape for
+ * "you are here", and it survives being the only one lit.
+ *
+ * Never moves or hides anything: the whole chapter's commentary is always
+ * rendered, and this is a quiet cross-pane link, not a mode.
  */
 .tes-commentary-seif-heading.is-current {
-  @apply border-b-teal text-(--accent-text);
+  @apply border-s-teal text-(--accent-text);
 }
 
 /*
