@@ -220,6 +220,16 @@ const scrollToPane = (pane: PaneId, instant: boolean) => {
 };
 
 watch(activePane, (pane) => {
+  // Cancel first, then scroll. A pill tap during a swipe's settle window
+  // arrives with a commit already armed against the *pre-tap* ratios — that
+  // pending commit resolves the slide the finger left behind and immediately
+  // scrolls the track back to it, undoing the tap. Cancelling restarts the
+  // countdown from zero, so the observer's post-scroll batch (one frame away)
+  // always lands inside the new window and the commit that eventually fires
+  // resolves the pane the reader actually chose. When the commit itself is
+  // what changed `activePane`, the timer has already fired and this is a
+  // no-op. Root cause of the intermittent e2e failure in issue 106.
+  settleTimer.cancel();
   scrollToPane(pane, false);
 });
 
