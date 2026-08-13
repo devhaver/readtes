@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { hebrewGematriaValue } from "../../scripts/lib/hebrew-numerals.ts";
+import {
+  hebrewGematriaValue,
+  printedMarkerForHebrewLabel,
+} from "../../scripts/lib/hebrew-numerals.ts";
 import { convertAnchorMarkers } from "../../scripts/lib/km-anchor-markers.ts";
 import {
   dedupeKmDocumentCandidates,
@@ -1344,5 +1347,41 @@ describe("isSupportedKmStructure", () => {
     expect(
       isSupportedKmStructure(parseDocBlocks("<h5>1. Know that.</h5>")),
     ).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// printedMarkerForHebrewLabel (issue #96)
+// ---------------------------------------------------------------------------
+
+describe("printedMarkerForHebrewLabel", () => {
+  it.each([
+    ["א", "1"],
+    ["י", "10"],
+    ["כ", "20"],
+    ["ל", "30"],
+    ["ר", "200"],
+    ["ת", "400"],
+  ])(
+    "marks %s as %s, the value the English edition prints",
+    (letter, expected) => {
+      expect(printedMarkerForHebrewLabel(letter)).toBe(expected);
+    },
+  );
+
+  it("takes the FIRST letter of a label naming several markers, not their sum", () => {
+    // `part-02/chapter-01` op-20 is labelled "ר וש" — one note covering two
+    // printed letters — and the source text prints only "ר". Summing would
+    // give 500, a number in no edition.
+    expect(printedMarkerForHebrewLabel("ר וש")).toBe("200");
+  });
+
+  it("ignores geresh/gershayim and surrounding punctuation", () => {
+    expect(printedMarkerForHebrewLabel('"כ"')).toBe("20");
+  });
+
+  it("returns null when there is no Hebrew letter to read", () => {
+    expect(printedMarkerForHebrewLabel("12")).toBeNull();
+    expect(printedMarkerForHebrewLabel("")).toBeNull();
   });
 });

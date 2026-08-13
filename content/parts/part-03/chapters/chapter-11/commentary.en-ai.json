@@ -1,8 +1,8 @@
 {
   "chapterId": "part-03/chapter-11",
-  "layer": "commentary",
   "versionId": "en-ai",
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:11",
+  "layer": "commentary",
   "items": [
     {
       "anchorId": "op-1",
@@ -129,7 +129,7 @@
       "order": 11,
       "label": {
         "he": "כ",
-        "en": "11"
+        "en": "20"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:11:11",
       "targetSeif": 8,

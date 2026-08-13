@@ -85,6 +85,25 @@ describe("content integrity — unanchored commentary items", () => {
     expect(nonBoilerplateErrors(errors)).toEqual([]);
   });
 
+  it("fires when a label bears no relation to the marker its own source prints (issue #96)", () => {
+    // The English import paths used to label a note with its running order
+    // ("12") while the source text printed the letter's gematria value
+    // ("30"), so clicking a marker landed on a differently-numbered note.
+    const { errors } = validateContent(
+      join(fixturesDir, "label-marker-mismatch"),
+    );
+
+    expect(nonBoilerplateErrors(errors)).toEqual([
+      'parts/part-01/chapters/chapter-01/commentary.v1.json: anchor "op-1" is labelled "1" (en) but its own source version prints "a" — run `pnpm migrate:commentary-labels`',
+    ]);
+  });
+
+  it("accepts a label that names its marker among several (a note covering two printed letters)", () => {
+    // `part-02/chapter-01` op-20 is labelled "ר וש" against a source that
+    // prints only "ר" — richer data, not drift, so it must not fire.
+    expect(labelNamesMarker("ר וש", "ר")).toBe(true);
+  });
+
   it("fires when two unanchored items in the same file duplicate an order", () => {
     const { errors } = validateContent(
       join(fixturesDir, "unanchored-duplicate-order"),

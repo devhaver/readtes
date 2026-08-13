@@ -24,6 +24,10 @@ import {
   type Toc,
 } from "../shared/types/content.ts";
 import {
+  anchorMarkersFromHtml,
+  labelNamesMarker,
+} from "../shared/utils/anchorMarkers.ts";
+import {
   deriveGlossaryCitationsFile,
   deriveGlossaryIndexFile,
   GLOSSARY_CITATIONS_FILE_NAME,
@@ -506,6 +510,75 @@ const checkCommentaryItemBasics = (
   }
 };
 
+/**
+ * An anchored commentary item's label must name the marker its OWN version's
+ * source text prints for that anchor (issue #96).
+ *
+ * The two are the same thing seen from either side of the page: the marker
+ * is what the reader sees inset in the Ari's text and clicks; the label is
+ * what the note beside it is called. They drifted because both import paths
+ * set the English label to `String(order)` — the item's running position —
+ * and Bnei Baruch's edition marks the text with the gematria values of the
+ * Hebrew letters instead (`… 10, 20, 30 … 400`), so the 12th note is printed
+ * "30", not "12". `scripts/migrate-commentary-labels.ts` corrected the
+ * committed files; this keeps a future import from silently undoing it.
+ *
+ * Deliberately checked per VERSION, never across versions: only
+ * `commentary.en-bb.json` against `source.en-bb.json`. A chapter's Hebrew
+ * source prints letters and its English source prints numbers, and neither
+ * is wrong.
+ *
+ * Uses `labelNamesMarker` rather than equality so a label may stay richer
+ * than its marker where the data genuinely is — `part-02/chapter-01` op-20
+ * is `"ר וש"`, one note covering two printed letters, against a source that
+ * prints only the first.
+ *
+ * Unanchored items are exempt: no marker exists anywhere for them, so
+ * `label` stays the plain `order` digits the schema documents.
+ */
+const checkCommentaryLabelMatchesSourceMarker = (
+  loaded: LoadedChapterFile[],
+  versions: ContentVersion[],
+  errors: string[],
+): void => {
+  const languageOf = new Map(versions.map((v) => [v.id, v.language]));
+
+  const sourceMarkers = new Map<string, Map<string, string>>();
+  for (const entry of loaded) {
+    if (entry.file.layer !== "source") continue;
+    sourceMarkers.set(
+      `${entry.chapterDirId}::${entry.file.versionId}`,
+      anchorMarkersFromHtml(entry.file.items.map((segment) => segment.html)),
+    );
+  }
+
+  for (const entry of loaded) {
+    if (entry.file.layer !== "commentary") continue;
+
+    const language = languageOf.get(entry.file.versionId);
+    if (language === undefined) continue;
+
+    const markers = sourceMarkers.get(
+      `${entry.chapterDirId}::${entry.file.versionId}`,
+    );
+    // No same-version source text in this chapter: nothing prints a marker
+    // to check against, which is a coverage gap, not a label defect.
+    if (!markers) continue;
+
+    for (const item of entry.file.items) {
+      if (item.targetSeif === undefined) continue;
+
+      const marker = markers.get(item.anchorId);
+      if (marker === undefined) continue;
+      if (labelNamesMarker(item.label[language], marker)) continue;
+
+      errors.push(
+        `${entry.relativePath}: anchor "${item.anchorId}" is labelled "${item.label[language] ?? ""}" (${language}) but its own source version prints "${marker}" — run \`pnpm migrate:commentary-labels\``,
+      );
+    }
+  }
+};
+
 const checkTocFileCrossReferences = (
   toc: Toc,
   loaded: LoadedChapterFile[],
@@ -827,6 +900,11 @@ export const validateContent = (contentDir: string): ValidationResult => {
   checkAnchorCommentaryIntegrity(loaded, errors);
   checkCommentaryItemBasics(loaded, errors);
   if (versionsParsed.success) {
+    checkCommentaryLabelMatchesSourceMarker(
+      loaded,
+      versionsParsed.data,
+      errors,
+    );
     checkTranslatedVersionIntegrity(
       versionsParsed.data,
       loaded,
