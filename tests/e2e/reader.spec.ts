@@ -196,7 +196,11 @@ test.describe("mobile reader", () => {
       const track = document.querySelector(
         "#reader-source-pane",
       )?.parentElement;
-      track?.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+      // Instant, like the gesture it stands in for. A programmatic *smooth*
+      // scroll was always an approximation of a swipe, and now that
+      // `scrollToPane` jumps rather than glides, the two animations fight
+      // and the track settles wherever they cancel each other.
+      track?.scrollTo({ left: track.scrollWidth, behavior: "auto" });
     });
     await expect.poll(trackScrollLeft).toBeGreaterThan(0);
     await paneTabs.getByRole("tab", { name: "The Ari's Text" }).click();
@@ -247,6 +251,67 @@ test.describe("mobile reader", () => {
       page.getByRole("navigation", { name: "Chapter navigation" }),
     ).toBeVisible();
     expect(await heightOf()).toBe(expanded);
+  });
+
+  test("switches pane on a tap with motion enabled — the real-device path", async ({
+    page,
+  }) => {
+    // `playwright.config.ts` sets `reducedMotion: "reduce"` for the whole
+    // project, so every other test here takes `scrollToPane`'s instant
+    // branch. A real phone does not: it took the smooth one, on a
+    // `scroll-snap-type: x mandatory` container, which is exactly where
+    // engines disagree — and the branch had never run in CI. This test
+    // pins the path a reader actually gets.
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto(CHAPTER_PATH);
+    await waitForHydration(page);
+    await page
+      .getByRole("group", { name: "Reading mode" })
+      .getByRole("button", { name: "Panes" })
+      .click();
+
+    const paneTabs = page.getByRole("tablist", { name: "Reader pane" });
+    const trackScrollLeft = () =>
+      page.evaluate(
+        () =>
+          document.querySelector("#reader-source-pane")?.parentElement
+            ?.scrollLeft ?? 0,
+      );
+
+    await paneTabs.getByRole("tab", { name: "Inner Light" }).tap();
+    await expect(page.locator("#reader-commentary-pane")).toBeInViewport();
+    await expect.poll(trackScrollLeft).toBeGreaterThan(0);
+
+    await paneTabs.getByRole("tab", { name: "The Ari's Text" }).tap();
+    await expect(page.locator("#reader-source-pane")).toBeInViewport();
+    await expect.poll(trackScrollLeft).toBe(0);
+  });
+
+  test("an anchor tap carries the reader to Inner Light", async ({ page }) => {
+    // Reported broken on a real phone while working on desktop, and this
+    // path had only ever been covered at desktop width — where both panes
+    // are on screen at once and there is no swipe track. It passes in
+    // emulation either way, so it does not yet reproduce the report; it is
+    // here so the mobile path stops being untested, not as proof of a fix.
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto(CHAPTER_PATH);
+    await waitForHydration(page);
+    await page
+      .getByRole("group", { name: "Reading mode" })
+      .getByRole("button", { name: "Panes" })
+      .click();
+
+    await page.locator('#reader-source-pane [data-anchor="op-1"]').tap();
+
+    await expect(
+      page.getByRole("tablist", { name: "Reader pane" }).getByRole("tab", {
+        name: "Inner Light",
+      }),
+    ).toHaveAttribute("aria-selected", "true");
+    await expect(page.locator("#reader-commentary-pane")).toBeInViewport();
+    await expect(
+      page.locator("#reader-commentary-pane #op-1"),
+    ).toBeInViewport();
   });
 
   test("docks the pane switcher to the bottom edge", async ({ page }) => {

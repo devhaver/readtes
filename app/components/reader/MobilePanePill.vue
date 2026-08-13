@@ -116,7 +116,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
     <div
       role="tablist"
       :aria-label="t('reader.mobilePane.label')"
-      class="flex items-stretch gap-1 p-1"
+      class="flex items-stretch gap-1 p-0.5"
     >
       <button
         v-for="(segment, index) in segments"
