@@ -42,6 +42,16 @@ const { mode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const { scale } = useReadingPreferences();
 const isStudyMode = computed(() => mode.value === "study");
+
+// The collapse control lives in the reader toolbar, but the site navbar is
+// this layout's — and on a phone it is 60px of the ~200px the reader is
+// asking for back (issue 113). It goes with the rest, below `lg` only:
+// there is no shortage of height on a desktop, and losing the site's own
+// nav there would be a worse trade than the space is worth.
+const { collapsed } = useCollapsedReaderChrome();
+const isChromeCollapsed = computed(
+  () => mode.value === "panes" && collapsed.value,
+);
 </script>
 
 <template>
@@ -54,6 +64,7 @@ const isStudyMode = computed(() => mode.value === "study");
     </a>
     <div
       :class="[
+        isChromeCollapsed && 'hidden lg:block',
         isStudyMode &&
           'sticky top-0 z-40 transition-transform duration-200 ease-out motion-reduce:transition-none',
         isStudyMode && !chromeVisible && '-translate-y-full',

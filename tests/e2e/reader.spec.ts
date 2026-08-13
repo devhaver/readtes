@@ -206,4 +206,68 @@ test.describe("mobile reader", () => {
     await expect(page.locator("#reader-source-pane")).toBeInViewport();
     await expect.poll(trackScrollLeft).toBe(0);
   });
+
+  test("collapses the top chrome on demand, and remembers it", async ({
+    page,
+  }) => {
+    // Issue 113. A button, not a scroll gesture: the reader asks, so the
+    // pane is allowed to simply grow into the space and everything stays
+    // in normal flow. The earlier scroll-driven version had to lift the
+    // chrome onto measured absolute positions to avoid moving the text,
+    // and broke in those seams (#117).
+    await page.goto(CHAPTER_PATH);
+    await waitForHydration(page);
+    await page
+      .getByRole("group", { name: "Reading mode" })
+      .getByRole("button", { name: "Panes" })
+      .click();
+
+    const paneBody = page.locator("#reader-source-pane .tes-pane-body");
+    const heightOf = async () =>
+      Math.round((await paneBody.boundingBox())!.height);
+    const expanded = await heightOf();
+
+    await page.getByRole("button", { name: "Collapse the toolbar" }).click();
+
+    // The site navbar goes with it — on a phone it is 60px of the ~200px
+    // being asked for back.
+    await expect(page.locator("header").first()).toBeHidden();
+    await expect(
+      page.getByRole("navigation", { name: "Chapter navigation" }),
+    ).toHaveCount(0);
+    expect(await heightOf()).toBeGreaterThan(expanded + 100);
+
+    // Expanding restores every piece of it. (That it *persists* across
+    // visits is `tests/unit/collapsed-reader-chrome.spec.ts` — this
+    // harness clears `localStorage` on every navigation, so a page-load
+    // assertion here could only ever prove the harness.)
+    await page.getByRole("button", { name: "Expand the toolbar" }).click();
+    await expect(page.locator("header").first()).toBeVisible();
+    await expect(
+      page.getByRole("navigation", { name: "Chapter navigation" }),
+    ).toBeVisible();
+    expect(await heightOf()).toBe(expanded);
+  });
+
+  test("docks the pane switcher to the bottom edge", async ({ page }) => {
+    await page.goto(CHAPTER_PATH);
+    await waitForHydration(page);
+    await page
+      .getByRole("group", { name: "Reading mode" })
+      .getByRole("button", { name: "Panes" })
+      .click();
+
+    const bar = page
+      .getByRole("tablist", { name: "Reader pane" })
+      .locator("xpath=ancestor::div[contains(@class,'fixed')][1]");
+    const box = (await bar.boundingBox())!;
+    const viewport = page.viewportSize()!;
+
+    // Flush, not floating: it used to sit 1rem up with the chapter's own
+    // text visible in the gap underneath it.
+    expect(Math.round(box.y + box.height)).toBe(viewport.height);
+
+    // One row, not two — "Inner Observation" wrapping made the bar ragged.
+    expect(box.height).toBeLessThan(72);
+  });
 });

@@ -86,7 +86,9 @@
     "progressLabel": "Reading progress",
     "toolbar": {
       "preferencesButton": "Reading preferences",
-      "contentsButton": "Contents"
+      "contentsButton": "Contents",
+      "collapseChrome": "Collapse the toolbar",
+      "expandChrome": "Expand the toolbar"
     },
     "breadcrumbMenu": {
       "browseChapters": "Browse all chapters"

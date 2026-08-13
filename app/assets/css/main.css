@@ -516,7 +516,7 @@ html {
 /* The transparent inline-start border is reserved on EVERY heading, not just
    the current one, so `.is-current` colouring it in shifts nothing. */
 .tes-commentary-seif-heading {
-  @apply sticky top-0 z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 text-sm font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 text-sm font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
 
 /*
@@ -532,6 +532,13 @@ html {
  * the strip; the matching extra `padding-block-start` puts its own text back
  * where it was; the negative `margin-block-start` cancels that padding in
  * normal flow, so an unstuck heading sits exactly where it did before.
+ *
+ * Neither class may carry `top-0` in its own `@apply`. Both are
+ * single-class selectors, so source order decides — and
+ * `.tes-prose-section-heading` is declared *below* this rule, which meant
+ * its `top-0` quietly won and Inner Observation kept the exact 16px strip
+ * of text-over-heading this was written to remove. Measured: computed `top`
+ * was `0px`, and the heading pinned 16px below the scrollport.
  */
 .tes-commentary-seif-heading,
 .tes-prose-section-heading {
@@ -614,7 +621,7 @@ html {
    marker of which of the part's Inner Observation chapters they are inside,
    and the sections are long enough to scroll their own heading away. */
 .tes-prose-section-heading {
-  @apply sticky top-0 z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) py-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) py-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
 
 .tes-prose-block {
@@ -664,7 +671,11 @@ html {
 }
 
 .tes-pane-body {
-  @apply min-h-0 flex-1 overflow-y-auto px-4 pb-24 lg:pb-4;
+  @apply min-h-0 flex-1 overflow-y-auto px-4 lg:pb-4;
+  /* Clears the docked pane-switcher bar (`MobilePanePill`, fixed to the
+     bottom edge below `lg`) plus the device's own safe area, so the last
+     line of a chapter is never sitting underneath it. */
+  padding-block-end: calc(3.5rem + env(safe-area-inset-bottom));
   /* Named rather than a bare `pt-4` because the sticky headings inside have
      to cancel exactly this value — see `.tes-commentary-seif-heading`. */
   --pane-pad-block-start: 1rem;
@@ -701,8 +712,23 @@ html {
 
 /* `MobilePanePill`'s per-pane tab — the selected/unselected tint stays
    conditional at the call site. */
+/*
+ * One tab of the docked pane switcher (`MobilePanePill`). Icon above label,
+ * not beside it: side by side, "Inner Observation" wraps to two lines in a
+ * third of a 412px screen and the bar comes out ragged, one tab taller than
+ * its neighbours. Stacked, every label fits on one line at every pane name
+ * in both locales, and the bar is the conventional shape a reader already
+ * knows from every other mobile app.
+ */
 .tes-pill-tab {
-  @apply flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply flex flex-col items-center gap-1 rounded-lg px-2 py-1.5 text-[11px] leading-tight font-medium whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/* `ReaderToolbar`'s collapse/expand handle (issue 113) — a full-width row
+   rather than another button competing for the control row's horizontal
+   space, which a 412px screen does not have. */
+.tes-chrome-handle {
+  @apply -mb-1 flex w-full items-center gap-2 rounded-button py-1 text-(--text-muted) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
 
 /* `ReaderToolbar`'s prev/next chapter links, and their disabled

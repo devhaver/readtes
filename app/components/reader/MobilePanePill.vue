@@ -111,12 +111,12 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
 <template>
   <div
     v-if="!isSheetOpen && !isContentsOpen && segments.length > 1"
-    class="pointer-events-none fixed inset-x-0 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-30 flex justify-center lg:hidden"
+    class="fixed inset-x-0 bottom-0 z-30 border-t border-(--border) bg-(--surface-raised) pb-[env(safe-area-inset-bottom)] lg:hidden"
   >
     <div
       role="tablist"
       :aria-label="t('reader.mobilePane.label')"
-      class="pointer-events-auto flex items-center gap-1 rounded-full border border-(--border) bg-(--surface-raised) p-1 shadow-lg"
+      class="flex items-stretch gap-1 p-1"
     >
       <button
         v-for="(segment, index) in segments"
@@ -127,7 +127,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
         :aria-selected="activePane === segment.pane"
         :aria-controls="segment.controls"
         :tabindex="activePane === segment.pane ? 0 : -1"
-        class="tes-pill-tab"
+        class="tes-pill-tab flex-1"
         :class="
           activePane === segment.pane
             ? 'bg-teal-strong text-surface-white'
