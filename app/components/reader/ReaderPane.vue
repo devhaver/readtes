@@ -24,53 +24,11 @@ defineProps<{
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
 
 const containerRef = provideReaderPaneContainer();
-
-// In mobile panes mode this header joins the navbar and toolbar as an
-// overlay above the pane body rather than a row above it, so the body can
-// own the full viewport height — see `useReaderChromeOverlay`. Above `lg`
-// (and in study mode) nothing here changes: the header stays a plain flow
-// row and the body scrolls beneath it.
-const overlay = useReaderChromeOverlay();
-const headerRef = ref<HTMLElement | null>(null);
-overlay.register("pane-header", headerRef);
-
-const headerTop = overlay.offsetOf("pane-header");
-const headerStyle = computed(() =>
-  overlay.active.value
-    ? {
-        top: `${headerTop.value}px`,
-        transform: `translateY(${overlay.shift.value}px)`,
-      }
-    : {},
-);
-
-/**
- * The body never moves; its *content* starts below the chrome. That is the
- * whole point — a scroller whose top edge stays put cannot make the text
- * jump when the chrome slides away. `scroll-padding` keeps `#seif-N` anchor
- * jumps from landing underneath it.
- */
-const bodyStyle = computed(() =>
-  overlay.active.value
-    ? {
-        paddingBlockStart: `${overlay.height.value}px`,
-        scrollPaddingBlockStart: `${overlay.height.value}px`,
-      }
-    : {},
-);
 </script>
 
 <template>
-  <section class="tes-pane-shell" :class="overlay.active.value && 'relative'">
-    <header
-      ref="headerRef"
-      :style="headerStyle"
-      class="tes-pane-header"
-      :class="[
-        overlay.active.value &&
-          'absolute inset-x-0 z-20 transition-transform duration-200 ease-out motion-reduce:transition-none',
-      ]"
-    >
+  <section class="tes-pane-shell">
+    <header class="tes-pane-header">
       <ReaderPaneHeader
         :title="title"
         :language-options="languageOptions"
@@ -85,7 +43,6 @@ const bodyStyle = computed(() =>
 
     <div
       ref="containerRef"
-      :style="bodyStyle"
       class="tes-pane-body"
       :dir="meta?.direction ?? 'ltr'"
       :lang="meta?.language"

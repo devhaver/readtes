@@ -42,20 +42,6 @@ const { mode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const { scale } = useReadingPreferences();
 const isStudyMode = computed(() => mode.value === "study");
-
-// Panes mode's chrome overlay (issue 113) — see `useReaderChromeOverlay`
-// for why panes mode cannot reuse study mode's sticky treatment. This layout
-// is the provider for the same reason it provides the others: it renders
-// around the page, so its call runs first.
-const overlay = useReaderChromeOverlay();
-const navbarRef = ref<HTMLElement | null>(null);
-overlay.register("navbar", navbarRef);
-
-const navbarStyle = computed(() =>
-  overlay.active.value
-    ? { transform: `translateY(${overlay.shift.value}px)` }
-    : {},
-);
 </script>
 
 <template>
@@ -67,17 +53,10 @@ const navbarStyle = computed(() =>
       {{ t("common.skipToContent") }}
     </a>
     <div
-      ref="navbarRef"
-      :style="navbarStyle"
       :class="[
         isStudyMode &&
           'sticky top-0 z-40 transition-transform duration-200 ease-out motion-reduce:transition-none',
         isStudyMode && !chromeVisible && '-translate-y-full',
-        // Out of flow entirely, so `main` below gets the whole viewport and
-        // the pane it holds keeps its height whether the chrome is showing
-        // or not — see `useReaderChromeOverlay`.
-        overlay.active.value &&
-          'fixed inset-x-0 top-0 z-40 transition-transform duration-200 ease-out motion-reduce:transition-none',
       ]"
     >
       <AppNavBar />
