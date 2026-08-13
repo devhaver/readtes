@@ -47,14 +47,20 @@ const readAllFiles = (dir: string): Record<string, string> => {
 };
 
 describe("qa-consolidation: CONSOLIDATED_QA_KINDS / isConsolidatedQaKind", () => {
-  it("names exactly the two answer kinds issue #91 consolidates", () => {
+  it("names every answer kind, so none is written one chapter per answer", () => {
+    // Issue #91 consolidated the two that existed then; issue #86's
+    // `answers-cause-effect` had to join them or its 34 answers would have
+    // come in as 34 chapters, reintroducing exactly the shape #91 removed.
     expect(CONSOLIDATED_QA_KINDS).toEqual([
       "answers-terminology",
       "answers-topics",
+      "answers-cause-effect",
     ]);
     expect(isConsolidatedQaKind("answers-terminology")).toBe(true);
     expect(isConsolidatedQaKind("answers-topics")).toBe(true);
+    expect(isConsolidatedQaKind("answers-cause-effect")).toBe(true);
     expect(isConsolidatedQaKind("questions-terminology")).toBe(false);
+    expect(isConsolidatedQaKind("questions-cause-effect")).toBe(false);
     expect(isConsolidatedQaKind("chapter")).toBe(false);
   });
 });

@@ -1291,6 +1291,25 @@
       }
     },
     {
+      "id": "part-06/questions-cause-effect-01",
+      "kind": "questions-cause-effect",
+      "number": 1,
+      "title": {
+        "en": "List of Questions on Cause and Effect",
+        "he": "לוח השאלות לסדר סיבה ומסובב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
       "id": "part-06/answers-terminology-01",
       "kind": "answers-terminology",
       "number": 1,
@@ -1331,6 +1350,26 @@
         "commentary": []
       },
       "itemCount": 107
+    },
+    {
+      "id": "part-06/answers-cause-effect-01",
+      "kind": "answers-cause-effect",
+      "number": 1,
+      "title": {
+        "en": "List of Answers on Cause and Effect",
+        "he": "לוח התשובות לסדר סיבה ומסובב"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      },
+      "itemCount": 34
     }
   ]
 }

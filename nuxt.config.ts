@@ -2,23 +2,9 @@ import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Toc } from "./shared/types/content";
+import { CHAPTER_KIND_ORDER } from "./shared/utils/chapterKinds";
 import { nativeLanguageName } from "./shared/utils/languages";
 import { stripContentChunkPrefetchHints } from "./shared/utils/manifestPrefetch";
-
-// Mirrors `KIND_ORDER` in `app/utils/chapterGrouping.ts` — duplicated
-// (rather than imported) on purpose: this file is type-checked as part of
-// the project *root* (not through the Nuxt app's own tsconfig/path-alias
-// setup), so pulling in an `app/` module here drags its `~~/shared/types/content`
-// import along with it and breaks under the root tsconfig's path mapping.
-// Keep in sync if the reading-order rule ever changes.
-const CHAPTER_KIND_ORDER = [
-  "chapter",
-  "inner-observation",
-  "questions-terminology",
-  "questions-topics",
-  "answers-terminology",
-  "answers-topics",
-] as const;
 
 // `nitro.prerender.routes` needs each volume's contents page listed
 // explicitly (see the comment below) — read straight from the committed

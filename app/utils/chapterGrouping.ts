@@ -9,6 +9,7 @@
  * what the cluster's `count` actually comes from).
  */
 import type { ChapterKind, TocChapter } from "~~/shared/types/content";
+import { CHAPTER_KIND_ORDER } from "~~/shared/utils/chapterKinds";
 
 /** The four row-grouping sections a volume's contents page renders, in order. */
 export type ChapterSection =
@@ -26,33 +27,27 @@ const SECTION_FOR_KIND: Record<ChapterKind, ChapterSection> = {
   "inner-observation": "inner-observation",
   "questions-terminology": "questions",
   "questions-topics": "questions",
+  "questions-cause-effect": "questions",
   "answers-terminology": "answers",
   "answers-topics": "answers",
+  "answers-cause-effect": "answers",
 };
 
 /**
  * Reading order of kinds within a section — also the order sections are
- * built in. Exported so `~/utils/toc` (`orderedPartChapters`) can sort a
- * part's chapters into true reading order too: a part's `TocChapter.number`
- * is only unique *within* a kind (e.g. `chapter` chapters 1-2 and
- * `inner-observation` chapters 1-10 both start their own numbering at 1), so
- * sorting by `number` alone interleaves kinds instead of reading through one
- * kind before the next.
+ * built in. Re-exported (rather than declared) so `~/utils/toc`'s
+ * `orderedPartChapters` keeps its existing import while the list itself
+ * lives in one place; see `~~/shared/utils/chapterKinds`.
  */
-export const KIND_ORDER: ChapterKind[] = [
-  "chapter",
-  "inner-observation",
-  "questions-terminology",
-  "questions-topics",
-  "answers-terminology",
-  "answers-topics",
-];
+export const KIND_ORDER = CHAPTER_KIND_ORDER;
 
 /** Kinds that render as one clustered row (count + link to the first chapter) rather than one row per chapter — see `groupChaptersByKind`'s doc comment. */
-type ClusteredKind = "answers-terminology" | "answers-topics";
+export type ClusteredKind =
+  "answers-terminology" | "answers-topics" | "answers-cause-effect";
 const CLUSTERED_KINDS = new Set<ChapterKind>([
   "answers-terminology",
   "answers-topics",
+  "answers-cause-effect",
 ] satisfies ClusteredKind[]);
 
 export interface ChapterRowEntry {
@@ -77,7 +72,7 @@ export interface ChapterGroupSection {
 
 /**
  * Groups a part's chapters into display sections. Every kind keeps its
- * chapters in `number` order; `answers-terminology`/`answers-topics` are
+ * chapters in `number` order; every `answers-*` kind is
  * collapsed into a single cluster entry each (count + link to the first —
  * "first" still matters even though there's only ever one `TocChapter` of
  * these kinds now, since it's what the cluster row links to).

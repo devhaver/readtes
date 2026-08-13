@@ -39,29 +39,40 @@
  * reader than the tab to sefaria.org this replaces.
  */
 import type { InjectionKey, Ref } from "vue";
-import type { SefariaCrossRef } from "~/utils/sefariaCrossRefs";
+import {
+  CROSS_REF_SUBJECTS,
+  type CrossRefSubject,
+  type SefariaCrossRef,
+} from "~/utils/sefariaCrossRefs";
 import type { TocChapter } from "~~/shared/types/content";
 
 interface CrossRefContext {
   chapterIds: ReadonlySet<string>;
   /** `answers-*` chapter id -> its `TocChapter.itemCount` (issue #91). Absent entries never resolve internally. */
   itemCounts: ReadonlyMap<string, number>;
-  topicsOffset: number;
+  answerCounts: Partial<Record<CrossRefSubject, number>>;
 }
 
 const CROSS_REF_CONTEXT_KEY: InjectionKey<CrossRefContext> =
   Symbol("cross-ref-context");
 
 /**
- * How many terminology answers the part has, as the consolidated
- * `answers-terminology-01` chapter's own `itemCount` — absent (0) if the
- * part has no such chapter or `itemCount` wasn't computed for it (no source
- * version to read). See `TocChapter.itemCount` for why this can't be
+ * How many answers the part has per subject, as each consolidated
+ * `answers-<subject>-01` chapter's own `itemCount` — absent for a subject
+ * the part has no table for, or whose `itemCount` wasn't computed (no
+ * source version to read). See `TocChapter.itemCount` for why this can't be
  * derived from chapter numbers any more, post-#91.
  */
-const terminologyAnswerOffset = (chapters: TocChapter[]): number =>
-  chapters.find((chapter) => chapter.kind === "answers-terminology")
-    ?.itemCount ?? 0;
+const answerCountsBySubject = (
+  chapters: TocChapter[],
+): Partial<Record<CrossRefSubject, number>> =>
+  Object.fromEntries(
+    CROSS_REF_SUBJECTS.map((subject) => [
+      subject,
+      chapters.find((chapter) => chapter.kind === `answers-${subject}`)
+        ?.itemCount,
+    ]).filter(([, count]) => count !== undefined),
+  );
 
 /**
  * Called once by the reader page, with the chapters of the part it has
@@ -77,7 +88,7 @@ export const provideCrossRefChapters = (chapters: TocChapter[]): void => {
         .filter((chapter) => chapter.itemCount !== undefined)
         .map((chapter) => [chapter.id, chapter.itemCount as number]),
     ),
-    topicsOffset: terminologyAnswerOffset(chapters),
+    answerCounts: answerCountsBySubject(chapters),
   });
 };
 
@@ -110,7 +121,7 @@ export const useLinkedCrossRefs = (): {
   const internalHref = (ref: SefariaCrossRef): string | null => {
     if (!context) return null;
 
-    const target = sefariaCrossRefTarget(ref, context.topicsOffset);
+    const target = sefariaCrossRefTarget(ref, context.answerCounts);
     if (
       !target ||
       !target.requiredChapterIds.every((id) => context.chapterIds.has(id))

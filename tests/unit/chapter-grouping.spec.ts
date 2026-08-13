@@ -146,3 +146,51 @@ describe("groupChaptersByKind", () => {
     expect(groupChaptersByKind([])).toEqual([]);
   });
 });
+
+// Issue #86 added the Cause-and-Effect pair. These pin the two decisions
+// that a new kind can silently get wrong: which section it lands in, and
+// whether it clusters like the other answers lists.
+describe("groupChaptersByKind — Cause and Effect (issue #86)", () => {
+  it("reads questions in subject order: terminology, topics, cause-and-effect", () => {
+    const chapters: TocChapter[] = [
+      chapter("part-06/questions-cause-effect-01", "questions-cause-effect", 1),
+      chapter("part-06/questions-topics-01", "questions-topics", 1),
+      chapter("part-06/questions-terminology-01", "questions-terminology", 1),
+    ];
+
+    const [section] = groupChaptersByKind(chapters);
+
+    expect(section?.section).toBe("questions");
+    expect(
+      section?.entries.map((entry) =>
+        entry.type === "chapter" ? entry.chapter.kind : entry.kind,
+      ),
+    ).toEqual([
+      "questions-terminology",
+      "questions-topics",
+      "questions-cause-effect",
+    ]);
+  });
+
+  it("clusters the cause-and-effect answers on their real item count", () => {
+    // Part 6's table is 34 answers folded into one chapter by issue #91 —
+    // a plain row would read "chapter 1", the thing clustering exists to
+    // avoid, and a new answers kind is exactly where that gets forgotten.
+    const chapters: TocChapter[] = [
+      chapter("part-06/answers-cause-effect-01", "answers-cause-effect", 1, 34),
+    ];
+
+    const [section] = groupChaptersByKind(chapters);
+
+    expect(section?.entries).toEqual([
+      {
+        type: "cluster",
+        kind: "answers-cause-effect",
+        count: 34,
+        firstChapter: expect.objectContaining({
+          id: "part-06/answers-cause-effect-01",
+        }),
+      },
+    ]);
+  });
+});

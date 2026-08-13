@@ -11,14 +11,14 @@ const SEFARIA_ORIGIN = "https://www.sefaria.org";
 const refHref = (
   numeral: string,
   apparatus: "Answers" | "Questions",
-  subject: "Terminology" | "Topics",
+  subject: "Terminology" | "Topics" | "Cause_and_Effect",
   n: number,
 ) =>
   `${SEFARIA_ORIGIN}/Talmud_Eser_HaSefirot,_Section_${numeral},_List_of_${apparatus}_on_${subject}_${n}`;
 
 /** Resolves every ref that maps at all — where existence isn't the point. */
-const resolveWithOffset = (topicsOffset: number) => (ref: SefariaCrossRef) => {
-  const target = sefariaCrossRefTarget(ref, topicsOffset);
+const resolveWithOffset = (terminology: number) => (ref: SefariaCrossRef) => {
+  const target = sefariaCrossRefTarget(ref, { terminology });
   return target && `${target.path}${target.hash}`;
 };
 
@@ -155,7 +155,9 @@ describe("sefariaCrossRefTarget", () => {
     // Issue #91: answers are `#seif-N` items of `answers-<subject>-01` now,
     // exactly like questions — no more one chapter per answer.
     expect(
-      sefariaCrossRefTarget(ref(refHref("I", "Answers", "Terminology", 1)), 54),
+      sefariaCrossRefTarget(ref(refHref("I", "Answers", "Terminology", 1)), {
+        terminology: 54,
+      }),
     ).toEqual({
       requiredChapterIds: ["part-01/answers-terminology-01"],
       answerItem: { chapterId: "part-01/answers-terminology-01", n: 1 },
@@ -170,10 +172,9 @@ describe("sefariaCrossRefTarget", () => {
     // own item 12 must exist), the same pairing #78 always used, now
     // checked at item granularity — see `SefariaCrossRefTarget.answerItem`.
     expect(
-      sefariaCrossRefTarget(
-        ref(refHref("I", "Questions", "Terminology", 12)),
-        54,
-      ),
+      sefariaCrossRefTarget(ref(refHref("I", "Questions", "Terminology", 12)), {
+        terminology: 54,
+      }),
     ).toEqual({
       requiredChapterIds: [
         "part-01/questions-terminology-01",
@@ -190,7 +191,9 @@ describe("sefariaCrossRefTarget", () => {
     // the links pointing at them are numbered 106-183 — continuing on from
     // its 105 terminology answers.
     expect(
-      sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Topics", 106)), 105),
+      sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Topics", 106)), {
+        terminology: 105,
+      }),
     ).toEqual({
       requiredChapterIds: ["part-09/answers-topics-01"],
       answerItem: { chapterId: "part-09/answers-topics-01", n: 1 },
@@ -201,10 +204,9 @@ describe("sefariaCrossRefTarget", () => {
 
   it("subtracts the same offset from a topics question ref's seif", () => {
     expect(
-      sefariaCrossRefTarget(
-        ref(refHref("IX", "Questions", "Topics", 183)),
-        105,
-      ),
+      sefariaCrossRefTarget(ref(refHref("IX", "Questions", "Topics", 183)), {
+        terminology: 105,
+      }),
     ).toEqual({
       requiredChapterIds: [
         "part-09/questions-topics-01",
@@ -218,16 +220,17 @@ describe("sefariaCrossRefTarget", () => {
 
   it("leaves a terminology ref's number alone whatever the offset", () => {
     expect(
-      sefariaCrossRefTarget(
-        ref(refHref("IX", "Answers", "Terminology", 12)),
-        105,
-      )?.answerItem,
+      sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Terminology", 12)), {
+        terminology: 105,
+      })?.answerItem,
     ).toEqual({ chapterId: "part-09/answers-terminology-01", n: 12 });
   });
 
   it("keeps three-digit answer numbers unpadded in the seif fragment", () => {
     expect(
-      sefariaCrossRefTarget(ref(refHref("XII", "Answers", "Topics", 251)), 149),
+      sefariaCrossRefTarget(ref(refHref("XII", "Answers", "Topics", 251)), {
+        terminology: 149,
+      }),
     ).toEqual({
       requiredChapterIds: ["part-12/answers-topics-01"],
       answerItem: { chapterId: "part-12/answers-topics-01", n: 102 },
@@ -238,13 +241,48 @@ describe("sefariaCrossRefTarget", () => {
 
   it("returns null when the offset would leave nothing to point at", () => {
     expect(
-      sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Topics", 105)), 105),
+      sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Topics", 105)), {
+        terminology: 105,
+      }),
     ).toBeNull();
+  });
+
+  it("subtracts terminology AND topics from a cause-and-effect ref (issue #86)", () => {
+    // Section VI is the only part with the table. Its cause-and-effect
+    // answers are numbered from 138 upstream, continuing on from 30
+    // terminology + 107 topics answers — the same 137 Sefaria publishes as
+    // that node's `index_offsets_by_depth` (issue #103).
+    expect(
+      sefariaCrossRefTarget(
+        ref(refHref("VI", "Answers", "Cause_and_Effect", 138)),
+        {
+          terminology: 30,
+          topics: 107,
+        },
+      ),
+    ).toEqual({
+      requiredChapterIds: ["part-06/answers-cause-effect-01"],
+      answerItem: { chapterId: "part-06/answers-cause-effect-01", n: 1 },
+      path: "/read/part-06/answers-cause-effect-01",
+      hash: "#seif-1",
+    });
+  });
+
+  it("counts a missing earlier subject as zero rather than refusing", () => {
+    // Fifteen of the sixteen parts have no cause-and-effect table at all,
+    // so a partial `answerCounts` is the normal case, not an error.
+    expect(
+      sefariaCrossRefTarget(ref(refHref("IX", "Answers", "Topics", 106)), {
+        terminology: 105,
+      })?.answerItem,
+    ).toEqual({ chapterId: "part-09/answers-topics-01", n: 1 });
   });
 
   it("returns null for a zero-numbered ref", () => {
     expect(
-      sefariaCrossRefTarget(ref(refHref("I", "Answers", "Terminology", 0)), 0),
+      sefariaCrossRefTarget(ref(refHref("I", "Answers", "Terminology", 0)), {
+        terminology: 0,
+      }),
     ).toBeNull();
   });
 });
@@ -260,11 +298,11 @@ describe("linkInternalSefariaCrossRefs", () => {
     (
       chapterIds: string[],
       itemCounts: Record<string, number> = {},
-      topicsOffset = 0,
+      terminology = 0,
     ) =>
     (parsed: SefariaCrossRef) => {
       const existing = new Set(chapterIds);
-      const target = sefariaCrossRefTarget(parsed, topicsOffset);
+      const target = sefariaCrossRefTarget(parsed, { terminology });
       if (!target) return null;
       if (!target.requiredChapterIds.every((id) => existing.has(id))) {
         return null;
@@ -319,7 +357,7 @@ describe("linkInternalSefariaCrossRefs", () => {
 
     expect(
       linkInternalSefariaCrossRefs(html, (parsed) => {
-        const target = sefariaCrossRefTarget(parsed, 0);
+        const target = sefariaCrossRefTarget(parsed, {});
         return target && `/he${target.path}${target.hash}`;
       }),
     ).toBe(

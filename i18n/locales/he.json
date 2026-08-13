@@ -168,6 +168,7 @@
     "partComingSoon": "חלק זה טרם נוסף — בקרו שוב בקרוב.",
     "answersTerminologyCluster": "תשובות — פירוש המלות ({count})",
     "answersTopicsCluster": "תשובות — עניינים ({count})",
+    "answersCauseEffectCluster": "תשובות — סיבה ומסובב ({count})",
     "section": {
       "chapters": "פרקים",
       "inner-observation": "הסתכלות פנימית",
@@ -232,8 +233,10 @@
       "inner-observation": "הסתכלות פנימית {n}",
       "questions-terminology": "שאלות — פירוש המלות",
       "questions-topics": "שאלות — עניינים",
+      "questions-cause-effect": "שאלות — סיבה ומסובב",
       "answers-terminology": "תשובות — פירוש המלות",
-      "answers-topics": "תשובות — עניינים"
+      "answers-topics": "תשובות — עניינים",
+      "answers-cause-effect": "תשובות — סיבה ומסובב"
     },
     "layerSummary": "תקציר",
     "emptyTitle": "אין מונח מתאים.",

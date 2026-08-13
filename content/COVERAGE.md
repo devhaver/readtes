@@ -47,6 +47,34 @@ which is what an author does when the part at hand has none:
 part 13. Parts 15 and 16 contain no such reference at all, so they carry
 no qualitative signal either way.
 
+### Cause and Consequence — what exists where (issue #86)
+
+Bnei Baruch's contents listing shows Cause-and-Consequence material for
+parts 6, 7 and 8, and Sefaria carries a node for **Section VI only**.
+Both are right; they are listing different things.
+
+- **The essay** (`סדר סבה ומסובב`) is Sefaria's `Histaklut Penimit 2`
+  and is already here, as `part-06/inner-observation-02` (35 items) and
+  `part-07/inner-observation-02` (16 items) — confirmed word for word
+  against Bnei Baruch's own English document. It is not a missing kind;
+  it was imported all along under the Inner Observation node that
+  carries it.
+- **The Q&A table** exists for part 6 alone: 34 questions and 64 answer
+  segments, imported here as `questions-cause-effect-01` /
+  `answers-cause-effect-01`.
+- **Parts 7 and 8 “Answer of Questions Regarding Cause and
+  Consequence”, and part 8 “Cause and Consequence”: Hebrew PDF only.**
+  No Sefaria node exists to align against, and this importer aligns to
+  Hebrew ground truth or refuses. Not imported, and not a defect.
+- **Part 5 “Additional Explanation”** (KabbalahMedia `9Poika27`) is the
+  same shape: English and Ukrainian documents exist, the Hebrew is PDF
+  only, and Sefaria has nothing. Importing the English alone would
+  create this corpus's first source chapter with no Hebrew, which
+  `checkTranslatedVersionIntegrity` exists to prevent.
+
+English for the part 6 table is on KabbalahMedia, not Sefaria, and is
+blocked on issue #111 rather than on anything about this material.
+
 ## Section I (`part-01`)
 
 | Layer | Version | Chapters w/ text | Chapters total | Segments |
@@ -464,13 +492,13 @@ does and does not establish.
 
 | Layer | Version | Chapters w/ text | Chapters total | Segments |
 | --- | --- | --- | --- | --- |
-| source | he-jerusalem-1956 | 195 | 195 | 389 |
-| source | en-sefaria-community | 0 | 195 | 0 |
+| source | he-jerusalem-1956 | 62 | 62 | 487 |
+| source | en-sefaria-community | 0 | 62 | 0 |
 | commentary | he-jerusalem-1956 | 38 | 54 | 104 |
 | commentary | en-sefaria-community | 0 | 54 | 0 |
 
 **Empty-version chapters:**
-- **source/en-sefaria-community**: no text for 195 chapter(s) — part-06/chapter-01, part-06/chapter-02, part-06/chapter-03, part-06/chapter-04, part-06/chapter-05, part-06/chapter-06, part-06/chapter-07, part-06/chapter-08, part-06/chapter-09, part-06/chapter-10, part-06/chapter-11, part-06/chapter-12, part-06/chapter-13, part-06/chapter-14, part-06/chapter-15, part-06/chapter-16, part-06/chapter-17, part-06/chapter-18, part-06/chapter-19, part-06/chapter-20, part-06/chapter-21, part-06/chapter-22, part-06/chapter-23, part-06/chapter-24, part-06/chapter-25, part-06/chapter-26, part-06/chapter-27, part-06/chapter-28, part-06/chapter-29, part-06/chapter-30, part-06/chapter-31, part-06/chapter-32, part-06/chapter-33, part-06/chapter-34, part-06/chapter-35, part-06/chapter-36, part-06/chapter-37, part-06/chapter-38, part-06/chapter-39, part-06/chapter-40, part-06/chapter-41, part-06/chapter-42, part-06/chapter-43, part-06/chapter-44, part-06/chapter-45, part-06/chapter-46, part-06/chapter-47, part-06/chapter-48, part-06/chapter-49, part-06/chapter-50, part-06/chapter-51, part-06/chapter-52, part-06/chapter-53, part-06/chapter-54, part-06/inner-observation-01, part-06/inner-observation-02, part-06/questions-terminology-01, part-06/questions-topics-01, part-06/answers-terminology-01, part-06/answers-terminology-02, part-06/answers-terminology-03, part-06/answers-terminology-04, part-06/answers-terminology-05, part-06/answers-terminology-06, part-06/answers-terminology-07, part-06/answers-terminology-08, part-06/answers-terminology-09, part-06/answers-terminology-10, part-06/answers-terminology-11, part-06/answers-terminology-12, part-06/answers-terminology-13, part-06/answers-terminology-14, part-06/answers-terminology-15, part-06/answers-terminology-16, part-06/answers-terminology-17, part-06/answers-terminology-18, part-06/answers-terminology-19, part-06/answers-terminology-20, part-06/answers-terminology-21, part-06/answers-terminology-22, part-06/answers-terminology-23, part-06/answers-terminology-24, part-06/answers-terminology-25, part-06/answers-terminology-26, part-06/answers-terminology-27, part-06/answers-terminology-28, part-06/answers-terminology-29, part-06/answers-terminology-30, part-06/answers-topics-01, part-06/answers-topics-02, part-06/answers-topics-03, part-06/answers-topics-04, part-06/answers-topics-05, part-06/answers-topics-06, part-06/answers-topics-07, part-06/answers-topics-08, part-06/answers-topics-09, part-06/answers-topics-10, part-06/answers-topics-11, part-06/answers-topics-12, part-06/answers-topics-13, part-06/answers-topics-14, part-06/answers-topics-15, part-06/answers-topics-16, part-06/answers-topics-17, part-06/answers-topics-18, part-06/answers-topics-19, part-06/answers-topics-20, part-06/answers-topics-21, part-06/answers-topics-22, part-06/answers-topics-23, part-06/answers-topics-24, part-06/answers-topics-25, part-06/answers-topics-26, part-06/answers-topics-27, part-06/answers-topics-28, part-06/answers-topics-29, part-06/answers-topics-30, part-06/answers-topics-31, part-06/answers-topics-32, part-06/answers-topics-33, part-06/answers-topics-34, part-06/answers-topics-35, part-06/answers-topics-36, part-06/answers-topics-37, part-06/answers-topics-38, part-06/answers-topics-39, part-06/answers-topics-40, part-06/answers-topics-41, part-06/answers-topics-42, part-06/answers-topics-43, part-06/answers-topics-44, part-06/answers-topics-45, part-06/answers-topics-46, part-06/answers-topics-47, part-06/answers-topics-48, part-06/answers-topics-49, part-06/answers-topics-50, part-06/answers-topics-51, part-06/answers-topics-52, part-06/answers-topics-53, part-06/answers-topics-54, part-06/answers-topics-55, part-06/answers-topics-56, part-06/answers-topics-57, part-06/answers-topics-58, part-06/answers-topics-59, part-06/answers-topics-60, part-06/answers-topics-61, part-06/answers-topics-62, part-06/answers-topics-63, part-06/answers-topics-64, part-06/answers-topics-65, part-06/answers-topics-66, part-06/answers-topics-67, part-06/answers-topics-68, part-06/answers-topics-69, part-06/answers-topics-70, part-06/answers-topics-71, part-06/answers-topics-72, part-06/answers-topics-73, part-06/answers-topics-74, part-06/answers-topics-75, part-06/answers-topics-76, part-06/answers-topics-77, part-06/answers-topics-78, part-06/answers-topics-79, part-06/answers-topics-80, part-06/answers-topics-81, part-06/answers-topics-82, part-06/answers-topics-83, part-06/answers-topics-84, part-06/answers-topics-85, part-06/answers-topics-86, part-06/answers-topics-87, part-06/answers-topics-88, part-06/answers-topics-89, part-06/answers-topics-90, part-06/answers-topics-91, part-06/answers-topics-92, part-06/answers-topics-93, part-06/answers-topics-94, part-06/answers-topics-95, part-06/answers-topics-96, part-06/answers-topics-97, part-06/answers-topics-98, part-06/answers-topics-99, part-06/answers-topics-100, part-06/answers-topics-101, part-06/answers-topics-102, part-06/answers-topics-103, part-06/answers-topics-104, part-06/answers-topics-105, part-06/answers-topics-106, part-06/answers-topics-107
+- **source/en-sefaria-community**: no text for 62 chapter(s) — part-06/chapter-01, part-06/chapter-02, part-06/chapter-03, part-06/chapter-04, part-06/chapter-05, part-06/chapter-06, part-06/chapter-07, part-06/chapter-08, part-06/chapter-09, part-06/chapter-10, part-06/chapter-11, part-06/chapter-12, part-06/chapter-13, part-06/chapter-14, part-06/chapter-15, part-06/chapter-16, part-06/chapter-17, part-06/chapter-18, part-06/chapter-19, part-06/chapter-20, part-06/chapter-21, part-06/chapter-22, part-06/chapter-23, part-06/chapter-24, part-06/chapter-25, part-06/chapter-26, part-06/chapter-27, part-06/chapter-28, part-06/chapter-29, part-06/chapter-30, part-06/chapter-31, part-06/chapter-32, part-06/chapter-33, part-06/chapter-34, part-06/chapter-35, part-06/chapter-36, part-06/chapter-37, part-06/chapter-38, part-06/chapter-39, part-06/chapter-40, part-06/chapter-41, part-06/chapter-42, part-06/chapter-43, part-06/chapter-44, part-06/chapter-45, part-06/chapter-46, part-06/chapter-47, part-06/chapter-48, part-06/chapter-49, part-06/chapter-50, part-06/chapter-51, part-06/chapter-52, part-06/chapter-53, part-06/chapter-54, part-06/inner-observation-01, part-06/inner-observation-02, part-06/questions-terminology-01, part-06/questions-topics-01, part-06/questions-cause-effect-01, part-06/answers-terminology-01, part-06/answers-topics-01, part-06/answers-cause-effect-01
 - **commentary/he-jerusalem-1956**: no text for 16 chapter(s) — part-06/chapter-08, part-06/chapter-11, part-06/chapter-13, part-06/chapter-14, part-06/chapter-15, part-06/chapter-18, part-06/chapter-22, part-06/chapter-29, part-06/chapter-34, part-06/chapter-35, part-06/chapter-36, part-06/chapter-37, part-06/chapter-46, part-06/chapter-51, part-06/chapter-52, part-06/chapter-53
 - **commentary/en-sefaria-community**: no text for 54 chapter(s) — part-06/chapter-01, part-06/chapter-02, part-06/chapter-03, part-06/chapter-04, part-06/chapter-05, part-06/chapter-06, part-06/chapter-07, part-06/chapter-08, part-06/chapter-09, part-06/chapter-10, part-06/chapter-11, part-06/chapter-12, part-06/chapter-13, part-06/chapter-14, part-06/chapter-15, part-06/chapter-16, part-06/chapter-17, part-06/chapter-18, part-06/chapter-19, part-06/chapter-20, part-06/chapter-21, part-06/chapter-22, part-06/chapter-23, part-06/chapter-24, part-06/chapter-25, part-06/chapter-26, part-06/chapter-27, part-06/chapter-28, part-06/chapter-29, part-06/chapter-30, part-06/chapter-31, part-06/chapter-32, part-06/chapter-33, part-06/chapter-34, part-06/chapter-35, part-06/chapter-36, part-06/chapter-37, part-06/chapter-38, part-06/chapter-39, part-06/chapter-40, part-06/chapter-41, part-06/chapter-42, part-06/chapter-43, part-06/chapter-44, part-06/chapter-45, part-06/chapter-46, part-06/chapter-47, part-06/chapter-48, part-06/chapter-49, part-06/chapter-50, part-06/chapter-51, part-06/chapter-52, part-06/chapter-53, part-06/chapter-54
 
@@ -687,8 +715,6 @@ does and does not establish.
 - Ohr Penimi on Talmud Eser HaSefirot 6:50: commentary item order 2 (he) has text but no links entry for it — imported unanchored
 - Ohr Penimi on Talmud Eser HaSefirot 6:54: commentary item order 1 (he) has text but no links entry for it — imported unanchored
 - Ohr Penimi on Talmud Eser HaSefirot 6:54: commentary item order 2 (he) has text but no links entry for it — imported unanchored
-- section "Talmud Eser HaSefirot, Section VI": unknown sibling node "List of Questions on Cause and Effect" — no ChapterKind mapping, skipped entirely
-- section "Talmud Eser HaSefirot, Section VI": unknown sibling node "List of Answers on Cause and Effect" — no ChapterKind mapping, skipped entirely
 ## Section VII (`part-07`)
 
 | Layer | Version | Chapters w/ text | Chapters total | Segments |

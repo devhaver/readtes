@@ -25,8 +25,10 @@ export const chapterKindSchema = z.enum([
   "inner-observation",
   "questions-terminology",
   "questions-topics",
+  "questions-cause-effect",
   "answers-terminology",
   "answers-topics",
+  "answers-cause-effect",
 ]);
 export type ChapterKind = z.infer<typeof chapterKindSchema>;
 

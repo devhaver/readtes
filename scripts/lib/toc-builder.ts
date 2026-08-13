@@ -10,6 +10,7 @@ import type {
   TocChapter,
   TocPart,
 } from "../../shared/types/content.ts";
+import { CHAPTER_KIND_ORDER } from "../../shared/utils/chapterKinds.ts";
 import { hebrewNumeral } from "./hebrew-numerals.ts";
 import type { SefariaIndexNode } from "./sefaria-api-types.ts";
 
@@ -25,15 +26,8 @@ type LocalizedTitle = Record<string, string>;
 const normalizeEnTitle = (title: string): string =>
   title.replace(/Penimit/g, "Pnimit");
 
-/** Stable display/sort order for chapter kinds within a part. */
-const KIND_ORDER: ChapterKind[] = [
-  "chapter",
-  "inner-observation",
-  "questions-terminology",
-  "questions-topics",
-  "answers-terminology",
-  "answers-topics",
-];
+/** Stable display/sort order for chapter kinds within a part — see `~~/shared/utils/chapterKinds`. */
+const KIND_ORDER = CHAPTER_KIND_ORDER;
 
 export interface ChapterFilesOnDisk {
   summary: string[];

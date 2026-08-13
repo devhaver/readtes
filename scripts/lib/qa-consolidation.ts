@@ -13,10 +13,16 @@
  */
 import type { ChapterKind, SourceSegment } from "../../shared/types/content.ts";
 
-/** The two `ChapterKind`s issue #91 consolidates — every other kind is untouched. */
+/**
+ * The `answers-*` kinds issue #91 consolidates — every other kind is
+ * untouched. A new answers kind belongs here the day it is added, or the
+ * importer writes one chapter per answer and reintroduces the shape #91
+ * removed: `answers-cause-effect` would have been 34 of them (issue #86).
+ */
 export const CONSOLIDATED_QA_KINDS: ChapterKind[] = [
   "answers-terminology",
   "answers-topics",
+  "answers-cause-effect",
 ];
 
 export const isConsolidatedQaKind = (kind: ChapterKind): boolean =>
