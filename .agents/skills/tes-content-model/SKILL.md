@@ -28,6 +28,18 @@ content/
   and filename — `validate-content` enforces this.
 - **Chapter ids** are `<partId>/<chapterSlug>`, e.g. `part-01/chapter-01`,
   `part-01/inner-observation-01`, `part-01/questions-terminology-01`.
+- **Chapter kinds have one reading order**, in
+  `shared/utils/chapterKinds.ts` (`CHAPTER_KIND_ORDER`): `chapter`,
+  `inner-observation`, then the questions lists by subject
+  (`terminology`, `topics`, `cause-effect`), then the answers lists in the
+  same subject order. `app/`, `scripts/` and `nuxt.config.ts` all import
+  it — it used to be copied into four modules with "keep in sync"
+  comments. A kind added to `chapterKindSchema` without a position there
+  sorts to the front of every part silently (`indexOf` returns -1);
+  `tests/unit/chapter-kinds.spec.ts` is what catches that. A new
+  `answers-*` kind must also join `CONSOLIDATED_QA_KINDS`
+  (`scripts/lib/qa-consolidation.ts`), or the importer writes one chapter
+  per answer and undoes #91.
 - **Anchor id grammar: `op-<order>`.** Sefaria's inline commentary markers
   (`<i data-commentator="Ohr Penimi" data-label="…" data-order="N">`) become
   anchor id `op-N`, where `N` is `data-order` (continuous per chapter). See

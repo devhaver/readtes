@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ChapterGroupEntry } from "~/utils/chapterGrouping";
+import type { ChapterGroupEntry, ClusteredKind } from "~/utils/chapterGrouping";
 import type { ContentVersion } from "~~/shared/types/content";
 
 const props = defineProps<{
@@ -17,16 +17,26 @@ const representativeChapter = computed(() =>
     : props.entry.firstChapter,
 );
 
+/**
+ * One key per clustered kind, keyed rather than branched: a two-way ternary
+ * silently labelled any third clustered kind "Topics", which is exactly
+ * what would have happened when issue #86 added Cause and Effect. A
+ * `Record<ClusteredKind, ...>` makes the compiler ask for the label.
+ */
+const CLUSTER_LABEL_KEY: Record<ClusteredKind, string> = {
+  "answers-terminology": "volumes.answersTerminologyCluster",
+  "answers-topics": "volumes.answersTopicsCluster",
+  "answers-cause-effect": "volumes.answersCauseEffectCluster",
+};
+
 const title = computed(() => {
   if (props.entry.type === "chapter") {
     return localizedText(props.entry.chapter.title, locale.value);
   }
 
-  const key =
-    props.entry.kind === "answers-terminology"
-      ? "volumes.answersTerminologyCluster"
-      : "volumes.answersTopicsCluster";
-  return t(key, { count: props.entry.count });
+  return t(CLUSTER_LABEL_KEY[props.entry.kind], {
+    count: props.entry.count,
+  });
 });
 
 const href = computed(() =>

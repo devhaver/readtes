@@ -126,7 +126,7 @@ describe("sefaria-index: node resolution", () => {
     );
   });
 
-  it("returns undefined for an unmapped sibling title (e.g. Section VI's Cause and Effect lists) — never guesses", () => {
+  it("maps Section VI's Cause and Effect lists, which issue #86 gave kinds to", () => {
     const section = findSectionNode(
       index,
       "Talmud Eser HaSefirot, Section VI",
@@ -135,9 +135,21 @@ describe("sefaria-index: node resolution", () => {
     expect(siblings.map((n) => n.title)).toContain(
       "List of Questions on Cause and Effect",
     );
-    expect(
-      mapNodeTitleToKind("List of Questions on Cause and Effect"),
-    ).toBeUndefined();
+    expect(mapNodeTitleToKind("List of Questions on Cause and Effect")).toBe(
+      "questions-cause-effect",
+    );
+    expect(mapNodeTitleToKind("List of Answers on Cause and Effect")).toBe(
+      "answers-cause-effect",
+    );
+  });
+
+  it("returns undefined for a title it has no kind for — never guesses", () => {
+    // The refusal itself still matters; Cause and Effect just stopped being
+    // an example of it. Sefaria's sibling set varies per section, and an
+    // unrecognised node must be reported and skipped rather than imported
+    // under an assumed kind.
+    expect(mapNodeTitleToKind("Additional Explanation")).toBeUndefined();
+    expect(mapNodeTitleToKind("")).toBeUndefined();
   });
 });
 

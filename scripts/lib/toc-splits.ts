@@ -27,7 +27,6 @@ import {
 } from "node:fs";
 import { dirname, join } from "node:path";
 import type {
-  ChapterKind,
   ContentVersion,
   LanguageAvailability,
   PartAvailableSummary,
@@ -37,6 +36,7 @@ import type {
   TocVolumesFile,
 } from "../../shared/types/content.ts";
 import { chapterLayerFileSchema } from "../../shared/types/content.ts";
+import { CHAPTER_KIND_ORDER } from "../../shared/utils/chapterKinds.ts";
 import { isConsolidatedQaKind } from "./qa-consolidation.ts";
 
 /**
@@ -88,21 +88,8 @@ const itemCountFor = (
   return file.items.reduce((highest, item) => Math.max(highest, item.n), 0);
 };
 
-/**
- * Stable display/reading order for chapter kinds within a part. Duplicated
- * (rather than imported) from `app/utils/chapterGrouping.ts` and
- * `scripts/lib/toc-builder.ts` on purpose — `scripts/` and `app/` are
- * independent build graphs in this repo (see `toc-builder.ts`'s own copy)
- * so a shared import isn't available here. Keep all three in sync.
- */
-const KIND_ORDER: ChapterKind[] = [
-  "chapter",
-  "inner-observation",
-  "questions-terminology",
-  "questions-topics",
-  "answers-terminology",
-  "answers-topics",
-];
+/** Stable display/reading order for chapter kinds within a part — `shared/` is reachable from both build graphs, so there is one list. */
+const KIND_ORDER = CHAPTER_KIND_ORDER;
 
 /**
  * A part's chapters in true reading order: kind first, `number` within a

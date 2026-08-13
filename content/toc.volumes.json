@@ -185,28 +185,30 @@
             "he": "חלק ו׳: עשר הספירות של עולם הנקודים"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VI",
-          "chapterCount": 60,
+          "chapterCount": 62,
           "kindsPresent": [
             "chapter",
             "inner-observation",
             "questions-terminology",
             "questions-topics",
+            "questions-cause-effect",
             "answers-terminology",
-            "answers-topics"
+            "answers-topics",
+            "answers-cause-effect"
           ],
           "firstChapterId": "part-06/chapter-01",
-          "lastChapterId": "part-06/answers-topics-01",
+          "lastChapterId": "part-06/answers-cause-effect-01",
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳"
           },
           "lastChapterTitle": {
-            "en": "List of Answers on Topics",
-            "he": "לוח התשובות לעניינים"
+            "en": "List of Answers on Cause and Effect",
+            "he": "לוח התשובות לסדר סיבה ומסובב"
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "partial"
           }
         },
         {

@@ -62,8 +62,30 @@ const SECTION_NUMERALS = [
 
 const SEFARIA_ORIGIN_RE = /^https?:\/\/(?:www\.)?sefaria\.org(?=\/)/i;
 
+/**
+ * The Q&A subjects, in Sefaria's own continuous numbering order — a
+ * section numbers its terminology block 1..T, continues straight into
+ * topics at T+1, and (Section VI only, issue #86) into cause-and-effect
+ * after that. Order is load-bearing: `crossRefSubjectOffset` sums the
+ * answer counts of every *earlier* subject to translate a ref's number
+ * back to ours.
+ */
+export const CROSS_REF_SUBJECTS = [
+  "terminology",
+  "topics",
+  "cause-effect",
+] as const;
+export type CrossRefSubject = (typeof CROSS_REF_SUBJECTS)[number];
+
+/** Sefaria's node-title spelling of each subject, as it appears in a ref href. */
+const SUBJECT_BY_REF_WORD: Record<string, CrossRefSubject> = {
+  Terminology: "terminology",
+  Topics: "topics",
+  Cause_and_Effect: "cause-effect",
+};
+
 const QA_REF_RE =
-  /^\/?Talmud_Eser_HaSefirot,_Section_([A-Z]+),_List_of_(Answers|Questions)_on_(Terminology|Topics)_(\d+)$/;
+  /^\/?Talmud_Eser_HaSefirot,_Section_([A-Z]+),_List_of_(Answers|Questions)_on_(Terminology|Topics|Cause_and_Effect)_(\d+)$/;
 
 /** Zero-pads to the 2-digit minimum the content ids use (`01`, `54`, `253`). */
 const padId = (value: number): string => String(value).padStart(2, "0");
@@ -73,7 +95,7 @@ export interface SefariaCrossRef {
   /** The section the ref names, as this site's part id (`part-09`). */
   partId: string;
   apparatus: "answers" | "questions";
-  subject: "terminology" | "topics";
+  subject: CrossRefSubject;
   /**
    * The ref's own number — **Sefaria's continuous per-section numbering**,
    * not ours. Within a section it numbers the terminology block 1..T and
@@ -84,13 +106,15 @@ export interface SefariaCrossRef {
    * but the links pointing at them read `…_List_of_Answers_on_Topics_106`
    * ..`_183`.
    *
-   * So a topics ref has to have that offset — the part's terminology
-   * answer count — subtracted before it means anything here. This is not a
-   * cosmetic detail: for a part with many topics answers, the unsubtracted
-   * number lands on a *different, existing* topics chapter, which an
-   * existence check alone would happily link. `sefariaCrossRefTarget` does
-   * the subtraction; the offset itself comes from the ToC
-   * (`useLinkedCrossRefs`), never from a hardcoded table.
+   * So a ref has to have the answer count of every *earlier* subject
+   * subtracted before it means anything here. This is not a cosmetic
+   * detail: for a part with many topics answers, the unsubtracted number
+   * lands on a *different, existing* topics chapter, which an existence
+   * check alone would happily link. `sefariaCrossRefTarget` does the
+   * subtraction; the offsets themselves come from the ToC
+   * (`useLinkedCrossRefs`), never from a hardcoded table — the same
+   * numbering Sefaria publishes as `index_offsets_by_depth` on the nodes
+   * (issue #103), arrived at independently and agreeing with it.
    *
    * Checked against every one of the 6,885 cross-references in the corpus:
    * terminology refs match our numbering exactly, and topics refs match it
@@ -119,7 +143,7 @@ export const parseSefariaCrossRef = (href: string): SefariaCrossRef | null => {
   return {
     partId: `part-${padId(sectionIndex + 1)}`,
     apparatus: match[2] === "Answers" ? "answers" : "questions",
-    subject: match[3] === "Terminology" ? "terminology" : "topics",
+    subject: SUBJECT_BY_REF_WORD[match[3] as string] as CrossRefSubject,
     number: Number.parseInt(match[4] as string, 10),
   };
 };
@@ -158,22 +182,38 @@ export interface SefariaCrossRefTarget {
 }
 
 /**
+ * How many answers of *earlier* subjects a part has, which is what a ref's
+ * number carries over Sefaria's continuous numbering. `answerCounts` is
+ * keyed by subject — a missing subject counts as zero, which is right for a
+ * part that has no such table (fifteen of the sixteen have no
+ * cause-and-effect one).
+ */
+export const crossRefSubjectOffset = (
+  subject: CrossRefSubject,
+  answerCounts: Partial<Record<CrossRefSubject, number>>,
+): number =>
+  CROSS_REF_SUBJECTS.slice(0, CROSS_REF_SUBJECTS.indexOf(subject)).reduce(
+    (sum, earlier) => sum + (answerCounts[earlier] ?? 0),
+    0,
+  );
+
+/**
  * Maps a parsed ref onto this site's ids, translating Sefaria's continuous
  * section numbering back to ours (see `SefariaCrossRef.number`).
  *
- * `topicsOffset` is how many terminology answers the ref's own part has;
- * it applies to topics refs only. Returns `null` when the translated
- * number isn't a plausible one (a topics ref numbered at or below the
- * offset, or a zero) — the caller then leaves the external link alone. The
- * returned ids/item are only *candidates*: they say nothing about whether
- * that chapter or item actually exists, which is the caller's job to check.
+ * `answerCounts` is how many answers the ref's own part has per subject;
+ * only the subjects *before* this ref's own are subtracted. Returns `null`
+ * when the translated number isn't a plausible one (numbered at or below
+ * the offset, or a zero) — the caller then leaves the external link alone.
+ * The returned ids/item are only *candidates*: they say nothing about
+ * whether that chapter or item actually exists, which is the caller's job
+ * to check.
  */
 export const sefariaCrossRefTarget = (
   ref: SefariaCrossRef,
-  topicsOffset: number,
+  answerCounts: Partial<Record<CrossRefSubject, number>>,
 ): SefariaCrossRefTarget | null => {
-  const number =
-    ref.subject === "topics" ? ref.number - topicsOffset : ref.number;
+  const number = ref.number - crossRefSubjectOffset(ref.subject, answerCounts);
   if (number < 1) return null;
 
   const answerChapterId = `${ref.partId}/answers-${ref.subject}-01`;

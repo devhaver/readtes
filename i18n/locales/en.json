@@ -168,6 +168,7 @@
     "partComingSoon": "This part hasn't been added yet — check back soon.",
     "answersTerminologyCluster": "Answers — Terminology ({count})",
     "answersTopicsCluster": "Answers — Topics ({count})",
+    "answersCauseEffectCluster": "Answers — Cause and Effect ({count})",
     "section": {
       "chapters": "Chapters",
       "inner-observation": "Inner Observation",
@@ -232,8 +233,10 @@
       "inner-observation": "Inner Observation {n}",
       "questions-terminology": "Questions — Terminology",
       "questions-topics": "Questions — Topics",
+      "questions-cause-effect": "Questions — Cause and Effect",
       "answers-terminology": "Answers — Terminology",
-      "answers-topics": "Answers — Topics"
+      "answers-topics": "Answers — Topics",
+      "answers-cause-effect": "Answers — Cause and Effect"
     },
     "layerSummary": "Summary",
     "emptyTitle": "No term matches.",

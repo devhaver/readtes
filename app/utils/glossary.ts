@@ -13,6 +13,7 @@ import type {
   GlossaryStrategy,
   GlossaryVariant,
 } from "~~/shared/types/content";
+import { CHAPTER_KIND_ORDER } from "~~/shared/utils/chapterKinds";
 
 /**
  * Display order of the four crossing strategies: the two ends of the scale
@@ -178,14 +179,7 @@ export interface GlossaryCitationTarget {
   chapterNumber: number;
 }
 
-const CHAPTER_KINDS: ChapterKind[] = [
-  "chapter",
-  "inner-observation",
-  "questions-terminology",
-  "questions-topics",
-  "answers-terminology",
-  "answers-topics",
-];
+const CHAPTER_KINDS: readonly ChapterKind[] = CHAPTER_KIND_ORDER;
 
 export const glossaryCitationTarget = (
   chapterId: string,

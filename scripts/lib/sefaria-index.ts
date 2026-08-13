@@ -9,8 +9,8 @@ import type { SefariaIndex, SefariaIndexNode } from "./sefaria-api-types.ts";
 /**
  * Sibling node title (English, primary) -> ChapterKind. Deliberately not
  * exhaustive of every section — Sefaria's sibling node set varies slightly
- * per section (e.g. Section VI adds "List of Questions/Answers on Cause and
- * Effect", some sections omit "Histaklut Penimit" entirely). Unknown titles
+ * per section (Section VI is the only one with the Cause and Effect tables,
+ * some sections omit "Histaklut Penimit" entirely). Unknown titles
  * are reported by `mapNodeTitleToKind` returning `undefined` — callers must
  * surface that as a warning, never guess a kind.
  */
@@ -20,6 +20,8 @@ const KIND_BY_NODE_TITLE: Record<string, ChapterKind> = {
   "List of Questions on Topics": "questions-topics",
   "List of Answers on Terminology": "answers-terminology",
   "List of Answers on Topics": "answers-topics",
+  "List of Questions on Cause and Effect": "questions-cause-effect",
+  "List of Answers on Cause and Effect": "answers-cause-effect",
 };
 
 export const mapNodeTitleToKind = (
