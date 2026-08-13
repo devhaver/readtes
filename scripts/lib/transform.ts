@@ -15,6 +15,7 @@ import type {
   SourceSegment,
 } from "../../shared/types/content.ts";
 import { extractLeadingHeading } from "./heading.ts";
+import { printedMarkerForHebrewLabel } from "./hebrew-numerals.ts";
 import type { JaggedNodeShape } from "./jagged-array.ts";
 import type { SefariaLink } from "./sefaria-api-types.ts";
 import { ohrPenimiItemRef, segmentRefFor } from "./sefaria-refs.ts";
@@ -241,10 +242,23 @@ export const buildCommentaryItems = (
       return;
     }
 
+    // The English marker is the letter's gematria value, not the running
+    // order — that is what the printed English edition marks both the text
+    // and its note list with (see `printedMarkerForHebrewLabel`, issue #96).
+    // `String(order)` here was the source of the invented labels that
+    // `validate-content.ts`'s `checkCommentaryLabelMatchesSourceMarker` now
+    // rejects.
+    const enLabel = printedMarkerForHebrewLabel(link.heLabel);
+    if (enLabel === null) {
+      warnings.push(
+        `${chapterRef}: commentary item order ${order} has label "${link.heLabel}" with no recognized Hebrew letter — falling back to the order digits`,
+      );
+    }
+
     items.push({
       anchorId: `op-${order}`,
       order,
-      label: { he: link.heLabel, en: String(order) },
+      label: { he: link.heLabel, en: enLabel ?? String(order) },
       sefariaRef,
       targetSeif: link.targetSeif,
       section: "ohr-pnimi",

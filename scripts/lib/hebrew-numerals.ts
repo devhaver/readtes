@@ -128,3 +128,29 @@ export const hebrewGematriaValue = (label: string): number => {
   }
   return total;
 };
+
+/**
+ * The number a printed English edition marks a commentary anchor with, given
+ * the Hebrew letter the Hebrew edition marks it with.
+ *
+ * Bnei Baruch's English marks both the Ari's text and its Inner Light list
+ * with the letters' gematria values — `1 2 3 … 10 20 30 … 400` — verified
+ * against their own document for `part-01/chapter-01` (KabbalahMedia
+ * `doc2html/vYyXn9gY`). So the 12th note is printed "30" (ל), not "12".
+ *
+ * The FIRST recognized letter decides it, unlike `hebrewGematriaValue` which
+ * sums every letter to read a multi-letter numeral like "יא" (11). A label
+ * can name more than one marker — `part-02/chapter-01` op-20 is "ר וש", one
+ * note covering two letters — and the text prints only the first, so summing
+ * would produce 500, a number in no edition.
+ *
+ * Returns `null` when the label holds no recognized Hebrew letter, leaving
+ * the caller to decide (import paths warn and fall back rather than crash).
+ */
+export const printedMarkerForHebrewLabel = (label: string): string | null => {
+  for (const char of label) {
+    const value = GEMATRIA_LETTER_VALUES[char];
+    if (value !== undefined) return String(value);
+  }
+  return null;
+};

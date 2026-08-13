@@ -22,7 +22,8 @@
     "emit:glossary-splits": "tsx scripts/emit-glossary-splits.ts",
     "import:sefaria": "tsx scripts/import-sefaria.ts",
     "import:kabbalahmedia": "tsx scripts/import-kabbalahmedia.ts",
-    "migrate:consolidate-qa": "tsx scripts/migrate-consolidate-qa.ts"
+    "migrate:consolidate-qa": "tsx scripts/migrate-consolidate-qa.ts",
+    "migrate:commentary-labels": "tsx scripts/migrate-commentary-labels.ts"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^10.6.0",

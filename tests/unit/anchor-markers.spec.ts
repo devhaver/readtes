@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { SourceSegment } from "~~/shared/types/content";
+import { labelNamesMarker } from "~~/shared/utils/anchorMarkers";
 
 const segment = (n: number, html: string): SourceSegment => ({
   n,
@@ -78,5 +79,30 @@ describe("anchorMarkersFromSegments", () => {
   it("returns an empty map for segments with no anchors at all", () => {
     expect(anchorMarkersFromSegments([segment(1, "plain text")]).size).toBe(0);
     expect(anchorMarkersFromSegments([]).size).toBe(0);
+  });
+});
+
+describe("labelNamesMarker", () => {
+  it("accepts a label equal to the marker", () => {
+    expect(labelNamesMarker("30", "30")).toBe(true);
+  });
+
+  it("accepts a label that lists the marker among several", () => {
+    // `part-02/chapter-01` op-20 is labelled "ר וש" — one note covering two
+    // printed letters — against a source that prints only the first.
+    expect(labelNamesMarker("ר וש", "ר")).toBe(true);
+  });
+
+  it("rejects an invented ordinal that has no relation to the marker", () => {
+    expect(labelNamesMarker("12", "30")).toBe(false);
+  });
+
+  it("compares whole tokens, never substrings", () => {
+    expect(labelNamesMarker("300", "30")).toBe(false);
+    expect(labelNamesMarker("30", "300")).toBe(false);
+  });
+
+  it("rejects a missing label rather than throwing", () => {
+    expect(labelNamesMarker(undefined, "30")).toBe(false);
   });
 });

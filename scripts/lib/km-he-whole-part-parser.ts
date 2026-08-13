@@ -70,7 +70,11 @@ import type {
   CommentaryItem,
   SourceSegment,
 } from "../../shared/types/content.ts";
-import { bareHebrewOrdinal, hebrewGematriaValue } from "./hebrew-numerals.ts";
+import {
+  bareHebrewOrdinal,
+  hebrewGematriaValue,
+  printedMarkerForHebrewLabel,
+} from "./hebrew-numerals.ts";
 
 // ---------------------------------------------------------------------------
 // Block tokenizing — this dialect additionally needs `<blockquote>` blocks
@@ -595,7 +599,12 @@ export const buildHeChapterContent = (
     items.push({
       anchorId: `op-${anchor.order}`,
       order: anchor.order,
-      label: { he: anchor.letter, en: String(anchor.order) },
+      // See `printedMarkerForHebrewLabel` (issue #96): the English marker is
+      // the letter's gematria value, not the item's running order.
+      label: {
+        he: anchor.letter,
+        en: printedMarkerForHebrewLabel(anchor.letter) ?? String(anchor.order),
+      },
       targetSeif: anchor.seif,
       section: "ohr-pnimi",
       html: sanitizeHtml(collapseSpaces(pieces.join(" "))),

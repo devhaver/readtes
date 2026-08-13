@@ -1,0 +1,165 @@
+/**
+ * One-off migration for issue #96: replaces every anchored commentary item's
+ * `label` with the marker its OWN version's source text actually prints.
+ *
+ * The defect. Both Sefaria and KabbalahMedia import paths set the English
+ * label to `String(order)` — the item's running position in the chapter
+ * (`transform.ts`, `km-he-whole-part-parser.ts`). That number appears
+ * nowhere in the printed book. Bnei Baruch's English edition (verified
+ * against their own document, KabbalahMedia `doc2html/vYyXn9gY`, for
+ * `part-01/chapter-01`) marks BOTH the Ari's text and its Inner Light list
+ * with the gematria values of the Hebrew letters:
+ *
+ *   1 2 3 4 5 6 7 8 9 10 20 30 40 50 60 70 80 90 100 200 300 400
+ *
+ * So the 12th note is printed "30" (ל), not "12". The source html we import
+ * carries the right value; only the label was invented. Below order 11 the
+ * two coincide (א=1 … י=10), which is why it went unnoticed.
+ *
+ * The rule. For an anchored item, the source html of the SAME version is
+ * ground truth — it is the marker the reader sees and clicks. So this
+ * derives, never computes: no gematria arithmetic, no assumption about
+ * where the sequence restarts. A version with no source file, an item with
+ * no marker in it, and every unanchored item (no marker exists to derive
+ * from — see `commentaryItemSchema`) are all left untouched.
+ *
+ * Only the key for the version's own language is rewritten: `en-bb`'s
+ * `label.en`, `he-jerusalem-1956`'s `label.he`. The other key is left as
+ * imported.
+ *
+ * `pnpm migrate:commentary-labels [--dry-run]`. Deterministic and
+ * idempotent: a second run against unchanged input writes nothing and
+ * leaves `git diff` empty. `checkCommentaryLabelMatchesSourceMarker` in
+ * `validate-content.ts` enforces the result from here on, so a future
+ * import that regresses fails `task check` loudly instead of silently
+ * reintroducing invented numbers.
+ */
+import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import {
+  chapterLayerFileSchema,
+  versionsFileSchema,
+  type CommentaryItem,
+} from "../shared/types/content.ts";
+import {
+  anchorMarkersFromHtml,
+  labelNamesMarker,
+} from "../shared/utils/anchorMarkers.ts";
+
+const CONTENT_ROOT = fileURLToPath(new URL("../content", import.meta.url));
+const PARTS_ROOT = join(CONTENT_ROOT, "parts");
+
+const isDryRun = process.argv.includes("--dry-run");
+
+/** Every directory holding chapter layer files: `content/parts/<part>/chapters/<chapter>`. */
+const chapterDirs = (): string[] => {
+  const dirs: string[] = [];
+  for (const part of readdirSync(PARTS_ROOT)) {
+    const chaptersRoot = join(PARTS_ROOT, part, "chapters");
+    if (!statSync(chaptersRoot, { throwIfNoEntry: false })?.isDirectory()) {
+      continue;
+    }
+    for (const chapter of readdirSync(chaptersRoot)) {
+      dirs.push(join(chaptersRoot, chapter));
+    }
+  }
+  return dirs.sort();
+};
+
+const versionLanguages = new Map(
+  versionsFileSchema
+    .parse(
+      JSON.parse(readFileSync(join(CONTENT_ROOT, "versions.json"), "utf8")),
+    )
+    .map((version) => [version.id, version.language]),
+);
+
+let filesRewritten = 0;
+let labelsChanged = 0;
+const skipped: string[] = [];
+
+for (const dir of chapterDirs()) {
+  for (const fileName of readdirSync(dir).sort()) {
+    const match = /^commentary\.(.+)\.json$/.exec(fileName);
+    if (!match) continue;
+
+    const versionId = match[1] as string;
+    const language = versionLanguages.get(versionId);
+    if (!language) {
+      skipped.push(
+        `${dir}/${fileName}: version "${versionId}" not in versions.json`,
+      );
+      continue;
+    }
+
+    const sourcePath = join(dir, `source.${versionId}.json`);
+    const sourceRaw = (() => {
+      try {
+        return readFileSync(sourcePath, "utf8");
+      } catch {
+        return null;
+      }
+    })();
+    // No same-version source file means no printed marker to derive from —
+    // the commentary is carried in a language whose source text we do not
+    // have. Leaving the label alone is the only honest option.
+    if (sourceRaw === null) continue;
+
+    const sourceFile = chapterLayerFileSchema.parse(JSON.parse(sourceRaw));
+    if (sourceFile.layer !== "source") continue;
+
+    const markers = anchorMarkersFromHtml(
+      sourceFile.items.map((segment) => segment.html),
+    );
+    if (markers.size === 0) continue;
+
+    const commentaryPath = join(dir, fileName);
+    const commentaryFile = chapterLayerFileSchema.parse(
+      JSON.parse(readFileSync(commentaryPath, "utf8")),
+    );
+    if (commentaryFile.layer !== "commentary") continue;
+
+    let changedHere = 0;
+    for (const item of commentaryFile.items as CommentaryItem[]) {
+      if (item.targetSeif === undefined) continue;
+
+      const marker = markers.get(item.anchorId);
+      if (marker === undefined) continue;
+      // A label that already NAMES the marker is left alone, even when it
+      // isn't equal to it: `part-02/chapter-01` op-20 carries `"ר וש"` —
+      // one note covering two printed letters, where the source prints only
+      // the first. Overwriting that with "ר" would delete real information
+      // to satisfy a string comparison. Only labels with no relationship to
+      // the marker at all (the invented running ordinals) are replaced.
+      if (labelNamesMarker(item.label[language], marker)) continue;
+
+      item.label[language] = marker;
+      changedHere++;
+    }
+
+    if (changedHere === 0) continue;
+
+    labelsChanged += changedHere;
+    filesRewritten++;
+
+    const relative = commentaryPath.slice(CONTENT_ROOT.length + 1);
+    console.log(
+      `${isDryRun ? "would rewrite" : "rewrote"} ${relative} (${changedHere} labels)`,
+    );
+
+    if (!isDryRun) {
+      writeFileSync(
+        commentaryPath,
+        `${JSON.stringify(commentaryFile, null, 2)}\n`,
+        "utf8",
+      );
+    }
+  }
+}
+
+for (const note of skipped) console.warn(`skipped: ${note}`);
+
+console.log(
+  `\n${isDryRun ? "[dry run] " : ""}${labelsChanged} labels in ${filesRewritten} files`,
+);
