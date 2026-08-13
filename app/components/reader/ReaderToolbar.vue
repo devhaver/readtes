@@ -51,12 +51,24 @@ const {
   open: openContents,
   close: closeContents,
 } = useContentsPanel();
+
+// Panes mode's collapse control (issue 113). Collapsed, this bar keeps one
+// slim row — where you are, and the way back — and the breadcrumb, chapter
+// nav and mode toggle stop rendering. Everything stays in normal flow: the
+// reader asked for the change, so the pane is allowed to simply grow into
+// the space. Study mode has its own scroll-driven hiding and does not show
+// this control; two mechanisms for the same chrome would be worse than
+// either.
+const { collapsed, toggle: toggleCollapsed } = useCollapsedReaderChrome();
+const isCollapsible = computed(() => mode.value === "panes");
+const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
 </script>
 
 <template>
   <div
-    class="flex flex-col gap-3 border-b border-(--border) bg-(--surface) px-4 py-3 sm:px-6"
+    class="flex flex-col border-b border-(--border) bg-(--surface) px-4 sm:px-6"
     :class="[
+      isCollapsed ? 'gap-0 py-1.5' : 'gap-3 py-3',
       isStudyMode &&
         'sticky top-0 z-30 transition-transform duration-200 ease-out motion-reduce:transition-none',
       isStudyMode && !chromeVisible && '-translate-y-full',
@@ -64,7 +76,21 @@ const {
   >
     <h1 class="sr-only">{{ chapterTitle }}</h1>
 
-    <div class="flex items-center justify-between gap-3">
+    <button
+      v-if="isCollapsed"
+      type="button"
+      class="tes-chrome-handle justify-between"
+      :aria-label="t('reader.toolbar.expandChrome')"
+      :aria-expanded="false"
+      @click="toggleCollapsed"
+    >
+      <span class="truncate text-sm text-(--text-muted)">
+        {{ chapterTitle }}
+      </span>
+      <span class="tes-icon tes-icon-chevron-down h-5 w-5" aria-hidden="true" />
+    </button>
+
+    <div v-if="!isCollapsed" class="flex items-center justify-between gap-3">
       <ReaderBreadcrumb
         :items="breadcrumbItems"
         :volumes="volumes"
@@ -119,6 +145,7 @@ const {
     />
 
     <nav
+      v-if="!isCollapsed"
       :aria-label="t('reader.chapterNav')"
       class="flex items-center justify-between gap-3 text-sm"
     >
@@ -148,5 +175,24 @@ const {
         <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
       </span>
     </nav>
+
+    <!-- Its own full-width row, not another icon in the control group:
+         that row already carries the breadcrumb, two icon buttons and a
+         three-way segmented control, and a fifth control pushed it off the
+         edge of a 412px screen. A handle spanning the bar is also the
+         conventional shape for "this collapses". -->
+    <button
+      v-if="isCollapsible && !isCollapsed"
+      type="button"
+      class="tes-chrome-handle justify-center"
+      :aria-label="t('reader.toolbar.collapseChrome')"
+      :aria-expanded="true"
+      @click="toggleCollapsed"
+    >
+      <span
+        class="tes-icon tes-icon-chevron-down h-5 w-5 rotate-180"
+        aria-hidden="true"
+      />
+    </button>
   </div>
 </template>

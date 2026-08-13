@@ -86,7 +86,9 @@
     "progressLabel": "התקדמות בקריאה",
     "toolbar": {
       "preferencesButton": "העדפות קריאה",
-      "contentsButton": "תוכן העניינים"
+      "contentsButton": "תוכן העניינים",
+      "collapseChrome": "כיווץ סרגל הכלים",
+      "expandChrome": "הרחבת סרגל הכלים"
     },
     "breadcrumbMenu": {
       "browseChapters": "עיינו בכל הפרקים"
