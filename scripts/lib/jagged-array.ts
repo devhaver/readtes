@@ -16,6 +16,13 @@ export interface JaggedNodeShape {
   depth?: number;
   /** e.g. `['Chapter', 'Seif']`, `['Paragraph']`, `['Siman', 'Paragraph']`, `['Chapter']`. */
   sectionNames?: string[];
+  /**
+   * Sefaria's `index_offsets_by_depth` — some nodes do not start at 1, and a
+   * ref composed without this names an item that 404s upstream (issue #103).
+   * Carried on the node so both ref builders receive it without every caller
+   * threading a separate argument. See `sefaria-refs.ts` for the two shapes.
+   */
+  index_offsets_by_depth?: Record<string, number | number[]>;
 }
 
 const asLeaf = (value: SefariaJaggedText): string =>
