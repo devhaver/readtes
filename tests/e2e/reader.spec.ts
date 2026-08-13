@@ -181,6 +181,17 @@ test.describe("mobile reader", () => {
 
     // Swipe to the last slide, then tap back — the tap must scroll the
     // track even while the swipe's settle timer is still pending.
+    //
+    // This used to flake (issue 106) and the animation was a red herring:
+    // `reducedMotion: "reduce"` is already set project-wide in
+    // `playwright.config.ts`, so `scrollToPane`'s own scroll was instant the
+    // whole time. What raced was state, not motion — the settle commit armed
+    // by this smooth scroll resolved the pre-tap ratios and scrolled back to
+    // the last slide, which is exactly the 780 this assertion kept seeing.
+    // `MobileSwipePanes` now cancels that pending commit when `activePane`
+    // changes; `tests/unit/mobile-swipe-panes.spec.ts` pins the mechanism
+    // deterministically with fake timers, and this stays as the real-browser
+    // proof that a tap after a swipe moves the track.
     await page.evaluate(() => {
       const track = document.querySelector(
         "#reader-source-pane",

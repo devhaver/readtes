@@ -13,6 +13,7 @@ import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defineComponent, h, nextTick } from "vue";
 import MobileSwipePanes from "~/components/reader/MobileSwipePanes.vue";
+import { DEFAULT_SETTLE_MS } from "~/utils/mobilePaneSync";
 import type { PaneId } from "~/utils/readerAnchorState";
 
 const stubMatchMedia = (matches: boolean) => {
@@ -29,6 +30,21 @@ const stubMatchMedia = (matches: boolean) => {
     })),
   );
 };
+
+/**
+ * The only fields `onIntersect` reads — `target` (for its `data-pane`) and
+ * `intersectionRatio`. Everything else on a real entry is layout the DOM
+ * stub cannot produce anyway.
+ */
+const entryFor = (
+  wrapper: { find: (selector: string) => { element: Element } },
+  pane: PaneId,
+  intersectionRatio: number,
+): IntersectionObserverEntry =>
+  ({
+    target: wrapper.find(`[data-pane="${pane}"]`).element,
+    intersectionRatio,
+  }) as IntersectionObserverEntry;
 
 const Host = defineComponent({
   props: {
@@ -125,6 +141,67 @@ describe("MobileSwipePanes", () => {
     await nextTick();
 
     expect(Element.prototype.scrollTo).toHaveBeenCalled();
+  });
+
+  it("lets a pill tap win over a settle commit still armed from the swipe it interrupted", async () => {
+    // The one piece of the swipe->settle direction that can be driven
+    // without real layout: the observer callback is captured and fed
+    // hand-written ratios, so the commit debounce runs for real against a
+    // known pre-tap visibility state. Reproduces the intermittent e2e
+    // failure in issue 106 — without the `settleTimer.cancel()` in the
+    // `activePane` watcher this ends on "inner-observation".
+    stubMatchMedia(true);
+    vi.useFakeTimers();
+    let notify: IntersectionObserverCallback | undefined;
+    vi.stubGlobal(
+      "IntersectionObserver",
+      class {
+        constructor(callback: IntersectionObserverCallback) {
+          notify = callback;
+        }
+        observe() {}
+        disconnect() {}
+      },
+    );
+
+    try {
+      const wrapper = await mountSuspended(Host);
+      await nextTick();
+
+      // A swipe has just carried the track to the last slide: the observer
+      // reports it fully visible, which arms a commit ~100ms out.
+      notify?.(
+        [
+          entryFor(wrapper, "source", 0),
+          entryFor(wrapper, "inner-observation", 1),
+        ],
+        {} as IntersectionObserver,
+      );
+      vi.advanceTimersByTime(DEFAULT_SETTLE_MS - 10);
+
+      // The reader taps "Inner Light" with 10ms left on that countdown.
+      wrapper.vm.state.setActivePane("commentary");
+      await nextTick();
+
+      // The stale deadline passes before the observer's post-scroll batch
+      // arrives — the window in which the interrupted commit used to fire
+      // and drag the track back to the slide the finger left behind.
+      vi.advanceTimersByTime(10);
+      await nextTick();
+      expect(wrapper.vm.state.activePane.value).toBe("commentary");
+
+      // The post-tap batch then confirms the same pane, one frame later.
+      notify?.(
+        [entryFor(wrapper, "commentary", 1), entryFor(wrapper, "source", 0)],
+        {} as IntersectionObserver,
+      );
+      vi.advanceTimersByTime(DEFAULT_SETTLE_MS);
+      await nextTick();
+
+      expect(wrapper.vm.state.activePane.value).toBe("commentary");
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it("never auto-scrolls on a wide (desktop grid) viewport", async () => {
