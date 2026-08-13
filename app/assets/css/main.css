@@ -520,6 +520,27 @@ html {
 }
 
 /*
+ * Pin flush to the top of the pane, not below its padding.
+ *
+ * A sticky element's offsets resolve against the scrollport, whose top edge
+ * sits below the container's `padding-block-start`. With a plain `top: 0`
+ * the heading pinned 16px down and the chapter's prose scrolled through the
+ * strip above it — a bar with text sliding over its head, which is what read
+ * as "floaty" rather than anchored.
+ *
+ * The negative `top` lets it pin that 16px higher so its background covers
+ * the strip; the matching extra `padding-block-start` puts its own text back
+ * where it was; the negative `margin-block-start` cancels that padding in
+ * normal flow, so an unstuck heading sits exactly where it did before.
+ */
+.tes-commentary-seif-heading,
+.tes-prose-section-heading {
+  top: calc(-1 * var(--pane-pad-block-start, 0px));
+  margin-block-start: calc(-1 * var(--pane-pad-block-start, 0px));
+  padding-block-start: calc(0.5rem + var(--pane-pad-block-start, 0px));
+}
+
+/*
  * The seif the source pane is currently scrolled to (`useCurrentSeif`).
  *
  * An edge bar, not just coloured text: colour alone read as "selected" —
@@ -643,7 +664,11 @@ html {
 }
 
 .tes-pane-body {
-  @apply min-h-0 flex-1 overflow-y-auto px-4 pt-4 pb-24 lg:pb-4;
+  @apply min-h-0 flex-1 overflow-y-auto px-4 pb-24 lg:pb-4;
+  /* Named rather than a bare `pt-4` because the sticky headings inside have
+     to cancel exactly this value — see `.tes-commentary-seif-heading`. */
+  --pane-pad-block-start: 1rem;
+  padding-block-start: var(--pane-pad-block-start);
 }
 
 /* The small uppercase "eyebrow" heading style: pane titles
