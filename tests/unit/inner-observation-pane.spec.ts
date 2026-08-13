@@ -149,3 +149,60 @@ describe("InnerObservationPane", () => {
     expect(wrapper.emitted("reload")).toHaveLength(1);
   });
 });
+
+describe("InnerObservationPane collapsible sections", () => {
+  const sections: InnerObservationSectionView[] = [
+    {
+      chapterId: "part-01/inner-observation-01",
+      title: { en: "Histaklut Pnimit 1", he: "הסתכלות פנימית א׳" },
+      items: [
+        {
+          n: 1,
+          sefariaRef: "x 1",
+          html: "First passage.<br>Second passage.",
+          anchors: [],
+        },
+      ],
+    },
+    {
+      chapterId: "part-01/inner-observation-02",
+      title: { en: "Histaklut Pnimit 2", he: "הסתכלות פנימית ב׳" },
+      items: [{ n: 1, sefariaRef: "x 2", html: "Other section.", anchors: [] }],
+    },
+  ];
+
+  it("opens every section by default — this pane is the part's whole reference text", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections },
+    });
+
+    const groups = wrapper.findAll("details");
+    expect(groups).toHaveLength(2);
+    for (const group of groups) {
+      expect((group.element as HTMLDetailsElement).open).toBe(true);
+    }
+  });
+
+  it("makes each section title its own summary, so it toggles the section", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections },
+    });
+
+    const summaries = wrapper.findAll("summary");
+    expect(summaries.map((summary) => summary.text())).toEqual([
+      "Histaklut Pnimit 1",
+      "Histaklut Pnimit 2",
+    ]);
+    expect(summaries[0]?.element.parentElement?.tagName).toBe("DETAILS");
+  });
+
+  it("splits a section's segment into paragraphs on its own <br>s", async () => {
+    const wrapper = await mountSuspended(InnerObservationPane, {
+      props: { sections },
+    });
+
+    expect(
+      wrapper.findAll("p.tes-prose-paragraph").map((p) => p.text()),
+    ).toContain("First passage.");
+  });
+});

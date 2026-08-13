@@ -193,3 +193,75 @@ describe("unanchoredCommentaryItems", () => {
     expect(unanchoredCommentaryItems(items)).toEqual([]);
   });
 });
+
+describe("groupCommentaryBySeif", () => {
+  it("groups items under the seif they comment on, seifim ascending", () => {
+    const items = [
+      item("op-4", 4, "ohr-pnimi", 3),
+      item("op-1", 1, "ohr-pnimi", 1),
+      item("op-3", 3, "ohr-pnimi", 2),
+      item("op-2", 2, "ohr-pnimi", 1),
+    ];
+
+    expect(
+      groupCommentaryBySeif(items).map((group) => [
+        group.seif,
+        group.items.map((i) => i.anchorId),
+      ]),
+    ).toEqual([
+      [1, ["op-1", "op-2"]],
+      [2, ["op-3"]],
+      [3, ["op-4"]],
+    ]);
+  });
+
+  it("sorts within a group by order, not by input position", () => {
+    const items = [
+      item("op-9", 9, "ohr-pnimi", 1),
+      item("op-2", 2, "ohr-pnimi", 1),
+    ];
+
+    expect(groupCommentaryBySeif(items)[0]?.items.map((i) => i.order)).toEqual([
+      2, 9,
+    ]);
+  });
+
+  it("puts the unanchored items in a trailing null-seif group", () => {
+    const items = [
+      unanchoredItem("op-5", 5, "ohr-pnimi"),
+      item("op-1", 1, "ohr-pnimi", 2),
+    ];
+
+    expect(groupCommentaryBySeif(items).map((group) => group.seif)).toEqual([
+      2,
+      null,
+    ]);
+  });
+
+  it("never emits an empty unanchored group for an anchored-only chapter", () => {
+    const items = [item("op-1", 1, "ohr-pnimi", 1)];
+
+    expect(
+      groupCommentaryBySeif(items).some((group) => group.seif === null),
+    ).toBe(false);
+  });
+
+  it("keeps a seif's own numbering independent of the items' running order", () => {
+    // The defect issue #93 reported: seif 1 of part-01/chapter-01 carries 11
+    // notes, so the 12th note belongs to seif 2 — the two numbers must not be
+    // conflated.
+    const items = Array.from({ length: 11 }, (_, index) =>
+      item(`op-${index + 1}`, index + 1, "ohr-pnimi", 1),
+    ).concat(item("op-12", 12, "ohr-pnimi", 2));
+
+    const groups = groupCommentaryBySeif(items);
+
+    expect(groups.map((group) => group.seif)).toEqual([1, 2]);
+    expect(groups[0]?.items).toHaveLength(11);
+    expect(groups[1]?.items.map((i) => i.order)).toEqual([12]);
+  });
+
+  it("returns no groups for no items", () => {
+    expect(groupCommentaryBySeif([])).toEqual([]);
+  });
+});

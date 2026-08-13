@@ -223,20 +223,25 @@ watch(activePane, (pane) => {
   scrollToPane(pane, false);
 });
 
-// Three comparable-width columns when all three panes exist — all three
-// carry substantial running prose (unlike the old 280px summary rail,
-// which was really just a chapter navigator), so equal thirds keeps
-// Source and Inner Light paired at the same width (the aligned reading
-// pair, the reader's core feature) while giving Inner Observation the same
-// real estate as reference material, not a cramped side column. Equal
-// halves for two panes, for the same reason; a single remaining pane just
-// takes the full row (its content caps its own reading measure — see
-// `SourcePane`'s `max-w-[65ch]` column).
+// The Ari's column is deliberately the narrowest. Equal thirds split the
+// space backwards for what these layers actually hold: a seif is a short
+// numbered unit (`part-01/chapter-01` is 5 of them) while its commentary is
+// long-form prose many times the length — 22 items for those same 5 seifim,
+// averaging over 1,000 characters each. Giving the reading pair's longer
+// half more room is what shortens its lines toward a comfortable measure;
+// the Ari's shorter text reaches its own `max-w-[65ch]` cap well before its
+// column runs out either way, so it loses nothing by being narrower.
+//
+// Still comparable, not a rail: all three carry running prose (unlike the
+// old 280px summary rail, which was really just a chapter navigator), so
+// Source stays a reading column — Inner Observation likewise gets real
+// estate as reference material rather than a cramped side column. A single
+// remaining pane just takes the full row and caps its own measure.
 const gridColsClass = computed(() =>
   paneOrder.value.length === 3
-    ? "lg:grid-cols-[1fr_1fr_1fr]"
+    ? "lg:grid-cols-[0.8fr_1.1fr_1.1fr]"
     : paneOrder.value.length === 2
-      ? "lg:grid-cols-[1fr_1fr]"
+      ? "lg:grid-cols-[0.85fr_1.15fr]"
       : "lg:grid-cols-[1fr]",
 );
 </script>

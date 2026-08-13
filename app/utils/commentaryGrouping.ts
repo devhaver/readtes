@@ -42,6 +42,66 @@ export const commentaryItemsForSeif = (
     .sort((a, b) => a.order - b.order);
 
 /**
+ * `null` stands for "no seif known" — the unanchored bucket (issue #79),
+ * which always sorts last. It is a distinct group rather than an omission
+ * because unanchored items are the majority of the corpus (1,255 of 1,654
+ * Hebrew commentary items measured 2026-08-12), so dropping them would
+ * hide most of the commentary.
+ */
+export interface CommentarySeifGroup {
+  seif: number | null;
+  items: CommentaryItem[];
+}
+
+/**
+ * Groups a section's commentary items under the source seif each one
+ * comments on, ascending, with the unanchored items last.
+ *
+ * This is what makes the commentary pane readable (issue #93 + the pane
+ * readability work): a flat `order`-sorted list of up to 53 items shows the
+ * reader a bare running ordinal that counts *notes* while the source pane
+ * beside it counts *seifim*, so the two panes' numbers diverge immediately
+ * (seif 1 of `part-01/chapter-01` alone carries 11 notes). Grouping under
+ * the seif makes the pane's own visible number the same number the source
+ * pane shows, and gives the column the headings/dividers a wall of
+ * uninterrupted paragraphs lacks.
+ *
+ * Ordering within a group stays `order` — the items' reading order, which
+ * is also the order their printed letter markers run in.
+ */
+export const groupCommentaryBySeif = (
+  items: CommentaryItem[],
+): CommentarySeifGroup[] => {
+  const bySeif = new Map<number, CommentaryItem[]>();
+  const unanchored: CommentaryItem[] = [];
+
+  for (const item of items) {
+    if (item.targetSeif === undefined) {
+      unanchored.push(item);
+      continue;
+    }
+    const group = bySeif.get(item.targetSeif);
+    if (group) group.push(item);
+    else bySeif.set(item.targetSeif, [item]);
+  }
+
+  const byOrder = (a: CommentaryItem, b: CommentaryItem) => a.order - b.order;
+
+  const groups: CommentarySeifGroup[] = [...bySeif.entries()]
+    .sort(([a], [b]) => a - b)
+    .map(([seif, groupItems]) => ({
+      seif,
+      items: [...groupItems].sort(byOrder),
+    }));
+
+  if (unanchored.length > 0) {
+    groups.push({ seif: null, items: [...unanchored].sort(byOrder) });
+  }
+
+  return groups;
+};
+
+/**
  * Anchored/unanchored is the same `targetSeif`-presence distinction
  * `validate-content.ts` and the content-model doc comment use (issue #79):
  * an item WITH `targetSeif` names an exact source seif and round-trips with

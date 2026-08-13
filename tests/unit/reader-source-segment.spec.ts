@@ -351,3 +351,47 @@ describe("ReaderSourceSegment — cross-reference clicks", () => {
     expect(push).not.toHaveBeenCalled();
   });
 });
+
+describe("ReaderSourceSegment paragraph splitting (Inner Observation)", () => {
+  const mountProse = async (html: string, splitParagraphs: boolean) =>
+    mountSuspended(CrossRefChapterPage, {
+      props: { chapters: [] },
+      slots: {
+        default: () =>
+          h(ReaderSourceSegment, { segment: segment(html), splitParagraphs }),
+      },
+    });
+
+  it("renders one paragraph per <br>-separated passage when opted in", async () => {
+    const wrapper = await mountProse("First passage.<br>Second passage.", true);
+
+    const paragraphs = wrapper.findAll("p.tes-prose-paragraph");
+    expect(paragraphs.map((p) => p.text())).toEqual([
+      "First passage.",
+      "Second passage.",
+    ]);
+  });
+
+  it("leaves a chapter seif as one continuous run by default", async () => {
+    const wrapper = await mountProse(
+      "First passage.<br>Second passage.",
+      false,
+    );
+
+    expect(wrapper.find("p.tes-prose-paragraph").exists()).toBe(false);
+    expect(wrapper.find("br").exists()).toBe(true);
+  });
+
+  it("keeps the print's bold opening word inside its own paragraph", async () => {
+    const wrapper = await mountProse("<b>ראשית</b> כל<br>ובזה תנוח", true);
+
+    const first = wrapper.findAll("p.tes-prose-paragraph")[0];
+    expect(first?.find("b").text()).toBe("ראשית");
+  });
+
+  it("still shows the seif chip alongside the split paragraphs", async () => {
+    const wrapper = await mountProse("One.<br>Two.", true);
+
+    expect(wrapper.find(".tes-seif-chip").text()).toBe("1");
+  });
+});

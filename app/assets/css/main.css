@@ -407,7 +407,142 @@ html {
      `rounded-card` as a utility, which LOST to that unlayered rule — an
      unlayered `rounded-card` in this class would win instead and silently
      change the flash radius 4px -> 8px. */
-  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4 p-1;
+  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4;
+  /* Marker ABOVE its prose, not in a gutter beside it. The gutter version
+     spent 2.25rem of every line's width on a 1-character marker, and
+     horizontal space is the scarcer axis here: three columns share the
+     viewport, and this one holds the longest prose in the corpus.
+     Measured on `part-01/chapter-01` at 1440px, gutter -> stacked:
+     body width 459px -> 495px, 45.9 -> 49.5 characters per line, and the
+     22-note list got SHORTER, 13,441px -> 12,929px. The extra marker line
+     costs less height than the wrapped lines the wider measure removes, so
+     this is not the horizontal-for-vertical trade it looks like.
+     `align-items: start` matters: a stretched marker in a column flex
+     container would span the full width instead of hugging its digit. */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.25rem;
+  padding-block: 0.75rem;
+}
+
+/* A rule between notes rather than only a gap: the gap alone was the entire
+   separation between two multi-hundred-word paragraphs, which is why the
+   column read as one undifferentiated block. Not on the first item — a rule
+   directly under the seif heading would double it. */
+.tes-commentary-item + .tes-commentary-item {
+  border-block-start: 1px solid var(--border);
+}
+
+/*
+ * `CommentaryPane`'s reading column — the same capped measure `SourcePane`
+ * has always given the Ari's text, which the commentary pane never had: its
+ * items ran the full pane width, so at two panes (or one) the longest prose
+ * in the corpus got the longest lines.
+ */
+.tes-commentary-column {
+  @apply mx-auto flex max-w-[65ch] flex-col gap-6;
+}
+
+/*
+ * The per-seif heading within a section (`groupCommentaryBySeif`). Sticky
+ * because it doubles as the reader's "you are here": scrolling the
+ * unfollowed list, the seif these notes belong to stays on screen instead of
+ * scrolling away — the cross-pane anchor highlight is a flash that fades, so
+ * without this nothing persistent says where you are. `bg-(--surface)` is
+ * load-bearing, not decoration: a transparent sticky heading has the list's
+ * own text sliding visibly under it.
+ */
+.tes-commentary-seif-heading {
+  @apply sticky top-0 z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) py-2 text-sm font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+/*
+ * The seif the reader is currently on in the source pane (`useCurrentSeif`).
+ * Colour only — no movement, no scrolling, no hiding: the whole chapter's
+ * commentary is always rendered, and this is the quiet cross-pane link
+ * between the two columns' numbers, not a mode.
+ */
+.tes-commentary-seif-heading.is-current {
+  @apply border-b-teal text-(--accent-text);
+}
+
+/*
+ * The note's own marker (its printed letter in Hebrew, digit in the BB
+ * English). Resets `.tes-anchor`'s inline-superscript geometry — in the
+ * gutter it is a marker in its own right, not a footnote mark inset into a
+ * sentence. Must stay AFTER `.tes-anchor` in this file: both are
+ * single-class selectors, so source order is what decides.
+ */
+.tes-commentary-marker {
+  /* Same pill geometry as `.tes-seif-chip` — the codebase's established
+     shape for "a number labelling the block under it", which is exactly
+     what this became when it moved out of the gutter. `min-w-5` + `px-1`
+     rather than a fixed circle so a 3-digit marker (the corpus reaches
+     "400" — see #96) widens instead of overflowing. */
+  @apply inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-(--surface-raised) px-1 font-semibold text-(--accent-text);
+  font-size: 0.75rem;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+/* The unanchored variant (issue #79) — no anchor to activate, so it must not
+   look or behave like the tappable one. */
+.tes-commentary-marker.is-plain {
+  @apply text-(--text-muted);
+  cursor: default;
+}
+
+.tes-commentary-body {
+  @apply min-w-0;
+}
+
+/*
+ * The catchword the official BB English opens each note with
+ * ("<strong>Upper, simple light:</strong> It refers to…") — the printed
+ * convention that tells you what a note is about independently of its
+ * number. Given its own weight/colour so it reads as the note's lead-in
+ * rather than mid-sentence emphasis. Hebrew editions carry no catchword, so
+ * this simply never matches there.
+ */
+.tes-commentary-body > strong:first-child {
+  @apply font-semibold text-(--text-primary);
+}
+
+/*
+ * Long-form prose columns — the Inner Observation (Histaklut Pnimit)
+ * essays, whose segments arrive as one unbroken html string each (measured:
+ * up to 5,347 characters, no headings anywhere in the layer). The column
+ * caps the measure; `.tes-prose-paragraph` restores the paragraphing
+ * recovered from the segment's own `<br>`s (`splitProseParagraphs`).
+ */
+.tes-prose-column {
+  @apply mx-auto flex max-w-[70ch] flex-col gap-8;
+}
+
+/* `InnerObservationPane`'s per-section `<summary>` — sticky for the same
+   reason the commentary pane's seif heading is: this is the reader's only
+   marker of which of the part's Inner Observation chapters they are inside,
+   and the sections are long enough to scroll their own heading away. */
+.tes-prose-section-heading {
+  @apply sticky top-0 z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) py-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+}
+
+.tes-prose-block {
+  @apply flex flex-col gap-4;
+}
+
+.tes-prose-paragraph {
+  @apply leading-relaxed;
+}
+
+/*
+ * The bold word the print opens a passage with (`<b>ראשית</b>` — "first of
+ * all"). It is the only landmark this layer has, so it's promoted to a
+ * signpost instead of reading as ordinary bold mid-paragraph.
+ */
+.tes-prose-paragraph > b:first-child {
+  @apply font-semibold text-(--accent-text);
 }
 
 /* The seif-number chip (`ReaderSourceSegment`) — one per source segment,
