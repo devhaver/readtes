@@ -20,6 +20,7 @@ import {
   type ContentVersion,
   type LayerKind,
   type ParsedChapterLayerFile,
+  type SefariaOffsetNodesFile,
   type SourceSegment,
   type Toc,
 } from "../shared/types/content.ts";
@@ -35,6 +36,10 @@ import {
   GLOSSARY_INDEX_FILE_NAME,
 } from "./lib/glossary-splits.ts";
 import { CONSOLIDATED_QA_KINDS } from "./lib/qa-consolidation.ts";
+import {
+  offsetViolations,
+  readOffsetNodes,
+} from "./lib/sefaria-offset-nodes.ts";
 import { deriveTocPartFiles, deriveTocVolumesFile } from "./lib/toc-splits.ts";
 
 export interface ValidationResult {
@@ -579,6 +584,38 @@ const checkCommentaryLabelMatchesSourceMarker = (
   }
 };
 
+/**
+ * Every `sefariaRef` under a node whose numbering does not start at 1 must
+ * have applied that node's offset (issue #103) — a ref that skipped it names
+ * an item that 404s upstream, and provenance that lands on nothing is the
+ * one thing the field exists not to do.
+ *
+ * The check is a floor, not an equality: it holds the committed items, not
+ * the node's own item list, so it can prove a ref is below the first index
+ * the node actually publishes but not that a given item sits at a given
+ * index. That is enough — the defect this guards against writes 1, and every
+ * offset node's first legal index is above it.
+ * `scripts/migrate-sefaria-refs.ts` does the exact recomposition.
+ */
+const checkSefariaRefsApplyIndexOffsets = (
+  offsets: SefariaOffsetNodesFile,
+  loaded: LoadedChapterFile[],
+  errors: string[],
+): void => {
+  for (const entry of loaded) {
+    for (const item of entry.file.items) {
+      const ref = "sefariaRef" in item ? item.sefariaRef : undefined;
+      if (ref === undefined) continue;
+
+      for (const violation of offsetViolations(offsets, ref)) {
+        errors.push(
+          `${entry.relativePath}: sefariaRef "${ref}" addresses ${violation.value} at component ${violation.position}, below the ${violation.floor} its Sefaria node starts at — the index offset was not applied; run \`pnpm migrate:sefaria-refs\``,
+        );
+      }
+    }
+  }
+};
+
 const checkTocFileCrossReferences = (
   toc: Toc,
   loaded: LoadedChapterFile[],
@@ -896,9 +933,19 @@ export const validateContent = (contentDir: string): ValidationResult => {
       )
     : new Set<string>();
 
+  // An absent map is not an error: it says "no node is known to start
+  // anywhere but 1", which is the honest state of any tree that has never
+  // been imported — every synthetic fixture in `tests/unit/`, for one. The
+  // committed corpus is a different matter, and
+  // `tests/unit/content-integrity.spec.ts` asserts the real file is there.
+  const offsets = readOffsetNodes(contentDir);
+
   checkSourceHtmlAnchorsConsistency(loaded, errors);
   checkAnchorCommentaryIntegrity(loaded, errors);
   checkCommentaryItemBasics(loaded, errors);
+  if (offsets !== null) {
+    checkSefariaRefsApplyIndexOffsets(offsets, loaded, errors);
+  }
   if (versionsParsed.success) {
     checkCommentaryLabelMatchesSourceMarker(
       loaded,

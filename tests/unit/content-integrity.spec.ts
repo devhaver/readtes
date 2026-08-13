@@ -1,5 +1,6 @@
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { readOffsetNodes } from "../../scripts/lib/sefaria-offset-nodes.ts";
 import {
   checkTranslatedVersionIntegrity,
   validateContent,
@@ -15,6 +16,18 @@ describe("content integrity", () => {
     const { errors } = validateContent(contentDir);
 
     expect(errors).toEqual([]);
+  });
+
+  // `validateContent` treats an absent offset map as "no node is known to
+  // start anywhere but 1" — true for a synthetic fixture, and silently
+  // false for this corpus, where deleting the file would disable the only
+  // check standing between us and issue #103's 404ing refs. Nothing else
+  // notices its absence, so this does.
+  it("keeps the committed Sefaria index-offset map, which the ref check reads", () => {
+    const offsets = readOffsetNodes(contentDir);
+
+    expect(offsets).not.toBeNull();
+    expect(Object.keys(offsets?.nodes ?? {}).length).toBeGreaterThan(0);
   });
 });
 
