@@ -240,6 +240,25 @@ html {
   background-color: var(--text-muted);
 }
 
+/*
+ * The mobile pane swipe track (`MobileSwipePanes`) is gesture-driven and
+ * scroll-snapped — the pane-switcher pill is its control, not a scrollbar.
+ * A visible horizontal bar under the reading columns is chrome nobody uses,
+ * and it takes height from the panes on exactly the viewport that has least.
+ *
+ * Safe to hide here, unlike the reading columns above, precisely because
+ * position is already reported: the pill shows which of the three panes is
+ * current. This is the one scroll container in the app with an explicit
+ * indicator of its own.
+ */
+.tes-swipe-track {
+  scrollbar-width: none;
+}
+
+.tes-swipe-track::-webkit-scrollbar {
+  display: none;
+}
+
 .dark {
   color-scheme: dark;
 }

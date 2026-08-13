@@ -249,7 +249,7 @@ const gridColsClass = computed(() =>
 <template>
   <div
     ref="trackRef"
-    class="flex min-h-0 w-full flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain [contain:layout] lg:grid lg:snap-none lg:gap-0 lg:overflow-hidden lg:[contain:none]"
+    class="tes-swipe-track flex min-h-0 w-full flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain [contain:layout] lg:grid lg:snap-none lg:gap-0 lg:overflow-hidden lg:[contain:none]"
     :class="gridColsClass"
   >
     <div
