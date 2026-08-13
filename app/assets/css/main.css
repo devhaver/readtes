@@ -199,6 +199,47 @@ html {
   color-scheme: light;
 }
 
+/*
+ * Thin, theme-coloured scrollbars.
+ *
+ * The reader is three independently scrolling columns plus the page itself,
+ * so default-width bars are up to four heavy stripes of chrome competing
+ * with the text. `scrollbar-color` uses the `--border` token, so each theme
+ * gets its own without a per-theme rule; `transparent` for the track keeps
+ * the gutter reading as part of the column rather than a channel beside it.
+ *
+ * `scrollbar-width`/`scrollbar-color` are the standard properties (Firefox,
+ * and Chromium since 121); the `::-webkit-` block below is the fallback for
+ * older WebKit/Chromium, which ignores them. Both are declared because
+ * neither covers every browser this ships to on its own.
+ *
+ * Deliberately not `scrollbar-width: none`: a scrollable column with no
+ * visible bar gives no indication there is more text below it, which is
+ * exactly the "where am I" problem the reader panes already had.
+ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
+}
+
 .dark {
   color-scheme: dark;
 }

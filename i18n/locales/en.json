@@ -23,7 +23,9 @@
     "breadcrumbLabel": "Breadcrumb"
   },
   "footer": {
-    "attribution": "Made by students of Bnei Baruch Kabbalah Academy"
+    "attribution": "Made by students of {academy}",
+    "academy": "Bnei Baruch Kabbalah Academy",
+    "sourcesLinkTitle": "Bnei Baruch's source library on Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "AI translated",
