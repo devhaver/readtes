@@ -31,6 +31,23 @@ const { mode, setMode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const isStudyMode = computed(() => mode.value === "study");
 
+// Panes mode on mobile lifts this bar out of flow too, stacked under the
+// navbar — see `useReaderChromeOverlay` for why the whole stack overlays
+// the pane rather than sitting above it.
+const overlay = useReaderChromeOverlay();
+const toolbarRef = ref<HTMLElement | null>(null);
+overlay.register("toolbar", toolbarRef);
+
+const toolbarTop = overlay.offsetOf("toolbar");
+const overlayStyle = computed(() =>
+  overlay.active.value
+    ? {
+        top: `${toolbarTop.value}px`,
+        transform: `translateY(${overlay.shift.value}px)`,
+      }
+    : {},
+);
+
 const modeOptions = computed(() => [
   { value: "study" as ReaderMode, label: t("reader.mode.study") },
   { value: "panes" as ReaderMode, label: t("reader.mode.panes") },
@@ -55,11 +72,15 @@ const {
 
 <template>
   <div
+    ref="toolbarRef"
+    :style="overlayStyle"
     class="flex flex-col gap-3 border-b border-(--border) bg-(--surface) px-4 py-3 sm:px-6"
     :class="[
       isStudyMode &&
         'sticky top-0 z-30 transition-transform duration-200 ease-out motion-reduce:transition-none',
       isStudyMode && !chromeVisible && '-translate-y-full',
+      overlay.active.value &&
+        'fixed inset-x-0 z-30 transition-transform duration-200 ease-out motion-reduce:transition-none',
     ]"
   >
     <h1 class="sr-only">{{ chapterTitle }}</h1>
