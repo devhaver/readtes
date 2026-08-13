@@ -46,3 +46,4 @@ test-results
 # worktrees/ holds throwaway agent checkouts (each a full node_modules).
 .claude/settings.local.json
 .claude/worktrees/
+.translation/
