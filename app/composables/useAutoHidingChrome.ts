@@ -20,12 +20,25 @@
  * disclosure is open near the top" rule baked into
  * `nextChromeVisibilityState`.
  *
- * The scroll listener itself is gated to study mode (`useReaderMode`):
- * panes mode never shows any auto-hiding chrome, so it should cost zero
- * scroll work — the listener attaches when `mode` becomes `"study"` and
- * detaches the moment it isn't, rather than running for the lifetime of
- * the page regardless of mode. Handler work is also rAF-throttled, same
- * pattern as `ProgressRail`'s scroll/resize handling.
+ * Both modes are tracked, from different sources (issue 113). Study mode
+ * scrolls the document, so it listens on `window`. Panes mode scrolls inside
+ * each pane's own `.tes-pane-body` container, and there are up to three of
+ * them mounted at once — so it listens on `document` in the **capture**
+ * phase, which is the one way to see a scroll event from an element that
+ * does not bubble it, and filters to the pane bodies by class. That avoids
+ * a registration protocol between this and every pane, and it also means a
+ * pane mounted later (a chapter with an Inner Light layer, say) is picked up
+ * with no extra wiring.
+ *
+ * `lastScrollTop` is tracked per scrolling element, not globally: swiping
+ * from a pane scrolled halfway to one at the top would otherwise read as one
+ * enormous upward scroll and yank the chrome back. A pane the reader has not
+ * scrolled simply contributes no events.
+ *
+ * The listener attaches on the mode it belongs to and detaches the moment
+ * the mode changes, rather than running for the page's lifetime. Handler
+ * work is rAF-throttled, same pattern as `ProgressRail`'s scroll/resize
+ * handling.
  */
 import type { ComputedRef, InjectionKey, Ref } from "vue";
 import {
@@ -52,19 +65,43 @@ const createAutoHidingChrome = (
     return typeof window === "undefined" ? 0 : window.scrollY;
   };
 
-  let rafHandle: number | null = null;
+  /** Per-element previous offset — see the module doc for why not one shared value. */
+  const lastScrollTops = new WeakMap<object, number>();
+  const WINDOW_KEY = {};
 
-  const measure = () => {
+  let rafHandle: number | null = null;
+  let pendingSource: object | null = null;
+  let pendingScrollTop = 0;
+
+  const commit = () => {
     rafHandle = null;
-    state.value = nextChromeVisibilityState(state.value, {
-      scrollTop: readScrollTop(),
-      hasOpenDisclosure: expandedAnchors.value.size > 0,
-    });
+    const source = pendingSource ?? WINDOW_KEY;
+    state.value = nextChromeVisibilityState(
+      { ...state.value, lastScrollTop: lastScrollTops.get(source) ?? 0 },
+      {
+        scrollTop: pendingScrollTop,
+        hasOpenDisclosure: expandedAnchors.value.size > 0,
+      },
+    );
+    lastScrollTops.set(source, pendingScrollTop);
   };
 
-  const handleScroll = () => {
+  const schedule = (source: object, scrollTop: number) => {
+    pendingSource = source;
+    pendingScrollTop = scrollTop;
     if (rafHandle !== null) return;
-    rafHandle = requestAnimationFrame(measure);
+    rafHandle = requestAnimationFrame(commit);
+  };
+
+  const handleWindowScroll = () => schedule(WINDOW_KEY, readScrollTop());
+
+  const PANE_BODY_SELECTOR = ".tes-pane-body";
+
+  const handlePaneScroll = (event: Event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    if (!target.matches(PANE_BODY_SELECTOR)) return;
+    schedule(target, target.scrollTop);
   };
 
   const cancelPendingMeasure = () => {
@@ -74,22 +111,43 @@ const createAutoHidingChrome = (
   };
 
   onMounted(() => {
-    const target: EventTarget | null | undefined = scrollRef
+    const windowTarget: EventTarget | null = scrollRef
       ? scrollRef.value
       : typeof window === "undefined"
         ? null
         : window;
-    if (!target) return;
 
     watch(
       mode,
       (current, _previous, onCleanup) => {
-        if (current !== "study") return;
+        if (current === "study") {
+          if (!windowTarget) return;
+          windowTarget.addEventListener("scroll", handleWindowScroll, {
+            passive: true,
+          });
+          onCleanup(() => {
+            windowTarget.removeEventListener("scroll", handleWindowScroll);
+            cancelPendingMeasure();
+          });
+          return;
+        }
 
-        target.addEventListener("scroll", handleScroll, { passive: true });
+        if (current !== "panes" || typeof document === "undefined") return;
+
+        // Capture phase: `scroll` does not bubble, so a listener on
+        // `document` only ever sees an inner container's scroll this way.
+        document.addEventListener("scroll", handlePaneScroll, {
+          capture: true,
+          passive: true,
+        });
         onCleanup(() => {
-          target.removeEventListener("scroll", handleScroll);
+          document.removeEventListener("scroll", handlePaneScroll, {
+            capture: true,
+          });
           cancelPendingMeasure();
+          // Leaving panes mode with the chrome mid-hide would strand it
+          // off-screen in a mode that has no way to bring it back.
+          state.value = initialChromeVisibilityState();
         });
       },
       { immediate: true },
