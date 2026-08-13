@@ -46,13 +46,31 @@
 // own trailing group under their own heading rather than being dropped.
 import type { CommentaryItem } from "~~/shared/types/content";
 
-const props = defineProps<{ items: CommentaryItem[] }>();
+const props = defineProps<{
+  items: CommentaryItem[];
+  /**
+   * `anchorId` -> the marker the source version on screen prints for it
+   * (`anchorMarkersFromSegments`). Preferred over the item's own `label`,
+   * because the two disagree and both are faithful to the printed edition:
+   * Bnei Baruch's English marks the Ari's text with the Hebrew letters'
+   * gematria values ("20") while numbering the notes sequentially ("11") —
+   * see issue #96. Taking the marker from the text means the number the
+   * reader clicks is the number they land on. Optional so the component
+   * still renders standalone (tests, any caller without segments).
+   */
+  anchorMarkers?: ReadonlyMap<string, string>;
+}>();
 
 const { locale, t } = useI18n();
 const { activateAnchor } = useReaderState();
 const { currentSeif } = useCurrentSeif();
 const containerRef = useReaderPaneContainer();
 useHighlightedAnchor("commentary", containerRef);
+
+/** The marker to print for an item: the source's own, else its stored label. */
+const markerFor = (item: CommentaryItem): string =>
+  props.anchorMarkers?.get(item.anchorId) ??
+  localizedText(item.label, locale.value);
 
 const sections = computed(() =>
   groupCommentaryBySection(props.items).map((section) => ({
@@ -137,10 +155,10 @@ const isSectionHeadingUseful = computed(
               class="tes-anchor tes-commentary-marker"
               @click="activateAnchor(item.anchorId, 'commentary')"
             >
-              {{ localizedText(item.label, locale) }}
+              {{ markerFor(item) }}
             </button>
             <span v-else class="tes-commentary-marker is-plain">
-              {{ localizedText(item.label, locale) }}
+              {{ markerFor(item) }}
             </span>
             <span class="tes-commentary-body" v-html="item.html" />
           </li>

@@ -38,6 +38,31 @@ const findAnchorElement = (
   );
 };
 
+/**
+ * Opens every collapsed `<details>` between `target` and `container`.
+ *
+ * Without this, a cross-pane activation into a folded group silently does
+ * nothing that the reader can see: the element is still in the document (it
+ * is found above, and in-page find can still reach it), but a closed
+ * `<details>` renders its contents `display: none`, so `scrollIntoView` has
+ * no box to scroll to and the highlight flashes where nobody is looking.
+ * Clicking `(20)` in the Ari's text must open the seif group holding note
+ * 20, not appear to do nothing.
+ *
+ * Stops at the pane container so this can never reach out and open chrome
+ * that happens to wrap the pane.
+ */
+const revealInsideCollapsedGroups = (
+  target: HTMLElement,
+  container: HTMLElement,
+): void => {
+  let node: HTMLElement | null = target.parentElement;
+  while (node && node !== container) {
+    if (node instanceof HTMLDetailsElement && !node.open) node.open = true;
+    node = node.parentElement;
+  }
+};
+
 export const useHighlightedAnchor = (
   paneId: PaneId,
   containerRef: Ref<HTMLElement | null | undefined>,
@@ -63,6 +88,8 @@ export const useHighlightedAnchor = (
 
       const target = findAnchorElement(container, anchorId);
       if (!target) return;
+
+      revealInsideCollapsedGroups(target, container);
 
       setActivePane(paneId);
       target.scrollIntoView({
