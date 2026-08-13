@@ -162,6 +162,28 @@ html {
 }
 
 /*
+ * Controls respond to the first tap.
+ *
+ * Reported on a real Android phone: tapping a pane tab did nothing, and
+ * double-tapping it worked. That is the signature of the browser holding the
+ * first tap back while it waits to see whether a second one is coming —
+ * double-tap-to-zoom disambiguation. `touch-action: manipulation` opts these
+ * elements out of that gesture, so the tap dispatches immediately.
+ *
+ * Scoped to controls, and deliberately NOT done by disabling zoom on the
+ * viewport: pinch-zoom stays available everywhere, including over these
+ * elements, which on a reading site carrying pointed Hebrew is not
+ * negotiable.
+ */
+button,
+summary,
+select,
+a[href],
+[role="tab"] {
+  touch-action: manipulation;
+}
+
+/*
  * Theme-change crossfade.
  *
  * Without this every switch is instant for surfaces — only the eight
@@ -721,7 +743,12 @@ html {
  * knows from every other mobile app.
  */
 .tes-pill-tab {
-  @apply flex flex-col items-center gap-1 rounded-lg px-2 py-1.5 text-[11px] leading-tight font-medium whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply flex flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-[11px] leading-tight font-medium whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  /* Tightened padding and gap take ~10px off the bar without taking it off
+     the tap target: the button keeps a 40px minimum height, which is what
+     a thumb actually needs. Shrinking the target instead would be a worse
+     trade than the pixels are worth. */
+  min-block-size: 2.5rem;
 }
 
 /* `ReaderToolbar`'s collapse/expand handle (issue 113) — a full-width row

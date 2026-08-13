@@ -76,7 +76,6 @@ import {
   resolveActivePane,
   type PaneVisibilityRatios,
 } from "~/utils/mobilePaneSync";
-import { prefersReducedMotion } from "~/utils/motion";
 import type { PaneId } from "~/utils/readerAnchorState";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 
@@ -185,17 +184,31 @@ watch(isNarrowViewport, (narrow) => {
 onMounted(() => {
   if (isNarrowViewport.value) attachTrackListeners();
 
-  // Snaps instantly (no motion to reduce, there's no prior on-screen
-  // state to visibly transition away from) to whichever slide is already
-  // `activePane` (source, by default) instead of leaving the browser's own
-  // "first slide in DOM order" scroll position silently mismatched against
-  // it.
-  scrollToPane(activePane.value, true);
+  // Snaps to whichever slide is already `activePane` (source, by default)
+  // instead of leaving the browser's own "first slide in DOM order" scroll
+  // position silently mismatched against it.
+  scrollToPane(activePane.value);
 });
 
 onUnmounted(detachTrackListeners);
 
-const scrollToPane = (pane: PaneId, instant: boolean) => {
+/**
+ * Always an instant jump, never a smooth glide.
+ *
+ * Every caller here is a *discrete* pane change — a pill tap, a cross-pane
+ * anchor jump, the initial snap on mount, or the settle commit correcting
+ * after a swipe the browser has already snapped. None of them is a gesture
+ * being followed, so none of them wants an animation. A tab bar jumps.
+ *
+ * It is also the only branch this repo has ever tested. `playwright.config`
+ * sets `reducedMotion: "reduce"` project-wide, so the smooth branch never
+ * ran in CI while it was exactly what a real phone took — and animating a
+ * `scroll-snap-type: x mandatory` container is precisely where engines
+ * disagree, with the snap able to cancel the animation mid-flight and leave
+ * the track where it started. Removing the branch removes the disagreement,
+ * and makes the tested path the only path.
+ */
+const scrollToPane = (pane: PaneId) => {
   if (!isNarrowViewport.value) return;
   const track = trackRef.value;
   const slide = slideRefs[pane].value;
@@ -213,10 +226,7 @@ const scrollToPane = (pane: PaneId, instant: boolean) => {
     Math.round(
       slide.getBoundingClientRect().left - track.getBoundingClientRect().left,
     ) + track.scrollLeft;
-  track.scrollTo({
-    left: target,
-    behavior: instant || prefersReducedMotion() ? "auto" : "smooth",
-  });
+  track.scrollTo({ left: target, behavior: "auto" });
 };
 
 watch(activePane, (pane) => {
@@ -230,7 +240,7 @@ watch(activePane, (pane) => {
   // what changed `activePane`, the timer has already fired and this is a
   // no-op. Root cause of the intermittent e2e failure in issue 106.
   settleTimer.cancel();
-  scrollToPane(pane, false);
+  scrollToPane(pane);
 });
 
 // The Ari's column is deliberately the narrowest. Equal thirds split the

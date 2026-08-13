@@ -7,7 +7,14 @@
  * explicitly).
  */
 export default defineEventHandler((event) => {
-  const { siteUrl } = useRuntimeConfig(event).public;
+  // `useRuntimeConfig()` without the event: Nuxt 4.5 pulls an h3 v2 RC into
+  // the Nitro types alongside h3 v1, so `defineEventHandler`'s `event` and
+  // `useRuntimeConfig`'s parameter no longer come from the same `H3Event`
+  // declaration and the call does not typecheck. The event form only buys
+  // request-scoped config overrides, which a fully prerendered static route
+  // has no use for — the global config is what `NUXT_PUBLIC_SITE_URL`
+  // populates at build time, and that is what this reads either way.
+  const { siteUrl } = useRuntimeConfig().public;
 
   setHeader(event, "content-type", "text/plain; charset=UTF-8");
   return [
