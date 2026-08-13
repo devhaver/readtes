@@ -49,11 +49,29 @@ const headerStyle = computed(() =>
  * whole point — a scroller whose top edge stays put cannot make the text
  * jump when the chrome slides away. `scroll-padding` keeps `#seif-N` anchor
  * jumps from landing underneath it.
+ *
+ * Sets variables, never `padding-block-start` directly. That property is
+ * derived from `--pane-pad-block-start`, which is the exact value
+ * `.tes-commentary-seif-heading` cancels to pin flush (issue #102) —
+ * overriding it behind that rule's back left every sticky heading in Inner
+ * Light compensating 16px against a real padding of 245px, and pinning them
+ * behind the navbar.
  */
 const bodyStyle = computed(() =>
   overlay.active.value
     ? {
-        paddingBlockStart: `${overlay.height.value}px`,
+        // How far the content starts below the scroller's own top edge.
+        // Constant while the mode is active: the scroller must not resize
+        // when the chrome hides, or the text jumps.
+        "--pane-chrome-inset": `${overlay.height.value}px`,
+        // How much chrome is on screen *right now* — sticky headings pin
+        // below it, so they follow the chrome up and back down.
+        "--pane-chrome-visible": `${overlay.height.value + overlay.shift.value}px`,
+        // The full stack, not the currently-visible part: an anchor jump
+        // is a large scroll, which can be exactly the gesture that brings
+        // the chrome back — landing the target where it is about to be
+        // covered. Reserving the whole height is never wrong, only
+        // occasionally generous.
         scrollPaddingBlockStart: `${overlay.height.value}px`,
       }
     : {},

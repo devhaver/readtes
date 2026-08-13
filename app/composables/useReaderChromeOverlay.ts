@@ -34,6 +34,7 @@ import {
   chromeShift,
   chromeStackHeight,
   emptyChromeHeights,
+  READER_CHROME_PIECES,
   type ReaderChromeHeights,
   type ReaderChromePiece,
 } from "~/utils/readerChrome";
@@ -89,8 +90,21 @@ const createReaderChromeOverlay = (): ReaderChromeOverlay => {
     });
   };
 
+  /**
+   * Every piece measured at least once. Without this gate the first frame
+   * in panes mode lays the stack out against zeros — traced entering the
+   * mode, the pane's content padding stepped 197px then 245px on the next
+   * frame, so the text visibly hopped as the header found its place. The
+   * overlay is worth nothing until it can be positioned correctly, and the
+   * in-flow layout it falls back to for that one frame is the same one the
+   * reader was already looking at.
+   */
+  const measured = computed(() =>
+    READER_CHROME_PIECES.every((piece) => heights[piece] > 0),
+  );
+
   const active = computed(
-    () => isNarrowViewport.value && mode.value === "panes",
+    () => isNarrowViewport.value && mode.value === "panes" && measured.value,
   );
 
   const height = computed(() => chromeStackHeight(heights));

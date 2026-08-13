@@ -535,7 +535,11 @@ html {
  */
 .tes-commentary-seif-heading,
 .tes-prose-section-heading {
-  top: calc(-1 * var(--pane-pad-block-start, 0px));
+  /* `--pane-chrome-visible` is the height of chrome currently overlaying
+     the top of this scroller — 0 everywhere except mobile panes mode, where
+     `ReaderPane` sets it (issue 113). Without it these pin flush to the
+     scroller's top edge, which in that mode sits *behind* the navbar. */
+  top: calc(var(--pane-chrome-visible, 0px) - var(--pane-pad-block-start, 0px));
   margin-block-start: calc(-1 * var(--pane-pad-block-start, 0px));
   padding-block-start: calc(0.5rem + var(--pane-pad-block-start, 0px));
 }
@@ -666,9 +670,16 @@ html {
 .tes-pane-body {
   @apply min-h-0 flex-1 overflow-y-auto px-4 pb-24 lg:pb-4;
   /* Named rather than a bare `pt-4` because the sticky headings inside have
-     to cancel exactly this value — see `.tes-commentary-seif-heading`. */
+     to cancel exactly this value — see `.tes-commentary-seif-heading`.
+     `--pane-chrome-inset` is separate and additive: in mobile panes mode
+     this scroller runs the full height of the viewport with the chrome
+     overlaying its top, so its content starts that much further down
+     (issue 113) — but the reading padding above a heading is still 1rem,
+     and that is the number the sticky rule has to cancel. */
   --pane-pad-block-start: 1rem;
-  padding-block-start: var(--pane-pad-block-start);
+  padding-block-start: calc(
+    var(--pane-pad-block-start) + var(--pane-chrome-inset, 0px)
+  );
 }
 
 /* The small uppercase "eyebrow" heading style: pane titles
