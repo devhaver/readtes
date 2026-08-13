@@ -81,6 +81,12 @@ export const buildSourceSegments = (
    * "don't force it" per the import brief.
    */
   extractHeadings: boolean,
+  /**
+   * 0-based position of this chapter within its node — selects the per-chapter
+   * entry when the node's depth-2 offset is given as an array (issue #103).
+   * Irrelevant to the scalar form, hence the default.
+   */
+  chapterIndex = 0,
 ): BuildSourceSegmentsResult => {
   const segments: SourceSegment[] = [];
   const droppedAnchors: DroppedAnchor[] = [];
@@ -89,7 +95,13 @@ export const buildSourceSegments = (
     if (rawHtml === "") return;
 
     const itemIndex = index + 1;
-    const sefariaRef = segmentRefFor(chapterRef, node, itemIndex);
+    const sefariaRef = segmentRefFor(
+      chapterRef,
+      node,
+      itemIndex,
+      node.index_offsets_by_depth,
+      chapterIndex,
+    );
     const { heading, rest } = extractHeadings
       ? extractLeadingHeading(rawHtml)
       : { heading: undefined, rest: rawHtml };

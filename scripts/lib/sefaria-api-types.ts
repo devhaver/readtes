@@ -26,6 +26,13 @@ export interface SefariaIndexNode {
   default?: boolean;
   titles?: SefariaIndexTitle[];
   nodes?: SefariaIndexNode[];
+  /**
+   * Sefaria's own snake_case field — some nodes do not start at 1, and a ref
+   * composed without it 404s upstream (issue #103). Kept under the wire name
+   * so a raw index node satisfies `JaggedNodeShape` structurally, the same way
+   * `sectionNames` already does.
+   */
+  index_offsets_by_depth?: Record<string, number | number[]>;
 }
 
 export interface SefariaIndex {

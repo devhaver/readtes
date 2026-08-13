@@ -337,6 +337,7 @@ const importPart = async (
       unit.chapterRef,
       unit.heItems,
       extractHeadings,
+      unit.number - 1,
     );
     const en =
       unit.enItems.length > 0
@@ -345,6 +346,7 @@ const importPart = async (
             unit.chapterRef,
             unit.enItems,
             extractHeadings,
+            unit.number - 1,
           )
         : { segments: [], droppedAnchors: [] };
 
@@ -415,10 +417,17 @@ const importPart = async (
         unit.chapterRef,
         unit.heItems,
         false,
+        unit.number - 1,
       );
       const en =
         unit.enItems.length > 0
-          ? buildSourceSegments(node, unit.chapterRef, unit.enItems, false)
+          ? buildSourceSegments(
+              node,
+              unit.chapterRef,
+              unit.enItems,
+              false,
+              unit.number - 1,
+            )
           : { segments: [], droppedAnchors: [] };
 
       for (const dropped of [...he.droppedAnchors, ...en.droppedAnchors]) {

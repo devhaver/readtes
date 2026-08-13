@@ -55,6 +55,7 @@ export const buildChapterUnits = (
     const chapterRef = chapterRefFor(
       refBase,
       singleImplicitChapter ? undefined : number,
+      node.index_offsets_by_depth,
     );
 
     return {
