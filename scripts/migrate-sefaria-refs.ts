@@ -165,9 +165,15 @@ for (const dir of chapterDirs()) {
 
     const filePath = join(dir, fileName);
     const relative = filePath.slice(CONTENT_ROOT.length + 1);
-    const file: ParsedChapterLayerFile = chapterLayerFileSchema.parse(
-      JSON.parse(readFileSync(filePath, "utf-8")),
-    );
+    // Validated through Zod, but written back from the object `JSON.parse`
+    // produced. `.parse()` returns a NEW object with the schema's key order,
+    // not the file's, so serialising its output rewrites `layer` to a
+    // different position in all 110 files — a diff that says nothing, and
+    // one the importer would immediately flip back on its next run.
+    const raw = JSON.parse(readFileSync(filePath, "utf-8")) as {
+      items: unknown[];
+    };
+    const file: ParsedChapterLayerFile = chapterLayerFileSchema.parse(raw);
     // Narrows `items` off the layer discriminant — summaries are curated
     // prose with no Sefaria address at all, and the filename filter above
     // has already excluded them.
@@ -182,7 +188,7 @@ for (const dir of chapterDirs()) {
 
     let changedHere = 0;
 
-    for (const item of file.items) {
+    for (const [index, item] of file.items.entries()) {
       const committed = "sefariaRef" in item ? item.sefariaRef : undefined;
       if (committed === undefined) continue;
 
@@ -225,7 +231,9 @@ for (const dir of chapterDirs()) {
         continue;
       }
 
-      item.sefariaRef = withOffsets;
+      // Written onto `raw`, whose key order is the file's own — `file` is
+      // the validated read model, not what gets serialised.
+      (raw.items as { sefariaRef?: string }[])[index]!.sefariaRef = withOffsets;
       changedHere++;
     }
 
@@ -238,7 +246,7 @@ for (const dir of chapterDirs()) {
     );
 
     if (!isDryRun) {
-      writeFileSync(filePath, `${JSON.stringify(file, null, 2)}\n`, "utf-8");
+      writeFileSync(filePath, `${JSON.stringify(raw, null, 2)}\n`, "utf-8");
     }
   }
 }
