@@ -36,6 +36,13 @@ duplicated) before exiting.
   Effect", which have no `ChapterKind` yet) — an unmapped node title is
   logged as a warning and skipped entirely, not silently imported under a
   guessed kind.
+- **Index offsets are recorded, not just applied.** Some nodes don't start
+  at 1 (`index_offsets_by_depth`); `sefaria-refs.ts` applies that when
+  composing a `sefariaRef`, and every run also merges the book's
+  offset-carrying nodes into `content/sefaria-index-offsets.json` so
+  `validate:content` can check committed refs offline. See the
+  `tes-content-model` skill's "Sefaria index offsets" section, and
+  `pnpm migrate:sefaria-refs` for repairing an already-committed tree.
 - **Coverage report**: `content/COVERAGE.md`, rewritten (and printed to the
   console) at the end of every non-dry-run import — per part × layer ×
   version, how many of the part's resolved chapters got text, and how many

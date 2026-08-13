@@ -13,6 +13,7 @@ must never end up in the client bundle).
 ```
 content/
   versions.json                              ContentVersion[] — the version registry
+  sefaria-index-offsets.json                  SefariaOffsetNodesFile — the nodes that don't start at 1, see below
   toc.json                                    the canonical Toc (volumes -> parts -> chapters) — BUILD-TIME ONLY, see below
   toc.volumes.json                            TocVolumesFile — volumes -> parts skeleton, no chapter lists (~17KB)
   toc.parts/part-<NN>.json                    TocPartFile — one part's full TocChapter[] + its own/parent-volume identity
@@ -120,6 +121,33 @@ equivalence check re-derives both files from the committed `toc.json` and
 structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
+
+## Sefaria index offsets — why a map is committed
+
+Some Sefaria nodes do not start numbering at 1: Section VI's topics tables
+start at 31, Section I's Histaklut Penimit chapter 2 starts at paragraph 10.
+Sefaria publishes that as `index_offsets_by_depth` on the node, and
+`scripts/lib/sefaria-refs.ts` applies it when composing a `sefariaRef`.
+
+That field only exists while an importer holds a freshly fetched index.
+`validate-content.ts` has neither network nor index, so it could not tell a
+ref that applied its offset from one that dropped it — which is how issue
+#103's whole corpus of 404ing refs went unnoticed.
+**`content/sefaria-index-offsets.json`** is the fix: 37 nodes, keyed by ref
+base, each with its `depth`/`sectionNames` (which decide _which_ address
+component an offset lands on) and the offsets themselves. Nodes that start
+at 1 are absent.
+
+- `import-sefaria.ts` merges it from the index on every run, so it cannot go
+  stale; `pnpm emit:sefaria-offsets` refreshes it alone (one cached request).
+  Both merge rather than replace, so `--part N` never narrows it.
+- `checkSefariaRefsApplyIndexOffsets` in `validate-content.ts` fails any
+  committed ref addressing an item below the first index its node publishes.
+- `pnpm migrate:sefaria-refs` is the one-off repair. It **recomposes from
+  position**, never from the stored ref — the offset and un-offset numbering
+  ranges overlap on half the sections, so a value alone cannot say whether a
+  ref has been migrated. It only rewrites a ref it has first reproduced
+  byte-for-byte from position, and reports anything it cannot.
 
 ## Volume grouping — Bnei Baruch's, not Sefaria's
 

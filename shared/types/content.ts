@@ -58,6 +58,45 @@ export const versionsFileSchema = z.array(contentVersionSchema);
 export type VersionsFile = z.infer<typeof versionsFileSchema>;
 
 // ---------------------------------------------------------------------------
+// Sefaria index offsets
+// ---------------------------------------------------------------------------
+
+/**
+ * Sefaria's `index_offsets_by_depth`, in the repo's casing: keyed by address
+ * depth, each value either a scalar applying to every address at that depth
+ * or an array giving one offset per parent index. See
+ * `scripts/lib/sefaria-refs.ts` for which component each depth lands on.
+ */
+export const indexOffsetsByDepthSchema = z.record(
+  z.string().regex(/^\d+$/),
+  z.union([
+    z.number().int().nonnegative(),
+    z.array(z.number().int().nonnegative()),
+  ]),
+);
+export type IndexOffsetsByDepth = z.infer<typeof indexOffsetsByDepthSchema>;
+
+export const sefariaOffsetNodeSchema = z.object({
+  depth: z.number().int().positive(),
+  sectionNames: z.array(z.string()),
+  indexOffsetsByDepth: indexOffsetsByDepthSchema,
+});
+export type SefariaOffsetNode = z.infer<typeof sefariaOffsetNodeSchema>;
+
+/**
+ * Shape of `content/sefaria-index-offsets.json` — the nodes of this book
+ * whose numbering does not start at 1, keyed by the ref base the importer
+ * composes for each. Nodes that start at 1 are simply absent. See
+ * `scripts/lib/sefaria-offset-nodes.ts` for why this is committed at all.
+ */
+export const sefariaOffsetNodesFileSchema = z.object({
+  nodes: z.record(z.string(), sefariaOffsetNodeSchema),
+});
+export type SefariaOffsetNodesFile = z.infer<
+  typeof sefariaOffsetNodesFileSchema
+>;
+
+// ---------------------------------------------------------------------------
 // Table of contents
 // ---------------------------------------------------------------------------
 

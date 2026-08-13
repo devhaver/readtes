@@ -20,10 +20,12 @@
     "validate:content": "tsx scripts/validate-content.ts",
     "emit:toc-splits": "tsx scripts/emit-toc-splits.ts",
     "emit:glossary-splits": "tsx scripts/emit-glossary-splits.ts",
+    "emit:sefaria-offsets": "tsx scripts/emit-sefaria-offsets.ts",
     "import:sefaria": "tsx scripts/import-sefaria.ts",
     "import:kabbalahmedia": "tsx scripts/import-kabbalahmedia.ts",
     "migrate:consolidate-qa": "tsx scripts/migrate-consolidate-qa.ts",
     "migrate:commentary-labels": "tsx scripts/migrate-commentary-labels.ts",
+    "migrate:sefaria-refs": "tsx scripts/migrate-sefaria-refs.ts",
     "translate:export": "tsx scripts/translate-export.ts",
     "translate:apply": "tsx scripts/translate-apply.ts"
   },

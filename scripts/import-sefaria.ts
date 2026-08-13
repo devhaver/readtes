@@ -63,6 +63,12 @@ import {
   findSiblingNodes,
   mapNodeTitleToKind,
 } from "./lib/sefaria-index.ts";
+import {
+  collectOffsetNodes,
+  mergeOffsetNodes,
+  readOffsetNodes,
+  writeOffsetNodes,
+} from "./lib/sefaria-offset-nodes.ts";
 import { ohrPenimiChapterRef } from "./lib/sefaria-refs.ts";
 import {
   buildTocChapter,
@@ -806,6 +812,19 @@ export const main = async (argv: string[]): Promise<void> => {
     };
     writeJsonFile(join(contentDir, "toc.json"), updatedToc);
     writeTocSplitFiles(contentDir, updatedToc, versions);
+
+    // Refreshed from the index every run, whether or not this run's parts
+    // own any offset-carrying node: `validate-content.ts` has no network and
+    // cannot otherwise tell a ref that applied its offset from one that
+    // dropped it (issue #103). Merged, so `--part N` never narrows the map
+    // to one section.
+    writeOffsetNodes(
+      contentDir,
+      mergeOffsetNodes(
+        readOffsetNodes(contentDir) ?? undefined,
+        collectOffsetNodes(index),
+      ),
+    );
   }
 
   const touchedCoverage = results.map((r) => r.coverage);
