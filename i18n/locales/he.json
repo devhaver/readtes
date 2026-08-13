@@ -23,7 +23,9 @@
     "breadcrumbLabel": "פירורי לחם"
   },
   "footer": {
-    "attribution": "נוצר על ידי תלמידי בני ברוך אקדמיה לקבלה"
+    "attribution": "נוצר על ידי תלמידי {academy}",
+    "academy": "בני ברוך אקדמיה לקבלה",
+    "sourcesLinkTitle": "ספריית המקורות של בני ברוך בקבלה מדיה"
   },
   "reader": {
     "aiTranslated": "תרגום בינה מלאכותית",
