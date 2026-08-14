@@ -15,6 +15,7 @@ import { hebrewNumeral } from "../../scripts/lib/hebrew-numerals.ts";
 import {
   consolidateAnswerSegments,
   CONSOLIDATED_QA_KINDS,
+  firstSegmentPerAnswer,
   isConsolidatedQaKind,
 } from "../../scripts/lib/qa-consolidation.ts";
 import { buildSourceSegments } from "../../scripts/lib/transform.ts";
@@ -62,6 +63,58 @@ describe("qa-consolidation: CONSOLIDATED_QA_KINDS / isConsolidatedQaKind", () =>
     expect(isConsolidatedQaKind("questions-terminology")).toBe(false);
     expect(isConsolidatedQaKind("questions-cause-effect")).toBe(false);
     expect(isConsolidatedQaKind("chapter")).toBe(false);
+  });
+});
+
+describe("qa-consolidation: firstSegmentPerAnswer", () => {
+  const segment = (n: number, sefariaRef: string) => ({
+    n,
+    sefariaRef,
+    html: sefariaRef,
+    anchors: [],
+  });
+
+  it("returns one entry per answer, in answer order", () => {
+    expect(
+      firstSegmentPerAnswer([segment(2, "b:1"), segment(1, "a:1")]).map(
+        (s) => s.n,
+      ),
+    ).toEqual([1, 2]);
+  });
+
+  it("keeps the FIRST segment of a multi-segment answer, not the last", () => {
+    // `part-01/answers-topics-01` answer 51 is two segments. A
+    // KabbalahMedia document has one block per answer, so it aligns
+    // against the answer — and the citation its text belongs to is where
+    // the answer starts. Taking the last would attach the whole English
+    // answer to its continuation's ref, which
+    // `checkSourceConsolidatedQaSubset` compares against.
+    const kept = firstSegmentPerAnswer([
+      segment(51, "…List of Answers on Topics 51:1"),
+      segment(51, "…List of Answers on Topics 51:2"),
+    ]);
+
+    expect(kept).toHaveLength(1);
+    expect(kept[0]?.sefariaRef).toBe("…List of Answers on Topics 51:1");
+  });
+
+  it("counts answers, not stored items — the number an aligner checks against", () => {
+    // The bug in issue #111 was counting the wrong thing entirely (answer
+    // *chapters*, always 1 post-#91). Items are the other wrong count: a
+    // part with any split answer has more items than answers.
+    const segments = [
+      segment(1, "a:1"),
+      segment(2, "b:1"),
+      segment(2, "b:2"),
+      segment(3, "c:1"),
+    ];
+
+    expect(segments).toHaveLength(4);
+    expect(firstSegmentPerAnswer(segments)).toHaveLength(3);
+  });
+
+  it("is empty for a chapter with no committed Hebrew", () => {
+    expect(firstSegmentPerAnswer([])).toEqual([]);
   });
 });
 

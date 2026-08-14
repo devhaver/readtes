@@ -130,10 +130,12 @@ import {
   indexKmTreePartsByNumber,
   KM_TES_COLLECTION_UID,
   parseKmChapterLeafNumber,
+  type KmLeafRole,
   type KmSqData,
   type KmTreeArticle,
   type KmTreePart,
 } from "./lib/km-tree.ts";
+import { firstSegmentPerAnswer } from "./lib/qa-consolidation.ts";
 import { writeTocSplitFiles } from "./lib/toc-splits.ts";
 import { validateContent } from "./validate-content.ts";
 
@@ -833,9 +835,23 @@ const processQaDialect = async (
   languages: Map<string, LanguageAccumulator>,
   client: HttpClient,
 ): Promise<void> => {
+  // Post-#91 there is exactly one answers chapter per kind. More than one
+  // means the tree predates the consolidation this importer now writes, and
+  // aligning against it would produce a shape nothing else in the corpus
+  // has — report rather than guess.
+  if (answersChapters.length > 1) {
+    for (const acc of languages.values()) {
+      acc.warnings.push(
+        `${partId} Q&A: ${answersChapters.length} answers chapters of one kind — expected the single consolidated chapter (#91); skipped`,
+      );
+    }
+    return;
+  }
+  const answersChapter = answersChapters[0];
+
   const targetChapterIds = [
     ...(questionsChapter ? [questionsChapter.id] : []),
-    ...answersChapters.map((c) => c.id),
+    ...(answersChapter ? [answersChapter.id] : []),
   ];
   if (targetChapterIds.length === 0 || candidateUids.length === 0) return;
 
@@ -851,22 +867,15 @@ const processQaDialect = async (
       )
     : undefined;
 
-  const answersGroundEntries = answersChapters
-    .map((chapter) => {
-      const dir = chapterDirFor(partId, chapter.id.split("/")[1] as string);
-      const heSegments = readHeSourceSegmentsOptional(dir);
-      return heSegments?.[0]
-        ? { number: chapter.number, sefariaRef: heSegments[0].sefariaRef }
-        : undefined;
-    })
-    .filter((entry): entry is { number: number; sefariaRef: string } =>
-      Boolean(entry),
-    );
-  const answersGroundSegments =
-    buildOrderAlignedGroundSegments(answersGroundEntries);
-  const answersChapterByNumber = new Map(
-    answersChapters.map((c) => [c.number, c]),
-  );
+  const answersDir = answersChapter
+    ? chapterDirFor(partId, answersChapter.id.split("/")[1] as string)
+    : undefined;
+  const answersGroundSegments = answersDir
+    ? firstSegmentPerAnswer(readHeSourceSegmentsOptional(answersDir) ?? [])
+    : [];
+  const answersSefariaRef = answersDir
+    ? heSefariaRef(answersDir, "source.he-jerusalem-1956.json")
+    : undefined;
   const emptyGroundTruth = buildKmChapterGroundTruth([]);
 
   const docFilesByLanguage = await collectKmDocFilesByLanguage(
@@ -906,7 +915,7 @@ const processQaDialect = async (
         const alignmentError = validateKmQaPairs(
           pairs,
           questionsHeItems?.length ?? 0,
-          answersGroundEntries.length,
+          answersGroundSegments.length,
         );
         return alignmentError
           ? { ok: false, kind: "unmatched", reason: alignmentError }
@@ -975,37 +984,35 @@ const processQaDialect = async (
       }
     }
 
-    // Answers half: N single-item chapters, split positionally.
-    const { segments: answerSegments, warnings: answerWarnings } =
-      buildKmSourceSegments(
+    // Answers half: one consolidated chapter (#91), one item per answer —
+    // the same shape, and the same call, as the questions half above.
+    if (answersChapter) {
+      const { segments, warnings } = buildKmSourceSegments(
         pairs.map((p) => ({ n: p.position, html: p.answerHtml })),
         answersGroundSegments,
         emptyGroundTruth,
       );
-    acc.warnings.push(
-      ...answerWarnings.map((w) => `${partId} answers: ${w.message}`),
-    );
-    const answersBySplit = splitOrderAlignedSegments(answerSegments);
-    for (const chapter of answersChapterByNumber.values()) {
-      const segment = answersBySplit.get(chapter.number);
-      if (!segment) {
+      acc.warnings.push(
+        ...warnings.map((w) => `${answersChapter.id} answers: ${w.message}`),
+      );
+      if (segments.length > 0) {
         acc.chapters.push({
-          chapterId: chapter.id,
+          chapterId: answersChapter.id,
+          status: "imported",
+          ...zeroCounts,
+          sourceSegments: segments.length,
+        });
+        acc.sourceByChapter.set(answersChapter.id, {
+          sefariaRef: answersSefariaRef,
+          segments,
+        });
+      } else {
+        acc.chapters.push({
+          chapterId: answersChapter.id,
           status: "unmatched",
           ...zeroCounts,
         });
-        continue;
       }
-      acc.chapters.push({
-        chapterId: chapter.id,
-        status: "imported",
-        ...zeroCounts,
-        sourceSegments: 1,
-      });
-      acc.sourceByChapter.set(chapter.id, {
-        sefariaRef: segment.sefariaRef,
-        segments: [segment],
-      });
     }
   }
 };
@@ -1061,6 +1068,13 @@ const processPart = async (
     tocPartChapters,
     "inner-observation",
   );
+  for (const article of articlesByRole.get("cause-and-consequence-essay") ??
+    []) {
+    chapterLevelWarnings.push(
+      `${partId}: KabbalahMedia leaf "${article.name}" (${article.id}) is the Cause and Consequence essay — already in the corpus as inner-observation-02 from Sefaria; not imported here`,
+    );
+  }
+
   for (const article of articlesByRole.get("inner-observation") ?? []) {
     await recordUnsupportedDialect(
       article.id,
@@ -1131,8 +1145,8 @@ const processPart = async (
 
   // Dialect 3: combined Q&A tables (terminology, topics).
   const qaFamilies: {
-    questionsRole: "questions-terminology" | "questions-topics";
-    answersRole: "answers-terminology" | "answers-topics";
+    questionsRole: KmLeafRole;
+    answersRole: KmLeafRole;
     questionsKind: ChapterKind;
     answersKind: ChapterKind;
   }[] = [
@@ -1147,6 +1161,15 @@ const processPart = async (
       answersRole: "answers-topics",
       questionsKind: "questions-topics",
       answersKind: "answers-topics",
+    },
+    // Section VI only — the one part with a Cause-and-Effect table
+    // (issue #86). Every other part simply has no article under these
+    // roles, so the family costs nothing there.
+    {
+      questionsRole: "questions-cause-effect",
+      answersRole: "answers-cause-effect",
+      questionsKind: "questions-cause-effect",
+      answersKind: "answers-cause-effect",
     },
   ];
 
@@ -1243,6 +1266,33 @@ export const main = async (argv: string[]): Promise<void> => {
     .filter((version) => version.source === "kabbalahmedia")
     .map((version) => version.id);
   let staleOutputs = 0;
+  let keptDespiteRefusal = 0;
+
+  /**
+   * Chapters this run looked at and declined to write, per version.
+   *
+   * "This run produced no file" has two very different causes: upstream no
+   * longer offers the chapter, or the importer refused it — an alignment it
+   * could not verify, a document dialect it does not parse, a language whose
+   * file was missing this time. Only the first is stale. Treating both the
+   * same deleted committed English whenever a refusal happened, so a run
+   * meant to *add* a translation silently subtracted four of them (#111).
+   *
+   * The importer records an outcome for every chapter it considered, so a
+   * non-`imported` outcome is exactly the evidence that its absence is a
+   * refusal rather than an absence upstream.
+   */
+  const refusedByVersion = new Map<string, Set<string>>();
+  for (const acc of languages.values()) {
+    refusedByVersion.set(
+      acc.versionId,
+      new Set(
+        acc.chapters
+          .filter((outcome) => outcome.status !== "imported")
+          .map((outcome) => outcome.chapterId),
+      ),
+    );
+  }
 
   for (const chapter of tocChapterIndex.values()) {
     const [partId, slug] = chapter.id.split("/") as [string, string];
@@ -1265,6 +1315,15 @@ export const main = async (argv: string[]): Promise<void> => {
       for (const { layer, desired } of layers) {
         const path = join(dir, `${layer}.${versionId}.json`);
         if (desired || !existsSync(path)) continue;
+
+        if (refusedByVersion.get(versionId)?.has(chapter.id)) {
+          keptDespiteRefusal += 1;
+          console.warn(
+            `Kept ${path}: this run declined to write it, which is not evidence it is gone upstream.`,
+          );
+          continue;
+        }
+
         staleOutputs += 1;
         if (args.dryRun) {
           console.log(`Would remove stale KabbalahMedia output: ${path}`);
@@ -1274,6 +1333,11 @@ export const main = async (argv: string[]): Promise<void> => {
         removeKmVersionAvailability(chapter, layer, versionId);
       }
     }
+  }
+  if (keptDespiteRefusal > 0) {
+    console.warn(
+      `\nKept ${keptDespiteRefusal} committed KabbalahMedia file(s) this run could not reproduce.`,
+    );
   }
   if (staleOutputs > 0) {
     console.log(

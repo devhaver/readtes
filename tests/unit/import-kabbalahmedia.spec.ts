@@ -1138,12 +1138,28 @@ describe("classifyKmArticle", () => {
     ["Table of Questions for Topics", "questions-topics"],
     ["Table of Answers for the Meaning of the Words", "answers-terminology"],
     ["Table of Answers for Topics", "answers-topics"],
+    // Bnei Baruch's name for Sefaria's "Cause and Effect" (issue #86).
+    ["Questions Regarding Cause and Consequence", "questions-cause-effect"],
+    [
+      "Answers of Questions Regarding Cause and Consequence",
+      "answers-cause-effect",
+    ],
   ] as const)("classifies %s as %s", (name, role) => {
     expect(classifyKmArticle(name, "Part 1")).toBe(role);
   });
 
-  it("classifies an unrecognized leaf name as unmapped, never guessed", () => {
+  it("gives the Cause and Consequence essay its own role, not Inner Observation", () => {
+    // It is Sefaria's `Histaklut Penimit 2`, already in the corpus as
+    // `inner-observation-02`. Filing it under the `inner-observation` role
+    // would put two leaves on one chapter, which the importer's own
+    // coverage guard rejects — see `km-tree.ts`.
     expect(classifyKmArticle("Cause and Consequence", "Part 6")).toBe(
+      "cause-and-consequence-essay",
+    );
+  });
+
+  it("classifies an unrecognized leaf name as unmapped, never guessed", () => {
+    expect(classifyKmArticle("Introduction to the Wisdom", "Part 6")).toBe(
       "unmapped",
     );
   });

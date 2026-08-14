@@ -23,9 +23,26 @@ fail before any network request.
   and commentary are written only when the relevant alignment is verified.
 - **Safe boundaries**: whole-part Ohr Pnimi/commentary is intentionally not
   written — there is no reliable Hebrew/Sefaria commentary target for it.
-  Inner Observation and unmapped Cause/Consequence-style leaves are reported
-  and skipped, never guessed. Parts 9–15 have no non-Hebrew KabbalahMedia
-  files and remain explicit coverage absences.
+  Inner Observation is reported and skipped, never guessed. Parts 9–15 have
+  no non-Hebrew KabbalahMedia files and remain explicit coverage absences.
+- **A refusal never deletes.** The stale-output sweep removes committed
+  KabbalahMedia files this run did not produce — but "did not produce" also
+  covers every refusal (an alignment it could not verify, a dialect it does
+  not parse, a language whose file was missing today), and treating those as
+  stale deleted committed English whenever one happened (issue #111). The
+  sweep now skips any chapter for which this run recorded a non-`imported`
+  outcome, and says so.
+- **Q&A answers align per answer, not per chapter or per item.** Issue #91
+  folded every answer of a kind into one chapter whose items carry the
+  answer number as `n`, with the rare split answer sharing an `n`. The
+  importer aligns a document's blocks against
+  `firstSegmentPerAnswer` (`scripts/lib/qa-consolidation.ts`) — counting
+  chapters instead (always 1 post-#91) made every part's Q&A unimportable.
+- **Cause and Consequence** is Bnei Baruch's name for Sefaria's Cause and
+  Effect. The Q&A tables map to `questions-cause-effect`/
+  `answers-cause-effect`; the _essay_ of that name is Sefaria's
+  `Histaklut Penimit 2`, already in the corpus as `inner-observation-02`,
+  and carries a role of its own so it is reported rather than re-imported.
 - **Output and validation**: a non-dry run updates layer files,
   `versions.json`, `toc.json`, and derived ToC splits, then runs
   `validateContent`. Only `--all` rewrites the KabbalahMedia-owned section of
