@@ -141,6 +141,11 @@ import {
   type KmTreeArticle,
   type KmTreePart,
 } from "./lib/km-tree.ts";
+import {
+  groupKmUnnumberedWholePartBlocks,
+  hasUnnumberedKmItems,
+  parseDeclaredItemRange,
+} from "./lib/km-unnumbered-whole-part-parser.ts";
 import { firstSegmentPerAnswer } from "./lib/qa-consolidation.ts";
 import { writeTocSplitFiles } from "./lib/toc-splits.ts";
 import { validateContent } from "./validate-content.ts";
@@ -601,33 +606,65 @@ const processWholePartDialect = async (
         );
       },
       (blocks) => {
-        // Two dialects, tried in order. The styled one keys on `h5`; the flat
-        // one exists because some conversions lost every heading style, and
-        // the heading level was never the structure (issue #81). Whichever
-        // produces items, the SAME alignment check below decides whether they
-        // are believed — which is what makes it safe to try a second reading
-        // rather than refusing outright.
+        // Three dialects, tried in order (issue #81). The styled one keys on
+        // numbered `h5`; the flat one exists because some conversions lost
+        // every heading style; the unnumbered one carries seifim as `h5` with
+        // no numeral at all. The heading level was never the structure.
+        //
+        // A document may also cover only PART of a part and say so —
+        // part 16's front matter reads `Items 42-85`. When it does, the parse
+        // is aligned against exactly those chapters, and the range's size is a
+        // second, independent statement of the item count that must agree with
+        // the first.
+        //
+        // Whichever dialect produces items, the SAME checks below decide
+        // whether they are believed. That is what makes it safe to try a
+        // further reading rather than refusing outright.
+        const declaredRange = parseDeclaredItemRange(blocks);
+        const scopedGround = declaredRange
+          ? groundEntries.filter(
+              (entry) =>
+                entry.number >= declaredRange.from &&
+                entry.number <= declaredRange.to,
+            )
+          : groundEntries;
+
+        if (declaredRange && scopedGround.length === 0) {
+          return {
+            ok: false,
+            kind: "unmatched",
+            reason: `document declares items ${declaredRange.from}-${declaredRange.to}, which match no chapter of this part`,
+          };
+        }
+
         const items = hasNumberedKmItems(blocks)
           ? groupKmChapterBlocks(blocks).items
           : hasFlatNumberedItems(blocks)
             ? groupKmFlatWholePartBlocks(blocks)
-            : undefined;
+            : hasUnnumberedKmItems(blocks)
+              ? groupKmUnnumberedWholePartBlocks(
+                  blocks,
+                  declaredRange?.from ?? 1,
+                )
+              : undefined;
 
         if (!items) {
           return {
             ok: false,
             kind: "structure-unsupported",
-            reason: "no numbered source items, styled or flat",
+            reason: "no source items — numbered, flat or unnumbered",
           };
         }
         const alignmentError =
-          validateNumberedOrderAlignment(items, groundEntries) ??
-          validateTranslationPlausibility(items, groundEntries);
+          validateNumberedOrderAlignment(items, scopedGround) ??
+          validateTranslationPlausibility(items, scopedGround);
         return alignmentError
           ? {
               ok: false,
               kind: "unmatched",
-              reason: alignmentError,
+              reason: declaredRange
+                ? `${alignmentError} (document declares items ${declaredRange.from}-${declaredRange.to})`
+                : alignmentError,
             }
           : { ok: true, value: items };
       },
