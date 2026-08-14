@@ -2894,15 +2894,15 @@ skipped, not force-imported.
 
 | Version | Language (KM code) | Chapters imported | Source segments | Commentary items |
 | --- | --- | --- | --- | --- |
-| de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 0/2090 | 0 | 0 |
-| en-bb | Bnei Baruch (KabbalahMedia) (`en`) | 84/2090 | 1474 | 51 |
-| es-bb | Bnei Baruch (KabbalahMedia) — Español (`es`) | 0/2090 | 0 | 0 |
-| fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 0/2090 | 0 | 0 |
-| he-bb | Bnei Baruch (KabbalahMedia) — עברית (`he`) | 2/2090 | 10 | 34 |
-| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2090 | 0 | 0 |
-| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 0/2090 | 0 | 0 |
-| tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2090 | 0 | 0 |
-| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 0/2090 | 0 | 0 |
+| de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 0/2091 | 0 | 0 |
+| en-bb | Bnei Baruch (KabbalahMedia) (`en`) | 255/2091 | 1645 | 51 |
+| es-bb | Bnei Baruch (KabbalahMedia) — Español (`es`) | 54/2091 | 54 | 0 |
+| fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 54/2091 | 54 | 0 |
+| he-bb | Bnei Baruch (KabbalahMedia) — עברית (`he`) | 2/2091 | 10 | 34 |
+| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2091 | 0 | 0 |
+| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 0/2091 | 0 | 0 |
+| tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2091 | 0 | 0 |
+| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 0/2091 | 0 | 0 |
 
 ### Per part x language
 
@@ -2913,13 +2913,13 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 
 | Part | de-bb | en-bb | es-bb | fr-bb | he-bb | pt-bb | ru-bb | tr-bb | uk-bb |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| part-01 | 0/16 | 4/16 | 0/16 | 0/16 | 2/16 | 0/16 | 0/16 | 0/16 | 0/16 |
+| part-01 | 0/17 | 4/17 | 0/17 | 0/17 | 2/17 | 0/17 | 0/17 | 0/17 | 0/17 |
 | part-02 | 0/16 | 4/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 |
 | part-03 | 0/34 | 4/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 |
 | part-04 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 |
 | part-05 | 0/66 | 66/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 |
-| part-06 | 0/62 | 6/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 |
-| part-07 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 |
+| part-06 | 0/62 | 60/62 | 54/62 | 54/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 |
+| part-07 | 0/79 | 73/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 |
 | part-08 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 |
 | part-09 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 |
 | part-10 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 |
@@ -2928,12 +2928,13 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | part-13 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 |
 | part-14 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 |
 | part-15 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 |
-| part-16 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 |
+| part-16 | 0/276 | 44/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 |
 
 ### Skipped chapters
 
 | Version | Part | Status | Chapters skipped | Reason |
 | --- | --- | --- | --- | --- |
+| de-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | de-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | de-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | de-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
@@ -2950,6 +2951,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | de-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | de-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | de-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| en-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | en-bb | part-01 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | en-bb | part-01 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | en-bb | part-02 | structure-unsupported | 10 | document structure not yet supported by this importer |
@@ -2959,11 +2961,11 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | en-bb | part-04 | no-file-for-language | 4 | no docx file for this language |
 | en-bb | part-04 | structure-unsupported | 11 | document structure not yet supported by this importer |
 | en-bb | part-04 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| en-bb | part-06 | structure-unsupported | 56 | document structure not yet supported by this importer |
-| en-bb | part-07 | structure-unsupported | 75 | document structure not yet supported by this importer |
+| en-bb | part-06 | structure-unsupported | 2 | document structure not yet supported by this importer |
+| en-bb | part-07 | structure-unsupported | 2 | document structure not yet supported by this importer |
 | en-bb | part-07 | unmatched | 4 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | en-bb | part-08 | no-file-for-language | 5 | no docx file for this language |
-| en-bb | part-08 | structure-unsupported | 94 | document structure not yet supported by this importer |
+| en-bb | part-08 | unmatched | 94 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | en-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
 | en-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
 | en-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
@@ -2972,14 +2974,14 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | en-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | en-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | en-bb | part-16 | no-file-for-language | 4 | no docx file for this language |
-| en-bb | part-16 | structure-unsupported | 272 | document structure not yet supported by this importer |
+| en-bb | part-16 | unmatched | 228 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| es-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | es-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | es-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | es-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
 | es-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
 | es-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
 | es-bb | part-06 | no-file-for-language | 8 | no docx file for this language |
-| es-bb | part-06 | structure-unsupported | 54 | document structure not yet supported by this importer |
 | es-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
 | es-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
 | es-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
@@ -2990,13 +2992,13 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | es-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | es-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | es-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| fr-bb | part-01 | no-file-for-language | 16 | no docx file for this language |
+| fr-bb | part-01 | no-file-for-language | 17 | no docx file for this language |
 | fr-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | fr-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
 | fr-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
 | fr-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
 | fr-bb | part-06 | no-file-for-language | 6 | no docx file for this language |
-| fr-bb | part-06 | structure-unsupported | 56 | document structure not yet supported by this importer |
+| fr-bb | part-06 | structure-unsupported | 2 | document structure not yet supported by this importer |
 | fr-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
 | fr-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
 | fr-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
@@ -3007,7 +3009,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | fr-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | fr-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | fr-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| he-bb | part-01 | no-file-for-language | 14 | no docx file for this language |
+| he-bb | part-01 | no-file-for-language | 15 | no docx file for this language |
 | he-bb | part-02 | no-file-for-language | 14 | no docx file for this language |
 | he-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | he-bb | part-03 | no-file-for-language | 19 | no docx file for this language |
@@ -3027,7 +3029,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | he-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | he-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | he-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| pt-bb | part-01 | no-file-for-language | 6 | no docx file for this language |
+| pt-bb | part-01 | no-file-for-language | 7 | no docx file for this language |
 | pt-bb | part-01 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | pt-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | pt-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
@@ -3044,6 +3046,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | pt-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | pt-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | pt-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| ru-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | ru-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | ru-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
 | ru-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
@@ -3056,7 +3059,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | ru-bb | part-06 | structure-unsupported | 58 | document structure not yet supported by this importer |
 | ru-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
 | ru-bb | part-08 | no-file-for-language | 5 | no docx file for this language |
-| ru-bb | part-08 | structure-unsupported | 94 | document structure not yet supported by this importer |
+| ru-bb | part-08 | unmatched | 94 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | ru-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
 | ru-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
 | ru-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
@@ -3065,6 +3068,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | ru-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | ru-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | ru-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| tr-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | tr-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | tr-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
 | tr-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
@@ -3084,6 +3088,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | tr-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | tr-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | tr-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| uk-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | uk-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | uk-bb | part-02 | no-file-for-language | 2 | no docx file for this language |
 | uk-bb | part-02 | structure-unsupported | 12 | document structure not yet supported by this importer |
@@ -3095,7 +3100,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | uk-bb | part-05 | no-file-for-language | 2 | no docx file for this language |
 | uk-bb | part-05 | structure-unsupported | 64 | document structure not yet supported by this importer |
 | uk-bb | part-06 | no-file-for-language | 2 | no docx file for this language |
-| uk-bb | part-06 | structure-unsupported | 60 | document structure not yet supported by this importer |
+| uk-bb | part-06 | structure-unsupported | 6 | document structure not yet supported by this importer |
+| uk-bb | part-06 | unmatched | 54 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | uk-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
 | uk-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
 | uk-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
@@ -3119,21 +3125,243 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **en-bb**: part-04/chapter-06: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
 - **en-bb**: part-05 whole-part source: source item 62: marker "(6)" has no matching anchor in this chapter's Hebrew ground truth — left as text
 - **en-bb**: part-05 whole-part source: source item 62: marker "(4)" has no matching anchor in this chapter's Hebrew ground truth — left as text
-- **en-bb**: part-06 whole-part candidate DztxuIK7/71lcWa3V: no numbered h5 source items
-- **en-bb**: part-06 whole-part candidate eNwJXy4s/aZn877XC: no numbered h5 source items
-- **en-bb**: part-07 whole-part candidate FWrR48Bb/PL8hC6VQ: no numbered h5 source items
 - **en-bb**: part-07 Q&A candidate dgNJLnA7/dLixUtOX: pair count 89 does not match Hebrew questions (90) and answer chapters (90)
 - **en-bb**: part-07 Q&A candidate P5q0Zmm6/PbrNcKpJ: pair count 89 does not match Hebrew questions (90) and answer chapters (90)
 - **en-bb**: part-07 Q&A candidate hdywOExs/fwz3gg4T: at least one answer is empty
 - **en-bb**: part-07 Q&A candidate wOz46Ac9/qwfKdRMI: at least one answer is empty
-- **en-bb**: part-08 whole-part candidate Pscnn3pP/GasR6FdS: no numbered h5 source items
-- **en-bb**: part-16 whole-part candidate mW6eON0z/XVunfM89: no numbered h5 source items
+- **en-bb**: part-08 whole-part candidate Pscnn3pP/GasR6FdS: parsed items are implausibly short for a translation — median 0.018 of the Hebrew's length, expected at least 0.5 (a table of contents or front matter read as text?)
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=1 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=2 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=3 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=4 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=5 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=6 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=7 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=8 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=9 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=10 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=11 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=12 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=13 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=14 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=15 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=16 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=17 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=18 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=19 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=20 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=21 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=22 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=23 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=24 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=25 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=26 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=27 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=28 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=29 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=30 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=31 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=32 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=33 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=34 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=35 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=36 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=37 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=38 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=39 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=40 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=41 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=86 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=87 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=88 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=89 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=90 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=91 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=92 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=93 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=94 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=95 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=96 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=97 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=98 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=99 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=100 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=101 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=102 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=103 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=104 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=105 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=106 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=107 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=108 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=109 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=110 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=111 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=112 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=113 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=114 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=115 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=116 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=117 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=118 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=119 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=120 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=121 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=122 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=123 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=124 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=125 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=126 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=127 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=128 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=129 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=130 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=131 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=132 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=133 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=134 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=135 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=136 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=137 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=138 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=139 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=140 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=141 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=142 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=143 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=144 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=145 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=146 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=147 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=148 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=149 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=150 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=151 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=152 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=153 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=154 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=155 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=156 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=157 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=158 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=159 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=160 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=161 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=162 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=163 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=164 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=165 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=166 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=167 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=168 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=169 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=170 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=171 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=172 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=173 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=174 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=175 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=176 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=177 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=178 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=179 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=180 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=181 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=182 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=183 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=184 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=185 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=186 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=187 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=188 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=189 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=190 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=191 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=192 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=193 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=194 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=195 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=196 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=197 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=198 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=199 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=200 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=201 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=202 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=203 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=204 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=205 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=206 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=207 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=208 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=209 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=210 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=211 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=212 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=213 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=214 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=215 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=216 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=217 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=218 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=219 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=220 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=221 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=222 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=223 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=224 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=225 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=226 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=227 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=228 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=229 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=230 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=231 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=232 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=233 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=234 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=235 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=236 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=237 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=238 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=239 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=240 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=241 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=242 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=243 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=244 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=245 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=246 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=247 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=248 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=249 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=250 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=251 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=252 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=253 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=254 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=255 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=256 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=257 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=258 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=259 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=260 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=261 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=262 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=263 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=264 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=265 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=266 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=267 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=268 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=269 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=270 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=271 has no matching KabbalahMedia item — skipped
+- **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=272 has no matching KabbalahMedia item — skipped
 - **es-bb**: part-01 Q&A candidate YR9r5s6q/bHSPTyoc: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate EiUPsO0e/LpNfOFWs: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate QCnCAagn/cNLiPwiE: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate nnGQFc43/1zxBqmSG: no h6 question blocks
-- **es-bb**: part-06 whole-part candidate DztxuIK7/OARhj9ck: no numbered h5 source items
-- **fr-bb**: part-06 whole-part candidate DztxuIK7/3XcQaHXJ: no numbered h5 source items
 - **he-bb**: part-02/chapter-01 Hebrew whole-part: consumed 5/11 topic headings before this chapter ended
 - **he-bb**: part-02/chapter-02 Hebrew whole-part: consumed 3/7 topic headings before this chapter ended
 - **he-bb**: part-03 Hebrew whole-part: found 4 chapter heading(s), expected 15
@@ -3164,9 +3392,9 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **ru-bb**: part-04 Q&A candidate Ut8PE5aO/dN8Yd8d9: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate sL3XV5Dr/dZTnwfLY: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate 1t0TL11u/GMyqDV1J: no h6 question blocks
-- **ru-bb**: part-06 whole-part candidate DztxuIK7/AoBmRybu: no numbered h5 source items
+- **ru-bb**: part-06 whole-part candidate DztxuIK7/AoBmRybu: no source items — numbered, flat or unnumbered
 - **ru-bb**: part-06 Q&A candidate KGNYqv7h/RNERyfru: no h6 question blocks
-- **ru-bb**: part-08 whole-part candidate Pscnn3pP/xZMvq2Fj: no numbered h5 source items
+- **ru-bb**: part-08 whole-part candidate Pscnn3pP/xZMvq2Fj: item count 3 does not match target chapter count 94
 - **tr-bb**: part-01 Q&A candidate YR9r5s6q/Nh6O9nlf: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate EiUPsO0e/HC7CHDmm: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate QCnCAagn/ztwA4HRl: no h6 question blocks
@@ -3194,10 +3422,10 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **uk-bb**: part-04 Q&A candidate Ut8PE5aO/C1TDuVGm: no h6 question blocks
 - **uk-bb**: part-04 Q&A candidate sL3XV5Dr/UQXzE4ji: no h6 question blocks
 - **uk-bb**: part-04 Q&A candidate 1t0TL11u/Iq6eO5Sk: no h6 question blocks
-- **uk-bb**: part-05 whole-part candidate 4pmOtkWY/BcOThHsH: no numbered h5 source items
+- **uk-bb**: part-05 whole-part candidate 4pmOtkWY/BcOThHsH: no source items — numbered, flat or unnumbered
 - **uk-bb**: part-05 Q&A candidate fSmz8o3A/8bV4ZlE6: no h6 question blocks
 - **uk-bb**: part-05 Q&A candidate uyAWnLqJ/4d1ToqGf: no h6 question blocks
-- **uk-bb**: part-06 whole-part candidate DztxuIK7/UNjSstg0: no numbered h5 source items
+- **uk-bb**: part-06 whole-part candidate DztxuIK7/UNjSstg0: item count 1 does not match target chapter count 54
 - **uk-bb**: part-06 Q&A candidate kqEIM6f0/o9d5zg6K: no h6 question blocks
 - **uk-bb**: part-06 Q&A candidate jOttKP5x/OPZPRezN: no h6 question blocks
 - **uk-bb**: part-06 Q&A candidate AkCMSd9U/NSDXv52g: no h6 question blocks
