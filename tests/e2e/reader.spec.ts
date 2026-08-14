@@ -346,7 +346,7 @@ test.describe("mobile reader", () => {
 
     const bar = page
       .getByRole("tablist", { name: "Reader pane" })
-      .locator("xpath=ancestor::div[contains(@class,'fixed')][1]");
+      .locator("xpath=..");
     const box = (await bar.boundingBox())!;
     const viewport = page.viewportSize()!;
 
@@ -356,5 +356,47 @@ test.describe("mobile reader", () => {
 
     // One row, not two — "Inner Observation" wrapping made the bar ragged.
     expect(box.height).toBeLessThan(72);
+
+    // In normal flow, not `position: fixed`. On Firefox for Android the
+    // dynamic address bar moves the viewport a fixed element anchors to, and
+    // `bottom: 0` came to rest a strip above the real bottom edge with the
+    // page showing beneath it (issue #122). Everything placed by layout was
+    // correct throughout, so the fix is to be placed by layout.
+    await expect(bar).toHaveCSS("position", "static");
+
+    // The pane ends exactly where the bar begins — no overlap to compensate
+    // for with padding, and nothing hidden underneath it.
+    const paneBody = page.locator("#reader-source-pane .tes-pane-body");
+    expect(
+      Math.round(
+        (await paneBody.boundingBox())!.y +
+          (await paneBody.boundingBox())!.height,
+      ),
+    ).toBe(Math.round(box.y));
+  });
+
+  test("keeps the pane still when the contents panel opens over the bar", async ({
+    page,
+  }) => {
+    // The bar used to be removed from the DOM while a panel was open, which
+    // in flow would reflow the pane underneath on every open and close. It
+    // goes `inert` instead: out of the tab order and the accessibility tree,
+    // still occupying its row.
+    await page.goto(CHAPTER_PATH);
+    await waitForHydration(page);
+    await page
+      .getByRole("group", { name: "Reading mode" })
+      .getByRole("button", { name: "Panes" })
+      .click();
+
+    const paneBody = page.locator("#reader-source-pane .tes-pane-body");
+    const heightOf = async () =>
+      Math.round((await paneBody.boundingBox())!.height);
+    const closed = await heightOf();
+
+    await page.getByRole("button", { name: "Contents", exact: true }).click();
+    await expect(page.getByRole("dialog")).toBeVisible();
+
+    expect(await heightOf()).toBe(closed);
   });
 });

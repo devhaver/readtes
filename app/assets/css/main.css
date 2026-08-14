@@ -693,11 +693,7 @@ a[href],
 }
 
 .tes-pane-body {
-  @apply min-h-0 flex-1 overflow-y-auto px-4 lg:pb-4;
-  /* Clears the docked pane-switcher bar (`MobilePanePill`, fixed to the
-     bottom edge below `lg`) plus the device's own safe area, so the last
-     line of a chapter is never sitting underneath it. */
-  padding-block-end: calc(3.5rem + env(safe-area-inset-bottom));
+  @apply min-h-0 flex-1 overflow-y-auto px-4 pb-4;
   /* Named rather than a bare `pt-4` because the sticky headings inside have
      to cancel exactly this value — see `.tes-commentary-seif-heading`. */
   --pane-pad-block-start: 1rem;

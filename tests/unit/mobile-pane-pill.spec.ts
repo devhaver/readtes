@@ -159,17 +159,25 @@ describe("MobilePanePill", () => {
     expect(wrapper.vm.state.activePane.value).toBe("source");
   });
 
-  it("hides itself while the commentary sheet is open", async () => {
+  it("goes inert — not away — while the commentary sheet is open", async () => {
+    // It used to be removed from the DOM. Now that the bar sits in normal
+    // flow rather than `position: fixed` (issue #122), removing it would
+    // reflow the pane above it on every open and close. `inert` takes it
+    // out of the tab order and the accessibility tree without moving
+    // anything, which is what a modal above it wants regardless.
     stubNarrowViewport();
     const wrapper = await mountSuspended(Host);
-    expect(wrapper.find('[role="tablist"]').exists()).toBe(true);
+    const bar = () => wrapper.find('[role="tablist"]').element.parentElement;
+
+    expect(bar()?.hasAttribute("inert")).toBe(false);
 
     wrapper.vm.sheet.open(1);
     await nextTick();
-    expect(wrapper.find('[role="tablist"]').exists()).toBe(false);
+    expect(wrapper.find('[role="tablist"]').exists()).toBe(true);
+    expect(bar()?.hasAttribute("inert")).toBe(true);
 
     wrapper.vm.sheet.close();
     await nextTick();
-    expect(wrapper.find('[role="tablist"]').exists()).toBe(true);
+    expect(bar()?.hasAttribute("inert")).toBe(false);
   });
 });
