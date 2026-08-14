@@ -1,7 +1,17 @@
 /**
  * Ingests a translated batch result and writes the corpus files.
  *
- * `pnpm translate:apply --file <result>.json [--dry-run]`
+ * `pnpm translate:apply --file <result>.json [--target <versionId>] [--dry-run]`
+ *
+ * `--target` names the version being written. It is a flag rather than a
+ * required field of the result file because the result file is what comes back
+ * from a MODEL, and the manifest's own instructions tell it to return
+ * `{ batch, translations }` and nothing else — deliberately, since the whole
+ * safety property below is that the model decides only `html`. Requiring it to
+ * echo `targetVersionId` made the documented output shape fail here with
+ * "`targetVersionId` undefined is not in content/versions.json", which is a
+ * confusing way to say "the runner forgot to tell me". A `targetVersionId` in
+ * the file is still honoured, so results that carry one keep working.
  *
  * The result file carries ONLY `{ chapterId, anchorId, html }` per item. Every
  * other field on a `CommentaryItem` — `order`, `label`, `sefariaRef`,
@@ -45,8 +55,12 @@ const arg = (flag: string): string | undefined => {
 const resultPath = arg("--file");
 const isDryRun = process.argv.includes("--dry-run");
 
+const targetFlag = arg("--target");
+
 if (!resultPath) {
-  console.error("usage: pnpm translate:apply --file <result>.json [--dry-run]");
+  console.error(
+    "usage: pnpm translate:apply --file <result>.json [--target <versionId>] [--dry-run]",
+  );
   process.exit(2);
 }
 
@@ -69,11 +83,15 @@ const versions = versionsFileSchema.parse(
   JSON.parse(readFileSync(join(CONTENT_ROOT, "versions.json"), "utf8")),
 );
 
-const targetVersionId = result.targetVersionId;
+// The flag wins over the file: the runner knows which version it is filling,
+// and a result file that names a different one is a mistake, not an override.
+const targetVersionId = targetFlag ?? result.targetVersionId;
 const targetVersion = versions.find((v) => v.id === targetVersionId);
 if (!targetVersion) {
   console.error(
-    `${resultPath}: \`targetVersionId\` ${JSON.stringify(targetVersionId)} is not in content/versions.json.`,
+    targetVersionId === undefined
+      ? `${resultPath}: no target version. Pass \`--target <versionId>\` (e.g. --target en-ai), which is what the batch manifest's \`targetVersionId\` names.`
+      : `${resultPath}: target version ${JSON.stringify(targetVersionId)} is not in content/versions.json.`,
   );
   process.exit(1);
 }
