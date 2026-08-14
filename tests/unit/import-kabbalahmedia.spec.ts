@@ -65,6 +65,11 @@ import {
   parseKmPartNumber,
   type KmSqData,
 } from "../../scripts/lib/km-tree.ts";
+import {
+  groupKmUnnumberedWholePartBlocks,
+  hasUnnumberedKmItems,
+  parseDeclaredItemRange,
+} from "../../scripts/lib/km-unnumbered-whole-part-parser.ts";
 import type {
   CommentaryItem,
   SourceSegment,
@@ -1545,5 +1550,123 @@ describe("validateTranslationPlausibility", () => {
         { number: 1, sefariaRef: "x 1" },
       ]),
     ).toBeUndefined();
+  });
+});
+
+// Issue #81. Parts 8 and 16 carry seifim as `h5` with no numeral at all, so
+// POSITION is the only thing aligning them — the most dangerous of the three
+// dialects, since one missed seif shifts every chapter after it and the text
+// still reads like scripture.
+describe("groupKmUnnumberedWholePartBlocks", () => {
+  const h5 = (html: string) => ({ tag: "h5", html });
+  const p = (html: string) => ({ tag: "p", html });
+
+  it("takes each h5 as a seif and ends it at the marker", () => {
+    const items = groupKmUnnumberedWholePartBlocks([
+      p("PART SIXTEEN"),
+      h5("* It is written in the Zohar."),
+      p("Ohr Pnimi"),
+      p("Meaning the first seven fallen Melachim."),
+      h5("Adam ha Rishon had no part of Olam ha Zeh."),
+    ]);
+
+    expect(items).toEqual([
+      { n: 1, html: "* It is written in the Zohar." },
+      { n: 2, html: "Adam ha Rishon had no part of Olam ha Zeh." },
+    ]);
+  });
+
+  it("numbers from the declared range's first chapter", () => {
+    // Part 16's document covers items 42-85 of a 272-chapter part. Numbering
+    // from 1 would align its first seif to chapter 1 — every one of the 44
+    // wrong, and every one of them plausible prose.
+    const items = groupKmUnnumberedWholePartBlocks(
+      [h5("First covered seif."), h5("Second.")],
+      42,
+    );
+
+    expect(items.map((item) => item.n)).toEqual([42, 43]);
+  });
+
+  it("joins a seif's continuation paragraphs but never its commentary", () => {
+    const items = groupKmUnnumberedWholePartBlocks([
+      h5("Opening."),
+      p("Continuation."),
+      p("Ohr Pnimi"),
+      p("Commentary that must stay out."),
+      h5("Next seif."),
+    ]);
+
+    expect(items[0]?.html).toBe("Opening. Continuation.");
+  });
+
+  it("steps over a page-number table of contents, which is never h5", () => {
+    const items = groupKmUnnumberedWholePartBlocks([
+      p("1. * 4"),
+      p("2. 4"),
+      p("3. 5"),
+      h5("The first real seif."),
+    ]);
+
+    expect(items).toHaveLength(1);
+    expect(items[0]?.html).toBe("The first real seif.");
+  });
+});
+
+describe("hasUnnumberedKmItems", () => {
+  it("is true for h5 seifim carrying no numeral", () => {
+    expect(
+      hasUnnumberedKmItems([
+        { tag: "h5", html: "* It is written in the Zohar." },
+      ]),
+    ).toBe(true);
+  });
+
+  it("is false when the h5 items ARE numbered — that is the styled dialect", () => {
+    expect(
+      hasUnnumberedKmItems([{ tag: "h5", html: "1. AK contains AB, SAG." }]),
+    ).toBe(false);
+  });
+
+  it("is false for a document with no h5 at all", () => {
+    expect(hasUnnumberedKmItems([{ tag: "p", html: "1. AK contains." }])).toBe(
+      false,
+    );
+  });
+});
+
+describe("parseDeclaredItemRange", () => {
+  it("reads the document's own statement of what it covers", () => {
+    expect(
+      parseDeclaredItemRange([
+        { tag: "p", html: "PART SIXTEEN" },
+        { tag: "p", html: "The Three Olamot Beria Yetzira Assiya" },
+        { tag: "p", html: "Items 42-85" },
+      ]),
+    ).toEqual({ from: 42, to: 85 });
+  });
+
+  it("accepts an en dash, which docx conversion likes to produce", () => {
+    expect(
+      parseDeclaredItemRange([{ tag: "p", html: "Items 42–85" }])?.to,
+    ).toBe(85);
+  });
+
+  it("is undefined for a document that covers a whole part", () => {
+    expect(
+      parseDeclaredItemRange([{ tag: "p", html: "PART SIX" }]),
+    ).toBeUndefined();
+  });
+
+  it("ignores the phrase outside the front matter", () => {
+    // Only the opening blocks are searched — "Items 1-9" could otherwise
+    // appear in a cross-reference in running commentary and silently rescope
+    // the whole document.
+    const blocks = [
+      ...Array.from({ length: 12 }, () => ({ tag: "p", html: "prose" })),
+      { tag: "p", html: "Items 1-9" },
+    ];
+
+    expect(parseDeclaredItemRange(blocks)).toBeUndefined();
   });
 });
