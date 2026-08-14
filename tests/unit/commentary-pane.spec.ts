@@ -1,4 +1,6 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { defineComponent, h } from "vue";
 import CommentaryPane from "~/components/reader/CommentaryPane.vue";
@@ -322,6 +324,46 @@ describe("CommentaryPane", () => {
       expect(
         wrapper.findAll(".tes-commentary-marker").map((m) => m.text()),
       ).toEqual(["1", "2"]);
+    });
+  });
+
+  // A source assertion rather than a rendered one, for the same reason
+  // `theme-tokens.spec.ts` is: what regressed here is which shape a class
+  // draws, and happy-dom evaluates no CSS at all — a mounted test would pass
+  // while the badge was visibly wrong again.
+  describe("marker shape (issue #93)", () => {
+    // Comments stripped first: the rules below explain themselves by naming
+    // the very shapes they must not draw, and a bare text search would find
+    // "rounded-full" in the prose saying it was removed.
+    const css = readFileSync(
+      join(process.cwd(), "app/assets/css/main.css"),
+      "utf8",
+    ).replace(/\/\*[\s\S]*?\*\//g, "");
+    const declarationsFor = (selector: string): string => {
+      const rule = new RegExp(`\\${selector}\\s*\\{([^}]*)\\}`).exec(css);
+      expect(rule, `no rule found for ${selector}`).not.toBeNull();
+      return rule?.[1] ?? "";
+    };
+
+    // The note marker counts *notes*; the seif chip counts *seifim* of the
+    // Ari's text, and a chapter carries several notes per seif, so the two
+    // run apart from the first seif on. They used to be drawn identically —
+    // same height, same `rounded-full`, same `bg-(--surface-raised)` — which
+    // is the half of issue #93 that grouping the pane by seif doesn't answer.
+    it("does not draw the note marker as the seif chip's filled pill", () => {
+      const marker = declarationsFor(".tes-commentary-marker");
+
+      expect(marker).not.toContain("rounded-full");
+      expect(marker).not.toContain("bg-(--surface-raised)");
+      expect(declarationsFor(".tes-seif-chip")).toContain("rounded-full");
+    });
+
+    it("marks the unanchored variant as pointing at nothing in the text", () => {
+      // Issue #79: no marker for it exists in the Ari's text, which is what
+      // the notice above the list says in words.
+      expect(declarationsFor(".tes-commentary-marker.is-plain")).toContain(
+        "border-dashed",
+      );
     });
   });
 });

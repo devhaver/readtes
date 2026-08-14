@@ -593,21 +593,35 @@ a[href],
  * single-class selectors, so source order is what decides.
  */
 .tes-commentary-marker {
-  /* Same pill geometry as `.tes-seif-chip` — the codebase's established
-     shape for "a number labelling the block under it", which is exactly
-     what this became when it moved out of the gutter. `min-w-5` + `px-1`
-     rather than a fixed circle so a 3-digit marker (the corpus reaches
-     "400" — see #96) widens instead of overflowing. */
-  @apply inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-(--surface-raised) px-1 font-semibold text-(--accent-text);
+  /* Deliberately NOT `.tes-seif-chip`'s shape, which it used to copy exactly
+     — same height, same `min-w-5`, same `rounded-full`, same
+     `bg-(--surface-raised)`. Two different numbering systems wore one badge:
+     the seif chip counts *seifim* of the Ari's text, this counts *notes*, and
+     a chapter routinely carries several notes per seif, so the two run apart
+     immediately (`part-01/chapter-01` seif 1 alone has 11 notes). Grouping
+     the pane by seif gave each note an unambiguous heading above it (#93),
+     but the badge itself still said "I am the same kind of number as the one
+     over there", which is the half of the report that grouping doesn't
+     answer.
+
+     So: squared and outlined against the chip's filled circle, and accent
+     rather than muted, which is also the colour the marker printed in the
+     Ari's text already carries (`.tes-anchor`). Same fact, same colour, one
+     glance. `min-w-5` + `px-1` rather than a fixed square so a 3-digit
+     marker (the corpus reaches "400" — see #96) widens instead of
+     overflowing. */
+  @apply inline-flex h-5 min-w-5 items-center justify-center rounded-sm border border-(--border) px-1 font-semibold text-(--accent-text);
   font-size: 0.75rem;
   line-height: 1;
   vertical-align: baseline;
 }
 
 /* The unanchored variant (issue #79) — no anchor to activate, so it must not
-   look or behave like the tappable one. */
+   look or behave like the tappable one. The dashed border is the same fact
+   the notice above the list states in words: this number points at nothing
+   in the text, because no marker for it exists there yet. */
 .tes-commentary-marker.is-plain {
-  @apply text-(--text-muted);
+  @apply border-dashed text-(--text-muted);
   cursor: default;
 }
 
