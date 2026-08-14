@@ -24,6 +24,10 @@ The ones that fail silently:
   Hebrew-facing family needs `subsets: ["latin", "hebrew"]` explicitly in
   `nuxt.config.ts`, or it ships with zero Hebrew glyph coverage and nothing
   errors.
+- **Fonts are vendored** into `public/fonts/` + `fonts.manifest.json`, both
+  **generated** — never hand-edit them, and never point the build back at
+  Google. Change `GOOGLE_FONT_FAMILIES` in `nuxt.config.ts`, then run
+  `pnpm fonts:vendor` and commit what it writes.
 - **Contrast tokens.** Use `--color-teal-strong` for white-on-teal,
   `--accent-text` for teal text on ambient surface, `--color-orange-cta-strong`
   and `--warning-text` for the orange equivalents. Plain `text-teal` /

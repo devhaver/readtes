@@ -56,31 +56,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # `@nuxt/fonts` downloads every subset from Google at build time, and a
-      # single 404 from `fonts.gstatic.com` fails the whole deploy — it did,
-      # for a commit with nothing wrong with it, and a re-run of the same SHA
-      # then succeeded (issue #121). A failed deploy is also invisible from
-      # the outside: `main` has merged and the site simply keeps serving the
-      # previous build.
-      #
-      # The cache is the module's own download cache, so a warm run needs no
-      # font network at all. Keyed on the font configuration: change a family
-      # or a subset and the key changes, so a stale cache can never mask a
-      # config that no longer fetches what it should.
-      - name: Restore font download cache
-        uses: actions/cache@v4
-        with:
-          path: node_modules/.cache/nuxt/fonts
-          key: nuxt-fonts-${{ hashFiles('nuxt.config.ts') }}
-          restore-keys: |
-            nuxt-fonts-
-
+      # No font-download cache any more, and no font network either: the
+      # fonts are vendored into `public/fonts/` and resolved from
+      # `fonts.manifest.json` (issue #121). This step used to fail on a 404
+      # from `fonts.gstatic.com` — twice in one day, on commits with nothing
+      # wrong with them — and a failed deploy is invisible from the outside,
+      # because `main` merges and the site keeps serving the previous build.
       - name: Generate static site
         run: pnpm generate
 
-      # The Hebrew families ship zero glyphs if their subsets are ever
-      # dropped, and nothing errors when that happens (see the `tes-seo-ssg`
-      # skill). A build that silently lost its fonts should not deploy.
+      # Every way the fonts can go missing produces a SUCCESSFUL build and a
+      # silently wrong site: a dropped Hebrew subset ships zero glyphs for
+      # U+0590–05FF, and a vendored provider the module doesn't recognise
+      # resolves no faces at all (both measured — see the script). A build
+      # that lost its fonts must not deploy.
       - name: Verify font output
         run: node scripts/verify-font-output.mjs
 

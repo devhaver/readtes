@@ -21,6 +21,7 @@
     "emit:toc-splits": "tsx scripts/emit-toc-splits.ts",
     "emit:glossary-splits": "tsx scripts/emit-glossary-splits.ts",
     "emit:sefaria-offsets": "tsx scripts/emit-sefaria-offsets.ts",
+    "fonts:vendor": "tsx scripts/vendor-fonts.ts",
     "import:sefaria": "tsx scripts/import-sefaria.ts",
     "import:kabbalahmedia": "tsx scripts/import-kabbalahmedia.ts",
     "migrate:consolidate-qa": "tsx scripts/migrate-consolidate-qa.ts",

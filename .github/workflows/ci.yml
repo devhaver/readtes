@@ -40,8 +40,11 @@ jobs:
       - name: Install browser
         run: pnpm exec playwright install --with-deps chromium
 
+      # Mirrors `task check`. `verify-font-output` sits after `generate` for
+      # the reason it exists: every way the fonts go missing leaves the build
+      # succeeding and the site silently wrong (issue #121).
       - name: Run full project gate
-        run: pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnpm test && pnpm generate
+        run: pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnpm test && pnpm generate && node scripts/verify-font-output.mjs
 
       - name: Run browser acceptance tests
         run: pnpm test:e2e
