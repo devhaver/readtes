@@ -1,10 +1,87 @@
+import type { ModuleOptions as FontsModuleOptions } from "@nuxt/fonts";
 import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import {
+  vendoredFontFamilies,
+  vendoredFontProvider,
+} from "./scripts/lib/vendored-fonts";
 import type { Toc } from "./shared/types/content";
 import { CHAPTER_KIND_ORDER } from "./shared/utils/chapterKinds";
 import { nativeLanguageName } from "./shared/utils/languages";
 import { stripContentChunkPrefetchHints } from "./shared/utils/manifestPrefetch";
+
+// The families, weights and subsets this site uses — the input to
+// `pnpm fonts:vendor`, and the only place these choices are made.
+//
+// Weight discipline: every family lists only the weights actually used
+// (Inter 400/500/600 for body, font-medium and the .tes-anchor chips;
+// Taviraj 400 incl. italic for the display face and the en hero quote;
+// Frank Ruhl Libre 700/900 as the Hebrew *display* face only — reading
+// Hebrew moved to David Libre 400/700, the classic face of printed
+// Hebrew holy books; Heebo 400/500/700 is the Hebrew UI-chrome sans
+// under /he/). Keep this list tight — extra weights balloon the
+// generated `_fonts` payload, and now the committed `public/fonts/` too.
+//
+// Subset discipline (T10 fix — real bug, verified on the generated
+// output): `@nuxt/fonts`' own default subset list is latin-only and does
+// NOT include `hebrew`. Left unset, every one of the three Hebrew faces
+// below silently emitted zero `@font-face` rules covering U+0590–05FF,
+// so all Hebrew text on the shipped site fell back to the browser's
+// default serif/sans instead of David Libre/Frank Ruhl Libre/Heebo. Each
+// Hebrew family lists `subsets: ["latin", "hebrew"]` explicitly (`latin`
+// stays, since digits/punctuation/the odd Latin loanword still need it);
+// Inter and Taviraj are untouched — they have no Hebrew glyphs to begin
+// with and must not gain a subset that would only balloon their payload.
+const GOOGLE_FONT_FAMILIES: NonNullable<FontsModuleOptions["families"]> = [
+  { name: "Inter", provider: "google", weights: [400, 500, 600] },
+  {
+    name: "Taviraj",
+    provider: "google",
+    weights: [400],
+    styles: ["normal", "italic"],
+  },
+  {
+    name: "Frank Ruhl Libre",
+    provider: "google",
+    weights: [700, 900],
+    subsets: ["latin", "hebrew"],
+  },
+  {
+    name: "David Libre",
+    provider: "google",
+    weights: [400, 700],
+    subsets: ["latin", "hebrew"],
+  },
+  {
+    name: "Heebo",
+    provider: "google",
+    weights: [400, 500, 700],
+    subsets: ["latin", "hebrew"],
+  },
+];
+
+// Which generic each family's fallback metrics are computed against. The
+// Google provider carries a `category` that decides this; a vendored family
+// has no upstream metadata, so it is stated here — and it matters, because
+// the wrong generic silently produces the wrong `size-adjust` for the three
+// reading faces. Values are `fontaine`'s own DEFAULT_CATEGORY_FALLBACKS, so
+// the generated rules are identical to what the Google path emits.
+const SERIF_FALLBACKS = ["Times New Roman", "Georgia", "Noto Serif"];
+const SANS_FALLBACKS = [
+  "BlinkMacSystemFont",
+  "Segoe UI",
+  "Helvetica Neue",
+  "Arial",
+  "Noto Sans",
+];
+const FONT_FALLBACKS: Record<string, string[]> = {
+  Inter: SANS_FALLBACKS,
+  Heebo: SANS_FALLBACKS,
+  Taviraj: SERIF_FALLBACKS,
+  "Frank Ruhl Libre": SERIF_FALLBACKS,
+  "David Libre": SERIF_FALLBACKS,
+};
 
 // `nitro.prerender.routes` needs each volume's contents page listed
 // explicitly (see the comment below) — read straight from the committed
@@ -269,52 +346,36 @@ export default defineNuxtConfig({
       },
     },
   },
-  // Weight discipline: every family lists only the weights actually used
-  // (Inter 400/500/600 for body, font-medium and the .tes-anchor chips;
-  // Taviraj 400 incl. italic for the display face and the en hero quote;
-  // Frank Ruhl Libre 700/900 as the Hebrew *display* face only — reading
-  // Hebrew moved to David Libre 400/700, the classic face of printed
-  // Hebrew holy books; Heebo 400/500/700 is the Hebrew UI-chrome sans
-  // under /he/). Keep this list tight — extra weights balloon the
-  // generated `_fonts` payload.
+  // Where the files come from (issue #121): `public/fonts/`, vendored into
+  // the repository, NOT `fonts.gstatic.com` at build time. A single 404 from
+  // Google used to fail the whole deploy — twice in one day, on commits with
+  // nothing wrong with them — and a failed deploy is invisible from outside,
+  // because `main` merges and the site keeps serving the previous build.
   //
-  // Subset discipline (T10 fix — real bug, verified on the generated
-  // output): `@nuxt/fonts`' own default subset list is latin-only and does
-  // NOT include `hebrew`. Left unset, every one of the three Hebrew faces
-  // below silently emitted zero `@font-face` rules covering U+0590–05FF,
-  // so all Hebrew text on the shipped site fell back to the browser's
-  // default serif/sans instead of David Libre/Frank Ruhl Libre/Heebo. Each
-  // Hebrew family lists `subsets: ["latin", "hebrew"]` explicitly (`latin`
-  // stays, since digits/punctuation/the odd Latin loanword still need it);
-  // Inter and Taviraj are untouched — they have no Hebrew glyphs to begin
-  // with and must not gain a subset that would only balloon their payload.
-  fonts: {
-    families: [
-      { name: "Inter", provider: "google", weights: [400, 500, 600] },
-      {
-        name: "Taviraj",
-        provider: "google",
-        weights: [400],
-        styles: ["normal", "italic"],
-      },
-      {
-        name: "Frank Ruhl Libre",
-        provider: "google",
-        weights: [700, 900],
-        subsets: ["latin", "hebrew"],
-      },
-      {
-        name: "David Libre",
-        provider: "google",
-        weights: [400, 700],
-        subsets: ["latin", "hebrew"],
-      },
-      {
-        name: "Heebo",
-        provider: "google",
-        weights: [400, 500, 700],
-        subsets: ["latin", "hebrew"],
-      },
-    ],
-  },
+  // `FONTS_SOURCE=google` is the one path that still fetches, and exists for
+  // exactly one caller: `pnpm fonts:vendor`, which builds through it and then
+  // records what it produced. The list below is therefore not dead config —
+  // it is the input to the refresh, and the only place a family, weight or
+  // subset is chosen.
+  fonts:
+    process.env.FONTS_SOURCE === "google"
+      ? { families: GOOGLE_FONT_FAMILIES }
+      : {
+          providers: {
+            vendored: vendoredFontProvider,
+            // Every remote provider off, so "this build makes no font
+            // requests" is a property of the configuration rather than a
+            // consequence of every family happening to name `vendored`.
+            // `@nuxt/fonts` also resolves font families it finds in CSS that
+            // are not listed in `families` at all — that path is how a
+            // stylesheet edit could quietly put Google back in the build.
+            google: false,
+            bunny: false,
+            fontshare: false,
+            fontsource: false,
+            adobe: false,
+            googleicons: false,
+          },
+          families: vendoredFontFamilies(FONT_FALLBACKS),
+        },
 });

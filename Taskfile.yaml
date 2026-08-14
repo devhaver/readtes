@@ -95,18 +95,30 @@ tasks:
       Run Nuxt's static site generation — this is what gets deployed.
     cmd: pnpm generate
 
+  verify:fonts:
+    desc: Fail if the generated site lost its fonts
+    summary: |
+      Check the generated output actually ships the font files and @font-face
+      rules, including Hebrew coverage. Every way this breaks — a dropped
+      subset, a vendored provider that resolves nothing — produces a
+      successful build and a silently wrong site, so it is checked rather
+      than trusted. Requires a prior `task generate`.
+    cmd: node scripts/verify-font-output.mjs
+
   check:
     desc: Run the complete pre-commit verification suite
     summary: |
       Run every required quality gate: linting, formatting, type-checking,
-      content validation, unit tests, static site generation, and the
-      Playwright end-to-end suite against the generated artifact.
+      content validation, unit tests, static site generation, the font-output
+      check, and the Playwright end-to-end suite against the generated
+      artifact.
     cmds:
       - task: qa
       - task: typecheck
       - task: validate:content
       - task: test
       - task: generate
+      - task: verify:fonts
       - task: test:e2e
 
   import:

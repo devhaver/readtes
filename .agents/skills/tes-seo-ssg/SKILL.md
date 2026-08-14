@@ -32,13 +32,40 @@ description: Static-generation and SEO wiring — siteUrl runtime config, canoni
   universe is a pure function of the ToC, so no heavyweight sitemap/SEO
   module is needed. `public/robots.txt` was deleted (it's now the dynamic
   route, which derives its `Sitemap:` line from `siteUrl`).
+- **Fonts are vendored, and the build makes no font requests** (issue
+  #121). `public/fonts/*.woff2` holds the files; `fonts.manifest.json`
+  records every `@font-face` (family, weight, style, `unicode-range`, file);
+  `scripts/lib/vendored-fonts.ts` is the `@nuxt/fonts` provider that reads
+  them, and every remote provider is set to `false` in `nuxt.config.ts` so
+  this is a property of the config rather than of every family happening to
+  name `vendored`. Both artifacts are **generated — never hand-edit them**.
+
+  Why: `@nuxt/fonts` downloaded each subset at build time and a single
+  `fonts.gstatic.com` 404 failed the whole deploy — twice in one day, on
+  commits with nothing wrong with them — and a failed deploy is invisible
+  from outside, because `main` merges and the site keeps serving the
+  previous build.
+
+  **To change a family, weight, style or subset**, edit
+  `GOOGLE_FONT_FAMILIES` in `nuxt.config.ts` and run **`pnpm fonts:vendor`**.
+  It builds once with `FONTS_SOURCE=google` (the only path that still
+  fetches) and records exactly what that produced, so the vendored output is
+  a recording of the real provider rather than a second guess at it. Review
+  the diff, commit both artifacts.
+
 - **Hebrew font subsets.** `@nuxt/fonts`' default subset list is
   latin-only and does not include `hebrew` — the three Hebrew faces
   (Frank Ruhl Libre, David Libre, Heebo) each list
-  `subsets: ["latin", "hebrew"]` explicitly in `nuxt.config.ts`'s `fonts`
-  block. Inter and Taviraj (no Hebrew glyphs) are left alone. If you add a
+  `subsets: ["latin", "hebrew"]` explicitly in `GOOGLE_FONT_FAMILIES`.
+  Inter and Taviraj (no Hebrew glyphs) are left alone. If you add a
   new Hebrew-facing font family, give it the same `subsets` entry or it
   will silently render with zero Hebrew glyph coverage.
+- **`scripts/verify-font-output.mjs` runs in `task check` and both
+  workflows**, after `generate`. Every way the fonts go missing leaves the
+  build _succeeding_: a dropped Hebrew subset ships zero glyphs for
+  U+0590–05FF, and a provider whose shape the module doesn't recognise
+  resolves no faces at all (measured — the site shipped with no
+  `@font-face` rules whatsoever and nothing complained).
 - **`404.html`.** `pnpm generate`'s static Nitro preset prerenders
   `/404.html` automatically. Its raw HTML is an empty pre-hydration shell
   (`data-ssr="false"` — Nuxt's standard static-hosting fallback: the file

@@ -89,7 +89,9 @@ V8's default heap; `task prod` sets this), `preview`, `start` (run the built
 typecheck` **and** `vue-tsc -p tsconfig.scripts.json` for
 `scripts/`/`tests/`/`shared/`), `validate:content`, `emit:toc-splits`,
 `emit:glossary-splits`, `emit:sefaria-offsets`, `import:kabbalahmedia`,
-`migrate:sefaria-refs`.
+`migrate:sefaria-refs`, `fonts:vendor` (refresh the vendored fonts in
+`public/fonts/` — the only thing here that ever fetches from Google; see the
+`tes-seo-ssg` skill).
 
 A first `pnpm install` in a fresh clone prints `ERR_PNPM_IGNORED_BUILDS` and
 stops build scripts short — that's expected; see the `tes-pnpm-setup` skill.
