@@ -51,8 +51,30 @@ test("serves the aligned English reader and synchronizes Ari anchors", async ({
   await expect(innerLight.locator("#op-1")).toContainText("spiritual time");
   await expect(innerObservation.locator("li").first()).not.toBeEmpty();
 
+  // The highlight is a flash: ~900ms under reduced motion, two frames
+  // without it. Polling for the class is a race with its own removal — it
+  // failed once under four-worker contention where it passes 5/5 solo. Watch
+  // for the transition instead of sampling for it, which is deterministic
+  // and asserts the same thing.
+  await innerLight.locator("#op-1").evaluate((el) => {
+    (window as unknown as { __flashed?: boolean }).__flashed = false;
+    new MutationObserver(() => {
+      if (/is-highlighted/.test(el.className)) {
+        (window as unknown as { __flashed?: boolean }).__flashed = true;
+      }
+    }).observe(el, { attributes: true, attributeFilter: ["class"] });
+  });
+
   await source.locator('[data-anchor="op-1"]').click();
-  await expect(innerLight.locator("#op-1")).toHaveClass(/is-highlighted/);
+
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () => (window as unknown as { __flashed?: boolean }).__flashed,
+      ),
+    )
+    .toBe(true);
+  await expect(innerLight.locator("#op-1")).toBeInViewport();
 });
 
 test("switches languages, identifies AI text, and supports themes", async ({

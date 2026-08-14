@@ -29,6 +29,30 @@ export const isConsolidatedQaKind = (kind: ChapterKind): boolean =>
   CONSOLIDATED_QA_KINDS.includes(kind);
 
 /**
+ * The first stored segment of each answer, in answer order.
+ *
+ * Consolidation gave every item the answer number as its `n`, and the rare
+ * answer that upstream splits across several segments keeps one `n` across
+ * several items (told apart by `sefariaRef`). Anything aligning *answers*
+ * against this chapter — a KabbalahMedia document has one block per answer,
+ * not per segment — needs one entry per answer, and the entry that carries
+ * the citation an answer's text belongs to is its first.
+ *
+ * `checkSourceConsolidatedQaSubset` in `validate-content.ts` is the other
+ * half of this contract: a translation may cover an answer once, provided it
+ * carries the `sefariaRef` and anchors of the segment it matched.
+ */
+export const firstSegmentPerAnswer = (
+  segments: readonly SourceSegment[],
+): SourceSegment[] => {
+  const byAnswer = new Map<number, SourceSegment>();
+  for (const segment of segments) {
+    if (!byAnswer.has(segment.n)) byAnswer.set(segment.n, segment);
+  }
+  return [...byAnswer.values()].sort((a, b) => a.n - b.n);
+};
+
+/**
  * One per-answer chapter's own ordinal (its printed "answer number", e.g.
  * `answers-terminology-06` -> `6`) and its own segments — each segment still
  * carrying the *local* `n` it had inside its own one-answer file (almost

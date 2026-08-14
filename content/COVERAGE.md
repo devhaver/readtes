@@ -2894,14 +2894,15 @@ skipped, not force-imported.
 
 | Version | Language (KM code) | Chapters imported | Source segments | Commentary items |
 | --- | --- | --- | --- | --- |
-| de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 0/5148 | 0 | 0 |
-| en-bb | Bnei Baruch (KabbalahMedia) (`en`) | 737/5148 | 1406 | 51 |
-| es-bb | Bnei Baruch (KabbalahMedia) — Español (`es`) | 0/5148 | 0 | 0 |
-| fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 0/5148 | 0 | 0 |
-| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/5148 | 0 | 0 |
-| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 0/5148 | 0 | 0 |
-| tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/5148 | 0 | 0 |
-| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 0/5148 | 0 | 0 |
+| de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 0/2090 | 0 | 0 |
+| en-bb | Bnei Baruch (KabbalahMedia) (`en`) | 84/2090 | 1474 | 51 |
+| es-bb | Bnei Baruch (KabbalahMedia) — Español (`es`) | 0/2090 | 0 | 0 |
+| fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 0/2090 | 0 | 0 |
+| he-bb | Bnei Baruch (KabbalahMedia) — עברית (`he`) | 2/2090 | 10 | 34 |
+| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2090 | 0 | 0 |
+| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 0/2090 | 0 | 0 |
+| tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2090 | 0 | 0 |
+| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 0/2090 | 0 | 0 |
 
 ### Per part x language
 
@@ -2910,181 +2911,201 @@ skipped, not force-imported.
 usable translation for it in that language (expected for Parts 9-15,
 which have no official non-Hebrew translation on KabbalahMedia at all).
 
-| Part | de-bb | en-bb | es-bb | fr-bb | pt-bb | ru-bb | tr-bb | uk-bb |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| part-01 | 0/119 | 54/119 | 0/119 | 0/119 | 0/119 | 0/119 | 0/119 | 0/119 |
-| part-02 | 0/186 | 174/186 | 0/186 | 0/186 | 0/186 | 0/186 | 0/186 | 0/186 |
-| part-03 | 0/268 | 104/268 | 0/268 | 0/268 | 0/268 | 0/268 | 0/268 | 0/268 |
-| part-04 | 0/137 | 0/137 | 0/137 | 0/137 | 0/137 | 0/137 | 0/137 | 0/137 |
-| part-05 | 0/266 | 266/266 | 0/266 | 0/266 | 0/266 | 0/266 | 0/266 | 0/266 |
-| part-06 | 0/195 | 139/195 | 0/195 | 0/195 | 0/195 | 0/195 | 0/195 | 0/195 |
-| part-07 | 0/231 | 0/231 | 0/231 | 0/231 | 0/231 | 0/231 | 0/231 | 0/231 |
-| part-08 | 0/245 | 0/245 | 0/245 | 0/245 | 0/245 | 0/245 | 0/245 | 0/245 |
-| part-09 | 0/295 | 0/295 | 0/295 | 0/295 | 0/295 | 0/295 | 0/295 | 0/295 |
-| part-10 | 0/344 | 0/344 | 0/344 | 0/344 | 0/344 | 0/344 | 0/344 | 0/344 |
-| part-11 | 0/346 | 0/346 | 0/346 | 0/346 | 0/346 | 0/346 | 0/346 | 0/346 |
-| part-12 | 0/555 | 0/555 | 0/555 | 0/555 | 0/555 | 0/555 | 0/555 | 0/555 |
-| part-13 | 0/380 | 0/380 | 0/380 | 0/380 | 0/380 | 0/380 | 0/380 | 0/380 |
-| part-14 | 0/479 | 0/479 | 0/479 | 0/479 | 0/479 | 0/479 | 0/479 | 0/479 |
-| part-15 | 0/529 | 0/529 | 0/529 | 0/529 | 0/529 | 0/529 | 0/529 | 0/529 |
-| part-16 | 0/573 | 0/573 | 0/573 | 0/573 | 0/573 | 0/573 | 0/573 | 0/573 |
+| Part | de-bb | en-bb | es-bb | fr-bb | he-bb | pt-bb | ru-bb | tr-bb | uk-bb |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| part-01 | 0/16 | 4/16 | 0/16 | 0/16 | 2/16 | 0/16 | 0/16 | 0/16 | 0/16 |
+| part-02 | 0/16 | 4/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 |
+| part-03 | 0/34 | 4/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 |
+| part-04 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 |
+| part-05 | 0/66 | 66/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 |
+| part-06 | 0/62 | 6/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 |
+| part-07 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 |
+| part-08 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 |
+| part-09 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 |
+| part-10 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 | 0/164 |
+| part-11 | 0/160 | 0/160 | 0/160 | 0/160 | 0/160 | 0/160 | 0/160 | 0/160 | 0/160 |
+| part-12 | 0/298 | 0/298 | 0/298 | 0/298 | 0/298 | 0/298 | 0/298 | 0/298 | 0/298 |
+| part-13 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 | 0/225 |
+| part-14 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 | 0/232 |
+| part-15 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 | 0/233 |
+| part-16 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 | 0/276 |
 
 ### Skipped chapters
 
 | Version | Part | Status | Chapters skipped | Reason |
 | --- | --- | --- | --- | --- |
-| de-bb | part-01 | structure-unsupported | 119 | document structure not yet supported by this importer |
-| de-bb | part-02 | no-file-for-language | 186 | no docx file for this language |
-| de-bb | part-03 | no-file-for-language | 268 | no docx file for this language |
-| de-bb | part-04 | no-file-for-language | 137 | no docx file for this language |
-| de-bb | part-05 | no-file-for-language | 266 | no docx file for this language |
-| de-bb | part-06 | no-file-for-language | 195 | no docx file for this language |
-| de-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| de-bb | part-08 | no-file-for-language | 245 | no docx file for this language |
-| de-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| de-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| de-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| de-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| de-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| de-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| de-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| de-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
+| de-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
+| de-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
+| de-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
+| de-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
+| de-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
+| de-bb | part-06 | no-file-for-language | 62 | no docx file for this language |
+| de-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| de-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| de-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| de-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| de-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| de-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| de-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| de-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| de-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| de-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
 | en-bb | part-01 | structure-unsupported | 10 | document structure not yet supported by this importer |
-| en-bb | part-01 | unmatched | 55 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| en-bb | part-01 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | en-bb | part-02 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | en-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| en-bb | part-03 | structure-unsupported | 163 | document structure not yet supported by this importer |
+| en-bb | part-03 | structure-unsupported | 29 | document structure not yet supported by this importer |
 | en-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| en-bb | part-04 | no-file-for-language | 125 | no docx file for this language |
+| en-bb | part-04 | no-file-for-language | 4 | no docx file for this language |
 | en-bb | part-04 | structure-unsupported | 11 | document structure not yet supported by this importer |
 | en-bb | part-04 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | en-bb | part-06 | structure-unsupported | 56 | document structure not yet supported by this importer |
-| en-bb | part-07 | no-file-for-language | 65 | no docx file for this language |
 | en-bb | part-07 | structure-unsupported | 75 | document structure not yet supported by this importer |
-| en-bb | part-07 | unmatched | 91 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| en-bb | part-08 | no-file-for-language | 151 | no docx file for this language |
+| en-bb | part-07 | unmatched | 4 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| en-bb | part-08 | no-file-for-language | 5 | no docx file for this language |
 | en-bb | part-08 | structure-unsupported | 94 | document structure not yet supported by this importer |
-| en-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| en-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| en-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| en-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| en-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| en-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| en-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| en-bb | part-16 | no-file-for-language | 301 | no docx file for this language |
+| en-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| en-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| en-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| en-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| en-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| en-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| en-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| en-bb | part-16 | no-file-for-language | 4 | no docx file for this language |
 | en-bb | part-16 | structure-unsupported | 272 | document structure not yet supported by this importer |
-| es-bb | part-01 | structure-unsupported | 119 | document structure not yet supported by this importer |
-| es-bb | part-02 | no-file-for-language | 186 | no docx file for this language |
-| es-bb | part-03 | no-file-for-language | 268 | no docx file for this language |
-| es-bb | part-04 | no-file-for-language | 137 | no docx file for this language |
-| es-bb | part-05 | no-file-for-language | 266 | no docx file for this language |
-| es-bb | part-06 | no-file-for-language | 141 | no docx file for this language |
+| es-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
+| es-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
+| es-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
+| es-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
+| es-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
+| es-bb | part-06 | no-file-for-language | 8 | no docx file for this language |
 | es-bb | part-06 | structure-unsupported | 54 | document structure not yet supported by this importer |
-| es-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| es-bb | part-08 | no-file-for-language | 245 | no docx file for this language |
-| es-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| es-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| es-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| es-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| es-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| es-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| es-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| es-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
-| fr-bb | part-01 | no-file-for-language | 119 | no docx file for this language |
-| fr-bb | part-02 | no-file-for-language | 186 | no docx file for this language |
-| fr-bb | part-03 | no-file-for-language | 268 | no docx file for this language |
-| fr-bb | part-04 | no-file-for-language | 137 | no docx file for this language |
-| fr-bb | part-05 | no-file-for-language | 266 | no docx file for this language |
-| fr-bb | part-06 | no-file-for-language | 139 | no docx file for this language |
+| es-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| es-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| es-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| es-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| es-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| es-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| es-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| es-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| es-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| es-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| fr-bb | part-01 | no-file-for-language | 16 | no docx file for this language |
+| fr-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
+| fr-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
+| fr-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
+| fr-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
+| fr-bb | part-06 | no-file-for-language | 6 | no docx file for this language |
 | fr-bb | part-06 | structure-unsupported | 56 | document structure not yet supported by this importer |
-| fr-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| fr-bb | part-08 | no-file-for-language | 245 | no docx file for this language |
-| fr-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| fr-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| fr-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| fr-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| fr-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| fr-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| fr-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| fr-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
-| pt-bb | part-01 | no-file-for-language | 109 | no docx file for this language |
+| fr-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| fr-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| fr-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| fr-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| fr-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| fr-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| fr-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| fr-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| fr-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| fr-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| he-bb | part-01 | no-file-for-language | 14 | no docx file for this language |
+| he-bb | part-02 | no-file-for-language | 14 | no docx file for this language |
+| he-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| he-bb | part-03 | no-file-for-language | 19 | no docx file for this language |
+| he-bb | part-03 | structure-unsupported | 15 | document structure not yet supported by this importer |
+| he-bb | part-04 | no-file-for-language | 10 | no docx file for this language |
+| he-bb | part-04 | unmatched | 6 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| he-bb | part-05 | no-file-for-language | 4 | no docx file for this language |
+| he-bb | part-05 | structure-unsupported | 62 | document structure not yet supported by this importer |
+| he-bb | part-06 | no-file-for-language | 62 | no docx file for this language |
+| he-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| he-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| he-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| he-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| he-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| he-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| he-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| he-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| he-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| he-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| pt-bb | part-01 | no-file-for-language | 6 | no docx file for this language |
 | pt-bb | part-01 | structure-unsupported | 10 | document structure not yet supported by this importer |
-| pt-bb | part-02 | no-file-for-language | 186 | no docx file for this language |
-| pt-bb | part-03 | no-file-for-language | 268 | no docx file for this language |
-| pt-bb | part-04 | no-file-for-language | 137 | no docx file for this language |
-| pt-bb | part-05 | no-file-for-language | 266 | no docx file for this language |
-| pt-bb | part-06 | no-file-for-language | 195 | no docx file for this language |
-| pt-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| pt-bb | part-08 | no-file-for-language | 245 | no docx file for this language |
-| pt-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| pt-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| pt-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| pt-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| pt-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| pt-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| pt-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| pt-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
-| ru-bb | part-01 | structure-unsupported | 119 | document structure not yet supported by this importer |
-| ru-bb | part-02 | structure-unsupported | 184 | document structure not yet supported by this importer |
+| pt-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
+| pt-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
+| pt-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
+| pt-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
+| pt-bb | part-06 | no-file-for-language | 62 | no docx file for this language |
+| pt-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| pt-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| pt-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| pt-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| pt-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| pt-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| pt-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| pt-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| pt-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| pt-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| ru-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
+| ru-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
 | ru-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| ru-bb | part-03 | structure-unsupported | 267 | document structure not yet supported by this importer |
+| ru-bb | part-03 | structure-unsupported | 33 | document structure not yet supported by this importer |
 | ru-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| ru-bb | part-04 | structure-unsupported | 136 | document structure not yet supported by this importer |
+| ru-bb | part-04 | structure-unsupported | 15 | document structure not yet supported by this importer |
 | ru-bb | part-04 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| ru-bb | part-05 | no-file-for-language | 266 | no docx file for this language |
-| ru-bb | part-06 | no-file-for-language | 139 | no docx file for this language |
-| ru-bb | part-06 | structure-unsupported | 56 | document structure not yet supported by this importer |
-| ru-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| ru-bb | part-08 | no-file-for-language | 151 | no docx file for this language |
+| ru-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
+| ru-bb | part-06 | no-file-for-language | 4 | no docx file for this language |
+| ru-bb | part-06 | structure-unsupported | 58 | document structure not yet supported by this importer |
+| ru-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| ru-bb | part-08 | no-file-for-language | 5 | no docx file for this language |
 | ru-bb | part-08 | structure-unsupported | 94 | document structure not yet supported by this importer |
-| ru-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| ru-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| ru-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| ru-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| ru-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| ru-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| ru-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| ru-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
-| tr-bb | part-01 | structure-unsupported | 119 | document structure not yet supported by this importer |
-| tr-bb | part-02 | structure-unsupported | 184 | document structure not yet supported by this importer |
+| ru-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| ru-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| ru-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| ru-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| ru-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| ru-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| ru-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| ru-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| tr-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
+| tr-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
 | tr-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| tr-bb | part-03 | no-file-for-language | 238 | no docx file for this language |
+| tr-bb | part-03 | no-file-for-language | 4 | no docx file for this language |
 | tr-bb | part-03 | structure-unsupported | 29 | document structure not yet supported by this importer |
 | tr-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| tr-bb | part-04 | no-file-for-language | 137 | no docx file for this language |
-| tr-bb | part-05 | no-file-for-language | 266 | no docx file for this language |
-| tr-bb | part-06 | no-file-for-language | 195 | no docx file for this language |
-| tr-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| tr-bb | part-08 | no-file-for-language | 245 | no docx file for this language |
-| tr-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| tr-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| tr-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| tr-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| tr-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| tr-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| tr-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| tr-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
-| uk-bb | part-01 | structure-unsupported | 119 | document structure not yet supported by this importer |
-| uk-bb | part-02 | no-file-for-language | 103 | no docx file for this language |
-| uk-bb | part-02 | structure-unsupported | 81 | document structure not yet supported by this importer |
+| tr-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
+| tr-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
+| tr-bb | part-06 | no-file-for-language | 62 | no docx file for this language |
+| tr-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| tr-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| tr-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| tr-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| tr-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| tr-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| tr-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| tr-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| tr-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| tr-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
+| uk-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
+| uk-bb | part-02 | no-file-for-language | 2 | no docx file for this language |
+| uk-bb | part-02 | structure-unsupported | 12 | document structure not yet supported by this importer |
 | uk-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| uk-bb | part-03 | structure-unsupported | 267 | document structure not yet supported by this importer |
+| uk-bb | part-03 | structure-unsupported | 33 | document structure not yet supported by this importer |
 | uk-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| uk-bb | part-04 | structure-unsupported | 136 | document structure not yet supported by this importer |
+| uk-bb | part-04 | structure-unsupported | 15 | document structure not yet supported by this importer |
 | uk-bb | part-04 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| uk-bb | part-05 | no-file-for-language | 161 | no docx file for this language |
-| uk-bb | part-05 | structure-unsupported | 105 | document structure not yet supported by this importer |
-| uk-bb | part-06 | structure-unsupported | 195 | document structure not yet supported by this importer |
-| uk-bb | part-07 | no-file-for-language | 231 | no docx file for this language |
-| uk-bb | part-08 | no-file-for-language | 245 | no docx file for this language |
-| uk-bb | part-09 | no-file-for-language | 295 | no docx file for this language |
-| uk-bb | part-10 | no-file-for-language | 344 | no docx file for this language |
-| uk-bb | part-11 | no-file-for-language | 346 | no docx file for this language |
-| uk-bb | part-12 | no-file-for-language | 555 | no docx file for this language |
-| uk-bb | part-13 | no-file-for-language | 380 | no docx file for this language |
-| uk-bb | part-14 | no-file-for-language | 479 | no docx file for this language |
-| uk-bb | part-15 | no-file-for-language | 529 | no docx file for this language |
-| uk-bb | part-16 | no-file-for-language | 573 | no docx file for this language |
+| uk-bb | part-05 | no-file-for-language | 2 | no docx file for this language |
+| uk-bb | part-05 | structure-unsupported | 64 | document structure not yet supported by this importer |
+| uk-bb | part-06 | no-file-for-language | 2 | no docx file for this language |
+| uk-bb | part-06 | structure-unsupported | 60 | document structure not yet supported by this importer |
+| uk-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
+| uk-bb | part-08 | no-file-for-language | 99 | no docx file for this language |
+| uk-bb | part-09 | no-file-for-language | 114 | no docx file for this language |
+| uk-bb | part-10 | no-file-for-language | 164 | no docx file for this language |
+| uk-bb | part-11 | no-file-for-language | 160 | no docx file for this language |
+| uk-bb | part-12 | no-file-for-language | 298 | no docx file for this language |
+| uk-bb | part-13 | no-file-for-language | 225 | no docx file for this language |
+| uk-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
+| uk-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
+| uk-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
 
 **Warnings:**
 - **de-bb**: part-01 Q&A candidate YR9r5s6q/GG3GRnUr: no h6 question blocks
@@ -3103,6 +3124,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **en-bb**: part-07 whole-part candidate FWrR48Bb/PL8hC6VQ: no numbered h5 source items
 - **en-bb**: part-07 Q&A candidate dgNJLnA7/dLixUtOX: pair count 89 does not match Hebrew questions (90) and answer chapters (90)
 - **en-bb**: part-07 Q&A candidate P5q0Zmm6/PbrNcKpJ: pair count 89 does not match Hebrew questions (90) and answer chapters (90)
+- **en-bb**: part-07 Q&A candidate hdywOExs/fwz3gg4T: at least one answer is empty
+- **en-bb**: part-07 Q&A candidate wOz46Ac9/qwfKdRMI: at least one answer is empty
 - **en-bb**: part-08 whole-part candidate Pscnn3pP/GasR6FdS: no numbered h5 source items
 - **en-bb**: part-16 whole-part candidate mW6eON0z/XVunfM89: no numbered h5 source items
 - **es-bb**: part-01 Q&A candidate YR9r5s6q/bHSPTyoc: no h6 question blocks
@@ -3111,6 +3134,16 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **es-bb**: part-01 Q&A candidate nnGQFc43/1zxBqmSG: no h6 question blocks
 - **es-bb**: part-06 whole-part candidate DztxuIK7/OARhj9ck: no numbered h5 source items
 - **fr-bb**: part-06 whole-part candidate DztxuIK7/3XcQaHXJ: no numbered h5 source items
+- **he-bb**: part-02/chapter-01 Hebrew whole-part: consumed 5/11 topic headings before this chapter ended
+- **he-bb**: part-02/chapter-02 Hebrew whole-part: consumed 3/7 topic headings before this chapter ended
+- **he-bb**: part-03 Hebrew whole-part: found 4 chapter heading(s), expected 15
+- **he-bb**: part-04/chapter-01 Hebrew whole-part: consumed 1/11 topic headings before this chapter ended
+- **he-bb**: part-04/chapter-02 Hebrew whole-part: consumed 8/10 topic headings before this chapter ended
+- **he-bb**: part-04/chapter-03 Hebrew whole-part: text before this chapter's first seif topic heading at block 176: "כשיסוד עולה מניח רשימה במקומו להאיר למלכ"
+- **he-bb**: part-04/chapter-04 Hebrew whole-part: consumed 1/8 topic headings before this chapter ended
+- **he-bb**: part-04/chapter-05 Hebrew whole-part: text before this chapter's first seif topic heading at block 366: "באורות עקודים יש י"ס פנימיות וי"ס מקיפות"
+- **he-bb**: part-04/chapter-06 Hebrew whole-part: text before this chapter's first seif topic heading at block 442: "בהתפשטות א' דעקודים לא יצאו האורות שלמים"
+- **he-bb**: part-05 Hebrew whole-part: found 0 chapter heading(s), expected 62
 - **ru-bb**: part-01 Q&A candidate YR9r5s6q/DgOTzKGq: no h6 question blocks
 - **ru-bb**: part-01 Q&A candidate EiUPsO0e/93HN4Yqz: no h6 question blocks
 - **ru-bb**: part-01 Q&A candidate QCnCAagn/Ttxyqldm: no h6 question blocks
@@ -3132,6 +3165,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **ru-bb**: part-04 Q&A candidate sL3XV5Dr/dZTnwfLY: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate 1t0TL11u/GMyqDV1J: no h6 question blocks
 - **ru-bb**: part-06 whole-part candidate DztxuIK7/AoBmRybu: no numbered h5 source items
+- **ru-bb**: part-06 Q&A candidate KGNYqv7h/RNERyfru: no h6 question blocks
 - **ru-bb**: part-08 whole-part candidate Pscnn3pP/xZMvq2Fj: no numbered h5 source items
 - **tr-bb**: part-01 Q&A candidate YR9r5s6q/Nh6O9nlf: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate EiUPsO0e/HC7CHDmm: no h6 question blocks

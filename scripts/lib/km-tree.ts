@@ -131,10 +131,13 @@ export type KmLeafRole =
   | "chapter"
   | "whole-part"
   | "inner-observation"
+  | "cause-and-consequence-essay"
   | "questions-terminology"
   | "questions-topics"
+  | "questions-cause-effect"
   | "answers-terminology"
   | "answers-topics"
+  | "answers-cause-effect"
   | "unmapped";
 
 const ROLE_BY_ARTICLE_NAME: Record<string, KmLeafRole> = {
@@ -143,6 +146,19 @@ const ROLE_BY_ARTICLE_NAME: Record<string, KmLeafRole> = {
   "Table of Questions for Topics": "questions-topics",
   "Table of Answers for the Meaning of the Words": "answers-terminology",
   "Table of Answers for Topics": "answers-topics",
+  // Bnei Baruch call this family "Cause and Consequence" where Sefaria
+  // calls it "Cause and Effect" (issue #86). The essay under that name is
+  // Sefaria's `Histaklut Penimit 2` and is already in the corpus as
+  // `inner-observation-02`, imported from there and confirmed word for word
+  // against this very document. It gets a role of its own rather than
+  // `inner-observation`: that role means "the part's Inner Observation
+  // document", and two leaves claiming it made the importer record two
+  // outcomes for one chapter — which its own coverage guard rejects, quite
+  // rightly. Known, accounted for, and imported by nobody here.
+  "Cause and Consequence": "cause-and-consequence-essay",
+  "Questions Regarding Cause and Consequence": "questions-cause-effect",
+  "Answers of Questions Regarding Cause and Consequence":
+    "answers-cause-effect",
 };
 
 /**
@@ -154,10 +170,7 @@ const ROLE_BY_ARTICLE_NAME: Record<string, KmLeafRole> = {
  * this importer — its KabbalahMedia doc structure has been seen to vary
  * per part (verified: Part 1 uses bare `"N)"` markers with no real
  * headings, Part 2 uses `"N."` markers under real heading levels), so it is
- * reported rather than force-parsed against an unverified shape. The Cause/
- * Consequence family has no `ChapterKind` at all yet (see
- * `sefaria-index.ts`'s `mapNodeTitleToKind` for the same situation on the
- * Sefaria side) and falls through to `"unmapped"`.
+ * reported rather than force-parsed against an unverified shape.
  */
 export const classifyKmArticle = (
   articleName: string,
