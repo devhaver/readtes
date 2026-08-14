@@ -35,6 +35,7 @@ import {
   GLOSSARY_FILE_NAME,
   GLOSSARY_INDEX_FILE_NAME,
 } from "./lib/glossary-splits.ts";
+import { printedMarkerForHebrewLabel } from "./lib/hebrew-numerals.ts";
 import { CONSOLIDATED_QA_KINDS } from "./lib/qa-consolidation.ts";
 import {
   offsetViolations,
@@ -616,6 +617,47 @@ const checkSefariaRefsApplyIndexOffsets = (
   }
 };
 
+/**
+ * On a version that prints Hebrew markers, `label.en` must be the gematria
+ * of `label.he` (issue #96: that is what the printed English edition marks
+ * both the text and its note list with).
+ *
+ * `checkCommentaryLabelMatchesSourceMarker` above only ever checks a
+ * version's *own* language, so `label.en` on a Hebrew file was unchecked —
+ * and it held the invented running ordinal for the whole corpus. That would
+ * be a quiet inconsistency on its own; what made it a blocker is that the
+ * KabbalahMedia importer copies `label` verbatim from Hebrew ground truth,
+ * so the wrong value propagated into `en-bb` and `import:kabbalahmedia --all`
+ * failed its own validation on content it had just written (issue #110).
+ *
+ * Deliberately not applied to English versions. There the source text prints
+ * its own marker and that text is what the reader sees, so it — not a
+ * derivation — is ground truth. `en-ai` currently prints the invented
+ * ordinals, which is a defect in that translation rather than a label
+ * disagreeing with its own page.
+ */
+const checkCommentaryEnglishLabelIsGematria = (
+  loaded: LoadedChapterFile[],
+  versions: ContentVersion[],
+  errors: string[],
+): void => {
+  const languageOf = new Map(versions.map((v) => [v.id, v.language]));
+
+  for (const entry of loaded) {
+    if (entry.file.layer !== "commentary") continue;
+    if (languageOf.get(entry.file.versionId) === "en") continue;
+
+    for (const item of entry.file.items) {
+      const expected = printedMarkerForHebrewLabel(item.label.he ?? "");
+      if (expected === null || item.label.en === expected) continue;
+
+      errors.push(
+        `${entry.relativePath}: anchor "${item.anchorId}" is labelled "${item.label.en}" (en) but "${item.label.he}" reads ${expected} — run \`pnpm migrate:commentary-labels\``,
+      );
+    }
+  }
+};
+
 const checkTocFileCrossReferences = (
   toc: Toc,
   loaded: LoadedChapterFile[],
@@ -952,6 +994,7 @@ export const validateContent = (contentDir: string): ValidationResult => {
       versionsParsed.data,
       errors,
     );
+    checkCommentaryEnglishLabelIsGematria(loaded, versionsParsed.data, errors);
     checkTranslatedVersionIntegrity(
       versionsParsed.data,
       loaded,

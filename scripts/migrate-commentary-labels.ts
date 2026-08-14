@@ -23,9 +23,19 @@
  * no marker in it, and every unanchored item (no marker exists to derive
  * from — see `commentaryItemSchema`) are all left untouched.
  *
- * Only the key for the version's own language is rewritten: `en-bb`'s
- * `label.en`, `he-jerusalem-1956`'s `label.he`. The other key is left as
- * imported.
+ * Both keys are rewritten, not just the version's own language.
+ *
+ * The first pass only corrected the language whose source it had read, which
+ * left `label.en` on every Hebrew-version file holding the invented running
+ * ordinal — and the KabbalahMedia importer copies `label` verbatim from that
+ * Hebrew ground truth, so the wrong value propagated into `en-bb` too and
+ * made `import:kabbalahmedia --all` fail its own validation (issue #110).
+ *
+ * The other key is derived rather than read, because the two are one fact:
+ * the printed English marker IS the gematria of the printed Hebrew letter
+ * (issue #96). `printedMarkerForHebrewLabel` returns `null` for a label with
+ * no Hebrew letter in it — an unanchored item's plain digits — and nothing
+ * is derived in that case.
  *
  * `pnpm migrate:commentary-labels [--dry-run]`. Deterministic and
  * idempotent: a second run against unchanged input writes nothing and
@@ -46,6 +56,7 @@ import {
   anchorMarkersFromHtml,
   labelNamesMarker,
 } from "../shared/utils/anchorMarkers.ts";
+import { printedMarkerForHebrewLabel } from "./lib/hebrew-numerals.ts";
 
 const CONTENT_ROOT = fileURLToPath(new URL("../content", import.meta.url));
 const PARTS_ROOT = join(CONTENT_ROOT, "parts");
@@ -115,13 +126,26 @@ for (const dir of chapterDirs()) {
     if (markers.size === 0) continue;
 
     const commentaryPath = join(dir, fileName);
-    const commentaryFile = chapterLayerFileSchema.parse(
-      JSON.parse(readFileSync(commentaryPath, "utf8")),
-    );
+    // Validated through Zod, written back from what `JSON.parse` produced:
+    // `.parse()` returns a new object carrying the schema's key order rather
+    // than the file's, which rewrites `"layer"` to a different position in
+    // every file it touches — a diff that says nothing, and one the
+    // importers flip straight back (the same fault as PR 109).
+    const commentaryRaw = JSON.parse(readFileSync(commentaryPath, "utf8")) as {
+      items: { label: Record<string, string> }[];
+    };
+    const commentaryFile = chapterLayerFileSchema.parse(commentaryRaw);
     if (commentaryFile.layer !== "commentary") continue;
 
     let changedHere = 0;
-    for (const item of commentaryFile.items as CommentaryItem[]) {
+    // `commentaryFile` is the validated read model; `commentaryRaw.items[i]`
+    // is what gets serialised, so every write below goes there by index.
+    const labelAt = (index: number): Record<string, string> =>
+      commentaryRaw.items[index]!.label;
+
+    for (const [index, item] of (
+      commentaryFile.items as CommentaryItem[]
+    ).entries()) {
       if (item.targetSeif === undefined) continue;
 
       const marker = markers.get(item.anchorId);
@@ -134,7 +158,34 @@ for (const dir of chapterDirs()) {
       // the marker at all (the invented running ordinals) are replaced.
       if (labelNamesMarker(item.label[language], marker)) continue;
 
+      labelAt(index)[language] = marker;
       item.label[language] = marker;
+      changedHere++;
+    }
+
+    // Second pass: fill in the OTHER language key, which has no source of
+    // its own to read.
+    //
+    // Only on non-English versions. A version's own printed marker is ground
+    // truth for its own language — that is the rule the loop above applies
+    // and `checkCommentaryLabelMatchesSourceMarker` enforces — so deriving
+    // `label.en` on an English version overrides the very text the reader
+    // sees. (Tried it: 29 validation errors, because `en-ai`'s source prints
+    // "11" where the Hebrew letter is כ. That the AI translation carries the
+    // invented numbering at all is a real defect, but it is a defect in that
+    // text, not something a label may silently disagree with.)
+    //
+    // On a Hebrew version there is no English source to consult, and the
+    // printed English marker is simply the gematria of the printed Hebrew
+    // letter (issue #96) — which is where the invented ordinals survived,
+    // and what the KabbalahMedia importer then copied verbatim into `en-bb`.
+    for (const [index, item] of language === "en"
+      ? []
+      : (commentaryFile.items as CommentaryItem[]).entries()) {
+      const derived = printedMarkerForHebrewLabel(item.label.he ?? "");
+      if (derived === null || item.label.en === derived) continue;
+
+      labelAt(index).en = derived;
       changedHere++;
     }
 
@@ -151,7 +202,7 @@ for (const dir of chapterDirs()) {
     if (!isDryRun) {
       writeFileSync(
         commentaryPath,
-        `${JSON.stringify(commentaryFile, null, 2)}\n`,
+        `${JSON.stringify(commentaryRaw, null, 2)}\n`,
         "utf8",
       );
     }

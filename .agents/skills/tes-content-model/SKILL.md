@@ -134,6 +134,32 @@ structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
 
+## Commentary labels — one fact, two keys
+
+The marker beside a note is one fact written two ways: the printed Hebrew
+letter, and its **gematria**, which is what the printed English edition marks
+both the text and the note list with (issue #96 — so the 12th note is "30",
+not "12").
+
+Two rules, and they do not overlap:
+
+- **A version's own printed marker is ground truth for its own language.**
+  `checkCommentaryLabelMatchesSourceMarker` reads the marker out of that
+  version's own source html. This is why `en-ai`'s `label.en` is left alone
+  even though its source prints the invented ordinals — that is a defect in
+  the translated text, not a label disagreeing with its own page.
+- **On a non-English version, `label.en` is the gematria of `label.he`.**
+  `checkCommentaryEnglishLabelIsGematria`. There is no English source to
+  consult on a Hebrew file, so it is derived — and it must be, because the
+  KabbalahMedia importer copies `label` verbatim from Hebrew ground truth.
+  While this went unchecked, `import:kabbalahmedia --all` failed its own
+  validation on content it had just written (issue #110).
+
+`pnpm migrate:commentary-labels` applies both. Like every migration here it
+writes back the object `JSON.parse` produced, never the one Zod returned —
+that carries the schema's key order rather than the file's, and rewrites
+`"layer"` in every file it touches for no reason (PR 109).
+
 ## Sefaria index offsets — why a map is committed
 
 Some Sefaria nodes do not start numbering at 1: Section VI's topics tables
