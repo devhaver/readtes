@@ -276,6 +276,6 @@ console.log(
     `batches         ${batches.length} (budget ${budgetChars.toLocaleString()} chars)`,
     `written to      ${outDir}`,
     ``,
-    `Next: translate each manifest, then \`pnpm translate:apply --file <result>.json\`.`,
+    `Next: translate each manifest, then \`pnpm translate:apply --file <result>.json --target ${targetVersion.id}\`.`,
   ].join("\n"),
 );
