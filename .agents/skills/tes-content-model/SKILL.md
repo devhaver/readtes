@@ -134,31 +134,49 @@ structurally compares them against what's on disk — any drift (stale,
 missing, or mismatched file) is a validation error, so these files can never
 silently go stale.
 
-## Commentary labels — one fact, two keys
+## Commentary markers and labels — one fact, three places
 
-The marker beside a note is one fact written two ways: the printed Hebrew
-letter, and its **gematria**, which is what the printed English edition marks
-both the text and the note list with (issue #96 — so the 12th note is "30",
-not "12").
+The marker beside a note is one fact written three ways: the printed Hebrew
+letter in the Hebrew source html, its **gematria** in a translation's source
+html, and `CommentaryItem.label`'s two keys. All three must agree, and the
+text is what the label follows — never the other way round (issue #96 — so
+the 12th note is "30", not "12").
 
-Two rules, and they do not overlap:
+Three rules, and they do not overlap:
 
 - **A version's own printed marker is ground truth for its own language.**
   `checkCommentaryLabelMatchesSourceMarker` reads the marker out of that
-  version's own source html. This is why `en-ai`'s `label.en` is left alone
-  even though its source prints the invented ordinals — that is a defect in
-  the translated text, not a label disagreeing with its own page.
+  version's own source html. A label never overrides the page the reader is
+  looking at.
 - **On a non-English version, `label.en` is the gematria of `label.he`.**
   `checkCommentaryEnglishLabelIsGematria`. There is no English source to
   consult on a Hebrew file, so it is derived — and it must be, because the
   KabbalahMedia importer copies `label` verbatim from Hebrew ground truth.
   While this went unchecked, `import:kabbalahmedia --all` failed its own
   validation on content it had just written (issue #110).
+- **A translation out of Hebrew prints the gematria of the marker its
+  original prints.** `checkTranslatedSourceMarkers`, scoped by
+  `ContentVersion.translatedFrom`. `en-ai`'s source html marked its anchors
+  with the note's running position instead (11, 12, 13 for כ, ל, מ), so an
+  English reader saw a different number beside the same note than a reader of
+  the Bnei Baruch English edition (issue #125). Because the first rule makes
+  the label follow the text, the _text_ is where that had to be fixed.
 
-`pnpm migrate:commentary-labels` applies both. Like every migration here it
-writes back the object `JSON.parse` produced, never the one Zod returned —
-that carries the schema's key order rather than the file's, and rewrites
-`"layer"` in every file it touches for no reason (PR 109).
+`pnpm migrate:commentary-labels` applies the first two,
+`pnpm migrate:translated-markers` the third. Run the marker migration first:
+it moves the ground truth the labels are then derived from. Like every
+migration here they write back the object `JSON.parse` produced, never the one
+Zod returned — that carries the schema's key order rather than the file's, and
+rewrites `"layer"` in every file it touches for no reason (PR 109).
+
+**One anchor can be printed more than once, printing something different each
+time.** `part-02/chapter-01` op-20 is a single note covering two consecutive
+letters: the Hebrew marks the text "ר" in one seif and "ש" in the next, and
+`label.he` reads "ר וש". `anchorMarkersFromHtml` keeps only the first marker,
+which is what the reader wants when labelling one note; anything reasoning
+about the text — the migration, the check above — uses
+`anchorMarkerOccurrences` and compares occurrence by occurrence. Reading one
+marker per id here silently rewrites a correct 300 to 200.
 
 ## Sefaria index offsets — why a map is committed
 
