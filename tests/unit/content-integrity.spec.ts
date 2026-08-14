@@ -311,6 +311,154 @@ describe("content integrity — translated versions", () => {
     );
   });
 
+  // Issue #125: `en-ai` marked its anchors with the note's running position
+  // (11, 12, 13) where the Hebrew it was translated from prints letters and
+  // every printed translation out of that Hebrew prints their gematria
+  // (20, 30, 40). The marker is what the reader sees inset in the text and
+  // clicks, so two versions of one book disagreeing about it is the same
+  // class of fault as a changed `sefariaRef`.
+  describe("printed markers", () => {
+    const markedSource = (
+      versionId: string,
+      ...markers: [anchorId: string, marker: string][]
+    ): LoadedChapterFile => ({
+      relativePath: `parts/part-01/chapters/chapter-01/source.${versionId}.json`,
+      chapterDirId: "part-01/chapter-01",
+      file: {
+        chapterId: "part-01/chapter-01",
+        layer: "source",
+        versionId,
+        items: [
+          {
+            n: 1,
+            sefariaRef: "TES 1:1",
+            html: markers
+              .map(
+                ([id, marker]) =>
+                  `<a class="tes-anchor" data-anchor="${id}">${marker}</a>text`,
+              )
+              .join(" "),
+            anchors: [...new Set(markers.map(([id]) => id))],
+          },
+        ],
+      },
+    });
+
+    it("accepts a translation printing the gematria of each Hebrew marker", () => {
+      const errors: string[] = [];
+
+      checkTranslatedVersionIntegrity(
+        versions,
+        [
+          markedSource("he-source", ["op-10", "י"], ["op-11", "כ"]),
+          markedSource("en-translation", ["op-10", "10"], ["op-11", "20"]),
+        ],
+        errors,
+      );
+
+      expect(errors).toEqual([]);
+    });
+
+    it("rejects a translation printing the note's running position", () => {
+      const errors: string[] = [];
+
+      checkTranslatedVersionIntegrity(
+        versions,
+        [
+          markedSource("he-source", ["op-11", "כ"]),
+          markedSource("en-translation", ["op-11", "11"]),
+        ],
+        errors,
+      );
+
+      expect(errors).toContain(
+        'parts/part-01/chapters/chapter-01/source.en-translation.json: anchor "op-11" prints "11", but "he-source" prints "כ", which reads 20 — run `pnpm migrate:translated-markers`',
+      );
+    });
+
+    // `part-02/chapter-01` op-20 is one note covering two consecutive
+    // letters, printed twice: "ר" in one place and "ש" in the next. Reading
+    // one marker per anchor id collapses those to "ר" and calls the correct
+    // second marker (300) an error — and a migration built on the same
+    // reading would overwrite it with 200.
+    it("compares an anchor printed twice occurrence by occurrence", () => {
+      const errors: string[] = [];
+
+      checkTranslatedVersionIntegrity(
+        versions,
+        [
+          markedSource("he-source", ["op-20", "ר"], ["op-20", "ש"]),
+          markedSource("en-translation", ["op-20", "200"], ["op-20", "300"]),
+        ],
+        errors,
+      );
+
+      expect(errors).toEqual([]);
+    });
+
+    it("names the occurrence when a repeated anchor disagrees", () => {
+      const errors: string[] = [];
+
+      checkTranslatedVersionIntegrity(
+        versions,
+        [
+          markedSource("he-source", ["op-20", "ר"], ["op-20", "ש"]),
+          markedSource("en-translation", ["op-20", "200"], ["op-20", "20"]),
+        ],
+        errors,
+      );
+
+      expect(errors[0]).toContain('anchor "op-20" (occurrence 2) prints "20"');
+    });
+
+    it("exempts an anchor the original does not print", () => {
+      const errors: string[] = [];
+
+      checkTranslatedVersionIntegrity(
+        versions,
+        [
+          markedSource("he-source", ["op-1", "א"]),
+          markedSource("en-translation", ["op-1", "1"], ["op-2", "whatever"]),
+        ],
+        errors,
+      );
+
+      // The differing `anchors[]` is its own (correct) failure from the
+      // index-aligned check; what matters here is that op-2 draws no marker
+      // complaint, because the original prints nothing to compare it to.
+      expect(errors.filter((error) => error.includes("prints"))).toEqual([]);
+    });
+
+    // The rule reads a Hebrew letter and returns what a translation prints
+    // for it. A Hebrew-to-Hebrew translation prints the letter itself, and
+    // this check has nothing to say about that.
+    it("does not apply to a translation into Hebrew", () => {
+      const errors: string[] = [];
+
+      checkTranslatedVersionIntegrity(
+        [
+          versions[0]!,
+          {
+            id: "he-other",
+            language: "he",
+            direction: "rtl",
+            title: "Hebrew, another edition",
+            license: "CC0",
+            source: "ai",
+            translatedFrom: "he-source",
+          },
+        ],
+        [
+          markedSource("he-source", ["op-11", "כ"]),
+          markedSource("he-other", ["op-11", "כ"]),
+        ],
+        errors,
+      );
+
+      expect(errors).toEqual([]);
+    });
+  });
+
   it("still applies the strict index-aligned check to a chapter not passed in consolidatedQaChapterIds, even with a subset translation", () => {
     const errors: string[] = [];
     const sourceTwoItems: LoadedChapterFile = {
