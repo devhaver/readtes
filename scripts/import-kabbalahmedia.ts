@@ -94,6 +94,10 @@ import {
   type KmLanguageOutcome,
 } from "./lib/km-coverage.ts";
 import { parseDocBlocks } from "./lib/km-doc-blocks.ts";
+import {
+  groupKmFlatWholePartBlocks,
+  hasFlatNumberedItems,
+} from "./lib/km-flat-whole-part-parser.ts";
 import { buildKmChapterGroundTruth } from "./lib/km-ground-truth.ts";
 import {
   buildHeChapterContent,
@@ -113,6 +117,8 @@ import {
   buildOrderAlignedGroundSegments,
   splitOrderAlignedSegments,
   validateNumberedOrderAlignment,
+  validateTranslationPlausibility,
+  type OrderAlignedTargetChapter,
 } from "./lib/km-order-align.ts";
 import {
   isSupportedKmQaStructure,
@@ -534,18 +540,25 @@ const processLeafChapterDialect = async (
 const buildWholePartGroundEntries = (
   partId: string,
   targetChapters: TocChapter[],
-): { number: number; sefariaRef: string }[] =>
+): OrderAlignedTargetChapter[] =>
   targetChapters
-    .map((chapter) => {
+    .map((chapter): OrderAlignedTargetChapter | undefined => {
       const dir = chapterDirFor(partId, chapter.id.split("/")[1] as string);
       const heSegments = readHeSourceSegmentsOptional(dir);
-      return heSegments?.[0]
-        ? { number: chapter.number, sefariaRef: heSegments[0].sefariaRef }
+      return heSegments?.[0]?.sefariaRef
+        ? {
+            number: chapter.number,
+            sefariaRef: heSegments[0].sefariaRef,
+            // Carried so `validateTranslationPlausibility` can tell a
+            // translation from a page-number table of contents (issue #81).
+            heTextLength: heSegments[0].html
+              .replace(/<[^>]*>/g, "")
+              .replace(/\s+/g, " ")
+              .trim().length,
+          }
         : undefined;
     })
-    .filter((entry): entry is { number: number; sefariaRef: string } =>
-      Boolean(entry),
-    );
+    .filter((entry): entry is OrderAlignedTargetChapter => Boolean(entry));
 
 const processWholePartDialect = async (
   partId: string,
@@ -588,18 +601,28 @@ const processWholePartDialect = async (
         );
       },
       (blocks) => {
-        if (!hasNumberedKmItems(blocks)) {
+        // Two dialects, tried in order. The styled one keys on `h5`; the flat
+        // one exists because some conversions lost every heading style, and
+        // the heading level was never the structure (issue #81). Whichever
+        // produces items, the SAME alignment check below decides whether they
+        // are believed — which is what makes it safe to try a second reading
+        // rather than refusing outright.
+        const items = hasNumberedKmItems(blocks)
+          ? groupKmChapterBlocks(blocks).items
+          : hasFlatNumberedItems(blocks)
+            ? groupKmFlatWholePartBlocks(blocks)
+            : undefined;
+
+        if (!items) {
           return {
             ok: false,
             kind: "structure-unsupported",
-            reason: "no numbered h5 source items",
+            reason: "no numbered source items, styled or flat",
           };
         }
-        const { items } = groupKmChapterBlocks(blocks);
-        const alignmentError = validateNumberedOrderAlignment(
-          items,
-          groundEntries,
-        );
+        const alignmentError =
+          validateNumberedOrderAlignment(items, groundEntries) ??
+          validateTranslationPlausibility(items, groundEntries);
         return alignmentError
           ? {
               ok: false,

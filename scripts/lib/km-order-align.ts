@@ -22,6 +22,8 @@ export interface OrderAlignedTargetChapter {
   number: number;
   /** This chapter's own (already-imported) Hebrew `sefariaRef`, copied into the pseudo segment so a matched KM item inherits the real citation. */
   sefariaRef: string;
+  /** Characters of Hebrew prose in this chapter's source segment, tags stripped — the scale a translation of it must plausibly have. See `validateTranslationPlausibility`. */
+  heTextLength?: number;
 }
 
 export const buildOrderAlignedGroundSegments = (
@@ -51,6 +53,70 @@ export const validateNumberedOrderAlignment = (
   }
 
   return undefined;
+};
+
+/**
+ * Whether a parse is plausibly a TRANSLATION of the Hebrew it claims to
+ * align with, by scale (issue #81).
+ *
+ * `validateNumberedOrderAlignment` above checks the count and the numbering.
+ * That is necessary and demonstrably not sufficient: part 8's English
+ * document opens with a page-number table of contents —
+ *
+ *     1. * 4
+ *     2. 4
+ *     3. 5
+ *
+ * — whose lines are numbered consecutively, and there are exactly **94** of
+ * them against part 8's exactly **94** chapters. The count check passes, the
+ * numbering check passes, and the importer writes "* 4" as the Ari's text.
+ * Measured, not hypothesised: it produced seif 1 = `"* 4"` (3 characters) and
+ * seif 50 = `"53"`.
+ *
+ * A real translation of a passage is never a fiftieth of its length. Measured
+ * on part 6's genuine English, the ratio runs 1.28–2.10 (English is longer
+ * than Hebrew); on the table of contents it is about 0.005. Those are three
+ * orders of magnitude apart, so the threshold does not need to be delicate.
+ *
+ * The MEDIAN is used rather than any single item: one unusually terse seif
+ * must not fail a good document, while a table of contents is uniformly tiny
+ * and cannot hide behind an average. Chapters with no recorded Hebrew length
+ * are skipped, and a set with none is passed rather than refused — absence of
+ * ground truth is not evidence of a bad parse.
+ */
+export const MIN_TRANSLATION_LENGTH_RATIO = 0.5;
+
+const stripHtml = (html: string): string =>
+  html
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+export const validateTranslationPlausibility = (
+  items: readonly KmSourceItem[],
+  chapters: readonly OrderAlignedTargetChapter[],
+): string | undefined => {
+  const ratios: number[] = [];
+
+  for (
+    let index = 0;
+    index < Math.min(items.length, chapters.length);
+    index++
+  ) {
+    const heLength = chapters[index]?.heTextLength;
+    if (!heLength) continue;
+    ratios.push(
+      stripHtml((items[index] as KmSourceItem).html).length / heLength,
+    );
+  }
+
+  if (ratios.length === 0) return undefined;
+
+  ratios.sort((a, b) => a - b);
+  const median = ratios[Math.floor(ratios.length / 2)] as number;
+  if (median >= MIN_TRANSLATION_LENGTH_RATIO) return undefined;
+
+  return `parsed items are implausibly short for a translation — median ${median.toFixed(3)} of the Hebrew's length, expected at least ${MIN_TRANSLATION_LENGTH_RATIO} (a table of contents or front matter read as text?)`;
 };
 
 /**

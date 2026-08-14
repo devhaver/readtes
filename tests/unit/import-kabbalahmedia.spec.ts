@@ -26,6 +26,10 @@ import {
   normalizeBlockWhitespace,
   parseDocBlocks,
 } from "../../scripts/lib/km-doc-blocks.ts";
+import {
+  groupKmFlatWholePartBlocks,
+  hasFlatNumberedItems,
+} from "../../scripts/lib/km-flat-whole-part-parser.ts";
 import { buildKmChapterGroundTruth } from "../../scripts/lib/km-ground-truth.ts";
 import {
   bcp47ForKmLanguage,
@@ -39,6 +43,7 @@ import {
   buildOrderAlignedGroundSegments,
   splitOrderAlignedSegments,
   validateNumberedOrderAlignment,
+  validateTranslationPlausibility,
 } from "../../scripts/lib/km-order-align.ts";
 import {
   isSupportedKmQaStructure,
@@ -1399,5 +1404,146 @@ describe("printedMarkerForHebrewLabel", () => {
   it("returns null when there is no Hebrew letter to read", () => {
     expect(printedMarkerForHebrewLabel("12")).toBeNull();
     expect(printedMarkerForHebrewLabel("")).toBeNull();
+  });
+});
+
+// Issue #81. Part 6's English whole-part document lost every heading style in
+// conversion — 334 blocks, all `p` — and was rejected as "no numbered h5
+// source items", taking all 56 of the part's chapters with it. The heading
+// level was never the structure.
+describe("groupKmFlatWholePartBlocks", () => {
+  const p = (html: string) => ({ tag: "p", html });
+
+  it("reads seifim from a flat run of paragraphs, using the marker as the boundary", () => {
+    const items = groupKmFlatWholePartBlocks([
+      p("Part Six"),
+      p("1. AK contains AB, SAG, MA, BON."),
+      p("Inner Light"),
+      p("1. AK contains: This study is the most profound."),
+      p("First, we must know which of the Partzufim."),
+      p("2. As it is in its internality."),
+      p("Inner Light"),
+      p("2. The Se'arot of its Rosh."),
+    ]);
+
+    expect(items).toEqual([
+      { n: 1, html: "AK contains AB, SAG, MA, BON." },
+      { n: 2, html: "As it is in its internality." },
+    ]);
+  });
+
+  it("accepts a seif number with no trailing dot", () => {
+    // Part 6's seif 32 reads `32 *In the beginning of my studies…` — the
+    // footnote asterisk follows the numeral instead of a dot. Requiring the
+    // dot stops the parse dead at seif 31 and returns a clean, consecutive,
+    // half-length result that looks entirely correct.
+    const items = groupKmFlatWholePartBlocks([
+      p("1. First seif."),
+      p("Inner Light"),
+      p("1. Commentary."),
+      p("32 *Not this one — 2 is due next."),
+      p("2 *Second seif."),
+    ]);
+
+    expect(items.map((item) => item.n)).toEqual([1, 2]);
+    expect(items[1]?.html).toBe("*Second seif.");
+  });
+
+  it("recognises the transliterated marker as well as the translated one", () => {
+    // Parts 6/7 print "Inner Light"; parts 8/16 print "Ohr Pnimi".
+    const items = groupKmFlatWholePartBlocks([
+      p("1. First seif."),
+      p("Ohr Pnimi"),
+      p("Commentary prose that must not join the seif."),
+      p("2. Second seif."),
+    ]);
+
+    expect(items[0]?.html).toBe("First seif.");
+  });
+
+  it("joins a seif's continuation paragraphs but never its commentary", () => {
+    const items = groupKmFlatWholePartBlocks([
+      p("1. Opening."),
+      p("Continuation of the seif."),
+      p("Inner Light"),
+      p("Commentary that must stay out."),
+      p("2. Next."),
+    ]);
+
+    expect(items[0]?.html).toBe("Opening. Continuation of the seif.");
+  });
+
+  it("never takes a number that is not the one due next", () => {
+    const items = groupKmFlatWholePartBlocks([
+      p("1. First."),
+      p("Inner Light"),
+      p("7. A commentary paragraph numbered by its printed marker."),
+      p("2. Second."),
+    ]);
+
+    expect(items.map((item) => item.n)).toEqual([1, 2]);
+  });
+});
+
+describe("hasFlatNumberedItems", () => {
+  it("is true for a document whose seifim are numbered from 1", () => {
+    expect(
+      hasFlatNumberedItems([{ tag: "p", html: "1. AK contains AB, SAG." }]),
+    ).toBe(true);
+  });
+
+  it("is false for a document with no numbered blocks", () => {
+    expect(hasFlatNumberedItems([{ tag: "p", html: "Part Six" }])).toBe(false);
+  });
+});
+
+// The count check alone is NOT sufficient, and this is the measured proof:
+// part 8's English document opens with a page-number table of contents whose
+// 94 consecutive lines match part 8's 94 chapters exactly. Both the count and
+// the numbering check pass, and the importer writes "* 4" as the Ari's text.
+describe("validateTranslationPlausibility", () => {
+  const chapters = [
+    { number: 1, sefariaRef: "x 1", heTextLength: 300 },
+    { number: 2, sefariaRef: "x 2", heTextLength: 300 },
+    { number: 3, sefariaRef: "x 3", heTextLength: 300 },
+  ];
+
+  it("accepts a real translation, which runs longer than its Hebrew", () => {
+    // Measured on part 6's genuine English: ratios 1.28–2.10.
+    const items = [1, 2, 3].map((n) => ({ n, html: "x".repeat(450) }));
+
+    expect(validateTranslationPlausibility(items, chapters)).toBeUndefined();
+  });
+
+  it("rejects a table of contents read as text", () => {
+    const items = [
+      { n: 1, html: "* 4" },
+      { n: 2, html: "4" },
+      { n: 3, html: "5" },
+    ];
+
+    expect(validateTranslationPlausibility(items, chapters)).toMatch(
+      /implausibly short for a translation/,
+    );
+  });
+
+  it("tolerates one unusually terse seif, judging by the median", () => {
+    const items = [
+      { n: 1, html: "x".repeat(450) },
+      { n: 2, html: "short" },
+      { n: 3, html: "x".repeat(450) },
+    ];
+
+    expect(validateTranslationPlausibility(items, chapters)).toBeUndefined();
+  });
+
+  it("passes when no Hebrew length is recorded — absent evidence is not bad evidence", () => {
+    const items = [{ n: 1, html: "* 4" }];
+
+    expect(
+      validateTranslationPlausibility(items, [
+        { number: 1, sefariaRef: "x 1" },
+      ]),
+    ).toBeUndefined();
   });
 });
