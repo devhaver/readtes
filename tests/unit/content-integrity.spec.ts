@@ -111,6 +111,22 @@ describe("content integrity — unanchored commentary items", () => {
     ]);
   });
 
+  it("fires when a Hebrew version's English label is not its letter's gematria (issue #110)", () => {
+    // `label.he` here names the printed marker, so the own-language rule is
+    // satisfied and only this one can fire. Unchecked, `label.en` on Hebrew
+    // files held the invented running ordinal for the whole corpus — and the
+    // KabbalahMedia importer copies `label` verbatim from that ground truth,
+    // which is how the wrong value reached `en-bb` and made
+    // `import:kabbalahmedia --all` fail on its own output.
+    const { errors } = validateContent(
+      join(fixturesDir, "en-label-not-gematria"),
+    );
+
+    expect(nonBoilerplateErrors(errors)).toEqual([
+      'parts/part-01/chapters/chapter-01/commentary.v1.json: anchor "op-1" is labelled "11" (en) but "כ" reads 20 — run `pnpm migrate:commentary-labels`',
+    ]);
+  });
+
   it("accepts a label that names its marker among several (a note covering two printed letters)", () => {
     // `part-02/chapter-01` op-20 is labelled "ר וש" against a source that
     // prints only "ר" — richer data, not drift, so it must not fire.
