@@ -21,6 +21,12 @@ export const layerKindSchema = z.enum(["summary", "source", "commentary"]);
 export type LayerKind = z.infer<typeof layerKindSchema>;
 
 export const chapterKindSchema = z.enum([
+  // Baal HaSulam's Introduction to the Study of the Ten Sefirot. Book-level
+  // rather than part-level — Sefaria carries it as a top-level node beside
+  // Section I…XVI, not inside any of them — and it is housed in part-01
+  // because volumes -> parts -> chapters has no slot above a part. Its
+  // `sefariaRef` (`Talmud Eser HaSefirot, Introduction N`) records the truth.
+  "introduction",
   "chapter",
   "inner-observation",
   "questions-terminology",

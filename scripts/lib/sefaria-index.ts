@@ -15,6 +15,7 @@ import type { SefariaIndex, SefariaIndexNode } from "./sefaria-api-types.ts";
  * surface that as a warning, never guess a kind.
  */
 const KIND_BY_NODE_TITLE: Record<string, ChapterKind> = {
+  Introduction: "introduction",
   "Histaklut Penimit": "inner-observation",
   "List of Questions on Terminology": "questions-terminology",
   "List of Questions on Topics": "questions-topics",
@@ -43,6 +44,24 @@ export const findSectionNode = (
     : sefariaNode;
   return index.schema.nodes.find((node) => node.title === sectionTitle);
 };
+
+/**
+ * The book-level nodes: top-level schema nodes that are NOT a Section, and so
+ * are reached by no part's `sefariaNode` (issue #86).
+ *
+ * There is exactly one today — `Introduction`, Baal HaSulam's Introduction to
+ * the Study of the Ten Sefirot, which Sefaria carries beside Section I…XVI
+ * rather than inside any of them. It is recognised by the same
+ * `mapNodeTitleToKind` every other node goes through, so an unmapped
+ * book-level node is reported and skipped exactly like an unmapped sibling,
+ * rather than silently disappearing because nothing walks it.
+ *
+ * Identified by shape, not by a name list: a Section node branches into
+ * children (a `"default"` main text plus its siblings), while a book-level
+ * node holds its own text directly.
+ */
+export const findBookLevelNodes = (index: SefariaIndex): SefariaIndexNode[] =>
+  index.schema.nodes.filter((node) => (node.nodes ?? []).length === 0);
 
 /** The section node's main-text node — the child keyed `"default"`. */
 export const findMainTextNode = (

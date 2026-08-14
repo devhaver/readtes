@@ -78,6 +78,43 @@ describe("ChapterRow", () => {
     expect(wrapper.text().toLowerCase()).toContain("hebrew only");
   });
 
+  // `number` is unique only within a kind, so the Introduction's 1 landed
+  // directly above Chapter 1's 1 — two rows showing the same ordinal for
+  // different things (issue #86).
+  it("shows no ordinal on the Introduction, which is always 1 of 1", async () => {
+    const introduction: TocChapter = {
+      id: "part-01/introduction-01",
+      kind: "introduction",
+      number: 1,
+      title: { en: "Introduction", he: "הקדמה" },
+      availableLayers: ["source"],
+      availableVersions: {
+        summary: [],
+        source: ["he-jerusalem-1956"],
+        commentary: [],
+      },
+    };
+    const wrapper = await mountSuspended(ChapterRow, {
+      props: { entry: { type: "chapter", chapter: introduction }, versions },
+      global: { stubs: { NuxtLink: { template: "<a><slot /></a>" } } },
+    });
+
+    expect(wrapper.text()).toContain("Introduction");
+    expect(wrapper.find("span.tabular-nums").exists()).toBe(false);
+  });
+
+  it("still shows the ordinal on an ordinary chapter", async () => {
+    const wrapper = await mountSuspended(ChapterRow, {
+      props: {
+        entry: { type: "chapter", chapter: aiTranslatedChapter },
+        versions,
+      },
+      global: { stubs: { NuxtLink: { template: "<a><slot /></a>" } } },
+    });
+
+    expect(wrapper.find("span.tabular-nums").text()).toBe("1");
+  });
+
   it("renders a cluster entry with its count and links to the first chapter", async () => {
     const entry: ChapterGroupEntry = {
       type: "cluster",

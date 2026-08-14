@@ -16,8 +16,9 @@
             "he": "חלק א׳: צמצום וקו"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
-          "chapterCount": 16,
+          "chapterCount": 17,
           "kindsPresent": [
+            "introduction",
             "chapter",
             "inner-observation",
             "questions-terminology",
@@ -25,11 +26,11 @@
             "answers-terminology",
             "answers-topics"
           ],
-          "firstChapterId": "part-01/chapter-01",
+          "firstChapterId": "part-01/introduction-01",
           "lastChapterId": "part-01/answers-topics-01",
           "firstChapterTitle": {
-            "en": "Chapter 1",
-            "he": "פרק א׳"
+            "en": "Introduction",
+            "he": "הקדמה"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",

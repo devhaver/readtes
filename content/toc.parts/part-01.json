@@ -17,6 +17,26 @@
   },
   "chapters": [
     {
+      "id": "part-01/introduction-01",
+      "kind": "introduction",
+      "number": 1,
+      "title": {
+        "en": "Introduction",
+        "he": "הקדמה"
+      },
+      "availableLayers": [
+        "source"
+      ],
+      "availableVersions": {
+        "summary": [],
+        "source": [
+          "en-sefaria-community",
+          "he-jerusalem-1956"
+        ],
+        "commentary": []
+      }
+    },
+    {
       "id": "part-01/chapter-01",
       "kind": "chapter",
       "number": 1,

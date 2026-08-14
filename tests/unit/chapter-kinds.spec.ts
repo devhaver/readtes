@@ -24,6 +24,15 @@ describe("CHAPTER_KIND_ORDER", () => {
     );
   });
 
+  it("puts the Introduction before the first chapter", () => {
+    // It introduces the whole work, and is housed in part-01 precisely so a
+    // reader meets it there (issue #86). A position after "chapter" would put
+    // Baal HaSulam's introduction below the text it introduces.
+    expect(chapterKindOrder("introduction")).toBeLessThan(
+      chapterKindOrder("chapter"),
+    );
+  });
+
   it("keeps questions before answers, and each apparatus in subject order", () => {
     const positionsOf = (prefix: string) =>
       CHAPTER_KIND_ORDER.filter((kind) => kind.startsWith(prefix)).map(
