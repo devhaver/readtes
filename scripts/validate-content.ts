@@ -25,6 +25,7 @@ import {
   type Toc,
 } from "../shared/types/content.ts";
 import {
+  anchorMarkerOccurrences,
   anchorMarkersFromHtml,
   labelNamesMarker,
 } from "../shared/utils/anchorMarkers.ts";
@@ -290,6 +291,69 @@ const checkSourceConsolidatedQaSubset = (
 };
 
 /**
+ * A translation out of Hebrew must print, for each commentary anchor, the
+ * marker its Hebrew original prints — converted, not renumbered (issue #125).
+ *
+ * The Hebrew marks its anchors with the sequential letters (א ב ג … י כ ל …)
+ * and every printed translation out of it marks them with those letters'
+ * gematria values (1 2 3 … 10 20 30 … 400). So this is the same identity the
+ * checks above defend, written in the target language's numerals: the marker
+ * is what the reader sees inset in the Ari's text and clicks, and two
+ * versions of one book may not disagree about which note that is.
+ *
+ * `en-ai` printed the note's running position instead, so an English reader
+ * on an AI-translated chapter saw a different number beside the same note
+ * than a reader of the Bnei Baruch English edition, and than the Hebrew
+ * alongside it. `scripts/migrate-translated-markers.ts` corrected the
+ * committed files.
+ *
+ * Scoped by `translatedFrom` rather than applied to every English source in a
+ * chapter that has a Hebrew one. `en-bb` agrees with the rule on all 51 of
+ * its shared anchors — measured — but it is an independent edition rather
+ * than a translation of `he-jerusalem-1956`, and holding a large future
+ * import (issue #81) to a cross-edition assumption is how a check stops
+ * describing the data and starts fighting it.
+ *
+ * An anchor the original does not print, and an original marker holding no
+ * Hebrew letter, are both exempt: nothing exists to derive from.
+ */
+const checkTranslatedSourceMarkers = (
+  translated: LoadedChapterFile,
+  source: LoadedChapterFile,
+  translatedFrom: string,
+  errors: string[],
+): void => {
+  if (translated.file.layer !== "source" || source.file.layer !== "source") {
+    return;
+  }
+
+  const originalMarkers = anchorMarkerOccurrences(
+    source.file.items.map((segment) => segment.html),
+  );
+  if (originalMarkers.size === 0) return;
+
+  const printedMarkers = anchorMarkerOccurrences(
+    translated.file.items.map((segment) => segment.html),
+  );
+
+  for (const [anchorId, printedList] of printedMarkers) {
+    printedList.forEach((printed, occurrence) => {
+      const original = originalMarkers.get(anchorId)?.[occurrence];
+      if (original === undefined) return;
+
+      const expected = printedMarkerForHebrewLabel(original);
+      if (expected === null || printed === expected) return;
+
+      const where =
+        printedList.length > 1 ? ` (occurrence ${occurrence + 1})` : "";
+      errors.push(
+        `${translated.relativePath}: anchor "${anchorId}"${where} prints "${printed}", but "${translatedFrom}" prints "${original}", which reads ${expected} — run \`pnpm migrate:translated-markers\``,
+      );
+    });
+  }
+};
+
+/**
  * A translated layer must remain structurally aligned with the registered
  * source version it names. Translation may change prose, but never the
  * identities the reader uses to align layers and commentary.
@@ -352,6 +416,21 @@ export const checkTranslatedVersionIntegrity = (
           );
         } else {
           checkSourceIndexAligned(
+            translated,
+            source,
+            version.translatedFrom,
+            errors,
+          );
+        }
+
+        // Only out of Hebrew and into another language: the rule is that the
+        // translation prints the Hebrew letter's gematria, which says nothing
+        // about a Hebrew-to-Hebrew pair (it would print the letter itself).
+        if (
+          version.language !== "he" &&
+          versionsById.get(version.translatedFrom)?.language === "he"
+        ) {
+          checkTranslatedSourceMarkers(
             translated,
             source,
             version.translatedFrom,
@@ -632,9 +711,10 @@ const checkSefariaRefsApplyIndexOffsets = (
  *
  * Deliberately not applied to English versions. There the source text prints
  * its own marker and that text is what the reader sees, so it — not a
- * derivation — is ground truth. `en-ai` currently prints the invented
- * ordinals, which is a defect in that translation rather than a label
- * disagreeing with its own page.
+ * derivation — is ground truth. When `en-ai` printed the invented ordinals
+ * that was a defect in the translation rather than a label disagreeing with
+ * its own page, and it was fixed in the text (`checkTranslatedSourceMarkers`,
+ * issue #125) rather than papered over here.
  */
 const checkCommentaryEnglishLabelIsGematria = (
   loaded: LoadedChapterFile[],

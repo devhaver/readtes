@@ -169,11 +169,12 @@ for (const dir of chapterDirs()) {
     // Only on non-English versions. A version's own printed marker is ground
     // truth for its own language — that is the rule the loop above applies
     // and `checkCommentaryLabelMatchesSourceMarker` enforces — so deriving
-    // `label.en` on an English version overrides the very text the reader
-    // sees. (Tried it: 29 validation errors, because `en-ai`'s source prints
-    // "11" where the Hebrew letter is כ. That the AI translation carries the
-    // invented numbering at all is a real defect, but it is a defect in that
-    // text, not something a label may silently disagree with.)
+    // `label.en` on an English version would override the very text the
+    // reader sees. (Tried it, when `en-ai`'s source still printed "11" where
+    // the Hebrew letter is כ: 29 validation errors. That numbering was a real
+    // defect, but a defect in the text — so it was fixed in the text, by
+    // `pnpm migrate:translated-markers`, issue #125. The labels then followed
+    // from the loop above, which is the whole point of the rule.)
     //
     // On a Hebrew version there is no English source to consult, and the
     // printed English marker is simply the gematria of the printed Hebrew

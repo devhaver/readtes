@@ -26,6 +26,7 @@
     "migrate:consolidate-qa": "tsx scripts/migrate-consolidate-qa.ts",
     "migrate:commentary-labels": "tsx scripts/migrate-commentary-labels.ts",
     "migrate:sefaria-refs": "tsx scripts/migrate-sefaria-refs.ts",
+    "migrate:translated-markers": "tsx scripts/migrate-translated-markers.ts",
     "translate:export": "tsx scripts/translate-export.ts",
     "translate:apply": "tsx scripts/translate-apply.ts"
   },
