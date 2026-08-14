@@ -1,12 +1,29 @@
 <script setup lang="ts">
-// Mobile panes swipe mode's pane switcher (T9): a floating pill fixed near
-// the bottom of the viewport (the thumb zone) — not a top tab bar — so it
+// Mobile panes swipe mode's pane switcher (T9): a bar docked to the bottom
+// of the reader (the thumb zone) — not a top tab bar — so it
 // stays reachable one-handed and never competes with the toolbar for space.
 // Always visible while this mode is active: it does not participate in
 // study mode's auto-hiding chrome (that mechanism doesn't run in panes
-// mode at all — see `useAutoHidingChrome`), and hides only while
-// `CommentarySheet` (`useCommentarySheet`) or the Contents panel
-// (`useContentsPanel`) is open, so no two floating surfaces ever overlap.
+// mode at all — see `useAutoHidingChrome`).
+//
+// In normal flow, not `position: fixed`. It is the last child of
+// `.tes-pane-shell`, which is a flex column, so it simply occupies the
+// bottom row and the swipe track shrinks above it. `fixed` looked
+// equivalent and was not: on Firefox for Android the dynamic address bar
+// moves the viewport a fixed element anchors to, and `bottom: 0` came to
+// rest a strip above the actual bottom edge with the page background
+// showing beneath it (issue #122). Everything else on the page is placed
+// by layout — sized off the reader root's `h-dvh` — and rendered correctly
+// throughout; only the one element positioned against the viewport did
+// not. Being in flow also means the pane body needs no compensating
+// bottom padding to avoid it.
+//
+// It stays rendered while `CommentarySheet` (`useCommentarySheet`) or the
+// Contents panel (`useContentsPanel`) is open, and goes `inert` instead.
+// Removing it from the DOM would reflow the pane underneath every time one
+// opens or closes; `inert` takes it out of the tab order and the
+// accessibility tree without moving anything, which is what a modal above
+// it wants anyway.
 //
 // `panes`: the panes that actually exist for this chapter (from
 // `resolveReaderPanes` via `MobileSwipePanes`) — `segments` renders a tab
@@ -110,8 +127,9 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
 
 <template>
   <div
-    v-if="!isSheetOpen && !isContentsOpen && segments.length > 1"
-    class="fixed inset-x-0 bottom-0 z-30 border-t border-(--border) bg-(--surface-raised) pb-[env(safe-area-inset-bottom)] lg:hidden"
+    v-if="segments.length > 1"
+    :inert="isSheetOpen || isContentsOpen"
+    class="shrink-0 border-t border-(--border) bg-(--surface-raised) pb-[env(safe-area-inset-bottom)] lg:hidden"
   >
     <div
       role="tablist"
