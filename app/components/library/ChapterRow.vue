@@ -54,8 +54,16 @@ const languages = computed(() =>
       class="flex items-center justify-between gap-3 rounded-card px-3 py-2.5 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
     >
       <span class="flex min-w-0 items-baseline gap-2">
+        <!--
+          `number` is unique only WITHIN a kind, so the Introduction (always
+          1 of 1) rendered a "1" directly above Chapter 1's "1" — two rows,
+          same ordinal, different things being counted. A kind with exactly
+          one chapter has nothing to enumerate, so it shows none (issue #86).
+        -->
         <span
-          v-if="entry.type === 'chapter'"
+          v-if="
+            entry.type === 'chapter' && entry.chapter.kind !== 'introduction'
+          "
           class="shrink-0 text-sm tabular-nums text-(--text-muted)"
         >
           {{ entry.chapter.number }}

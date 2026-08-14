@@ -58,6 +58,7 @@ import type {
   SefariaV3TextsResponse,
 } from "./lib/sefaria-api-types.ts";
 import {
+  findBookLevelNodes,
   findMainTextNode,
   findSectionNode,
   findSiblingNodes,
@@ -90,6 +91,16 @@ const SEFARIA_BASE = "https://www.sefaria.org/api";
 const LANGUAGE_FAMILY: Record<string, string> = { he: "hebrew", en: "english" };
 /** This importer is specific to the one corpus Read TES publishes — see AGENTS.md. */
 const BOOK_INDEX_TITLE = "Talmud_Eser_HaSefirot";
+
+/**
+ * Which part houses the book-level nodes (the Introduction — issue #86).
+ *
+ * `toc.json` is volumes -> parts -> chapters, with no level above a part, and
+ * inventing one would touch every ToC consumer and every `/read/...` URL for
+ * a single chapter. Part 1 is where the printed book puts the Introduction,
+ * and `CHAPTER_KIND_ORDER` sorts the kind first, so it reads correctly.
+ */
+const BOOK_LEVEL_HOST_PART_ID = "part-01";
 
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
 const contentDir = join(repoRoot, "content");
@@ -626,6 +637,60 @@ const importPart = async (
     }
   }
 
+  // --- Book-level nodes ------------------------------------------------------
+  // Nodes that belong to the whole book rather than to any Section — today
+  // just the Introduction (issue #86). They are reached by no part's
+  // `sefariaNode`, so without this they were never walked and never reported:
+  // 443 paragraphs of Baal HaSulam that the corpus simply did not have.
+  //
+  // Housed in the FIRST part, because `toc.json` is volumes -> parts ->
+  // chapters and has no slot above a part. `CHAPTER_KIND_ORDER` puts the kind
+  // first, so the reader meets it at the top of Part 1's contents, which is
+  // where the printed book puts it. The `sefariaRef` on every segment keeps
+  // the real address (`Talmud Eser HaSefirot, Introduction 1`), so nothing
+  // downstream has to believe it is part of Part 1.
+  //
+  // Written only when this run covers that part: a `--part 6` run must not
+  // silently add a chapter to part 1, and `buildTocPart` below rebuilds only
+  // the part it was given.
+  const bookLevelUnitsByNode: {
+    node: SefariaIndexNode;
+    units: ChapterUnit[];
+  }[] = [];
+
+  if (part.id === BOOK_LEVEL_HOST_PART_ID) {
+    for (const bookNode of findBookLevelNodes(index)) {
+      const kind = mapNodeTitleToKind(bookNode.title);
+      if (!kind) {
+        warnings.push(
+          `book-level node "${bookNode.title}" — no ChapterKind mapping, skipped entirely`,
+        );
+        continue;
+      }
+
+      const bookRefBase = `${index.title}, ${bookNode.title}`;
+      const bookText = await fetchWholeNodeText(
+        client,
+        bookRefBase,
+        heVersion,
+        enVersion,
+      );
+      const bookUnits = buildChapterUnits(
+        part.id,
+        kind,
+        bookNode,
+        bookRefBase,
+        bookText.he,
+        bookText.en,
+      );
+
+      bookLevelUnitsByNode.push({ node: bookNode, units: bookUnits });
+      for (const unit of bookUnits) {
+        processSourceOnlyUnit(unit, bookNode, false);
+      }
+    }
+  }
+
   // --- toc.json chapters -----------------------------------------------------
   for (const unit of mainUnits) {
     const dir = chapterDirFor(part.id, chapterSlug(unit.kind, unit.number));
@@ -644,7 +709,10 @@ const importPart = async (
     );
   }
 
-  for (const { node: siblingNode, units } of siblingUnitsByKind.values()) {
+  for (const { node: siblingNode, units } of [
+    ...siblingUnitsByKind.values(),
+    ...bookLevelUnitsByNode,
+  ]) {
     for (const unit of units) {
       const dir = chapterDirFor(part.id, chapterSlug(unit.kind, unit.number));
       const files = filesOnDiskFor(

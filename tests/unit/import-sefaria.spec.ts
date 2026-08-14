@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   buildChapterUnits,
   chapterSlug,
+  isSingleImplicitChapterNode,
 } from "../../scripts/lib/chapter-units.ts";
 import {
   buildCoverageMarkdown,
@@ -22,6 +23,7 @@ import type {
   SefariaV3TextsResponse,
 } from "../../scripts/lib/sefaria-api-types.ts";
 import {
+  findBookLevelNodes,
   findMainTextNode,
   findSectionNode,
   findSiblingNodes,
@@ -108,6 +110,42 @@ describe("sefaria-index: node resolution", () => {
       "List of Questions on Terminology",
       "List of Answers on Terminology",
     ]);
+  });
+
+  // Issue #86. `Introduction` sits beside Section I…XVI rather than inside
+  // one, so no part's `sefariaNode` reaches it and nothing walked it — 443
+  // paragraphs of Baal HaSulam the corpus simply did not have, reported by
+  // nothing because "unknown node" warnings only fire for nodes something
+  // iterates.
+  it("finds book-level nodes — the ones no Section contains", () => {
+    expect(findBookLevelNodes(index).map((n) => n.title)).toEqual([
+      "Introduction",
+    ]);
+  });
+
+  it("identifies a book-level node by shape, not by a name list", () => {
+    // A Section branches into children (a "default" main text plus siblings);
+    // a book-level node holds its own text. Matching on the name "Introduction"
+    // would silently skip any future one.
+    for (const node of findBookLevelNodes(index)) {
+      expect(node.nodes ?? []).toHaveLength(0);
+    }
+    expect(findBookLevelNodes(index).map((n) => n.title)).not.toContain(
+      "Section I",
+    );
+  });
+
+  it("maps the Introduction to its own kind, so it is not guessed into another", () => {
+    expect(mapNodeTitleToKind("Introduction")).toBe("introduction");
+  });
+
+  it("treats the Introduction as one implicit chapter, not 443 of them", () => {
+    // depth 1 with sectionNames ["Paragraph"] — the same shape the Q&A lists
+    // have, which is why it needed no new chapter-splitting rule.
+    const introduction = findBookLevelNodes(index)[0]!;
+    expect(introduction.depth).toBe(1);
+    expect(introduction.sectionNames?.[0]).not.toBe("Chapter");
+    expect(isSingleImplicitChapterNode(introduction)).toBe(true);
   });
 
   it("maps known sibling titles to a ChapterKind", () => {

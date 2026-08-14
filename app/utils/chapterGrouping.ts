@@ -23,6 +23,11 @@ const SECTION_ORDER: ChapterSection[] = [
 ];
 
 const SECTION_FOR_KIND: Record<ChapterKind, ChapterSection> = {
+  // The Introduction sits in the "chapters" section rather than getting one
+  // of its own: it is a single row, and `CHAPTER_KIND_ORDER` already puts it
+  // above Chapter 1, which is the whole of what it needs (issue #86). A
+  // section of its own would render a heading over one link.
+  introduction: "chapters",
   chapter: "chapters",
   "inner-observation": "inner-observation",
   "questions-terminology": "questions",

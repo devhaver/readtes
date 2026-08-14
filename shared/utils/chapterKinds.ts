@@ -26,6 +26,10 @@ import type { ChapterKind } from "../types/content";
  * printed edition sets them: two tables at the back of a part, not six.
  */
 export const CHAPTER_KIND_ORDER: readonly ChapterKind[] = [
+  // First, because it introduces the whole work and the reader meets it
+  // before Part 1's first chapter — which is exactly why it is housed in
+  // part-01 (issue #86).
+  "introduction",
   "chapter",
   "inner-observation",
   "questions-terminology",
