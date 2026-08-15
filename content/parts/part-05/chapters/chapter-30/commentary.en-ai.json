@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<b>His looking, His seeing and His gazing at the light of Akudim, which are called Nefesh:</b> The Peh of the Rosh [head] is called Nefesh, as written before us. And the expansion of the light is called by the name a look and a gaze. And therefore the expansion of the upper light to the screen in the vessel of Malchut for a coupling by striking is called by the name a look and a gaze at the Nefesh — that is, at the screen in Malchut, as written before us."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>The Emanator sees and gazes at the Nefesh, which is called Et.</b> As written in the adjacent passage, that the screen in the vessel of Malchut is called Nefesh and is called Et. As the ARI explained well above (Part 3, Chapter 3, item 3; study it there well)."
+    }
+  ]
+}

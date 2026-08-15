@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Yod and Vav are two aspects of expansion, Hey and Hey are two aspects of departure:</b> For the first expansion is the secret of Yod, and the second expansion is the secret of Vav. And the first departure is the secret of the first Hey, and the second departure is the secret of the last Hey. As written before us."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>HaVaYaH begins only from Hochma downward.</b> As is known, that the Yod is the secret of Hochma; the Vav is the secret of ZA; the first Hey is the secret of Bina; and the last Hey is the secret of Malchut. But Keter is not alluded to in the four letters, except in the thorn of the Yod. And this is for the reason the ARI explains here below."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-18",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Keter and the upper light are back to back:</b><br>And this is because phase four left no record, and it is known that phase four is what draws the light of Keter. And although the light of Keter itself left a record in its own vessel, that record is only the aspect of a record of clothing and not the aspect of a record of drawing, as above (in the Inner Light, page 294, the passage beginning “It does not reach Keter”; study it there well) — which is discerned as the aspect of the posterior with respect to the aspect of drawing, and it is discerned because of this that its posterior is upward and its face downward."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>That Keter and Hochma shall be face to face.</b> For Hochma has a complete record, also from the aspect of drawing, and this record turns her face upward. And Keter, which lacks a record of drawing as above, is found to have her posterior upward. And by this they are found equivalent to one another, which is called face to face. And it will be further explained before us."
+    }
+  ]
+}
