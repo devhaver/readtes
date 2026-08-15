@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Malchut revealed by herself is not found in Arich Anpin, etc., and likewise in Atik Yomin</b>: As was explained in the adjacent item (page 613, the passage beginning “And you should know”), that the bottom Hey of MA is concealed in the Rosh of Atik, and her self is not revealed in all of Atzilut. Study it there well."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Malchut is revealed from the secret of that Reisha Ila’a of them all that is not known, etc.</b>: This is called the Rosh of Atik Yomin, which is the first Rosh of Atzilut, and there the bottom Hey is concealed, as above. And her illumination is revealed in the Malchut of the world of Atzilut, that is, in the Malchut that became a complete Partzuf, the Nukva of ZA."
+    }
+  ]
+}

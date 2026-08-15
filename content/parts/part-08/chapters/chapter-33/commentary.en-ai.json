@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-33",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Every Partzuf was corrected and sorted through the Partzuf above it and higher than it</b>: As written above in the adjacent item, both the Ibur [impregnation] and the coupling of Gadlut of every lower one are made in the one above it: the two couplings of Atik were made in the Rosh of SAG; the two couplings of AA were made in the Rosh of Atik; the two couplings of AVI were made in the Rosh of AA; and the coupling of ZON was made in the Rosh of AVI, as above, with its reason and its rationale."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Which, by coupling with the Nukva, would sort the parts needed for this lower one:</b> As above in the adjacent item, all the sortings out of the records and the vessels of BON were made through the coupling of male and female of the upper Partzuf, in that the Nukva of the upper one raised to herself the sortings that belong to her, from the discernment of what had been with her in a single degree in the time of the kings, and the male of the upper one corrected them with his illumination."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-28",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:28",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:28:1",
+      "section": "ohr-pnimi",
+      "html": "<b>The ten Sefirot of Atzilut divide into five Partzufim</b>: This is according to the five known phases: upon a screen of phase four the level of Keter emerges; upon a screen of phase three the level of Hochma emerges; upon a screen of phase two the level of Bina emerges; upon a screen of phase one the level of ZA emerges; and upon a screen of the phase of Keter the level of Malchut emerges. And you already know that the level of ZA, which emerges upon phase one, includes six Sefirot, HGT NHY, and hence the five levels mentioned above are reckoned as ten Sefirot."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:28:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>They do not take them in this order</b>: This is because of the difference that exists between MA and BON. For those five levels mentioned above, which emerged in Atzilut, are called the new MA, since every renewal of light that emerged in Atzilut, in addition to the lights of BON that were already in the vessels at the time of the seven kings, is called by the name the new MA; while the old lights, which were already there at the time of the kings, are called by the name BON. And with this you will understand that all the lights of those five levels mentioned above, which emerged upon the five phases in the screen in Atzilut itself, are reckoned by the name of the new MA. However, each and every level of MA takes for itself one Sefira from BON to be the female for it, as written further on, and in them there are differences. For the Keter of BON divides into two: its upper half joined with the level of Keter of MA, and its lower half joined with the level of Hochma of MA — and there are yet further differences. Hence the Partzufim of Atzilut are found not to be so precise according to the order of the levels, since one must also take into account the discernments of BON that are in the Partzuf, as written."
+    }
+  ]
+}
