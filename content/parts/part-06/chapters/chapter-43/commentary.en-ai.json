@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Entirely beneath the place of Malchut of Atzilut</b>: That is, beneath the new point of restriction, where the discernment of Atzilut ends and the place of the worlds of separation begins, as above."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Their place remained vacant beneath the Sefira of Bina</b>. For the GAR, which are KHB, endured, and only the kings from Bina downward were broken, <b>(51)</b> and their place remained vacant. And in this place is the standing of the world of Atzilut after the correction."
+    }
+  ]
+}
