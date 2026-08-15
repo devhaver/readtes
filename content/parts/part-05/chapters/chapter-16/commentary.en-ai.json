@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-16",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:16",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:16:1",
+      "section": "ohr-pnimi",
+      "html": "<b>The upper light will now be called posterior at the time of its departure</b>: The matter of the appellations face and posterior applies only to vessels, for in the light they are called expansion and departure. And what the ARI calls here the departure of the light by the name posterior is by way of borrowing, he wishing to bring into comparison the matter of the departure of the light with the matter of the posterior in vessels, and to call them by the name back to back. And as to the reflected light descending to the empty vessels being called by the name posterior and departure, the ARI has already explained this in Part 4, Chapter 3, item 4; study it there well."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:16:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>That the light became distant from her, she can turn her face</b> upward. For after the coupling ceased from the upper phase as well, and the illumination of the coupling ceased from descending to the vessel, behold, then the record returns to shine in the vessel, and the vessel is found returning its face upward as at first. And the face shines from the aspect of the record, and the posterior of the vessel is downward as at first, since it now receives no illumination whatever. As above in the passage beginning “And then the vessel,” where we dealt with this at length. Study it there well."
+    }
+  ]
+}
