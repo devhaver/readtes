@@ -41,7 +41,6 @@ import {
   glossaryIndexFileSchema,
   tocSchema,
   versionsFileSchema,
-  type CommentaryItem,
   type SourceSegment,
 } from "../shared/types/content.ts";
 import {
@@ -49,6 +48,7 @@ import {
   proseLength,
   untranslatedItems,
   type TranslatableChapter,
+  type TranslatableItem,
 } from "./lib/translation-batches.ts";
 
 const CONTENT_ROOT = fileURLToPath(new URL("../content", import.meta.url));
@@ -65,6 +65,19 @@ if (!targetLanguage) {
   console.error(
     "usage: pnpm translate:export --lang <code> [--part part-05] [--budget 20000] [--out DIR]",
   );
+  process.exit(2);
+}
+
+/**
+ * Which layer to export. The commentary layer is the default because that is
+ * where the corpus's gap overwhelmingly is (1,223 items). The source layer
+ * matters for a handful of chapters the Sefaria community translation left
+ * short — above all the Introduction, 15 of whose 443 paragraphs are in
+ * English (issue #133) — which the commentary walk cannot see at all.
+ */
+const layer = arg("--layer") ?? "commentary";
+if (layer !== "commentary" && layer !== "source") {
+  console.error(`--layer must be "commentary" or "source", got ${layer}`);
   process.exit(2);
 }
 
@@ -142,16 +155,17 @@ for (const chapterId of chapterIds) {
   );
   if (!existsSync(dir)) continue;
 
-  const source = readLayer(dir, `commentary.${SOURCE_VERSION_ID}.json`);
-  if (!source || source.layer !== "commentary") continue;
+  const source = readLayer(dir, `${layer}.${SOURCE_VERSION_ID}.json`);
+  if (!source || source.layer !== layer) continue;
 
   // Anything any edition in the target language already covers is done.
-  const covered: CommentaryItem[] = [];
+  const covered: TranslatableItem[] = [];
+  const layerFileRe = new RegExp(`^${layer}\\.(.+)\\.json$`);
   for (const fileName of readdirSync(dir)) {
-    const match = /^commentary\.(.+)\.json$/.exec(fileName);
+    const match = layerFileRe.exec(fileName);
     if (!match || !targetLanguageVersionIds.has(match[1] as string)) continue;
     const existing = readLayer(dir, fileName);
-    if (existing?.layer === "commentary") covered.push(...existing.items);
+    if (existing?.layer === layer) covered.push(...existing.items);
   }
 
   const items = untranslatedItems(source.items, covered);
@@ -224,6 +238,7 @@ for (const batch of batches) {
     batch: batch.id,
     targetLanguage,
     targetVersionId: targetVersion.id,
+    layer,
     sourceVersionId: SOURCE_VERSION_ID,
     itemCount: batch.items,
     sourceChars: batch.chars,
@@ -236,16 +251,21 @@ for (const batch of batches) {
     chapters: batch.chapters.map((chapter) => ({
       chapterId: chapter.chapterId,
       context: {
-        sourceText: chapter.sourceSegments.map((s) => ({
-          n: s.n,
-          html: s.html,
-        })),
+        // On the source layer the items ARE this text — sending it twice
+        // doubled a 105,000-character manifest for nothing (issue #133).
+        sourceText:
+          layer === "source"
+            ? []
+            : chapter.sourceSegments.map((s) => ({ n: s.n, html: s.html })),
         targetText:
           chapter.targetSegments?.map((s) => ({ n: s.n, html: s.html })) ??
           null,
       },
+      // The identity a result must come back keyed by: `anchorId` for
+      // commentary, `n` for a source segment. Never produced by the model —
+      // `translate-apply.ts` copies it from the Hebrew.
       items: chapter.items.map((item) => ({
-        anchorId: item.anchorId,
+        ...("anchorId" in item ? { anchorId: item.anchorId } : { n: item.n }),
         he: item.html,
       })),
     })),
@@ -276,6 +296,6 @@ console.log(
     `batches         ${batches.length} (budget ${budgetChars.toLocaleString()} chars)`,
     `written to      ${outDir}`,
     ``,
-    `Next: translate each manifest, then \`pnpm translate:apply --file <result>.json --target ${targetVersion.id}\`.`,
+    `Next: translate each manifest, then \`pnpm translate:apply --file <result>.json --target ${targetVersion.id}${layer === "source" ? " --layer source" : ""}\`.`,
   ].join("\n"),
 );

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  itemKey,
   packBatches,
   proseLength,
   untranslatedItems,
@@ -52,7 +53,7 @@ describe("untranslatedItems", () => {
     ];
     const target = [item("op-2", 2, "translated")];
 
-    expect(untranslatedItems(source, target).map((i) => i.anchorId)).toEqual([
+    expect(untranslatedItems(source, target).map(itemKey)).toEqual([
       "op-1",
       "op-3",
     ]);
@@ -61,7 +62,10 @@ describe("untranslatedItems", () => {
   it("returns them in reading order regardless of input order", () => {
     const source = [item("op-9", 9, "a"), item("op-2", 2, "b")];
 
-    expect(untranslatedItems(source, []).map((i) => i.order)).toEqual([2, 9]);
+    expect(untranslatedItems(source, []).map(itemKey)).toEqual([
+      "op-2",
+      "op-9",
+    ]);
   });
 
   it("supports a partially translated chapter — the validator allows subsets", () => {
@@ -148,7 +152,31 @@ describe("packBatches", () => {
     ]);
   });
 
-  it("never splits a chapter's items across batches", () => {
+  // Was "never splits a chapter's items across batches". Relaxed deliberately
+  // in the source-layer work (issue #133): the Introduction is ONE chapter of
+  // 105,000 characters, and an unsplittable chapter made the budget
+  // meaningless there. The original justification — two half-files racing to
+  // write one path — does not hold, because `translate-apply.ts` starts from
+  // whatever is already on disk (`existing.items`) and refuses to overwrite an
+  // item already present, so the pieces merge whatever order they arrive in.
+  //
+  // What must NOT happen is a chapter being split when it fits, which would
+  // scatter one file's items across manifests for no reason.
+  it("keeps a chapter whole whenever it fits in the budget", () => {
+    const chapters = [
+      chapter("p/c1", [
+        item("op-1", 1, prose(400)),
+        item("op-2", 2, prose(400)),
+      ]),
+    ];
+
+    const batches = packBatches(chapters, 1000, "en");
+
+    expect(batches).toHaveLength(1);
+    expect(batches[0]?.items).toBe(2);
+  });
+
+  it("splits a chapter only once it exceeds the budget on its own", () => {
     const chapters = [
       chapter("p/c1", [
         item("op-1", 1, prose(800)),
@@ -158,8 +186,8 @@ describe("packBatches", () => {
 
     const batches = packBatches(chapters, 1000, "en");
 
-    expect(batches).toHaveLength(1);
-    expect(batches[0]?.items).toBe(2);
+    expect(batches).toHaveLength(2);
+    expect(batches.every((b) => b.chars <= 1000)).toBe(true);
   });
 
   it("numbers batches in order with a stable, zero-padded id", () => {
@@ -190,5 +218,77 @@ describe("packBatches", () => {
 
   it("returns no batches for no chapters", () => {
     expect(packBatches([], 1000, "en")).toEqual([]);
+  });
+});
+
+// Issue #133. The source layer's units are seif segments keyed by `n`, not
+// commentary items keyed by `anchorId`, and one of its chapters is enormous:
+// the Introduction is 443 segments and 105,000 characters in a single chapter.
+describe("source-layer batching", () => {
+  const segment = (n: number, html: string) => ({
+    n,
+    html,
+    anchors: [],
+    sefariaRef: `Talmud Eser HaSefirot, Introduction ${n}`,
+  });
+
+  it("keys a source segment by its n, and a commentary item by its anchorId", () => {
+    expect(itemKey(segment(7, "x"))).toBe("seif-7");
+    expect(
+      itemKey({
+        anchorId: "op-7",
+        order: 7,
+        label: {},
+        section: "ohr-pnimi",
+        html: "x",
+      }),
+    ).toBe("op-7");
+  });
+
+  it("finds the untranslated segments of a partly translated chapter", () => {
+    // The Introduction ships 15 of its 443 paragraphs in English.
+    const source = [segment(1, "a"), segment(2, "b"), segment(3, "c")];
+    const target = [segment(2, "translated")];
+
+    expect(untranslatedItems(source, target).map(itemKey)).toEqual([
+      "seif-1",
+      "seif-3",
+    ]);
+  });
+
+  it("orders source segments by n", () => {
+    expect(
+      untranslatedItems([segment(9, "a"), segment(2, "b")], []).map(itemKey),
+    ).toEqual(["seif-2", "seif-9"]);
+  });
+
+  it("splits an oversize chapter across batches rather than emitting one huge one", () => {
+    // Left unsplit, the Introduction produced a single 519KB manifest at five
+    // times the budget — a batch no model would take, and a budget that meant
+    // nothing. Safe to split because `translate-apply` merges into what is
+    // already on disk and refuses to overwrite an item that is present.
+    const chapter = {
+      chapterId: "part-01/introduction-01",
+      items: Array.from({ length: 10 }, (_, i) =>
+        segment(i + 1, "x".repeat(30)),
+      ),
+      sourceSegments: [],
+      targetSegments: null,
+    };
+
+    const batches = packBatches([chapter], 100, "en");
+
+    expect(batches.length).toBeGreaterThan(1);
+    expect(batches.every((b) => b.chars <= 100)).toBe(true);
+    // Nothing lost, nothing duplicated, order preserved.
+    expect(
+      batches.flatMap((b) => b.chapters.flatMap((c) => c.items)).map(itemKey),
+    ).toEqual(chapter.items.map(itemKey));
+    // Every slice keeps the chapter's identity, so apply merges them into one file.
+    expect(
+      batches.every((b) =>
+        b.chapters.every((c) => c.chapterId === "part-01/introduction-01"),
+      ),
+    ).toBe(true);
   });
 });
