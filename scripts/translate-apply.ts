@@ -1,7 +1,7 @@
 /**
  * Ingests a translated batch result and writes the corpus files.
  *
- * `pnpm translate:apply --file <result>.json [--target <versionId>] [--dry-run]`
+ * `pnpm translate:apply --file <result>.json [--target <versionId>] [--layer source] [--dry-run]`
  *
  * `--target` names the version being written. It is a flag rather than a
  * required field of the result file because the result file is what comes back
@@ -13,7 +13,13 @@
  * confusing way to say "the runner forgot to tell me". A `targetVersionId` in
  * the file is still honoured, so results that carry one keep working.
  *
- * The result file carries ONLY `{ chapterId, anchorId, html }` per item. Every
+ * `--layer` selects which layer is being filled — `commentary` (the default,
+ * and where the corpus's gap overwhelmingly is) or `source`. A source entry is
+ * keyed by its segment number `n` instead of an `anchorId`; everything below
+ * applies identically to both, because the identity is the only thing that
+ * differs and neither is ever produced by a model.
+ *
+ * The result file carries ONLY `{ chapterId, anchorId | n, html }` per item. Every
  * other field on a `CommentaryItem` — `order`, `label`, `sefariaRef`,
  * `section`, `targetSeif` — is copied byte-for-byte from the Hebrew source
  * here, never from the model. That is the pipeline's safety property: three of
@@ -42,8 +48,10 @@ import {
   versionsFileSchema,
   type ChapterLayerFile,
   type CommentaryItem,
+  type SourceSegment,
 } from "../shared/types/content.ts";
 import { writeTocSplitFiles } from "./lib/toc-splits.ts";
+import { itemKey, type TranslatableItem } from "./lib/translation-batches.ts";
 
 const CONTENT_ROOT = fileURLToPath(new URL("../content", import.meta.url));
 
@@ -56,10 +64,15 @@ const resultPath = arg("--file");
 const isDryRun = process.argv.includes("--dry-run");
 
 const targetFlag = arg("--target");
+const layer = arg("--layer") ?? "commentary";
+if (layer !== "commentary" && layer !== "source") {
+  console.error(`--layer must be "commentary" or "source", got ${layer}`);
+  process.exit(2);
+}
 
 if (!resultPath) {
   console.error(
-    "usage: pnpm translate:apply --file <result>.json [--target <versionId>] [--dry-run]",
+    "usage: pnpm translate:apply --file <result>.json [--target <versionId>] [--layer source] [--dry-run]",
   );
   process.exit(2);
 }
@@ -67,7 +80,12 @@ if (!resultPath) {
 interface TranslationResult {
   batch?: string;
   targetVersionId?: string;
-  translations: { chapterId: string; anchorId: string; html: string }[];
+  translations: {
+    chapterId: string;
+    anchorId?: string;
+    n?: number;
+    html: string;
+  }[];
 }
 
 const result = JSON.parse(
@@ -103,23 +121,35 @@ const HEBREW = /[֐-׿]/g;
 
 const errors: string[] = [];
 
-const byChapter = new Map<string, { anchorId: string; html: string }[]>();
+/** `anchorId` on the commentary layer, `seif-<n>` on the source layer. */
+const entryKey = (entry: {
+  anchorId?: string;
+  n?: number;
+}): string | undefined =>
+  layer === "commentary"
+    ? entry.anchorId
+    : typeof entry.n === "number"
+      ? `seif-${entry.n}`
+      : undefined;
+
+const byChapter = new Map<string, { key: string; html: string }[]>();
 for (const entry of result.translations) {
-  if (!entry?.chapterId || !entry?.anchorId) {
+  const key = entry?.chapterId ? entryKey(entry) : undefined;
+  if (!key) {
     errors.push(
-      `an entry is missing chapterId or anchorId: ${JSON.stringify(entry)}`,
+      `an entry is missing chapterId or ${layer === "commentary" ? "anchorId" : "n"}: ${JSON.stringify(entry)}`,
     );
     continue;
   }
   const list = byChapter.get(entry.chapterId) ?? [];
-  list.push({ anchorId: entry.anchorId, html: entry.html });
+  list.push({ key, html: entry.html });
   byChapter.set(entry.chapterId, list);
 }
 
 interface PendingWrite {
   path: string;
   chapterId: string;
-  file: ChapterLayerFile<CommentaryItem>;
+  file: ChapterLayerFile<CommentaryItem> | ChapterLayerFile<SourceSegment>;
   added: number;
 }
 
@@ -134,11 +164,11 @@ for (const [chapterId, translations] of byChapter) {
     "chapters",
     slug as string,
   );
-  const sourcePath = join(dir, `commentary.${sourceVersionId}.json`);
+  const sourcePath = join(dir, `${layer}.${sourceVersionId}.json`);
 
   if (!existsSync(sourcePath)) {
     errors.push(
-      `${chapterId}: no ${sourceVersionId} commentary file to copy structure from`,
+      `${chapterId}: no ${sourceVersionId} ${layer} file to copy structure from`,
     );
     continue;
   }
@@ -146,30 +176,35 @@ for (const [chapterId, translations] of byChapter) {
   const parsedSource = chapterLayerFileSchema.parse(
     JSON.parse(readFileSync(sourcePath, "utf8")),
   );
-  if (parsedSource.layer !== "commentary") continue;
-  const sourceByAnchor = new Map(
-    parsedSource.items.map((item) => [item.anchorId, item]),
+  if (parsedSource.layer !== layer) continue;
+  const sourceByKey = new Map(
+    (parsedSource.items as TranslatableItem[]).map((item) => [
+      itemKey(item),
+      item,
+    ]),
   );
 
-  const targetPath = join(dir, `commentary.${targetVersion.id}.json`);
+  const targetPath = join(dir, `${layer}.${targetVersion.id}.json`);
   const existing = existsSync(targetPath)
     ? chapterLayerFileSchema.parse(JSON.parse(readFileSync(targetPath, "utf8")))
     : null;
-  const items: CommentaryItem[] =
-    existing?.layer === "commentary" ? [...existing.items] : [];
-  const alreadyPresent = new Set(items.map((item) => item.anchorId));
+  const items: TranslatableItem[] =
+    existing?.layer === layer
+      ? [...(existing.items as TranslatableItem[])]
+      : [];
+  const alreadyPresent = new Set(items.map(itemKey));
 
   const seen = new Set<string>();
   let added = 0;
 
-  for (const { anchorId, html } of translations) {
+  for (const { key: anchorId, html } of translations) {
     if (seen.has(anchorId)) {
       errors.push(`${chapterId}: ${anchorId} returned more than once`);
       continue;
     }
     seen.add(anchorId);
 
-    const sourceItem = sourceByAnchor.get(anchorId);
+    const sourceItem = sourceByKey.get(anchorId);
     if (!sourceItem) {
       errors.push(
         `${chapterId}: ${anchorId} does not exist in ${sourceVersionId}`,
@@ -203,7 +238,9 @@ for (const [chapterId, translations] of byChapter) {
 
   if (added === 0) continue;
 
-  items.sort((a, b) => a.order - b.order);
+  items.sort(
+    (a, b) => ("order" in a ? a.order : a.n) - ("order" in b ? b.order : b.n),
+  );
 
   pending.push({
     path: targetPath,
@@ -211,12 +248,16 @@ for (const [chapterId, translations] of byChapter) {
     added,
     file: {
       chapterId,
-      layer: "commentary",
+      // The two layers' item shapes are disjoint unions to the schema, and
+      // `items` is homogeneous by construction — every entry came from the
+      // same `parsedSource`. The cast states that; the schema still validates
+      // on read, and `validate:content` on the whole tree afterwards.
+      layer: layer as "commentary",
       versionId: targetVersion.id,
       ...(parsedSource.sefariaRef
         ? { sefariaRef: parsedSource.sefariaRef }
         : {}),
-      items,
+      items: items as CommentaryItem[],
     },
   });
 }
