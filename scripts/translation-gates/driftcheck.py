@@ -41,6 +41,16 @@ BANNED = {
     r"\bDa[’']at\b": "Daat, no apostrophe (712 hits corpus-wide vs 65)",
     r"openings of the Ey": "נקבי עינים is 'Nikvey Einayim' (glossary-locked)",
     r"upper Aba and Ima": "או\"א עילאין is 'the upper AVI' (official English)",
+    # Transliterations this corpus does not use. Three translators in round 6
+    # independently generalised one glossed occurrence in a part-9 pane into a
+    # global rule and wrote these into 83 places. Word-boundary counts over
+    # content/parts/*/chapters/*/commentary.en-ai.json: 0 each (the raw
+    # substring hits are Klipa/Klipot).
+    r"\bKli\b": "כלי is 'vessel' (0 occurrences of 'Kli' in the commentary corpus)",
+    r"\bKelim\b": "כלים is 'vessels' (0 occurrences in the commentary corpus)",
+    r"\bZivug(?:im)?\b": "זווג is 'coupling' (glossary strategy: translate)",
+    r"\bMasach(?:im)?\b": "מסך is 'screen' (0 occurrences in the commentary corpus)",
+    r"Sub Header": "ד\"ה is 'the passage beginning' in this run",
     r"\bYesod of Nukva\b(?# harmless, placeholder)": None,
 }
 BANNED = {k: v for k, v in BANNED.items() if v}
