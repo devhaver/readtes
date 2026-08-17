@@ -218,3 +218,28 @@ lock blindly:
 יסוד` is `ה' ספירות` → **five Sefirot**.
 - `ה"ר` → usually "first Hey", but in part 8 often `ה' ראשונות` → **the first
   five**.
+
+## Added in the 2026-08-17 takeover round (batches en-001..006, parts 8–9)
+
+- `חיה` → **Haya** everywhere, including in NRNHY expansions. Corpus arbitration:
+  en-bb 5 Haya : 0 Chaya; merged en-ai pane+commentary 254 Haya : 114 Chaya.
+  One translator claimed "Chaya 13:1" — that was counted over that session's
+  own output files, not the corpus. Do not re-open.
+- `בחינה` in the part-8/9 lemma position: the part-9 pane renders
+  "discernment of …" where the commentary uses `בחינת X` → keep **the
+  discernment of X** in prose, and mirror the pane inside lemmas.
+- `אות X` citations stay **Item N** and `דף X` stays **page N**, both via
+  gematria — a "page 585" for `תרפ"ה` (=685) was caught and corrected by
+  independent recomputation; recheck any printed page number whose digits look
+  transposed.
+- Part-8 printer's-error pattern confirmed again: `אף`→`דף`, `כבד`→`כבר`,
+  `ו"ת`→`ז"ת` where ZAT is meant, unclosed parentheses. Translate as printed,
+  report in the batch notes.
+- `הבחנה`/`הבחין` stays "discernment" (see the round-5 settlement above);
+  do not let the part-9 pane's "discernment of …" pull prose `בחינה` into
+  "discernment" — the split in "הבחינה — settled" stands.
+- The `ה"ת` gloss: part-8 pane writes both "bottom Hey" and "lower Hey"; the
+  settled `ה"ת` → **bottom Hey** is corpus-locked (57:21 over "lower Hey"),
+  keep it in prose, mirror the pane in lemmas.
+- `תיקון` → **correction** (glossary-locked); `תיקונים` (the work) →
+  **the Tikkunim**.

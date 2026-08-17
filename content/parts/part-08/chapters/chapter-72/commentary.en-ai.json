@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-72",
+  "layer": "commentary",
+  "versionId": "en-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:1",
+      "section": "ohr-pnimi",
+      "html": "<b>From BON, Aba took the VAK of the Hochma of BON, etc.</b>: And we need to understand well the reason for this order of the division of MA and BON between the upper AVI and YESHSUT. And we have already explained this above (page 654, the passage beginning “And Indeed”), and from there you will seek it."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>The five extremities of the Bina of BON, which are the three lower ones NHY</b>: It should read: Gevura, Tifferet and the three lower ones NHY."
+    }
+  ]
+}
