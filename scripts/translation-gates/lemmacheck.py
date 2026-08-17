@@ -17,8 +17,14 @@ def grams(s, n=4):
     return {" ".join(w[i:i + n]) for i in range(max(0, len(w) - n + 1))}
 
 
+def load_chapters(path):
+    """Accept either a full export manifest or a bare extracted chapters list."""
+    d = json.load(open(path))
+    return {"chapters": d} if isinstance(d, list) else d
+
+
 def check(batch, threshold=0.55):
-    src = json.load(open(f"{SCRATCH}/chs-{batch}.json"))
+    src = load_chapters(f"{SCRATCH}/chs-{batch}.json")
     panes = {
         c["chapterId"]: strip(" ".join(x["html"] for x in (c["context"].get("targetText") or [])))
         for c in src["chapters"]

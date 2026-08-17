@@ -55,6 +55,12 @@ CITATION = {
 }
 
 
+def load_chapters(path):
+    """Accept either a full export manifest or a bare extracted chapters list."""
+    d = json.load(open(path))
+    return {"chapters": d} if isinstance(d, list) else d
+
+
 def count_tags(s):
     c = Counter()
     for t in TAGS:
@@ -65,7 +71,7 @@ def count_tags(s):
 
 
 def check(batch):
-    src = json.load(open(f"{SCRATCH}/chs-{batch}.json"))
+    src = load_chapters(f"{SCRATCH}/chs-{batch}.json")
     try:
         out = json.load(open(f"{SCRATCH}/out-{batch}.json"))
     except FileNotFoundError:
