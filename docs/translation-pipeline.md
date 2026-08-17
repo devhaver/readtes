@@ -132,4 +132,94 @@ untranslated commentary lives in parts 7–16**. Its 125 terms are binding
 everywhere, but it has not seen the vocabulary of the parts being translated.
 
 Translate one part, review it against the Hebrew, then scale. `--part` exists
-for exactly that.
+for exactly that. Two supplements to the manifest glossary are binding for
+English and live in this repo:
+
+- **`docs/translation-terminology.md`** — every terminology call settled since
+  the run began. Read it before translating; append new decisions after.
+- **`scripts/translation-gates/`** — mechanical verification scripts (below).
+
+## Running a session — the orchestration playbook
+
+Proven shape (2026-08-15): an orchestrator fans batches out to **4–6
+translator agents concurrently**, gates every returned batch, then applies,
+checks and ships once per round. 267 items merged in one such session versus
+97 sequential. If a single AI is doing the work alone the same gates and rules
+apply — only the fan-out disappears.
+
+Each round:
+
+1. `git checkout main && git pull --ff-only`, then re-export. **Batch ids are
+   not stable** — the export recomputes what is untranslated, so after every
+   apply everything renumbers. Always take `en-001..N` fresh; never assume
+   "batch N" still means anything.
+2. Split each manifest before handing it over: extract `chapters` into its own
+   file and put the `instructions` + `glossary` into a shared brief written
+   once. **Never hand a translator the raw manifest** — it is ~3,300 lines and
+   the glossary alone consumes a whole read budget.
+3. Give each translator: the brief, its chapters file, its **exact item
+   count**, and the part-specific pane guidance (below). Require the output
+   file to be **rewritten every 3–5 items** — agents die mid-batch (server
+   errors, session limits) and incremental writes are what makes a partial
+   batch recoverable. A partial batch is shippable; the exporter re-lists
+   whatever is missing next round.
+4. Gate every returned batch (next section). Fix what the gates flag.
+5. Apply all batches, run `task check` **once**, one PR per round, merge,
+   re-export.
+
+### The four gates
+
+`task check` cannot see a wrong word. These can — run all four on every batch:
+
+1. **`scripts/translation-gates/driftcheck.py`** — item-set equality and
+   order, tag counts (`<b>`/`<br>`/`<small>`) against the source, straight
+   quotes, Hebrew leakage outside bracketed glosses, banned terms, required
+   citation renderings, and the expansion ratio. The ratio bounds
+   (1.35–2.30, median ≈1.79) were **measured over the merged corpus** — if
+   they ever need adjusting, recalibrate from real data, don't guess. Run as
+   `TX_SCRATCH=<dir> python3 scripts/translation-gates/driftcheck.py en-001 …`
+   where `<dir>` holds `chs-<batch>.json` (the extracted chapters) and
+   `out-<batch>.json` (the returned translations).
+2. **Independent gematria recomputation** — verify every `דף X` page number
+   and every letter marker against the English with your own letter table,
+   not the translator's. Across ~200 checks this has caught zero translator
+   errors and one genuine source lacuna — it is cheap and keeps everyone
+   honest.
+3. **`scripts/translation-gates/lemmacheck.py`** — n-gram overlap of each
+   bolded lemma against the pane line it quotes (`context.targetText`).
+   Catches lemma drift nothing else can see.
+4. **Corpus arbitration** — before settling any disputed term, count it in
+   both layers (`grep -ro … *.en-ai.json | wc -l` vs `*.en-bb.json`, from the
+   repo root) and let the corpus decide. Record the outcome in
+   `docs/translation-terminology.md`.
+
+### The prose/lemma rule — the central editorial decision
+
+Some parts' `source.en-ai` pane came from an earlier translation effort with
+different vocabulary than this commentary corpus.
+
+- **Running prose follows the corpus** — the commentary must read as one work.
+- **A bolded `<b>` lemma follows the pane**, because a lemma quotes the Ari
+  and the reader matches those words against the adjacent pane.
+- **Unless the pane is self-inconsistent** (part 8 always is — it writes
+  Chochma/Hochma, Abba/Aba, smallness/Katnut in adjacent chapters). Then use
+  the settled corpus form everywhere, lemmas included.
+- **Where the pane is unreliable, the Hebrew decides**: spelled-out
+  `אריך אנפין` → Arich Anpin, abbreviated `א"א` → AA — same rule for every
+  name.
+- From part 9 on the manifest context carries official `en-bb` `targetText`;
+  where it exists it is **better evidence than the glossary** — anchor
+  vocabulary to it.
+
+### Standing translator instructions
+
+- **Printer's errors are everywhere in parts 7–9** (`אף` for `דף`, `כבד` for
+  `כבר`, unclosed parentheses). Never silently emend — translate what is
+  printed and report the suspected error.
+- Two-sense abbreviations are read from the sentence, never applied blindly:
+  `ה"ר` is usually "first Hey" but in part 8 often `ה' ראשונות` → "the first
+  five"; `ה"ס` is usually "is the secret of" but sometimes `ה' ספירות` →
+  "five Sefirot".
+- Expansion runs ≈1.75× the Hebrew character count — every abbreviation
+  Baal HaSulam compresses expands to a full English phrase. The run is
+  generation-bound; bigger batch budgets save nothing, only parallelism helps.
