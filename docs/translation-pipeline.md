@@ -207,9 +207,17 @@ different vocabulary than this commentary corpus.
 - **Where the pane is unreliable, the Hebrew decides**: spelled-out
   `אריך אנפין` → Arich Anpin, abbreviated `א"א` → AA — same rule for every
   name.
-- From part 9 on the manifest context carries official `en-bb` `targetText`;
-  where it exists it is **better evidence than the glossary** — anchor
-  vocabulary to it.
+- **`targetText` is never the official English.** `translate-export.ts` reads
+  `source.<targetVersionId>.json`, so for an `en-ai` run the pane is the
+  `en-ai` source layer — the earlier translation effort — in every part. An
+  earlier version of this line claimed part 9 onward carried official `en-bb`
+  text and it is wrong; a round-7 ruling was argued from it before the code
+  was checked. The pane still governs lemmas, but because the **reader sees
+  it beside the note**, not because it is authoritative.
+- **Test self-inconsistency per chapter, not per part.** Part 9's panes print
+  both "Nesirah" and "sawing" inside the _same_ chapter, and part 10's mix
+  `Ibur` (26) with "pregnancy" (8) — in both cases the exception fires and
+  the corpus form wins in the lemma too.
 
 ### Standing translator instructions
 
