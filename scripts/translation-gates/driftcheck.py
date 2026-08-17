@@ -125,10 +125,11 @@ def check(batch):
 
         if '"' in html:
             problems.append(f"{tag}: {html.count(chr(34))} straight double quote(s) — use “ ”")
-        # straight apostrophe: Da'at and other transliterated ayin/aleph
-        # markers legitimately use it (168 merged items agree); possessives
-        # should be curly. Minor, so labelled as such.
-        stripped = re.sub(r"\b(?:Da|Ba|Ta|Ma|Sa)'(?:at|al|am|an)\b", "", html)
+        # straight apostrophe: transliterated ayin/aleph markers (Da'at, Ila'a,
+        # beRe'uta, Kadma'a) legitimately use it — the marker is always
+        # followed by a vowel; possessives and contractions end in 's or 't
+        # and should be curly. Minor, so labelled as such.
+        stripped = re.sub(r"[A-Za-z]'[aeiou]", "", html)
         if "'" in stripped:
             problems.append(
                 f"{tag}: minor — {stripped.count(chr(39))} straight apostrophe(s) outside a transliteration; use ’"
