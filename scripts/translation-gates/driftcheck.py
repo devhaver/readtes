@@ -23,7 +23,6 @@ BANNED = {
     r"\bphase [1-5]\b": "phase ordinals spelled as words (phase four)",
     r"\bReshimo\b": "רשימו is 'record'",
     r"\bReshimot\b": "רשימו is 'record'",
-    r"\bimprint\b": "רשימו is 'record'",
     r"\bbackside\b": "אחורים is 'posterior'",
     r"\bback side\b": "אחורים is 'posterior'",
     r"\bZeir Anpin \(ZA\)": "gloss style: no parenthetical acronyms",
@@ -164,6 +163,11 @@ def check(batch):
                 if re.search(rf"\b{w}\b", html):
                     problems.append(f"{tag}: {w!r} where the source has עביות — use 'coarseness'")
 
+        # 'imprint' is only wrong for רשימו (which is 'record'). It is the
+        # attested rendering of ציור, so ban it only when רשימו is present.
+        if "רשימו" in he and re.search(r"\bimprint\b", html):
+            problems.append(f"{tag}: 'imprint' where the source has רשימו — use 'record'")
+
         for pat, why in BANNED.items():
             for m in re.finditer(pat, html):
                 problems.append(f"{tag}: banned {m.group(0)!r} — {why}")
@@ -180,7 +184,13 @@ def check(batch):
         # min 1.42, p5 1.59, median 1.79, p95 1.94, max 2.13. Outside
         # 1.35-2.30 means a clause was dropped or something was invented.
         ratio = len(html) / max(len(he), 1)
-        if ratio < 1.35:
+        # Cross-reference-only items ("עי' לעיל דף תתקל"ט אות קל"ח") are a
+        # handful of characters and legitimately compress — a page number is
+        # shorter spelled in digits than in Hebrew letters. The ratio only
+        # means something over a paragraph or more.
+        if len(he) < 120:
+            pass
+        elif ratio < 1.35:
             problems.append(f"{tag}: expansion {ratio:.2f}x looks compressed — clause dropped? (len {len(html)} vs he {len(he)})")
         elif ratio > 2.30:
             problems.append(f"{tag}: expansion {ratio:.2f}x looks padded — added commentary? (len {len(html)} vs he {len(he)})")
