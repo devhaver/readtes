@@ -97,6 +97,16 @@ typecheck` **and** `vue-tsc -p tsconfig.scripts.json` for
 A first `pnpm install` in a fresh clone prints `ERR_PNPM_IGNORED_BUILDS` and
 stops build scripts short — that's expected; see the `tes-pnpm-setup` skill.
 
+## Translation work
+
+Translating content (`translate:export` / `translate:apply`) is governed by
+**`docs/translation-pipeline.md`** — the mechanics, the orchestration
+playbook, and the four verification gates (`scripts/translation-gates/`).
+Terminology decisions accumulated across the run are binding and live in
+**`docs/translation-terminology.md`**; read it before translating anything,
+append to it when you settle a new term. The `en-ai` output must keep its
+"AI translated" badge (automatic via `content/versions.json`).
+
 ## Dev server ports
 
 `nuxt.config.ts` pins `devServer.port` to **6217** and Vite's HMR websocket to
