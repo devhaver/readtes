@@ -218,3 +218,83 @@ lock blindly:
 יסוד` is `ה' ספירות` → **five Sefirot**.
 - `ה"ר` → usually "first Hey", but in part 8 often `ה' ראשונות` → **the first
   five**.
+
+## Added in round 6 — settled
+
+### Part 9's pane does NOT transliterate — the round's main trap
+
+A translator rendered 26 items on the stated belief that part 9's
+`context.targetText` "consistently transliterates" `Kli` and `Zivug`, and so
+introduced both into 19 items. It does not. Counted over the whole repo:
+
+| form                 | commentary `en-ai` | commentary `en-bb` | source `en-bb` (the parts-9+ pane) |
+| -------------------- | ------------------ | ------------------ | ---------------------------------- |
+| coupling / couplings | 629 / 49           | 14 / 0             | 196 / 43                           |
+| **Zivug / Zivugim**  | **0 / 0**          | **0 / 0**          | **1 / 0**                          |
+| vessel / vessels     | 1,275 / 762        | 28 / 19            | 548 / 360                          |
+| **Kli / Kelim**      | **0 / 0**          | **0 / 0**          | **0 / 0**                          |
+
+`Kli` and `Kelim` appear **nowhere in the corpus at all**, in any layer. A
+single glossed occurrence in one chapter's pane is not evidence of a
+convention — count before generalising from it.
+
+- `זווג` → **coupling** (manifest glossary entry `zivug`, `strategy:
+translate`, 98% coverage). Prose _and_ lemma. Never `Zivug`.
+- `כלי` / `כלים` → **vessel** / **vessels**. Never `Kli` / `Kelim`.
+- `נשיקין` → **Neshikin [kissing]**, glossed on first use, bare after. Not
+  "kisses" (0 occurrences corpus-wide).
+- `אב"א` / `פב"פ` → **back to back** / **face to face** in plain words
+  (76 : 0), even where a part's own pane transliterates them.
+- `יניקה` → **nursing** (20), not "Yenika" (1) or "suckling" (0 in commentary).
+
+### Citation renderings — two more locked
+
+- `עש"ה` → **"study it there well"** (67 : 0 against "see there well").
+- `בדיבור הסמוך` → **"the adjacent item"** (48 : 4 against "previous item").
+- `ד"ה` → **"the passage beginning"**. Never "Sub Header" — that rendering
+  appeared 7 times in one batch and matches nothing in the corpus.
+
+### `עביות` vs `עובי` — source-conditional, both legitimate
+
+`thickness` is only wrong when the Hebrew is `עביות`; `עובי` genuinely reads
+thickness. Verified this round: one item with 6 × `עביות` needed
+**coarseness**, while another with 3 × `עובי` and no `עביות` was correct as
+printed. `driftcheck.py` already encodes this — do not "fix" it globally.
+
+### The part-08 lemma exception, confirmed by count
+
+Part 08's pane is self-inconsistent for the same Hebrew construction — it
+prints "aspect of male and female" once and "phases of male and female" once.
+The exception therefore fires as written: **use the settled corpus form
+everywhere in part 08, lemmas included.** In particular generic nominal
+`בחינת X` → **the discernment of X** even inside a `<b>` lemma
+(commentary corpus: discernment 627, aspect 487, phase 289 — while the
+_source_ pane says aspect 3,866, which is the earlier translation effort's
+vocabulary and is exactly what the prose/lemma rule exists to keep out).
+
+### `בחינה`, again — how to count it (round 6)
+
+A translator re-opened the round-5 ruling, arguing "the aspect of" beats "the
+discernment of" 4,353 : 1,543 corpus-wide and 322 : 216 within part 8, and
+that the manifest glossary's note ("en-bb ... never [uses discernment] for
+`בחינה` as a level") settles it.
+
+**Both counts are wrong because they glob `*.en-ai.json`, which sums the
+commentary with the `source` pane.** The part-7/8 source pane came from an
+earlier translation effort whose vocabulary this run deliberately does not
+follow — that divergence is the entire reason the prose/lemma rule exists.
+Split by layer:
+
+|                                   | commentary `en-ai` | source `en-ai` |
+| --------------------------------- | ------------------ | -------------- |
+| part 8 — the discernment of       | **282**            | 12             |
+| part 8 — the aspect of            | 34                 | **288**        |
+| whole corpus — the discernment of | **935**            | 916            |
+| whole corpus — the aspect of      | 487                | 3,866          |
+
+In the layer this run is actually writing, discernment wins part 8 by 8 : 1.
+The glossary note is also accurate as written and simply not about us: it
+describes **en-bb**, and round 5 already measured why this corpus differs.
+
+**When counting for gate 4, always glob `commentary.en-ai.json` explicitly —
+never `*.en-ai.json`.** A bare `*` glob has now produced a wrong ruling twice.
