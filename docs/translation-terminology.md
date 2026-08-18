@@ -508,3 +508,59 @@ English and worse for the reader.
 This one is a judgment call on thin evidence, not a measurement — flagged so
 it is not silently re-litigated. `ראשים` (Hebrew plural) stays **heads**;
 `ראש` as a structural degree stays **Rosh [head]**.
+
+## Round 10 — part 13's middle, and six bugs in the citation table
+
+`cites.py` earned its place — batches that read it wrote their citations
+correctly first time — but **every one of its false positives was found by a
+translator, not by me.** Keep telling them to check the table rather than obey
+it; an agent that applied it literally would have written "item 5" into a
+sentence about the letter Hey, and "page 1074" into `דתיקון א' עד פומא`
+("correction 1, until the mouth" — `עד` scans as 74).
+
+Fixed this round, all from translator reports:
+
+- **`ב`+`אות` glued** — `(באות קפ"ט)` is "in item 189". The word-boundary
+  anchor added to stop `אות` matching inside `נקראות` was excluding it. The
+  same string is also the verb "they come" (`באות גם`) — the numeral test on
+  the _next_ token settles which.
+- **Item lists continue without repeating `אות`** — `אות קי"ז קי"ח וקי"ט` is
+  items 117, 118 **and** 119. The continuation scan stops at abbreviations
+  that scan as numerals (`ז"ל`, `ע"ש`, `ע"ב`, `ע"א`, `נ"ל`, `ע"כ`, `ה"ס`).
+- **A bare thousand needs citation context** — `א'` + numeral is only a page
+  inside parentheses or near `לעיל`/`כנ"ל`/`עי'`/`ד"ה`/`אות`. Otherwise it is
+  an ordinal, as in `עיבור א' דא"א` ("the first Ibur of AA", not page 1006).
+
+What it still cannot cover: a printer's error in the citation marker itself.
+One item prints `(אוה ק"ז ק"ח ק"ט)` for `אות` — the translator computed items
+107–109 by hand and said so.
+
+### `ראש` in part 13 — count the construction, not the word
+
+Part 13's pane is the least reliable in the book and inverts every one of
+these. Split by construction:
+
+| Hebrew                             | English                            |   commentary |         part-13 pane |
+| ---------------------------------- | ---------------------------------- | -----------: | -------------------: |
+| `ג' רישין דא"א` (collective)       | the three **heads** of AA          |        6 : 4 |            159 plain |
+| `רישא`/`ראש` ordinal or structural | the second **Rosh**, `Rosh [head]` | **129 : 14** | 47 : 0 the other way |
+| `ירכין`                            | **legs**, not thighs               |   **97 : 6** |  9 : 1 the other way |
+
+Round 9 narrowed `Reishin` to `רישין דישסו"ת`; this refines the rest. The
+collective plural stays plain, the ordinal singular is `Rosh`. Two agents in
+one round rendered the singular both ways.
+
+### Glosses that were coined twice in one round
+
+`Nimin [strands]` (not "[filaments]"), `Chivaret [bright strands]` (not
+"[whiteness]"), `Kutzin [barbs]` (new, unattested — flagged as a coinage).
+An unattested term is the highest-risk class in a fan-out round: two agents
+will each invent something reasonable and different. Grep the _other_ batches'
+outputs before applying, not just the corpus.
+
+### `דיקנא` — the exception fired correctly, for once
+
+`Dikna [beard]` in running prose (102 : 65 corpus-wide, 8 : 1 within part 13),
+but plain **beard** inside a lemma whose own chapter pane says "beard"
+consistently. That is the prose/lemma rule working as designed: the exception
+is checked, not assumed.
