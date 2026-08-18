@@ -448,3 +448,63 @@ class as clean forever.
 - `יניקה` → **nursing**, which fights part 12's pane hard (it says "Yenika"
   throughout) and wins 74 : 9. A stray "Yenika" in the already-merged
   part-12/chapter-177 was corrected to match.
+
+## Round 9 — part 13, and pre-computing the citations
+
+### `scripts/translation-gates/cites.py` — gate 2, moved upstream
+
+Telling translators the page convention did not work: an agent that had the
+rule in its brief _and_ in its prompt still shipped five thousand-prefix
+errors. So the numbers are now pre-computed for them:
+
+```sh
+TX_SCRATCH=<dir> python3 scripts/translation-gates/cites.py en-001 …
+```
+
+writes `cites-<batch>.md` — every `דף` and `אות` in the batch, printed form →
+the number to write. Hand it to each translator with the brief. In the round
+it was introduced, batches that read it first got **every citation right on
+the first pass**; the two agents that had already started fixed themselves
+mid-batch.
+
+Three false-positive classes it took to get right, all found by translators
+who checked the table instead of obeying it — which is the behaviour to keep
+asking for:
+
+- `אות` matches inside `נקראות`. Anchor with `(?<![א-ת])`.
+- `אות` also means **letter**: `אות ה' של אלקים` is "the letter Hey of
+  Elokim", not "item 5". Not detectable mechanically — the table says so in
+  its header.
+- A page can be cited with **no `דף` at all**: `(א' שכ"ז אות ע"ב)` is page 1327.
+
+### Part 13's terminology
+
+Part 13's pane is the least reliable so far — it flattens `רישין`/`ראשים` to
+plain "head", and its `AV`/`SaG`/`BaN` spellings appear **nowhere** in the
+commentary. Anchor to the corpus harder here than anywhere else.
+
+- `עזקא` → **Izka** (part-13 pane 18, commentary 3; "Ozka" 0), so
+  `עזקא דכיא`/`עזקא רבה` → Izka Dachya / Izka Rabba.
+- `חו"פ` → **HP [Hotem and Peh]**, on the `AHP` pattern. Two agents coined
+  `HP` and `HUP` for it in the same round; neither was attested.
+- `מוחא סתימאה` / `מו"ס` → **Mocha Stimaa [the concealed brain]** (31 : 9
+  against "the concealed Hochma").
+- `אוירא` (AA's second head) → **the air**, per the settled `אויר`→air rule.
+  The Zohar pun `י' דנפיק מאויר ואשתאר אור` keeps the transliteration —
+  "the Yod that comes out of Avir [air], leaving Or [light]" — under the
+  discussing-the-word-itself exception.
+- Vowel names: **Holam**, not the pane's very consistent "Cholam".
+- `עי"מ` → **IYM [Ibur, nursing, and Mochin]**, glossed once per item.
+
+### `רישין` — the round-4 entry, narrowed
+
+Round 4 settled `רישין` → **Reishin [heads]**. That holds only for
+`רישין דישסו"ת`, which is where all four corpus occurrences are. For part
+13's constant "the two/three heads of AA", write plain **heads**: the
+commentary has 6 plain against 4 `Reishin`, the pane has 159 plain, and part
+13 is built on the phrase. Writing "the three Reishin" forty times is worse
+English and worse for the reader.
+
+This one is a judgment call on thin evidence, not a measurement — flagged so
+it is not silently re-litigated. `ראשים` (Hebrew plural) stays **heads**;
+`ראש` as a structural degree stays **Rosh [head]**.
