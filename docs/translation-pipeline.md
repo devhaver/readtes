@@ -135,6 +135,12 @@ Translate one part, review it against the Hebrew, then scale. `--part` exists
 for exactly that. Two supplements to the manifest glossary are binding for
 English and live in this repo:
 
+- **`docs/translation-rules.md`** — the translator-facing contract: what not
+  to transliterate, how the pane governs a lemma, citation and page-number
+  conventions, tag/quote mechanics, and the two standing prohibitions (never
+  drop what you cannot parse; never normalise an abbreviation to make a
+  passage read consistently). `translation-split.py` appends it to every
+  brief.
 - **`docs/translation-terminology.md`** — every terminology call settled since
   the run began. Read it before translating; append new decisions after.
 - **`scripts/translation-gates/`** — mechanical verification scripts (below).
@@ -153,10 +159,20 @@ Each round:
    not stable** — the export recomputes what is untranslated, so after every
    apply everything renumbers. Always take `en-001..N` fresh; never assume
    "batch N" still means anything.
-2. Split each manifest before handing it over: extract `chapters` into its own
-   file and put the `instructions` + `glossary` into a shared brief written
-   once. **Never hand a translator the raw manifest** — it is ~3,300 lines and
-   the glossary alone consumes a whole read budget.
+2. Split each manifest before handing it over:
+
+   ```sh
+   TX_SCRATCH=<dir> python3 scripts/translation-split.py en-001 en-002 …
+   TX_SCRATCH=<dir> python3 scripts/translation-gates/cites.py en-001 en-002 …
+   ```
+
+   The first writes `brief.md` (the manifest's instructions and glossary,
+   followed by `docs/translation-rules.md`) plus one `chs-<batch>.json` per
+   batch. The second writes `cites-<batch>.md`. **Never hand a translator the
+   raw manifest** — it is ~3,300 lines and the glossary alone consumes a whole
+   read budget. Give each translator the brief, its chapters file, its
+   citation table, and its exact item count.
+
 3. Give each translator: the brief, its chapters file, its **exact item
    count**, and the part-specific pane guidance (below). Require the output
    file to be **rewritten every 3–5 items** — agents die mid-batch (server
@@ -181,10 +197,19 @@ Each round:
    where `<dir>` holds `chs-<batch>.json` (the extracted chapters) and
    `out-<batch>.json` (the returned translations).
 2. **Independent gematria recomputation** — verify every `דף X` page number
-   and every letter marker against the English with your own letter table,
-   not the translator's. Across ~200 checks this has caught zero translator
-   errors and one genuine source lacuna — it is cheap and keeps everyone
-   honest.
+   against the English with your own letter table, written fresh and kept
+   _outside_ `scripts/translation-gates/`; the independence is the whole
+   point. Do not skip it because the run has been clean: its record of "zero
+   translator errors in ~290 refs" turned out to be an artefact of the
+   checker not knowing that past 999 the thousand is written as a bare `א'`.
+   Taught that form, it found 12 real errors in a single round.
+
+   Upstream of it, **`scripts/translation-gates/cites.py`** pre-computes every
+   `דף` and `אות` citation in a batch into a table the translator copies from,
+   so nobody does gematria by hand. Instruction alone did not fix this class —
+   an agent with the rule in its brief _and_ its prompt still shipped five
+   errors; the table fixed it in one round.
+
 3. **`scripts/translation-gates/lemmacheck.py`** — n-gram overlap of each
    bolded lemma against the pane line it quotes (`context.targetText`).
    Catches lemma drift nothing else can see.
