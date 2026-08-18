@@ -11,6 +11,9 @@ VALUES = {"א":1,"ב":2,"ג":3,"ד":4,"ה":5,"ו":6,"ז":7,"ח":8,"ט":9,"י":10
 value = lambda t: sum(VALUES.get(c, 0) for c in t)
 NUMERAL = r"[א-ת]+(?:[\"״'׳][א-ת]+)?['׳]?"
 IDIOM = {'ד"ה', "ד״ה"}
+# Abbreviations that scan as numerals but end a citation list:
+# וז"ל 'and these are his words', ע"ש 'see there', ע"ב the b-side of a folio.
+STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו'}
 
 # A numeral carries gershayim (מ"ה) or is one or two letters with a
 # geresh (י'). Anything else after דף/אות is an ordinary word.
@@ -18,7 +21,9 @@ is_numeral = lambda t: bool(re.search(r"[\"״'׳]", t)) or len(t.rstrip("'׳")) 
 
 REF = re.compile(rf"(?<![א-ת])ב?(?:דף|רף|דך)\s+({NUMERAL})(?:\s+({NUMERAL}))?")
 # The lookbehind matters: without it "אות" matches inside נקראות.
-ITEM = re.compile(rf"(?<![א-ת])אות\s+({NUMERAL})")
+# ב?אות: "(באות קפ\"ט)" is "in item 189". The same string can be the verb
+# "they come" (באות גם) — the is_numeral filter on the next token settles it.
+ITEM = re.compile(rf"(?<![א-ת])ב?אות\s+({NUMERAL})")
 
 for batch in sys.argv[1:]:
     rows = []
@@ -41,11 +46,30 @@ for batch in sys.argv[1:]:
             for m in BARE.finditer(he):
                 if not is_numeral(m.group(1)) or REF.search(he[max(0, m.start()-4):m.start()]):
                     continue
+                # A bare thousand is only a citation in citation context.
+                # 'דתיקון א\' עד פומא' is "correction 1, until the mouth" —
+                # ordinal + preposition, and עד happens to scan as 74.
+                before = he[max(0, m.start() - 18):m.start()]
+                after = he[m.end():m.end() + 12]
+                cue = ("(" in before or "לעיל" in before or "כנ\"ל" in before
+                       or "עי'" in before or "ועי" in before or "ע\"ש" in after
+                       or "ד\"ה" in after or "אות" in after)
+                if not cue:
+                    continue
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {1000 + value(m.group(1))} (cited without דף)"))
             for m in ITEM.finditer(he):
                 if not is_numeral(m.group(1)):
                     continue
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"item {value(m.group(1))}"))
+                # A list continues without repeating אות: 'אות קי"ז קי"ח וקי"ט'.
+                tail = he[m.end():m.end() + 80]
+                while True:
+                    c = re.match(rf"\s+ו?({NUMERAL})", tail)
+                    if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
+                        break
+                    tok = c.group(1)
+                    rows.append((ch["chapterId"], it["anchorId"], tok, f"item {value(tok)} (continues the list)"))
+                    tail = tail[c.end():]
     lines = [f"# Pre-computed citations for {batch}", "",
              "Every `דף` page number and `אות` item number in your batch, already",
              "converted. **Use these numbers verbatim** — do not recompute gematria.",
