@@ -298,3 +298,109 @@ describes **en-bb**, and round 5 already measured why this corpus differs.
 
 **When counting for gate 4, always glob `commentary.en-ai.json` explicitly —
 never `*.en-ai.json`.** A bare `*` glob has now produced a wrong ruling twice.
+
+## Round 7 — part 9's tail, part 10, and what `targetText` actually is
+
+### `targetText` is the `en-ai` source pane, in every part
+
+`docs/translation-pipeline.md` used to say the manifest carried official
+`en-bb` English from part 9 onward. It never did: `translate-export.ts` reads
+`source.<targetVersionId>.json`, so for an `en-ai` run the pane is always the
+earlier translation effort. A ruling in this round was argued from the false
+claim before the code was checked. The pane still governs a lemma — but
+because the reader sees it beside the note, not because it is authoritative.
+
+### Test pane self-inconsistency **per chapter**, by counting
+
+Two calls this round turned on it, and both went against the pane:
+
+| Hebrew  | pane says                                                                                                | corpus (commentary `en-ai`) | ruling                                   |
+| ------- | -------------------------------------------------------------------------------------------------------- | --------------------------- | ---------------------------------------- |
+| `נסירה` | part-9 panes print _both_ `Nesirah` (14) and "sawing" (15) — chapters 103, 104 and 109 print one of each | sawing 3, Nesirah 0         | **sawing**, lemmas included              |
+| `עיבור` | part-10 panes mix `Ibur` (26) with "pregnancy" (8)                                                       | Ibur 122, pregnancy 1       | **Ibur [impregnation]**, lemmas included |
+
+Prose had already been converted; what the per-chapter count settled was the
+four lemmas that had been left following the pane.
+
+### Names the corpus already fixed, invented three ways in one round
+
+`בוצד"ק` / `בוצינא דקרדינותא` → **Butzina de Kardinuta [the lamp of
+darkness]**. Three translators produced "the Botzedek", "the Butzadak", and
+the pane's "Botzina … [the hardened candle]". Counts: commentary `Butzina` 1
+and "lamp of darkness" 1; official `en-bb` `Butzina` 3; every invention 0.
+
+- `מנצפ"ך` → **MaNTzePaCh**. Panes spell it three ways ("Mantzepach" 2,
+  "Mantzapach" 3, `MaNTzePaCh` 18); the corpus form is the camel-cased one,
+  which also shows the reader which letters are meant.
+- `עלי עליון` → **the upper of the upper** (5 in commentary, lowercase).
+  Never "the Upper's Upper" (0).
+- `בס"ה` → **in the secret of**, exactly parallel to `ה"ס`. Rendering it
+  "alone" drops the citation formula; the corpus writes
+  `in the secret of “for He desires mercy”` around this very verse.
+- `רוחא קדמאה` → **Rucha Kadmaa [the first Ruach]**. Not "[the first
+  spirit]": bare "spirit" is 0 in the commentary (the 56 hits are
+  "spirituality"), `Ruach` is 219, and the item's own point is that the level
+  is _called_ Rucha because it holds only Nefesh and Ruach.
+- `תבונה` → **Tevuna** (45 : 0), even where a chapter's own pane says "Tvuna".
+- `אה"ר` → **Adam HaRishon**; `מיין דוכרין` → **Mayin Duchrin [male waters]**;
+  `ט"ר` → **the nine first ones**; `ל"ב האבן` → **the heart of stone**
+  (keeping the לב / ל"ב pun the pane makes).
+
+### Gloss forms, counted rather than invented
+
+`Gadlut [greatness/adulthood]` (17 : 8 against "[greatness]"),
+`Katnut [smallness/infancy]`, `Tzelem [image]`, `Taamim [tastes]` (101 : 13).
+Acronyms already dense in the corpus — ZA, ZON, NHY, GE, AHP, ZAT — stay
+bare; the corpus glosses them rarely and this run matches that, not the
+pane's liberal bracketing.
+
+### Never normalise an abbreviation to make a passage consistent
+
+Part-10 chapter-84 prints `ג"ש העליונים … וג"ש אמצעים … וב"ש תחתונים`. A
+translator read the two `ג"ש` as slips for `ב"ש` and rendered all three
+"two-thirds", which reads smoothly and erases what is printed. Restored to
+**the upper three thirds / the middle three thirds / the bottom two-thirds**,
+with the inconsistency reported instead of absorbed. Translating what is
+printed applies to abbreviations too, not only to obvious typos.
+
+### A settled technical term beats the pane, lemma or not
+
+The per-chapter self-inconsistency test decides _phrasing_. It does not decide
+**settled technical vocabulary** — those terms win everywhere, exactly as
+`Kli`/`Zivug` already do. Part 11's panes say "pregnancy" 174 times against
+`Ibur` 8, and some individual chapters say it only one way, so the per-chapter
+test would have let "pregnancy" into a lemma while the same item's prose read
+`Ibur [impregnation]`. The commentary corpus is 122 : 1. The term is `Ibur`,
+lemma included.
+
+Nor does a lemma follow the pane's **spelling** of a transliterated name:
+**Hochma** (1,504 : 2 against "Chochma"), **Aba**, **Hassadim**, **Tevuna**.
+The reader matches words; these are the same word.
+
+- `יה"ו` → **YHV**, not the pane's "YAHU" (commentary 13 : 0; YAHU is 0 in the
+  commentary and 7 in the pane). A part-local pane majority is not evidence.
+- `תנה"י` → **TNHY** (9 in commentary, 97 in the pane). Do not silently drop
+  the leading `ת` as unparseable — two agents this round dropped a letter or a
+  clause they could not parse, and no gate can see an omission.
+- `ציור` → **imprint** is correct; the ban on that word applies only when the
+  source has `רשימו` (which is _record_). `driftcheck.py` now tests the source.
+- `כי חפץ חסד הוא` → **“for He desires mercy”** (7 : 0 against "desires
+  Hesed"), even when a neighbouring item in the same chapter got it wrong.
+- Page citations read **“(page 683, item 93)”** — lowercase, Arabic numerals
+  (144 : 0 against "(Page").
+
+### Gate bugs this round — all three flagged correct translations
+
+Gate 2 reported three page mismatches and every one was the checker's fault,
+keeping the running total at **zero translator errors in ~290 page refs**:
+
+1. A parenthesis lists further pages without repeating `דף`
+   (`דף תשנ"ד ד"ה וזה. תשע"ב`) — the second page is not stray.
+2. Past 999 the page is written as the **word** `אלף` plus a numeral:
+   `דף אלף ז'` is page 1007, not gematria(`אלף`) = 111.
+3. The English capitalises "Page" at the start of a parenthetical, and the
+   check was case-sensitive.
+
+`driftcheck.py` also flagged a cross-reference-only item ("See above, page
+939, item 138") as compressed at 1.30×. The expansion ratio is meaningless
+below a paragraph; it is now skipped under 120 source characters.
