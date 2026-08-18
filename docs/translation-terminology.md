@@ -404,3 +404,47 @@ keeping the running total at **zero translator errors in ~290 page refs**:
 `driftcheck.py` also flagged a cross-reference-only item ("See above, page
 939, item 138") as compressed at 1.30×. The expansion ratio is meaningless
 below a paragraph; it is now skipped under 120 source characters.
+
+## Round 8 — the page-numbering convention nobody had noticed
+
+The book runs past page 1,200, and past 999 the thousand is written as a bare
+`א'` or the word `אלף`, with the hundreds following and **`דף` often not
+repeated**:
+
+| printed        | means                      |
+| -------------- | -------------------------- |
+| `דף אלף ז'`    | page 1007                  |
+| `דף א' קע"ג`   | page 1173                  |
+| `דף א' ד"ה …`  | page 1000                  |
+| `כנ"ל אלף ל"ז` | page 1037 (no `דף` at all) |
+
+Four agents in one round misread this, in three different ways — "page 38"
+(thousand dropped), "page 1, page 173" (read as two pages), and "page 1, item
+71" (hundreds turned into an item number). Two of them cited the round-7
+continuation-ref note as their justification, so **that note is now the more
+dangerous half of the pair**: a second numeral after a page can be a
+continuation ref _or_ the hundreds of a thousand, and only the page range
+decides. Gate 2 knows all four forms now.
+
+This also breaks the old boast. Gate 2's record was "zero translator errors in
+~290 page refs" — true only because the gate could not see this form. The
+corrected count for round 8 alone is **12 real page errors** across four
+batches, every one of them found by the recomputation once it was taught the
+convention. A checker that cannot express a class of error will report that
+class as clean forever.
+
+### Terms settled this round
+
+- `אויר` → **air** (98 : 0 against "Avir"); transliterate only where the item
+  discusses the word itself.
+- `עטרה` → **Atara [crown]** (26 : 0 against the pane's "corona"), lemmas
+  included.
+- `פרק`/`פרקין` → **joint(s)**, never the pane's "article".
+- `אור מקיף` → **surrounding light** (125 : 0 against the pane's "makifim").
+- `תבונה` → **Tevuna** (pane writes "Tevunah" 60 times; commentary, 0).
+- `וז"ל` → **“and these are his words”** — _his_, even when the source quoted
+  is a book.
+- `יש"ס ותבונה` → **YESHSUT**, all caps. One batch shipped 39 "Yeshsut".
+- `יניקה` → **nursing**, which fights part 12's pane hard (it says "Yenika"
+  throughout) and wins 74 : 9. A stray "Yenika" in the already-merged
+  part-12/chapter-177 was corrected to match.
