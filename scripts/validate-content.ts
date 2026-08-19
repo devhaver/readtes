@@ -363,6 +363,80 @@ const checkTranslatedSourceMarkers = (
  * `answers-topics`) — every other chapter, including the always-whole
  * `questions-*` chapters, keeps the strict index-aligned check.
  */
+/**
+ * Languages written in the Arabic script. Anything outside this set has no
+ * business carrying Arabic-block codepoints.
+ */
+const ARABIC_SCRIPT_LANGUAGES = new Set(["fa", "ar", "ur", "ps", "ku", "sd"]);
+
+/**
+ * Arabic (U+0600-06FF), Arabic Presentation Forms-A (U+FB50-FDFF), and
+ * Arabic Presentation Forms-B (U+FE70-FEFC).
+ *
+ * Written as escapes, not literal characters: Forms-B runs to U+FEFF, and
+ * a literal class containing it puts a zero-width no-break space in the
+ * source. It is also excluded on purpose — U+FEFF is a byte-order mark,
+ * not Arabic text, and flagging a stray BOM as "this file is in the wrong
+ * language" would be a confusing false positive.
+ */
+const ARABIC_BLOCK = /[\u0600-\u06FF\uFB50-\uFDFF\uFE70-\uFEFC]/u;
+
+/**
+ * A version must be written in a script its own language actually uses.
+ *
+ * This exists because of issue #133: Sefaria's *English* community
+ * translation of the Introduction is Farsi — someone uploaded a Persian
+ * translation into the English slot upstream — and we imported it
+ * faithfully and served Persian to English readers for days. Nothing
+ * caught it, because every structural check passed: the item count was
+ * right, the anchors aligned, the refs resolved. Only the script was
+ * wrong.
+ *
+ * Deliberately asymmetric: this flags Arabic-block text in a
+ * non-Arabic-script version, and does NOT flag Hebrew-block text in, say,
+ * an English version. English commentary quotes Hebrew terms constantly —
+ * that is correct and expected. Arabic script appearing anywhere outside
+ * an Arabic-script language is not.
+ *
+ * If a legitimate Arabic quotation ever needs to ship in another language,
+ * widen this deliberately rather than deleting it — an unexplained
+ * exemption is how the original bug survived review.
+ */
+export const checkVersionTextMatchesItsScript = (
+  versions: ContentVersion[],
+  loaded: LoadedChapterFile[],
+  errors: string[],
+): void => {
+  const versionsById = new Map(
+    versions.map((version) => [version.id, version]),
+  );
+
+  for (const { relativePath, file } of loaded) {
+    const version = versionsById.get(file.versionId);
+    if (!version || ARABIC_SCRIPT_LANGUAGES.has(version.language)) continue;
+
+    for (const item of file.items) {
+      if (!ARABIC_BLOCK.test(item.html)) continue;
+
+      // `items` is a union across the three layers: a source segment is
+      // numbered (`n`), a commentary item is keyed (`anchorId`), a summary
+      // item is keyed (`id`). Name whichever the file actually has so the
+      // error points at something findable.
+      const which =
+        "n" in item
+          ? `item ${item.n}`
+          : "anchorId" in item
+            ? `item "${item.anchorId}"`
+            : `item "${item.id}"`;
+
+      errors.push(
+        `${relativePath}: version "${file.versionId}" is registered as "${version.language}" but ${which} contains Arabic-script text — an upstream translation in the wrong language slot (see issue #133)`,
+      );
+      break;
+    }
+  }
+};
+
 export const checkTranslatedVersionIntegrity = (
   versions: ContentVersion[],
   loaded: LoadedChapterFile[],
@@ -1075,6 +1149,7 @@ export const validateContent = (contentDir: string): ValidationResult => {
       errors,
     );
     checkCommentaryEnglishLabelIsGematria(loaded, versionsParsed.data, errors);
+    checkVersionTextMatchesItsScript(versionsParsed.data, loaded, errors);
     checkTranslatedVersionIntegrity(
       versionsParsed.data,
       loaded,
