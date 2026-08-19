@@ -18,6 +18,15 @@
     "sefariaVersionTitle": "Sefaria Community Translation"
   },
   {
+    "id": "en-sefaria-sulam",
+    "language": "en",
+    "direction": "ltr",
+    "title": "The Sefaria Sulam, 2023",
+    "license": "unknown",
+    "source": "sefaria",
+    "sefariaVersionTitle": "The Sefaria Sulam, 2023"
+  },
+  {
     "id": "en-curated",
     "language": "en",
     "direction": "ltr",

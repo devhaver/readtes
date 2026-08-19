@@ -29,7 +29,12 @@ export type VersionsById = Map<string, ContentVersion>;
  */
 const LANGUAGE_VERSION_CHAINS: Record<string, string[]> = {
   he: ["he-jerusalem-1956", "he-bb"],
-  en: ["en-bb", "en-sefaria-community", "en-ai"],
+  // `en-sefaria-sulam` sits below the community translation (CC0 beats an
+  // unknown license where both exist) and above `en-ai` (a human
+  // translation beats a machine one). In practice it exists for exactly
+  // one chapter — the Introduction — where the community translation is
+  // absent, so the two never actually compete. See issue #133.
+  en: ["en-bb", "en-sefaria-community", "en-sefaria-sulam", "en-ai"],
 };
 
 /**

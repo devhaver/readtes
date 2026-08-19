@@ -102,6 +102,41 @@ const BOOK_INDEX_TITLE = "Talmud_Eser_HaSefirot";
  */
 const BOOK_LEVEL_HOST_PART_ID = "part-01";
 
+/**
+ * The English version every node uses unless it is named in
+ * `BOOK_LEVEL_EN_VERSION_IDS` below.
+ *
+ * Resolved by id, not by `find(language === "en" && source === "sefaria")`:
+ * there is now more than one such version in `versions.json`, and picking
+ * the first match would make the whole import depend on the array's order.
+ */
+const DEFAULT_EN_VERSION_ID = "en-sefaria-community";
+
+/**
+ * Book-level nodes whose English comes from somewhere other than
+ * `DEFAULT_EN_VERSION_ID`, keyed by node title.
+ *
+ * The Introduction is here because Sefaria's *English* community
+ * translation of that node is not English: 68 segments, 15 non-empty, and
+ * all 15 are Farsi — a Persian translation uploaded into the English slot
+ * upstream (Sefaria carries a correctly-labelled `fa` version beside it).
+ * We imported it faithfully and shipped Persian to English readers
+ * (issue #133).
+ *
+ * `The Sefaria Sulam, 2023` covers the same node completely — 443 of 443
+ * segments — and exists for NO other node in the book (checked against
+ * `Section I/IV/XIII/XVI`), which is why this is a per-node override and
+ * not a change of default. Its license is `unknown` rather than the
+ * community translation's CC0; that trade was made deliberately for this
+ * one chapter.
+ *
+ * This mapping is what stops a later import run from silently restoring
+ * the Persian file.
+ */
+const BOOK_LEVEL_EN_VERSION_IDS: Record<string, string> = {
+  Introduction: "en-sefaria-sulam",
+};
+
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
 const contentDir = join(repoRoot, "content");
 const cacheDir = join(repoRoot, ".superpowers/import-cache");
@@ -259,6 +294,14 @@ interface ChapterCoverageEntry {
   unit: ChapterUnit;
   sourceHe: number;
   sourceEn: number;
+  /**
+   * Which English version `sourceEn` was written from. Absent means the
+   * run's default (`DEFAULT_EN_VERSION_ID`). Present only for a node with
+   * a `BOOK_LEVEL_EN_VERSION_IDS` override — without it, COVERAGE.md would
+   * credit the Introduction's 443 Sulam segments to the community
+   * translation, which is exactly the confusion issue #133 came from.
+   */
+  sourceEnVersionId?: string;
   commentaryHeAnchored?: number;
   commentaryHeUnanchored?: number;
   commentaryEnAnchored?: number;
@@ -275,6 +318,8 @@ const importPart = async (
   index: SefariaIndex,
   heVersion: ContentVersion,
   enVersion: ContentVersion,
+  /** The whole registry — book-level English overrides resolve against it. */
+  versions: ContentVersion[],
   part: TocPart,
   dryRun: boolean,
 ): Promise<ImportPartResult> => {
@@ -348,6 +393,8 @@ const importPart = async (
     unit: ChapterUnit,
     node: SefariaIndexNode,
     extractHeadings: boolean,
+    /** Overridden only for a node in `BOOK_LEVEL_EN_VERSION_IDS`. */
+    enVersionForUnit: ContentVersion = enVersion,
   ): void => {
     const he = buildSourceSegments(
       node,
@@ -389,12 +436,12 @@ const importPart = async (
       }
     }
     if (en.segments.length > 0) {
-      planned.push({ layer: "source", versionId: enVersion.id });
+      planned.push({ layer: "source", versionId: enVersionForUnit.id });
       if (!dryRun) {
-        writeLayerFile(join(dir, `source.${enVersion.id}.json`), {
+        writeLayerFile(join(dir, `source.${enVersionForUnit.id}.json`), {
           chapterId: unit.chapterId,
           layer: "source",
-          versionId: enVersion.id,
+          versionId: enVersionForUnit.id,
           sefariaRef: unit.chapterRef,
           items: en.segments,
         });
@@ -406,6 +453,7 @@ const importPart = async (
       unit,
       sourceHe: he.segments.length,
       sourceEn: en.segments.length,
+      sourceEnVersionId: enVersionForUnit.id,
     });
   };
 
@@ -668,12 +716,19 @@ const importPart = async (
         continue;
       }
 
+      const pinnedEnVersionId = BOOK_LEVEL_EN_VERSION_IDS[bookNode.title];
+      const bookEnVersion = pinnedEnVersionId
+        ? // Presence is checked once in `main` — a missing pin is a config
+          // error there, not a silent fallback to the wrong English here.
+          (versions.find((v) => v.id === pinnedEnVersionId) ?? enVersion)
+        : enVersion;
+
       const bookRefBase = `${index.title}, ${bookNode.title}`;
       const bookText = await fetchWholeNodeText(
         client,
         bookRefBase,
         heVersion,
-        enVersion,
+        bookEnVersion,
       );
       const bookUnits = buildChapterUnits(
         part.id,
@@ -686,7 +741,7 @@ const importPart = async (
 
       bookLevelUnitsByNode.push({ node: bookNode, units: bookUnits });
       for (const unit of bookUnits) {
-        processSourceOnlyUnit(unit, bookNode, false);
+        processSourceOnlyUnit(unit, bookNode, false, bookEnVersion);
       }
     }
   }
@@ -778,9 +833,30 @@ const importPart = async (
     };
   };
 
+  /**
+   * One source stat per English version actually written, each scoped to
+   * the chapters that version covers. A single stat over `allUnits` would
+   * credit a pinned node's segments (the Introduction's 443 Sulam
+   * paragraphs) to the default version and simultaneously count that
+   * chapter as an empty chapter for the version that really produced it.
+   */
+  const englishSourceStats = (): VersionCoverageStat[] => {
+    const versionIdFor = (e: ChapterCoverageEntry) =>
+      e.sourceEnVersionId ?? enVersion.id;
+    const writtenIds = [...new Set(allUnits.map(versionIdFor))];
+    return writtenIds.map((id) =>
+      versionStat(
+        "source",
+        versions.find((v) => v.id === id) ?? enVersion,
+        allUnits.filter((e) => versionIdFor(e) === id),
+        (e) => e.sourceEn,
+      ),
+    );
+  };
+
   const stats: VersionCoverageStat[] = [
     versionStat("source", heVersion, allUnits, (e) => e.sourceHe),
-    versionStat("source", enVersion, allUnits, (e) => e.sourceEn),
+    ...englishSourceStats(),
     commentaryVersionStat(
       heVersion,
       chapterKindUnits,
@@ -835,13 +911,21 @@ export const main = async (argv: string[]): Promise<void> => {
   const heVersion = versions.find(
     (v) => v.language === "he" && v.source === "sefaria",
   );
-  const enVersion = versions.find(
-    (v) => v.language === "en" && v.source === "sefaria",
-  );
+  const enVersion = versions.find((v) => v.id === DEFAULT_EN_VERSION_ID);
   if (!heVersion || !enVersion) {
     throw new Error(
-      'content/versions.json must have one "he"/"sefaria" and one "en"/"sefaria" ContentVersion for the importer to fetch',
+      `content/versions.json must have one "he"/"sefaria" ContentVersion and the "${DEFAULT_EN_VERSION_ID}" version for the importer to fetch`,
     );
+  }
+
+  for (const [nodeTitle, versionId] of Object.entries(
+    BOOK_LEVEL_EN_VERSION_IDS,
+  )) {
+    if (!versions.some((v) => v.id === versionId)) {
+      throw new Error(
+        `content/versions.json is missing "${versionId}", the English version the book-level node "${nodeTitle}" is pinned to`,
+      );
+    }
   }
 
   const client = createHttpClient({ cacheDir });
@@ -859,6 +943,7 @@ export const main = async (argv: string[]): Promise<void> => {
       index,
       heVersion,
       enVersion,
+      versions,
       part,
       args.dryRun,
     );

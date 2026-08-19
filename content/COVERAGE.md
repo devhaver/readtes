@@ -80,7 +80,8 @@ blocked on issue #111 rather than on anything about this material.
 | Layer | Version | Chapters w/ text | Chapters total | Segments |
 | --- | --- | --- | --- | --- |
 | source | he-jerusalem-1956 | 17 | 17 | 701 |
-| source | en-sefaria-community | 3 | 17 | 25 |
+| source | en-sefaria-community | 2 | 16 | 10 |
+| source | en-sefaria-sulam | 1 | 1 | 443 |
 | commentary | he-jerusalem-1956 | 2 | 2 | 34 |
 | commentary | en-sefaria-community | 1 | 2 | 6 |
 

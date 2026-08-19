@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { readOffsetNodes } from "../../scripts/lib/sefaria-offset-nodes.ts";
 import {
   checkTranslatedVersionIntegrity,
+  checkVersionTextMatchesItsScript,
   validateContent,
   type LoadedChapterFile,
 } from "../../scripts/validate-content.ts";
@@ -582,6 +583,95 @@ describe("content integrity — Q&A subset translations (issue #91)", () => {
       [source, translated],
       errors,
       new Set(["part-01/answers-terminology-01"]),
+    );
+
+    expect(errors).toEqual([]);
+  });
+});
+
+describe("content integrity — a version must be written in its own script", () => {
+  const versions: ContentVersion[] = [
+    {
+      id: "en-sefaria-community",
+      language: "en",
+      direction: "ltr",
+      title: "Sefaria Community Translation",
+      license: "CC0",
+      source: "sefaria",
+    },
+    {
+      id: "fa-community",
+      language: "fa",
+      direction: "rtl",
+      title: "Persian",
+      license: "CC0",
+      source: "sefaria",
+    },
+  ];
+
+  const fileWith = (versionId: string, html: string): LoadedChapterFile => ({
+    relativePath: `parts/part-01/chapters/introduction-01/source.${versionId}.json`,
+    chapterDirId: "part-01/introduction-01",
+    file: {
+      chapterId: "part-01/introduction-01",
+      layer: "source",
+      versionId,
+      items: [{ n: 54, sefariaRef: "TES Introduction 54", html, anchors: [] }],
+    },
+  });
+
+  // Issue #133: Sefaria's *English* community translation of the
+  // Introduction was Farsi. Every structural check passed — item counts,
+  // anchors, refs — because only the script was wrong.
+  it("rejects Arabic-script text in a version registered as English", () => {
+    const errors: string[] = [];
+
+    checkVersionTextMatchesItsScript(
+      versions,
+      [
+        fileWith(
+          "en-sefaria-community",
+          "<p>\u062a\u062a-\u0648\u0627\u0648 (\u067e\u0627\u0646\u0632\u062f\u0647)</p>",
+        ),
+      ],
+      errors,
+    );
+
+    expect(errors).toEqual([
+      'parts/part-01/chapters/introduction-01/source.en-sefaria-community.json: version "en-sefaria-community" is registered as "en" but item 54 contains Arabic-script text — an upstream translation in the wrong language slot (see issue #133)',
+    ]);
+  });
+
+  it("accepts the same text under a version that is actually Persian", () => {
+    const errors: string[] = [];
+
+    checkVersionTextMatchesItsScript(
+      versions,
+      [
+        fileWith(
+          "fa-community",
+          "<p>\u062a\u062a-\u0648\u0627\u0648 (\u067e\u0627\u0646\u0632\u062f\u0647)</p>",
+        ),
+      ],
+      errors,
+    );
+
+    expect(errors).toEqual([]);
+  });
+
+  // Asymmetric on purpose: English commentary quotes Hebrew constantly.
+  it("does not flag Hebrew quoted inside an English version", () => {
+    const errors: string[] = [];
+
+    checkVersionTextMatchesItsScript(
+      versions,
+      [
+        fileWith(
+          "en-sefaria-community",
+          "<p>the word \u05d0\u05d5\u05e8 means light</p>",
+        ),
+      ],
+      errors,
     );
 
     expect(errors).toEqual([]);
