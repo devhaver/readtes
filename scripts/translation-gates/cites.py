@@ -13,13 +13,14 @@ NUMERAL = r"[א-ת]+(?:[\"״'׳][א-ת]+)?['׳]?"
 IDIOM = {'ד"ה', "ד״ה"}
 # Abbreviations that scan as numerals but end a citation list:
 # וז"ל 'and these are his words', ע"ש 'see there', ע"ב the b-side of a folio.
-STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו'}
+STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו',
+        'דף', 'ודף', 'רף', 'דך', 'אות', 'ואות'}
 
 # A numeral carries gershayim (מ"ה) or is one or two letters with a
 # geresh (י'). Anything else after דף/אות is an ordinary word.
 is_numeral = lambda t: bool(re.search(r"[\"״'׳]", t)) or len(t.rstrip("'׳")) <= 2
 
-REF = re.compile(rf"(?<![א-ת])ב?(?:דף|רף|דך)\s+({NUMERAL})(?:\s+({NUMERAL}))?")
+REF = re.compile(rf"(?<![א-ת])[וב]?(?:דף|רף|דך)\s+({NUMERAL})(?:\s+({NUMERAL}))?")
 # The lookbehind matters: without it "אות" matches inside נקראות.
 # ב?אות: "(באות קפ\"ט)" is "in item 189". The same string can be the verb
 # "they come" (באות גם) — the is_numeral filter on the next token settles it.
@@ -43,8 +44,13 @@ for batch in sys.argv[1:]:
                 else:
                     n = value(tok)
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {n}"))
+            ref_spans = [(m.start(), m.end()) for m in REF.finditer(he)]
             for m in BARE.finditer(he):
-                if not is_numeral(m.group(1)) or REF.search(he[max(0, m.start()-4):m.start()]):
+                # 'דף א\' שע"ז' is one citation, not two: skip a bare match that
+                # sits inside a דף match already reported above.
+                if any(a <= m.start() < b for a, b in ref_spans):
+                    continue
+                if not is_numeral(m.group(1)):
                     continue
                 # A bare thousand is only a citation in citation context.
                 # 'דתיקון א\' עד פומא' is "correction 1, until the mouth" —
@@ -68,7 +74,12 @@ for batch in sys.argv[1:]:
                     if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
                         break
                     tok = c.group(1)
-                    rows.append((ch["chapterId"], it["anchorId"], tok, f"item {value(tok)} (continues the list)"))
+                    # 'דף A אות B  C אות D' — a continuation followed by אות is
+                    # the next PAGE in the list, not another item number.
+                    kind = ("page" if re.match(r"\s+ו?אות(?![א-ת])", tail[c.end():])
+                            else "item")
+                    rows.append((ch["chapterId"], it["anchorId"], tok,
+                                 f"{kind} {value(tok)} (continues the list)"))
                     tail = tail[c.end():]
     lines = [f"# Pre-computed citations for {batch}", "",
              "Every `דף` page number and `אות` item number in your batch, already",
