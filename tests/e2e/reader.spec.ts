@@ -40,11 +40,20 @@ test("serves the aligned English reader and synchronizes Ari anchors", async ({
       .getByRole("heading", { name: "Inner Light", exact: true })
       .first(),
   ).toBeVisible();
+  // The third pane names three layers, so its heading is the tablist's
+  // (screen-reader-only) label and the visible title is the selected tab.
   await expect(
-    innerObservation
-      .getByRole("heading", { name: "Inner Observation", exact: true })
-      .first(),
-  ).toBeVisible();
+    innerObservation.getByRole("heading", {
+      name: "Inner Observation, Questions, and Answers",
+      exact: true,
+    }),
+  ).toBeAttached();
+  await expect(
+    innerObservation.getByRole("tab", {
+      name: "Inner Observation",
+      exact: true,
+    }),
+  ).toHaveAttribute("aria-selected", "true");
   await expect(source.locator("li[data-seif]").first()).toContainText(
     "emanated beings",
   );
@@ -124,11 +133,16 @@ test("serves the Hebrew reader with RTL panes", async ({ page }) => {
       .first(),
   ).toBeVisible();
   await expect(
+    page.locator("#reader-inner-observation-pane").getByRole("heading", {
+      name: "הסתכלות פנימית, שאלות ותשובות",
+      exact: true,
+    }),
+  ).toBeAttached();
+  await expect(
     page
       .locator("#reader-inner-observation-pane")
-      .getByRole("heading", { name: "הסתכלות פנימית", exact: true })
-      .first(),
-  ).toBeVisible();
+      .getByRole("tab", { name: "הסתכלות פנימית", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
 });
 
 test.describe("Q&A cross-references (issue #91)", () => {

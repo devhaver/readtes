@@ -55,7 +55,19 @@ interface Segment {
   iconClass: string;
 }
 
-const props = defineProps<{ panes: PaneId[] }>();
+const props = withDefaults(
+  defineProps<{
+    panes: PaneId[];
+    /**
+     * The third pane's label. It is tabbed (Inner Observation / Questions /
+     * Answers) and five parts have no Inner Observation at all, so naming
+     * it unconditionally after its first tab would label a pane after
+     * content it does not contain. The page decides; this stays dumb.
+     */
+    thirdPaneLabelKey?: string;
+  }>(),
+  { thirdPaneLabelKey: "reader.mobilePane.innerObservation" },
+);
 
 const SEGMENT_BY_PANE: Record<PaneId, Segment> = {
   source: {
@@ -79,7 +91,11 @@ const SEGMENT_BY_PANE: Record<PaneId, Segment> = {
 };
 
 const segments = computed<Segment[]>(() =>
-  props.panes.map((pane) => SEGMENT_BY_PANE[pane]),
+  props.panes.map((pane) =>
+    pane === "inner-observation"
+      ? { ...SEGMENT_BY_PANE[pane], labelKey: props.thirdPaneLabelKey }
+      : SEGMENT_BY_PANE[pane],
+  ),
 );
 
 const { t } = useI18n();

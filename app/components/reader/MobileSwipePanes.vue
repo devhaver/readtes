@@ -79,7 +79,7 @@ import {
 import type { PaneId } from "~/utils/readerAnchorState";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 
-const props = defineProps<{ panes: PaneId[] }>();
+const props = defineProps<{ panes: PaneId[]; thirdPaneLabelKey?: string }>();
 
 const { activePane, setActivePane } = useReaderState();
 
@@ -257,13 +257,44 @@ watch(activePane, (pane) => {
 // Source stays a reading column — Inner Observation likewise gets real
 // estate as reference material rather than a cramped side column. A single
 // remaining pane just takes the full row and caps its own measure.
-const gridColsClass = computed(() =>
-  paneOrder.value.length === 3
-    ? "lg:grid-cols-[0.8fr_1.1fr_1.1fr]"
-    : paneOrder.value.length === 2
-      ? "lg:grid-cols-[0.85fr_1.15fr]"
-      : "lg:grid-cols-[1fr]",
+//
+// The third pane is collapsible (`useReaderThirdPane`), so what the grid
+// has to lay out at `lg:` is the pane count MINUS a closed third pane, plus
+// the always-present `auto` rail that carries its toggle. Below `lg` none
+// of this applies — the track is a flex row of slides and every pane the
+// chapter has is a slide, open or not.
+const { open: thirdPaneOpen } = useReaderThirdPane();
+
+const hasThirdPane = computed(() =>
+  paneOrder.value.includes("inner-observation"),
 );
+
+/** Columns actually drawn at `lg:` — a closed third pane occupies none. */
+const desktopColumnCount = computed(
+  () =>
+    paneOrder.value.length -
+    (hasThirdPane.value && !thirdPaneOpen.value ? 1 : 0),
+);
+
+// Written as whole literal class names, never assembled from pieces:
+// Tailwind generates utilities by scanning source text, so a template
+// literal like `lg:grid-cols-[...${rail}]` produces a class that exists in
+// the DOM and in no stylesheet — the grid silently falls back to one
+// column. The trailing `auto` track is the toggle rail, present at `lg:`
+// whenever there is a third pane to toggle (open or closed).
+const gridColsClass = computed(() => {
+  if (!hasThirdPane.value) {
+    return desktopColumnCount.value === 2
+      ? "lg:grid-cols-[0.85fr_1.15fr]"
+      : "lg:grid-cols-[1fr]";
+  }
+
+  if (desktopColumnCount.value >= 3)
+    return "lg:grid-cols-[0.8fr_1.1fr_1.1fr_auto]";
+  if (desktopColumnCount.value === 2)
+    return "lg:grid-cols-[0.85fr_1.15fr_auto]";
+  return "lg:grid-cols-[1fr_auto]";
+});
 </script>
 
 <template>
@@ -294,16 +325,28 @@ const gridColsClass = computed(() =>
     >
       <slot name="commentary" />
     </div>
+    <!-- `lg:hidden` when closed, never `v-if`: this is the same DOM node as
+         the mobile track's third slide, and unmounting it would drop its
+         scroll position and re-mount it on every crossing of the `lg`
+         breakpoint. Below `lg` it is always a slide, open or not — the
+         collapse is a desktop affordance, because that is where the width
+         it gives back exists. -->
     <div
-      v-if="paneOrder.includes('inner-observation')"
+      v-if="hasThirdPane"
       id="reader-inner-observation-pane"
       ref="innerObservationRef"
       data-pane="inner-observation"
       class="h-full min-h-0 w-full min-w-0 shrink-0 snap-start snap-always scroll-mt-4"
+      :class="!thirdPaneOpen && 'lg:hidden'"
     >
       <slot name="inner-observation" />
     </div>
+
+    <ReaderThirdPaneRail v-if="hasThirdPane" />
   </div>
 
-  <ReaderMobilePanePill :panes="paneOrder" />
+  <ReaderMobilePanePill
+    :panes="paneOrder"
+    :third-pane-label-key="thirdPaneLabelKey"
+  />
 </template>

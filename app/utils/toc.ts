@@ -11,6 +11,7 @@
  * per-volume-skeleton/per-part shapes instead.
  */
 import type {
+  ChapterKind,
   TocChapter,
   TocPartFile,
   TocPartSkeleton,
@@ -56,7 +57,7 @@ export const findChapterInPart = (
  * Inner Observation pane/mobile slide: absent entirely for five parts (5,
  * 11, 14, 15, 16 — confirmed against KabbalahMedia's own source, not a gap
  * in our import), present but never chapter-scoped for the rest — see
- * `useInnerObservationContent`.
+ * `usePartScopedSections`.
  */
 export const innerObservationChaptersInPart = (
   chapters: TocChapter[],
@@ -64,6 +65,53 @@ export const innerObservationChaptersInPart = (
   chapters
     .filter((chapter) => chapter.kind === "inner-observation")
     .sort((a, b) => a.number - b.number);
+
+/**
+ * The kinds behind the third pane's Questions and Answers tabs, in the order
+ * the printed book asks them: terminology first, then topics, then part 6's
+ * Cause and Effect (the only part that has one).
+ *
+ * Listed explicitly rather than matched on a `questions-`/`answers-` prefix:
+ * `ChapterKind` is a closed enum, and a prefix test would silently adopt any
+ * future kind that happened to start with the same word into a reader pane
+ * nobody had decided it belonged in.
+ */
+const QUESTION_KINDS: ChapterKind[] = [
+  "questions-terminology",
+  "questions-topics",
+  "questions-cause-effect",
+];
+
+const ANSWER_KINDS: ChapterKind[] = [
+  "answers-terminology",
+  "answers-topics",
+  "answers-cause-effect",
+];
+
+const chaptersOfKinds = (
+  chapters: TocChapter[],
+  kinds: ChapterKind[],
+): TocChapter[] =>
+  chapters
+    .filter((chapter) => kinds.includes(chapter.kind))
+    .sort(
+      (a, b) =>
+        kinds.indexOf(a.kind) - kinds.indexOf(b.kind) || a.number - b.number,
+    );
+
+/**
+ * A part's question chapters, for the third pane's Questions tab.
+ *
+ * Every one of the 16 parts has these (issue #91 consolidated them to one
+ * chapter per kind), which is what lets the third pane exist even for the
+ * five parts with no Inner Observation at all.
+ */
+export const questionsChaptersInPart = (chapters: TocChapter[]): TocChapter[] =>
+  chaptersOfKinds(chapters, QUESTION_KINDS);
+
+/** A part's answer chapters, for the third pane's Answers tab. */
+export const answersChaptersInPart = (chapters: TocChapter[]): TocChapter[] =>
+  chaptersOfKinds(chapters, ANSWER_KINDS);
 
 /** Original mode's Prev/Next pagination position within a part. */
 export interface PartPaginationPosition {

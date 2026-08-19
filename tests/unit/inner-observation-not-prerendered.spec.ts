@@ -81,11 +81,11 @@ const InnerObservationSubtree = defineComponent({
   // `async setup` + `await` on purpose, even though the composable is
   // synchronous: `await` on a non-promise is a no-op, but if the composable
   // ever goes back to resolving the bodies in setup (its shape before this
-  // change — the page did `await useInnerObservationContent(...)` from its
+  // change — the page did `await usePartScopedSections(...)` from its
   // own `<script setup>`) the server render will wait for them and the
   // assertions below will see the essays in the HTML.
   async setup() {
-    const { sections, state } = await useInnerObservationContent(
+    const { sections, state } = await usePartScopedSections(
       PART_ID,
       innerObservationChapters,
     );
@@ -123,7 +123,7 @@ describe("guardrail: Inner Observation essays are never server-rendered", () => 
     expect(html).toContain('data-state="pending"');
   });
 
-  it("never awaits useInnerObservationContent in the chapter page", () => {
+  it("never awaits usePartScopedSections in the chapter page", () => {
     const page = readFileSync(
       join(process.cwd(), "app/pages/read/[part]/[chapter].vue"),
       "utf-8",
@@ -132,7 +132,7 @@ describe("guardrail: Inner Observation essays are never server-rendered", () => 
     // Awaiting it again would only reintroduce SSR'd bodies if the composable
     // also went back to loading in setup, but the two always regressed
     // together and the `await` is the visible half.
-    expect(page).not.toMatch(/await\s+useInnerObservationContent\s*\(/);
+    expect(page).not.toMatch(/await\s+usePartScopedSections\s*\(/);
   });
 });
 

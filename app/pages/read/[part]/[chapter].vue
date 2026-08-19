@@ -2,7 +2,7 @@
 // The reader: Source | Inner Light | Inner Observation for one chapter (two
 // panes when the part has no Inner Observation — see below), with two-way
 // anchor sync between Source and Inner Light. Inner Observation is
-// part-scoped and never anchor-synced — see `useInnerObservationContent`.
+// part-scoped and never anchor-synced — see `usePartScopedSections`.
 // Resolves the chapter from its part's `content/toc.parts/<partId>.json` by
 // route params — an unknown part or chapter 404s, the same way
 // `/volumes/[volume]` does.
@@ -79,7 +79,6 @@ const innerObservationChapters = innerObservationChaptersInPart(
   partFile.chapters,
 );
 const hasInnerObservation = innerObservationChapters.length > 0;
-const panes = resolveReaderPanes({ hasCommentary, hasInnerObservation });
 
 const readerLanguages = useReaderLanguages(chapter, versions.value);
 // Study mode below `lg`, panes at/above it by default — original is an
@@ -92,7 +91,7 @@ const { mode } = useReaderMode();
 // Deliberately not awaited and deliberately not server-rendered: the bodies
 // load in the browser, from the part's own content chunks, once per part
 // rather than being inlined into every chapter page's HTML — see
-// `useInnerObservationContent`. Only `versions` (ToC-derived, so identical
+// `usePartScopedSections`. Only `versions` (ToC-derived, so identical
 // on both sides of hydration) is available during prerendering.
 //
 // The gate reads `mode`, which only resolves to the real viewport once
@@ -106,16 +105,61 @@ const { mode } = useReaderMode();
 // Panes mode is the only one of the three that renders an Inner Observation
 // pane at all, so on a phone (study by default) this gate is the difference
 // between fetching the part's whole essay set and fetching none of it.
-const {
-  versions: innerObservationVersions,
-  sections: innerObservationRawSections,
-  state: innerObservationState,
-} = useInnerObservationContent(
-  partId,
-  innerObservationChapters,
-  () => mode.value === "panes",
-);
 const versionsById = computed(() => buildVersionsById(versions.value));
+
+// The third pane's own state: collapsed-or-not (desktop) and which tab.
+// Both persisted — see `useReaderThirdPane` for why it pushes the columns
+// rather than floating over them.
+const { tab: preferredThirdPaneTab, setTab: setThirdPaneTab } =
+  useReaderThirdPane();
+
+const thirdPaneChapters = {
+  innerObservation: innerObservationChapters,
+  questions: questionsChaptersInPart(partFile.chapters),
+  answers: answersChaptersInPart(partFile.chapters),
+};
+
+// Static for the page: the part's chapter list does not change under it,
+// and `panes` below is resolved once at setup from the same fact. Inner
+// Observation leads when it exists — it is the layer this pane has always
+// been, and the one the printed book pairs with the text.
+const availableThirdPaneTabs: ThirdPaneTab[] = [
+  ...(thirdPaneChapters.innerObservation.length > 0
+    ? (["inner-observation"] as const)
+    : []),
+  ...(thirdPaneChapters.questions.length > 0 ? (["questions"] as const) : []),
+  ...(thirdPaneChapters.answers.length > 0 ? (["answers"] as const) : []),
+];
+
+// The persisted tab is a standing preference, not a per-part fact: on a
+// part with no Inner Observation this falls through to Questions WITHOUT
+// overwriting the preference, so the reader gets Inner Observation back on
+// the next part that has one.
+const activeThirdPaneTab = computed(() =>
+  resolveThirdPaneTab(preferredThirdPaneTab.value, availableThirdPaneTabs),
+);
+
+const panes = resolveReaderPanes({
+  hasCommentary,
+  hasThirdPane: availableThirdPaneTabs.length > 0,
+});
+
+// The mobile pill names the third pane. It is space-constrained chrome, so
+// it takes the short form ("Q & A") where the pane's own heading takes the
+// full one — but it must never name a part after Inner Observation when
+// that part has none.
+const thirdPaneLabelKey = availableThirdPaneTabs.includes("inner-observation")
+  ? "reader.mobilePane.innerObservation"
+  : "reader.mobilePane.questionsAnswers";
+
+const thirdPane = useThirdPaneTabContent(
+  partId,
+  thirdPaneChapters,
+  activeThirdPaneTab,
+  () => mode.value === "panes",
+  versionsById,
+  locale,
+);
 
 const sourceLanguageOptions = computed(() =>
   paneLanguageOptions(sourceVersions.value, locale.value, versionsById.value),
@@ -127,14 +171,6 @@ const commentaryLanguageOptions = computed(() =>
     versionsById.value,
   ),
 );
-const innerObservationLanguageOptions = computed(() =>
-  paneLanguageOptions(
-    innerObservationVersions.value,
-    locale.value,
-    versionsById.value,
-  ),
-);
-
 const metaFor = (versionId: string | null) =>
   versionId ? (versionsById.value.get(versionId) ?? null) : null;
 
@@ -157,64 +193,6 @@ const commentaryFile = computed(() =>
 
 const sourceSegments = computed(() => sourceFile.value?.items ?? []);
 const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
-
-// Inner Observation has no persisted language preference of its own
-// (unlike source/commentary via `useReaderLanguages`) — there's exactly
-// one pane for it, so nothing needs remembering across chapters; it just
-// follows the same default rule, recomputed whenever the part's available
-// versions load.
-const innerObservationLanguage = ref<string | null>(null);
-watch(
-  innerObservationVersions,
-  (ids) => {
-    if (
-      innerObservationLanguage.value &&
-      resolveVersionForLanguage(
-        ids,
-        innerObservationLanguage.value,
-        versionsById.value,
-      )
-    ) {
-      return;
-    }
-    innerObservationLanguage.value = resolveDefaultLanguage(
-      ids,
-      locale.value,
-      versionsById.value,
-    );
-  },
-  { immediate: true },
-);
-
-const innerObservationVersion = computed(() =>
-  innerObservationLanguage.value
-    ? resolveVersionForLanguage(
-        innerObservationVersions.value,
-        innerObservationLanguage.value,
-        versionsById.value,
-      )
-    : null,
-);
-
-const innerObservationMeta = computed(() =>
-  metaFor(innerObservationVersion.value),
-);
-const innerObservationSections = computed(() =>
-  innerObservationRawSections.value
-    .map((section) => ({
-      chapterId: section.chapterId,
-      title: section.title,
-      items: innerObservationVersion.value
-        ? (section.itemsByVersion[innerObservationVersion.value]?.items ?? [])
-        : [],
-    }))
-    // A section whose *selected* version has no items would render as a
-    // bare heading with nothing under it — drop it; the sections that do
-    // have text in this version carry the pane. (If none do, the pane
-    // falls back to `innerObservationEmpty` — the honest wording there,
-    // since this pane only renders for parts that do have one.)
-    .filter((section) => section.items.length > 0),
-);
 
 const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
 
@@ -337,7 +315,11 @@ useLocalizedSeo({
 
 <template>
   <div class="contents">
-    <ReaderShell v-if="mode === 'panes'" :panes="panes">
+    <ReaderShell
+      v-if="mode === 'panes'"
+      :panes="panes"
+      :third-pane-label-key="thirdPaneLabelKey"
+    >
       <template #toolbar>
         <ReaderToolbar
           :chapter-title="chapterTitle"
@@ -405,21 +387,40 @@ useLocalizedSeo({
         </ReaderPane>
       </template>
 
-      <template v-if="hasInnerObservation" #inner-observation>
+      <template v-if="availableThirdPaneTabs.length > 0" #inner-observation>
         <ReaderPane
           :title="t('reader.pane.innerObservation')"
-          :language-options="innerObservationLanguageOptions"
-          :model-value="innerObservationLanguage"
-          :meta="innerObservationMeta"
+          :language-options="thirdPane.languageOptions.value"
+          :model-value="thirdPane.language.value"
+          :meta="thirdPane.meta.value"
           @update:model-value="
-            (language) => (innerObservationLanguage = language)
+            (language) => (thirdPane.language.value = language)
           "
         >
-          <ReaderInnerObservationPane
-            :sections="innerObservationSections"
-            :state="innerObservationState"
-            @reload="reloadNuxtApp({ force: true })"
-          />
+          <!-- The tablist stands in for the single layer title every other
+               pane prints — this pane names three layers, so the reader
+               picks between them from the heading position. -->
+          <template #title>
+            <ReaderThirdPaneTabs
+              v-if="activeThirdPaneTab"
+              :tabs="availableThirdPaneTabs"
+              :active="activeThirdPaneTab"
+              @select="setThirdPaneTab"
+            />
+          </template>
+
+          <div
+            v-if="activeThirdPaneTab"
+            :id="`reader-third-pane-panel-${activeThirdPaneTab}`"
+            role="tabpanel"
+            :aria-labelledby="`reader-third-pane-tab-${activeThirdPaneTab}`"
+          >
+            <ReaderInnerObservationPane
+              :sections="thirdPane.sections.value"
+              :state="thirdPane.state.value"
+              @reload="reloadNuxtApp({ force: true })"
+            />
+          </div>
         </ReaderPane>
       </template>
     </ReaderShell>

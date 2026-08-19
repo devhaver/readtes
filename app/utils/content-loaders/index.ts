@@ -9,7 +9,7 @@
  *
  * Resolved modules are cached in `resolvedModules` keyed by `partId` so
  * loading a second chapter from the same part (the common case — a reader
- * page's own part, then `useInnerObservationContent`'s part-scoped pane)
+ * page's own part, then `usePartScopedSections`'s part-scoped pane)
  * doesn't re-run `import()` for a module already resolved.
  */
 type PartContentModules = Record<string, () => Promise<{ default: unknown }>>;

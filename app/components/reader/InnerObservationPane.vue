@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Inner Observation (Histaklut Pnimit) is PART-scoped, not chapter-scoped —
-// see the content model skill / `useInnerObservationContent`: every chapter
+// see the content model skill / `usePartScopedSections`: every chapter
 // in a part shares the exact same Inner Observation content, concatenated
 // from that part's own `kind: "inner-observation"` chapters in section
 // order, each rendered under its own title heading. None of the corpus's
@@ -11,7 +11,7 @@
 // restarts at 1, so ids here would collide with the Source pane's).
 //
 // `state` exists because the bodies are deliberately not server-rendered
-// (see `useInnerObservationContent`'s module doc — issue #84 measured
+// (see `usePartScopedSections`'s module doc — issue #84 measured
 // part-scoped content SSR'd into every chapter of its part at ~411MB of the
 // built site). Prerendered HTML and the hydrating client render both show
 // the skeleton;
@@ -22,14 +22,14 @@
 // held apart from `"ready"` with no sections for exactly the same reason:
 // a chunk that 404s (a redeploy under a cached HTML document) must say so,
 // not claim the part has nothing. Its recovery is a page reload, which the
-// parent owns (`reload`) — see `useInnerObservationContent` for why an
+// parent owns (`reload`) — see `usePartScopedSections` for why an
 // in-place retry provably cannot work for a failed `import()`.
 //
 // A11y: the skeleton is decorative (`aria-hidden`) and the three states are
 // announced instead by one persistent polite live region, which is what
 // makes the *transition* audible — a `role="status"` that is destroyed the
 // moment the content arrives announces the wait but never its end.
-import type { InnerObservationLoadState } from "~/composables/useInnerObservationContent";
+import type { PartSectionsLoadState } from "~/composables/usePartScopedSections";
 import type { LocalizedText } from "~/utils/localization";
 import type { SourceSegment } from "~~/shared/types/content";
 
@@ -50,7 +50,7 @@ export interface InnerObservationSectionView {
 const props = withDefaults(
   defineProps<{
     sections: InnerObservationSectionView[];
-    state?: InnerObservationLoadState;
+    state?: PartSectionsLoadState;
   }>(),
   { state: "ready" },
 );
