@@ -25,7 +25,7 @@
  *
  * Only loads the `source`/`commentary` layers — the reader no longer has a
  * summary pane (the layer is effectively dead: exactly 1 file exists across
- * the whole corpus) and `useInnerObservationContent` covers the part-scoped
+ * the whole corpus) and `usePartScopedSections` covers the part-scoped
  * Inner Observation reference pane separately, so nothing here needs the
  * `summary` layer any more. `loadLayerFile` is exported for that composable
  * to reuse — same per-part lazy chunk maps, not a second set of

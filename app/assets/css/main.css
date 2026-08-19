@@ -742,6 +742,31 @@ a[href],
   @apply rounded-button border px-1.5 py-0.5 text-xs font-medium;
 }
 
+/*
+ * `ThirdPaneTabs` — the third pane's Inner Observation / Questions /
+ * Answers tablist, which sits where every other pane prints a single
+ * layer title. It therefore wears the same `tes-eyebrow` type as those
+ * titles: the reader should read it as "this pane's heading, which happens
+ * to be switchable", not as a second navigation bar competing with the
+ * toolbar above it.
+ *
+ * `-mx-1` pulls the first tab's padding back so its text aligns with the
+ * other panes' titles rather than sitting a few pixels inboard of them.
+ */
+.tes-third-pane-tab {
+  @apply rounded-button px-1 font-display text-sm tracking-wide uppercase first:-ms-1;
+}
+
+.tes-third-pane-tab:focus-visible {
+  @apply outline outline-2 outline-teal;
+}
+
+/* Underlined rather than filled: a filled chip at this size reads as a
+   button to press, and these are a heading's segments. */
+.tes-third-pane-tab-active {
+  @apply text-(--text-primary) underline decoration-teal decoration-2 underline-offset-4;
+}
+
 /* `MobilePanePill`'s per-pane tab — the selected/unselected tint stays
    conditional at the call site. */
 /*

@@ -36,7 +36,11 @@ const containerRef = provideReaderPaneContainer();
         :meta="meta"
         class="flex-1"
         @update:model-value="(value) => emit('update:modelValue', value)"
-      />
+      >
+        <template v-if="$slots.title" #title>
+          <slot name="title" />
+        </template>
+      </ReaderPaneHeader>
 
       <slot name="toast" />
     </header>

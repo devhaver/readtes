@@ -7,7 +7,7 @@
 /**
  * The reader panes an anchor can originate from / target. Only "source" and
  * "commentary" ever actually activate an anchor — Inner Observation carries
- * no anchors at all (see `useInnerObservationContent`) — but it still needs
+ * no anchors at all (see `usePartScopedSections`) — but it still needs
  * a `PaneId` of its own so it counts as a swipeable slide in mobile panes
  * mode (`~/utils/mobilePaneSync`).
  */

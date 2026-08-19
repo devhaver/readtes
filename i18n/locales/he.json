@@ -33,7 +33,11 @@
     "pane": {
       "source": "כתבי האר״י",
       "innerLight": "אור פנימי",
-      "innerObservation": "הסתכלות פנימית"
+      "innerObservation": "הסתכלות פנימית",
+      "questions": "שאלות",
+      "answers": "תשובות",
+      "thirdPaneTablist": "הסתכלות פנימית, שאלות ותשובות",
+      "thirdPaneTablistQaOnly": "שאלות ותשובות"
     },
     "paneLanguageLabel": "שפה: {pane}",
     "sefariaTranslated": "תרגום ספריא",
@@ -101,7 +105,8 @@
       "label": "חלונית הקורא",
       "source": "כתבי האר״י",
       "innerLight": "אור פנימי",
-      "innerObservation": "הסתכלות פנימית"
+      "innerObservation": "הסתכלות פנימית",
+      "questionsAnswers": "שאלות ותשובות"
     },
     "commentarySheet": {
       "title": "פירוש על סעיף {n}",
@@ -129,6 +134,10 @@
       "language": {
         "label": "שפה"
       }
+    },
+    "thirdPane": {
+      "collapse": "הסתרת חלונית ההסתכלות הפנימית",
+      "expand": "הצגת חלונית ההסתכלות הפנימית"
     }
   },
   "home": {

@@ -60,9 +60,15 @@ const onLanguageChange = (event: Event) => {
 
 <template>
   <div class="flex flex-wrap items-center justify-between gap-2">
-    <h2 class="tes-eyebrow">
-      {{ title }}
-    </h2>
+    <!-- The third pane replaces the single layer title with a tablist
+         (Inner Observation / Questions / Answers), so it supplies its own
+         heading. Every other pane names exactly one layer and takes the
+         default. -->
+    <slot name="title">
+      <h2 class="tes-eyebrow">
+        {{ title }}
+      </h2>
+    </slot>
 
     <div class="flex items-center gap-2">
       <span

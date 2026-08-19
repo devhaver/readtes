@@ -24,17 +24,34 @@ import type { PaneId } from "~/utils/readerAnchorState";
 export interface ReaderPaneAvailability {
   /** The chapter has at least one commentary (Inner Light) version. */
   hasCommentary: boolean;
-  /** The chapter's part has `kind: "inner-observation"` chapters. */
-  hasInnerObservation: boolean;
+  /**
+   * The chapter's part has content for at least one of the third pane's
+   * tabs — Inner Observation, Questions, or Answers.
+   *
+   * This used to be `hasInnerObservation` alone, and the pane vanished for
+   * the five parts Baal HaSulam wrote no Inner Observation for. Since the
+   * pane became tabbed, every part has Questions and Answers (issue #91
+   * consolidated them to one chapter per kind), so in practice this is now
+   * always true — it stays a parameter rather than becoming an assumption
+   * because "every part has a Q&A table" is a fact about the corpus, not
+   * about the layout, and the layout should not silently break if a future
+   * part arrives without one.
+   *
+   * The absence of Inner Observation specifically is still told to the
+   * reader, unchanged, by `ReaderLayerAbsenceNote` in the Source pane —
+   * those parts simply get a two-tab third pane rather than a tab that
+   * opens onto an apology.
+   */
+  hasThirdPane: boolean;
 }
 
 export const resolveReaderPanes = ({
   hasCommentary,
-  hasInnerObservation,
+  hasThirdPane,
 }: ReaderPaneAvailability): PaneId[] =>
   PANE_ORDER.filter(
     (pane) =>
       pane === "source" ||
       (pane === "commentary" && hasCommentary) ||
-      (pane === "inner-observation" && hasInnerObservation),
+      (pane === "inner-observation" && hasThirdPane),
   );

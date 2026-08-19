@@ -61,7 +61,7 @@ describe("InnerObservationPane", () => {
     expect(wrapper.text().toLowerCase()).toContain("no inner observation");
   });
 
-  // The bodies are client-loaded (see `useInnerObservationContent`), so
+  // The bodies are client-loaded (see `usePartScopedSections`), so
   // "nothing here yet" is the state every first paint starts in — it must
   // not read as "this part has none".
   it("shows a decorative skeleton, not the empty state, while the bodies are pending", async () => {

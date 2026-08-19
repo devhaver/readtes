@@ -26,7 +26,7 @@
 // duplicate rendering of the panes.
 import type { PaneId } from "~/utils/readerAnchorState";
 
-const props = defineProps<{ panes: PaneId[] }>();
+const props = defineProps<{ panes: PaneId[]; thirdPaneLabelKey?: string }>();
 
 const hasPane = (pane: PaneId) => props.panes.includes(pane);
 
@@ -39,7 +39,10 @@ useReaderState();
       <slot name="toolbar" />
     </div>
 
-    <ReaderMobileSwipePanes :panes="panes">
+    <ReaderMobileSwipePanes
+      :panes="panes"
+      :third-pane-label-key="thirdPaneLabelKey"
+    >
       <template #source>
         <slot name="source" />
       </template>

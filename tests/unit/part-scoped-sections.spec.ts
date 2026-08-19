@@ -7,7 +7,7 @@ import type {
   TocChapter,
 } from "~~/shared/types/content";
 
-// `useInnerObservationContent` reuses `useChapterContent`'s per-file lazy
+// `usePartScopedSections` reuses `useChapterContent`'s per-file lazy
 // loader; stubbing it keeps this spec about *when* the bodies are fetched
 // (never during setup/SSR, once per part after mount, never at all while the
 // pane's mode isn't showing) rather than about the committed corpus. The
@@ -58,7 +58,7 @@ const mountHost = async (
 ) => {
   const Host = defineComponent({
     setup() {
-      const content = useInnerObservationContent(partId, chapters, enabled);
+      const content = usePartScopedSections(partId, chapters, enabled);
       // Captured synchronously in `setup` — i.e. what the prerendered HTML
       // and the client's hydrating render both resolve to.
       const preMount = {
@@ -81,10 +81,10 @@ beforeEach(() => {
   loadLayerFile.mockReset();
 });
 
-describe("innerObservationVersionIds", () => {
+describe("partScopedVersionIds", () => {
   it("unions the ToC's source versions across sections, in first-seen order", () => {
     expect(
-      innerObservationVersionIds([
+      partScopedVersionIds([
         innerObservationChapter("part-01/inner-observation-01", [
           "he-jerusalem-1956",
           "en-bb",
@@ -98,11 +98,11 @@ describe("innerObservationVersionIds", () => {
   });
 
   it("returns an empty list for a part with no Inner Observation chapters", () => {
-    expect(innerObservationVersionIds([])).toEqual([]);
+    expect(partScopedVersionIds([])).toEqual([]);
   });
 });
 
-describe("useInnerObservationContent (hydration)", () => {
+describe("usePartScopedSections (hydration)", () => {
   it("fetches no bodies during setup, then loads them after mount", async () => {
     resolveTo("part-90");
 
@@ -213,7 +213,7 @@ describe("useInnerObservationContent (hydration)", () => {
   });
 });
 
-describe("useInnerObservationContent (mode gate)", () => {
+describe("usePartScopedSections (mode gate)", () => {
   it("fetches nothing while the pane's mode isn't showing", async () => {
     resolveTo("part-95");
 

@@ -66,7 +66,7 @@ import type {
   TocChapter,
 } from "~~/shared/types/content";
 
-export interface InnerObservationSection {
+export interface PartScopedSection {
   chapterId: string;
   title: TocChapter["title"];
   itemsByVersion: Record<string, ChapterLayerFile<SourceSegment> | null>;
@@ -78,21 +78,19 @@ export interface InnerObservationSection {
  * never to be shown as "none available"). Parts with no Inner Observation
  * chapters start, and stay, `"ready"`.
  */
-export type InnerObservationLoadState = "pending" | "ready" | "failed";
+export type PartSectionsLoadState = "pending" | "ready" | "failed";
 
 export interface InnerObservationContent {
   /** Union of every section's available source versions, first-seen order. */
   versions: ComputedRef<string[]>;
   /** Empty until the bodies have loaded in the browser — see the module doc. */
-  sections: ComputedRef<InnerObservationSection[]>;
+  sections: ComputedRef<PartScopedSection[]>;
   /** Lets the pane tell "not loaded yet" and "load failed" from "genuinely empty". */
-  state: ComputedRef<InnerObservationLoadState>;
+  state: ComputedRef<PartSectionsLoadState>;
 }
 
 /** Union of the source versions the ToC lists for these chapters, first-seen order. */
-export const innerObservationVersionIds = (
-  chapters: TocChapter[],
-): string[] => {
+export const partScopedVersionIds = (chapters: TocChapter[]): string[] => {
   const versionIds: string[] = [];
   for (const chapter of chapters) {
     for (const versionId of chapter.availableVersions.source) {
@@ -105,7 +103,7 @@ export const innerObservationVersionIds = (
 const loadSections = async (
   partId: string,
   chapters: TocChapter[],
-): Promise<InnerObservationSection[]> =>
+): Promise<PartScopedSection[]> =>
   await Promise.all(
     chapters.map(async (chapter) => {
       const chapterSlug = chapter.id.split("/")[1] as string;
@@ -130,31 +128,40 @@ const loadSections = async (
     }),
   );
 
-// One in-flight/settled load per part, shared by every chapter page of that
-// part: moving to `onMounted` means the page remounts (`key: route.fullPath`)
-// on every chapter navigation, and without this each one would re-walk the
-// part's loader map and re-await ten already-imported modules on every
-// chapter step within a part whose Inner Observation is, by definition,
-// unchanged. It does not skip the skeleton — `state` still starts
-// `"pending"` on each remount and is only settled from inside the mounted
-// handler — it just makes that skeleton resolve in a microtask off an
-// already-settled promise rather than after a fresh walk, so no skeleton
-// frame reaches the screen. A rejected load is evicted so a failure isn't
-// cached forever — the part's next chapter re-attempts it.
-const sectionsByPart = new Map<string, Promise<InnerObservationSection[]>>();
+// One in-flight/settled load per part AND chapter set, shared by every
+// chapter page of that part: moving to `onMounted` means the page remounts
+// (`key: route.fullPath`) on every chapter navigation, and without this each
+// one would re-walk the part's loader map and re-await ten already-imported
+// modules on every chapter step within a part whose part-scoped sections
+// are, by definition, unchanged. It does not skip the skeleton — `state`
+// still starts `"pending"` on each remount and is only settled from inside
+// the mounted handler — it just makes that skeleton resolve in a microtask
+// off an already-settled promise rather than after a fresh walk, so no
+// skeleton frame reaches the screen. A rejected load is evicted so a failure
+// isn't cached forever — the part's next chapter re-attempts it.
+//
+// Keyed by the chapter ids, not by `partId` alone: the third pane calls this
+// three times for the SAME part (Inner Observation, Questions, Answers), and
+// a part-only key would hand the second and third callers the first one's
+// essays.
+const sectionsByKey = new Map<string, Promise<PartScopedSection[]>>();
+
+const cacheKeyFor = (partId: string, chapters: TocChapter[]): string =>
+  `${partId}|${chapters.map((chapter) => chapter.id).join(",")}`;
 
 const loadPartSections = (
   partId: string,
   chapters: TocChapter[],
-): Promise<InnerObservationSection[]> => {
-  const cached = sectionsByPart.get(partId);
+): Promise<PartScopedSection[]> => {
+  const key = cacheKeyFor(partId, chapters);
+  const cached = sectionsByKey.get(key);
   if (cached) return cached;
 
   const pending = loadSections(partId, chapters).catch((error: unknown) => {
-    sectionsByPart.delete(partId);
+    sectionsByKey.delete(key);
     throw error;
   });
-  sectionsByPart.set(partId, pending);
+  sectionsByKey.set(key, pending);
   return pending;
 };
 
@@ -179,18 +186,16 @@ const loadPartSections = (
  * pre-mount mode ("panes") and load on every viewport. The watch below makes
  * that a lost optimisation rather than a bug.
  */
-export const useInnerObservationContent = (
+export const usePartScopedSections = (
   partId: string,
   chapters: TocChapter[],
   enabled: () => boolean = () => true,
 ): InnerObservationContent => {
-  const versionIds = innerObservationVersionIds(chapters);
+  const versionIds = partScopedVersionIds(chapters);
   const hasChapters = chapters.length > 0;
 
-  const sections = shallowRef<InnerObservationSection[]>([]);
-  const state = ref<InnerObservationLoadState>(
-    hasChapters ? "pending" : "ready",
-  );
+  const sections = shallowRef<PartScopedSection[]>([]);
+  const state = ref<PartSectionsLoadState>(hasChapters ? "pending" : "ready");
 
   const load = async () => {
     state.value = "pending";

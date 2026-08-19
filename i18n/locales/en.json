@@ -33,7 +33,11 @@
     "pane": {
       "source": "The Ari's Text",
       "innerLight": "Inner Light",
-      "innerObservation": "Inner Observation"
+      "innerObservation": "Inner Observation",
+      "questions": "Questions",
+      "answers": "Answers",
+      "thirdPaneTablist": "Inner Observation, Questions, and Answers",
+      "thirdPaneTablistQaOnly": "Questions and Answers"
     },
     "paneLanguageLabel": "Language: {pane}",
     "sefariaTranslated": "Sefaria translation",
@@ -101,7 +105,8 @@
       "label": "Reader pane",
       "source": "The Ari's Text",
       "innerLight": "Inner Light",
-      "innerObservation": "Inner Observation"
+      "innerObservation": "Inner Observation",
+      "questionsAnswers": "Q & A"
     },
     "commentarySheet": {
       "title": "Commentary on seif {n}",
@@ -129,6 +134,10 @@
       "language": {
         "label": "Language"
       }
+    },
+    "thirdPane": {
+      "collapse": "Hide the Inner Observation pane",
+      "expand": "Show the Inner Observation pane"
     }
   },
   "home": {
