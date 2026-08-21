@@ -205,10 +205,16 @@ Each round:
    Taught that form, it found 12 real errors in a single round.
 
    Upstream of it, **`scripts/translation-gates/cites.py`** pre-computes every
-   `דף` and `אות` citation in a batch into a table the translator copies from,
-   so nobody does gematria by hand. Instruction alone did not fix this class —
-   an agent with the rule in its brief _and_ its prompt still shipped five
-   errors; the table fixed it in one round.
+   `דף`, `אות` and `תשובה` citation in a batch into a table the translator
+   copies from, so nobody does gematria by hand. Instruction alone did not fix
+   this class — an agent with the rule in its brief _and_ its prompt still
+   shipped five errors; the table fixed it in one round.
+
+   **Run `python3 scripts/translation-gates/cites.py --selftest` after
+   touching it.** It covers every citation form the run has met and exists
+   because a silent regression there dropped 32 page references across one
+   round's eight batches — including `דף אלף ז'`, the first row of the round-8
+   table in `docs/translation-terminology.md`, which had never worked.
 
 3. **`scripts/translation-gates/lemmacheck.py`** — n-gram overlap of each
    bolded lemma against the pane line it quotes (`context.targetText`).
