@@ -15,13 +15,18 @@ IDIOM = {'ד"ה', "ד״ה"}
 # וז"ל 'and these are his words', ע"ש 'see there', ע"ב the b-side of a folio.
 STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו',
         'או"פ', 'באו"פ', 'אוה"פ', 'ע"פ', 'ד"ה', 'עד', 'שם', 'עוד', 'כאן',
-        'עש"ה', 'ועש"ה', 'עי"ש', 'עיי"ש', 'יש', 'ויש', 'אין', 'ואין',
+        'עש"ה', 'ועש"ה', 'עי"ש', 'עיי"ש', 'יש', 'ויש', 'אין', 'ואין', 'כנ"ל',
+        'גם', 'וגם', 'כי', 'הם', 'הוא', 'היא', 'רק', 'עם', 'אל', 'כן', 'אך',
+        'של', 'ושל', 'מע"ט', 'ומע"ט',
         'דף', 'ודף', 'רף', 'דך', 'אות', 'ואות'}
 
 # A numeral carries gershayim (מ"ה) or is one or two letters with a
 # geresh (י'). Anything else after דף/אות is an ordinary word.
 KEYWORDS = {'דף', 'ודף', 'בדף', 'רף', 'דך', 'אות', 'ואות', 'באות', 'אלף',
-            'חלק', 'בחלק', 'תשובה', 'ותשובה', 'שם', 'עוד'}
+            'חלק', 'בחלק', 'תשובה', 'ותשובה', 'שם', 'עוד',
+            # calendar abbreviations that scan as numerals
+            'ר"ה', 'דר"ה', 'בר"ה', 'ר"ח', 'דר"ח', 'יוה"כ', 'ביוה"כ', 'עשי"ת',
+            'מע"ט', 'ומע"ט', 'של', 'ושל'}
 is_numeral = lambda t: (t.rstrip("'׳") not in KEYWORDS
                         and (bool(re.search(r"[\"״'׳]", t)) or len(t.rstrip("'׳")) <= 2))
 
@@ -30,7 +35,7 @@ REF = re.compile(rf"(?<![א-ת])[וב]{{0,2}}(?:דף|רף|דך)\s+({NUMERAL})(?:
 # ב?אות: "(באות קפ\"ט)" is "in item 189". The same string can be the verb
 # "they come" (באות גם) — the is_numeral filter on the next token settles it.
 ANSWER = re.compile(rf"(?<![א-ת])ו?ב?תשוב(?:ה|ת)\s+({NUMERAL})")
-ITEM = re.compile(rf"(?<![א-ת])[ובמ]?ב?אות(?:\s+\(?\s*|\()({NUMERAL})")
+ITEM = re.compile(rf"(?<![א-ת])[ובמ]?ב?אות(?:\s+אות)?(?:\s+\(?\s*|\()({NUMERAL})")
 
 def run(batch):
     rows = []
@@ -78,8 +83,25 @@ def run(batch):
                 if not cue:
                     continue
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {1000 + value(m.group(1))} (cited without דף)"))
+            PAGEITEM = re.compile(rf"(?<![א-ת])({NUMERAL})\s+אות\s+{NUMERAL}")
+            for m in PAGEITEM.finditer(he):
+                tok = m.group(1)
+                if any(a <= m.start() < b for a, b in ref_spans):
+                    continue
+                if tok in KEYWORDS | STOP | IDIOM or not re.search(r'["״]', tok):
+                    continue
+                # '(חלק י"ד אות מ"ו)' is PART 14, item 46 — not page 14. Report
+                # the part rather than dropping the row.
+                kind = ("part" if re.search(r"ב?חלק\s*$", he[max(0, m.start() - 8):m.start()])
+                        else "page")
+                note = "" if kind == "part" else " (cited without דף)"
+                rows.append((ch["chapterId"], it["anchorId"], m.group(0),
+                             f"{kind} {value(tok)}{note}"))
             for m in ANSWER.finditer(he):
                 if not is_numeral(m.group(1)):
+                    continue
+                # 'עשרת ימי תשובה' — the Ten Days of Repentance, not answer N.
+                if "ימי" in he[max(0, m.start() - 14):m.start()]:
                     continue
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"answer {value(m.group(1))}"))
                 tail = he[m.end():m.end() + 60]
@@ -101,6 +123,12 @@ def run(batch):
                 # A list continues without repeating אות: 'אות קי"ז קי"ח וקי"ט'.
                 tail = he[m.end():m.end() + 80]
                 while True:
+                    r = re.match(rf"\s+עד\s+({NUMERAL})", tail)
+                    if r and is_numeral(r.group(1)) and r.group(1) not in IDIOM | STOP:
+                        rows.append((ch["chapterId"], it["anchorId"], r.group(0).strip(),
+                                     f"item {value(r.group(1))} (end of the range)"))
+                        tail = tail[r.end():]
+                        continue
                     c = re.match(rf"[\s,]+ו?({NUMERAL})", tail)
                     if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
                         break
@@ -156,10 +184,29 @@ CASES = [
     ("""ודף תתכ"ה תשובה י"ג וט"ו""", ["page 825", "answer 13", "answer 15"]),
     ("""ובזוהר נשא דף קל"א ע"ב""", ["page 131b"]),
     ("""לעיל דף תרי"ט מאות כ"ה עד אות כ"ז""", ["page 619", "item 25", "item 27"]),
+    # 'מאות נ"א עד נ"ג' is a range: items 51 TO 53. But 'עד פומא' is "until
+    # the mouth" and must still not be scanned as 74.
+    ("""דף תקל"א מאות נ"א עד נ"ג""", ["page 531", "item 51", "item 53"]),
+    ("""דתיקון א' עד פומא""", []),
     # עש"ה is "study it there well", not item 375.
     ("""כנ"ל (אות ע"ו) עש"ה""", ["item 76"]),
     # ויש is "and there is", not item 310.
     ("""עי' לקמן באות רכ"ז ויש משם הוכחה ברורה""", ["item 227"]),
+    # גם is "also", not item 43.
+    ("""כמ"ש לעיל אות ה' גם נודע שאח"פ אלו""", ["item 5"]),
+    # 'עשרת ימי תשובה כנ"ל' is the Ten Days of Repentance, not answer 100.
+    ("""ובהמשך עשרת ימי תשובה כנ"ל""", []),
+    # 'ביום א\' דר"ה' is the first day of Rosh HaShanah, not page 1209.
+    ("""ורק ביום א' דר"ה קודם תקיעת שופר""", []),
+    # A second reference can repeat neither דף nor a separator.
+    ("""ע"ש דף תשפ"א אות ע"ג. תשצ"ח אות צה.""",
+     ["page 781", "item 73", "page 798", "item 95"]),
+    # '(חלק י"ד אות מ"ו)' is Part 14, item 46 — not page 14.
+    ("""כמ"ש הרב לעיל (חלק י"ד אות מ"ו) ע"ש""", ["part 14", "item 46"]),
+    # repentance and good deeds — not answer 125, and של is not 330.
+    ("""ע"י תשובה ומע"ט של ישראל""", []),
+    # the printer set אות twice; the item number is still 156.
+    ("""(חלק זה אות אות קנ"ו)""", ["item 156"]),
 ]
 
 def selftest():
