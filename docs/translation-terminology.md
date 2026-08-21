@@ -565,7 +565,10 @@ but plain **beard** inside a lemma whose own chapter pane says "beard"
 consistently. That is the prose/lemma rule working as designed: the exception
 is checked, not assumed.
 
-## Round 11 — part 14 finished, and four bugs in the citation table
+## Round 11 — part 14 through chapter 199, and four bugs in the citation table
+
+(The PR for this round was titled "part 14 complete". It was not: 22 items
+in chapters 201-225 remained, and round 12 picked them up.)
 
 ### `cites.py` was dropping every `דף אלף …` citation
 
@@ -668,3 +671,95 @@ and the corpus form wins in lemmas too.
 - **Give each translator its own scratch subdirectory.** Two agents wrote an
   `assemble.py` to the shared round directory and one overwrote the other
   mid-run. Nothing was lost, but only because both noticed and renamed.
+
+## Round 12 — part 14 finished for real, part 15 to chapter 113
+
+### Five more bugs in `cites.py`, all found the same way
+
+Round 11 fixed four. Round 12 found five more, every one reported by a
+translator who checked the table instead of obeying it. The pattern is now
+unmistakable: **the pre-computer is the least-tested thing in the pipeline and
+the most trusted.**
+
+| printed               | was            | is                                     |
+| --------------------- | -------------- | -------------------------------------- |
+| `בחלק א' דף ה' ד"ה`   | page 1084      | **page 5** — Part 1, page 5            |
+| `אות י"א ובאו"פ שם`   | items 11, 89   | **item 11** — `או"פ` is Ohr Pnimi      |
+| `מאות כ"ה עד אות כ"ז` | item 27 only   | **items 25 and 27**                    |
+| `תשובה י"ג וט"ו`      | answer 13 only | **answers 13 and 15**                  |
+| `(אות ע"ו) עש"ה`      | items 76, 375  | **item 76** — "study it there well"    |
+| `באות רכ"ז ויש משם`   | items 227, 310 | **item 227** — `ויש` is "and there is" |
+| `דף קל"א ע"ב`         | page 131       | **page 131b** — the amud was dropped   |
+
+Two root causes worth naming, because both will recur:
+
+- **`is_numeral()` accepted any two-letter token without a gershayim**, so the
+  citation keywords `דף` and `אות` scored as their own numbers — `דף` is
+  ד4+ף80 = 84, which is where "page 1084" came from.
+- **The stop list was a list of strings, and Hebrew has many.** `עד`, `שם`,
+  `יש`, `ויש`, `או"פ`, `עש"ה` all scan as plausible numerals in a continuation
+  slot. Each was added only after it produced a wrong row.
+
+The self-test now covers **22 forms**. `תשובה` continuations and folio amudim
+are pre-computed. `מאות` rows carry the caveat "or 'hundreds', read the
+sentence" rather than a ruling, because `ג' מאות` is 300.
+
+**Gate 2 shared two of these blind spots and not the others.** It missed the
+`או"פ` and `מאות` classes, and was immune to the keyword-as-numeral class
+because it requires a gershayim on every numeral. That is the argument for
+keeping it written from the convention rather than from `cites.py`: two
+checkers built the same way fail the same way.
+
+### Part 15's pane governs almost nothing
+
+Counted over all 233 part-15 panes against the merged commentary. It agrees on
+the names — Hochma, Aba, Ima, Malchut, Nukva, Partzuf, Galgalta, ZA, AA,
+surrounding light, correction — and loses everywhere else:
+
+| Hebrew   | write              | part-15 pane     | corpus                          |
+| -------- | ------------------ | ---------------- | ------------------------------- |
+| `בחינה`  | **discernment**    | aspect 995 : 11  | **6309 : 1035**                 |
+| `ראש`    | **Rosh [head]**    | head 211 : 42    | **1971 : 734**                  |
+| `חזה`    | **Chazeh [chest]** | chest 97 : 19    | **591 : 103**                   |
+| `עטרה`   | **Atara [crown]**  | crown 86 : 9     | 164 : 156, locked round 8       |
+| `פה`     | **Peh [mouth]**    | mouth 11 : 10    | **401 : 253**                   |
+| `אחורים` | **posterior**      | Achoraim 69 : 30 | **985 : 0**                     |
+| `קומה`   | **level**          | stature 173 : 2  | **1371 : 130**, glossary-locked |
+| `נסירה`  | **sawing**         | sawing 38 : 0    | 20 : Nesirah **0**              |
+
+`קומה` is the sharpest case: the pane is _consistent_ on "stature", so the
+lemma rule would normally follow it — but `קומה → level` is a binding glossary
+entry with no sense-carve-out, and a glossary term beats the pane, lemma or
+not (round 7). Seven batches wrote "level"; one wrote "stature" and was
+corrected.
+
+### `ט"ס` is nine, not ten
+
+Part 15's panes render `ט"ס` as "ten Sefirot" in at least seven chapters.
+`ט` is 9. Three batches independently caught it, one confirming from the
+item's own arithmetic (nine his + ten hers = nineteen). Reserve "ten Sefirot"
+for `י"ס`. Beware the two-sense trap inside one part: in a citation slot,
+`באות ט"ס` is **item 69**.
+
+### Terms settled this round
+
+- `כתר אחד` → **one Keter** (corpus Keter 1826 : crown 156, and "crown" is
+  reserved for `עטרה`). Two batches wrote "one Keter", one wrote "one crown".
+- `נסירה` as a verb: **passive is "sawn / sawn off", active is "sawed"**
+  ("the Emanator sawed her"). The corpus passive is sawn-family 10 :
+  sawed-family 5; the part-15 pane is split 4 : 4, so the exception fires.
+  Three batches had to be unified.
+- `קטרוג` → **complaint** (two batches agreed independently).
+- `אמצעיות` → **middleness**, coined as the parallel to the attested
+  `externality` (206) and `internality` (250); the pane's "middle aspects" is
+  barred by the `בחינה` ruling. Unattested — flagged, not settled.
+- `תרדמה` → **deep slumber**, matching the attested gloss
+  `Durmita [deep slumber]`; `שינה` stays "sleep".
+
+### An open flag, deliberately left as printed
+
+`part-15/chapter-07` cites `דף אלף תרד"א` = page 1605. The same `ד"ה שניהם` is
+cited from part-15/chapter-50 and chapter-17 as `דף א' תרצ"א` = **1691**, and
+`ד"ה שניהם` is verifiably part-15/chapter-06. The numeral looks corrupt. It
+was translated **as printed** per the never-emend rule and is recorded here so
+a later reader can decide, not so it can be quietly changed.
