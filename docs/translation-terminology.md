@@ -763,3 +763,104 @@ cited from part-15/chapter-50 and chapter-17 as `דף א' תרצ"א` = **1691**,
 `ד"ה שניהם` is verifiably part-15/chapter-06. The numeral looks corrupt. It
 was translated **as printed** per the never-emend rule and is recorded here so
 a later reader can decide, not so it can be quietly changed.
+
+## Round 13 — part 15 finished, part 16 opened
+
+66 items, including the corpus's largest single item (part-15/chapter-190,
+37,272 Hebrew characters → 66,521 English, ratio 1.78).
+
+### Seven more bugs in `cites.py` — and two of them were mine
+
+Fifteen across three rounds now. What changed this round is that **two of the
+seven were caused by earlier fixes**:
+
+| printed                    | was                     | is                                 |
+| -------------------------- | ----------------------- | ---------------------------------- |
+| `ביום א' דר"ה`             | page 1209               | the first day of **Rosh HaShanah** |
+| `ע"ש … תשצ"ח אות צה`       | page dropped            | **page 798, item 95**              |
+| `(חלק י"ד אות מ"ו)`        | page 14                 | **Part 14**, item 46               |
+| `ע"י תשובה ומע"ט של ישראל` | answer 125 + answer 330 | **repentance and good deeds**      |
+| `(חלק זה אות אות קנ"ו)`    | dropped (dittography)   | **item 156**                       |
+| `עשרת ימי תשובה כנ"ל`      | answer 100              | the **Ten Days of Repentance**     |
+| `מאות נ"א עד נ"ג`          | item 51 only            | items 51 **to 53**                 |
+
+- Adding `עד` to the stop list (round 12, to kill `עד פומא` = 74) **broke
+  ranges**: `מאות נ"א עד נ"ג` is "from item 51 **to** 53". `עד` is genuinely
+  two things and the next token decides — a numeral means range, a word means
+  "until". Both cases are now pinned in the self-test.
+- A new rule reading `NUMERAL אות NUMERAL` as "page N, item M" — added to
+  catch `תשצ"ח אות צה` — immediately misread `חלק י"ד אות מ"ו` as page 14. It
+  now reports **part 14** for that form instead of dropping or mislabelling it.
+
+The lesson is not "be more careful". It is that **every fix to a heuristic
+needs its counter-example pinned in the same commit**, because the fix and the
+regression look identical from inside the change. The self-test now covers
+**31 forms**, several of which exist only to hold a previous fix in place.
+
+### Both checkers, synchronised — but not identically
+
+Gate 2 was given the same `NUMERAL אות NUMERAL` rule and the same stop words,
+and it immediately over-fired where `cites.py` had not: it re-reported the
+hundreds of an already-resolved thousand (`דף א' תתצ"ג` → 1893 _and_ 893). It
+also had the opposite blind spot — it requires a gershayim on every numeral,
+so it missed `אות צה` (item 95), which the printer set without one. It now
+accepts an unmarked one- or two-letter token **only** directly after
+`אות`/`דף`, never in a continuation slot, where `של` and `גם` live.
+
+One blind spot survives in both, deliberately: a Zohar folio cited as
+`דקכ"ד` — the `ד` prefix glued to the numeral with no `דף`. Recognising it
+would mean treating a bare `ד`-prefixed word as a citation, which is far too
+common a construction. The translator caught it and wrote page 124.
+
+### Part 16's reference layers
+
+Part 16 carries **44 `source.en-bb.json` files** — official Bnei Baruch
+English of the Ari's text — which parts 14 and 15 do not. The rule given to
+translators: **consult it to arbitrate a term, never to override a lemma.**
+The lemma rule exists because the reader sees the pane beside the note, and an
+`en-ai` reader sees the `en-ai` pane. Disagreements get reported.
+
+### Part 16's worlds
+
+| Hebrew  | write       | part-16 pane               | corpus       |
+| ------- | ----------- | -------------------------- | ------------ |
+| `בריאה` | **Beria**   | Beriah 326 : Beria 63      | **213 : 28** |
+| `יצירה` | **Yetzira** | Yetzirah 228 : Yetzira 101 | **87 : 6**   |
+| `עשיה`  | **Assiya**  | Assiyah 188 : Assiya 92    | **124 : 2**  |
+
+The pane prints both forms, so the exception fires and the corpus wins in
+lemmas too. `BYA` (435) and `ABYA` (27) stay acronyms. This matters more here
+than anywhere else — part 16 is built on ABYA. The silent-final-`ה` pattern
+generalises: `נעילה` → **Neila**, not "Neilah".
+
+### Terms settled this round
+
+- `ח"ס` → **the concealed Hochma** (42 : 1 against "Hochma Stimaa"). Round 12
+  used the former and round 13 the latter — a _cross-round_ drift that no
+  per-batch gate and no within-round coinage check can see. `מו"ס` →
+  **Mocha Stimaa** (329) is untouched.
+- `מזלין` → **Mazlin** (5 : 2 against "Mazalin"). 28 uses in this round were
+  on the losing side; the corpus still decides.
+- `או"א עילאין` → **the upper AVI**, never "upper Aba and Ima" — driftcheck
+  bans this one outright and caught it in the largest item in the corpus.
+- `ט' ימי תשובה` → **nine days of repentance**, and `עשי"ת` → **the Ten Days
+  of Repentance**. Both appear; they are different phrases, not a slip.
+- `בית שער הכונות` — the two part-16 batches transliterated it differently,
+  `HaKavanot` and `LaKavanot`, and **both are right**: their chapters print
+  different Hebrew. Never normalise a printed inconsistency to make two
+  batches agree.
+
+### `lemmacheck` scores the wrong pane
+
+Six of one batch's eight lemma flags were the gate comparing a lemma against
+its own chapter's `targetText` when the lemma quotes **a sibling chapter's**
+Ari text. Re-scored against the chapter each lemma actually quotes, they were
+76–100%. Worth teaching the gate to search sibling panes before anyone spends
+another round explaining the same false flags.
+
+### An open flag, left as printed
+
+`part-15/chapter-190` seg 36 cites `דף מצ"ז ד"ה או"א` = page 137. Segment 33
+of the same item cites `דף שצ"ז ד"ה או"א` — same passage-beginning, same
+subject — which is page 397. A `ש`/`מ` slip is the obvious reading. Translated
+as printed and recorded here, not changed.
