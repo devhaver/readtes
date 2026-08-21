@@ -20,13 +20,14 @@ STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו',
 # geresh (י'). Anything else after דף/אות is an ordinary word.
 is_numeral = lambda t: bool(re.search(r"[\"״'׳]", t)) or len(t.rstrip("'׳")) <= 2
 
-REF = re.compile(rf"(?<![א-ת])[וב]?(?:דף|רף|דך)\s+({NUMERAL})(?:\s+({NUMERAL}))?")
+REF = re.compile(rf"(?<![א-ת])[וב]{{0,2}}(?:דף|רף|דך)\s+({NUMERAL})(?:\s+({NUMERAL}))?")
 # The lookbehind matters: without it "אות" matches inside נקראות.
 # ב?אות: "(באות קפ\"ט)" is "in item 189". The same string can be the verb
 # "they come" (באות גם) — the is_numeral filter on the next token settles it.
-ITEM = re.compile(rf"(?<![א-ת])ב?אות\s+({NUMERAL})")
+ANSWER = re.compile(rf"(?<![א-ת])ו?ב?תשוב(?:ה|ת)\s+({NUMERAL})")
+ITEM = re.compile(rf"(?<![א-ת])ו?ב?אות(?:\s+\(?\s*|\()({NUMERAL})")
 
-for batch in sys.argv[1:]:
+def run(batch):
     rows = []
     BARE = re.compile(rf"(?<![א-ת])(?:אלף|א['׳])\s+({NUMERAL})")
     for ch in json.load(open(f"{OUT}/chs-{batch}.json", encoding="utf-8")):
@@ -34,7 +35,12 @@ for batch in sys.argv[1:]:
             he = it["he"]
             for m in REF.finditer(he):
                 tok, nxt = m.group(1), m.group(2)
-                if not is_numeral(tok):
+                # 'אלף' is the thousand written as a word — it carries no
+                # gershayim and is three letters, so is_numeral rejects it and
+                # the whole 'דף אלף תקל"ו' citation used to vanish. The bare
+                # fallback below could not rescue it either: the match sits
+                # inside this one's span.
+                if tok.rstrip("'׳") not in ("אלף", "א") and not is_numeral(tok):
                     continue
                 if tok in IDIOM:
                     rows.append((ch["chapterId"], it["anchorId"], m.group(0), "— idiom 'the passage beginning', NOT a page"))
@@ -63,6 +69,9 @@ for batch in sys.argv[1:]:
                 if not cue:
                     continue
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {1000 + value(m.group(1))} (cited without דף)"))
+            for m in ANSWER.finditer(he):
+                if is_numeral(m.group(1)):
+                    rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"answer {value(m.group(1))}"))
             for m in ITEM.finditer(he):
                 if not is_numeral(m.group(1)):
                     continue
@@ -70,7 +79,7 @@ for batch in sys.argv[1:]:
                 # A list continues without repeating אות: 'אות קי"ז קי"ח וקי"ט'.
                 tail = he[m.end():m.end() + 80]
                 while True:
-                    c = re.match(rf"\s+ו?({NUMERAL})", tail)
+                    c = re.match(rf"[\s,]+ו?({NUMERAL})", tail)
                     if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
                         break
                     tok = c.group(1)
@@ -94,3 +103,57 @@ for batch in sys.argv[1:]:
         lines.append("| — | — | (no page or item citations in this batch) | — |")
     open(f"{OUT}/cites-{batch}.md", "w", encoding="utf-8").write("\n".join(lines) + "\n")
     print(f"cites-{batch}.md: {len(rows)} citation(s)")
+
+
+# --- self-test -------------------------------------------------------------
+# Every citation form the run has actually met, from the rounds that found
+# them. `python3 cites.py --selftest` — cheap, and it is how the `דף אלף`
+# regression (32 dropped page refs in one round, every batch affected) would
+# have been caught before the tables went out.
+CASES = [
+    ("""כמ"ש לעיל (דף אלף ז' ד"ה והנה)""", ["page 1007"]),
+    ("""לעיל (דף א' קע"ג)""", ["page 1173"]),
+    ("""לעיל (דף א' ד"ה והנה)""", ["page 1000"]),
+    ("""כנ"ל אלף ל"ז""", ["page 1037"]),
+    ("""(דף תקי"ט)""", ["page 519"]),
+    ("""(א' שכ"ז אות ע"ב)""", ["page 1327", "item 72"]),
+    ("""לעיל דף תתקי"ט אות פ"ו""", ["page 919", "item 86"]),
+    ("""כנ"ל (דף אלף תקל"ו אות ע"ו ע"ז. עש"ה)""", ["page 1536", "item 76", "item 77"]),
+    ("""ועי' בדף אלף של"ט""", ["page 1339"]),
+    ("""וזה אמרו (באות קפ"ט)""", ["item 189"]),
+    ("""אות קי"ז קי"ח וקי"ט""", ["item 117", "item 118", "item 119"]),
+    ("""ובדף א' קט"ו תשובה קכ"ט""", ["page 1115", "answer 129"]),
+    ("""וזהו אמרו באות (ק"ע)""", ["item 170"]),
+    # אותה / אותו / אותם are ordinary words, not 'item 5 / 6 / 40'.
+    ("""ומקבל אותה ההארה, אותו הזווג, אותם המוחין""", []),
+    ("""דף א' מ"ח אות ע"ג, וע"ח""", ["page 1048", "item 73", "item 78"]),
+]
+
+def selftest():
+    global OUT
+    import tempfile
+    bad = 0
+    with tempfile.TemporaryDirectory() as tmp:
+        OUT = tmp
+        for n, (he, want) in enumerate(CASES):
+            json.dump([{"chapterId": "t", "items": [{"anchorId": f"op-{n}", "he": he}]}],
+                      open(f"{tmp}/chs-t{n}.json", "w"), ensure_ascii=False)
+            run(f"t{n}")
+            got = open(f"{tmp}/cites-t{n}.md", encoding="utf-8").read()
+            rows_out = [l for l in got.splitlines() if l.startswith('| t ')]
+            if not want:
+                missing = [f'expected no rows, got {rows_out}'] if rows_out else []
+            else:
+                missing = [w for w in want if w not in got]
+            if missing:
+                bad += 1
+                print(f"  FAIL {he}\n    missing {missing}")
+    print(f"selftest: {len(CASES) - bad}/{len(CASES)} forms correct")
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    if "--selftest" in sys.argv:
+        sys.exit(selftest())
+    for b in sys.argv[1:]:
+        run(b)

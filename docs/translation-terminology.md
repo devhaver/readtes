@@ -564,3 +564,107 @@ outputs before applying, not just the corpus.
 but plain **beard** inside a lemma whose own chapter pane says "beard"
 consistently. That is the prose/lemma rule working as designed: the exception
 is checked, not assumed.
+
+## Round 11 — part 14 finished, and four bugs in the citation table
+
+### `cites.py` was dropping every `דף אלף …` citation
+
+`is_numeral()` requires a gershayim or a token of one or two letters. `אלף` —
+the thousand written as a **word** — is three plain letters, so it failed the
+test and the whole citation was skipped. The bare-thousand fallback could not
+rescue it either: that match sits inside the `דף` match and is deliberately
+suppressed as a duplicate.
+
+The damage was not marginal. **32 page references were missing across all
+eight batches of the round**, every batch affected, the worst carrying ten.
+`דף אלף ז'` → page 1007 is the _first row of the round-8 table in this very
+document_, and it had never worked.
+
+Three more, all found by translators reading the table instead of obeying it:
+
+- **`ובדף א' קט"ו`** — the prefix can be two letters (`ו` + `ב`); the pattern
+  allowed one, so the page vanished.
+- **`באות (ק"ע)`** — the numeral can sit in its own parentheses.
+- **`אות ע"ג, וע"ח`** — a continuation can be comma-separated.
+
+`תשובה קכ"ט` ("answer 129") is now pre-computed too; the Answers layer is
+cited exactly like items and translators were doing it by hand.
+
+**`python3 cites.py --selftest` now exists** and covers all fifteen forms the
+run has met. On the pre-fix script it reports 8/15. A checker that cannot
+express a class of error reports that class as clean forever — the round-8
+lesson, repeated with a script instead of a gate.
+
+One near-miss worth keeping: relaxing the `אות` separator to `\s*` so it would
+match `אות(ק"ע)` made `אות` match inside **`אותה`/`אותו`/`אותם`**, whose final
+letter then scanned as items 5/6/40. It produced dozens of phantom rows before
+the diff caught it. The separator must be real whitespace or an immediate
+paren, never optional.
+
+### The thousand is elided when the same page is re-cited
+
+Two independent cases in one batch, both reported by the translator and both
+confirmed by gate 2:
+
+| printed               | means         | why                                                                |
+| --------------------- | ------------- | ------------------------------------------------------------------ |
+| `בדף תקע"ה בכל ההמשך` | page **1575** | the same item cites `דף אלף תקע"ה ד"ה ואין` two paragraphs earlier |
+| `דף תקע"א ד"ה אור`    | page **1571** | the same item also prints `א' תקע"א ד"ה אור` — identical catchword |
+
+Part 14's own pages run ≈1339–1590, so a bare `תקע"ה` would be page 575, in
+part 6. Where a part sits past 1,000, a bare numeral that matches a
+thousand-prefixed citation elsewhere in the same item is the same reference.
+This is a judgment on same-item corroboration, not a rule to apply blindly —
+a genuine cross-reference to an early part is still possible.
+
+### An audit of what earlier rounds shipped — clean
+
+Recomputing every merged `en-ai` item against its Hebrew: **99 references to
+pages past 1,000, 97 rendered correctly.** The two exceptions are both correct
+as printed — `part-01/chapter-02` cites `דף א' ד"ה` at the _front_ of the book,
+where it means page 1 and the round-8 convention does not apply, and
+`part-13/chapter-205` is the words `אלף עלמין` / `אלף אלפין` ("a thousand
+worlds"), not a citation. No earlier round shipped this error.
+
+### Part 14's pane — where it wins and where it loses
+
+Counted over all 232 part-14 panes against the merged commentary:
+
+|                          | pane                     | corpus                   | ruling                              |
+| ------------------------ | ------------------------ | ------------------------ | ----------------------------------- |
+| **Hochma** (not Chochma) | 417 : 13                 | 2506 : 7                 | pane agrees — follow it             |
+| **Aba** (not Abba)       | 380 : 0                  | 423 : 4                  | pane agrees — follow it             |
+| `קטנות`                  | smallness 20 : Katnut 2  | **572 : 58**             | **Katnut**, lemmas included         |
+| `גדלות`                  | greatness 24 : Gadlut 3  | **805 : 91**             | **Gadlut**, lemmas included         |
+| `עיבור`                  | pregnancy 27 : Ibur 18   | **618 : 3**              | **Ibur**, lemmas included           |
+| `יניקה`                  | Yenika 3 : nursing 4     | **335 : 8**              | **nursing**                         |
+| `נסירה`                  | Nesirah 1                | Nesirah **0**, sawing 20 | **sawing**                          |
+| `פרקין`                  | joints 126 : segments 21 | **150 : 0**              | **joints** — the round-8 call holds |
+
+The pane is self-inconsistent on all of the lower five, so the exception fires
+and the corpus form wins in lemmas too.
+
+### Terms settled this round
+
+- `ב' עטרין` / `תרין עטרין` → **two crowns** (corpus 14 : 0 against "two
+  Atarot"; part-14 pane 25 : 0, and its "coronets" 22 is the pane fighting
+  itself). Five batches wrote "two crowns", two wrote "two Atarot" — the
+  cross-batch coinage check is what caught it, not any gate. The **singular**
+  `עטרא דחסד` / `עטרא דגבורה` stays **Atara of Hesed / of Gevura**.
+- `נהירו ונציצו` → **radiance and sparkle** (7 uses across two batches against
+  one "a shining and a sparkling"). It is a fixed Zohar formula — "the
+  radiance and sparkle of the river that goes out of Eden".
+- `אחסנתא` → **the inheritance [Achsanta]** on first use, then `Achsanta`.
+  Unattested in the commentary; three batches hit it and all three agreed,
+  which is what the flag-your-coinages instruction is for.
+
+### Two process lessons
+
+- **The orchestrator's prompt is not authoritative — the brief is.** My
+  dispatch prompt told all eight translators "straight quotes only"; the rule
+  is **curly only**, and a straight quote fails driftcheck. Every one of the
+  eight followed `brief.md` over the prompt and said so. Write the prompt to
+  point at the brief rather than restate it.
+- **Give each translator its own scratch subdirectory.** Two agents wrote an
+  `assemble.py` to the shared round directory and one overwrote the other
+  mid-run. Nothing was lost, but only because both noticed and renamed.
