@@ -14,18 +14,23 @@ IDIOM = {'ד"ה', "ד״ה"}
 # Abbreviations that scan as numerals but end a citation list:
 # וז"ל 'and these are his words', ע"ש 'see there', ע"ב the b-side of a folio.
 STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו',
+        'או"פ', 'באו"פ', 'אוה"פ', 'ע"פ', 'ד"ה', 'עד', 'שם', 'עוד', 'כאן',
+        'עש"ה', 'ועש"ה', 'עי"ש', 'עיי"ש', 'יש', 'ויש', 'אין', 'ואין',
         'דף', 'ודף', 'רף', 'דך', 'אות', 'ואות'}
 
 # A numeral carries gershayim (מ"ה) or is one or two letters with a
 # geresh (י'). Anything else after דף/אות is an ordinary word.
-is_numeral = lambda t: bool(re.search(r"[\"״'׳]", t)) or len(t.rstrip("'׳")) <= 2
+KEYWORDS = {'דף', 'ודף', 'בדף', 'רף', 'דך', 'אות', 'ואות', 'באות', 'אלף',
+            'חלק', 'בחלק', 'תשובה', 'ותשובה', 'שם', 'עוד'}
+is_numeral = lambda t: (t.rstrip("'׳") not in KEYWORDS
+                        and (bool(re.search(r"[\"״'׳]", t)) or len(t.rstrip("'׳")) <= 2))
 
 REF = re.compile(rf"(?<![א-ת])[וב]{{0,2}}(?:דף|רף|דך)\s+({NUMERAL})(?:\s+({NUMERAL}))?")
 # The lookbehind matters: without it "אות" matches inside נקראות.
 # ב?אות: "(באות קפ\"ט)" is "in item 189". The same string can be the verb
 # "they come" (באות גם) — the is_numeral filter on the next token settles it.
 ANSWER = re.compile(rf"(?<![א-ת])ו?ב?תשוב(?:ה|ת)\s+({NUMERAL})")
-ITEM = re.compile(rf"(?<![א-ת])ו?ב?אות(?:\s+\(?\s*|\()({NUMERAL})")
+ITEM = re.compile(rf"(?<![א-ת])[ובמ]?ב?אות(?:\s+\(?\s*|\()({NUMERAL})")
 
 def run(batch):
     rows = []
@@ -47,9 +52,11 @@ def run(batch):
                     continue
                 if tok.rstrip("'׳") in ("אלף", "א"):
                     n = 1000 + (0 if (not nxt or nxt in IDIOM) else value(nxt))
+                    amud = ""
                 else:
                     n = value(tok)
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {n}"))
+                    amud = {'ע"א': "a", 'ע"ב': "b"}.get(nxt or "", "")
+                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {n}{amud}"))
             ref_spans = [(m.start(), m.end()) for m in REF.finditer(he)]
             for m in BARE.finditer(he):
                 # 'דף א\' שע"ז' is one citation, not two: skip a bare match that
@@ -62,6 +69,8 @@ def run(batch):
                 # 'דתיקון א\' עד פומא' is "correction 1, until the mouth" —
                 # ordinal + preposition, and עד happens to scan as 74.
                 before = he[max(0, m.start() - 18):m.start()]
+                if re.search(r"ב?חלק\s*$", before):
+                    continue
                 after = he[m.end():m.end() + 12]
                 cue = ("(" in before or "לעיל" in before or "כנ\"ל" in before
                        or "עי'" in before or "ועי" in before or "ע\"ש" in after
@@ -70,12 +79,25 @@ def run(batch):
                     continue
                 rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {1000 + value(m.group(1))} (cited without דף)"))
             for m in ANSWER.finditer(he):
-                if is_numeral(m.group(1)):
-                    rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"answer {value(m.group(1))}"))
+                if not is_numeral(m.group(1)):
+                    continue
+                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"answer {value(m.group(1))}"))
+                tail = he[m.end():m.end() + 60]
+                while True:
+                    c = re.match(rf"[\s,]+ו?({NUMERAL})", tail)
+                    if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
+                        break
+                    rows.append((ch["chapterId"], it["anchorId"], c.group(1),
+                                 f"answer {value(c.group(1))} (continues the list)"))
+                    tail = tail[c.end():]
             for m in ITEM.finditer(he):
                 if not is_numeral(m.group(1)):
                     continue
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"item {value(m.group(1))}"))
+                # מאות is also the plural 'hundreds' — say so instead of ruling.
+                note = (" — or 'hundreds', read the sentence"
+                        if m.group(0).lstrip().startswith("מאות") else "")
+                rows.append((ch["chapterId"], it["anchorId"], m.group(0),
+                             f"item {value(m.group(1))}{note}"))
                 # A list continues without repeating אות: 'אות קי"ז קי"ח וקי"ט'.
                 tail = he[m.end():m.end() + 80]
                 while True:
@@ -127,6 +149,17 @@ CASES = [
     # אותה / אותו / אותם are ordinary words, not 'item 5 / 6 / 40'.
     ("""ומקבל אותה ההארה, אותו הזווג, אותם המוחין""", []),
     ("""דף א' מ"ח אות ע"ג, וע"ח""", ["page 1048", "item 73", "item 78"]),
+    # 'בחלק א\' דף ה\'' is Part 1, page 5 — not page 1084 (the word דף scans as 84).
+    ("""כמ"ש בחלק א' דף ה' ד"ה וטעם""", ["page 5"]),
+    # או"פ is Ohr Pnimi, not item 89 — it must not continue an item list.
+    ("""לעיל דף א' תרצ"ו אות י"א ובאו"פ שם""", ["page 1696", "item 11"]),
+    ("""ודף תתכ"ה תשובה י"ג וט"ו""", ["page 825", "answer 13", "answer 15"]),
+    ("""ובזוהר נשא דף קל"א ע"ב""", ["page 131b"]),
+    ("""לעיל דף תרי"ט מאות כ"ה עד אות כ"ז""", ["page 619", "item 25", "item 27"]),
+    # עש"ה is "study it there well", not item 375.
+    ("""כנ"ל (אות ע"ו) עש"ה""", ["item 76"]),
+    # ויש is "and there is", not item 310.
+    ("""עי' לקמן באות רכ"ז ויש משם הוכחה ברורה""", ["item 227"]),
 ]
 
 def selftest():
