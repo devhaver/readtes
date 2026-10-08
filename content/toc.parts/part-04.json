@@ -4,7 +4,8 @@
     "number": 4,
     "title": {
       "en": "The Ten Sefirot of Akudim",
-      "he": "עשר הספירות של עקודים"
+      "he": "עשר הספירות של עקודים",
+      "ru": "Десять сфирот Акудим"
     }
   },
   "volume": {
@@ -12,7 +13,8 @@
     "number": 1,
     "title": {
       "en": "Volume 1",
-      "he": "כרך 1"
+      "he": "כרך 1",
+      "ru": "Том 1"
     }
   },
   "chapters": [
@@ -22,7 +24,8 @@
       "number": 1,
       "title": {
         "en": "Chapter 1",
-        "he": "פרק א׳"
+        "he": "פרק א׳",
+        "ru": "Глава 1"
       },
       "availableLayers": [
         "source",
@@ -32,11 +35,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -48,7 +53,8 @@
       "number": 2,
       "title": {
         "en": "Chapter 2",
-        "he": "פרק ב׳"
+        "he": "פרק ב׳",
+        "ru": "Глава 2"
       },
       "availableLayers": [
         "source",
@@ -58,11 +64,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -74,7 +82,8 @@
       "number": 3,
       "title": {
         "en": "Chapter 3",
-        "he": "פרק ג׳"
+        "he": "פרק ג׳",
+        "ru": "Глава 3"
       },
       "availableLayers": [
         "source",
@@ -84,11 +93,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -100,7 +111,8 @@
       "number": 4,
       "title": {
         "en": "Chapter 4",
-        "he": "פרק ד׳"
+        "he": "פרק ד׳",
+        "ru": "Глава 4"
       },
       "availableLayers": [
         "source",
@@ -110,11 +122,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -126,7 +140,8 @@
       "number": 5,
       "title": {
         "en": "Chapter 5",
-        "he": "פרק ה׳"
+        "he": "פרק ה׳",
+        "ru": "Глава 5"
       },
       "availableLayers": [
         "source",
@@ -136,11 +151,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -152,7 +169,8 @@
       "number": 6,
       "title": {
         "en": "Chapter 6",
-        "he": "פרק ו׳"
+        "he": "פרק ו׳",
+        "ru": "Глава 6"
       },
       "availableLayers": [
         "source",
@@ -161,10 +179,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -176,7 +196,8 @@
       "number": 1,
       "title": {
         "en": "Inner Observation 1",
-        "he": "הסתכלות פנימית א׳"
+        "he": "הסתכלות פנימית א׳",
+        "ru": "Внутреннее созерцание 1"
       },
       "availableLayers": [
         "source"
@@ -197,7 +218,8 @@
       "number": 2,
       "title": {
         "en": "Inner Observation 2",
-        "he": "הסתכלות פנימית ב׳"
+        "he": "הסתכלות פנימית ב׳",
+        "ru": "Внутреннее созерцание 2"
       },
       "availableLayers": [
         "source"
@@ -218,7 +240,8 @@
       "number": 3,
       "title": {
         "en": "Inner Observation 3",
-        "he": "הסתכלות פנימית ג׳"
+        "he": "הסתכלות פנימית ג׳",
+        "ru": "Внутреннее созерцание 3"
       },
       "availableLayers": [
         "source"
@@ -239,7 +262,8 @@
       "number": 4,
       "title": {
         "en": "Inner Observation 4",
-        "he": "הסתכלות פנימית ד׳"
+        "he": "הסתכלות פנימית ד׳",
+        "ru": "Внутреннее созерцание 4"
       },
       "availableLayers": [
         "source"
@@ -260,7 +284,8 @@
       "number": 5,
       "title": {
         "en": "Inner Observation 5",
-        "he": "הסתכלות פנימית ה׳"
+        "he": "הסתכלות פנימית ה׳",
+        "ru": "Внутреннее созерцание 5"
       },
       "availableLayers": [
         "source"
@@ -281,7 +306,8 @@
       "number": 6,
       "title": {
         "en": "Inner Observation 6",
-        "he": "הסתכלות פנימית ו׳"
+        "he": "הסתכלות פנימית ו׳",
+        "ru": "Внутреннее созерцание 6"
       },
       "availableLayers": [
         "source"
@@ -302,7 +328,8 @@
       "number": 1,
       "title": {
         "en": "List of Questions on Terminology",
-        "he": "לוח השאלות לפירוש המלות"
+        "he": "לוח השאלות לפירוש המלות",
+        "ru": "Вопросы о значении слов"
       },
       "availableLayers": [
         "source"
@@ -323,7 +350,8 @@
       "number": 1,
       "title": {
         "en": "List of Questions on Topics",
-        "he": "לוח השאלות לעניינים"
+        "he": "לוח השאלות לעניינים",
+        "ru": "Вопросы по темам"
       },
       "availableLayers": [
         "source"
@@ -344,7 +372,8 @@
       "number": 1,
       "title": {
         "en": "List of Answers on Terminology",
-        "he": "לוח התשובות לפירוש המלות"
+        "he": "לוח התשובות לפירוש המלות",
+        "ru": "Ответы о значении слов"
       },
       "availableLayers": [
         "source"
@@ -366,7 +395,8 @@
       "number": 1,
       "title": {
         "en": "List of Answers on Topics",
-        "he": "לוח התשובות לעניינים"
+        "he": "לוח התשובות לעניינים",
+        "ru": "Ответы по темам"
       },
       "availableLayers": [
         "source"

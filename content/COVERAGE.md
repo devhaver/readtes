@@ -2901,7 +2901,7 @@ skipped, not force-imported.
 | fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 54/2091 | 54 | 0 |
 | he-bb | Bnei Baruch (KabbalahMedia) — עברית (`he`) | 2/2091 | 10 | 34 |
 | pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2091 | 0 | 0 |
-| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 0/2091 | 0 | 0 |
+| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 19/2091 | 168 | 318 |
 | tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2091 | 0 | 0 |
 | uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 0/2091 | 0 | 0 |
 
@@ -2914,10 +2914,10 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 
 | Part | de-bb | en-bb | es-bb | fr-bb | he-bb | pt-bb | ru-bb | tr-bb | uk-bb |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| part-01 | 0/17 | 4/17 | 0/17 | 0/17 | 2/17 | 0/17 | 0/17 | 0/17 | 0/17 |
-| part-02 | 0/16 | 4/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 |
-| part-03 | 0/34 | 4/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 | 0/34 |
-| part-04 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 |
+| part-01 | 0/17 | 4/17 | 0/17 | 0/17 | 2/17 | 0/17 | 1/17 | 0/17 | 0/17 |
+| part-02 | 0/16 | 4/16 | 0/16 | 0/16 | 0/16 | 0/16 | 1/16 | 0/16 | 0/16 |
+| part-03 | 0/34 | 4/34 | 0/34 | 0/34 | 0/34 | 0/34 | 11/34 | 0/34 | 0/34 |
+| part-04 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 6/16 | 0/16 | 0/16 |
 | part-05 | 0/66 | 66/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 |
 | part-06 | 0/62 | 60/62 | 54/62 | 54/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 |
 | part-07 | 0/79 | 73/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 |
@@ -3048,13 +3048,10 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | pt-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | pt-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
 | ru-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
-| ru-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
-| ru-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
-| ru-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| ru-bb | part-03 | structure-unsupported | 33 | document structure not yet supported by this importer |
-| ru-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| ru-bb | part-04 | structure-unsupported | 15 | document structure not yet supported by this importer |
-| ru-bb | part-04 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| ru-bb | part-01 | structure-unsupported | 15 | document structure not yet supported by this importer |
+| ru-bb | part-02 | structure-unsupported | 15 | document structure not yet supported by this importer |
+| ru-bb | part-03 | structure-unsupported | 23 | document structure not yet supported by this importer |
+| ru-bb | part-04 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | ru-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
 | ru-bb | part-06 | no-file-for-language | 4 | no docx file for this language |
 | ru-bb | part-06 | structure-unsupported | 58 | document structure not yet supported by this importer |
@@ -3071,11 +3068,9 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | ru-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
 | tr-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | tr-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
-| tr-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
-| tr-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| tr-bb | part-02 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | tr-bb | part-03 | no-file-for-language | 4 | no docx file for this language |
-| tr-bb | part-03 | structure-unsupported | 29 | document structure not yet supported by this importer |
-| tr-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| tr-bb | part-03 | structure-unsupported | 30 | document structure not yet supported by this importer |
 | tr-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
 | tr-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
 | tr-bb | part-06 | no-file-for-language | 62 | no docx file for this language |
@@ -3092,12 +3087,9 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | uk-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | uk-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | uk-bb | part-02 | no-file-for-language | 2 | no docx file for this language |
-| uk-bb | part-02 | structure-unsupported | 12 | document structure not yet supported by this importer |
-| uk-bb | part-02 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| uk-bb | part-03 | structure-unsupported | 33 | document structure not yet supported by this importer |
-| uk-bb | part-03 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| uk-bb | part-04 | structure-unsupported | 15 | document structure not yet supported by this importer |
-| uk-bb | part-04 | unmatched | 1 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
+| uk-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
+| uk-bb | part-03 | structure-unsupported | 34 | document structure not yet supported by this importer |
+| uk-bb | part-04 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | uk-bb | part-05 | no-file-for-language | 2 | no docx file for this language |
 | uk-bb | part-05 | structure-unsupported | 64 | document structure not yet supported by this importer |
 | uk-bb | part-06 | no-file-for-language | 2 | no docx file for this language |
@@ -3115,6 +3107,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | uk-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
 
 **Warnings:**
+- **de-bb**: part-01/chapter-01: source: matched 0 of 5 Hebrew seifim
+- **de-bb**: part-01/chapter-02: source: matched 0 of 5 Hebrew seifim
 - **de-bb**: part-01 Q&A candidate YR9r5s6q/GG3GRnUr: no h6 question blocks
 - **de-bb**: part-01 Q&A candidate QCnCAagn/L3C8AIUs: no h6 question blocks
 - **en-bb**: part-01 Q&A candidate YR9r5s6q/JG0l6gj3: pair count 54 does not match Hebrew questions (55) and answer chapters (54)
@@ -3359,6 +3353,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=270 has no matching KabbalahMedia item — skipped
 - **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=271 has no matching KabbalahMedia item — skipped
 - **en-bb**: part-16 whole-part source: source: Hebrew ground-truth segment n=272 has no matching KabbalahMedia item — skipped
+- **es-bb**: part-01/chapter-01: source: matched 0 of 5 Hebrew seifim
+- **es-bb**: part-01/chapter-02: source: matched 0 of 5 Hebrew seifim
 - **es-bb**: part-01 Q&A candidate YR9r5s6q/bHSPTyoc: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate EiUPsO0e/LpNfOFWs: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate QCnCAagn/cNLiPwiE: no h6 question blocks
@@ -3373,22 +3369,24 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **he-bb**: part-04/chapter-05 Hebrew whole-part: text before this chapter's first seif topic heading at block 366: "באורות עקודים יש י"ס פנימיות וי"ס מקיפות"
 - **he-bb**: part-04/chapter-06 Hebrew whole-part: text before this chapter's first seif topic heading at block 442: "בהתפשטות א' דעקודים לא יצאו האורות שלמים"
 - **he-bb**: part-05 Hebrew whole-part: found 0 chapter heading(s), expected 62
+- **ru-bb**: part-01/chapter-01: source: matched 4 of 5 Hebrew seifim
 - **ru-bb**: part-01 Q&A candidate YR9r5s6q/DgOTzKGq: no h6 question blocks
 - **ru-bb**: part-01 Q&A candidate EiUPsO0e/93HN4Yqz: no h6 question blocks
 - **ru-bb**: part-01 Q&A candidate QCnCAagn/Ttxyqldm: no h6 question blocks
 - **ru-bb**: part-01 Q&A candidate nnGQFc43/EP1jdWBT: no h6 question blocks
 - **ru-bb**: part-02/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-22" — ambiguous marker scheme, refusing to guess
-- **ru-bb**: part-02/chapter-02: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
 - **ru-bb**: part-02 Q&A candidate ydlHgmBg/smR8Yk7R: no h6 question blocks
 - **ru-bb**: part-02 Q&A candidate YhAlwjNh/OZgf2u5B: no h6 question blocks
 - **ru-bb**: part-02 Q&A candidate VBX3VORk/n3fdlbf1: no h6 question blocks
 - **ru-bb**: part-02 Q&A candidate F1dDm1OY/pHQm88U1: no h6 question blocks
-- **ru-bb**: part-03/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
+- **ru-bb**: part-03/chapter-08: Hebrew commentary has unanchored items
+- **ru-bb**: part-03/chapter-11: seif 7: anchor(s) op-8 not printed
+- **ru-bb**: part-03/chapter-13: source: matched 5 of 6 Hebrew seifim
+- **ru-bb**: part-03/chapter-15: seif 1: English is 4.11x its Hebrew — outside 0.9-3
 - **ru-bb**: part-03 Q&A candidate zCY8AVzl/VqUMN0AP: no h6 question blocks
 - **ru-bb**: part-03 Q&A candidate 4KFDFg3m/oegyRo8Z: no h6 question blocks
 - **ru-bb**: part-03 Q&A candidate S5mViX7z/n01F3Mzf: no h6 question blocks
 - **ru-bb**: part-03 Q&A candidate Levgq2jH/UqN2izFb: no h6 question blocks
-- **ru-bb**: part-04/chapter-06: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
 - **ru-bb**: part-04 Q&A candidate PNEWuQYa/1CWxknTx: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate Ut8PE5aO/dN8Yd8d9: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate sL3XV5Dr/dZTnwfLY: no h6 question blocks
@@ -3396,6 +3394,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **ru-bb**: part-06 whole-part candidate DztxuIK7/AoBmRybu: no source items — numbered, flat or unnumbered
 - **ru-bb**: part-06 Q&A candidate KGNYqv7h/RNERyfru: no h6 question blocks
 - **ru-bb**: part-08 whole-part candidate Pscnn3pP/xZMvq2Fj: item count 3 does not match target chapter count 94
+- **tr-bb**: part-01/chapter-01: seif 1: anchor(s) op-8, op-9, op-10, op-11 not printed
+- **tr-bb**: part-01/chapter-02: seif 1: anchor(s) op-2, op-3, op-4 not printed
 - **tr-bb**: part-01 Q&A candidate YR9r5s6q/Nh6O9nlf: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate EiUPsO0e/HC7CHDmm: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate QCnCAagn/ztwA4HRl: no h6 question blocks
@@ -3407,6 +3407,22 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **tr-bb**: part-02 Q&A candidate VBX3VORk/zZdPFEIs: no h6 question blocks
 - **tr-bb**: part-02 Q&A candidate F1dDm1OY/vlTGhHva: no h6 question blocks
 - **tr-bb**: part-03/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
+- **tr-bb**: part-03/chapter-02: source: matched 1 of 3 Hebrew seifim
+- **tr-bb**: part-03/chapter-03: source: matched 1 of 5 Hebrew seifim
+- **tr-bb**: part-03/chapter-04: source: matched 1 of 9 Hebrew seifim
+- **tr-bb**: part-03/chapter-05: source: matched 1 of 7 Hebrew seifim
+- **tr-bb**: part-03/chapter-06: source: matched 1 of 8 Hebrew seifim
+- **tr-bb**: part-03/chapter-07: source: matched 1 of 10 Hebrew seifim
+- **tr-bb**: part-03/chapter-08: Hebrew commentary has unanchored items
+- **tr-bb**: part-03/chapter-09: source: matched 1 of 13 Hebrew seifim
+- **tr-bb**: part-03/chapter-10: source: matched 1 of 8 Hebrew seifim
+- **tr-bb**: part-03/chapter-11: source: matched 1 of 8 Hebrew seifim
+- **tr-bb**: part-03/chapter-12: source: matched 1 of 7 Hebrew seifim
+- **tr-bb**: part-03/chapter-13: source: matched 5 of 6 Hebrew seifim
+- **tr-bb**: part-03/chapter-14: source: matched 1 of 10 Hebrew seifim
+- **tr-bb**: part-03/chapter-15: source: matched 2 of 6 Hebrew seifim
+- **uk-bb**: part-01/chapter-01: source: matched 0 of 5 Hebrew seifim
+- **uk-bb**: part-01/chapter-02: source: matched 0 of 5 Hebrew seifim
 - **uk-bb**: part-01 Q&A candidate YR9r5s6q/lXO5auAP: no h6 question blocks
 - **uk-bb**: part-01 Q&A candidate QCnCAagn/lIm75k6l: no h6 question blocks
 - **uk-bb**: part-02/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-22" — ambiguous marker scheme, refusing to guess
@@ -3414,10 +3430,29 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **uk-bb**: part-02 Q&A candidate ydlHgmBg/9wGbULwh: no h6 question blocks
 - **uk-bb**: part-02 Q&A candidate YhAlwjNh/68FKTvLu: no h6 question blocks
 - **uk-bb**: part-03/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
+- **uk-bb**: part-03/chapter-02: source: matched 0 of 3 Hebrew seifim
+- **uk-bb**: part-03/chapter-03: the "ua" document's text is not Ukrainian
+- **uk-bb**: part-03/chapter-04: source: matched 0 of 9 Hebrew seifim
+- **uk-bb**: part-03/chapter-05: source: matched 0 of 7 Hebrew seifim
+- **uk-bb**: part-03/chapter-06: source: matched 0 of 8 Hebrew seifim
+- **uk-bb**: part-03/chapter-07: source: matched 0 of 10 Hebrew seifim
+- **uk-bb**: part-03/chapter-08: Hebrew commentary has unanchored items
+- **uk-bb**: part-03/chapter-09: source: matched 0 of 13 Hebrew seifim
+- **uk-bb**: part-03/chapter-10: source: matched 0 of 8 Hebrew seifim
+- **uk-bb**: part-03/chapter-11: source: matched 0 of 8 Hebrew seifim
+- **uk-bb**: part-03/chapter-12: source: matched 0 of 7 Hebrew seifim
+- **uk-bb**: part-03/chapter-13: seif 2: printed marker(s) 216 match no Hebrew anchor
+- **uk-bb**: part-03/chapter-14: source: matched 0 of 10 Hebrew seifim
+- **uk-bb**: part-03/chapter-15: seif 1: English is 4.09x its Hebrew — outside 0.9-3
 - **uk-bb**: part-03 Q&A candidate zCY8AVzl/AENdGV22: no h6 question blocks
 - **uk-bb**: part-03 Q&A candidate 4KFDFg3m/RJ8eNryp: no h6 question blocks
 - **uk-bb**: part-03 Q&A candidate S5mViX7z/fwqNmOnf: no h6 question blocks
 - **uk-bb**: part-03 Q&A candidate Levgq2jH/NlafCbQ2: no h6 question blocks
+- **uk-bb**: part-04/chapter-01: source: matched 0 of 11 Hebrew seifim
+- **uk-bb**: part-04/chapter-02: source: matched 0 of 10 Hebrew seifim
+- **uk-bb**: part-04/chapter-03: source: matched 0 of 13 Hebrew seifim
+- **uk-bb**: part-04/chapter-04: source: matched 0 of 8 Hebrew seifim
+- **uk-bb**: part-04/chapter-05: source: matched 0 of 8 Hebrew seifim
 - **uk-bb**: part-04/chapter-06: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
 - **uk-bb**: part-04 Q&A candidate PNEWuQYa/ClP7q0Ih: no h6 question blocks
 - **uk-bb**: part-04 Q&A candidate Ut8PE5aO/C1TDuVGm: no h6 question blocks
@@ -3499,6 +3534,23 @@ whatever English they had.
 
 ### Notes
 
+- part-03/chapter-01: dropped a heading from op-10: The correction of the screen to detain the upper light from expanding in the ves
+- part-03/chapter-01: dropped a heading from op-15: By the power of the striking of the light of Ein Sof on the screen, the light re
+- part-03/chapter-01: dropped a heading from op-22: There are four phases in the coarseness of the upper light: 1) reception from th
+- part-03/chapter-04: dropped a heading from op-2: Bina passes the light at the level of Hochma through a window to ZA and Malchut,
+- part-03/chapter-04: dropped a heading from op-8: In order to shine in the world of Beria, the upper light clothes the level of ph
+- part-03/chapter-04: dropped a heading from op-13: Bina of Atzilut passes the light of Hochma to ZON, and Bina of Beria passes the 
+- part-03/chapter-04: dropped a heading from op-15: In the world of Yetzira, the upper light clothes the reflected light of phase on
+- part-03/chapter-04: dropped a heading from op-18: ABYA are the four letters Yod, Hey, Vav, Hey. Yod is Atzilut, which is Hochma; H
+- part-03/chapter-05: dropped a heading from op-2: Each phase of the four phases in Adam consists of four: Spirituality is Haya, Ne
+- part-03/chapter-05: dropped a heading from op-6: Between Creator and created being, which is the spirituality in a person, there 
+- part-03/chapter-05: dropped a heading from op-8: The median phase consists of two sparks: a spark of the Creator, which clothes t
+- part-03/chapter-05: dropped a heading from op-13: Between the spirituality of man and man’s body, there is the discernment of the 
+- part-03/chapter-05: dropped a heading from op-14: Between the body and the garments there are the discernments of hairs and nails 
+- part-03/chapter-06: dropped a heading from op-1: Keter is sometimes counted among the ten Sefirot and is sometimes not, and Daat 
+- part-03/chapter-06: dropped a heading from op-5: Tohu contains the four rudiments of the emanated being, potentially, not actuall
+- part-03/chapter-06: dropped a heading from op-8: Keter might be called an emanated being in relation to Ein Sof, and in relation 
+- part-03/chapter-06: dropped a heading from op-10: Keter contains two phases: the last phase of Ein Sof, which emanated a second ph
 - Part 5 - Additional Explanation about the Matter of the Inversion of the Panim and the Making Order of the Kelim: other pages are not imported yet
 - Part 6 - Questions Regarding Cause and Consequence: other pages are not imported yet
 - Part 8 - The Eser Sefirot of Olam ha Atzilut: the page repeats text from seif 47 on — seifim 47+ not offered for alignment
