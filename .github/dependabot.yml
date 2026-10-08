@@ -20,6 +20,12 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "vue-tsc"
         update-types: ["version-update:semver-major"]
+      # vue-tsc 3.3.11+ makes prettier-plugin-organize-imports ADD
+      # `import { defineProps } from "vue"` to every SFC (a compiler macro
+      # that must not be imported). Held at 3.3.9 until that is fixed —
+      # see the tracking issue.
+      - dependency-name: "vue-tsc"
+        versions: [">3.3.9"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
