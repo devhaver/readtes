@@ -3484,10 +3484,10 @@ whatever English they had.
 | part-01 | source | 11 | 4 | 1 |
 | part-02 | commentary | 1 | 0 | 1 |
 | part-02 | source | 11 | 4 | 1 |
-| part-03 | commentary | 9 | 2 | 4 |
-| part-03 | source | 22 | 4 | 8 |
-| part-04 | commentary | 5 | 0 | 1 |
-| part-04 | source | 15 | 0 | 1 |
+| part-03 | commentary | 12 | 2 | 1 |
+| part-03 | source | 25 | 4 | 5 |
+| part-04 | commentary | 6 | 0 | 0 |
+| part-04 | source | 16 | 0 | 0 |
 | part-05 | commentary | 48 | 0 | 4 |
 | part-05 | source | 0 | 66 | 0 |
 | part-06 | commentary | 37 | 0 | 1 |
@@ -3504,20 +3504,12 @@ whatever English they had.
 - `part-01/questions-terminology-01` source: page has 54 entries, the Hebrew 55
 - `part-02/chapter-01` source: Hebrew commentary has unanchored items
 - `part-02/chapter-01` commentary: Hebrew commentary has unanchored items
-- `part-03/chapter-04` source: source: matched 8 of 9 Hebrew seifim; commentary: matched 20 of 21 Hebrew items (next unmatched: op-21)
-- `part-03/chapter-04` commentary: source: matched 8 of 9 Hebrew seifim; commentary: matched 20 of 21 Hebrew items (next unmatched: op-21)
-- `part-03/chapter-07` source: source: matched 7 of 10 Hebrew seifim; commentary: matched 14 of 18 Hebrew items (next unmatched: op-15)
-- `part-03/chapter-07` commentary: source: matched 7 of 10 Hebrew seifim; commentary: matched 14 of 18 Hebrew items (next unmatched: op-15)
 - `part-03/chapter-08` source: Hebrew commentary has unanchored items
 - `part-03/chapter-08` commentary: Hebrew commentary has unanchored items
-- `part-03/chapter-10` source: source: matched 5 of 8 Hebrew seifim; commentary: matched 3 of 5 Hebrew items (next unmatched: op-4)
-- `part-03/chapter-10` commentary: source: matched 5 of 8 Hebrew seifim; commentary: matched 3 of 5 Hebrew items (next unmatched: op-4)
 - `part-03/inner-observation-05` source: segment 2: its first paragraph reads as the previous segment's
 - `part-03/inner-observation-07` source: segment 2: its first paragraph reads as the previous segment's
 - `part-03/answers-topics-01` source: page has 136 entries, the Hebrew 135
 - `part-03/questions-topics-01` source: its answers were refused
-- `part-04/chapter-06` source: source: matched 17 of 22 Hebrew seifim; commentary: matched 34 of 43 Hebrew items (next unmatched: op-35)
-- `part-04/chapter-06` commentary: source: matched 17 of 22 Hebrew seifim; commentary: matched 34 of 43 Hebrew items (next unmatched: op-35)
 - `part-06/chapter-23` commentary: op-1: no printed note could be placed on it
 - `part-05/chapter-47` commentary: op-1: no printed note could be placed on it
 - `part-05/chapter-51` commentary: op-1: no printed note could be placed on it

@@ -166,6 +166,28 @@ describe("alignKiChapterPage", () => {
     ]);
   });
 
+  it("opens a seif whose first marker sits in its second paragraph, but not a synopsis line", () => {
+    const blocks = parseKiBlocks(
+      page(
+        [
+          "<p><strong>1. Synopsis line one.</strong></p>",
+          "<p><strong>2. Synopsis line two.</strong></p>",
+          `<h5><strong>${seifText(1, "(1) and (2)")}</strong></h5>`,
+          "<h4><strong>Inner Light</strong></h4>",
+          "<p>1. First words: First note.</p>",
+          "<p>2. Second words: Second note.</p>",
+          "<h5><strong>2. The opening line of the second seif, with no marker yet.</strong></h5>",
+          "<h5><strong>Its second paragraph carries the marker (3) the Hebrew expects.</strong></h5>",
+          "<h4><strong>Inner Light</strong></h4>",
+          "<p>3. Third words: Third note.</p>",
+        ].join(""),
+      ),
+    );
+    const result = alignKiChapterPage(blocks, hebrew, items);
+    expect(result.problems).toEqual([]);
+    expect(result.segments[1]?.anchors).toEqual(["op-3"]);
+  });
+
   it("matches a numeral that repeats after the alphabet restarts to the later note", () => {
     const many = [heSeif(1, ["op-1", "op-2"])];
     const restarting = [heItem(1, "א", "1", 1), heItem(2, "א", "1", 1)];
