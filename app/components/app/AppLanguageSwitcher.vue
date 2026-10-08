@@ -24,8 +24,14 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
       "
       :aria-current="entry.code === locale ? 'true' : undefined"
       :hreflang="entry.language"
+      :lang="entry.code"
     >
-      {{ entry.name }}
+      <!-- Codes on phones: three language names pushed the site name onto
+           two lines beside them. -->
+      <span class="sm:hidden" aria-hidden="true">{{
+        entry.code.toUpperCase()
+      }}</span>
+      <span class="sr-only sm:not-sr-only">{{ entry.name }}</span>
     </NuxtLink>
   </nav>
 </template>

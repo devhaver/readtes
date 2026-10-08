@@ -70,6 +70,8 @@ import {
   HttpClientError,
   type HttpClient,
 } from "./lib/http-client.ts";
+import { alignKiChapterPage } from "./lib/ki-chapter-page.ts";
+import { toKiBlock } from "./lib/ki-page.ts";
 import {
   DOCX_MIMETYPE,
   type KmContentUnit,
@@ -450,20 +452,15 @@ const processLeafChapterDialect = async (
     }
     return;
   }
-  let groundTruth: ReturnType<typeof buildKmChapterGroundTruth>;
+  // The styled dialect resolves numerals through a lookup table, which is
+  // ambiguous once the Hebrew alphabet restarts after ת; the guided
+  // fallback below matches sequentially and does not need it.
+  let groundTruth: ReturnType<typeof buildKmChapterGroundTruth> | undefined;
+  let groundTruthError: string | undefined;
   try {
     groundTruth = buildKmChapterGroundTruth(heCommentaryItems);
   } catch (error) {
-    for (const file of docFiles) {
-      const acc = getAcc(languages, file.language);
-      acc.chapters.push({
-        chapterId,
-        status: "unmatched",
-        ...zeroCounts,
-      });
-      acc.warnings.push(`${chapterId}: ${(error as Error).message}`);
-    }
-    return;
+    groundTruthError = (error as Error).message;
   }
   const sourceRef = heSefariaRef(dir, "source.he-jerusalem-1956.json");
   const commentaryRef = heSefariaRef(dir, "commentary.he-jerusalem-1956.json");
@@ -475,12 +472,79 @@ const processLeafChapterDialect = async (
     );
     const blocks = parseDocBlocks(html);
 
-    if (!isSupportedKmStructure(blocks)) {
+    // English is excluded on purpose: kabbalah.info publishes the same
+    // English with its headings set in bold, which its own importer reads
+    // cleanly, while these documents set some headings as ordinary
+    // sentences that a walk cannot tell from a note's last paragraph.
+    const guidedAllowed = file.language !== "en";
+    if (!guidedAllowed && (!isSupportedKmStructure(blocks) || !groundTruth)) {
       acc.chapters.push({
         chapterId,
-        status: "structure-unsupported",
+        status: groundTruth ? "structure-unsupported" : "unmatched",
         ...zeroCounts,
       });
+      if (groundTruthError) {
+        acc.warnings.push(`${chapterId}: ${groundTruthError}`);
+      }
+      continue;
+    }
+    if (!isSupportedKmStructure(blocks) || !groundTruth) {
+      // Not the styled English dialect (or its numeral table is ambiguous):
+      // walk the document guided by the Hebrew instead — the dialect the
+      // Russian documents and kabbalah.info's pages share
+      // (`ki-chapter-page.ts`). All-or-nothing per chapter.
+      const guided = alignKiChapterPage(
+        blocks.flatMap((block) => toKiBlock(block.tag, block.html) ?? []),
+        heSegments,
+        heCommentaryItems,
+        bcp47ForKmLanguage(file.language),
+      );
+      // KabbalahMedia occasionally files a document under the wrong
+      // language: a "Ukrainian" part 3 chapter has a Ukrainian title page
+      // and a Russian body. Ukrainian prose uses і/ї/є/ґ every few words
+      // (~6% of letters); Russian never does.
+      if (file.language === "ua") {
+        const text = [...guided.segments, ...guided.items]
+          .map((item) => item.html.replace(/<[^>]*>/g, ""))
+          .join(" ");
+        const cyrillic = (text.match(/[а-яёіїєґ]/gi) ?? []).length;
+        const ukrainian = (text.match(/[іїєґ]/gi) ?? []).length;
+        if (cyrillic > 0 && ukrainian / cyrillic < 0.02) {
+          guided.problems.push(`the "ua" document's text is not Ukrainian`);
+        }
+      }
+      if (guided.problems.length > 0) {
+        acc.chapters.push({
+          chapterId,
+          status: isSupportedKmStructure(blocks)
+            ? "unmatched"
+            : "structure-unsupported",
+          ...zeroCounts,
+        });
+        acc.warnings.push(
+          `${chapterId}: ${groundTruthError ?? guided.problems[0] ?? ""}`,
+        );
+        continue;
+      }
+      acc.chapters.push({
+        chapterId,
+        status: "imported",
+        sourceSegments: guided.segments.length,
+        commentaryItems: guided.items.length,
+        sourceItemsSkipped: 0,
+        commentaryParagraphsSkipped: 0,
+        unmatchedNumerals: 0,
+      });
+      acc.sourceByChapter.set(chapterId, {
+        sefariaRef: sourceRef,
+        segments: guided.segments,
+      });
+      if (guided.items.length > 0) {
+        acc.commentaryByChapter.set(chapterId, {
+          sefariaRef: commentaryRef,
+          items: guided.items,
+        });
+      }
       continue;
     }
 

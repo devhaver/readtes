@@ -37,23 +37,37 @@ import type {
 } from "../../shared/types/content.ts";
 import { hebrewGematriaValue } from "./hebrew-numerals.ts";
 import { kiParagraphs, type KiBlock } from "./ki-page.ts";
+import { similarityScorer } from "./ki-similarity-align.ts";
 
-const MARKER_RE = /^(inner light|ohr pnimi)\s*:?$/i;
-const LEADING_NUMBER_TEXT_RE = /^\s*(\d+)\s*\.(?!\d)/;
+/**
+ * The commentary marker, in the languages Bnei Baruch publishes TES in:
+ * English prints "Inner Light" or "Ohr Pnimi"; the Russian and Ukrainian
+ * documents transliterate it ("Ор пними" / "Ор пнімі").
+ */
+const MARKER_RE =
+  /^(inner light|ohr pnimi|ор пними|ор пнімі|внутренний свет|внутрішнє світло)\s*:?$/i;
+/**
+ * A leading numeral: `N.` (English), `N)` (Russian and others), or `(N)`
+ * (a Russian note). The Russian documents also print a stray running count
+ * before a seif's own numeral (`1   1) Знай…`), which is skipped.
+ */
+const LEADING_NUMBER_TEXT_RE =
+  /^\s*(?:\d+\s+(?=\d))?(?:(\d+)\s*[.)]|\((\d+)\))(?!\d)/;
 /** Leading tags/space, then digits that a tag may split (`1<strong>0.`). */
 const LEADING_NUMBER_HTML_RE =
-  /^((?:\s|<[^>]+>)*)\d(?:(?:<[^>]+>)*\d)*((?:<[^>]+>)*)\s*\.(?!\d)\s*/;
+  /^((?:\s|<[^>]+>)*)(?:\d+\s+(?=\d))?(?:\d(?:(?:<[^>]+>)*\d)*((?:<[^>]+>)*)\s*[.)]|\(\d+\)[.:]?)(?!\d)\s*/;
 const TRAILING_NUMBER_TEXT_RE = /\D(\d+)\.\s*$/;
 const PRINTED_MARKER_RE = /\((\d+)\)/g;
 
 /** True for the paragraph that opens a seif's commentary. */
 export const isKiCommentaryMarker = (block: KiBlock): boolean =>
-  MARKER_RE.test(block.text);
+  // The Russian documents dash it: "- Ор пними –".
+  MARKER_RE.test(block.text.replace(/^[\s\-–—]+|[\s\-–—]+$/g, ""));
 
 /** The leading `N.` numeral of a block's text, if it has one. */
 export const kiLeadingNumber = (block: KiBlock): number | undefined => {
   const match = LEADING_NUMBER_TEXT_RE.exec(block.text);
-  return match ? Number(match[1]) : undefined;
+  return match ? Number(match[1] ?? match[2]) : undefined;
 };
 
 /** Removes the leading `N.` numeral from block HTML, keeping any tags that wrap it. */
@@ -125,6 +139,14 @@ const TAIL_RATIO_FLOOR = 1.15;
 /** Outside this band a seif's English is not a translation of its Hebrew. */
 const SEIF_RATIO_BAND = [0.9, 3] as const;
 
+/** A short line that does not end like a sentence — a heading set as text. */
+const isUnpunctuatedHeading = (html: string): boolean => {
+  const text = html.replace(/<[^>]*>/g, "").trim();
+  return (
+    text.length > 0 && text.length <= 250 && !/[.?!:;…"”’»)\]]$/.test(text)
+  );
+};
+
 const collapseSpaces = (html: string): string =>
   html
     .replace(/ {2,}/g, " ")
@@ -169,6 +191,8 @@ export const alignKiChapterPage = (
   blocks: KiBlock[],
   heSegments: SourceSegment[],
   heItems: CommentaryItem[],
+  /** The document's language; a note is labelled with the numeral it prints there. */
+  language = "en",
 ): KiChapterAlignment => {
   const problems: string[] = [];
   const unplaced: string[] = [];
@@ -210,16 +234,21 @@ export const alignKiChapterPage = (
     let length = plainLength(seif.parts.join(" "));
     for (const html of seif.pending) {
       // Punctuation alone (a stray `.` block) finishes the last sentence.
-      if (!/[a-z]/i.test(html.replace(/<[^>]*>/g, ""))) {
+      if (!/\p{L}/u.test(html.replace(/<[^>]*>/g, ""))) {
         const last = seif.parts.length - 1;
         seif.parts[last] = `${seif.parts[last] ?? ""}${unboldKiHtml(html)}`;
         continue;
       }
+      // An unpunctuated line right before the next seif is that seif's
+      // heading whatever its length — the Russian documents set headings
+      // as plain paragraphs, and Russian runs closer to the Hebrew's
+      // length than English, so the ratio test alone kept them.
       const keep =
         asText ||
         (heLength > 0 &&
           length / heLength < TAIL_RATIO_FLOOR &&
-          plainLength(html) > HEADING_MAX_CHARS);
+          plainLength(html) > HEADING_MAX_CHARS &&
+          !isUnpunctuatedHeading(html));
       if (keep) {
         seif.parts.push(unboldKiHtml(html));
         length += plainLength(html);
@@ -296,6 +325,21 @@ export const alignKiChapterPage = (
       seif.parts = [unboldKiHtml(stripKiLeadingNumber(block.html))];
       seif.pending = [];
     } else if (opensNextSeif(block)) {
+      // The next seif's section heading, when the document did not style
+      // it as one, ends up as the last paragraph of the previous note. It
+      // gives itself away: short, and no closing punctuation — a heading,
+      // not a sentence.
+      const last = opened.at(-1);
+      const tail = last?.parts.at(-1);
+      if (
+        mode === "commentary" &&
+        last &&
+        tail !== undefined &&
+        last.parts.length > 1 &&
+        isUnpunctuatedHeading(tail)
+      ) {
+        unplaced.push(last.parts.pop() as string);
+      }
       settlePending(false);
       seifIndex += 1;
       const n = (heSegments[seifIndex] as SourceSegment).n;
@@ -320,7 +364,10 @@ export const alignKiChapterPage = (
     } else if (mode === "commentary") {
       const last = opened.at(-1);
       const lastItem = last ? heItems[last.index] : undefined;
-      if (block.bold) {
+      // A section heading ends the notes: bold on kabbalah.info, any
+      // heading tag in KabbalahMedia's documents (`h5` there is the Ari's
+      // text style, never a note).
+      if (block.bold || /^h[1-6]$/.test(block.tag)) {
         mode = "heading";
         unplaced.push(text);
       } else if (last && lastItem?.targetSeif === currentSeif()?.n) {
@@ -379,7 +426,13 @@ export const alignKiChapterPage = (
     return {
       anchorId: he.anchorId,
       order: he.order,
-      label: he.label,
+      label:
+        language in he.label
+          ? he.label
+          : {
+              ...he.label,
+              [language]: String(numeralByAnchor.get(he.anchorId) ?? he.order),
+            },
       ...(he.sefariaRef ? { sefariaRef: he.sefariaRef } : {}),
       ...(he.targetSeif !== undefined ? { targetSeif: he.targetSeif } : {}),
       section: he.section,
@@ -394,3 +447,56 @@ export const alignKiChapterPage = (
 
   return { segments, items, problems, unplaced };
 };
+
+/**
+ * Drops a section heading a page set as a plain paragraph, which the walk
+ * cannot tell from a note's last paragraph (kabbalah.info's part 3
+ * chapter 5 sets every heading this way). A heading summarises the seif it
+ * introduces, so a note's last paragraph that reads more like the NEXT
+ * seif (its `en-ai` text) than like the note itself (the note's `en-ai`)
+ * is that heading. Needs both references; without them a note is left as
+ * it is. Returns the notes, and how many headings were removed.
+ */
+export const dropLeakedHeadings = (
+  items: CommentaryItem[],
+  ownReference: (item: CommentaryItem) => string | undefined,
+  nextSeifReference: (item: CommentaryItem) => string | undefined,
+): { items: CommentaryItem[]; removed: string[] } => {
+  const paragraphs = (html: string): string[] =>
+    [
+      ...html.matchAll(
+        /<span class="tes-para">([\s\S]*?)<\/span>(?=<span class="tes-para">|$)/g,
+      ),
+    ].map((match) => match[1] as string);
+  const references = items.flatMap((item) =>
+    [ownReference(item), nextSeifReference(item)].filter(
+      (text): text is string => text !== undefined,
+    ),
+  );
+  const score = similarityScorer([
+    ...references,
+    ...items.flatMap((item) => paragraphs(item.html)),
+  ]);
+  const removed: string[] = [];
+  const result = items.map((item) => {
+    const parts = paragraphs(item.html);
+    const own = ownReference(item);
+    const next = nextSeifReference(item);
+    const last = parts.at(-1);
+    if (parts.length < 2 || !own || !next || last === undefined) return item;
+    // A heading never opens with a note's numeral ("300. When Keter…").
+    if (/^\s*(?:<[^>]+>\s*)*\d+\s*[.)]/.test(last)) return item;
+    const towardNext = score(next, last);
+    if (towardNext < LEAK_MIN_SIMILARITY || towardNext <= score(own, last)) {
+      return item;
+    }
+    removed.push(
+      `${item.anchorId}: ${last.replace(/<[^>]*>/g, "").slice(0, 80)}`,
+    );
+    return { ...item, html: kiParagraphs(parts.slice(0, -1)) };
+  });
+  return { items: result, removed };
+};
+
+/** A last paragraph must score at least this against the next seif to be its heading. */
+const LEAK_MIN_SIMILARITY = 0.12;

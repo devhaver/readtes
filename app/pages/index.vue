@@ -15,6 +15,8 @@ const localePath = useLocalePath();
 const openingLine: Record<string, string> = {
   en: "Before the contraction, there was the Infinite, filling all of existence.",
   he: "לפני הצמצום היה אין סוף ממלא כל המציאות",
+  // The heading Bnei Baruch's Russian edition gives this seif.
+  ru: "До сокращения Бесконечность наполняла всю реальность.",
 };
 
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);

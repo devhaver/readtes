@@ -119,6 +119,21 @@ const isEntirelyBold = (html: string): boolean => {
   return total > 0 && letters(outside) / total <= 0.05;
 };
 
+/**
+ * One block from its tag and raw inner HTML, or `undefined` when it holds
+ * no text. Shared with the KabbalahMedia importer, whose `doc2html` blocks
+ * go through the same Hebrew-guided chapter alignment.
+ */
+export const toKiBlock = (
+  tag: string,
+  rawHtml: string,
+): KiBlock | undefined => {
+  const html = normalizeKiHtml(rawHtml);
+  const text = decodeEntities(stripTags(html)).replace(/\s+/g, " ").trim();
+  if (text === "") return undefined;
+  return { tag, html, text, bold: isEntirelyBold(html) };
+};
+
 /** Tokenizes a kabbalah.info article page into its body blocks. */
 export const parseKiBlocks = (pageHtml: string): KiBlock[] => {
   const start = pageHtml.indexOf(CONTENT_START);
@@ -132,16 +147,10 @@ export const parseKiBlocks = (pageHtml: string): KiBlock[] => {
   const blocks: KiBlock[] = [];
 
   for (const match of body.matchAll(BLOCK_RE)) {
-    const html = normalizeKiHtml(match[2] as string);
-    const text = decodeEntities(stripTags(html)).replace(/\s+/g, " ").trim();
-    if (text === "") continue;
-    if (FOOTER_SENTINELS.has(text)) break;
-    blocks.push({
-      tag: match[1] as string,
-      html,
-      text,
-      bold: isEntirelyBold(html),
-    });
+    const block = toKiBlock(match[1] as string, match[2] as string);
+    if (!block) continue;
+    if (FOOTER_SENTINELS.has(block.text)) break;
+    blocks.push(block);
   }
 
   return blocks;

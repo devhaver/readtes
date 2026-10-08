@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import type { CommentaryItem, SourceSegment } from "~~/shared/types/content";
-import { alignKiChapterPage } from "../../scripts/lib/ki-chapter-page.ts";
+import {
+  alignKiChapterPage,
+  dropLeakedHeadings,
+} from "../../scripts/lib/ki-chapter-page.ts";
 import {
   alignObservation,
   kiObservationUnitHtml,
@@ -603,5 +606,66 @@ describe("Q&A tables", () => {
       "Everything that exists as existence.",
       "Its absence.",
     ]);
+  });
+});
+
+describe("non-English documents", () => {
+  it("reads Russian numerals and markers, and keeps a Cyrillic heading out of the seif", () => {
+    const hebrew = [heSeif(1, ["op-1"]), heSeif(2, [])];
+    const blocks = parseKiBlocks(
+      page(
+        [
+          "<h3>1) Знай, что (1) прежде, чем были созданы создания, простой высший свет заполнял всю реальность.</h3>",
+          "<p> - Ор пними –</p>",
+          "<p> (1). Форма духовного времени подробно рассматривается далее.</p>",
+          "<p><strong>В высшем свете есть сила десяти сфирот</strong></p>",
+          "<h3>2) Когда возникло в Его простом желании создать миры и создания.</h3>",
+        ].join(""),
+      ),
+    );
+    const result = alignKiChapterPage(
+      blocks,
+      hebrew,
+      [heItem(1, "א", "1", 1)],
+      "ru",
+    );
+    expect(result.problems).toEqual([]);
+    expect(result.segments.map((s) => s.html).join(" ")).not.toContain(
+      "В высшем свете",
+    );
+    expect(result.items[0]?.label).toEqual({ he: "א", en: "1", ru: "1" });
+  });
+});
+
+describe("dropLeakedHeadings", () => {
+  const note = (anchorId: string, html: string): CommentaryItem => ({
+    ...heItem(1, "א", "1", 1),
+    anchorId,
+    html,
+  });
+
+  it("drops a last paragraph that reads as the next seif, keeps one that reads as the note", () => {
+    const leaked = note(
+      "op-1",
+      '<span class="tes-para">The screen detains the upper light at the Tabur.</span><span class="tes-para">Between Creator and created there is a median phase.</span>',
+    );
+    const genuine = note(
+      "op-2",
+      '<span class="tes-para">The screen detains the upper light.</span><span class="tes-para">This detaining of the light by the screen is the Tabur.</span>',
+    );
+    const { items, removed } = dropLeakedHeadings(
+      [leaked, genuine],
+      (item) =>
+        item.anchorId === "op-1"
+          ? "The screen detains the upper light at the Tabur"
+          : "The screen detains the upper light; this detaining is the Tabur",
+      () =>
+        "A median phase between Creator and created, the spirituality in man",
+    );
+    expect(removed).toHaveLength(1);
+    expect(items[0]?.html).toBe(
+      "The screen detains the upper light at the Tabur.",
+    );
+    expect(items[1]?.html).toBe(genuine.html);
   });
 });

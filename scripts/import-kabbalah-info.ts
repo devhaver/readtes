@@ -48,7 +48,10 @@ import {
   versionsFileSchema,
 } from "../shared/types/content.ts";
 import { createHttpClient } from "./lib/http-client.ts";
-import { alignKiChapterPage } from "./lib/ki-chapter-page.ts";
+import {
+  alignKiChapterPage,
+  dropLeakedHeadings,
+} from "./lib/ki-chapter-page.ts";
 import {
   alignObservation,
   alignObservationByRuns,
@@ -205,9 +208,39 @@ const processChapterPage = (
       ? { status: "imported", items }
       : { status: "refused", reason: result.problems.join("; ") };
 
+  // Headings the page set as plain paragraphs leak into the note before
+  // them; the next seif's `en-ai` text identifies them (`dropLeakedHeadings`).
+  const aiSource = readLayer(chapterId, "source", "en-ai") ?? [];
+  const aiNotes = new Map(
+    (readLayer(chapterId, "commentary", "en-ai") ?? []).map((item) => [
+      item.anchorId,
+      item.html,
+    ]),
+  );
+  const lastNoteOfSeif = new Map<number, string>();
+  for (const item of result.items) {
+    if (item.targetSeif !== undefined) {
+      lastNoteOfSeif.set(item.targetSeif, item.anchorId);
+    }
+  }
+  const { items, removed } = dropLeakedHeadings(
+    result.items,
+    (item) => aiNotes.get(item.anchorId),
+    (item) => {
+      const seif = item.targetSeif;
+      if (seif === undefined || lastNoteOfSeif.get(seif) !== item.anchorId) {
+        return undefined;
+      }
+      return aiSource.find((segment) => segment.n === seif + 1)?.html;
+    },
+  );
+  for (const line of removed) {
+    planned.notes.push(`${chapterId}: dropped a heading from ${line}`);
+  }
+
   plan(planned, chapterId, "source", verdict(result.segments));
   if (heCommentary.length > 0) {
-    plan(planned, chapterId, "commentary", verdict(result.items));
+    plan(planned, chapterId, "commentary", verdict(items));
   }
 };
 

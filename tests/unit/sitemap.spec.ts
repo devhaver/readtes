@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import toc from "../../content/toc.json";
 import type { Toc } from "../../shared/types/content";
 import {
+  SITEMAP_LOCALES,
   buildSitemapEntries,
   escapeXml,
   renderSitemapXml,
@@ -42,8 +43,9 @@ describe("sitemap URL builder", () => {
       );
 
       expect(entry).toBeDefined();
-      expect(entry?.en).toBe(`${SITE_URL}/read/${id}`);
-      expect(entry?.he).toBe(`${SITE_URL}/he/read/${id}`);
+      expect(entry?.urls.en).toBe(`${SITE_URL}/read/${id}`);
+      expect(entry?.urls.he).toBe(`${SITE_URL}/he/read/${id}`);
+      expect(entry?.urls.ru).toBe(`${SITE_URL}/ru/read/${id}`);
     }
   });
 
@@ -72,11 +74,12 @@ describe("sitemap URL builder", () => {
     const entries = buildSitemapEntries(realToc, SITE_URL);
     const home = entries.find((entry) => entry.path === "/");
 
-    expect(home?.en).toBe(`${SITE_URL}/`);
-    expect(home?.he).toBe(`${SITE_URL}/he`);
+    expect(home?.urls.en).toBe(`${SITE_URL}/`);
+    expect(home?.urls.he).toBe(`${SITE_URL}/he`);
+    expect(home?.urls.ru).toBe(`${SITE_URL}/ru`);
   });
 
-  it("renders well-formed XML with an alternate pair for every URL", () => {
+  it("renders well-formed XML with every locale's alternate for every URL", () => {
     const entries = buildSitemapEntries(realToc, SITE_URL);
     const xml = renderSitemapXml(entries);
 
@@ -92,11 +95,14 @@ describe("sitemap URL builder", () => {
 
     const urlBlocks = xml.match(/<url>[\s\S]*?<\/url>/g) ?? [];
     // One <url> per locale variant of every entry.
-    expect(urlBlocks).toHaveLength(entries.length * 2);
+    expect(urlBlocks).toHaveLength(entries.length * SITEMAP_LOCALES.length);
 
     for (const block of urlBlocks) {
-      expect(block).toContain('<xhtml:link rel="alternate" hreflang="en"');
-      expect(block).toContain('<xhtml:link rel="alternate" hreflang="he"');
+      for (const locale of SITEMAP_LOCALES) {
+        expect(block).toContain(
+          `<xhtml:link rel="alternate" hreflang="${locale}"`,
+        );
+      }
       expect(block).toContain(
         '<xhtml:link rel="alternate" hreflang="x-default"',
       );

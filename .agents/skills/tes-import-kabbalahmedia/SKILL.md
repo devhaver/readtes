@@ -21,6 +21,16 @@ fail before any network request.
   positionally split into source-only chapter files; combined terminology and
   topics Q&A tables write question and answer chapters positionally. Source
   and commentary are written only when the relevant alignment is verified.
+- **Hebrew-guided fallback (non-English only)**: a leaf chapter document
+  the styled dialect does not parse — every Russian one — goes through
+  `alignKiChapterPage` (`ki-chapter-page.ts`, shared with the kabbalah.info
+  importer): seif by seif and note by note against the Hebrew, numerals
+  `N.`/`N)`/`(N)`, the "Ор пними" marker, all-or-nothing per chapter, notes
+  labelled with the numeral their own language prints. English is excluded:
+  these documents set some headings as plain sentences, and kabbalah.info's
+  English (bold headings) is the better source. A `ua` document must
+  actually be Ukrainian (і/ї/є/ґ frequency) — one part 3 "Ukrainian" file
+  is Russian.
 - **Safe boundaries**: whole-part Ohr Pnimi/commentary is intentionally not
   written — there is no reliable Hebrew/Sefaria commentary target for it.
   Inner Observation is reported and skipped, never guessed. Parts 9–15 have
