@@ -5,7 +5,13 @@
     "title": {
       "en": "Circles and Straightness",
       "he": "עגולים ויושר",
-      "ru": "Круги и прямая"
+      "ru": "Круги и прямая",
+      "uk": "Кола і пряма",
+      "es": "Círculos y rectitud",
+      "pt": "Círculos e retidão",
+      "fr": "Cercles et droiture",
+      "de": "Kreise und Geradheit",
+      "tr": "Daireler ve doğruluk"
     }
   },
   "volume": {
@@ -14,7 +20,13 @@
     "title": {
       "en": "Volume 1",
       "he": "כרך 1",
-      "ru": "Том 1"
+      "ru": "Том 1",
+      "uk": "Том 1",
+      "es": "Volumen 1",
+      "pt": "Volume 1",
+      "fr": "Volume 1",
+      "de": "Band 1",
+      "tr": "Cilt 1"
     }
   },
   "chapters": [
@@ -25,7 +37,13 @@
       "title": {
         "en": "Chapter 1",
         "he": "פרק א׳",
-        "ru": "Глава 1"
+        "ru": "Глава 1",
+        "uk": "Глава 1",
+        "es": "Capítulo 1",
+        "pt": "Capítulo 1",
+        "fr": "Chapitre 1",
+        "de": "Kapitel 1",
+        "tr": "Bölüm 1"
       },
       "availableLayers": [
         "source",
@@ -50,7 +68,13 @@
       "title": {
         "en": "Chapter 2",
         "he": "פרק ב׳",
-        "ru": "Глава 2"
+        "ru": "Глава 2",
+        "uk": "Глава 2",
+        "es": "Capítulo 2",
+        "pt": "Capítulo 2",
+        "fr": "Chapitre 2",
+        "de": "Kapitel 2",
+        "tr": "Bölüm 2"
       },
       "availableLayers": [
         "source",
@@ -79,7 +103,13 @@
       "title": {
         "en": "Inner Observation 1",
         "he": "הסתכלות פנימית א׳",
-        "ru": "Внутреннее созерцание 1"
+        "ru": "Внутреннее созерцание 1",
+        "uk": "Внутрішнє споглядання 1",
+        "es": "Observación Interior 1",
+        "pt": "Observação Interior 1",
+        "fr": "Observation intérieure 1",
+        "de": "Innere Betrachtung 1",
+        "tr": "İç Gözlem 1"
       },
       "availableLayers": [
         "source"
@@ -101,7 +131,13 @@
       "title": {
         "en": "Inner Observation 2",
         "he": "הסתכלות פנימית ב׳",
-        "ru": "Внутреннее созерцание 2"
+        "ru": "Внутреннее созерцание 2",
+        "uk": "Внутрішнє споглядання 2",
+        "es": "Observación Interior 2",
+        "pt": "Observação Interior 2",
+        "fr": "Observation intérieure 2",
+        "de": "Innere Betrachtung 2",
+        "tr": "İç Gözlem 2"
       },
       "availableLayers": [
         "source"
@@ -123,7 +159,13 @@
       "title": {
         "en": "Inner Observation 3",
         "he": "הסתכלות פנימית ג׳",
-        "ru": "Внутреннее созерцание 3"
+        "ru": "Внутреннее созерцание 3",
+        "uk": "Внутрішнє споглядання 3",
+        "es": "Observación Interior 3",
+        "pt": "Observação Interior 3",
+        "fr": "Observation intérieure 3",
+        "de": "Innere Betrachtung 3",
+        "tr": "İç Gözlem 3"
       },
       "availableLayers": [
         "source"
@@ -145,7 +187,13 @@
       "title": {
         "en": "Inner Observation 4",
         "he": "הסתכלות פנימית ד׳",
-        "ru": "Внутреннее созерцание 4"
+        "ru": "Внутреннее созерцание 4",
+        "uk": "Внутрішнє споглядання 4",
+        "es": "Observación Interior 4",
+        "pt": "Observação Interior 4",
+        "fr": "Observation intérieure 4",
+        "de": "Innere Betrachtung 4",
+        "tr": "İç Gözlem 4"
       },
       "availableLayers": [
         "source"
@@ -167,7 +215,13 @@
       "title": {
         "en": "Inner Observation 5",
         "he": "הסתכלות פנימית ה׳",
-        "ru": "Внутреннее созерцание 5"
+        "ru": "Внутреннее созерцание 5",
+        "uk": "Внутрішнє споглядання 5",
+        "es": "Observación Interior 5",
+        "pt": "Observação Interior 5",
+        "fr": "Observation intérieure 5",
+        "de": "Innere Betrachtung 5",
+        "tr": "İç Gözlem 5"
       },
       "availableLayers": [
         "source"
@@ -189,7 +243,13 @@
       "title": {
         "en": "Inner Observation 6",
         "he": "הסתכלות פנימית ו׳",
-        "ru": "Внутреннее созерцание 6"
+        "ru": "Внутреннее созерцание 6",
+        "uk": "Внутрішнє споглядання 6",
+        "es": "Observación Interior 6",
+        "pt": "Observação Interior 6",
+        "fr": "Observation intérieure 6",
+        "de": "Innere Betrachtung 6",
+        "tr": "İç Gözlem 6"
       },
       "availableLayers": [
         "source"
@@ -211,7 +271,13 @@
       "title": {
         "en": "Inner Observation 7",
         "he": "הסתכלות פנימית ז׳",
-        "ru": "Внутреннее созерцание 7"
+        "ru": "Внутреннее созерцание 7",
+        "uk": "Внутрішнє споглядання 7",
+        "es": "Observación Interior 7",
+        "pt": "Observação Interior 7",
+        "fr": "Observation intérieure 7",
+        "de": "Innere Betrachtung 7",
+        "tr": "İç Gözlem 7"
       },
       "availableLayers": [
         "source"
@@ -233,7 +299,13 @@
       "title": {
         "en": "Inner Observation 8",
         "he": "הסתכלות פנימית ח׳",
-        "ru": "Внутреннее созерцание 8"
+        "ru": "Внутреннее созерцание 8",
+        "uk": "Внутрішнє споглядання 8",
+        "es": "Observación Interior 8",
+        "pt": "Observação Interior 8",
+        "fr": "Observation intérieure 8",
+        "de": "Innere Betrachtung 8",
+        "tr": "İç Gözlem 8"
       },
       "availableLayers": [
         "source"
@@ -255,7 +327,13 @@
       "title": {
         "en": "Inner Observation 9",
         "he": "הסתכלות פנימית ט׳",
-        "ru": "Внутреннее созерцание 9"
+        "ru": "Внутреннее созерцание 9",
+        "uk": "Внутрішнє споглядання 9",
+        "es": "Observación Interior 9",
+        "pt": "Observação Interior 9",
+        "fr": "Observation intérieure 9",
+        "de": "Innere Betrachtung 9",
+        "tr": "İç Gözlem 9"
       },
       "availableLayers": [
         "source"
@@ -277,7 +355,13 @@
       "title": {
         "en": "Inner Observation 10",
         "he": "הסתכלות פנימית י׳",
-        "ru": "Внутреннее созерцание 10"
+        "ru": "Внутреннее созерцание 10",
+        "uk": "Внутрішнє споглядання 10",
+        "es": "Observación Interior 10",
+        "pt": "Observação Interior 10",
+        "fr": "Observation intérieure 10",
+        "de": "Innere Betrachtung 10",
+        "tr": "İç Gözlem 10"
       },
       "availableLayers": [
         "source"
@@ -299,7 +383,13 @@
       "title": {
         "en": "List of Questions on Terminology",
         "he": "לוח השאלות לפירוש המלות",
-        "ru": "Вопросы о значении слов"
+        "ru": "Вопросы о значении слов",
+        "uk": "Питання про значення слів",
+        "es": "Preguntas sobre el significado de las palabras",
+        "pt": "Perguntas sobre o significado das palavras",
+        "fr": "Questions sur le sens des mots",
+        "de": "Fragen zur Bedeutung der Wörter",
+        "tr": "Kelimelerin anlamı üzerine sorular"
       },
       "availableLayers": [
         "source"
@@ -320,7 +410,13 @@
       "title": {
         "en": "List of Questions on Topics",
         "he": "לוח השאלות לעניינים",
-        "ru": "Вопросы по темам"
+        "ru": "Вопросы по темам",
+        "uk": "Питання за темами",
+        "es": "Preguntas sobre los temas",
+        "pt": "Perguntas sobre os temas",
+        "fr": "Questions sur les thèmes",
+        "de": "Fragen zu den Themen",
+        "tr": "Konular üzerine sorular"
       },
       "availableLayers": [
         "source"
@@ -341,7 +437,13 @@
       "title": {
         "en": "List of Answers on Terminology",
         "he": "לוח התשובות לפירוש המלות",
-        "ru": "Ответы о значении слов"
+        "ru": "Ответы о значении слов",
+        "uk": "Відповіді про значення слів",
+        "es": "Respuestas sobre el significado de las palabras",
+        "pt": "Respostas sobre o significado das palavras",
+        "fr": "Réponses sur le sens des mots",
+        "de": "Antworten zur Bedeutung der Wörter",
+        "tr": "Kelimelerin anlamı üzerine cevaplar"
       },
       "availableLayers": [
         "source"
@@ -363,7 +465,13 @@
       "title": {
         "en": "List of Answers on Topics",
         "he": "לוח התשובות לעניינים",
-        "ru": "Ответы по темам"
+        "ru": "Ответы по темам",
+        "uk": "Відповіді за темами",
+        "es": "Respuestas sobre los temas",
+        "pt": "Respostas sobre os temas",
+        "fr": "Réponses sur les thèmes",
+        "de": "Antworten zu den Themen",
+        "tr": "Konular üzerine cevaplar"
       },
       "availableLayers": [
         "source"

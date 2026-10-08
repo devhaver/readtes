@@ -3,8 +3,8 @@
  * `partDisplayTitle` for parts) to the committed ToC — for when they change
  * without a full Sefaria re-import: chapters now read "Inner Observation N"
  * rather than "Histaklut Pnimit N", and parts carry their names rather than
- * "Section I", and every title has a Russian entry. Rewrites `toc.json` and
- * its splits; idempotent.
+ * "Section I", and every title has an entry in each reader language of
+ * `CHAPTER_TITLE_FORMS`. Rewrites `toc.json` and its splits; idempotent.
  *
  * `pnpm migrate:toc-titles`
  */
@@ -13,10 +13,10 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tocSchema, versionsFileSchema } from "../shared/types/content.ts";
 import {
-  addRussianChapterTitles,
+  addLocalizedChapterTitles,
+  CHAPTER_TITLE_FORMS,
   normalizeEnTitle,
   partDisplayTitle,
-  russianVolumeTitle,
 } from "./lib/toc-builder.ts";
 import { writeTocSplitFiles } from "./lib/toc-splits.ts";
 
@@ -34,9 +34,11 @@ const main = (): void => {
   );
   let changed = 0;
   for (const volume of toc.volumes) {
-    if (volume.title.ru === undefined) {
-      volume.title.ru = russianVolumeTitle(volume.number);
-      changed += 1;
+    for (const [language, forms] of Object.entries(CHAPTER_TITLE_FORMS)) {
+      if (volume.title[language] === undefined) {
+        volume.title[language] = forms.volume(volume.number);
+        changed += 1;
+      }
     }
     for (const part of volume.parts) {
       const title = partDisplayTitle(
@@ -44,19 +46,11 @@ const main = (): void => {
         part.title.he ?? "",
         part.title.en ?? "",
       );
-      if (
-        title.en !== part.title.en ||
-        title.he !== part.title.he ||
-        title.ru !== part.title.ru
-      ) {
+      if (JSON.stringify(title) !== JSON.stringify(part.title)) {
         part.title = title;
         changed += 1;
       }
-      const before = part.chapters.filter(
-        (c) => c.title.ru === undefined,
-      ).length;
-      addRussianChapterTitles(part.chapters);
-      changed += before;
+      changed += addLocalizedChapterTitles(part.chapters);
       for (const chapter of part.chapters) {
         const en = chapter.title.en;
         if (en === undefined) continue;

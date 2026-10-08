@@ -63,26 +63,138 @@ export const PART_NAMES_EN: Record<number, string> = {
 };
 
 /**
- * The same names in Russian: Bnei Baruch's own where their Russian
- * documents print one (parts 1, 3, 4), the rest in the same register.
+ * Part names in the reader's other languages. Russian follows Bnei Baruch's
+ * own Russian documents where they print one (parts 1, 3, 4); everything
+ * else renders the Hebrew names in each language's register, keeping the
+ * Hebrew terms Bnei Baruch keeps (Akudim, Nekudim, Atzilut, Zeir Anpin…).
  */
-export const PART_NAMES_RU: Record<number, string> = {
-  1: "Сокращение и линия",
-  2: "Круги и прямая",
-  3: "Прямой свет и отраженный свет",
-  4: "Десять сфирот Акудим",
-  5: "Акудим во втором распространении: «Мати и ло мати»",
-  6: "Мир Некудим",
-  7: "Семь умерших царей",
-  8: "Десять сфирот мира Ацилут",
-  9: "Зивуги сфирот",
-  10: "Первый ибур Зеир Анпина",
-  11: "Исправление светов, искр и келим в зародыше и второй ибур",
-  12: "Рождение и еника Зеир Анпина",
-  13: "Исправления головы и бороды Арих Анпина",
-  14: "Мохин гадлута Зеир Анпина",
-  15: "Построение Нуквы Зеир Анпина",
-  16: "Три мира: Брия, Ецира и Асия",
+export const PART_NAMES: Record<string, Record<number, string>> = {
+  ru: {
+    1: "Сокращение и линия",
+    2: "Круги и прямая",
+    3: "Прямой свет и отраженный свет",
+    4: "Десять сфирот Акудим",
+    5: "Акудим во втором распространении: «Мати и ло мати»",
+    6: "Мир Некудим",
+    7: "Семь умерших царей",
+    8: "Десять сфирот мира Ацилут",
+    9: "Зивуги сфирот",
+    10: "Первый ибур Зеир Анпина",
+    11: "Исправление светов, искр и келим в зародыше и второй ибур",
+    12: "Рождение и еника Зеир Анпина",
+    13: "Исправления головы и бороды Арих Анпина",
+    14: "Мохин гадлута Зеир Анпина",
+    15: "Построение Нуквы Зеир Анпина",
+    16: "Три мира: Брия, Ецира и Асия",
+  },
+  uk: {
+    1: "Скорочення і лінія",
+    2: "Кола і пряма",
+    3: "Пряме світло і відбите світло",
+    4: "Десять сфірот Акудім",
+    5: "Акудім у другому поширенні: «Маті і ло маті»",
+    6: "Світ Некудім",
+    7: "Сім померлих царів",
+    8: "Десять сфірот світу Ацилут",
+    9: "Зівуги сфірот",
+    10: "Перший ібур Зеір Анпіна",
+    11: "Виправлення світел, іскор і келім у зародку та другий ібур",
+    12: "Народження і єніка Зеір Анпіна",
+    13: "Виправлення голови і бороди Аріх Анпіна",
+    14: "Мохін ґадлуту Зеір Анпіна",
+    15: "Побудова Нукви Зеір Анпіна",
+    16: "Три світи: Брія, Єцира і Асія",
+  },
+  es: {
+    1: "Restricción y línea",
+    2: "Círculos y rectitud",
+    3: "Luz directa y luz reflejada",
+    4: "Las diez Sefirot de Akudim",
+    5: "Akudim en la segunda expansión: Matei ve Lo Matei",
+    6: "El mundo de Nekudim",
+    7: "Los siete reyes que murieron",
+    8: "Las diez Sefirot del mundo de Atzilut",
+    9: "Los acoplamientos de las Sefirot",
+    10: "El primer Ibur de Zeir Anpin",
+    11: "Corrección de luces, chispas y vasijas en el embrión, y el segundo Ibur",
+    12: "Nacimiento y Yeniká de Zeir Anpin",
+    13: "Las correcciones de la cabeza y la barba de Arij Anpin",
+    14: "Los Mojin de Gadlut de Zeir Anpin",
+    15: "La construcción de la Nukva de Zeir Anpin",
+    16: "Los tres mundos: Beriá, Yetzirá y Asiyá",
+  },
+  pt: {
+    1: "Restrição e linha",
+    2: "Círculos e retidão",
+    3: "Luz direta e luz refletida",
+    4: "As dez Sefirot de Akudim",
+    5: "Akudim na segunda expansão: Matei ve Lo Matei",
+    6: "O mundo de Nekudim",
+    7: "Os sete reis que morreram",
+    8: "As dez Sefirot do mundo de Atzilut",
+    9: "Os acoplamentos das Sefirot",
+    10: "O primeiro Ibur de Zeir Anpin",
+    11: "Correção das luzes, centelhas e vasos no embrião, e o segundo Ibur",
+    12: "Nascimento e Yeniká de Zeir Anpin",
+    13: "As correções da cabeça e da barba de Arich Anpin",
+    14: "Os Mochin de Gadlut de Zeir Anpin",
+    15: "A construção da Nukva de Zeir Anpin",
+    16: "Os três mundos: Beriá, Yetzirá e Assiyá",
+  },
+  fr: {
+    1: "Restriction et ligne",
+    2: "Cercles et droiture",
+    3: "Lumière directe et lumière réfléchie",
+    4: "Les dix Sefirot d'Akoudim",
+    5: "Akoudim dans la seconde expansion : Matei ve Lo Matei",
+    6: "Le monde de Nekoudim",
+    7: "Les sept rois morts",
+    8: "Les dix Sefirot du monde d'Atsilout",
+    9: "Les accouplements des Sefirot",
+    10: "Le premier Ibour de Zeir Anpin",
+    11: "Correction des lumières, étincelles et récipients dans l'embryon, et le second Ibour",
+    12: "Naissance et allaitement de Zeir Anpin",
+    13: "Les corrections de la tête et de la barbe d'Arikh Anpin",
+    14: "Les Mokhin de Gadlout de Zeir Anpin",
+    15: "La construction de la Noukva de Zeir Anpin",
+    16: "Les trois mondes : Bria, Yetsira et Assiya",
+  },
+  de: {
+    1: "Einschränkung und Linie",
+    2: "Kreise und Geradheit",
+    3: "Direktes Licht und reflektiertes Licht",
+    4: "Die zehn Sefirot von Akudim",
+    5: "Akudim in der zweiten Ausbreitung: Matei ve Lo Matei",
+    6: "Die Welt Nekudim",
+    7: "Die sieben Könige, die starben",
+    8: "Die zehn Sefirot der Welt Azilut",
+    9: "Die Vereinigungen der Sefirot",
+    10: "Der erste Ibur von Seir Anpin",
+    11: "Korrektur der Lichter, Funken und Gefäße im Embryo und der zweite Ibur",
+    12: "Geburt und Jenika von Seir Anpin",
+    13: "Die Korrekturen von Kopf und Bart von Arich Anpin",
+    14: "Die Mochin de Gadlut von Seir Anpin",
+    15: "Der Aufbau der Nukwa von Seir Anpin",
+    16: "Die drei Welten: Beria, Jezira und Assija",
+  },
+  tr: {
+    1: "Kısıtlama ve çizgi",
+    2: "Daireler ve doğruluk",
+    3: "Doğrudan Işık ve Yansıyan Işık",
+    4: "Akudim'in on Sefirot'u",
+    5: "İkinci yayılımda Akudim: Matei ve Lo Matei",
+    6: "Nekudim dünyası",
+    7: "Ölen yedi kral",
+    8: "Atzilut dünyasının on Sefirot'u",
+    9: "Sefirot'un çiftleşmeleri",
+    10: "Zeir Anpin'in ilk İbur'u",
+    11: "Embriyoda ışıkların, kıvılcımların ve kapların ıslahı ve ikinci İbur",
+    12: "Zeir Anpin'in doğumu ve Yenika'sı",
+    13: "Arih Anpin'in başının ve sakalının ıslahları",
+    14: "Zeir Anpin'in Gadlut Mohin'i",
+    15: "Zeir Anpin'in Nukva'sının inşası",
+    16: "Üç dünya: Beria, Yetzira ve Assiya",
+  },
 };
 
 /** A part's display title: its name, without the "Part N" every surface already prints. */
@@ -93,37 +205,12 @@ export const partDisplayTitle = (
 ): LocalizedTitle => ({
   en: PART_NAMES_EN[number] ?? sefariaEnTitle,
   he: sefariaHeTitle.replace(/^חלק\s+[^:]+:\s*/, ""),
-  ...(PART_NAMES_RU[number] ? { ru: PART_NAMES_RU[number] } : {}),
+  ...Object.fromEntries(
+    Object.entries(PART_NAMES).flatMap(([language, names]) =>
+      names[number] ? [[language, names[number]]] : [],
+    ),
+  ),
 });
-
-const RUSSIAN_KIND_TITLES: Partial<Record<ChapterKind, string>> = {
-  introduction: "Предисловие",
-  "inner-observation": "Внутреннее созерцание",
-  "questions-terminology": "Вопросы о значении слов",
-  "questions-topics": "Вопросы по темам",
-  "questions-cause-effect": "Вопросы о причине и следствии",
-  "answers-terminology": "Ответы о значении слов",
-  "answers-topics": "Ответы по темам",
-  "answers-cause-effect": "Ответы о причине и следствии",
-};
-
-/**
- * A chapter's Russian title, derived from its kind and number exactly as
- * the English one is (`Chapter N` / a numbered node title). Sefaria has no
- * Russian titles to take one from.
- */
-export const russianChapterTitle = (
-  kind: ChapterKind,
-  number: number,
-  totalInKind: number,
-): string => {
-  if (kind === "chapter") return `Глава ${number}`;
-  const base = RUSSIAN_KIND_TITLES[kind] ?? kind;
-  return totalInKind > 1 ? `${base} ${number}` : base;
-};
-
-/** A volume's Russian title. */
-export const russianVolumeTitle = (number: number): string => `Том ${number}`;
 
 /** Stable display/sort order for chapter kinds within a part — see `~~/shared/utils/chapterKinds`. */
 const KIND_ORDER = CHAPTER_KIND_ORDER;
@@ -202,22 +289,159 @@ export const buildTocPart = (
   chapters: sortTocChapters(chapters),
 });
 
+interface ChapterTitleForms {
+  chapter: (n: number) => string;
+  volume: (n: number) => string;
+  kinds: Partial<Record<ChapterKind, string>>;
+}
+
 /**
- * Fills in each chapter's Russian title from its kind and number (and the
- * part's count of that kind, which decides whether a lone node is
- * numbered). Leaves any title that already has a Russian entry alone.
+ * Chapter and volume titles in the reader's other languages, derived from
+ * kind and number exactly as the English ones are (`Chapter N`, a numbered
+ * node title). Sefaria has no titles in these languages to take one from.
  */
-export const addRussianChapterTitles = (chapters: TocChapter[]): void => {
+export const CHAPTER_TITLE_FORMS: Record<string, ChapterTitleForms> = {
+  ru: {
+    chapter: (n) => `Глава ${n}`,
+    volume: (n) => `Том ${n}`,
+    kinds: {
+      introduction: "Предисловие",
+      "inner-observation": "Внутреннее созерцание",
+      "questions-terminology": "Вопросы о значении слов",
+      "questions-topics": "Вопросы по темам",
+      "questions-cause-effect": "Вопросы о причине и следствии",
+      "answers-terminology": "Ответы о значении слов",
+      "answers-topics": "Ответы по темам",
+      "answers-cause-effect": "Ответы о причине и следствии",
+    },
+  },
+  uk: {
+    chapter: (n) => `Глава ${n}`,
+    volume: (n) => `Том ${n}`,
+    kinds: {
+      introduction: "Передмова",
+      "inner-observation": "Внутрішнє споглядання",
+      "questions-terminology": "Питання про значення слів",
+      "questions-topics": "Питання за темами",
+      "questions-cause-effect": "Питання про причину і наслідок",
+      "answers-terminology": "Відповіді про значення слів",
+      "answers-topics": "Відповіді за темами",
+      "answers-cause-effect": "Відповіді про причину і наслідок",
+    },
+  },
+  es: {
+    chapter: (n) => `Capítulo ${n}`,
+    volume: (n) => `Volumen ${n}`,
+    kinds: {
+      introduction: "Introducción",
+      "inner-observation": "Observación Interior",
+      "questions-terminology": "Preguntas sobre el significado de las palabras",
+      "questions-topics": "Preguntas sobre los temas",
+      "questions-cause-effect": "Preguntas sobre causa y efecto",
+      "answers-terminology": "Respuestas sobre el significado de las palabras",
+      "answers-topics": "Respuestas sobre los temas",
+      "answers-cause-effect": "Respuestas sobre causa y efecto",
+    },
+  },
+  pt: {
+    chapter: (n) => `Capítulo ${n}`,
+    volume: (n) => `Volume ${n}`,
+    kinds: {
+      introduction: "Introdução",
+      "inner-observation": "Observação Interior",
+      "questions-terminology": "Perguntas sobre o significado das palavras",
+      "questions-topics": "Perguntas sobre os temas",
+      "questions-cause-effect": "Perguntas sobre causa e efeito",
+      "answers-terminology": "Respostas sobre o significado das palavras",
+      "answers-topics": "Respostas sobre os temas",
+      "answers-cause-effect": "Respostas sobre causa e efeito",
+    },
+  },
+  fr: {
+    chapter: (n) => `Chapitre ${n}`,
+    volume: (n) => `Volume ${n}`,
+    kinds: {
+      introduction: "Introduction",
+      "inner-observation": "Observation intérieure",
+      "questions-terminology": "Questions sur le sens des mots",
+      "questions-topics": "Questions sur les thèmes",
+      "questions-cause-effect": "Questions sur la cause et l'effet",
+      "answers-terminology": "Réponses sur le sens des mots",
+      "answers-topics": "Réponses sur les thèmes",
+      "answers-cause-effect": "Réponses sur la cause et l'effet",
+    },
+  },
+  de: {
+    chapter: (n) => `Kapitel ${n}`,
+    volume: (n) => `Band ${n}`,
+    kinds: {
+      introduction: "Einleitung",
+      "inner-observation": "Innere Betrachtung",
+      "questions-terminology": "Fragen zur Bedeutung der Wörter",
+      "questions-topics": "Fragen zu den Themen",
+      "questions-cause-effect": "Fragen zu Ursache und Wirkung",
+      "answers-terminology": "Antworten zur Bedeutung der Wörter",
+      "answers-topics": "Antworten zu den Themen",
+      "answers-cause-effect": "Antworten zu Ursache und Wirkung",
+    },
+  },
+  tr: {
+    chapter: (n) => `Bölüm ${n}`,
+    volume: (n) => `Cilt ${n}`,
+    kinds: {
+      introduction: "Giriş",
+      "inner-observation": "İç Gözlem",
+      "questions-terminology": "Kelimelerin anlamı üzerine sorular",
+      "questions-topics": "Konular üzerine sorular",
+      "questions-cause-effect": "Sebep ve sonuç üzerine sorular",
+      "answers-terminology": "Kelimelerin anlamı üzerine cevaplar",
+      "answers-topics": "Konular üzerine cevaplar",
+      "answers-cause-effect": "Sebep ve sonuç üzerine cevaplar",
+    },
+  },
+};
+
+/** A chapter's title in `language`, from its kind and number. */
+export const localizedChapterTitle = (
+  language: string,
+  kind: ChapterKind,
+  number: number,
+  totalInKind: number,
+): string | undefined => {
+  const forms = CHAPTER_TITLE_FORMS[language];
+  if (!forms) return undefined;
+  if (kind === "chapter") return forms.chapter(number);
+  const base = forms.kinds[kind];
+  if (base === undefined) return undefined;
+  return totalInKind > 1 ? `${base} ${number}` : base;
+};
+
+/**
+ * Fills in each chapter's title in every language of
+ * `CHAPTER_TITLE_FORMS`, from its kind and number (and the part's count of
+ * that kind, which decides whether a lone node is numbered). A title that
+ * already has an entry for a language is left alone.
+ */
+export const addLocalizedChapterTitles = (chapters: TocChapter[]): number => {
   const totals = new Map<ChapterKind, number>();
   for (const chapter of chapters) {
     totals.set(chapter.kind, (totals.get(chapter.kind) ?? 0) + 1);
   }
+  let added = 0;
   for (const chapter of chapters) {
-    if (chapter.title.ru !== undefined) continue;
-    chapter.title.ru = russianChapterTitle(
-      chapter.kind,
-      chapter.number,
-      totals.get(chapter.kind) ?? 1,
-    );
+    for (const language of Object.keys(CHAPTER_TITLE_FORMS)) {
+      if (chapter.title[language] !== undefined) continue;
+      const title = localizedChapterTitle(
+        language,
+        chapter.kind,
+        chapter.number,
+        totals.get(chapter.kind) ?? 1,
+      );
+      if (title !== undefined) {
+        chapter.title[language] = title;
+        added += 1;
+      }
+    }
   }
+  return added;
 };

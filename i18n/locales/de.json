@@ -1,0 +1,292 @@
+{
+  "common": {
+    "siteName": "Read TES",
+    "brandSubline": "Bnei Baruch · Kabbala-Akademie",
+    "sixVolumes": "Sechs Bände",
+    "volume": "Band",
+    "part": "Teil",
+    "chapter": "Kapitel",
+    "skipToContent": "Zum Inhalt springen",
+    "language": "Sprache",
+    "close": "Schließen"
+  },
+  "nav": {
+    "primary": "Hauptnavigation",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen",
+    "volumesLink": "Bände",
+    "glossaryLink": "Glossar",
+    "themeToggleToDark": "Zum dunklen Modus wechseln",
+    "themeToggleToLight": "Zum hellen Modus wechseln",
+    "themeToggleToSepia": "Zum Sepia-Modus wechseln",
+    "languageSwitcherLabel": "Sprache wechseln",
+    "breadcrumbLabel": "Brotkrumennavigation"
+  },
+  "footer": {
+    "attribution": "Erstellt von Schülern der {academy}",
+    "academy": "Bnei Baruch Kabbala-Akademie",
+    "sourcesLinkTitle": "Die Quellenbibliothek von Bnei Baruch auf Kabbalah Media"
+  },
+  "reader": {
+    "aiTranslated": "KI-übersetzt",
+    "hebrewOnly": "Nur Hebräisch",
+    "pane": {
+      "introduction": "Einleitung",
+      "source": "Der Text des Ari",
+      "innerLight": "Inneres Licht",
+      "innerObservation": "Innere Betrachtung",
+      "questions": "Fragen",
+      "answers": "Antworten",
+      "thirdPaneTablist": "Innere Betrachtung, Fragen und Antworten",
+      "thirdPaneTablistQaOnly": "Fragen und Antworten"
+    },
+    "paneLanguageLabel": "Sprache: {pane}",
+    "sefariaTranslated": "Sefaria-Übersetzung",
+    "commentarySection": {
+      "ohr-pnimi": "Inneres Licht",
+      "histaklut-pnimit": "Innere Betrachtung"
+    },
+    "commentaryEmpty": "Für dieses Kapitel ist noch kein Kommentar verfügbar.",
+    "commentaryNotAligned": "Dieser Kommentar wurde noch nicht einzelnen Absätzen zugeordnet – die Einträge erscheinen in Lesereihenfolge, und die Zahl neben jedem Eintrag zählt die Anmerkungen selbst, nicht die Absätze des Ari-Textes.",
+    "commentaryUnanchoredGroup": "Keinem Absatz zugeordnet",
+    "innerLightAbsent": "Der Kommentar „Inneres Licht“ (Ohr Pnimi) zu diesem Kapitel ist in keiner Ausgabe bisher digitalisiert.",
+    "sourceEmpty": "Für dieses Kapitel ist noch kein Quelltext verfügbar.",
+    "summaryEmpty": "Für dieses Kapitel ist noch keine Zusammenfassung verfügbar.",
+    "innerObservationEmpty": "Für dieses Kapitel ist noch keine Innere Betrachtung verfügbar.",
+    "innerObservationLoading": "Innere Betrachtung wird geladen …",
+    "innerObservationLoaded": "Innere Betrachtung geladen.",
+    "innerObservationFailed": "Die Innere Betrachtung konnte nicht geladen werden.",
+    "innerObservationReload": "Seite neu laden",
+    "innerObservationNeverWritten": "Baal HaSulam hat zu diesem Teil keine Innere Betrachtung (Histaklut Pnimit) geschrieben – elf der sechzehn Teile haben eine, dieser gehört nicht dazu. Es gibt hier keinen Text, den eine Ausgabe enthalten könnte, daher handelt es sich nicht um eine Digitalisierungslücke.",
+    "miniTocTitle": "In diesem Kapitel",
+    "miniTocTruncated": "… und {count} weitere – nach unten scrollen, um alle zu lesen.",
+    "seifLabel": "Absatz {n}",
+    "missingAnchor": {
+      "message": "In dieser Sprache nicht verfügbar.",
+      "switchToHebrew": "Zu Hebräisch wechseln"
+    },
+    "prevChapter": "Vorheriges Kapitel",
+    "nextChapter": "Nächstes Kapitel",
+    "chapterNav": "Kapitelnavigation",
+    "mode": {
+      "label": "Lesemodus",
+      "study": "Studium",
+      "panes": "Spalten",
+      "original": "Original"
+    },
+    "original": {
+      "prev": "Zurück",
+      "next": "Weiter",
+      "pagination": "Kapitelseiten"
+    },
+    "chapterIntro": {
+      "title": "In diesem Kapitel"
+    },
+    "studyMode": {
+      "fold": "Einklappen",
+      "readFullCommentary": "Den ganzen Kommentar lesen",
+      "readFullCommentaryHint": "Hier erscheint nur bereits geöffneter Kommentar – alle Einträge dieses Kapitels zeigt die vollständige Dreispaltenansicht.",
+      "unalignedCommentaryTitle": "Weiterer Kommentar (noch nicht Absätzen zugeordnet)"
+    },
+    "progressLabel": "Lesefortschritt",
+    "toolbar": {
+      "preferencesButton": "Leseeinstellungen",
+      "contentsButton": "Inhalt",
+      "collapseChrome": "Werkzeugleiste einklappen",
+      "expandChrome": "Werkzeugleiste ausklappen"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "Alle Kapitel durchsuchen"
+    },
+    "contents": {
+      "title": "Inhalt",
+      "close": "Schließen"
+    },
+    "mobilePane": {
+      "label": "Lesespalte",
+      "source": "Der Text des Ari",
+      "innerLight": "Inneres Licht",
+      "innerObservation": "Innere Betrachtung",
+      "questionsAnswers": "Fragen & Antworten"
+    },
+    "commentarySheet": {
+      "title": "Kommentar zu Absatz {n}",
+      "openInCommentary": "Im Kommentar öffnen",
+      "empty": "Kein Kommentar zu diesem Absatz in dieser Sprache.",
+      "close": "Schließen"
+    },
+    "prefs": {
+      "title": "Leseeinstellungen",
+      "close": "Schließen",
+      "fontSize": {
+        "label": "Textgröße",
+        "step1": "Klein",
+        "step2": "Standard",
+        "step3": "Groß",
+        "step4": "Sehr groß"
+      },
+      "theme": {
+        "label": "Design",
+        "light": "Hell",
+        "sepia": "Sepia",
+        "dark": "Dunkel",
+        "system": "System"
+      },
+      "language": {
+        "label": "Sprache"
+      }
+    },
+    "thirdPane": {
+      "collapse": "Spalte „Innere Betrachtung“ ausblenden",
+      "expand": "Spalte „Innere Betrachtung“ einblenden"
+    }
+  },
+  "home": {
+    "description": "Talmud Eser Sefirot, gelesen anhand des Ari-Textes, des Inneren Lichts und der Inneren Betrachtung – auf Deutsch, Englisch und Hebräisch.",
+    "browseVolumes": "Die sechs Bände durchsuchen",
+    "heroTitle": "Talmud Eser Sefirot",
+    "heroTitleHebrew": "תלמוד עשר הספירות",
+    "heroSubtitle": "Das Studium der Zehn Sefirot",
+    "beginReading": "Mit dem Lesen beginnen",
+    "quoteSource": "Talmud Eser Sefirot, Teil 1, Kapitel 1",
+    "howItWorksTitle": "So funktioniert dieser Reader",
+    "howItWorksSourceTitle": "Der Text des Ari",
+    "howItWorksSourceHebrew": "כתבי האר״י",
+    "howItWorksSourceBody": "Die nummerierten Quellabsätze des Ari, Kapitel für Kapitel dort wiedergegeben, wo Baal HaSulam sie erklärt.",
+    "howItWorksLightTitle": "Inneres Licht",
+    "howItWorksLightHebrew": "אור פנימי",
+    "howItWorksLightBody": "Baal HaSulams unmittelbare Erklärung, Satzteil für Satzteil im Text des Ari verankert.",
+    "howItWorksObservationTitle": "Innere Betrachtung",
+    "howItWorksObservationHebrew": "הסתכלות פנימית",
+    "howItWorksObservationBody": "Baal HaSulams tiefere, systematische Erklärung zum jeweiligen Teil, die sich als fortlaufendes eigenes Werk lesen lässt.",
+    "coverageTitle": "Der aktuelle Stand des Textes",
+    "coverageHebrew": "Der vollständige hebräische Text liegt in der Jerusalemer Ausgabe von 1956 vor.",
+    "coverageEnglish": "Die Abdeckung der Übersetzungen unterscheidet sich je nach Teil und Ausgabe; offizielle und KI-gestützte Übersetzungen sind klar gekennzeichnet.",
+    "coverageMore": "Die Übersicht der Bände zeigt, welche Ebenen und Ausgaben es für jeden Teil gibt."
+  },
+  "errors": {
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundMessage": "Diese Seite existiert noch nicht oder wurde verschoben.",
+    "notFoundBackHome": "Zurück zur Startseite",
+    "genericTitle": "Etwas ist schiefgelaufen",
+    "genericMessage": "Ein unerwarteter Fehler ist aufgetreten. Lade die Seite neu oder kehre zur Startseite zurück."
+  },
+  "volumes": {
+    "indexTitle": "Bände",
+    "indexDescription": "Talmud Eser Sefirot in sechs Bänden und sechzehn Teilen – der Text des Ari mit Innerem Licht und Innerer Betrachtung.",
+    "comingSoon": "Demnächst",
+    "chapterCount": "{count} Kapitel",
+    "partialLanguage": "teilweise",
+    "partComingSoon": "Dieser Teil wurde noch nicht hinzugefügt – schau bald wieder vorbei.",
+    "answersTerminologyCluster": "Antworten – Terminologie ({count})",
+    "answersTopicsCluster": "Antworten – Themen ({count})",
+    "answersCauseEffectCluster": "Antworten – Ursache und Wirkung ({count})",
+    "section": {
+      "chapters": "Kapitel",
+      "inner-observation": "Innere Betrachtung",
+      "questions": "Fragen",
+      "answers": "Antworten"
+    }
+  },
+  "about": {
+    "title": "Über Read TES",
+    "intro": "Read TES ist eine unabhängige, interaktive Lesefassung von Talmud Eser Sefirot – Baal HaSulams grundlegendem Kommentar zur Kabbala des Ari –, erstellt von Schülern der Bnei Baruch Kabbala-Akademie für alle, die den Text eingehend studieren, auf Hebräisch, Englisch oder Deutsch.",
+    "readingModelTitle": "Das Lesemodell",
+    "readingModelBody": "Der Reader folgt dem Aufbau von Talmud Eser Sefirot selbst: dem nummerierten Text des Ari, Baal HaSulams direkt darin verankerter Erklärung im Inneren Licht und der Inneren Betrachtung als tieferer, systematischer Erklärung zum jeweiligen Teil. Die Innere Betrachtung ist fortlaufend statt an einzelne Absätze gebunden und bleibt daher eine eigenständige Lesespalte.",
+    "licensesTitle": "Texte, Ausgaben und Lizenzen",
+    "licensesIntro": "Jede Textausgabe dieser Seite ist unten mit Sprache, Lizenz und Quelle aufgeführt.",
+    "licensesTableCaption": "In Read TES verwendete Textausgaben",
+    "tableHeaderTitle": "Ausgabe",
+    "tableHeaderLanguage": "Sprache",
+    "tableHeaderLicense": "Lizenz",
+    "tableHeaderSource": "Quelle",
+    "sourceLabelSefaria": "Sefaria",
+    "sourceLabelCurated": "Read TES",
+    "sourceLabelAi": "KI-Übersetzung",
+    "sourceLabelKabbalahmedia": "KabbalahMedia.info",
+    "sourceLabelKabbalahInfo": "Kabbalah.info",
+    "languageLabelEn": "Englisch",
+    "languageLabelHe": "Hebräisch",
+    "attributionTitle": "Mit Dank",
+    "attributionBody": "Die Quelltexte stammen aus der offenen Bibliothek von Sefaria, und die Lektionen, an denen sich diese Lesefassung orientiert, von KabbalahMedia.info – beides mit Erlaubnis verwendet.",
+    "portraitAlt": "Porträt von Rav Yehuda Ashlag, Baal HaSulam",
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam – Autor von Talmud Eser Sefirot"
+  },
+  "glossary": {
+    "title": "Glossar",
+    "titleHebrew": "מונחים",
+    "lede": "{count} Begriffe aus Talmud Eser Sefirot und das Englisch, das die offizielle Ausgabe tatsächlich für jeden von ihnen verwendet.",
+    "evidence": "Jeder Begriff hier wurde aus den {chapters} Kapiteln abgelesen, in denen sich das Jerusalemer Hebräisch von 1956 und das Englisch von Bnei Baruch Eintrag für Eintrag nebeneinanderlegen ließen – insgesamt {items} zugeordnete Paare.",
+    "languageNote": "Das Hebräische ist der Jerusalemer Ausgabe von 1956 entnommen, das Englische der Ausgabe von Bnei Baruch. Hinweise und Regeln beschreiben das Englische und sind auf Englisch verfasst.",
+    "coverageParts": "Teile {parts} von sechzehn",
+    "coverageStripDescription": "Die englische Ausgabe deckt die Teile {parts} der sechzehn Teile von Talmud Eser Sefirot ab.",
+    "filtersLabel": "Einen Begriff finden",
+    "searchLabel": "Begriffe suchen",
+    "searchPlaceholder": "{count} Begriffe durchsuchen – Hebräisch oder Englisch",
+    "strategyFilterLabel": "Danach filtern, wie der Begriff ins Englische übertragen wird",
+    "termsLabel": "Begriffe",
+    "resultCount": "{shown} von {total} Begriffen angezeigt",
+    "strategy": {
+      "translate": "Übersetzt",
+      "transliterate": "Transliteriert",
+      "transliterate-with-gloss": "Transliteriert mit Erläuterung",
+      "acronym": "Akronym"
+    },
+    "attestedIn": "Belegt in den Teilen {parts}.",
+    "attestedNowhere": "In keinem zugeordneten Teil belegt.",
+    "variantsTitle": "Was die Ausgabe schreibt",
+    "variantsHint": "Die Zahlen geben Vorkommen in den zugeordneten Passagen an, nicht im ganzen Buch.",
+    "citationsTitle": "Abgelesen aus",
+    "citationsLoading": "Passagen werden geladen …",
+    "citationsFailed": "Die Passagen konnten nicht geladen werden.",
+    "citationsRetry": "Erneut versuchen",
+    "citationChapter": "Teil {part} · {chapter}",
+    "chapterKind": {
+      "chapter": "Kapitel {n}",
+      "inner-observation": "Innere Betrachtung {n}",
+      "questions-terminology": "Fragen – Terminologie",
+      "questions-topics": "Fragen – Themen",
+      "questions-cause-effect": "Fragen – Ursache und Wirkung",
+      "answers-terminology": "Antworten – Terminologie",
+      "answers-topics": "Antworten – Themen",
+      "answers-cause-effect": "Antworten – Ursache und Wirkung"
+    },
+    "layerSummary": "Zusammenfassung",
+    "emptyTitle": "Kein Begriff passt.",
+    "emptyBody": "Versuche eine andere Schreibweise, auf Hebräisch oder Englisch – Anführungszeichen in Akronymen werden ignoriert.",
+    "clearFilters": "Filter zurücksetzen",
+    "conventionsTitle": "Wie das Englische gesetzt ist",
+    "conventionsIntro": "Regeln, denen die offizielle Ausgabe über einzelne Wörter hinaus folgt – wie Absatzmarkierungen, Kommentaranfänge, Zitate und Ehrentitel behandelt werden –, jeweils mit den zugehörigen Belegen.",
+    "conventionEvidenceLabel": "Beleg:",
+    "limitsTitle": "Wo die Belege enden",
+    "limitsIntro": "Dieses Glossar reicht nur so weit wie die englische Ausgabe. Bitte vor dem Verwenden einer Zahl lesen.",
+    "methodTitle": "Wie das Glossar erstellt wurde",
+    "methodSource": "Englische Ausgabe",
+    "methodReference": "Hebräische Referenz",
+    "methodGeneratedOn": "Zusammengestellt"
+  },
+  "seo": {
+    "ogImageAlt": "Read TES – ein aufgeschlagenes Buch neben den Tzimtzum-Kreisen des Ari vor einem nächtlichen Himmel",
+    "home": {
+      "description": "Eine kostenlose, mehrsprachige Lesefassung von Talmud Eser Sefirot – der Text des Ari mit Baal HaSulams Erklärungen im Inneren Licht und in der Inneren Betrachtung, auf Deutsch, Englisch und Hebräisch."
+    },
+    "about": {
+      "description": "Was Read TES ist, wie die drei Leseebenen funktionieren und welche Lizenzen und Quellen hinter jeder Textausgabe der Seite stehen."
+    },
+    "volumesIndex": {
+      "description": "Die sechs Bände und sechzehn Teile von Talmud Eser Sefirot, Kapitel für Kapitel durchsuchbar."
+    },
+    "glossary": {
+      "description": "Jeder Begriff aus Talmud Eser Sefirot – Or, Kli, Masach, Tzimtzum – mit dem Englisch der offiziellen Ausgabe, den Varianten, zwischen denen sie schwankt, und den Passagen, aus denen er abgelesen wurde."
+    },
+    "volume": {
+      "description": "Die Teile und Kapitel von {title}, mit dem Text des Ari, Innerem Licht und Innerer Betrachtung."
+    },
+    "chapter": {
+      "description": "{chapter} von {part} – der Text des Ari neben seiner Erklärung im Inneren Licht und der Inneren Betrachtung des Teils."
+    },
+    "notFound": {
+      "description": "Diese Seite existiert noch nicht oder wurde verschoben – finde zurück zu den Bänden oder zur Startseite von Read TES."
+    }
+  }
+}

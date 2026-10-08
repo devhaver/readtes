@@ -42,6 +42,8 @@ export const NATIVE_LANGUAGE_NAMES: Record<string, string> = {
   zh: "中文",
   it: "Italiano",
   ja: "日本語",
+  pt: "Português",
+  uk: "Українська",
 };
 
 export const nativeLanguageName = (language: string): string =>
