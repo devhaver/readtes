@@ -19,8 +19,8 @@ import type { Toc } from "~~/shared/types/content";
  * The fully prerendered locales, default first (`prefix_except_default`:
  * the default is unprefixed). The other interface languages
  * (`SPA_READER_LOCALES` in `nuxt.config.ts`) render their reader pages in
- * the browser, so their chapter URLs are not listed here as indexable
- * pages.
+ * the browser from the 404 shell, so their chapter URLs are not listed
+ * here as indexable pages.
  */
 export const SITEMAP_LOCALES = ["en", "he", "ru"] as const;
 export type SitemapLocale = (typeof SITEMAP_LOCALES)[number];

@@ -114,13 +114,16 @@ const toc: Toc = JSON.parse(
   ),
 );
 
-// Interface languages whose READER pages are not prerendered. Cloudflare
-// Pages takes at most 20,000 files per deploy, and a fully prerendered
-// locale costs ~2,100 (one per chapter); six more would cross it. These
-// locales get their home/volumes/glossary/about pages prerendered as usual,
-// while `/<code>/read/*` is served by the app shell (`public/_redirects`
-// rewrites it to `/200.html`) and renders in the browser. A locale moves to
-// full prerendering by leaving this list (and the `_redirects` file).
+// Interface languages whose READER pages are not prerendered. The site is
+// served by GitHub Pages (`.github/workflows/deploy-pages.yml`), which caps
+// a site at 1 GB; a fully prerendered locale is ~75 MB (~2,100 chapter
+// pages), so all nine would be ~720 MB and leave little headroom. These
+// locales get their home/volumes/glossary/about pages prerendered; a
+// `/<code>/read/*` URL has no file, so GitHub Pages answers with
+// `404.html` — the app shell — which renders the chapter in the browser.
+// Readers get the page; the HTTP status is 404, so search engines skip
+// these (mostly English-fallback) pages. A locale moves to full
+// prerendering by leaving this list.
 const SPA_READER_LOCALES = [
   { code: "es", language: "es-ES" },
   { code: "fr", language: "fr-FR" },
