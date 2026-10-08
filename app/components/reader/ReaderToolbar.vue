@@ -9,7 +9,7 @@
 import type { BreadcrumbItem } from "~/components/app/AppBreadcrumb.vue";
 import type { ReaderMode } from "~/utils/readerMode";
 import type { ChapterLink } from "~/utils/toc";
-import type { TocVolumeSkeleton } from "~~/shared/types/content";
+import type { TocChapter, TocVolumeSkeleton } from "~~/shared/types/content";
 
 defineProps<{
   // The reader page renders no other heading — this is that page's ONE
@@ -22,6 +22,8 @@ defineProps<{
   currentPartId: string;
   prev: ChapterLink | null;
   next: ChapterLink | null;
+  currentPartChapters?: TocChapter[];
+  currentChapterId?: string;
 }>();
 
 const { t, locale } = useI18n();
@@ -216,6 +218,8 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
       :volumes="volumes"
       :current-volume-id="currentVolumeId"
       :current-part-id="currentPartId"
+      :current-part-chapters="currentPartChapters"
+      :current-chapter-id="currentChapterId"
       @close="closeContents"
     />
   </div>
