@@ -3,8 +3,8 @@
     "id": "part-13",
     "number": 13,
     "title": {
-      "en": "Section XIII",
-      "he": "חלק י״ג: תיקוני רישא ודיקנא דא\"א"
+      "en": "The Corrections of the Head and Beard of Arich Anpin",
+      "he": "תיקוני רישא ודיקנא דא\"א"
     }
   },
   "volume": {
@@ -4681,7 +4681,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit",
+        "en": "Inner Observation",
         "he": "הסתכלות פנימית"
       },
       "availableLayers": [

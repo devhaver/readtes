@@ -65,10 +65,13 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
 </script>
 
 <template>
+  <!-- One row at every width. It was three — breadcrumb + controls, then
+       prev/next, then a full-width collapse handle — ~130px of chrome on
+       desktop and ~240px on a phone before the first word of text. -->
   <div
-    class="flex flex-col border-b border-(--border) bg-(--surface) px-4 sm:px-6"
+    class="flex flex-col border-b border-(--border) bg-(--surface) px-3 sm:px-5"
     :class="[
-      isCollapsed ? 'gap-0 py-1.5' : 'gap-3 py-3',
+      isCollapsed ? 'py-1' : 'py-2',
       isStudyMode &&
         'sticky top-0 z-30 transition-transform duration-200 ease-out motion-reduce:transition-none',
       isStudyMode && !chromeVisible && '-translate-y-full',
@@ -90,19 +93,75 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
       <span class="tes-icon tes-icon-chevron-down h-5 w-5" aria-hidden="true" />
     </button>
 
-    <div v-if="!isCollapsed" class="flex items-center justify-between gap-3">
-      <ReaderBreadcrumb
-        :items="breadcrumbItems"
-        :volumes="volumes"
-        :current-volume-id="currentVolumeId"
-        :current-part-id="currentPartId"
-      />
+    <!-- Phones get two short rows — chapter navigation, then controls —
+         because the three-way mode control alone is half a 390px screen. -->
+    <div
+      v-else
+      class="flex min-w-0 flex-wrap items-center gap-x-1 gap-y-1.5 sm:flex-nowrap sm:gap-2"
+    >
+      <nav
+        :aria-label="t('reader.chapterNav')"
+        class="flex min-w-0 basis-full items-center gap-1 sm:flex-1 sm:basis-auto"
+      >
+        <NuxtLink
+          v-if="prev"
+          :to="localePath(`/read/${prev.id}`)"
+          class="tes-chapter-nav-link shrink-0"
+          :title="localizedText(prev.title, locale)"
+        >
+          <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
+          <span class="sr-only">{{ t("reader.prevChapter") }}:</span>
+          <span class="hidden max-w-[12rem] truncate xl:inline">{{
+            localizedText(prev.title, locale)
+          }}</span>
+        </NuxtLink>
+        <span
+          v-else
+          aria-disabled="true"
+          class="tes-chapter-nav-disabled shrink-0"
+          :title="t('reader.prevChapter')"
+        >
+          <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
+          <span class="sr-only">{{ t("reader.prevChapter") }}</span>
+        </span>
 
-      <div class="flex shrink-0 items-center gap-2">
+        <ReaderBreadcrumb
+          class="min-w-0 flex-1 px-1"
+          :items="breadcrumbItems"
+          :volumes="volumes"
+          :current-volume-id="currentVolumeId"
+          :current-part-id="currentPartId"
+        />
+
+        <NuxtLink
+          v-if="next"
+          :to="localePath(`/read/${next.id}`)"
+          class="tes-chapter-nav-link shrink-0"
+          :title="localizedText(next.title, locale)"
+        >
+          <span class="sr-only">{{ t("reader.nextChapter") }}:</span>
+          <span class="hidden max-w-[12rem] truncate xl:inline">{{
+            localizedText(next.title, locale)
+          }}</span>
+          <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
+        </NuxtLink>
+        <span
+          v-else
+          aria-disabled="true"
+          class="tes-chapter-nav-disabled shrink-0"
+          :title="t('reader.nextChapter')"
+        >
+          <span class="sr-only">{{ t("reader.nextChapter") }}</span>
+          <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
+        </span>
+      </nav>
+
+      <div class="ms-auto flex shrink-0 items-center gap-1 sm:gap-2">
         <button
           type="button"
           class="tes-icon-btn"
           :aria-label="t('reader.toolbar.contentsButton')"
+          :title="t('reader.toolbar.contentsButton')"
           aria-haspopup="dialog"
           :aria-expanded="showContents"
           @click="openContents"
@@ -114,6 +173,7 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
           type="button"
           class="tes-icon-btn"
           :aria-label="t('reader.toolbar.preferencesButton')"
+          :title="t('reader.toolbar.preferencesButton')"
           @click="showPreferences = true"
         >
           <span
@@ -128,6 +188,21 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
           :options="modeOptions"
           @update:model-value="(value) => setMode(value)"
         />
+
+        <button
+          v-if="isCollapsible"
+          type="button"
+          class="tes-icon-btn hidden lg:inline-flex"
+          :aria-label="t('reader.toolbar.collapseChrome')"
+          :title="t('reader.toolbar.collapseChrome')"
+          :aria-expanded="true"
+          @click="toggleCollapsed"
+        >
+          <span
+            class="tes-icon tes-icon-chevron-down h-5 w-5 rotate-180"
+            aria-hidden="true"
+          />
+        </button>
       </div>
     </div>
 
@@ -143,56 +218,5 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
       :current-part-id="currentPartId"
       @close="closeContents"
     />
-
-    <nav
-      v-if="!isCollapsed"
-      :aria-label="t('reader.chapterNav')"
-      class="flex items-center justify-between gap-3 text-sm"
-    >
-      <NuxtLink
-        v-if="prev"
-        :to="localePath(`/read/${prev.id}`)"
-        class="tes-chapter-nav-link"
-      >
-        <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
-        <span class="truncate">{{ localizedText(prev.title, locale) }}</span>
-      </NuxtLink>
-      <span v-else aria-disabled="true" class="tes-chapter-nav-disabled">
-        <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
-        {{ t("reader.prevChapter") }}
-      </span>
-
-      <NuxtLink
-        v-if="next"
-        :to="localePath(`/read/${next.id}`)"
-        class="tes-chapter-nav-link text-end"
-      >
-        <span class="truncate">{{ localizedText(next.title, locale) }}</span>
-        <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
-      </NuxtLink>
-      <span v-else aria-disabled="true" class="tes-chapter-nav-disabled">
-        {{ t("reader.nextChapter") }}
-        <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
-      </span>
-    </nav>
-
-    <!-- Its own full-width row, not another icon in the control group:
-         that row already carries the breadcrumb, two icon buttons and a
-         three-way segmented control, and a fifth control pushed it off the
-         edge of a 412px screen. A handle spanning the bar is also the
-         conventional shape for "this collapses". -->
-    <button
-      v-if="isCollapsible && !isCollapsed"
-      type="button"
-      class="tes-chrome-handle justify-center"
-      :aria-label="t('reader.toolbar.collapseChrome')"
-      :aria-expanded="true"
-      @click="toggleCollapsed"
-    >
-      <span
-        class="tes-icon tes-icon-chevron-down h-5 w-5 rotate-180"
-        aria-hidden="true"
-      />
-    </button>
   </div>
 </template>

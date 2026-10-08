@@ -3,8 +3,8 @@
     "id": "part-10",
     "number": 10,
     "title": {
-      "en": "Section X",
-      "he": "חלק י׳: עיבור ראשון דז\"א"
+      "en": "The First Ibur of Zeir Anpin",
+      "he": "עיבור ראשון דז\"א"
     }
   },
   "volume": {
@@ -3377,7 +3377,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit",
+        "en": "Inner Observation",
         "he": "הסתכלות פנימית"
       },
       "availableLayers": [

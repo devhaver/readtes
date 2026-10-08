@@ -615,19 +615,19 @@ describe("toc-builder", () => {
       10,
     );
     expect(title).toEqual({
-      en: "Histaklut Pnimit 3",
+      en: "Inner Observation 3",
       he: "הסתכלות פנימית ג׳",
     });
   });
 
-  it("siblingChapterTitle normalizes Sefaria's 'Penimit' transliteration to 'Pnimit'", () => {
+  it("siblingChapterTitle names the Histaklut Penimit essays Inner Observation in English", () => {
     const title = siblingChapterTitle(
       { title: "Histaklut Penimit", heTitle: "הסתכלות פנימית" },
       1,
       1,
     );
     expect(title).toEqual({
-      en: "Histaklut Pnimit",
+      en: "Inner Observation",
       he: "הסתכלות פנימית",
     });
   });

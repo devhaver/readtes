@@ -88,9 +88,7 @@ useLocalizedSeo({
 
       <div v-else class="mt-4 flex flex-col gap-6">
         <div v-for="group in section.groups" :key="group.section">
-          <h3
-            class="text-sm font-medium tracking-wide text-(--text-muted) uppercase"
-          >
+          <h3 class="font-semibold text-sm text-(--text-muted)">
             {{ t(`volumes.section.${group.section}`) }}
           </h3>
           <ul class="mt-2 divide-y divide-(--border)">

@@ -84,6 +84,9 @@ export const normalizeKiHtml = (html: string): string =>
     .replace(/&nbsp;|\u00A0/gi, " ")
     // `<br>___` closes many paragraphs: an editor's divider, not text.
     .replace(/(?:<br\s*\/?>\s*)?_{3,}/g, "")
+    // A blank line inside one block (`<br><br>`) is a list's spacing in the
+    // editor; rendered, it is an empty line between every item.
+    .replace(/(?:<br\s*\/?>\s*){2,}/gi, "<br>")
     .replace(/[\u200E\u200F\u202A-\u202E]/g, "")
     .replace(/\s+/g, " ")
     .trim();
@@ -258,4 +261,17 @@ export const classifyKiPage = (entry: KiTocEntry): KiPageRef | undefined => {
   // subject ("Part 7 - The Seven Melachim that Died").
   if (part >= 5) return { ...entry, part, kind: "whole-part" };
   return { ...entry, part, kind: "other" };
+};
+
+/**
+ * Joins a passage's paragraphs. The site prints them as separate blocks;
+ * joined with `<br>` they read as one wall of text with ragged line
+ * breaks, so each becomes a `tes-para` block the reader spaces like a
+ * paragraph. A single paragraph is left bare.
+ */
+export const kiParagraphs = (paragraphs: string[]): string => {
+  const kept = paragraphs.map((p) => p.trim()).filter((p) => p !== "");
+  return kept.length <= 1
+    ? (kept[0] ?? "")
+    : kept.map((p) => `<span class="tes-para">${p}</span>`).join("");
 };

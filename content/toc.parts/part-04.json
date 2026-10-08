@@ -3,8 +3,8 @@
     "id": "part-04",
     "number": 4,
     "title": {
-      "en": "Section IV",
-      "he": "חלק ד׳: עשר הספירות של עקודים"
+      "en": "The Ten Sefirot of Akudim",
+      "he": "עשר הספירות של עקודים"
     }
   },
   "volume": {
@@ -175,7 +175,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit 1",
+        "en": "Inner Observation 1",
         "he": "הסתכלות פנימית א׳"
       },
       "availableLayers": [
@@ -196,7 +196,7 @@
       "kind": "inner-observation",
       "number": 2,
       "title": {
-        "en": "Histaklut Pnimit 2",
+        "en": "Inner Observation 2",
         "he": "הסתכלות פנימית ב׳"
       },
       "availableLayers": [
@@ -217,7 +217,7 @@
       "kind": "inner-observation",
       "number": 3,
       "title": {
-        "en": "Histaklut Pnimit 3",
+        "en": "Inner Observation 3",
         "he": "הסתכלות פנימית ג׳"
       },
       "availableLayers": [
@@ -238,7 +238,7 @@
       "kind": "inner-observation",
       "number": 4,
       "title": {
-        "en": "Histaklut Pnimit 4",
+        "en": "Inner Observation 4",
         "he": "הסתכלות פנימית ד׳"
       },
       "availableLayers": [
@@ -259,7 +259,7 @@
       "kind": "inner-observation",
       "number": 5,
       "title": {
-        "en": "Histaklut Pnimit 5",
+        "en": "Inner Observation 5",
         "he": "הסתכלות פנימית ה׳"
       },
       "availableLayers": [
@@ -280,7 +280,7 @@
       "kind": "inner-observation",
       "number": 6,
       "title": {
-        "en": "Histaklut Pnimit 6",
+        "en": "Inner Observation 6",
         "he": "הסתכלות פנימית ו׳"
       },
       "availableLayers": [

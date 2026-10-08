@@ -3,8 +3,8 @@
     "id": "part-08",
     "number": 8,
     "title": {
-      "en": "Section VIII",
-      "he": "חלק ח׳: עשר הספירות של עולם האצילות"
+      "en": "The Ten Sefirot of the World of Atzilut",
+      "he": "עשר הספירות של עולם האצילות"
     }
   },
   "volume": {
@@ -2240,7 +2240,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit",
+        "en": "Inner Observation",
         "he": "הסתכלות פנימית"
       },
       "availableLayers": [

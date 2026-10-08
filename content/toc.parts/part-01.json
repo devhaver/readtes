@@ -3,8 +3,8 @@
     "id": "part-01",
     "number": 1,
     "title": {
-      "en": "Section I",
-      "he": "חלק א׳: צמצום וקו"
+      "en": "Restriction and Line",
+      "he": "צמצום וקו"
     }
   },
   "volume": {
@@ -100,7 +100,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit 1",
+        "en": "Inner Observation 1",
         "he": "הסתכלות פנימית א׳"
       },
       "availableLayers": [
@@ -121,7 +121,7 @@
       "kind": "inner-observation",
       "number": 2,
       "title": {
-        "en": "Histaklut Pnimit 2",
+        "en": "Inner Observation 2",
         "he": "הסתכלות פנימית ב׳"
       },
       "availableLayers": [
@@ -142,7 +142,7 @@
       "kind": "inner-observation",
       "number": 3,
       "title": {
-        "en": "Histaklut Pnimit 3",
+        "en": "Inner Observation 3",
         "he": "הסתכלות פנימית ג׳"
       },
       "availableLayers": [
@@ -163,7 +163,7 @@
       "kind": "inner-observation",
       "number": 4,
       "title": {
-        "en": "Histaklut Pnimit 4",
+        "en": "Inner Observation 4",
         "he": "הסתכלות פנימית ד׳"
       },
       "availableLayers": [
@@ -184,7 +184,7 @@
       "kind": "inner-observation",
       "number": 5,
       "title": {
-        "en": "Histaklut Pnimit 5",
+        "en": "Inner Observation 5",
         "he": "הסתכלות פנימית ה׳"
       },
       "availableLayers": [
@@ -205,7 +205,7 @@
       "kind": "inner-observation",
       "number": 6,
       "title": {
-        "en": "Histaklut Pnimit 6",
+        "en": "Inner Observation 6",
         "he": "הסתכלות פנימית ו׳"
       },
       "availableLayers": [
@@ -226,7 +226,7 @@
       "kind": "inner-observation",
       "number": 7,
       "title": {
-        "en": "Histaklut Pnimit 7",
+        "en": "Inner Observation 7",
         "he": "הסתכלות פנימית ז׳"
       },
       "availableLayers": [
@@ -247,7 +247,7 @@
       "kind": "inner-observation",
       "number": 8,
       "title": {
-        "en": "Histaklut Pnimit 8",
+        "en": "Inner Observation 8",
         "he": "הסתכלות פנימית ח׳"
       },
       "availableLayers": [
@@ -268,7 +268,7 @@
       "kind": "inner-observation",
       "number": 9,
       "title": {
-        "en": "Histaklut Pnimit 9",
+        "en": "Inner Observation 9",
         "he": "הסתכלות פנימית ט׳"
       },
       "availableLayers": [
@@ -289,7 +289,7 @@
       "kind": "inner-observation",
       "number": 10,
       "title": {
-        "en": "Histaklut Pnimit 10",
+        "en": "Inner Observation 10",
         "he": "הסתכלות פנימית י׳"
       },
       "availableLayers": [

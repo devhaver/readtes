@@ -36,7 +36,7 @@ import type {
   SourceSegment,
 } from "../../shared/types/content.ts";
 import { hebrewGematriaValue } from "./hebrew-numerals.ts";
-import type { KiBlock } from "./ki-page.ts";
+import { kiParagraphs, type KiBlock } from "./ki-page.ts";
 
 const MARKER_RE = /^(inner light|ohr pnimi)\s*:?$/i;
 const LEADING_NUMBER_TEXT_RE = /^\s*(\d+)\s*\.(?!\d)/;
@@ -340,7 +340,7 @@ export const alignKiChapterPage = (
     const he = heSegments[index] as SourceSegment;
     const anchors = he.anchors ?? [];
     const linked = linkSeifMarkers(
-      seif.parts.join("<br>"),
+      kiParagraphs(seif.parts),
       anchors,
       numeralByAnchor,
     );
@@ -383,7 +383,7 @@ export const alignKiChapterPage = (
       ...(he.sefariaRef ? { sefariaRef: he.sefariaRef } : {}),
       ...(he.targetSeif !== undefined ? { targetSeif: he.targetSeif } : {}),
       section: he.section,
-      html: collapseSpaces(sanitizeHtml(parts.join("<br>"))),
+      html: collapseSpaces(sanitizeHtml(kiParagraphs(parts))),
     };
   });
   if (items.length !== heItems.length) {

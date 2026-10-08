@@ -3,8 +3,8 @@
     "id": "part-09",
     "number": 9,
     "title": {
-      "en": "Section IX",
-      "he": "חלק ט׳: זווגי הספירות"
+      "en": "The Couplings of the Sefirot",
+      "he": "זווגי הספירות"
     }
   },
   "volume": {
@@ -2453,7 +2453,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit",
+        "en": "Inner Observation",
         "he": "הסתכלות פנימית"
       },
       "availableLayers": [

@@ -75,6 +75,7 @@ import {
   buildTocChapter,
   buildTocPart,
   mainChapterTitle,
+  partDisplayTitle,
   siblingChapterTitle,
   type ChapterFilesOnDisk,
 } from "./lib/toc-builder.ts";
@@ -783,7 +784,7 @@ const importPart = async (
 
   const tocPart = buildTocPart(
     part,
-    { en: sectionNode.title, he: sectionNode.heTitle },
+    partDisplayTitle(part.number, sectionNode.heTitle, sectionNode.title),
     tocChapters,
   );
 
