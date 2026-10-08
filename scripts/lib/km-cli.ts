@@ -7,10 +7,14 @@ export interface KmCliArgs {
   dryRun: boolean;
 }
 
-const usage = (): Error =>
-  new Error("Usage: import-kabbalahmedia (--part <N> | --all) [--dry-run]");
+const usage = (scriptName: string): Error =>
+  new Error(`Usage: ${scriptName} (--part <N> | --all) [--dry-run]`);
 
-export const parseKmArgs = (argv: string[]): KmCliArgs => {
+/** Shared by both Bnei Baruch importers; `scriptName` only shapes the usage error. */
+export const parseKmArgs = (
+  argv: string[],
+  scriptName = "import-kabbalahmedia",
+): KmCliArgs => {
   let part: number | undefined;
   let all = false;
   let dryRun = false;
@@ -43,7 +47,7 @@ export const parseKmArgs = (argv: string[]): KmCliArgs => {
     }
   }
 
-  if (all === (part !== undefined)) throw usage();
+  if (all === (part !== undefined)) throw usage(scriptName);
   if (part !== undefined && (part < 1 || part > KM_TOTAL_PARTS)) {
     throw new Error(`--part must be between 1 and ${KM_TOTAL_PARTS}`);
   }

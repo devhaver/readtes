@@ -31,6 +31,14 @@ const versions: ContentVersion[] = [
     source: "ai",
     translatedFrom: "he-jerusalem-1956",
   },
+  {
+    id: "en-bb-kabbalah-info",
+    language: "en",
+    direction: "ltr",
+    title: "Bnei Baruch (kabbalah.info)",
+    license: "Used with permission",
+    source: "kabbalah-info",
+  },
 ];
 
 const chapter = (overrides: {
@@ -70,6 +78,17 @@ describe("chapterLanguages", () => {
     );
 
     expect(result).toEqual({ he: true, en: true, aiTranslated: true });
+  });
+
+  it("does not flag aiTranslated when Bnei Baruch's English outranks en-ai", () => {
+    const result = chapterLanguages(
+      chapter({
+        source: ["he-jerusalem-1956", "en-bb-kabbalah-info", "en-ai"],
+      }),
+      versions,
+    );
+
+    expect(result).toEqual({ he: true, en: true, aiTranslated: false });
   });
 
   it("does not flag aiTranslated when en-ai is absent, even if other en versions exist", () => {

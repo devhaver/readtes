@@ -2,15 +2,17 @@
 paths:
   - "scripts/import-sefaria.ts"
   - "scripts/import-kabbalahmedia.ts"
+  - "scripts/import-kabbalah-info.ts"
   - "scripts/lib/**"
   - "scripts/emit-toc-splits.ts"
 ---
 
 # Import scripts
 
-Load **`tes-import-sefaria`** or **`tes-import-kabbalahmedia`** before
-changing either importer — each documents its CLI contract, caching, and the
-alignment boundaries it deliberately refuses to cross.
+Load **`tes-import-sefaria`**, **`tes-import-kabbalahmedia`** or
+**`tes-import-kabbalah-info`** before changing that importer — each documents
+its CLI contract, caching, and the alignment boundaries it deliberately refuses
+to cross.
 
 Shared invariants:
 

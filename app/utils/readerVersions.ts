@@ -34,7 +34,18 @@ const LANGUAGE_VERSION_CHAINS: Record<string, string[]> = {
   // translation beats a machine one). In practice it exists for exactly
   // one chapter — the Introduction — where the community translation is
   // absent, so the two never actually compete. See issue #133.
-  en: ["en-bb", "en-sefaria-community", "en-sefaria-sulam", "en-ai"],
+  //
+  // `en-bb-kabbalah-info` is the same Bnei Baruch translation as `en-bb`,
+  // taken from their web edition at kabbalah.info where KabbalahMedia has no
+  // document for a chapter's layer — so it never competes with `en-bb` for
+  // the same layer, and outranks everything that is not Bnei Baruch's.
+  en: [
+    "en-bb",
+    "en-bb-kabbalah-info",
+    "en-sefaria-community",
+    "en-sefaria-sulam",
+    "en-ai",
+  ],
 };
 
 /**

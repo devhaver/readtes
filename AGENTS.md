@@ -51,6 +51,7 @@ skill before working in these areas:
 | `tes-content-model`        | `content/`, schemas, ToC/glossary splits, anchors, `validate:content` |
 | `tes-import-sefaria`       | `scripts/import-sefaria.ts`                                           |
 | `tes-import-kabbalahmedia` | `scripts/import-kabbalahmedia.ts`                                     |
+| `tes-import-kabbalah-info` | `scripts/import-kabbalah-info.ts`                                     |
 | `tes-seo-ssg`              | SEO, sitemap, canonical, prerender, fonts, contrast tokens            |
 | `tes-testing`              | `tests/unit/`, Vitest setup, guardrail specs                          |
 | `tes-pnpm-setup`           | A fresh clone or install failing                                      |
@@ -89,6 +90,7 @@ V8's default heap; `task prod` sets this), `preview`, `start` (run the built
 typecheck` **and** `vue-tsc -p tsconfig.scripts.json` for
 `scripts/`/`tests/`/`shared/`), `validate:content`, `emit:toc-splits`,
 `emit:glossary-splits`, `emit:sefaria-offsets`, `import:kabbalahmedia`,
+`import:kabbalah-info`,
 `migrate:sefaria-refs`, `migrate:commentary-labels`,
 `migrate:translated-markers`, `fonts:vendor` (refresh the vendored fonts in
 `public/fonts/` — the only thing here that ever fetches from Google; see the

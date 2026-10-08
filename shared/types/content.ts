@@ -54,7 +54,13 @@ export const contentVersionSchema = z.object({
     "Used with permission",
     "unknown",
   ]),
-  source: z.enum(["sefaria", "kabbalahmedia", "curated", "ai"]),
+  source: z.enum([
+    "sefaria",
+    "kabbalahmedia",
+    "kabbalah-info",
+    "curated",
+    "ai",
+  ]),
   sefariaVersionTitle: z.string().optional(),
   /** versionId of the source-language version this was translated from (AI or human). */
   translatedFrom: z.string().optional(),
