@@ -185,6 +185,7 @@ export type KiPageKind =
   | "inner-observation"
   | "qa-terminology"
   | "qa-topics"
+  | "cause-and-consequence"
   | "other";
 
 export interface KiPageRef extends KiTocEntry {
@@ -236,6 +237,10 @@ export const classifyKiPage = (entry: KiTocEntry): KiPageRef | undefined => {
   }
   if (rest.startsWith("inner observation")) {
     return { ...entry, part, kind: "inner-observation" };
+  }
+  // The essay, not its Q&A table (which sits under "Questions …").
+  if (rest === "cause and consequence") {
+    return { ...entry, part, kind: "cause-and-consequence" };
   }
   if (rest.includes("cause and consequence") || rest === "tes") {
     return { ...entry, part, kind: "other" };

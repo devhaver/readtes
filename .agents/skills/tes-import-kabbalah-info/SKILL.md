@@ -47,6 +47,25 @@ blocks open commentary.
   place every note and structure can only veto; with no `en-ai` (part 16),
   structure decides.
 
+- **Inner Observation, and part 6's Cause and Consequence essay**
+  (`ki-inner-observation.ts`). Items are numbered (`1.`, or `1)` on part
+  1. and Sefaria's Hebrew segments follow them; whatever precedes an item
+     (chapter heading, synopsis, sub-heading) belongs to it, rendered as
+     `<small>` like the Hebrew. Where item and segment counts agree (parts 1,
+  2. they pair in order, each pair scoring best against its own `en-ai`
+     reference, not a neighbour's. Elsewhere (parts 2, 3, 6) each segment
+     takes a contiguous run of the page's blocks (`splitIntoRuns`: DP on
+     similarity to `en-ai` with a length penalty, never crossing a printed
+     `Chapter …` heading when there is one per chapter); every run must pass
+     an **edge test** — its first and last substantial paragraphs read as
+     its own segment rather than the neighbour's — and open with a
+     sub-heading exactly where the Hebrew segment does (`<small>`). The
+     Hebrew also places sub-headings: part 1 sets them as short plain
+     paragraphs that land at the end of the previous item until
+     `settleSubtitles` moves them across. On parts 6/7
+     `inner-observation-02` is the Cause and Consequence essay and is taken
+     only from that essay's page (part 7 has none).
+
 ## Refusals (all reported in COVERAGE.md, nothing partial is written)
 
 - Chapters with unanchored Hebrew notes (part 2 ch 1, part 3 ch 8).
@@ -56,8 +75,11 @@ blocks open commentary.
   48 and one placeholder note under a dozen seifim, then "64 – 95
   (Translation in process)". `truncateAtRepeatedText` cuts the page at the
   first repeated text, so seifim 47+ are never offered.
-- Inner Observation, the Q&A tables, Cause and Consequence and part 5's
-  Additional Explanation are reported as not imported yet.
+- Inner Observation chapters failing the edge or sub-heading test (part 3
+  ch 5 and 7, both part-6 chapters) and part 7's page, which is far
+  shorter than its Hebrew.
+- The Q&A tables, the Cause and Consequence Q&A and part 5's Additional
+  Explanation are reported as not imported yet.
 
 Verification done on the first import (2026-10-08): independent reviewers
 compared all 638 notes against `en-ai`/Hebrew (0 mismatches) and all 159

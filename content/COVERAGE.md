@@ -3444,19 +3444,19 @@ whatever English they had.
 | Part | Layer | Imported | Outranked by `en-bb` | Refused |
 | --- | --- | --- | --- | --- |
 | part-01 | commentary | 0 | 2 | 0 |
-| part-01 | source | 0 | 2 | 0 |
+| part-01 | source | 10 | 2 | 0 |
 | part-02 | commentary | 1 | 0 | 1 |
-| part-02 | source | 1 | 0 | 1 |
+| part-02 | source | 11 | 0 | 1 |
 | part-03 | commentary | 9 | 2 | 4 |
-| part-03 | source | 9 | 2 | 4 |
+| part-03 | source | 22 | 2 | 6 |
 | part-04 | commentary | 5 | 0 | 1 |
-| part-04 | source | 5 | 0 | 1 |
+| part-04 | source | 11 | 0 | 1 |
 | part-05 | commentary | 48 | 0 | 4 |
 | part-05 | source | 0 | 62 | 0 |
 | part-06 | commentary | 37 | 0 | 1 |
-| part-06 | source | 0 | 54 | 0 |
+| part-06 | source | 0 | 54 | 2 |
 | part-07 | commentary | 46 | 0 | 2 |
-| part-07 | source | 0 | 73 | 0 |
+| part-07 | source | 0 | 73 | 1 |
 | part-08 | commentary | 33 | 0 | 0 |
 | part-08 | source | 46 | 0 | 0 |
 | part-16 | commentary | 17 | 0 | 1 |
@@ -3474,6 +3474,8 @@ whatever English they had.
 - `part-03/chapter-08` commentary: Hebrew commentary has unanchored items
 - `part-03/chapter-10` source: source: matched 5 of 8 Hebrew seifim; commentary: matched 3 of 5 Hebrew items (next unmatched: op-4)
 - `part-03/chapter-10` commentary: source: matched 5 of 8 Hebrew seifim; commentary: matched 3 of 5 Hebrew items (next unmatched: op-4)
+- `part-03/inner-observation-05` source: segment 2: its first paragraph reads as the previous segment's
+- `part-03/inner-observation-07` source: segment 2: its first paragraph reads as the previous segment's
 - `part-04/chapter-06` source: source: matched 17 of 22 Hebrew seifim; commentary: matched 34 of 43 Hebrew items (next unmatched: op-35)
 - `part-04/chapter-06` commentary: source: matched 17 of 22 Hebrew seifim; commentary: matched 34 of 43 Hebrew items (next unmatched: op-35)
 - `part-06/chapter-23` commentary: op-1: no printed note could be placed on it
@@ -3481,33 +3483,29 @@ whatever English they had.
 - `part-05/chapter-51` commentary: op-1: no printed note could be placed on it
 - `part-05/chapter-53` commentary: op-1: English is 0.28x its Hebrew
 - `part-05/chapter-62` commentary: op-3: no printed note could be placed on it
+- `part-06/inner-observation-01` source: segment 5: its last paragraph reads as the next segment's
+- `part-06/inner-observation-02` source: segment 13: its first paragraph reads as the previous segment's
 - `part-07/chapter-35` commentary: op-1: structure and content place it on different notes
 - `part-07/chapter-41` commentary: op-1: structure and content place it on different notes
+- `part-07/inner-observation-01` source: segment 4: English is 0.41x its Hebrew
 - `part-16/chapter-81` commentary: op-1: English is 0.57x its Hebrew
 
 ### Notes
 
-- Part 1 - Inner Observation: inner-observation pages are not imported yet
 - Part 1 - Table of Questions and Answers on the Meaning of Words: qa-terminology pages are not imported yet
 - Part 1 - Questions and Answers on the Meaning of Topics: qa-topics pages are not imported yet
-- Part 2 - Inner Observation: inner-observation pages are not imported yet
 - Part 2 - Questions and Answers on the Meaning of Words: qa-terminology pages are not imported yet
 - Part 2 - Table of Questions and Answers on the Meaning of Topics: qa-topics pages are not imported yet
-- Part 3 - Inner Observation: inner-observation pages are not imported yet
 - Part 3 - Table of Questions for the Meaning of the Words: qa-terminology pages are not imported yet
 - Part 3 - Table of Questions for Topics: qa-topics pages are not imported yet
-- Part 4 - Inner Observation: inner-observation pages are not imported yet
 - Part 4 - Table of Questions and for the Meaning of the Words: qa-terminology pages are not imported yet
 - Part 4 - Table of Questions and Answers for Topics: qa-topics pages are not imported yet
 - Part 5 - Table of Questions and Answers for the Meaning of the Words: qa-terminology pages are not imported yet
 - Part 5 - Table of Questions for Topics: qa-topics pages are not imported yet
 - Part 5 - Additional Explanation about the Matter of the Inversion of the Panim and the Making Order of the Kelim: other pages are not imported yet
-- Part 6 - Inner Observation (Histaklut Pnimit): inner-observation pages are not imported yet
-- Part 6 - Cause and Consequence: other pages are not imported yet
 - Part 6 - Table of Questions for the Meaning of the Words: qa-terminology pages are not imported yet
 - Part 6 - Table of Questions for Topics: qa-topics pages are not imported yet
 - Part 6 - Questions Regarding Cause and Consequence: other pages are not imported yet
-- Part 7 - Inner Observation: inner-observation pages are not imported yet
 - Part 7 - Table of Questions and Answers for the Meaning of the Words: qa-terminology pages are not imported yet
 - Part 7 - Table of Questions and Answers for Topics: qa-topics pages are not imported yet
 - Part 8 - The Eser Sefirot of Olam ha Atzilut: the page repeats text from seif 47 on — seifim 47+ not offered for alignment
