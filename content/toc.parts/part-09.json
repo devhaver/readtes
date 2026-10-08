@@ -5,7 +5,13 @@
     "title": {
       "en": "The Couplings of the Sefirot",
       "he": "זווגי הספירות",
-      "ru": "Зивуги сфирот"
+      "ru": "Зивуги сфирот",
+      "uk": "Зівуги сфірот",
+      "es": "Los acoplamientos de las Sefirot",
+      "pt": "Os acoplamentos das Sefirot",
+      "fr": "Les accouplements des Sefirot",
+      "de": "Die Vereinigungen der Sefirot",
+      "tr": "Sefirot'un çiftleşmeleri"
     }
   },
   "volume": {
@@ -14,7 +20,13 @@
     "title": {
       "en": "Volume 3",
       "he": "כרך 3",
-      "ru": "Том 3"
+      "ru": "Том 3",
+      "uk": "Том 3",
+      "es": "Volumen 3",
+      "pt": "Volume 3",
+      "fr": "Volume 3",
+      "de": "Band 3",
+      "tr": "Cilt 3"
     }
   },
   "chapters": [
@@ -25,7 +37,13 @@
       "title": {
         "en": "Chapter 1",
         "he": "פרק א׳",
-        "ru": "Глава 1"
+        "ru": "Глава 1",
+        "uk": "Глава 1",
+        "es": "Capítulo 1",
+        "pt": "Capítulo 1",
+        "fr": "Chapitre 1",
+        "de": "Kapitel 1",
+        "tr": "Bölüm 1"
       },
       "availableLayers": [
         "source",
@@ -50,7 +68,13 @@
       "title": {
         "en": "Chapter 2",
         "he": "פרק ב׳",
-        "ru": "Глава 2"
+        "ru": "Глава 2",
+        "uk": "Глава 2",
+        "es": "Capítulo 2",
+        "pt": "Capítulo 2",
+        "fr": "Chapitre 2",
+        "de": "Kapitel 2",
+        "tr": "Bölüm 2"
       },
       "availableLayers": [
         "source",
@@ -75,7 +99,13 @@
       "title": {
         "en": "Chapter 3",
         "he": "פרק ג׳",
-        "ru": "Глава 3"
+        "ru": "Глава 3",
+        "uk": "Глава 3",
+        "es": "Capítulo 3",
+        "pt": "Capítulo 3",
+        "fr": "Chapitre 3",
+        "de": "Kapitel 3",
+        "tr": "Bölüm 3"
       },
       "availableLayers": [
         "source",
@@ -100,7 +130,13 @@
       "title": {
         "en": "Chapter 4",
         "he": "פרק ד׳",
-        "ru": "Глава 4"
+        "ru": "Глава 4",
+        "uk": "Глава 4",
+        "es": "Capítulo 4",
+        "pt": "Capítulo 4",
+        "fr": "Chapitre 4",
+        "de": "Kapitel 4",
+        "tr": "Bölüm 4"
       },
       "availableLayers": [
         "source"
@@ -121,7 +157,13 @@
       "title": {
         "en": "Chapter 5",
         "he": "פרק ה׳",
-        "ru": "Глава 5"
+        "ru": "Глава 5",
+        "uk": "Глава 5",
+        "es": "Capítulo 5",
+        "pt": "Capítulo 5",
+        "fr": "Chapitre 5",
+        "de": "Kapitel 5",
+        "tr": "Bölüm 5"
       },
       "availableLayers": [
         "source"
@@ -142,7 +184,13 @@
       "title": {
         "en": "Chapter 6",
         "he": "פרק ו׳",
-        "ru": "Глава 6"
+        "ru": "Глава 6",
+        "uk": "Глава 6",
+        "es": "Capítulo 6",
+        "pt": "Capítulo 6",
+        "fr": "Chapitre 6",
+        "de": "Kapitel 6",
+        "tr": "Bölüm 6"
       },
       "availableLayers": [
         "source",
@@ -167,7 +215,13 @@
       "title": {
         "en": "Chapter 7",
         "he": "פרק ז׳",
-        "ru": "Глава 7"
+        "ru": "Глава 7",
+        "uk": "Глава 7",
+        "es": "Capítulo 7",
+        "pt": "Capítulo 7",
+        "fr": "Chapitre 7",
+        "de": "Kapitel 7",
+        "tr": "Bölüm 7"
       },
       "availableLayers": [
         "source",
@@ -192,7 +246,13 @@
       "title": {
         "en": "Chapter 8",
         "he": "פרק ח׳",
-        "ru": "Глава 8"
+        "ru": "Глава 8",
+        "uk": "Глава 8",
+        "es": "Capítulo 8",
+        "pt": "Capítulo 8",
+        "fr": "Chapitre 8",
+        "de": "Kapitel 8",
+        "tr": "Bölüm 8"
       },
       "availableLayers": [
         "source",
@@ -217,7 +277,13 @@
       "title": {
         "en": "Chapter 9",
         "he": "פרק ט׳",
-        "ru": "Глава 9"
+        "ru": "Глава 9",
+        "uk": "Глава 9",
+        "es": "Capítulo 9",
+        "pt": "Capítulo 9",
+        "fr": "Chapitre 9",
+        "de": "Kapitel 9",
+        "tr": "Bölüm 9"
       },
       "availableLayers": [
         "source",
@@ -242,7 +308,13 @@
       "title": {
         "en": "Chapter 10",
         "he": "פרק י׳",
-        "ru": "Глава 10"
+        "ru": "Глава 10",
+        "uk": "Глава 10",
+        "es": "Capítulo 10",
+        "pt": "Capítulo 10",
+        "fr": "Chapitre 10",
+        "de": "Kapitel 10",
+        "tr": "Bölüm 10"
       },
       "availableLayers": [
         "source",
@@ -267,7 +339,13 @@
       "title": {
         "en": "Chapter 11",
         "he": "פרק י״א",
-        "ru": "Глава 11"
+        "ru": "Глава 11",
+        "uk": "Глава 11",
+        "es": "Capítulo 11",
+        "pt": "Capítulo 11",
+        "fr": "Chapitre 11",
+        "de": "Kapitel 11",
+        "tr": "Bölüm 11"
       },
       "availableLayers": [
         "source",
@@ -292,7 +370,13 @@
       "title": {
         "en": "Chapter 12",
         "he": "פרק י״ב",
-        "ru": "Глава 12"
+        "ru": "Глава 12",
+        "uk": "Глава 12",
+        "es": "Capítulo 12",
+        "pt": "Capítulo 12",
+        "fr": "Chapitre 12",
+        "de": "Kapitel 12",
+        "tr": "Bölüm 12"
       },
       "availableLayers": [
         "source",
@@ -317,7 +401,13 @@
       "title": {
         "en": "Chapter 13",
         "he": "פרק י״ג",
-        "ru": "Глава 13"
+        "ru": "Глава 13",
+        "uk": "Глава 13",
+        "es": "Capítulo 13",
+        "pt": "Capítulo 13",
+        "fr": "Chapitre 13",
+        "de": "Kapitel 13",
+        "tr": "Bölüm 13"
       },
       "availableLayers": [
         "source",
@@ -342,7 +432,13 @@
       "title": {
         "en": "Chapter 14",
         "he": "פרק י״ד",
-        "ru": "Глава 14"
+        "ru": "Глава 14",
+        "uk": "Глава 14",
+        "es": "Capítulo 14",
+        "pt": "Capítulo 14",
+        "fr": "Chapitre 14",
+        "de": "Kapitel 14",
+        "tr": "Bölüm 14"
       },
       "availableLayers": [
         "source",
@@ -367,7 +463,13 @@
       "title": {
         "en": "Chapter 15",
         "he": "פרק ט״ו",
-        "ru": "Глава 15"
+        "ru": "Глава 15",
+        "uk": "Глава 15",
+        "es": "Capítulo 15",
+        "pt": "Capítulo 15",
+        "fr": "Chapitre 15",
+        "de": "Kapitel 15",
+        "tr": "Bölüm 15"
       },
       "availableLayers": [
         "source"
@@ -388,7 +490,13 @@
       "title": {
         "en": "Chapter 16",
         "he": "פרק ט״ז",
-        "ru": "Глава 16"
+        "ru": "Глава 16",
+        "uk": "Глава 16",
+        "es": "Capítulo 16",
+        "pt": "Capítulo 16",
+        "fr": "Chapitre 16",
+        "de": "Kapitel 16",
+        "tr": "Bölüm 16"
       },
       "availableLayers": [
         "source",
@@ -413,7 +521,13 @@
       "title": {
         "en": "Chapter 17",
         "he": "פרק י״ז",
-        "ru": "Глава 17"
+        "ru": "Глава 17",
+        "uk": "Глава 17",
+        "es": "Capítulo 17",
+        "pt": "Capítulo 17",
+        "fr": "Chapitre 17",
+        "de": "Kapitel 17",
+        "tr": "Bölüm 17"
       },
       "availableLayers": [
         "source",
@@ -438,7 +552,13 @@
       "title": {
         "en": "Chapter 18",
         "he": "פרק י״ח",
-        "ru": "Глава 18"
+        "ru": "Глава 18",
+        "uk": "Глава 18",
+        "es": "Capítulo 18",
+        "pt": "Capítulo 18",
+        "fr": "Chapitre 18",
+        "de": "Kapitel 18",
+        "tr": "Bölüm 18"
       },
       "availableLayers": [
         "source"
@@ -459,7 +579,13 @@
       "title": {
         "en": "Chapter 19",
         "he": "פרק י״ט",
-        "ru": "Глава 19"
+        "ru": "Глава 19",
+        "uk": "Глава 19",
+        "es": "Capítulo 19",
+        "pt": "Capítulo 19",
+        "fr": "Chapitre 19",
+        "de": "Kapitel 19",
+        "tr": "Bölüm 19"
       },
       "availableLayers": [
         "source",
@@ -484,7 +610,13 @@
       "title": {
         "en": "Chapter 20",
         "he": "פרק כ׳",
-        "ru": "Глава 20"
+        "ru": "Глава 20",
+        "uk": "Глава 20",
+        "es": "Capítulo 20",
+        "pt": "Capítulo 20",
+        "fr": "Chapitre 20",
+        "de": "Kapitel 20",
+        "tr": "Bölüm 20"
       },
       "availableLayers": [
         "source",
@@ -509,7 +641,13 @@
       "title": {
         "en": "Chapter 21",
         "he": "פרק כ״א",
-        "ru": "Глава 21"
+        "ru": "Глава 21",
+        "uk": "Глава 21",
+        "es": "Capítulo 21",
+        "pt": "Capítulo 21",
+        "fr": "Chapitre 21",
+        "de": "Kapitel 21",
+        "tr": "Bölüm 21"
       },
       "availableLayers": [
         "source",
@@ -534,7 +672,13 @@
       "title": {
         "en": "Chapter 22",
         "he": "פרק כ״ב",
-        "ru": "Глава 22"
+        "ru": "Глава 22",
+        "uk": "Глава 22",
+        "es": "Capítulo 22",
+        "pt": "Capítulo 22",
+        "fr": "Chapitre 22",
+        "de": "Kapitel 22",
+        "tr": "Bölüm 22"
       },
       "availableLayers": [
         "source",
@@ -559,7 +703,13 @@
       "title": {
         "en": "Chapter 23",
         "he": "פרק כ״ג",
-        "ru": "Глава 23"
+        "ru": "Глава 23",
+        "uk": "Глава 23",
+        "es": "Capítulo 23",
+        "pt": "Capítulo 23",
+        "fr": "Chapitre 23",
+        "de": "Kapitel 23",
+        "tr": "Bölüm 23"
       },
       "availableLayers": [
         "source"
@@ -580,7 +730,13 @@
       "title": {
         "en": "Chapter 24",
         "he": "פרק כ״ד",
-        "ru": "Глава 24"
+        "ru": "Глава 24",
+        "uk": "Глава 24",
+        "es": "Capítulo 24",
+        "pt": "Capítulo 24",
+        "fr": "Chapitre 24",
+        "de": "Kapitel 24",
+        "tr": "Bölüm 24"
       },
       "availableLayers": [
         "source",
@@ -605,7 +761,13 @@
       "title": {
         "en": "Chapter 25",
         "he": "פרק כ״ה",
-        "ru": "Глава 25"
+        "ru": "Глава 25",
+        "uk": "Глава 25",
+        "es": "Capítulo 25",
+        "pt": "Capítulo 25",
+        "fr": "Chapitre 25",
+        "de": "Kapitel 25",
+        "tr": "Bölüm 25"
       },
       "availableLayers": [
         "source",
@@ -630,7 +792,13 @@
       "title": {
         "en": "Chapter 26",
         "he": "פרק כ״ו",
-        "ru": "Глава 26"
+        "ru": "Глава 26",
+        "uk": "Глава 26",
+        "es": "Capítulo 26",
+        "pt": "Capítulo 26",
+        "fr": "Chapitre 26",
+        "de": "Kapitel 26",
+        "tr": "Bölüm 26"
       },
       "availableLayers": [
         "source",
@@ -655,7 +823,13 @@
       "title": {
         "en": "Chapter 27",
         "he": "פרק כ״ז",
-        "ru": "Глава 27"
+        "ru": "Глава 27",
+        "uk": "Глава 27",
+        "es": "Capítulo 27",
+        "pt": "Capítulo 27",
+        "fr": "Chapitre 27",
+        "de": "Kapitel 27",
+        "tr": "Bölüm 27"
       },
       "availableLayers": [
         "source",
@@ -680,7 +854,13 @@
       "title": {
         "en": "Chapter 28",
         "he": "פרק כ״ח",
-        "ru": "Глава 28"
+        "ru": "Глава 28",
+        "uk": "Глава 28",
+        "es": "Capítulo 28",
+        "pt": "Capítulo 28",
+        "fr": "Chapitre 28",
+        "de": "Kapitel 28",
+        "tr": "Bölüm 28"
       },
       "availableLayers": [
         "source",
@@ -705,7 +885,13 @@
       "title": {
         "en": "Chapter 29",
         "he": "פרק כ״ט",
-        "ru": "Глава 29"
+        "ru": "Глава 29",
+        "uk": "Глава 29",
+        "es": "Capítulo 29",
+        "pt": "Capítulo 29",
+        "fr": "Chapitre 29",
+        "de": "Kapitel 29",
+        "tr": "Bölüm 29"
       },
       "availableLayers": [
         "source"
@@ -726,7 +912,13 @@
       "title": {
         "en": "Chapter 30",
         "he": "פרק ל׳",
-        "ru": "Глава 30"
+        "ru": "Глава 30",
+        "uk": "Глава 30",
+        "es": "Capítulo 30",
+        "pt": "Capítulo 30",
+        "fr": "Chapitre 30",
+        "de": "Kapitel 30",
+        "tr": "Bölüm 30"
       },
       "availableLayers": [
         "source",
@@ -751,7 +943,13 @@
       "title": {
         "en": "Chapter 31",
         "he": "פרק ל״א",
-        "ru": "Глава 31"
+        "ru": "Глава 31",
+        "uk": "Глава 31",
+        "es": "Capítulo 31",
+        "pt": "Capítulo 31",
+        "fr": "Chapitre 31",
+        "de": "Kapitel 31",
+        "tr": "Bölüm 31"
       },
       "availableLayers": [
         "source"
@@ -772,7 +970,13 @@
       "title": {
         "en": "Chapter 32",
         "he": "פרק ל״ב",
-        "ru": "Глава 32"
+        "ru": "Глава 32",
+        "uk": "Глава 32",
+        "es": "Capítulo 32",
+        "pt": "Capítulo 32",
+        "fr": "Chapitre 32",
+        "de": "Kapitel 32",
+        "tr": "Bölüm 32"
       },
       "availableLayers": [
         "source"
@@ -793,7 +997,13 @@
       "title": {
         "en": "Chapter 33",
         "he": "פרק ל״ג",
-        "ru": "Глава 33"
+        "ru": "Глава 33",
+        "uk": "Глава 33",
+        "es": "Capítulo 33",
+        "pt": "Capítulo 33",
+        "fr": "Chapitre 33",
+        "de": "Kapitel 33",
+        "tr": "Bölüm 33"
       },
       "availableLayers": [
         "source",
@@ -818,7 +1028,13 @@
       "title": {
         "en": "Chapter 34",
         "he": "פרק ל״ד",
-        "ru": "Глава 34"
+        "ru": "Глава 34",
+        "uk": "Глава 34",
+        "es": "Capítulo 34",
+        "pt": "Capítulo 34",
+        "fr": "Chapitre 34",
+        "de": "Kapitel 34",
+        "tr": "Bölüm 34"
       },
       "availableLayers": [
         "source",
@@ -843,7 +1059,13 @@
       "title": {
         "en": "Chapter 35",
         "he": "פרק ל״ה",
-        "ru": "Глава 35"
+        "ru": "Глава 35",
+        "uk": "Глава 35",
+        "es": "Capítulo 35",
+        "pt": "Capítulo 35",
+        "fr": "Chapitre 35",
+        "de": "Kapitel 35",
+        "tr": "Bölüm 35"
       },
       "availableLayers": [
         "source",
@@ -868,7 +1090,13 @@
       "title": {
         "en": "Chapter 36",
         "he": "פרק ל״ו",
-        "ru": "Глава 36"
+        "ru": "Глава 36",
+        "uk": "Глава 36",
+        "es": "Capítulo 36",
+        "pt": "Capítulo 36",
+        "fr": "Chapitre 36",
+        "de": "Kapitel 36",
+        "tr": "Bölüm 36"
       },
       "availableLayers": [
         "source",
@@ -893,7 +1121,13 @@
       "title": {
         "en": "Chapter 37",
         "he": "פרק ל״ז",
-        "ru": "Глава 37"
+        "ru": "Глава 37",
+        "uk": "Глава 37",
+        "es": "Capítulo 37",
+        "pt": "Capítulo 37",
+        "fr": "Chapitre 37",
+        "de": "Kapitel 37",
+        "tr": "Bölüm 37"
       },
       "availableLayers": [
         "source",
@@ -918,7 +1152,13 @@
       "title": {
         "en": "Chapter 38",
         "he": "פרק ל״ח",
-        "ru": "Глава 38"
+        "ru": "Глава 38",
+        "uk": "Глава 38",
+        "es": "Capítulo 38",
+        "pt": "Capítulo 38",
+        "fr": "Chapitre 38",
+        "de": "Kapitel 38",
+        "tr": "Bölüm 38"
       },
       "availableLayers": [
         "source",
@@ -943,7 +1183,13 @@
       "title": {
         "en": "Chapter 39",
         "he": "פרק ל״ט",
-        "ru": "Глава 39"
+        "ru": "Глава 39",
+        "uk": "Глава 39",
+        "es": "Capítulo 39",
+        "pt": "Capítulo 39",
+        "fr": "Chapitre 39",
+        "de": "Kapitel 39",
+        "tr": "Bölüm 39"
       },
       "availableLayers": [
         "source"
@@ -964,7 +1210,13 @@
       "title": {
         "en": "Chapter 40",
         "he": "פרק מ׳",
-        "ru": "Глава 40"
+        "ru": "Глава 40",
+        "uk": "Глава 40",
+        "es": "Capítulo 40",
+        "pt": "Capítulo 40",
+        "fr": "Chapitre 40",
+        "de": "Kapitel 40",
+        "tr": "Bölüm 40"
       },
       "availableLayers": [
         "source",
@@ -989,7 +1241,13 @@
       "title": {
         "en": "Chapter 41",
         "he": "פרק מ״א",
-        "ru": "Глава 41"
+        "ru": "Глава 41",
+        "uk": "Глава 41",
+        "es": "Capítulo 41",
+        "pt": "Capítulo 41",
+        "fr": "Chapitre 41",
+        "de": "Kapitel 41",
+        "tr": "Bölüm 41"
       },
       "availableLayers": [
         "source"
@@ -1010,7 +1268,13 @@
       "title": {
         "en": "Chapter 42",
         "he": "פרק מ״ב",
-        "ru": "Глава 42"
+        "ru": "Глава 42",
+        "uk": "Глава 42",
+        "es": "Capítulo 42",
+        "pt": "Capítulo 42",
+        "fr": "Chapitre 42",
+        "de": "Kapitel 42",
+        "tr": "Bölüm 42"
       },
       "availableLayers": [
         "source",
@@ -1035,7 +1299,13 @@
       "title": {
         "en": "Chapter 43",
         "he": "פרק מ״ג",
-        "ru": "Глава 43"
+        "ru": "Глава 43",
+        "uk": "Глава 43",
+        "es": "Capítulo 43",
+        "pt": "Capítulo 43",
+        "fr": "Chapitre 43",
+        "de": "Kapitel 43",
+        "tr": "Bölüm 43"
       },
       "availableLayers": [
         "source"
@@ -1056,7 +1326,13 @@
       "title": {
         "en": "Chapter 44",
         "he": "פרק מ״ד",
-        "ru": "Глава 44"
+        "ru": "Глава 44",
+        "uk": "Глава 44",
+        "es": "Capítulo 44",
+        "pt": "Capítulo 44",
+        "fr": "Chapitre 44",
+        "de": "Kapitel 44",
+        "tr": "Bölüm 44"
       },
       "availableLayers": [
         "source",
@@ -1081,7 +1357,13 @@
       "title": {
         "en": "Chapter 45",
         "he": "פרק מ״ה",
-        "ru": "Глава 45"
+        "ru": "Глава 45",
+        "uk": "Глава 45",
+        "es": "Capítulo 45",
+        "pt": "Capítulo 45",
+        "fr": "Chapitre 45",
+        "de": "Kapitel 45",
+        "tr": "Bölüm 45"
       },
       "availableLayers": [
         "source"
@@ -1102,7 +1384,13 @@
       "title": {
         "en": "Chapter 46",
         "he": "פרק מ״ו",
-        "ru": "Глава 46"
+        "ru": "Глава 46",
+        "uk": "Глава 46",
+        "es": "Capítulo 46",
+        "pt": "Capítulo 46",
+        "fr": "Chapitre 46",
+        "de": "Kapitel 46",
+        "tr": "Bölüm 46"
       },
       "availableLayers": [
         "source",
@@ -1127,7 +1415,13 @@
       "title": {
         "en": "Chapter 47",
         "he": "פרק מ״ז",
-        "ru": "Глава 47"
+        "ru": "Глава 47",
+        "uk": "Глава 47",
+        "es": "Capítulo 47",
+        "pt": "Capítulo 47",
+        "fr": "Chapitre 47",
+        "de": "Kapitel 47",
+        "tr": "Bölüm 47"
       },
       "availableLayers": [
         "source"
@@ -1148,7 +1442,13 @@
       "title": {
         "en": "Chapter 48",
         "he": "פרק מ״ח",
-        "ru": "Глава 48"
+        "ru": "Глава 48",
+        "uk": "Глава 48",
+        "es": "Capítulo 48",
+        "pt": "Capítulo 48",
+        "fr": "Chapitre 48",
+        "de": "Kapitel 48",
+        "tr": "Bölüm 48"
       },
       "availableLayers": [
         "source"
@@ -1169,7 +1469,13 @@
       "title": {
         "en": "Chapter 49",
         "he": "פרק מ״ט",
-        "ru": "Глава 49"
+        "ru": "Глава 49",
+        "uk": "Глава 49",
+        "es": "Capítulo 49",
+        "pt": "Capítulo 49",
+        "fr": "Chapitre 49",
+        "de": "Kapitel 49",
+        "tr": "Bölüm 49"
       },
       "availableLayers": [
         "source",
@@ -1194,7 +1500,13 @@
       "title": {
         "en": "Chapter 50",
         "he": "פרק נ׳",
-        "ru": "Глава 50"
+        "ru": "Глава 50",
+        "uk": "Глава 50",
+        "es": "Capítulo 50",
+        "pt": "Capítulo 50",
+        "fr": "Chapitre 50",
+        "de": "Kapitel 50",
+        "tr": "Bölüm 50"
       },
       "availableLayers": [
         "source",
@@ -1219,7 +1531,13 @@
       "title": {
         "en": "Chapter 51",
         "he": "פרק נ״א",
-        "ru": "Глава 51"
+        "ru": "Глава 51",
+        "uk": "Глава 51",
+        "es": "Capítulo 51",
+        "pt": "Capítulo 51",
+        "fr": "Chapitre 51",
+        "de": "Kapitel 51",
+        "tr": "Bölüm 51"
       },
       "availableLayers": [
         "source",
@@ -1244,7 +1562,13 @@
       "title": {
         "en": "Chapter 52",
         "he": "פרק נ״ב",
-        "ru": "Глава 52"
+        "ru": "Глава 52",
+        "uk": "Глава 52",
+        "es": "Capítulo 52",
+        "pt": "Capítulo 52",
+        "fr": "Chapitre 52",
+        "de": "Kapitel 52",
+        "tr": "Bölüm 52"
       },
       "availableLayers": [
         "source",
@@ -1269,7 +1593,13 @@
       "title": {
         "en": "Chapter 53",
         "he": "פרק נ״ג",
-        "ru": "Глава 53"
+        "ru": "Глава 53",
+        "uk": "Глава 53",
+        "es": "Capítulo 53",
+        "pt": "Capítulo 53",
+        "fr": "Chapitre 53",
+        "de": "Kapitel 53",
+        "tr": "Bölüm 53"
       },
       "availableLayers": [
         "source",
@@ -1294,7 +1624,13 @@
       "title": {
         "en": "Chapter 54",
         "he": "פרק נ״ד",
-        "ru": "Глава 54"
+        "ru": "Глава 54",
+        "uk": "Глава 54",
+        "es": "Capítulo 54",
+        "pt": "Capítulo 54",
+        "fr": "Chapitre 54",
+        "de": "Kapitel 54",
+        "tr": "Bölüm 54"
       },
       "availableLayers": [
         "source"
@@ -1315,7 +1651,13 @@
       "title": {
         "en": "Chapter 55",
         "he": "פרק נ״ה",
-        "ru": "Глава 55"
+        "ru": "Глава 55",
+        "uk": "Глава 55",
+        "es": "Capítulo 55",
+        "pt": "Capítulo 55",
+        "fr": "Chapitre 55",
+        "de": "Kapitel 55",
+        "tr": "Bölüm 55"
       },
       "availableLayers": [
         "source"
@@ -1336,7 +1678,13 @@
       "title": {
         "en": "Chapter 56",
         "he": "פרק נ״ו",
-        "ru": "Глава 56"
+        "ru": "Глава 56",
+        "uk": "Глава 56",
+        "es": "Capítulo 56",
+        "pt": "Capítulo 56",
+        "fr": "Chapitre 56",
+        "de": "Kapitel 56",
+        "tr": "Bölüm 56"
       },
       "availableLayers": [
         "source"
@@ -1357,7 +1705,13 @@
       "title": {
         "en": "Chapter 57",
         "he": "פרק נ״ז",
-        "ru": "Глава 57"
+        "ru": "Глава 57",
+        "uk": "Глава 57",
+        "es": "Capítulo 57",
+        "pt": "Capítulo 57",
+        "fr": "Chapitre 57",
+        "de": "Kapitel 57",
+        "tr": "Bölüm 57"
       },
       "availableLayers": [
         "source"
@@ -1378,7 +1732,13 @@
       "title": {
         "en": "Chapter 58",
         "he": "פרק נ״ח",
-        "ru": "Глава 58"
+        "ru": "Глава 58",
+        "uk": "Глава 58",
+        "es": "Capítulo 58",
+        "pt": "Capítulo 58",
+        "fr": "Chapitre 58",
+        "de": "Kapitel 58",
+        "tr": "Bölüm 58"
       },
       "availableLayers": [
         "source",
@@ -1403,7 +1763,13 @@
       "title": {
         "en": "Chapter 59",
         "he": "פרק נ״ט",
-        "ru": "Глава 59"
+        "ru": "Глава 59",
+        "uk": "Глава 59",
+        "es": "Capítulo 59",
+        "pt": "Capítulo 59",
+        "fr": "Chapitre 59",
+        "de": "Kapitel 59",
+        "tr": "Bölüm 59"
       },
       "availableLayers": [
         "source"
@@ -1424,7 +1790,13 @@
       "title": {
         "en": "Chapter 60",
         "he": "פרק ס׳",
-        "ru": "Глава 60"
+        "ru": "Глава 60",
+        "uk": "Глава 60",
+        "es": "Capítulo 60",
+        "pt": "Capítulo 60",
+        "fr": "Chapitre 60",
+        "de": "Kapitel 60",
+        "tr": "Bölüm 60"
       },
       "availableLayers": [
         "source",
@@ -1449,7 +1821,13 @@
       "title": {
         "en": "Chapter 61",
         "he": "פרק ס״א",
-        "ru": "Глава 61"
+        "ru": "Глава 61",
+        "uk": "Глава 61",
+        "es": "Capítulo 61",
+        "pt": "Capítulo 61",
+        "fr": "Chapitre 61",
+        "de": "Kapitel 61",
+        "tr": "Bölüm 61"
       },
       "availableLayers": [
         "source",
@@ -1474,7 +1852,13 @@
       "title": {
         "en": "Chapter 62",
         "he": "פרק ס״ב",
-        "ru": "Глава 62"
+        "ru": "Глава 62",
+        "uk": "Глава 62",
+        "es": "Capítulo 62",
+        "pt": "Capítulo 62",
+        "fr": "Chapitre 62",
+        "de": "Kapitel 62",
+        "tr": "Bölüm 62"
       },
       "availableLayers": [
         "source",
@@ -1499,7 +1883,13 @@
       "title": {
         "en": "Chapter 63",
         "he": "פרק ס״ג",
-        "ru": "Глава 63"
+        "ru": "Глава 63",
+        "uk": "Глава 63",
+        "es": "Capítulo 63",
+        "pt": "Capítulo 63",
+        "fr": "Chapitre 63",
+        "de": "Kapitel 63",
+        "tr": "Bölüm 63"
       },
       "availableLayers": [
         "source"
@@ -1520,7 +1910,13 @@
       "title": {
         "en": "Chapter 64",
         "he": "פרק ס״ד",
-        "ru": "Глава 64"
+        "ru": "Глава 64",
+        "uk": "Глава 64",
+        "es": "Capítulo 64",
+        "pt": "Capítulo 64",
+        "fr": "Chapitre 64",
+        "de": "Kapitel 64",
+        "tr": "Bölüm 64"
       },
       "availableLayers": [
         "source",
@@ -1545,7 +1941,13 @@
       "title": {
         "en": "Chapter 65",
         "he": "פרק ס״ה",
-        "ru": "Глава 65"
+        "ru": "Глава 65",
+        "uk": "Глава 65",
+        "es": "Capítulo 65",
+        "pt": "Capítulo 65",
+        "fr": "Chapitre 65",
+        "de": "Kapitel 65",
+        "tr": "Bölüm 65"
       },
       "availableLayers": [
         "source"
@@ -1566,7 +1968,13 @@
       "title": {
         "en": "Chapter 66",
         "he": "פרק ס״ו",
-        "ru": "Глава 66"
+        "ru": "Глава 66",
+        "uk": "Глава 66",
+        "es": "Capítulo 66",
+        "pt": "Capítulo 66",
+        "fr": "Chapitre 66",
+        "de": "Kapitel 66",
+        "tr": "Bölüm 66"
       },
       "availableLayers": [
         "source",
@@ -1591,7 +1999,13 @@
       "title": {
         "en": "Chapter 67",
         "he": "פרק ס״ז",
-        "ru": "Глава 67"
+        "ru": "Глава 67",
+        "uk": "Глава 67",
+        "es": "Capítulo 67",
+        "pt": "Capítulo 67",
+        "fr": "Chapitre 67",
+        "de": "Kapitel 67",
+        "tr": "Bölüm 67"
       },
       "availableLayers": [
         "source",
@@ -1616,7 +2030,13 @@
       "title": {
         "en": "Chapter 68",
         "he": "פרק ס״ח",
-        "ru": "Глава 68"
+        "ru": "Глава 68",
+        "uk": "Глава 68",
+        "es": "Capítulo 68",
+        "pt": "Capítulo 68",
+        "fr": "Chapitre 68",
+        "de": "Kapitel 68",
+        "tr": "Bölüm 68"
       },
       "availableLayers": [
         "source",
@@ -1641,7 +2061,13 @@
       "title": {
         "en": "Chapter 69",
         "he": "פרק ס״ט",
-        "ru": "Глава 69"
+        "ru": "Глава 69",
+        "uk": "Глава 69",
+        "es": "Capítulo 69",
+        "pt": "Capítulo 69",
+        "fr": "Chapitre 69",
+        "de": "Kapitel 69",
+        "tr": "Bölüm 69"
       },
       "availableLayers": [
         "source",
@@ -1666,7 +2092,13 @@
       "title": {
         "en": "Chapter 70",
         "he": "פרק ע׳",
-        "ru": "Глава 70"
+        "ru": "Глава 70",
+        "uk": "Глава 70",
+        "es": "Capítulo 70",
+        "pt": "Capítulo 70",
+        "fr": "Chapitre 70",
+        "de": "Kapitel 70",
+        "tr": "Bölüm 70"
       },
       "availableLayers": [
         "source"
@@ -1687,7 +2119,13 @@
       "title": {
         "en": "Chapter 71",
         "he": "פרק ע״א",
-        "ru": "Глава 71"
+        "ru": "Глава 71",
+        "uk": "Глава 71",
+        "es": "Capítulo 71",
+        "pt": "Capítulo 71",
+        "fr": "Chapitre 71",
+        "de": "Kapitel 71",
+        "tr": "Bölüm 71"
       },
       "availableLayers": [
         "source"
@@ -1708,7 +2146,13 @@
       "title": {
         "en": "Chapter 72",
         "he": "פרק ע״ב",
-        "ru": "Глава 72"
+        "ru": "Глава 72",
+        "uk": "Глава 72",
+        "es": "Capítulo 72",
+        "pt": "Capítulo 72",
+        "fr": "Chapitre 72",
+        "de": "Kapitel 72",
+        "tr": "Bölüm 72"
       },
       "availableLayers": [
         "source",
@@ -1733,7 +2177,13 @@
       "title": {
         "en": "Chapter 73",
         "he": "פרק ע״ג",
-        "ru": "Глава 73"
+        "ru": "Глава 73",
+        "uk": "Глава 73",
+        "es": "Capítulo 73",
+        "pt": "Capítulo 73",
+        "fr": "Chapitre 73",
+        "de": "Kapitel 73",
+        "tr": "Bölüm 73"
       },
       "availableLayers": [
         "source",
@@ -1758,7 +2208,13 @@
       "title": {
         "en": "Chapter 74",
         "he": "פרק ע״ד",
-        "ru": "Глава 74"
+        "ru": "Глава 74",
+        "uk": "Глава 74",
+        "es": "Capítulo 74",
+        "pt": "Capítulo 74",
+        "fr": "Chapitre 74",
+        "de": "Kapitel 74",
+        "tr": "Bölüm 74"
       },
       "availableLayers": [
         "source"
@@ -1779,7 +2235,13 @@
       "title": {
         "en": "Chapter 75",
         "he": "פרק ע״ה",
-        "ru": "Глава 75"
+        "ru": "Глава 75",
+        "uk": "Глава 75",
+        "es": "Capítulo 75",
+        "pt": "Capítulo 75",
+        "fr": "Chapitre 75",
+        "de": "Kapitel 75",
+        "tr": "Bölüm 75"
       },
       "availableLayers": [
         "source"
@@ -1800,7 +2262,13 @@
       "title": {
         "en": "Chapter 76",
         "he": "פרק ע״ו",
-        "ru": "Глава 76"
+        "ru": "Глава 76",
+        "uk": "Глава 76",
+        "es": "Capítulo 76",
+        "pt": "Capítulo 76",
+        "fr": "Chapitre 76",
+        "de": "Kapitel 76",
+        "tr": "Bölüm 76"
       },
       "availableLayers": [
         "source"
@@ -1821,7 +2289,13 @@
       "title": {
         "en": "Chapter 77",
         "he": "פרק ע״ז",
-        "ru": "Глава 77"
+        "ru": "Глава 77",
+        "uk": "Глава 77",
+        "es": "Capítulo 77",
+        "pt": "Capítulo 77",
+        "fr": "Chapitre 77",
+        "de": "Kapitel 77",
+        "tr": "Bölüm 77"
       },
       "availableLayers": [
         "source"
@@ -1842,7 +2316,13 @@
       "title": {
         "en": "Chapter 78",
         "he": "פרק ע״ח",
-        "ru": "Глава 78"
+        "ru": "Глава 78",
+        "uk": "Глава 78",
+        "es": "Capítulo 78",
+        "pt": "Capítulo 78",
+        "fr": "Chapitre 78",
+        "de": "Kapitel 78",
+        "tr": "Bölüm 78"
       },
       "availableLayers": [
         "source",
@@ -1867,7 +2347,13 @@
       "title": {
         "en": "Chapter 79",
         "he": "פרק ע״ט",
-        "ru": "Глава 79"
+        "ru": "Глава 79",
+        "uk": "Глава 79",
+        "es": "Capítulo 79",
+        "pt": "Capítulo 79",
+        "fr": "Chapitre 79",
+        "de": "Kapitel 79",
+        "tr": "Bölüm 79"
       },
       "availableLayers": [
         "source"
@@ -1888,7 +2374,13 @@
       "title": {
         "en": "Chapter 80",
         "he": "פרק פ׳",
-        "ru": "Глава 80"
+        "ru": "Глава 80",
+        "uk": "Глава 80",
+        "es": "Capítulo 80",
+        "pt": "Capítulo 80",
+        "fr": "Chapitre 80",
+        "de": "Kapitel 80",
+        "tr": "Bölüm 80"
       },
       "availableLayers": [
         "source"
@@ -1909,7 +2401,13 @@
       "title": {
         "en": "Chapter 81",
         "he": "פרק פ״א",
-        "ru": "Глава 81"
+        "ru": "Глава 81",
+        "uk": "Глава 81",
+        "es": "Capítulo 81",
+        "pt": "Capítulo 81",
+        "fr": "Chapitre 81",
+        "de": "Kapitel 81",
+        "tr": "Bölüm 81"
       },
       "availableLayers": [
         "source"
@@ -1930,7 +2428,13 @@
       "title": {
         "en": "Chapter 82",
         "he": "פרק פ״ב",
-        "ru": "Глава 82"
+        "ru": "Глава 82",
+        "uk": "Глава 82",
+        "es": "Capítulo 82",
+        "pt": "Capítulo 82",
+        "fr": "Chapitre 82",
+        "de": "Kapitel 82",
+        "tr": "Bölüm 82"
       },
       "availableLayers": [
         "source",
@@ -1955,7 +2459,13 @@
       "title": {
         "en": "Chapter 83",
         "he": "פרק פ״ג",
-        "ru": "Глава 83"
+        "ru": "Глава 83",
+        "uk": "Глава 83",
+        "es": "Capítulo 83",
+        "pt": "Capítulo 83",
+        "fr": "Chapitre 83",
+        "de": "Kapitel 83",
+        "tr": "Bölüm 83"
       },
       "availableLayers": [
         "source"
@@ -1976,7 +2486,13 @@
       "title": {
         "en": "Chapter 84",
         "he": "פרק פ״ד",
-        "ru": "Глава 84"
+        "ru": "Глава 84",
+        "uk": "Глава 84",
+        "es": "Capítulo 84",
+        "pt": "Capítulo 84",
+        "fr": "Chapitre 84",
+        "de": "Kapitel 84",
+        "tr": "Bölüm 84"
       },
       "availableLayers": [
         "source"
@@ -1997,7 +2513,13 @@
       "title": {
         "en": "Chapter 85",
         "he": "פרק פ״ה",
-        "ru": "Глава 85"
+        "ru": "Глава 85",
+        "uk": "Глава 85",
+        "es": "Capítulo 85",
+        "pt": "Capítulo 85",
+        "fr": "Chapitre 85",
+        "de": "Kapitel 85",
+        "tr": "Bölüm 85"
       },
       "availableLayers": [
         "source"
@@ -2018,7 +2540,13 @@
       "title": {
         "en": "Chapter 86",
         "he": "פרק פ״ו",
-        "ru": "Глава 86"
+        "ru": "Глава 86",
+        "uk": "Глава 86",
+        "es": "Capítulo 86",
+        "pt": "Capítulo 86",
+        "fr": "Chapitre 86",
+        "de": "Kapitel 86",
+        "tr": "Bölüm 86"
       },
       "availableLayers": [
         "source"
@@ -2039,7 +2567,13 @@
       "title": {
         "en": "Chapter 87",
         "he": "פרק פ״ז",
-        "ru": "Глава 87"
+        "ru": "Глава 87",
+        "uk": "Глава 87",
+        "es": "Capítulo 87",
+        "pt": "Capítulo 87",
+        "fr": "Chapitre 87",
+        "de": "Kapitel 87",
+        "tr": "Bölüm 87"
       },
       "availableLayers": [
         "source"
@@ -2060,7 +2594,13 @@
       "title": {
         "en": "Chapter 88",
         "he": "פרק פ״ח",
-        "ru": "Глава 88"
+        "ru": "Глава 88",
+        "uk": "Глава 88",
+        "es": "Capítulo 88",
+        "pt": "Capítulo 88",
+        "fr": "Chapitre 88",
+        "de": "Kapitel 88",
+        "tr": "Bölüm 88"
       },
       "availableLayers": [
         "source"
@@ -2081,7 +2621,13 @@
       "title": {
         "en": "Chapter 89",
         "he": "פרק פ״ט",
-        "ru": "Глава 89"
+        "ru": "Глава 89",
+        "uk": "Глава 89",
+        "es": "Capítulo 89",
+        "pt": "Capítulo 89",
+        "fr": "Chapitre 89",
+        "de": "Kapitel 89",
+        "tr": "Bölüm 89"
       },
       "availableLayers": [
         "source"
@@ -2102,7 +2648,13 @@
       "title": {
         "en": "Chapter 90",
         "he": "פרק צ׳",
-        "ru": "Глава 90"
+        "ru": "Глава 90",
+        "uk": "Глава 90",
+        "es": "Capítulo 90",
+        "pt": "Capítulo 90",
+        "fr": "Chapitre 90",
+        "de": "Kapitel 90",
+        "tr": "Bölüm 90"
       },
       "availableLayers": [
         "source"
@@ -2123,7 +2675,13 @@
       "title": {
         "en": "Chapter 91",
         "he": "פרק צ״א",
-        "ru": "Глава 91"
+        "ru": "Глава 91",
+        "uk": "Глава 91",
+        "es": "Capítulo 91",
+        "pt": "Capítulo 91",
+        "fr": "Chapitre 91",
+        "de": "Kapitel 91",
+        "tr": "Bölüm 91"
       },
       "availableLayers": [
         "source"
@@ -2144,7 +2702,13 @@
       "title": {
         "en": "Chapter 92",
         "he": "פרק צ״ב",
-        "ru": "Глава 92"
+        "ru": "Глава 92",
+        "uk": "Глава 92",
+        "es": "Capítulo 92",
+        "pt": "Capítulo 92",
+        "fr": "Chapitre 92",
+        "de": "Kapitel 92",
+        "tr": "Bölüm 92"
       },
       "availableLayers": [
         "source"
@@ -2165,7 +2729,13 @@
       "title": {
         "en": "Chapter 93",
         "he": "פרק צ״ג",
-        "ru": "Глава 93"
+        "ru": "Глава 93",
+        "uk": "Глава 93",
+        "es": "Capítulo 93",
+        "pt": "Capítulo 93",
+        "fr": "Chapitre 93",
+        "de": "Kapitel 93",
+        "tr": "Bölüm 93"
       },
       "availableLayers": [
         "source"
@@ -2186,7 +2756,13 @@
       "title": {
         "en": "Chapter 94",
         "he": "פרק צ״ד",
-        "ru": "Глава 94"
+        "ru": "Глава 94",
+        "uk": "Глава 94",
+        "es": "Capítulo 94",
+        "pt": "Capítulo 94",
+        "fr": "Chapitre 94",
+        "de": "Kapitel 94",
+        "tr": "Bölüm 94"
       },
       "availableLayers": [
         "source",
@@ -2211,7 +2787,13 @@
       "title": {
         "en": "Chapter 95",
         "he": "פרק צ״ה",
-        "ru": "Глава 95"
+        "ru": "Глава 95",
+        "uk": "Глава 95",
+        "es": "Capítulo 95",
+        "pt": "Capítulo 95",
+        "fr": "Chapitre 95",
+        "de": "Kapitel 95",
+        "tr": "Bölüm 95"
       },
       "availableLayers": [
         "source"
@@ -2232,7 +2814,13 @@
       "title": {
         "en": "Chapter 96",
         "he": "פרק צ״ו",
-        "ru": "Глава 96"
+        "ru": "Глава 96",
+        "uk": "Глава 96",
+        "es": "Capítulo 96",
+        "pt": "Capítulo 96",
+        "fr": "Chapitre 96",
+        "de": "Kapitel 96",
+        "tr": "Bölüm 96"
       },
       "availableLayers": [
         "source"
@@ -2253,7 +2841,13 @@
       "title": {
         "en": "Chapter 97",
         "he": "פרק צ״ז",
-        "ru": "Глава 97"
+        "ru": "Глава 97",
+        "uk": "Глава 97",
+        "es": "Capítulo 97",
+        "pt": "Capítulo 97",
+        "fr": "Chapitre 97",
+        "de": "Kapitel 97",
+        "tr": "Bölüm 97"
       },
       "availableLayers": [
         "source"
@@ -2274,7 +2868,13 @@
       "title": {
         "en": "Chapter 98",
         "he": "פרק צ״ח",
-        "ru": "Глава 98"
+        "ru": "Глава 98",
+        "uk": "Глава 98",
+        "es": "Capítulo 98",
+        "pt": "Capítulo 98",
+        "fr": "Chapitre 98",
+        "de": "Kapitel 98",
+        "tr": "Bölüm 98"
       },
       "availableLayers": [
         "source"
@@ -2295,7 +2895,13 @@
       "title": {
         "en": "Chapter 99",
         "he": "פרק צ״ט",
-        "ru": "Глава 99"
+        "ru": "Глава 99",
+        "uk": "Глава 99",
+        "es": "Capítulo 99",
+        "pt": "Capítulo 99",
+        "fr": "Chapitre 99",
+        "de": "Kapitel 99",
+        "tr": "Bölüm 99"
       },
       "availableLayers": [
         "source"
@@ -2316,7 +2922,13 @@
       "title": {
         "en": "Chapter 100",
         "he": "פרק ק׳",
-        "ru": "Глава 100"
+        "ru": "Глава 100",
+        "uk": "Глава 100",
+        "es": "Capítulo 100",
+        "pt": "Capítulo 100",
+        "fr": "Chapitre 100",
+        "de": "Kapitel 100",
+        "tr": "Bölüm 100"
       },
       "availableLayers": [
         "source",
@@ -2341,7 +2953,13 @@
       "title": {
         "en": "Chapter 101",
         "he": "פרק ק״א",
-        "ru": "Глава 101"
+        "ru": "Глава 101",
+        "uk": "Глава 101",
+        "es": "Capítulo 101",
+        "pt": "Capítulo 101",
+        "fr": "Chapitre 101",
+        "de": "Kapitel 101",
+        "tr": "Bölüm 101"
       },
       "availableLayers": [
         "source",
@@ -2366,7 +2984,13 @@
       "title": {
         "en": "Chapter 102",
         "he": "פרק ק״ב",
-        "ru": "Глава 102"
+        "ru": "Глава 102",
+        "uk": "Глава 102",
+        "es": "Capítulo 102",
+        "pt": "Capítulo 102",
+        "fr": "Chapitre 102",
+        "de": "Kapitel 102",
+        "tr": "Bölüm 102"
       },
       "availableLayers": [
         "source",
@@ -2391,7 +3015,13 @@
       "title": {
         "en": "Chapter 103",
         "he": "פרק ק״ג",
-        "ru": "Глава 103"
+        "ru": "Глава 103",
+        "uk": "Глава 103",
+        "es": "Capítulo 103",
+        "pt": "Capítulo 103",
+        "fr": "Chapitre 103",
+        "de": "Kapitel 103",
+        "tr": "Bölüm 103"
       },
       "availableLayers": [
         "source",
@@ -2416,7 +3046,13 @@
       "title": {
         "en": "Chapter 104",
         "he": "פרק ק״ד",
-        "ru": "Глава 104"
+        "ru": "Глава 104",
+        "uk": "Глава 104",
+        "es": "Capítulo 104",
+        "pt": "Capítulo 104",
+        "fr": "Chapitre 104",
+        "de": "Kapitel 104",
+        "tr": "Bölüm 104"
       },
       "availableLayers": [
         "source",
@@ -2441,7 +3077,13 @@
       "title": {
         "en": "Chapter 105",
         "he": "פרק ק״ה",
-        "ru": "Глава 105"
+        "ru": "Глава 105",
+        "uk": "Глава 105",
+        "es": "Capítulo 105",
+        "pt": "Capítulo 105",
+        "fr": "Chapitre 105",
+        "de": "Kapitel 105",
+        "tr": "Bölüm 105"
       },
       "availableLayers": [
         "source",
@@ -2466,7 +3108,13 @@
       "title": {
         "en": "Chapter 106",
         "he": "פרק ק״ו",
-        "ru": "Глава 106"
+        "ru": "Глава 106",
+        "uk": "Глава 106",
+        "es": "Capítulo 106",
+        "pt": "Capítulo 106",
+        "fr": "Chapitre 106",
+        "de": "Kapitel 106",
+        "tr": "Bölüm 106"
       },
       "availableLayers": [
         "source",
@@ -2491,7 +3139,13 @@
       "title": {
         "en": "Chapter 107",
         "he": "פרק ק״ז",
-        "ru": "Глава 107"
+        "ru": "Глава 107",
+        "uk": "Глава 107",
+        "es": "Capítulo 107",
+        "pt": "Capítulo 107",
+        "fr": "Chapitre 107",
+        "de": "Kapitel 107",
+        "tr": "Bölüm 107"
       },
       "availableLayers": [
         "source",
@@ -2516,7 +3170,13 @@
       "title": {
         "en": "Chapter 108",
         "he": "פרק ק״ח",
-        "ru": "Глава 108"
+        "ru": "Глава 108",
+        "uk": "Глава 108",
+        "es": "Capítulo 108",
+        "pt": "Capítulo 108",
+        "fr": "Chapitre 108",
+        "de": "Kapitel 108",
+        "tr": "Bölüm 108"
       },
       "availableLayers": [
         "source",
@@ -2541,7 +3201,13 @@
       "title": {
         "en": "Chapter 109",
         "he": "פרק ק״ט",
-        "ru": "Глава 109"
+        "ru": "Глава 109",
+        "uk": "Глава 109",
+        "es": "Capítulo 109",
+        "pt": "Capítulo 109",
+        "fr": "Chapitre 109",
+        "de": "Kapitel 109",
+        "tr": "Bölüm 109"
       },
       "availableLayers": [
         "source",
@@ -2566,7 +3232,13 @@
       "title": {
         "en": "Inner Observation",
         "he": "הסתכלות פנימית",
-        "ru": "Внутреннее созерцание"
+        "ru": "Внутреннее созерцание",
+        "uk": "Внутрішнє споглядання",
+        "es": "Observación Interior",
+        "pt": "Observação Interior",
+        "fr": "Observation intérieure",
+        "de": "Innere Betrachtung",
+        "tr": "İç Gözlem"
       },
       "availableLayers": [
         "source"
@@ -2587,7 +3259,13 @@
       "title": {
         "en": "List of Questions on Terminology",
         "he": "לוח השאלות לפירוש המלות",
-        "ru": "Вопросы о значении слов"
+        "ru": "Вопросы о значении слов",
+        "uk": "Питання про значення слів",
+        "es": "Preguntas sobre el significado de las palabras",
+        "pt": "Perguntas sobre o significado das palavras",
+        "fr": "Questions sur le sens des mots",
+        "de": "Fragen zur Bedeutung der Wörter",
+        "tr": "Kelimelerin anlamı üzerine sorular"
       },
       "availableLayers": [
         "source"
@@ -2608,7 +3286,13 @@
       "title": {
         "en": "List of Questions on Topics",
         "he": "לוח השאלות לעניינים",
-        "ru": "Вопросы по темам"
+        "ru": "Вопросы по темам",
+        "uk": "Питання за темами",
+        "es": "Preguntas sobre los temas",
+        "pt": "Perguntas sobre os temas",
+        "fr": "Questions sur les thèmes",
+        "de": "Fragen zu den Themen",
+        "tr": "Konular üzerine sorular"
       },
       "availableLayers": [
         "source"
@@ -2629,7 +3313,13 @@
       "title": {
         "en": "List of Answers on Terminology",
         "he": "לוח התשובות לפירוש המלות",
-        "ru": "Ответы о значении слов"
+        "ru": "Ответы о значении слов",
+        "uk": "Відповіді про значення слів",
+        "es": "Respuestas sobre el significado de las palabras",
+        "pt": "Respostas sobre o significado das palavras",
+        "fr": "Réponses sur le sens des mots",
+        "de": "Antworten zur Bedeutung der Wörter",
+        "tr": "Kelimelerin anlamı üzerine cevaplar"
       },
       "availableLayers": [
         "source"
@@ -2651,7 +3341,13 @@
       "title": {
         "en": "List of Answers on Topics",
         "he": "לוח התשובות לעניינים",
-        "ru": "Ответы по темам"
+        "ru": "Ответы по темам",
+        "uk": "Відповіді за темами",
+        "es": "Respuestas sobre los temas",
+        "pt": "Respostas sobre os temas",
+        "fr": "Réponses sur les thèmes",
+        "de": "Antworten zu den Themen",
+        "tr": "Konular üzerine cevaplar"
       },
       "availableLayers": [
         "source"

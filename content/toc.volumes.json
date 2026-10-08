@@ -6,7 +6,13 @@
       "title": {
         "en": "Volume 1",
         "he": "כרך 1",
-        "ru": "Том 1"
+        "ru": "Том 1",
+        "uk": "Том 1",
+        "es": "Volumen 1",
+        "pt": "Volume 1",
+        "fr": "Volume 1",
+        "de": "Band 1",
+        "tr": "Cilt 1"
       },
       "parts": [
         {
@@ -15,7 +21,13 @@
           "title": {
             "en": "Restriction and Line",
             "he": "צמצום וקו",
-            "ru": "Сокращение и линия"
+            "ru": "Сокращение и линия",
+            "uk": "Скорочення і лінія",
+            "es": "Restricción y línea",
+            "pt": "Restrição e linha",
+            "fr": "Restriction et ligne",
+            "de": "Einschränkung und Linie",
+            "tr": "Kısıtlama ve çizgi"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
           "chapterCount": 17,
@@ -33,12 +45,24 @@
           "firstChapterTitle": {
             "en": "Introduction",
             "he": "הקדמה",
-            "ru": "Предисловие"
+            "ru": "Предисловие",
+            "uk": "Передмова",
+            "es": "Introducción",
+            "pt": "Introdução",
+            "fr": "Introduction",
+            "de": "Einleitung",
+            "tr": "Giriş"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -51,7 +75,13 @@
           "title": {
             "en": "Circles and Straightness",
             "he": "עגולים ויושר",
-            "ru": "Круги и прямая"
+            "ru": "Круги и прямая",
+            "uk": "Кола і пряма",
+            "es": "Círculos y rectitud",
+            "pt": "Círculos e retidão",
+            "fr": "Cercles et droiture",
+            "de": "Kreise und Geradheit",
+            "tr": "Daireler ve doğruluk"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section II",
           "chapterCount": 16,
@@ -68,12 +98,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -86,7 +128,13 @@
           "title": {
             "en": "Direct Light and Reflected Light",
             "he": "אור ישר ואור חוזר",
-            "ru": "Прямой свет и отраженный свет"
+            "ru": "Прямой свет и отраженный свет",
+            "uk": "Пряме світло і відбите світло",
+            "es": "Luz directa y luz reflejada",
+            "pt": "Luz direta e luz refletida",
+            "fr": "Lumière directe et lumière réfléchie",
+            "de": "Direktes Licht und reflektiertes Licht",
+            "tr": "Doğrudan Işık ve Yansıyan Işık"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section III",
           "chapterCount": 34,
@@ -103,12 +151,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -121,7 +181,13 @@
           "title": {
             "en": "The Ten Sefirot of Akudim",
             "he": "עשר הספירות של עקודים",
-            "ru": "Десять сфирот Акудим"
+            "ru": "Десять сфирот Акудим",
+            "uk": "Десять сфірот Акудім",
+            "es": "Las diez Sefirot de Akudim",
+            "pt": "As dez Sefirot de Akudim",
+            "fr": "Les dix Sefirot d'Akoudim",
+            "de": "Die zehn Sefirot von Akudim",
+            "tr": "Akudim'in on Sefirot'u"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IV",
           "chapterCount": 16,
@@ -138,12 +204,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -158,7 +236,13 @@
       "title": {
         "en": "Volume 2",
         "he": "כרך 2",
-        "ru": "Том 2"
+        "ru": "Том 2",
+        "uk": "Том 2",
+        "es": "Volumen 2",
+        "pt": "Volume 2",
+        "fr": "Volume 2",
+        "de": "Band 2",
+        "tr": "Cilt 2"
       },
       "parts": [
         {
@@ -167,7 +251,13 @@
           "title": {
             "en": "Akudim in the Second Expansion: Matei ve Lo Matei",
             "he": "ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי",
-            "ru": "Акудим во втором распространении: «Мати и ло мати»"
+            "ru": "Акудим во втором распространении: «Мати и ло мати»",
+            "uk": "Акудім у другому поширенні: «Маті і ло маті»",
+            "es": "Akudim en la segunda expansión: Matei ve Lo Matei",
+            "pt": "Akudim na segunda expansão: Matei ve Lo Matei",
+            "fr": "Akoudim dans la seconde expansion : Matei ve Lo Matei",
+            "de": "Akudim in der zweiten Ausbreitung: Matei ve Lo Matei",
+            "tr": "İkinci yayılımda Akudim: Matei ve Lo Matei"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section V",
           "chapterCount": 66,
@@ -183,12 +273,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -201,7 +303,13 @@
           "title": {
             "en": "The World of Nekudim",
             "he": "עשר הספירות של עולם הנקודים",
-            "ru": "Мир Некудим"
+            "ru": "Мир Некудим",
+            "uk": "Світ Некудім",
+            "es": "El mundo de Nekudim",
+            "pt": "O mundo de Nekudim",
+            "fr": "Le monde de Nekoudim",
+            "de": "Die Welt Nekudim",
+            "tr": "Nekudim dünyası"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VI",
           "chapterCount": 62,
@@ -220,12 +328,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Cause and Effect",
             "he": "לוח התשובות לסדר סיבה ומסובב",
-            "ru": "Ответы о причине и следствии"
+            "ru": "Ответы о причине и следствии",
+            "uk": "Відповіді про причину і наслідок",
+            "es": "Respuestas sobre causa y efecto",
+            "pt": "Respostas sobre causa e efeito",
+            "fr": "Réponses sur la cause et l'effet",
+            "de": "Antworten zu Ursache und Wirkung",
+            "tr": "Sebep ve sonuç üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -238,7 +358,13 @@
           "title": {
             "en": "The Seven Kings That Died",
             "he": "עשר הספירות דז' מלכין קדמאין דמיתו",
-            "ru": "Семь умерших царей"
+            "ru": "Семь умерших царей",
+            "uk": "Сім померлих царів",
+            "es": "Los siete reyes que murieron",
+            "pt": "Os sete reis que morreram",
+            "fr": "Les sept rois morts",
+            "de": "Die sieben Könige, die starben",
+            "tr": "Ölen yedi kral"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VII",
           "chapterCount": 79,
@@ -255,12 +381,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -275,7 +413,13 @@
       "title": {
         "en": "Volume 3",
         "he": "כרך 3",
-        "ru": "Том 3"
+        "ru": "Том 3",
+        "uk": "Том 3",
+        "es": "Volumen 3",
+        "pt": "Volume 3",
+        "fr": "Volume 3",
+        "de": "Band 3",
+        "tr": "Cilt 3"
       },
       "parts": [
         {
@@ -284,7 +428,13 @@
           "title": {
             "en": "The Ten Sefirot of the World of Atzilut",
             "he": "עשר הספירות של עולם האצילות",
-            "ru": "Десять сфирот мира Ацилут"
+            "ru": "Десять сфирот мира Ацилут",
+            "uk": "Десять сфірот світу Ацилут",
+            "es": "Las diez Sefirot del mundo de Atzilut",
+            "pt": "As dez Sefirot do mundo de Atzilut",
+            "fr": "Les dix Sefirot du monde d'Atsilout",
+            "de": "Die zehn Sefirot der Welt Azilut",
+            "tr": "Atzilut dünyasının on Sefirot'u"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
           "chapterCount": 99,
@@ -301,12 +451,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -319,7 +481,13 @@
           "title": {
             "en": "The Couplings of the Sefirot",
             "he": "זווגי הספירות",
-            "ru": "Зивуги сфирот"
+            "ru": "Зивуги сфирот",
+            "uk": "Зівуги сфірот",
+            "es": "Los acoplamientos de las Sefirot",
+            "pt": "Os acoplamentos das Sefirot",
+            "fr": "Les accouplements des Sefirot",
+            "de": "Die Vereinigungen der Sefirot",
+            "tr": "Sefirot'un çiftleşmeleri"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IX",
           "chapterCount": 114,
@@ -336,12 +504,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -354,7 +534,13 @@
           "title": {
             "en": "The First Ibur of Zeir Anpin",
             "he": "עיבור ראשון דז\"א",
-            "ru": "Первый ибур Зеир Анпина"
+            "ru": "Первый ибур Зеир Анпина",
+            "uk": "Перший ібур Зеір Анпіна",
+            "es": "El primer Ibur de Zeir Anpin",
+            "pt": "O primeiro Ibur de Zeir Anpin",
+            "fr": "Le premier Ibour de Zeir Anpin",
+            "de": "Der erste Ibur von Seir Anpin",
+            "tr": "Zeir Anpin'in ilk İbur'u"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section X",
           "chapterCount": 164,
@@ -371,12 +557,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -391,7 +589,13 @@
       "title": {
         "en": "Volume 4",
         "he": "כרך 4",
-        "ru": "Том 4"
+        "ru": "Том 4",
+        "uk": "Том 4",
+        "es": "Volumen 4",
+        "pt": "Volume 4",
+        "fr": "Volume 4",
+        "de": "Band 4",
+        "tr": "Cilt 4"
       },
       "parts": [
         {
@@ -400,7 +604,13 @@
           "title": {
             "en": "Correcting Lights, Sparks and Vessels in the Ubar, and the Second Ibur",
             "he": "תיקון אורות ניצוצין וכלים בעובר ועיבור ב'",
-            "ru": "Исправление светов, искр и келим в зародыше и второй ибур"
+            "ru": "Исправление светов, искр и келим в зародыше и второй ибур",
+            "uk": "Виправлення світел, іскор і келім у зародку та другий ібур",
+            "es": "Corrección de luces, chispas y vasijas en el embrión, y el segundo Ibur",
+            "pt": "Correção das luzes, centelhas e vasos no embrião, e o segundo Ibur",
+            "fr": "Correction des lumières, étincelles et récipients dans l'embryon, et le second Ibour",
+            "de": "Korrektur der Lichter, Funken und Gefäße im Embryo und der zweite Ibur",
+            "tr": "Embriyoda ışıkların, kıvılcımların ve kapların ıslahı ve ikinci İbur"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XI",
           "chapterCount": 160,
@@ -416,12 +626,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -434,7 +656,13 @@
           "title": {
             "en": "The Birth and Yenika of Zeir Anpin",
             "he": "לידה ויניקה של הז\"א",
-            "ru": "Рождение и еника Зеир Анпина"
+            "ru": "Рождение и еника Зеир Анпина",
+            "uk": "Народження і єніка Зеір Анпіна",
+            "es": "Nacimiento y Yeniká de Zeir Anpin",
+            "pt": "Nascimento e Yeniká de Zeir Anpin",
+            "fr": "Naissance et allaitement de Zeir Anpin",
+            "de": "Geburt und Jenika von Seir Anpin",
+            "tr": "Zeir Anpin'in doğumu ve Yenika'sı"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XII",
           "chapterCount": 298,
@@ -451,12 +679,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -471,7 +711,13 @@
       "title": {
         "en": "Volume 5",
         "he": "כרך 5",
-        "ru": "Том 5"
+        "ru": "Том 5",
+        "uk": "Том 5",
+        "es": "Volumen 5",
+        "pt": "Volume 5",
+        "fr": "Volume 5",
+        "de": "Band 5",
+        "tr": "Cilt 5"
       },
       "parts": [
         {
@@ -480,7 +726,13 @@
           "title": {
             "en": "The Corrections of the Head and Beard of Arich Anpin",
             "he": "תיקוני רישא ודיקנא דא\"א",
-            "ru": "Исправления головы и бороды Арих Анпина"
+            "ru": "Исправления головы и бороды Арих Анпина",
+            "uk": "Виправлення голови і бороди Аріх Анпіна",
+            "es": "Las correcciones de la cabeza y la barba de Arij Anpin",
+            "pt": "As correções da cabeça e da barba de Arich Anpin",
+            "fr": "Les corrections de la tête et de la barbe d'Arikh Anpin",
+            "de": "Die Korrekturen von Kopf und Bart von Arich Anpin",
+            "tr": "Arih Anpin'in başının ve sakalının ıslahları"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
           "chapterCount": 225,
@@ -497,12 +749,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -515,7 +779,13 @@
           "title": {
             "en": "The Mochin of Gadlut of Zeir Anpin",
             "he": "מוחין דגדלות של זעיר אנפין",
-            "ru": "Мохин гадлута Зеир Анпина"
+            "ru": "Мохин гадлута Зеир Анпина",
+            "uk": "Мохін ґадлуту Зеір Анпіна",
+            "es": "Los Mojin de Gadlut de Zeir Anpin",
+            "pt": "Os Mochin de Gadlut de Zeir Anpin",
+            "fr": "Les Mokhin de Gadlout de Zeir Anpin",
+            "de": "Die Mochin de Gadlut von Seir Anpin",
+            "tr": "Zeir Anpin'in Gadlut Mohin'i"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
           "chapterCount": 232,
@@ -531,12 +801,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -551,7 +833,13 @@
       "title": {
         "en": "Volume 6",
         "he": "כרך 6",
-        "ru": "Том 6"
+        "ru": "Том 6",
+        "uk": "Том 6",
+        "es": "Volumen 6",
+        "pt": "Volume 6",
+        "fr": "Volume 6",
+        "de": "Band 6",
+        "tr": "Cilt 6"
       },
       "parts": [
         {
@@ -560,7 +848,13 @@
           "title": {
             "en": "Building the Nukva of Zeir Anpin",
             "he": "בנין הנוקבא דז\"א",
-            "ru": "Построение Нуквы Зеир Анпина"
+            "ru": "Построение Нуквы Зеир Анпина",
+            "uk": "Побудова Нукви Зеір Анпіна",
+            "es": "La construcción de la Nukva de Zeir Anpin",
+            "pt": "A construção da Nukva de Zeir Anpin",
+            "fr": "La construction de la Noukva de Zeir Anpin",
+            "de": "Der Aufbau der Nukwa von Seir Anpin",
+            "tr": "Zeir Anpin'in Nukva'sının inşası"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XV",
           "chapterCount": 233,
@@ -576,12 +870,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
@@ -594,7 +900,13 @@
           "title": {
             "en": "The Three Worlds: Beria, Yetzira and Assiya",
             "he": "ג' העולמות בריאה יצירה ועשיה",
-            "ru": "Три мира: Брия, Ецира и Асия"
+            "ru": "Три мира: Брия, Ецира и Асия",
+            "uk": "Три світи: Брія, Єцира і Асія",
+            "es": "Los tres mundos: Beriá, Yetzirá y Asiyá",
+            "pt": "Os três mundos: Beriá, Yetzirá e Assiyá",
+            "fr": "Les trois mondes : Bria, Yetsira et Assiya",
+            "de": "Die drei Welten: Beria, Jezira und Assija",
+            "tr": "Üç dünya: Beria, Yetzira ve Assiya"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
           "chapterCount": 276,
@@ -610,12 +922,24 @@
           "firstChapterTitle": {
             "en": "Chapter 1",
             "he": "פרק א׳",
-            "ru": "Глава 1"
+            "ru": "Глава 1",
+            "uk": "Глава 1",
+            "es": "Capítulo 1",
+            "pt": "Capítulo 1",
+            "fr": "Chapitre 1",
+            "de": "Kapitel 1",
+            "tr": "Bölüm 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
             "he": "לוח התשובות לעניינים",
-            "ru": "Ответы по темам"
+            "ru": "Ответы по темам",
+            "uk": "Відповіді за темами",
+            "es": "Respuestas sobre los temas",
+            "pt": "Respostas sobre os temas",
+            "fr": "Réponses sur les thèmes",
+            "de": "Antworten zu den Themen",
+            "tr": "Konular üzerine cevaplar"
           },
           "availableSummary": {
             "he": "full",
