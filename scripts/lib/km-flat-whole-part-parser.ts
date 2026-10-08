@@ -77,7 +77,10 @@ const SECTION_MARKERS = new Set(
 
 const isSectionMarker = (text: string): boolean =>
   SECTION_MARKERS.has(
-    text.replace(/^[\s\-–—]+|[\s\-–—:]+$/g, "").toLocaleLowerCase(),
+    text
+      .replace(/\([^)]*\)/g, "")
+      .replace(/^[\s\-–—]+|[\s\-–—:]+$/g, "")
+      .toLocaleLowerCase(),
   );
 
 /** `12.` or `12` — see the module doc on why the dot cannot be required. */

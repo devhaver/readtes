@@ -48,21 +48,25 @@ const MARKER_RE =
   /^(inner light|ohr pnimi|ор пними|ор пнімі|внутренний свет|внутрішнє світло)\s*:?$/i;
 /**
  * A leading numeral: `N.` (English), `N)` (Russian and others), or `(N)`
- * (a Russian note). The Russian documents also print a stray running count
+ * (a Russian note), optionally after a footnote asterisk (`* 1)`). The
+ * Russian documents also print a stray running count
  * before a seif's own numeral (`1   1) Знай…`), which is skipped.
  */
 const LEADING_NUMBER_TEXT_RE =
-  /^\s*(?:\d+\s+(?=\d))?(?:(\d+)\s*[.)]|\((\d+)\))(?!\d)/;
+  /^\s*\*?\s*(?:\d+\s+(?=\d))?(?:(\d+)\s*[.)]|\((\d+)\))(?!\d)/;
 /** Leading tags/space, then digits that a tag may split (`1<strong>0.`). */
 const LEADING_NUMBER_HTML_RE =
-  /^((?:\s|<[^>]+>)*)(?:\d+\s+(?=\d))?(?:\d(?:(?:<[^>]+>)*\d)*((?:<[^>]+>)*)\s*[.)]|\(\d+\)[.:]?)(?!\d)\s*/;
+  /^((?:\s|<[^>]+>)*)\*?\s*(?:\d+\s+(?=\d))?(?:\d(?:(?:<[^>]+>)*\d)*((?:<[^>]+>)*)\s*[.)]|\(\d+\)[.:]?)(?!\d)\s*/;
 const TRAILING_NUMBER_TEXT_RE = /\D(\d+)\.\s*$/;
 const PRINTED_MARKER_RE = /\((\d+)\)/g;
 
 /** True for the paragraph that opens a seif's commentary. */
 export const isKiCommentaryMarker = (block: KiBlock): boolean =>
   // The Russian documents dash it: "- Ор пними –".
-  MARKER_RE.test(block.text.replace(/^[\s\-–—]+|[\s\-–—]+$/g, ""));
+  // …and the Ukrainian one sometimes glosses it: "Ор пними(пнімі)".
+  MARKER_RE.test(
+    block.text.replace(/\([^)]*\)/g, "").replace(/^[\s\-–—]+|[\s\-–—]+$/g, ""),
+  );
 
 /** The leading `N.` numeral of a block's text, if it has one. */
 export const kiLeadingNumber = (block: KiBlock): number | undefined => {
