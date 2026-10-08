@@ -90,5 +90,13 @@
     "title": "Bnei Baruch (KabbalahMedia) — Русский",
     "license": "Used with permission",
     "source": "kabbalahmedia"
+  },
+  {
+    "id": "uk-bb",
+    "language": "uk",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia) — Українська",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
   }
 ]

@@ -2901,9 +2901,9 @@ skipped, not force-imported.
 | fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 54/2091 | 54 | 0 |
 | he-bb | Bnei Baruch (KabbalahMedia) — עברית (`he`) | 2/2091 | 10 | 34 |
 | pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2091 | 0 | 0 |
-| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 19/2091 | 168 | 318 |
+| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 73/2091 | 222 | 318 |
 | tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2091 | 0 | 0 |
-| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 0/2091 | 0 | 0 |
+| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 62/2091 | 62 | 0 |
 
 ### Per part x language
 
@@ -2918,8 +2918,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | part-02 | 0/16 | 4/16 | 0/16 | 0/16 | 0/16 | 0/16 | 1/16 | 0/16 | 0/16 |
 | part-03 | 0/34 | 4/34 | 0/34 | 0/34 | 0/34 | 0/34 | 11/34 | 0/34 | 0/34 |
 | part-04 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 6/16 | 0/16 | 0/16 |
-| part-05 | 0/66 | 66/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 |
-| part-06 | 0/62 | 60/62 | 54/62 | 54/62 | 0/62 | 0/62 | 0/62 | 0/62 | 0/62 |
+| part-05 | 0/66 | 66/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 0/66 | 62/66 |
+| part-06 | 0/62 | 60/62 | 54/62 | 54/62 | 0/62 | 0/62 | 54/62 | 0/62 | 0/62 |
 | part-07 | 0/79 | 73/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 | 0/79 |
 | part-08 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 | 0/99 |
 | part-09 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 | 0/114 |
@@ -3054,7 +3054,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | ru-bb | part-04 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | ru-bb | part-05 | no-file-for-language | 66 | no docx file for this language |
 | ru-bb | part-06 | no-file-for-language | 4 | no docx file for this language |
-| ru-bb | part-06 | structure-unsupported | 58 | document structure not yet supported by this importer |
+| ru-bb | part-06 | structure-unsupported | 4 | document structure not yet supported by this importer |
 | ru-bb | part-07 | no-file-for-language | 79 | no docx file for this language |
 | ru-bb | part-08 | no-file-for-language | 5 | no docx file for this language |
 | ru-bb | part-08 | unmatched | 94 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
@@ -3091,7 +3091,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | uk-bb | part-03 | structure-unsupported | 34 | document structure not yet supported by this importer |
 | uk-bb | part-04 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | uk-bb | part-05 | no-file-for-language | 2 | no docx file for this language |
-| uk-bb | part-05 | structure-unsupported | 64 | document structure not yet supported by this importer |
+| uk-bb | part-05 | structure-unsupported | 2 | document structure not yet supported by this importer |
 | uk-bb | part-06 | no-file-for-language | 2 | no docx file for this language |
 | uk-bb | part-06 | structure-unsupported | 6 | document structure not yet supported by this importer |
 | uk-bb | part-06 | unmatched | 54 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
@@ -3359,6 +3359,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **es-bb**: part-01 Q&A candidate EiUPsO0e/LpNfOFWs: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate QCnCAagn/cNLiPwiE: no h6 question blocks
 - **es-bb**: part-01 Q&A candidate nnGQFc43/1zxBqmSG: no h6 question blocks
+- **es-bb**: part-06/chapter-23 commentary: notes not of plausible length against the English edition — not written
+- **fr-bb**: part-06/chapter-23 commentary: notes not of plausible length against the English edition — not written
 - **he-bb**: part-02/chapter-01 Hebrew whole-part: consumed 5/11 topic headings before this chapter ended
 - **he-bb**: part-02/chapter-02 Hebrew whole-part: consumed 3/7 topic headings before this chapter ended
 - **he-bb**: part-03 Hebrew whole-part: found 4 chapter heading(s), expected 15
@@ -3391,7 +3393,8 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **ru-bb**: part-04 Q&A candidate Ut8PE5aO/dN8Yd8d9: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate sL3XV5Dr/dZTnwfLY: no h6 question blocks
 - **ru-bb**: part-04 Q&A candidate 1t0TL11u/GMyqDV1J: no h6 question blocks
-- **ru-bb**: part-06 whole-part candidate DztxuIK7/AoBmRybu: no source items — numbered, flat or unnumbered
+- **ru-bb**: part-06 whole-part source: source item 54: marker "(161)" has no matching anchor in this chapter's Hebrew ground truth — left as text
+- **ru-bb**: part-06/chapter-23 commentary: notes not of plausible length against the English edition — not written
 - **ru-bb**: part-06 Q&A candidate KGNYqv7h/RNERyfru: no h6 question blocks
 - **ru-bb**: part-08 whole-part candidate Pscnn3pP/xZMvq2Fj: item count 3 does not match target chapter count 94
 - **tr-bb**: part-01/chapter-01: seif 1: anchor(s) op-8, op-9, op-10, op-11 not printed
@@ -3458,7 +3461,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **uk-bb**: part-04 Q&A candidate Ut8PE5aO/C1TDuVGm: no h6 question blocks
 - **uk-bb**: part-04 Q&A candidate sL3XV5Dr/UQXzE4ji: no h6 question blocks
 - **uk-bb**: part-04 Q&A candidate 1t0TL11u/Iq6eO5Sk: no h6 question blocks
-- **uk-bb**: part-05 whole-part candidate 4pmOtkWY/BcOThHsH: no source items — numbered, flat or unnumbered
 - **uk-bb**: part-05 Q&A candidate fSmz8o3A/8bV4ZlE6: no h6 question blocks
 - **uk-bb**: part-05 Q&A candidate uyAWnLqJ/4d1ToqGf: no h6 question blocks
 - **uk-bb**: part-06 whole-part candidate DztxuIK7/UNjSstg0: item count 1 does not match target chapter count 54
