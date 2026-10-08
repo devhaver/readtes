@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<strong>Only the <em>Behina</em> of the apparent <em>Malchut </em>is not in <em>AA </em>etc. …In <em>Atik Yomin </em>too.</strong> As we have explained above <em>(Ohr Pnimi</em> item 20), the <em>Hey Tata’a de MA</em> was concealed in <em>Rosh de Atik</em>, and her <em>Atzmut </em>does not appear in the entire <em>Atzilut</em>."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<strong><em>Malchut </em>appears from that Upper most <em>Reisha de Lo Etyada</em>.</strong> It is called <em>Rosh de Atik Yomin</em>, which is the first <em>Rosh</em> of <em>Atzilut</em>, and where the <em>Hey Tata’a </em>was concealed. Her <em>He’arah</em> appears in <em>Malchut </em>of <em>Olam ha Atzilut</em>, meaning in <em>Malchut </em>that became a complete <em>Partzuf </em>for <em>Nukva de ZA</em>."
+    }
+  ]
+}

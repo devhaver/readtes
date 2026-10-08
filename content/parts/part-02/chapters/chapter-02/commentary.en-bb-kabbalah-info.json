@@ -1,0 +1,332 @@
+{
+  "chapterId": "part-02/chapter-02",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "<strong>The roof of the top circle:</strong> The Keter in each world or Sefira is regarded as the roof of that world or Sefira. Malchut in each world or Sefira is regarded as the ground of that world or Sefira. The top circle is the Sefira of Keter, and the roof of that Keter is the Keter in the ten Sefirot of that Keter."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "<strong>The image of a straight Adam: </strong>The clothing of the Mochin is called Tzelem [image, semblance], from the word Tzel [shade]. The illumination of straightness, which consists of the first three Sefirot, is called Adam, since it receives GAR in garments of Tzelem, and this is an elaborate matter, and here is not the place to elaborate on it."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "<strong>Upright:</strong> The Rosh of every Sefira and Partzuf consists of the first three Sefirot: Keter, Hochma, Bina. The seven bottom Sefirot: Hesed, Gevura, Tifferet, Netzah, Hod, Yesod, Malchut in each Sefira and Partzuf, are regarded as the Guf of that Sefira and Partzuf. When they are in order, meaning when the lights of GAR are in the vessels of GAR, and the lights of ZAT are in the vessels of ZAT, the Partzuf is regarded as upright. However, if the lights of the Guf are in the vessels of GAR, instead of clothing the lights attributed to them, then that Partzuf is not regarded as being upright, since the Rosh is not more important than the Guf, since even the Rosh uses only the lights of the Guf. This is called “lowering the Rosh,” when the Rosh and the Guf are on the same degree."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "<strong>Consisting of 248 organs depicted as three lines: right, left, and middle:</strong> There are 248 states of Hesed in the upper Partzuf, from which 248 organs are extended in the lower ones, elaborated (in the <em>Mishnah</em>, <em>Ohalot</em>), and there is no room to elaborate, and it will be clarified in its place."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:5",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "<strong>Five kinds of light in the lower Adam:</strong> There is not an essence in all the worlds, both in the upper worlds, as well as in this world, that does not consist of the above ten Sefirot, which are the four above mentioned phases and their root. This is why he says that these five phases are also found in the lower Adam in this world."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:6",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "<strong>Nefesh, Ruach, Neshama, Haya, Yechida:</strong> The vessels in the ten Sefirot are called Keter, Hochma, Bina, Zeir Anpin, Malchut, and the lights in them are called Yechida, Haya, Neshama, Ruach, Nefesh (as it is written in<em>Midrash Rabbah</em>, <em>Devarim</em>, Chapter Two, 26), that the light of Yechida clothes the vessel of Keter, the light of Haya clothes in the vessel of Hochma, the light of Neshama in the vessel of Bina, the light of Ruach in the vessel of Zeir Anpin, and the light of Nefesh in the vessel of Malchut."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:7",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "<strong>Five levels, one above the other:</strong> You already know that the degrees are differentiated according to their refinement and coarseness. The term “above” means greater refinement than the other."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:8",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "<strong>Lights and vessels:</strong> The lights are NRNHY, and the vessels are KHB ZON."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:9",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "<strong>The light is divided into inner light and surrounding light, and the vessel is divided into externality and internality:</strong> The spiritual division happened due to the disparity of form that was innovated there (Part One, Chapter One, Item 30). Higher than another means more refined than the other, and lower than another means being coarser than the other, since in the disparity of form of this coarseness, one is separated and exits from the other, and becomes lower than him. It is known that the lights are imparted from any upper one to the one below it. Because of this, the lower one must receive the abundance in its highest and most refined phase, while the upper one imparts the abundance only from its lowest and coarsest phase.<br>Thus, the form of the light that comes from the upper one equalizes with the form of the vessel in the lower one, since the coarsest and crudest phase in the upper one has equivalence to the finest and most refined phase in the lower one. It turns out that the lower one cannot receive all the light that belongs to it, but only a very small part, as much as its most refined vessel can receive. Its other phases, which are not that refined, must remain without the light attributed to them due to their disparity of form from the upper one that bestows upon them.<br>For this reason, we find that the light that belongs to the lower one is divided into two phases: The first is the small amount of light that it receives from the upper one inside its uppermost vessel. That light that it receives is called the “inner light in the lower one.” The second is the full amount of light that belongs to the phases that remain in the lower one, and cannot receive due to their disparity of form from the upper one. That full amount is regarded as remaining in the upper one, and not descending to the lower one. It is called “surrounding light” because it surrounds the lower one, meaning shines on it from afar, though it is not clothed in it. Rather, it is a diminished and far illumination. This distant illumination can refine the coarseness in the lower one until all the forms of the phases in the lower equalize with the form of the upper one. Then it will be able to receive the full measure of the light that belongs to it. This is called the “entry of surroundings, meaning that the surrounding lights entered and clothed the vessels of the lower one that were refined, and they all became inner light."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:10",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "<strong>The vessel is divided into externality and internality:</strong> Because the lights were divided into inner light and surrounding light there are now two kinds of reception in the vessel, which are reception inside the vessel, and reception in the externality of the vessel (Part One, Questions and Answers on the Meaning of Topics, Item 102). The inner light is received inside the vessel, and the Surrounding Light, which refines it from its coarseness, is regarded as received through the externality of the vessel, meaning without clothing in the vessel whatsoever.<br>This division into externality and internality is according to the coarseness and refinement in the vessel, for only its coarseness is fit to receive the inner light, since the vessel of reception of the emanated being is primarily phase four. Indeed, the first three phases are not fit for reception, but cause phase four to appear. For this reason, it is discerned that each vessel has its own four phases in the vessel, and the light is received primarily in phase four in it. This is why she is called the internality of the vessel and its interior, where the abundance is found.<br>The three phases that cause only the revelation of phase four in the vessel, while they themselves do not receive, are regarded as circling phase four from the outside, like the thickness of a wall of a corporeal vessel that consists of four shells that surround one another. Everything is received only in the interior of the vessel, meaning in the inner shell, while the other three shells in the thickness of the wall only strengthen the innermost shell, so it may have the strength to bear its filling. We should understand spirituality in much the same way, namely that phase four is the primary phase that holds the abundance in the vessel. The first three phases are the reasons for the revelation of phase four in all its strength, until she is suitable to hold the abundance, while for themselves, they are not qualified to receive the inner light.<br>They are called the externality of the vessel because they are excluded from receiving the inner light. Phase three is the externality of phase four; phase two is the externality of phase three; phase one is the most external and surrounds all the others. Outside them all there is an external phase without any coarseness, which is the root of all four phases in the vessel. Know that this completely refined phase is the vessel of reception for the Surrounding Light, since due to the wondrous refinement in it, it can receive the illumination of the surrounding light, although it is from afar.<br>This explains the matter of the division of the vessel, whose internality, meaning its coarsest phase, namely phase four in the vessel, receives the inner light. Its externality, meaning its most refined phase, the root phase in the vessel, receives the surrounding light from afar. We should not ask why phase four is unfit to receive due to the force of the restriction and the screen, as we are concerned here only with the reflected light that rises from phase four (Inner Observation)."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:11",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "<strong>The ten Sefirot of circles are regarded as the light of Nefesh. There are inner light and Surrounding Light in them, internal and external:</strong> All the Sefirot that can only receive lights and have no ability to bestow upon others, the light in them is called “light of Nefesh.” It has already been explained that all the light in the circles must be received from the light of the line (Part Two, Chapter One, Item 30). The reason is that the upper light cannot connect to the vessels except by a coupling with the screen that raises reflected light, as that reflected light connects the light with the vessels (Part Two, Chapter One, Item 30).<br>Consequently, the upper light does not connect with the vessels that do not have that screen, so they cannot bestow upon others from above downward. Instead, they can only receive light from the previous degree, from below upward, for their own sustenance. This light is called “light of Nefesh.” Thus, because there is no screen in the above-mentioned vessels of circles, the upper light does not connect to them, and they must receive light from the line, but even that is only for their own sustenance, and not to bestow. For this reason, the light in the circles is called “light of Nefesh.”"
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:12",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "<strong>Ruach, which is a higher degree than the degree of Nefesh: </strong>The ten Sefirot of Ruach are regarded as bestowing. For this reason, the light of Ruach is called “male light,” meaning it bestows. However, the ten Sefirot of Nefesh are called “female light,” meaning that they receive and cannot bestow. For this reason, the ten Sefirot of the light of the line are called “ten Sefirot of Ruach,” indicating that they are regarded as male light, bestowing, as we have explained above. Therefore, the Ruach is higher than the degree of Nefesh because it bestows upon the Nefesh.<br>Arich Anpin of the circles shines for Abba and Ima of the circles in the state of windows, from the three lines: right, left, and middle in him. The light is extended from them to all the circles, in a way that all the elements that exist is in the straightness, also exist in the circles"
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "40"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:13",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>Circles one within the other: </strong>Meaning the five degrees KHB ZON are not extended in straightness, meaning one below the other, from refined to coarse (Part Two, Chapter One, Item 5). Rather, the five degrees are equal to each other, and not one below the other, namely coarser than the other. Of course, there is a differentiation of cause and effect between them, because they do emerge from one another and are extended from one another. Thus, Hochma emerged from Keter, Bina from Hochma, Zeir Anpin from Bina, and Malchut from Zeir Anpin (Inner Light, Part One, Chapter One, Item 50). However, that above differentiation of cause and effect is defined by their being one inside the other, where each reason causes its consequence: Hochma is caused by Keter, Bina is caused by Hochma, etc. Thus, one within the other means that one is the result of the other. However, there is no differentiation of up or down between them whatsoever (Part One, Chapter One, Item 100)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "50"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:14",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>They already have all the states of reception of the abundance that exist in the ten Sefirot in the line of straightness: </strong>Because this is the impression of the light from the vessel in which it is clothed, where even when it leaves there to go to another vessel, it does not change its conduct from the previous vessel. Hence, while the light in the line was in straightness, it was extended and descended, one below the other, meaning gained coarseness in a gradual order because of the screen that is there (Part Two, Chapter One, Item 6), therefore, even after it had left there and came to the ten Sefirot of the circles, in which there is no screen, and it necessarily becomes circular in them, it still did not change its conducts in its expansion from degree to degree. For example, when the light of the line comes to the Sefira of Keter, it becomes circular there, meaning acquires the shape of that vessel, in which there is no distinction of above and below.<br>However, when the light expands from the circle of Keter to the circle of Hochma, it does not become circular (Part One, Item 3), but is extended in straightness, meaning with a distinction of above and below. Consequently, the Sefira of the circle of Hochma is below the circle of Keter and coarser than Keter, since their form is not the same. Similarly, when light comes from Hochma to Bina, it is extended to it in straightness. It is therefore considered that Bina is below Hochma, meaning coarser than Hochma. It is likewise with all the Sefirot, so that although the form of the ten Sefirot of circles are of equal form, without distinction of above and below with regard to the vessels, there is still a distinction of above and below in them because they have all the phases of reception of the abundance in the ten Sefirot in the line of straightness."
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "60"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:15",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>Arich Anpin after the correction:</strong> After the four worlds ABYA were established, each Sefira became a complete Partzuf with Rosh, Toch, Sof. Because of this they were given different names: The Partzuf that was made from Keter was named Arich Anpin; the Partzuf that was made from Hochma was named Abba; and the Partzuf that was made from Bina was named Ima; the Partzuf that was made from the six Sefirot HGT NHY was named Zeir Anpin; and the Partzuf that was made from Malchut was named Nukva [female]. The meaning of these names will be explained in their places."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "70"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:16",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>One hole and window: </strong>You already know that because of the light of the ten Sefirot of the line that is received in the circles, all the phases of straightness are necessarily imprinted in the circles, as well (Item 50). This phase in the line, which is called a “screen,” whose reflected light connects the upper light in the vessels (Part Two, Chapter One, Item 20), is imprinted in the circles, too, but without its coarseness, since the coarseness cannot rise from a lower degree to a higher one whatsoever, as this is why it is called “upper one,” although it does not have the same coarseness as in the lower one. Rather, only the “gap” that this screen reveals in the lower one, meaning in the ten Sefirot of straightness, rises from the screen of the line of straightness and is imprinted in the circles.<br>This “gap” from the screen is called a “window.” Like a window that is set in a room in order to bring the light into that room, that screen reveals the ability of the reflected light to connect the light with the emanated being, in a way that if the screen disappeared from there, the light would also depart from the emanated being, which would remain in the dark, as if the window in the room had been closed. Thus, when we refer only to the gap from the screen, excluding its coarseness, we refer to it as a window or a hole."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "80"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:17",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>On the right side of the circle:</strong> This means that it was imprinted in the right and left that operated in the ten Sefirot of straightness (Questions and Answers on the Meaning of Words, Part One, 23)."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "90"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:18",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>The light of Arich descends to the circle of Abba and shines to it:</strong> The above-mentioned window created a discernment of extension and descent of the light there, meaning that it becomes gradually by an order of degrees where the lower degree is coarser than its predecessor. The words, “From there, the light of Arich descends to the circle of Abba,” mean that because of the window, the light received coarseness and descended to Abba of circles. In other words, Hochma was lowered in degree, and is no longer equal to the Keter of circles, as it was before they received the light of straightness through the window. Similarly, Bina is below Hochma."
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "100"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:19",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>Punctures it and makes a window in it: </strong>This window was made in the Sefirot together with the descent of the light to it from the upper circle. It means that then that light imprinted in it the screen that is included in it. That is why it is considered that the light punctured it and made a window in it."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "200"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:20",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>Passes there only as a passageway:</strong> This matter has already been thoroughly explained above (Part Two, Chapter One, Item 4)."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "300"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:21",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "<strong>Straight lines, (300) right, left and middle, in the windows in them:</strong> The light descends from circle to circle by way of extension in straightness, in straight lines. However, this is not regarded as an actual correction of the lines that descend from the screen and contain the male light with which to bestow upon others. Rather, these lines of the circles have no power of bestowal since they come down as windows, which suffice only for reception of the light for themselves, but not to bestow upon others. This is the rule: Anything that does not have a screen, does not have the male light in it, but rather the female light, which is the light of Nefesh."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "400"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:22",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "<strong>That AK:</strong> We should not wonder at the use of the name Adam that used here. It is as it is written (<em>Midrash Rabbah</em>, <em>Beresheet</em>, 27): “Rabbi Yudan said, ‘Great is the power of prophets who liken a form to its Maker, as it is said, ‘And I heard the voice of a man between the banks of Ulai, etc.,’ ‘and upon the likeness of the throne was a likeness as the appearance of a man upon it above.’’” The reason for it will be explained in its appropriate place."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:23",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "<strong>Extended from one end to the other:</strong> It means that it connects everything from Ein Sof, the most refined in all the worlds, to the middle point, which is the coarsest phase in all the worlds. Thus, all of reality before us, upper ones and lower ones, are its branches, which have cascaded from it, hang on it, and clothe it. This is why it connects all of them."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:24",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "<strong>We have no permission whatsoever to speak and to engage in the internality and self of that Adam:</strong> The internality means the light of Ein Sof that is clothed in Him, and His self is the state of GAR in Him. It has already been explained (Introduction, Item 27) that we have no permission to speak of any phase of GAR in any degree or Partzuf, even in the world of Assiya. But in ZAT, we are permitted to engage, even in the ZAT of GAR of Adam Kadmon."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:25",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "<strong>In the beginning, the ten Sefirot came out through a circle:</strong> It has already been explained that the circles appeared immediately after the restriction and the departure of the light. Afterwards, the straightness appeared in such a way that the circles were regarded as the cause and the reason for the light of the line. Because of this, they are regarded as preceding it (as it is written in Questions and Answers on the Meaning of Words, this part, Item 42)."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:26",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "<strong>Throughout the length of all the above-mentioned circles:</strong> Meaning, from the top end to the bottom end. Observe an imaginary corporeal length, and through it, study its spiritual root. We understand an imaginary length by three discernments: its top end, its bottom end, and the distance between them. You can distinguish a spiritual length in precisely the same way: First, you find its bottom end, meaning its last and coarsest phase, of which there is no lower in coarseness. From knowing the bottom end, you will immediately learn the top end too, since the measure of the coarseness in the last phase is the measure of the level of the reflected light (Inner Observation, Item 86). For example, the coarseness of phase four in phase four, reaches the level of the Keter of Keter; the coarseness of phase three in phase four, reaches only as high as the Keter of Hochma; and phase two in phase four, reaches only the level of Keter of Bina, etc. Thus, by knowing the bottom end, the top end immediately becomes known.<br>Once you know both ends in the degree, you naturally know the distance between them, since a spiritual distance means disparity of form between two discernments. The measure of disparity of form determines the distance between them. For example, if the bottom end is phase one in phase four, then the top end reaches only the level of Keter of ZA. In that instance, the distance is not so great. But if the bottom end is phase two, then the top end is the degree of Keter of Bina. Thus, the distance between them is two levels of coarseness, which are phase one and phase two. If the bottom end is coarseness of phase three in phase four, then its top end is Keter of Hochma. Here, the distance is the length of three phases, etc., likewise."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:27",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "<strong>We do not engage in the circles whatsoever, but only in the straightness:</strong> This is because the circles surround the first three Sefirot of straightness (Part Two, Chapter One, Item 90). It is known that their vessels are far superior to the GAR of straightness. You already know that we are forbidden to speak of and engage in the GAR. For this reason, we have no permission to engage in any phases of the circles."
+    }
+  ]
+}

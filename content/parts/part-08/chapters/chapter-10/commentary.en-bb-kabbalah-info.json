@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-10",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:1",
+      "section": "ohr-pnimi",
+      "html": "<strong>It sorted out what it could sort out from the Nekudot de SAG that had the breaking in them.</strong> This examination begins at <em>Rosh ha Bet de Nekudim</em>, which is <em>Keter de Nekudim</em>. However, <em>Rosh ha Aleph de Nekudim </em>that stands above <em>Tabur</em> did not connect with this new <em>MA</em> because there wasn’t any breaking in it. This is because the <em>Masach </em>stands below it and the <em>Aviut</em> in the <em>Masach </em>cannot blemish above its location."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:2",
+      "section": "ohr-pnimi",
+      "html": "<strong>SAG became Behinat Nukva.</strong> This does not refer to <em>SAG de AK</em>, only to the <em>Eser Sefirot </em>of the <em>Nekudim</em>, which the Rav calls <em>SAG</em>because their <em>Kelim</em> are from the <em>Behinat</em> lower nine of <em>SAG</em>, called <em>Nekudot de SAG</em>."
+    }
+  ]
+}

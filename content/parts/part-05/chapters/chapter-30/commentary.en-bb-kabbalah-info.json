@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<strong>Its <em>Histaklut</em>, <em>Reiah</em> and <em>Habata</em> in the <em>Ohr </em><em>Akudim</em>, called the above mentioned <em>Nefesh</em>.</strong> The <em>Peh </em><em>de </em><em>Rosh</em> is called <em>Nefesh</em>. The <em>Hitpashtut </em><em>Ohr</em> is called <em>Histaklut</em> and <em>Habata</em>. Hence, the <em>Hitpashtut Ohr Elyon </em>to the <em>Masach </em>in <em>Kli </em><em>Malchut </em>for <em>Zivug </em><em>de </em><em>Hakaa </em>is called <em>Histaklut</em> and <em>Habata</em> in the <em>Nefesh</em>, meaning the <em>Masach </em>in <em>Malchut</em>."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<strong>The emanator, He sees and looks at the <em>Nefesh</em>, called “the”.</strong> As has been written in the previous item, the <em>Masach </em>in <em>Kli </em><em>Malchut </em>is called <em>Nefesh </em>and is called “the”, as the Rav has written, and examine carefully (Part 3, Chap 3 item 3)."
+    }
+  ]
+}
