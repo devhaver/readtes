@@ -142,7 +142,7 @@
     }
   },
   "home": {
-    "description": "Talmud Eser Sefirot, read through the Ari's text, Inner Light, and Inner Observation — in English and Hebrew.",
+    "description": "Talmud Eser Sefirot, read through the Ari's text, Inner Light, and Inner Observation — in English, Hebrew, and seven more languages.",
     "browseVolumes": "Browse the six volumes",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -190,7 +190,7 @@
   },
   "about": {
     "title": "About Read TES",
-    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baal HaSulam's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew or in English.",
+    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baal HaSulam's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew, in English, or in any of the reader's seven other languages.",
     "readingModelTitle": "The reading model",
     "readingModelBody": "The reader follows the structure of Talmud Eser Sefirot itself: the Ari's numbered text, Baal HaSulam's Inner Light explanation anchored directly to it, and Inner Observation as the deeper systematic explanation for the part. Inner Observation is continuous rather than paragraph-linked, so it remains an independent reading pane.",
     "licensesTitle": "Texts, editions, and licenses",
@@ -268,7 +268,7 @@
   "seo": {
     "ogImageAlt": "Read TES — an open book beside the ARI's Tzimtzum circles, on a night-field background",
     "home": {
-      "description": "A free, bilingual reading of Talmud Eser Sefirot — the Ari's text with Baal HaSulam's Inner Light and Inner Observation explanations, in English and Hebrew."
+      "description": "A free, multilingual reading of Talmud Eser Sefirot — the Ari's text with Baal HaSulam's Inner Light and Inner Observation explanations, in English, Hebrew, and seven more languages."
     },
     "about": {
       "description": "What Read TES is, how its three reading layers work, and the licenses and sources behind every text edition on the site."

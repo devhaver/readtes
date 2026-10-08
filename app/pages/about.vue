@@ -23,7 +23,10 @@ const editions = computed(() =>
     title: version.title,
     titleDir: version.direction,
     titleLang: version.language,
-    language: languageLabels[version.language] ?? version.language,
+    // Localized where the UI has a label, the language's own name otherwise —
+    // never the bare code ("es", "ru") the table used to print.
+    language:
+      languageLabels[version.language] ?? nativeLanguageName(version.language),
     license: version.license,
     source: sourceLabels[version.source],
     isAi: version.source === "ai",
