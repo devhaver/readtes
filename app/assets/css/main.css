@@ -1168,3 +1168,18 @@ a[href],
 [data-version="en-sefaria-sulam"] b {
   font-weight: inherit;
 }
+
+/*
+ * Section sub-headings inside reading text. The Hebrew edition marks each
+ * Inner Observation segment's heading as `<small>…</small>` and the
+ * imported Bnei Baruch text follows it — as it does a chapter's synopsis.
+ * Unstyled, they read as body text; bold, a six-line synopsis turned into
+ * a slab. A quieter, separate line serves both.
+ */
+:is(.tes-seif-lg, .tes-seif-md, .tes-prose-block, .tes-prose-paragraph) small {
+  display: block;
+  margin-block-end: 0.35em;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--text-muted);
+}
