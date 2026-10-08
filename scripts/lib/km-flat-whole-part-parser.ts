@@ -52,7 +52,33 @@ import type { DocBlock } from "./km-doc-blocks.ts";
  * The paragraph that opens a commentary section, by exact text. Bnei Baruch's
  * English editions print either the translated or the transliterated name.
  */
-const SECTION_MARKERS = new Set(["Inner Light", "Ohr Pnimi"]);
+/**
+ * In every language Bnei Baruch publishes the part in, compared
+ * case-insensitively and without surrounding dashes. An English-only list
+ * let the French and Spanish part 6 documents' "Lumière intérieure" /
+ * "Luz Interior" through as source text: 39 of 54 seifim carried their
+ * whole commentary in the Ari's-text pane.
+ */
+const SECTION_MARKERS = new Set(
+  [
+    "Inner Light",
+    "Ohr Pnimi",
+    "Lumière intérieure",
+    "Luz interior",
+    "Luz interna",
+    "Inneres Licht",
+    "İç ışık",
+    "Ор пними",
+    "Ор пнімі",
+    "Внутренний свет",
+    "Внутрішнє світло",
+  ].map((marker) => marker.toLocaleLowerCase()),
+);
+
+const isSectionMarker = (text: string): boolean =>
+  SECTION_MARKERS.has(
+    text.replace(/^[\s\-–—]+|[\s\-–—:]+$/g, "").toLocaleLowerCase(),
+  );
 
 /** `12.` or `12` — see the module doc on why the dot cannot be required. */
 const LEADING_NUMBER_RE = /^\s*(\d+)\.?\s+/;
@@ -93,7 +119,7 @@ export const groupKmFlatWholePartBlocks = (
   for (const block of blocks) {
     const text = stripTags(block.html);
 
-    if (SECTION_MARKERS.has(text)) {
+    if (isSectionMarker(text)) {
       // Everything up to the next due seif number belongs to the commentary.
       inCommentary = true;
       current = undefined;
@@ -124,5 +150,11 @@ export const groupKmFlatWholePartBlocks = (
     }
   }
 
-  return items;
+  // The Ari's text is bold throughout the French and Spanish documents
+  // (it is how print sets it apart from the commentary); the reader shows it
+  // at one weight in every language, as the English already arrives.
+  return items.map((item) => ({
+    ...item,
+    html: item.html.replace(/<\/?(strong|b)\b[^>]*>/gi, ""),
+  }));
 };

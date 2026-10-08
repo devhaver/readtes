@@ -7,21 +7,30 @@ describe("AppLanguageSwitcher", () => {
     const wrapper = await mountSuspended(AppLanguageSwitcher);
     const links = wrapper.findAll("a");
 
-    expect(links).toHaveLength(3);
+    expect(links.map((link) => link.text())).toEqual([
+      "English",
+      "עברית",
+      "Русский",
+      "Español",
+      "Français",
+      "Deutsch",
+      "Português",
+      "Türkçe",
+      "Українська",
+    ]);
+  });
 
-    // Each link carries a short code for phones and the full name.
-    const labels = links.map((link) => link.text());
-    expect(labels.some((label) => label.includes("English"))).toBe(true);
-    expect(labels.some((label) => label.includes("עברית"))).toBe(true);
-    expect(labels.some((label) => label.includes("Русский"))).toBe(true);
+  it("is a disclosure menu labelled with the current language", async () => {
+    const wrapper = await mountSuspended(AppLanguageSwitcher);
+    expect(wrapper.find("details > summary").text()).toContain("English");
   });
 
   it("marks the active locale with aria-current and links to the other locale's path", async () => {
     const wrapper = await mountSuspended(AppLanguageSwitcher);
     const links = wrapper.findAll("a");
 
-    const english = links.find((link) => link.text().includes("English"));
-    const hebrew = links.find((link) => link.text().includes("עברית"));
+    const english = links.find((link) => link.text() === "English");
+    const hebrew = links.find((link) => link.text() === "עברית");
 
     expect(english?.attributes("aria-current")).toBe("true");
     expect(hebrew?.attributes("aria-current")).toBeUndefined();

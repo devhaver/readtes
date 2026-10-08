@@ -1,0 +1,292 @@
+{
+  "common": {
+    "siteName": "Read TES",
+    "brandSubline": "Bnei Baruch · Academia de Cabalá",
+    "sixVolumes": "Seis volúmenes",
+    "volume": "Volumen",
+    "part": "Parte",
+    "chapter": "Capítulo",
+    "skipToContent": "Saltar al contenido",
+    "language": "Idioma",
+    "close": "Cerrar"
+  },
+  "nav": {
+    "primary": "Principal",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "volumesLink": "Volúmenes",
+    "glossaryLink": "Glosario",
+    "themeToggleToDark": "Cambiar al modo oscuro",
+    "themeToggleToLight": "Cambiar al modo claro",
+    "themeToggleToSepia": "Cambiar al modo sepia",
+    "languageSwitcherLabel": "Cambiar de idioma",
+    "breadcrumbLabel": "Ruta de navegación"
+  },
+  "footer": {
+    "attribution": "Hecho por estudiantes de la {academy}",
+    "academy": "Academia de Cabalá Bnei Baruch",
+    "sourcesLinkTitle": "Biblioteca de fuentes de Bnei Baruch en Kabbalah Media"
+  },
+  "reader": {
+    "aiTranslated": "Traducido con IA",
+    "hebrewOnly": "Solo en hebreo",
+    "pane": {
+      "introduction": "Introducción",
+      "source": "El texto del Ari",
+      "innerLight": "Luz Interior",
+      "innerObservation": "Observación Interior",
+      "questions": "Preguntas",
+      "answers": "Respuestas",
+      "thirdPaneTablist": "Observación Interior, preguntas y respuestas",
+      "thirdPaneTablistQaOnly": "Preguntas y respuestas"
+    },
+    "paneLanguageLabel": "Idioma: {pane}",
+    "sefariaTranslated": "Traducción de Sefaria",
+    "commentarySection": {
+      "ohr-pnimi": "Luz Interior",
+      "histaklut-pnimit": "Observación Interior"
+    },
+    "commentaryEmpty": "Aún no hay comentario disponible para este capítulo.",
+    "commentaryNotAligned": "Este comentario aún no se ha asociado a cada inciso: los elementos se muestran en orden de lectura, y el número junto a cada uno cuenta las propias notas, no los incisos del texto del Ari.",
+    "commentaryUnanchoredGroup": "Sin asociar a un inciso",
+    "innerLightAbsent": "El comentario de la Luz Interior (Ohr Pnimi) de este capítulo aún no se ha digitalizado en ninguna edición.",
+    "sourceEmpty": "Aún no hay texto original disponible para este capítulo.",
+    "summaryEmpty": "Aún no hay resumen disponible para este capítulo.",
+    "innerObservationEmpty": "Aún no hay Observación Interior disponible para este capítulo.",
+    "innerObservationLoading": "Cargando la Observación Interior…",
+    "innerObservationLoaded": "Observación Interior cargada.",
+    "innerObservationFailed": "No se pudo cargar la Observación Interior.",
+    "innerObservationReload": "Recargar la página",
+    "innerObservationNeverWritten": "Baal HaSulam no escribió Observación Interior (Histaklut Pnimit) para esta parte: once de las dieciséis partes la tienen, y esta no es una de ellas. No hay texto que una edición pueda incluir, así que no se trata de una laguna de digitalización.",
+    "miniTocTitle": "En este capítulo",
+    "miniTocTruncated": "…y {count} más: desplácese hacia abajo para leerlos todos.",
+    "seifLabel": "Inciso {n}",
+    "missingAnchor": {
+      "message": "No disponible en este idioma.",
+      "switchToHebrew": "Cambiar a hebreo"
+    },
+    "prevChapter": "Capítulo anterior",
+    "nextChapter": "Capítulo siguiente",
+    "chapterNav": "Navegación de capítulos",
+    "mode": {
+      "label": "Modo de lectura",
+      "study": "Estudio",
+      "panes": "Paneles",
+      "original": "Original"
+    },
+    "original": {
+      "prev": "Ant.",
+      "next": "Sig.",
+      "pagination": "Paginación del capítulo"
+    },
+    "chapterIntro": {
+      "title": "En este capítulo"
+    },
+    "studyMode": {
+      "fold": "Plegar",
+      "readFullCommentary": "Leer el comentario completo",
+      "readFullCommentaryHint": "Aquí solo aparece el comentario que ha abierto: explore todos los elementos de este capítulo en la vista completa de tres paneles.",
+      "unalignedCommentaryTitle": "Más comentario (aún sin asociar a incisos)"
+    },
+    "progressLabel": "Progreso de lectura",
+    "toolbar": {
+      "preferencesButton": "Preferencias de lectura",
+      "contentsButton": "Contenido",
+      "collapseChrome": "Contraer la barra de herramientas",
+      "expandChrome": "Expandir la barra de herramientas"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "Ver todos los capítulos"
+    },
+    "contents": {
+      "title": "Contenido",
+      "close": "Cerrar"
+    },
+    "mobilePane": {
+      "label": "Panel de lectura",
+      "source": "El texto del Ari",
+      "innerLight": "Luz Interior",
+      "innerObservation": "Observación Interior",
+      "questionsAnswers": "Preguntas y respuestas"
+    },
+    "commentarySheet": {
+      "title": "Comentario del inciso {n}",
+      "openInCommentary": "Abrir en el comentario",
+      "empty": "No hay comentario para este inciso en este idioma.",
+      "close": "Cerrar"
+    },
+    "prefs": {
+      "title": "Preferencias de lectura",
+      "close": "Cerrar",
+      "fontSize": {
+        "label": "Tamaño del texto",
+        "step1": "Pequeño",
+        "step2": "Predeterminado",
+        "step3": "Grande",
+        "step4": "Muy grande"
+      },
+      "theme": {
+        "label": "Tema",
+        "light": "Claro",
+        "sepia": "Sepia",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      },
+      "language": {
+        "label": "Idioma"
+      }
+    },
+    "thirdPane": {
+      "collapse": "Ocultar el panel de Observación Interior",
+      "expand": "Mostrar el panel de Observación Interior"
+    }
+  },
+  "home": {
+    "description": "El Estudio de las Diez Sefirot, leído a través del texto del Ari, la Luz Interior y la Observación Interior, en español, inglés y hebreo.",
+    "browseVolumes": "Ver los seis volúmenes",
+    "heroTitle": "Talmud Eser Sefirot",
+    "heroTitleHebrew": "תלמוד עשר הספירות",
+    "heroSubtitle": "El Estudio de las Diez Sefirot",
+    "beginReading": "Empezar a leer",
+    "quoteSource": "El Estudio de las Diez Sefirot, Parte 1, capítulo 1",
+    "howItWorksTitle": "Cómo funciona este lector",
+    "howItWorksSourceTitle": "El texto del Ari",
+    "howItWorksSourceHebrew": "כתבי האר״י",
+    "howItWorksSourceBody": "Los pasajes numerados del Ari, presentados capítulo a capítulo justo donde Baal HaSulam los explica.",
+    "howItWorksLightTitle": "Luz Interior",
+    "howItWorksLightHebrew": "אור פנימי",
+    "howItWorksLightBody": "La explicación directa de Baal HaSulam, anclada frase a frase al texto del Ari.",
+    "howItWorksObservationTitle": "Observación Interior",
+    "howItWorksObservationHebrew": "הסתכלות פנימית",
+    "howItWorksObservationBody": "La explicación más profunda y sistemática de Baal HaSulam para la parte, que se lee como una obra continua en sí misma.",
+    "coverageTitle": "Estado del texto",
+    "coverageHebrew": "El corpus hebreo completo está disponible en la edición de Jerusalén de 1956.",
+    "coverageEnglish": "La cobertura en otros idiomas varía según la parte y la edición; las traducciones oficiales y las asistidas por IA están claramente señaladas.",
+    "coverageMore": "Explore los volúmenes para ver las capas y ediciones disponibles de cada sección."
+  },
+  "errors": {
+    "notFoundTitle": "Página no encontrada",
+    "notFoundMessage": "Esta página aún no existe o se ha movido.",
+    "notFoundBackHome": "Volver al inicio",
+    "genericTitle": "Algo salió mal",
+    "genericMessage": "Se produjo un error inesperado. Intente recargar la página o vuelva al inicio."
+  },
+  "volumes": {
+    "indexTitle": "Volúmenes",
+    "indexDescription": "El Estudio de las Diez Sefirot en seis volúmenes y dieciséis partes: el texto del Ari con la Luz Interior y la Observación Interior.",
+    "comingSoon": "Próximamente",
+    "chapterCount": "{count} capítulos",
+    "partialLanguage": "parcial",
+    "partComingSoon": "Esta parte aún no se ha añadido: vuelva pronto.",
+    "answersTerminologyCluster": "Respuestas — Terminología ({count})",
+    "answersTopicsCluster": "Respuestas — Temas ({count})",
+    "answersCauseEffectCluster": "Respuestas — Causa y efecto ({count})",
+    "section": {
+      "chapters": "Capítulos",
+      "inner-observation": "Observación Interior",
+      "questions": "Preguntas",
+      "answers": "Respuestas"
+    }
+  },
+  "about": {
+    "title": "Acerca de Read TES",
+    "intro": "Read TES es una lectura interactiva e independiente de El Estudio de las Diez Sefirot, el comentario fundamental de Baal HaSulam sobre la Cabalá del Ari, creada por estudiantes de la Academia de Cabalá Bnei Baruch para quienes estudian el texto con detenimiento, en hebreo, español o inglés.",
+    "readingModelTitle": "El modelo de lectura",
+    "readingModelBody": "El lector sigue la estructura del propio Estudio de las Diez Sefirot: el texto numerado del Ari, la explicación de la Luz Interior de Baal HaSulam anclada directamente a él, y la Observación Interior como explicación sistemática más profunda de la parte. La Observación Interior es continua y no se vincula párrafo a párrafo, por lo que sigue siendo un panel de lectura independiente.",
+    "licensesTitle": "Textos, ediciones y licencias",
+    "licensesIntro": "A continuación se enumera cada edición de texto de este sitio con su idioma, licencia y fuente.",
+    "licensesTableCaption": "Ediciones de texto utilizadas en Read TES",
+    "tableHeaderTitle": "Edición",
+    "tableHeaderLanguage": "Idioma",
+    "tableHeaderLicense": "Licencia",
+    "tableHeaderSource": "Fuente",
+    "sourceLabelSefaria": "Sefaria",
+    "sourceLabelCurated": "Read TES",
+    "sourceLabelAi": "Traducción con IA",
+    "sourceLabelKabbalahmedia": "KabbalahMedia.info",
+    "sourceLabelKabbalahInfo": "Kabbalah.info",
+    "languageLabelEn": "Inglés",
+    "languageLabelHe": "Hebreo",
+    "attributionTitle": "Agradecimientos",
+    "attributionBody": "Los textos originales proceden de la biblioteca abierta de Sefaria, y las lecciones que inspiran esta lectura son de KabbalahMedia.info; ambos se usan con permiso.",
+    "portraitAlt": "Retrato del Rav Yehuda Ashlag, Baal HaSulam",
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam, autor de El Estudio de las Diez Sefirot"
+  },
+  "glossary": {
+    "title": "Glosario",
+    "titleHebrew": "מונחים",
+    "lede": "{count} términos de El Estudio de las Diez Sefirot y el inglés que la edición oficial emplea realmente para cada uno.",
+    "evidence": "Cada término se obtuvo de los {chapters} capítulos en que el hebreo de Jerusalén de 1956 y el inglés de Bnei Baruch pudieron ponerse lado a lado, elemento por elemento: {items} pares alineados en total.",
+    "languageNote": "El hebreo se cita de la edición de Jerusalén de 1956 y el inglés de la edición de Bnei Baruch. Las notas y reglas describen el inglés y están escritas en inglés.",
+    "coverageParts": "Partes {parts} de dieciséis",
+    "coverageStripDescription": "La edición en inglés abarca las partes {parts} de las dieciséis partes de El Estudio de las Diez Sefirot.",
+    "filtersLabel": "Buscar un término",
+    "searchLabel": "Buscar términos",
+    "searchPlaceholder": "Buscar entre {count} términos, en hebreo o inglés",
+    "strategyFilterLabel": "Filtrar por cómo pasa el término al inglés",
+    "termsLabel": "Términos",
+    "resultCount": "Mostrando {shown} de {total} términos",
+    "strategy": {
+      "translate": "Traducido",
+      "transliterate": "Transliterado",
+      "transliterate-with-gloss": "Transliterado con glosa",
+      "acronym": "Acrónimo"
+    },
+    "attestedIn": "Documentado en las partes {parts}.",
+    "attestedNowhere": "No documentado en ninguna parte alineada.",
+    "variantsTitle": "Lo que escribe la edición",
+    "variantsHint": "Las cifras son apariciones dentro de los pasajes alineados, no en todo el libro.",
+    "citationsTitle": "Extraído de",
+    "citationsLoading": "Cargando pasajes…",
+    "citationsFailed": "No se pudieron cargar los pasajes.",
+    "citationsRetry": "Reintentar",
+    "citationChapter": "Parte {part} · {chapter}",
+    "chapterKind": {
+      "chapter": "Capítulo {n}",
+      "inner-observation": "Observación Interior {n}",
+      "questions-terminology": "Preguntas — Terminología",
+      "questions-topics": "Preguntas — Temas",
+      "questions-cause-effect": "Preguntas — Causa y efecto",
+      "answers-terminology": "Respuestas — Terminología",
+      "answers-topics": "Respuestas — Temas",
+      "answers-cause-effect": "Respuestas — Causa y efecto"
+    },
+    "layerSummary": "Resumen",
+    "emptyTitle": "Ningún término coincide.",
+    "emptyBody": "Pruebe otra grafía, en hebreo o inglés; las comillas dentro de los acrónimos se ignoran.",
+    "clearFilters": "Borrar filtros",
+    "conventionsTitle": "Cómo se fija el inglés",
+    "conventionsIntro": "Reglas que la edición oficial sigue más allá de las palabras sueltas (cómo se tratan los marcadores de elementos, los comienzos de comentario, las citas y los honoríficos), cada una con su evidencia.",
+    "conventionEvidenceLabel": "Evidencia:",
+    "limitsTitle": "Dónde termina la evidencia",
+    "limitsIntro": "Este glosario solo llega hasta donde llega la edición en inglés. Léalo antes de apoyarse en un recuento.",
+    "methodTitle": "Cómo se elaboró el glosario",
+    "methodSource": "Edición en inglés",
+    "methodReference": "Referencia hebrea",
+    "methodGeneratedOn": "Compilado"
+  },
+  "seo": {
+    "ogImageAlt": "Read TES: un libro abierto junto a los círculos del Tzimtzum del Ari, sobre un fondo de campo nocturno",
+    "home": {
+      "description": "Una lectura bilingüe y gratuita de El Estudio de las Diez Sefirot: el texto del Ari con las explicaciones de la Luz Interior y la Observación Interior de Baal HaSulam, en español, inglés y hebreo."
+    },
+    "about": {
+      "description": "Qué es Read TES, cómo funcionan sus tres capas de lectura, y las licencias y fuentes de cada edición de texto del sitio."
+    },
+    "volumesIndex": {
+      "description": "Los seis volúmenes y dieciséis partes de El Estudio de las Diez Sefirot, para explorar capítulo a capítulo."
+    },
+    "glossary": {
+      "description": "Cada término de El Estudio de las Diez Sefirot (or, kli, masaj, tzimtzum) con el inglés que usa la edición oficial, las variantes entre las que oscila y los pasajes de los que se extrajo."
+    },
+    "volume": {
+      "description": "Las partes y capítulos de {title}, con el texto del Ari, la Luz Interior y la Observación Interior."
+    },
+    "chapter": {
+      "description": "{chapter} de {part}: el texto del Ari junto a su explicación de la Luz Interior y la Observación Interior de la parte."
+    },
+    "notFound": {
+      "description": "Esta página aún no existe o se ha movido: encuentre el camino de vuelta a los volúmenes o a la página de inicio de Read TES."
+    }
+  }
+}

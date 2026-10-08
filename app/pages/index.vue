@@ -17,6 +17,12 @@ const openingLine: Record<string, string> = {
   he: "לפני הצמצום היה אין סוף ממלא כל המציאות",
   // The heading Bnei Baruch's Russian edition gives this seif.
   ru: "До сокращения Бесконечность наполняла всю реальность.",
+  uk: "До скорочення Нескінченність наповнювала всю реальність.",
+  es: "Antes de la restricción, el Infinito llenaba toda la realidad.",
+  pt: "Antes da restrição, o Infinito preenchia toda a realidade.",
+  fr: "Avant la restriction, l'Infini emplissait toute la réalité.",
+  de: "Vor der Einschränkung erfüllte das Unendliche die ganze Wirklichkeit.",
+  tr: "Kısıtlamadan önce Sonsuzluk tüm gerçekliği dolduruyordu.",
 };
 
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);

@@ -1,0 +1,292 @@
+{
+  "common": {
+    "siteName": "Read TES",
+    "brandSubline": "Bnei Baruch · Académie de Kabbale",
+    "sixVolumes": "Six volumes",
+    "volume": "Volume",
+    "part": "Partie",
+    "chapter": "Chapitre",
+    "skipToContent": "Aller au contenu",
+    "language": "Langue",
+    "close": "Fermer"
+  },
+  "nav": {
+    "primary": "Principale",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "volumesLink": "Volumes",
+    "glossaryLink": "Glossaire",
+    "themeToggleToDark": "Passer au mode sombre",
+    "themeToggleToLight": "Passer au mode clair",
+    "themeToggleToSepia": "Passer au mode sépia",
+    "languageSwitcherLabel": "Changer de langue",
+    "breadcrumbLabel": "Fil d'Ariane"
+  },
+  "footer": {
+    "attribution": "Réalisé par des étudiants de {academy}",
+    "academy": "l'Académie de Kabbale Bnei Baruch",
+    "sourcesLinkTitle": "La bibliothèque de sources de Bnei Baruch sur Kabbalah Media"
+  },
+  "reader": {
+    "aiTranslated": "Traduit par IA",
+    "hebrewOnly": "Hébreu uniquement",
+    "pane": {
+      "introduction": "Introduction",
+      "source": "Le texte du Ari",
+      "innerLight": "Lumière intérieure",
+      "innerObservation": "Observation intérieure",
+      "questions": "Questions",
+      "answers": "Réponses",
+      "thirdPaneTablist": "Observation intérieure, questions et réponses",
+      "thirdPaneTablistQaOnly": "Questions et réponses"
+    },
+    "paneLanguageLabel": "Langue : {pane}",
+    "sefariaTranslated": "Traduction de Sefaria",
+    "commentarySection": {
+      "ohr-pnimi": "Lumière intérieure",
+      "histaklut-pnimit": "Observation intérieure"
+    },
+    "commentaryEmpty": "Aucun commentaire n'est encore disponible pour ce chapitre.",
+    "commentaryNotAligned": "Ce commentaire n'a pas encore été rattaché aux paragraphes individuels — les éléments sont affichés dans l'ordre de lecture, et le numéro à côté de chacun compte les notes elles-mêmes, et non les paragraphes du texte du Ari.",
+    "commentaryUnanchoredGroup": "Non rattaché à un paragraphe",
+    "innerLightAbsent": "Le commentaire de la Lumière intérieure (Ohr Pnimi) pour ce chapitre n'a encore été numérisé dans aucune édition.",
+    "sourceEmpty": "Aucun texte source n'est encore disponible pour ce chapitre.",
+    "summaryEmpty": "Aucun résumé n'est encore disponible pour ce chapitre.",
+    "innerObservationEmpty": "Aucune Observation intérieure n'est encore disponible pour ce chapitre.",
+    "innerObservationLoading": "Chargement de l'Observation intérieure…",
+    "innerObservationLoaded": "Observation intérieure chargée.",
+    "innerObservationFailed": "Impossible de charger l'Observation intérieure.",
+    "innerObservationReload": "Recharger la page",
+    "innerObservationNeverWritten": "Baal HaSoulam n'a écrit aucune Observation intérieure (Histaklut Pnimit) pour cette partie — onze des seize parties en comportent une, et celle-ci n'en fait pas partie. Il n'y a ici aucun texte qu'une édition puisse porter : il ne s'agit donc pas d'une lacune de numérisation.",
+    "miniTocTitle": "Dans ce chapitre",
+    "miniTocTruncated": "…et {count} de plus — faites défiler vers le bas pour tout lire.",
+    "seifLabel": "Paragraphe {n}",
+    "missingAnchor": {
+      "message": "Non disponible dans cette langue.",
+      "switchToHebrew": "Passer à l'hébreu"
+    },
+    "prevChapter": "Chapitre précédent",
+    "nextChapter": "Chapitre suivant",
+    "chapterNav": "Navigation entre les chapitres",
+    "mode": {
+      "label": "Mode de lecture",
+      "study": "Étude",
+      "panes": "Colonnes",
+      "original": "Original"
+    },
+    "original": {
+      "prev": "Préc.",
+      "next": "Suiv.",
+      "pagination": "Pagination du chapitre"
+    },
+    "chapterIntro": {
+      "title": "Dans ce chapitre"
+    },
+    "studyMode": {
+      "fold": "Replier",
+      "readFullCommentary": "Lire le commentaire complet",
+      "readFullCommentaryHint": "Seuls les commentaires que vous avez ouverts s'affichent ici — parcourez tous les éléments de ce chapitre dans la vue complète à trois colonnes.",
+      "unalignedCommentaryTitle": "Autres commentaires (pas encore rattachés aux paragraphes)"
+    },
+    "progressLabel": "Progression de la lecture",
+    "toolbar": {
+      "preferencesButton": "Préférences de lecture",
+      "contentsButton": "Sommaire",
+      "collapseChrome": "Réduire la barre d'outils",
+      "expandChrome": "Développer la barre d'outils"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "Parcourir tous les chapitres"
+    },
+    "contents": {
+      "title": "Sommaire",
+      "close": "Fermer"
+    },
+    "mobilePane": {
+      "label": "Colonne de lecture",
+      "source": "Le texte du Ari",
+      "innerLight": "Lumière intérieure",
+      "innerObservation": "Observation intérieure",
+      "questionsAnswers": "Questions et réponses"
+    },
+    "commentarySheet": {
+      "title": "Commentaire du paragraphe {n}",
+      "openInCommentary": "Ouvrir dans le commentaire",
+      "empty": "Aucun commentaire pour ce paragraphe dans cette langue.",
+      "close": "Fermer"
+    },
+    "prefs": {
+      "title": "Préférences de lecture",
+      "close": "Fermer",
+      "fontSize": {
+        "label": "Taille du texte",
+        "step1": "Petite",
+        "step2": "Par défaut",
+        "step3": "Grande",
+        "step4": "Très grande"
+      },
+      "theme": {
+        "label": "Thème",
+        "light": "Clair",
+        "sepia": "Sépia",
+        "dark": "Sombre",
+        "system": "Système"
+      },
+      "language": {
+        "label": "Langue"
+      }
+    },
+    "thirdPane": {
+      "collapse": "Masquer la colonne Observation intérieure",
+      "expand": "Afficher la colonne Observation intérieure"
+    }
+  },
+  "home": {
+    "description": "Talmud Eser Sefirot, lu à travers le texte du Ari, la Lumière intérieure et l'Observation intérieure — en français, anglais et hébreu.",
+    "browseVolumes": "Parcourir les six volumes",
+    "heroTitle": "Talmud Eser Sefirot",
+    "heroTitleHebrew": "תלמוד עשר הספירות",
+    "heroSubtitle": "L'Étude des Dix Sefirot",
+    "beginReading": "Commencer la lecture",
+    "quoteSource": "Talmud Eser Sefirot, partie 1, chapitre 1",
+    "howItWorksTitle": "Comment fonctionne ce lecteur",
+    "howItWorksSourceTitle": "Le texte du Ari",
+    "howItWorksSourceHebrew": "כתבי האר״י",
+    "howItWorksSourceBody": "Les passages numérotés du Ari, présentés chapitre par chapitre, exactement là où Baal HaSoulam les explique.",
+    "howItWorksLightTitle": "Lumière intérieure",
+    "howItWorksLightHebrew": "אור פנימי",
+    "howItWorksLightBody": "L'explication directe de Baal HaSoulam, rattachée au texte du Ari expression par expression.",
+    "howItWorksObservationTitle": "Observation intérieure",
+    "howItWorksObservationHebrew": "הסתכלות פנימית",
+    "howItWorksObservationBody": "L'explication plus profonde et systématique de Baal HaSoulam pour la partie, à lire comme une œuvre continue à part entière.",
+    "coverageTitle": "Où en est le texte",
+    "coverageHebrew": "Le corpus hébreu complet est disponible grâce à l'édition de Jérusalem de 1956.",
+    "coverageEnglish": "La couverture des traductions varie selon la partie et l'édition ; les traductions officielles et celles assistées par IA sont clairement indiquées.",
+    "coverageMore": "Parcourez les volumes pour voir les couches et les éditions disponibles pour chaque section."
+  },
+  "errors": {
+    "notFoundTitle": "Page introuvable",
+    "notFoundMessage": "Cette page n'existe pas encore, ou elle a été déplacée.",
+    "notFoundBackHome": "Retour à l'accueil",
+    "genericTitle": "Une erreur s'est produite",
+    "genericMessage": "Une erreur inattendue est survenue. Essayez de recharger la page, ou retournez à l'accueil."
+  },
+  "volumes": {
+    "indexTitle": "Volumes",
+    "indexDescription": "Talmud Eser Sefirot en six volumes et seize parties — le texte du Ari avec la Lumière intérieure et l'Observation intérieure.",
+    "comingSoon": "Bientôt disponible",
+    "chapterCount": "{count} chapitres",
+    "partialLanguage": "partiel",
+    "partComingSoon": "Cette partie n'a pas encore été ajoutée — revenez bientôt.",
+    "answersTerminologyCluster": "Réponses — Terminologie ({count})",
+    "answersTopicsCluster": "Réponses — Thèmes ({count})",
+    "answersCauseEffectCluster": "Réponses — Cause et conséquence ({count})",
+    "section": {
+      "chapters": "Chapitres",
+      "inner-observation": "Observation intérieure",
+      "questions": "Questions",
+      "answers": "Réponses"
+    }
+  },
+  "about": {
+    "title": "À propos de Read TES",
+    "intro": "Read TES est une lecture interactive et indépendante du Talmud Eser Sefirot — le commentaire fondateur de Baal HaSoulam sur la Kabbale du Ari — réalisée par des étudiants de l'Académie de Kabbale Bnei Baruch pour toute personne qui étudie le texte de près, en hébreu, en anglais ou en français.",
+    "readingModelTitle": "Le modèle de lecture",
+    "readingModelBody": "Le lecteur suit la structure du Talmud Eser Sefirot lui-même : le texte numéroté du Ari, l'explication de la Lumière intérieure de Baal HaSoulam qui s'y rattache directement, et l'Observation intérieure comme explication systématique plus profonde pour la partie. L'Observation intérieure est continue plutôt que liée aux paragraphes ; elle reste donc une colonne de lecture indépendante.",
+    "licensesTitle": "Textes, éditions et licences",
+    "licensesIntro": "Chaque édition de texte présente sur ce site est listée ci-dessous avec sa langue, sa licence et sa source.",
+    "licensesTableCaption": "Éditions de texte utilisées dans Read TES",
+    "tableHeaderTitle": "Édition",
+    "tableHeaderLanguage": "Langue",
+    "tableHeaderLicense": "Licence",
+    "tableHeaderSource": "Source",
+    "sourceLabelSefaria": "Sefaria",
+    "sourceLabelCurated": "Read TES",
+    "sourceLabelAi": "Traduction par IA",
+    "sourceLabelKabbalahmedia": "KabbalahMedia.info",
+    "sourceLabelKabbalahInfo": "Kabbalah.info",
+    "languageLabelEn": "Anglais",
+    "languageLabelHe": "Hébreu",
+    "attributionTitle": "Remerciements",
+    "attributionBody": "Les textes sources proviennent de la bibliothèque ouverte de Sefaria, et les cours dont cette lecture s'inspire viennent de KabbalahMedia.info — les deux sont utilisés avec autorisation.",
+    "portraitAlt": "Portrait de Rav Yehuda Ashlag, Baal HaSoulam",
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSoulam — auteur du Talmud Eser Sefirot"
+  },
+  "glossary": {
+    "title": "Glossaire",
+    "titleHebrew": "מונחים",
+    "lede": "{count} termes du Talmud Eser Sefirot, et l'anglais que l'édition officielle emploie réellement pour chacun.",
+    "evidence": "Chaque terme ici a été relevé dans les {chapters} chapitres où l'hébreu de l'édition de Jérusalem de 1956 et l'anglais de Bnei Baruch ont pu être mis côte à côte, élément par élément — {items} paires alignées au total.",
+    "languageNote": "L'hébreu est cité d'après l'édition de Jérusalem de 1956, l'anglais d'après l'édition de Bnei Baruch. Les notes et les règles décrivent l'anglais, et sont rédigées en anglais.",
+    "coverageParts": "Parties {parts} sur seize",
+    "coverageStripDescription": "L'édition anglaise couvre les parties {parts} sur les seize parties du Talmud Eser Sefirot.",
+    "filtersLabel": "Trouver un terme",
+    "searchLabel": "Rechercher des termes",
+    "searchPlaceholder": "Rechercher parmi {count} termes — en hébreu ou en anglais",
+    "strategyFilterLabel": "Filtrer selon la manière dont le terme passe en anglais",
+    "termsLabel": "Termes",
+    "resultCount": "{shown} termes affichés sur {total}",
+    "strategy": {
+      "translate": "Traduit",
+      "transliterate": "Translittéré",
+      "transliterate-with-gloss": "Translittéré avec glose",
+      "acronym": "Acronyme"
+    },
+    "attestedIn": "Attesté dans les parties {parts}.",
+    "attestedNowhere": "Non attesté dans les parties alignées.",
+    "variantsTitle": "Ce que l'édition écrit",
+    "variantsHint": "Les nombres sont des occurrences dans les passages alignés, et non dans tout le livre.",
+    "citationsTitle": "Relevé dans",
+    "citationsLoading": "Chargement des passages…",
+    "citationsFailed": "Impossible de charger les passages.",
+    "citationsRetry": "Réessayer",
+    "citationChapter": "Partie {part} · {chapter}",
+    "chapterKind": {
+      "chapter": "Chapitre {n}",
+      "inner-observation": "Observation intérieure {n}",
+      "questions-terminology": "Questions — Terminologie",
+      "questions-topics": "Questions — Thèmes",
+      "questions-cause-effect": "Questions — Cause et conséquence",
+      "answers-terminology": "Réponses — Terminologie",
+      "answers-topics": "Réponses — Thèmes",
+      "answers-cause-effect": "Réponses — Cause et conséquence"
+    },
+    "layerSummary": "Résumé",
+    "emptyTitle": "Aucun terme ne correspond.",
+    "emptyBody": "Essayez une autre orthographe, en hébreu ou en anglais — les guillemets à l'intérieur des acronymes sont ignorés.",
+    "clearFilters": "Effacer les filtres",
+    "conventionsTitle": "Comment l'anglais est établi",
+    "conventionsIntro": "Les règles que suit l'édition officielle au-delà des mots isolés — traitement des marqueurs d'éléments, des ouvertures de commentaire, des citations et des titres honorifiques — chacune avec les preuves à l'appui.",
+    "conventionEvidenceLabel": "Preuves :",
+    "limitsTitle": "Où s'arrêtent les preuves",
+    "limitsIntro": "Ce glossaire ne couvre que ce que couvre l'édition anglaise. Lisez ceci avant de vous appuyer sur un décompte.",
+    "methodTitle": "Comment le glossaire a été constitué",
+    "methodSource": "Édition anglaise",
+    "methodReference": "Référence hébraïque",
+    "methodGeneratedOn": "Compilé le"
+  },
+  "seo": {
+    "ogImageAlt": "Read TES — un livre ouvert à côté des cercles du Tsimtsoum du Ari, sur un fond de ciel nocturne",
+    "home": {
+      "description": "Une lecture gratuite et multilingue du Talmud Eser Sefirot — le texte du Ari avec les explications de la Lumière intérieure et de l'Observation intérieure de Baal HaSoulam, en français, anglais et hébreu."
+    },
+    "about": {
+      "description": "Ce qu'est Read TES, comment fonctionnent ses trois couches de lecture, et les licences et sources de chaque édition de texte du site."
+    },
+    "volumesIndex": {
+      "description": "Les six volumes et seize parties du Talmud Eser Sefirot, à parcourir chapitre par chapitre."
+    },
+    "glossary": {
+      "description": "Chaque terme du Talmud Eser Sefirot — or, kli, massakh, tsimtsoum — avec l'anglais qu'emploie l'édition officielle, les rendus entre lesquels elle varie, et les passages où chacun a été relevé."
+    },
+    "volume": {
+      "description": "Les parties et chapitres de {title}, avec le texte du Ari, la Lumière intérieure et l'Observation intérieure."
+    },
+    "chapter": {
+      "description": "{chapter} de {part} — le texte du Ari à côté de son explication de la Lumière intérieure et de l'Observation intérieure de la partie."
+    },
+    "notFound": {
+      "description": "Cette page n'existe pas encore, ou elle a été déplacée — retrouvez le chemin des volumes ou de la page d'accueil de Read TES."
+    }
+  }
+}

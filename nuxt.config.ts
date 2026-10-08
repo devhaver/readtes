@@ -48,6 +48,8 @@ const GOOGLE_FONT_FAMILIES: NonNullable<FontsModuleOptions["families"]> = [
     provider: "google",
     weights: [400],
     styles: ["normal", "italic"],
+    // latin-ext: Turkish (ğ ş ı İ), Portuguese, French, German headings.
+    subsets: ["latin", "latin-ext"],
   },
   // Taviraj has no Cyrillic: PT Serif — drawn for Cyrillic — is the display
   // face under /ru/, as Frank Ruhl Libre is under /he/.
@@ -112,6 +114,22 @@ const toc: Toc = JSON.parse(
   ),
 );
 
+// Interface languages whose READER pages are not prerendered. Cloudflare
+// Pages takes at most 20,000 files per deploy, and a fully prerendered
+// locale costs ~2,100 (one per chapter); six more would cross it. These
+// locales get their home/volumes/glossary/about pages prerendered as usual,
+// while `/<code>/read/*` is served by the app shell (`public/_redirects`
+// rewrites it to `/200.html`) and renders in the browser. A locale moves to
+// full prerendering by leaving this list (and the `_redirects` file).
+const SPA_READER_LOCALES = [
+  { code: "es", language: "es-ES" },
+  { code: "fr", language: "fr-FR" },
+  { code: "de", language: "de-DE" },
+  { code: "pt", language: "pt-BR" },
+  { code: "tr", language: "tr-TR" },
+  { code: "uk", language: "uk-UA" },
+] as const;
+
 // `/volumes/volume-<N>` for every volume, in both locales — `@nuxtjs/i18n`
 // does not itself multiply explicit `nitro.prerender.routes` entries across
 // locale prefixes (unlike the crawler, which follows a page's own localized
@@ -120,6 +138,9 @@ const volumePrerenderRoutes = toc.volumes.flatMap((volume) => [
   `/volumes/volume-${volume.number}`,
   `/he/volumes/volume-${volume.number}`,
   `/ru/volumes/volume-${volume.number}`,
+  ...SPA_READER_LOCALES.map(
+    ({ code }) => `/${code}/volumes/volume-${volume.number}`,
+  ),
 ]);
 
 // `/read/<chapterId>` for every chapter that exists, in both locales.
@@ -236,6 +257,12 @@ export default defineNuxtConfig({
         name: nativeLanguageName("ru"),
         file: "ru.json",
       },
+      ...SPA_READER_LOCALES.map(({ code, language }) => ({
+        code,
+        language,
+        name: nativeLanguageName(code),
+        file: `${code}.json`,
+      })),
     ],
     detectBrowserLanguage: false,
     // Drives `useLocaleHead()`'s canonical link + hreflang alternates +
@@ -283,6 +310,15 @@ export default defineNuxtConfig({
   routeRules: {
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
+    "/ru/design-tokens": { prerender: false },
+    // See `SPA_READER_LOCALES`: the crawler would otherwise follow every
+    // volume page's chapter links and prerender them anyway.
+    ...Object.fromEntries(
+      SPA_READER_LOCALES.flatMap(({ code }) => [
+        [`/${code}/read/**`, { prerender: false }],
+        [`/${code}/design-tokens`, { prerender: false }],
+      ]),
+    ),
   },
   // T12 scaling fix — dev-only route-rules matcher bloat: Nuxt turns every
   // explicit `nitro.prerender.routes` entry into a client route rule, and

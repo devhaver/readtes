@@ -72,7 +72,7 @@ import {
 } from "./lib/sefaria-offset-nodes.ts";
 import { ohrPenimiChapterRef } from "./lib/sefaria-refs.ts";
 import {
-  addRussianChapterTitles,
+  addLocalizedChapterTitles,
   buildTocChapter,
   buildTocPart,
   mainChapterTitle,
@@ -783,7 +783,7 @@ const importPart = async (
     }
   }
 
-  addRussianChapterTitles(tocChapters);
+  addLocalizedChapterTitles(tocChapters);
   const tocPart = buildTocPart(
     part,
     partDisplayTitle(part.number, sectionNode.heTitle, sectionNode.title),

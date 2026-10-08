@@ -1032,7 +1032,8 @@ a[href],
 
 /* Russian UI (/ru/): the display face (Taviraj) has no Cyrillic glyphs, so
    headings set in it switch to PT Serif. Unlayered to beat the utility. */
-.font-display:lang(ru) {
+.font-display:lang(ru),
+.font-display:lang(uk) {
   font-family: var(--font-cyrillic-display);
 }
 

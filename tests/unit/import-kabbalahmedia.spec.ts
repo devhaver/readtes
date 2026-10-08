@@ -1437,6 +1437,24 @@ describe("groupKmFlatWholePartBlocks", () => {
     ]);
   });
 
+  it("ends a seif at the marker in other languages, and unbolds the Ari's text", () => {
+    // The English-only marker list let "Lumière intérieure" through as source:
+    // 39 of 54 French seifim carried their whole commentary.
+    const items = groupKmFlatWholePartBlocks([
+      p("<strong>1. AK contient AB, SAG, MA, BON.</strong>"),
+      p("Lumière Intérieure"),
+      p("1. AK contient : cette étude est la plus profonde."),
+      p("<b>2. Comme dans son intériorité.</b>"),
+      p("– Luz Interior –"),
+      p("2. Los cabellos de su Rosh."),
+    ]);
+
+    expect(items).toEqual([
+      { n: 1, html: "AK contient AB, SAG, MA, BON." },
+      { n: 2, html: "Comme dans son intériorité." },
+    ]);
+  });
+
   it("accepts a seif number with no trailing dot", () => {
     // Part 6's seif 32 reads `32 *In the beginning of my studies…` — the
     // footnote asterisk follows the numeral instead of a dot. Requiring the

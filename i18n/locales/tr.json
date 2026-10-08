@@ -1,0 +1,292 @@
+{
+  "common": {
+    "siteName": "Read TES",
+    "brandSubline": "Bnei Baruch · Kabala Akademisi",
+    "sixVolumes": "Altı cilt",
+    "volume": "Cilt",
+    "part": "Kısım",
+    "chapter": "Bölüm",
+    "skipToContent": "İçeriğe geç",
+    "language": "Dil",
+    "close": "Kapat"
+  },
+  "nav": {
+    "primary": "Ana menü",
+    "menuOpen": "Menüyü aç",
+    "menuClose": "Menüyü kapat",
+    "volumesLink": "Ciltler",
+    "glossaryLink": "Sözlük",
+    "themeToggleToDark": "Koyu moda geç",
+    "themeToggleToLight": "Açık moda geç",
+    "themeToggleToSepia": "Sepya moduna geç",
+    "languageSwitcherLabel": "Dili değiştir",
+    "breadcrumbLabel": "Gezinti yolu"
+  },
+  "footer": {
+    "attribution": "{academy} öğrencileri tarafından hazırlandı",
+    "academy": "Bnei Baruch Kabala Akademisi",
+    "sourcesLinkTitle": "Bnei Baruch'un Kabbalah Media üzerindeki kaynak kütüphanesi"
+  },
+  "reader": {
+    "aiTranslated": "Yapay zekâ çevirisi",
+    "hebrewOnly": "Yalnızca İbranice",
+    "pane": {
+      "introduction": "Giriş",
+      "source": "Ari'nin Metni",
+      "innerLight": "İç Işık",
+      "innerObservation": "İç Gözlem",
+      "questions": "Sorular",
+      "answers": "Cevaplar",
+      "thirdPaneTablist": "İç Gözlem, Sorular ve Cevaplar",
+      "thirdPaneTablistQaOnly": "Sorular ve Cevaplar"
+    },
+    "paneLanguageLabel": "Dil: {pane}",
+    "sefariaTranslated": "Sefaria çevirisi",
+    "commentarySection": {
+      "ohr-pnimi": "İç Işık",
+      "histaklut-pnimit": "İç Gözlem"
+    },
+    "commentaryEmpty": "Bu bölüm için henüz şerh yok.",
+    "commentaryNotAligned": "Bu şerh henüz tek tek maddelerle eşleştirilmedi — öğeler okuma sırasıyla gösteriliyor ve her birinin yanındaki numara, Ari'nin metnindeki maddeleri değil, notların kendisini sayar.",
+    "commentaryUnanchoredGroup": "Bir maddeyle eşleştirilmedi",
+    "innerLightAbsent": "Bu bölümün İç Işık (Ohr Pnimi) şerhi henüz hiçbir baskıda dijitalleştirilmedi.",
+    "sourceEmpty": "Bu bölüm için henüz kaynak metin yok.",
+    "summaryEmpty": "Bu bölüm için henüz özet yok.",
+    "innerObservationEmpty": "Bu bölüm için henüz İç Gözlem yok.",
+    "innerObservationLoading": "İç Gözlem yükleniyor…",
+    "innerObservationLoaded": "İç Gözlem yüklendi.",
+    "innerObservationFailed": "İç Gözlem yüklenemedi.",
+    "innerObservationReload": "Sayfayı yeniden yükle",
+    "innerObservationNeverWritten": "Baal HaSulam bu kısım için İç Gözlem (Histaklut Pnimit) yazmadı — on altı kısmın on biri İç Gözlem içerir ve bu kısım onlardan biri değildir. Bir baskının taşıyacağı bir metin yoktur, dolayısıyla bu bir dijitalleştirme eksiği değildir.",
+    "miniTocTitle": "Bu bölümde",
+    "miniTocTruncated": "…ve {count} tane daha — hepsini okumak için aşağı kaydırın.",
+    "seifLabel": "Madde {n}",
+    "missingAnchor": {
+      "message": "Bu dilde mevcut değil.",
+      "switchToHebrew": "İbraniceye geç"
+    },
+    "prevChapter": "Önceki bölüm",
+    "nextChapter": "Sonraki bölüm",
+    "chapterNav": "Bölümler arası gezinme",
+    "mode": {
+      "label": "Okuma modu",
+      "study": "Çalışma",
+      "panes": "Paneller",
+      "original": "Orijinal"
+    },
+    "original": {
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "pagination": "Bölüm sayfalaması"
+    },
+    "chapterIntro": {
+      "title": "Bu bölümde"
+    },
+    "studyMode": {
+      "fold": "Daralt",
+      "readFullCommentary": "Şerhin tamamını oku",
+      "readFullCommentaryHint": "Burada yalnızca açtığınız şerhler görünür — bu bölümün tüm öğelerine üç panelli tam görünümden göz atabilirsiniz.",
+      "unalignedCommentaryTitle": "Daha fazla şerh (henüz maddelerle eşleştirilmedi)"
+    },
+    "progressLabel": "Okuma ilerlemesi",
+    "toolbar": {
+      "preferencesButton": "Okuma tercihleri",
+      "contentsButton": "İçindekiler",
+      "collapseChrome": "Araç çubuğunu daralt",
+      "expandChrome": "Araç çubuğunu genişlet"
+    },
+    "breadcrumbMenu": {
+      "browseChapters": "Tüm bölümlere göz at"
+    },
+    "contents": {
+      "title": "İçindekiler",
+      "close": "Kapat"
+    },
+    "mobilePane": {
+      "label": "Okuyucu paneli",
+      "source": "Ari'nin Metni",
+      "innerLight": "İç Işık",
+      "innerObservation": "İç Gözlem",
+      "questionsAnswers": "Soru ve Cevap"
+    },
+    "commentarySheet": {
+      "title": "{n}. madde üzerine şerh",
+      "openInCommentary": "Şerhte aç",
+      "empty": "Bu madde için bu dilde şerh yok.",
+      "close": "Kapat"
+    },
+    "prefs": {
+      "title": "Okuma tercihleri",
+      "close": "Kapat",
+      "fontSize": {
+        "label": "Metin boyutu",
+        "step1": "Küçük",
+        "step2": "Varsayılan",
+        "step3": "Büyük",
+        "step4": "Çok büyük"
+      },
+      "theme": {
+        "label": "Tema",
+        "light": "Açık",
+        "sepia": "Sepya",
+        "dark": "Koyu",
+        "system": "Sistem"
+      },
+      "language": {
+        "label": "Dil"
+      }
+    },
+    "thirdPane": {
+      "collapse": "İç Gözlem panelini gizle",
+      "expand": "İç Gözlem panelini göster"
+    }
+  },
+  "home": {
+    "description": "On Sefirot'un Çalışması, Ari'nin metni, İç Işık ve İç Gözlem aracılığıyla okunur — Türkçe, İngilizce ve İbranice.",
+    "browseVolumes": "Altı cilde göz at",
+    "heroTitle": "Talmud Eser Sefirot",
+    "heroTitleHebrew": "תלמוד עשר הספירות",
+    "heroSubtitle": "On Sefirot'un Çalışması",
+    "beginReading": "Okumaya başla",
+    "quoteSource": "On Sefirot'un Çalışması, Kısım I, Bölüm 1",
+    "howItWorksTitle": "Bu okuyucu nasıl çalışır",
+    "howItWorksSourceTitle": "Ari'nin Metni",
+    "howItWorksSourceHebrew": "כתבי האר״י",
+    "howItWorksSourceBody": "Ari'nin numaralı kaynak pasajları, Baal HaSulam'ın onları açıkladığı yerde, bölüm bölüm sunulur.",
+    "howItWorksLightTitle": "İç Işık",
+    "howItWorksLightHebrew": "אור פנימי",
+    "howItWorksLightBody": "Baal HaSulam'ın doğrudan açıklaması; ifade ifade Ari'nin metnine bağlanmıştır.",
+    "howItWorksObservationTitle": "İç Gözlem",
+    "howItWorksObservationHebrew": "הסתכלות פנימית",
+    "howItWorksObservationBody": "Baal HaSulam'ın kısım için yaptığı daha derin, sistematik açıklama; başlı başına sürekli bir eser olarak okunur.",
+    "coverageTitle": "Metnin durumu",
+    "coverageHebrew": "İbranice külliyatın tamamı 1956 Kudüs baskısından sunulmaktadır.",
+    "coverageEnglish": "Çeviri kapsamı kısma ve baskıya göre değişir; resmî ve yapay zekâ destekli çeviriler açıkça etiketlenir.",
+    "coverageMore": "Her bölüm için mevcut katmanları ve baskıları görmek üzere ciltlere göz atın."
+  },
+  "errors": {
+    "notFoundTitle": "Sayfa bulunamadı",
+    "notFoundMessage": "Bu sayfa henüz yok ya da taşınmış.",
+    "notFoundBackHome": "Ana sayfaya dön",
+    "genericTitle": "Bir şeyler ters gitti",
+    "genericMessage": "Beklenmeyen bir hata oluştu. Sayfayı yeniden yüklemeyi deneyin ya da ana sayfaya dönün."
+  },
+  "volumes": {
+    "indexTitle": "Ciltler",
+    "indexDescription": "Altı cilt ve on altı kısımdan oluşan On Sefirot'un Çalışması — Ari'nin metni, İç Işık ve İç Gözlem ile.",
+    "comingSoon": "Yakında",
+    "chapterCount": "{count} bölüm",
+    "partialLanguage": "kısmi",
+    "partComingSoon": "Bu kısım henüz eklenmedi — yakında tekrar bakın.",
+    "answersTerminologyCluster": "Cevaplar — Terminoloji ({count})",
+    "answersTopicsCluster": "Cevaplar — Konular ({count})",
+    "answersCauseEffectCluster": "Cevaplar — Sebep ve Sonuç ({count})",
+    "section": {
+      "chapters": "Bölümler",
+      "inner-observation": "İç Gözlem",
+      "questions": "Sorular",
+      "answers": "Cevaplar"
+    }
+  },
+  "about": {
+    "title": "Read TES hakkında",
+    "intro": "Read TES, On Sefirot'un Çalışması'nın — Baal HaSulam'ın Ari'nin Kabalası üzerine temel şerhinin — bağımsız ve etkileşimli bir okumasıdır. Metni yakından inceleyen herkes için, İbranice ya da Türkçe, Bnei Baruch Kabala Akademisi öğrencileri tarafından hazırlanmıştır.",
+    "readingModelTitle": "Okuma modeli",
+    "readingModelBody": "Okuyucu, On Sefirot'un Çalışması'nın kendi yapısını izler: Ari'nin numaralı metni, ona doğrudan bağlanan Baal HaSulam'ın İç Işık açıklaması ve kısım için daha derin, sistematik açıklama olan İç Gözlem. İç Gözlem paragraflara bağlı değil süreklidir; bu yüzden bağımsız bir okuma paneli olarak kalır.",
+    "licensesTitle": "Metinler, baskılar ve lisanslar",
+    "licensesIntro": "Bu sitedeki her metin baskısı, dili, lisansı ve kaynağıyla birlikte aşağıda listelenmiştir.",
+    "licensesTableCaption": "Read TES'te kullanılan metin baskıları",
+    "tableHeaderTitle": "Baskı",
+    "tableHeaderLanguage": "Dil",
+    "tableHeaderLicense": "Lisans",
+    "tableHeaderSource": "Kaynak",
+    "sourceLabelSefaria": "Sefaria",
+    "sourceLabelCurated": "Read TES",
+    "sourceLabelAi": "Yapay zekâ çevirisi",
+    "sourceLabelKabbalahmedia": "KabbalahMedia.info",
+    "sourceLabelKabbalahInfo": "Kabbalah.info",
+    "languageLabelEn": "İngilizce",
+    "languageLabelHe": "İbranice",
+    "attributionTitle": "Teşekkürler",
+    "attributionBody": "Kaynak metinler Sefaria'nın açık kütüphanesinden alınmıştır; bu okumaya ilham veren dersler ise KabbalahMedia.info'dandır — ikisi de izinle kullanılmaktadır.",
+    "portraitAlt": "Baal HaSulam, Rav Yehuda Aşlag'ın portresi",
+    "portraitCaption": "Rav Yehuda Aşlag (1884–1954), Baal HaSulam — On Sefirot'un Çalışması'nın yazarı"
+  },
+  "glossary": {
+    "title": "Sözlük",
+    "titleHebrew": "מונחים",
+    "lede": "On Sefirot'un Çalışması'ndan {count} terim ve resmî baskının her biri için gerçekte kullandığı İngilizce karşılık.",
+    "evidence": "Buradaki her terim, 1956 Kudüs İbranice metni ile Bnei Baruch İngilizcesinin öğe öğe yan yana konabildiği {chapters} bölümden çıkarılmıştır — toplam {items} eşleşmiş çift.",
+    "languageNote": "İbranice metin 1956 Kudüs baskısından, İngilizce metin Bnei Baruch baskısından alıntılanmıştır. Notlar ve kurallar İngilizceyi anlatır ve İngilizce yazılmıştır.",
+    "coverageParts": "On altı kısımdan {parts}",
+    "coverageStripDescription": "İngilizce baskı, On Sefirot'un Çalışması'nın on altı kısmından {parts} kısımlarını kapsar.",
+    "filtersLabel": "Terim bul",
+    "searchLabel": "Terim ara",
+    "searchPlaceholder": "{count} terimde ara — İbranice ya da İngilizce",
+    "strategyFilterLabel": "Terimin İngilizceye nasıl geçtiğine göre süz",
+    "termsLabel": "Terimler",
+    "resultCount": "{total} terimden {shown} tanesi gösteriliyor",
+    "strategy": {
+      "translate": "Çevrilmiş",
+      "transliterate": "Harf çevirisi yapılmış",
+      "transliterate-with-gloss": "Harf çevirisi ve açıklamalı",
+      "acronym": "Kısaltma"
+    },
+    "attestedIn": "{parts}. kısımlarda geçer.",
+    "attestedNowhere": "Eşleşmiş hiçbir kısımda geçmez.",
+    "variantsTitle": "Baskının yazdığı biçimler",
+    "variantsHint": "Sayılar tüm kitaptaki değil, eşleşmiş pasajlardaki geçiş sayılarıdır.",
+    "citationsTitle": "Çıkarıldığı yerler",
+    "citationsLoading": "Pasajlar yükleniyor…",
+    "citationsFailed": "Pasajlar yüklenemedi.",
+    "citationsRetry": "Tekrar dene",
+    "citationChapter": "Kısım {part} · {chapter}",
+    "chapterKind": {
+      "chapter": "Bölüm {n}",
+      "inner-observation": "İç Gözlem {n}",
+      "questions-terminology": "Sorular — Terminoloji",
+      "questions-topics": "Sorular — Konular",
+      "questions-cause-effect": "Sorular — Sebep ve Sonuç",
+      "answers-terminology": "Cevaplar — Terminoloji",
+      "answers-topics": "Cevaplar — Konular",
+      "answers-cause-effect": "Cevaplar — Sebep ve Sonuç"
+    },
+    "layerSummary": "Özet",
+    "emptyTitle": "Eşleşen terim yok.",
+    "emptyBody": "İbranice ya da İngilizce başka bir yazım deneyin — kısaltmalardaki tırnak işaretleri yok sayılır.",
+    "clearFilters": "Süzgeçleri temizle",
+    "conventionsTitle": "İngilizce metin nasıl düzenlenir",
+    "conventionsIntro": "Resmî baskının tek tek sözcüklerin ötesinde izlediği kurallar — madde işaretleri, şerh başlangıçları, atıflar ve unvanların nasıl ele alındığı — her biri dayanağıyla birlikte.",
+    "conventionEvidenceLabel": "Dayanak:",
+    "limitsTitle": "Kanıtın bittiği yer",
+    "limitsIntro": "Bu sözlük yalnızca İngilizce baskı kadar geniştir. Bir sayıya dayanmadan önce bunları okuyun.",
+    "methodTitle": "Sözlük nasıl oluşturuldu",
+    "methodSource": "İngilizce baskı",
+    "methodReference": "İbranice kaynak",
+    "methodGeneratedOn": "Derlenme tarihi"
+  },
+  "seo": {
+    "ogImageAlt": "Read TES — gece alanı arka planında, Ari'nin Tsimtsum çemberlerinin yanında açık bir kitap",
+    "home": {
+      "description": "On Sefirot'un Çalışması'nın ücretsiz, çok dilli okuması — Ari'nin metni ile Baal HaSulam'ın İç Işık ve İç Gözlem açıklamaları, Türkçe, İngilizce ve İbranice."
+    },
+    "about": {
+      "description": "Read TES nedir, üç okuma katmanı nasıl işler ve sitedeki her metin baskısının arkasındaki lisanslar ve kaynaklar."
+    },
+    "volumesIndex": {
+      "description": "On Sefirot'un Çalışması'nın altı cildi ve on altı kısmı, bölüm bölüm gezilebilir."
+    },
+    "glossary": {
+      "description": "On Sefirot'un Çalışması'ndaki her terim — or, kli, masah, tsimtsum — resmî baskının kullandığı İngilizce karşılık, değiştiği biçimler ve her birinin çıkarıldığı pasajlarla."
+    },
+    "volume": {
+      "description": "{title} kısımları ve bölümleri; Ari'nin metni, İç Işık ve İç Gözlem ile."
+    },
+    "chapter": {
+      "description": "{part} kısmının {chapter} — Ari'nin metni, yanında İç Işık açıklaması ve kısmın İç Gözlemi."
+    },
+    "notFound": {
+      "description": "Bu sayfa henüz yok ya da taşınmış — Read TES'in ciltlerine ya da ana sayfasına dönün."
+    }
+  }
+}
