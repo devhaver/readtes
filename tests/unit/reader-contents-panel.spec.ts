@@ -140,4 +140,38 @@ describe("ReaderContentsPanel", () => {
 
     wrapper.unmount();
   });
+
+  it("lists the open part's chapters, marks the current one, and lists every part once", async () => {
+    const chapter = (n: number) => ({
+      id: `part-01/chapter-0${n}`,
+      kind: "chapter" as const,
+      number: n,
+      title: { en: `Chapter ${n}`, he: `פרק ${n}` },
+      availableLayers: ["source" as const],
+      availableVersions: {
+        summary: [],
+        source: ["he-jerusalem-1956"],
+        commentary: [],
+      },
+    });
+    const wrapper = await mountSuspended(ReaderContentsPanel, {
+      props: {
+        open: true,
+        volumes,
+        currentVolumeId: "volume-01",
+        currentPartId: "part-01",
+        currentPartChapters: [chapter(1), chapter(2)],
+        currentChapterId: "part-01/chapter-02",
+      },
+    });
+
+    const current = document.body.querySelector('[aria-current="page"]');
+    expect(current?.textContent?.trim()).toBe("Chapter 2");
+    // A chapter list placed between a part's link and its "coming soon"
+    // fallback once rendered every other part twice.
+    expect(
+      document.body.querySelectorAll(".tes-contents-part-disabled"),
+    ).toHaveLength(1);
+    wrapper.unmount();
+  });
 });

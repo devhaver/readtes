@@ -17,13 +17,19 @@
 import { useMediaQuery } from "@vueuse/core";
 import { prefersReducedMotion } from "~/utils/motion";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
-import type { TocVolumeSkeleton } from "~~/shared/types/content";
+import type { TocChapter, TocVolumeSkeleton } from "~~/shared/types/content";
 
 const props = defineProps<{
   open: boolean;
   volumes: TocVolumeSkeleton[];
   currentVolumeId: string;
   currentPartId: string;
+  /**
+   * The open part's chapters, listed under it: a contents panel that only
+   * reached each part's first chapter left no way to jump to a chapter.
+   */
+  currentPartChapters?: TocChapter[];
+  currentChapterId?: string;
 }>();
 
 const emit = defineEmits<{ close: [] }>();
@@ -44,6 +50,18 @@ const sortedVolumes = computed(() =>
 
 const sortedParts = (volume: TocVolumeSkeleton) =>
   [...volume.parts].sort((a, b) => a.number - b.number);
+
+// The current chapter scrolled into view on open: part 12 lists 293.
+watch(
+  () => props.open,
+  async (open) => {
+    if (!open) return;
+    await nextTick();
+    panelRef.value
+      ?.querySelector('[data-current-chapter="true"]')
+      ?.scrollIntoView({ block: "center" });
+  },
+);
 
 const isNarrowViewport = useMediaQuery(STUDY_MODE_MEDIA_QUERY);
 
@@ -157,6 +175,36 @@ const transitionDuration = computed(() =>
                     {{ localizedText(part.title, locale) }}
                     ({{ t("volumes.comingSoon") }})
                   </span>
+                  <ol
+                    v-if="
+                      part.id === currentPartId && currentPartChapters?.length
+                    "
+                    class="mt-1 mb-2 flex flex-col border-s border-(--border) ps-3"
+                  >
+                    <li
+                      v-for="chapter in currentPartChapters"
+                      :key="chapter.id"
+                    >
+                      <NuxtLink
+                        :to="localePath(`/read/${chapter.id}`)"
+                        class="tes-contents-part-link block py-0.5 text-sm"
+                        :class="
+                          chapter.id === currentChapterId
+                            ? 'font-semibold text-(--accent-text)'
+                            : 'text-(--text-muted) hover:text-(--text-primary)'
+                        "
+                        :aria-current="
+                          chapter.id === currentChapterId ? 'page' : undefined
+                        "
+                        :data-current-chapter="
+                          chapter.id === currentChapterId ? 'true' : undefined
+                        "
+                        @click="close"
+                      >
+                        {{ localizedText(chapter.title, locale) }}
+                      </NuxtLink>
+                    </li>
+                  </ol>
                 </li>
               </ul>
             </li>

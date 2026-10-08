@@ -345,6 +345,8 @@ useLocalizedSeo({
           :current-part-id="partFile.part.id"
           :prev="prev"
           :next="next"
+          :current-part-chapters="partFile.chapters"
+          :current-chapter-id="chapter.id"
         />
       </template>
 
@@ -450,6 +452,8 @@ useLocalizedSeo({
         :current-part-id="partFile.part.id"
         :prev="prev"
         :next="next"
+        :current-part-chapters="partFile.chapters"
+        :current-chapter-id="chapter.id"
       />
       <ReaderStudyStream
         :source-label-key="sourceLabelKey"
@@ -484,6 +488,8 @@ useLocalizedSeo({
         :current-part-id="partFile.part.id"
         :prev="prev"
         :next="next"
+        :current-part-chapters="partFile.chapters"
+        :current-chapter-id="chapter.id"
       />
       <ReaderOriginalStream
         :source-segments="sourceSegments"
