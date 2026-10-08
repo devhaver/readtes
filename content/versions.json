@@ -74,5 +74,13 @@
     "title": "Bnei Baruch (KabbalahMedia) — Français",
     "license": "Used with permission",
     "source": "kabbalahmedia"
+  },
+  {
+    "id": "en-bb-kabbalah-info",
+    "language": "en",
+    "direction": "ltr",
+    "title": "Bnei Baruch (kabbalah.info)",
+    "license": "Used with permission",
+    "source": "kabbalah-info"
   }
 ]

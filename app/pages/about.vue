@@ -9,6 +9,7 @@ const sourceLabels: Record<ContentVersion["source"], string> = {
   curated: t("about.sourceLabelCurated"),
   ai: t("about.sourceLabelAi"),
   kabbalahmedia: t("about.sourceLabelKabbalahmedia"),
+  "kabbalah-info": t("about.sourceLabelKabbalahInfo"),
 };
 
 const languageLabels: Record<string, string> = {

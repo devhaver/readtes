@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<strong>Completely under the place of <em>Malchut de Atzilut</em>.</strong> Under the place of the new <em>Tzimtzum </em>where <em>Behinat </em><em>Atzilut </em>ends and the place of the Separated <em>Olamot</em> begins."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<strong>Their place under <em>Sefirat Bina</em> remained vacant.</strong> This is so because the <em>GAR</em>, which are <em>KHB</em>, remained, and only the <em>Melachim </em>from <em>Bina</em> down broke and left a vacant space. After the <em>Tikun</em>, that will be the place where <em>Olam </em><em>Atzilut </em>will stand."
+    }
+  ]
+}

@@ -24,6 +24,7 @@
     "fonts:vendor": "tsx scripts/vendor-fonts.ts",
     "import:sefaria": "tsx scripts/import-sefaria.ts",
     "import:kabbalahmedia": "tsx scripts/import-kabbalahmedia.ts",
+    "import:kabbalah-info": "tsx scripts/import-kabbalah-info.ts",
     "migrate:consolidate-qa": "tsx scripts/migrate-consolidate-qa.ts",
     "migrate:commentary-labels": "tsx scripts/migrate-commentary-labels.ts",
     "migrate:sefaria-refs": "tsx scripts/migrate-sefaria-refs.ts",

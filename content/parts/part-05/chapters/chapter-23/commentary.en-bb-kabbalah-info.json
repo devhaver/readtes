@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<strong>The <em>Yod</em><em>-Vav</em>are two <em>Behinot </em><em>Hitpashtut</em>, and the <em>Heys </em>are two <em>Behinot </em><em>Histalkut</em>.</strong> The first <em>Hitpashtut </em>is the <em>Yod</em>; the second <em>Hitpashtut </em>is the <em>Vav</em>. The first <em>Histalkut </em>is the First <em>Hey</em>and the second <em>Histalkut </em>is the last <em>Hey</em>."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<strong><em>HaVaYaH </em>begins only from <em>Hochma </em>downward.</strong> It is known that the <em>Yod</em> means <em>Hochma</em>, <em>Vav</em> means <em>ZA</em>, the First <em>Hey</em> means <em>Bina</em> and the last <em>Hey</em>means <em>Malchut</em>. <em>Keter</em>, however, is not implied in the four <em>Otiot</em>, except in the tip of the <em>Yod</em>. This is so for the reason that the Rav explains below."
+    }
+  ]
+}

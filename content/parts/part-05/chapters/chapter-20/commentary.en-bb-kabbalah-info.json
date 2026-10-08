@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<strong><em>“Matei ve Lo Matei</em>.” These two <em>Behinot</em> are called <em>Hitpashtut </em>and <em>Histalkut</em>, by which the four <em>Behinot</em>.</strong> This refers to the four <em>Otiot</em> of the Name <em>HaVaYaH</em>. This is because these two <em>Behinot</em> of <em>Hitpashtut </em>and <em>Histalkut </em><em>de </em><em>Hitpashtut </em><em>Aleph </em><em>de </em><em>Akudim </em>that he introduced above (item 19) are the two <em>Otiot </em><em>Yod</em>, <em>Hey</em> of <em>HaVaYaH</em>. These two <em>Behinot</em> of <em>Hitpashtut </em>and <em>Histalkut </em>in <em>Hitpashtut </em><em>Bet </em><em>de </em><em>Akudim</em>, called <em>Matei ve Lo Matei</em>, are the two <em>Otiot </em><em>Vav</em>, <em>Hey</em> of <em>HaVaYaH</em>."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<strong>The beginning of the <em>Matei</em> of <em>Ohr</em> inside the <em>Kli </em><em>de </em><em>Keter</em>.</strong> Will be explained below."
+    }
+  ]
+}

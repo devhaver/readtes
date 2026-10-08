@@ -36,7 +36,8 @@ Nothing else is preloaded. Two mechanisms fill in context as you work:
   these; they fire on path match.
 - **`.agents/skills/`** — procedures and reference (`tes-content-model`,
   `tes-seo-ssg`, `tes-testing`, `tes-import-sefaria`,
-  `tes-import-kabbalahmedia`, `tes-pnpm-setup`), loaded when you invoke them.
+  `tes-import-kabbalahmedia`, `tes-import-kabbalah-info`, `tes-pnpm-setup`),
+  loaded when you invoke them.
   `.claude/skills/` symlinks to the same directories.
 
 `AGENTS.md` is the full standalone reference, kept complete so a cold Codex or

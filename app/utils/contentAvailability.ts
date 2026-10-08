@@ -16,6 +16,7 @@ import type {
   TocChapter,
   TocPart,
 } from "~~/shared/types/content";
+import { buildVersionsById, resolveVersionForLanguage } from "./readerVersions";
 
 /** Per-language coverage across a group of chapters (a whole part, on the index page). */
 export type LanguageAvailability = "none" | "partial" | "full";
@@ -23,7 +24,12 @@ export type LanguageAvailability = "none" | "partial" | "full";
 export interface ChapterLanguages {
   he: boolean;
   en: boolean;
-  /** True when the chapter's `source` layer has an AI-translated (`en-ai`) version. */
+  /**
+   * True when the English the reader shows for the chapter's `source` layer
+   * is the AI translation — i.e. `en-ai` exists and no human English
+   * outranks it. A chapter that also has Bnei Baruch's English is read in
+   * that, so it is not badged.
+   */
   aiTranslated: boolean;
 }
 
@@ -53,9 +59,12 @@ export const chapterLanguages = (
   return {
     he,
     en,
-    aiTranslated: chapter.availableVersions.source.includes(
-      AI_TRANSLATION_VERSION_ID,
-    ),
+    aiTranslated:
+      resolveVersionForLanguage(
+        chapter.availableVersions.source,
+        "en",
+        buildVersionsById(versions),
+      ) === AI_TRANSLATION_VERSION_ID,
   };
 };
 

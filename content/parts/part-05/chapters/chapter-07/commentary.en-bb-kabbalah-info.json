@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-07",
+  "layer": "commentary",
+  "versionId": "en-bb-kabbalah-info",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:1",
+      "section": "ohr-pnimi",
+      "html": "<strong>One, when two <em>Orot</em> are in two <em>Kelim</em> etc. contained in one another in one <em>Kli</em>.</strong> Interpretation: Any spiritual separation is through <em>Shinui Tzura </em>and any spiritual unification is through <em>Hishtavut Tzura</em>. Hence, if for example one <em>Ohr</em> is clothed in <em>Behina Dalet </em>and the other in <em>Behina Gimel </em>they are considered two. This is because the <em>Shinui Tzura </em>separates between them. They are considered two separate <em>Orot</em> in two <em>Kelim</em> in themselves.<br>However, when the <em>Kli </em><em>de </em><em>Behina Dalet </em>is purified and remains in <em>Behina Gimel </em>too, the two <em>Kelim</em>mingle and become one <em>Kli</em>, since both are in even <em>Tzura</em>. The two <em>Orot</em> are also mingled in their <em>He’arah</em>. Even though they both originate from the <em>Eser </em><em>Sefirot </em><em>de </em><em>Ohr Yashar</em>, they are two kinds, such as one being <em>Ruach</em> and the other is <em>Nefesh</em>."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:2",
+      "section": "ohr-pnimi",
+      "html": "<strong>Two <em>Orot</em> are in two <em>Kelim</em> etc. Then there is <em>AhaVaH</em>.</strong> This refers to the <em>Zivug </em><em>de </em><em>Neshikin</em> and will be explained in its place."
+    }
+  ]
+}
