@@ -13,6 +13,12 @@ import {
   parseKiToc,
 } from "../../scripts/lib/ki-page.ts";
 import {
+  alignQaEntries,
+  kiQaEntryHtml,
+  parseKiQaTable,
+  questionsWithoutEcho,
+} from "../../scripts/lib/ki-qa.ts";
+import {
   acceptedPairs,
   alignBySimilarity,
 } from "../../scripts/lib/ki-similarity-align.ts";
@@ -509,5 +515,93 @@ describe("Inner Observation", () => {
       "Part 6 - Questions Regarding Cause and Consequence",
     ].map((title) => classifyKiPage({ url: "u", title })?.kind);
     expect(kinds).toEqual(["cause-and-consequence", "other"]);
+  });
+});
+
+describe("Q&A tables", () => {
+  const he = (n: number): SourceSegment => ({
+    n,
+    sefariaRef: `Answers ${n}:1`,
+    html: "ת".repeat(120),
+    anchors: [],
+  });
+  const answers = [
+    "<strong>67. What is Ohr Makif?</strong>The surrounding light that the vessel cannot receive shines from afar on its outside.",
+    "<strong>68. What is Hizdakchut?</strong>The screen refines from phase four to phase three and the level diminishes.",
+    "<strong>69. What is Zivug?</strong>The coupling by striking of the upper light on the screen raises reflected light.",
+  ];
+  const listPage = parseKiBlocks(
+    page(
+      [
+        "<p>67. What is Ohr Makif?</p>",
+        "<p>68. What is Hizdakchut?</p>",
+        "<p>69. What is Zivug?</p>",
+        ...answers.map((a) => `<p>${a}</p>`),
+      ].join(""),
+    ),
+  );
+  const references = [
+    "Surrounding light: the light the vessel cannot receive shines on its outside from afar",
+    "Refinement: the screen refines from phase four to phase three, the level diminishes",
+    "Coupling: the upper light strikes the screen and reflected light rises",
+  ];
+
+  it("reads a list-shaped table, numbered past the Hebrew's own numbering", () => {
+    const table = parseKiQaTable(listPage);
+    expect(table?.shape).toBe("list");
+    expect(table?.questions.map((q) => q.number)).toEqual([67, 68, 69]);
+    expect(table?.answers.map((a) => a.number)).toEqual([67, 68, 69]);
+    expect(questionsWithoutEcho(table as NonNullable<typeof table>)).toEqual(
+      [],
+    );
+  });
+
+  it("pairs answers by position with the first segment's ref", () => {
+    const table = parseKiQaTable(listPage) as NonNullable<
+      ReturnType<typeof parseKiQaTable>
+    >;
+    const verdict = alignQaEntries(
+      table.answers,
+      [1, 2, 3].map((n, i) => ({
+        segments: [he(n)],
+        reference: references[i] as string,
+      })),
+      true,
+    );
+    expect(verdict).toMatchObject({
+      status: "imported",
+      items: [{ n: 1, sefariaRef: "Answers 1:1" }, { n: 2 }, { n: 3 }],
+    });
+  });
+
+  it("refuses a table whose answers are out of step for two in a row", () => {
+    const table = parseKiQaTable(listPage) as NonNullable<
+      ReturnType<typeof parseKiQaTable>
+    >;
+    const shifted = [references[0], references[2], references[1]];
+    const verdict = alignQaEntries(
+      table.answers,
+      [1, 2, 3].map((n, i) => ({
+        segments: [he(n)],
+        reference: shifted[i] as string,
+      })),
+      true,
+    );
+    expect(verdict.status).toBe("refused");
+  });
+
+  it("reads an interleaved table: numbered question, plain answer", () => {
+    const table = parseKiQaTable(
+      parseKiBlocks(
+        page(
+          "<p>1. What is light</p><p>Everything that exists as existence.</p><p>2. What is darkness</p><p>Its absence.</p>",
+        ),
+      ),
+    );
+    expect(table?.shape).toBe("interleaved");
+    expect(table?.answers.map(kiQaEntryHtml)).toEqual([
+      "Everything that exists as existence.",
+      "Its absence.",
+    ]);
   });
 });

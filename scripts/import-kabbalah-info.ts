@@ -63,6 +63,12 @@ import {
   type KiPageRef,
 } from "./lib/ki-page.ts";
 import {
+  alignQaEntries,
+  parseKiQaTable,
+  qaTargets,
+  questionsWithoutEcho,
+} from "./lib/ki-qa.ts";
+import {
   alignWholePartCommentary,
   alignWholePartSource,
   type ChapterVerdict,
@@ -276,7 +282,54 @@ const IMPORTED_KINDS = new Set<KiPageKind>([
   "whole-part",
   "inner-observation",
   "cause-and-consequence",
+  "qa-terminology",
+  "qa-topics",
 ]);
+
+/**
+ * A Q&A table: answers pair with the Hebrew answers by position and are
+ * verified against `en-ai`; questions are written only if their answers
+ * were, and (list-shaped pages) each answer echoes its question.
+ */
+const processQaPage = (
+  ref: KiPageRef,
+  html: string,
+  planned: Planned,
+): void => {
+  const kind = ref.kind === "qa-terminology" ? "terminology" : "topics";
+  const questionsId = `${partIdFor(ref.part)}/questions-${kind}-01`;
+  const answersId = `${partIdFor(ref.part)}/answers-${kind}-01`;
+  const heQuestions = readLayer(questionsId, "source", "he-jerusalem-1956");
+  const heAnswers = readLayer(answersId, "source", "he-jerusalem-1956");
+  const table = parseKiQaTable(parseKiBlocks(html));
+  if (!heQuestions || !heAnswers || !table) {
+    planned.notes.push(`${ref.title}: no Q&A table or no Hebrew to align to`);
+    return;
+  }
+
+  const answers = alignQaEntries(
+    table.answers,
+    qaTargets(heAnswers, readLayer(answersId, "source", "en-ai")),
+    true,
+  );
+  plan(planned, answersId, "source", answers);
+
+  const unechoed = questionsWithoutEcho(table);
+  const questions: ChapterVerdict<SourceSegment> =
+    answers.status !== "imported"
+      ? { status: "refused", reason: "its answers were refused" }
+      : unechoed.length > 0
+        ? {
+            status: "refused",
+            reason: `answers do not repeat question(s) ${unechoed.join(", ")}`,
+          }
+        : alignQaEntries(
+            table.questions,
+            qaTargets(heQuestions, readLayer(questionsId, "source", "en-ai")),
+            false,
+          );
+  plan(planned, questionsId, "source", questions);
+};
 
 /**
  * On parts 6 and 7, Sefaria's second Histaklut node is the Cause and
@@ -429,6 +482,8 @@ export const main = async (argv: string[]): Promise<void> => {
     if (ref.kind === "chapter") processChapterPage(ref, html, planned);
     else if (ref.kind === "whole-part") {
       processWholePartPage(ref, html, planned);
+    } else if (ref.kind === "qa-terminology" || ref.kind === "qa-topics") {
+      processQaPage(ref, html, planned);
     } else processObservationPage(ref, html, planned);
   }
 
