@@ -66,6 +66,18 @@ blocks open commentary.
      `inner-observation-02` is the Cause and Consequence essay and is taken
      only from that essay's page (part 7 has none).
 
+- **Q&A tables** (`ki-qa.ts`). Two shapes: _list_ (all questions, then all
+  answers renumbered from the same first numeral — parts 4, 7) and
+  _interleaved_ (numbered question, plain answer — parts 1, 3). BB numbers
+  a part's two tables straight through (part 4 topics start at 67) where
+  the Hebrew restarts at 1, so pairing is positional and only when counts
+  agree. Answers are verified against `en-ai` with the neighbour test; an
+  isolated weak pair passes (a shift fails consecutive pairs — part 7's
+  terminology answers are out of step at 86-87), two in a row or >10%
+  refuse the table. Questions are written only when their answers were and,
+  on list pages, every answer repeats its question. Split Hebrew answers get
+  one item on the first segment's ref, like KabbalahMedia's `en-bb`.
+
 ## Refusals (all reported in COVERAGE.md, nothing partial is written)
 
 - Chapters with unanchored Hebrew notes (part 2 ch 1, part 3 ch 8).
@@ -78,8 +90,11 @@ blocks open commentary.
 - Inner Observation chapters failing the edge or sub-heading test (part 3
   ch 5 and 7, both part-6 chapters) and part 7's page, which is far
   shorter than its Hebrew.
-- The Q&A tables, the Cause and Consequence Q&A and part 5's Additional
-  Explanation are reported as not imported yet.
+- Q&A tables whose counts disagree with the Hebrew (part 1 questions 54 vs
+  55, part 3 topics 136 vs 135, part 7 topics 59 vs 64) or are out of step
+  (part 7 terminology).
+- The Cause and Consequence Q&A and part 5's Additional Explanation are
+  reported as not imported yet.
 
 Verification done on the first import (2026-10-08): independent reviewers
 compared all 638 notes against `en-ai`/Hebrew (0 mismatches) and all 159
