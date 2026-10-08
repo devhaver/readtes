@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ChapterKind } from "~~/shared/types/content";
 // The reader: Source | Inner Light | Inner Observation for one chapter (two
 // panes when the part has no Inner Observation — see below), with two-way
 // anchor sync between Source and Inner Light. Inner Observation is
@@ -123,13 +124,25 @@ const thirdPaneChapters = {
 // and `panes` below is resolved once at setup from the same fact. Inner
 // Observation leads when it exists — it is the layer this pane has always
 // been, and the one the printed book pairs with the text.
+//
+// Only the Ari's own chapters get the whole companion pane. Beside the
+// Introduction it was unrelated text; beside an Inner Observation chapter it
+// showed that same essay a second time; beside an answers table, the
+// answers again. A questions table keeps only its Answers tab — reading a
+// question with its answer beside it is the one pairing that helps there.
+const companionTabs = (kind: ChapterKind): ThirdPaneTab[] | null => {
+  if (kind === "chapter") return null;
+  if (kind.startsWith("questions-")) return ["answers"];
+  return [];
+};
+const allowedTabs = companionTabs(chapter.kind);
 const availableThirdPaneTabs: ThirdPaneTab[] = [
   ...(thirdPaneChapters.innerObservation.length > 0
     ? (["inner-observation"] as const)
     : []),
   ...(thirdPaneChapters.questions.length > 0 ? (["questions"] as const) : []),
   ...(thirdPaneChapters.answers.length > 0 ? (["answers"] as const) : []),
-];
+].filter((tab) => allowedTabs === null || allowedTabs.includes(tab));
 
 // The persisted tab is a standing preference, not a per-part fact: on a
 // part with no Inner Observation this falls through to Questions WITHOUT
@@ -148,6 +161,8 @@ const panes = resolveReaderPanes({
 // it takes the short form ("Q & A") where the pane's own heading takes the
 // full one — but it must never name a part after Inner Observation when
 // that part has none.
+const sourceLabelKey = sourcePaneLabelKey(chapter.kind);
+
 const thirdPaneLabelKey = availableThirdPaneTabs.includes("inner-observation")
   ? "reader.mobilePane.innerObservation"
   : "reader.mobilePane.questionsAnswers";
@@ -319,6 +334,7 @@ useLocalizedSeo({
       v-if="mode === 'panes'"
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"
+      :source-label-key="sourceLabelKey"
     >
       <template #toolbar>
         <ReaderToolbar
@@ -334,7 +350,7 @@ useLocalizedSeo({
 
       <template #source>
         <ReaderPane
-          :title="t('reader.pane.source')"
+          :title="t(sourceLabelKey)"
           :language-options="sourceLanguageOptions"
           :model-value="readerLanguages.source.value"
           :meta="sourceMeta"
@@ -436,6 +452,7 @@ useLocalizedSeo({
         :next="next"
       />
       <ReaderStudyStream
+        :source-label-key="sourceLabelKey"
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"
         :summary-items="[]"

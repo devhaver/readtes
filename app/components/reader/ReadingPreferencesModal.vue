@@ -126,9 +126,7 @@ const transitionDuration = computed(() =>
 
           <div class="flex flex-col gap-4">
             <div>
-              <h3
-                class="mb-1.5 font-display text-xs tracking-wide text-(--text-muted) uppercase"
-              >
+              <h3 class="font-semibold mb-1.5 text-xs text-(--text-muted)">
                 {{ t("reader.prefs.fontSize.label") }}
               </h3>
               <UiSegmentedControl
@@ -140,9 +138,7 @@ const transitionDuration = computed(() =>
             </div>
 
             <div>
-              <h3
-                class="mb-1.5 font-display text-xs tracking-wide text-(--text-muted) uppercase"
-              >
+              <h3 class="font-semibold mb-1.5 text-xs text-(--text-muted)">
                 {{ t("reader.prefs.theme.label") }}
               </h3>
               <UiSegmentedControl
@@ -154,9 +150,7 @@ const transitionDuration = computed(() =>
             </div>
 
             <div>
-              <h3
-                class="mb-1.5 font-display text-xs tracking-wide text-(--text-muted) uppercase"
-              >
+              <h3 class="font-semibold mb-1.5 text-xs text-(--text-muted)">
                 {{ t("reader.prefs.language.label") }}
               </h3>
               <nav

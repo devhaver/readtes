@@ -50,6 +50,7 @@ const containerRef = provideReaderPaneContainer();
       class="tes-pane-body"
       :dir="meta?.direction ?? 'ltr'"
       :lang="meta?.language"
+      :data-version="meta?.id"
     >
       <slot />
     </div>

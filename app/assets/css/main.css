@@ -469,11 +469,11 @@ a[href],
  * all) so folding them in here would force every caller into one shape.
  */
 .tes-seif-lg {
-  @apply text-[length:calc(1.125rem*var(--reading-scale))] leading-relaxed text-(--text-primary);
+  @apply text-[length:calc(1.125*var(--fit,1rem)*var(--reading-scale))] leading-relaxed text-(--text-primary);
 }
 
 .tes-seif-md {
-  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary);
+  @apply text-[length:calc(var(--fit,1rem)*var(--reading-scale))] leading-relaxed text-(--text-primary);
 }
 
 /* `CommentaryPane`'s own item `<li>` — same "medium" seif sizing as
@@ -489,7 +489,7 @@ a[href],
      `rounded-card` as a utility, which LOST to that unlayered rule — an
      unlayered `rounded-card` in this class would win instead and silently
      change the flash radius 4px -> 8px. */
-  @apply text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4;
+  @apply text-[length:calc(var(--fit,1rem)*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4;
   /* Marker ABOVE its prose, not in a gutter beside it. The gutter version
      spent 2.25rem of every line's width on a 1-character marker, and
      horizontal space is the scarcer axis here: three columns share the
@@ -523,7 +523,10 @@ a[href],
  * in the corpus got the longest lines.
  */
 .tes-commentary-column {
-  @apply mx-auto flex max-w-[65ch] flex-col gap-6;
+  @apply mx-auto flex max-w-[72ch] flex-col gap-6;
+  /* `ch` is measured in this element's own font-size: without this the
+     column stayed 72ch of 16px while its text grew with `--fit`. */
+  font-size: var(--fit, 1rem);
 }
 
 /*
@@ -637,8 +640,20 @@ a[href],
  * rather than mid-sentence emphasis. Hebrew editions carry no catchword, so
  * this simply never matches there.
  */
-.tes-commentary-body > strong:first-child {
+.tes-commentary-body > strong:first-child,
+.tes-commentary-body > .tes-para:first-child > strong:first-child {
   @apply font-semibold text-(--text-primary);
+}
+
+/* A paragraph inside one item (a seif, a note, an Inner Observation
+   segment). Bnei Baruch's English prints these as separate paragraphs;
+   joined with `<br>` they read as one wall of text with ragged breaks. */
+.tes-para {
+  display: block;
+}
+
+.tes-para + .tes-para {
+  margin-block-start: 0.75em;
 }
 
 /*
@@ -650,6 +665,7 @@ a[href],
  */
 .tes-prose-column {
   @apply mx-auto flex max-w-[70ch] flex-col gap-8;
+  font-size: var(--fit, 1rem);
 }
 
 /* `InnerObservationPane`'s per-section `<summary>` — sticky for the same
@@ -708,18 +724,28 @@ a[href],
 
 .tes-pane-body {
   @apply min-h-0 flex-1 overflow-y-auto px-4 pb-4;
+  /* Reading text sizes itself to the pane, not the viewport: collapsing a
+     pane must visibly hand its width to the others. A fixed 1rem text in a
+     fixed 65ch column left a widened pane as empty margin (the column just
+     re-centred), so `--fit` grows the type — and with it the ch-based
+     column — as the pane widens, 1rem at ~650px up to 1.2rem. Outside a
+     pane (study/original modes) `--fit` is unset and text falls back to
+     1rem. Unregistered, so `cqi` resolves where it is used, i.e. against
+     this container. */
+  container-type: inline-size;
+  --fit: clamp(1rem, 0.55rem + 1.1cqi, 1.2rem);
   /* Named rather than a bare `pt-4` because the sticky headings inside have
      to cancel exactly this value — see `.tes-commentary-seif-heading`. */
   --pane-pad-block-start: 1rem;
   padding-block-start: var(--pane-pad-block-start);
 }
 
-/* The small uppercase "eyebrow" heading style: pane titles
+/* The small "eyebrow" heading style: pane titles
    (`ReaderPaneHeader`), the chapter-intro disclosure label
    (`ChapterIntro`), and commentary/summary section headings
    (`CommentaryPane`, `StudyStream`, `ReaderSummaryBody`). */
 .tes-eyebrow {
-  @apply font-display text-sm tracking-wide text-(--text-muted) uppercase;
+  @apply font-semibold text-sm text-(--text-muted);
 }
 
 /* Toolbar icon buttons — `ReaderToolbar`'s Contents/Preferences buttons.
@@ -754,7 +780,7 @@ a[href],
  * other panes' titles rather than sitting a few pixels inboard of them.
  */
 .tes-third-pane-tab {
-  @apply rounded-button px-1 font-display text-sm tracking-wide uppercase first:-ms-1;
+  @apply font-semibold rounded-button px-1 text-sm first:-ms-1;
 }
 
 .tes-third-pane-tab:focus-visible {
@@ -1123,4 +1149,14 @@ a[href],
     var(--color-teal)
   );
   mix-blend-mode: color;
+}
+
+/*
+ * The Sefaria Sulam translation (the Introduction's only English) bolds the
+ * words that translate the Hebrew literally and sets its own clarifications
+ * in roman. Nothing on the page explains that convention, so it read as
+ * random bolding mid-sentence; the text is shown at one weight.
+ */
+[data-version="en-sefaria-sulam"] b {
+  font-weight: inherit;
 }

@@ -61,27 +61,39 @@ const volumeContentsLink = computed(() =>
 </script>
 
 <template>
-  <nav :aria-label="t('nav.breadcrumbLabel')" class="text-sm">
-    <ol class="tes-breadcrumb-list">
-      <li class="tes-breadcrumb-item">
-        <ReaderBreadcrumbMenu
-          :trigger-label="items[0]?.label ?? t('common.sixVolumes')"
-          :items="volumeItems"
-        />
-        <span aria-hidden="true">/</span>
+  <nav :aria-label="t('nav.breadcrumbLabel')" class="min-w-0 text-sm">
+    <!-- Below `md` only the current chapter shows: the volume and part
+         menus wrapped the toolbar onto five lines of a phone screen, and the
+         contents button beside it reaches the same places. -->
+    <ol class="tes-breadcrumb-list min-w-0 !flex-nowrap">
+      <!-- `hidden` on a wrapper, not on the `tes-breadcrumb-item` itself:
+           that class is unlayered CSS and its `display: flex` beat the
+           `hidden` utility. -->
+      <li class="hidden shrink-0 md:block">
+        <span class="tes-breadcrumb-item">
+          <ReaderBreadcrumbMenu
+            :trigger-label="items[0]?.label ?? t('common.sixVolumes')"
+            :items="volumeItems"
+          />
+          <span aria-hidden="true">/</span>
+        </span>
       </li>
-      <li v-if="items[1]" class="tes-breadcrumb-item">
-        <ReaderBreadcrumbMenu
-          :trigger-label="items[1].label"
-          :items="partItems"
-          :footer-item="volumeContentsLink"
-        />
-        <span aria-hidden="true">/</span>
+      <li v-if="items[1]" class="hidden shrink-0 md:block">
+        <span class="tes-breadcrumb-item">
+          <ReaderBreadcrumbMenu
+            :trigger-label="items[1].label"
+            :items="partItems"
+            :footer-item="volumeContentsLink"
+          />
+          <span aria-hidden="true">/</span>
+        </span>
       </li>
-      <li v-if="items[2]">
-        <span class="text-(--text-primary)" aria-current="page">{{
-          items[2].label
-        }}</span>
+      <li v-if="items[2]" class="min-w-0">
+        <span
+          class="block truncate text-(--text-primary)"
+          aria-current="page"
+          >{{ items[2].label }}</span
+        >
       </li>
     </ol>
   </nav>

@@ -23,7 +23,7 @@
  */
 import { sanitizeHtml } from "../../app/utils/sanitizeHtml.ts";
 import type { SourceSegment } from "../../shared/types/content.ts";
-import type { KiBlock } from "./ki-page.ts";
+import { kiParagraphs, type KiBlock } from "./ki-page.ts";
 import { similarityScorer } from "./ki-similarity-align.ts";
 
 const NUMERAL_RE = /^\s*(\d+)\s*[.)](?!\d)/;
@@ -114,13 +114,13 @@ const tidy = (html: string): string =>
 /** An entry as HTML, its numeral dropped. */
 export const kiQaEntryHtml = (entry: KiQaEntry): string =>
   tidy(
-    entry.blocks
-      .map((block, i) =>
+    kiParagraphs(
+      entry.blocks.map((block, i) =>
         i === 0
           ? block.html.replace(NUMERAL_HTML_RE, "$1$2").trim()
           : block.html,
-      )
-      .join("<br>"),
+      ),
+    ),
   ).replace(/^(<strong>[^<]*<\/strong>)(?=\w)/, "$1 ");
 
 export interface QaTarget {

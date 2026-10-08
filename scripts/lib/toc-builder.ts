@@ -23,8 +23,54 @@ type LocalizedTitle = Record<string, string>;
  * titles on write so re-imports can never drift the corpus back to the
  * Sefaria spelling — refs and provenance keep Sefaria's original strings.
  */
-const normalizeEnTitle = (title: string): string =>
-  title.replace(/Penimit/g, "Pnimit");
+/**
+ * Sefaria's English node titles, made readable: its transliteration is
+ * normalized, and the Inner Observation essays are called that in English —
+ * the reader labels the layer "Inner Observation" everywhere, and a contents
+ * list of "Histaklut Pnimit 1…10" under that heading read as a different
+ * thing.
+ */
+export const normalizeEnTitle = (title: string): string =>
+  title
+    .replace(/Penimit/g, "Pnimit")
+    .replace(/^Histaklut Pnimit\b/, "Inner Observation");
+
+/**
+ * Each part's name. Sefaria titles the parts "Section I…XVI" in English
+ * and "חלק א׳: צמצום וקו" in Hebrew, so the English carried no name at all
+ * and every surface that already says "Part 1" (breadcrumb, volume page)
+ * repeated the number in Hebrew. Names follow Bnei Baruch's English
+ * titles where they publish one (parts 1, 2, 4-8, 16); the rest render the
+ * Hebrew in the same register.
+ */
+export const PART_NAMES_EN: Record<number, string> = {
+  1: "Restriction and Line",
+  2: "Circles and Straightness",
+  3: "Direct Light and Reflected Light",
+  4: "The Ten Sefirot of Akudim",
+  5: "Akudim in the Second Expansion: Matei ve Lo Matei",
+  6: "The World of Nekudim",
+  7: "The Seven Kings That Died",
+  8: "The Ten Sefirot of the World of Atzilut",
+  9: "The Couplings of the Sefirot",
+  10: "The First Ibur of Zeir Anpin",
+  11: "Correcting Lights, Sparks and Vessels in the Ubar, and the Second Ibur",
+  12: "The Birth and Yenika of Zeir Anpin",
+  13: "The Corrections of the Head and Beard of Arich Anpin",
+  14: "The Mochin of Gadlut of Zeir Anpin",
+  15: "Building the Nukva of Zeir Anpin",
+  16: "The Three Worlds: Beria, Yetzira and Assiya",
+};
+
+/** A part's display title: its name, without the "Part N" every surface already prints. */
+export const partDisplayTitle = (
+  number: number,
+  sefariaHeTitle: string,
+  sefariaEnTitle: string,
+): LocalizedTitle => ({
+  en: PART_NAMES_EN[number] ?? sefariaEnTitle,
+  he: sefariaHeTitle.replace(/^חלק\s+[^:]+:\s*/, ""),
+});
 
 /** Stable display/sort order for chapter kinds within a part — see `~~/shared/utils/chapterKinds`. */
 const KIND_ORDER = CHAPTER_KIND_ORDER;

@@ -65,8 +65,13 @@ const props = withDefaults(
      * content it does not contain. The page decides; this stays dumb.
      */
     thirdPaneLabelKey?: string;
+    /** The first pane's label — it is not always the Ari's text. */
+    sourceLabelKey?: string;
   }>(),
-  { thirdPaneLabelKey: "reader.mobilePane.innerObservation" },
+  {
+    thirdPaneLabelKey: "reader.mobilePane.innerObservation",
+    sourceLabelKey: "reader.mobilePane.source",
+  },
 );
 
 const SEGMENT_BY_PANE: Record<PaneId, Segment> = {
@@ -94,7 +99,9 @@ const segments = computed<Segment[]>(() =>
   props.panes.map((pane) =>
     pane === "inner-observation"
       ? { ...SEGMENT_BY_PANE[pane], labelKey: props.thirdPaneLabelKey }
-      : SEGMENT_BY_PANE[pane],
+      : pane === "source"
+        ? { ...SEGMENT_BY_PANE[pane], labelKey: props.sourceLabelKey }
+        : SEGMENT_BY_PANE[pane],
   ),
 );
 

@@ -18,7 +18,7 @@
 import { sanitizeHtml } from "../../app/utils/sanitizeHtml.ts";
 import type { SourceSegment } from "../../shared/types/content.ts";
 import { unboldKiHtml } from "./ki-chapter-page.ts";
-import type { KiBlock } from "./ki-page.ts";
+import { kiParagraphs, type KiBlock } from "./ki-page.ts";
 import { similarityScorer, vectorSpace } from "./ki-similarity-align.ts";
 
 const ITEM_NUMERAL_RE = /^\s*(\d+)\s*[.)](?!\d)\s*/;
@@ -83,16 +83,16 @@ interface RenderContext {
 
 const renderBlocks = (blocks: KiBlock[], context: RenderContext): string =>
   sanitizeHtml(
-    blocks
-      .map((block) => {
+    kiParagraphs(
+      blocks.map((block) => {
         if (isHeadingBlock(block) || context.subtitles.has(block)) {
           return `<small>${unboldKiHtml(block.html)}</small>`;
         }
         return context.itemHeads.has(block)
           ? block.html.replace(ITEM_NUMERAL_HTML_RE, "$1$2").trim()
           : block.html;
-      })
-      .join("<br>"),
+      }),
+    ),
   )
     .replace(/ {2,}/g, " ")
     .replace(/\s*<br>\s*/g, "<br>")
@@ -213,7 +213,10 @@ const finish = (
       );
       return;
     }
-    if (opensWithSubtitle(he) && !rendered.startsWith("<small>")) {
+    if (
+      opensWithSubtitle(he) &&
+      !rendered.replace(/^<span class="tes-para">/, "").startsWith("<small>")
+    ) {
       flag(
         target.chapterId,
         `segment ${he.n}: the Hebrew opens with a sub-heading, the page's text does not`,

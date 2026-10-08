@@ -3,8 +3,8 @@
     "id": "part-07",
     "number": 7,
     "title": {
-      "en": "Section VII",
-      "he": "חלק ז׳: עשר הספירות דז' מלכין קדמאין דמיתו"
+      "en": "The Seven Kings That Died",
+      "he": "עשר הספירות דז' מלכין קדמאין דמיתו"
     }
   },
   "volume": {
@@ -1792,7 +1792,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit 1",
+        "en": "Inner Observation 1",
         "he": "הסתכלות פנימית א׳"
       },
       "availableLayers": [
@@ -1812,7 +1812,7 @@
       "kind": "inner-observation",
       "number": 2,
       "title": {
-        "en": "Histaklut Pnimit 2",
+        "en": "Inner Observation 2",
         "he": "הסתכלות פנימית ב׳"
       },
       "availableLayers": [

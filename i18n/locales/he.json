@@ -31,6 +31,7 @@
     "aiTranslated": "תרגום בינה מלאכותית",
     "hebrewOnly": "בעברית בלבד",
     "pane": {
+      "introduction": "הקדמה",
       "source": "כתבי האר״י",
       "innerLight": "אור פנימי",
       "innerObservation": "הסתכלות פנימית",

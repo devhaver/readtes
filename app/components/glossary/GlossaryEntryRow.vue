@@ -157,9 +157,7 @@ const variantShares = computed(() =>
       </p>
 
       <section v-if="variantShares.length > 0" class="mt-5">
-        <h4
-          class="text-xs font-medium tracking-wide text-(--text-muted) uppercase"
-        >
+        <h4 class="font-semibold text-xs text-(--text-muted)">
           {{ t("glossary.variantsTitle") }}
         </h4>
         <ul class="mt-2 space-y-1.5">
@@ -188,9 +186,7 @@ const variantShares = computed(() =>
       </section>
 
       <section v-if="entry.citationCount > 0" class="mt-5">
-        <h4
-          class="text-xs font-medium tracking-wide text-(--text-muted) uppercase"
-        >
+        <h4 class="font-semibold text-xs text-(--text-muted)">
           {{ t("glossary.citationsTitle") }}
         </h4>
         <div v-if="citationsFailed" class="mt-2">

@@ -79,7 +79,11 @@ import {
 import type { PaneId } from "~/utils/readerAnchorState";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 
-const props = defineProps<{ panes: PaneId[]; thirdPaneLabelKey?: string }>();
+const props = defineProps<{
+  panes: PaneId[];
+  thirdPaneLabelKey?: string;
+  sourceLabelKey?: string;
+}>();
 
 const { activePane, setActivePane } = useReaderState();
 
@@ -348,5 +352,6 @@ const gridColsClass = computed(() => {
   <ReaderMobilePanePill
     :panes="paneOrder"
     :third-pane-label-key="thirdPaneLabelKey"
+    :source-label-key="sourceLabelKey"
   />
 </template>

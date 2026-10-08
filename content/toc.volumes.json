@@ -12,8 +12,8 @@
           "id": "part-01",
           "number": 1,
           "title": {
-            "en": "Section I",
-            "he": "חלק א׳: צמצום וקו"
+            "en": "Restriction and Line",
+            "he": "צמצום וקו"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
           "chapterCount": 17,
@@ -45,8 +45,8 @@
           "id": "part-02",
           "number": 2,
           "title": {
-            "en": "Section II",
-            "he": "חלק ב׳: עגולים ויושר"
+            "en": "Circles and Straightness",
+            "he": "עגולים ויושר"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section II",
           "chapterCount": 16,
@@ -77,8 +77,8 @@
           "id": "part-03",
           "number": 3,
           "title": {
-            "en": "Section III",
-            "he": "חלק ג׳: אור ישר ואור חוזר"
+            "en": "Direct Light and Reflected Light",
+            "he": "אור ישר ואור חוזר"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section III",
           "chapterCount": 34,
@@ -109,8 +109,8 @@
           "id": "part-04",
           "number": 4,
           "title": {
-            "en": "Section IV",
-            "he": "חלק ד׳: עשר הספירות של עקודים"
+            "en": "The Ten Sefirot of Akudim",
+            "he": "עשר הספירות של עקודים"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IV",
           "chapterCount": 16,
@@ -151,8 +151,8 @@
           "id": "part-05",
           "number": 5,
           "title": {
-            "en": "Section V",
-            "he": "חלק ה׳: ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי"
+            "en": "Akudim in the Second Expansion: Matei ve Lo Matei",
+            "he": "ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section V",
           "chapterCount": 66,
@@ -182,8 +182,8 @@
           "id": "part-06",
           "number": 6,
           "title": {
-            "en": "Section VI",
-            "he": "חלק ו׳: עשר הספירות של עולם הנקודים"
+            "en": "The World of Nekudim",
+            "he": "עשר הספירות של עולם הנקודים"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VI",
           "chapterCount": 62,
@@ -216,8 +216,8 @@
           "id": "part-07",
           "number": 7,
           "title": {
-            "en": "Section VII",
-            "he": "חלק ז׳: עשר הספירות דז' מלכין קדמאין דמיתו"
+            "en": "The Seven Kings That Died",
+            "he": "עשר הספירות דז' מלכין קדמאין דמיתו"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VII",
           "chapterCount": 79,
@@ -258,8 +258,8 @@
           "id": "part-08",
           "number": 8,
           "title": {
-            "en": "Section VIII",
-            "he": "חלק ח׳: עשר הספירות של עולם האצילות"
+            "en": "The Ten Sefirot of the World of Atzilut",
+            "he": "עשר הספירות של עולם האצילות"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
           "chapterCount": 99,
@@ -290,8 +290,8 @@
           "id": "part-09",
           "number": 9,
           "title": {
-            "en": "Section IX",
-            "he": "חלק ט׳: זווגי הספירות"
+            "en": "The Couplings of the Sefirot",
+            "he": "זווגי הספירות"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IX",
           "chapterCount": 114,
@@ -322,8 +322,8 @@
           "id": "part-10",
           "number": 10,
           "title": {
-            "en": "Section X",
-            "he": "חלק י׳: עיבור ראשון דז\"א"
+            "en": "The First Ibur of Zeir Anpin",
+            "he": "עיבור ראשון דז\"א"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section X",
           "chapterCount": 164,
@@ -364,8 +364,8 @@
           "id": "part-11",
           "number": 11,
           "title": {
-            "en": "Section XI",
-            "he": "חלק י״א: תיקון אורות ניצוצין וכלים בעובר ועיבור ב'"
+            "en": "Correcting Lights, Sparks and Vessels in the Ubar, and the Second Ibur",
+            "he": "תיקון אורות ניצוצין וכלים בעובר ועיבור ב'"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XI",
           "chapterCount": 160,
@@ -395,8 +395,8 @@
           "id": "part-12",
           "number": 12,
           "title": {
-            "en": "Section XII",
-            "he": "חלק י״ב: לידה ויניקה של הז\"א"
+            "en": "The Birth and Yenika of Zeir Anpin",
+            "he": "לידה ויניקה של הז\"א"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XII",
           "chapterCount": 298,
@@ -437,8 +437,8 @@
           "id": "part-13",
           "number": 13,
           "title": {
-            "en": "Section XIII",
-            "he": "חלק י״ג: תיקוני רישא ודיקנא דא\"א"
+            "en": "The Corrections of the Head and Beard of Arich Anpin",
+            "he": "תיקוני רישא ודיקנא דא\"א"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
           "chapterCount": 225,
@@ -469,8 +469,8 @@
           "id": "part-14",
           "number": 14,
           "title": {
-            "en": "Section XIV",
-            "he": "חלק י״ד: מוחין דגדלות של זעיר אנפין"
+            "en": "The Mochin of Gadlut of Zeir Anpin",
+            "he": "מוחין דגדלות של זעיר אנפין"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
           "chapterCount": 232,
@@ -510,8 +510,8 @@
           "id": "part-15",
           "number": 15,
           "title": {
-            "en": "Section XV",
-            "he": "חלק ט״ו: בנין הנוקבא דז\"א"
+            "en": "Building the Nukva of Zeir Anpin",
+            "he": "בנין הנוקבא דז\"א"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XV",
           "chapterCount": 233,
@@ -541,8 +541,8 @@
           "id": "part-16",
           "number": 16,
           "title": {
-            "en": "Section XVI",
-            "he": "חלק ט״ז: ג' העולמות בריאה יצירה ועשיה"
+            "en": "The Three Worlds: Beria, Yetzira and Assiya",
+            "he": "ג' העולמות בריאה יצירה ועשיה"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
           "chapterCount": 276,

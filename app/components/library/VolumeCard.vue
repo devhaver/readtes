@@ -86,27 +86,37 @@ const languageLabel = (
         </span>
       </div>
 
-      <ul class="flex flex-col gap-1.5 text-sm">
+      <!-- Name on its own line, facts beneath: name, count and two chips on
+           one wrapping line broke mid-row on a phone and left a chip
+           stranded on a line of its own. -->
+      <ul class="flex flex-col gap-2.5 text-sm">
         <li
           v-for="summary in partSummaries"
           :key="summary.part.id"
-          class="flex flex-wrap items-center gap-x-2 gap-y-1 text-(--text-muted)"
+          class="flex flex-col gap-0.5"
         >
-          <span class="text-(--text-primary)">{{ summary.title }}</span>
-          <span>{{
-            t("volumes.chapterCount", { count: summary.chapterCount })
-          }}</span>
-          <span
-            v-if="languageLabel('he', summary.languages.he)"
-            class="rounded-button border border-teal/50 px-1.5 py-0.5 text-xs text-(--accent-text)"
-          >
-            {{ languageLabel("he", summary.languages.he) }}
+          <span class="text-(--text-primary)">
+            <span class="text-(--text-muted)"
+              >{{ t("common.part") }} {{ summary.part.number }}</span
+            >
+            {{ summary.title }}
           </span>
-          <span
-            v-if="languageLabel('en', summary.languages.en)"
-            class="rounded-button border border-teal/50 px-1.5 py-0.5 text-xs text-(--accent-text)"
-          >
-            {{ languageLabel("en", summary.languages.en) }}
+          <span class="flex items-center gap-2 text-xs text-(--text-muted)">
+            <span>{{
+              t("volumes.chapterCount", { count: summary.chapterCount })
+            }}</span>
+            <span
+              v-if="languageLabel('he', summary.languages.he)"
+              class="rounded-button border border-teal/50 px-1.5 py-0.5 text-(--accent-text)"
+            >
+              {{ languageLabel("he", summary.languages.he) }}
+            </span>
+            <span
+              v-if="languageLabel('en', summary.languages.en)"
+              class="rounded-button border border-teal/50 px-1.5 py-0.5 text-(--accent-text)"
+            >
+              {{ languageLabel("en", summary.languages.en) }}
+            </span>
           </span>
         </li>
       </ul>

@@ -45,9 +45,7 @@ const copy = computed(() => NOTE_COPY[props.layer]);
 
 <template>
   <aside role="note" class="mt-10 border-t border-(--border) pt-4">
-    <h3
-      class="font-display text-sm tracking-wide text-(--text-muted) uppercase"
-    >
+    <h3 class="font-semibold text-sm text-(--text-muted)">
       {{ t(copy.titleKey) }}
     </h3>
     <p class="mt-1 text-sm leading-relaxed text-(--text-muted)">

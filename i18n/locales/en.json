@@ -31,6 +31,7 @@
     "aiTranslated": "AI translated",
     "hebrewOnly": "Hebrew only",
     "pane": {
+      "introduction": "Introduction",
       "source": "The Ari's Text",
       "innerLight": "Inner Light",
       "innerObservation": "Inner Observation",
