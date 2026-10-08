@@ -22,7 +22,7 @@ const { t, locale } = useI18n();
 const NAME_SLOT = "@@ACADEMY@@";
 
 /** KabbalahMedia serves these; the other target languages fall back to English. */
-const KM_SOURCES_LOCALES = new Set(["en", "he"]);
+const KM_SOURCES_LOCALES = new Set(["en", "he", "ru"]);
 
 const sourcesUrl = computed(
   () =>

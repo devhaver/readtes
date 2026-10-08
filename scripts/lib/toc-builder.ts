@@ -62,6 +62,29 @@ export const PART_NAMES_EN: Record<number, string> = {
   16: "The Three Worlds: Beria, Yetzira and Assiya",
 };
 
+/**
+ * The same names in Russian: Bnei Baruch's own where their Russian
+ * documents print one (parts 1, 3, 4), the rest in the same register.
+ */
+export const PART_NAMES_RU: Record<number, string> = {
+  1: "Сокращение и линия",
+  2: "Круги и прямая",
+  3: "Прямой свет и отраженный свет",
+  4: "Десять сфирот Акудим",
+  5: "Акудим во втором распространении: «Мати и ло мати»",
+  6: "Мир Некудим",
+  7: "Семь умерших царей",
+  8: "Десять сфирот мира Ацилут",
+  9: "Зивуги сфирот",
+  10: "Первый ибур Зеир Анпина",
+  11: "Исправление светов, искр и келим в зародыше и второй ибур",
+  12: "Рождение и еника Зеир Анпина",
+  13: "Исправления головы и бороды Арих Анпина",
+  14: "Мохин гадлута Зеир Анпина",
+  15: "Построение Нуквы Зеир Анпина",
+  16: "Три мира: Брия, Ецира и Асия",
+};
+
 /** A part's display title: its name, without the "Part N" every surface already prints. */
 export const partDisplayTitle = (
   number: number,
@@ -70,7 +93,37 @@ export const partDisplayTitle = (
 ): LocalizedTitle => ({
   en: PART_NAMES_EN[number] ?? sefariaEnTitle,
   he: sefariaHeTitle.replace(/^חלק\s+[^:]+:\s*/, ""),
+  ...(PART_NAMES_RU[number] ? { ru: PART_NAMES_RU[number] } : {}),
 });
+
+const RUSSIAN_KIND_TITLES: Partial<Record<ChapterKind, string>> = {
+  introduction: "Предисловие",
+  "inner-observation": "Внутреннее созерцание",
+  "questions-terminology": "Вопросы о значении слов",
+  "questions-topics": "Вопросы по темам",
+  "questions-cause-effect": "Вопросы о причине и следствии",
+  "answers-terminology": "Ответы о значении слов",
+  "answers-topics": "Ответы по темам",
+  "answers-cause-effect": "Ответы о причине и следствии",
+};
+
+/**
+ * A chapter's Russian title, derived from its kind and number exactly as
+ * the English one is (`Chapter N` / a numbered node title). Sefaria has no
+ * Russian titles to take one from.
+ */
+export const russianChapterTitle = (
+  kind: ChapterKind,
+  number: number,
+  totalInKind: number,
+): string => {
+  if (kind === "chapter") return `Глава ${number}`;
+  const base = RUSSIAN_KIND_TITLES[kind] ?? kind;
+  return totalInKind > 1 ? `${base} ${number}` : base;
+};
+
+/** A volume's Russian title. */
+export const russianVolumeTitle = (number: number): string => `Том ${number}`;
 
 /** Stable display/sort order for chapter kinds within a part — see `~~/shared/utils/chapterKinds`. */
 const KIND_ORDER = CHAPTER_KIND_ORDER;
@@ -148,3 +201,23 @@ export const buildTocPart = (
   title,
   chapters: sortTocChapters(chapters),
 });
+
+/**
+ * Fills in each chapter's Russian title from its kind and number (and the
+ * part's count of that kind, which decides whether a lone node is
+ * numbered). Leaves any title that already has a Russian entry alone.
+ */
+export const addRussianChapterTitles = (chapters: TocChapter[]): void => {
+  const totals = new Map<ChapterKind, number>();
+  for (const chapter of chapters) {
+    totals.set(chapter.kind, (totals.get(chapter.kind) ?? 0) + 1);
+  }
+  for (const chapter of chapters) {
+    if (chapter.title.ru !== undefined) continue;
+    chapter.title.ru = russianChapterTitle(
+      chapter.kind,
+      chapter.number,
+      totals.get(chapter.kind) ?? 1,
+    );
+  }
+};

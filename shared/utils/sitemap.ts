@@ -15,13 +15,18 @@
  */
 import type { Toc } from "~~/shared/types/content";
 
+/**
+ * The site's locales, default first — mirrors `i18n.locales` in
+ * `nuxt.config.ts` (`prefix_except_default`: the default is unprefixed).
+ */
+export const SITEMAP_LOCALES = ["en", "he", "ru"] as const;
+export type SitemapLocale = (typeof SITEMAP_LOCALES)[number];
+
 export interface SitemapEntry {
   /** Locale-agnostic path, e.g. "/volumes/volume-1" or "/read/part-01/chapter-01". */
   path: string;
-  /** Absolute URL of the English (default-locale) variant. */
-  en: string;
-  /** Absolute URL of the Hebrew variant. */
-  he: string;
+  /** Absolute URL of each locale's variant. */
+  urls: Record<SitemapLocale, string>;
 }
 
 const STATIC_PATHS = ["/", "/about", "/glossary", "/volumes"];
@@ -42,10 +47,10 @@ export const escapeXml = (value: string): string =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
 
-/** `@nuxtjs/i18n`'s `prefix_except_default` strategy: en is unprefixed, he gets `/he`. */
-const localizedPath = (path: string, locale: "en" | "he"): string => {
-  if (locale === "en") return path;
-  return path === "/" ? "/he" : `/he${path}`;
+/** `@nuxtjs/i18n`'s `prefix_except_default` strategy: en is unprefixed, others get `/<code>`. */
+const localizedPath = (path: string, locale: SitemapLocale): string => {
+  if (locale === SITEMAP_LOCALES[0]) return path;
+  return path === "/" ? `/${locale}` : `/${locale}${path}`;
 };
 
 /** Every locale-agnostic path in the site's public route universe. */
@@ -59,19 +64,23 @@ export const sitemapPaths = (toc: Toc): string[] => [
   ),
 ];
 
-/** One entry (English + Hebrew absolute URL pair) per path in the route universe. */
+/** One entry (every locale's absolute URL) per path in the route universe. */
 export const buildSitemapEntries = (
   toc: Toc,
   siteUrl: string,
 ): SitemapEntry[] =>
   sitemapPaths(toc).map((path) => ({
     path,
-    en: `${siteUrl}${localizedPath(path, "en")}`,
-    he: `${siteUrl}${localizedPath(path, "he")}`,
+    urls: Object.fromEntries(
+      SITEMAP_LOCALES.map((locale) => [
+        locale,
+        `${siteUrl}${localizedPath(path, locale)}`,
+      ]),
+    ) as Record<SitemapLocale, string>,
   }));
 
 /**
- * One `<url>` block, self-referentially listing en/he/x-default alternates
+ * One `<url>` block, self-referentially listing every locale's alternate and x-default
  * alongside its own `<loc>` (Google's recommended pattern). `x-default`
  * points at the English (default-locale, `i18n.defaultLocale`) URL — the
  * variant to serve a user whose locale doesn't match any listed alternate
@@ -82,18 +91,19 @@ const urlBlock = (loc: string, entry: SitemapEntry): string =>
   [
     "  <url>",
     `    <loc>${escapeXml(loc)}</loc>`,
-    `    <xhtml:link rel="alternate" hreflang="en" href="${escapeXml(entry.en)}"/>`,
-    `    <xhtml:link rel="alternate" hreflang="he" href="${escapeXml(entry.he)}"/>`,
-    `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(entry.en)}"/>`,
+    ...SITEMAP_LOCALES.map(
+      (locale) =>
+        `    <xhtml:link rel="alternate" hreflang="${locale}" href="${escapeXml(entry.urls[locale])}"/>`,
+    ),
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(entry.urls.en)}"/>`,
     "  </url>",
   ].join("\n");
 
-/** Serializes built entries into sitemap XML — one `<url>` per locale variant, each carrying both alternates. */
+/** Serializes built entries into sitemap XML — one `<url>` per locale variant, each carrying every alternate. */
 export const renderSitemapXml = (entries: SitemapEntry[]): string => {
-  const urls = entries.flatMap((entry) => [
-    urlBlock(entry.en, entry),
-    urlBlock(entry.he, entry),
-  ]);
+  const urls = entries.flatMap((entry) =>
+    SITEMAP_LOCALES.map((locale) => urlBlock(entry.urls[locale], entry)),
+  );
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',

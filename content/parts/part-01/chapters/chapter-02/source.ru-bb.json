@@ -1,0 +1,54 @@
+{
+  "chapterId": "part-01/chapter-02",
+  "layer": "source",
+  "versionId": "ru-bb",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I 2",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:1",
+      "html": "<em> И вот, после сокращения, <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a> когда осталось место пространства и воздуха, пустое и свободное, прямо в середине света Бесконечности, было уже место, в котором могли быть нээцали́м и нивраи́м, и ецури́м, и нааси́м. И тогда <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a> извлекло оно из света Бесконечности линию одну прямую <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a> из круглого света Его <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a> сверху вниз, и нисходит она, и опускается внутрь этого пространства.</em>",
+      "anchors": [
+        "op-1",
+        "op-2",
+        "op-3",
+        "op-4"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:2",
+      "html": "<em> <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a> Вершина линии исходит из самой Бесконечности <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a> и касается ее, однако окончание этой линии <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a> внизу, в конце ее, не касается света Бесконечности.</em>",
+      "anchors": [
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:3",
+      "html": "<em> И через эту линию притягивается и распространяется свет Бесконечности вниз.</em>",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:4",
+      "html": "<em> И в месте пространства того <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a> создал и сотворил, и произвел, и сделал все эти миры.</em>",
+      "anchors": [
+        "op-8"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:5",
+      "html": "<em> <a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">9</a> До этих четырех миров была Бесконечность, <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">10</a> Он един, и имя Его едино в единстве чудесном и скрытом, и <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">20</a> нет сил даже у ангелов, близких к Нему, и не постигают они Бесконечность, ибо нет такого разума творения, который смог бы постичь Его, поскольку <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">30</a> нет у Него ни места, ни границы, ни имени.</em>",
+      "anchors": [
+        "op-9",
+        "op-10",
+        "op-11",
+        "op-12"
+      ]
+    }
+  ]
+}

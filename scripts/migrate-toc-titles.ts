@@ -3,7 +3,8 @@
  * `partDisplayTitle` for parts) to the committed ToC — for when they change
  * without a full Sefaria re-import: chapters now read "Inner Observation N"
  * rather than "Histaklut Pnimit N", and parts carry their names rather than
- * "Section I". Rewrites `toc.json` and its splits; idempotent.
+ * "Section I", and every title has a Russian entry. Rewrites `toc.json` and
+ * its splits; idempotent.
  *
  * `pnpm migrate:toc-titles`
  */
@@ -11,7 +12,12 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tocSchema, versionsFileSchema } from "../shared/types/content.ts";
-import { normalizeEnTitle, partDisplayTitle } from "./lib/toc-builder.ts";
+import {
+  addRussianChapterTitles,
+  normalizeEnTitle,
+  partDisplayTitle,
+  russianVolumeTitle,
+} from "./lib/toc-builder.ts";
 import { writeTocSplitFiles } from "./lib/toc-splits.ts";
 
 const contentDir = join(
@@ -28,16 +34,29 @@ const main = (): void => {
   );
   let changed = 0;
   for (const volume of toc.volumes) {
+    if (volume.title.ru === undefined) {
+      volume.title.ru = russianVolumeTitle(volume.number);
+      changed += 1;
+    }
     for (const part of volume.parts) {
       const title = partDisplayTitle(
         part.number,
         part.title.he ?? "",
         part.title.en ?? "",
       );
-      if (title.en !== part.title.en || title.he !== part.title.he) {
+      if (
+        title.en !== part.title.en ||
+        title.he !== part.title.he ||
+        title.ru !== part.title.ru
+      ) {
         part.title = title;
         changed += 1;
       }
+      const before = part.chapters.filter(
+        (c) => c.title.ru === undefined,
+      ).length;
+      addRussianChapterTitles(part.chapters);
+      changed += before;
       for (const chapter of part.chapters) {
         const en = chapter.title.en;
         if (en === undefined) continue;

@@ -92,6 +92,7 @@
   --font-hebrew: "David Libre", "Frank Ruhl Libre", serif;
   --font-hebrew-display: "Frank Ruhl Libre", serif;
   --font-hebrew-sans: "Heebo", sans-serif;
+  --font-cyrillic-display: "PT Serif", serif;
 }
 
 /*
@@ -1027,6 +1028,12 @@ a[href],
  */
 .font-body:lang(he) {
   font-family: var(--font-hebrew-sans);
+}
+
+/* Russian UI (/ru/): the display face (Taviraj) has no Cyrillic glyphs, so
+   headings set in it switch to PT Serif. Unlayered to beat the utility. */
+.font-display:lang(ru) {
+  font-family: var(--font-cyrillic-display);
 }
 
 /*

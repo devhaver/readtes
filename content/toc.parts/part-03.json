@@ -4,7 +4,8 @@
     "number": 3,
     "title": {
       "en": "Direct Light and Reflected Light",
-      "he": "אור ישר ואור חוזר"
+      "he": "אור ישר ואור חוזר",
+      "ru": "Прямой свет и отраженный свет"
     }
   },
   "volume": {
@@ -12,7 +13,8 @@
     "number": 1,
     "title": {
       "en": "Volume 1",
-      "he": "כרך 1"
+      "he": "כרך 1",
+      "ru": "Том 1"
     }
   },
   "chapters": [
@@ -22,7 +24,8 @@
       "number": 1,
       "title": {
         "en": "Chapter 1",
-        "he": "פרק א׳"
+        "he": "פרק א׳",
+        "ru": "Глава 1"
       },
       "availableLayers": [
         "source",
@@ -32,11 +35,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -48,7 +53,8 @@
       "number": 2,
       "title": {
         "en": "Chapter 2",
-        "he": "פרק ב׳"
+        "he": "פרק ב׳",
+        "ru": "Глава 2"
       },
       "availableLayers": [
         "source",
@@ -57,10 +63,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "ru-bb",
           "en-bb",
           "he-jerusalem-1956"
         ],
         "commentary": [
+          "ru-bb",
           "en-bb",
           "he-jerusalem-1956"
         ]
@@ -72,7 +80,8 @@
       "number": 3,
       "title": {
         "en": "Chapter 3",
-        "he": "פרק ג׳"
+        "he": "פרק ג׳",
+        "ru": "Глава 3"
       },
       "availableLayers": [
         "source",
@@ -81,10 +90,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "ru-bb",
           "en-bb",
           "he-jerusalem-1956"
         ],
         "commentary": [
+          "ru-bb",
           "en-bb",
           "he-jerusalem-1956"
         ]
@@ -96,7 +107,8 @@
       "number": 4,
       "title": {
         "en": "Chapter 4",
-        "he": "פרק ד׳"
+        "he": "פרק ד׳",
+        "ru": "Глава 4"
       },
       "availableLayers": [
         "source",
@@ -105,10 +117,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -120,7 +134,8 @@
       "number": 5,
       "title": {
         "en": "Chapter 5",
-        "he": "פרק ה׳"
+        "he": "פרק ה׳",
+        "ru": "Глава 5"
       },
       "availableLayers": [
         "source",
@@ -130,11 +145,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -146,7 +163,8 @@
       "number": 6,
       "title": {
         "en": "Chapter 6",
-        "he": "פרק ו׳"
+        "he": "פרק ו׳",
+        "ru": "Глава 6"
       },
       "availableLayers": [
         "source",
@@ -156,11 +174,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -172,7 +192,8 @@
       "number": 7,
       "title": {
         "en": "Chapter 7",
-        "he": "פרק ז׳"
+        "he": "פרק ז׳",
+        "ru": "Глава 7"
       },
       "availableLayers": [
         "source",
@@ -181,10 +202,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -196,7 +219,8 @@
       "number": 8,
       "title": {
         "en": "Chapter 8",
-        "he": "פרק ח׳"
+        "he": "פרק ח׳",
+        "ru": "Глава 8"
       },
       "availableLayers": [
         "source",
@@ -220,7 +244,8 @@
       "number": 9,
       "title": {
         "en": "Chapter 9",
-        "he": "פרק ט׳"
+        "he": "פרק ט׳",
+        "ru": "Глава 9"
       },
       "availableLayers": [
         "source",
@@ -230,11 +255,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -246,7 +273,8 @@
       "number": 10,
       "title": {
         "en": "Chapter 10",
-        "he": "פרק י׳"
+        "he": "פרק י׳",
+        "ru": "Глава 10"
       },
       "availableLayers": [
         "source",
@@ -255,10 +283,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -270,7 +300,8 @@
       "number": 11,
       "title": {
         "en": "Chapter 11",
-        "he": "פרק י״א"
+        "he": "פרק י״א",
+        "ru": "Глава 11"
       },
       "availableLayers": [
         "source",
@@ -296,7 +327,8 @@
       "number": 12,
       "title": {
         "en": "Chapter 12",
-        "he": "פרק י״ב"
+        "he": "פרק י״ב",
+        "ru": "Глава 12"
       },
       "availableLayers": [
         "source",
@@ -306,11 +338,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -322,7 +356,8 @@
       "number": 13,
       "title": {
         "en": "Chapter 13",
-        "he": "פרק י״ג"
+        "he": "פרק י״ג",
+        "ru": "Глава 13"
       },
       "availableLayers": [
         "source",
@@ -348,7 +383,8 @@
       "number": 14,
       "title": {
         "en": "Chapter 14",
-        "he": "פרק י״ד"
+        "he": "פרק י״ד",
+        "ru": "Глава 14"
       },
       "availableLayers": [
         "source",
@@ -358,11 +394,13 @@
         "summary": [],
         "source": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
+          "ru-bb",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -374,7 +412,8 @@
       "number": 15,
       "title": {
         "en": "Chapter 15",
-        "he": "פרק ט״ו"
+        "he": "פרק ט״ו",
+        "ru": "Глава 15"
       },
       "availableLayers": [
         "source",
@@ -400,7 +439,8 @@
       "number": 1,
       "title": {
         "en": "Inner Observation 1",
-        "he": "הסתכלות פנימית א׳"
+        "he": "הסתכלות פנימית א׳",
+        "ru": "Внутреннее созерцание 1"
       },
       "availableLayers": [
         "source"
@@ -421,7 +461,8 @@
       "number": 2,
       "title": {
         "en": "Inner Observation 2",
-        "he": "הסתכלות פנימית ב׳"
+        "he": "הסתכלות פנימית ב׳",
+        "ru": "Внутреннее созерцание 2"
       },
       "availableLayers": [
         "source"
@@ -442,7 +483,8 @@
       "number": 3,
       "title": {
         "en": "Inner Observation 3",
-        "he": "הסתכלות פנימית ג׳"
+        "he": "הסתכלות פנימית ג׳",
+        "ru": "Внутреннее созерцание 3"
       },
       "availableLayers": [
         "source"
@@ -463,7 +505,8 @@
       "number": 4,
       "title": {
         "en": "Inner Observation 4",
-        "he": "הסתכלות פנימית ד׳"
+        "he": "הסתכלות פנימית ד׳",
+        "ru": "Внутреннее созерцание 4"
       },
       "availableLayers": [
         "source"
@@ -484,7 +527,8 @@
       "number": 5,
       "title": {
         "en": "Inner Observation 5",
-        "he": "הסתכלות פנימית ה׳"
+        "he": "הסתכלות פנימית ה׳",
+        "ru": "Внутреннее созерцание 5"
       },
       "availableLayers": [
         "source"
@@ -504,7 +548,8 @@
       "number": 6,
       "title": {
         "en": "Inner Observation 6",
-        "he": "הסתכלות פנימית ו׳"
+        "he": "הסתכלות פנימית ו׳",
+        "ru": "Внутреннее созерцание 6"
       },
       "availableLayers": [
         "source"
@@ -525,7 +570,8 @@
       "number": 7,
       "title": {
         "en": "Inner Observation 7",
-        "he": "הסתכלות פנימית ז׳"
+        "he": "הסתכלות פנימית ז׳",
+        "ru": "Внутреннее созерцание 7"
       },
       "availableLayers": [
         "source"
@@ -545,7 +591,8 @@
       "number": 8,
       "title": {
         "en": "Inner Observation 8",
-        "he": "הסתכלות פנימית ח׳"
+        "he": "הסתכלות פנימית ח׳",
+        "ru": "Внутреннее созерцание 8"
       },
       "availableLayers": [
         "source"
@@ -566,7 +613,8 @@
       "number": 9,
       "title": {
         "en": "Inner Observation 9",
-        "he": "הסתכלות פנימית ט׳"
+        "he": "הסתכלות פנימית ט׳",
+        "ru": "Внутреннее созерцание 9"
       },
       "availableLayers": [
         "source"
@@ -587,7 +635,8 @@
       "number": 10,
       "title": {
         "en": "Inner Observation 10",
-        "he": "הסתכלות פנימית י׳"
+        "he": "הסתכלות פנימית י׳",
+        "ru": "Внутреннее созерцание 10"
       },
       "availableLayers": [
         "source"
@@ -608,7 +657,8 @@
       "number": 11,
       "title": {
         "en": "Inner Observation 11",
-        "he": "הסתכלות פנימית י״א"
+        "he": "הסתכלות פנימית י״א",
+        "ru": "Внутреннее созерцание 11"
       },
       "availableLayers": [
         "source"
@@ -629,7 +679,8 @@
       "number": 12,
       "title": {
         "en": "Inner Observation 12",
-        "he": "הסתכלות פנימית י״ב"
+        "he": "הסתכלות פנימית י״ב",
+        "ru": "Внутреннее созерцание 12"
       },
       "availableLayers": [
         "source"
@@ -650,7 +701,8 @@
       "number": 13,
       "title": {
         "en": "Inner Observation 13",
-        "he": "הסתכלות פנימית י״ג"
+        "he": "הסתכלות פנימית י״ג",
+        "ru": "Внутреннее созерцание 13"
       },
       "availableLayers": [
         "source"
@@ -671,7 +723,8 @@
       "number": 14,
       "title": {
         "en": "Inner Observation 14",
-        "he": "הסתכלות פנימית י״ד"
+        "he": "הסתכלות פנימית י״ד",
+        "ru": "Внутреннее созерцание 14"
       },
       "availableLayers": [
         "source"
@@ -692,7 +745,8 @@
       "number": 15,
       "title": {
         "en": "Inner Observation 15",
-        "he": "הסתכלות פנימית ט״ו"
+        "he": "הסתכלות פנימית ט״ו",
+        "ru": "Внутреннее созерцание 15"
       },
       "availableLayers": [
         "source"
@@ -713,7 +767,8 @@
       "number": 1,
       "title": {
         "en": "List of Questions on Terminology",
-        "he": "לוח השאלות לפירוש המלות"
+        "he": "לוח השאלות לפירוש המלות",
+        "ru": "Вопросы о значении слов"
       },
       "availableLayers": [
         "source"
@@ -733,7 +788,8 @@
       "number": 1,
       "title": {
         "en": "List of Questions on Topics",
-        "he": "לוח השאלות לעניינים"
+        "he": "לוח השאלות לעניינים",
+        "ru": "Вопросы по темам"
       },
       "availableLayers": [
         "source"
@@ -753,7 +809,8 @@
       "number": 1,
       "title": {
         "en": "List of Answers on Terminology",
-        "he": "לוח התשובות לפירוש המלות"
+        "he": "לוח התשובות לפירוש המלות",
+        "ru": "Ответы о значении слов"
       },
       "availableLayers": [
         "source"
@@ -774,7 +831,8 @@
       "number": 1,
       "title": {
         "en": "List of Answers on Topics",
-        "he": "לוח התשובות לעניינים"
+        "he": "לוח התשובות לעניינים",
+        "ru": "Ответы по темам"
       },
       "availableLayers": [
         "source"

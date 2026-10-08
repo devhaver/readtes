@@ -34,12 +34,29 @@ import { stripContentChunkPrefetchHints } from "./shared/utils/manifestPrefetch"
 // Inter and Taviraj are untouched — they have no Hebrew glyphs to begin
 // with and must not gain a subset that would only balloon their payload.
 const GOOGLE_FONT_FAMILIES: NonNullable<FontsModuleOptions["families"]> = [
-  { name: "Inter", provider: "google", weights: [400, 500, 600] },
+  // Inter also carries the Russian UI (/ru/) and Russian reading text.
+  {
+    name: "Inter",
+    provider: "google",
+    weights: [400, 500, 600],
+    // The -ext sets were in the default list this replaces: transliterations
+    // carry the odd accented Latin, and the Russian text accented vowels.
+    subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
+  },
   {
     name: "Taviraj",
     provider: "google",
     weights: [400],
     styles: ["normal", "italic"],
+  },
+  // Taviraj has no Cyrillic: PT Serif — drawn for Cyrillic — is the display
+  // face under /ru/, as Frank Ruhl Libre is under /he/.
+  {
+    name: "PT Serif",
+    provider: "google",
+    weights: [400],
+    styles: ["normal", "italic"],
+    subsets: ["latin", "cyrillic"],
   },
   {
     name: "Frank Ruhl Libre",
@@ -79,6 +96,7 @@ const FONT_FALLBACKS: Record<string, string[]> = {
   Inter: SANS_FALLBACKS,
   Heebo: SANS_FALLBACKS,
   Taviraj: SERIF_FALLBACKS,
+  "PT Serif": SERIF_FALLBACKS,
   "Frank Ruhl Libre": SERIF_FALLBACKS,
   "David Libre": SERIF_FALLBACKS,
 };
@@ -101,6 +119,7 @@ const toc: Toc = JSON.parse(
 const volumePrerenderRoutes = toc.volumes.flatMap((volume) => [
   `/volumes/volume-${volume.number}`,
   `/he/volumes/volume-${volume.number}`,
+  `/ru/volumes/volume-${volume.number}`,
 ]);
 
 // `/read/<chapterId>` for every chapter that exists, in both locales.
@@ -119,7 +138,11 @@ const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
           CHAPTER_KIND_ORDER.indexOf(a.kind) -
             CHAPTER_KIND_ORDER.indexOf(b.kind) || a.number - b.number,
       )
-      .flatMap((chapter) => [`/read/${chapter.id}`, `/he/read/${chapter.id}`]),
+      .flatMap((chapter) => [
+        `/read/${chapter.id}`,
+        `/he/read/${chapter.id}`,
+        `/ru/read/${chapter.id}`,
+      ]),
   ),
 );
 
@@ -206,6 +229,12 @@ export default defineNuxtConfig({
         name: nativeLanguageName("he"),
         dir: "rtl",
         file: "he.json",
+      },
+      {
+        code: "ru",
+        language: "ru-RU",
+        name: nativeLanguageName("ru"),
+        file: "ru.json",
       },
     ],
     detectBrowserLanguage: false,

@@ -4,7 +4,8 @@
     "number": 15,
     "title": {
       "en": "Building the Nukva of Zeir Anpin",
-      "he": "בנין הנוקבא דז\"א"
+      "he": "בנין הנוקבא דז\"א",
+      "ru": "Построение Нуквы Зеир Анпина"
     }
   },
   "volume": {
@@ -12,7 +13,8 @@
     "number": 6,
     "title": {
       "en": "Volume 6",
-      "he": "כרך 6"
+      "he": "כרך 6",
+      "ru": "Том 6"
     }
   },
   "chapters": [
@@ -22,7 +24,8 @@
       "number": 1,
       "title": {
         "en": "Chapter 1",
-        "he": "פרק א׳"
+        "he": "פרק א׳",
+        "ru": "Глава 1"
       },
       "availableLayers": [
         "source"
@@ -42,7 +45,8 @@
       "number": 2,
       "title": {
         "en": "Chapter 2",
-        "he": "פרק ב׳"
+        "he": "פרק ב׳",
+        "ru": "Глава 2"
       },
       "availableLayers": [
         "source",
@@ -66,7 +70,8 @@
       "number": 3,
       "title": {
         "en": "Chapter 3",
-        "he": "פרק ג׳"
+        "he": "פרק ג׳",
+        "ru": "Глава 3"
       },
       "availableLayers": [
         "source",
@@ -90,7 +95,8 @@
       "number": 4,
       "title": {
         "en": "Chapter 4",
-        "he": "פרק ד׳"
+        "he": "פרק ד׳",
+        "ru": "Глава 4"
       },
       "availableLayers": [
         "source",
@@ -114,7 +120,8 @@
       "number": 5,
       "title": {
         "en": "Chapter 5",
-        "he": "פרק ה׳"
+        "he": "פרק ה׳",
+        "ru": "Глава 5"
       },
       "availableLayers": [
         "source",
@@ -138,7 +145,8 @@
       "number": 6,
       "title": {
         "en": "Chapter 6",
-        "he": "פרק ו׳"
+        "he": "פרק ו׳",
+        "ru": "Глава 6"
       },
       "availableLayers": [
         "source",
@@ -162,7 +170,8 @@
       "number": 7,
       "title": {
         "en": "Chapter 7",
-        "he": "פרק ז׳"
+        "he": "פרק ז׳",
+        "ru": "Глава 7"
       },
       "availableLayers": [
         "source",
@@ -186,7 +195,8 @@
       "number": 8,
       "title": {
         "en": "Chapter 8",
-        "he": "פרק ח׳"
+        "he": "פרק ח׳",
+        "ru": "Глава 8"
       },
       "availableLayers": [
         "source"
@@ -206,7 +216,8 @@
       "number": 9,
       "title": {
         "en": "Chapter 9",
-        "he": "פרק ט׳"
+        "he": "פרק ט׳",
+        "ru": "Глава 9"
       },
       "availableLayers": [
         "source"
@@ -226,7 +237,8 @@
       "number": 10,
       "title": {
         "en": "Chapter 10",
-        "he": "פרק י׳"
+        "he": "פרק י׳",
+        "ru": "Глава 10"
       },
       "availableLayers": [
         "source"
@@ -246,7 +258,8 @@
       "number": 11,
       "title": {
         "en": "Chapter 11",
-        "he": "פרק י״א"
+        "he": "פרק י״א",
+        "ru": "Глава 11"
       },
       "availableLayers": [
         "source"
@@ -266,7 +279,8 @@
       "number": 12,
       "title": {
         "en": "Chapter 12",
-        "he": "פרק י״ב"
+        "he": "פרק י״ב",
+        "ru": "Глава 12"
       },
       "availableLayers": [
         "source"
@@ -286,7 +300,8 @@
       "number": 13,
       "title": {
         "en": "Chapter 13",
-        "he": "פרק י״ג"
+        "he": "פרק י״ג",
+        "ru": "Глава 13"
       },
       "availableLayers": [
         "source",
@@ -310,7 +325,8 @@
       "number": 14,
       "title": {
         "en": "Chapter 14",
-        "he": "פרק י״ד"
+        "he": "פרק י״ד",
+        "ru": "Глава 14"
       },
       "availableLayers": [
         "source",
@@ -334,7 +350,8 @@
       "number": 15,
       "title": {
         "en": "Chapter 15",
-        "he": "פרק ט״ו"
+        "he": "פרק ט״ו",
+        "ru": "Глава 15"
       },
       "availableLayers": [
         "source"
@@ -354,7 +371,8 @@
       "number": 16,
       "title": {
         "en": "Chapter 16",
-        "he": "פרק ט״ז"
+        "he": "פרק ט״ז",
+        "ru": "Глава 16"
       },
       "availableLayers": [
         "source",
@@ -378,7 +396,8 @@
       "number": 17,
       "title": {
         "en": "Chapter 17",
-        "he": "פרק י״ז"
+        "he": "פרק י״ז",
+        "ru": "Глава 17"
       },
       "availableLayers": [
         "source",
@@ -402,7 +421,8 @@
       "number": 18,
       "title": {
         "en": "Chapter 18",
-        "he": "פרק י״ח"
+        "he": "פרק י״ח",
+        "ru": "Глава 18"
       },
       "availableLayers": [
         "source",
@@ -426,7 +446,8 @@
       "number": 19,
       "title": {
         "en": "Chapter 19",
-        "he": "פרק י״ט"
+        "he": "פרק י״ט",
+        "ru": "Глава 19"
       },
       "availableLayers": [
         "source",
@@ -450,7 +471,8 @@
       "number": 20,
       "title": {
         "en": "Chapter 20",
-        "he": "פרק כ׳"
+        "he": "פרק כ׳",
+        "ru": "Глава 20"
       },
       "availableLayers": [
         "source",
@@ -474,7 +496,8 @@
       "number": 21,
       "title": {
         "en": "Chapter 21",
-        "he": "פרק כ״א"
+        "he": "פרק כ״א",
+        "ru": "Глава 21"
       },
       "availableLayers": [
         "source",
@@ -498,7 +521,8 @@
       "number": 22,
       "title": {
         "en": "Chapter 22",
-        "he": "פרק כ״ב"
+        "he": "פרק כ״ב",
+        "ru": "Глава 22"
       },
       "availableLayers": [
         "source"
@@ -518,7 +542,8 @@
       "number": 23,
       "title": {
         "en": "Chapter 23",
-        "he": "פרק כ״ג"
+        "he": "פרק כ״ג",
+        "ru": "Глава 23"
       },
       "availableLayers": [
         "source",
@@ -542,7 +567,8 @@
       "number": 24,
       "title": {
         "en": "Chapter 24",
-        "he": "פרק כ״ד"
+        "he": "פרק כ״ד",
+        "ru": "Глава 24"
       },
       "availableLayers": [
         "source"
@@ -562,7 +588,8 @@
       "number": 25,
       "title": {
         "en": "Chapter 25",
-        "he": "פרק כ״ה"
+        "he": "פרק כ״ה",
+        "ru": "Глава 25"
       },
       "availableLayers": [
         "source"
@@ -582,7 +609,8 @@
       "number": 26,
       "title": {
         "en": "Chapter 26",
-        "he": "פרק כ״ו"
+        "he": "פרק כ״ו",
+        "ru": "Глава 26"
       },
       "availableLayers": [
         "source"
@@ -602,7 +630,8 @@
       "number": 27,
       "title": {
         "en": "Chapter 27",
-        "he": "פרק כ״ז"
+        "he": "פרק כ״ז",
+        "ru": "Глава 27"
       },
       "availableLayers": [
         "source"
@@ -622,7 +651,8 @@
       "number": 28,
       "title": {
         "en": "Chapter 28",
-        "he": "פרק כ״ח"
+        "he": "פרק כ״ח",
+        "ru": "Глава 28"
       },
       "availableLayers": [
         "source",
@@ -646,7 +676,8 @@
       "number": 29,
       "title": {
         "en": "Chapter 29",
-        "he": "פרק כ״ט"
+        "he": "פרק כ״ט",
+        "ru": "Глава 29"
       },
       "availableLayers": [
         "source"
@@ -666,7 +697,8 @@
       "number": 30,
       "title": {
         "en": "Chapter 30",
-        "he": "פרק ל׳"
+        "he": "פרק ל׳",
+        "ru": "Глава 30"
       },
       "availableLayers": [
         "source"
@@ -686,7 +718,8 @@
       "number": 31,
       "title": {
         "en": "Chapter 31",
-        "he": "פרק ל״א"
+        "he": "פרק ל״א",
+        "ru": "Глава 31"
       },
       "availableLayers": [
         "source"
@@ -706,7 +739,8 @@
       "number": 32,
       "title": {
         "en": "Chapter 32",
-        "he": "פרק ל״ב"
+        "he": "פרק ל״ב",
+        "ru": "Глава 32"
       },
       "availableLayers": [
         "source",
@@ -730,7 +764,8 @@
       "number": 33,
       "title": {
         "en": "Chapter 33",
-        "he": "פרק ל״ג"
+        "he": "פרק ל״ג",
+        "ru": "Глава 33"
       },
       "availableLayers": [
         "source"
@@ -750,7 +785,8 @@
       "number": 34,
       "title": {
         "en": "Chapter 34",
-        "he": "פרק ל״ד"
+        "he": "פרק ל״ד",
+        "ru": "Глава 34"
       },
       "availableLayers": [
         "source",
@@ -774,7 +810,8 @@
       "number": 35,
       "title": {
         "en": "Chapter 35",
-        "he": "פרק ל״ה"
+        "he": "פרק ל״ה",
+        "ru": "Глава 35"
       },
       "availableLayers": [
         "source"
@@ -794,7 +831,8 @@
       "number": 36,
       "title": {
         "en": "Chapter 36",
-        "he": "פרק ל״ו"
+        "he": "פרק ל״ו",
+        "ru": "Глава 36"
       },
       "availableLayers": [
         "source"
@@ -814,7 +852,8 @@
       "number": 37,
       "title": {
         "en": "Chapter 37",
-        "he": "פרק ל״ז"
+        "he": "פרק ל״ז",
+        "ru": "Глава 37"
       },
       "availableLayers": [
         "source",
@@ -838,7 +877,8 @@
       "number": 38,
       "title": {
         "en": "Chapter 38",
-        "he": "פרק ל״ח"
+        "he": "פרק ל״ח",
+        "ru": "Глава 38"
       },
       "availableLayers": [
         "source"
@@ -858,7 +898,8 @@
       "number": 39,
       "title": {
         "en": "Chapter 39",
-        "he": "פרק ל״ט"
+        "he": "פרק ל״ט",
+        "ru": "Глава 39"
       },
       "availableLayers": [
         "source"
@@ -878,7 +919,8 @@
       "number": 40,
       "title": {
         "en": "Chapter 40",
-        "he": "פרק מ׳"
+        "he": "פרק מ׳",
+        "ru": "Глава 40"
       },
       "availableLayers": [
         "source",
@@ -902,7 +944,8 @@
       "number": 41,
       "title": {
         "en": "Chapter 41",
-        "he": "פרק מ״א"
+        "he": "פרק מ״א",
+        "ru": "Глава 41"
       },
       "availableLayers": [
         "source",
@@ -926,7 +969,8 @@
       "number": 42,
       "title": {
         "en": "Chapter 42",
-        "he": "פרק מ״ב"
+        "he": "פרק מ״ב",
+        "ru": "Глава 42"
       },
       "availableLayers": [
         "source",
@@ -950,7 +994,8 @@
       "number": 43,
       "title": {
         "en": "Chapter 43",
-        "he": "פרק מ״ג"
+        "he": "פרק מ״ג",
+        "ru": "Глава 43"
       },
       "availableLayers": [
         "source"
@@ -970,7 +1015,8 @@
       "number": 44,
       "title": {
         "en": "Chapter 44",
-        "he": "פרק מ״ד"
+        "he": "פרק מ״ד",
+        "ru": "Глава 44"
       },
       "availableLayers": [
         "source"
@@ -990,7 +1036,8 @@
       "number": 45,
       "title": {
         "en": "Chapter 45",
-        "he": "פרק מ״ה"
+        "he": "פרק מ״ה",
+        "ru": "Глава 45"
       },
       "availableLayers": [
         "source",
@@ -1014,7 +1061,8 @@
       "number": 46,
       "title": {
         "en": "Chapter 46",
-        "he": "פרק מ״ו"
+        "he": "פרק מ״ו",
+        "ru": "Глава 46"
       },
       "availableLayers": [
         "source"
@@ -1034,7 +1082,8 @@
       "number": 47,
       "title": {
         "en": "Chapter 47",
-        "he": "פרק מ״ז"
+        "he": "פרק מ״ז",
+        "ru": "Глава 47"
       },
       "availableLayers": [
         "source"
@@ -1054,7 +1103,8 @@
       "number": 48,
       "title": {
         "en": "Chapter 48",
-        "he": "פרק מ״ח"
+        "he": "פרק מ״ח",
+        "ru": "Глава 48"
       },
       "availableLayers": [
         "source"
@@ -1074,7 +1124,8 @@
       "number": 49,
       "title": {
         "en": "Chapter 49",
-        "he": "פרק מ״ט"
+        "he": "פרק מ״ט",
+        "ru": "Глава 49"
       },
       "availableLayers": [
         "source",
@@ -1098,7 +1149,8 @@
       "number": 50,
       "title": {
         "en": "Chapter 50",
-        "he": "פרק נ׳"
+        "he": "פרק נ׳",
+        "ru": "Глава 50"
       },
       "availableLayers": [
         "source",
@@ -1122,7 +1174,8 @@
       "number": 51,
       "title": {
         "en": "Chapter 51",
-        "he": "פרק נ״א"
+        "he": "פרק נ״א",
+        "ru": "Глава 51"
       },
       "availableLayers": [
         "source"
@@ -1142,7 +1195,8 @@
       "number": 52,
       "title": {
         "en": "Chapter 52",
-        "he": "פרק נ״ב"
+        "he": "פרק נ״ב",
+        "ru": "Глава 52"
       },
       "availableLayers": [
         "source",
@@ -1166,7 +1220,8 @@
       "number": 53,
       "title": {
         "en": "Chapter 53",
-        "he": "פרק נ״ג"
+        "he": "פרק נ״ג",
+        "ru": "Глава 53"
       },
       "availableLayers": [
         "source"
@@ -1186,7 +1241,8 @@
       "number": 54,
       "title": {
         "en": "Chapter 54",
-        "he": "פרק נ״ד"
+        "he": "פרק נ״ד",
+        "ru": "Глава 54"
       },
       "availableLayers": [
         "source",
@@ -1210,7 +1266,8 @@
       "number": 55,
       "title": {
         "en": "Chapter 55",
-        "he": "פרק נ״ה"
+        "he": "פרק נ״ה",
+        "ru": "Глава 55"
       },
       "availableLayers": [
         "source",
@@ -1234,7 +1291,8 @@
       "number": 56,
       "title": {
         "en": "Chapter 56",
-        "he": "פרק נ״ו"
+        "he": "פרק נ״ו",
+        "ru": "Глава 56"
       },
       "availableLayers": [
         "source"
@@ -1254,7 +1312,8 @@
       "number": 57,
       "title": {
         "en": "Chapter 57",
-        "he": "פרק נ״ז"
+        "he": "פרק נ״ז",
+        "ru": "Глава 57"
       },
       "availableLayers": [
         "source",
@@ -1278,7 +1337,8 @@
       "number": 58,
       "title": {
         "en": "Chapter 58",
-        "he": "פרק נ״ח"
+        "he": "פרק נ״ח",
+        "ru": "Глава 58"
       },
       "availableLayers": [
         "source",
@@ -1302,7 +1362,8 @@
       "number": 59,
       "title": {
         "en": "Chapter 59",
-        "he": "פרק נ״ט"
+        "he": "פרק נ״ט",
+        "ru": "Глава 59"
       },
       "availableLayers": [
         "source"
@@ -1322,7 +1383,8 @@
       "number": 60,
       "title": {
         "en": "Chapter 60",
-        "he": "פרק ס׳"
+        "he": "פרק ס׳",
+        "ru": "Глава 60"
       },
       "availableLayers": [
         "source",
@@ -1346,7 +1408,8 @@
       "number": 61,
       "title": {
         "en": "Chapter 61",
-        "he": "פרק ס״א"
+        "he": "פרק ס״א",
+        "ru": "Глава 61"
       },
       "availableLayers": [
         "source",
@@ -1370,7 +1433,8 @@
       "number": 62,
       "title": {
         "en": "Chapter 62",
-        "he": "פרק ס״ב"
+        "he": "פרק ס״ב",
+        "ru": "Глава 62"
       },
       "availableLayers": [
         "source",
@@ -1394,7 +1458,8 @@
       "number": 63,
       "title": {
         "en": "Chapter 63",
-        "he": "פרק ס״ג"
+        "he": "פרק ס״ג",
+        "ru": "Глава 63"
       },
       "availableLayers": [
         "source",
@@ -1418,7 +1483,8 @@
       "number": 64,
       "title": {
         "en": "Chapter 64",
-        "he": "פרק ס״ד"
+        "he": "פרק ס״ד",
+        "ru": "Глава 64"
       },
       "availableLayers": [
         "source"
@@ -1438,7 +1504,8 @@
       "number": 65,
       "title": {
         "en": "Chapter 65",
-        "he": "פרק ס״ה"
+        "he": "פרק ס״ה",
+        "ru": "Глава 65"
       },
       "availableLayers": [
         "source",
@@ -1462,7 +1529,8 @@
       "number": 66,
       "title": {
         "en": "Chapter 66",
-        "he": "פרק ס״ו"
+        "he": "פרק ס״ו",
+        "ru": "Глава 66"
       },
       "availableLayers": [
         "source"
@@ -1482,7 +1550,8 @@
       "number": 67,
       "title": {
         "en": "Chapter 67",
-        "he": "פרק ס״ז"
+        "he": "פרק ס״ז",
+        "ru": "Глава 67"
       },
       "availableLayers": [
         "source"
@@ -1502,7 +1571,8 @@
       "number": 68,
       "title": {
         "en": "Chapter 68",
-        "he": "פרק ס״ח"
+        "he": "פרק ס״ח",
+        "ru": "Глава 68"
       },
       "availableLayers": [
         "source"
@@ -1522,7 +1592,8 @@
       "number": 69,
       "title": {
         "en": "Chapter 69",
-        "he": "פרק ס״ט"
+        "he": "פרק ס״ט",
+        "ru": "Глава 69"
       },
       "availableLayers": [
         "source"
@@ -1542,7 +1613,8 @@
       "number": 70,
       "title": {
         "en": "Chapter 70",
-        "he": "פרק ע׳"
+        "he": "פרק ע׳",
+        "ru": "Глава 70"
       },
       "availableLayers": [
         "source"
@@ -1562,7 +1634,8 @@
       "number": 71,
       "title": {
         "en": "Chapter 71",
-        "he": "פרק ע״א"
+        "he": "פרק ע״א",
+        "ru": "Глава 71"
       },
       "availableLayers": [
         "source",
@@ -1586,7 +1659,8 @@
       "number": 72,
       "title": {
         "en": "Chapter 72",
-        "he": "פרק ע״ב"
+        "he": "פרק ע״ב",
+        "ru": "Глава 72"
       },
       "availableLayers": [
         "source",
@@ -1610,7 +1684,8 @@
       "number": 73,
       "title": {
         "en": "Chapter 73",
-        "he": "פרק ע״ג"
+        "he": "פרק ע״ג",
+        "ru": "Глава 73"
       },
       "availableLayers": [
         "source",
@@ -1634,7 +1709,8 @@
       "number": 74,
       "title": {
         "en": "Chapter 74",
-        "he": "פרק ע״ד"
+        "he": "פרק ע״ד",
+        "ru": "Глава 74"
       },
       "availableLayers": [
         "source",
@@ -1658,7 +1734,8 @@
       "number": 75,
       "title": {
         "en": "Chapter 75",
-        "he": "פרק ע״ה"
+        "he": "פרק ע״ה",
+        "ru": "Глава 75"
       },
       "availableLayers": [
         "source",
@@ -1682,7 +1759,8 @@
       "number": 76,
       "title": {
         "en": "Chapter 76",
-        "he": "פרק ע״ו"
+        "he": "פרק ע״ו",
+        "ru": "Глава 76"
       },
       "availableLayers": [
         "source"
@@ -1702,7 +1780,8 @@
       "number": 77,
       "title": {
         "en": "Chapter 77",
-        "he": "פרק ע״ז"
+        "he": "פרק ע״ז",
+        "ru": "Глава 77"
       },
       "availableLayers": [
         "source"
@@ -1722,7 +1801,8 @@
       "number": 78,
       "title": {
         "en": "Chapter 78",
-        "he": "פרק ע״ח"
+        "he": "פרק ע״ח",
+        "ru": "Глава 78"
       },
       "availableLayers": [
         "source",
@@ -1746,7 +1826,8 @@
       "number": 79,
       "title": {
         "en": "Chapter 79",
-        "he": "פרק ע״ט"
+        "he": "פרק ע״ט",
+        "ru": "Глава 79"
       },
       "availableLayers": [
         "source"
@@ -1766,7 +1847,8 @@
       "number": 80,
       "title": {
         "en": "Chapter 80",
-        "he": "פרק פ׳"
+        "he": "פרק פ׳",
+        "ru": "Глава 80"
       },
       "availableLayers": [
         "source"
@@ -1786,7 +1868,8 @@
       "number": 81,
       "title": {
         "en": "Chapter 81",
-        "he": "פרק פ״א"
+        "he": "פרק פ״א",
+        "ru": "Глава 81"
       },
       "availableLayers": [
         "source"
@@ -1806,7 +1889,8 @@
       "number": 82,
       "title": {
         "en": "Chapter 82",
-        "he": "פרק פ״ב"
+        "he": "פרק פ״ב",
+        "ru": "Глава 82"
       },
       "availableLayers": [
         "source"
@@ -1826,7 +1910,8 @@
       "number": 83,
       "title": {
         "en": "Chapter 83",
-        "he": "פרק פ״ג"
+        "he": "פרק פ״ג",
+        "ru": "Глава 83"
       },
       "availableLayers": [
         "source",
@@ -1850,7 +1935,8 @@
       "number": 84,
       "title": {
         "en": "Chapter 84",
-        "he": "פרק פ״ד"
+        "he": "פרק פ״ד",
+        "ru": "Глава 84"
       },
       "availableLayers": [
         "source"
@@ -1870,7 +1956,8 @@
       "number": 85,
       "title": {
         "en": "Chapter 85",
-        "he": "פרק פ״ה"
+        "he": "פרק פ״ה",
+        "ru": "Глава 85"
       },
       "availableLayers": [
         "source"
@@ -1890,7 +1977,8 @@
       "number": 86,
       "title": {
         "en": "Chapter 86",
-        "he": "פרק פ״ו"
+        "he": "פרק פ״ו",
+        "ru": "Глава 86"
       },
       "availableLayers": [
         "source"
@@ -1910,7 +1998,8 @@
       "number": 87,
       "title": {
         "en": "Chapter 87",
-        "he": "פרק פ״ז"
+        "he": "פרק פ״ז",
+        "ru": "Глава 87"
       },
       "availableLayers": [
         "source"
@@ -1930,7 +2019,8 @@
       "number": 88,
       "title": {
         "en": "Chapter 88",
-        "he": "פרק פ״ח"
+        "he": "פרק פ״ח",
+        "ru": "Глава 88"
       },
       "availableLayers": [
         "source"
@@ -1950,7 +2040,8 @@
       "number": 89,
       "title": {
         "en": "Chapter 89",
-        "he": "פרק פ״ט"
+        "he": "פרק פ״ט",
+        "ru": "Глава 89"
       },
       "availableLayers": [
         "source"
@@ -1970,7 +2061,8 @@
       "number": 90,
       "title": {
         "en": "Chapter 90",
-        "he": "פרק צ׳"
+        "he": "פרק צ׳",
+        "ru": "Глава 90"
       },
       "availableLayers": [
         "source"
@@ -1990,7 +2082,8 @@
       "number": 91,
       "title": {
         "en": "Chapter 91",
-        "he": "פרק צ״א"
+        "he": "פרק צ״א",
+        "ru": "Глава 91"
       },
       "availableLayers": [
         "source"
@@ -2010,7 +2103,8 @@
       "number": 92,
       "title": {
         "en": "Chapter 92",
-        "he": "פרק צ״ב"
+        "he": "פרק צ״ב",
+        "ru": "Глава 92"
       },
       "availableLayers": [
         "source"
@@ -2030,7 +2124,8 @@
       "number": 93,
       "title": {
         "en": "Chapter 93",
-        "he": "פרק צ״ג"
+        "he": "פרק צ״ג",
+        "ru": "Глава 93"
       },
       "availableLayers": [
         "source"
@@ -2050,7 +2145,8 @@
       "number": 94,
       "title": {
         "en": "Chapter 94",
-        "he": "פרק צ״ד"
+        "he": "פרק צ״ד",
+        "ru": "Глава 94"
       },
       "availableLayers": [
         "source"
@@ -2070,7 +2166,8 @@
       "number": 95,
       "title": {
         "en": "Chapter 95",
-        "he": "פרק צ״ה"
+        "he": "פרק צ״ה",
+        "ru": "Глава 95"
       },
       "availableLayers": [
         "source"
@@ -2090,7 +2187,8 @@
       "number": 96,
       "title": {
         "en": "Chapter 96",
-        "he": "פרק צ״ו"
+        "he": "פרק צ״ו",
+        "ru": "Глава 96"
       },
       "availableLayers": [
         "source"
@@ -2110,7 +2208,8 @@
       "number": 97,
       "title": {
         "en": "Chapter 97",
-        "he": "פרק צ״ז"
+        "he": "פרק צ״ז",
+        "ru": "Глава 97"
       },
       "availableLayers": [
         "source"
@@ -2130,7 +2229,8 @@
       "number": 98,
       "title": {
         "en": "Chapter 98",
-        "he": "פרק צ״ח"
+        "he": "פרק צ״ח",
+        "ru": "Глава 98"
       },
       "availableLayers": [
         "source"
@@ -2150,7 +2250,8 @@
       "number": 99,
       "title": {
         "en": "Chapter 99",
-        "he": "פרק צ״ט"
+        "he": "פרק צ״ט",
+        "ru": "Глава 99"
       },
       "availableLayers": [
         "source",
@@ -2174,7 +2275,8 @@
       "number": 100,
       "title": {
         "en": "Chapter 100",
-        "he": "פרק ק׳"
+        "he": "פרק ק׳",
+        "ru": "Глава 100"
       },
       "availableLayers": [
         "source",
@@ -2198,7 +2300,8 @@
       "number": 101,
       "title": {
         "en": "Chapter 101",
-        "he": "פרק ק״א"
+        "he": "פרק ק״א",
+        "ru": "Глава 101"
       },
       "availableLayers": [
         "source"
@@ -2218,7 +2321,8 @@
       "number": 102,
       "title": {
         "en": "Chapter 102",
-        "he": "פרק ק״ב"
+        "he": "פרק ק״ב",
+        "ru": "Глава 102"
       },
       "availableLayers": [
         "source",
@@ -2242,7 +2346,8 @@
       "number": 103,
       "title": {
         "en": "Chapter 103",
-        "he": "פרק ק״ג"
+        "he": "פרק ק״ג",
+        "ru": "Глава 103"
       },
       "availableLayers": [
         "source",
@@ -2266,7 +2371,8 @@
       "number": 104,
       "title": {
         "en": "Chapter 104",
-        "he": "פרק ק״ד"
+        "he": "פרק ק״ד",
+        "ru": "Глава 104"
       },
       "availableLayers": [
         "source",
@@ -2290,7 +2396,8 @@
       "number": 105,
       "title": {
         "en": "Chapter 105",
-        "he": "פרק ק״ה"
+        "he": "פרק ק״ה",
+        "ru": "Глава 105"
       },
       "availableLayers": [
         "source",
@@ -2314,7 +2421,8 @@
       "number": 106,
       "title": {
         "en": "Chapter 106",
-        "he": "פרק ק״ו"
+        "he": "פרק ק״ו",
+        "ru": "Глава 106"
       },
       "availableLayers": [
         "source"
@@ -2334,7 +2442,8 @@
       "number": 107,
       "title": {
         "en": "Chapter 107",
-        "he": "פרק ק״ז"
+        "he": "פרק ק״ז",
+        "ru": "Глава 107"
       },
       "availableLayers": [
         "source"
@@ -2354,7 +2463,8 @@
       "number": 108,
       "title": {
         "en": "Chapter 108",
-        "he": "פרק ק״ח"
+        "he": "פרק ק״ח",
+        "ru": "Глава 108"
       },
       "availableLayers": [
         "source",
@@ -2378,7 +2488,8 @@
       "number": 109,
       "title": {
         "en": "Chapter 109",
-        "he": "פרק ק״ט"
+        "he": "פרק ק״ט",
+        "ru": "Глава 109"
       },
       "availableLayers": [
         "source"
@@ -2398,7 +2509,8 @@
       "number": 110,
       "title": {
         "en": "Chapter 110",
-        "he": "פרק ק״י"
+        "he": "פרק ק״י",
+        "ru": "Глава 110"
       },
       "availableLayers": [
         "source",
@@ -2422,7 +2534,8 @@
       "number": 111,
       "title": {
         "en": "Chapter 111",
-        "he": "פרק קי״א"
+        "he": "פרק קי״א",
+        "ru": "Глава 111"
       },
       "availableLayers": [
         "source"
@@ -2442,7 +2555,8 @@
       "number": 112,
       "title": {
         "en": "Chapter 112",
-        "he": "פרק קי״ב"
+        "he": "פרק קי״ב",
+        "ru": "Глава 112"
       },
       "availableLayers": [
         "source",
@@ -2466,7 +2580,8 @@
       "number": 113,
       "title": {
         "en": "Chapter 113",
-        "he": "פרק קי״ג"
+        "he": "פרק קי״ג",
+        "ru": "Глава 113"
       },
       "availableLayers": [
         "source",
@@ -2490,7 +2605,8 @@
       "number": 114,
       "title": {
         "en": "Chapter 114",
-        "he": "פרק קי״ד"
+        "he": "פרק קי״ד",
+        "ru": "Глава 114"
       },
       "availableLayers": [
         "source"
@@ -2510,7 +2626,8 @@
       "number": 115,
       "title": {
         "en": "Chapter 115",
-        "he": "פרק קט״ו"
+        "he": "פרק קט״ו",
+        "ru": "Глава 115"
       },
       "availableLayers": [
         "source",
@@ -2534,7 +2651,8 @@
       "number": 116,
       "title": {
         "en": "Chapter 116",
-        "he": "פרק קט״ז"
+        "he": "פרק קט״ז",
+        "ru": "Глава 116"
       },
       "availableLayers": [
         "source"
@@ -2554,7 +2672,8 @@
       "number": 117,
       "title": {
         "en": "Chapter 117",
-        "he": "פרק קי״ז"
+        "he": "פרק קי״ז",
+        "ru": "Глава 117"
       },
       "availableLayers": [
         "source"
@@ -2574,7 +2693,8 @@
       "number": 118,
       "title": {
         "en": "Chapter 118",
-        "he": "פרק קי״ח"
+        "he": "פרק קי״ח",
+        "ru": "Глава 118"
       },
       "availableLayers": [
         "source"
@@ -2594,7 +2714,8 @@
       "number": 119,
       "title": {
         "en": "Chapter 119",
-        "he": "פרק קי״ט"
+        "he": "פרק קי״ט",
+        "ru": "Глава 119"
       },
       "availableLayers": [
         "source",
@@ -2618,7 +2739,8 @@
       "number": 120,
       "title": {
         "en": "Chapter 120",
-        "he": "פרק ק״כ"
+        "he": "פרק ק״כ",
+        "ru": "Глава 120"
       },
       "availableLayers": [
         "source"
@@ -2638,7 +2760,8 @@
       "number": 121,
       "title": {
         "en": "Chapter 121",
-        "he": "פרק קכ״א"
+        "he": "פרק קכ״א",
+        "ru": "Глава 121"
       },
       "availableLayers": [
         "source"
@@ -2658,7 +2781,8 @@
       "number": 122,
       "title": {
         "en": "Chapter 122",
-        "he": "פרק קכ״ב"
+        "he": "פרק קכ״ב",
+        "ru": "Глава 122"
       },
       "availableLayers": [
         "source"
@@ -2678,7 +2802,8 @@
       "number": 123,
       "title": {
         "en": "Chapter 123",
-        "he": "פרק קכ״ג"
+        "he": "פרק קכ״ג",
+        "ru": "Глава 123"
       },
       "availableLayers": [
         "source",
@@ -2702,7 +2827,8 @@
       "number": 124,
       "title": {
         "en": "Chapter 124",
-        "he": "פרק קכ״ד"
+        "he": "פרק קכ״ד",
+        "ru": "Глава 124"
       },
       "availableLayers": [
         "source"
@@ -2722,7 +2848,8 @@
       "number": 125,
       "title": {
         "en": "Chapter 125",
-        "he": "פרק קכ״ה"
+        "he": "פרק קכ״ה",
+        "ru": "Глава 125"
       },
       "availableLayers": [
         "source",
@@ -2746,7 +2873,8 @@
       "number": 126,
       "title": {
         "en": "Chapter 126",
-        "he": "פרק קכ״ו"
+        "he": "פרק קכ״ו",
+        "ru": "Глава 126"
       },
       "availableLayers": [
         "source"
@@ -2766,7 +2894,8 @@
       "number": 127,
       "title": {
         "en": "Chapter 127",
-        "he": "פרק קכ״ז"
+        "he": "פרק קכ״ז",
+        "ru": "Глава 127"
       },
       "availableLayers": [
         "source"
@@ -2786,7 +2915,8 @@
       "number": 128,
       "title": {
         "en": "Chapter 128",
-        "he": "פרק קכ״ח"
+        "he": "פרק קכ״ח",
+        "ru": "Глава 128"
       },
       "availableLayers": [
         "source",
@@ -2810,7 +2940,8 @@
       "number": 129,
       "title": {
         "en": "Chapter 129",
-        "he": "פרק קכ״ט"
+        "he": "פרק קכ״ט",
+        "ru": "Глава 129"
       },
       "availableLayers": [
         "source"
@@ -2830,7 +2961,8 @@
       "number": 130,
       "title": {
         "en": "Chapter 130",
-        "he": "פרק ק״ל"
+        "he": "פרק ק״ל",
+        "ru": "Глава 130"
       },
       "availableLayers": [
         "source"
@@ -2850,7 +2982,8 @@
       "number": 131,
       "title": {
         "en": "Chapter 131",
-        "he": "פרק קל״א"
+        "he": "פרק קל״א",
+        "ru": "Глава 131"
       },
       "availableLayers": [
         "source"
@@ -2870,7 +3003,8 @@
       "number": 132,
       "title": {
         "en": "Chapter 132",
-        "he": "פרק קל״ב"
+        "he": "פרק קל״ב",
+        "ru": "Глава 132"
       },
       "availableLayers": [
         "source",
@@ -2894,7 +3028,8 @@
       "number": 133,
       "title": {
         "en": "Chapter 133",
-        "he": "פרק קל״ג"
+        "he": "פרק קל״ג",
+        "ru": "Глава 133"
       },
       "availableLayers": [
         "source"
@@ -2914,7 +3049,8 @@
       "number": 134,
       "title": {
         "en": "Chapter 134",
-        "he": "פרק קל״ד"
+        "he": "פרק קל״ד",
+        "ru": "Глава 134"
       },
       "availableLayers": [
         "source",
@@ -2938,7 +3074,8 @@
       "number": 135,
       "title": {
         "en": "Chapter 135",
-        "he": "פרק קל״ה"
+        "he": "פרק קל״ה",
+        "ru": "Глава 135"
       },
       "availableLayers": [
         "source",
@@ -2962,7 +3099,8 @@
       "number": 136,
       "title": {
         "en": "Chapter 136",
-        "he": "פרק קל״ו"
+        "he": "פרק קל״ו",
+        "ru": "Глава 136"
       },
       "availableLayers": [
         "source",
@@ -2986,7 +3124,8 @@
       "number": 137,
       "title": {
         "en": "Chapter 137",
-        "he": "פרק קל״ז"
+        "he": "פרק קל״ז",
+        "ru": "Глава 137"
       },
       "availableLayers": [
         "source"
@@ -3006,7 +3145,8 @@
       "number": 138,
       "title": {
         "en": "Chapter 138",
-        "he": "פרק קל״ח"
+        "he": "פרק קל״ח",
+        "ru": "Глава 138"
       },
       "availableLayers": [
         "source"
@@ -3026,7 +3166,8 @@
       "number": 139,
       "title": {
         "en": "Chapter 139",
-        "he": "פרק קל״ט"
+        "he": "פרק קל״ט",
+        "ru": "Глава 139"
       },
       "availableLayers": [
         "source",
@@ -3050,7 +3191,8 @@
       "number": 140,
       "title": {
         "en": "Chapter 140",
-        "he": "פרק ק״מ"
+        "he": "פרק ק״מ",
+        "ru": "Глава 140"
       },
       "availableLayers": [
         "source",
@@ -3074,7 +3216,8 @@
       "number": 141,
       "title": {
         "en": "Chapter 141",
-        "he": "פרק קמ״א"
+        "he": "פרק קמ״א",
+        "ru": "Глава 141"
       },
       "availableLayers": [
         "source"
@@ -3094,7 +3237,8 @@
       "number": 142,
       "title": {
         "en": "Chapter 142",
-        "he": "פרק קמ״ב"
+        "he": "פרק קמ״ב",
+        "ru": "Глава 142"
       },
       "availableLayers": [
         "source",
@@ -3118,7 +3262,8 @@
       "number": 143,
       "title": {
         "en": "Chapter 143",
-        "he": "פרק קמ״ג"
+        "he": "פרק קמ״ג",
+        "ru": "Глава 143"
       },
       "availableLayers": [
         "source"
@@ -3138,7 +3283,8 @@
       "number": 144,
       "title": {
         "en": "Chapter 144",
-        "he": "פרק קמ״ד"
+        "he": "פרק קמ״ד",
+        "ru": "Глава 144"
       },
       "availableLayers": [
         "source",
@@ -3162,7 +3308,8 @@
       "number": 145,
       "title": {
         "en": "Chapter 145",
-        "he": "פרק קמ״ה"
+        "he": "פרק קמ״ה",
+        "ru": "Глава 145"
       },
       "availableLayers": [
         "source"
@@ -3182,7 +3329,8 @@
       "number": 146,
       "title": {
         "en": "Chapter 146",
-        "he": "פרק קמ״ו"
+        "he": "פרק קמ״ו",
+        "ru": "Глава 146"
       },
       "availableLayers": [
         "source"
@@ -3202,7 +3350,8 @@
       "number": 147,
       "title": {
         "en": "Chapter 147",
-        "he": "פרק קמ״ז"
+        "he": "פרק קמ״ז",
+        "ru": "Глава 147"
       },
       "availableLayers": [
         "source",
@@ -3226,7 +3375,8 @@
       "number": 148,
       "title": {
         "en": "Chapter 148",
-        "he": "פרק קמ״ח"
+        "he": "פרק קמ״ח",
+        "ru": "Глава 148"
       },
       "availableLayers": [
         "source"
@@ -3246,7 +3396,8 @@
       "number": 149,
       "title": {
         "en": "Chapter 149",
-        "he": "פרק קמ״ט"
+        "he": "פרק קמ״ט",
+        "ru": "Глава 149"
       },
       "availableLayers": [
         "source"
@@ -3266,7 +3417,8 @@
       "number": 150,
       "title": {
         "en": "Chapter 150",
-        "he": "פרק ק״נ"
+        "he": "פרק ק״נ",
+        "ru": "Глава 150"
       },
       "availableLayers": [
         "source",
@@ -3290,7 +3442,8 @@
       "number": 151,
       "title": {
         "en": "Chapter 151",
-        "he": "פרק קנ״א"
+        "he": "פרק קנ״א",
+        "ru": "Глава 151"
       },
       "availableLayers": [
         "source",
@@ -3314,7 +3467,8 @@
       "number": 152,
       "title": {
         "en": "Chapter 152",
-        "he": "פרק קנ״ב"
+        "he": "פרק קנ״ב",
+        "ru": "Глава 152"
       },
       "availableLayers": [
         "source",
@@ -3338,7 +3492,8 @@
       "number": 153,
       "title": {
         "en": "Chapter 153",
-        "he": "פרק קנ״ג"
+        "he": "פרק קנ״ג",
+        "ru": "Глава 153"
       },
       "availableLayers": [
         "source",
@@ -3362,7 +3517,8 @@
       "number": 154,
       "title": {
         "en": "Chapter 154",
-        "he": "פרק קנ״ד"
+        "he": "פרק קנ״ד",
+        "ru": "Глава 154"
       },
       "availableLayers": [
         "source",
@@ -3386,7 +3542,8 @@
       "number": 155,
       "title": {
         "en": "Chapter 155",
-        "he": "פרק קנ״ה"
+        "he": "פרק קנ״ה",
+        "ru": "Глава 155"
       },
       "availableLayers": [
         "source",
@@ -3410,7 +3567,8 @@
       "number": 156,
       "title": {
         "en": "Chapter 156",
-        "he": "פרק קנ״ו"
+        "he": "פרק קנ״ו",
+        "ru": "Глава 156"
       },
       "availableLayers": [
         "source",
@@ -3434,7 +3592,8 @@
       "number": 157,
       "title": {
         "en": "Chapter 157",
-        "he": "פרק קנ״ז"
+        "he": "פרק קנ״ז",
+        "ru": "Глава 157"
       },
       "availableLayers": [
         "source",
@@ -3458,7 +3617,8 @@
       "number": 158,
       "title": {
         "en": "Chapter 158",
-        "he": "פרק קנ״ח"
+        "he": "פרק קנ״ח",
+        "ru": "Глава 158"
       },
       "availableLayers": [
         "source",
@@ -3482,7 +3642,8 @@
       "number": 159,
       "title": {
         "en": "Chapter 159",
-        "he": "פרק קנ״ט"
+        "he": "פרק קנ״ט",
+        "ru": "Глава 159"
       },
       "availableLayers": [
         "source"
@@ -3502,7 +3663,8 @@
       "number": 160,
       "title": {
         "en": "Chapter 160",
-        "he": "פרק ק״ס"
+        "he": "פרק ק״ס",
+        "ru": "Глава 160"
       },
       "availableLayers": [
         "source"
@@ -3522,7 +3684,8 @@
       "number": 161,
       "title": {
         "en": "Chapter 161",
-        "he": "פרק קס״א"
+        "he": "פרק קס״א",
+        "ru": "Глава 161"
       },
       "availableLayers": [
         "source",
@@ -3546,7 +3709,8 @@
       "number": 162,
       "title": {
         "en": "Chapter 162",
-        "he": "פרק קס״ב"
+        "he": "פרק קס״ב",
+        "ru": "Глава 162"
       },
       "availableLayers": [
         "source",
@@ -3570,7 +3734,8 @@
       "number": 163,
       "title": {
         "en": "Chapter 163",
-        "he": "פרק קס״ג"
+        "he": "פרק קס״ג",
+        "ru": "Глава 163"
       },
       "availableLayers": [
         "source"
@@ -3590,7 +3755,8 @@
       "number": 164,
       "title": {
         "en": "Chapter 164",
-        "he": "פרק קס״ד"
+        "he": "פרק קס״ד",
+        "ru": "Глава 164"
       },
       "availableLayers": [
         "source"
@@ -3610,7 +3776,8 @@
       "number": 165,
       "title": {
         "en": "Chapter 165",
-        "he": "פרק קס״ה"
+        "he": "פרק קס״ה",
+        "ru": "Глава 165"
       },
       "availableLayers": [
         "source"
@@ -3630,7 +3797,8 @@
       "number": 166,
       "title": {
         "en": "Chapter 166",
-        "he": "פרק קס״ו"
+        "he": "פרק קס״ו",
+        "ru": "Глава 166"
       },
       "availableLayers": [
         "source",
@@ -3654,7 +3822,8 @@
       "number": 167,
       "title": {
         "en": "Chapter 167",
-        "he": "פרק קס״ז"
+        "he": "פרק קס״ז",
+        "ru": "Глава 167"
       },
       "availableLayers": [
         "source"
@@ -3674,7 +3843,8 @@
       "number": 168,
       "title": {
         "en": "Chapter 168",
-        "he": "פרק קס״ח"
+        "he": "פרק קס״ח",
+        "ru": "Глава 168"
       },
       "availableLayers": [
         "source"
@@ -3694,7 +3864,8 @@
       "number": 169,
       "title": {
         "en": "Chapter 169",
-        "he": "פרק קס״ט"
+        "he": "פרק קס״ט",
+        "ru": "Глава 169"
       },
       "availableLayers": [
         "source"
@@ -3714,7 +3885,8 @@
       "number": 170,
       "title": {
         "en": "Chapter 170",
-        "he": "פרק ק״ע"
+        "he": "פרק ק״ע",
+        "ru": "Глава 170"
       },
       "availableLayers": [
         "source"
@@ -3734,7 +3906,8 @@
       "number": 171,
       "title": {
         "en": "Chapter 171",
-        "he": "פרק קע״א"
+        "he": "פרק קע״א",
+        "ru": "Глава 171"
       },
       "availableLayers": [
         "source"
@@ -3754,7 +3927,8 @@
       "number": 172,
       "title": {
         "en": "Chapter 172",
-        "he": "פרק קע״ב"
+        "he": "פרק קע״ב",
+        "ru": "Глава 172"
       },
       "availableLayers": [
         "source"
@@ -3774,7 +3948,8 @@
       "number": 173,
       "title": {
         "en": "Chapter 173",
-        "he": "פרק קע״ג"
+        "he": "פרק קע״ג",
+        "ru": "Глава 173"
       },
       "availableLayers": [
         "source"
@@ -3794,7 +3969,8 @@
       "number": 174,
       "title": {
         "en": "Chapter 174",
-        "he": "פרק קע״ד"
+        "he": "פרק קע״ד",
+        "ru": "Глава 174"
       },
       "availableLayers": [
         "source",
@@ -3818,7 +3994,8 @@
       "number": 175,
       "title": {
         "en": "Chapter 175",
-        "he": "פרק קע״ה"
+        "he": "פרק קע״ה",
+        "ru": "Глава 175"
       },
       "availableLayers": [
         "source"
@@ -3838,7 +4015,8 @@
       "number": 176,
       "title": {
         "en": "Chapter 176",
-        "he": "פרק קע״ו"
+        "he": "פרק קע״ו",
+        "ru": "Глава 176"
       },
       "availableLayers": [
         "source"
@@ -3858,7 +4036,8 @@
       "number": 177,
       "title": {
         "en": "Chapter 177",
-        "he": "פרק קע״ז"
+        "he": "פרק קע״ז",
+        "ru": "Глава 177"
       },
       "availableLayers": [
         "source",
@@ -3882,7 +4061,8 @@
       "number": 178,
       "title": {
         "en": "Chapter 178",
-        "he": "פרק קע״ח"
+        "he": "פרק קע״ח",
+        "ru": "Глава 178"
       },
       "availableLayers": [
         "source",
@@ -3906,7 +4086,8 @@
       "number": 179,
       "title": {
         "en": "Chapter 179",
-        "he": "פרק קע״ט"
+        "he": "פרק קע״ט",
+        "ru": "Глава 179"
       },
       "availableLayers": [
         "source"
@@ -3926,7 +4107,8 @@
       "number": 180,
       "title": {
         "en": "Chapter 180",
-        "he": "פרק ק״פ"
+        "he": "פרק ק״פ",
+        "ru": "Глава 180"
       },
       "availableLayers": [
         "source"
@@ -3946,7 +4128,8 @@
       "number": 181,
       "title": {
         "en": "Chapter 181",
-        "he": "פרק קפ״א"
+        "he": "פרק קפ״א",
+        "ru": "Глава 181"
       },
       "availableLayers": [
         "source"
@@ -3966,7 +4149,8 @@
       "number": 182,
       "title": {
         "en": "Chapter 182",
-        "he": "פרק קפ״ב"
+        "he": "פרק קפ״ב",
+        "ru": "Глава 182"
       },
       "availableLayers": [
         "source"
@@ -3986,7 +4170,8 @@
       "number": 183,
       "title": {
         "en": "Chapter 183",
-        "he": "פרק קפ״ג"
+        "he": "פרק קפ״ג",
+        "ru": "Глава 183"
       },
       "availableLayers": [
         "source"
@@ -4006,7 +4191,8 @@
       "number": 184,
       "title": {
         "en": "Chapter 184",
-        "he": "פרק קפ״ד"
+        "he": "פרק קפ״ד",
+        "ru": "Глава 184"
       },
       "availableLayers": [
         "source",
@@ -4030,7 +4216,8 @@
       "number": 185,
       "title": {
         "en": "Chapter 185",
-        "he": "פרק קפ״ה"
+        "he": "פרק קפ״ה",
+        "ru": "Глава 185"
       },
       "availableLayers": [
         "source"
@@ -4050,7 +4237,8 @@
       "number": 186,
       "title": {
         "en": "Chapter 186",
-        "he": "פרק קפ״ו"
+        "he": "פרק קפ״ו",
+        "ru": "Глава 186"
       },
       "availableLayers": [
         "source"
@@ -4070,7 +4258,8 @@
       "number": 187,
       "title": {
         "en": "Chapter 187",
-        "he": "פרק קפ״ז"
+        "he": "פרק קפ״ז",
+        "ru": "Глава 187"
       },
       "availableLayers": [
         "source"
@@ -4090,7 +4279,8 @@
       "number": 188,
       "title": {
         "en": "Chapter 188",
-        "he": "פרק קפ״ח"
+        "he": "פרק קפ״ח",
+        "ru": "Глава 188"
       },
       "availableLayers": [
         "source"
@@ -4110,7 +4300,8 @@
       "number": 189,
       "title": {
         "en": "Chapter 189",
-        "he": "פרק קפ״ט"
+        "he": "פרק קפ״ט",
+        "ru": "Глава 189"
       },
       "availableLayers": [
         "source",
@@ -4134,7 +4325,8 @@
       "number": 190,
       "title": {
         "en": "Chapter 190",
-        "he": "פרק ק״צ"
+        "he": "פרק ק״צ",
+        "ru": "Глава 190"
       },
       "availableLayers": [
         "source",
@@ -4158,7 +4350,8 @@
       "number": 191,
       "title": {
         "en": "Chapter 191",
-        "he": "פרק קצ״א"
+        "he": "פרק קצ״א",
+        "ru": "Глава 191"
       },
       "availableLayers": [
         "source"
@@ -4178,7 +4371,8 @@
       "number": 192,
       "title": {
         "en": "Chapter 192",
-        "he": "פרק קצ״ב"
+        "he": "פרק קצ״ב",
+        "ru": "Глава 192"
       },
       "availableLayers": [
         "source"
@@ -4198,7 +4392,8 @@
       "number": 193,
       "title": {
         "en": "Chapter 193",
-        "he": "פרק קצ״ג"
+        "he": "פרק קצ״ג",
+        "ru": "Глава 193"
       },
       "availableLayers": [
         "source"
@@ -4218,7 +4413,8 @@
       "number": 194,
       "title": {
         "en": "Chapter 194",
-        "he": "פרק קצ״ד"
+        "he": "פרק קצ״ד",
+        "ru": "Глава 194"
       },
       "availableLayers": [
         "source"
@@ -4238,7 +4434,8 @@
       "number": 195,
       "title": {
         "en": "Chapter 195",
-        "he": "פרק קצ״ה"
+        "he": "פרק קצ״ה",
+        "ru": "Глава 195"
       },
       "availableLayers": [
         "source"
@@ -4258,7 +4455,8 @@
       "number": 196,
       "title": {
         "en": "Chapter 196",
-        "he": "פרק קצ״ו"
+        "he": "פרק קצ״ו",
+        "ru": "Глава 196"
       },
       "availableLayers": [
         "source"
@@ -4278,7 +4476,8 @@
       "number": 197,
       "title": {
         "en": "Chapter 197",
-        "he": "פרק קצ״ז"
+        "he": "פרק קצ״ז",
+        "ru": "Глава 197"
       },
       "availableLayers": [
         "source"
@@ -4298,7 +4497,8 @@
       "number": 198,
       "title": {
         "en": "Chapter 198",
-        "he": "פרק קצ״ח"
+        "he": "פרק קצ״ח",
+        "ru": "Глава 198"
       },
       "availableLayers": [
         "source"
@@ -4318,7 +4518,8 @@
       "number": 199,
       "title": {
         "en": "Chapter 199",
-        "he": "פרק קצ״ט"
+        "he": "פרק קצ״ט",
+        "ru": "Глава 199"
       },
       "availableLayers": [
         "source"
@@ -4338,7 +4539,8 @@
       "number": 200,
       "title": {
         "en": "Chapter 200",
-        "he": "פרק ר׳"
+        "he": "פרק ר׳",
+        "ru": "Глава 200"
       },
       "availableLayers": [
         "source"
@@ -4358,7 +4560,8 @@
       "number": 201,
       "title": {
         "en": "Chapter 201",
-        "he": "פרק ר״א"
+        "he": "פרק ר״א",
+        "ru": "Глава 201"
       },
       "availableLayers": [
         "source"
@@ -4378,7 +4581,8 @@
       "number": 202,
       "title": {
         "en": "Chapter 202",
-        "he": "פרק ר״ב"
+        "he": "פרק ר״ב",
+        "ru": "Глава 202"
       },
       "availableLayers": [
         "source"
@@ -4398,7 +4602,8 @@
       "number": 203,
       "title": {
         "en": "Chapter 203",
-        "he": "פרק ר״ג"
+        "he": "פרק ר״ג",
+        "ru": "Глава 203"
       },
       "availableLayers": [
         "source"
@@ -4418,7 +4623,8 @@
       "number": 204,
       "title": {
         "en": "Chapter 204",
-        "he": "פרק ר״ד"
+        "he": "פרק ר״ד",
+        "ru": "Глава 204"
       },
       "availableLayers": [
         "source"
@@ -4438,7 +4644,8 @@
       "number": 205,
       "title": {
         "en": "Chapter 205",
-        "he": "פרק ר״ה"
+        "he": "פרק ר״ה",
+        "ru": "Глава 205"
       },
       "availableLayers": [
         "source"
@@ -4458,7 +4665,8 @@
       "number": 206,
       "title": {
         "en": "Chapter 206",
-        "he": "פרק ר״ו"
+        "he": "פרק ר״ו",
+        "ru": "Глава 206"
       },
       "availableLayers": [
         "source"
@@ -4478,7 +4686,8 @@
       "number": 207,
       "title": {
         "en": "Chapter 207",
-        "he": "פרק ר״ז"
+        "he": "פרק ר״ז",
+        "ru": "Глава 207"
       },
       "availableLayers": [
         "source",
@@ -4502,7 +4711,8 @@
       "number": 208,
       "title": {
         "en": "Chapter 208",
-        "he": "פרק ר״ח"
+        "he": "פרק ר״ח",
+        "ru": "Глава 208"
       },
       "availableLayers": [
         "source",
@@ -4526,7 +4736,8 @@
       "number": 209,
       "title": {
         "en": "Chapter 209",
-        "he": "פרק ר״ט"
+        "he": "פרק ר״ט",
+        "ru": "Глава 209"
       },
       "availableLayers": [
         "source"
@@ -4546,7 +4757,8 @@
       "number": 210,
       "title": {
         "en": "Chapter 210",
-        "he": "פרק ר״י"
+        "he": "פרק ר״י",
+        "ru": "Глава 210"
       },
       "availableLayers": [
         "source"
@@ -4566,7 +4778,8 @@
       "number": 211,
       "title": {
         "en": "Chapter 211",
-        "he": "פרק רי״א"
+        "he": "פרק רי״א",
+        "ru": "Глава 211"
       },
       "availableLayers": [
         "source"
@@ -4586,7 +4799,8 @@
       "number": 212,
       "title": {
         "en": "Chapter 212",
-        "he": "פרק רי״ב"
+        "he": "פרק רי״ב",
+        "ru": "Глава 212"
       },
       "availableLayers": [
         "source"
@@ -4606,7 +4820,8 @@
       "number": 213,
       "title": {
         "en": "Chapter 213",
-        "he": "פרק רי״ג"
+        "he": "פרק רי״ג",
+        "ru": "Глава 213"
       },
       "availableLayers": [
         "source"
@@ -4626,7 +4841,8 @@
       "number": 214,
       "title": {
         "en": "Chapter 214",
-        "he": "פרק רי״ד"
+        "he": "פרק רי״ד",
+        "ru": "Глава 214"
       },
       "availableLayers": [
         "source"
@@ -4646,7 +4862,8 @@
       "number": 215,
       "title": {
         "en": "Chapter 215",
-        "he": "פרק רט״ו"
+        "he": "פרק רט״ו",
+        "ru": "Глава 215"
       },
       "availableLayers": [
         "source"
@@ -4666,7 +4883,8 @@
       "number": 216,
       "title": {
         "en": "Chapter 216",
-        "he": "פרק רט״ז"
+        "he": "פרק רט״ז",
+        "ru": "Глава 216"
       },
       "availableLayers": [
         "source"
@@ -4686,7 +4904,8 @@
       "number": 217,
       "title": {
         "en": "Chapter 217",
-        "he": "פרק רי״ז"
+        "he": "פרק רי״ז",
+        "ru": "Глава 217"
       },
       "availableLayers": [
         "source",
@@ -4710,7 +4929,8 @@
       "number": 218,
       "title": {
         "en": "Chapter 218",
-        "he": "פרק רי״ח"
+        "he": "פרק רי״ח",
+        "ru": "Глава 218"
       },
       "availableLayers": [
         "source"
@@ -4730,7 +4950,8 @@
       "number": 219,
       "title": {
         "en": "Chapter 219",
-        "he": "פרק רי״ט"
+        "he": "פרק רי״ט",
+        "ru": "Глава 219"
       },
       "availableLayers": [
         "source"
@@ -4750,7 +4971,8 @@
       "number": 220,
       "title": {
         "en": "Chapter 220",
-        "he": "פרק ר״כ"
+        "he": "פרק ר״כ",
+        "ru": "Глава 220"
       },
       "availableLayers": [
         "source"
@@ -4770,7 +4992,8 @@
       "number": 221,
       "title": {
         "en": "Chapter 221",
-        "he": "פרק רכ״א"
+        "he": "פרק רכ״א",
+        "ru": "Глава 221"
       },
       "availableLayers": [
         "source"
@@ -4790,7 +5013,8 @@
       "number": 222,
       "title": {
         "en": "Chapter 222",
-        "he": "פרק רכ״ב"
+        "he": "פרק רכ״ב",
+        "ru": "Глава 222"
       },
       "availableLayers": [
         "source"
@@ -4810,7 +5034,8 @@
       "number": 223,
       "title": {
         "en": "Chapter 223",
-        "he": "פרק רכ״ג"
+        "he": "פרק רכ״ג",
+        "ru": "Глава 223"
       },
       "availableLayers": [
         "source"
@@ -4831,7 +5056,8 @@
       "number": 224,
       "title": {
         "en": "Chapter 224",
-        "he": "פרק רכ״ד"
+        "he": "פרק רכ״ד",
+        "ru": "Глава 224"
       },
       "availableLayers": [
         "source"
@@ -4851,7 +5077,8 @@
       "number": 225,
       "title": {
         "en": "Chapter 225",
-        "he": "פרק רכ״ה"
+        "he": "פרק רכ״ה",
+        "ru": "Глава 225"
       },
       "availableLayers": [
         "source"
@@ -4871,7 +5098,8 @@
       "number": 226,
       "title": {
         "en": "Chapter 226",
-        "he": "פרק רכ״ו"
+        "he": "פרק רכ״ו",
+        "ru": "Глава 226"
       },
       "availableLayers": [
         "source"
@@ -4891,7 +5119,8 @@
       "number": 227,
       "title": {
         "en": "Chapter 227",
-        "he": "פרק רכ״ז"
+        "he": "פרק רכ״ז",
+        "ru": "Глава 227"
       },
       "availableLayers": [
         "source"
@@ -4911,7 +5140,8 @@
       "number": 228,
       "title": {
         "en": "Chapter 228",
-        "he": "פרק רכ״ח"
+        "he": "פרק רכ״ח",
+        "ru": "Глава 228"
       },
       "availableLayers": [
         "source"
@@ -4931,7 +5161,8 @@
       "number": 229,
       "title": {
         "en": "Chapter 229",
-        "he": "פרק רכ״ט"
+        "he": "פרק רכ״ט",
+        "ru": "Глава 229"
       },
       "availableLayers": [
         "source",
@@ -4955,7 +5186,8 @@
       "number": 1,
       "title": {
         "en": "List of Questions on Terminology",
-        "he": "לוח השאלות לפירוש המלות"
+        "he": "לוח השאלות לפירוש המלות",
+        "ru": "Вопросы о значении слов"
       },
       "availableLayers": [
         "source"
@@ -4975,7 +5207,8 @@
       "number": 1,
       "title": {
         "en": "List of Questions on Topics",
-        "he": "לוח השאלות לעניינים"
+        "he": "לוח השאלות לעניינים",
+        "ru": "Вопросы по темам"
       },
       "availableLayers": [
         "source"
@@ -4995,7 +5228,8 @@
       "number": 1,
       "title": {
         "en": "List of Answers on Terminology",
-        "he": "לוח התשובות לפירוש המלות"
+        "he": "לוח התשובות לפירוש המלות",
+        "ru": "Ответы о значении слов"
       },
       "availableLayers": [
         "source"
@@ -5016,7 +5250,8 @@
       "number": 1,
       "title": {
         "en": "List of Answers on Topics",
-        "he": "לוח התשובות לעניינים"
+        "he": "לוח התשובות לעניינים",
+        "ru": "Ответы по темам"
       },
       "availableLayers": [
         "source"

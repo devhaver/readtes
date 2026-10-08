@@ -82,5 +82,13 @@
     "title": "Bnei Baruch (kabbalah.info)",
     "license": "Used with permission",
     "source": "kabbalah-info"
+  },
+  {
+    "id": "ru-bb",
+    "language": "ru",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia) — Русский",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
   }
 ]
