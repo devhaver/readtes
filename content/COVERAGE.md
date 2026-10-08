@@ -3444,19 +3444,19 @@ whatever English they had.
 | Part | Layer | Imported | Outranked by `en-bb` | Refused |
 | --- | --- | --- | --- | --- |
 | part-01 | commentary | 0 | 2 | 0 |
-| part-01 | source | 10 | 2 | 0 |
+| part-01 | source | 11 | 4 | 1 |
 | part-02 | commentary | 1 | 0 | 1 |
-| part-02 | source | 11 | 0 | 1 |
+| part-02 | source | 11 | 4 | 1 |
 | part-03 | commentary | 9 | 2 | 4 |
-| part-03 | source | 22 | 2 | 6 |
+| part-03 | source | 22 | 4 | 8 |
 | part-04 | commentary | 5 | 0 | 1 |
-| part-04 | source | 11 | 0 | 1 |
+| part-04 | source | 15 | 0 | 1 |
 | part-05 | commentary | 48 | 0 | 4 |
-| part-05 | source | 0 | 62 | 0 |
+| part-05 | source | 0 | 66 | 0 |
 | part-06 | commentary | 37 | 0 | 1 |
-| part-06 | source | 0 | 54 | 2 |
+| part-06 | source | 0 | 58 | 2 |
 | part-07 | commentary | 46 | 0 | 2 |
-| part-07 | source | 0 | 73 | 1 |
+| part-07 | source | 0 | 73 | 5 |
 | part-08 | commentary | 33 | 0 | 0 |
 | part-08 | source | 46 | 0 | 0 |
 | part-16 | commentary | 17 | 0 | 1 |
@@ -3464,6 +3464,7 @@ whatever English they had.
 
 ### Refused
 
+- `part-01/questions-terminology-01` source: page has 54 entries, the Hebrew 55
 - `part-02/chapter-01` source: Hebrew commentary has unanchored items
 - `part-02/chapter-01` commentary: Hebrew commentary has unanchored items
 - `part-03/chapter-04` source: source: matched 8 of 9 Hebrew seifim; commentary: matched 20 of 21 Hebrew items (next unmatched: op-21)
@@ -3476,6 +3477,8 @@ whatever English they had.
 - `part-03/chapter-10` commentary: source: matched 5 of 8 Hebrew seifim; commentary: matched 3 of 5 Hebrew items (next unmatched: op-4)
 - `part-03/inner-observation-05` source: segment 2: its first paragraph reads as the previous segment's
 - `part-03/inner-observation-07` source: segment 2: its first paragraph reads as the previous segment's
+- `part-03/answers-topics-01` source: page has 136 entries, the Hebrew 135
+- `part-03/questions-topics-01` source: its answers were refused
 - `part-04/chapter-06` source: source: matched 17 of 22 Hebrew seifim; commentary: matched 34 of 43 Hebrew items (next unmatched: op-35)
 - `part-04/chapter-06` commentary: source: matched 17 of 22 Hebrew seifim; commentary: matched 34 of 43 Hebrew items (next unmatched: op-35)
 - `part-06/chapter-23` commentary: op-1: no printed note could be placed on it
@@ -3488,24 +3491,14 @@ whatever English they had.
 - `part-07/chapter-35` commentary: op-1: structure and content place it on different notes
 - `part-07/chapter-41` commentary: op-1: structure and content place it on different notes
 - `part-07/inner-observation-01` source: segment 4: English is 0.41x its Hebrew
+- `part-07/answers-terminology-01` source: answers 86 and 87 both read closer to a neighbour — the page is out of step there
+- `part-07/questions-terminology-01` source: its answers were refused
+- `part-07/answers-topics-01` source: page has 59 entries, the Hebrew 64
+- `part-07/questions-topics-01` source: its answers were refused
 - `part-16/chapter-81` commentary: op-1: English is 0.57x its Hebrew
 
 ### Notes
 
-- Part 1 - Table of Questions and Answers on the Meaning of Words: qa-terminology pages are not imported yet
-- Part 1 - Questions and Answers on the Meaning of Topics: qa-topics pages are not imported yet
-- Part 2 - Questions and Answers on the Meaning of Words: qa-terminology pages are not imported yet
-- Part 2 - Table of Questions and Answers on the Meaning of Topics: qa-topics pages are not imported yet
-- Part 3 - Table of Questions for the Meaning of the Words: qa-terminology pages are not imported yet
-- Part 3 - Table of Questions for Topics: qa-topics pages are not imported yet
-- Part 4 - Table of Questions and for the Meaning of the Words: qa-terminology pages are not imported yet
-- Part 4 - Table of Questions and Answers for Topics: qa-topics pages are not imported yet
-- Part 5 - Table of Questions and Answers for the Meaning of the Words: qa-terminology pages are not imported yet
-- Part 5 - Table of Questions for Topics: qa-topics pages are not imported yet
 - Part 5 - Additional Explanation about the Matter of the Inversion of the Panim and the Making Order of the Kelim: other pages are not imported yet
-- Part 6 - Table of Questions for the Meaning of the Words: qa-terminology pages are not imported yet
-- Part 6 - Table of Questions for Topics: qa-topics pages are not imported yet
 - Part 6 - Questions Regarding Cause and Consequence: other pages are not imported yet
-- Part 7 - Table of Questions and Answers for the Meaning of the Words: qa-terminology pages are not imported yet
-- Part 7 - Table of Questions and Answers for Topics: qa-topics pages are not imported yet
 - Part 8 - The Eser Sefirot of Olam ha Atzilut: the page repeats text from seif 47 on — seifim 47+ not offered for alignment
