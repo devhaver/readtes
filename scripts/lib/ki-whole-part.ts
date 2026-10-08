@@ -49,8 +49,16 @@ export interface KiWholePart {
   unplaced: string[];
 }
 
+/**
+ * A note opens with its lemma — the quoted words of the Ari it explains:
+ * bold on kabbalah.info, an `h5` on part 8's page, and in guillemets in the
+ * Russian and French documents (`«А"К содержит»: …`).
+ */
 const isNoteHeading = (block: KiBlock): boolean =>
-  block.bold || block.tag === "h5" || block.tag === "h6";
+  block.bold ||
+  block.tag === "h5" ||
+  block.tag === "h6" ||
+  /^\s*«/.test(block.text);
 
 export const parseKiWholePart = (blocks: KiBlock[]): KiWholePart => {
   const seifim: KiWholePartSeif[] = [];
@@ -66,6 +74,13 @@ export const parseKiWholePart = (blocks: KiBlock[]): KiWholePart => {
     });
   };
 
+  // kabbalah.info bolds the Ari's text, so a seif opens only on a bold
+  // numeral there; the Russian documents bold nothing, and there any
+  // numeral can open one (still only the next number in sequence).
+  const boldNumbering = blocks.some(
+    (block) => block.bold && kiLeadingNumber(block) !== undefined,
+  );
+
   for (const block of blocks) {
     if (isKiCommentaryMarker(block)) {
       if (current) inNotes = true;
@@ -73,7 +88,20 @@ export const parseKiWholePart = (blocks: KiBlock[]): KiWholePart => {
     }
 
     const number = kiLeadingNumber(block);
-    if (block.bold && number !== undefined) {
+    // The first seif may go unbolded where the rest are (part 6's Russian
+    // document): a `1` before any seif has opened is always seif 1.
+    const opensFirst = !current && number === 1;
+    // …and so may others (its seif 17). An unbolded next numeral that does
+    // not open with a «lemma» is the next seif; a wrong split here is caught
+    // downstream, where every seif's length is checked against its Hebrew.
+    const opensNextUnbolded =
+      current !== undefined &&
+      number === current.n + 1 &&
+      !/^\s*«/.test(block.text);
+    if (
+      (block.bold || !boldNumbering || opensFirst || opensNextUnbolded) &&
+      number !== undefined
+    ) {
       if (!current || number === current.n + 1) {
         current = {
           n: number,

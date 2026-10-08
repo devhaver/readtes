@@ -669,3 +669,27 @@ describe("dropLeakedHeadings", () => {
     expect(items[1]?.html).toBe(genuine.html);
   });
 });
+
+describe("parseKiWholePart, Russian document shape", () => {
+  it("reads unbolded seifim, `* 1)` numerals and «lemma» note heads", () => {
+    const { seifim } = parseKiWholePart(
+      parseKiBlocks(
+        page(
+          [
+            "<p><strong>ТЭС, часть 6</strong></p>",
+            '<p>* 1) А"К содержит А"Б, Са"Г, М"А и Бо"Н в себе самом.</p>',
+            "<p><strong>Ор пними</strong></p>",
+            '<p><strong>1)</strong> «А"К содержит»: этот комментарий самый глубокий.</p>',
+            "<p>И сначала следует узнать, о каком из парцуфим идет речь.</p>",
+            "<p>«Из него выходят также света наружу»: они называются сэарот.</p>",
+            "<p><strong>2) И таким же образом, как в его внутренней части.</strong></p>",
+            "<p>3) Первый свет, который сначала был внизу.</p>",
+          ].join(""),
+        ),
+      ),
+    );
+    expect(seifim.map((seif) => seif.n)).toEqual([1, 2, 3]);
+    expect(seifim[0]?.dibburim).toHaveLength(2);
+    expect(seifim[0]?.dibburim[1]?.headHtml).toContain("«Из него выходят");
+  });
+});

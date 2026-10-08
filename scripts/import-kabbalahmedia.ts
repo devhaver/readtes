@@ -71,7 +71,9 @@ import {
   type HttpClient,
 } from "./lib/http-client.ts";
 import { alignKiChapterPage } from "./lib/ki-chapter-page.ts";
-import { toKiBlock } from "./lib/ki-page.ts";
+import { kiParagraphs, toKiBlock } from "./lib/ki-page.ts";
+import { alignWholePartCommentary } from "./lib/ki-whole-part-align.ts";
+import { parseKiWholePart } from "./lib/ki-whole-part.ts";
 import {
   DOCX_MIMETYPE,
   type KmContentUnit,
@@ -204,6 +206,66 @@ const readHeCommentaryItems = (dir: string): CommentaryItem[] => {
     JSON.parse(readFileSync(path, "utf-8")),
   );
   return parsed.items;
+};
+
+const readHeCommentaryItemsOptional = (
+  dir: string,
+): CommentaryItem[] | undefined =>
+  existsSync(join(dir, "commentary.he-jerusalem-1956.json"))
+    ? readHeCommentaryItems(dir)
+    : undefined;
+
+/** The chapter's official English notes (either Bnei Baruch edition), if any. */
+const readEnglishCommentary = (dir: string): CommentaryItem[] | undefined => {
+  for (const versionId of ["en-bb", "en-bb-kabbalah-info"]) {
+    const path = join(dir, `commentary.${versionId}.json`);
+    if (existsSync(path)) {
+      return commentaryLayerFileSchema.parse(
+        JSON.parse(readFileSync(path, "utf-8")),
+      ).items;
+    }
+  }
+  return undefined;
+};
+
+const plainLength = (html: string): number =>
+  html
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim().length;
+
+/** Outside this band a note is not a translation of the same English note. */
+const NOTE_VS_ENGLISH_BAND = [0.5, 2] as const;
+
+/**
+ * Every note's length is plausible against the official English note with
+ * the same anchor — the check that a structure-only placement (no `en-ai`
+ * in these languages to compare content with) has not shifted.
+ */
+const notesMatchEnglish = (
+  items: CommentaryItem[],
+  english: CommentaryItem[],
+): boolean => {
+  const byAnchor = new Map(english.map((item) => [item.anchorId, item]));
+  return items.every((item) => {
+    const counterpart = byAnchor.get(item.anchorId);
+    if (!counterpart) return false;
+    const ratio =
+      plainLength(item.html) / Math.max(1, plainLength(counterpart.html));
+    return ratio >= NOTE_VS_ENGLISH_BAND[0] && ratio <= NOTE_VS_ENGLISH_BAND[1];
+  });
+};
+
+/** Source items from a document in the kabbalah.info whole-part shape. */
+const kiWholePartItems = (
+  blocks: { tag: string; html: string }[],
+): { n: number; html: string }[] | undefined => {
+  const { seifim } = parseKiWholePart(
+    blocks.flatMap((block) => toKiBlock(block.tag, block.html) ?? []),
+  );
+  return seifim.length > 0
+    ? seifim.map((seif) => ({ n: seif.n, html: kiParagraphs(seif.paragraphs) }))
+    : undefined;
 };
 
 const heSefariaRef = (
@@ -710,7 +772,9 @@ const processWholePartDialect = async (
                   blocks,
                   declaredRange?.from ?? 1,
                 )
-              : undefined;
+              : lang !== "en"
+                ? kiWholePartItems(blocks)
+                : undefined;
 
         if (!items) {
           return {
@@ -730,7 +794,7 @@ const processWholePartDialect = async (
                 ? `${alignmentError} (document declares items ${declaredRange.from}-${declaredRange.to})`
                 : alignmentError,
             }
-          : { ok: true, value: items };
+          : { ok: true, value: { items, blocks } };
       },
     );
     for (const rejection of resolution.rejections) {
@@ -753,7 +817,7 @@ const processWholePartDialect = async (
         `${partId} whole-part: selected fallback ${resolution.selected.uid}/${resolution.selected.file.id}`,
       );
     }
-    const items = resolution.value;
+    const { items, blocks } = resolution.value;
     const { segments, warnings } = buildKmSourceSegments(
       items,
       groundSegments,
@@ -784,6 +848,46 @@ const processWholePartDialect = async (
         sefariaRef: segment.sefariaRef,
         segments: [segment],
       });
+    }
+
+    // Commentary, non-English only (English comes from kabbalah.info, where
+    // en-ai lets content vouch for each note). The page's notes are placed
+    // by structure — the same count under seif K as Hebrew chapter K — and
+    // each must then be of plausible length against the English edition of
+    // the same note, which kabbalah.info's verified import provides.
+    if (lang !== "en") {
+      const verdicts = alignWholePartCommentary(
+        targetChapters.flatMap((chapter) => {
+          const heItems = readHeCommentaryItemsOptional(
+            chapterDirFor(
+              partId,
+              `chapter-${String(chapter.number).padStart(2, "0")}`,
+            ),
+          );
+          return heItems && heItems.length > 0
+            ? [{ chapter: chapter.number, heItems, aiItems: null }]
+            : [];
+        }),
+        parseKiWholePart(
+          blocks.flatMap((block) => toKiBlock(block.tag, block.html) ?? []),
+        ).seifim,
+      );
+      for (const [number, verdict] of verdicts) {
+        if (verdict.status !== "imported") continue;
+        const chapterId = `${partId}/chapter-${String(number).padStart(2, "0")}`;
+        const dir = chapterDirFor(partId, chapterId.split("/")[1] as string);
+        const english = readEnglishCommentary(dir);
+        if (!english || !notesMatchEnglish(verdict.items, english)) {
+          acc.warnings.push(
+            `${chapterId} commentary: notes not of plausible length against the English edition — not written`,
+          );
+          continue;
+        }
+        acc.commentaryByChapter.set(chapterId, {
+          sefariaRef: heSefariaRef(dir, "commentary.he-jerusalem-1956.json"),
+          items: verdict.items,
+        });
+      }
     }
   }
 };
