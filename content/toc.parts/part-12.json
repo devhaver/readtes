@@ -3,8 +3,8 @@
     "id": "part-12",
     "number": 12,
     "title": {
-      "en": "Section XII",
-      "he": "חלק י״ב: לידה ויניקה של הז\"א"
+      "en": "The Birth and Yenika of Zeir Anpin",
+      "he": "לידה ויניקה של הז\"א"
     }
   },
   "volume": {
@@ -6241,7 +6241,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit",
+        "en": "Inner Observation",
         "he": "הסתכלות פנימית"
       },
       "availableLayers": [

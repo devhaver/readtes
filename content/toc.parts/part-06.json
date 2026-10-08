@@ -3,8 +3,8 @@
     "id": "part-06",
     "number": 6,
     "title": {
-      "en": "Section VI",
-      "he": "חלק ו׳: עשר הספירות של עולם הנקודים"
+      "en": "The World of Nekudim",
+      "he": "עשר הספירות של עולם הנקודים"
     }
   },
   "volume": {
@@ -1452,7 +1452,7 @@
       "kind": "inner-observation",
       "number": 1,
       "title": {
-        "en": "Histaklut Pnimit 1",
+        "en": "Inner Observation 1",
         "he": "הסתכלות פנימית א׳"
       },
       "availableLayers": [
@@ -1472,7 +1472,7 @@
       "kind": "inner-observation",
       "number": 2,
       "title": {
-        "en": "Histaklut Pnimit 2",
+        "en": "Inner Observation 2",
         "he": "הסתכלות פנימית ב׳"
       },
       "availableLayers": [

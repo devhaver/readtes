@@ -13,8 +13,8 @@
           "number": 1,
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
           "title": {
-            "en": "Section I",
-            "he": "חלק א׳: צמצום וקו"
+            "en": "Restriction and Line",
+            "he": "צמצום וקו"
           },
           "chapters": [
             {
@@ -101,7 +101,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit 1",
+                "en": "Inner Observation 1",
                 "he": "הסתכלות פנימית א׳"
               },
               "availableLayers": [
@@ -122,7 +122,7 @@
               "kind": "inner-observation",
               "number": 2,
               "title": {
-                "en": "Histaklut Pnimit 2",
+                "en": "Inner Observation 2",
                 "he": "הסתכלות פנימית ב׳"
               },
               "availableLayers": [
@@ -143,7 +143,7 @@
               "kind": "inner-observation",
               "number": 3,
               "title": {
-                "en": "Histaklut Pnimit 3",
+                "en": "Inner Observation 3",
                 "he": "הסתכלות פנימית ג׳"
               },
               "availableLayers": [
@@ -164,7 +164,7 @@
               "kind": "inner-observation",
               "number": 4,
               "title": {
-                "en": "Histaklut Pnimit 4",
+                "en": "Inner Observation 4",
                 "he": "הסתכלות פנימית ד׳"
               },
               "availableLayers": [
@@ -185,7 +185,7 @@
               "kind": "inner-observation",
               "number": 5,
               "title": {
-                "en": "Histaklut Pnimit 5",
+                "en": "Inner Observation 5",
                 "he": "הסתכלות פנימית ה׳"
               },
               "availableLayers": [
@@ -206,7 +206,7 @@
               "kind": "inner-observation",
               "number": 6,
               "title": {
-                "en": "Histaklut Pnimit 6",
+                "en": "Inner Observation 6",
                 "he": "הסתכלות פנימית ו׳"
               },
               "availableLayers": [
@@ -227,7 +227,7 @@
               "kind": "inner-observation",
               "number": 7,
               "title": {
-                "en": "Histaklut Pnimit 7",
+                "en": "Inner Observation 7",
                 "he": "הסתכלות פנימית ז׳"
               },
               "availableLayers": [
@@ -248,7 +248,7 @@
               "kind": "inner-observation",
               "number": 8,
               "title": {
-                "en": "Histaklut Pnimit 8",
+                "en": "Inner Observation 8",
                 "he": "הסתכלות פנימית ח׳"
               },
               "availableLayers": [
@@ -269,7 +269,7 @@
               "kind": "inner-observation",
               "number": 9,
               "title": {
-                "en": "Histaklut Pnimit 9",
+                "en": "Inner Observation 9",
                 "he": "הסתכלות פנימית ט׳"
               },
               "availableLayers": [
@@ -290,7 +290,7 @@
               "kind": "inner-observation",
               "number": 10,
               "title": {
-                "en": "Histaklut Pnimit 10",
+                "en": "Inner Observation 10",
                 "he": "הסתכלות פנימית י׳"
               },
               "availableLayers": [
@@ -394,8 +394,8 @@
           "number": 2,
           "sefariaNode": "Talmud Eser HaSefirot, Section II",
           "title": {
-            "en": "Section II",
-            "he": "חלק ב׳: עגולים ויושר"
+            "en": "Circles and Straightness",
+            "he": "עגולים ויושר"
           },
           "chapters": [
             {
@@ -453,7 +453,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit 1",
+                "en": "Inner Observation 1",
                 "he": "הסתכלות פנימית א׳"
               },
               "availableLayers": [
@@ -474,7 +474,7 @@
               "kind": "inner-observation",
               "number": 2,
               "title": {
-                "en": "Histaklut Pnimit 2",
+                "en": "Inner Observation 2",
                 "he": "הסתכלות פנימית ב׳"
               },
               "availableLayers": [
@@ -495,7 +495,7 @@
               "kind": "inner-observation",
               "number": 3,
               "title": {
-                "en": "Histaklut Pnimit 3",
+                "en": "Inner Observation 3",
                 "he": "הסתכלות פנימית ג׳"
               },
               "availableLayers": [
@@ -516,7 +516,7 @@
               "kind": "inner-observation",
               "number": 4,
               "title": {
-                "en": "Histaklut Pnimit 4",
+                "en": "Inner Observation 4",
                 "he": "הסתכלות פנימית ד׳"
               },
               "availableLayers": [
@@ -537,7 +537,7 @@
               "kind": "inner-observation",
               "number": 5,
               "title": {
-                "en": "Histaklut Pnimit 5",
+                "en": "Inner Observation 5",
                 "he": "הסתכלות פנימית ה׳"
               },
               "availableLayers": [
@@ -558,7 +558,7 @@
               "kind": "inner-observation",
               "number": 6,
               "title": {
-                "en": "Histaklut Pnimit 6",
+                "en": "Inner Observation 6",
                 "he": "הסתכלות פנימית ו׳"
               },
               "availableLayers": [
@@ -579,7 +579,7 @@
               "kind": "inner-observation",
               "number": 7,
               "title": {
-                "en": "Histaklut Pnimit 7",
+                "en": "Inner Observation 7",
                 "he": "הסתכלות פנימית ז׳"
               },
               "availableLayers": [
@@ -600,7 +600,7 @@
               "kind": "inner-observation",
               "number": 8,
               "title": {
-                "en": "Histaklut Pnimit 8",
+                "en": "Inner Observation 8",
                 "he": "הסתכלות פנימית ח׳"
               },
               "availableLayers": [
@@ -621,7 +621,7 @@
               "kind": "inner-observation",
               "number": 9,
               "title": {
-                "en": "Histaklut Pnimit 9",
+                "en": "Inner Observation 9",
                 "he": "הסתכלות פנימית ט׳"
               },
               "availableLayers": [
@@ -642,7 +642,7 @@
               "kind": "inner-observation",
               "number": 10,
               "title": {
-                "en": "Histaklut Pnimit 10",
+                "en": "Inner Observation 10",
                 "he": "הסתכלות פנימית י׳"
               },
               "availableLayers": [
@@ -745,8 +745,8 @@
           "number": 3,
           "sefariaNode": "Talmud Eser HaSefirot, Section III",
           "title": {
-            "en": "Section III",
-            "he": "חלק ג׳: אור ישר ואור חוזר"
+            "en": "Direct Light and Reflected Light",
+            "he": "אור ישר ואור חוזר"
           },
           "chapters": [
             {
@@ -1132,7 +1132,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit 1",
+                "en": "Inner Observation 1",
                 "he": "הסתכלות פנימית א׳"
               },
               "availableLayers": [
@@ -1153,7 +1153,7 @@
               "kind": "inner-observation",
               "number": 2,
               "title": {
-                "en": "Histaklut Pnimit 2",
+                "en": "Inner Observation 2",
                 "he": "הסתכלות פנימית ב׳"
               },
               "availableLayers": [
@@ -1174,7 +1174,7 @@
               "kind": "inner-observation",
               "number": 3,
               "title": {
-                "en": "Histaklut Pnimit 3",
+                "en": "Inner Observation 3",
                 "he": "הסתכלות פנימית ג׳"
               },
               "availableLayers": [
@@ -1195,7 +1195,7 @@
               "kind": "inner-observation",
               "number": 4,
               "title": {
-                "en": "Histaklut Pnimit 4",
+                "en": "Inner Observation 4",
                 "he": "הסתכלות פנימית ד׳"
               },
               "availableLayers": [
@@ -1216,7 +1216,7 @@
               "kind": "inner-observation",
               "number": 5,
               "title": {
-                "en": "Histaklut Pnimit 5",
+                "en": "Inner Observation 5",
                 "he": "הסתכלות פנימית ה׳"
               },
               "availableLayers": [
@@ -1236,7 +1236,7 @@
               "kind": "inner-observation",
               "number": 6,
               "title": {
-                "en": "Histaklut Pnimit 6",
+                "en": "Inner Observation 6",
                 "he": "הסתכלות פנימית ו׳"
               },
               "availableLayers": [
@@ -1257,7 +1257,7 @@
               "kind": "inner-observation",
               "number": 7,
               "title": {
-                "en": "Histaklut Pnimit 7",
+                "en": "Inner Observation 7",
                 "he": "הסתכלות פנימית ז׳"
               },
               "availableLayers": [
@@ -1277,7 +1277,7 @@
               "kind": "inner-observation",
               "number": 8,
               "title": {
-                "en": "Histaklut Pnimit 8",
+                "en": "Inner Observation 8",
                 "he": "הסתכלות פנימית ח׳"
               },
               "availableLayers": [
@@ -1298,7 +1298,7 @@
               "kind": "inner-observation",
               "number": 9,
               "title": {
-                "en": "Histaklut Pnimit 9",
+                "en": "Inner Observation 9",
                 "he": "הסתכלות פנימית ט׳"
               },
               "availableLayers": [
@@ -1319,7 +1319,7 @@
               "kind": "inner-observation",
               "number": 10,
               "title": {
-                "en": "Histaklut Pnimit 10",
+                "en": "Inner Observation 10",
                 "he": "הסתכלות פנימית י׳"
               },
               "availableLayers": [
@@ -1340,7 +1340,7 @@
               "kind": "inner-observation",
               "number": 11,
               "title": {
-                "en": "Histaklut Pnimit 11",
+                "en": "Inner Observation 11",
                 "he": "הסתכלות פנימית י״א"
               },
               "availableLayers": [
@@ -1361,7 +1361,7 @@
               "kind": "inner-observation",
               "number": 12,
               "title": {
-                "en": "Histaklut Pnimit 12",
+                "en": "Inner Observation 12",
                 "he": "הסתכלות פנימית י״ב"
               },
               "availableLayers": [
@@ -1382,7 +1382,7 @@
               "kind": "inner-observation",
               "number": 13,
               "title": {
-                "en": "Histaklut Pnimit 13",
+                "en": "Inner Observation 13",
                 "he": "הסתכלות פנימית י״ג"
               },
               "availableLayers": [
@@ -1403,7 +1403,7 @@
               "kind": "inner-observation",
               "number": 14,
               "title": {
-                "en": "Histaklut Pnimit 14",
+                "en": "Inner Observation 14",
                 "he": "הסתכלות פנימית י״ד"
               },
               "availableLayers": [
@@ -1424,7 +1424,7 @@
               "kind": "inner-observation",
               "number": 15,
               "title": {
-                "en": "Histaklut Pnimit 15",
+                "en": "Inner Observation 15",
                 "he": "הסתכלות פנימית ט״ו"
               },
               "availableLayers": [
@@ -1527,8 +1527,8 @@
           "number": 4,
           "sefariaNode": "Talmud Eser HaSefirot, Section IV",
           "title": {
-            "en": "Section IV",
-            "he": "חלק ד׳: עשר הספירות של עקודים"
+            "en": "The Ten Sefirot of Akudim",
+            "he": "עשר הספירות של עקודים"
           },
           "chapters": [
             {
@@ -1690,7 +1690,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit 1",
+                "en": "Inner Observation 1",
                 "he": "הסתכלות פנימית א׳"
               },
               "availableLayers": [
@@ -1711,7 +1711,7 @@
               "kind": "inner-observation",
               "number": 2,
               "title": {
-                "en": "Histaklut Pnimit 2",
+                "en": "Inner Observation 2",
                 "he": "הסתכלות פנימית ב׳"
               },
               "availableLayers": [
@@ -1732,7 +1732,7 @@
               "kind": "inner-observation",
               "number": 3,
               "title": {
-                "en": "Histaklut Pnimit 3",
+                "en": "Inner Observation 3",
                 "he": "הסתכלות פנימית ג׳"
               },
               "availableLayers": [
@@ -1753,7 +1753,7 @@
               "kind": "inner-observation",
               "number": 4,
               "title": {
-                "en": "Histaklut Pnimit 4",
+                "en": "Inner Observation 4",
                 "he": "הסתכלות פנימית ד׳"
               },
               "availableLayers": [
@@ -1774,7 +1774,7 @@
               "kind": "inner-observation",
               "number": 5,
               "title": {
-                "en": "Histaklut Pnimit 5",
+                "en": "Inner Observation 5",
                 "he": "הסתכלות פנימית ה׳"
               },
               "availableLayers": [
@@ -1795,7 +1795,7 @@
               "kind": "inner-observation",
               "number": 6,
               "title": {
-                "en": "Histaklut Pnimit 6",
+                "en": "Inner Observation 6",
                 "he": "הסתכלות פנימית ו׳"
               },
               "availableLayers": [
@@ -1912,8 +1912,8 @@
           "number": 5,
           "sefariaNode": "Talmud Eser HaSefirot, Section V",
           "title": {
-            "en": "Section V",
-            "he": "חלק ה׳: ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי"
+            "en": "Akudim in the Second Expansion: Matei ve Lo Matei",
+            "he": "ע\"ס דעקודים בהתפשטות השניה הנקראים מטי ולא מטי"
           },
           "chapters": [
             {
@@ -3499,8 +3499,8 @@
           "number": 6,
           "sefariaNode": "Talmud Eser HaSefirot, Section VI",
           "title": {
-            "en": "Section VI",
-            "he": "חלק ו׳: עשר הספירות של עולם הנקודים"
+            "en": "The World of Nekudim",
+            "he": "עשר הספירות של עולם הנקודים"
           },
           "chapters": [
             {
@@ -4939,7 +4939,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit 1",
+                "en": "Inner Observation 1",
                 "he": "הסתכלות פנימית א׳"
               },
               "availableLayers": [
@@ -4959,7 +4959,7 @@
               "kind": "inner-observation",
               "number": 2,
               "title": {
-                "en": "Histaklut Pnimit 2",
+                "en": "Inner Observation 2",
                 "he": "הסתכלות פנימית ב׳"
               },
               "availableLayers": [
@@ -5101,8 +5101,8 @@
           "number": 7,
           "sefariaNode": "Talmud Eser HaSefirot, Section VII",
           "title": {
-            "en": "Section VII",
-            "he": "חלק ז׳: עשר הספירות דז' מלכין קדמאין דמיתו"
+            "en": "The Seven Kings That Died",
+            "he": "עשר הספירות דז' מלכין קדמאין דמיתו"
           },
           "chapters": [
             {
@@ -6881,7 +6881,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit 1",
+                "en": "Inner Observation 1",
                 "he": "הסתכלות פנימית א׳"
               },
               "availableLayers": [
@@ -6901,7 +6901,7 @@
               "kind": "inner-observation",
               "number": 2,
               "title": {
-                "en": "Histaklut Pnimit 2",
+                "en": "Inner Observation 2",
                 "he": "הסתכלות פנימית ב׳"
               },
               "availableLayers": [
@@ -7013,8 +7013,8 @@
           "number": 8,
           "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
           "title": {
-            "en": "Section VIII",
-            "he": "חלק ח׳: עשר הספירות של עולם האצילות"
+            "en": "The Ten Sefirot of the World of Atzilut",
+            "he": "עשר הספירות של עולם האצילות"
           },
           "chapters": [
             {
@@ -9241,7 +9241,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit",
+                "en": "Inner Observation",
                 "he": "הסתכלות פנימית"
               },
               "availableLayers": [
@@ -9343,8 +9343,8 @@
           "number": 9,
           "sefariaNode": "Talmud Eser HaSefirot, Section IX",
           "title": {
-            "en": "Section IX",
-            "he": "חלק ט׳: זווגי הספירות"
+            "en": "The Couplings of the Sefirot",
+            "he": "זווגי הספירות"
           },
           "chapters": [
             {
@@ -11784,7 +11784,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit",
+                "en": "Inner Observation",
                 "he": "הסתכלות פנימית"
               },
               "availableLayers": [
@@ -11886,8 +11886,8 @@
           "number": 10,
           "sefariaNode": "Talmud Eser HaSefirot, Section X",
           "title": {
-            "en": "Section X",
-            "he": "חלק י׳: עיבור ראשון דז\"א"
+            "en": "The First Ibur of Zeir Anpin",
+            "he": "עיבור ראשון דז\"א"
           },
           "chapters": [
             {
@@ -15251,7 +15251,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit",
+                "en": "Inner Observation",
                 "he": "הסתכלות פנימית"
               },
               "availableLayers": [
@@ -15363,8 +15363,8 @@
           "number": 11,
           "sefariaNode": "Talmud Eser HaSefirot, Section XI",
           "title": {
-            "en": "Section XI",
-            "he": "חלק י״א: תיקון אורות ניצוצין וכלים בעובר ועיבור ב'"
+            "en": "Correcting Lights, Sparks and Vessels in the Ubar, and the Second Ibur",
+            "he": "תיקון אורות ניצוצין וכלים בעובר ועיבור ב'"
           },
           "chapters": [
             {
@@ -18718,8 +18718,8 @@
           "number": 12,
           "sefariaNode": "Talmud Eser HaSefirot, Section XII",
           "title": {
-            "en": "Section XII",
-            "he": "חלק י״ב: לידה ויניקה של הז\"א"
+            "en": "The Birth and Yenika of Zeir Anpin",
+            "he": "לידה ויניקה של הז\"א"
           },
           "chapters": [
             {
@@ -24947,7 +24947,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit",
+                "en": "Inner Observation",
                 "he": "הסתכלות פנימית"
               },
               "availableLayers": [
@@ -25059,8 +25059,8 @@
           "number": 13,
           "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
           "title": {
-            "en": "Section XIII",
-            "he": "חלק י״ג: תיקוני רישא ודיקנא דא\"א"
+            "en": "The Corrections of the Head and Beard of Arich Anpin",
+            "he": "תיקוני רישא ודיקנא דא\"א"
           },
           "chapters": [
             {
@@ -29728,7 +29728,7 @@
               "kind": "inner-observation",
               "number": 1,
               "title": {
-                "en": "Histaklut Pnimit",
+                "en": "Inner Observation",
                 "he": "הסתכלות פנימית"
               },
               "availableLayers": [
@@ -29830,8 +29830,8 @@
           "number": 14,
           "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
           "title": {
-            "en": "Section XIV",
-            "he": "חלק י״ד: מוחין דגדלות של זעיר אנפין"
+            "en": "The Mochin of Gadlut of Zeir Anpin",
+            "he": "מוחין דגדלות של זעיר אנפין"
           },
           "chapters": [
             {
@@ -34879,8 +34879,8 @@
           "number": 15,
           "sefariaNode": "Talmud Eser HaSefirot, Section XV",
           "title": {
-            "en": "Section XV",
-            "he": "חלק ט״ו: בנין הנוקבא דז\"א"
+            "en": "Building the Nukva of Zeir Anpin",
+            "he": "בנין הנוקבא דז\"א"
           },
           "chapters": [
             {
@@ -39903,8 +39903,8 @@
           "number": 16,
           "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
           "title": {
-            "en": "Section XVI",
-            "he": "חלק ט״ז: ג' העולמות בריאה יצירה ועשיה"
+            "en": "The Three Worlds: Beria, Yetzira and Assiya",
+            "he": "ג' העולמות בריאה יצירה ועשיה"
           },
           "chapters": [
             {
