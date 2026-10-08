@@ -38,7 +38,9 @@ useSeifTapActivation(containerRef, (seifN) =>
 </script>
 
 <template>
-  <div class="mx-auto flex max-w-[65ch] flex-col gap-6">
+  <div
+    class="mx-auto flex max-w-[65ch] flex-col gap-6 text-[length:var(--fit,1rem)]"
+  >
     <ReaderChapterIntro :summary-items="[]" :source-segments="segments" />
 
     <ol v-if="segments.length > 0" class="flex flex-col gap-6">

@@ -26,6 +26,7 @@ import type {
   CommentaryItem,
   SourceSegment,
 } from "../../shared/types/content.ts";
+import { kiParagraphs } from "./ki-page.ts";
 import {
   acceptedPairs,
   alignBySimilarity,
@@ -155,9 +156,7 @@ export const alignWholePartCommentary = (
         break;
       }
       const html = tidy(
-        placement
-          .map((unit) => kiDibburHtml(units[unit] as KiDibbur))
-          .join("<br>"),
+        placement.map((unit) => kiDibburHtml(units[unit] as KiDibbur)).join(""),
       );
       const ratio = plain(html).length / Math.max(1, plain(he.html).length);
       if (ratio < NOTE_RATIO_BAND[0] || ratio > NOTE_RATIO_BAND[1]) {
@@ -228,7 +227,7 @@ export const alignWholePartSource = (
       });
       continue;
     }
-    const html = tidy(seif.paragraphs.join("<br>"));
+    const html = tidy(kiParagraphs(seif.paragraphs));
     if ((textCount.get(plain(seif.paragraphs.join(" "))) ?? 0) > 1) {
       verdicts.set(chapter, {
         status: "refused",

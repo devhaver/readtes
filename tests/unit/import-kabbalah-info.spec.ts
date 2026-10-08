@@ -158,7 +158,7 @@ describe("alignKiChapterPage", () => {
     expect(result.segments[0]?.html).not.toContain("<strong>");
     expect(result.items.map((item) => item.html)).toEqual([
       "<strong>First words:</strong> First note.",
-      "<strong>Second words:</strong> Second note.<br>Second note, continued.",
+      '<span class="tes-para"><strong>Second words:</strong> Second note.</span><span class="tes-para">Second note, continued.</span>',
       "<strong>Third words:</strong> Third note.",
     ]);
   });
@@ -425,7 +425,7 @@ describe("Inner Observation", () => {
       "Circles are regarded as GAR.",
     ]);
     expect(kiObservationUnitHtml(units[1] as (typeof units)[number])).toBe(
-      "<small>Straightness is more internal.</small><br>In straightness the internal line is more important than the circle.",
+      '<span class="tes-para"><small>Straightness is more internal.</small></span><span class="tes-para">In straightness the internal line is more important than the circle.</span>',
     );
   });
 
@@ -483,7 +483,7 @@ describe("Inner Observation", () => {
     expect(verdict?.status).toBe("imported");
     expect(verdict?.segments.map((s) => s.html)).toEqual([
       "The first item speaks of the manna and of bestowal at length.",
-      "<small>How the soul is a part of Godliness</small><br>The soul is a part of Godliness above, as the Kabbalists wrote.",
+      '<span class="tes-para"><small>How the soul is a part of Godliness</small></span><span class="tes-para">The soul is a part of Godliness above, as the Kabbalists wrote.</span>',
     ]);
   });
 

@@ -28,6 +28,8 @@ const props = defineProps<{
   /** The chapter's `he-jerusalem-1956` commentary items, if it has that version — for the inline "switch to Hebrew" notice. */
   hebrewItems: CommentaryItem[] | null;
   hebrewVersionId: string;
+  /** The first pane's label key — see `sourcePaneLabelKey`. */
+  sourceLabelKey?: string;
 }>();
 
 const emit = defineEmits<{
@@ -171,7 +173,7 @@ const goToFullCommentary = async () => {
         chapter, which issues #79/#87 will create).
       -->
       <ReaderPaneHeader
-        :title="t('reader.pane.source')"
+        :title="t(sourceLabelKey ?? 'reader.pane.source')"
         :language-options="sourceLanguageOptions"
         :model-value="sourceLanguage"
         :meta="sourceMeta"
@@ -268,9 +270,7 @@ const goToFullCommentary = async () => {
           :key="group.section"
           class="flex flex-col gap-4"
         >
-          <h3
-            class="font-display text-xs tracking-wide text-(--text-muted) uppercase"
-          >
+          <h3 class="font-semibold text-xs text-(--text-muted)">
             {{ t(`reader.commentarySection.${group.section}`) }}
           </h3>
 

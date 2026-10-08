@@ -25,7 +25,7 @@ import {
   stripKiLeadingNumber,
   unboldKiHtml,
 } from "./ki-chapter-page.ts";
-import type { KiBlock } from "./ki-page.ts";
+import { kiParagraphs, type KiBlock } from "./ki-page.ts";
 
 export interface KiDibbur {
   /** Seif whose notes this sits among. */
@@ -127,7 +127,10 @@ export const parseKiWholePart = (blocks: KiBlock[]): KiWholePart => {
 export const kiDibburHtml = (dibbur: KiDibbur): string => {
   const head = `<strong>${dibbur.headHtml}</strong>`;
   return dibbur.bodyHtml.length > 0
-    ? `${head} ${dibbur.bodyHtml.join("<br>")}`
+    ? kiParagraphs([
+        `${head} ${dibbur.bodyHtml[0] ?? ""}`,
+        ...dibbur.bodyHtml.slice(1),
+      ])
     : head;
 };
 
