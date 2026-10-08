@@ -50,9 +50,16 @@ import {
 import { createHttpClient } from "./lib/http-client.ts";
 import { alignKiChapterPage } from "./lib/ki-chapter-page.ts";
 import {
+  alignObservation,
+  alignObservationByRuns,
+  parseKiObservationUnits,
+  type ObservationTarget,
+} from "./lib/ki-inner-observation.ts";
+import {
   classifyKiPage,
   parseKiBlocks,
   parseKiToc,
+  type KiPageKind,
   type KiPageRef,
 } from "./lib/ki-page.ts";
 import {
@@ -264,6 +271,85 @@ const processWholePartPage = (
   }
 };
 
+const IMPORTED_KINDS = new Set<KiPageKind>([
+  "chapter",
+  "whole-part",
+  "inner-observation",
+  "cause-and-consequence",
+]);
+
+/**
+ * On parts 6 and 7, Sefaria's second Histaklut node is the Cause and
+ * Consequence essay (see COVERAGE.md, issue #86). The site publishes it on
+ * a page of its own, so it is aligned from that page, never from the
+ * Inner Observation page.
+ */
+const ESSAY_CHAPTER_SLUG = "inner-observation-02";
+const PARTS_WITH_ESSAY = new Set([6, 7]);
+
+const observationChapterSlugs = (ref: KiPageRef): string[] => {
+  const all = readdirSync(
+    join(contentDir, "parts", partIdFor(ref.part), "chapters"),
+  )
+    .filter((slug) => slug.startsWith("inner-observation-"))
+    .sort();
+  if (ref.kind === "cause-and-consequence") {
+    return all.filter((slug) => slug === ESSAY_CHAPTER_SLUG);
+  }
+  return PARTS_WITH_ESSAY.has(ref.part)
+    ? all.filter((slug) => slug !== ESSAY_CHAPTER_SLUG)
+    : all;
+};
+
+/**
+ * Inner Observation (and the Cause and Consequence essay): items pair with
+ * Hebrew segments one-to-one where the counts agree, else each segment
+ * takes a run of the page's paragraphs (`ki-inner-observation.ts`).
+ */
+const processObservationPage = (
+  ref: KiPageRef,
+  html: string,
+  planned: Planned,
+): void => {
+  const targets: ObservationTarget[] = observationChapterSlugs(ref).flatMap(
+    (slug) => {
+      const chapterId = `${partIdFor(ref.part)}/${slug}`;
+      const he = readLayer(chapterId, "source", "he-jerusalem-1956") ?? [];
+      const ai = readLayer(chapterId, "source", "en-ai");
+      return he.map((segment, i) => ({
+        chapterId,
+        segment,
+        reference: ai?.[i]?.html ?? null,
+      }));
+    },
+  );
+  if (targets.length === 0) {
+    planned.notes.push(`${ref.title}: no Hebrew chapters to align to`);
+    return;
+  }
+  const blocks = parseKiBlocks(html);
+  const byItems = alignObservation(targets, parseKiObservationUnits(blocks));
+  // Item pairing where it held; the run split only for chapters it refused.
+  const byRuns = byItems.every((v) => v.status === "imported")
+    ? []
+    : alignObservationByRuns(targets, blocks);
+  const verdicts = byItems.map((verdict) =>
+    verdict.status === "imported"
+      ? verdict
+      : (byRuns.find((v) => v.chapterId === verdict.chapterId) ?? verdict),
+  );
+  for (const verdict of verdicts) {
+    plan(
+      planned,
+      verdict.chapterId,
+      "source",
+      verdict.status === "imported"
+        ? { status: "imported", items: verdict.segments }
+        : { status: "refused", reason: verdict.reason ?? "refused" },
+    );
+  }
+};
+
 const buildCoverageSection = (planned: Planned): string => {
   const rows = new Map<string, Record<string, number>>();
   for (const outcome of planned.outcomes) {
@@ -332,7 +418,7 @@ export const main = async (argv: string[]): Promise<void> => {
 
   for (const ref of refs) {
     if (!scopedParts.has(ref.part)) continue;
-    if (ref.kind !== "chapter" && ref.kind !== "whole-part") {
+    if (!IMPORTED_KINDS.has(ref.kind)) {
       planned.notes.push(
         `${ref.title}: ${ref.kind} pages are not imported yet`,
       );
@@ -341,7 +427,9 @@ export const main = async (argv: string[]): Promise<void> => {
     console.log(`Fetching ${ref.title}...`);
     const html = await client.getText(ref.url);
     if (ref.kind === "chapter") processChapterPage(ref, html, planned);
-    else processWholePartPage(ref, html, planned);
+    else if (ref.kind === "whole-part") {
+      processWholePartPage(ref, html, planned);
+    } else processObservationPage(ref, html, planned);
   }
 
   // --- Write, and sweep this version's files the run no longer produces ----

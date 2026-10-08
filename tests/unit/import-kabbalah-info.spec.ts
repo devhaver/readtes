@@ -2,6 +2,12 @@ import { describe, expect, it } from "vitest";
 import type { CommentaryItem, SourceSegment } from "~~/shared/types/content";
 import { alignKiChapterPage } from "../../scripts/lib/ki-chapter-page.ts";
 import {
+  alignObservation,
+  kiObservationUnitHtml,
+  parseKiObservationUnits,
+  splitIntoRuns,
+} from "../../scripts/lib/ki-inner-observation.ts";
+import {
   classifyKiPage,
   parseKiBlocks,
   parseKiToc,
@@ -383,5 +389,125 @@ describe("parseKmArgs scriptName", () => {
     expect(() => parseKmArgs([], "import-kabbalah-info")).toThrow(
       "Usage: import-kabbalah-info",
     );
+  });
+});
+
+describe("Inner Observation", () => {
+  const segment = (n: number, length: number): SourceSegment => ({
+    n,
+    html: "א".repeat(length),
+    anchors: [],
+  });
+  const blocks = parseKiBlocks(
+    page(
+      [
+        "<h3><strong>Chapter One</strong></h3>",
+        "<h5><strong>Circles are regarded as GAR.</strong></h5>",
+        "<p>1. The ARI spoke very little of the circles of the Sefirot and Ein Sof.</p>",
+        "<p>Conversely the restriction of the vessel shows the circles plainly.</p>",
+        "<h5><strong>Straightness is more internal.</strong></h5>",
+        "<p>2. In straightness the internal line is more important than the circle.</p>",
+      ].join(""),
+    ),
+  );
+
+  it("splits the page at item numerals, headings travelling with the next item", () => {
+    const units = parseKiObservationUnits(blocks);
+    expect(units.map((u) => u.n)).toEqual([1, 2]);
+    expect(units[0]?.preamble.map((b) => b.text)).toEqual([
+      "Chapter One",
+      "Circles are regarded as GAR.",
+    ]);
+    expect(kiObservationUnitHtml(units[1] as (typeof units)[number])).toBe(
+      "<small>Straightness is more internal.</small><br>In straightness the internal line is more important than the circle.",
+    );
+  });
+
+  it("pairs items with segments one-to-one and checks each against its neighbours", () => {
+    const targets = [
+      {
+        chapterId: "part-02/inner-observation-01",
+        segment: segment(1, 70),
+        reference:
+          "The ARI spoke little of the circles, Ein Sof and restriction",
+      },
+      {
+        chapterId: "part-02/inner-observation-01",
+        segment: segment(2, 50),
+        reference: "In straightness the internal line is more important",
+      },
+    ];
+    const [verdict] = alignObservation(
+      targets,
+      parseKiObservationUnits(blocks),
+    );
+    expect(verdict?.status).toBe("imported");
+    expect(verdict?.segments.map((s) => s.n)).toEqual([1, 2]);
+  });
+
+  it("moves a plain sub-heading to the item the Hebrew opens with it", () => {
+    const plainSubtitles = parseKiBlocks(
+      page(
+        [
+          "<p>1) The first item speaks of the manna and of bestowal at length.</p>",
+          "<p>How the soul is a part of Godliness</p>",
+          "<p>2) The soul is a part of Godliness above, as the Kabbalists wrote.</p>",
+        ].join(""),
+      ),
+    );
+    const [verdict] = alignObservation(
+      [
+        {
+          chapterId: "part-01/inner-observation-01",
+          segment: segment(1, 40),
+          reference: "The first item: the manna and bestowal",
+        },
+        {
+          chapterId: "part-01/inner-observation-01",
+          segment: {
+            ...segment(2, 40),
+            html: `<small>כותרת</small><br>${"א".repeat(40)}`,
+          },
+          reference:
+            "How the soul is a part of Godliness: the soul, as the Kabbalists wrote",
+        },
+      ],
+      parseKiObservationUnits(plainSubtitles),
+    );
+    expect(verdict?.status).toBe("imported");
+    expect(verdict?.segments.map((s) => s.html)).toEqual([
+      "The first item speaks of the manna and of bestowal at length.",
+      "<small>How the soul is a part of Godliness</small><br>The soul is a part of Godliness above, as the Kabbalists wrote.",
+    ]);
+  });
+
+  it("refuses one-to-one pairing when the counts differ", () => {
+    const [verdict] = alignObservation(
+      [
+        {
+          chapterId: "part-02/inner-observation-01",
+          segment: segment(1, 70),
+          reference: "x",
+        },
+      ],
+      parseKiObservationUnits(blocks),
+    );
+    expect(verdict?.reason).toContain("page has 2 items");
+  });
+
+  it("splits blocks into one run per segment by similarity", () => {
+    const starts = splitIntoRuns(blocks, [
+      "Circles GAR: the ARI spoke little of the circles and Ein Sof; the restriction shows the circles",
+      "Straightness internal: in straightness the internal line is more important",
+    ]);
+    expect(starts).toEqual([0, 4]);
+  });
+
+  it("classifies the Cause and Consequence essay apart from its Q&A", () => {
+    const kinds = [
+      "Part 6 - Cause and Consequence",
+      "Part 6 - Questions Regarding Cause and Consequence",
+    ].map((title) => classifyKiPage({ url: "u", title })?.kind);
+    expect(kinds).toEqual(["cause-and-consequence", "other"]);
   });
 });

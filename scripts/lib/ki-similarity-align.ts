@@ -229,3 +229,38 @@ export const acceptedPairs = (steps: AlignmentStep[]): Map<number, number> => {
   });
   return accepted;
 };
+
+/**
+ * A pairwise scorer over a fixed set of documents (their idf weights), for
+ * checks that compare individual pairs rather than align whole sequences.
+ */
+export const similarityScorer = (
+  documents: string[],
+): ((a: string, b: string) => number) => {
+  const idf = buildIdf(documents.map(similarityTokens));
+  return (a, b) =>
+    cosine(
+      vectorize(similarityTokens(a), idf),
+      vectorize(similarityTokens(b), idf),
+    );
+};
+
+export interface VectorSpace {
+  vector: (html: string) => Map<string, number>;
+  /** Adds `b` into `a` in place and returns `a`. */
+  add: (a: Map<string, number>, b: Map<string, number>) => Map<string, number>;
+  cosine: (a: Map<string, number>, b: Map<string, number>) => number;
+}
+
+/** The scorer's pieces, for callers that build up vectors incrementally. */
+export const vectorSpace = (documents: string[]): VectorSpace => {
+  const idf = buildIdf(documents.map(similarityTokens));
+  return {
+    vector: (html) => vectorize(similarityTokens(html), idf),
+    add: (a, b) => {
+      for (const [word, weight] of b) a.set(word, (a.get(word) ?? 0) + weight);
+      return a;
+    },
+    cosine,
+  };
+};
