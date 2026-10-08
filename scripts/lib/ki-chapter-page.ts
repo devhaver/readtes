@@ -281,7 +281,23 @@ export const alignKiChapterPage = (
 
     const firstAnchor = next.anchors?.[0];
     if (firstAnchor === undefined) return true;
-    return printedMarkers(block.text)[0] === numeralByAnchor.get(firstAnchor);
+    const expected = numeralByAnchor.get(firstAnchor);
+    const ownMarkers = printedMarkers(block.text);
+    if (ownMarkers.length > 0) return ownMarkers[0] === expected;
+    // The seif's first marker may sit in its second paragraph (part 3
+    // chapter 10's seif 6). Look ahead through the seif's own paragraphs —
+    // up to the next numbered block or commentary marker — for it. A
+    // synopsis line cannot pass: synopsis lines run back to back, each the
+    // next numbered block, with no markers between.
+    for (let i = blockIndex + 1; i < blocks.length; i += 1) {
+      const ahead = blocks[i] as KiBlock;
+      if (isKiCommentaryMarker(ahead) || kiLeadingNumber(ahead) !== undefined) {
+        return false;
+      }
+      const markers = printedMarkers(ahead.text);
+      if (markers.length > 0) return markers[0] === expected;
+    }
+    return false;
   };
 
   /**
@@ -311,7 +327,9 @@ export const alignKiChapterPage = (
     );
   };
 
+  let blockIndex = -1;
   for (const block of blocks) {
+    blockIndex += 1;
     const text = block.text;
 
     if (isKiCommentaryMarker(block)) {
