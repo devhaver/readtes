@@ -233,7 +233,7 @@ const siteUrl = (
 // visitor saw the default layout and then a jump. Keys must match the
 // composables' `STORAGE_KEY`s; see `useRootDataAttribute`. Wrapped in
 // try/catch: storage can be blocked, and a head script must never throw.
-const READER_PREFS_HEAD_SCRIPT = `(function(){try{var d=document.documentElement,g=function(k){return localStorage.getItem(k)};var s=g("readtes:reading-scale");if(s&&/^[1-4]$/.test(s))d.setAttribute("data-pref-scale",s);if(g("readtes:reader-third-pane-open")==="false")d.setAttribute("data-pref-third-pane","closed");if(g("readtes:reader-chrome-collapsed")==="true")d.setAttribute("data-pref-chrome","collapsed");var m=g("readtes:reader-mode");if(m==="study"||m==="panes"||m==="original")d.setAttribute("data-pref-mode",m)}catch(e){}})();`;
+const READER_PREFS_HEAD_SCRIPT = `(function(){try{var d=document.documentElement,g=function(k){return localStorage.getItem(k)};var s=g("readtes:reading-scale");if(s&&/^[1-4]$/.test(s))d.setAttribute("data-pref-scale",s);var o=g("readtes:reader-third-pane-open");if(o==="false"||(o!=="true"&&!matchMedia("(min-width: 80rem)").matches))d.setAttribute("data-pref-third-pane","closed");if(g("readtes:reader-chrome-collapsed")==="true")d.setAttribute("data-pref-chrome","collapsed");var m=g("readtes:reader-mode");if(m==="study"||m==="panes"||m==="original")d.setAttribute("data-pref-mode",m)}catch(e){}})();`;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

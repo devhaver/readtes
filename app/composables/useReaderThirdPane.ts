@@ -114,10 +114,17 @@ const createReaderThirdPane = (): ReaderThirdPane => {
   );
 
   // Lets CSS hide a collapsed pane before hydration — see
-  // `useRootDataAttribute`.
+  // `useRootDataAttribute`. Same rule as `open` below, minus the hydration
+  // gate: the persisted choice, else the viewport. `matchMedia` is read
+  // directly because `isWide` is false until mounted, which would flash a
+  // wide viewport closed. The head script applies the identical rule.
   useRootDataAttribute(
     "data-pref-third-pane",
-    computed(() => (persistedOpen.value ? null : "closed")),
+    computed(() => {
+      void isWide.value;
+      const wide = window.matchMedia(WIDE_QUERY).matches;
+      return (persistedOpen.value ?? wide) ? null : "closed";
+    }),
   );
 
   // Gates the persisted read until after mount, same reason as
