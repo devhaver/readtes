@@ -154,7 +154,7 @@
     }
   },
   "home": {
-    "description": "Talmud Eser Sefirot, lido pelo texto do Ari, pela Luz Interior e pela Observação Interior — em português, inglês e hebraico.",
+    "description": "Talmud Eser Sefirot, lido pelo texto do Ari, pela Luz Interior e pela Observação Interior — em hebraico e inglês, com traduções da Bnei Baruch de algumas partes para russo, ucraniano, espanhol e francês, e interface em nove idiomas.",
     "browseVolumes": "Ver os seis volumes",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -202,7 +202,7 @@
   },
   "about": {
     "title": "Sobre o Read TES",
-    "intro": "O Read TES é uma leitura interativa e independente do Talmud Eser Sefirot — o comentário fundamental de Baal HaSulam sobre a Cabala do Ari — criada por alunos da Academia de Cabala Bnei Baruch para quem estuda o texto de perto, em hebraico ou em português.",
+    "intro": "O Read TES é uma leitura interativa e independente do Talmud Eser Sefirot — o comentário fundamental de Baal HaSulam sobre a Cabala do Ari — criada por alunos da Academia de Cabala Bnei Baruch para quem estuda o texto de perto. O texto está em hebraico e inglês, e algumas partes têm também traduções da Bnei Baruch para russo, ucraniano, espanhol e francês; a interface está disponível em nove idiomas.",
     "readingModelTitle": "O modelo de leitura",
     "readingModelBody": "O leitor segue a própria estrutura do Talmud Eser Sefirot: o texto numerado do Ari, a explicação da Luz Interior de Baal HaSulam ligada diretamente a ele, e a Observação Interior como explicação sistemática mais profunda da parte. A Observação Interior é contínua, e não vinculada a parágrafos, por isso permanece como um painel de leitura independente.",
     "licensesTitle": "Textos, edições e licenças",
@@ -280,7 +280,7 @@
   "seo": {
     "ogImageAlt": "Read TES — um livro aberto ao lado dos círculos do Tzimtzum do Ari, sobre um fundo de céu noturno",
     "home": {
-      "description": "Uma leitura gratuita e multilíngue do Talmud Eser Sefirot — o texto do Ari com as explicações da Luz Interior e da Observação Interior de Baal HaSulam, em português, inglês e hebraico."
+      "description": "Uma leitura gratuita do Talmud Eser Sefirot — o texto do Ari com as explicações da Luz Interior e da Observação Interior de Baal HaSulam, em hebraico e inglês, algumas partes também em russo, ucraniano, espanhol e francês, com interface em nove idiomas."
     },
     "about": {
       "description": "O que é o Read TES, como funcionam suas três camadas de leitura e as licenças e fontes por trás de cada edição de texto do site."

@@ -154,7 +154,7 @@
     }
   },
   "home": {
-    "description": "On Sefirot'un Çalışması, Ari'nin metni, İç Işık ve İç Gözlem aracılığıyla okunur — Türkçe, İngilizce ve İbranice.",
+    "description": "On Sefirot'un Çalışması, Ari'nin metni, İç Işık ve İç Gözlem aracılığıyla okunur — İbranice ve İngilizce olarak; bazı kısımları ayrıca Bnei Baruch'un Rusça, Ukraynaca, İspanyolca ve Fransızca çevirileriyle, arayüzü ise dokuz dilde.",
     "browseVolumes": "Altı cilde göz at",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -202,7 +202,7 @@
   },
   "about": {
     "title": "Read TES hakkında",
-    "intro": "Read TES, On Sefirot'un Çalışması'nın — Baal HaSulam'ın Ari'nin Kabalası üzerine temel şerhinin — bağımsız ve etkileşimli bir okumasıdır. Metni yakından inceleyen herkes için, İbranice ya da Türkçe, Bnei Baruch Kabala Akademisi öğrencileri tarafından hazırlanmıştır.",
+    "intro": "Read TES, On Sefirot'un Çalışması'nın — Baal HaSulam'ın Ari'nin Kabalası üzerine temel şerhinin — bağımsız ve etkileşimli bir okumasıdır. Metni yakından inceleyen herkes için Bnei Baruch Kabala Akademisi öğrencileri tarafından hazırlanmıştır. Metin İbranice ve İngilizcedir; bazı kısımlarının ayrıca Bnei Baruch'un Rusça, Ukraynaca, İspanyolca ve Fransızca çevirileri vardır; arayüz dokuz dilde kullanılabilir.",
     "readingModelTitle": "Okuma modeli",
     "readingModelBody": "Okuyucu, On Sefirot'un Çalışması'nın kendi yapısını izler: Ari'nin numaralı metni, ona doğrudan bağlanan Baal HaSulam'ın İç Işık açıklaması ve kısım için daha derin, sistematik açıklama olan İç Gözlem. İç Gözlem paragraflara bağlı değil süreklidir; bu yüzden bağımsız bir okuma paneli olarak kalır.",
     "licensesTitle": "Metinler, baskılar ve lisanslar",
@@ -280,7 +280,7 @@
   "seo": {
     "ogImageAlt": "Read TES — gece alanı arka planında, Ari'nin Tsimtsum çemberlerinin yanında açık bir kitap",
     "home": {
-      "description": "On Sefirot'un Çalışması'nın ücretsiz, çok dilli okuması — Ari'nin metni ile Baal HaSulam'ın İç Işık ve İç Gözlem açıklamaları, Türkçe, İngilizce ve İbranice."
+      "description": "On Sefirot'un Çalışması'nın ücretsiz okuması — Ari'nin metni ile Baal HaSulam'ın İç Işık ve İç Gözlem açıklamaları, İbranice ve İngilizce; bazı kısımlar ayrıca Rusça, Ukraynaca, İspanyolca ve Fransızca; arayüz dokuz dilde."
     },
     "about": {
       "description": "Read TES nedir, üç okuma katmanı nasıl işler ve sitedeki her metin baskısının arkasındaki lisanslar ve kaynaklar."

@@ -154,7 +154,7 @@
     }
   },
   "home": {
-    "description": "El Estudio de las Diez Sefirot, leído a través del texto del Ari, la Luz Interior y la Observación Interior, en español, inglés y hebreo.",
+    "description": "El Estudio de las Diez Sefirot, leído a través del texto del Ari, la Luz Interior y la Observación Interior, en hebreo e inglés, con traducciones de Bnei Baruch de algunas partes al ruso, ucraniano, español y francés, y con la interfaz en nueve idiomas.",
     "browseVolumes": "Ver los seis volúmenes",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -202,7 +202,7 @@
   },
   "about": {
     "title": "Acerca de Read TES",
-    "intro": "Read TES es una lectura interactiva e independiente de El Estudio de las Diez Sefirot, el comentario fundamental de Baal HaSulam sobre la Cabalá del Ari, creada por estudiantes de la Academia de Cabalá Bnei Baruch para quienes estudian el texto con detenimiento, en hebreo, español o inglés.",
+    "intro": "Read TES es una lectura interactiva e independiente de El Estudio de las Diez Sefirot, el comentario fundamental de Baal HaSulam sobre la Cabalá del Ari, creada por estudiantes de la Academia de Cabalá Bnei Baruch para quienes estudian el texto con detenimiento. El texto está en hebreo e inglés, y algunas partes cuentan además con traducciones de Bnei Baruch al ruso, ucraniano, español y francés; la interfaz está disponible en nueve idiomas.",
     "readingModelTitle": "El modelo de lectura",
     "readingModelBody": "El lector sigue la estructura del propio Estudio de las Diez Sefirot: el texto numerado del Ari, la explicación de la Luz Interior de Baal HaSulam anclada directamente a él, y la Observación Interior como explicación sistemática más profunda de la parte. La Observación Interior es continua y no se vincula párrafo a párrafo, por lo que sigue siendo un panel de lectura independiente.",
     "licensesTitle": "Textos, ediciones y licencias",
@@ -280,7 +280,7 @@
   "seo": {
     "ogImageAlt": "Read TES: un libro abierto junto a los círculos del Tzimtzum del Ari, sobre un fondo de campo nocturno",
     "home": {
-      "description": "Una lectura bilingüe y gratuita de El Estudio de las Diez Sefirot: el texto del Ari con las explicaciones de la Luz Interior y la Observación Interior de Baal HaSulam, en español, inglés y hebreo."
+      "description": "Una lectura gratuita de El Estudio de las Diez Sefirot: el texto del Ari con las explicaciones de la Luz Interior y la Observación Interior de Baal HaSulam, en hebreo e inglés, con algunas partes también en ruso, ucraniano, español y francés, e interfaz en nueve idiomas."
     },
     "about": {
       "description": "Qué es Read TES, cómo funcionan sus tres capas de lectura, y las licencias y fuentes de cada edición de texto del sitio."
