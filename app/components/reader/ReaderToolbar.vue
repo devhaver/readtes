@@ -103,6 +103,8 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
        desktop and ~240px on a phone before the first word of text. -->
   <div
     ref="rootRef"
+    data-reader-toolbar
+    :inert="isStudyMode && !chromeVisible ? true : undefined"
     class="flex flex-col border-b border-(--border) bg-(--surface) px-3 sm:px-5"
     :class="[
       isCollapsed ? 'py-1' : 'py-2',

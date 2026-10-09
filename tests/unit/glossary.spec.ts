@@ -4,6 +4,7 @@ import {
   GLOSSARY_LAYER_LABEL_KEYS,
   GLOSSARY_STRATEGIES,
   glossaryAttestationTicks,
+  glossaryCitationHash,
   glossaryCitationTarget,
   glossaryEditionId,
   glossaryExampleHebrew,
@@ -28,6 +29,7 @@ type GlossaryCopy = {
   glossary: {
     conventionCopy: Record<string, { topic: string; rule: string }>;
     editionNames: Record<string, string>;
+    noteCopy: Record<string, string>;
   };
 };
 
@@ -253,6 +255,13 @@ describe("glossaryCitationTarget", () => {
   });
 });
 
+describe("glossaryCitationHash", () => {
+  it("links a citation item to the reader's stable seif anchor", () => {
+    expect(glossaryCitationHash("item 13")).toBe("#seif-13");
+    expect(glossaryCitationHash("not numbered")).toBe("");
+  });
+});
+
 describe("glossaryVariantShares", () => {
   it("scales every bar against the entry's most-used variant", () => {
     expect(
@@ -353,6 +362,20 @@ describe("glossary reader-facing copy", () => {
         expect(
           catalog.glossary.editionNames[id],
           `${code}: ${id}`,
+        ).toBeTruthy();
+      }
+    }
+  });
+
+  it("translates every reader-facing term note in all nine languages", () => {
+    const notedEntries = glossaryIndex.entries.filter((entry) => entry.note);
+    expect(notedEntries).toHaveLength(33);
+
+    for (const [code, catalog] of Object.entries(locales)) {
+      for (const entry of notedEntries) {
+        expect(
+          catalog.glossary.noteCopy[entry.id],
+          `${code}: ${entry.id}`,
         ).toBeTruthy();
       }
     }

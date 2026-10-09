@@ -15,19 +15,24 @@
 // behaves like an independently-scrolling column.
 import type { ContentVersion } from "~~/shared/types/content";
 
-const props = defineProps<{
-  title: string;
-  /** Language codes in display order; the header hides its select when length <= 1. */
-  languageOptions: string[];
-  modelValue: string | null;
-  meta: ContentVersion | null;
-  hideProvenance?: boolean;
-}>();
+const props = withDefaults(
+  defineProps<{
+    title: string;
+    /** Language codes in display order; the header hides its select when length <= 1. */
+    languageOptions: string[];
+    modelValue: string | null;
+    meta: ContentVersion | null;
+    hideProvenance?: boolean;
+    paneId?: string;
+  }>(),
+  { paneId: "pane" },
+);
 
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
 
 const containerRef = provideReaderPaneContainer();
 provideReaderPaneContentAttrs(() => props.meta);
+usePaneScrollHistory(containerRef, props.paneId);
 </script>
 
 <template>

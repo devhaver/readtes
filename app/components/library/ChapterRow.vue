@@ -36,6 +36,10 @@ const CLUSTER_LABEL_KEY: Record<ClusteredKind, string> = {
 
 const title = computed(() => {
   if (props.entry.type === "chapter") {
+    if (props.entry.chapter.kind === "chapter") return t("common.chapter");
+    if (props.entry.chapter.kind === "inner-observation") {
+      return t("volumes.section.inner-observation");
+    }
     return localizedText(props.entry.chapter.title, locale.value);
   }
 
@@ -50,18 +54,27 @@ const href = computed(() =>
 const languages = computed(() =>
   chapterLanguages(representativeChapter.value, props.versions, locale.value),
 );
+const showsOrdinal = computed(
+  () =>
+    props.entry.type === "chapter" &&
+    ["chapter", "inner-observation"].includes(props.entry.chapter.kind),
+);
 </script>
 
 <template>
   <li>
-    <!-- No separate ordinal: a numbered chapter's title already carries its
-         number ("Chapter 3"), and the number shown beside it was a second
-         "3". The title may wrap to two lines; the badge sits below it on a
-         phone rather than squeezing the title. -->
     <NuxtLink
       :to="href"
-      class="flex flex-col gap-1 rounded-card px-3 py-2.5 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring) sm:flex-row sm:items-center sm:justify-between sm:gap-3"
+      class="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-2 gap-y-1 rounded-card px-3 py-2.5 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring) sm:grid-cols-[2.25rem_minmax(0,1fr)_auto] sm:items-center sm:gap-x-3"
     >
+      <span
+        class="text-end text-sm tabular-nums text-(--text-muted)"
+        :aria-hidden="!showsOrdinal"
+      >
+        {{
+          showsOrdinal && entry.type === "chapter" ? entry.chapter.number : ""
+        }}
+      </span>
       <span class="line-clamp-2 min-w-0 text-(--text-primary)">{{
         title
       }}</span>
@@ -71,7 +84,7 @@ const languages = computed(() =>
           (showAiBadge && languages.aiTranslated) ||
           (languages.he && !languages.en)
         "
-        class="flex shrink-0 items-center gap-1.5"
+        class="col-start-2 flex shrink-0 items-center gap-1.5 sm:col-start-3"
       >
         <span
           v-if="showAiBadge && languages.aiTranslated"

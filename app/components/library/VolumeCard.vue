@@ -129,7 +129,7 @@ const partSummaries = computed(() =>
             class="-mx-2 flex flex-col gap-0.5 rounded-button px-2 py-1.5"
             :class="
               active
-                ? 'hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal'
+                ? 'hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)'
                 : ''
             "
           >

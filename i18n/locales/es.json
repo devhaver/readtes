@@ -249,7 +249,7 @@
     "titleHebrew": "מונחים",
     "lede": "{count} términos de El Estudio de las Diez Sefirot y el inglés que la edición oficial emplea realmente para cada uno.",
     "evidence": "Cada término se obtuvo de los {chapters} capítulos en que el hebreo de Jerusalén de 1956 y el inglés de Bnei Baruch pudieron ponerse lado a lado, elemento por elemento: {items} pares alineados en total.",
-    "languageNote": "El hebreo se cita de la edición de Jerusalén de 1956 y el inglés de la edición de Bnei Baruch. Las notas breves sobre cada término están escritas en inglés.",
+    "languageNote": "El hebreo se cita de la edición de Jerusalén de 1956 y el inglés de la edición de Bnei Baruch. Las notas breves se muestran en el idioma de la interfaz.",
     "coverageParts": "Partes {parts} de dieciséis",
     "coverageStripDescription": "La edición en inglés abarca las partes {parts} de las dieciséis partes de El Estudio de las Diez Sefirot.",
     "filtersLabel": "Buscar un término",
@@ -275,6 +275,7 @@
     "citationsLoading": "Cargando pasajes…",
     "citationsFailed": "No se pudieron cargar los pasajes.",
     "citationsRetry": "Reintentar",
+    "permalink": "Enlace a este término",
     "citationChapter": "Parte {part} · {chapter}",
     "chapterKind": {
       "chapter": "Capítulo {n}",
@@ -302,6 +303,41 @@
     "editionNames": {
       "en-bb": "Inglés de Bnei Baruch (KabbalahMedia)",
       "he-jerusalem-1956": "Hebreo, edición de Jerusalén, 1956–1966"
+    },
+    "noteCopy": {
+      "or": "Nunca se translitera como Ohr. Solo lleva mayúscula en los títulos «Luz Interior» y «Observación Interior».",
+      "kli": "Se traduce, no se translitera. «Kli» aparece una sola vez en todo el corpus inglés.",
+      "zakut": "También se vierte como «refinamiento», igual que הזדככות; véanse las inconsistencias.",
+      "reshimo": "Siempre se traduce. «Reshimo» y «Reshimot» no aparecen en el inglés oficial.",
+      "zivug": "En todo este corpus el hebreo se escribe זווג; זיווג no aparece.",
+      "histaklut-pnimit": "Nombre de la segunda capa de comentario de Baal HaSulam. Ambas palabras llevan mayúscula.",
+      "histaklut": "Como término técnico para la mirada de Maljut hacia la luz, significa «mirada» o «mirar», no «observación».",
+      "or-pnimi": "Tiene dos sentidos: el título de la primera capa de comentario de Baal HaSulam y el término técnico en minúscula.",
+      "behina": "La edición reserva «discernimiento» para הבחן o הבחנה, no para בחינה como grado.",
+      "behina-dalet": "Los ordinales de las fases se escriben con palabras: fase uno, dos, tres y cuatro.",
+      "madrega": "קומה es «nivel»; מדרגה es «grado». Ambos pueden aparecer juntos.",
+      "atzmut": "עצמותו ית׳ se traduce «Su ser». «Esencia» se reserva para מהות.",
+      "taamim": "Solo se atestigua en la Parte 6.",
+      "nekudot": "El inglés oficial realmente varía aquí; véanse las inconsistencias.",
+      "hassadim": "אור דחסדים se traduce «luz de Jasadim».",
+      "partzufim": "La primera aparición en cada punto lleva la glosa «Partzufim [pl. de Partzuf]».",
+      "rosh": "En el primer uso lleva la glosa «[cabeza]».",
+      "toch": "Solo se translitera para el tercio medio técnico de un Partzuf; תוך o בתוך ordinarios son «dentro».",
+      "sof": "No es אין סוף, «Ein Sof». En el primer uso lleva «[fin]» o «[fin/conclusión]».",
+      "ein-sof": "א״ס ב״ה se vierte «Ein Sof»; se omite el honorífico ב״ה.",
+      "atzilut": "El mundo es «Atzilut»; el acto de emanar es «emanación», en minúscula.",
+      "adam-kadmon": "Se escribe completo en las Partes 1–2 y se abrevia «AK» desde la Parte 3.",
+      "hochma": "«Sabiduría» solo se usa en la expresión «sabiduría de la Cabalá».",
+      "bon": "BON, no BAN. Forma la pareja «MA y BON».",
+      "za": "Se escribe completo en las Partes 1–3 y se abrevia desde la Parte 5.",
+      "einayim": "El inglés oficial realmente varía aquí; véanse las inconsistencias.",
+      "klipot": "Suele traducirse «cáscaras»; una vez aparece «Klipot [cáscaras]».",
+      "harav": "En TES הרב designa al ARI, y el inglés oficial siempre pone «the ARI», nunca «the Rav».",
+      "akudim": "Siempre con mayúscula: «world of Akudim», «Keter of Akudim».",
+      "ohr-hozer-abbrev": "La abreviatura se vierte igual que אור חוזר; nunca como «Ohr Hozer».",
+      "ohr-yashar-abbrev": "Coincide con אור ישר. Se añadió en la versión 2 y faltaba en la versión 1.",
+      "reshimot-plural": "Plural de רשימו: registros.",
+      "bitushim-plural": "Deriva del singular fijado ביטוש: choque. No está atestiguado; todo uso debe revisarse."
     },
     "limits": {
       "coverage": "El inglés de Bnei Baruch solo abarca las partes {parts} de las dieciséis. De las demás partes no hay aquí evidencia de ningún término.",
@@ -383,7 +419,13 @@
       "description": "Las partes y capítulos de {title}, con el texto del Ari, la Luz Interior y la Observación Interior."
     },
     "chapter": {
-      "description": "{chapter} de {part}: el texto del Ari junto a su explicación de la Luz Interior y la Observación Interior de la parte."
+      "description": {
+        "chapter": "{chapter} — {part}. El texto del Ari junto a su explicación de la Luz Interior y la Observación Interior de la parte.",
+        "introduction": "{chapter} — {part}. Introducción a esta parte del Talmud Eser Sefirot.",
+        "inner-observation": "{chapter} — {part}. La explicación profunda de Baal HaSulam para toda la parte.",
+        "questions": "{chapter} — {part}. Preguntas para repasar esta parte del Talmud Eser Sefirot.",
+        "answers": "{chapter} — {part}. Respuestas para repasar esta parte del Talmud Eser Sefirot."
+      }
     },
     "notFound": {
       "description": "Esta página no existe o se ha movido: encuentre el camino de vuelta a los volúmenes, al glosario o a la página de inicio de Read TES."

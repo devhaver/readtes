@@ -123,7 +123,7 @@ describe("GlossaryEntryRow", () => {
     const text = wrapper.text();
     expect(text).toContain("Never transliterated as Ohr.");
     expect(text).toContain("Light (title case, in section names)");
-    expect(text).toContain("1250");
+    expect(text).toContain("1,250");
   });
 
   it("scales the variant bars against the entry's most-used rendering", async () => {
@@ -169,7 +169,7 @@ describe("GlossaryEntryRow", () => {
 
     const link = wrapper.get("figcaption a");
     expect(link.attributes("href")).toBe(
-      "/read/part-03/answers-terminology-01",
+      "/read/part-03/answers-terminology-01#seif-13",
     );
     expect(link.text()).toContain("Part 3");
     // No numeral on the link label itself (issue #91: the consolidated
@@ -178,6 +178,16 @@ describe("GlossaryEntryRow", () => {
     expect(link.text()).toContain("Answers — Terminology");
     expect(link.text()).not.toContain("Answers — Terminology 1");
     expect(wrapper.get("figcaption").text()).toContain("item 13");
+  });
+
+  it("offers a restorable permalink for an open term", async () => {
+    const wrapper = await mountRow();
+    await wrapper.get("button").trigger("click");
+
+    const link = wrapper
+      .findAll("a")
+      .find((candidate) => candidate.text() === "Link to this term");
+    expect(link?.attributes("href")).toBe("/?term=or#term-or");
   });
 
   it("renders a citation's two languages with their own dir/lang", async () => {

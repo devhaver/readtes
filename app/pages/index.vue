@@ -125,7 +125,7 @@ const layers = computed(() => [
         :aria-pressed="motionPaused"
         :aria-label="t('home.pauseMotion')"
         :title="t('home.pauseMotion')"
-        class="absolute end-3 top-3 z-10 inline-flex h-8 w-8 items-center justify-center rounded-button border border-surface-white/30 text-surface-white/80 hover:border-teal hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="absolute end-3 top-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-button border border-surface-white/30 text-surface-white/80 hover:border-teal hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring-inverse)"
         :class="{ 'bg-surface-white/15': motionPaused }"
         @click="motionPaused = !motionPaused"
       >
@@ -248,7 +248,7 @@ const layers = computed(() => [
           <div class="mt-8 flex flex-wrap items-center gap-4">
             <NuxtLink
               :to="localePath('/read/part-01/chapter-01')"
-              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--focus-ring-inverse)"
             >
               {{ t("home.beginReading") }}
               <svg
@@ -266,7 +266,7 @@ const layers = computed(() => [
             </NuxtLink>
             <NuxtLink
               :to="localePath('/volumes')"
-              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--focus-ring-inverse)"
             >
               {{ t("home.browseVolumes") }}
             </NuxtLink>
@@ -351,7 +351,7 @@ const layers = computed(() => [
         <p class="mt-3 text-sm">
           <NuxtLink
             :to="localePath('/volumes')"
-            class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
           >
             {{ t("home.coverageMore") }}
           </NuxtLink>

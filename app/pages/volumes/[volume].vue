@@ -112,7 +112,7 @@ useLocalizedSeo({
         v-for="section in partSections"
         :key="section.part.id"
         :to="{ hash: `#${section.part.id}` }"
-        class="rounded-button border border-(--border) px-2.5 py-1 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="rounded-button border border-(--border) px-2.5 py-1 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
       >
         {{ t("common.part") }} {{ section.part.number }}
       </NuxtLink>
@@ -150,7 +150,7 @@ useLocalizedSeo({
                 :to="localePath(`/read/${entry.chapter.id}`)"
                 :aria-label="localizedTitle(entry.chapter.title)"
                 :title="localizedTitle(entry.chapter.title)"
-                class="block rounded-button border border-(--border) py-2 text-center text-sm tabular-nums text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+                class="block rounded-button border border-(--border) py-2 text-center text-sm tabular-nums text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
               >
                 {{ entry.chapter.number }}
               </NuxtLink>
@@ -171,7 +171,7 @@ useLocalizedSeo({
       <p v-if="section.hasContent" class="mt-6 text-sm">
         <NuxtLink
           :to="{ hash: '#volume-top' }"
-          class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
         >
           {{ t("volumes.backToTop") }}
         </NuxtLink>

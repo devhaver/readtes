@@ -493,10 +493,10 @@ a.tes-anchor::after {
  * these rules (more specific, and always in step) are what stops a
  * returning visitor's layout jumping once the page hydrates.
  *
- * Not covered here: `data-pref-chrome` (collapsed toolbar/navbar) and
- * `data-pref-mode` (study vs panes) are set on <html> too, but the toolbar
- * and mode trees are `v-if`-rendered in the page, so hiding them before
- * hydration needs the toolbar/layout markup to carry stable hooks.
+ * The mode tree is prerendered as panes. A persisted non-panes choice hides
+ * that tree until hydration replaces it, preventing a one-frame panes flash.
+ * Persisted collapsed chrome likewise hides the expanded navbar/toolbar
+ * until Vue renders the compact toolbar.
  */
 html[data-pref-scale="1"] [data-reading-scale] {
   --reading-scale: 0.875;
@@ -512,6 +512,17 @@ html[data-pref-scale="3"] [data-reading-scale] {
 
 html[data-pref-scale="4"] [data-reading-scale] {
   --reading-scale: 1.3125;
+}
+
+html:not([data-reader-hydrated])[data-pref-mode="study"]
+  [data-reader-mode="panes"],
+html:not([data-reader-hydrated])[data-pref-mode="original"]
+  [data-reader-mode="panes"],
+html:not([data-reader-hydrated])[data-pref-chrome="collapsed"]
+  [data-reader-navbar],
+html:not([data-reader-hydrated])[data-pref-chrome="collapsed"]
+  [data-reader-toolbar] {
+  visibility: hidden;
 }
 
 /* A collapsed third pane (desktop only — below `lg` it is a swipe slide).
@@ -564,7 +575,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
 /* Skip-to-content link — identical in both layouts, so identical on
    every page in the site. */
 .tes-skip-link {
-  @apply sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-navy-primary focus:px-4 focus:py-2 focus:text-surface-white focus:outline focus:outline-2 focus:outline-teal;
+  @apply sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-navy-primary focus:px-4 focus:py-2 focus:text-surface-white focus:outline focus:outline-2 focus:outline-(--focus-ring-inverse);
 }
 
 /*
