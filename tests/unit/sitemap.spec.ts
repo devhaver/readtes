@@ -151,4 +151,14 @@ describe("sitemap URL builder", () => {
       );
     });
   });
+
+  it("lists every given locale on the server build", () => {
+    const locales = ["en", "he", "ru", "es", "fr", "de", "pt", "tr", "uk"];
+    const entries = buildSitemapEntries(realToc, SITE_URL, locales);
+    const home = entries.find((entry) => entry.path === "/");
+    expect(Object.keys(home?.urls ?? {})).toEqual(locales);
+    expect(home?.urls.es).toBe(`${SITE_URL}/es`);
+    const xml = renderSitemapXml(entries.slice(0, 1));
+    expect(xml.match(/<url>/g)).toHaveLength(locales.length);
+  });
 });

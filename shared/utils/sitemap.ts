@@ -23,12 +23,12 @@ import type { Toc } from "~~/shared/types/content";
  * here as indexable pages.
  */
 export const SITEMAP_LOCALES = ["en", "he", "ru"] as const;
-export type SitemapLocale = (typeof SITEMAP_LOCALES)[number];
+export type SitemapLocale = string;
 
 export interface SitemapEntry {
   /** Locale-agnostic path, e.g. "/volumes/volume-1" or "/read/part-01/chapter-01". */
   path: string;
-  /** Absolute URL of each locale's variant. */
+  /** Absolute URL of each listed locale's variant, default locale first. */
   urls: Record<SitemapLocale, string>;
 }
 
@@ -52,7 +52,7 @@ export const escapeXml = (value: string): string =>
 
 /** `@nuxtjs/i18n`'s `prefix_except_default` strategy: en is unprefixed, others get `/<code>`. */
 const localizedPath = (path: string, locale: SitemapLocale): string => {
-  if (locale === SITEMAP_LOCALES[0]) return path;
+  if (locale === "en") return path;
   return path === "/" ? `/${locale}` : `/${locale}${path}`;
 };
 
@@ -71,11 +71,12 @@ export const sitemapPaths = (toc: Toc): string[] => [
 export const buildSitemapEntries = (
   toc: Toc,
   siteUrl: string,
+  locales: readonly string[] = SITEMAP_LOCALES,
 ): SitemapEntry[] =>
   sitemapPaths(toc).map((path) => ({
     path,
     urls: Object.fromEntries(
-      SITEMAP_LOCALES.map((locale) => [
+      locales.map((locale) => [
         locale,
         `${siteUrl}${localizedPath(path, locale)}`,
       ]),
@@ -94,18 +95,18 @@ const urlBlock = (loc: string, entry: SitemapEntry): string =>
   [
     "  <url>",
     `    <loc>${escapeXml(loc)}</loc>`,
-    ...SITEMAP_LOCALES.map(
-      (locale) =>
-        `    <xhtml:link rel="alternate" hreflang="${locale}" href="${escapeXml(entry.urls[locale])}"/>`,
+    ...Object.entries(entry.urls).map(
+      ([locale, url]) =>
+        `    <xhtml:link rel="alternate" hreflang="${locale}" href="${escapeXml(url)}"/>`,
     ),
-    `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(entry.urls.en)}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(entry.urls.en ?? loc)}"/>`,
     "  </url>",
   ].join("\n");
 
 /** Serializes built entries into sitemap XML — one `<url>` per locale variant, each carrying every alternate. */
 export const renderSitemapXml = (entries: SitemapEntry[]): string => {
   const urls = entries.flatMap((entry) =>
-    SITEMAP_LOCALES.map((locale) => urlBlock(entry.urls[locale], entry)),
+    Object.values(entry.urls).map((url) => urlBlock(url, entry)),
   );
 
   return [
