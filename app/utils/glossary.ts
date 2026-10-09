@@ -229,3 +229,18 @@ export const glossaryVariantShares = (
     sharePct: max === 0 ? 0 : Math.round((variant.occurrences / max) * 100),
   }));
 };
+
+/**
+ * The edition id at the front of the artifact's own description of an
+ * edition — `"en-bb (Bnei Baruch / KabbalahMedia official English)"` →
+ * `"en-bb"`. The id is what the page maps to a name a reader knows.
+ */
+export const glossaryEditionId = (raw: string): string =>
+  raw.split(" ")[0] ?? raw;
+
+/**
+ * A convention example's Hebrew side, minus the pipeline's own
+ * `(marker ל on op-12)` annotation — an anchor id means nothing to a reader.
+ */
+export const glossaryExampleHebrew = (he: string): string =>
+  he.replace(/\s*\(marker [^)]*\)/g, "");

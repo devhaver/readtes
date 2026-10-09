@@ -229,7 +229,7 @@
     "titleHebrew": "מונחים",
     "lede": "{count} términos de El Estudio de las Diez Sefirot y el inglés que la edición oficial emplea realmente para cada uno.",
     "evidence": "Cada término se obtuvo de los {chapters} capítulos en que el hebreo de Jerusalén de 1956 y el inglés de Bnei Baruch pudieron ponerse lado a lado, elemento por elemento: {items} pares alineados en total.",
-    "languageNote": "El hebreo se cita de la edición de Jerusalén de 1956 y el inglés de la edición de Bnei Baruch. Las notas y reglas describen el inglés y están escritas en inglés.",
+    "languageNote": "El hebreo se cita de la edición de Jerusalén de 1956 y el inglés de la edición de Bnei Baruch. Las notas breves sobre cada término están escritas en inglés.",
     "coverageParts": "Partes {parts} de dieciséis",
     "coverageStripDescription": "La edición en inglés abarca las partes {parts} de las dieciséis partes de El Estudio de las Diez Sefirot.",
     "filtersLabel": "Buscar un término",
@@ -248,7 +248,7 @@
     "attestedNowhere": "No documentado en ninguna parte alineada.",
     "variantsTitle": "Lo que escribe la edición",
     "variantsHint": "Las cifras son apariciones dentro de los pasajes alineados, no en todo el libro.",
-    "citationsTitle": "Extraído de",
+    "citationsTitle": "Pasajes",
     "citationsLoading": "Cargando pasajes…",
     "citationsFailed": "No se pudieron cargar los pasajes.",
     "citationsRetry": "Reintentar",
@@ -268,14 +268,79 @@
     "emptyBody": "Pruebe otra grafía, en hebreo o inglés; las comillas dentro de los acrónimos se ignoran.",
     "clearFilters": "Borrar filtros",
     "conventionsTitle": "Cómo se fija el inglés",
-    "conventionsIntro": "Reglas que la edición oficial sigue más allá de las palabras sueltas (cómo se tratan los marcadores de elementos, los comienzos de comentario, las citas y los honoríficos), cada una con su evidencia.",
-    "conventionEvidenceLabel": "Evidencia:",
+    "conventionsIntro": "Reglas que la edición oficial sigue más allá de las palabras sueltas (cómo se tratan los marcadores de elementos, los comienzos de comentario, las citas y los honoríficos), cada una con pasajes de ejemplo.",
     "limitsTitle": "Dónde termina la evidencia",
     "limitsIntro": "Este glosario solo llega hasta donde llega la edición en inglés. Léalo antes de apoyarse en un recuento.",
     "methodTitle": "Cómo se elaboró el glosario",
     "methodSource": "Edición en inglés",
     "methodReference": "Referencia hebrea",
-    "methodGeneratedOn": "Compilado"
+    "methodGeneratedOn": "Compilado",
+    "methodBody": "Siempre que existen tanto el hebreo (edición de Jerusalén) como el inglés oficial de Bnei Baruch para el mismo capítulo y la misma capa, ambos se pusieron lado a lado y se emparejaron elemento por elemento; un emparejamiento solo se aceptó cuando la numeración y las anclas coincidían exactamente. Para cada término hebreo se reunieron como candidatos las traducciones inglesas que aparecen con frecuencia inusual en los elementos que lo contienen, y cada candidato se confirmó después leyendo pares reales. Cada pasaje citado se extrajo del texto emparejado mediante un programa, sin escribirlo a mano.",
+    "editionNames": {
+      "en-bb": "Inglés de Bnei Baruch (KabbalahMedia)",
+      "he-jerusalem-1956": "Hebreo, edición de Jerusalén, 1956–1966"
+    },
+    "limits": {
+      "coverage": "El inglés de Bnei Baruch solo abarca las partes {parts} de las dieciséis. De las demás partes no hay aquí evidencia de ningún término.",
+      "runningProse": "La mayor parte de la evidencia procede de las Tablas de Preguntas y Respuestas, que por naturaleza son terminológicas. Solo pudieron compararse unos pocos capítulos corridos, así que lo que el glosario muestra sobre el estilo de la prosa es más escaso que lo que muestra sobre términos sueltos.",
+      "thinTerms": "Algunos términos aparecen en solo uno a tres pasajes comparados. Es muy poco para fijarlos, por lo que se omiten en lugar de adivinarlos.",
+      "wholeChapters": "Algunos capítulos solo pudieron compararse enteros, no elemento por elemento, por lo que los pasajes citados de ellos son una evidencia más débil.",
+      "aiNotUsed": "La traducción al inglés hecha con IA que ofrece este sitio no se usó para elaborar el glosario; solo se contrastó con él una vez terminado."
+    },
+    "conventionCopy": {
+      "item-markers-gematria": {
+        "topic": "Marcadores de elementos",
+        "rule": "Una letra hebrea usada como marcador en el texto se escribe con su valor numérico en cifras arábigas (guematría): álef es 1, yod es 10, lámed es 30, kuf es 100 y tav es 400. La letra nunca se conserva y los marcadores no se renumeran de forma correlativa."
+      },
+      "commentary-lemma": {
+        "topic": "Elementos del comentario",
+        "rule": "Cada elemento del comentario en inglés comienza con un lema en negrita —la frase del texto fuente que comenta—, seguido de dos puntos y de la explicación. El comentario hebreo no tiene lema y se identifica solo por su ancla, de modo que una traducción debe tomar el lema del texto fuente correspondiente."
+      },
+      "nav-links-dropped": {
+        "topic": "Enlaces de navegación",
+        "rule": "Los enlaces hebreos que llevan de una pregunta a su respuesta y viceversa («a la pregunta», «a la respuesta») se omiten por completo. No tienen equivalente en inglés."
+      },
+      "answer-headword-dropped": {
+        "topic": "Elementos de la Tabla de Respuestas",
+        "rule": "La palabra clave hebrea en negrita que abre una respuesta no se repite en inglés; el elemento empieza directamente con la definición. La cita que sigue a esa palabra se pasa al final del elemento o se omite, pero nunca se deja al principio."
+      },
+      "question-punctuation": {
+        "topic": "Elementos de la Tabla de Preguntas",
+        "rule": "Las preguntas hebreas terminan con un punto; la edición en inglés las escribe como preguntas con signo de interrogación final. Cuando se añade una cita, el signo de interrogación suele omitirse y el elemento termina con el paréntesis de cierre."
+      },
+      "abbreviation-expansion": {
+        "topic": "Abreviaturas de las citas",
+        "rule": "Las abreviaturas hebreas de las citas se escriben completas en inglés, nunca transliteradas: las referencias a parte y capítulo pasan a ser “Part 3, Chapter 5”, las dos capas del comentario se nombran por entero como “Inner Light” e “Inner Observation”, y “item”, “page” y “see answer” llevan cifras arábigas. Las remisiones hacia atrás se convierten en “ibid.” o “see above item”. Todo número escrito con letras hebreas pasa a cifras arábigas."
+      },
+      "honorifics-dropped": {
+        "topic": "Honoríficos y fórmulas piadosas",
+        "rule": "«Bendito sea» tras Ein Sof se omite siempre, de modo que queda solo “Ein Sof”. El honorífico junto al nombre del Creador se omite o se absorbe en “His” y “Him”. La expresión hebrea equivalente a «Dios no lo quiera» se convierte en el adverbio “whatsoever” en las oraciones negativas, o se omite, y nunca se traduce como “God forbid”. «Véase allí» suele omitirse."
+      },
+      "harav-is-ari": {
+        "topic": "Referencias al autor",
+        "rule": "En este texto el hebreo «el Rav» designa al Ari (Isaac Luria), autor del texto de Etz Jaim que se cita. El inglés dice siempre “the ARI” y nunca “the Rav”. Baal HaSulam, el comentarista, no es nombrado en el cuerpo del texto."
+      },
+      "gloss-brackets": {
+        "topic": "Glosas de transliteración",
+        "rule": "Tras un término transliterado, la primera vez que aparece en un elemento, va una breve glosa en inglés entre corchetes; después se usa solo: “Rosh [head]”, “Guf [body]”, “Ein Sof [infinity]”, “Katnut [smallness]”, “Gadlut [greatness]”. La glosa se emplea con moderación, no en cada aparición."
+      },
+      "phase-ordinals": {
+        "topic": "Números en el texto",
+        "rule": "Los ordinales de las fases se escriben con palabras en minúscula —“phase one”, “phase two”, “phase three”, “phase four”— y nunca con cifras. Del mismo modo, “ten Sefirot” conserva “ten” como palabra en minúscula."
+      },
+      "feminine-malchut": {
+        "topic": "Género gramatical",
+        "rule": "Malchut, la cuarta fase y la Nukva conservan en inglés su gramática femenina hebrea: “she”, “her”, “herself”. Nunca se convierten en “it”."
+      },
+      "typography": {
+        "topic": "Tipografía",
+        "rule": "Los términos citados llevan comillas tipográficas curvas, nunca comillas rectas, y las glosas van entre corchetes. Las letras hebreas aparecen en el inglés solo dentro de glosas de letras."
+      },
+      "layer-names": {
+        "topic": "Nombres de las capas del comentario",
+        "rule": "“Inner Light”, el nombre de la primera capa del comentario de Baal HaSulam, se escribe con mayúscula inicial en cada palabra; las mismas palabras en minúscula, “inner light”, son el término técnico de la luz revestida dentro de una vasija. “Inner Observation” nombra la segunda capa. La diferencia de mayúsculas es lo único que distingue el nombre de la capa del término."
+      }
+    }
   },
   "seo": {
     "ogImageAlt": "Read TES: un libro abierto junto a los círculos del Tzimtzum del Ari, sobre un fondo de campo nocturno",

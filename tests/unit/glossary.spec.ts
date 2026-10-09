@@ -5,14 +5,31 @@ import {
   GLOSSARY_STRATEGIES,
   glossaryAttestationTicks,
   glossaryCitationTarget,
+  glossaryEditionId,
+  glossaryExampleHebrew,
   glossaryStrategyCounts,
   glossaryVariantShares,
   normalizedGlossaryText,
   partNumberFromId,
 } from "~/utils/glossary";
+import glossaryIndex from "~~/content/glossary/tes-en.index.json";
+import de from "~~/i18n/locales/de.json";
 import en from "~~/i18n/locales/en.json";
+import es from "~~/i18n/locales/es.json";
+import fr from "~~/i18n/locales/fr.json";
 import he from "~~/i18n/locales/he.json";
+import pt from "~~/i18n/locales/pt.json";
+import ru from "~~/i18n/locales/ru.json";
+import tr from "~~/i18n/locales/tr.json";
+import uk from "~~/i18n/locales/uk.json";
 import type { GlossaryIndexEntry } from "~~/shared/types/content";
+
+type GlossaryCopy = {
+  glossary: {
+    conventionCopy: Record<string, { topic: string; rule: string }>;
+    editionNames: Record<string, string>;
+  };
+};
 
 const entry = (
   overrides: Partial<GlossaryIndexEntry> & Pick<GlossaryIndexEntry, "id">,
@@ -282,5 +299,62 @@ describe("GLOSSARY_LAYER_LABEL_KEYS", () => {
   it("leaves no glossary-owned copy of the layer names behind", () => {
     expect(en.glossary).not.toHaveProperty("layer");
     expect(he.glossary).not.toHaveProperty("layer");
+  });
+});
+
+describe("glossaryEditionId", () => {
+  it("takes the edition id off the front of the artifact's own description", () => {
+    expect(
+      glossaryEditionId("en-bb (Bnei Baruch / KabbalahMedia official English)"),
+    ).toBe("en-bb");
+    expect(glossaryEditionId("he-jerusalem-1956")).toBe("he-jerusalem-1956");
+  });
+});
+
+describe("glossaryExampleHebrew", () => {
+  it("strips the pipeline's own anchor annotation from a convention example", () => {
+    expect(
+      glossaryExampleHebrew("וכאשר לעלה ברצונו הפשוט (marker ל on op-12)"),
+    ).toBe("וכאשר לעלה ברצונו הפשוט");
+    expect(glossaryExampleHebrew("אור עליון")).toBe("אור עליון");
+  });
+});
+
+describe("glossary reader-facing copy", () => {
+  const locales = {
+    en: en as GlossaryCopy,
+    he: he as GlossaryCopy,
+    ru: ru as GlossaryCopy,
+    uk: uk as GlossaryCopy,
+    es: es as GlossaryCopy,
+    fr: fr as GlossaryCopy,
+    de: de as GlossaryCopy,
+    pt: pt as GlossaryCopy,
+    tr: tr as GlossaryCopy,
+  };
+
+  it("writes every house rule's topic and rule in all nine languages", () => {
+    for (const [code, catalog] of Object.entries(locales)) {
+      for (const convention of glossaryIndex.conventions) {
+        const copy = catalog.glossary.conventionCopy[convention.id];
+        expect(copy?.topic, `${code}: ${convention.id} topic`).toBeTruthy();
+        expect(copy?.rule, `${code}: ${convention.id} rule`).toBeTruthy();
+      }
+    }
+  });
+
+  it("names the two editions the artifact cites, in all nine languages", () => {
+    for (const [code, catalog] of Object.entries(locales)) {
+      for (const raw of [
+        glossaryIndex.meta.sourceVersion,
+        glossaryIndex.meta.referenceVersion,
+      ]) {
+        const id = glossaryEditionId(raw);
+        expect(
+          catalog.glossary.editionNames[id],
+          `${code}: ${id}`,
+        ).toBeTruthy();
+      }
+    }
   });
 });

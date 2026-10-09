@@ -1,10 +1,9 @@
 /**
- * The house rules are the one part of the glossary written *about* the
- * English edition rather than in the reader's language: topic, rule and
- * evidence all come out of the artifact as English prose, and several of
- * them quote Hebrew fragments inline. Under `/he` the document is
- * `dir="rtl"`, so an untagged rule has its brackets, slashes and trailing
- * punctuation reordered by the bidi algorithm — legible-looking, wrong.
+ * The house rules are written in the reader's language (`glossary.
+ * conventionCopy.<id>` in every locale), keyed by the convention's id — the
+ * artifact's own topic/rule/evidence strings are pipeline notes (counts,
+ * file names, anchor ids) and are never rendered. Several examples quote
+ * Hebrew inline, so those stay explicitly tagged by `GlossaryQuotePair`.
  */
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it } from "vitest";
@@ -18,35 +17,27 @@ const mountList = () =>
   mountSuspended(GlossaryConventionList, { props: { conventions } });
 
 describe("GlossaryConventionList", () => {
-  it("tags every convention's topic, rule and evidence as English prose", async () => {
+  it("renders each rule's topic and rule from the reader-facing copy", async () => {
+    const wrapper = await mountList();
+    const summaries = wrapper.findAll("summary").map((s) => s.text());
+
+    expect(summaries).toHaveLength(conventions.length);
+    expect(summaries[0]).toBe("Item markers");
+    expect(wrapper.text()).toContain(
+      "A Hebrew letter used as an inline marker",
+    );
+    expect(wrapper.text()).not.toContain("glossary.conventionCopy");
+  });
+
+  it("never renders the artifact's own pipeline notes", async () => {
     const wrapper = await mountList();
 
     for (const convention of conventions) {
-      for (const prose of [
-        convention.topic,
-        convention.rule,
-        convention.evidence,
-      ]) {
-        const tagged = wrapper
-          .findAll('[dir="ltr"][lang="en"]')
-          .find((element) => element.text() === prose);
-
-        expect(tagged, `untagged English: ${prose}`).toBeTruthy();
-      }
+      expect(wrapper.text()).not.toContain(convention.evidence);
+      expect(wrapper.text()).not.toContain(convention.rule);
     }
-  });
-
-  it("leaves the translated label around the evidence in the page's own direction", async () => {
-    const wrapper = await mountList();
-    const evidenceLine = wrapper
-      .findAll("p")
-      .find((paragraph) => paragraph.text().startsWith("Evidence:"));
-
-    expect(evidenceLine).toBeTruthy();
-    expect(evidenceLine!.attributes("dir")).toBeUndefined();
-    expect(evidenceLine!.get('[dir="ltr"]').text()).toBe(
-      conventions[0]?.evidence,
-    );
+    expect(wrapper.text()).not.toMatch(/op-\d+/);
+    expect(wrapper.text()).not.toContain("Evidence:");
   });
 
   it("prerenders one collapsed disclosure per rule", async () => {
