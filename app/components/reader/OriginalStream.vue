@@ -123,7 +123,7 @@ const markerFor = (item: CommentaryItem): string =>
           v-for="item in commentaryItems"
           :id="item.anchorId"
           :key="item.anchorId"
-          class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+          class="scroll-mt-24 rounded-card text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) target:bg-(--surface-raised)"
         >
           <span class="me-1.5 font-medium">{{ markerFor(item) }}.</span>
           <span v-html="item.html" />

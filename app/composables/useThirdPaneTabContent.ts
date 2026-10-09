@@ -22,7 +22,8 @@
  * previous behaviour for Inner Observation (fetched whenever panes mode was
  * active) becomes strictly narrower rather than wider.
  */
-import type { ComputedRef, Ref } from "vue";
+import { useLocalStorage } from "@vueuse/core";
+import type { ComputedRef, Ref, WritableComputedRef } from "vue";
 import type { InnerObservationSectionView } from "~/components/reader/InnerObservationPane.vue";
 import type {
   PartScopedSection,
@@ -42,7 +43,7 @@ export interface ThirdPaneTabChapters {
 export interface ThirdPaneTabContent {
   /** Language codes offered for the active tab. */
   languageOptions: ComputedRef<string[]>;
-  language: Ref<string | null>;
+  language: WritableComputedRef<string | null>;
   /** Version metadata for the tab as a whole, for `dir`/`lang` — provenance is per section. */
   meta: ComputedRef<ContentVersion | null>;
   sections: ComputedRef<InnerObservationSectionView[]>;
@@ -89,6 +90,8 @@ export const resolveSectionViews = (
   });
 };
 
+const LANGUAGE_STORAGE_KEY = "readtes:reader-third-pane-language";
+
 export const useThirdPaneTabContent = (
   partId: string,
   chapters: ThirdPaneTabChapters,
@@ -128,28 +131,36 @@ export const useThirdPaneTabContent = (
     paneLanguageOptions(versionIds.value, locale.value, versionsById.value),
   );
 
-  // Not persisted across chapters, same as the pane's language always was:
-  // it re-resolves from the locale whenever the available versions change,
-  // and only holds a reader's explicit pick for as long as that pick is
-  // still offered.
-  const language = ref<string | null>(null);
-  watch(
-    versionIds,
-    (ids) => {
-      if (
-        language.value &&
-        resolveVersionForLanguage(ids, language.value, versionsById.value)
-      ) {
-        return;
+  // Persisted like the other two panes' language (`useReaderLanguages`): a
+  // reader's pick holds across chapters and tabs for as long as it is still
+  // offered, and otherwise the locale's default applies. The persisted read
+  // waits for mount so the first client render matches the prerendered HTML
+  // (same hydration discipline as `useReaderLanguages`).
+  const preferredLanguage = useLocalStorage<string | null>(
+    LANGUAGE_STORAGE_KEY,
+    null,
+  );
+  const hydrated = ref(false);
+  onMounted(() => {
+    hydrated.value = true;
+  });
+
+  const language = computed<string | null>({
+    get: () => {
+      const preferred = hydrated.value ? preferredLanguage.value : null;
+      if (preferred && languageOptions.value.includes(preferred)) {
+        return preferred;
       }
-      language.value = resolveDefaultLanguage(
-        ids,
+      return resolveDefaultLanguage(
+        versionIds.value,
         locale.value,
         versionsById.value,
       );
     },
-    { immediate: true },
-  );
+    set: (next) => {
+      preferredLanguage.value = next;
+    },
+  });
 
   const versionId = computed(() =>
     language.value

@@ -112,6 +112,7 @@ describe("useReaderMode (hydration)", () => {
         ) => listeners.delete(listener),
       })),
     );
+    return listeners;
   };
 
   const Host = defineComponent({
@@ -185,6 +186,35 @@ describe("useReaderMode (hydration)", () => {
     const returning = await mountSuspended(Host);
     await nextTick();
     expect(returning.vm.readerMode.mode.value).toBe("panes");
+  });
+
+  it("shows a one-off mode without persisting it", async () => {
+    stubMatchMedia(true);
+
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+    expect(wrapper.vm.readerMode.mode.value).toBe("study");
+
+    wrapper.vm.readerMode.setModeOnce("panes");
+    await nextTick();
+    expect(wrapper.vm.readerMode.mode.value).toBe("panes");
+    expect(localStorage.getItem("readtes:reader-mode")).toBeNull();
+
+    const returning = await mountSuspended(Host);
+    await nextTick();
+    expect(returning.vm.readerMode.mode.value).toBe("study");
+  });
+
+  // Crossing 1024px mid-read (a phone rotated) used to swap the whole reader
+  // between study and panes and lose the reader's place.
+  it("resolves the viewport default once per load, listening for no viewport changes", async () => {
+    const listeners = stubMatchMedia(true);
+
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+
+    expect(wrapper.vm.readerMode.mode.value).toBe("study");
+    expect(listeners.size).toBe(0);
   });
 
   it("switches to and persists Original mode as an explicit override, on any viewport", async () => {

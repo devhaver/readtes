@@ -12,7 +12,7 @@ definePageMeta({
   // Full remount on every param change (not just on prop update) so the
   // 404 check below always re-runs against the new ids, and so
   // `useReaderLanguages`' locale-dependent defaults are recomputed fresh.
-  key: (route) => route.fullPath,
+  key: (route) => route.path,
 });
 
 const route = useRoute();

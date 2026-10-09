@@ -49,7 +49,7 @@ const emit = defineEmits<{
 
 const { t, locale } = useI18n();
 const { activateAnchor, toggleInline, expandedAnchors } = useReaderState();
-const { setMode } = useReaderMode();
+const { setModeOnce } = useReaderMode();
 
 // Study mode has no separate scroll container of its own — the whole
 // document scrolls (see `useAutoHidingChrome`) — but `useHighlightedAnchor`
@@ -177,7 +177,7 @@ const onInlineEntered = (anchorId: string) => {
 
 /** Switches to panes mode and scrolls straight to its commentary column — see `ReaderShell`'s `#reader-commentary-pane`. */
 const goToFullCommentary = async () => {
-  setMode("panes");
+  setModeOnce("panes");
   await nextTick();
   document
     .getElementById("reader-commentary-pane")
