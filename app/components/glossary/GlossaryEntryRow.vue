@@ -196,7 +196,7 @@ const variantShares = computed(() =>
           </p>
           <button
             type="button"
-            class="mt-2 rounded-button border border-(--border) px-3 py-1.5 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="mt-2 rounded-button border border-(--border-control) px-3 py-1.5 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
             @click="emit('retry')"
           >
             {{ t("glossary.citationsRetry") }}
@@ -258,18 +258,20 @@ const variantShares = computed(() =>
   transition: background-color 150ms ease;
 }
 
-.glossary-row:hover {
-  background-color: var(--surface-raised);
+@media (hover: hover) {
+  .glossary-row:hover {
+    background-color: var(--surface-raised);
+  }
 }
 
 /*
  * Byte-for-byte the ring the rest of the site draws with
- * `focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal
+ * `focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)
  * focus-visible:-outline-offset-2` — the same computed style, written out
  * because the class string is what costs 125 times over.
  */
 .glossary-row:focus-visible {
-  outline: 2px solid var(--color-teal);
+  outline: 2px solid var(--focus-ring);
   outline-offset: -2px;
 }
 

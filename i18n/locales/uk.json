@@ -8,7 +8,8 @@
     "chapter": "Розділ",
     "skipToContent": "Перейти до тексту",
     "language": "Мова",
-    "close": "Закрити"
+    "close": "Закрити",
+    "skipToText": "Перейти до тексту"
   },
   "nav": {
     "primary": "Основне меню",
@@ -16,11 +17,9 @@
     "menuClose": "Закрити меню",
     "volumesLink": "Томи",
     "glossaryLink": "Глосарій",
-    "themeToggleToDark": "Темна тема",
-    "themeToggleToLight": "Світла тема",
-    "themeToggleToSepia": "Тема «сепія»",
     "languageSwitcherLabel": "Змінити мову",
     "breadcrumbLabel": "Навігаційний ланцюжок",
+    "themeToggleLabel": "Тема: {current}. Перемкнути на: {next}.",
     "aboutLink": "Про проєкт"
   },
   "footer": {

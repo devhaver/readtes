@@ -132,6 +132,22 @@
    * mode.
    */
   --warning-text: var(--color-orange-cta-strong);
+  /*
+   * Focus ring + control borders (issue #202). The bright brand teal
+   * measured 2.12-2.49:1 as a ring on light/sepia surfaces (WCAG 1.4.11
+   * wants 3:1), and `--border` (a decorative hairline, 1.05-1.24:1) was
+   * doing duty as the edge of interactive controls. Measured per theme
+   * against every surface in that theme:
+   *   light  --focus-ring-surface #007a7f  4.54-5.13:1   --border-control #8a8a8a  3.05-3.45:1
+   *   sepia  --focus-ring-surface #006a6e  4.88-5.72:1   --border-control #8a7660  3.31-3.89:1
+   *   dark   --focus-ring-surface #00b6bd  5.97-6.93:1   --border-control #5d7b96  3.36-3.90:1
+   * `--focus-ring-inverse` is for rings drawn on the navy header, where the
+   * bright teal is the one that clears 3:1 (4.65:1).
+   */
+  --focus-ring-surface: var(--color-teal-strong);
+  --focus-ring: var(--focus-ring-surface);
+  --focus-ring-inverse: var(--color-teal);
+  --border-control: #8a8a8a;
 }
 
 .dark {
@@ -143,6 +159,8 @@
   --border: #1f3a52;
   --accent-text: var(--color-teal);
   --warning-text: var(--color-orange-cta);
+  --focus-ring-surface: var(--color-teal);
+  --border-control: #5d7b96;
 }
 
 /*
@@ -259,8 +277,10 @@ a[href],
   border-radius: 4px;
 }
 
-*::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-muted);
+@media (hover: hover) {
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-muted);
+  }
 }
 
 /*
@@ -312,6 +332,8 @@ a[href],
   --border: #d9cbb2;
   --accent-text: #006a6e;
   --warning-text: var(--color-orange-cta-strong);
+  --focus-ring-surface: #006a6e;
+  --border-control: #8a7660;
 }
 
 .sepia {
@@ -403,19 +425,25 @@ a.tes-anchor::after {
   inset-inline: -0.55em;
 }
 
-.tes-anchor:hover,
+/* Hover underline only where hover exists: on touch it stuck after a tap. */
+@media (hover: hover) {
+  .tes-anchor:hover {
+    text-decoration: underline;
+  }
+}
+
 .tes-anchor:focus-visible {
   text-decoration: underline;
 }
 
 .tes-anchor:focus-visible {
-  outline: 2px solid var(--color-teal);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 1px;
 }
 
 /* A note moved focus to (`useHighlightedAnchor`) on keyboard activation. */
 .reader-anchor-target:focus-visible {
-  outline: 2px solid var(--color-teal);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -527,10 +555,10 @@ html[data-pref-scale="4"] [data-reading-scale] {
 
 /* The project's one focus-ring treatment (see the tes-seo-ssg skill's
    accessibility conventions) — was `focus-visible:outline
-   focus-visible:outline-2 focus-visible:outline-teal` at nearly every
+   focus-visible:outline-2 focus-visible:outline-(--focus-ring)` at nearly every
    interactive element in the reader chrome, nav, and breadcrumb. */
 .tes-focus-ring {
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* Skip-to-content link — identical in both layouts, so identical on
@@ -625,7 +653,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
 /* The transparent inline-start border is reserved on EVERY heading, not just
    the current one, so `.is-current` colouring it in shifts nothing. */
 .tes-commentary-seif-heading {
-  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
   font-size: calc(0.875rem * var(--reading-scale));
   line-height: 1.43;
 }
@@ -766,7 +794,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
   /* `pb-2`, not `py-2`: the shared rule above gives this heading its
      `padding-block-start` (8px + the pane's padding it cancels), and `py-2`
      here, being declared later, reset it to 8px. */
-  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) pb-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) pb-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 .tes-prose-block {
@@ -875,7 +903,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
    (`ReaderContentsPanel`'s close button deliberately keeps its own inline
    classes: muted text + `tes-focus-ring`, not this recipe.) */
 .tes-icon-btn {
-  @apply inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* End of the Study stream: the way on to the neighbouring chapters. */
@@ -884,7 +912,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
 }
 
 .tes-study-end-link {
-  @apply flex min-w-0 max-w-[48%] flex-col gap-0.5 rounded-card border border-(--border) px-4 py-3 text-(--text-primary) hover:border-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply flex min-w-0 max-w-[48%] flex-col gap-0.5 rounded-card border border-(--border) px-4 py-3 text-(--text-primary) hover:border-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* The collapsed bar's prev/next targets: 44px, the size a thumb needs. */
@@ -907,7 +935,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
 /* `ReaderPaneHeader`'s per-layer language <select> — up to 3x per
    panes-mode page. */
 .tes-lang-select {
-  @apply rounded-input border border-(--border) bg-(--surface) px-2 py-1 text-xs text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply rounded-input border border-(--border-control) bg-(--surface) px-2 py-1 text-xs text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* `ReaderPaneHeader`'s provenance badge — the tone-specific
@@ -933,7 +961,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
 }
 
 .tes-third-pane-tab:focus-visible {
-  @apply outline outline-2 outline-teal;
+  @apply outline outline-2 outline-(--focus-ring);
 }
 
 /* Underlined rather than filled: a filled chip at this size reads as a
@@ -953,7 +981,7 @@ html[data-pref-scale="4"] [data-reading-scale] {
  * knows from every other mobile app.
  */
 .tes-pill-tab {
-  @apply flex flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-xs leading-tight font-medium break-words focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply flex flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-xs leading-tight font-medium break-words focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
   /* Tightened padding and gap take ~10px off the bar without taking it off
      the tap target: the button keeps a 40px minimum height, which is what
      a thumb actually needs. Shrinking the target instead would be a worse
@@ -965,13 +993,13 @@ html[data-pref-scale="4"] [data-reading-scale] {
    rather than another button competing for the control row's horizontal
    space, which a 412px screen does not have. */
 .tes-chrome-handle {
-  @apply flex min-h-11 min-w-0 flex-1 items-center gap-2 rounded-button px-2 py-1 text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply flex min-h-11 min-w-0 flex-1 items-center gap-2 rounded-button px-2 py-1 text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* `ReaderToolbar`'s prev/next chapter links, and their disabled
    (corpus-edge) state. */
 .tes-chapter-nav-link {
-  @apply inline-flex text-sm min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply inline-flex min-w-0 items-center gap-1.5 rounded-button px-2 py-1 text-sm text-(--text-primary) hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 .tes-chapter-nav-disabled {
@@ -988,21 +1016,22 @@ html[data-pref-scale="4"] [data-reading-scale] {
 }
 
 .tes-breadcrumb-link {
-  @apply rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply rounded-button hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* `ReaderBreadcrumbMenu`'s disclosure trigger. */
 .tes-breadcrumb-menu-trigger {
-  @apply inline-flex items-center gap-1 rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply inline-flex items-center gap-1 rounded-button hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* Dropdown-menu link rows — `ReaderBreadcrumbMenu`'s panel items. */
-/* NOTE: these classes are unlayered, so their `color` beats ANY utility a
-   call site adds (`text-(--accent-text)` conditionals included). If a call
-   site ever needs a color override, move the color out of the class or
-   layer it. */
-.tes-menu-link {
-  @apply block px-3 py-2 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+/* Layered (`components`) on purpose: an unlayered class's `color` beats ANY
+   utility a call site adds, so the current item's `text-(--accent-text)`
+   lost and the current page read as bold black. */
+@layer components {
+  .tes-menu-link {
+    @apply block px-3 py-2 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
+  }
 }
 
 .tes-menu-link-disabled {
@@ -1011,11 +1040,11 @@ html[data-pref-scale="4"] [data-reading-scale] {
 
 /* `ReaderContentsPanel`'s volume/part tree links. */
 .tes-contents-volume-link {
-  @apply rounded-button font-display text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply rounded-button font-display text-sm hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 .tes-contents-part-link {
-  @apply block rounded-button px-2 py-1 text-sm hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply block rounded-button px-2 py-1 text-sm hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 .tes-contents-part-disabled {
@@ -1023,19 +1052,55 @@ html[data-pref-scale="4"] [data-reading-scale] {
 }
 
 /* `AppNavBar`'s primary links — desktop row and the mobile disclosure. */
+/* They sit on the navy bar in every theme, where the bright brand teal is the
+   colour that clears 3:1 — so hover text and the ring use it, not the
+   surface-theme tokens. The current page gets weight plus an underline, never
+   colour alone; `/volumes/*` lights Volumes (the prefix match is
+   `AppNavBar`'s `current`). */
 .tes-navbar-link {
-  @apply text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  --focus-ring: var(--focus-ring-inverse);
+  @apply rounded-button text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 .tes-navbar-link-mobile {
-  @apply block rounded-button py-2 text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  --focus-ring: var(--focus-ring-inverse);
+  @apply block rounded-button py-2 text-sm hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
+}
+
+.tes-navbar-link.is-current,
+.tes-navbar-link-mobile.is-current {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.tes-focus-ring-inverse {
+  --focus-ring: var(--focus-ring-inverse);
+}
+
+/* UI chrome set in Hebrew uses the Hebrew sans, not the book face that the
+   bare `[lang="he"]` rule above gives reading text. */
+.tes-chrome-lang:lang(he) {
+  font-family: var(--font-hebrew-sans);
+}
+
+/* A trapped overlay is open: the page behind must not scroll. */
+.tes-scroll-locked {
+  overflow: hidden;
+}
+
+/* Programmatic focus targets (<main> for the skip link) take focus without
+   drawing a ring around the whole page. */
+main[tabindex="-1"]:focus {
+  outline: none;
 }
 
 /* `<details>` disclosure summary — `ChapterIntro`'s chapter-intro card
    and `StudyStream`'s unanchored-commentary section share this exact
    trigger + chevron pair. */
 .tes-disclosure-summary {
-  @apply flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply flex cursor-pointer list-none items-center justify-between gap-2 px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
 }
 
 /* Pairs with `.tes-icon .tes-icon-chevron-down` at the call site, not a
@@ -1049,7 +1114,85 @@ html[data-pref-scale="4"] [data-reading-scale] {
 
 /* `ReaderSummaryBody`'s mini-toc entry buttons. */
 .tes-minitoc-link {
-  @apply rounded-button px-2 py-1 text-start text-sm text-(--text-primary) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply rounded-button px-2 py-1 text-start text-sm text-(--text-primary) hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring);
+}
+
+/*
+ * `UiSegmentedControl` segments. The ring is drawn inside the segment: the
+ * group no longer clips (it used to be `overflow-hidden`, which hid the ring
+ * on the first and last segment), and an inset ring on a neighbour-adjacent
+ * segment would otherwise be painted over by the next one. A selected
+ * segment is filled with the ring colour, so its ring is white there.
+ */
+.tes-segment {
+  position: relative;
+}
+
+.tes-segment:focus-visible {
+  z-index: 1;
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -3px;
+}
+
+.tes-segment[aria-pressed="true"]:focus-visible {
+  outline-color: var(--color-surface-white);
+}
+
+/*
+ * Touch targets. On a coarse pointer the primary controls reach 44x44 CSS px
+ * (WCAG 2.5.5) without changing the layout: icon buttons, the hamburger and
+ * the language summary grow an invisible hit area (negative inset on a
+ * pseudo-element, so neighbours do not move), while rows and fields whose
+ * height is not precious simply get a 44px floor.
+ */
+@media (pointer: coarse) {
+  .tes-touch-target,
+  .tes-icon-btn,
+  .tes-breadcrumb-menu-trigger {
+    position: relative;
+  }
+
+  .tes-touch-target::after,
+  .tes-icon-btn::after,
+  .tes-breadcrumb-menu-trigger::after {
+    content: "";
+    position: absolute;
+    inset-inline: min(0px, calc((100% - 44px) / 2));
+    inset-block: min(0px, calc((100% - 44px) / 2));
+  }
+
+  /* Segments sit edge to edge, so only the height grows. */
+  .tes-segment-target::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block: -10px;
+  }
+
+  .tes-lang-select,
+  .tes-menu-link,
+  .tes-menu-link-disabled,
+  .tes-contents-part-link,
+  .tes-contents-volume-link,
+  .tes-navbar-link-mobile,
+  .tes-chip,
+  .tes-minitoc-link {
+    min-block-size: 44px;
+  }
+
+  .tes-menu-link,
+  .tes-contents-part-link,
+  .tes-contents-volume-link,
+  .tes-navbar-link-mobile,
+  .tes-minitoc-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .tes-chip {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 /* `InnerObservationPane`'s pending-state skeleton line — width stays a
@@ -1117,6 +1260,36 @@ html[data-pref-scale="4"] [data-reading-scale] {
 
 .tes-icon-theme-dark {
   --tes-icon-url: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%22M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z%22/%3E%3C/svg%3E");
+}
+
+/*
+ * `AppThemeToggle`: all three theme icons are in the markup and the class on
+ * <html> picks one, so the prerendered page (which cannot know the visitor's
+ * theme) cannot show the wrong icon after hydration. No class on <html> means
+ * light. The dots under the icon mark the three stops of the cycle.
+ */
+.tes-theme-toggle .tes-theme-icon {
+  display: none;
+}
+
+:root:not(.dark):not(.sepia) .tes-theme-toggle .tes-icon-theme-light,
+.sepia .tes-theme-toggle .tes-icon-theme-sepia,
+.dark .tes-theme-toggle .tes-icon-theme-dark {
+  display: inline-block;
+}
+
+.tes-theme-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  opacity: 0.35;
+}
+
+:root:not(.dark):not(.sepia) .tes-theme-dot-light,
+.sepia .tes-theme-dot-sepia,
+.dark .tes-theme-dot-dark {
+  opacity: 1;
 }
 
 .tes-icon-contents {

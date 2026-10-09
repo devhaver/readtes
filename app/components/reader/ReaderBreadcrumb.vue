@@ -19,7 +19,7 @@ const props = defineProps<{
   currentPartId: string;
 }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
 const volumeItems = computed(() =>
@@ -42,7 +42,7 @@ const partItems = computed(() =>
     .sort((a, b) => a.number - b.number)
     .map((part) => ({
       key: part.id,
-      label: `${t("common.part")} ${part.number}`,
+      label: `${t("common.part")} ${part.number} · ${localizedText(part.title, locale.value)}`,
       to: part.firstChapterId
         ? localePath(`/read/${part.firstChapterId}`)
         : null,
@@ -61,7 +61,14 @@ const volumeContentsLink = computed(() =>
 </script>
 
 <template>
-  <nav :aria-label="t('nav.breadcrumbLabel')" class="min-w-0 text-sm">
+  <!-- A labelled group, not a `nav`: the toolbar already wraps this in its
+       "Chapter navigation" landmark, and a landmark inside a landmark of the
+       same kind is announced twice. -->
+  <div
+    role="group"
+    :aria-label="t('nav.breadcrumbLabel')"
+    class="min-w-0 text-sm"
+  >
     <!-- Below `md` only the current chapter shows: the volume and part
          menus wrapped the toolbar onto five lines of a phone screen, and the
          contents button beside it reaches the same places. -->
@@ -96,5 +103,5 @@ const volumeContentsLink = computed(() =>
         >
       </li>
     </ol>
-  </nav>
+  </div>
 </template>

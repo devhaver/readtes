@@ -8,7 +8,8 @@
     "chapter": "Bölüm",
     "skipToContent": "İçeriğe geç",
     "language": "Dil",
-    "close": "Kapat"
+    "close": "Kapat",
+    "skipToText": "Metne geç"
   },
   "nav": {
     "primary": "Ana menü",
@@ -16,11 +17,9 @@
     "menuClose": "Menüyü kapat",
     "volumesLink": "Ciltler",
     "glossaryLink": "Sözlük",
-    "themeToggleToDark": "Koyu moda geç",
-    "themeToggleToLight": "Açık moda geç",
-    "themeToggleToSepia": "Sepya moduna geç",
     "languageSwitcherLabel": "Dili değiştir",
     "breadcrumbLabel": "Gezinti yolu",
+    "themeToggleLabel": "Tema: {current}. Şuna geç: {next}.",
     "aboutLink": "Hakkında"
   },
   "footer": {

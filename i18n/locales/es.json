@@ -8,7 +8,8 @@
     "chapter": "Capítulo",
     "skipToContent": "Saltar al contenido",
     "language": "Idioma",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "skipToText": "Saltar al texto"
   },
   "nav": {
     "primary": "Principal",
@@ -16,11 +17,9 @@
     "menuClose": "Cerrar menú",
     "volumesLink": "Volúmenes",
     "glossaryLink": "Glosario",
-    "themeToggleToDark": "Cambiar al modo oscuro",
-    "themeToggleToLight": "Cambiar al modo claro",
-    "themeToggleToSepia": "Cambiar al modo sepia",
     "languageSwitcherLabel": "Cambiar de idioma",
     "breadcrumbLabel": "Ruta de navegación",
+    "themeToggleLabel": "Tema: {current}. Cambiar a: {next}.",
     "aboutLink": "Acerca de"
   },
   "footer": {

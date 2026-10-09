@@ -23,12 +23,28 @@ const FOCUSABLE_SELECTOR = [
   '[tabindex]:not([tabindex="-1"])',
 ].join(", ");
 
+/**
+ * How many trapped overlays are open right now. Anything else that floats
+ * (the language menu, the mobile nav) closes itself while this is above zero,
+ * and the page behind does not scroll.
+ */
+export const useOpenOverlayCount = () => useState("tes-open-overlays", () => 0);
+
+const SCROLL_LOCK_CLASS = "tes-scroll-locked";
+
 export const useFocusTrap = (
   containerRef: Ref<HTMLElement | null | undefined>,
   active: Ref<boolean>,
   onClose: () => void,
+  /**
+   * Where focus lands on open, instead of the first focusable element — the
+   * contents panel uses this to start on the current chapter rather than on
+   * Close, ~300 Tabs before it in part 12.
+   */
+  initialFocus?: () => HTMLElement | null | undefined,
 ): void => {
   let previouslyFocused: HTMLElement | null = null;
+  const openOverlays = useOpenOverlayCount();
 
   const focusableElements = (): HTMLElement[] =>
     containerRef.value
@@ -70,10 +86,27 @@ export const useFocusTrap = (
       previouslyFocused = document.activeElement as HTMLElement | null;
       document.addEventListener("keydown", onKeydown);
 
-      const toFocus = focusableElements()[0] ?? containerRef.value;
+      openOverlays.value += 1;
+      document.documentElement.classList.add(SCROLL_LOCK_CLASS);
+
+      // Opened by a tap or click, the trigger is not `:focus-visible`; moving
+      // focus to the first control would paint a focus ring nobody asked for.
+      // Land on the dialog itself then (it is `tabindex="-1"`), so Tab still
+      // starts inside it. A keyboard opener gets the first/initial control.
+      const openedByPointer =
+        previouslyFocused !== null &&
+        previouslyFocused !== document.body &&
+        !previouslyFocused.matches(":focus-visible");
+      const toFocus = openedByPointer
+        ? containerRef.value
+        : (initialFocus?.() ?? focusableElements()[0] ?? containerRef.value);
       toFocus?.focus();
 
       onCleanup(() => {
+        openOverlays.value = Math.max(0, openOverlays.value - 1);
+        if (openOverlays.value === 0) {
+          document.documentElement.classList.remove(SCROLL_LOCK_CLASS);
+        }
         document.removeEventListener("keydown", onKeydown);
         previouslyFocused?.focus();
         previouslyFocused = null;

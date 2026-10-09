@@ -124,7 +124,7 @@ const statusMessage = computed(() => {
       </p>
       <button
         type="button"
-        class="rounded-button border border-(--border) px-3 py-1.5 text-sm text-(--text-primary) underline underline-offset-2"
+        class="rounded-button border border-(--border-control) px-3 py-1.5 text-sm text-(--text-primary) underline underline-offset-2"
         @click="emit('reload')"
       >
         {{ t("reader.innerObservationReload") }}

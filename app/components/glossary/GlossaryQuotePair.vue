@@ -55,7 +55,7 @@ const chapterLabel = computed(() => {
       <NuxtLink
         v-if="chapterId && chapterLabel"
         :to="localePath(`/read/${chapterId}`)"
-        class="inline-flex items-center gap-1 text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="inline-flex items-center gap-1 text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
       >
         {{ chapterLabel }}
         <svg

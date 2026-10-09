@@ -15,6 +15,10 @@
 // need an arbitrary cap that wastes the extra room a desktop viewport
 // actually has for a real Volumes/Parts tree.
 import { useMediaQuery } from "@vueuse/core";
+import {
+  clampSheetDragOffset,
+  shouldDismissSheetDrag,
+} from "~/utils/commentarySheetGesture";
 import { prefersReducedMotion } from "~/utils/motion";
 import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 import type { TocChapter, TocVolumeSkeleton } from "~~/shared/types/content";
@@ -42,7 +46,11 @@ const panelRef = ref<HTMLElement | null>(null);
 const isOpen = computed(() => props.open);
 
 const close = () => emit("close");
-useFocusTrap(panelRef, isOpen, close);
+// Start on the current chapter, not on Close: part 12 lists 293 chapters, and
+// Close first meant ~300 Tabs to reach the one the reader is in.
+useFocusTrap(panelRef, isOpen, close, () =>
+  panelRef.value?.querySelector<HTMLElement>('[data-current-chapter="true"]'),
+);
 
 const sortedVolumes = computed(() =>
   [...props.volumes].sort((a, b) => a.number - b.number),
@@ -64,6 +72,37 @@ watch(
 );
 
 const isNarrowViewport = useMediaQuery(STUDY_MODE_MEDIA_QUERY);
+
+// Swipe-down-to-dismiss on the bottom-sheet form, same gesture (and same
+// pure threshold math) as `CommentarySheet`.
+const dragOffset = ref(0);
+const isDragging = ref(false);
+let dragStartY = 0;
+
+const onDragStart = (event: PointerEvent) => {
+  isDragging.value = true;
+  dragStartY = event.clientY;
+  (event.target as HTMLElement).setPointerCapture(event.pointerId);
+};
+
+const onDragMove = (event: PointerEvent) => {
+  if (!isDragging.value) return;
+  dragOffset.value = clampSheetDragOffset(event.clientY - dragStartY);
+};
+
+const onDragEnd = () => {
+  if (!isDragging.value) return;
+  isDragging.value = false;
+  const dismiss = shouldDismissSheetDrag(dragOffset.value);
+  dragOffset.value = 0;
+  if (dismiss) close();
+};
+
+const panelStyle = computed(() =>
+  dragOffset.value > 0
+    ? { transform: `translateY(${dragOffset.value}px)`, transition: "none" }
+    : {},
+);
 
 const slideFromClass = computed(() =>
   isNarrowViewport.value
@@ -89,7 +128,7 @@ const transitionDuration = computed(() =>
         type="button"
         tabindex="-1"
         aria-hidden="true"
-        class="fixed inset-0 z-50 cursor-default bg-black/40"
+        class="fixed inset-0 z-[60] cursor-default bg-black/40"
         @click="close"
       />
     </Transition>
@@ -107,12 +146,28 @@ const transitionDuration = computed(() =>
         aria-modal="true"
         :aria-labelledby="titleId"
         tabindex="-1"
-        class="fixed inset-x-0 bottom-0 z-50 flex max-h-[85vh] flex-col rounded-t-card border-t border-(--border) bg-(--surface) pb-[env(safe-area-inset-bottom)] shadow-lg lg:inset-x-auto lg:inset-y-0 lg:end-0 lg:bottom-auto lg:h-full lg:max-h-none lg:w-full lg:max-w-sm lg:rounded-none lg:rounded-s-card lg:border-t-0 lg:border-s"
+        :style="panelStyle"
+        class="fixed inset-x-0 bottom-0 z-[60] flex max-h-[85vh] flex-col rounded-t-card border-t border-(--border) bg-(--surface) pb-[env(safe-area-inset-bottom)] shadow-lg lg:inset-x-auto lg:inset-y-0 lg:end-0 lg:bottom-auto lg:h-full lg:max-h-none lg:w-full lg:max-w-sm lg:rounded-none lg:rounded-s-card lg:border-t-0 lg:border-s"
       >
+        <div
+          class="flex shrink-0 cursor-grab touch-none justify-center pt-2 active:cursor-grabbing lg:hidden"
+          @pointerdown="onDragStart"
+          @pointermove="onDragMove"
+          @pointerup="onDragEnd"
+          @pointercancel="onDragEnd"
+        >
+          <span
+            aria-hidden="true"
+            class="h-1 w-10 shrink-0 rounded-full bg-(--border)"
+          />
+        </div>
         <div
           class="flex shrink-0 items-center justify-between gap-2 border-b border-(--border) px-4 py-3"
         >
-          <h2 :id="titleId" class="font-display text-sm text-(--text-primary)">
+          <h2
+            :id="titleId"
+            class="font-display text-base text-(--text-primary)"
+          >
             {{ t("reader.contents.title") }}
           </h2>
           <button
@@ -127,7 +182,7 @@ const transitionDuration = computed(() =>
 
         <nav
           :aria-label="t('reader.contents.title')"
-          class="flex-1 overflow-y-auto px-4 py-4"
+          class="flex-1 overflow-y-auto overscroll-contain px-4 py-4"
         >
           <ol class="flex flex-col gap-5">
             <li v-for="volume in sortedVolumes" :key="volume.id">

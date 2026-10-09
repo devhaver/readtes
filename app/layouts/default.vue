@@ -10,7 +10,7 @@ const { t } = useI18n();
       {{ t("common.skipToContent") }}
     </a>
     <AppNavBar />
-    <main id="main-content" class="flex-1">
+    <main id="main-content" tabindex="-1" class="flex-1">
       <slot />
     </main>
     <AppFooter />

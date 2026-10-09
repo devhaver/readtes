@@ -72,7 +72,7 @@ const transitionDuration = computed(() =>
         type="button"
         tabindex="-1"
         aria-hidden="true"
-        class="fixed inset-0 z-50 cursor-default bg-black/40"
+        class="fixed inset-0 z-[60] cursor-default bg-black/40"
         @click="onBackdropClick"
       />
     </Transition>
@@ -90,10 +90,14 @@ const transitionDuration = computed(() =>
         aria-modal="true"
         :aria-labelledby="titleId"
         tabindex="-1"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4"
+        class="pointer-events-none fixed inset-0 z-[60] flex items-center justify-center p-4"
       >
+        <!-- This wrapper spans the viewport and sits over the backdrop, so it
+             lets clicks through (`pointer-events-none`) and only the card
+             takes them — otherwise a click outside the card never reached
+             the backdrop and the modal ignored it. -->
         <div
-          class="w-full max-w-sm rounded-card border border-(--border) bg-(--surface) p-5 shadow-lg"
+          class="pointer-events-auto max-h-full w-full max-w-sm overflow-y-auto overscroll-contain rounded-card border border-(--border) bg-(--surface) p-5 shadow-lg"
         >
           <div class="mb-4 flex items-center justify-between gap-2">
             <h2
@@ -104,7 +108,7 @@ const transitionDuration = computed(() =>
             </h2>
             <button
               type="button"
-              class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-muted) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+              class="tes-touch-target inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-muted) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
               :aria-label="t('reader.prefs.close')"
               @click="close"
             >
@@ -130,6 +134,7 @@ const transitionDuration = computed(() =>
                 {{ t("reader.prefs.fontSize.label") }}
               </h3>
               <UiSegmentedControl
+                fill
                 :accessible-label="t('reader.prefs.fontSize.label')"
                 :model-value="fontSizeValue"
                 :options="fontSizeOptions"
@@ -142,6 +147,7 @@ const transitionDuration = computed(() =>
                 {{ t("reader.prefs.theme.label") }}
               </h3>
               <UiSegmentedControl
+                fill
                 :accessible-label="t('reader.prefs.theme.label')"
                 :model-value="themeValue"
                 :options="themeOptions"
@@ -161,7 +167,7 @@ const transitionDuration = computed(() =>
                   v-for="entry in availableLocales"
                   :key="entry.code"
                   :to="switchLocalePath(entry.code)"
-                  class="rounded-button border border-(--border) px-2.5 py-1 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+                  class="tes-chip rounded-button border border-(--border-control) px-2.5 py-1 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
                   :class="
                     entry.code === locale
                       ? 'bg-teal-strong text-surface-white'
@@ -169,6 +175,7 @@ const transitionDuration = computed(() =>
                   "
                   :aria-current="entry.code === locale ? 'true' : undefined"
                   :hreflang="entry.language"
+                  :lang="entry.code"
                   @click="close"
                 >
                   {{ entry.name }}

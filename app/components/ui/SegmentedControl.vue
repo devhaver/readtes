@@ -16,27 +16,34 @@ defineProps<{
   modelValue: T;
   options: SegmentedControlOption<T>[];
   accessibleLabel: string;
+  /** Stretch to the container, segments sharing the width equally. */
+  fill?: boolean;
 }>();
 
 const emit = defineEmits<{ "update:modelValue": [value: T] }>();
 </script>
 
 <template>
+  <!-- No `overflow-hidden` on the group: it clipped the focus ring on the
+       first and last segment. The ends are rounded on the segments instead,
+       and the ring is drawn inset (see `.tes-segment`). -->
   <div
     role="group"
     :aria-label="accessibleLabel"
-    class="flex shrink-0 overflow-hidden rounded-button border border-(--border) text-xs"
+    class="max-w-full text-xs"
+    :class="fill ? 'flex w-full' : 'inline-flex shrink-0'"
   >
     <button
       v-for="(option, index) in options"
       :key="option.value"
       type="button"
       :aria-pressed="modelValue === option.value"
-      class="px-2.5 py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      class="tes-segment tes-segment-target border border-(--border-control) px-2.5 py-1 text-center leading-tight first:rounded-s-button last:rounded-e-button"
       :class="[
-        index > 0 && 'border-s border-(--border)',
+        fill ? 'min-w-0 flex-1' : 'whitespace-nowrap',
+        index > 0 && '-ms-px',
         modelValue === option.value
-          ? 'bg-teal-strong text-surface-white'
+          ? 'border-teal-strong bg-teal-strong text-surface-white'
           : 'text-(--text-primary) hover:bg-(--surface-raised)',
       ]"
       @click="emit('update:modelValue', option.value)"

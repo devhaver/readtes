@@ -32,7 +32,7 @@ const links = computed(() => [
 ]);
 
 const linkClass =
-  "rounded-button underline underline-offset-2 hover:text-(--accent-text) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal";
+  "rounded-button underline underline-offset-2 hover:text-(--accent-text) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)";
 </script>
 
 <template>

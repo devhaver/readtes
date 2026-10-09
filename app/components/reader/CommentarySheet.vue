@@ -105,7 +105,7 @@ const transitionDuration = computed(() =>
         type="button"
         tabindex="-1"
         aria-hidden="true"
-        class="fixed inset-0 z-50 cursor-default bg-black/40"
+        class="fixed inset-0 z-[60] cursor-default bg-black/40"
         @click="close"
       />
     </Transition>
@@ -123,7 +123,7 @@ const transitionDuration = computed(() =>
         aria-modal="true"
         :aria-labelledby="titleId"
         tabindex="-1"
-        class="fixed inset-x-0 bottom-0 z-50 flex max-h-[80vh] flex-col rounded-t-card border-t border-(--border) bg-(--surface) pb-[env(safe-area-inset-bottom)] shadow-lg"
+        class="fixed inset-x-0 bottom-0 z-[60] flex max-h-[80vh] flex-col rounded-t-card border-t border-(--border) bg-(--surface) pb-[env(safe-area-inset-bottom)] shadow-lg"
         :style="panelStyle"
       >
         <div
@@ -142,13 +142,13 @@ const transitionDuration = computed(() =>
           >
             <h2
               :id="titleId"
-              class="font-display text-sm text-(--text-primary)"
+              class="font-display text-base text-(--text-primary)"
             >
               {{ t("reader.commentarySheet.title", { n: seif }) }}
             </h2>
             <button
               type="button"
-              class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-muted) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+              class="inline-flex h-8 w-8 items-center justify-center rounded-button text-(--text-muted) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
               :aria-label="t('reader.commentarySheet.close')"
               @click="close"
             >
@@ -169,7 +169,7 @@ const transitionDuration = computed(() =>
           </div>
         </div>
 
-        <div class="flex-1 overflow-y-auto px-4 pb-4">
+        <div class="flex-1 overflow-y-auto overscroll-contain px-4 pb-4">
           <!-- Capped and centred: on a tablet the sheet is as wide as the
                screen, and 120-150 character lines are unreadable. -->
           <ol
@@ -195,7 +195,7 @@ const transitionDuration = computed(() =>
               />
               <button
                 type="button"
-                class="mt-2 rounded-button border border-teal px-2.5 py-1 text-xs font-medium text-(--accent-text) hover:bg-teal-strong hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+                class="mt-2 rounded-button border border-teal px-2.5 py-1 text-xs font-medium text-(--accent-text) hover:bg-teal-strong hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
                 @click="openInCommentary(item)"
               >
                 {{ t("reader.commentarySheet.openInCommentary") }}

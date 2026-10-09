@@ -33,7 +33,7 @@ const { t } = useI18n();
     >
       <details class="group">
         <summary
-          class="flex cursor-pointer list-none items-center gap-3 px-4 py-3 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal sm:px-6"
+          class="flex cursor-pointer list-none items-center gap-3 px-4 py-3 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--focus-ring) sm:px-6"
         >
           <span class="min-w-0 flex-1 text-sm text-(--text-primary)">
             {{ t(`glossary.conventionCopy.${convention.id}.topic`) }}

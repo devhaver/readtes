@@ -103,7 +103,7 @@ test("switches languages, identifies AI text, and supports themes", async ({
 
   const html = page.locator("html");
   const themeButton = page.getByRole("button", {
-    name: "Switch to sepia mode",
+    name: "Theme: Light. Switch to Sepia.",
   });
   await themeButton.click();
   await expect(html).toHaveClass(/sepia/);

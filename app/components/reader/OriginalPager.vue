@@ -25,7 +25,7 @@ const localePath = useLocalePath();
     <NuxtLink
       v-if="prev"
       :to="localePath(`/read/${prev.id}`)"
-      class="rounded-button px-2 py-1 hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      class="rounded-button px-2 py-1 hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
     >
       <span aria-hidden="true" class="inline-block rtl:rotate-180"
         >&#9664;</span
@@ -50,7 +50,7 @@ const localePath = useLocalePath();
     <NuxtLink
       v-if="next"
       :to="localePath(`/read/${next.id}`)"
-      class="rounded-button px-2 py-1 text-end hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      class="rounded-button px-2 py-1 text-end hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
     >
       {{ t("reader.original.next") }}
       <span aria-hidden="true" class="inline-block rtl:rotate-180"

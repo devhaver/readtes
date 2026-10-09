@@ -76,7 +76,7 @@ const fold = () => {
 
       <button
         type="button"
-        class="rounded-button px-2 py-1 text-xs text-(--text-muted) hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        class="rounded-button px-2 py-1 text-xs text-(--text-muted) hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
         :aria-label="t('reader.studyMode.fold')"
         @click="fold"
       >

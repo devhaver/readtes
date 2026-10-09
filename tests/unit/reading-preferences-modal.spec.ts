@@ -80,4 +80,48 @@ describe("ReadingPreferencesModal", () => {
     expect(wrapper.emitted("close")).toBeTruthy();
     wrapper.unmount();
   });
+
+  it("lets clicks outside the card through to the backdrop", async () => {
+    const wrapper = await mountSuspended(ReadingPreferencesModal, {
+      props: { open: true },
+    });
+    await nextTick();
+
+    // The dialog wrapper spans the viewport above the backdrop; if it takes
+    // pointer events, a click outside the card never reaches the backdrop.
+    const dialog = document.body.querySelector('[role="dialog"]');
+    expect(dialog?.className).toContain("pointer-events-none");
+    expect(dialog?.firstElementChild?.className).toContain(
+      "pointer-events-auto",
+    );
+    wrapper.unmount();
+  });
+
+  it("locks page scroll while open and releases it on close", async () => {
+    const wrapper = await mountSuspended(ReadingPreferencesModal, {
+      props: { open: true },
+    });
+    await nextTick();
+    expect(document.documentElement.classList).toContain("tes-scroll-locked");
+
+    await wrapper.setProps({ open: false });
+    await nextTick();
+    expect(document.documentElement.classList).not.toContain(
+      "tes-scroll-locked",
+    );
+    wrapper.unmount();
+  });
+
+  it("tags each language link with its own lang", async () => {
+    const wrapper = await mountSuspended(ReadingPreferencesModal, {
+      props: { open: true },
+    });
+    await nextTick();
+
+    const hebrew = Array.from(document.body.querySelectorAll("a")).find(
+      (link) => link.textContent?.trim() === "עברית",
+    );
+    expect(hebrew?.getAttribute("lang")).toBe("he");
+    wrapper.unmount();
+  });
 });
