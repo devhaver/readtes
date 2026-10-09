@@ -17,7 +17,7 @@ STOP = {'ז"ל', 'ע"ש', 'ע"ב', 'ע"א', 'נ"ל', 'ע"כ', 'ה"ס', 'וכו',
         'או"פ', 'באו"פ', 'אוה"פ', 'ע"פ', 'ד"ה', 'עד', 'שם', 'עוד', 'כאן',
         'עש"ה', 'ועש"ה', 'עי"ש', 'עיי"ש', 'יש', 'ויש', 'אין', 'ואין', 'כנ"ל',
         'גם', 'וגם', 'כי', 'הם', 'הוא', 'היא', 'רק', 'עם', 'אל', 'כן', 'אך',
-        'של', 'ושל', 'מע"ט', 'ומע"ט',
+        'של', 'ושל', 'מע"ט', 'ומע"ט', 'כמ"ש', 'וכמ"ש',
         'דף', 'ודף', 'רף', 'דך', 'אות', 'ואות'}
 
 # A numeral carries gershayim (מ"ה) or is one or two letters with a
@@ -57,6 +57,13 @@ def run(batch):
                     continue
                 if tok.rstrip("'׳") in ("אלף", "א"):
                     n = 1000 + (0 if (not nxt or nxt in IDIOM) else value(nxt))
+                    amud = ""
+                elif (tok in ("ב'", "ב׳") and nxt and nxt not in ('ע"א', 'ע"ב')
+                      and is_numeral(nxt)):
+                    # Part 16 runs past page 2,000, and the printer writes the
+                    # second thousand the same way as the first: 'דף ב\' ז\''
+                    # is page 2007. Read as page 2, it dropped the ז' (round 14).
+                    n = 2000 + value(nxt)
                     amud = ""
                 else:
                     n = value(tok)
@@ -162,6 +169,9 @@ def run(batch):
 # have been caught before the tables went out.
 CASES = [
     ("""כמ"ש לעיל (דף אלף ז' ד"ה והנה)""", ["page 1007"]),
+    ("""כנ"ל דף ב' ז' ד"ה א"א""", ["page 2007"]),
+    ("""כנ"ל דף ב' ט"ז""", ["page 2016"]),
+    ("""באות קע"ז, כמ"ש לעיל""", ["item 177"]),
     ("""לעיל (דף א' קע"ג)""", ["page 1173"]),
     ("""לעיל (דף א' ד"ה והנה)""", ["page 1000"]),
     ("""כנ"ל אלף ל"ז""", ["page 1037"]),

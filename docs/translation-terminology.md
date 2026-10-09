@@ -864,3 +864,47 @@ another round explaining the same false flags.
 of the same item cites `דף שצ"ז ד"ה או"א` — same passage-beginning, same
 subject — which is page 397. A `ש`/`מ` slip is the obvious reading. Translated
 as printed and recorded here, not changed.
+
+## Round 14 — part 16 finished; the English corpus is complete
+
+89 items in 11 parallel batches. `pnpm translate:export --lang en` now reports
+nothing left to translate.
+
+### Two more bugs in `cites.py`
+
+| printed                | was                 | is                                    |
+| ---------------------- | ------------------- | ------------------------------------- |
+| `דף ב' ז'`             | page 2 (ז' dropped) | **page 2007** — the second thousand   |
+| `באות קע"ז, כמ"ש לעיל` | item 177 + item 360 | **item 177** — `כמ"ש` is "as written" |
+
+Part 16 runs past page 2,000 and the printer writes the second thousand as a
+bare `ב'`, exactly like the first. Both forms are pinned in the self-test.
+Still not covered, deliberately: `אות ר"ה` (item 205) — `ר"ה` stays a keyword
+because it is far more often Rosh HaShanah; translators compute it by hand.
+`ט"א` / `ט"ב` after a page number is a column marker → "page 98, column 1"
+(part-11/chapter-32 precedent).
+
+### Terms settled this round
+
+- `קליפות` → **shells**, lemmas included, although part 16's pane prints
+  "Klipot" (commentary 224 : 22).
+- `מוחא, עצמות, גידין, בשר, עור` → **brain, bones, sinews, flesh, skin**
+  (part-13/chapter-205). Bare `עצמות` stays "self".
+- `חשמ"ל` → **Hashmal**; `שרפים` → **Serafim**; `אופנים` → **Ofanim**;
+  `חיות` (angels) → **Hayot**.
+- `הרכנת ראש` → **bowing of the head**; `כפיפת ראש` → **bending of the head**.
+  Different words — count by the Hebrew, not by the English phrase.
+- `ד"ת` → **the four lower ones**, parallel to `ט"ת` → the nine lower ones.
+- `אל אחר` (no article) → **another god**.
+- `ע"ב דמזלא` → **the AB of the Mazal**.
+
+### Fixed in already-merged text
+
+- part-08/chapter-79: `מד"ת דיצירה` had been "the first Hey of Yetzira" → the
+  four lower ones of Yetzira.
+- part-16/answers-topics-01 (pane): `א' תתקמ"ד` had been "Part 1, Page 944"
+  → page 1944.
+
+Open: the part-16/chapter-138 pane renders `ואמר הדור האחרון` (Deut. 29:21)
+as "and you shall say to the last generation"; the Hebrew is "and the last
+generation shall say". The commentary lemma follows the Hebrew.
