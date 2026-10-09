@@ -57,6 +57,15 @@
     "innerObservationLoaded": "Inner Observation loaded.",
     "innerObservationFailed": "Inner Observation could not be loaded.",
     "innerObservationReload": "Reload the page",
+    "questionsEmpty": "No questions available for this chapter yet.",
+    "questionsLoading": "Loading questions…",
+    "questionsLoaded": "Questions loaded.",
+    "questionsFailed": "The questions could not be loaded.",
+    "answersEmpty": "No answers available for this chapter yet.",
+    "answersLoading": "Loading answers…",
+    "answersLoaded": "Answers loaded.",
+    "answersFailed": "The answers could not be loaded.",
+    "languageFallback": "Not yet available in {language} — showing {shown}",
     "innerObservationNeverWritten": "Baal HaSulam wrote no Inner Observation (Histaklut Pnimit) for this part — eleven of the sixteen parts have one, and this is not among them. There is no text here for an edition to carry, so this is not a digitization gap.",
     "miniTocTitle": "In this chapter",
     "miniTocTruncated": "…and {count} more — scroll down to read them all.",
@@ -140,8 +149,8 @@
       }
     },
     "thirdPane": {
-      "collapse": "Hide the Inner Observation pane",
-      "expand": "Show the Inner Observation pane"
+      "collapse": "Hide pane: {pane}",
+      "expand": "Show pane: {pane}"
     }
   },
   "home": {

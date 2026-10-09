@@ -82,6 +82,7 @@ import { STUDY_MODE_MEDIA_QUERY } from "~/utils/readerMode";
 const props = defineProps<{
   panes: PaneId[];
   thirdPaneLabelKey?: string;
+  thirdPaneName?: string;
   sourceLabelKey?: string;
 }>();
 
@@ -309,7 +310,7 @@ const gridColsClass = computed(() => {
     <!-- First in the DOM (so first in Tab order, not last after every
          pane's content) but placed in the last grid column, top row, where
          it is drawn. -->
-    <ReaderThirdPaneRail v-if="hasThirdPane" />
+    <ReaderThirdPaneRail v-if="hasThirdPane" :pane-name="thirdPaneName" />
     <div
       id="reader-source-pane"
       ref="sourceRef"

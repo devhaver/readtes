@@ -30,7 +30,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const selectId = useId();
 
@@ -42,6 +42,21 @@ const selectId = useId();
 const languageLabel = computed(() =>
   t("reader.paneLanguageLabel", { pane: props.title }),
 );
+
+// The pane's options always name the language genuinely on screen
+// (`paneLanguageOptions`), so a UI locale missing from them means this layer
+// has no text in the reader's language and a fallback is showing. That must
+// be said in words, not left to a 12px <select>. Hebrew is exempt: a Hebrew
+// reader is shown the original, which is never a "fallback".
+const fallbackNotice = computed(() => {
+  if (locale.value === "he" || !props.modelValue) return null;
+  if (props.languageOptions.length === 0) return null;
+  if (props.languageOptions.includes(locale.value)) return null;
+  return t("reader.languageFallback", {
+    language: nativeLanguageName(locale.value),
+    shown: nativeLanguageName(props.modelValue),
+  });
+});
 
 const onLanguageChange = (event: Event) => {
   emit("update:modelValue", (event.target as HTMLSelectElement).value);
@@ -84,5 +99,13 @@ const onLanguageChange = (event: Event) => {
         </select>
       </template>
     </div>
+
+    <p
+      v-if="fallbackNotice"
+      class="basis-full text-xs text-(--text-muted)"
+      data-testid="language-fallback-notice"
+    >
+      {{ fallbackNotice }}
+    </p>
   </div>
 </template>

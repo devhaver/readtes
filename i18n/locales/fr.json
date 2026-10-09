@@ -57,6 +57,15 @@
     "innerObservationLoaded": "Observation intérieure chargée.",
     "innerObservationFailed": "Impossible de charger l'Observation intérieure.",
     "innerObservationReload": "Recharger la page",
+    "questionsEmpty": "Aucune question n'est encore disponible pour ce chapitre.",
+    "questionsLoading": "Chargement des questions…",
+    "questionsLoaded": "Questions chargées.",
+    "questionsFailed": "Impossible de charger les questions.",
+    "answersEmpty": "Aucune réponse n'est encore disponible pour ce chapitre.",
+    "answersLoading": "Chargement des réponses…",
+    "answersLoaded": "Réponses chargées.",
+    "answersFailed": "Impossible de charger les réponses.",
+    "languageFallback": "Pas encore disponible en {language} — affichage : {shown}",
     "innerObservationNeverWritten": "Baal HaSoulam n'a écrit aucune Observation intérieure (Histaklut Pnimit) pour cette partie — onze des seize parties en comportent une, et celle-ci n'en fait pas partie. Il n'y a ici aucun texte qu'une édition puisse porter : il ne s'agit donc pas d'une lacune de numérisation.",
     "miniTocTitle": "Dans ce chapitre",
     "miniTocTruncated": "…et {count} de plus — faites défiler vers le bas pour tout lire.",
@@ -140,8 +149,8 @@
       }
     },
     "thirdPane": {
-      "collapse": "Masquer la colonne Observation intérieure",
-      "expand": "Afficher la colonne Observation intérieure"
+      "collapse": "Masquer la colonne : {pane}",
+      "expand": "Afficher la colonne : {pane}"
     }
   },
   "home": {

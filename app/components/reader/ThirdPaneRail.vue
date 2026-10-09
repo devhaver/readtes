@@ -13,12 +13,18 @@
 //
 // `lg:` only: below it the third pane is a swipe slide reached from
 // `MobilePanePill`, and there is nothing to collapse.
+const props = defineProps<{ paneName?: string }>();
+
 const { open, toggle } = useReaderThirdPane();
 
 const { t } = useI18n();
 
+// Named after the tab on screen: the pane is Inner Observation, Questions or
+// Answers, and "Hide the Inner Observation pane" beside a Q&A pane is wrong.
 const label = computed(() =>
-  open.value ? t("reader.thirdPane.collapse") : t("reader.thirdPane.expand"),
+  t(open.value ? "reader.thirdPane.collapse" : "reader.thirdPane.expand", {
+    pane: props.paneName ?? t("reader.pane.innerObservation"),
+  }),
 );
 </script>
 

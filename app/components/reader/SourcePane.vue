@@ -35,6 +35,7 @@ const emit = defineEmits<{ "open-seif-commentary": [seifN: number] }>();
 const { t } = useI18n();
 const { activateAnchor } = useReaderState();
 const containerRef = useReaderPaneContainer();
+const contentAttrs = useReaderPaneContentAttrs();
 useHighlightedAnchor("source", containerRef);
 useAnchorActivation(containerRef, (id) => activateAnchor(id, "source"));
 // Reports which seif the reader is on into the shared `useCurrentSeif`, so
@@ -55,7 +56,11 @@ useSeifTapActivation(containerRef, (seifN) =>
       :source-segments="segments"
     />
 
-    <ol v-if="segments.length > 0" class="flex flex-col gap-6">
+    <ol
+      v-if="segments.length > 0"
+      class="flex flex-col gap-6"
+      v-bind="contentAttrs"
+    >
       <li
         v-for="(segment, index) in segments"
         :id="

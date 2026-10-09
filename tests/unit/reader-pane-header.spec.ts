@@ -117,3 +117,39 @@ describe("ReaderPaneHeader language select", () => {
     expect(wrapper.emitted("update:modelValue")?.[0]).toEqual(["he"]);
   });
 });
+
+describe("ReaderPaneHeader language fallback notice", () => {
+  const enBb = version({
+    id: "en-bb",
+    language: "en",
+    source: "kabbalahmedia",
+  });
+
+  // The test locale is English: a layer offered only in Hebrew means the
+  // reader's own language is missing and a fallback is on screen.
+  it("says so in words when the UI language is missing and another is shown", async () => {
+    const wrapper = await mountSuspended(ReaderPaneHeader, {
+      props: {
+        title: "The Ari's Text",
+        languageOptions: ["he"],
+        modelValue: "he",
+        meta: version({
+          id: "he-jerusalem-1956",
+          language: "he",
+          direction: "rtl",
+          source: "sefaria",
+        }),
+      },
+    });
+    expect(wrapper.get('[data-testid="language-fallback-notice"]').text()).toBe(
+      "Not yet available in English — showing עברית",
+    );
+  });
+
+  it("stays silent when the UI language is on offer", async () => {
+    const wrapper = await mountHeader(enBb, ["en", "he"]);
+    expect(
+      wrapper.find('[data-testid="language-fallback-notice"]').exists(),
+    ).toBe(false);
+  });
+});

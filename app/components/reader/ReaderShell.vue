@@ -29,6 +29,8 @@ import type { PaneId } from "~/utils/readerAnchorState";
 const props = defineProps<{
   panes: PaneId[];
   thirdPaneLabelKey?: string;
+  /** The active third-pane tab's name, for the collapse rail's label. */
+  thirdPaneName?: string;
   sourceLabelKey?: string;
 }>();
 
@@ -42,6 +44,7 @@ useReaderState();
     <ReaderMobileSwipePanes
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"
+      :third-pane-name="thirdPaneName"
       :source-label-key="sourceLabelKey"
     >
       <template #source>

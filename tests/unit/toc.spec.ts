@@ -280,6 +280,27 @@ describe("innerObservationChaptersInPart", () => {
   });
 });
 
+describe("answersChaptersForQuestions", () => {
+  const chapters: TocChapter[] = [
+    chapterOf("part-04/answers-terminology-01", "answers-terminology", 1),
+    chapterOf("part-04/answers-topics-01", "answers-topics", 1),
+    chapterOf("part-04/answers-cause-effect-01", "answers-cause-effect", 1),
+  ];
+
+  it("keeps only the answer list matching the questions table", () => {
+    expect(
+      answersChaptersForQuestions(chapters, "questions-topics").map(
+        (c) => c.id,
+      ),
+    ).toEqual(["part-04/answers-topics-01"]);
+    expect(
+      answersChaptersForQuestions(chapters, "questions-cause-effect").map(
+        (c) => c.id,
+      ),
+    ).toEqual(["part-04/answers-cause-effect-01"]);
+  });
+});
+
 describe("partPaginationPosition", () => {
   const chapters: TocChapter[] = [
     chapterOf("part-01/chapter-01", "chapter", 1),

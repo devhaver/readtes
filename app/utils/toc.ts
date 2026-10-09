@@ -113,6 +113,20 @@ export const questionsChaptersInPart = (chapters: TocChapter[]): TocChapter[] =>
 export const answersChaptersInPart = (chapters: TocChapter[]): TocChapter[] =>
   chaptersOfKinds(chapters, ANSWER_KINDS);
 
+/**
+ * The answers that belong beside a questions table: `questions-X` pairs with
+ * `answers-X` only. Showing every answer list beside it put the matching
+ * one thousands of pixels down (part 4's Topics started 19,576px in).
+ */
+export const answersChaptersForQuestions = (
+  answers: TocChapter[],
+  questionsKind: ChapterKind,
+): TocChapter[] =>
+  answers.filter(
+    (chapter) =>
+      chapter.kind === questionsKind.replace("questions-", "answers-"),
+  );
+
 /** Original mode's Prev/Next pagination position within a part. */
 export interface PartPaginationPosition {
   /** 1-based position of the current chapter within the part's ToC order. */

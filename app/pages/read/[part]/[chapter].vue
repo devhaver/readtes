@@ -124,7 +124,13 @@ const { tab: preferredThirdPaneTab, setTab: setThirdPaneTab } =
 const thirdPaneChapters = {
   innerObservation: innerObservationChapters,
   questions: questionsChaptersInPart(partFile.chapters),
-  answers: answersChaptersInPart(partFile.chapters),
+  // A questions table pairs with its own answer list only.
+  answers: chapter.kind.startsWith("questions-")
+    ? answersChaptersForQuestions(
+        answersChaptersInPart(partFile.chapters),
+        chapter.kind,
+      )
+    : answersChaptersInPart(partFile.chapters),
 };
 
 // Static for the page: the part's chapter list does not change under it,
@@ -157,6 +163,17 @@ const availableThirdPaneTabs: ThirdPaneTab[] = [
 // the next part that has one.
 const activeThirdPaneTab = computed(() =>
   resolveThirdPaneTab(preferredThirdPaneTab.value, availableThirdPaneTabs),
+);
+
+// The third pane is named after the tab on screen, not always "Inner
+// Observation" — its language label, rail and status copy all follow it.
+const THIRD_PANE_TITLE_KEYS: Record<ThirdPaneTab, string> = {
+  "inner-observation": "reader.pane.innerObservation",
+  questions: "reader.pane.questions",
+  answers: "reader.pane.answers",
+};
+const thirdPaneTitle = computed(() =>
+  t(THIRD_PANE_TITLE_KEYS[activeThirdPaneTab.value ?? "inner-observation"]),
 );
 
 const panes = resolveReaderPanes({
@@ -368,6 +385,7 @@ useLocalizedSeo({
       class="min-h-0 flex-1"
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"
+      :third-pane-name="thirdPaneTitle"
       :source-label-key="sourceLabelKey"
     >
       <template #source>
@@ -432,7 +450,7 @@ useLocalizedSeo({
 
       <template v-if="availableThirdPaneTabs.length > 0" #inner-observation>
         <ReaderPane
-          :title="t('reader.pane.innerObservation')"
+          :title="thirdPaneTitle"
           :language-options="thirdPane.languageOptions.value"
           :model-value="thirdPane.language.value"
           :meta="thirdPane.meta.value"
@@ -462,6 +480,7 @@ useLocalizedSeo({
             <ReaderInnerObservationPane
               :sections="thirdPane.sections.value"
               :state="thirdPane.state.value"
+              :tab="activeThirdPaneTab"
               @reload="reloadNuxtApp({ force: true })"
             />
           </div>
