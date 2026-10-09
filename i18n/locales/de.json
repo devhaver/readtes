@@ -61,6 +61,8 @@
     "miniTocTitle": "In diesem Kapitel",
     "miniTocTruncated": "… und {count} weitere – nach unten scrollen, um alle zu lesen.",
     "seifLabel": "Absatz {n}",
+    "noteLabel": "Anmerkung {n}",
+    "printMark": "Zeichen aus der Originalausgabe",
     "missingAnchor": {
       "message": "In dieser Sprache nicht verfügbar.",
       "switchToHebrew": "Zu Hebräisch wechseln"

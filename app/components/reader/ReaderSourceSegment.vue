@@ -52,11 +52,22 @@ const props = defineProps<{
 // gets to handle them through the delegated click listener that ref binds.
 const { linkCrossRefs, crossRefRoot } = useLinkedCrossRefs();
 
+const { t } = useI18n();
+
+// Last, over the finished html: `prepareReadingHtml` is display-only
+// touch-ups (edge `<br>`s, note markers glued to their word, synopsis and
+// print-mark hooks for CSS) that must see the links the passes above wrote.
 const displayHtml = computed(() =>
-  linkCrossRefs(
-    rewriteLegacySefariaRelativeHrefs(
-      stripLeadingSeifNumber(props.segment.html, props.segment.n),
+  prepareReadingHtml(
+    linkCrossRefs(
+      rewriteLegacySefariaRelativeHrefs(
+        stripLeadingSeifNumber(props.segment.html, props.segment.n),
+      ),
     ),
+    {
+      noteLabel: (marker) => t("reader.noteLabel", { n: marker }),
+      printMarkTitle: t("reader.printMark"),
+    },
   ),
 );
 
@@ -64,24 +75,30 @@ const paragraphs = computed(() => splitProseParagraphs(displayHtml.value));
 </script>
 
 <template>
-  <span v-if="!continuation" class="tes-seif-chip" aria-hidden="true">
-    {{ segment.n }}
-  </span>
-  <!-- One `crossRefRoot` per rendered branch: the ref binds to whichever
-       element actually renders, and `useLinkedCrossRefs` only ever needs the
-       one root containing this segment's `v-html` links. -->
-  <div v-if="splitParagraphs" ref="crossRefRoot" class="tes-prose-block">
-    <p
-      v-for="(paragraph, index) in paragraphs"
-      :key="index"
-      class="tes-prose-paragraph"
-      v-html="paragraph"
-    />
+  <!-- A hanging grid, not an inline chip before block content: the chip
+       sits in its own fixed-width column beside the text, so a segment whose
+       html is block-level (a `.tes-para` run, a continuation) no longer
+       strands the chip alone on a line above it. -->
+  <div class="tes-seif">
+    <span v-if="!continuation" class="tes-seif-chip" aria-hidden="true">
+      {{ segment.n }}
+    </span>
+    <!-- One `crossRefRoot` per rendered branch: the ref binds to whichever
+         element actually renders, and `useLinkedCrossRefs` only ever needs
+         the one root containing this segment's `v-html` links. -->
+    <div
+      v-if="splitParagraphs"
+      ref="crossRefRoot"
+      class="tes-seif-body tes-prose-block"
+    >
+      <p
+        v-for="(paragraph, index) in paragraphs"
+        :key="index"
+        class="tes-prose-paragraph"
+        :class="{ 'is-lead-bold': startsWithBold(paragraph) }"
+        v-html="paragraph"
+      />
+    </div>
+    <div v-else ref="crossRefRoot" class="tes-seif-body" v-html="displayHtml" />
   </div>
-  <span
-    v-else
-    ref="crossRefRoot"
-    :class="continuation ? 'tes-seif-continuation' : undefined"
-    v-html="displayHtml"
-  />
 </template>

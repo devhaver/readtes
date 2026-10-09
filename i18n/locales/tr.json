@@ -61,6 +61,8 @@
     "miniTocTitle": "Bu bölümde",
     "miniTocTruncated": "…ve {count} tane daha — hepsini okumak için aşağı kaydırın.",
     "seifLabel": "Madde {n}",
+    "noteLabel": "Not {n}",
+    "printMark": "Orijinal baskıda yer alan bir işaret",
     "missingAnchor": {
       "message": "Bu dilde mevcut değil.",
       "switchToHebrew": "İbraniceye geç"

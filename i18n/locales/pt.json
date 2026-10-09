@@ -61,6 +61,8 @@
     "miniTocTitle": "Neste capítulo",
     "miniTocTruncated": "…e mais {count} — role para baixo para ler todos.",
     "seifLabel": "Item {n}",
+    "noteLabel": "Nota {n}",
+    "printMark": "Marca impressa na edição original",
     "missingAnchor": {
       "message": "Não disponível neste idioma.",
       "switchToHebrew": "Mudar para o hebraico"

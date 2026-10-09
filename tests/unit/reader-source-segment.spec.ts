@@ -394,4 +394,59 @@ describe("ReaderSourceSegment paragraph splitting (Inner Observation)", () => {
 
     expect(wrapper.find(".tes-seif-chip").text()).toBe("1");
   });
+
+  it("marks a paragraph's bold as a signpost only when it really opens it", async () => {
+    const wrapper = await mountProse(
+      "<b>ראשית</b> כל<br>ובזה <b>ה</b> תנוח",
+      true,
+    );
+
+    const [first, second] = wrapper.findAll("p.tes-prose-paragraph");
+    expect(first?.classes()).toContain("is-lead-bold");
+    expect(second?.classes()).not.toContain("is-lead-bold");
+  });
+});
+
+describe("ReaderSourceSegment layout and render-time touch-ups", () => {
+  const mountPlain = async (html: string, continuation = false) =>
+    mountSuspended(CrossRefChapterPage, {
+      props: { chapters: [] },
+      slots: {
+        default: () =>
+          h(ReaderSourceSegment, { segment: segment(html), continuation }),
+      },
+    });
+
+  it("hangs the chip in its own column beside the body", async () => {
+    const wrapper = await mountPlain("Text");
+
+    const root = wrapper.find(".tes-seif");
+    expect(root.find(".tes-seif-chip").exists()).toBe(true);
+    expect(root.find(".tes-seif-body").text()).toBe("Text");
+  });
+
+  it("renders a continuation with no chip but the same body column", async () => {
+    const wrapper = await mountPlain("More of the answer", true);
+
+    expect(wrapper.find(".tes-seif-chip").exists()).toBe(false);
+    expect(wrapper.find(".tes-seif-body").text()).toBe("More of the answer");
+  });
+
+  it("glues a note marker to its word and names it", async () => {
+    const wrapper = await mountPlain(
+      'all of reality <a class="tes-anchor" href="#op-3" data-anchor="op-3">3</a>.',
+    );
+
+    const html = wrapper.find(".tes-seif-body").html();
+    expect(html).toContain('reality<a class="tes-anchor"');
+    expect(wrapper.find("a.tes-anchor").attributes("aria-label")).toBe(
+      "Note 3",
+    );
+  });
+
+  it("trims a leading <br> so the item does not open on a blank line", async () => {
+    const wrapper = await mountPlain("<br>First words");
+
+    expect(wrapper.find(".tes-seif-body br").exists()).toBe(false);
+  });
 });

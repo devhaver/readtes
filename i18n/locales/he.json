@@ -61,6 +61,8 @@
     "miniTocTitle": "בפרק זה",
     "miniTocTruncated": "ועוד {count} נוספים — גללו למטה כדי לקרוא את כולם.",
     "seifLabel": "סעיף {n}",
+    "noteLabel": "הערה {n}",
+    "printMark": "סימן שהודפס במהדורה המקורית",
     "missingAnchor": {
       "message": "לא זמין בשפה זו.",
       "switchToHebrew": "עבור לעברית"

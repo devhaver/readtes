@@ -44,4 +44,15 @@ describe("splitProseParagraphs", () => {
       splitProseParagraphs('<b>ראשית</b> כל<br>ובזה <small>(ע"ח)</small> תנוח'),
     ).toEqual(["<b>ראשית</b> כל", 'ובזה <small>(ע"ח)</small> תנוח']);
   });
+
+  it("keeps a small block whole, so its own lines are not split into paragraphs", () => {
+    expect(
+      splitProseParagraphs(
+        "<small>Explains:<br><br>1. One<br>2. Two</small><br>Body text",
+      ),
+    ).toEqual([
+      "<small>Explains:<br><br>1. One<br>2. Two</small>",
+      "Body text",
+    ]);
+  });
 });

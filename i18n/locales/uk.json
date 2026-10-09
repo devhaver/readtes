@@ -61,6 +61,8 @@
     "miniTocTitle": "У цьому розділі",
     "miniTocTruncated": "…і ще {count} — прокрутіть униз, щоб прочитати всі.",
     "seifLabel": "Пункт {n}",
+    "noteLabel": "Примітка {n}",
+    "printMark": "Знак, надрукований в оригінальному виданні",
     "missingAnchor": {
       "message": "Цією мовою недоступно.",
       "switchToHebrew": "Перемкнути на іврит"
