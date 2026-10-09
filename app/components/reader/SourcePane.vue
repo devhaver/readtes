@@ -17,9 +17,18 @@
 // corpus). It's real navigation, so it moved here rather than disappearing:
 // `ChapterIntro`'s own `<details>` pattern, reused as-is (study mode already
 // renders the identical body above its stream) rather than duplicated.
-import type { SourceSegment } from "~~/shared/types/content";
+import type { SourceSegment, SummaryItem } from "~~/shared/types/content";
 
-const props = defineProps<{ segments: SourceSegment[] }>();
+const props = withDefaults(
+  defineProps<{
+    segments: SourceSegment[];
+    /** The chapter's curated summary, when it has one — the intro's body. */
+    summaryItems?: SummaryItem[];
+    /** Renders each segment as paragraphs — see `ReaderSourceSegment`. */
+    splitParagraphs?: boolean;
+  }>(),
+  { summaryItems: () => [], splitParagraphs: false },
+);
 
 const emit = defineEmits<{ "open-seif-commentary": [seifN: number] }>();
 
@@ -41,7 +50,10 @@ useSeifTapActivation(containerRef, (seifN) =>
   <div
     class="mx-auto flex max-w-[65ch] flex-col gap-6 text-[length:var(--fit,1rem)]"
   >
-    <ReaderChapterIntro :summary-items="[]" :source-segments="segments" />
+    <ReaderChapterIntro
+      :summary-items="summaryItems"
+      :source-segments="segments"
+    />
 
     <ol v-if="segments.length > 0" class="flex flex-col gap-6">
       <li
@@ -58,6 +70,7 @@ useSeifTapActivation(containerRef, (seifN) =>
         <ReaderSourceSegment
           :segment="segment"
           :continuation="isContinuationSegment(segments, index)"
+          :split-paragraphs="splitParagraphs"
         />
       </li>
     </ol>

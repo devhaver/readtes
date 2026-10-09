@@ -5,19 +5,35 @@
 // `<details>` needs no extra ARIA to be a fully accessible collapsible;
 // collapsed by default (no `open` attribute) so a mobile reader lands on
 // the source stream itself, not a wall of summary text.
+//
+// Rendered only when it has something to say: a curated summary, or at least
+// two source segments carrying a real heading. Without headings the mini-toc
+// is a bare "Seif 1 … Seif N" — a box that opens onto a list of the numbers
+// already printed beside every seif (only 396 of 21,218 corpus segments
+// have a heading), so those chapters get no box at all rather than a useless one.
 import type { SourceSegment, SummaryItem } from "~~/shared/types/content";
 
-defineProps<{
+const props = defineProps<{
   summaryItems: SummaryItem[];
   sourceSegments: SourceSegment[];
 }>();
 
 const { t } = useI18n();
+
+const MIN_HEADINGS = 2;
+
+const hasContent = computed(
+  () =>
+    props.summaryItems.length > 0 ||
+    props.sourceSegments.filter((segment) => segment.heading?.trim()).length >=
+      MIN_HEADINGS,
+);
 </script>
 
 <template>
   <details
-    class="group mb-6 rounded-card border border-(--border) bg-(--surface-reading)"
+    v-if="hasContent"
+    class="group rounded-card border border-(--border) bg-(--surface-reading)"
   >
     <summary class="tes-disclosure-summary">
       <span class="tes-eyebrow">

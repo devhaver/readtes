@@ -61,6 +61,8 @@
     "miniTocTitle": "Dans ce chapitre",
     "miniTocTruncated": "…et {count} de plus — faites défiler vers le bas pour tout lire.",
     "seifLabel": "Paragraphe {n}",
+    "noteLabel": "Note {n}",
+    "printMark": "Signe imprimé dans l'édition originale",
     "missingAnchor": {
       "message": "Non disponible dans cette langue.",
       "switchToHebrew": "Passer à l'hébreu"

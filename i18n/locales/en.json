@@ -61,6 +61,8 @@
     "miniTocTitle": "In this chapter",
     "miniTocTruncated": "…and {count} more — scroll down to read them all.",
     "seifLabel": "Seif {n}",
+    "noteLabel": "Note {n}",
+    "printMark": "A mark printed in the original edition",
     "missingAnchor": {
       "message": "Not available in this language.",
       "switchToHebrew": "Switch to Hebrew"

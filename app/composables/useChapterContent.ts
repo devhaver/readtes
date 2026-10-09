@@ -23,12 +23,13 @@
  * re-resolving the toc internally) so this composable's first statement is
  * its own logic, independent of how the caller resolved the chapter.
  *
- * Only loads the `source`/`commentary` layers — the reader no longer has a
- * summary pane (the layer is effectively dead: exactly 1 file exists across
- * the whole corpus) and `usePartScopedSections` covers the part-scoped
- * Inner Observation reference pane separately, so nothing here needs the
- * `summary` layer any more. `loadLayerFile` is exported for that composable
- * to reuse — same per-part lazy chunk maps, not a second set of
+ * Loads the `source`/`commentary` layers, plus the `summary` layer for the
+ * one chapter that has it (exactly 1 file exists across the whole corpus):
+ * there is no summary pane any more, but that curated text is the "In this
+ * chapter" intro's body, shown in place of the bare seif list.
+ * `usePartScopedSections` covers the part-scoped Inner Observation
+ * reference pane separately. `loadLayerFile` is exported for that
+ * composable to reuse — same per-part lazy chunk maps, not a second set of
  * `import.meta.glob`s over the same files.
  *
  * T13 scaling fix — one `import.meta.glob` over all of `content/parts/**`
@@ -46,6 +47,7 @@ import type {
   LayerItem,
   LayerKind,
   SourceSegment,
+  SummaryItem,
   TocChapter,
 } from "~~/shared/types/content";
 
@@ -110,6 +112,8 @@ export interface ChapterContent {
   commentaryByVersion: ComputedRef<
     Record<string, ChapterLayerFile<CommentaryItem> | null>
   >;
+  /** The curated summary's items — the first summary version, empty when the chapter has none. */
+  summaryItems: ComputedRef<SummaryItem[]>;
 }
 
 export const useChapterContent = async (
@@ -117,7 +121,7 @@ export const useChapterContent = async (
   chapterSlug: string,
   availableVersions: AvailableVersions,
 ): Promise<ChapterContent> => {
-  const [source, commentary] = await Promise.all([
+  const [source, commentary, summary] = await Promise.all([
     loadAllVersions<SourceSegment>(
       partId,
       chapterSlug,
@@ -130,12 +134,20 @@ export const useChapterContent = async (
       "commentary",
       availableVersions.commentary,
     ),
+    loadAllVersions<SummaryItem>(
+      partId,
+      chapterSlug,
+      "summary",
+      availableVersions.summary,
+    ),
   ]);
+  const summaryItems = Object.values(summary)[0]?.items ?? [];
 
   return {
     sourceVersions: computed(() => availableVersions.source),
     commentaryVersions: computed(() => availableVersions.commentary),
     sourceByVersion: computed(() => source),
     commentaryByVersion: computed(() => commentary),
+    summaryItems: computed(() => summaryItems),
   };
 };

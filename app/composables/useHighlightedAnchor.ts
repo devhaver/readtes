@@ -63,6 +63,59 @@ const revealInsideCollapsedGroups = (
   }
 };
 
+/**
+ * A target taller than this share of the pane is a long note, not a marker.
+ */
+const LONG_TARGET_RATIO = 0.5;
+
+/**
+ * Brings `target` into view inside `container`. Centring is right for a
+ * marker or a short note, but a long commentary note centred is cut off at
+ * its top — the reader lands mid-note, or under the sticky seif heading — so
+ * those align to the top edge instead, below that heading via the item's
+ * `scroll-margin-block-start`.
+ */
+const scrollTargetIntoView = (
+  target: HTMLElement,
+  container: HTMLElement,
+): void => {
+  const isLong =
+    target.getBoundingClientRect().height >
+    container.clientHeight * LONG_TARGET_RATIO;
+
+  target.scrollIntoView({
+    block: isLong ? "start" : "center",
+    behavior: prefersReducedMotion() ? "auto" : "smooth",
+  });
+};
+
+/**
+ * When the activation came from the keyboard on a note marker in the OTHER
+ * pane, focus follows the jump: otherwise it stays on the marker, and the
+ * next Tab continues from a place the reader has just scrolled away from.
+ * `:focus-visible` is the keyboard test (a mouse click on a marker does not
+ * match it); the marker check keeps this from pulling focus out of anything
+ * else that happens to trigger a re-activation (a language `<select>`).
+ */
+const moveFocusToTarget = (
+  target: HTMLElement,
+  container: HTMLElement,
+): void => {
+  const active = document.activeElement;
+  if (
+    !(active instanceof HTMLElement) ||
+    container.contains(active) ||
+    !active.matches(".tes-anchor:focus-visible")
+  ) {
+    return;
+  }
+
+  if (!target.matches("a[href], button, [tabindex]")) {
+    target.setAttribute("tabindex", "-1");
+  }
+  target.focus({ preventScroll: true });
+};
+
 export const useHighlightedAnchor = (
   paneId: PaneId,
   containerRef: Ref<HTMLElement | null | undefined>,
@@ -92,10 +145,8 @@ export const useHighlightedAnchor = (
       revealInsideCollapsedGroups(target, container);
 
       setActivePane(paneId);
-      target.scrollIntoView({
-        block: "center",
-        behavior: prefersReducedMotion() ? "auto" : "smooth",
-      });
+      scrollTargetIntoView(target, container);
+      moveFocusToTarget(target, container);
       flashAnchorHighlight(target);
     },
     { flush: "post" },

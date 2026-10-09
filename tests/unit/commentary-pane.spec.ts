@@ -261,8 +261,29 @@ describe("CommentaryPane", () => {
         slots: { default: () => h(CommentaryPane, { items }) },
       });
 
-      expect(wrapper.find(".tes-commentary-seif-heading h4").text()).toBe(
+      // No section heading renders for a lone Inner Light section, so the
+      // seif heading sits directly under the pane's own h2: an h3, not an h4.
+      expect(wrapper.find(".tes-commentary-seif-heading h3").text()).toBe(
         "Seif 1",
+      );
+    });
+
+    it("steps down to an h4 only when a section heading renders above it", async () => {
+      const both: CommentaryItem[] = [
+        ...items,
+        {
+          ...items[0]!,
+          anchorId: "op-9",
+          section: "histaklut-pnimit",
+        },
+      ];
+      const wrapper = await mountSuspended(PaneContainerStub, {
+        slots: { default: () => h(CommentaryPane, { items: both }) },
+      });
+
+      expect(wrapper.find("h3.tes-eyebrow").exists()).toBe(true);
+      expect(wrapper.find(".tes-commentary-seif-heading h4").exists()).toBe(
+        true,
       );
     });
 

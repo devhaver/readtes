@@ -129,13 +129,16 @@ const isSectionHeadingUseful = computed(
               seifGroup.seif !== null && seifGroup.seif === currentSeif,
           }"
         >
-          <h4>
+          <!-- One level under whatever heads the group: the section heading
+               (h3) when it renders, else the pane's own title (h2) — an h4
+               straight under an h2 skips a level. -->
+          <component :is="isSectionHeadingUseful ? 'h4' : 'h3'">
             {{
               seifGroup.seif === null
                 ? t("reader.commentaryUnanchoredGroup")
                 : t("reader.seifLabel", { n: seifGroup.seif })
             }}
-          </h4>
+          </component>
           <span
             aria-hidden="true"
             class="tes-icon tes-icon-chevron-down tes-disclosure-chevron h-4 w-4"
@@ -153,6 +156,7 @@ const isSectionHeadingUseful = computed(
               v-if="isAnchoredCommentaryItem(item)"
               type="button"
               class="tes-anchor tes-commentary-marker"
+              :aria-label="t('reader.noteLabel', { n: markerFor(item) })"
               @click="activateAnchor(item.anchorId, 'commentary')"
             >
               {{ markerFor(item) }}
@@ -160,7 +164,10 @@ const isSectionHeadingUseful = computed(
             <span v-else class="tes-commentary-marker is-plain">
               {{ markerFor(item) }}
             </span>
-            <span class="tes-commentary-body" v-html="item.html" />
+            <span
+              class="tes-commentary-body"
+              v-html="trimEdgeBreaks(item.html)"
+            />
           </li>
         </ol>
       </details>

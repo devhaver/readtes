@@ -380,6 +380,29 @@ a[href],
   cursor: pointer;
 }
 
+/*
+ * The source text's own note markers are `<a>`s inside running prose. As
+ * `inline-flex` they were atomic inlines, which a line may break before — a
+ * marker could start a line, detached from the word it annotates
+ * (`attachNoteMarkers` removes the space that offered the break too). Plain
+ * `inline` has no such break opportunity against the word it touches.
+ *
+ * A marker is ~10x13px, far under a comfortable tap target, so `::after`
+ * extends the hit area without moving anything: absolutely positioned,
+ * outside the flow, so it cannot reflow the line.
+ */
+a.tes-anchor {
+  display: inline;
+  position: relative;
+}
+
+a.tes-anchor::after {
+  content: "";
+  position: absolute;
+  inset-block: -0.8em;
+  inset-inline: -0.55em;
+}
+
 .tes-anchor:hover,
 .tes-anchor:focus-visible {
   text-decoration: underline;
@@ -388,6 +411,12 @@ a[href],
 .tes-anchor:focus-visible {
   outline: 2px solid var(--color-teal);
   outline-offset: 1px;
+}
+
+/* A note moved focus to (`useHighlightedAnchor`) on keyboard activation. */
+.reader-anchor-target:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
 }
 
 .tes-anchor.is-highlighted,
@@ -490,7 +519,11 @@ a[href],
      `rounded-card` as a utility, which LOST to that unlayered rule — an
      unlayered `rounded-card` in this class would win instead and silently
      change the flash radius 4px -> 8px. */
-  @apply text-[length:calc(var(--fit,1rem)*var(--reading-scale))] leading-relaxed text-(--text-primary) scroll-mt-4;
+  @apply text-[length:calc(var(--fit,1rem)*var(--reading-scale))] leading-relaxed text-(--text-primary);
+  /* A jump (`useHighlightedAnchor`) aligns the note's top to the pane's top
+     edge; the sticky seif heading covers ~53px of it, so the margin has to
+     clear that or the note's first line lands underneath. */
+  scroll-margin-block-start: 4rem;
   /* Marker ABOVE its prose, not in a gutter beside it. The gutter version
      spent 2.25rem of every line's width on a 1-character marker, and
      horizontal space is the scarcer axis here: three columns share the
@@ -542,7 +575,9 @@ a[href],
 /* The transparent inline-start border is reserved on EVERY heading, not just
    the current one, so `.is-current` colouring it in shifts nothing. */
 .tes-commentary-seif-heading {
-  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 text-sm font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) border-s-[3px] border-s-transparent bg-(--surface) py-2 ps-2 font-semibold tabular-nums text-(--text-primary) [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  font-size: calc(0.875rem * var(--reading-scale));
+  line-height: 1.43;
 }
 
 /*
@@ -614,8 +649,12 @@ a[href],
      glance. `min-w-5` + `px-1` rather than a fixed square so a 3-digit
      marker (the corpus reaches "400" — see #96) widens instead of
      overflowing. */
-  @apply inline-flex h-5 min-w-5 items-center justify-center rounded-sm border border-(--border) px-1 font-semibold text-(--accent-text);
-  font-size: 0.75rem;
+  @apply inline-flex items-center justify-center rounded-sm border border-(--border) px-1 font-semibold text-(--accent-text);
+  /* Scaled with the reading text: a fixed 20px badge beside 21px text read
+     as a different size at every setting but the default. */
+  height: calc(1.25rem * var(--reading-scale));
+  min-width: calc(1.25rem * var(--reading-scale));
+  font-size: calc(0.75rem * var(--reading-scale));
   line-height: 1;
   vertical-align: baseline;
 }
@@ -674,7 +713,10 @@ a[href],
    marker of which of the part's Inner Observation chapters they are inside,
    and the sections are long enough to scroll their own heading away. */
 .tes-prose-section-heading {
-  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) py-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
+  /* `pb-2`, not `py-2`: the shared rule above gives this heading its
+     `padding-block-start` (8px + the pane's padding it cancels), and `py-2`
+     here, being declared later, reset it to 8px. */
+  @apply sticky z-10 flex cursor-pointer list-none items-center justify-between gap-2 border-b border-(--border) bg-(--surface) pb-2 [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal;
 }
 
 .tes-prose-block {
@@ -688,24 +730,42 @@ a[href],
 /*
  * The bold word the print opens a passage with (`<b>ראשית</b>` — "first of
  * all"). It is the only landmark this layer has, so it's promoted to a
- * signpost instead of reading as ordinary bold mid-paragraph.
+ * signpost instead of reading as ordinary bold mid-paragraph. `is-lead-bold`
+ * (`ReaderSourceSegment`) says the bold really opens the paragraph —
+ * `:first-child` alone also matched a bold letter after a run of text.
  */
-.tes-prose-paragraph > b:first-child {
+.tes-prose-paragraph.is-lead-bold > b:first-child {
   @apply font-semibold text-(--accent-text);
 }
 
-/* The seif-number chip (`ReaderSourceSegment`) — one per source segment,
-   so its repetition count matches the corpus's segment count. */
-.tes-seif-chip {
-  @apply me-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-(--surface-raised) px-1 align-middle text-xs tabular-nums text-(--text-muted);
+/*
+ * A source segment (`ReaderSourceSegment`): the seif-number chip hangs in its
+ * own fixed-width column and the text fills the rest. The chip used to be an
+ * inline element in front of the text, which left it alone on a line whenever
+ * the text was block-level (every `.tes-para` run — 507 English seifim, every
+ * Inner Observation and Q&A item). A continuation segment has no chip and its
+ * body takes the same second column, so it still reads as more of the
+ * paragraph above. `baseline` lines the chip up with the text's first line.
+ */
+.tes-seif {
+  display: grid;
+  grid-template-columns: calc(2rem * var(--reading-scale)) minmax(0, 1fr);
+  column-gap: 0.25rem;
+  align-items: baseline;
 }
 
-/* A continuation segment's own html (`ReaderSourceSegment`, issue #91): no
-   chip precedes it, so this puts it on its own line, indented to the width
-   a chip + its `me-2` gap would have taken (h-5 + me-2 = 1.75rem = `ms-7`)
-   — reading as more of the paragraph above rather than a fresh seif. */
-.tes-seif-continuation {
-  @apply block ms-7;
+.tes-seif-body {
+  grid-column: 2;
+}
+
+/* The seif-number chip — one per source segment, so its repetition count
+   matches the corpus's segment count. Sized from `--reading-scale` so it
+   keeps its proportion to the text it labels. */
+.tes-seif-chip {
+  @apply inline-flex items-center justify-center rounded-full bg-(--surface-raised) px-1 tabular-nums text-(--text-muted);
+  height: calc(1.25rem * var(--reading-scale));
+  min-width: calc(1.25rem * var(--reading-scale));
+  font-size: calc(0.75rem * var(--reading-scale));
 }
 
 /* Full-height flex column: `ReaderShell`'s own root plus each
@@ -747,6 +807,12 @@ a[href],
    (`CommentaryPane`, `StudyStream`, `ReaderSummaryBody`). */
 .tes-eyebrow {
   @apply font-semibold text-sm text-(--text-muted);
+}
+
+/* Inside a reading pane the eyebrows head the text itself (section and
+   chapter-intro labels), so they follow the reader's text size. */
+.tes-pane-body .tes-eyebrow {
+  font-size: calc(0.875rem * var(--reading-scale));
 }
 
 /* Toolbar icon buttons — `ReaderToolbar`'s Contents/Preferences buttons.
@@ -1170,16 +1236,78 @@ a[href],
 }
 
 /*
- * Section sub-headings inside reading text. The Hebrew edition marks each
- * Inner Observation segment's heading as `<small>…</small>` and the
- * imported Bnei Baruch text follows it — as it does a chapter's synopsis.
- * Unstyled, they read as body text; bold, a six-line synopsis turned into
- * a slab. A quieter, separate line serves both.
+ * Section sub-headings and synopses inside reading text. The Hebrew edition
+ * marks each Inner Observation segment's heading as `<small>…</small>`, and
+ * kabbalah.info wraps a section's title AND its whole synopsis in `<small>`
+ * (`markSynopses` tags the long ones `tes-synopsis`). The old blanket rule
+ * set all of it grey at 0.9em, which turned headings into muted body text
+ * and a six-line synopsis into a grey slab.
+ *
+ * Normal colour throughout: a short `<small>` that is a paragraph of its own
+ * is a heading and is set as one; a synopsis is its own block, marked off by
+ * an edge rule rather than by fading it.
  */
 :is(.tes-seif-lg, .tes-seif-md, .tes-prose-block, .tes-prose-paragraph) small {
   display: block;
   margin-block-end: 0.35em;
   font-size: 0.9em;
   font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tes-para > small:only-child:not(.tes-synopsis) {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+small.tes-synopsis {
+  margin-block: 0.25em 0.5em;
+  padding-inline-start: 0.75em;
+  border-inline-start: 3px solid var(--border);
+  font-size: 0.95em;
+  font-weight: 400;
+}
+
+/* A title the markup does not mark as one (`markTitleParagraph`). */
+.tes-para-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/*
+ * The `*` the Hebrew edition opens ~550 seifim with (`markPrintAsterisk`) —
+ * a mark from the printed page, not part of the sentence.
+ */
+.tes-print-mark {
+  margin-inline-end: 0.25em;
   color: var(--text-muted);
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+}
+
+/*
+ * Links inside reading text: Hebrew "(לתשובה)" / "(לשאלה)" cross-references
+ * (202 on one page) and any external Sefaria link. They inherited the text
+ * colour and no underline — contrast 1.00:1 against the words around them,
+ * so nothing said they were links. `::after` adds hit area without reflow,
+ * like the note markers.
+ */
+:is(.tes-seif-body, .tes-commentary-body) a:not(.tes-anchor) {
+  position: relative;
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+:is(.tes-seif-body, .tes-commentary-body) a:not(.tes-anchor)::after {
+  content: "";
+  position: absolute;
+  inset-block: -0.4em;
+  inset-inline: -0.3em;
+}
+
+:is(.tes-seif-body, .tes-commentary-body) a:not(.tes-anchor):hover {
+  text-decoration-thickness: 2px;
 }

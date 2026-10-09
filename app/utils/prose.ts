@@ -24,14 +24,25 @@
 /** `<br>`, `<br/>`, `<br />` — never `<b>`, which has no `r`. */
 const BREAK_TAG = /<br\s*\/?>/gi;
 
+/** A `<small>…</small>` run — a heading or a whole synopsis. */
+const SMALL_BLOCK = /<small\b[^>]*>[\s\S]*?<\/small>/gi;
+
+/** Stands in for a `<br>` inside a `<small>` while the html is split. */
+const KEPT_BREAK = "\u0000";
+
 /**
  * The segment's paragraphs, in order, with empty runs dropped (consecutive
  * `<br>`s are a blank line in the print, not an empty paragraph). Returns a
  * single-element array when there is no `<br>` at all, so callers can render
  * the result uniformly without a "did it split?" branch.
+ *
+ * A `<br>` inside a `<small>` is left alone: kabbalah.info sets a section's
+ * numbered synopsis as one `<small>` of lines, and splitting there would cut
+ * the element in two and leave half of it unstyled.
  */
 export const splitProseParagraphs = (html: string): string[] =>
   html
+    .replace(SMALL_BLOCK, (block) => block.replace(BREAK_TAG, KEPT_BREAK))
     .split(BREAK_TAG)
-    .map((paragraph) => paragraph.trim())
+    .map((paragraph) => paragraph.replaceAll(KEPT_BREAK, "<br>").trim())
     .filter((paragraph) => paragraph.length > 0);

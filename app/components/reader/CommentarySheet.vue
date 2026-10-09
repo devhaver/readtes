@@ -18,12 +18,17 @@ import {
   shouldDismissSheetDrag,
 } from "~/utils/commentarySheetGesture";
 import { prefersReducedMotion } from "~/utils/motion";
-import type { CommentaryItem } from "~~/shared/types/content";
+import type { CommentaryItem, ContentVersion } from "~~/shared/types/content";
 
 const props = defineProps<{
   open: boolean;
   seif: number | null;
   items: CommentaryItem[];
+  /**
+   * The commentary version on screen — the notes are in ITS language and
+   * direction (Hebrew in an English UI), not the UI locale's.
+   */
+  meta?: ContentVersion | null;
   /** `anchorId` -> the marker the source text prints — see `anchorMarkersFromSegments` (issue #96). */
   anchorMarkers?: ReadonlyMap<string, string>;
 }>();
@@ -132,7 +137,9 @@ const transitionDuration = computed(() =>
             aria-hidden="true"
             class="h-1 w-10 shrink-0 rounded-full bg-(--border)"
           />
-          <div class="flex w-full items-center justify-between gap-2">
+          <div
+            class="mx-auto flex w-full max-w-2xl items-center justify-between gap-2"
+          >
             <h2
               :id="titleId"
               class="font-display text-sm text-(--text-primary)"
@@ -163,7 +170,12 @@ const transitionDuration = computed(() =>
         </div>
 
         <div class="flex-1 overflow-y-auto px-4 pb-4">
-          <ol v-if="items.length > 0" class="flex flex-col gap-4">
+          <!-- Capped and centred: on a tablet the sheet is as wide as the
+               screen, and 120-150 character lines are unreadable. -->
+          <ol
+            v-if="items.length > 0"
+            class="mx-auto flex max-w-2xl flex-col gap-4"
+          >
             <li
               v-for="item in items"
               :key="item.anchorId"
@@ -176,8 +188,10 @@ const transitionDuration = computed(() =>
                 }}
               </p>
               <div
-                class="text-sm leading-relaxed text-(--text-primary)"
-                v-html="item.html"
+                class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+                :dir="meta?.direction ?? 'ltr'"
+                :lang="meta?.language"
+                v-html="trimEdgeBreaks(item.html)"
               />
               <button
                 type="button"
@@ -188,7 +202,7 @@ const transitionDuration = computed(() =>
               </button>
             </li>
           </ol>
-          <p v-else class="text-sm text-(--text-muted)">
+          <p v-else class="mx-auto max-w-2xl text-sm text-(--text-muted)">
             {{ t("reader.commentarySheet.empty") }}
           </p>
         </div>
