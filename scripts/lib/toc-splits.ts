@@ -104,9 +104,12 @@ const orderedChapters = (chapters: TocChapter[]): TocChapter[] =>
   );
 
 /**
- * Per-language ("he"/"en") coverage across a part's chapters: `"full"` when
- * every chapter has that language in some layer, `"partial"` when some do,
- * `"none"` when zero do (including an empty part). Duplicated (rather than
+ * Per-edition coverage across a part's chapters: `"full"` when every chapter
+ * has that edition in some layer, `"partial"` when some do, `"none"` when
+ * zero do (including an empty part). `he`/`en` count any edition in that
+ * language; `enOfficial`/`enAi` split English into everything-but-AI and the
+ * AI translation; `ru`/`uk`/`es`/`fr` are the Bnei Baruch translations.
+ * Duplicated (rather than
  * imported) from `app/utils/contentAvailability.ts`'s `partLanguageAvailability`
  * for the same cross-build-graph reason as `KIND_ORDER` above — this is the
  * one-time emit-time computation baked into `toc.volumes.json`, the app
@@ -116,10 +119,23 @@ const partAvailableSummary = (
   chapters: TocChapter[],
   versions: ContentVersion[],
 ): PartAvailableSummary => {
-  const languageById = new Map(versions.map((v) => [v.id, v.language]));
+  const versionById = new Map(versions.map((v) => [v.id, v]));
   const total = chapters.length;
 
-  if (total === 0) return { he: "none", en: "none" };
+  const matchers: Record<
+    keyof PartAvailableSummary,
+    (version: ContentVersion) => boolean
+  > = {
+    he: (v) => v.language === "he",
+    en: (v) => v.language === "en",
+    enOfficial: (v) => v.language === "en" && v.source !== "ai",
+    enAi: (v) => v.language === "en" && v.source === "ai",
+    ru: (v) => v.language === "ru",
+    uk: (v) => v.language === "uk",
+    es: (v) => v.language === "es",
+    fr: (v) => v.language === "fr",
+  };
+  const keys = Object.keys(matchers) as (keyof PartAvailableSummary)[];
 
   const versionIdsOf = (chapter: TocChapter): string[] => [
     ...chapter.availableVersions.summary,
@@ -127,20 +143,25 @@ const partAvailableSummary = (
     ...chapter.availableVersions.commentary,
   ];
 
-  let heCount = 0;
-  let enCount = 0;
+  const counts = Object.fromEntries(keys.map((key) => [key, 0])) as Record<
+    keyof PartAvailableSummary,
+    number
+  >;
   for (const chapter of chapters) {
-    const languages = new Set(
-      versionIdsOf(chapter).map((id) => languageById.get(id)),
-    );
-    if (languages.has("he")) heCount++;
-    if (languages.has("en")) enCount++;
+    const chapterVersions = versionIdsOf(chapter)
+      .map((id) => versionById.get(id))
+      .filter((v): v is ContentVersion => v !== undefined);
+    for (const key of keys) {
+      if (chapterVersions.some(matchers[key])) counts[key]++;
+    }
   }
 
   const stateFor = (count: number): LanguageAvailability =>
     count === 0 ? "none" : count === total ? "full" : "partial";
 
-  return { he: stateFor(heCount), en: stateFor(enCount) };
+  return Object.fromEntries(
+    keys.map((key) => [key, stateFor(counts[key])]),
+  ) as PartAvailableSummary;
 };
 
 export const deriveTocVolumesFile = (

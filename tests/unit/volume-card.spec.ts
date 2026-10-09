@@ -19,7 +19,16 @@ const activeVolume: TocVolumeSkeleton = {
       lastChapterId: "part-01/chapter-01",
       firstChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
       lastChapterTitle: { en: "Chapter 1", he: "פרק א׳" },
-      availableSummary: { he: "full", en: "none" },
+      availableSummary: {
+        he: "full",
+        en: "none",
+        enOfficial: "none",
+        enAi: "none",
+        ru: "none",
+        uk: "none",
+        es: "none",
+        fr: "none",
+      },
     },
   ],
 };
@@ -40,7 +49,16 @@ const emptyVolume: TocVolumeSkeleton = {
       lastChapterId: null,
       firstChapterTitle: null,
       lastChapterTitle: null,
-      availableSummary: { he: "none", en: "none" },
+      availableSummary: {
+        he: "none",
+        en: "none",
+        enOfficial: "none",
+        enAi: "none",
+        ru: "none",
+        uk: "none",
+        es: "none",
+        fr: "none",
+      },
     },
   ],
 };
@@ -67,11 +85,34 @@ describe("VolumeCard", () => {
     expect(wrapper.text().toLowerCase()).toContain("coming soon");
   });
 
-  it("renders the precomputed availableSummary language chip", async () => {
+  it("shows no chip for a complete Hebrew source or an absent edition", async () => {
     const wrapper = await mountSuspended(VolumeCard, {
       props: { volume: activeVolume },
     });
 
-    expect(wrapper.text()).toContain("עברית");
+    expect(wrapper.text()).not.toContain("עברית");
+    expect(wrapper.text()).not.toContain("English");
+  });
+
+  it("splits English into official and AI translated chips", async () => {
+    const [part] = activeVolume.parts;
+    const volume: TocVolumeSkeleton = {
+      ...activeVolume,
+      parts: [
+        {
+          ...part!,
+          availableSummary: {
+            ...part!.availableSummary,
+            en: "full",
+            enOfficial: "partial",
+            enAi: "full",
+          },
+        },
+      ],
+    };
+    const wrapper = await mountSuspended(VolumeCard, { props: { volume } });
+
+    expect(wrapper.text()).toContain("English (partial)");
+    expect(wrapper.text()).toContain("English, AI translated");
   });
 });

@@ -171,17 +171,33 @@ describe("deriveTocVolumesFile", () => {
   });
 
   it("computes availableSummary he/en coverage across the part's chapters", () => {
+    const none = {
+      he: "none",
+      en: "none",
+      enOfficial: "none",
+      enAi: "none",
+      ru: "none",
+      uk: "none",
+      es: "none",
+      fr: "none",
+    };
+
     // part-01: all 3 chapters have he; only chapter-01 has en -> he full, en partial.
     const part01 = result.volumes[0]?.parts[0];
-    expect(part01?.availableSummary).toEqual({ he: "full", en: "partial" });
+    expect(part01?.availableSummary).toEqual({
+      ...none,
+      he: "full",
+      en: "partial",
+      enOfficial: "partial",
+    });
 
     // part-02: no chapters -> none/none.
     const part02 = result.volumes[0]?.parts[1];
-    expect(part02?.availableSummary).toEqual({ he: "none", en: "none" });
+    expect(part02?.availableSummary).toEqual(none);
 
     // part-03: one chapter, no versions at all -> none/none.
     const part03 = result.volumes[1]?.parts[0];
-    expect(part03?.availableSummary).toEqual({ he: "none", en: "none" });
+    expect(part03?.availableSummary).toEqual(none);
   });
 });
 

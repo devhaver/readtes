@@ -66,7 +66,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "partial",
+            "ru": "partial",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -119,7 +125,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "partial",
+            "ru": "partial",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -172,7 +184,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "partial",
+            "ru": "partial",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -225,7 +243,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "full",
+            "enAi": "full",
+            "ru": "partial",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]
@@ -294,7 +318,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "full",
+            "enAi": "partial",
+            "ru": "none",
+            "uk": "partial",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -349,7 +379,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "partial",
+            "ru": "partial",
+            "uk": "none",
+            "es": "partial",
+            "fr": "partial"
           }
         },
         {
@@ -402,7 +438,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]
@@ -472,7 +514,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -525,7 +573,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -578,7 +632,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]
@@ -647,7 +707,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -700,7 +766,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]
@@ -770,7 +842,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -822,7 +900,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]
@@ -891,7 +975,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         },
         {
@@ -943,7 +1033,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "full"
+            "en": "full",
+            "enOfficial": "partial",
+            "enAi": "full",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]
