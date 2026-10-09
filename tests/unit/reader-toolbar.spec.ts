@@ -120,6 +120,23 @@ describe("ReaderToolbar", () => {
     expect(wrapper.text()).toContain("Chapter 2");
   });
 
+  // "Chapter 1" at the end of another part must not read as this part's.
+  it("prefixes a prev/next label with its part when the link crosses parts", async () => {
+    const wrapper = await mountSuspended(ReaderToolbar, {
+      props: {
+        chapterTitle: "Part 1 · Chapter 1",
+        ...baseProps,
+        prev: null,
+        next: chapterLink("part-02/chapter-01", "Chapter 1"),
+      },
+    });
+
+    const nextLink = wrapper
+      .findAll("a")
+      .find((link) => link.attributes("href")?.includes("part-02"));
+    expect(nextLink?.attributes("title")).toBe("Part 2 · Chapter 1");
+  });
+
   it("disables prev/next at the corpus edges without rendering a link", async () => {
     const wrapper = await mountSuspended(ReaderToolbar, {
       props: {

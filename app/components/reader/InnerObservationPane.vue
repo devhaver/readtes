@@ -142,7 +142,7 @@ const statusMessage = computed(() => {
           <li
             v-for="segment in section.items"
             :key="segment.n"
-            class="tes-seif-lg"
+            class="tes-seif-md"
           >
             <ReaderSourceSegment :segment="segment" split-paragraphs />
           </li>

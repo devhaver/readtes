@@ -2,11 +2,14 @@
 // Study mode's thin reading-position rail: a fixed strip on the
 // inline-end edge (`end-0` — the logical property, so it lands on the
 // left in RTL rather than needing a `dir`-conditional class) that fills
-// top-down as the reader scrolls through the chapter. Passive scroll/resize
+// top-down as the reader scrolls through the chapter. It starts below the
+// chrome while that is showing, so the navbar and toolbar never cover the top
+// of it (`--reader-navbar-h`/`--reader-toolbar-h`). Passive scroll/resize
 // listeners, rAF-batched, and the fill itself only ever changes via a
 // `transform: scaleY(...)` on a fixed-size track — no layout-affecting
 // property is ever touched, so this can never cause layout thrash.
 const { t } = useI18n();
+const { visible: chromeVisible } = useAutoHidingChrome();
 
 const progress = ref(0);
 let rafHandle: number | null = null;
@@ -42,7 +45,12 @@ const percent = computed(() => Math.round(progress.value * 100));
 
 <template>
   <div
-    class="pointer-events-none fixed inset-y-0 end-0 z-20 w-1"
+    class="pointer-events-none fixed bottom-0 end-0 z-20 w-1 transition-[inset-block-start] duration-200 motion-reduce:transition-none"
+    :style="{
+      insetBlockStart: chromeVisible
+        ? 'calc(var(--reader-navbar-h, 0px) + var(--reader-toolbar-h, 0px))'
+        : '0px',
+    }"
     role="progressbar"
     aria-valuemin="0"
     aria-valuemax="100"

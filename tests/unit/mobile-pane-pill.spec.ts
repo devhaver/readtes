@@ -146,6 +146,21 @@ describe("MobilePanePill", () => {
     expect(wrapper.vm.state.activePane.value).toBe("commentary");
   });
 
+  // Arrow keys follow what is drawn: in an RTL pill the tab on the right —
+  // the previous one in reading order — answers ArrowRight.
+  it("mirrors the arrow keys in an RTL pill", async () => {
+    const wrapper = await mountSuspended(Host);
+    const tab = wrapper.findAll('[role="tab"]')[1]!;
+    const computed = vi
+      .spyOn(window, "getComputedStyle")
+      .mockReturnValue({ direction: "rtl" } as CSSStyleDeclaration);
+
+    await tab.trigger("keydown", { key: "ArrowRight" });
+    expect(wrapper.vm.state.activePane.value).toBe("source");
+
+    computed.mockRestore();
+  });
+
   it("jumps to the first/last tab on Home/End", async () => {
     const wrapper = await mountSuspended(Host);
 

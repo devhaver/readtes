@@ -59,28 +59,33 @@ const onLanguageChange = (event: Event) => {
 </script>
 
 <template>
-  <div class="flex flex-wrap items-center justify-between gap-2">
+  <!-- One row at every width: the title truncates, the select shrinks and
+       the provenance badge collapses to an icon when the header is narrow
+       (container query), instead of wrapping to a second and third row. -->
+  <div class="@container flex min-w-0 items-center justify-between gap-2">
     <!-- The third pane replaces the single layer title with a tablist
          (Inner Observation / Questions / Answers), so it supplies its own
          heading. Every other pane names exactly one layer and takes the
          default. -->
     <slot name="title">
-      <h2 class="tes-eyebrow">
+      <h2 class="tes-pane-title min-w-0 truncate" :title="title">
         {{ title }}
       </h2>
     </slot>
 
-    <div class="flex items-center gap-2">
+    <div class="flex min-w-0 shrink-0 items-center gap-2">
       <span
         v-if="provenance"
-        class="tes-provenance-badge"
+        class="tes-provenance-badge shrink-0"
+        :title="provenance.label"
         :class="
           provenance.tone === 'warning'
             ? 'border-orange-cta text-(--warning-text)'
             : 'border-(--border) text-(--text-muted)'
         "
       >
-        {{ provenance.label }}
+        <span class="@max-sm:sr-only">{{ provenance.label }}</span>
+        <span aria-hidden="true" class="hidden @max-sm:inline">&#10022;</span>
       </span>
 
       <template v-if="languageOptions.length > 1">

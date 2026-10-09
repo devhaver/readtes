@@ -21,6 +21,12 @@
 // `vuejs-accessibility/interactive-supports-focus` says so), and the tab is
 // where the focus actually is when the key is pressed.
 //
+// Home/End jump to the first/last tab, per the APG tabs pattern.
+//
+// A part with a single tab (Questions and Answers only, one of them
+// missing) has nothing to switch between, so it renders as a plain title
+// rather than a one-button tablist.
+//
 // `dir="rtl"` is resolved through the element's own computed direction
 // rather than hardcoding left = previous: in Hebrew the visually-previous
 // tab is the one to the right.
@@ -79,6 +85,14 @@ const focusTab = (tab: ThirdPaneTab) => {
 };
 
 const onKeydown = (event: KeyboardEvent) => {
+  if (event.key === "Home" || event.key === "End") {
+    const edge = props.tabs[event.key === "Home" ? 0 : props.tabs.length - 1];
+    if (!edge) return;
+    event.preventDefault();
+    emit("select", edge);
+    void nextTick(() => focusTab(edge));
+    return;
+  }
   if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
 
   // In an RTL pane, ArrowLeft means "the tab drawn to the left", which is
@@ -104,7 +118,15 @@ const onKeydown = (event: KeyboardEvent) => {
 </script>
 
 <template>
-  <div class="flex flex-wrap items-center gap-1">
+  <h2
+    v-if="tabs.length === 1"
+    :id="tabId(active)"
+    class="tes-pane-title min-w-0 truncate"
+  >
+    {{ headingText }}
+  </h2>
+
+  <div v-else class="flex min-w-0 items-center gap-1">
     <h2 :id="HEADING_ID" class="sr-only">
       {{ headingText }}
     </h2>
@@ -113,7 +135,7 @@ const onKeydown = (event: KeyboardEvent) => {
       ref="rootRef"
       role="tablist"
       :aria-labelledby="HEADING_ID"
-      class="flex flex-wrap items-center gap-1"
+      class="flex min-w-0 items-center gap-1 overflow-x-auto"
     >
       <button
         v-for="tab in tabs"

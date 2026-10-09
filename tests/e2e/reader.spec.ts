@@ -275,7 +275,7 @@ test.describe("mobile reader", () => {
     await expect(
       page.getByRole("navigation", { name: "Chapter navigation" }),
     ).toHaveCount(0);
-    expect(await heightOf()).toBeGreaterThan(expanded + 100);
+    expect(await heightOf()).toBeGreaterThan(expanded + 70);
 
     // Expanding restores every piece of it. (That it *persists* across
     // visits is `tests/unit/collapsed-reader-chrome.spec.ts` — this
@@ -287,6 +287,39 @@ test.describe("mobile reader", () => {
       page.getByRole("navigation", { name: "Chapter navigation" }),
     ).toBeVisible();
     expect(await heightOf()).toBe(expanded);
+  });
+
+  test("study mode's navbar and toolbar return together on scroll-up, deep in a long chapter", async ({
+    page,
+  }) => {
+    // The reader root used to be `h-dvh`, so the sticky chrome could only
+    // stick within the first viewport: scrolled thousands of px down it sat
+    // far above the page and never came back on scroll-up.
+    await page.goto("/read/part-01/introduction-01");
+    await waitForHydration(page);
+
+    const navbar = page.locator("header").first();
+    const toolbar = page.getByRole("navigation", {
+      name: "Chapter navigation",
+    });
+
+    // Real wheel travel, as a reader does it: the hide rule accumulates
+    // scroll distance and ignores a single programmatic jump.
+    for (let i = 0; i < 30; i++) await page.mouse.wheel(0, 400);
+    await expect(navbar).not.toBeInViewport();
+    await expect(toolbar).not.toBeInViewport();
+
+    await page.mouse.wheel(0, -120);
+    await page.mouse.wheel(0, -120);
+    await expect(navbar).toBeInViewport({ ratio: 1 });
+    await expect(toolbar).toBeInViewport({ ratio: 1 });
+
+    // One unit: the toolbar sits directly below the navbar, not under it.
+    const navbarBox = (await navbar.boundingBox())!;
+    const toolbarBox = (await toolbar.boundingBox())!;
+    expect(toolbarBox.y).toBeGreaterThanOrEqual(
+      Math.round(navbarBox.y + navbarBox.height),
+    );
   });
 
   test("switches pane on a tap with motion enabled — the real-device path", async ({

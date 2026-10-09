@@ -70,6 +70,7 @@
     "prevChapter": "Capítulo anterior",
     "nextChapter": "Capítulo siguiente",
     "chapterNav": "Navegación de capítulos",
+    "chapterNavEnd": "Capítulo siguiente y anterior",
     "mode": {
       "label": "Modo de lectura",
       "study": "Estudio",

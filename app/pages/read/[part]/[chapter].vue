@@ -164,9 +164,15 @@ const panes = resolveReaderPanes({
 // that part has none.
 const sourceLabelKey = sourcePaneLabelKey(chapter.kind);
 
+// A part with only one of Questions/Answers names that one — "Q & A" would
+// promise a layer the chapter does not have.
 const thirdPaneLabelKey = availableThirdPaneTabs.includes("inner-observation")
   ? "reader.mobilePane.innerObservation"
-  : "reader.mobilePane.questionsAnswers";
+  : availableThirdPaneTabs.length === 1
+    ? availableThirdPaneTabs[0] === "questions"
+      ? "reader.pane.questions"
+      : "reader.pane.answers"
+    : "reader.mobilePane.questionsAnswers";
 
 const thirdPane = useThirdPaneTabContent(
   partId,
@@ -218,6 +224,11 @@ const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
 const originalPagination = partPaginationPosition(partFile.chapters, chapterId);
 
 const chapterTitle = computed(() => localizedTitle(chapter.title));
+// Chapter titles repeat across parts ("Chapter 1" x16), so the heading and
+// the document title carry the part too.
+const readerTitle = computed(
+  () => `${t("common.part")} ${partFile.part.number} · ${chapterTitle.value}`,
+);
 
 const breadcrumbItems = computed(() => [
   { label: t("common.sixVolumes"), to: localePath("/volumes") },
@@ -226,7 +237,7 @@ const breadcrumbItems = computed(() => [
     to: localePath(`/volumes/${volumeSlug(partFile.volume)}`),
   },
   {
-    label: `${t("common.part")} ${partFile.part.number} · ${chapterTitle.value}`,
+    label: readerTitle.value,
   },
 ]);
 
@@ -319,7 +330,7 @@ useContentsPanel();
 const partTitle = computed(() => localizedTitle(partFile.part.title));
 
 useLocalizedSeo({
-  title: () => `${chapterTitle.value} · ${t("common.siteName")}`,
+  title: () => `${readerTitle.value} · ${t("common.siteName")}`,
   description: () =>
     t("seo.chapter.description", {
       chapter: chapterTitle.value,
@@ -330,27 +341,29 @@ useLocalizedSeo({
 </script>
 
 <template>
-  <div class="contents">
+  <div class="flex flex-col" :class="mode === 'panes' && 'h-full min-h-0'">
+    <!-- ONE toolbar for every mode, above the branches: switching mode or
+         collapsing the chrome re-renders the content beneath it but never
+         unmounts the focused control. -->
+    <ReaderToolbar
+      :chapter-title="readerTitle"
+      :breadcrumb-items="breadcrumbItems"
+      :volumes="volumes"
+      :current-volume-id="partFile.volume.id"
+      :current-part-id="partFile.part.id"
+      :prev="prev"
+      :next="next"
+      :current-part-chapters="partFile.chapters"
+      :current-chapter-id="chapter.id"
+    />
+
     <ReaderShell
       v-if="mode === 'panes'"
+      class="min-h-0 flex-1"
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"
       :source-label-key="sourceLabelKey"
     >
-      <template #toolbar>
-        <ReaderToolbar
-          :chapter-title="chapterTitle"
-          :breadcrumb-items="breadcrumbItems"
-          :volumes="volumes"
-          :current-volume-id="partFile.volume.id"
-          :current-part-id="partFile.part.id"
-          :prev="prev"
-          :next="next"
-          :current-part-chapters="partFile.chapters"
-          :current-chapter-id="chapter.id"
-        />
-      </template>
-
       <template #source>
         <ReaderPane
           :title="t(sourceLabelKey)"
@@ -433,7 +446,7 @@ useLocalizedSeo({
           <div
             v-if="activeThirdPaneTab"
             :id="`reader-third-pane-panel-${activeThirdPaneTab}`"
-            role="tabpanel"
+            :role="availableThirdPaneTabs.length > 1 ? 'tabpanel' : 'region'"
             :aria-labelledby="`reader-third-pane-tab-${activeThirdPaneTab}`"
           >
             <ReaderInnerObservationPane
@@ -447,17 +460,6 @@ useLocalizedSeo({
     </ReaderShell>
 
     <template v-else-if="mode === 'study'">
-      <ReaderToolbar
-        :chapter-title="chapterTitle"
-        :breadcrumb-items="breadcrumbItems"
-        :volumes="volumes"
-        :current-volume-id="partFile.volume.id"
-        :current-part-id="partFile.part.id"
-        :prev="prev"
-        :next="next"
-        :current-part-chapters="partFile.chapters"
-        :current-chapter-id="chapter.id"
-      />
       <ReaderStudyStream
         :source-label-key="sourceLabelKey"
         :source-segments="sourceSegments"
@@ -481,20 +483,31 @@ useLocalizedSeo({
             readerLanguages.setLanguage('commentary', language)
         "
       />
+      <nav
+        v-if="prev || next"
+        :aria-label="t('reader.chapterNavEnd')"
+        class="tes-study-end-nav"
+      >
+        <NuxtLink
+          v-if="prev"
+          :to="localePath(`/read/${prev.id}`)"
+          class="tes-study-end-link"
+        >
+          <span class="tes-eyebrow">{{ t("reader.prevChapter") }}</span>
+          <span>{{ localizedText(prev.title, locale) }}</span>
+        </NuxtLink>
+        <NuxtLink
+          v-if="next"
+          :to="localePath(`/read/${next.id}`)"
+          class="tes-study-end-link ms-auto text-end"
+        >
+          <span class="tes-eyebrow">{{ t("reader.nextChapter") }}</span>
+          <span>{{ localizedText(next.title, locale) }}</span>
+        </NuxtLink>
+      </nav>
     </template>
 
     <template v-else>
-      <ReaderToolbar
-        :chapter-title="chapterTitle"
-        :breadcrumb-items="breadcrumbItems"
-        :volumes="volumes"
-        :current-volume-id="partFile.volume.id"
-        :current-part-id="partFile.part.id"
-        :prev="prev"
-        :next="next"
-        :current-part-chapters="partFile.chapters"
-        :current-chapter-id="chapter.id"
-      />
       <ReaderOriginalStream
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"

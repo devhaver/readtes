@@ -6,7 +6,7 @@
 // not offer must fall through WITHOUT being overwritten; and the tablist
 // must only ever offer tabs the part actually has.
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import { beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { defineComponent, nextTick } from "vue";
 import ThirdPaneTabs from "~/components/reader/ThirdPaneTabs.vue";
 import {
@@ -22,19 +22,55 @@ const Host = defineComponent({
   render: () => null,
 });
 
+// Only the 80rem (1280px) query matters to the pane's default.
+const stubViewport = (wide: boolean) => {
+  vi.stubGlobal("matchMedia", (query: string) => ({
+    matches: wide,
+    media: query,
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    addListener: () => {},
+    removeListener: () => {},
+  }));
+};
+
 describe("useReaderThirdPane", () => {
   beforeEach(() => {
     localStorage.clear();
+    stubViewport(true);
   });
 
-  // Open by default: the pane is what the reader had before it became
-  // collapsible, and nobody should have to discover a control to find
-  // Inner Observation where it has always been.
-  it("starts open, on the first tab", async () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  // Open by default where there is room (>= 1280px): a reader who never
+  // touched the control should find Inner Observation where it has always
+  // been.
+  it("starts open on a wide viewport, on the first tab", async () => {
     const wrapper = await mountSuspended(Host);
+    await nextTick();
 
     expect(wrapper.vm.pane.open.value).toBe(true);
     expect(wrapper.vm.pane.tab.value).toBe("inner-observation");
+  });
+
+  // Below 1280px three columns squeeze the Ari's text to a sliver.
+  it("starts closed on a narrower viewport", async () => {
+    stubViewport(false);
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+
+    expect(wrapper.vm.pane.open.value).toBe(false);
+  });
+
+  it("lets a stored choice win over the viewport", async () => {
+    stubViewport(false);
+    localStorage.setItem(OPEN_STORAGE_KEY, "true");
+    const wrapper = await mountSuspended(Host);
+    await nextTick();
+
+    expect(wrapper.vm.pane.open.value).toBe(true);
   });
 
   it("toggles, and writes the choice to storage", async () => {
@@ -175,5 +211,31 @@ describe("ThirdPaneTabs", () => {
       .trigger("keydown", { key: "ArrowLeft" });
 
     expect(wrapper.emitted("select")?.[0]).toEqual(["inner-observation"]);
+  });
+
+  it("jumps to the first/last tab on Home/End", async () => {
+    const wrapper = await mountTabs(
+      ["inner-observation", "questions", "answers"],
+      "questions",
+    );
+
+    await wrapper
+      .findAll('[role="tab"]')[1]!
+      .trigger("keydown", { key: "End" });
+    expect(wrapper.emitted("select")?.[0]).toEqual(["answers"]);
+
+    await wrapper
+      .findAll('[role="tab"]')[1]!
+      .trigger("keydown", { key: "Home" });
+    expect(wrapper.emitted("select")?.[1]).toEqual(["inner-observation"]);
+  });
+
+  // A one-button tablist has nothing to switch between.
+  it("renders a single tab as a plain title, not a tablist", async () => {
+    const wrapper = await mountTabs(["answers"], "answers");
+
+    expect(wrapper.find('[role="tablist"]').exists()).toBe(false);
+    expect(wrapper.find('[role="tab"]').exists()).toBe(false);
+    expect(wrapper.get("h2").text()).toBe("Answers");
   });
 });

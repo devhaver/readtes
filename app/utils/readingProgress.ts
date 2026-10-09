@@ -12,9 +12,10 @@ export const computeReadingProgress = (params: {
 }): number => {
   const scrollable = params.contentHeight - params.viewportHeight;
 
-  // A chapter shorter than the viewport has nothing to scroll — it's
-  // entirely on screen already, i.e. fully "read" through.
-  if (scrollable <= 0) return 1;
+  // A chapter shorter than the viewport has nothing to scroll, so there is
+  // no progress to show: an instantly-full stripe would claim the reader had
+  // read something they have not yet reached.
+  if (scrollable <= 0) return 0;
 
   return Math.min(Math.max(params.scrollTop / scrollable, 0), 1);
 };

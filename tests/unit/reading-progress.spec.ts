@@ -31,14 +31,14 @@ describe("computeReadingProgress", () => {
     ).toBe(0.5);
   });
 
-  it("is 1 (fully read) when the chapter is shorter than the viewport", () => {
+  it("is 0 (nothing to show) when the chapter is shorter than the viewport", () => {
     expect(
       computeReadingProgress({
         scrollTop: 0,
         viewportHeight: 800,
         contentHeight: 400,
       }),
-    ).toBe(1);
+    ).toBe(0);
   });
 
   it("clamps to 1 even if scrollTop overshoots (e.g. elastic/bounce scrolling)", () => {
