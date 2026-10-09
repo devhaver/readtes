@@ -113,6 +113,13 @@ const createReaderThirdPane = (): ReaderThirdPane => {
     THIRD_PANE_TABS[0],
   );
 
+  // Lets CSS hide a collapsed pane before hydration — see
+  // `useRootDataAttribute`.
+  useRootDataAttribute(
+    "data-pref-third-pane",
+    computed(() => (persistedOpen.value ? null : "closed")),
+  );
+
   // Gates the persisted read until after mount, same reason as
   // `useCollapsedReaderChrome`/`useReadingPreferences`: prerendering has no
   // `localStorage`, so consulting it during the first client render would

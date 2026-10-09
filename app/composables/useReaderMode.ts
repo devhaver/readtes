@@ -45,6 +45,12 @@ const READER_MODE_KEY: InjectionKey<ReaderModeState> = Symbol("reader-mode");
 
 const createReaderModeState = (): ReaderModeState => {
   const override = useLocalStorage<ReaderMode | null>(STORAGE_KEY, null);
+
+  // Pre-hydration hook for CSS — see `useRootDataAttribute`.
+  useRootDataAttribute(
+    "data-pref-mode",
+    computed(() => override.value),
+  );
   const prefersStudyViewport = ref(false);
   const onceMode = ref<ReaderMode | null>(null);
 

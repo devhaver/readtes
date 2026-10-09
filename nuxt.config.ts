@@ -226,6 +226,15 @@ const siteUrl = (
   process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.com"
 ).replace(/\/$/, "");
 
+// Runs before first paint and mirrors the reader's persisted layout
+// preferences onto <html> as `data-pref-*` attributes, which `main.css`
+// reads. The preference composables cannot apply them during hydration
+// (prerendered HTML has no localStorage), so without this a returning
+// visitor saw the default layout and then a jump. Keys must match the
+// composables' `STORAGE_KEY`s; see `useRootDataAttribute`. Wrapped in
+// try/catch: storage can be blocked, and a head script must never throw.
+const READER_PREFS_HEAD_SCRIPT = `(function(){try{var d=document.documentElement,g=function(k){return localStorage.getItem(k)};var s=g("readtes:reading-scale");if(s&&/^[1-4]$/.test(s))d.setAttribute("data-pref-scale",s);if(g("readtes:reader-third-pane-open")==="false")d.setAttribute("data-pref-third-pane","closed");if(g("readtes:reader-chrome-collapsed")==="true")d.setAttribute("data-pref-chrome","collapsed");var m=g("readtes:reader-mode");if(m==="study"||m==="panes"||m==="original")d.setAttribute("data-pref-mode",m)}catch(e){}})();`;
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // Static, locale-independent document head. Per-route canonical, hreflang
@@ -254,6 +263,13 @@ export default defineNuxtConfig({
       // Literal hex is unavoidable in a meta value; the token it mirrors is
       // --color-navy-primary in app/assets/css/main.css.
       meta: [{ name: "theme-color", content: "#003b65" }],
+      script: [
+        {
+          innerHTML: READER_PREFS_HEAD_SCRIPT,
+          tagPosition: "head",
+          tagPriority: "critical",
+        },
+      ],
     },
   },
   modules: [
