@@ -184,6 +184,15 @@ tasks:
       - NODE_OPTIONS="--max-old-space-size=8192" NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://readtes.org} pnpm build
       - NODE_ENV=production HOST=0.0.0.0 PORT=6219 pnpm start
 
+  docker:server:
+    desc: Build and run the Node server image Coolify deploys (http://localhost:6220)
+    summary: |
+      Builds the `server` Dockerfile target (`nuxt build` with
+      READTES_DEPLOY_TARGET=server — reader pages render on request) and runs
+      it. See docs/deploy-coolify.md.
+    cmds:
+      - docker compose up --build server
+
   docker:prod:
     desc: Build and serve the generated static site (http://localhost:6219)
     summary: |

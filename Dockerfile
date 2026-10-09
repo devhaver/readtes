@@ -63,13 +63,13 @@ COPY . .
 RUN pnpm exec nuxt prepare && pnpm generate
 
 ###############################################################################
-# Production — nginx serving the prerendered output
+# Static — nginx serving the prerendered output (`--target static`)
 #
 # Deliberately not a Node image. `nuxt generate` emits static files to
 # .output/public with no server entrypoint, so weburz's
 # `node .output/server/index.mjs` has nothing to run here.
 ###############################################################################
-FROM nginx:1.27-alpine AS production
+FROM nginx:1.27-alpine AS static
 
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/.output/public /usr/share/nginx/html
@@ -78,3 +78,43 @@ EXPOSE 80
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD wget -qO- http://localhost/ >/dev/null 2>&1 || exit 1
+
+###############################################################################
+# Server build — the Node server (`nuxt build`, READTES_DEPLOY_TARGET=server)
+#
+# Reader pages are rendered on request, not prerendered, which is what keeps
+# this build within a CI runner's memory (a full `generate` peaks ~7 GB).
+###############################################################################
+FROM base AS server-build
+
+ARG NUXT_PUBLIC_SITE_URL=https://readtes.com
+ENV NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL}
+ENV READTES_DEPLOY_TARGET=server
+ENV NODE_OPTIONS=--max-old-space-size=6144
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN pnpm exec nuxt prepare && pnpm build
+
+###############################################################################
+# Server — the production image (default target; Coolify runs this)
+#
+# `.output` is self-contained: Nitro bundles every runtime dependency into
+# .output/server, so no node_modules and no pnpm are needed here.
+###############################################################################
+FROM node:24-alpine AS server
+
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=3000
+WORKDIR /app
+
+COPY --from=server-build /app/.output ./.output
+
+USER node
+EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD wget -qO- http://127.0.0.1:3000/healthz >/dev/null 2>&1 || exit 1
+
+CMD ["node", ".output/server/index.mjs"]

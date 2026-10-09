@@ -32,7 +32,7 @@ services:
   prod:
     build:
       context: .
-      target: production
+      target: static
       args:
         # Baked in at build time; a static site has no runtime config.
         NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-https://readtes.org}
@@ -50,4 +50,24 @@ services:
           memory: 1G
         reservations:
           cpus: "0.5"
+          memory: 512M
+
+  # Server — the Node production image Coolify deploys (docs/deploy-coolify.md).
+  server:
+    build:
+      context: .
+      target: server
+      args:
+        NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-https://readtes.com}
+    container_name: readtes-server
+    image: readtes:server
+    ports:
+      - "6220:3000"
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
           memory: 512M

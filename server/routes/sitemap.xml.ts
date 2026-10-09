@@ -18,8 +18,12 @@ export default defineEventHandler((event) => {
   // request-scoped config overrides, which a fully prerendered static route
   // has no use for — the global config is what `NUXT_PUBLIC_SITE_URL`
   // populates at build time, and that is what this reads either way.
-  const { siteUrl } = useRuntimeConfig().public;
-  const entries = buildSitemapEntries(toc as Toc, siteUrl);
+  const { siteUrl, indexedLocales } = useRuntimeConfig().public;
+  const entries = buildSitemapEntries(
+    toc as Toc,
+    siteUrl,
+    indexedLocales as string[],
+  );
 
   setHeader(event, "content-type", "application/xml; charset=UTF-8");
   return renderSitemapXml(entries);

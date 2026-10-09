@@ -114,6 +114,15 @@ const toc: Toc = JSON.parse(
   ),
 );
 
+// Where this build runs. `static` (the default) is the GitHub Pages site:
+// everything prerendered by `nuxt generate`. `server` is the Node server
+// (`nuxt build`, deployed with Coolify — docs/deploy-coolify.md): every page
+// renders on request in a few milliseconds and Cloudflare caches it, so no
+// reader page needs prerendering, every language is a real indexable page,
+// and the build drops from ~7 GB of RAM to a fraction of it.
+const DEPLOY_TARGET =
+  process.env.READTES_DEPLOY_TARGET === "server" ? "server" : "static";
+
 // Interface languages whose READER pages are not prerendered. The site is
 // served by GitHub Pages (`.github/workflows/deploy-pages.yml`), which caps
 // a site at 1 GB; a fully prerendered locale is ~75 MB (~2,100 chapter
@@ -132,6 +141,33 @@ const SPA_READER_LOCALES = [
   { code: "tr", language: "tr-TR" },
   { code: "uk", language: "uk-UA" },
 ] as const;
+
+// The languages whose pages the sitemap offers search engines: on the
+// server every language is a real page; on GitHub Pages the
+// SPA_READER_LOCALES' reader pages are 404-status shells and stay out.
+const INDEXED_LOCALES =
+  DEPLOY_TARGET === "server"
+    ? ["en", "he", "ru", ...SPA_READER_LOCALES.map(({ code }) => code)]
+    : ["en", "he", "ru"];
+
+// Server mode only: HTML may sit in Cloudflare's cache for 10 minutes and be
+// served stale for a day while it refreshes; browsers always revalidate. A
+// deploy shows up within the 10 minutes (or at once after a cache purge).
+const HTML_CACHE = {
+  "cache-control":
+    "public, max-age=0, must-revalidate, s-maxage=600, stale-while-revalidate=86400",
+};
+const SERVER_HTML_ROUTES = [
+  "",
+  ...INDEXED_LOCALES.slice(1).map((c) => `/${c}`),
+].flatMap((prefix) => [
+  `${prefix}/`,
+  `${prefix}/read/**`,
+  `${prefix}/volumes/**`,
+  `${prefix}/volumes`,
+  `${prefix}/glossary`,
+  `${prefix}/about`,
+]);
 
 // `/volumes/volume-<N>` for every volume, in both locales — `@nuxtjs/i18n`
 // does not itself multiply explicit `nitro.prerender.routes` entries across
@@ -154,21 +190,24 @@ const volumePrerenderRoutes = toc.volumes.flatMap((volume) => [
 // chapters 2+ of a cluster. Same kind-then-number reading order as
 // `~/utils/toc`'s `flattenChapters` — irrelevant to prerendering itself,
 // just keeps this list's order legible.
-const readerPrerenderRoutes = toc.volumes.flatMap((volume) =>
-  volume.parts.flatMap((part) =>
-    [...part.chapters]
-      .sort(
-        (a, b) =>
-          CHAPTER_KIND_ORDER.indexOf(a.kind) -
-            CHAPTER_KIND_ORDER.indexOf(b.kind) || a.number - b.number,
-      )
-      .flatMap((chapter) => [
-        `/read/${chapter.id}`,
-        `/he/read/${chapter.id}`,
-        `/ru/read/${chapter.id}`,
-      ]),
-  ),
-);
+const readerPrerenderRoutes =
+  DEPLOY_TARGET === "server"
+    ? []
+    : toc.volumes.flatMap((volume) =>
+        volume.parts.flatMap((part) =>
+          [...part.chapters]
+            .sort(
+              (a, b) =>
+                CHAPTER_KIND_ORDER.indexOf(a.kind) -
+                  CHAPTER_KIND_ORDER.indexOf(b.kind) || a.number - b.number,
+            )
+            .flatMap((chapter) => [
+              `/read/${chapter.id}`,
+              `/he/read/${chapter.id}`,
+              `/ru/read/${chapter.id}`,
+            ]),
+        ),
+      );
 
 // Every absolute URL the app emits (canonical links, og:url/og:image,
 // hreflang alternates, sitemap.xml, robots.txt) derives from this single
@@ -279,6 +318,8 @@ export default defineNuxtConfig({
       // standard public-runtime-config env override) — see the `siteUrl`
       // comment above for what derives from this.
       siteUrl,
+      // Read by `server/routes/sitemap.xml.ts` — see INDEXED_LOCALES.
+      indexedLocales: INDEXED_LOCALES,
       // Umami analytics, both empty by default. There is no runtime config
       // on a static site — Cloudflare Pages serves prerendered HTML, so
       // these are only ever settable at `pnpm generate` time via
@@ -311,6 +352,11 @@ export default defineNuxtConfig({
   // `tes-content-model` skill, "Volume grouping", for the full reasoning —
   // read it before adding a redirect for a volume URL.
   routeRules: {
+    ...(DEPLOY_TARGET === "server"
+      ? Object.fromEntries(
+          SERVER_HTML_ROUTES.map((route) => [route, { headers: HTML_CACHE }]),
+        )
+      : {}),
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
     "/ru/design-tokens": { prerender: false },
