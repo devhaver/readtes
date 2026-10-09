@@ -92,7 +92,7 @@ const partSummaries = computed(() =>
           <NuxtLink
             v-if="active"
             :to="href"
-            class="after:absolute after:inset-0 rounded-button hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="after:absolute after:inset-0 rounded-button hover:text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
           >
             {{ title }}
           </NuxtLink>

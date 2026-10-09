@@ -8,7 +8,8 @@
     "chapter": "Глава",
     "skipToContent": "Перейти к тексту",
     "language": "Язык",
-    "close": "Закрыть"
+    "close": "Закрыть",
+    "skipToText": "Перейти к тексту"
   },
   "nav": {
     "primary": "Основное меню",
@@ -16,11 +17,9 @@
     "menuClose": "Закрыть меню",
     "volumesLink": "Тома",
     "glossaryLink": "Глоссарий",
-    "themeToggleToDark": "Тёмная тема",
-    "themeToggleToLight": "Светлая тема",
-    "themeToggleToSepia": "Тема «сепия»",
     "languageSwitcherLabel": "Сменить язык",
     "breadcrumbLabel": "Навигационная цепочка",
+    "themeToggleLabel": "Тема: {current}. Переключить на: {next}.",
     "aboutLink": "О проекте"
   },
   "footer": {

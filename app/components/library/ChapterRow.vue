@@ -51,7 +51,7 @@ const languages = computed(() =>
   <li>
     <NuxtLink
       :to="href"
-      class="flex items-center justify-between gap-3 rounded-card px-3 py-2.5 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+      class="flex items-center justify-between gap-3 rounded-card px-3 py-2.5 transition-colors hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
     >
       <span class="flex min-w-0 items-baseline gap-2">
         <!--

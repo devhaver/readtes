@@ -36,6 +36,26 @@ const { t } = useI18n();
 const { mode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const { scale } = useReadingPreferences();
+// The reader's chrome (navbar, toolbar, breadcrumb) sits ahead of the text,
+// and in panes mode the text is a scroll container, not a landmark. Move
+// focus to the first visible passage so the next Tab starts inside the text.
+const skipToText = () => {
+  const passage = Array.from(
+    document.querySelectorAll<HTMLElement>(
+      "#main-content .reader-anchor-target",
+    ),
+  ).find((element) => element.offsetParent !== null);
+  if (!passage) {
+    document.getElementById("main-content")?.focus();
+    return;
+  }
+  passage.tabIndex = -1;
+  passage.focus();
+};
+
+// Teleported overlays render under <body>, outside the wrapper below, so the
+// scale has to be on <body> too for their reading text to follow it.
+useHead({ bodyAttrs: { "data-reading-scale": scale } });
 const isStudyMode = computed(() => mode.value === "study");
 
 // The collapse control lives in the reader toolbar, but the site navbar is
@@ -84,6 +104,9 @@ onBeforeUnmount(() => {
     <a href="#main-content" class="tes-skip-link">
       {{ t("common.skipToContent") }}
     </a>
+    <a href="#main-content" class="tes-skip-link" @click.prevent="skipToText">
+      {{ t("common.skipToText") }}
+    </a>
     <div
       ref="navbarRef"
       :class="[
@@ -98,7 +121,7 @@ onBeforeUnmount(() => {
     >
       <AppNavBar full-width />
     </div>
-    <main id="main-content" class="min-h-0 flex-1">
+    <main id="main-content" tabindex="-1" class="min-h-0 flex-1">
       <slot />
     </main>
   </div>

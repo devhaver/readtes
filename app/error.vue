@@ -15,6 +15,7 @@ const localeHead = useLocaleHead();
 // return type for `link`/`meta` is looser than `useHead`'s.
 useHead((() => ({
   htmlAttrs: { ...localeHead.value.htmlAttrs },
+  bodyAttrs: { class: "font-body" },
   link: localeHead.value.link,
   meta: localeHead.value.meta,
 })) as unknown as Parameters<typeof useHead>[0]);
@@ -59,6 +60,7 @@ const actions = computed(() => [
     <AppNavBar />
     <main
       id="main-content"
+      tabindex="-1"
       class="mx-auto flex w-full max-w-5xl flex-1 flex-col items-start justify-center gap-6 px-4 py-16 sm:px-6"
     >
       <p class="font-display text-sm tracking-widest text-(--text-muted)">
@@ -76,11 +78,11 @@ const actions = computed(() => [
           v-for="action in actions"
           :key="action.to"
           :to="action.to"
-          class="inline-flex items-center gap-2 rounded-button px-5 py-2.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          class="inline-flex items-center gap-2 rounded-button px-5 py-2.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
           :class="
             action.primary
               ? 'bg-teal-strong text-surface-white hover:bg-navy-primary'
-              : 'border border-(--border) text-(--text-primary) hover:border-teal hover:text-(--accent-text)'
+              : 'border border-(--border-control) text-(--text-primary) hover:border-teal hover:text-(--accent-text) hover:underline'
           "
           @click="clearError()"
         >

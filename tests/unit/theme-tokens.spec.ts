@@ -33,6 +33,8 @@ const SEMANTIC_TOKENS = [
   "--border",
   "--accent-text",
   "--warning-text",
+  "--focus-ring-surface",
+  "--border-control",
 ];
 
 describe("theme tokens", () => {
@@ -56,5 +58,10 @@ describe("theme tokens", () => {
 
   it("sepia is a light theme for form controls and scrollbars", () => {
     expect(blockFor(".sepia")).toContain("color-scheme: light");
+  });
+
+  it("draws focus rings with --focus-ring, never the bare brand teal", () => {
+    // Plain teal is 2.12-2.49:1 on light/sepia surfaces (WCAG 1.4.11 wants 3:1).
+    expect(css).not.toMatch(/focus-visible:outline-teal/);
   });
 });

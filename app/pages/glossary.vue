@@ -187,7 +187,7 @@ useLocalizedSeo({
             :placeholder="
               t('glossary.searchPlaceholder', { count: meta.entryCount })
             "
-            class="w-full rounded-input border border-(--border) bg-(--surface) px-3 py-2 text-sm text-(--text-primary) placeholder:text-(--text-muted) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="w-full rounded-input border border-(--border-control) bg-(--surface) px-3 py-2 text-sm text-(--text-primary) placeholder:text-(--text-muted) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
           />
         </label>
 
@@ -201,7 +201,7 @@ useLocalizedSeo({
             :key="option"
             type="button"
             :aria-pressed="strategy === option"
-            class="rounded-button border px-2.5 py-1 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-teal"
+            class="tes-chip rounded-button border px-2.5 py-1 text-xs transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-(--focus-ring)"
             :class="
               strategy === option
                 ? 'border-teal-strong bg-teal-strong text-surface-white'
@@ -261,7 +261,7 @@ useLocalizedSeo({
           </p>
           <button
             type="button"
-            class="mt-4 rounded-button border border-(--border) px-3 py-1.5 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="mt-4 rounded-button border border-(--border-control) px-3 py-1.5 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
             @click="clearFilters"
           >
             {{ t("glossary.clearFilters") }}
@@ -302,7 +302,7 @@ useLocalizedSeo({
 
         <details class="mt-6 rounded-card border border-(--border)">
           <summary
-            class="cursor-pointer px-4 py-3 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-teal sm:px-6"
+            class="cursor-pointer px-4 py-3 text-sm text-(--text-primary) hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--focus-ring) sm:px-6"
           >
             {{ t("glossary.methodTitle") }}
           </summary>

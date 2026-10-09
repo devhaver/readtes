@@ -36,4 +36,77 @@ describe("AppLanguageSwitcher", () => {
     expect(hebrew?.attributes("aria-current")).toBeUndefined();
     expect(hebrew?.attributes("href")).toMatch(/\/he(\/|$)/);
   });
+
+  describe("closing", () => {
+    const open = async () => {
+      const wrapper = await mountSuspended(AppLanguageSwitcher, {
+        attachTo: document.body,
+      });
+      const details = wrapper.get("details").element as HTMLDetailsElement;
+      details.open = true;
+      await nextTick();
+      return { wrapper, details };
+    };
+
+    it("closes on a pointerdown outside the menu", async () => {
+      const { wrapper, details } = await open();
+
+      document.body.dispatchEvent(new Event("pointerdown", { bubbles: true }));
+
+      expect(details.open).toBe(false);
+      wrapper.unmount();
+    });
+
+    it("stays open for a pointerdown inside the menu", async () => {
+      const { wrapper, details } = await open();
+
+      details
+        .querySelector("summary")
+        ?.dispatchEvent(new Event("pointerdown", { bubbles: true }));
+
+      expect(details.open).toBe(true);
+      wrapper.unmount();
+    });
+
+    it("closes on Escape and returns focus to the summary", async () => {
+      const { wrapper, details } = await open();
+      details.querySelector<HTMLElement>("a[href]")?.focus();
+
+      document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+
+      expect(details.open).toBe(false);
+      expect(document.activeElement).toBe(details.querySelector("summary"));
+      wrapper.unmount();
+    });
+
+    it("moves through the languages with ArrowDown and ArrowUp", async () => {
+      const { wrapper, details } = await open();
+      const items = Array.from(
+        details.querySelectorAll<HTMLElement>("a[href]"),
+      );
+      details.querySelector<HTMLElement>("summary")?.focus();
+
+      const press = (key: string) =>
+        document.dispatchEvent(new KeyboardEvent("keydown", { key }));
+      press("ArrowDown");
+      expect(document.activeElement).toBe(items[0]);
+      press("ArrowDown");
+      expect(document.activeElement).toBe(items[1]);
+      press("ArrowUp");
+      expect(document.activeElement).toBe(items[0]);
+      wrapper.unmount();
+    });
+
+    it("closes when a trapped overlay opens", async () => {
+      const { wrapper, details } = await open();
+      const overlays = useOpenOverlayCount();
+
+      overlays.value = 1;
+      await nextTick();
+
+      expect(details.open).toBe(false);
+      overlays.value = 0;
+      wrapper.unmount();
+    });
+  });
 });

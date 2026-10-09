@@ -137,7 +137,7 @@ onClickOutside(rootRef, close);
       type="button"
       class="tes-breadcrumb-menu-trigger"
       :aria-expanded="isOpen"
-      :aria-controls="panelId"
+      :aria-controls="isOpen ? panelId : undefined"
       @click="toggle"
       @keydown="onTriggerKeydown"
     >
@@ -154,34 +154,34 @@ onClickOutside(rootRef, close);
       ref="panelRef"
       class="absolute start-0 top-full z-40 mt-1 min-w-48 rounded-card border border-(--border) bg-(--surface) py-1 shadow-lg"
     >
-      <nav :aria-label="triggerLabel">
-        <ul class="flex flex-col">
-          <li v-for="item in items" :key="item.key">
-            <NuxtLink
-              v-if="item.to"
-              :to="item.to"
-              class="tes-menu-link"
-              :class="item.current && 'font-semibold text-(--accent-text)'"
-              :aria-current="item.current ? 'true' : undefined"
-              @click="onItemClick"
-            >
-              {{ item.label }}
-            </NuxtLink>
-            <span v-else class="tes-menu-link-disabled">
-              {{ item.label }}
-            </span>
-          </li>
-          <li v-if="footerItem" class="border-t border-(--border)">
-            <NuxtLink
-              :to="footerItem.to"
-              class="tes-focus-ring block px-3 py-2 text-sm text-(--accent-text) hover:bg-(--surface-raised)"
-              @click="onItemClick"
-            >
-              {{ footerItem.label }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
+      <!-- A list, not a nested `nav`: this menu already sits inside the
+           breadcrumb's own `nav`. -->
+      <ul class="flex flex-col" :aria-label="triggerLabel">
+        <li v-for="item in items" :key="item.key">
+          <NuxtLink
+            v-if="item.to"
+            :to="item.to"
+            class="tes-menu-link"
+            :class="item.current && 'font-semibold text-(--accent-text)'"
+            :aria-current="item.current ? 'true' : undefined"
+            @click="onItemClick"
+          >
+            {{ item.label }}
+          </NuxtLink>
+          <span v-else class="tes-menu-link-disabled">
+            {{ item.label }}
+          </span>
+        </li>
+        <li v-if="footerItem" class="border-t border-(--border)">
+          <NuxtLink
+            :to="footerItem.to"
+            class="tes-focus-ring block px-3 py-2 text-sm text-(--accent-text) hover:bg-(--surface-raised)"
+            @click="onItemClick"
+          >
+            {{ footerItem.label }}
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

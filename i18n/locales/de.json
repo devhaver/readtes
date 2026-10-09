@@ -8,7 +8,8 @@
     "chapter": "Kapitel",
     "skipToContent": "Zum Inhalt springen",
     "language": "Sprache",
-    "close": "Schließen"
+    "close": "Schließen",
+    "skipToText": "Zum Text springen"
   },
   "nav": {
     "primary": "Hauptnavigation",
@@ -16,11 +17,9 @@
     "menuClose": "Menü schließen",
     "volumesLink": "Bände",
     "glossaryLink": "Glossar",
-    "themeToggleToDark": "Zum dunklen Modus wechseln",
-    "themeToggleToLight": "Zum hellen Modus wechseln",
-    "themeToggleToSepia": "Zum Sepia-Modus wechseln",
     "languageSwitcherLabel": "Sprache wechseln",
     "breadcrumbLabel": "Brotkrumennavigation",
+    "themeToggleLabel": "Farbschema: {current}. Wechseln zu: {next}.",
     "aboutLink": "Über das Projekt"
   },
   "footer": {

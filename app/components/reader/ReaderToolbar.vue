@@ -257,6 +257,8 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
           class="tes-icon-btn"
           :aria-label="t('reader.toolbar.preferencesButton')"
           :title="t('reader.toolbar.preferencesButton')"
+          aria-haspopup="dialog"
+          :aria-expanded="showPreferences"
           @click="showPreferences = true"
         >
           <span

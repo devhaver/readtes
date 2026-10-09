@@ -8,7 +8,8 @@
     "chapter": "פרק",
     "skipToContent": "דלג לתוכן",
     "language": "שפה",
-    "close": "סגור"
+    "close": "סגור",
+    "skipToText": "דלג אל הטקסט"
   },
   "nav": {
     "primary": "ניווט ראשי",
@@ -16,11 +17,9 @@
     "menuClose": "סגור תפריט",
     "volumesLink": "כרכים",
     "glossaryLink": "מילון מונחים",
-    "themeToggleToDark": "עבור למצב כהה",
-    "themeToggleToLight": "עבור למצב בהיר",
-    "themeToggleToSepia": "עבור למצב ספיה",
     "languageSwitcherLabel": "החלף שפה",
     "breadcrumbLabel": "פירורי לחם",
+    "themeToggleLabel": "ערכת נושא: {current}. מעבר אל: {next}.",
     "aboutLink": "אודות"
   },
   "footer": {

@@ -47,6 +47,10 @@ onBeforeUnmount(() => clearTimeout(themeTransitionTimer));
 // per route.
 useHead((() => ({
   htmlAttrs: { ...localeHead.value.htmlAttrs },
+  // Teleported overlays (preferences modal, contents panel, commentary
+  // sheet) render under <body>, outside every layout's `font-body` wrapper,
+  // and fell back to the system font — Hebrew UI included.
+  bodyAttrs: { class: "font-body" },
   link: localeHead.value.link,
   meta: localeHead.value.meta,
 })) as unknown as Parameters<typeof useHead>[0]);
