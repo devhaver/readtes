@@ -43,6 +43,7 @@ import {
   versionsFileSchema,
   type SourceSegment,
 } from "../shared/types/content.ts";
+import { versionChainForLanguage } from "../shared/utils/versionChains.ts";
 import {
   packBatches,
   proseLength,
@@ -144,6 +145,35 @@ const chapterIds = toc.volumes
 
 const chapters: TranslatableChapter[] = [];
 
+/**
+ * For a target other than English, every item also carries the English a
+ * reader of that passage sees (the reader's own edition chain, best first)
+ * as a reference beside the Hebrew. The Hebrew stays authoritative; the
+ * English is there because thirteen gated rounds already resolved its
+ * abbreviations, citations and terminology, and every translator into
+ * another language would otherwise have to solve them again alone.
+ */
+const ENGLISH_CRIB_CHAIN =
+  targetLanguage === "en" ? [] : versionChainForLanguage("en");
+
+const englishCrib = (dir: string): Map<string, string> => {
+  const crib = new Map<string, string>();
+  // Walk worst-first so a better edition overwrites a worse one per item.
+  for (const versionId of [...ENGLISH_CRIB_CHAIN].reverse()) {
+    const file = readLayer(dir, `${layer}.${versionId}.json`);
+    if (!file || file.layer !== layer) continue;
+    const byKey = new Map<string, string[]>();
+    for (const item of file.items) {
+      const key = "anchorId" in item ? item.anchorId : String(item.n);
+      byKey.set(key, [...(byKey.get(key) ?? []), item.html]);
+    }
+    for (const [key, parts] of byKey) crib.set(key, parts.join("<br>"));
+  }
+  return crib;
+};
+
+const cribs = new Map<string, Map<string, string>>();
+
 for (const chapterId of chapterIds) {
   const [partId, slug] = chapterId.split("/");
   const dir = join(
@@ -173,6 +203,8 @@ for (const chapterId of chapterIds) {
 
   const sourceText = readLayer(dir, `source.${SOURCE_VERSION_ID}.json`);
   const targetText = readLayer(dir, `source.${targetVersion.id}.json`);
+
+  if (ENGLISH_CRIB_CHAIN.length > 0) cribs.set(chapterId, englishCrib(dir));
 
   chapters.push({
     chapterId,
@@ -206,14 +238,18 @@ const glossary = glossaryIndexFileSchema.parse(
 );
 
 const INSTRUCTIONS = [
-  `Translate the Ohr Pnimi (Inner Light) commentary items in this batch from Hebrew into ${targetLanguage}.`,
+  layer === "source"
+    ? `Translate the items in this batch (the Ari's text, an Introduction, Inner Observation, or Questions and Answers) from Hebrew into ${targetLanguage}.`
+    : `Translate the Ohr Pnimi (Inner Light) commentary items in this batch from Hebrew into ${targetLanguage}.`,
   "",
   "Return JSON of the shape:",
   '  { "batch": "<this batch id>", "translations": [ { "chapterId": "...", "anchorId": "op-N", "html": "..." } ] }',
   "",
   "Rules:",
   "1. Translate ONLY the `html` of each item in `chapters[].items`. Return one entry per item, no more and no fewer.",
-  "2. `glossary.entries` is binding: use each term's `canonicalEn` for every occurrence unless its `note` carves out a sense distinction. `strategy` says whether a term is translated, transliterated, or an acronym. `glossary.knownGaps` lists what the glossary does NOT cover.",
+  targetLanguage === "en"
+    ? "2. `glossary.entries` is binding: use each term's `canonicalEn` for every occurrence unless its `note` carves out a sense distinction. `strategy` says whether a term is translated, transliterated, or an acronym. `glossary.knownGaps` lists what the glossary does NOT cover."
+    : `2. Terminology: the ${targetLanguage} terminology table (docs/translation/terms-${targetLanguage}.md, drawn from Bnei Baruch's own ${targetLanguage} translations) is binding. \`glossary.entries\` maps each Hebrew term to its settled English, which helps you recognise the term — it does not decide the ${targetLanguage} form. Each item's \`en\` is the published English of the same passage: use it to resolve abbreviations, citations and difficult syntax, never as the source. Where it and the Hebrew disagree, the Hebrew wins; report the disagreement.`,
   "3. `chapters[].context` is NOT for translation. It is the Ari's text these notes gloss — match its terminology, especially `targetText` where present, since the reader sees it in the pane beside these notes.",
   "4. Preserve inline HTML exactly (`<b>`, `<br>`, `<small>`, quotation marks). The html is rendered, not escaped.",
   "5. Write in Rav Laitman's voice, using Bnei Baruch terminology.",
@@ -264,10 +300,16 @@ for (const batch of batches) {
       // The identity a result must come back keyed by: `anchorId` for
       // commentary, `n` for a source segment. Never produced by the model —
       // `translate-apply.ts` copies it from the Hebrew.
-      items: chapter.items.map((item) => ({
-        ...("anchorId" in item ? { anchorId: item.anchorId } : { n: item.n }),
-        he: item.html,
-      })),
+      items: chapter.items.map((item) => {
+        const key = "anchorId" in item ? item.anchorId : String(item.n);
+        const en = cribs.get(chapter.chapterId)?.get(key);
+        return {
+          ...("anchorId" in item ? { anchorId: item.anchorId } : { n: item.n }),
+          he: item.html,
+          // Reference only — never returned, never authoritative.
+          ...(en ? { en } : {}),
+        };
+      }),
     })),
   };
 

@@ -1,0 +1,7298 @@
+{
+  "language": "ru",
+  "quotes": {
+    "open": "«",
+    "close": "»",
+    "innerOpen": "«",
+    "innerClose": "»"
+  },
+  "quotesNote": "BB nests guillemets: «…«…»…» (139 nested openings; „ 0, “ 0). Straight \" as quotation marks is a part-6 import artifact (~87 vs « 1,868).",
+  "evidenceBase": {
+    "tesRuBb": "content/parts/*/chapters/*/{source,commentary}.ru-bb.json — 73 chapters (parts 1–4, 6), 583 items, ~396k chars",
+    "intro": "km-intro/intro.ru.txt — BB Introduction to the Study of the Ten Sefirot, 155 sections, ~152k chars",
+    "pticha": "km-intro/pticha.ru.txt — BB Preface to the Wisdom of Kabbalah, 187 sections, ~210k chars",
+    "countLegend": "count = regex occurrences in the Russian of all three; tes/intro/pticha = split; paired = tokens/units inside the units whose Hebrew has the term. officialCount = count of the binding form(s): paired tokens where officialCountBasis is \"paired\", global occurrences where \"global\", units in which BB omits the formula where \"omission\"."
+  },
+  "required": [
+    {
+      "he": "ד\"ה",
+      "heRegex": "(?<![א-ת])[ובל]?ד\"ה(?![א-ת])",
+      "pattern": "(?i)\\bсо слов(а)? «",
+      "why": "BB TES formula for ד\"ה: «со слов «…»» (35; «начиная со слов» 4). Catch-word in guillemets."
+    },
+    {
+      "he": "עש\"ה",
+      "heRegex": "עש\"ה",
+      "pattern": "(?i)\\bпосмотри там как следует",
+      "why": "BB: «посмотри там как следует» 13 vs «изучи там как следует» 1, «см. там как следует» 1."
+    },
+    {
+      "he": "אכמ\"ל",
+      "heRegex": "אכמ\"ל",
+      "pattern": "(?i)\\bнечего добавить",
+      "why": "BB (TES p3): «и здесь нечего добавить» — 3 of 4 paired units."
+    },
+    {
+      "he": "דף",
+      "heRegex": "(?<![א-ת])[ובל]{0,2}דף\\s+(?:אלף\\s+)?(?:[א-ת]{1,3}\"[א-ת]|[א-ת][\\'׳])",
+      "pattern": "\\bстр\\.\\s?\\d",
+      "why": "Page citations: «стр.297» (BB «стр.» 17, «страница N» 0). Hebrew numerals → Arabic; thousands per the English round-8 table."
+    },
+    {
+      "he": "אות",
+      "heRegex": "(?<![א-ת])[ובל]{0,2}אות\\s+\\(?(?:[א-ת]{1,3}\"[א-ת]|[א-ת][\\'׳])",
+      "pattern": "\\bпп?\\.\\s?\\d",
+      "why": "Item citations: «п.50» (264). אות can also mean “letter” («буква хэй») — then this check is a false positive; say so."
+    },
+    {
+      "he": "חלק",
+      "heRegex": "(?<![א-ת])[ובל]{0,2}חלק\\s+(?:[א-ת]{1,3}\"[א-ת]|[א-ת][\\'׳])",
+      "pattern": "\\bч\\.\\s?\\d|\\b(?i:част)[ьиюе]\\b",
+      "why": "Part citations: «ч.2» (79); in prose «часть/во 2-й части»."
+    },
+    {
+      "he": "פרק",
+      "heRegex": "(?<![א-ת])[ובל]{0,2}פרק\\s+(?:[א-ת]{1,3}\"[א-ת]|[א-ת][\\'׳])",
+      "pattern": "\\bгл\\.\\s?\\d|\\b(?i:глав)[аеуы]\\b",
+      "why": "Chapter citations: «гл.1» (76)."
+    },
+    {
+      "he": "תשובה",
+      "heRegex": "(?<![א-ת])[ובל]{0,2}תשובה\\s+(?:[א-ת]{1,3}\"[א-ת]|[א-ת][\\'׳])",
+      "pattern": "(?i)\\bответ\\w*\\s\\d",
+      "why": "PROPOSED «ответ N» (TES p4 drops these refs; no BB form)."
+    },
+    {
+      "he": "או\"פ",
+      "heRegex": "(?<![א-ת])[ובל]{0,2}או\"פ\\s+(?:ח\"|חלק|פ\"|פרק|אות|דף|ד\"ה|שם|לעיל)|באו\"פ",
+      "pattern": "Ор пними",
+      "why": "Ohr Pnimi as a cited layer: «Ор пними» (TES 51). NB או\"מ ואו\"פ (surrounding and inner light) is the technical term, not a citation — the trigger requires citation context."
+    },
+    {
+      "he": "הסתכלות פנימית",
+      "heRegex": "הסתכלות פנימית|הסת\"פ",
+      "pattern": "(?i)\\bвнутренне\\w? созерцани|Внутр?\\. соз\\.",
+      "why": "Inner Observation: «Внутреннее созерцание»; in parenthetical citations «Внутр. соз.» (TES 21)."
+    },
+    {
+      "he": "מסך",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,3}מס(ך|כים|כא)(?![א-ת])",
+      "pattern": "(?i)\\bэкран",
+      "why": "Screen is translated: «экран» 677 vs «масах» 29."
+    },
+    {
+      "he": "עביות",
+      "heRegex": "עביות",
+      "pattern": "(?i)\\bавиют",
+      "why": "Coarseness is transliterated: «авиют» 427 (грубость 1)."
+    },
+    {
+      "he": "זווג",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,3}(זווג|זיווג)",
+      "pattern": "(?i)\\bзивуг",
+      "why": "Coupling is transliterated: «зивуг» 295 («соединение» 28)."
+    },
+    {
+      "he": "רשימו",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,3}רשימו(ת)?(?![א-ת])",
+      "pattern": "(?i)\\bрешимо",
+      "why": "Record is transliterated: «решимо / решимот» 246, never «запись»."
+    },
+    {
+      "he": "כלי",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,3}(כלי|כלים)(?![א-ת])",
+      "pattern": "(?i)\\bкли\\b|\\bкелим\\b",
+      "why": "Vessel is transliterated: «кли / келим» 1049 vs «сосуд» 17."
+    },
+    {
+      "he": "או\"ח / אור חוזר",
+      "heRegex": "או\"ח|אור חוזר|אור החוזר",
+      "pattern": "(?i)\\bотраженн\\w* свет",
+      "why": "Reflected light is translated and never abbreviated (TES «О\"Х» 70 is a trap)."
+    },
+    {
+      "he": "או\"י / אור ישר",
+      "heRegex": "או\"י|אור ישר|אור הישר",
+      "pattern": "(?i)\\bпрям\\w* свет",
+      "why": "Direct light: «прямой свет» (144)."
+    },
+    {
+      "he": "או\"מ / אור מקיף",
+      "heRegex": "או\"מ|אור מקיף|אורות מקיפים|אור המקיף",
+      "pattern": "(?i)\\bокружающ\\w* свет",
+      "why": "Surrounding light: «окружающий свет» (111)."
+    },
+    {
+      "he": "א\"ס / אין סוף",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}א\"ס(?![א-ת])|אין סוף",
+      "pattern": "Бесконечност",
+      "why": "Ein Sof is translated and capitalised: «Бесконечность» 182 vs «Эйн Соф» 35."
+    },
+    {
+      "he": "בחי\"ד",
+      "heRegex": "בחי\"ד|בחינה ד\\'|בחינה רביעית",
+      "pattern": "(?i)\\bбхин\\w* далет",
+      "why": "Phase four: «бхина далет» 224 vs «стадия далет» 33 / «четвертая стадия» 30."
+    },
+    {
+      "he": "בחי\"ג",
+      "heRegex": "בחי\"ג|בחינה ג\\'",
+      "pattern": "(?i)\\bбхин\\w* гимэл",
+      "why": "Phase three: «бхина гимэл» (letter spelling гимэл 122 vs гимель 50)."
+    },
+    {
+      "he": "בחי\"ב",
+      "heRegex": "בחי\"ב|בחינה ב\\'",
+      "pattern": "(?i)\\bбхин\\w* бэт",
+      "why": "Phase two: «бхина бэт» (бэт 98 vs бет 54)."
+    },
+    {
+      "he": "בחי\"א",
+      "heRegex": "בחי\"א|בחינה א\\'",
+      "pattern": "(?i)\\bбхин\\w* алеф",
+      "why": "Phase one: «бхина алеф» 61."
+    },
+    {
+      "he": "ז\"א",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}ז\"א(?![א-ת])|זעיר אנפין",
+      "pattern": "\\bЗА\\b|Зэир Анпин",
+      "why": "Acronym class rule: «ЗА» (CAPS, no quote mark); spelled out «Зэир Анпин»."
+    },
+    {
+      "he": "זו\"ן",
+      "heRegex": "זו\"ן",
+      "pattern": "\\bЗОН\\b",
+      "why": "Acronym class rule: «ЗОН»."
+    },
+    {
+      "he": "או\"א",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}או\"א(?![א-ת])",
+      "pattern": "\\bАВИ\\b|Аба ве-Има",
+      "why": "Acronym class rule: «АВИ» / «Аба ве-Има». NB כאו\"א is “each one” — excluded by the trigger."
+    },
+    {
+      "he": "א\"ק",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}א\"ק(?![א-ת])|אדם קדמון",
+      "pattern": "\\bАК\\b|Адам\\w* Кадмон",
+      "why": "Acronym class rule: «АК» / «Адам Кадмон»."
+    },
+    {
+      "he": "ס\"ג",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}ס\"ג(?![א-ת])",
+      "pattern": "\\bСАГ\\b",
+      "why": "Acronym class rule: «САГ»."
+    },
+    {
+      "he": "ב\"ן",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}ב\"ן(?![א-ת])",
+      "pattern": "\\bБОН\\b",
+      "why": "Acronym class rule: «БОН» (never БАН)."
+    },
+    {
+      "he": "ג\"ר",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}ג\"ר(?![א-ת])",
+      "pattern": "\\bГАР\\b",
+      "why": "Acronym class rule: «ГАР»."
+    },
+    {
+      "he": "ו\"ק",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}ו\"ק(?![א-ת])",
+      "pattern": "\\bВАК\\b",
+      "why": "Acronym class rule: «ВАК»."
+    },
+    {
+      "he": "ז\"ת",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}ז\"ת(?![א-ת])",
+      "pattern": "\\bЗАТ\\b",
+      "why": "Acronym class rule: «ЗАТ»."
+    },
+    {
+      "he": "אח\"פ",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}אח\"פ(?![א-ת])",
+      "pattern": "\\bАХАП\\b",
+      "why": "Acronym class rule: «АХАП»."
+    },
+    {
+      "he": "אבי\"ע",
+      "heRegex": "אבי\"ע",
+      "pattern": "\\bАБЕА\\b",
+      "why": "Acronym class rule: «АБЕА»."
+    },
+    {
+      "he": "בי\"ע",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}בי\"ע(?![א-ת])",
+      "pattern": "\\bБЕА\\b",
+      "why": "Acronym class rule: «БЕА»."
+    },
+    {
+      "he": "ה\"ת",
+      "heRegex": "(?<![א-ת])[ובמד]?ה\"ת(?![א-ת])",
+      "pattern": "(?i)\\bнижн\\w* хэй",
+      "why": "Bottom Hey: «нижняя хэй» (38). The trigger excludes לה\"ת (Table of Answers)."
+    },
+    {
+      "he": "הרב",
+      "heRegex": "(?<![א-ת])[וד]?הרב(?![א-ת])",
+      "pattern": "\\bАри\\b",
+      "why": "הרב in TES is the Ari: «Ари» 168 (never «Рав»)."
+    },
+    {
+      "he": "כתר",
+      "heRegex": "(?<![א-ת])[ובלמהד]{0,2}כתר(?![א-ת])",
+      "pattern": "(?i)\\bкэтэр",
+      "why": "Spelling ruling: «кэтэр» 390 vs «Кетер» 139 vs «кетэр» 68."
+    },
+    {
+      "he": "חסד",
+      "heRegex": "(?<![א-ת])[ובלהד]{0,2}חסד(?![א-ת])",
+      "pattern": "(?i)\\bхэсэд",
+      "why": "Spelling ruling: «хэсэд» 21 vs «хесед» 11. Not for חסדים (хасадим)."
+    },
+    {
+      "he": "תפארת / ת\"ת",
+      "heRegex": "תפארת|(?<![א-ת])[ובלמהד]{0,2}ת\"ת(?![א-ת])",
+      "pattern": "(?i)\\bтиферет",
+      "why": "Spelling ruling: «тиферет» 66 vs «тифэрэт» 28."
+    },
+    {
+      "he": "נצח",
+      "heRegex": "(?<![א-ת])[ובהד]{0,2}נצח(?![א-ת])",
+      "pattern": "(?i)\\bнецах",
+      "why": "Spelling ruling: «нецах» 6 vs «нэцах» 3. (לנצח “forever” is excluded by the trigger.)"
+    },
+    {
+      "he": "קטנות",
+      "heRegex": "קטנות",
+      "pattern": "(?i)\\bкатнут",
+      "why": "Transliterated: «катнут» (28)."
+    },
+    {
+      "he": "גדלות",
+      "heRegex": "גדלות",
+      "pattern": "(?i)\\bгадлут",
+      "why": "Transliterated: «гадлут» (42)."
+    },
+    {
+      "he": "מוחין",
+      "heRegex": "מוחין",
+      "pattern": "(?i)\\bмохин",
+      "why": "Transliterated: «мохин» (117)."
+    },
+    {
+      "he": "טבור",
+      "heRegex": "טבור",
+      "pattern": "(?i)\\bтабур",
+      "why": "Transliterated: «табур» (236)."
+    },
+    {
+      "he": "פרסא",
+      "heRegex": "פרסא",
+      "pattern": "(?i)\\bпарс[аыуеой]\\b",
+      "why": "Transliterated: «парса» (71)."
+    },
+    {
+      "he": "קליפות",
+      "heRegex": "קליפות|קליפה",
+      "pattern": "(?i)\\bклип",
+      "why": "Transliterated: «клипот / клипа» (22)."
+    }
+  ],
+  "banned": [
+    {
+      "pattern": "(?i)\\bсефир",
+      "why": "BB never writes «сефира/сефирот» (0); use «сфира/сфирот» (876)."
+    },
+    {
+      "pattern": "(?i)\\bхокм",
+      "why": "0 official; use «хохма» (525)."
+    },
+    {
+      "pattern": "(?i)\\bабба\\b",
+      "why": "0 official; use «Аба» (88)."
+    },
+    {
+      "pattern": "(?i)\\bгевур",
+      "why": "0 official; use «гвура» (21)."
+    },
+    {
+      "pattern": "(?i)\\b[йи]есод",
+      "why": "0 official; use «есод» (78)."
+    },
+    {
+      "pattern": "(?i)\\bмальхут",
+      "why": "0 official; use «малхут» (623)."
+    },
+    {
+      "pattern": "(?i)\\b(атцилут|ацилус|малхус|тиферес|сфирос|гвурос|хасодим)|\\bдаас\\b",
+      "why": "Ashkenazi / mis-transliterated forms, 0 official; BB is Sephardi-Israeli: Ацилут 509, малхут 623, тиферет 66, сфирот 756, гвурот, хасадим 55, даат 21."
+    },
+    {
+      "pattern": "(?i)\\bберия\\b|\\bберии\\b",
+      "why": "0 official; use «Брия» (208)."
+    },
+    {
+      "pattern": "(?i)\\bйецир",
+      "why": "0 official; use «Ецира» (135)."
+    },
+    {
+      "pattern": "(?i)\\bасси(я|и|ю|ей)\\b",
+      "why": "0 official; use «Асия» (120)."
+    },
+    {
+      "pattern": "(?i)\\bхакаа\\b",
+      "why": "0 official; «зивуг де-акаа» (118), standalone «удар»."
+    },
+    {
+      "pattern": "(?i)\\bзо[хг]ар",
+      "why": "0 official; use «Зоар» (22)."
+    },
+    {
+      "pattern": "(?i)\\bпарцуфы\\b",
+      "why": "Russian plural «парцуфы» 0 vs Hebrew plural «парцуфим» 204."
+    },
+    {
+      "pattern": "(?i)\\bклипп",
+      "why": "0 official; one «п»: «клипот» (19)."
+    },
+    {
+      "pattern": "(?i)\\bзейр\\b",
+      "why": "0 official; use «Зэир Анпин» / «ЗА»."
+    },
+    {
+      "pattern": "(?i)\\bави?ут\\b|\\bавают|\\bавйут",
+      "why": "0 official; use «авиют» (427)."
+    },
+    {
+      "pattern": "(?i)\\bнукб",
+      "why": "0 official; use «Нуква» (87)."
+    },
+    {
+      "pattern": "(?i)\\bарик анпин",
+      "why": "0 official; use «Арих Анпин» (50)."
+    },
+    {
+      "pattern": "(?i)\\bгалгалт",
+      "why": "0 official; use «Гальгальта» (44)."
+    },
+    {
+      "pattern": "(?i)\\bэйнайим|\\bэнаим\\b|\\bейнаим",
+      "why": "0 official; use «эйнаим» (118)."
+    },
+    {
+      "pattern": "\\bБАН\\b",
+      "why": "0 official; the name is «БОН» (49 + Бо\"Н 54)."
+    },
+    {
+      "pattern": "(?i)\\bкатнют|\\bгадлют",
+      "why": "0 official; «катнут» 28, «гадлут» 42."
+    },
+    {
+      "pattern": "(?i)\\bйехид|\\bхайя\\b",
+      "why": "0 official; «ехида» 96, «хая» 92."
+    },
+    {
+      "pattern": "(?i)\\bконец цитаты",
+      "why": "BB renders עכ\"ל with no words (0 of 12 paired units); the closing » ends the quote."
+    },
+    {
+      "pattern": "(?i)\\bотрывк\\w*,? начина",
+      "why": "Calque of the English “the passage beginning”; BB writes «со слов «…»» (35), this 0."
+    },
+    {
+      "pattern": "(?i)\\bфаз[аыуеой]?\\b",
+      "why": "Calque of English “phase”; 0 official. Use «бхина» (910)."
+    },
+    {
+      "pattern": "(?i)\\bсоединени\\w* (через |посредством )?удар",
+      "why": "Calque of “coupling by striking”; 0 official. Use «зивуг де-акаа»."
+    },
+    {
+      "pattern": "(?i)\\bстраниц[аеуы] \\d",
+      "why": "0 official; page citations are «стр. N»."
+    }
+  ],
+  "terms": [
+    {
+      "id": "or",
+      "he": "אור",
+      "en": "light",
+      "target": "свет",
+      "status": "OFFICIAL",
+      "officialCount": 2369,
+      "officialCountBasis": "global",
+      "note": "Always translated. «ор» survives only inside the layer name «Ор пними» and inside a (досл. …) gloss. Never «Ор» as a running word.",
+      "evidence": [
+        {
+          "form": "свет*",
+          "count": 2369,
+          "tes": 1714,
+          "intro": 99,
+          "pticha": 556,
+          "chosen": true
+        },
+        {
+          "form": "ор (translit., outside names)",
+          "count": 35,
+          "tes": 26,
+          "intro": 0,
+          "pticha": 9,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "orot",
+      "he": "אורות",
+      "en": "lights",
+      "target": "света (мн.), род. п. светов",
+      "status": "OFFICIAL",
+      "officialCount": 1013,
+      "officialCountBasis": "global",
+      "note": "BB plural is «света» (nom./acc.; same spelling as gen. sg.), «светов» (gen. pl. 170): «подъем светов». Never «светы».",
+      "evidence": [
+        {
+          "form": "света/светов",
+          "count": 1013,
+          "tes": 736,
+          "intro": 28,
+          "pticha": 249,
+          "chosen": true
+        },
+        {
+          "form": "светы",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "or-elyon",
+      "he": "אור עליון",
+      "en": "upper light",
+      "target": "высший свет",
+      "status": "OFFICIAL",
+      "officialCount": 175,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "высший свет*",
+          "count": 175,
+          "tes": 94,
+          "intro": 1,
+          "pticha": 80,
+          "chosen": true
+        },
+        {
+          "form": "верхний свет",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "kli",
+      "he": "כלי",
+      "en": "vessel",
+      "target": "кли (несклоняемое)",
+      "status": "OFFICIAL",
+      "officialCount": 569,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED, unlike English. Indeclinable, neuter: «это кли», «в кли». «сосуд» (12) is the Intro’s non-technical prose or a one-off gloss «кли (сосуд)» — do not use.",
+      "evidence": [
+        {
+          "form": "кли",
+          "count": 569,
+          "tes": 434,
+          "intro": 0,
+          "pticha": 135,
+          "chosen": true
+        },
+        {
+          "form": "сосуд*",
+          "count": 12,
+          "tes": 4,
+          "intro": 5,
+          "pticha": 3,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "kelim",
+      "he": "כלים",
+      "en": "vessels",
+      "target": "келим (несклоняемое)",
+      "status": "OFFICIAL",
+      "officialCount": 480,
+      "officialCountBasis": "global",
+      "note": "Plural of кли, indeclinable: «келим де-паним». No stress marks (part 1 prints «кели́м» 4×; drop them).",
+      "evidence": [
+        {
+          "form": "келим",
+          "count": 480,
+          "tes": 276,
+          "intro": 0,
+          "pticha": 204,
+          "chosen": true
+        },
+        {
+          "form": "сосуды",
+          "count": 5,
+          "tes": 1,
+          "intro": 4,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "kli-kabbala",
+      "he": "כלי קבלה",
+      "en": "vessel of reception",
+      "target": "получающее кли (мн. получающие келим)",
+      "status": "OFFICIAL",
+      "officialCount": 31,
+      "officialCountBasis": "paired",
+      "note": "In units whose Hebrew has כלי קבלה: получающее кли 31 tokens / 12 units, кли получения 11 / 7 (TES p4, p6). The Pticha is consistent.",
+      "evidence": [
+        {
+          "form": "получающ* кли/келим",
+          "count": 32,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 29,
+          "chosen": true,
+          "paired": {
+            "units": 22,
+            "tokens": 31,
+            "unitsWith": 12
+          }
+        },
+        {
+          "form": "кли/келим получения",
+          "count": 11,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 22,
+            "tokens": 11,
+            "unitsWith": 7
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "or-yashar",
+      "he": "אור ישר",
+      "en": "direct light",
+      "target": "прямой свет",
+      "status": "OFFICIAL",
+      "officialCount": 144,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "прям* свет",
+          "count": 144,
+          "tes": 141,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "ор яшар",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ohr-yashar-abbrev",
+      "he": "או\"י",
+      "en": "direct light",
+      "target": "прямой свет (не сокращать)",
+      "status": "OFFICIAL",
+      "officialCount": 144,
+      "officialCountBasis": "global",
+      "note": "Expand the abbreviation. TES part 4 abbreviates «О\"Я» 22× — do not copy.",
+      "evidence": [
+        {
+          "form": "прям* свет",
+          "count": 144,
+          "tes": 141,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "О\"Я (abbr.)",
+          "count": 22,
+          "tes": 22,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "or-hozer",
+      "he": "אור חוזר",
+      "en": "reflected light",
+      "target": "отраженный свет",
+      "status": "OFFICIAL",
+      "officialCount": 295,
+      "officialCountBasis": "global",
+      "note": "Translated. Write «отраженный» with «е» (BB never prints «ё» here).",
+      "evidence": [
+        {
+          "form": "отраженн* свет",
+          "count": 295,
+          "tes": 244,
+          "intro": 0,
+          "pticha": 51,
+          "chosen": true
+        },
+        {
+          "form": "ор хозэр/хозер",
+          "count": 15,
+          "tes": 12,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": false
+        },
+        {
+          "form": "О\"Х (abbr.)",
+          "count": 70,
+          "tes": 70,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ohr-hozer-abbrev",
+      "he": "או\"ח",
+      "en": "reflected light",
+      "target": "отраженный свет (не сокращать)",
+      "status": "OFFICIAL",
+      "officialCount": 295,
+      "officialCountBasis": "global",
+      "note": "Always expand. TES part 4 abbreviates «О\"Х» 70× (Pticha 0) — the abbreviation is a trap.",
+      "evidence": [
+        {
+          "form": "отраженн* свет",
+          "count": 295,
+          "tes": 244,
+          "intro": 0,
+          "pticha": 51,
+          "chosen": true
+        },
+        {
+          "form": "О\"Х (abbr.)",
+          "count": 70,
+          "tes": 70,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "or-makif",
+      "he": "אור מקיף",
+      "en": "surrounding light",
+      "target": "окружающий свет",
+      "status": "OFFICIAL",
+      "officialCount": 111,
+      "officialCountBasis": "global",
+      "note": "Plural «окружающие света».",
+      "evidence": [
+        {
+          "form": "окружающ* свет",
+          "count": 111,
+          "tes": 62,
+          "intro": 1,
+          "pticha": 48,
+          "chosen": true
+        },
+        {
+          "form": "ор макиф",
+          "count": 5,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "or-pnimi",
+      "he": "אור פנימי",
+      "en": "inner light",
+      "target": "внутренний свет (термин); «Ор пними» (название комментария)",
+      "status": "OFFICIAL",
+      "officialCount": 121,
+      "officialCountBasis": "global",
+      "note": "Two senses, two forms: the technical term (light clothed in a vessel) is lower-case «внутренний свет»; the name of Baal HaSulam’s commentary is «Ор пними». See section names.",
+      "evidence": [
+        {
+          "form": "внутренн* свет (term)",
+          "count": 69,
+          "tes": 46,
+          "intro": 1,
+          "pticha": 22,
+          "chosen": true
+        },
+        {
+          "form": "Ор пними (layer)",
+          "count": 52,
+          "tes": 51,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "Ор Пними",
+          "count": 3,
+          "tes": 0,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ohr-hochma",
+      "he": "אור החכמה / אור חכמה",
+      "en": "light of Hochma",
+      "target": "свет хохма",
+      "status": "OFFICIAL",
+      "officialCount": 89,
+      "officialCountBasis": "global",
+      "note": "Indeclinable «хохма» after «свет»: «света хохма», «светом хохма».",
+      "evidence": [
+        {
+          "form": "свет* хохма",
+          "count": 89,
+          "tes": 66,
+          "intro": 3,
+          "pticha": 20,
+          "chosen": true
+        },
+        {
+          "form": "свет* мудрости",
+          "count": 2,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        },
+        {
+          "form": "ор хохма",
+          "count": 1,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "ohr-hassadim",
+      "he": "אור החסדים / אור דחסדים",
+      "en": "light of Hassadim",
+      "target": "свет хасадим",
+      "status": "OFFICIAL",
+      "officialCount": 40,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "свет* хасадим",
+          "count": 40,
+          "tes": 22,
+          "intro": 0,
+          "pticha": 18,
+          "chosen": true
+        },
+        {
+          "form": "свет* милосердия",
+          "count": 2,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "hassadim",
+      "he": "חסדים",
+      "en": "Hassadim",
+      "target": "хасадим",
+      "status": "OFFICIAL",
+      "officialCount": 55,
+      "officialCountBasis": "global",
+      "note": "Lower case, indeclinable. «пять хасадим и пять гвурот» (Pticha).",
+      "evidence": [
+        {
+          "form": "хасадим",
+          "count": 55,
+          "tes": 31,
+          "intro": 0,
+          "pticha": 24,
+          "chosen": true
+        },
+        {
+          "form": "милосерди*",
+          "count": 22,
+          "tes": 13,
+          "intro": 2,
+          "pticha": 7,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "masach",
+      "he": "מסך",
+      "en": "screen",
+      "target": "экран",
+      "status": "OFFICIAL",
+      "officialCount": 677,
+      "officialCountBasis": "global",
+      "note": "Translated. «масах» is a part-4 holdover (25 of 29 hits) — do not use.",
+      "evidence": [
+        {
+          "form": "экран*",
+          "count": 677,
+          "tes": 415,
+          "intro": 0,
+          "pticha": 262,
+          "chosen": true
+        },
+        {
+          "form": "масах*",
+          "count": 29,
+          "tes": 25,
+          "intro": 0,
+          "pticha": 4,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "aviut",
+      "he": "עביות",
+      "en": "coarseness",
+      "target": "авиют",
+      "status": "OFFICIAL",
+      "officialCount": 427,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED, indeclinable and feminine as in TES: «вся авиют», «авиют, которая» (TES 222 bare : 6 declined; unambiguous agreement 15 fem : 5 masc). The Pticha declines it as a masculine noun («авиюта», 113) — do not mix. Source-conditional like English: עובי (not עביות) may be «толщина».",
+      "evidence": [
+        {
+          "form": "авиют*",
+          "count": 427,
+          "tes": 228,
+          "intro": 0,
+          "pticha": 199,
+          "chosen": true
+        },
+        {
+          "form": "грубост*",
+          "count": 1,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        },
+        {
+          "form": "толщ*",
+          "count": 9,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "av",
+      "he": "עב",
+      "en": "coarse",
+      "target": "грубый",
+      "status": "OFFICIAL",
+      "officialCount": 27,
+      "officialCountBasis": "paired",
+      "note": "«более грубый» for עב יותר. «плотный» is part-4 only.",
+      "evidence": [
+        {
+          "form": "груб*",
+          "count": 37,
+          "tes": 27,
+          "intro": 8,
+          "pticha": 2,
+          "chosen": true,
+          "paired": {
+            "units": 35,
+            "tokens": 27,
+            "unitsWith": 17
+          }
+        },
+        {
+          "form": "плотн*",
+          "count": 22,
+          "tes": 22,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 35,
+            "tokens": 22,
+            "unitsWith": 12
+          }
+        },
+        {
+          "form": "ав (translit.)",
+          "count": 16,
+          "tes": 16,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 35,
+            "tokens": 16,
+            "unitsWith": 10
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "zakut",
+      "he": "זכות",
+      "en": "refinement",
+      "target": "чистота",
+      "status": "OFFICIAL",
+      "officialCount": 4,
+      "officialCountBasis": "paired",
+      "note": "The quality opposite to авиют: «в соответствии с чистотой или авиют ступени» (TES p2); Pticha «закут» (чистоту). Not the act (that is очищение).",
+      "evidence": [
+        {
+          "form": "чистот*",
+          "count": 5,
+          "tes": 2,
+          "intro": 1,
+          "pticha": 2,
+          "chosen": true,
+          "paired": {
+            "units": 49,
+            "tokens": 4,
+            "unitsWith": 4
+          }
+        },
+        {
+          "form": "тонкост*",
+          "count": 7,
+          "tes": 4,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 49,
+            "tokens": 1,
+            "unitsWith": 1
+          }
+        },
+        {
+          "form": "закут",
+          "count": 5,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false,
+          "paired": {
+            "units": 49,
+            "tokens": 4,
+            "unitsWith": 2
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "zach",
+      "he": "זך",
+      "en": "refined",
+      "target": "тонкий",
+      "status": "OFFICIAL",
+      "officialCount": 38,
+      "officialCountBasis": "paired",
+      "note": "«более тонкий» = זך יותר. «чистый» is a close second (paired units 21 : 18) — never mix the two inside one item.",
+      "evidence": [
+        {
+          "form": "тонкий (adj.)",
+          "count": 48,
+          "tes": 43,
+          "intro": 0,
+          "pticha": 5,
+          "chosen": true,
+          "paired": {
+            "units": 85,
+            "tokens": 38,
+            "unitsWith": 21
+          }
+        },
+        {
+          "form": "чистый (adj.)",
+          "count": 26,
+          "tes": 8,
+          "intro": 12,
+          "pticha": 6,
+          "chosen": false,
+          "paired": {
+            "units": 85,
+            "tokens": 19,
+            "unitsWith": 18
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hizdakchut",
+      "he": "הזדככות",
+      "en": "refinement",
+      "target": "очищение (гл. очищаться/очиститься)",
+      "status": "OFFICIAL",
+      "officialCount": 121,
+      "officialCountBasis": "paired",
+      "note": "«очищение экрана». Not «утоньшение» (TES p3–4) or «высветление» (p4). The Pticha glosses once «издахехут (очищение)».",
+      "evidence": [
+        {
+          "form": "очищ-/очист-",
+          "count": 143,
+          "tes": 47,
+          "intro": 13,
+          "pticha": 83,
+          "chosen": true,
+          "paired": {
+            "units": 85,
+            "tokens": 121,
+            "unitsWith": 53
+          }
+        },
+        {
+          "form": "утоньш-",
+          "count": 71,
+          "tes": 66,
+          "intro": 3,
+          "pticha": 2,
+          "chosen": false,
+          "paired": {
+            "units": 85,
+            "tokens": 70,
+            "unitsWith": 40
+          }
+        },
+        {
+          "form": "высветл-",
+          "count": 19,
+          "tes": 19,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 85,
+            "tokens": 19,
+            "unitsWith": 15
+          }
+        },
+        {
+          "form": "издахехут",
+          "count": 17,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 15,
+          "chosen": false,
+          "paired": {
+            "units": 85,
+            "tokens": 17,
+            "unitsWith": 14
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "reshimo",
+      "he": "רשימו",
+      "en": "record",
+      "target": "решимо (несклоняемое)",
+      "status": "OFFICIAL",
+      "officialCount": 150,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED, indeclinable, neuter: «решимо осталось». Never «запись/воспоминание».",
+      "evidence": [
+        {
+          "form": "решимо",
+          "count": 150,
+          "tes": 113,
+          "intro": 0,
+          "pticha": 37,
+          "chosen": true
+        },
+        {
+          "form": "воспоминани*",
+          "count": 1,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "запис*",
+          "count": 11,
+          "tes": 9,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "reshimot-plural",
+      "he": "רשימות",
+      "en": "records",
+      "target": "решимот",
+      "status": "OFFICIAL",
+      "officialCount": 96,
+      "officialCountBasis": "global",
+      "note": "Hebrew plural, indeclinable.",
+      "evidence": [
+        {
+          "form": "решимот",
+          "count": 96,
+          "tes": 62,
+          "intro": 0,
+          "pticha": 34,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "zivug",
+      "he": "זווג",
+      "en": "coupling",
+      "target": "зивуг (мн. зивугим)",
+      "status": "OFFICIAL",
+      "officialCount": 295,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED; declines like a Russian noun in the singular («зивуга», «в зивуге»), Hebrew plural «зивугим» (12; «зивуги» 0).",
+      "evidence": [
+        {
+          "form": "зивуг*",
+          "count": 295,
+          "tes": 178,
+          "intro": 0,
+          "pticha": 117,
+          "chosen": true
+        },
+        {
+          "form": "соединени*",
+          "count": 28,
+          "tes": 21,
+          "intro": 0,
+          "pticha": 7,
+          "chosen": false
+        },
+        {
+          "form": "зивуги (Russian pl.)",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hakaa",
+      "he": "הכאה",
+      "en": "striking",
+      "target": "удар (в прозе); акаа — только в «зивуг де-акаа»",
+      "status": "OFFICIAL",
+      "officialCount": 22,
+      "officialCountBasis": "paired",
+      "note": "Standalone הכאה is «удар» («удар высшего света в экран»); the transliteration lives only in the fixed term. Never «хакаа» (0).",
+      "evidence": [
+        {
+          "form": "удар*",
+          "count": 73,
+          "tes": 54,
+          "intro": 4,
+          "pticha": 15,
+          "chosen": true,
+          "paired": {
+            "units": 10,
+            "tokens": 22,
+            "unitsWith": 8
+          }
+        },
+        {
+          "form": "акаа",
+          "count": 126,
+          "tes": 70,
+          "intro": 0,
+          "pticha": 56,
+          "chosen": false,
+          "paired": {
+            "units": 10,
+            "tokens": 3,
+            "unitsWith": 3
+          }
+        },
+        {
+          "form": "хакаа",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 10,
+            "tokens": 0,
+            "unitsWith": 0
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "zivug-dehakaa",
+      "he": "זווג דהכאה",
+      "en": "coupling by striking",
+      "target": "зивуг де-акаа",
+      "status": "OFFICIAL",
+      "officialCount": 118,
+      "officialCountBasis": "global",
+      "note": "Particle per convention «де-» (see Conventions).",
+      "evidence": [
+        {
+          "form": "зивуг* де-/дэ-акаа",
+          "count": 118,
+          "tes": 65,
+          "intro": 0,
+          "pticha": 53,
+          "chosen": true
+        },
+        {
+          "form": "зивуг* де-акаа",
+          "count": 54,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 53,
+          "chosen": false
+        },
+        {
+          "form": "зивуг* дэ-акаа",
+          "count": 64,
+          "tes": 64,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hitlabshut",
+      "he": "התלבשות",
+      "en": "clothing",
+      "target": "облачение (гл. облачаться)",
+      "status": "OFFICIAL",
+      "officialCount": 510,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "облач*",
+          "count": 510,
+          "tes": 318,
+          "intro": 19,
+          "pticha": 173,
+          "chosen": true
+        },
+        {
+          "form": "одева*/одеяни*",
+          "count": 88,
+          "tes": 63,
+          "intro": 25,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "bitush",
+      "he": "ביטוש",
+      "en": "clash",
+      "target": "битуш",
+      "status": "OFFICIAL",
+      "officialCount": 27,
+      "officialCountBasis": "global",
+      "note": "«битуш окружающего света с внутренним» (Pticha).",
+      "evidence": [
+        {
+          "form": "битуш*",
+          "count": 27,
+          "tes": 9,
+          "intro": 0,
+          "pticha": 18,
+          "chosen": true
+        },
+        {
+          "form": "столкновени*",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "bitushim-plural",
+      "he": "בטישות",
+      "en": "clashes",
+      "target": "битушим",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested. BB pluralises masculine Hebrew loans with the Hebrew ending (зивуг→зивугим 12, «зивуги» 0), so битуш→битушим. Flag every use.",
+      "evidence": [
+        {
+          "form": "битушим",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "битуши",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tzimtzum",
+      "he": "צמצום",
+      "en": "restriction",
+      "target": "сокращение",
+      "status": "OFFICIAL",
+      "officialCount": 133,
+      "officialCountBasis": "global",
+      "note": "Translated (66 of 77 paired units). «цимцум» only inside the names «Цимцум Алеф/Бет» if the Hebrew spells them as names.",
+      "evidence": [
+        {
+          "form": "сокращени*",
+          "count": 133,
+          "tes": 68,
+          "intro": 5,
+          "pticha": 60,
+          "chosen": true
+        },
+        {
+          "form": "цимцум*",
+          "count": 24,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 16,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tzimtzum-aleph",
+      "he": "צמצום א' / צ\"א",
+      "en": "first restriction (Tzimtzum Aleph)",
+      "target": "первое сокращение (ЦА)",
+      "status": "OFFICIAL",
+      "officialCount": 22,
+      "officialCountBasis": "global",
+      "note": "Abbreviation צ\"א → ЦА (Pticha 3).",
+      "evidence": [
+        {
+          "form": "перв* сокращени*",
+          "count": 22,
+          "tes": 7,
+          "intro": 0,
+          "pticha": 15,
+          "chosen": true
+        },
+        {
+          "form": "Цимцум Алеф",
+          "count": 5,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 4,
+          "chosen": false
+        },
+        {
+          "form": "ЦА",
+          "count": 3,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "tzimtzum-bet",
+      "he": "צמצום ב' / צ\"ב",
+      "en": "second restriction (Tzimtzum Bet)",
+      "target": "второе сокращение (ЦБ)",
+      "status": "OFFICIAL",
+      "officialCount": 25,
+      "officialCountBasis": "global",
+      "note": "Abbreviation צ\"ב → ЦБ (Pticha 16).",
+      "evidence": [
+        {
+          "form": "втор* сокращени*",
+          "count": 25,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 20,
+          "chosen": true
+        },
+        {
+          "form": "Цимцум Бет",
+          "count": 8,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 7,
+          "chosen": false
+        },
+        {
+          "form": "ЦБ",
+          "count": 16,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 16,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "kav",
+      "he": "קו",
+      "en": "line",
+      "target": "линия",
+      "status": "OFFICIAL",
+      "officialCount": 41,
+      "officialCountBasis": "global",
+      "note": "Translated. «кав» is part-2 usage (13 of 23). As one of the three lines (קוין) also «линия».",
+      "evidence": [
+        {
+          "form": "лини*",
+          "count": 41,
+          "tes": 31,
+          "intro": 0,
+          "pticha": 10,
+          "chosen": true
+        },
+        {
+          "form": "кав/кава",
+          "count": 23,
+          "tes": 22,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "igulim",
+      "he": "עיגולים / עגולים",
+      "en": "circles",
+      "target": "игулим",
+      "status": "OFFICIAL",
+      "officialCount": 50,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED (part 2, the chapter on circles: 50 vs «круг» 3). NB the Hebrew of this corpus spells it עגולים.",
+      "evidence": [
+        {
+          "form": "игулим/игуль (all forms)",
+          "count": 50,
+          "tes": 50,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "круг*",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "igul",
+      "he": "עיגול / עגול",
+      "en": "circle",
+      "target": "игуль (род. игуля)",
+      "status": "OFFICIAL",
+      "officialCount": 22,
+      "officialCountBasis": "global",
+      "note": "«игуль кэтэр», «от игуля к игулю». Plain geometric «круг» only for צורת העיגול (shape of a circle).",
+      "evidence": [
+        {
+          "form": "игул(ь|я|ю|ем|е)",
+          "count": 22,
+          "tes": 22,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "круг",
+          "count": 2,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "yosher",
+      "he": "יושר",
+      "en": "straightness",
+      "target": "ёшер",
+      "status": "OFFICIAL",
+      "officialCount": 28,
+      "officialCountBasis": "global",
+      "note": "With «ё». «10 сфирот де-ёшер», «игулим и ёшер».",
+      "evidence": [
+        {
+          "form": "ёшер",
+          "count": 28,
+          "tes": 28,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "йошер",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "прямизна",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "halal",
+      "he": "חלל",
+      "en": "space",
+      "target": "пространство",
+      "status": "OFFICIAL",
+      "officialCount": 22,
+      "officialCountBasis": "global",
+      "note": "«пустое пространство» for חלל פנוי (Pticha 4).",
+      "evidence": [
+        {
+          "form": "пространств*",
+          "count": 22,
+          "tes": 8,
+          "intro": 1,
+          "pticha": 13,
+          "chosen": true
+        },
+        {
+          "form": "пустот*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "makom-panui",
+      "he": "מקום פנוי",
+      "en": "vacant place",
+      "target": "свободное место",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Phrase unattested. Built from BB’s «пустое и свободное» (part 1, for פנוי ריקני) and «свободное/пустое пространство» (Pticha).",
+      "evidence": [
+        {
+          "form": "свободн* мест*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "пуст* мест*",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "behina",
+      "he": "בחינה",
+      "en": "phase",
+      "target": "бхина (мн. бхинот)",
+      "status": "OFFICIAL",
+      "officialCount": 910,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED, declined as a Russian feminine noun (бхина/бхины/бхину/бхине/бхиной); plural is the Hebrew «бхинот» (142), but after 2–4 «бхины». Generic בחינת X (English “the discernment of X”) is «бхина X» too: inside the 363 units with בחינת, бхина 583, свойство 291, стадия 176, категория 34. Not «аспект» (5) and never «фаза» (0).",
+      "evidence": [
+        {
+          "form": "бхин*",
+          "count": 910,
+          "tes": 509,
+          "intro": 0,
+          "pticha": 401,
+          "chosen": true
+        },
+        {
+          "form": "стади*",
+          "count": 291,
+          "tes": 193,
+          "intro": 69,
+          "pticha": 29,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "dalet-behinot",
+      "he": "ד' בחינות",
+      "en": "four phases",
+      "target": "четыре бхины",
+      "status": "OFFICIAL",
+      "officialCount": 58,
+      "officialCountBasis": "global",
+      "note": "Number as a word per Conventions (TES prints «4 бхины» 50×). «четыре стадии прямого света» is the minority form (45).",
+      "evidence": [
+        {
+          "form": "4/четыре бхины|бхинот",
+          "count": 58,
+          "tes": 52,
+          "intro": 0,
+          "pticha": 6,
+          "chosen": true
+        },
+        {
+          "form": "4/четыре стадии",
+          "count": 45,
+          "tes": 40,
+          "intro": 3,
+          "pticha": 2,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "behina-dalet",
+      "he": "בחי\"ד / בחינה ד'",
+      "en": "phase four",
+      "target": "бхина далет",
+      "status": "OFFICIAL",
+      "officialCount": 224,
+      "officialCountBasis": "global",
+      "note": "Ordinal phases use the Hebrew LETTER NAME, lower case: бхина шореш / алеф / бэт / гимэл / далет. Not «четвертая стадия», never a digit.",
+      "evidence": [
+        {
+          "form": "бхин* далет",
+          "count": 224,
+          "tes": 102,
+          "intro": 0,
+          "pticha": 122,
+          "chosen": true
+        },
+        {
+          "form": "стади* далет",
+          "count": 33,
+          "tes": 33,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "четверт* стади*",
+          "count": 30,
+          "tes": 14,
+          "intro": 11,
+          "pticha": 5,
+          "chosen": false
+        },
+        {
+          "form": "стадия 4",
+          "count": 2,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "behina-aleph",
+      "he": "בחי\"א",
+      "en": "phase one",
+      "target": "бхина алеф",
+      "status": "OFFICIAL",
+      "officialCount": 61,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "бхин* алеф",
+          "count": 61,
+          "tes": 21,
+          "intro": 0,
+          "pticha": 40,
+          "chosen": true
+        },
+        {
+          "form": "стади* алеф",
+          "count": 9,
+          "tes": 9,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "перв* стади*",
+          "count": 28,
+          "tes": 14,
+          "intro": 6,
+          "pticha": 8,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "behina-bet",
+      "he": "בחי\"ב",
+      "en": "phase two",
+      "target": "бхина бэт",
+      "status": "OFFICIAL",
+      "officialCount": 98,
+      "officialCountBasis": "global",
+      "note": "Letter-name spelling «бэт» (TES 98) beats «бет» (Pticha 52). Same spelling when the letter itself is meant.",
+      "evidence": [
+        {
+          "form": "бэт (letter name)",
+          "count": 98,
+          "tes": 98,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "бет (letter name)",
+          "count": 54,
+          "tes": 1,
+          "intro": 1,
+          "pticha": 52,
+          "chosen": false
+        },
+        {
+          "form": "втор* стади*",
+          "count": 14,
+          "tes": 5,
+          "intro": 5,
+          "pticha": 4,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "behina-gimel",
+      "he": "בחי\"ג",
+      "en": "phase three",
+      "target": "бхина гимэл",
+      "status": "OFFICIAL",
+      "officialCount": 122,
+      "officialCountBasis": "global",
+      "note": "Letter-name spelling «гимэл» (TES 122) beats «гимель» (Pticha 49).",
+      "evidence": [
+        {
+          "form": "гимэл",
+          "count": 122,
+          "tes": 122,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "гимель",
+          "count": 50,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 49,
+          "chosen": false
+        },
+        {
+          "form": "гимел",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "трет* стади*",
+          "count": 14,
+          "tes": 2,
+          "intro": 8,
+          "pticha": 4,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "behina-shoresh",
+      "he": "בחינת שורש",
+      "en": "root phase",
+      "target": "бхина шореш",
+      "status": "OFFICIAL",
+      "officialCount": 38,
+      "officialCountBasis": "global",
+      "note": "«шорэш» (TES p3, 1) is a variant; write «шореш».",
+      "evidence": [
+        {
+          "form": "шореш",
+          "count": 38,
+          "tes": 18,
+          "intro": 0,
+          "pticha": 20,
+          "chosen": true
+        },
+        {
+          "form": "бхин* шореш",
+          "count": 9,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 9,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "hitpashtut",
+      "he": "התפשטות",
+      "en": "expansion",
+      "target": "распространение",
+      "status": "OFFICIAL",
+      "officialCount": 358,
+      "officialCountBasis": "global",
+      "note": "74 of 77 paired units.",
+      "evidence": [
+        {
+          "form": "распространени*/распространя*",
+          "count": 358,
+          "tes": 260,
+          "intro": 5,
+          "pticha": 93,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "histalkut",
+      "he": "הסתלקות",
+      "en": "departure",
+      "target": "исторжение (гл. исторгаться/уходить)",
+      "status": "OFFICIAL",
+      "officialCount": 48,
+      "officialCountBasis": "global",
+      "note": "Noun «исторжение» (31 of 60 paired units; Pticha too). For the verb נסתלק BB writes «ушел/исчез» freely — the noun is what must stay fixed.",
+      "evidence": [
+        {
+          "form": "исторжени*",
+          "count": 48,
+          "tes": 38,
+          "intro": 0,
+          "pticha": 10,
+          "chosen": true
+        },
+        {
+          "form": "удалени*",
+          "count": 20,
+          "tes": 20,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "исчезновени*",
+          "count": 26,
+          "tes": 18,
+          "intro": 0,
+          "pticha": 8,
+          "chosen": false
+        },
+        {
+          "form": "уход*",
+          "count": 19,
+          "tes": 6,
+          "intro": 5,
+          "pticha": 8,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hishtalshelut",
+      "he": "השתלשלות",
+      "en": "cascading",
+      "target": "нисхождение",
+      "status": "OFFICIAL",
+      "officialCount": 8,
+      "officialCountBasis": "global",
+      "note": "7 of 10 paired units. «нисхождение миров».",
+      "evidence": [
+        {
+          "form": "нисхождени*",
+          "count": 8,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 6,
+          "chosen": true
+        },
+        {
+          "form": "каскад*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "развити*",
+          "count": 5,
+          "tes": 0,
+          "intro": 3,
+          "pticha": 2,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "siba-mesubav",
+      "he": "סבה ומסובב",
+      "en": "cause and consequence",
+      "target": "причина и следствие",
+      "status": "OFFICIAL",
+      "officialCount": 10,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "причин* и следстви*",
+          "count": 10,
+          "tes": 8,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tikkun",
+      "he": "תיקון",
+      "en": "correction",
+      "target": "исправление",
+      "status": "OFFICIAL",
+      "officialCount": 76,
+      "officialCountBasis": "global",
+      "note": "Translated. «тикуним» only for the 13 תיקוני דיקנא (the beard’s corrections, part 6) and in «гмар тикун».",
+      "evidence": [
+        {
+          "form": "исправлени*",
+          "count": 76,
+          "tes": 38,
+          "intro": 13,
+          "pticha": 25,
+          "chosen": true
+        },
+        {
+          "form": "тикун (translit.)",
+          "count": 6,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "gmar-tikkun",
+      "he": "גמר התיקון",
+      "en": "the end of correction",
+      "target": "конечное исправление («гмар тикун»)",
+      "status": "OFFICIAL",
+      "officialCount": 4,
+      "officialCountBasis": "global",
+      "note": "TES p3: «после конечного исправления («гмар тикун»)». Gloss once per item.",
+      "evidence": [
+        {
+          "form": "гмар тикун",
+          "count": 4,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "конечн* исправлени*",
+          "count": 2,
+          "tes": 1,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "окончательн* исправлени*",
+          "count": 4,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 4,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "shevira",
+      "he": "שבירה / שביה\"כ",
+      "en": "breaking",
+      "target": "разбиение (שביה\"כ — разбиение келим)",
+      "status": "OFFICIAL",
+      "officialCount": 32,
+      "officialCountBasis": "global",
+      "note": "7 of 7 paired units. Verb «разбились».",
+      "evidence": [
+        {
+          "form": "разбиени*",
+          "count": 32,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 21,
+          "chosen": true
+        },
+        {
+          "form": "разбити*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "швира",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "histaklut",
+      "he": "הסתכלות",
+      "en": "look",
+      "target": "истаклут",
+      "status": "OFFICIAL",
+      "officialCount": 29,
+      "officialCountBasis": "paired",
+      "note": "The technical act (Malchut “looking” at the light) stays TRANSLITERATED, glossed once: «истаклут (досл. всматривание)». Not «созерцание» — that word is reserved for the layer name.",
+      "evidence": [
+        {
+          "form": "истаклут",
+          "count": 31,
+          "tes": 31,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true,
+          "paired": {
+            "units": 23,
+            "tokens": 29,
+            "unitsWith": 16
+          }
+        },
+        {
+          "form": "созерцани*/всматривани*/взгляд*",
+          "count": 32,
+          "tes": 12,
+          "intro": 18,
+          "pticha": 2,
+          "chosen": false,
+          "paired": {
+            "units": 23,
+            "tokens": 8,
+            "unitsWith": 6
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hitkalelut",
+      "he": "התכללות",
+      "en": "inclusion",
+      "target": "включение",
+      "status": "OFFICIAL",
+      "officialCount": 41,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "включени*",
+          "count": 41,
+          "tes": 14,
+          "intro": 0,
+          "pticha": 27,
+          "chosen": true
+        },
+        {
+          "form": "взаимовключени*",
+          "count": 2,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "haara",
+      "he": "הארה",
+      "en": "illumination",
+      "target": "свечение",
+      "status": "OFFICIAL",
+      "officialCount": 122,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "свечени*",
+          "count": 122,
+          "tes": 84,
+          "intro": 1,
+          "pticha": 37,
+          "chosen": true
+        },
+        {
+          "form": "озарени*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "освещени*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "aliya",
+      "he": "עליה",
+      "en": "ascent",
+      "target": "подъем",
+      "status": "OFFICIAL",
+      "officialCount": 156,
+      "officialCountBasis": "global",
+      "note": "Write «подъем» (BB prints «е», not «ё»).",
+      "evidence": [
+        {
+          "form": "подъем*",
+          "count": 156,
+          "tes": 61,
+          "intro": 0,
+          "pticha": 95,
+          "chosen": true
+        },
+        {
+          "form": "восхождени*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "madrega",
+      "he": "מדרגה",
+      "en": "degree",
+      "target": "ступень",
+      "status": "OFFICIAL",
+      "officialCount": 498,
+      "officialCountBasis": "global",
+      "note": "104 of 104 paired units. Keep distinct from קומה (уровень).",
+      "evidence": [
+        {
+          "form": "ступен*",
+          "count": 498,
+          "tes": 240,
+          "intro": 31,
+          "pticha": 227,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "koma",
+      "he": "קומה / קומת",
+      "en": "level",
+      "target": "уровень",
+      "status": "OFFICIAL",
+      "officialCount": 587,
+      "officialCountBasis": "global",
+      "note": "«уровень хохма», «уровень кэтэр». The Pticha’s «ступень уровня Хохма» (5) is a calque of מדרגת קומת — use only when both words are in the Hebrew.",
+      "evidence": [
+        {
+          "form": "уров*",
+          "count": 587,
+          "tes": 309,
+          "intro": 7,
+          "pticha": 271,
+          "chosen": true
+        },
+        {
+          "form": "ступень уровня",
+          "count": 18,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 18,
+          "chosen": false
+        },
+        {
+          "form": "высот*",
+          "count": 8,
+          "tes": 4,
+          "intro": 3,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "shoresh",
+      "he": "שורש",
+      "en": "root",
+      "target": "корень",
+      "status": "OFFICIAL",
+      "officialCount": 168,
+      "officialCountBasis": "global",
+      "note": "Translated as a word; transliterated only as the phase name «бхина шореш».",
+      "evidence": [
+        {
+          "form": "корень/корн*",
+          "count": 168,
+          "tes": 132,
+          "intro": 3,
+          "pticha": 33,
+          "chosen": true
+        },
+        {
+          "form": "шореш",
+          "count": 38,
+          "tes": 18,
+          "intro": 0,
+          "pticha": 20,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ratzon-lekabel",
+      "he": "רצון לקבל",
+      "en": "will to receive",
+      "target": "желание получать",
+      "status": "OFFICIAL",
+      "officialCount": 55,
+      "officialCountBasis": "global",
+      "note": "Imperfective. «желание получить» (17) is the minority, mostly part 1.",
+      "evidence": [
+        {
+          "form": "желани* получать",
+          "count": 55,
+          "tes": 14,
+          "intro": 0,
+          "pticha": 41,
+          "chosen": true
+        },
+        {
+          "form": "желани* получить",
+          "count": 17,
+          "tes": 11,
+          "intro": 1,
+          "pticha": 5,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ratzon-lehashpia",
+      "he": "רצון להשפיע",
+      "en": "will to bestow",
+      "target": "желание отдавать",
+      "status": "OFFICIAL",
+      "officialCount": 6,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "желани* отдавать",
+          "count": 6,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 5,
+          "chosen": true
+        },
+        {
+          "form": "желани* отдать",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "shinui-tzura",
+      "he": "שינוי צורה",
+      "en": "disparity of form",
+      "target": "отличие по форме",
+      "status": "OFFICIAL",
+      "officialCount": 10,
+      "officialCountBasis": "paired",
+      "note": "Thin majority; «изменение формы» is part 1’s choice.",
+      "evidence": [
+        {
+          "form": "отличи* (по )?форм*",
+          "count": 10,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 9,
+          "chosen": true,
+          "paired": {
+            "units": 20,
+            "tokens": 10,
+            "unitsWith": 7
+          }
+        },
+        {
+          "form": "изменени* форм*",
+          "count": 7,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false,
+          "paired": {
+            "units": 20,
+            "tokens": 7,
+            "unitsWith": 6
+          }
+        },
+        {
+          "form": "отличи* свойств",
+          "count": 15,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 4,
+          "chosen": false,
+          "paired": {
+            "units": 20,
+            "tokens": 9,
+            "unitsWith": 4
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hashvaat-tzura",
+      "he": "השתוות הצורה",
+      "en": "equivalence of form",
+      "target": "подобие по форме",
+      "status": "OFFICIAL",
+      "officialCount": 6,
+      "officialCountBasis": "paired",
+      "note": "Pairs with «отличие по форме».",
+      "evidence": [
+        {
+          "form": "подоби* (по )?форм*",
+          "count": 7,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 6,
+          "chosen": true,
+          "paired": {
+            "units": 22,
+            "tokens": 6,
+            "unitsWith": 5
+          }
+        },
+        {
+          "form": "подоби* свойств",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 22,
+            "tokens": 4,
+            "unitsWith": 4
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "pnimiut",
+      "he": "פנימיות",
+      "en": "internality",
+      "target": "внутренняя часть",
+      "status": "OFFICIAL",
+      "officialCount": 45,
+      "officialCountBasis": "global",
+      "note": "«внутренняя часть кли»; as a pair «внутреннее и внешнее».",
+      "evidence": [
+        {
+          "form": "внутренн* част*",
+          "count": 45,
+          "tes": 41,
+          "intro": 1,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "внутреннее (subst.)",
+          "count": 26,
+          "tes": 23,
+          "intro": 2,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hitzoniut",
+      "he": "חיצוניות",
+      "en": "externality",
+      "target": "внешняя часть",
+      "status": "OFFICIAL",
+      "officialCount": 28,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "внешн* част*",
+          "count": 28,
+          "tes": 25,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "внешнее (subst.)",
+          "count": 25,
+          "tes": 24,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "atzmut",
+      "he": "עצמות",
+      "en": "self",
+      "target": "сущность («сущность Творца»)",
+      "status": "OFFICIAL",
+      "officialCount": 40,
+      "officialCountBasis": "paired",
+      "note": "The Pticha glosses «Ацмуто» once; do not transliterate in running text. English reserves “essence” for מהות; BB Russian uses «сущность» for both — where both occur in one item, render מהות «суть».",
+      "evidence": [
+        {
+          "form": "сущност*",
+          "count": 45,
+          "tes": 44,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": true,
+          "paired": {
+            "units": 43,
+            "tokens": 40,
+            "unitsWith": 26
+          }
+        },
+        {
+          "form": "Ацмут*",
+          "count": 22,
+          "tes": 9,
+          "intro": 0,
+          "pticha": 13,
+          "chosen": false,
+          "paired": {
+            "units": 43,
+            "tokens": 22,
+            "unitsWith": 17
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "upper",
+      "he": "עליון",
+      "en": "upper",
+      "target": "высший",
+      "status": "OFFICIAL",
+      "officialCount": 446,
+      "officialCountBasis": "global",
+      "note": "«высший» for the upper degree/Partzuf; «верхний» only spatially («верхняя треть»).",
+      "evidence": [
+        {
+          "form": "высш*",
+          "count": 446,
+          "tes": 253,
+          "intro": 11,
+          "pticha": 182,
+          "chosen": true
+        },
+        {
+          "form": "верхн*",
+          "count": 39,
+          "tes": 24,
+          "intro": 0,
+          "pticha": 15,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "lower",
+      "he": "תחתון",
+      "en": "lower",
+      "target": "низший (о ступени, парцуфе); нижний (пространственно, в терминах)",
+      "status": "OFFICIAL",
+      "officialCount": 253,
+      "officialCountBasis": "paired",
+      "note": "Sense split, both official: the lower degree/Partzuf as a noun is «низший» («каждый низший»); positions and fixed terms take «нижний» («нижняя хэй», «семь нижних сфирот», «нижняя треть»).",
+      "evidence": [
+        {
+          "form": "низш*",
+          "count": 62,
+          "tes": 56,
+          "intro": 2,
+          "pticha": 4,
+          "chosen": true,
+          "paired": {
+            "units": 129,
+            "tokens": 62,
+            "unitsWith": 30
+          }
+        },
+        {
+          "form": "нижн*",
+          "count": 259,
+          "tes": 137,
+          "intro": 5,
+          "pticha": 117,
+          "chosen": true,
+          "paired": {
+            "units": 129,
+            "tokens": 191,
+            "unitsWith": 103
+          }
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "boreh",
+      "he": "בורא",
+      "en": "Creator",
+      "target": "Творец",
+      "status": "OFFICIAL",
+      "officialCount": 355,
+      "officialCountBasis": "global",
+      "note": "Capitalised. Also for הקב\"ה / השי\"ת.",
+      "evidence": [
+        {
+          "form": "Творец/Творц*",
+          "count": 355,
+          "tes": 89,
+          "intro": 248,
+          "pticha": 18,
+          "chosen": true
+        },
+        {
+          "form": "творец (lower)",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "maatzil",
+      "he": "מאציל",
+      "en": "Emanator",
+      "target": "Творец",
+      "status": "OFFICIAL",
+      "officialCount": 56,
+      "officialCountBasis": "paired",
+      "note": "BB merges Emanator and Creator; follow it. Exception kept by BB: «поднялся к своему источнику» for עלה למאציל (p4). The Pticha prefers «Создатель» (8 of 9 units) — see Traps.",
+      "evidence": [
+        {
+          "form": "Творец/Творц*",
+          "count": 355,
+          "tes": 89,
+          "intro": 248,
+          "pticha": 18,
+          "chosen": true,
+          "paired": {
+            "units": 70,
+            "tokens": 56,
+            "unitsWith": 40
+          }
+        },
+        {
+          "form": "источник*",
+          "count": 95,
+          "tes": 63,
+          "intro": 24,
+          "pticha": 8,
+          "chosen": false,
+          "paired": {
+            "units": 70,
+            "tokens": 46,
+            "unitsWith": 28
+          }
+        },
+        {
+          "form": "Создател*",
+          "count": 35,
+          "tes": 16,
+          "intro": 1,
+          "pticha": 18,
+          "chosen": false,
+          "paired": {
+            "units": 70,
+            "tokens": 28,
+            "unitsWith": 10
+          }
+        },
+        {
+          "form": "маациль",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 70,
+            "tokens": 4,
+            "unitsWith": 3
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "neetzal",
+      "he": "נאצל",
+      "en": "emanated being",
+      "target": "творение",
+      "status": "OFFICIAL",
+      "officialCount": 58,
+      "officialCountBasis": "paired",
+      "note": "Same word as נברא — BB does not separate them.",
+      "evidence": [
+        {
+          "form": "творени*",
+          "count": 127,
+          "tes": 67,
+          "intro": 33,
+          "pticha": 27,
+          "chosen": true,
+          "paired": {
+            "units": 47,
+            "tokens": 58,
+            "unitsWith": 31
+          }
+        },
+        {
+          "form": "создани*",
+          "count": 65,
+          "tes": 40,
+          "intro": 9,
+          "pticha": 16,
+          "chosen": false,
+          "paired": {
+            "units": 47,
+            "tokens": 23,
+            "unitsWith": 12
+          }
+        },
+        {
+          "form": "нээцаль",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 47,
+            "tokens": 1,
+            "unitsWith": 1
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ein-sof",
+      "he": "אין סוף / א\"ס",
+      "en": "Ein Sof",
+      "target": "Бесконечность",
+      "status": "OFFICIAL",
+      "officialCount": 182,
+      "officialCountBasis": "global",
+      "note": "Translated and capitalised: «свет Бесконечности», «мир Бесконечности». א\"ס ב\"ה → «Бесконечность» (drop ב\"ה). «Эйн Соф» (35) only as a gloss: «Бесконечность (Эйн Соф)».",
+      "evidence": [
+        {
+          "form": "Бесконечност*",
+          "count": 182,
+          "tes": 149,
+          "intro": 0,
+          "pticha": 33,
+          "chosen": true
+        },
+        {
+          "form": "бесконечност* (lower)",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Эйн Соф",
+          "count": 35,
+          "tes": 33,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "kabbalah",
+      "he": "חכמת הקבלה",
+      "en": "the wisdom of Kabbalah",
+      "target": "наука Каббала",
+      "status": "OFFICIAL",
+      "officialCount": 25,
+      "officialCountBasis": "global",
+      "note": "«наука Каббала» with capital К and nominative «Каббала» after «наука» (Intro 24).",
+      "evidence": [
+        {
+          "form": "наук* Каббала",
+          "count": 25,
+          "tes": 0,
+          "intro": 24,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "наук* каббала",
+          "count": 3,
+          "tes": 1,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": false
+        },
+        {
+          "form": "мудрост* Каббал*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "sefira",
+      "he": "ספירה",
+      "en": "Sefira",
+      "target": "сфира",
+      "status": "OFFICIAL",
+      "officialCount": 120,
+      "officialCountBasis": "global",
+      "note": "Lower case; declines (сфиры, сфиру, сфире, сфирой).",
+      "evidence": [
+        {
+          "form": "сфир[аыуеой]",
+          "count": 120,
+          "tes": 79,
+          "intro": 4,
+          "pticha": 37,
+          "chosen": true
+        },
+        {
+          "form": "сефира",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "sefirot",
+      "he": "ספירות",
+      "en": "Sefirot",
+      "target": "сфирот",
+      "status": "OFFICIAL",
+      "officialCount": 756,
+      "officialCountBasis": "global",
+      "note": "Lower case, indeclinable Hebrew plural. «сфиры» exists (Russian plural, 57 incl. gen. sg.) — prefer «сфирот» for the plural.",
+      "evidence": [
+        {
+          "form": "сфирот",
+          "count": 756,
+          "tes": 485,
+          "intro": 12,
+          "pticha": 259,
+          "chosen": true
+        },
+        {
+          "form": "Сфирот",
+          "count": 2,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": false
+        },
+        {
+          "form": "сефирот",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "сфиры (Russian pl.)",
+          "count": 57,
+          "tes": 35,
+          "intro": 4,
+          "pticha": 18,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "eser-sefirot",
+      "he": "עשר ספירות / ע\"ס / י\"ס",
+      "en": "ten Sefirot",
+      "target": "десять сфирот",
+      "status": "OFFICIAL",
+      "officialCount": 233,
+      "officialCountBasis": "global",
+      "note": "Per-term the digit form wins (306 : 233, all TES), but numbers in prose are a class convention ruled for words (874 : 740) — see Conventions. ט\"ס is NINE: «девять сфирот».",
+      "evidence": [
+        {
+          "form": "десять/десяти сфирот",
+          "count": 233,
+          "tes": 16,
+          "intro": 6,
+          "pticha": 211,
+          "chosen": true
+        },
+        {
+          "form": "10 сфирот",
+          "count": 295,
+          "tes": 295,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "10-ти сфирот",
+          "count": 11,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "keter",
+      "he": "כתר",
+      "en": "Keter",
+      "target": "кэтэр",
+      "status": "OFFICIAL",
+      "officialCount": 390,
+      "officialCountBasis": "global",
+      "note": "Three BB spellings; majority wins. Lower case (see Conventions). Mostly indeclinable («уровень кэтэр», «в кэтэр»: 357 bare : 29 declined).",
+      "evidence": [
+        {
+          "form": "кэтэр",
+          "count": 390,
+          "tes": 390,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Кетер",
+          "count": 139,
+          "tes": 0,
+          "intro": 3,
+          "pticha": 136,
+          "chosen": false
+        },
+        {
+          "form": "кетэр",
+          "count": 68,
+          "tes": 68,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hochma",
+      "he": "חכמה",
+      "en": "Hochma",
+      "target": "хохма",
+      "status": "OFFICIAL",
+      "officialCount": 525,
+      "officialCountBasis": "global",
+      "note": "Lower case. Indeclinable after «свет/уровень» («свет хохма»), may decline as an object («из хохмы»). «мудрость» only for חכמה as plain wisdom.",
+      "evidence": [
+        {
+          "form": "хохм*",
+          "count": 525,
+          "tes": 401,
+          "intro": 8,
+          "pticha": 116,
+          "chosen": true
+        },
+        {
+          "form": "хокма",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "мудрост* (as sefira)",
+          "count": 31,
+          "tes": 11,
+          "intro": 19,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "bina",
+      "he": "בינה",
+      "en": "Bina",
+      "target": "бина",
+      "status": "OFFICIAL",
+      "officialCount": 380,
+      "officialCountBasis": "global",
+      "note": "Lower case; declines.",
+      "evidence": [
+        {
+          "form": "бин[аыуеой]",
+          "count": 380,
+          "tes": 253,
+          "intro": 4,
+          "pticha": 123,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "daat",
+      "he": "דעת",
+      "en": "Daat",
+      "target": "даат",
+      "status": "OFFICIAL",
+      "officialCount": 21,
+      "officialCountBasis": "global",
+      "note": "Lower case per class ruling (Pticha capitalises it, 19).",
+      "evidence": [
+        {
+          "form": "даат",
+          "count": 21,
+          "tes": 1,
+          "intro": 1,
+          "pticha": 19,
+          "chosen": true
+        },
+        {
+          "form": "даас (Ashk.)",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "hesed",
+      "he": "חסד",
+      "en": "Hesed",
+      "target": "хэсэд",
+      "status": "OFFICIAL",
+      "officialCount": 21,
+      "officialCountBasis": "global",
+      "note": "Per-term majority (TES). Not to be confused with хасадим (חסדים).",
+      "evidence": [
+        {
+          "form": "хэсэд",
+          "count": 21,
+          "tes": 21,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "хесед",
+          "count": 11,
+          "tes": 1,
+          "intro": 3,
+          "pticha": 7,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "gevura",
+      "he": "גבורה",
+      "en": "Gevura",
+      "target": "гвура (мн. гвурот)",
+      "status": "OFFICIAL",
+      "officialCount": 21,
+      "officialCountBasis": "global",
+      "note": "«пять гвурот» (Pticha).",
+      "evidence": [
+        {
+          "form": "гвур*",
+          "count": 21,
+          "tes": 11,
+          "intro": 2,
+          "pticha": 8,
+          "chosen": true
+        },
+        {
+          "form": "гевура",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tifferet",
+      "he": "תפארת / ת\"ת",
+      "en": "Tifferet",
+      "target": "тиферет",
+      "status": "OFFICIAL",
+      "officialCount": 66,
+      "officialCountBasis": "global",
+      "note": "ת\"ת is the abbreviation of תפארת — expand to «тиферет».",
+      "evidence": [
+        {
+          "form": "тиферет",
+          "count": 66,
+          "tes": 2,
+          "intro": 1,
+          "pticha": 63,
+          "chosen": true
+        },
+        {
+          "form": "тифэрэт",
+          "count": 28,
+          "tes": 28,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "тиферэт",
+          "count": 2,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "тиферес (Ashk.)",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "netzah",
+      "he": "נצח",
+      "en": "Netzah",
+      "target": "нецах",
+      "status": "OFFICIAL",
+      "officialCount": 6,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "нецах",
+          "count": 6,
+          "tes": 1,
+          "intro": 1,
+          "pticha": 4,
+          "chosen": true
+        },
+        {
+          "form": "нэцах",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hod",
+      "he": "הוד",
+      "en": "Hod",
+      "target": "ход",
+      "status": "OFFICIAL",
+      "officialCount": 13,
+      "officialCountBasis": "global",
+      "note": "Collides with the Russian word «ход»; keep it inside the sefira list or write «сфира ход» on first mention in an item.",
+      "evidence": [
+        {
+          "form": "ход (all)",
+          "count": 13,
+          "tes": 8,
+          "intro": 1,
+          "pticha": 4,
+          "chosen": true
+        },
+        {
+          "form": "од",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "yesod",
+      "he": "יסוד",
+      "en": "Yesod",
+      "target": "есод",
+      "status": "OFFICIAL",
+      "officialCount": 78,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "есод*",
+          "count": 78,
+          "tes": 64,
+          "intro": 1,
+          "pticha": 13,
+          "chosen": true
+        },
+        {
+          "form": "йесод/иесод",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "malchut",
+      "he": "מלכות",
+      "en": "Malchut",
+      "target": "малхут",
+      "status": "OFFICIAL",
+      "officialCount": 461,
+      "officialCountBasis": "global",
+      "note": "Indeclinable. Feminine: «малхут поднялась», «она».",
+      "evidence": [
+        {
+          "form": "малхут (lower)",
+          "count": 461,
+          "tes": 461,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Малхут (Cap.)",
+          "count": 162,
+          "tes": 14,
+          "intro": 5,
+          "pticha": 143,
+          "chosen": false
+        },
+        {
+          "form": "мальхут",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hgt",
+      "he": "חג\"ת",
+      "en": "HGT",
+      "target": "ХАГАТ",
+      "status": "OFFICIAL",
+      "officialCount": 24,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "ХАГАТ",
+          "count": 24,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 23,
+          "chosen": true
+        },
+        {
+          "form": "ХаГа\"Т",
+          "count": 33,
+          "tes": 33,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "nhy",
+      "he": "נה\"י",
+      "en": "NHY",
+      "target": "НЕХИ",
+      "status": "OFFICIAL",
+      "officialCount": 19,
+      "officialCountBasis": "global",
+      "note": "נהי\"מ → НЕХИМ (Pticha 14).",
+      "evidence": [
+        {
+          "form": "НЕХИ",
+          "count": 19,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 19,
+          "chosen": true
+        },
+        {
+          "form": "НэХ\"И",
+          "count": 42,
+          "tes": 42,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "НЭХИ",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "nhym",
+      "he": "נהי\"מ",
+      "en": "NHYM",
+      "target": "НЕХИМ",
+      "status": "OFFICIAL",
+      "officialCount": 15,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "НЕХИМ",
+          "count": 15,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 14,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "hbd",
+      "he": "חב\"ד",
+      "en": "HBD",
+      "target": "ХАБАД",
+      "status": "OFFICIAL",
+      "officialCount": 1,
+      "officialCountBasis": "global",
+      "note": "Thin (1 + 1).",
+      "evidence": [
+        {
+          "form": "ХАБАД",
+          "count": 1,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "ХаБа\"Д",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "khb",
+      "he": "כח\"ב",
+      "en": "KHB",
+      "target": "КАХАБ",
+      "status": "OFFICIAL",
+      "officialCount": 27,
+      "officialCountBasis": "global",
+      "note": "כחב\"ד → «КАХБАД» (Pticha 3).",
+      "evidence": [
+        {
+          "form": "КАХАБ",
+          "count": 27,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 26,
+          "chosen": true
+        },
+        {
+          "form": "КаХа\"Б",
+          "count": 18,
+          "tes": 18,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hb",
+      "he": "חו\"ב",
+      "en": "HB",
+      "target": "ХУБ",
+      "status": "OFFICIAL",
+      "officialCount": 16,
+      "officialCountBasis": "global",
+      "note": "חו\"ב תו\"מ → ХУБ ТУМ (Pticha 16/13).",
+      "evidence": [
+        {
+          "form": "ХУБ",
+          "count": 16,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 16,
+          "chosen": true
+        },
+        {
+          "form": "Ху\"Б",
+          "count": 21,
+          "tes": 21,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "tm",
+      "he": "תו\"מ",
+      "en": "TM (Tifferet and Malchut)",
+      "target": "ТУМ",
+      "status": "OFFICIAL",
+      "officialCount": 13,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "ТУМ",
+          "count": 13,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 13,
+          "chosen": true
+        },
+        {
+          "form": "Ту\"М",
+          "count": 20,
+          "tes": 20,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "zat",
+      "he": "ז\"ת",
+      "en": "ZAT",
+      "target": "ЗАТ",
+      "status": "OFFICIAL",
+      "officialCount": 70,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "ЗАТ",
+          "count": 70,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 69,
+          "chosen": true
+        },
+        {
+          "form": "За\"Т",
+          "count": 7,
+          "tes": 7,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "gar",
+      "he": "ג\"ר",
+      "en": "GAR",
+      "target": "ГАР",
+      "status": "OFFICIAL",
+      "officialCount": 60,
+      "officialCountBasis": "global",
+      "note": "Part 8: ה\"ר can mean «первые пять» — read the sentence (see Traps).",
+      "evidence": [
+        {
+          "form": "ГАР",
+          "count": 60,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 60,
+          "chosen": true
+        },
+        {
+          "form": "Га\"Р/ГА\"Р",
+          "count": 45,
+          "tes": 45,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "vak",
+      "he": "ו\"ק",
+      "en": "VAK",
+      "target": "ВАК",
+      "status": "OFFICIAL",
+      "officialCount": 50,
+      "officialCountBasis": "global",
+      "note": "«ВАК без рош» (Pticha).",
+      "evidence": [
+        {
+          "form": "ВАК",
+          "count": 50,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 50,
+          "chosen": true
+        },
+        {
+          "form": "Ва\"К",
+          "count": 10,
+          "tes": 10,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hey-tataa",
+      "he": "ה\"ת",
+      "en": "bottom Hey",
+      "target": "нижняя хэй",
+      "status": "OFFICIAL",
+      "officialCount": 38,
+      "officialCountBasis": "global",
+      "note": "«подъем нижней хэй в никвэй эйнаим». NB «לה\"ת» is the Table of Answers, not this.",
+      "evidence": [
+        {
+          "form": "нижн* хэй",
+          "count": 38,
+          "tes": 13,
+          "intro": 0,
+          "pticha": 25,
+          "chosen": true
+        },
+        {
+          "form": "хэй татаа",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hey-rishona",
+      "he": "ה\"ר",
+      "en": "first Hey",
+      "target": "первая хэй",
+      "status": "OFFICIAL",
+      "officialCount": 4,
+      "officialCountBasis": "global",
+      "note": "Thin (4, part 6). In part 8 ה\"ר often = ה' ראשונות «первые пять».",
+      "evidence": [
+        {
+          "form": "перв* хэй",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "partzuf",
+      "he": "פרצוף",
+      "en": "Partzuf",
+      "target": "парцуф",
+      "status": "OFFICIAL",
+      "officialCount": 579,
+      "officialCountBasis": "global",
+      "note": "Lower case; declines in the singular.",
+      "evidence": [
+        {
+          "form": "парцуф (sg. all cases)",
+          "count": 579,
+          "tes": 216,
+          "intro": 7,
+          "pticha": 356,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "partzufim",
+      "he": "פרצופים",
+      "en": "Partzufim",
+      "target": "парцуфим",
+      "status": "OFFICIAL",
+      "officialCount": 204,
+      "officialCountBasis": "global",
+      "note": "Hebrew plural, indeclinable. Never «парцуфы».",
+      "evidence": [
+        {
+          "form": "парцуфим",
+          "count": 204,
+          "tes": 38,
+          "intro": 1,
+          "pticha": 165,
+          "chosen": true
+        },
+        {
+          "form": "парцуфов",
+          "count": 5,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "парцуфы",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "adam-kadmon",
+      "he": "אדם קדמון / א\"ק",
+      "en": "Adam Kadmon / AK",
+      "target": "Адам Кадмон; сокращение АК",
+      "status": "OFFICIAL",
+      "officialCount": 337,
+      "officialCountBasis": "global",
+      "note": "Spell out when the Hebrew spells out; א\"ק → АК.",
+      "evidence": [
+        {
+          "form": "АК",
+          "count": 337,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 336,
+          "chosen": true
+        },
+        {
+          "form": "А\"К",
+          "count": 179,
+          "tes": 179,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Адам Кадмон",
+          "count": 40,
+          "tes": 32,
+          "intro": 0,
+          "pticha": 8,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "galgalta",
+      "he": "גלגלתא",
+      "en": "Galgalta",
+      "target": "Гальгальта (парцуф); гальгальта (часть рош)",
+      "status": "OFFICIAL",
+      "officialCount": 44,
+      "officialCountBasis": "global",
+      "note": "Distinct senses, distinct case: the first Partzuf of AK is «Гальгальта»; the skull-part in «гальгальта ве-эйнаим (ГЭ)» is lower case.",
+      "evidence": [
+        {
+          "form": "Гальгальт* (Partzuf)",
+          "count": 33,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 25,
+          "chosen": true
+        },
+        {
+          "form": "гальгальт* (part of Rosh)",
+          "count": 11,
+          "tes": 6,
+          "intro": 0,
+          "pticha": 5,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ab",
+      "he": "ע\"ב",
+      "en": "AB",
+      "target": "АБ",
+      "status": "OFFICIAL",
+      "officialCount": 102,
+      "officialCountBasis": "global",
+      "note": "Beware ע\"ב = side b of a leaf in Talmud/Zohar citations («…, стр.2»).",
+      "evidence": [
+        {
+          "form": "АБ",
+          "count": 102,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 99,
+          "chosen": true
+        },
+        {
+          "form": "А\"Б",
+          "count": 90,
+          "tes": 90,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "sag",
+      "he": "ס\"ג",
+      "en": "SAG",
+      "target": "САГ",
+      "status": "OFFICIAL",
+      "officialCount": 131,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "САГ",
+          "count": 131,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 130,
+          "chosen": true
+        },
+        {
+          "form": "Са\"Г",
+          "count": 205,
+          "tes": 205,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ma",
+      "he": "מ\"ה",
+      "en": "MA",
+      "target": "МА",
+      "status": "OFFICIAL",
+      "officialCount": 105,
+      "officialCountBasis": "global",
+      "note": "«МА и БОН», «новый МА» (מ\"ה החדש).",
+      "evidence": [
+        {
+          "form": "МА",
+          "count": 105,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 105,
+          "chosen": true
+        },
+        {
+          "form": "М\"А",
+          "count": 48,
+          "tes": 48,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "bon",
+      "he": "ב\"ן",
+      "en": "BON",
+      "target": "БОН",
+      "status": "OFFICIAL",
+      "officialCount": 49,
+      "officialCountBasis": "global",
+      "note": "BON, never БАН (0).",
+      "evidence": [
+        {
+          "form": "БОН",
+          "count": 49,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 48,
+          "chosen": true
+        },
+        {
+          "form": "Бо\"Н",
+          "count": 54,
+          "tes": 54,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "БАН",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "atik",
+      "he": "עתיק",
+      "en": "Atik",
+      "target": "Атик",
+      "status": "OFFICIAL",
+      "officialCount": 87,
+      "officialCountBasis": "global",
+      "note": "עתיק יומין → «Атик Йомин» (10).",
+      "evidence": [
+        {
+          "form": "Атик*",
+          "count": 87,
+          "tes": 29,
+          "intro": 11,
+          "pticha": 47,
+          "chosen": true
+        },
+        {
+          "form": "атик (lower)",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "aa",
+      "he": "א\"א / אריך אנפין",
+      "en": "AA / Arich Anpin",
+      "target": "АА; полностью Арих Анпин",
+      "status": "OFFICIAL",
+      "officialCount": 23,
+      "officialCountBasis": "global",
+      "note": "Spelled out → Арих Анпин (50); abbreviation → АА. Same rule as ЗА.",
+      "evidence": [
+        {
+          "form": "АА",
+          "count": 23,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 23,
+          "chosen": true
+        },
+        {
+          "form": "А\"А",
+          "count": 54,
+          "tes": 54,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Арих Анпин",
+          "count": 50,
+          "tes": 9,
+          "intro": 0,
+          "pticha": 41,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "abba",
+      "he": "אבא",
+      "en": "Abba (Aba)",
+      "target": "Аба",
+      "status": "OFFICIAL",
+      "officialCount": 88,
+      "officialCountBasis": "global",
+      "note": "One «б» (88 : 0).",
+      "evidence": [
+        {
+          "form": "Аба",
+          "count": 88,
+          "tes": 29,
+          "intro": 0,
+          "pticha": 59,
+          "chosen": true
+        },
+        {
+          "form": "Абба",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "ima",
+      "he": "אמא",
+      "en": "Ima",
+      "target": "Има",
+      "status": "OFFICIAL",
+      "officialCount": 88,
+      "officialCountBasis": "global",
+      "note": "אמא עילאה → «высшая Има».",
+      "evidence": [
+        {
+          "form": "Има",
+          "count": 88,
+          "tes": 23,
+          "intro": 0,
+          "pticha": 65,
+          "chosen": true
+        },
+        {
+          "form": "има (lower)",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "avi",
+      "he": "או\"א / אבא ואמא",
+      "en": "AVI (Abba ve Ima)",
+      "target": "АВИ; полностью Аба ве-Има",
+      "status": "OFFICIAL",
+      "officialCount": 107,
+      "officialCountBasis": "global",
+      "note": "או\"א עילאין → «высшие АВИ». Spelled out «Аба ве-Има» (55).",
+      "evidence": [
+        {
+          "form": "АВИ",
+          "count": 107,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 107,
+          "chosen": true
+        },
+        {
+          "form": "АВ\"И",
+          "count": 54,
+          "tes": 54,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Аба ве-Има",
+          "count": 56,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 55,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "yeshsut",
+      "he": "ישסו\"ת / ישראל סבא ותבונה",
+      "en": "YESHSUT (Israel Saba ve Tevuna)",
+      "target": "ИШСУТ; полностью Исраэль Саба ве-Твуна",
+      "status": "OFFICIAL",
+      "officialCount": 35,
+      "officialCountBasis": "global",
+      "note": "Spelled-out form attested only in part 6 (Исраэль Саба 2, Твуна 3); «ве-» per Conventions. תבונה alone → «Твуна».",
+      "evidence": [
+        {
+          "form": "ИШСУТ",
+          "count": 35,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 35,
+          "chosen": true
+        },
+        {
+          "form": "ИШСУ\"Т",
+          "count": 37,
+          "tes": 37,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Исраэль Саба",
+          "count": 2,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Твуна",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "za",
+      "he": "ז\"א / זעיר אנפין",
+      "en": "ZA / Zeir Anpin",
+      "target": "ЗА; полностью Зэир Анпин",
+      "status": "OFFICIAL",
+      "officialCount": 70,
+      "officialCountBasis": "global",
+      "note": "Spelled out: «Зэир Анпин» (9 : 4), capitalised as a Partzuf name.",
+      "evidence": [
+        {
+          "form": "ЗА",
+          "count": 70,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 69,
+          "chosen": true
+        },
+        {
+          "form": "З\"А",
+          "count": 187,
+          "tes": 187,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Зэир Анпин",
+          "count": 9,
+          "tes": 6,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": false
+        },
+        {
+          "form": "Зеир Анпин",
+          "count": 4,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "nukva",
+      "he": "נוקבא",
+      "en": "Nukva",
+      "target": "Нуква",
+      "status": "OFFICIAL",
+      "officialCount": 57,
+      "officialCountBasis": "global",
+      "note": "Capitalised as a Partzuf (57 : 30).",
+      "evidence": [
+        {
+          "form": "Нукв*",
+          "count": 57,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 49,
+          "chosen": true
+        },
+        {
+          "form": "нукв* (lower)",
+          "count": 30,
+          "tes": 23,
+          "intro": 0,
+          "pticha": 7,
+          "chosen": false
+        },
+        {
+          "form": "нукба",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "zon",
+      "he": "זו\"ן",
+      "en": "ZON",
+      "target": "ЗОН",
+      "status": "OFFICIAL",
+      "officialCount": 123,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "ЗОН",
+          "count": 123,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 123,
+          "chosen": true
+        },
+        {
+          "form": "ЗО\"Н/Зо\"Н",
+          "count": 54,
+          "tes": 54,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "rachel",
+      "he": "רחל",
+      "en": "Rachel",
+      "target": "Рахель",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested in the official texts. Standard BB/Russian Bible form «Рахель».",
+      "evidence": [
+        {
+          "form": "Рахель",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "leah",
+      "he": "לאה",
+      "en": "Leah",
+      "target": "Лея",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested. Russian Synodal/BB form «Лея» (gen. «Леи»).",
+      "evidence": [
+        {
+          "form": "Лея",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "rosh",
+      "he": "ראש",
+      "en": "Rosh",
+      "target": "рош (несклоняемое; мн. рошим)",
+      "status": "OFFICIAL",
+      "officialCount": 526,
+      "officialCountBasis": "global",
+      "note": "Indeclinable (526; inflected 0). Gloss once per item where helpful: «рош (досл. голова)». Plural ראשים → «рошим» (8).",
+      "evidence": [
+        {
+          "form": "рош",
+          "count": 526,
+          "tes": 304,
+          "intro": 1,
+          "pticha": 221,
+          "chosen": true
+        },
+        {
+          "form": "рошим",
+          "count": 8,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 7,
+          "chosen": false
+        },
+        {
+          "form": "голов*",
+          "count": 23,
+          "tes": 12,
+          "intro": 10,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "toch",
+      "he": "תוך",
+      "en": "Toch",
+      "target": "тох",
+      "status": "OFFICIAL",
+      "officialCount": 24,
+      "officialCountBasis": "global",
+      "note": "Only for the technical middle third (рош, тох, соф). Preposition תוך/בתוך → «внутри».",
+      "evidence": [
+        {
+          "form": "тох",
+          "count": 24,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 13,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "sof",
+      "he": "סוף",
+      "en": "Sof",
+      "target": "соф",
+      "status": "OFFICIAL",
+      "officialCount": 69,
+      "officialCountBasis": "global",
+      "note": "Technical part only; plain “end” is «конец». Do not confuse with Бесконечность.",
+      "evidence": [
+        {
+          "form": "соф",
+          "count": 69,
+          "tes": 50,
+          "intro": 0,
+          "pticha": 19,
+          "chosen": true
+        },
+        {
+          "form": "конец (plain)",
+          "count": 53,
+          "tes": 30,
+          "intro": 11,
+          "pticha": 12,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "guf",
+      "he": "גוף",
+      "en": "Guf",
+      "target": "гуф (мн. гуфим)",
+      "status": "OFFICIAL",
+      "officialCount": 333,
+      "officialCountBasis": "global",
+      "note": "Mostly indeclinable (333 : 24 declined). Gloss once: «гуф (досл. тело)».",
+      "evidence": [
+        {
+          "form": "гуф",
+          "count": 333,
+          "tes": 176,
+          "intro": 0,
+          "pticha": 157,
+          "chosen": true
+        },
+        {
+          "form": "гуфа/гуфе/гуфу (declined)",
+          "count": 24,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 21,
+          "chosen": false
+        },
+        {
+          "form": "гуфим",
+          "count": 34,
+          "tes": 12,
+          "intro": 0,
+          "pticha": 22,
+          "chosen": false
+        },
+        {
+          "form": "тел[оау]",
+          "count": 40,
+          "tes": 15,
+          "intro": 15,
+          "pticha": 10,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "peh",
+      "he": "פה",
+      "en": "Peh",
+      "target": "пэ",
+      "status": "OFFICIAL",
+      "officialCount": 191,
+      "officialCountBasis": "global",
+      "note": "Gloss «пэ (досл. рот)».",
+      "evidence": [
+        {
+          "form": "пэ",
+          "count": 191,
+          "tes": 94,
+          "intro": 0,
+          "pticha": 97,
+          "chosen": true
+        },
+        {
+          "form": "пе",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tabur",
+      "he": "טבור",
+      "en": "Tabur",
+      "target": "табур",
+      "status": "OFFICIAL",
+      "officialCount": 236,
+      "officialCountBasis": "global",
+      "note": "Declines: «до табура», «ниже табура».",
+      "evidence": [
+        {
+          "form": "табур*",
+          "count": 236,
+          "tes": 141,
+          "intro": 0,
+          "pticha": 95,
+          "chosen": true
+        },
+        {
+          "form": "пуп*",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "chazeh",
+      "he": "חזה",
+      "en": "Chazeh",
+      "target": "хазэ",
+      "status": "OFFICIAL",
+      "officialCount": 79,
+      "officialCountBasis": "global",
+      "note": "Gloss «хазэ (досл. грудь)».",
+      "evidence": [
+        {
+          "form": "хазэ",
+          "count": 79,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 68,
+          "chosen": true
+        },
+        {
+          "form": "хазе",
+          "count": 5,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "груд*",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "parsa",
+      "he": "פרסא",
+      "en": "Parsa",
+      "target": "парса",
+      "status": "OFFICIAL",
+      "officialCount": 71,
+      "officialCountBasis": "global",
+      "note": "Declines: «над парсой», «ниже парсы».",
+      "evidence": [
+        {
+          "form": "парс[аыуеой]",
+          "count": 71,
+          "tes": 34,
+          "intro": 0,
+          "pticha": 37,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "sium",
+      "he": "סיום",
+      "en": "Sium",
+      "target": "сиюм",
+      "status": "OFFICIAL",
+      "officialCount": 74,
+      "officialCountBasis": "global",
+      "note": "«сиюм раглин» (11). Plain “end” of a process → «окончание».",
+      "evidence": [
+        {
+          "form": "сиюм*",
+          "count": 74,
+          "tes": 27,
+          "intro": 0,
+          "pticha": 47,
+          "chosen": true
+        },
+        {
+          "form": "окончани*",
+          "count": 49,
+          "tes": 29,
+          "intro": 2,
+          "pticha": 18,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "raglin",
+      "he": "רגלין / רגלי",
+      "en": "Raglin (legs)",
+      "target": "раглин",
+      "status": "OFFICIAL",
+      "officialCount": 28,
+      "officialCountBasis": "global",
+      "note": "«сиюм раглин», «раглин АК».",
+      "evidence": [
+        {
+          "form": "раглин",
+          "count": 28,
+          "tes": 22,
+          "intro": 0,
+          "pticha": 6,
+          "chosen": true
+        },
+        {
+          "form": "ног*",
+          "count": 3,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 2,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "einayim",
+      "he": "עינים",
+      "en": "Einayim",
+      "target": "эйнаим",
+      "status": "OFFICIAL",
+      "officialCount": 118,
+      "officialCountBasis": "global",
+      "note": "Indeclinable.",
+      "evidence": [
+        {
+          "form": "эйнаим",
+          "count": 118,
+          "tes": 74,
+          "intro": 0,
+          "pticha": 44,
+          "chosen": true
+        },
+        {
+          "form": "эйнайим/энаим/ейнаим",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "nikvey-einayim",
+      "he": "נקבי עינים / נ\"ע",
+      "en": "Nikvey Einayim",
+      "target": "никвэй эйнаим (НЭ)",
+      "status": "OFFICIAL",
+      "officialCount": 52,
+      "officialCountBasis": "global",
+      "note": "Abbreviation נ\"ע → НЭ (Pticha 13).",
+      "evidence": [
+        {
+          "form": "никвэй эйнаим",
+          "count": 52,
+          "tes": 27,
+          "intro": 0,
+          "pticha": 25,
+          "chosen": true
+        },
+        {
+          "form": "никвей эйнаим",
+          "count": 13,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 13,
+          "chosen": false
+        },
+        {
+          "form": "НЭ",
+          "count": 13,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 13,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ge",
+      "he": "גו\"ע / גלגלתא ועינים",
+      "en": "GE (Galgalta ve Einayim)",
+      "target": "ГЭ; полностью гальгальта ве-эйнаим",
+      "status": "OFFICIAL",
+      "officialCount": 29,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "ГЭ",
+          "count": 29,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 29,
+          "chosen": true
+        },
+        {
+          "form": "Г\"Э",
+          "count": 5,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "гальгальта ве-/и эйнаим",
+          "count": 6,
+          "tes": 6,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "ahap",
+      "he": "אח\"פ",
+      "en": "AHP",
+      "target": "АХАП",
+      "status": "OFFICIAL",
+      "officialCount": 84,
+      "officialCountBasis": "global",
+      "note": "Spelled out: «озэн, хотэм, пэ».",
+      "evidence": [
+        {
+          "form": "АХАП",
+          "count": 84,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 84,
+          "chosen": true
+        },
+        {
+          "form": "АХа\"П",
+          "count": 51,
+          "tes": 51,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ozen",
+      "he": "אזן",
+      "en": "Ozen",
+      "target": "озэн",
+      "status": "OFFICIAL",
+      "officialCount": 58,
+      "officialCountBasis": "global",
+      "note": "Gloss «озэн (досл. ухо)».",
+      "evidence": [
+        {
+          "form": "озэн",
+          "count": 58,
+          "tes": 55,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "озен",
+          "count": 2,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "hotem",
+      "he": "חוטם",
+      "en": "Hotem",
+      "target": "хотэм",
+      "status": "OFFICIAL",
+      "officialCount": 42,
+      "officialCountBasis": "global",
+      "note": "Gloss «хотэм (досл. нос)».",
+      "evidence": [
+        {
+          "form": "хотэм",
+          "count": 42,
+          "tes": 37,
+          "intro": 0,
+          "pticha": 5,
+          "chosen": true
+        },
+        {
+          "form": "хотем",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "mocha-stimaa",
+      "he": "מוחא סתימאה / מו\"ס",
+      "en": "Mocha Stimaa",
+      "target": "моха стимаа",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested as a name; the Pticha writes «моха» (мозг) for מוחא once. Lower case like the other head-parts; gloss once «моха стимаа (досл. скрытый мозг)». ח\"ס stays «скрытая хохма».",
+      "evidence": [
+        {
+          "form": "моха стимаа",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "моха",
+          "count": 1,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "dikna",
+      "he": "דיקנא",
+      "en": "Dikna",
+      "target": "дикна",
+      "status": "OFFICIAL",
+      "officialCount": 30,
+      "officialCountBasis": "global",
+      "note": "Part 6 only (30). «13 тикуним дикны». Gloss «дикна (досл. борода)».",
+      "evidence": [
+        {
+          "form": "дикн*",
+          "count": 30,
+          "tes": 30,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "бород*",
+          "count": 8,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "panim",
+      "he": "פנים",
+      "en": "Panim (face)",
+      "target": "паним",
+      "status": "OFFICIAL",
+      "officialCount": 106,
+      "officialCountBasis": "global",
+      "note": "«келим де-паним». As the Ari’s text itself («פנים» = the main text) BB writes «Паним» capitalised (Intro).",
+      "evidence": [
+        {
+          "form": "паним",
+          "count": 106,
+          "tes": 41,
+          "intro": 5,
+          "pticha": 60,
+          "chosen": true
+        },
+        {
+          "form": "лицев* сторон*",
+          "count": 5,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "achoraim",
+      "he": "אחורים",
+      "en": "posterior",
+      "target": "ахораим",
+      "status": "OFFICIAL",
+      "officialCount": 105,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED (unlike English “posterior”): «келим де-ахораим». Singular אחור → «ахор».",
+      "evidence": [
+        {
+          "form": "ахораим",
+          "count": 105,
+          "tes": 63,
+          "intro": 0,
+          "pticha": 42,
+          "chosen": true
+        },
+        {
+          "form": "обратн* сторон*",
+          "count": 20,
+          "tes": 12,
+          "intro": 7,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "achor",
+      "he": "אחור",
+      "en": "back",
+      "target": "ахор",
+      "status": "OFFICIAL",
+      "officialCount": 36,
+      "officialCountBasis": "global",
+      "note": "Positional states: אב\"א «ахор бе-ахор» (8), פב\"פ «паним бе-паним» (14), אב\"פ «ахор бе-паним», פב\"א «паним бе-ахор» (PROPOSED by analogy). Not «спина к спине» (2).",
+      "evidence": [
+        {
+          "form": "ахор",
+          "count": 36,
+          "tes": 11,
+          "intro": 0,
+          "pticha": 25,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "zachar",
+      "he": "זכר",
+      "en": "Zachar (male)",
+      "target": "захар",
+      "status": "OFFICIAL",
+      "officialCount": 59,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "захар*",
+          "count": 59,
+          "tes": 30,
+          "intro": 0,
+          "pticha": 29,
+          "chosen": true
+        },
+        {
+          "form": "мужск*",
+          "count": 9,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "nekeva",
+      "he": "נקבה",
+      "en": "Nekeva (female)",
+      "target": "нэкева",
+      "status": "OFFICIAL",
+      "officialCount": 26,
+      "officialCountBasis": "global",
+      "note": "Per-term majority (TES); the Pticha writes «некева». נקב (hole) → «нэкев».",
+      "evidence": [
+        {
+          "form": "нэкев[аыуеой]",
+          "count": 26,
+          "tes": 26,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "некев[аыуеой]",
+          "count": 24,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 24,
+          "chosen": false
+        },
+        {
+          "form": "женск*",
+          "count": 6,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "olam",
+      "he": "עולם",
+      "en": "world",
+      "target": "мир",
+      "status": "OFFICIAL",
+      "officialCount": 1107,
+      "officialCountBasis": "global",
+      "note": "«мир Ацилут» — the world name stays in the nominative after «мир»: «в мире Ацилут».",
+      "evidence": [
+        {
+          "form": "мир*",
+          "count": 1107,
+          "tes": 480,
+          "intro": 255,
+          "pticha": 372,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "atzilut",
+      "he": "אצילות",
+      "en": "Atzilut",
+      "target": "Ацилут",
+      "status": "OFFICIAL",
+      "officialCount": 509,
+      "officialCountBasis": "global",
+      "note": "Capitalised. The PROCESS sense (סדר אצילות העולמות) is not the world: «образование/эманация миров» — read the sentence.",
+      "evidence": [
+        {
+          "form": "Ацилут",
+          "count": 509,
+          "tes": 278,
+          "intro": 26,
+          "pticha": 205,
+          "chosen": true
+        },
+        {
+          "form": "Атцилут/Ацилус",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "beria",
+      "he": "בריאה",
+      "en": "Beria",
+      "target": "Брия",
+      "status": "OFFICIAL",
+      "officialCount": 208,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "Брия/Брии",
+          "count": 208,
+          "tes": 150,
+          "intro": 13,
+          "pticha": 45,
+          "chosen": true
+        },
+        {
+          "form": "Берия/Брийа",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "yetzira",
+      "he": "יצירה",
+      "en": "Yetzira",
+      "target": "Ецира",
+      "status": "OFFICIAL",
+      "officialCount": 135,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "Ецира",
+          "count": 135,
+          "tes": 69,
+          "intro": 16,
+          "pticha": 50,
+          "chosen": true
+        },
+        {
+          "form": "Йецира",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "assiya",
+      "he": "עשיה",
+      "en": "Assiya",
+      "target": "Асия",
+      "status": "OFFICIAL",
+      "officialCount": 120,
+      "officialCountBasis": "global",
+      "note": "One «с».",
+      "evidence": [
+        {
+          "form": "Асия/Асии",
+          "count": 120,
+          "tes": 65,
+          "intro": 12,
+          "pticha": 43,
+          "chosen": true
+        },
+        {
+          "form": "Ассия",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "abya",
+      "he": "אבי\"ע",
+      "en": "ABYA",
+      "target": "АБЕА",
+      "status": "OFFICIAL",
+      "officialCount": 41,
+      "officialCountBasis": "global",
+      "note": "«миры АБЕА».",
+      "evidence": [
+        {
+          "form": "АБЕА",
+          "count": 41,
+          "tes": 0,
+          "intro": 8,
+          "pticha": 33,
+          "chosen": true
+        },
+        {
+          "form": "АБЕ\"А",
+          "count": 13,
+          "tes": 13,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "bya",
+      "he": "בי\"ע",
+      "en": "BYA",
+      "target": "БЕА",
+      "status": "OFFICIAL",
+      "officialCount": 73,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "БЕА",
+          "count": 73,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 73,
+          "chosen": true
+        },
+        {
+          "form": "БЕ\"А",
+          "count": 18,
+          "tes": 18,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "nekudim",
+      "he": "נקודים",
+      "en": "Nekudim",
+      "target": "Некудим",
+      "status": "OFFICIAL",
+      "officialCount": 248,
+      "officialCountBasis": "global",
+      "note": "«мир Некудим», «де-Некудим».",
+      "evidence": [
+        {
+          "form": "Некудим",
+          "count": 248,
+          "tes": 75,
+          "intro": 0,
+          "pticha": 173,
+          "chosen": true
+        },
+        {
+          "form": "некудим (lower)",
+          "count": 7,
+          "tes": 7,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Нэкудим",
+          "count": 8,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "akudim",
+      "he": "עקודים",
+      "en": "Akudim",
+      "target": "Акудим",
+      "status": "OFFICIAL",
+      "officialCount": 18,
+      "officialCountBasis": "global",
+      "note": "Per-term the lower case wins (40 : 18, part 4 «сфирот акудим»), but it is a world name and the world class is capitalised 758 : 2 — capitalise, like «Некудим».",
+      "evidence": [
+        {
+          "form": "Акудим",
+          "count": 18,
+          "tes": 17,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "акудим (lower)",
+          "count": 40,
+          "tes": 40,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tikkun-world",
+      "he": "עולם התיקון",
+      "en": "the world of correction",
+      "target": "мир Исправления",
+      "status": "OFFICIAL",
+      "officialCount": 11,
+      "officialCountBasis": "global",
+      "note": "Pticha: «мир Исправления».",
+      "evidence": [
+        {
+          "form": "мир* Исправления",
+          "count": 11,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 9,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "nrnhy",
+      "he": "נרנח\"י (נפש/רוח/נשמה/חיה/יחידה)",
+      "en": "Nefesh, Ruach, Neshama, Haya, Yechida",
+      "target": "НАРАНХАЙ; по отдельности: нэфеш, руах, нешама, хая, ехида",
+      "status": "OFFICIAL",
+      "officialCount": 3,
+      "officialCountBasis": "global",
+      "note": "נר\"ן → НАРАН (21). Individual lights lower case.",
+      "evidence": [
+        {
+          "form": "НАРАНХАЙ",
+          "count": 3,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 3,
+          "chosen": true
+        },
+        {
+          "form": "НАРАН",
+          "count": 21,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 21,
+          "chosen": false
+        },
+        {
+          "form": "НаРа\"Н",
+          "count": 9,
+          "tes": 9,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "nefesh",
+      "he": "נפש",
+      "en": "Nefesh",
+      "target": "нэфеш",
+      "status": "OFFICIAL",
+      "officialCount": 139,
+      "officialCountBasis": "global",
+      "note": "Per-term majority; see Traps (mixed е/э within one list is what BB prints).",
+      "evidence": [
+        {
+          "form": "нэфеш",
+          "count": 139,
+          "tes": 139,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "нефеш",
+          "count": 22,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 22,
+          "chosen": false
+        },
+        {
+          "form": "нэфэш",
+          "count": 4,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "ruach",
+      "he": "רוח",
+      "en": "Ruach",
+      "target": "руах",
+      "status": "OFFICIAL",
+      "officialCount": 122,
+      "officialCountBasis": "paired",
+      "note": "«дух» only for רוח as plain spirit/wind.",
+      "evidence": [
+        {
+          "form": "руах",
+          "count": 125,
+          "tes": 104,
+          "intro": 0,
+          "pticha": 21,
+          "chosen": true,
+          "paired": {
+            "units": 59,
+            "tokens": 122,
+            "unitsWith": 46
+          }
+        },
+        {
+          "form": "дух (noun)",
+          "count": 23,
+          "tes": 1,
+          "intro": 22,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 59,
+            "tokens": 22,
+            "unitsWith": 4
+          }
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "neshama",
+      "he": "נשמה",
+      "en": "Neshama",
+      "target": "нешама",
+      "status": "OFFICIAL",
+      "officialCount": 94,
+      "officialCountBasis": "global",
+      "note": "94 : 86. As the plain word “soul” (Intro) → «душа».",
+      "evidence": [
+        {
+          "form": "нешама",
+          "count": 94,
+          "tes": 33,
+          "intro": 0,
+          "pticha": 61,
+          "chosen": true
+        },
+        {
+          "form": "нэшама",
+          "count": 86,
+          "tes": 86,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "haya",
+      "he": "חיה",
+      "en": "Haya",
+      "target": "хая",
+      "status": "OFFICIAL",
+      "officialCount": 92,
+      "officialCountBasis": "global",
+      "note": "«свет хая».",
+      "evidence": [
+        {
+          "form": "хая/хаи",
+          "count": 92,
+          "tes": 50,
+          "intro": 0,
+          "pticha": 42,
+          "chosen": true
+        },
+        {
+          "form": "хайя",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "yechida",
+      "he": "יחידה",
+      "en": "Yechida",
+      "target": "ехида",
+      "status": "OFFICIAL",
+      "officialCount": 96,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "ехид*",
+          "count": 96,
+          "tes": 52,
+          "intro": 0,
+          "pticha": 44,
+          "chosen": true
+        },
+        {
+          "form": "йехида",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "mochin",
+      "he": "מוחין",
+      "en": "Mochin",
+      "target": "мохин",
+      "status": "OFFICIAL",
+      "officialCount": 117,
+      "officialCountBasis": "global",
+      "note": "Lower case, plural sense: «эти мохин».",
+      "evidence": [
+        {
+          "form": "мохин",
+          "count": 117,
+          "tes": 17,
+          "intro": 0,
+          "pticha": 100,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "katnut",
+      "he": "קטנות",
+      "en": "Katnut",
+      "target": "катнут («состояние катнут»)",
+      "status": "OFFICIAL",
+      "officialCount": 28,
+      "officialCountBasis": "global",
+      "note": "BB adds «состояние» (13 of 24 paired units): «в состоянии катнут». Gloss once «катнут (малое состояние)».",
+      "evidence": [
+        {
+          "form": "катнут",
+          "count": 28,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 24,
+          "chosen": true
+        },
+        {
+          "form": "мал* состояни*",
+          "count": 9,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 5,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "gadlut",
+      "he": "גדלות",
+      "en": "Gadlut",
+      "target": "гадлут («состояние гадлут»)",
+      "status": "OFFICIAL",
+      "officialCount": 42,
+      "officialCountBasis": "global",
+      "note": "«мохин де-гадлут».",
+      "evidence": [
+        {
+          "form": "гадлут",
+          "count": 42,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 38,
+          "chosen": true
+        },
+        {
+          "form": "больш* состояни*",
+          "count": 15,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 10,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ibur",
+      "he": "עיבור",
+      "en": "Ibur",
+      "target": "ибур",
+      "status": "OFFICIAL",
+      "officialCount": 18,
+      "officialCountBasis": "global",
+      "note": "Gloss once «ибур (досл. зародыш)» (TES p3).",
+      "evidence": [
+        {
+          "form": "ибур",
+          "count": 18,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 14,
+          "chosen": true
+        },
+        {
+          "form": "зародыш*/беременност*",
+          "count": 2,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "yenika",
+      "he": "יניקה",
+      "en": "Yenika (nursing)",
+      "target": "еника",
+      "status": "OFFICIAL",
+      "officialCount": 10,
+      "officialCountBasis": "global",
+      "note": "Gloss once «еника (досл. вскармливание)». Where the shells “suck” (יניקת הקליפות) → «вскармливание/питание» by sense.",
+      "evidence": [
+        {
+          "form": "еника",
+          "count": 10,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 9,
+          "chosen": true
+        },
+        {
+          "form": "вскармливани*",
+          "count": 2,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "man",
+      "he": "מ\"ן",
+      "en": "MAN",
+      "target": "МАН",
+      "status": "OFFICIAL",
+      "officialCount": 57,
+      "officialCountBasis": "global",
+      "note": "«подъем МАН» (Pticha «алият МАН»). Gloss once «МАН (мэй нуквин)».",
+      "evidence": [
+        {
+          "form": "МАН",
+          "count": 57,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 57,
+          "chosen": true
+        },
+        {
+          "form": "МА\"Н",
+          "count": 24,
+          "tes": 24,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "mad",
+      "he": "מ\"ד",
+      "en": "MAD",
+      "target": "МАД",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested; formed exactly like МАН. Gloss once «МАД (мэй дхурин)».",
+      "evidence": [
+        {
+          "form": "МАД",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "taamim",
+      "he": "טעמים",
+      "en": "tastes",
+      "target": "таамим",
+      "status": "OFFICIAL",
+      "officialCount": 75,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED (unlike English “tastes”). טנת\"א → «таамим, некудот, тагин, отиёт».",
+      "evidence": [
+        {
+          "form": "таамим",
+          "count": 75,
+          "tes": 52,
+          "intro": 1,
+          "pticha": 22,
+          "chosen": true
+        },
+        {
+          "form": "вкус*",
+          "count": 27,
+          "tes": 1,
+          "intro": 25,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "nekudot",
+      "he": "נקודות",
+      "en": "Nekudot",
+      "target": "некудот",
+      "status": "OFFICIAL",
+      "officialCount": 97,
+      "officialCountBasis": "global",
+      "note": "«некудот де-САГ». The Hebrew vowel points as such («точки») only when the Hebrew means punctuation marks.",
+      "evidence": [
+        {
+          "form": "некудот",
+          "count": 97,
+          "tes": 44,
+          "intro": 0,
+          "pticha": 53,
+          "chosen": true
+        },
+        {
+          "form": "нэкудот",
+          "count": 36,
+          "tes": 36,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "точки",
+          "count": 41,
+          "tes": 23,
+          "intro": 4,
+          "pticha": 14,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "tagin",
+      "he": "תגין",
+      "en": "Tagin",
+      "target": "тагин",
+      "status": "OFFICIAL",
+      "officialCount": 23,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "тагин",
+          "count": 23,
+          "tes": 14,
+          "intro": 0,
+          "pticha": 9,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "otiot",
+      "he": "אותיות",
+      "en": "letters",
+      "target": "буквы; «отиёт» — только в четвёрке таамим-некудот-тагин-отиёт",
+      "status": "OFFICIAL",
+      "officialCount": 107,
+      "officialCountBasis": "paired",
+      "note": "Sense split: the transliteration is used for the fourth member of טנת\"א (in units with that foursome: отиёт 6, буквы 1).",
+      "evidence": [
+        {
+          "form": "букв*",
+          "count": 102,
+          "tes": 68,
+          "intro": 11,
+          "pticha": 23,
+          "chosen": true,
+          "paired": {
+            "units": 43,
+            "tokens": 80,
+            "unitsWith": 38
+          }
+        },
+        {
+          "form": "отиёт",
+          "count": 28,
+          "tes": 13,
+          "intro": 0,
+          "pticha": 15,
+          "chosen": true,
+          "paired": {
+            "units": 43,
+            "tokens": 27,
+            "unitsWith": 15
+          }
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "havayah",
+      "he": "הויה",
+      "en": "HaVaYaH",
+      "target": "АВАЯ",
+      "status": "OFFICIAL",
+      "officialCount": 11,
+      "officialCountBasis": "global",
+      "note": "«имя АВАЯ». Letter names: юд, хэй, вав, хэй.",
+      "evidence": [
+        {
+          "form": "АВАЯ",
+          "count": 11,
+          "tes": 2,
+          "intro": 1,
+          "pticha": 8,
+          "chosen": true
+        },
+        {
+          "form": "АВА\"Я",
+          "count": 37,
+          "tes": 37,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "letter-yod",
+      "he": "יוד / י'",
+      "en": "Yod",
+      "target": "юд",
+      "status": "OFFICIAL",
+      "officialCount": 38,
+      "officialCountBasis": "global",
+      "note": "38 : 14.",
+      "evidence": [
+        {
+          "form": "юд",
+          "count": 38,
+          "tes": 38,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "йуд",
+          "count": 14,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 13,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "letter-hey",
+      "he": "הא / ה'",
+      "en": "Hey",
+      "target": "хэй",
+      "status": "OFFICIAL",
+      "officialCount": 96,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "хэй",
+          "count": 96,
+          "tes": 54,
+          "intro": 0,
+          "pticha": 42,
+          "chosen": true
+        },
+        {
+          "form": "хей",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "letter-vav",
+      "he": "וו / ו'",
+      "en": "Vav",
+      "target": "вав",
+      "status": "OFFICIAL",
+      "officialCount": 43,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "вав",
+          "count": 43,
+          "tes": 27,
+          "intro": 0,
+          "pticha": 16,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "klipot",
+      "he": "קליפות",
+      "en": "shells",
+      "target": "клипот (ед. клипа)",
+      "status": "OFFICIAL",
+      "officialCount": 22,
+      "officialCountBasis": "global",
+      "note": "TRANSLITERATED (unlike English “shells”), one «п».",
+      "evidence": [
+        {
+          "form": "клип*",
+          "count": 22,
+          "tes": 11,
+          "intro": 2,
+          "pticha": 9,
+          "chosen": true
+        },
+        {
+          "form": "скорлуп*/оболочк*",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "клиппот",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "melachim",
+      "he": "מלך / מלכים",
+      "en": "king / kings",
+      "target": "мелех (мн. мелахим)",
+      "status": "OFFICIAL",
+      "officialCount": 23,
+      "officialCountBasis": "global",
+      "note": "One lexeme, counted together: ме- 23 (Pticha: «четвертый мелех де-Некудим», «семь мелахим») vs мэ- 20 (TES p4/p6 plural) vs «малахим» 7 (p6; the same spelling is “angels” מלאכים in p3 — avoid it for kings).",
+      "evidence": [
+        {
+          "form": "мелех*/мелахим",
+          "count": 23,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 23,
+          "chosen": true
+        },
+        {
+          "form": "мэлахим",
+          "count": 20,
+          "tes": 20,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "малахим (TES p6; also “angels”)",
+          "count": 8,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "цар*",
+          "count": 12,
+          "tes": 2,
+          "intro": 9,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "nitzotzin",
+      "he": "ניצוצין / ניצוצות",
+      "en": "sparks",
+      "target": "ницуцин (искры)",
+      "status": "OFFICIAL",
+      "officialCount": 61,
+      "officialCountBasis": "global",
+      "note": "«ницуцин – искры» (TES p4).",
+      "evidence": [
+        {
+          "form": "ницуц*",
+          "count": 61,
+          "tes": 61,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "искр*",
+          "count": 30,
+          "tes": 26,
+          "intro": 0,
+          "pticha": 4,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "histaklut-pnimit",
+      "he": "הסתכלות פנימית / הסת\"פ",
+      "en": "Inner Observation",
+      "target": "Внутреннее созерцание (в ссылках: Внутр. соз.)",
+      "status": "OFFICIAL",
+      "officialCount": 29,
+      "officialCountBasis": "global",
+      "note": "Capital В only; in running text in guillemets «Внутреннее созерцание». Inside parenthetical citations TES abbreviates «Внутр. соз.» — use it there only.",
+      "evidence": [
+        {
+          "form": "Внутренне* созерцани*",
+          "count": 8,
+          "tes": 5,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Внутр. соз.",
+          "count": 21,
+          "tes": 21,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Истаклут пнимит",
+          "count": 2,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ohr-pnimi-layer",
+      "he": "אור פנימי / או\"פ (כשם הפירוש)",
+      "en": "Inner Light (commentary)",
+      "target": "Ор пними",
+      "status": "OFFICIAL",
+      "officialCount": 52,
+      "officialCountBasis": "global",
+      "note": "Lower-case «п» (TES 51; the Intro’s «Ор Пними» 3). Unquoted inside citations («см. Ор пними, ч.1, гл.1, п.50»), «Ор пними» in guillemets in prose.",
+      "evidence": [
+        {
+          "form": "Ор пними",
+          "count": 52,
+          "tes": 51,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "Ор Пними",
+          "count": 3,
+          "tes": 0,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "ор пними (lower)",
+          "count": 4,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false
+        },
+        {
+          "form": "Внутренний свет (as title)",
+          "count": 2,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "questions-terminology",
+      "he": "לוח השאלות לפירוש המלות",
+      "en": "Table of Questions on the Meaning of Words",
+      "target": "Вопросы о смысле слов",
+      "status": "OFFICIAL",
+      "officialCount": 4,
+      "officialCountBasis": "global",
+      "note": "TES p2 uses «вопросы о смысле слов (и действий)» as a table name (4; there it even cites לה\"ת with it). When the prose speaks of the tables as objects («test yourself in the Table of Questions», Intro §156) BB writes «Таблица вопросов» / «Таблица ответов».",
+      "evidence": [
+        {
+          "form": "Вопрос* о смысле слов",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Таблиц* вопросов",
+          "count": 4,
+          "tes": 1,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "answers-terminology",
+      "he": "לוח התשובות לפירוש המלות",
+      "en": "Table of Answers on the Meaning of Words",
+      "target": "Ответы о смысле слов",
+      "status": "OFFICIAL",
+      "officialCount": 7,
+      "officialCountBasis": "global",
+      "note": "TES p3/p4.",
+      "evidence": [
+        {
+          "form": "Ответ* о смысле (слов)",
+          "count": 7,
+          "tes": 7,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Таблиц* ответов",
+          "count": 2,
+          "tes": 0,
+          "intro": 2,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "tables-generic",
+      "he": "לוח השאלות / לוח התשובות / לה\"ת (in citations, table not specified)",
+      "en": "Table of Questions / Answers",
+      "target": "Вопросы / Ответы о смысле слов и действий",
+      "status": "OFFICIAL",
+      "officialCount": 6,
+      "officialCountBasis": "global",
+      "note": "BB TES verbatim: «(см. Ответы о смысле слов и действий, ч.2, п.43)» for (עי' לה\"ת ח\"ב אות מ\"ג). BB numbers the two tables of a part continuously (p2 cites item 102 of part 1), hence one name for both.",
+      "evidence": [
+        {
+          "form": "…о смысле слов и действий",
+          "count": 6,
+          "tes": 6,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "«Ответы» alone",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "questions-topics",
+      "he": "לוח השאלות לעניינים",
+      "en": "Table of Questions on Topics",
+      "target": "Вопросы о смысле действий",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "No separate official title. BB’s joint name «…о смысле слов и действий» (6) splits into «о смысле слов» (attested) + «о смысле действий». Alternative from Intro §156 («на все слова и на все явления»): «Вопросы о явлениях».",
+      "evidence": [
+        {
+          "form": "о смысле действий",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "…слов и действий (joint name)",
+          "count": 6,
+          "tes": 6,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "на все явления (Intro)",
+          "count": 1,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "answers-topics",
+      "he": "לוח התשובות לעניינים",
+      "en": "Table of Answers on Topics",
+      "target": "Ответы о смысле действий",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Pairs with «Вопросы о смысле действий».",
+      "evidence": [
+        {
+          "form": "о смысле действий",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "tes-title",
+      "he": "תלמוד עשר הספירות / תע\"ס",
+      "en": "Talmud Eser Sefirot (The Study of the Ten Sefirot)",
+      "target": "Учение десяти сфирот (ТЭС)",
+      "status": "OFFICIAL",
+      "officialCount": 4,
+      "officialCountBasis": "global",
+      "note": "Lower-case «десяти сфирот» (Pticha 2, Intro 1 vs «Десяти Сфирот» 1).",
+      "evidence": [
+        {
+          "form": "Учени* десяти сфирот",
+          "count": 4,
+          "tes": 0,
+          "intro": 2,
+          "pticha": 2,
+          "chosen": true
+        },
+        {
+          "form": "ТЭС",
+          "count": 2,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": false
+        },
+        {
+          "form": "Талмуд Эсер Сфирот",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "panim-text",
+      "he": "פנים (דברי האריז\"ל)",
+      "en": "the Panim (the Ari’s text)",
+      "target": "Паним",
+      "status": "OFFICIAL",
+      "officialCount": 11,
+      "officialCountBasis": "global",
+      "note": "Intro §156: «Сначала изучи «Паним», то есть слова Ари».",
+      "evidence": [
+        {
+          "form": "Паним (capital)",
+          "count": 11,
+          "tes": 5,
+          "intro": 5,
+          "pticha": 1,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "harav",
+      "he": "הרב",
+      "en": "the ARI",
+      "target": "Ари",
+      "status": "OFFICIAL",
+      "officialCount": 168,
+      "officialCountBasis": "global",
+      "note": "הרב in TES is the Ari. «пишет Ари» (30 units). The site UI says «Текст АРИ» — that is UI copy, not BB usage (5).",
+      "evidence": [
+        {
+          "form": "Ари",
+          "count": 168,
+          "tes": 160,
+          "intro": 8,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "АРИ",
+          "count": 5,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        },
+        {
+          "form": "Рав (the Rav)",
+          "count": 5,
+          "tes": 0,
+          "intro": 5,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": true
+    },
+    {
+      "id": "ari",
+      "he": "האר\"י ז\"ל / האריז\"ל",
+      "en": "the ARI",
+      "target": "Ари",
+      "status": "OFFICIAL",
+      "officialCount": 168,
+      "officialCountBasis": "global",
+      "note": "Honorific ז\"ל dropped. Intro once «великого Ари» for האריז\"ל in a eulogy — not a formula.",
+      "evidence": [
+        {
+          "form": "Ари",
+          "count": 168,
+          "tes": 160,
+          "intro": 8,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "великий Ари",
+          "count": 1,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "Аризаль",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "baal-hasulam",
+      "he": "בעל הסולם",
+      "en": "Baal HaSulam",
+      "target": "Бааль Сулам",
+      "status": "OFFICIAL",
+      "officialCount": 3,
+      "officialCountBasis": "global",
+      "note": "No article (3 : 0).",
+      "evidence": [
+        {
+          "form": "Бааль Сулам",
+          "count": 3,
+          "tes": 1,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "Бааль а-Сулам",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "rashbi",
+      "he": "רשב\"י / רבי שמעון בר יוחאי",
+      "en": "Rabbi Shimon Bar Yochai",
+      "target": "рабби Шимон бар Йохай (РАШБИ)",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Full name unattested. BB writes the title lower case «рабби» + name («рабби Эльазар, сын рабби Шимона», 13). «бар Йохай», acronym РАШБИ by the acronym convention.",
+      "evidence": [
+        {
+          "form": "рабби Шимон",
+          "count": 13,
+          "tes": 0,
+          "intro": 13,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "бар Йохай",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "etz-chaim",
+      "he": "עץ חיים / ע\"ח",
+      "en": "Etz Chaim",
+      "target": "«Древо жизни»",
+      "status": "OFFICIAL",
+      "officialCount": 12,
+      "officialCountBasis": "global",
+      "note": "Book title in guillemets, lower-case «жизни» (Intro 8, TES 3). ע\"ח שער N פ\"M → «Древо жизни», шаар N, гл.M (TES p6 «шаар 5, гл.1», 3; «врата» 1). «Эц хаим» (TES 8) is the minority.",
+      "evidence": [
+        {
+          "form": "Древо жизни/Жизни",
+          "count": 12,
+          "tes": 3,
+          "intro": 9,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Эц хаим/Хаим",
+          "count": 8,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "zohar",
+      "he": "הזוהר / זוהר / זה\"ק",
+      "en": "the Zohar",
+      "target": "книга Зоар",
+      "status": "OFFICIAL",
+      "officialCount": 22,
+      "officialCountBasis": "global",
+      "note": "Never «Зохар» (0).",
+      "evidence": [
+        {
+          "form": "Зоар",
+          "count": 22,
+          "tes": 7,
+          "intro": 14,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "Зохар/Зогар",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "tikkunim",
+      "he": "התיקונים / תיקוני הזוהר",
+      "en": "Tikkunim (Tikkunei Zohar)",
+      "target": "«Тикуним»; полностью «Тикуней Зоар»",
+      "status": "OFFICIAL",
+      "officialCount": 8,
+      "officialCountBasis": "global",
+      "note": "TES: «В книгах «Зоар» и «Тикуним»» (p4) for התיקונים; the Intro writes «Тикуней Зоар» (5) where the Hebrew is תיקוני זוהר.",
+      "evidence": [
+        {
+          "form": "Тикуним (book)",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Тикуней Зоар",
+          "count": 5,
+          "tes": 0,
+          "intro": 5,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "mevo-shearim",
+      "he": "מבוא שערים",
+      "en": "Mevo She'arim",
+      "target": "«Мево шеарим»",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested. Titles of the Ari’s commentaries are transliterated by BB («Паним меирот», «Паним масбирот»); lower-case second word as in «Древо жизни».",
+      "evidence": [
+        {
+          "form": "Мево шеарим",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "shaar-hakavanot",
+      "he": "שער הכוונות",
+      "en": "Sha'ar HaKavanot",
+      "target": "«Шаар а-каванот»",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Unattested. Article ה → «а-» as BB does («мидат а-рахамим», «Эц а-хаим»). NB the Intro translates שער ההקדמות «Врата предисловий» — keep a translated title only where BB has one.",
+      "evidence": [
+        {
+          "form": "Шаар а-каванот",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "rav-chaim-vital",
+      "he": "הרח\"ו / רבי חיים ויטאל",
+      "en": "Rav Chaim Vital",
+      "target": "рав Хаим Виталь",
+      "status": "OFFICIAL",
+      "officialCount": 7,
+      "officialCountBasis": "global",
+      "note": "Intro (6).",
+      "evidence": [
+        {
+          "form": "Хаим Виталь",
+          "count": 7,
+          "tes": 0,
+          "intro": 7,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "panim-masbirot",
+      "he": "פנים מסבירות / פנים מאירות",
+      "en": "Panim Masbirot / Panim Meirot",
+      "target": "«Паним масбирот» / «Паним меирот»",
+      "status": "OFFICIAL",
+      "officialCount": 4,
+      "officialCountBasis": "global",
+      "note": "Lower-case second word (TES 2, Intro 1, Pticha 1).",
+      "evidence": [
+        {
+          "form": "Паним масбирот",
+          "count": 4,
+          "tes": 2,
+          "intro": 1,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "Паним меирот",
+          "count": 2,
+          "tes": 0,
+          "intro": 2,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "creator-honorific",
+      "he": "ית' / יתברך",
+      "en": "(dropped)",
+      "target": "— (опускается или «Творец»)",
+      "status": "OFFICIAL",
+      "officialCount": 71,
+      "officialCountBasis": "omission",
+      "note": "Not rendered as a word: 0 «благословен» in the 71 units whose Hebrew has ית'. «עצמותו ית'» → «сущность Творца».",
+      "evidence": [
+        {
+          "form": "благословен*",
+          "count": 7,
+          "tes": 1,
+          "intro": 6,
+          "pticha": 0,
+          "chosen": true,
+          "paired": {
+            "units": 71,
+            "tokens": 0,
+            "unitsWith": 0
+          }
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "chas-veshalom",
+      "he": "ח\"ו",
+      "en": "God forbid",
+      "target": "страшно подумать (или опускается)",
+      "status": "OFFICIAL",
+      "officialCount": 1,
+      "officialCountBasis": "global",
+      "note": "Intro §156: ח\"ו → «страшно подумать». In technical TES prose BB usually drops it.",
+      "evidence": [
+        {
+          "form": "страшно подумать",
+          "count": 1,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "упаси/не дай Бог",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-dh",
+      "he": "ד\"ה",
+      "en": "the passage beginning",
+      "target": "со слов «…» (одно слово: со слова «…»)",
+      "status": "OFFICIAL",
+      "officialCount": 35,
+      "officialCountBasis": "global",
+      "note": "TES: «(см. Ор пними, ч.1, гл.1, п.50, со слов «теперь»)». Catch-word in guillemets, lower case.",
+      "evidence": [
+        {
+          "form": "со слов(а) «",
+          "count": 35,
+          "tes": 35,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "начиная со слов",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "в отрывке / подзаголовок",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-ush-h",
+      "he": "עש\"ה",
+      "en": "study it there well",
+      "target": "посмотри там как следует",
+      "status": "OFFICIAL",
+      "officialCount": 13,
+      "officialCountBasis": "global",
+      "note": "13 : 1 : 1. Not «исследуй».",
+      "evidence": [
+        {
+          "form": "посмотри там как следует",
+          "count": 13,
+          "tes": 8,
+          "intro": 0,
+          "pticha": 5,
+          "chosen": true
+        },
+        {
+          "form": "изучи там как следует",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "см. там как следует",
+          "count": 1,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-ush",
+      "he": "ע\"ש",
+      "en": "see there",
+      "target": "посмотри там",
+      "status": "OFFICIAL",
+      "officialCount": 39,
+      "officialCountBasis": "global",
+      "note": "39 : 14 (the TES «см. там» is the minority). NB ע\"ש can also be על שם «по имени» — read it.",
+      "evidence": [
+        {
+          "form": "посмотри там",
+          "count": 39,
+          "tes": 10,
+          "intro": 0,
+          "pticha": 29,
+          "chosen": true
+        },
+        {
+          "form": "см. там",
+          "count": 14,
+          "tes": 14,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-ekhl",
+      "he": "עכ\"ל",
+      "en": "End of quote",
+      "target": "— (не переводится: цитату закрывает »)",
+      "status": "OFFICIAL",
+      "officialCount": 12,
+      "officialCountBasis": "omission",
+      "note": "BB renders none of the 12 paired עכ\"ל with words; the closing guillemet ends the quotation. Do not add «конец цитаты» (0).",
+      "evidence": [
+        {
+          "form": "(omitted) — units with עכ\"ל",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true,
+          "paired": {
+            "units": 12,
+            "tokens": 0,
+            "unitsWith": 0
+          }
+        },
+        {
+          "form": "конец цитаты",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 12,
+            "tokens": 0,
+            "unitsWith": 0
+          }
+        },
+        {
+          "form": "до сих пор его слова",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false,
+          "paired": {
+            "units": 12,
+            "tokens": 0,
+            "unitsWith": 0
+          }
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-vzl",
+      "he": "וז\"ל",
+      "en": "and these are his words",
+      "target": "и вот его слова:",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "BB has no fixed form (Intro: «Вот оно:» 1, «Краткий перевод:» 1, dropped 2 of 4). Proposed literal, then open «…».",
+      "evidence": [
+        {
+          "form": "и вот его слова",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "Вот оно",
+          "count": 1,
+          "tes": 0,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "его слова",
+          "count": 4,
+          "tes": 1,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-akhmal",
+      "he": "אכמ\"ל",
+      "en": "this is not the place to elaborate",
+      "target": "и здесь нечего добавить",
+      "status": "OFFICIAL",
+      "officialCount": 3,
+      "officialCountBasis": "global",
+      "note": "3 of 4 paired אכמ\"ל (TES p3).",
+      "evidence": [
+        {
+          "form": "нечего добавить",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "здесь не место",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-daf",
+      "he": "דף N",
+      "en": "page N",
+      "target": "стр. N",
+      "status": "OFFICIAL",
+      "officialCount": 17,
+      "officialCountBasis": "global",
+      "note": "TES page numerals → Arabic: «стр.297» (thousands per the English round-8 table). A Talmud/Zohar leaf with a side is cited as BB’s Intro does: «Таанит, 7, стр.1» for ז' ע\"א (7 cases). BB’s own TES converts page refs to its edition’s items; the AI must keep the page.",
+      "evidence": [
+        {
+          "form": "стр.",
+          "count": 17,
+          "tes": 3,
+          "intro": 14,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "лист",
+          "count": 3,
+          "tes": 1,
+          "intro": 2,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "страниц*",
+          "count": 3,
+          "tes": 0,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-ot",
+      "he": "אות N",
+      "en": "item N",
+      "target": "п. N",
+      "status": "OFFICIAL",
+      "officialCount": 264,
+      "officialCountBasis": "global",
+      "note": "Abbreviated «п.» + Arabic numeral (264). Several items «пп.157–158». אות as “letter” («буква хэй») is NOT a citation.",
+      "evidence": [
+        {
+          "form": "п.N",
+          "count": 264,
+          "tes": 129,
+          "intro": 4,
+          "pticha": 131,
+          "chosen": true
+        },
+        {
+          "form": "пп.",
+          "count": 3,
+          "tes": 1,
+          "intro": 0,
+          "pticha": 2,
+          "chosen": false
+        },
+        {
+          "form": "пункт N",
+          "count": 4,
+          "tes": 4,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-teshuva",
+      "he": "תשובה N",
+      "en": "answer N",
+      "target": "ответ N",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "TES p4 drops these refs; when the Hebrew cites a table item with אות, BB writes «(см. Ответы о смысле слов и действий, ч.2, п.43)». For תשובה N write «ответ N» (literal; same number style).",
+      "evidence": [
+        {
+          "form": "ответ N",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-helek",
+      "he": "חלק N / ח\"N",
+      "en": "Part N",
+      "target": "ч. N",
+      "status": "OFFICIAL",
+      "officialCount": 79,
+      "officialCountBasis": "global",
+      "note": "Inside citations «ч.2»; in titles and prose «часть вторая / во 2-й части».",
+      "evidence": [
+        {
+          "form": "ч.N",
+          "count": 79,
+          "tes": 75,
+          "intro": 3,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "часть N",
+          "count": 7,
+          "tes": 6,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-perek",
+      "he": "פרק N / פ\"N",
+      "en": "Chapter N",
+      "target": "гл. N",
+      "status": "OFFICIAL",
+      "officialCount": 76,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "гл.N",
+          "count": 76,
+          "tes": 76,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "глава N",
+          "count": 5,
+          "tes": 5,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-see",
+      "he": "עי' / עיין",
+      "en": "see",
+      "target": "см.",
+      "status": "OFFICIAL",
+      "officialCount": 88,
+      "officialCountBasis": "global",
+      "note": "«(см. Ор пними, ч.1, гл.1, п.50)».",
+      "evidence": [
+        {
+          "form": "см.",
+          "count": 88,
+          "tes": 80,
+          "intro": 0,
+          "pticha": 8,
+          "chosen": true
+        },
+        {
+          "form": "смотри",
+          "count": 4,
+          "tes": 1,
+          "intro": 3,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-knl",
+      "he": "כנ\"ל",
+      "en": "as mentioned above",
+      "target": "как сказано выше",
+      "status": "OFFICIAL",
+      "officialCount": 116,
+      "officialCountBasis": "global",
+      "note": "With a reference: «как сказано выше, в п.55».",
+      "evidence": [
+        {
+          "form": "как сказано выше",
+          "count": 116,
+          "tes": 38,
+          "intro": 5,
+          "pticha": 73,
+          "chosen": true
+        },
+        {
+          "form": "как было сказано",
+          "count": 55,
+          "tes": 7,
+          "intro": 0,
+          "pticha": 48,
+          "chosen": false
+        },
+        {
+          "form": "вышеупомянут*",
+          "count": 18,
+          "tes": 3,
+          "intro": 4,
+          "pticha": 11,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-leil",
+      "he": "לעיל",
+      "en": "above",
+      "target": "выше",
+      "status": "OFFICIAL",
+      "officialCount": 496,
+      "officialCountBasis": "global",
+      "note": "",
+      "evidence": [
+        {
+          "form": "выше",
+          "count": 496,
+          "tes": 269,
+          "intro": 21,
+          "pticha": 206,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-adjacent",
+      "he": "בדיבור הסמוך",
+      "en": "in the adjacent item",
+      "target": "в предыдущем пункте",
+      "status": "OFFICIAL",
+      "officialCount": 3,
+      "officialCountBasis": "global",
+      "note": "BB flattens most of these to «выше» (22 of 35 paired units); the explicit form, where BB keeps it, is «в предыдущем пункте / см. предыдущий пункт» (3).",
+      "evidence": [
+        {
+          "form": "предыдущ* пункт*",
+          "count": 3,
+          "tes": 2,
+          "intro": 0,
+          "pticha": 1,
+          "chosen": true
+        },
+        {
+          "form": "выше в тексте",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-sham",
+      "he": "שם",
+      "en": "ibid. / there",
+      "target": "там же",
+      "status": "OFFICIAL",
+      "officialCount": 3,
+      "officialCountBasis": "global",
+      "note": "«и в Ор пними там же».",
+      "evidence": [
+        {
+          "form": "там же",
+          "count": 3,
+          "tes": 3,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-hs",
+      "he": "ה\"ס",
+      "en": "is the secret of",
+      "target": "это внутренний смысл",
+      "status": "OFFICIAL",
+      "officialCount": 12,
+      "officialCountBasis": "global",
+      "note": "TES: «И это внутренний смысл фразы…» (10 formula uses); the Intro’s «есть тайна сказанного» (7) is the minority. וז\"ס → «и в этом внутренний смысл».",
+      "evidence": [
+        {
+          "form": "внутренн* смысл*",
+          "count": 12,
+          "tes": 11,
+          "intro": 1,
+          "pticha": 0,
+          "chosen": true
+        },
+        {
+          "form": "тайна (formula: …сказанного/клятвы/того)",
+          "count": 7,
+          "tes": 0,
+          "intro": 7,
+          "pticha": 0,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "cite-dosl",
+      "he": "(gloss of a transliterated word)",
+      "en": "[gloss]",
+      "target": "(досл. …)",
+      "status": "OFFICIAL",
+      "officialCount": 65,
+      "officialCountBasis": "global",
+      "note": "BB glosses with «(досл. окно)» right after the term (65), not English-style [brackets]; square brackets in the Pticha are editorial insertions, not glosses.",
+      "evidence": [
+        {
+          "form": "(досл. …",
+          "count": 65,
+          "tes": 51,
+          "intro": 0,
+          "pticha": 14,
+          "chosen": true
+        },
+        {
+          "form": "(букв. …",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": false
+        },
+        {
+          "form": "[…] — Pticha editorial insertions, not glosses",
+          "count": 273,
+          "tes": 13,
+          "intro": 1,
+          "pticha": 259,
+          "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    }
+  ]
+}

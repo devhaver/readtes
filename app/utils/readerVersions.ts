@@ -11,6 +11,7 @@
  * than nothing (covers `en-curated` and any future id naming).
  */
 import type { ContentVersion } from "~~/shared/types/content";
+import { versionChainForLanguage } from "~~/shared/utils/versionChains";
 
 /**
  * Re-exported so the pane header can auto-import it alongside the rest of
@@ -20,33 +21,6 @@ import type { ContentVersion } from "~~/shared/types/content";
 export { nativeLanguageName } from "~~/shared/utils/languages";
 
 export type VersionsById = Map<string, ContentVersion>;
-
-/**
- * Per-language edition preference, best first. Languages absent from this
- * map use the generic `<lang>-bb` then `<lang>-ai` chain, which is how
- * every KabbalahMedia language is named — so adding a language needs
- * content, not a code change.
- */
-const LANGUAGE_VERSION_CHAINS: Record<string, string[]> = {
-  he: ["he-jerusalem-1956", "he-bb"],
-  // `en-sefaria-sulam` sits below the community translation (CC0 beats an
-  // unknown license where both exist) and above `en-ai` (a human
-  // translation beats a machine one). In practice it exists for exactly
-  // one chapter — the Introduction — where the community translation is
-  // absent, so the two never actually compete. See issue #133.
-  //
-  // `en-bb-kabbalah-info` is the same Bnei Baruch translation as `en-bb`,
-  // taken from their web edition at kabbalah.info where KabbalahMedia has no
-  // document for a chapter's layer — so it never competes with `en-bb` for
-  // the same layer, and outranks everything that is not Bnei Baruch's.
-  en: [
-    "en-bb",
-    "en-bb-kabbalah-info",
-    "en-sefaria-community",
-    "en-sefaria-sulam",
-    "en-ai",
-  ],
-};
 
 /**
  * Languages pinned to the front of every switcher, in this order. Hebrew
@@ -59,9 +33,6 @@ const LANGUAGE_DISPLAY_ORDER = ["he", "en"];
 
 export const buildVersionsById = (versions: ContentVersion[]): VersionsById =>
   new Map(versions.map((version) => [version.id, version]));
-
-export const versionChainForLanguage = (language: string): string[] =>
-  LANGUAGE_VERSION_CHAINS[language] ?? [`${language}-bb`, `${language}-ai`];
 
 /**
  * The registry is the only authority on what language an id is in — the

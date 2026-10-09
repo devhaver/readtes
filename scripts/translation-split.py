@@ -31,7 +31,8 @@ if not batches:
 m = json.load(open(f"{SRC}/{batches[0]}.json"))
 g = m["glossary"]
 
-lines = ["# Ohr Pnimi → English — translator brief\n", m["instructions"], "\n## Glossary conventions\n"]
+title = "Ohr Pnimi → English" if lang == "en" else f"Read TES → {lang}"
+lines = [f"# {title} — translator brief\n", m["instructions"], "\n## Glossary conventions\n"]
 lines.append("```json\n" + json.dumps(g["conventions"], ensure_ascii=False, indent=1) + "\n```\n")
 lines.append("## Known gaps\n")
 lines.append("```json\n" + json.dumps(g["knownGaps"], ensure_ascii=False, indent=1) + "\n```\n")
@@ -41,7 +42,17 @@ lines.append("| --- | --- | --- | --- |")
 for e in g["entries"]:
     note = (e.get("note") or "").replace("\n", " ").replace("|", "/")
     lines.append(f"| {e['he']} | {e['canonicalEn']} | {e['strategy']} | {note} |")
-rules = open(os.path.join(REPO, "docs", "translation-rules.md"), encoding="utf-8").read()
+if lang == "en":
+    rules = open(os.path.join(REPO, "docs", "translation-rules.md"), encoding="utf-8").read()
+else:
+    # Other languages: the language-neutral rules, then that language's binding
+    # terminology table (mined from Bnei Baruch's own translations).
+    tdir = os.path.join(REPO, "docs", "translation")
+    rules = open(os.path.join(tdir, "rules-multilingual.md"), encoding="utf-8").read()
+    terms = os.path.join(tdir, f"terms-{lang}.md")
+    if not os.path.exists(terms):
+        sys.exit(f"no terminology table at {terms} — build one before translating into {lang}")
+    rules += "\n\n" + open(terms, encoding="utf-8").read()
 open(f"{OUT}/brief.md", "w").write("\n".join(lines) + "\n\n" + rules)
 
 report = []
