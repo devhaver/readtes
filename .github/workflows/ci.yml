@@ -44,6 +44,9 @@ jobs:
       # the reason it exists: every way the fonts go missing leaves the build
       # succeeding and the site silently wrong (issue #121).
       - name: Run full project gate
+        # Prerendering peaks around 5 GB, past V8's default heap.
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
         run: pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnpm test && pnpm generate && node scripts/verify-font-output.mjs
 
       - name: Run browser acceptance tests

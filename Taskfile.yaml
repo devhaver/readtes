@@ -93,7 +93,9 @@ tasks:
     desc: Statically generate the site
     summary: |
       Run Nuxt's static site generation — this is what gets deployed.
-    cmd: pnpm generate
+      Prerendering every reader page peaks around 5 GB resident, past V8's
+      default heap, so the heap is raised as the Pages deploy does.
+    cmd: NODE_OPTIONS="--max-old-space-size=6144" pnpm generate
 
   verify:fonts:
     desc: Fail if the generated site lost its fonts
