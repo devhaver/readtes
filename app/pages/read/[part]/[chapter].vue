@@ -485,7 +485,7 @@ useLocalizedSeo({
       />
       <nav
         v-if="prev || next"
-        :aria-label="t('reader.chapterNav')"
+        :aria-label="t('reader.chapterNavEnd')"
         class="tes-study-end-nav"
       >
         <NuxtLink

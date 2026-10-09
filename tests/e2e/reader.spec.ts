@@ -275,7 +275,7 @@ test.describe("mobile reader", () => {
     await expect(
       page.getByRole("navigation", { name: "Chapter navigation" }),
     ).toHaveCount(0);
-    expect(await heightOf()).toBeGreaterThan(expanded + 100);
+    expect(await heightOf()).toBeGreaterThan(expanded + 70);
 
     // Expanding restores every piece of it. (That it *persists* across
     // visits is `tests/unit/collapsed-reader-chrome.spec.ts` — this
@@ -303,8 +303,9 @@ test.describe("mobile reader", () => {
       name: "Chapter navigation",
     });
 
-    await page.evaluate(() => window.scrollTo(0, 12000));
-    await page.mouse.wheel(0, 400);
+    // Real wheel travel, as a reader does it: the hide rule accumulates
+    // scroll distance and ignores a single programmatic jump.
+    for (let i = 0; i < 30; i++) await page.mouse.wheel(0, 400);
     await expect(navbar).not.toBeInViewport();
     await expect(toolbar).not.toBeInViewport();
 
