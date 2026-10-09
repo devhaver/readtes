@@ -51,6 +51,14 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "pt-bb",
+          "de-bb",
+          "tr-bb",
+          "en-bb",
+          "uk-bb",
+          "es-bb",
+          "ru-bb",
+          "fr-bb",
           "en-sefaria-sulam",
           "he-jerusalem-1956"
         ],
