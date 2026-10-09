@@ -85,11 +85,18 @@ landmark. The reader page's toolbar carries that page's one `<h1>`
 since nothing else on that page is heading-shaped.
 
 Interactive elements get a `focus-visible:outline focus-visible:outline-2
-focus-visible:outline-teal` (or the token-derived contrast-safe variants
-below) — match this exact utility set rather than inventing a new ring
-style.
+focus-visible:outline-(--focus-ring)` (the `tes-focus-ring` class) — match
+this exact utility set rather than inventing a new ring style. Never
+`outline-teal`: bare teal is 2.12-2.49:1 on light/sepia surfaces. On the navy
+header the ring is `--focus-ring-inverse` (the `tes-focus-ring-inverse`
+class). Hover text on a surface is `hover:text-(--accent-text)` plus an
+underline, never `hover:text-teal`; the navy header keeps `hover:text-teal`.
+The edge of an interactive control (input, select, segmented control, chip)
+uses `--border-control` (≥3:1 per theme), not the decorative `--border`.
 
-Four contrast-driven tokens live in `main.css`:
+Contrast-driven tokens live in `main.css` (`--focus-ring-surface` /
+`--focus-ring` and `--border-control` are per theme; the numbers are in the
+`:root` comment):
 
 - `--color-teal-strong` — a darkened teal that clears 4.5:1 against every
   light-mode surface and against white text. Use for any "white text on a
