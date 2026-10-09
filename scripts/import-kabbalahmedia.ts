@@ -6,7 +6,7 @@
  * every part/chapter this importer knows how to fetch straight from
  * KabbalahMedia's `sqdata` tree (see `scripts/lib/km-tree.ts` — there is no
  * hardcoded uid table anymore), classifies each of a part's tree leaves by
- * name, and — depending on that classification — runs one of three parsing
+ * name, and — depending on that classification — runs one of four parsing
  * dialects, each with its own verified doc shape (see AGENTS.md
  * "KabbalahMedia import"):
  *
@@ -31,6 +31,11 @@
  *     `questions-*` chapter with all N items, the answers half splits
  *     positionally into N single-item `answers-*` chapters (`km-qa-blocks.ts`
  *     + `km-order-align.ts`).
+ *  4. **The Introduction** (`part-01/introduction-01`): a stand-alone article
+ *     outside the collection tree, fetched by its own content-unit id. One
+ *     docx per language is aligned to the 443 Hebrew segments, section by
+ *     section, through the Hebrew document KabbalahMedia publishes beside
+ *     them (`km-introduction.ts`) — a language it cannot verify is refused.
  *
  * Anything this importer doesn't recognize (Inner Observation — verified to
  * use a different doc shape per part; the Cause/Consequence family, which
@@ -109,6 +114,12 @@ import {
   parseHeChapterBody,
   parseHeDocBlocks,
 } from "./lib/km-he-whole-part-parser.ts";
+import {
+  alignKmIntroduction,
+  buildKmHebrewReference,
+  KM_INTRODUCTION_CHAPTER_ID,
+  KM_INTRODUCTION_UID,
+} from "./lib/km-introduction.ts";
 import {
   bcp47ForKmLanguage,
   KM_EXPECTED_LANGUAGES,
@@ -1246,6 +1257,142 @@ const processQaDialect = async (
 };
 
 // ---------------------------------------------------------------------------
+// Dialect 4: the Introduction — a stand-alone article outside the collection
+// ---------------------------------------------------------------------------
+
+/**
+ * The Introduction is no leaf of the collection tree `processPart` walks. It
+ * is its own article (`KM_INTRODUCTION_UID`) with one docx per language beside
+ * the Hebrew original, and a language lands in `part-01/introduction-01` only
+ * when `km-introduction.ts` can verify it against that Hebrew: otherwise the
+ * chapter is recorded with the status that says why, and the stale sweep
+ * keeps whatever is already committed for the language.
+ *
+ * Only `KM_EXPECTED_LANGUAGES` are read. The article also carries an Italian
+ * document, for which this site has no version.
+ */
+const processIntroductionDialect = async (
+  chapter: TocChapter,
+  languages: Map<string, LanguageAccumulator>,
+  client: HttpClient,
+  chapterLevelWarnings: string[],
+): Promise<void> => {
+  const [partId, slug] = chapter.id.split("/") as [string, string];
+  const dir = chapterDirFor(partId, slug);
+
+  console.log(
+    `Fetching ${chapter.id} (KabbalahMedia uid ${KM_INTRODUCTION_UID})...`,
+  );
+  let unit: KmContentUnit;
+  try {
+    unit = await client.getJson<KmContentUnit>(
+      `${KM_BASE}/backend/content_units/${KM_INTRODUCTION_UID}`,
+    );
+  } catch (error) {
+    if (error instanceof HttpClientError && error.status === 404) {
+      recordMissingLanguages(
+        languages,
+        KM_EXPECTED_NON_HE_LANGUAGES,
+        [],
+        [chapter.id],
+      );
+      return;
+    }
+    throw error;
+  }
+  const docFile = (language: string): KmFile | undefined =>
+    (unit.files ?? []).find(
+      (file) => file.mimetype === DOCX_MIMETYPE && file.language === language,
+    );
+  const present = KM_EXPECTED_NON_HE_LANGUAGES.filter(
+    (language) => docFile(language) !== undefined,
+  );
+  recordMissingLanguages(languages, KM_EXPECTED_NON_HE_LANGUAGES, present, [
+    chapter.id,
+  ]);
+
+  const record = (
+    language: string,
+    outcome: Omit<KmChapterOutcome, "chapterId">,
+    warning?: string,
+  ): void => {
+    const acc = getAcc(languages, language);
+    acc.chapters.push({ chapterId: chapter.id, ...outcome });
+    if (warning) acc.warnings.push(`${chapter.id}: ${warning}`);
+  };
+  const refuseAll = (
+    status: "structure-unsupported" | "unmatched",
+    reason: string,
+  ): void => {
+    for (const language of present) {
+      record(language, { status, ...zeroCounts }, reason);
+    }
+  };
+
+  const heSegments = readHeSourceSegmentsOptional(dir);
+  if (!heSegments) {
+    chapterLevelWarnings.push(
+      `${dir}/source.he-jerusalem-1956.json: missing — the KabbalahMedia importer requires the Hebrew ground truth to already exist for this chapter`,
+    );
+    refuseAll("unmatched", "no Hebrew ground truth on disk to align against");
+    return;
+  }
+  const heFile = docFile("he");
+  if (!heFile) {
+    refuseAll(
+      "unmatched",
+      "the article has no Hebrew document to align the translations through",
+    );
+    return;
+  }
+
+  const reference = buildKmHebrewReference(
+    await client.getText(`${KM_BASE}/assets/api/doc2html/${heFile.id}`),
+    heSegments,
+  );
+  if (!reference.ok) {
+    refuseAll(reference.status, reference.reason);
+    return;
+  }
+  console.log(
+    `  ${chapter.id}: Hebrew document placed in our segments (${(reference.identity * 100).toFixed(2)}% of words identical)`,
+  );
+
+  const sefariaRef = heSefariaRef(dir, "source.he-jerusalem-1956.json");
+  for (const language of present) {
+    const file = docFile(language) as KmFile;
+    const result = alignKmIntroduction(
+      reference,
+      await client.getText(`${KM_BASE}/assets/api/doc2html/${file.id}`),
+    );
+    if (!result.ok) {
+      record(language, { status: result.status, ...zeroCounts }, result.reason);
+      continue;
+    }
+
+    record(language, {
+      status: "imported",
+      ...zeroCounts,
+      sourceSegments: result.segments.length,
+    });
+    for (const warning of result.warnings) {
+      getAcc(languages, language).warnings.push(`${chapter.id}: ${warning}`);
+    }
+    getAcc(languages, language).sourceByChapter.set(chapter.id, {
+      sefariaRef,
+      segments: result.segments,
+    });
+    const beads = Object.entries(result.beads)
+      .sort(([left], [right]) => left.localeCompare(right))
+      .map(([bead, count]) => `${bead}×${count}`)
+      .join(" ");
+    console.log(
+      `  ${chapter.id} (${language}): ${result.segments.length} segments from ${result.paragraphs} paragraphs; beads ${beads}`,
+    );
+  }
+};
+
+// ---------------------------------------------------------------------------
 // Per-part orchestration
 // ---------------------------------------------------------------------------
 
@@ -1418,6 +1565,19 @@ const processPart = async (
       answersChapters,
       languages,
       client,
+    );
+  }
+
+  // Dialect 4: the Introduction — housed in part 1, but not in its tree.
+  const introduction = tocPartChapters.find(
+    (chapter) => chapter.id === KM_INTRODUCTION_CHAPTER_ID,
+  );
+  if (introduction) {
+    await processIntroductionDialect(
+      introduction,
+      languages,
+      client,
+      chapterLevelWarnings,
     );
   }
 };

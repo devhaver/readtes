@@ -98,5 +98,29 @@
     "title": "Bnei Baruch (KabbalahMedia) — Українська",
     "license": "Used with permission",
     "source": "kabbalahmedia"
+  },
+  {
+    "id": "tr-bb",
+    "language": "tr",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia) — Türkçe",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
+  },
+  {
+    "id": "de-bb",
+    "language": "de",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia) — Deutsch",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
+  },
+  {
+    "id": "pt-bb",
+    "language": "pt",
+    "direction": "ltr",
+    "title": "Bnei Baruch (KabbalahMedia) — Português",
+    "license": "Used with permission",
+    "source": "kabbalahmedia"
   }
 ]
