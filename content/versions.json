@@ -122,5 +122,68 @@
     "title": "Bnei Baruch (KabbalahMedia) — Português",
     "license": "Used with permission",
     "source": "kabbalahmedia"
+  },
+  {
+    "id": "ru-ai",
+    "language": "ru",
+    "direction": "ltr",
+    "title": "Русский (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "es-ai",
+    "language": "es",
+    "direction": "ltr",
+    "title": "Español (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "fr-ai",
+    "language": "fr",
+    "direction": "ltr",
+    "title": "Français (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "de-ai",
+    "language": "de",
+    "direction": "ltr",
+    "title": "Deutsch (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "pt-ai",
+    "language": "pt",
+    "direction": "ltr",
+    "title": "Português (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "tr-ai",
+    "language": "tr",
+    "direction": "ltr",
+    "title": "Türkçe (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
+    "id": "uk-ai",
+    "language": "uk",
+    "direction": "ltr",
+    "title": "Українська (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
   }
 ]
