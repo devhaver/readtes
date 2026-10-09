@@ -150,17 +150,17 @@ const layers = computed(() => [
           height="593"
           loading="lazy"
           decoding="async"
-          class="hero-circles absolute hidden md:block"
+          class="hero-circles absolute hidden xl:block"
         />
       </div>
 
       <div
         dir="ltr"
-        class="relative mx-auto grid max-w-7xl items-end gap-x-10 px-4 sm:grid-cols-[17rem_minmax(0,1fr)] sm:px-6 lg:grid-cols-[20rem_minmax(0,1fr)]"
+        class="relative mx-auto grid max-w-7xl items-end gap-x-10 px-4 sm:px-6 lg:grid-cols-[20rem_minmax(28rem,1fr)]"
       >
         <!-- Portrait: duotone, rising out of the hero's bottom edge -->
         <div
-          class="hero-portrait hero-enter-portrait order-2 -mb-6 w-52 justify-self-center sm:order-1 sm:-mb-8 sm:w-full sm:justify-self-auto"
+          class="hero-portrait hero-enter-portrait order-2 -mb-6 w-52 justify-self-center sm:w-64 lg:order-1 lg:-mb-8 lg:w-full lg:justify-self-auto"
         >
           <!--
             Full-resolution cut-out (Figma node 117:724) at the same display
@@ -173,7 +173,7 @@ const layers = computed(() => [
               /images/baal-hasulam-540.webp  540w,
               /images/baal-hasulam.webp     1080w
             "
-            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 17rem, 13rem"
+            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 16rem, 13rem"
             fetchpriority="high"
             alt=""
             width="1080"
@@ -186,7 +186,7 @@ const layers = computed(() => [
         <!-- Content -->
         <div
           :dir="locale === 'he' ? 'rtl' : 'ltr'"
-          class="hero-copy hero-enter-content order-1 py-12 text-surface-white sm:order-2 sm:py-16"
+          class="hero-copy hero-enter-content order-1 py-12 text-surface-white sm:py-16 lg:order-2"
         >
           <!-- inline-block shrink-wraps the RTL run so the lockup sits at
                the content column's inline-start instead of drifting to the
@@ -419,7 +419,7 @@ const layers = computed(() => [
   padding-right: 0;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 80rem) {
   .hero-copy {
     padding-right: clamp(15rem, 23vw, 27rem);
   }
