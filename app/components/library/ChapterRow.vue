@@ -43,7 +43,7 @@ const href = computed(() =>
   localePath(`/read/${representativeChapter.value.id}`),
 );
 const languages = computed(() =>
-  chapterLanguages(representativeChapter.value, props.versions),
+  chapterLanguages(representativeChapter.value, props.versions, locale.value),
 );
 </script>
 

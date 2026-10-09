@@ -24,7 +24,10 @@
  */
 import type { ComputedRef, Ref } from "vue";
 import type { InnerObservationSectionView } from "~/components/reader/InnerObservationPane.vue";
-import type { PartSectionsLoadState } from "~/composables/usePartScopedSections";
+import type {
+  PartScopedSection,
+  PartSectionsLoadState,
+} from "~/composables/usePartScopedSections";
 import { usePartScopedSections } from "~/composables/usePartScopedSections";
 import type { ThirdPaneTab } from "~/composables/useReaderThirdPane";
 import type { VersionsById } from "~/utils/readerVersions";
@@ -40,11 +43,51 @@ export interface ThirdPaneTabContent {
   /** Language codes offered for the active tab. */
   languageOptions: ComputedRef<string[]>;
   language: Ref<string | null>;
-  /** Version metadata for the active tab, for the provenance badge and `dir`. */
+  /** Version metadata for the tab as a whole, for `dir`/`lang` — provenance is per section. */
   meta: ComputedRef<ContentVersion | null>;
   sections: ComputedRef<InnerObservationSectionView[]>;
   state: ComputedRef<PartSectionsLoadState>;
 }
+
+/**
+ * One section's view in the chosen language. The edition is resolved PER
+ * SECTION (walking the language's chain for the versions that section
+ * actually has), not once for the tab: the editions of a part's sections
+ * are uneven — part 3's Inner Observation has Bnei Baruch's English for
+ * sections 4, 6 and 8 and only the AI translation for 5 and 7 — so a
+ * tab-wide pick silently dropped every section it did not cover. Each view
+ * carries its own `meta` so the pane can badge "AI translated" exactly
+ * where it applies. A section with no text in this language is omitted
+ * rather than rendered as a bare heading.
+ */
+export const resolveSectionViews = (
+  sections: PartScopedSection[],
+  language: string | null,
+  versionsById: VersionsById,
+): InnerObservationSectionView[] => {
+  if (!language) return [];
+
+  return sections.flatMap((section) => {
+    const withItems = Object.keys(section.itemsByVersion).filter(
+      (versionId) => (section.itemsByVersion[versionId]?.items.length ?? 0) > 0,
+    );
+    const versionId = resolveVersionForLanguage(
+      withItems,
+      language,
+      versionsById,
+    );
+    if (!versionId) return [];
+
+    return [
+      {
+        chapterId: section.chapterId,
+        title: section.title,
+        items: section.itemsByVersion[versionId]?.items ?? [],
+        meta: versionsById.get(versionId) ?? null,
+      },
+    ];
+  });
+};
 
 export const useThirdPaneTabContent = (
   partId: string,
@@ -123,18 +166,11 @@ export const useThirdPaneTabContent = (
   );
 
   const sections = computed<InnerObservationSectionView[]>(() =>
-    active.value.sections.value
-      .map((section) => ({
-        chapterId: section.chapterId,
-        title: section.title,
-        items: versionId.value
-          ? (section.itemsByVersion[versionId.value]?.items ?? [])
-          : [],
-      }))
-      // A section whose *selected* version has no items would render as a
-      // bare heading with nothing under it — drop it; the sections that do
-      // have text in this version carry the tab.
-      .filter((section) => section.items.length > 0),
+    resolveSectionViews(
+      active.value.sections.value,
+      language.value,
+      versionsById.value,
+    ),
   );
 
   const state = computed(() => active.value.state.value);

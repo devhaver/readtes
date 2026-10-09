@@ -31,6 +31,21 @@ export type VersionsById = Map<string, ContentVersion>;
  */
 const LANGUAGE_DISPLAY_ORDER = ["he", "en"];
 
+/**
+ * What the reader should be told about the text they are reading: `"ai"`
+ * (machine translation — the mandatory label), `"sefaria"` (community
+ * translation), or `null` for the original and the official Bnei Baruch
+ * editions.
+ */
+export const versionProvenance = (
+  meta: ContentVersion | null,
+): "ai" | "sefaria" | null => {
+  if (!meta || meta.language === "he") return null;
+  if (meta.source === "ai") return "ai";
+  if (meta.source === "sefaria") return "sefaria";
+  return null;
+};
+
 export const buildVersionsById = (versions: ContentVersion[]): VersionsById =>
   new Map(versions.map((version) => [version.id, version]));
 

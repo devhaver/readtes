@@ -19,6 +19,7 @@ defineProps<{
   languageOptions: string[];
   modelValue: string | null;
   meta: ContentVersion | null;
+  hideProvenance?: boolean;
 }>();
 
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
@@ -34,6 +35,7 @@ const containerRef = provideReaderPaneContainer();
         :language-options="languageOptions"
         :model-value="modelValue"
         :meta="meta"
+        :hide-provenance="hideProvenance"
         class="flex-1"
         @update:model-value="(value) => emit('update:modelValue', value)"
       >

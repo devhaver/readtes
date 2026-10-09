@@ -70,6 +70,12 @@ const {
 // `LayerAbsenceNote` footnote in the Source pane.
 const hasCommentary = chapter.availableVersions.commentary.length > 0;
 
+// The "not digitized yet" / "never written" footnotes describe gaps in the
+// Ari's own chapters. The Introduction and the Inner Observation and Q&A
+// pages are not chapters of the Ari's text, so they have no Inner Light or
+// Inner Observation to be missing and must not claim one.
+const isAriChapter = chapter.kind === "chapter";
+
 // Inner Observation isn't a per-chapter layer file — it lives in the part's
 // own `kind: "inner-observation"` chapters (see AGENTS.md / the content
 // model skill), so it's loaded once per part rather than per chapter, and
@@ -380,7 +386,10 @@ useLocalizedSeo({
             :split-paragraphs="chapter.kind === 'inner-observation'"
             @open-seif-commentary="handleOpenSeifCommentary"
           >
-            <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
+            <template
+              v-if="isAriChapter && (!hasCommentary || !hasInnerObservation)"
+              #footnote
+            >
               <ReaderLayerAbsenceNote v-if="!hasCommentary" />
               <ReaderLayerAbsenceNote
                 v-if="!hasInnerObservation"
@@ -427,6 +436,7 @@ useLocalizedSeo({
           :language-options="thirdPane.languageOptions.value"
           :model-value="thirdPane.language.value"
           :meta="thirdPane.meta.value"
+          hide-provenance
           @update:model-value="
             (language) => (thirdPane.language.value = language)
           "
@@ -462,6 +472,7 @@ useLocalizedSeo({
     <template v-else-if="mode === 'study'">
       <ReaderStudyStream
         :source-label-key="sourceLabelKey"
+        :chapter-kind="chapter.kind"
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"
         :summary-items="summaryItems"

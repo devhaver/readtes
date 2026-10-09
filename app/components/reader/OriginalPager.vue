@@ -27,7 +27,9 @@ const localePath = useLocalePath();
       :to="localePath(`/read/${prev.id}`)"
       class="rounded-button px-2 py-1 hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
     >
-      <span aria-hidden="true" class="rtl:rotate-180">&#9664;</span>
+      <span aria-hidden="true" class="inline-block rtl:rotate-180"
+        >&#9664;</span
+      >
       {{ t("reader.original.prev") }}
     </NuxtLink>
     <span
@@ -35,7 +37,9 @@ const localePath = useLocalePath();
       aria-disabled="true"
       class="px-2 py-1 text-(--text-muted) opacity-50"
     >
-      <span aria-hidden="true" class="rtl:rotate-180">&#9664;</span>
+      <span aria-hidden="true" class="inline-block rtl:rotate-180"
+        >&#9664;</span
+      >
       {{ t("reader.original.prev") }}
     </span>
 
@@ -49,7 +53,9 @@ const localePath = useLocalePath();
       class="rounded-button px-2 py-1 text-end hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
     >
       {{ t("reader.original.next") }}
-      <span aria-hidden="true" class="rtl:rotate-180">&#9654;</span>
+      <span aria-hidden="true" class="inline-block rtl:rotate-180"
+        >&#9654;</span
+      >
     </NuxtLink>
     <span
       v-else
@@ -57,7 +63,9 @@ const localePath = useLocalePath();
       class="px-2 py-1 text-(--text-muted) opacity-50"
     >
       {{ t("reader.original.next") }}
-      <span aria-hidden="true" class="rtl:rotate-180">&#9654;</span>
+      <span aria-hidden="true" class="inline-block rtl:rotate-180"
+        >&#9654;</span
+      >
     </span>
   </nav>
 </template>

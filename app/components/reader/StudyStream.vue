@@ -8,6 +8,7 @@
 // `SourcePane`, rather than duplicating any of it.
 import { prefersReducedMotion } from "~/utils/motion";
 import type {
+  ChapterKind,
   CommentaryItem,
   ContentVersion,
   SourceSegment,
@@ -33,6 +34,12 @@ const props = defineProps<{
   sourceLabelKey?: string;
   /** Renders each segment as paragraphs — see `ReaderSourceSegment`. */
   splitParagraphs?: boolean;
+  /**
+   * The open page's kind. Only the Ari's own chapters have an Inner Light
+   * layer that could be "not digitized yet"; an Introduction, Inner
+   * Observation or Q&A page has none to be missing. Omitted means a chapter.
+   */
+  chapterKind?: ChapterKind;
 }>();
 
 const emit = defineEmits<{
@@ -322,10 +329,12 @@ const goToFullCommentary = async () => {
       </div>
     </details>
 
-    <ReaderLayerAbsenceNote v-if="!hasCommentaryLayer" />
+    <ReaderLayerAbsenceNote
+      v-if="!hasCommentaryLayer && (chapterKind ?? 'chapter') === 'chapter'"
+    />
 
     <section
-      v-else
+      v-else-if="hasCommentaryLayer"
       class="mt-10 rounded-card border border-(--border) p-4 text-center"
     >
       <p class="text-sm text-(--text-muted)">

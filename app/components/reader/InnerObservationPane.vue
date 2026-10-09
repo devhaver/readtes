@@ -31,12 +31,14 @@
 // moment the content arrives announces the wait but never its end.
 import type { PartSectionsLoadState } from "~/composables/usePartScopedSections";
 import type { LocalizedText } from "~/utils/localization";
-import type { SourceSegment } from "~~/shared/types/content";
+import type { ContentVersion, SourceSegment } from "~~/shared/types/content";
 
 export interface InnerObservationSectionView {
   chapterId: string;
   title: LocalizedText;
   items: SourceSegment[];
+  /** The edition this section was resolved to — drives its own provenance badge. */
+  meta?: ContentVersion | null;
 }
 
 // This pane renders only for a part that HAS an Inner Observation
@@ -129,9 +131,12 @@ const statusMessage = computed(() => {
         open
       >
         <summary class="tes-prose-section-heading">
-          <h3 class="tes-eyebrow">
-            {{ localizedText(section.title, locale) }}
-          </h3>
+          <span class="flex min-w-0 flex-wrap items-center gap-2">
+            <h3 class="tes-eyebrow">
+              {{ localizedText(section.title, locale) }}
+            </h3>
+            <ReaderProvenanceBadge :meta="section.meta ?? null" />
+          </span>
           <span
             aria-hidden="true"
             class="tes-icon tes-icon-chevron-down tes-disclosure-chevron h-4 w-4"

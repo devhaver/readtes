@@ -24,6 +24,8 @@ const props = defineProps<{
   modelValue: string | null;
   /** The RESOLVED version — drives the badge, and `dir`/`lang` in `ReaderPane`. */
   meta: ContentVersion | null;
+  /** The third pane badges each section itself — one tab can mix editions. */
+  hideProvenance?: boolean;
 }>();
 
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
@@ -40,18 +42,6 @@ const selectId = useId();
 const languageLabel = computed(() =>
   t("reader.paneLanguageLabel", { pane: props.title }),
 );
-
-const provenance = computed(() => {
-  const meta = props.meta;
-  if (!meta || meta.language === "he") return null;
-  if (meta.source === "ai") {
-    return { label: t("reader.aiTranslated"), tone: "warning" as const };
-  }
-  if (meta.source === "sefaria") {
-    return { label: t("reader.sefariaTranslated"), tone: "muted" as const };
-  }
-  return null;
-});
 
 const onLanguageChange = (event: Event) => {
   emit("update:modelValue", (event.target as HTMLSelectElement).value);
@@ -74,19 +64,7 @@ const onLanguageChange = (event: Event) => {
     </slot>
 
     <div class="flex min-w-0 shrink-0 items-center gap-2">
-      <span
-        v-if="provenance"
-        class="tes-provenance-badge shrink-0"
-        :title="provenance.label"
-        :class="
-          provenance.tone === 'warning'
-            ? 'border-orange-cta text-(--warning-text)'
-            : 'border-(--border) text-(--text-muted)'
-        "
-      >
-        <span class="@max-sm:sr-only">{{ provenance.label }}</span>
-        <span aria-hidden="true" class="hidden @max-sm:inline">&#10022;</span>
-      </span>
+      <ReaderProvenanceBadge v-if="!hideProvenance" :meta="meta" />
 
       <template v-if="languageOptions.length > 1">
         <label :for="selectId" class="sr-only">{{ languageLabel }}</label>
