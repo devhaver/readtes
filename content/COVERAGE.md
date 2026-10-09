@@ -2895,15 +2895,15 @@ skipped, not force-imported.
 
 | Version | Language (KM code) | Chapters imported | Source segments | Commentary items |
 | --- | --- | --- | --- | --- |
-| de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 0/2091 | 0 | 0 |
-| en-bb | Bnei Baruch (KabbalahMedia) (`en`) | 255/2091 | 1645 | 51 |
-| es-bb | Bnei Baruch (KabbalahMedia) — Español (`es`) | 54/2091 | 54 | 0 |
-| fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 54/2091 | 54 | 0 |
+| de-bb | Bnei Baruch (KabbalahMedia) — Deutsch (`de`) | 1/2091 | 317 | 0 |
+| en-bb | Bnei Baruch (KabbalahMedia) (`en`) | 256/2091 | 2004 | 51 |
+| es-bb | Bnei Baruch (KabbalahMedia) — Español (`es`) | 55/2091 | 427 | 0 |
+| fr-bb | Bnei Baruch (KabbalahMedia) — Français (`fr`) | 55/2091 | 409 | 0 |
 | he-bb | Bnei Baruch (KabbalahMedia) — עברית (`he`) | 2/2091 | 10 | 34 |
-| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 0/2091 | 0 | 0 |
-| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 73/2091 | 222 | 318 |
-| tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 0/2091 | 0 | 0 |
-| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 62/2091 | 62 | 0 |
+| pt-bb | Bnei Baruch (KabbalahMedia) — Português (`pt`) | 1/2091 | 356 | 0 |
+| ru-bb | Bnei Baruch (KabbalahMedia) — Русский (`ru`) | 74/2091 | 545 | 318 |
+| tr-bb | Bnei Baruch (KabbalahMedia) — Türkçe (`tr`) | 1/2091 | 353 | 0 |
+| uk-bb | Bnei Baruch (KabbalahMedia) — Українська (`ua`) | 63/2091 | 498 | 0 |
 
 ### Per part x language
 
@@ -2914,7 +2914,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 
 | Part | de-bb | en-bb | es-bb | fr-bb | he-bb | pt-bb | ru-bb | tr-bb | uk-bb |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| part-01 | 0/17 | 4/17 | 0/17 | 0/17 | 2/17 | 0/17 | 1/17 | 0/17 | 0/17 |
+| part-01 | 1/17 | 5/17 | 1/17 | 1/17 | 2/17 | 1/17 | 2/17 | 1/17 | 1/17 |
 | part-02 | 0/16 | 4/16 | 0/16 | 0/16 | 0/16 | 0/16 | 1/16 | 0/16 | 0/16 |
 | part-03 | 0/34 | 4/34 | 0/34 | 0/34 | 0/34 | 0/34 | 11/34 | 0/34 | 0/34 |
 | part-04 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 0/16 | 6/16 | 0/16 | 0/16 |
@@ -2935,7 +2935,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 
 | Version | Part | Status | Chapters skipped | Reason |
 | --- | --- | --- | --- | --- |
-| de-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | de-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | de-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | de-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
@@ -2952,7 +2951,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | de-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | de-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | de-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| en-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | en-bb | part-01 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | en-bb | part-01 | unmatched | 2 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
 | en-bb | part-02 | structure-unsupported | 10 | document structure not yet supported by this importer |
@@ -2976,7 +2974,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | en-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | en-bb | part-16 | no-file-for-language | 4 | no docx file for this language |
 | en-bb | part-16 | unmatched | 228 | document parsed, but no item at this chapter's position — count mismatch against the Hebrew ground truth |
-| es-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | es-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | es-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | es-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
@@ -2993,7 +2990,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | es-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | es-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | es-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| fr-bb | part-01 | no-file-for-language | 17 | no docx file for this language |
+| fr-bb | part-01 | no-file-for-language | 16 | no docx file for this language |
 | fr-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | fr-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
 | fr-bb | part-04 | no-file-for-language | 16 | no docx file for this language |
@@ -3030,7 +3027,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | he-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | he-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | he-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| pt-bb | part-01 | no-file-for-language | 7 | no docx file for this language |
+| pt-bb | part-01 | no-file-for-language | 6 | no docx file for this language |
 | pt-bb | part-01 | structure-unsupported | 10 | document structure not yet supported by this importer |
 | pt-bb | part-02 | no-file-for-language | 16 | no docx file for this language |
 | pt-bb | part-03 | no-file-for-language | 34 | no docx file for this language |
@@ -3047,7 +3044,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | pt-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | pt-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | pt-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| ru-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | ru-bb | part-01 | structure-unsupported | 15 | document structure not yet supported by this importer |
 | ru-bb | part-02 | structure-unsupported | 15 | document structure not yet supported by this importer |
 | ru-bb | part-03 | structure-unsupported | 23 | document structure not yet supported by this importer |
@@ -3066,7 +3062,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | ru-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | ru-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | ru-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| tr-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | tr-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | tr-bb | part-02 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | tr-bb | part-03 | no-file-for-language | 4 | no docx file for this language |
@@ -3084,7 +3079,6 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 | tr-bb | part-14 | no-file-for-language | 232 | no docx file for this language |
 | tr-bb | part-15 | no-file-for-language | 233 | no docx file for this language |
 | tr-bb | part-16 | no-file-for-language | 276 | no docx file for this language |
-| uk-bb | part-01 | no-file-for-language | 1 | no docx file for this language |
 | uk-bb | part-01 | structure-unsupported | 16 | document structure not yet supported by this importer |
 | uk-bb | part-02 | no-file-for-language | 2 | no docx file for this language |
 | uk-bb | part-02 | structure-unsupported | 14 | document structure not yet supported by this importer |
@@ -3111,6 +3105,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **de-bb**: part-01/chapter-02: source: matched 0 of 5 Hebrew seifim
 - **de-bb**: part-01 Q&A candidate YR9r5s6q/GG3GRnUr: no h6 question blocks
 - **de-bb**: part-01 Q&A candidate QCnCAagn/L3C8AIUs: no h6 question blocks
+- **de-bb**: part-01/introduction-01: section 156 is abridged (0.16× this language's median length) — its translation is placed whole under the section's first segment
 - **en-bb**: part-01 Q&A candidate YR9r5s6q/JG0l6gj3: pair count 54 does not match Hebrew questions (55) and answer chapters (54)
 - **en-bb**: part-01 Q&A candidate EiUPsO0e/Pee90kjq: pair count 54 does not match Hebrew questions (55) and answer chapters (54)
 - **en-bb**: part-02/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-22" — ambiguous marker scheme, refusing to guess
@@ -3371,6 +3366,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **he-bb**: part-04/chapter-05 Hebrew whole-part: text before this chapter's first seif topic heading at block 366: "באורות עקודים יש י"ס פנימיות וי"ס מקיפות"
 - **he-bb**: part-04/chapter-06 Hebrew whole-part: text before this chapter's first seif topic heading at block 442: "בהתפשטות א' דעקודים לא יצאו האורות שלמים"
 - **he-bb**: part-05 Hebrew whole-part: found 0 chapter heading(s), expected 62
+- **pt-bb**: part-01/introduction-01: section 156 is abridged (0.18× this language's median length) — its translation is placed whole under the section's first segment
 - **ru-bb**: part-01/chapter-01: source: matched 4 of 5 Hebrew seifim
 - **ru-bb**: part-01 Q&A candidate YR9r5s6q/DgOTzKGq: no h6 question blocks
 - **ru-bb**: part-01 Q&A candidate EiUPsO0e/93HN4Yqz: no h6 question blocks
@@ -3403,6 +3399,7 @@ which have no official non-Hebrew translation on KabbalahMedia at all).
 - **tr-bb**: part-01 Q&A candidate EiUPsO0e/HC7CHDmm: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate QCnCAagn/ztwA4HRl: no h6 question blocks
 - **tr-bb**: part-01 Q&A candidate nnGQFc43/nqjjlQGN: no h6 question blocks
+- **tr-bb**: part-01/introduction-01: section 156 is abridged (0.19× this language's median length) — its translation is placed whole under the section's first segment
 - **tr-bb**: part-02/chapter-01: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-22" — ambiguous marker scheme, refusing to guess
 - **tr-bb**: part-02/chapter-02: buildKmChapterGroundTruth: gematria value 1 maps to both "op-1" and "op-23" — ambiguous marker scheme, refusing to guess
 - **tr-bb**: part-02 Q&A candidate ydlHgmBg/HuEuVPDc: no h6 question blocks
