@@ -6,6 +6,7 @@
 // selection (`ReaderPaneHeader`), seif rendering (`ReaderSourceSegment`)
 // and anchor-activation behaviour (`useAnchorActivation`) as panes mode's
 // `SourcePane`, rather than duplicating any of it.
+import { prefersReducedMotion } from "~/utils/motion";
 import type {
   CommentaryItem,
   ContentVersion,
@@ -30,6 +31,8 @@ const props = defineProps<{
   hebrewVersionId: string;
   /** The first pane's label key — see `sourcePaneLabelKey`. */
   sourceLabelKey?: string;
+  /** Renders each segment as paragraphs — see `ReaderSourceSegment`. */
+  splitParagraphs?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -147,6 +150,24 @@ const anchorMarkers = computed(() =>
   anchorMarkersFromSegments(props.sourceSegments),
 );
 
+// A note opens beneath its WHOLE seif, which can be well below the marker
+// that was tapped — off-screen on a phone, with nothing to say it opened. Once
+// the unfold has finished (while it runs the clip wrapper is still collapsed,
+// and scrolling into it would scroll the clip itself), bring the card into
+// view and move focus into it.
+const onInlineEntered = (anchorId: string) => {
+  const card = containerRef.value?.querySelector<HTMLElement>(
+    `#${CSS.escape(anchorId)}`,
+  );
+  if (!card) return;
+
+  card.scrollIntoView({
+    block: "nearest",
+    behavior: prefersReducedMotion() ? "auto" : "smooth",
+  });
+  card.focus({ preventScroll: true });
+};
+
 /** Switches to panes mode and scrolls straight to its commentary column — see `ReaderShell`'s `#reader-commentary-pane`. */
 const goToFullCommentary = async () => {
   setMode("panes");
@@ -192,6 +213,7 @@ const goToFullCommentary = async () => {
     </div>
 
     <ReaderChapterIntro
+      class="mb-6"
       :summary-items="summaryItems"
       :source-segments="sourceSegments"
     />
@@ -201,6 +223,7 @@ const goToFullCommentary = async () => {
       class="flex flex-col gap-6"
       :dir="sourceMeta?.direction ?? 'ltr'"
       :lang="sourceMeta?.language"
+      :data-version="sourceMeta?.id"
     >
       <li
         v-for="(segment, index) in sourceSegments"
@@ -215,6 +238,7 @@ const goToFullCommentary = async () => {
         <ReaderSourceSegment
           :segment="segment"
           :continuation="isContinuationSegment(sourceSegments, index)"
+          :split-paragraphs="splitParagraphs"
         />
 
         <div v-for="anchorId in segment.anchors" :key="anchorId" class="mt-3">
@@ -225,6 +249,7 @@ const goToFullCommentary = async () => {
             enter-to-class="grid-rows-[1fr]"
             leave-from-class="grid-rows-[1fr]"
             leave-to-class="grid-rows-[0fr]"
+            @after-enter="onInlineEntered(anchorId)"
           >
             <div v-if="isExpanded(anchorId)" class="grid overflow-hidden">
               <div class="overflow-hidden">
@@ -290,7 +315,7 @@ const goToFullCommentary = async () => {
               <span class="me-1.5 text-xs font-semibold text-(--accent-text)">
                 {{ localizedText(item.label, locale) }}
               </span>
-              <span v-html="item.html" />
+              <span v-html="trimEdgeBreaks(item.html)" />
             </li>
           </ol>
         </section>

@@ -9,7 +9,7 @@ import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it, vi } from "vitest";
 import { defineComponent, h, type PropType } from "vue";
 import CommentarySheet from "~/components/reader/CommentarySheet.vue";
-import type { CommentaryItem } from "~~/shared/types/content";
+import type { CommentaryItem, ContentVersion } from "~~/shared/types/content";
 
 const items: CommentaryItem[] = [
   {
@@ -64,6 +64,24 @@ describe("CommentarySheet", () => {
 
     expect(document.body.textContent).toContain("First commentary item");
     expect(document.body.textContent).toContain("3");
+    wrapper.unmount();
+  });
+
+  it("sets each note in its own version's language and direction, not the UI's", async () => {
+    const wrapper = await mountSuspended(CommentarySheet, {
+      props: {
+        open: true,
+        seif: 3,
+        items,
+        meta: { direction: "rtl", language: "he" } as ContentVersion,
+      },
+    });
+
+    const body = [...document.body.querySelectorAll("[dir]")].find((el) =>
+      el.textContent?.includes("First commentary item"),
+    );
+    expect(body?.getAttribute("dir")).toBe("rtl");
+    expect(body?.getAttribute("lang")).toBe("he");
     wrapper.unmount();
   });
 

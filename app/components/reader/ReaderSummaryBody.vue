@@ -49,7 +49,9 @@ const onMiniTocEntryClick = (anchorId: string) => {
 </script>
 
 <template>
-  <div v-if="hasSummary" class="flex flex-col gap-6">
+  <!-- The only summary edition is `en-curated`: English text, whatever the
+       pane around it is set in (a Hebrew pane is rtl). -->
+  <div v-if="hasSummary" lang="en" dir="ltr" class="flex flex-col gap-6">
     <article
       v-for="item in summaryItems"
       :key="item.id"
@@ -71,7 +73,7 @@ const onMiniTocEntryClick = (anchorId: string) => {
     v-else-if="miniToc.entries.length > 0"
     :aria-label="t('reader.miniTocTitle')"
   >
-    <ol class="flex flex-col gap-1">
+    <ol class="flex max-h-72 flex-col gap-1 overflow-y-auto">
       <li v-for="entry in miniToc.entries" :key="entry.anchorId">
         <button
           type="button"

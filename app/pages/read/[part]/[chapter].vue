@@ -60,6 +60,7 @@ const {
   commentaryVersions,
   sourceByVersion,
   commentaryByVersion,
+  summaryItems,
 } = await useChapterContent(partId, chapterSlug, chapter.availableVersions);
 
 // Static per chapter (from the ToC's `availableVersions`, identical on
@@ -362,6 +363,8 @@ useLocalizedSeo({
         >
           <ReaderSourcePane
             :segments="sourceSegments"
+            :summary-items="summaryItems"
+            :split-paragraphs="chapter.kind === 'inner-observation'"
             @open-seif-commentary="handleOpenSeifCommentary"
           >
             <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
@@ -459,7 +462,8 @@ useLocalizedSeo({
         :source-label-key="sourceLabelKey"
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"
-        :summary-items="[]"
+        :summary-items="summaryItems"
+        :split-paragraphs="chapter.kind === 'inner-observation'"
         :source-meta="sourceMeta"
         :commentary-meta="commentaryMeta"
         :source-language-options="sourceLanguageOptions"
@@ -504,6 +508,7 @@ useLocalizedSeo({
       :open="commentarySheetSeif !== null"
       :seif="commentarySheetSeif"
       :items="commentarySheetItems"
+      :meta="commentaryMeta"
       :anchor-markers="anchorMarkers"
       @close="closeCommentarySheet"
     />
