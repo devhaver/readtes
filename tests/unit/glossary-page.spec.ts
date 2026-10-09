@@ -76,7 +76,7 @@ describe("glossary page", () => {
     const text = wrapper.text();
 
     expect(text).toContain(String(glossaryIndex.meta.alignedChapters));
-    expect(text).toContain("Parts 1, 2, 3, 5, 6");
+    expect(text).toContain("Parts \u20661, 2, 3, 5, 6\u2069");
   });
 
   it("prerenders every house rule as a collapsed native disclosure", async () => {
@@ -95,7 +95,9 @@ describe("glossary page", () => {
     const wrapper = await mountSuspended(GlossaryPage);
     const text = wrapper.text();
 
-    expect(text).toContain("covers only parts 1, 2, 3, 5, 6 of the sixteen");
+    expect(text).toContain(
+      "covers only parts \u20661, 2, 3, 5, 6\u2069 of the sixteen",
+    );
     for (const note of glossaryIndex.knownGaps) {
       expect(text).not.toContain(note.slice(0, 40));
     }

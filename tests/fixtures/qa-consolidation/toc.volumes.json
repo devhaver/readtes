@@ -30,7 +30,13 @@
           },
           "availableSummary": {
             "he": "full",
-            "en": "partial"
+            "en": "partial",
+            "enOfficial": "none",
+            "enAi": "none",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
           }
         }
       ]

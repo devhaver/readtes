@@ -16,7 +16,16 @@
           "lastChapterId": "part-01/chapter-01",
           "firstChapterTitle": { "en": "Chapter 1" },
           "lastChapterTitle": { "en": "Chapter 1" },
-          "availableSummary": { "he": "none", "en": "full" }
+          "availableSummary": {
+            "he": "none",
+            "en": "full",
+            "enOfficial": "none",
+            "enAi": "none",
+            "ru": "none",
+            "uk": "none",
+            "es": "none",
+            "fr": "none"
+          }
         }
       ]
     }

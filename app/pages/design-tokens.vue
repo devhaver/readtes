@@ -1,7 +1,16 @@
 <script setup lang="ts">
 // Dev-only token demo — proves design tokens, fonts, and dark mode work.
 // Not linked from anywhere and excluded from prerender (see nuxt.config.ts
-// routeRules) — never ships in the generated static site.
+// routeRules) — never ships in the generated static site. The Node server
+// build skips prerender rules and would otherwise serve it, so outside dev it
+// answers 404 like any unknown route.
+if (!import.meta.dev) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page not found",
+    fatal: true,
+  });
+}
 
 const colorSwatches = [
   { name: "navy-primary", class: "bg-navy-primary" },

@@ -23,6 +23,7 @@ import {
   GLOSSARY_STRATEGIES,
   glossaryAttestationTicks,
   glossaryEditionId,
+  glossaryPartList,
   glossaryStrategyCounts,
   partNumberFromId,
 } from "~/utils/glossary";
@@ -81,12 +82,12 @@ const coverageTicks = computed(() => {
 });
 
 const coveredPartNumbers = computed(() =>
-  meta.value.partsCovered
-    .flatMap((partId) => {
+  glossaryPartList(
+    meta.value.partsCovered.flatMap((partId) => {
       const number = partNumberFromId(partId);
       return number === null ? [] : [number];
-    })
-    .join(", "),
+    }),
+  ),
 );
 
 /**
@@ -117,7 +118,7 @@ useLocalizedSeo({
 <template>
   <div class="pb-16">
     <header class="border-b border-(--border) bg-(--surface-reading)">
-      <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+      <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
         <!-- The Hebrew lockup over the English title, as on the homepage
              hero. Dropped under /he/, where the h1 is already Hebrew. -->
         <p
@@ -170,7 +171,7 @@ useLocalizedSeo({
       </div>
     </header>
 
-    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
       <!-- Lookup bar. Sticky, because looking a term up is why anyone is
            here and 125 rows is well past a screenful. -->
       <section

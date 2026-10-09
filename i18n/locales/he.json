@@ -20,12 +20,16 @@
     "themeToggleToLight": "עבור למצב בהיר",
     "themeToggleToSepia": "עבור למצב ספיה",
     "languageSwitcherLabel": "החלף שפה",
-    "breadcrumbLabel": "פירורי לחם"
+    "breadcrumbLabel": "פירורי לחם",
+    "aboutLink": "אודות"
   },
   "footer": {
     "attribution": "נוצר על ידי תלמידי {academy}",
     "academy": "בני ברוך אקדמיה לקבלה",
-    "sourcesLinkTitle": "ספריית המקורות של בני ברוך בקבלה מדיה"
+    "navLabel": "קישורים באתר",
+    "licenses": "רישיונות",
+    "newTab": "נפתח בלשונית חדשה",
+    "sourceLibrary": "ספריית המקורות של בני ברוך בקבלה מדיה"
   },
   "reader": {
     "aiTranslated": "תרגום בינה מלאכותית",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "הדף לא נמצא",
-    "notFoundMessage": "דף זה עדיין לא קיים, או שהוא הועבר.",
+    "notFoundMessage": "דף זה אינו קיים, או שהוא הועבר. תלמוד עשר הספירות כאן מחולק לשישה כרכים ולשישה עשר חלקים — אפשר להתחיל מהכרכים, מהמילון או מדף הבית.",
     "notFoundBackHome": "חזרה לדף הבית",
     "genericTitle": "משהו השתבש",
     "genericMessage": "אירעה שגיאה בלתי צפויה. נסו לרענן, או חזרו לדף הבית."
@@ -206,23 +210,33 @@
     "readingModelTitle": "מודל הקריאה",
     "readingModelBody": "הקורא עוקב אחר מבנה תלמוד עשר הספירות עצמו: כתבי האר״י הממוספרים, ביאור אור פנימי של בעל הסולם המעוגן אליהם ישירות, והסתכלות פנימית כביאור השיטתי והמעמיק של החלק. ההסתכלות הפנימית היא חיבור רציף ולא פירוש המקושר לכל סעיף, ולכן היא מוצגת כעמודת קריאה עצמאית.",
     "licensesTitle": "טקסטים, מהדורות ורישיונות",
-    "licensesIntro": "כל מהדורת טקסט באתר זה מפורטת להלן עם שפתה, רישיונה ומקורה.",
-    "licensesTableCaption": "מהדורות הטקסט בשימוש ב-Read TES",
-    "tableHeaderTitle": "מהדורה",
+    "licensesIntro": "כל מהדורת טקסט באתר זה מפורטת להלן, מקובצת לפי מקור, עם שפתה ורישיונה.",
     "tableHeaderLanguage": "שפה",
     "tableHeaderLicense": "רישיון",
-    "tableHeaderSource": "מקור",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "תרגום בינה מלאכותית",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "אנגלית",
-    "languageLabelHe": "עברית",
     "attributionTitle": "תודות",
-    "attributionBody": "טקסטי המקור לקוחים מהספרייה הפתוחה של Sefaria, והשיעורים שהקריאה הזו נשענת עליהם הם מ-KabbalahMedia.info — שניהם בשימוש ברשות.",
+    "attributionBody": "טקסטי המקור לקוחים מהספרייה הפתוחה של Sefaria. תרגומי בני ברוך לקוחים מ-KabbalahMedia.info והמהדורה המקוונת של בני ברוך מ-Kabbalah.info, שניהם בשימוש ברשות, והשיעורים שהקריאה הזו נשענת עליהם הם מ-KabbalahMedia.info.",
     "portraitAlt": "דיוקנו של הרב יהודה אשלג, בעל הסולם",
-    "portraitCaption": "הרב יהודה אשלג (1884–1954), בעל הסולם — מחבר תלמוד עשר הספירות"
+    "portraitCaption": "הרב יהודה אשלג (1884–1954), בעל הסולם — מחבר תלמוד עשר הספירות",
+    "languageNames": {
+      "en": "אנגלית",
+      "he": "עברית",
+      "ru": "רוסית",
+      "uk": "אוקראינית",
+      "es": "ספרדית",
+      "fr": "צרפתית"
+    },
+    "licenseNames": {
+      "publicDomain": "נחלת הכלל",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "בשימוש ברשות",
+      "unknown": "הרישיון לא צוין"
+    }
   },
   "glossary": {
     "title": "מילון מונחים",
@@ -363,7 +377,7 @@
       "description": "{chapter} מתוך {part} — כתבי האר״י לצד ביאור אור פנימי וההסתכלות הפנימית של החלק."
     },
     "notFound": {
-      "description": "דף זה עדיין לא קיים, או שהוא הועבר — מצאו את דרככם חזרה לכרכים או לדף הבית של Read TES."
+      "description": "דף זה אינו קיים, או שהוא הועבר — מצאו את דרככם חזרה לכרכים, למילון או לדף הבית של Read TES."
     }
   }
 }

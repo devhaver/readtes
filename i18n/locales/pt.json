@@ -20,12 +20,16 @@
     "themeToggleToLight": "Mudar para o modo claro",
     "themeToggleToSepia": "Mudar para o modo sépia",
     "languageSwitcherLabel": "Mudar de idioma",
-    "breadcrumbLabel": "Trilha de navegação"
+    "breadcrumbLabel": "Trilha de navegação",
+    "aboutLink": "Sobre"
   },
   "footer": {
     "attribution": "Feito por alunos da {academy}",
     "academy": "Academia de Cabala Bnei Baruch",
-    "sourcesLinkTitle": "Biblioteca de fontes do Bnei Baruch no Kabbalah Media"
+    "navLabel": "Links do site",
+    "licenses": "Licenças",
+    "newTab": "abre em uma nova aba",
+    "sourceLibrary": "Biblioteca de fontes do Bnei Baruch no Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "Traduzido por IA",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Página não encontrada",
-    "notFoundMessage": "Esta página ainda não existe ou foi movida.",
+    "notFoundMessage": "Esta página não existe ou foi movida. Aqui o Talmud Eser Sefirot tem seis volumes e dezesseis partes — comece pelos volumes, pelo glossário ou pela página inicial.",
     "notFoundBackHome": "Voltar ao início",
     "genericTitle": "Algo deu errado",
     "genericMessage": "Ocorreu um erro inesperado. Tente recarregar a página ou volte ao início."
@@ -206,23 +210,33 @@
     "readingModelTitle": "O modelo de leitura",
     "readingModelBody": "O leitor segue a própria estrutura do Talmud Eser Sefirot: o texto numerado do Ari, a explicação da Luz Interior de Baal HaSulam ligada diretamente a ele, e a Observação Interior como explicação sistemática mais profunda da parte. A Observação Interior é contínua, e não vinculada a parágrafos, por isso permanece como um painel de leitura independente.",
     "licensesTitle": "Textos, edições e licenças",
-    "licensesIntro": "Todas as edições de texto deste site estão listadas abaixo, com idioma, licença e fonte.",
-    "licensesTableCaption": "Edições de texto usadas no Read TES",
-    "tableHeaderTitle": "Edição",
+    "licensesIntro": "Todas as edições de texto deste site estão listadas abaixo, agrupadas por fonte, com idioma e licença.",
     "tableHeaderLanguage": "Idioma",
     "tableHeaderLicense": "Licença",
-    "tableHeaderSource": "Fonte",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "Tradução por IA",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "Inglês",
-    "languageLabelHe": "Hebraico",
     "attributionTitle": "Agradecimentos",
-    "attributionBody": "Os textos-fonte vêm da biblioteca aberta da Sefaria, e as aulas que inspiram esta leitura são do KabbalahMedia.info — ambos usados com permissão.",
+    "attributionBody": "Os textos-fonte vêm da biblioteca aberta da Sefaria. As traduções do Bnei Baruch vêm do KabbalahMedia.info e a edição web do Bnei Baruch do Kabbalah.info, ambas usadas com permissão. As aulas que inspiram esta leitura são do KabbalahMedia.info.",
     "portraitAlt": "Retrato do Rav Yehuda Ashlag, Baal HaSulam",
-    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — autor do Talmud Eser Sefirot"
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — autor do Talmud Eser Sefirot",
+    "languageNames": {
+      "en": "Inglês",
+      "he": "Hebraico",
+      "ru": "Russo",
+      "uk": "Ucraniano",
+      "es": "Espanhol",
+      "fr": "Francês"
+    },
+    "licenseNames": {
+      "publicDomain": "Domínio público",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "Usado com permissão",
+      "unknown": "Licença não indicada"
+    }
   },
   "glossary": {
     "title": "Glossário",
@@ -363,7 +377,7 @@
       "description": "{chapter} de {part} — o texto do Ari ao lado da explicação da Luz Interior e da Observação Interior da parte."
     },
     "notFound": {
-      "description": "Esta página ainda não existe ou foi movida — volte aos volumes ou à página inicial do Read TES."
+      "description": "Esta página não existe ou foi movida — volte aos volumes, ao glossário ou à página inicial do Read TES."
     }
   }
 }

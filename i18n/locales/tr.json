@@ -20,12 +20,16 @@
     "themeToggleToLight": "Açık moda geç",
     "themeToggleToSepia": "Sepya moduna geç",
     "languageSwitcherLabel": "Dili değiştir",
-    "breadcrumbLabel": "Gezinti yolu"
+    "breadcrumbLabel": "Gezinti yolu",
+    "aboutLink": "Hakkında"
   },
   "footer": {
     "attribution": "{academy} öğrencileri tarafından hazırlandı",
     "academy": "Bnei Baruch Kabala Akademisi",
-    "sourcesLinkTitle": "Bnei Baruch'un Kabbalah Media üzerindeki kaynak kütüphanesi"
+    "navLabel": "Site bağlantıları",
+    "licenses": "Lisanslar",
+    "newTab": "yeni sekmede açılır",
+    "sourceLibrary": "Bnei Baruch'un Kabbalah Media üzerindeki kaynak kütüphanesi"
   },
   "reader": {
     "aiTranslated": "Yapay zekâ çevirisi",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Sayfa bulunamadı",
-    "notFoundMessage": "Bu sayfa henüz yok ya da taşınmış.",
+    "notFoundMessage": "Bu sayfa yok ya da taşınmış. On Sefirot'un Çalışması burada altı cilt ve on altı kısımdan oluşur — ciltlerden, sözlükten ya da ana sayfadan başlayın.",
     "notFoundBackHome": "Ana sayfaya dön",
     "genericTitle": "Bir şeyler ters gitti",
     "genericMessage": "Beklenmeyen bir hata oluştu. Sayfayı yeniden yüklemeyi deneyin ya da ana sayfaya dönün."
@@ -206,23 +210,33 @@
     "readingModelTitle": "Okuma modeli",
     "readingModelBody": "Okuyucu, On Sefirot'un Çalışması'nın kendi yapısını izler: Ari'nin numaralı metni, ona doğrudan bağlanan Baal HaSulam'ın İç Işık açıklaması ve kısım için daha derin, sistematik açıklama olan İç Gözlem. İç Gözlem paragraflara bağlı değil süreklidir; bu yüzden bağımsız bir okuma paneli olarak kalır.",
     "licensesTitle": "Metinler, baskılar ve lisanslar",
-    "licensesIntro": "Bu sitedeki her metin baskısı, dili, lisansı ve kaynağıyla birlikte aşağıda listelenmiştir.",
-    "licensesTableCaption": "Read TES'te kullanılan metin baskıları",
-    "tableHeaderTitle": "Baskı",
+    "licensesIntro": "Bu sitedeki her metin baskısı, kaynağa göre gruplanmış olarak, dili ve lisansıyla birlikte aşağıda listelenmiştir.",
     "tableHeaderLanguage": "Dil",
     "tableHeaderLicense": "Lisans",
-    "tableHeaderSource": "Kaynak",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "Yapay zekâ çevirisi",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "İngilizce",
-    "languageLabelHe": "İbranice",
     "attributionTitle": "Teşekkürler",
-    "attributionBody": "Kaynak metinler Sefaria'nın açık kütüphanesinden alınmıştır; bu okumaya ilham veren dersler ise KabbalahMedia.info'dandır — ikisi de izinle kullanılmaktadır.",
+    "attributionBody": "Kaynak metinler Sefaria'nın açık kütüphanesinden alınmıştır. Bnei Baruch çevirileri KabbalahMedia.info'dan, Bnei Baruch web baskısı Kabbalah.info'dan gelir; ikisi de izinle kullanılmaktadır. Bu okumaya ilham veren dersler ise KabbalahMedia.info'dandır.",
     "portraitAlt": "Baal HaSulam, Rav Yehuda Aşlag'ın portresi",
-    "portraitCaption": "Rav Yehuda Aşlag (1884–1954), Baal HaSulam — On Sefirot'un Çalışması'nın yazarı"
+    "portraitCaption": "Rav Yehuda Aşlag (1884–1954), Baal HaSulam — On Sefirot'un Çalışması'nın yazarı",
+    "languageNames": {
+      "en": "İngilizce",
+      "he": "İbranice",
+      "ru": "Rusça",
+      "uk": "Ukraynaca",
+      "es": "İspanyolca",
+      "fr": "Fransızca"
+    },
+    "licenseNames": {
+      "publicDomain": "Kamu malı",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "İzinle kullanılmıştır",
+      "unknown": "Lisans belirtilmemiş"
+    }
   },
   "glossary": {
     "title": "Sözlük",
@@ -363,7 +377,7 @@
       "description": "{part} kısmının {chapter} — Ari'nin metni, yanında İç Işık açıklaması ve kısmın İç Gözlemi."
     },
     "notFound": {
-      "description": "Bu sayfa henüz yok ya da taşınmış — Read TES'in ciltlerine ya da ana sayfasına dönün."
+      "description": "Bu sayfa yok ya da taşınmış — Read TES'in ciltlerine, sözlüğüne ya da ana sayfasına dönün."
     }
   }
 }

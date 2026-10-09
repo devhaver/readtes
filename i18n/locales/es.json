@@ -20,12 +20,16 @@
     "themeToggleToLight": "Cambiar al modo claro",
     "themeToggleToSepia": "Cambiar al modo sepia",
     "languageSwitcherLabel": "Cambiar de idioma",
-    "breadcrumbLabel": "Ruta de navegación"
+    "breadcrumbLabel": "Ruta de navegación",
+    "aboutLink": "Acerca de"
   },
   "footer": {
     "attribution": "Hecho por estudiantes de la {academy}",
     "academy": "Academia de Cabalá Bnei Baruch",
-    "sourcesLinkTitle": "Biblioteca de fuentes de Bnei Baruch en Kabbalah Media"
+    "navLabel": "Enlaces del sitio",
+    "licenses": "Licencias",
+    "newTab": "se abre en una pestaña nueva",
+    "sourceLibrary": "Biblioteca de fuentes de Bnei Baruch en Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "Traducido con IA",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Página no encontrada",
-    "notFoundMessage": "Esta página aún no existe o se ha movido.",
+    "notFoundMessage": "Esta página no existe o se ha movido. Aquí El Estudio de las Diez Sefirot consta de seis volúmenes y dieciséis partes: empiece por los volúmenes, el glosario o la página de inicio.",
     "notFoundBackHome": "Volver al inicio",
     "genericTitle": "Algo salió mal",
     "genericMessage": "Se produjo un error inesperado. Intente recargar la página o vuelva al inicio."
@@ -206,23 +210,33 @@
     "readingModelTitle": "El modelo de lectura",
     "readingModelBody": "El lector sigue la estructura del propio Estudio de las Diez Sefirot: el texto numerado del Ari, la explicación de la Luz Interior de Baal HaSulam anclada directamente a él, y la Observación Interior como explicación sistemática más profunda de la parte. La Observación Interior es continua y no se vincula párrafo a párrafo, por lo que sigue siendo un panel de lectura independiente.",
     "licensesTitle": "Textos, ediciones y licencias",
-    "licensesIntro": "A continuación se enumera cada edición de texto de este sitio con su idioma, licencia y fuente.",
-    "licensesTableCaption": "Ediciones de texto utilizadas en Read TES",
-    "tableHeaderTitle": "Edición",
+    "licensesIntro": "A continuación se enumera cada edición de texto de este sitio, agrupada por fuente, con su idioma y licencia.",
     "tableHeaderLanguage": "Idioma",
     "tableHeaderLicense": "Licencia",
-    "tableHeaderSource": "Fuente",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "Traducción con IA",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "Inglés",
-    "languageLabelHe": "Hebreo",
     "attributionTitle": "Agradecimientos",
-    "attributionBody": "Los textos originales proceden de la biblioteca abierta de Sefaria, y las lecciones que inspiran esta lectura son de KabbalahMedia.info; ambos se usan con permiso.",
+    "attributionBody": "Los textos originales proceden de la biblioteca abierta de Sefaria. Las traducciones de Bnei Baruch vienen de KabbalahMedia.info y la edición web de Bnei Baruch de Kabbalah.info; ambas se usan con permiso. Las lecciones que inspiran esta lectura son de KabbalahMedia.info.",
     "portraitAlt": "Retrato del Rav Yehuda Ashlag, Baal HaSulam",
-    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam, autor de El Estudio de las Diez Sefirot"
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam, autor de El Estudio de las Diez Sefirot",
+    "languageNames": {
+      "en": "Inglés",
+      "he": "Hebreo",
+      "ru": "Ruso",
+      "uk": "Ucraniano",
+      "es": "Español",
+      "fr": "Francés"
+    },
+    "licenseNames": {
+      "publicDomain": "Dominio público",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "Usado con permiso",
+      "unknown": "Licencia no indicada"
+    }
   },
   "glossary": {
     "title": "Glosario",
@@ -363,7 +377,7 @@
       "description": "{chapter} de {part}: el texto del Ari junto a su explicación de la Luz Interior y la Observación Interior de la parte."
     },
     "notFound": {
-      "description": "Esta página aún no existe o se ha movido: encuentre el camino de vuelta a los volúmenes o a la página de inicio de Read TES."
+      "description": "Esta página no existe o se ha movido: encuentre el camino de vuelta a los volúmenes, al glosario o a la página de inicio de Read TES."
     }
   }
 }

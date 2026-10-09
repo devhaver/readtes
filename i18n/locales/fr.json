@@ -20,12 +20,16 @@
     "themeToggleToLight": "Passer au mode clair",
     "themeToggleToSepia": "Passer au mode sépia",
     "languageSwitcherLabel": "Changer de langue",
-    "breadcrumbLabel": "Fil d'Ariane"
+    "breadcrumbLabel": "Fil d'Ariane",
+    "aboutLink": "À propos"
   },
   "footer": {
     "attribution": "Réalisé par des étudiants de {academy}",
     "academy": "l'Académie de Kabbale Bnei Baruch",
-    "sourcesLinkTitle": "La bibliothèque de sources de Bnei Baruch sur Kabbalah Media"
+    "navLabel": "Liens du site",
+    "licenses": "Licences",
+    "newTab": "s'ouvre dans un nouvel onglet",
+    "sourceLibrary": "La bibliothèque de sources de Bnei Baruch sur Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "Traduit par IA",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Page introuvable",
-    "notFoundMessage": "Cette page n'existe pas encore, ou elle a été déplacée.",
+    "notFoundMessage": "Cette page n'existe pas, ou elle a été déplacée. Ici, le Talmud Eser Sefirot compte six volumes et seize parties — commencez par les volumes, le glossaire ou la page d'accueil.",
     "notFoundBackHome": "Retour à l'accueil",
     "genericTitle": "Une erreur s'est produite",
     "genericMessage": "Une erreur inattendue est survenue. Essayez de recharger la page, ou retournez à l'accueil."
@@ -206,23 +210,33 @@
     "readingModelTitle": "Le modèle de lecture",
     "readingModelBody": "Le lecteur suit la structure du Talmud Eser Sefirot lui-même : le texte numéroté du Ari, l'explication de la Lumière intérieure de Baal HaSoulam qui s'y rattache directement, et l'Observation intérieure comme explication systématique plus profonde pour la partie. L'Observation intérieure est continue plutôt que liée aux paragraphes ; elle reste donc une colonne de lecture indépendante.",
     "licensesTitle": "Textes, éditions et licences",
-    "licensesIntro": "Chaque édition de texte présente sur ce site est listée ci-dessous avec sa langue, sa licence et sa source.",
-    "licensesTableCaption": "Éditions de texte utilisées dans Read TES",
-    "tableHeaderTitle": "Édition",
+    "licensesIntro": "Chaque édition de texte présente sur ce site est listée ci-dessous, regroupée par source, avec sa langue et sa licence.",
     "tableHeaderLanguage": "Langue",
     "tableHeaderLicense": "Licence",
-    "tableHeaderSource": "Source",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "Traduction par IA",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "Anglais",
-    "languageLabelHe": "Hébreu",
     "attributionTitle": "Remerciements",
-    "attributionBody": "Les textes sources proviennent de la bibliothèque ouverte de Sefaria, et les cours dont cette lecture s'inspire viennent de KabbalahMedia.info — les deux sont utilisés avec autorisation.",
+    "attributionBody": "Les textes sources proviennent de la bibliothèque ouverte de Sefaria. Les traductions de Bnei Baruch viennent de KabbalahMedia.info et l'édition web de Bnei Baruch de Kabbalah.info, toutes deux utilisées avec autorisation. Les cours dont cette lecture s'inspire viennent de KabbalahMedia.info.",
     "portraitAlt": "Portrait de Rav Yehuda Ashlag, Baal HaSoulam",
-    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSoulam — auteur du Talmud Eser Sefirot"
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSoulam — auteur du Talmud Eser Sefirot",
+    "languageNames": {
+      "en": "Anglais",
+      "he": "Hébreu",
+      "ru": "Russe",
+      "uk": "Ukrainien",
+      "es": "Espagnol",
+      "fr": "Français"
+    },
+    "licenseNames": {
+      "publicDomain": "Domaine public",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "Utilisé avec autorisation",
+      "unknown": "Licence non précisée"
+    }
   },
   "glossary": {
     "title": "Glossaire",
@@ -363,7 +377,7 @@
       "description": "{chapter} de {part} — le texte du Ari à côté de son explication de la Lumière intérieure et de l'Observation intérieure de la partie."
     },
     "notFound": {
-      "description": "Cette page n'existe pas encore, ou elle a été déplacée — retrouvez le chemin des volumes ou de la page d'accueil de Read TES."
+      "description": "Cette page n'existe pas, ou elle a été déplacée — retrouvez le chemin des volumes, du glossaire ou de la page d'accueil de Read TES."
     }
   }
 }

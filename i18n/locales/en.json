@@ -20,12 +20,16 @@
     "themeToggleToLight": "Switch to light mode",
     "themeToggleToSepia": "Switch to sepia mode",
     "languageSwitcherLabel": "Switch language",
-    "breadcrumbLabel": "Breadcrumb"
+    "breadcrumbLabel": "Breadcrumb",
+    "aboutLink": "About"
   },
   "footer": {
     "attribution": "Made by students of {academy}",
     "academy": "Bnei Baruch Kabbalah Academy",
-    "sourcesLinkTitle": "Bnei Baruch's source library on Kabbalah Media"
+    "navLabel": "Site links",
+    "licenses": "Licenses",
+    "newTab": "opens in a new tab",
+    "sourceLibrary": "Bnei Baruch's source library on Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "AI translated",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Page not found",
-    "notFoundMessage": "This page doesn't exist yet, or has moved.",
+    "notFoundMessage": "This page doesn't exist, or it has moved. Talmud Eser Sefirot here runs to six volumes and sixteen parts — start from the volumes, the glossary or the home page.",
     "notFoundBackHome": "Back to home",
     "genericTitle": "Something went wrong",
     "genericMessage": "An unexpected error occurred. Try reloading, or head back home."
@@ -206,23 +210,33 @@
     "readingModelTitle": "The reading model",
     "readingModelBody": "The reader follows the structure of Talmud Eser Sefirot itself: the Ari's numbered text, Baal HaSulam's Inner Light explanation anchored directly to it, and Inner Observation as the deeper systematic explanation for the part. Inner Observation is continuous rather than paragraph-linked, so it remains an independent reading pane.",
     "licensesTitle": "Texts, editions, and licenses",
-    "licensesIntro": "Every text edition on this site is listed below with its language, license, and source.",
-    "licensesTableCaption": "Text editions used in Read TES",
-    "tableHeaderTitle": "Edition",
+    "licensesIntro": "Every text edition on this site is listed below, grouped by source, with its language and license.",
     "tableHeaderLanguage": "Language",
     "tableHeaderLicense": "License",
-    "tableHeaderSource": "Source",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "AI translation",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "English",
-    "languageLabelHe": "Hebrew",
     "attributionTitle": "With thanks",
-    "attributionBody": "Source texts are drawn from Sefaria's open library, and the lessons this reading is inspired by are from KabbalahMedia.info — both used with permission.",
+    "attributionBody": "Source texts are drawn from Sefaria's open library. The Bnei Baruch translations come from KabbalahMedia.info and the Bnei Baruch web edition from Kabbalah.info, both used with permission, and the lessons this reading is inspired by are from KabbalahMedia.info.",
     "portraitAlt": "Portrait of Rav Yehuda Ashlag, Baal HaSulam",
-    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — author of Talmud Eser Sefirot"
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — author of Talmud Eser Sefirot",
+    "languageNames": {
+      "en": "English",
+      "he": "Hebrew",
+      "ru": "Russian",
+      "uk": "Ukrainian",
+      "es": "Spanish",
+      "fr": "French"
+    },
+    "licenseNames": {
+      "publicDomain": "Public domain",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "Used with permission",
+      "unknown": "License not stated"
+    }
   },
   "glossary": {
     "title": "Glossary",
@@ -363,7 +377,7 @@
       "description": "{chapter} of {part} — the Ari's text beside its Inner Light explanation and the part's Inner Observation."
     },
     "notFound": {
-      "description": "This page doesn't exist yet, or has moved — find your way back to Read TES's volumes or home page."
+      "description": "This page doesn't exist, or it has moved — find your way back to Read TES's volumes, glossary or home page."
     }
   }
 }
