@@ -11,8 +11,13 @@
  * prerendered HTML it's hydrating — a mismatch. `resolveReaderMode`
  * (`~/utils/readerMode`) always resolves to the fixed `FIXED_PREMOUNT_MODE`
  * until `hydrated` flips true in `onMounted`; only then do the real
- * viewport (`prefersStudyViewport`, tracked via a `matchMedia` listener)
- * and the persisted `override` get consulted.
+ * viewport (`prefersStudyViewport`) and the persisted `override` get
+ * consulted.
+ *
+ * The viewport default is resolved ONCE per load, deliberately not tracked:
+ * a phone rotated across 1024px used to swap the whole reader between study
+ * and panes mid-read, losing the reader's place. A reader who wants the
+ * other layout picks it from the toolbar.
  */
 import { useLocalStorage } from "@vueuse/core";
 import type { ComputedRef, InjectionKey } from "vue";
@@ -28,13 +33,26 @@ export interface ReaderModeState {
   mode: ComputedRef<ReaderMode>;
   /** Sets (and persists) an explicit user override — wins over the viewport default from then on. */
   setMode: (mode: ReaderMode) => void;
+  /**
+   * Shows a mode for this page load only, without touching the persisted
+   * choice — for one-off jumps like study mode's "Read the full commentary",
+   * which must not silently change the reader's standing preference.
+   */
+  setModeOnce: (mode: ReaderMode) => void;
 }
 
 const READER_MODE_KEY: InjectionKey<ReaderModeState> = Symbol("reader-mode");
 
 const createReaderModeState = (): ReaderModeState => {
   const override = useLocalStorage<ReaderMode | null>(STORAGE_KEY, null);
+
+  // Pre-hydration hook for CSS — see `useRootDataAttribute`.
+  useRootDataAttribute(
+    "data-pref-mode",
+    computed(() => override.value),
+  );
   const prefersStudyViewport = ref(false);
+  const onceMode = ref<ReaderMode | null>(null);
 
   // Gates viewport/override reads until after mount — see the module doc.
   const hydrated = ref(false);
@@ -45,14 +63,9 @@ const createReaderModeState = (): ReaderModeState => {
       return;
     }
 
-    const mql = window.matchMedia(STUDY_MODE_MEDIA_QUERY);
-    prefersStudyViewport.value = mql.matches;
-
-    const onChange = (event: MediaQueryListEvent) => {
-      prefersStudyViewport.value = event.matches;
-    };
-    mql.addEventListener("change", onChange);
-    onUnmounted(() => mql.removeEventListener("change", onChange));
+    prefersStudyViewport.value = window.matchMedia(
+      STUDY_MODE_MEDIA_QUERY,
+    ).matches;
 
     // Set only after `prefersStudyViewport` already reflects the real
     // viewport, so `mode`'s first hydrated-reactive pass resolves correctly
@@ -63,16 +76,21 @@ const createReaderModeState = (): ReaderModeState => {
   const mode = computed(() =>
     resolveReaderMode({
       hydrated: hydrated.value,
-      override: override.value,
+      override: onceMode.value ?? override.value,
       prefersStudyViewport: prefersStudyViewport.value,
     }),
   );
 
   const setMode = (next: ReaderMode) => {
+    onceMode.value = null;
     override.value = next;
   };
 
-  return { mode, setMode };
+  const setModeOnce = (next: ReaderMode) => {
+    onceMode.value = next;
+  };
+
+  return { mode, setMode, setModeOnce };
 };
 
 export const useReaderMode = (): ReaderModeState => {

@@ -57,6 +57,15 @@
     "innerObservationLoaded": "Innere Betrachtung geladen.",
     "innerObservationFailed": "Die Innere Betrachtung konnte nicht geladen werden.",
     "innerObservationReload": "Seite neu laden",
+    "questionsEmpty": "Für dieses Kapitel sind noch keine Fragen verfügbar.",
+    "questionsLoading": "Fragen werden geladen …",
+    "questionsLoaded": "Fragen geladen.",
+    "questionsFailed": "Die Fragen konnten nicht geladen werden.",
+    "answersEmpty": "Für dieses Kapitel sind noch keine Antworten verfügbar.",
+    "answersLoading": "Antworten werden geladen …",
+    "answersLoaded": "Antworten geladen.",
+    "answersFailed": "Die Antworten konnten nicht geladen werden.",
+    "languageFallback": "Noch nicht auf {language} verfügbar — angezeigt wird: {shown}",
     "innerObservationNeverWritten": "Baal HaSulam hat zu diesem Teil keine Innere Betrachtung (Histaklut Pnimit) geschrieben – elf der sechzehn Teile haben eine, dieser gehört nicht dazu. Es gibt hier keinen Text, den eine Ausgabe enthalten könnte, daher handelt es sich nicht um eine Digitalisierungslücke.",
     "miniTocTitle": "In diesem Kapitel",
     "miniTocTruncated": "… und {count} weitere – nach unten scrollen, um alle zu lesen.",
@@ -140,8 +149,8 @@
       }
     },
     "thirdPane": {
-      "collapse": "Spalte „Innere Betrachtung“ ausblenden",
-      "expand": "Spalte „Innere Betrachtung“ einblenden"
+      "collapse": "Spalte ausblenden: {pane}",
+      "expand": "Spalte einblenden: {pane}"
     }
   },
   "home": {

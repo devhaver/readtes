@@ -1,6 +1,8 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it } from "vitest";
+import { h } from "vue";
 import ReaderPane from "~/components/reader/ReaderPane.vue";
+import SourcePane from "~/components/reader/SourcePane.vue";
 import type { ContentVersion } from "~~/shared/types/content";
 
 const hebrewMeta: ContentVersion = {
@@ -23,7 +25,7 @@ const aiMeta: ContentVersion = {
 };
 
 describe("ReaderPane", () => {
-  it("sets dir/lang on the scroll container from the resolved version metadata", async () => {
+  it("puts the resolved version's dir/lang on the content list, not on the chrome-bearing scroll container", async () => {
     const wrapper = await mountSuspended(ReaderPane, {
       props: {
         title: "Source",
@@ -31,11 +33,26 @@ describe("ReaderPane", () => {
         modelValue: "he",
         meta: hebrewMeta,
       },
+      slots: {
+        default: () => [
+          h(SourcePane, {
+            segments: [{ n: 1, sefariaRef: "x", html: "א", anchors: [] }],
+          }),
+          h("p", { "data-testid": "chrome" }, "UI note"),
+        ],
+      },
     });
 
-    const container = wrapper.find('[lang="he"]');
-    expect(container.exists()).toBe(true);
-    expect(container.attributes("dir")).toBe("rtl");
+    const list = wrapper.get("li#seif-1").element.parentElement as HTMLElement;
+    expect(list.getAttribute("lang")).toBe("he");
+    expect(list.getAttribute("dir")).toBe("rtl");
+
+    const body = wrapper.get(".tes-pane-body");
+    expect(body.attributes("lang")).toBeUndefined();
+    expect(body.attributes("dir")).toBeUndefined();
+    expect(
+      wrapper.get('[data-testid="chrome"]').element.closest("[lang]"),
+    ).toBeNull();
   });
 
   it("shows the AI-translated badge only for an AI-sourced version", async () => {

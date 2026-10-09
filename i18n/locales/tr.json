@@ -57,6 +57,15 @@
     "innerObservationLoaded": "İç Gözlem yüklendi.",
     "innerObservationFailed": "İç Gözlem yüklenemedi.",
     "innerObservationReload": "Sayfayı yeniden yükle",
+    "questionsEmpty": "Bu bölüm için henüz soru yok.",
+    "questionsLoading": "Sorular yükleniyor…",
+    "questionsLoaded": "Sorular yüklendi.",
+    "questionsFailed": "Sorular yüklenemedi.",
+    "answersEmpty": "Bu bölüm için henüz cevap yok.",
+    "answersLoading": "Cevaplar yükleniyor…",
+    "answersLoaded": "Cevaplar yüklendi.",
+    "answersFailed": "Cevaplar yüklenemedi.",
+    "languageFallback": "Henüz {language} dilinde yok — gösterilen: {shown}",
     "innerObservationNeverWritten": "Baal HaSulam bu kısım için İç Gözlem (Histaklut Pnimit) yazmadı — on altı kısmın on biri İç Gözlem içerir ve bu kısım onlardan biri değildir. Bir baskının taşıyacağı bir metin yoktur, dolayısıyla bu bir dijitalleştirme eksiği değildir.",
     "miniTocTitle": "Bu bölümde",
     "miniTocTruncated": "…ve {count} tane daha — hepsini okumak için aşağı kaydırın.",
@@ -140,8 +149,8 @@
       }
     },
     "thirdPane": {
-      "collapse": "İç Gözlem panelini gizle",
-      "expand": "İç Gözlem panelini göster"
+      "collapse": "Paneli gizle: {pane}",
+      "expand": "Paneli göster: {pane}"
     }
   },
   "home": {

@@ -65,6 +65,7 @@ const { locale, t } = useI18n();
 const { activateAnchor } = useReaderState();
 const { currentSeif } = useCurrentSeif();
 const containerRef = useReaderPaneContainer();
+const contentAttrs = useReaderPaneContentAttrs();
 useHighlightedAnchor("commentary", containerRef);
 
 /** The marker to print for an item: the source's own, else its stored label. */
@@ -145,7 +146,7 @@ const isSectionHeadingUseful = computed(
           />
         </summary>
 
-        <ol class="flex flex-col">
+        <ol class="flex flex-col" v-bind="contentAttrs">
           <li
             v-for="item in seifGroup.items"
             :id="item.anchorId"

@@ -103,6 +103,37 @@ describe("chapterLanguages", () => {
     expect(result.aiTranslated).toBe(false);
   });
 
+  it("does not badge Hebrew-original chapters in the Hebrew library", () => {
+    const aiChapter = chapter({ source: ["he-jerusalem-1956", "en-ai"] });
+
+    expect(chapterLanguages(aiChapter, versions, "he").aiTranslated).toBe(
+      false,
+    );
+    expect(chapterLanguages(aiChapter, versions, "es").aiTranslated).toBe(true);
+  });
+
+  it("badges any AI edition the locale resolves to, not only en-ai", () => {
+    const withRussian: ContentVersion[] = [
+      ...versions,
+      {
+        id: "ru-ai",
+        language: "ru",
+        direction: "ltr",
+        title: "Russian (AI translation)",
+        license: "CC0",
+        source: "ai",
+        translatedFrom: "he-jerusalem-1956",
+      },
+    ];
+    const ruChapter = chapter({
+      source: ["he-jerusalem-1956", "en-ai", "ru-ai"],
+    });
+
+    expect(chapterLanguages(ruChapter, withRussian, "ru").aiTranslated).toBe(
+      true,
+    );
+  });
+
   it("reports false for a language with no version present at all", () => {
     const result = chapterLanguages(
       chapter({ source: ["he-jerusalem-1956"] }),

@@ -12,7 +12,7 @@ definePageMeta({
   // Full remount on every param change (not just on prop update) so the
   // 404 check below always re-runs against the new ids, and so
   // `useReaderLanguages`' locale-dependent defaults are recomputed fresh.
-  key: (route) => route.fullPath,
+  key: (route) => route.path,
 });
 
 const route = useRoute();
@@ -70,6 +70,12 @@ const {
 // `LayerAbsenceNote` footnote in the Source pane.
 const hasCommentary = chapter.availableVersions.commentary.length > 0;
 
+// The "not digitized yet" / "never written" footnotes describe gaps in the
+// Ari's own chapters. The Introduction and the Inner Observation and Q&A
+// pages are not chapters of the Ari's text, so they have no Inner Light or
+// Inner Observation to be missing and must not claim one.
+const isAriChapter = chapter.kind === "chapter";
+
 // Inner Observation isn't a per-chapter layer file — it lives in the part's
 // own `kind: "inner-observation"` chapters (see AGENTS.md / the content
 // model skill), so it's loaded once per part rather than per chapter, and
@@ -118,7 +124,13 @@ const { tab: preferredThirdPaneTab, setTab: setThirdPaneTab } =
 const thirdPaneChapters = {
   innerObservation: innerObservationChapters,
   questions: questionsChaptersInPart(partFile.chapters),
-  answers: answersChaptersInPart(partFile.chapters),
+  // A questions table pairs with its own answer list only.
+  answers: chapter.kind.startsWith("questions-")
+    ? answersChaptersForQuestions(
+        answersChaptersInPart(partFile.chapters),
+        chapter.kind,
+      )
+    : answersChaptersInPart(partFile.chapters),
 };
 
 // Static for the page: the part's chapter list does not change under it,
@@ -151,6 +163,17 @@ const availableThirdPaneTabs: ThirdPaneTab[] = [
 // the next part that has one.
 const activeThirdPaneTab = computed(() =>
   resolveThirdPaneTab(preferredThirdPaneTab.value, availableThirdPaneTabs),
+);
+
+// The third pane is named after the tab on screen, not always "Inner
+// Observation" — its language label, rail and status copy all follow it.
+const THIRD_PANE_TITLE_KEYS: Record<ThirdPaneTab, string> = {
+  "inner-observation": "reader.pane.innerObservation",
+  questions: "reader.pane.questions",
+  answers: "reader.pane.answers",
+};
+const thirdPaneTitle = computed(() =>
+  t(THIRD_PANE_TITLE_KEYS[activeThirdPaneTab.value ?? "inner-observation"]),
 );
 
 const panes = resolveReaderPanes({
@@ -362,6 +385,7 @@ useLocalizedSeo({
       class="min-h-0 flex-1"
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"
+      :third-pane-name="thirdPaneTitle"
       :source-label-key="sourceLabelKey"
     >
       <template #source>
@@ -380,7 +404,10 @@ useLocalizedSeo({
             :split-paragraphs="chapter.kind === 'inner-observation'"
             @open-seif-commentary="handleOpenSeifCommentary"
           >
-            <template v-if="!hasCommentary || !hasInnerObservation" #footnote>
+            <template
+              v-if="isAriChapter && (!hasCommentary || !hasInnerObservation)"
+              #footnote
+            >
               <ReaderLayerAbsenceNote v-if="!hasCommentary" />
               <ReaderLayerAbsenceNote
                 v-if="!hasInnerObservation"
@@ -423,10 +450,11 @@ useLocalizedSeo({
 
       <template v-if="availableThirdPaneTabs.length > 0" #inner-observation>
         <ReaderPane
-          :title="t('reader.pane.innerObservation')"
+          :title="thirdPaneTitle"
           :language-options="thirdPane.languageOptions.value"
           :model-value="thirdPane.language.value"
           :meta="thirdPane.meta.value"
+          hide-provenance
           @update:model-value="
             (language) => (thirdPane.language.value = language)
           "
@@ -452,6 +480,7 @@ useLocalizedSeo({
             <ReaderInnerObservationPane
               :sections="thirdPane.sections.value"
               :state="thirdPane.state.value"
+              :tab="activeThirdPaneTab"
               @reload="reloadNuxtApp({ force: true })"
             />
           </div>
@@ -462,6 +491,7 @@ useLocalizedSeo({
     <template v-else-if="mode === 'study'">
       <ReaderStudyStream
         :source-label-key="sourceLabelKey"
+        :chapter-kind="chapter.kind"
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"
         :summary-items="summaryItems"

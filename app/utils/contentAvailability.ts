@@ -25,15 +25,15 @@ export interface ChapterLanguages {
   he: boolean;
   en: boolean;
   /**
-   * True when the English the reader shows for the chapter's `source` layer
-   * is the AI translation — i.e. `en-ai` exists and no human English
-   * outranks it. A chapter that also has Bnei Baruch's English is read in
-   * that, so it is not badged.
+   * True when the text the reader shows for the chapter's `source` layer in
+   * this UI locale is an AI translation (`source: "ai"` in the registry) —
+   * i.e. the locale's default language resolves to an AI edition and no
+   * human edition outranks it. A Hebrew locale reads the original, and a
+   * chapter that also has Bnei Baruch's English is read in that, so
+   * neither is badged.
    */
   aiTranslated: boolean;
 }
-
-const AI_TRANSLATION_VERSION_ID = "en-ai";
 
 const collectVersionIds = (chapter: TocChapter): string[] => [
   ...chapter.availableVersions.summary,
@@ -45,8 +45,9 @@ const collectVersionIds = (chapter: TocChapter): string[] => [
 export const chapterLanguages = (
   chapter: TocChapter,
   versions: ContentVersion[],
+  locale = "en",
 ): ChapterLanguages => {
-  const versionById = new Map(versions.map((version) => [version.id, version]));
+  const versionById = buildVersionsById(versions);
   let he = false;
   let en = false;
 
@@ -56,15 +57,25 @@ export const chapterLanguages = (
     if (language === "en") en = true;
   }
 
+  const shownLanguage = resolveDefaultLanguage(
+    chapter.availableVersions.source,
+    locale,
+    versionById,
+  );
+  const shownVersionId = shownLanguage
+    ? resolveVersionForLanguage(
+        chapter.availableVersions.source,
+        shownLanguage,
+        versionById,
+      )
+    : null;
+
   return {
     he,
     en,
     aiTranslated:
-      resolveVersionForLanguage(
-        chapter.availableVersions.source,
-        "en",
-        buildVersionsById(versions),
-      ) === AI_TRANSLATION_VERSION_ID,
+      shownVersionId !== null &&
+      versionById.get(shownVersionId)?.source === "ai",
   };
 };
 

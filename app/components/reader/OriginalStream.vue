@@ -59,6 +59,18 @@ const markerFor = (item: CommentaryItem): string =>
       :next="pagination.next"
     />
 
+    <!-- Language + provenance above each list: this mode has no pane header,
+         and "AI translated" is mandatory wherever `en-ai` text is shown.
+         Chrome, not content, so it keeps the UI locale's dir/lang. -->
+    <p
+      v-if="sourceMeta"
+      class="flex flex-wrap items-center gap-2 text-xs text-(--text-muted)"
+      data-testid="original-source-provenance"
+    >
+      <span>{{ nativeLanguageName(sourceMeta.language) }}</span>
+      <ReaderProvenanceBadge :meta="sourceMeta" />
+    </p>
+
     <ol
       v-if="sourceSegments.length > 0"
       class="flex flex-col gap-6"
@@ -91,13 +103,17 @@ const markerFor = (item: CommentaryItem): string =>
     </p>
 
     <template v-if="hasCommentary">
-      <h2
-        class="font-display text-base text-(--text-primary)"
-        :dir="commentaryMeta?.direction ?? 'ltr'"
-        :lang="commentaryMeta?.language"
-      >
+      <h2 class="font-display text-base text-(--text-primary)">
         {{ t("reader.commentarySection.ohr-pnimi") }}
       </h2>
+      <p
+        v-if="commentaryMeta"
+        class="-mt-4 flex flex-wrap items-center gap-2 text-xs text-(--text-muted)"
+        data-testid="original-commentary-provenance"
+      >
+        <span>{{ nativeLanguageName(commentaryMeta.language) }}</span>
+        <ReaderProvenanceBadge :meta="commentaryMeta" />
+      </p>
       <ol
         class="flex flex-col gap-4"
         :dir="commentaryMeta?.direction ?? 'ltr'"
@@ -107,9 +123,9 @@ const markerFor = (item: CommentaryItem): string =>
           v-for="item in commentaryItems"
           :id="item.anchorId"
           :key="item.anchorId"
-          class="text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary)"
+          class="scroll-mt-24 rounded-card text-[length:calc(1rem*var(--reading-scale))] leading-relaxed text-(--text-primary) target:bg-(--surface-raised)"
         >
-          <span class="font-medium">{{ markerFor(item) }}.</span>
+          <span class="me-1.5 font-medium">{{ markerFor(item) }}.</span>
           <span v-html="item.html" />
         </li>
       </ol>

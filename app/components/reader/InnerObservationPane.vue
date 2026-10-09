@@ -30,13 +30,16 @@
 // makes the *transition* audible — a `role="status"` that is destroyed the
 // moment the content arrives announces the wait but never its end.
 import type { PartSectionsLoadState } from "~/composables/usePartScopedSections";
+import type { ThirdPaneTab } from "~/composables/useReaderThirdPane";
 import type { LocalizedText } from "~/utils/localization";
-import type { SourceSegment } from "~~/shared/types/content";
+import type { ContentVersion, SourceSegment } from "~~/shared/types/content";
 
 export interface InnerObservationSectionView {
   chapterId: string;
   title: LocalizedText;
   items: SourceSegment[];
+  /** The edition this section was resolved to — drives its own provenance badge. */
+  meta?: ContentVersion | null;
 }
 
 // This pane renders only for a part that HAS an Inner Observation
@@ -51,20 +54,33 @@ const props = withDefaults(
   defineProps<{
     sections: InnerObservationSectionView[];
     state?: PartSectionsLoadState;
+    /** Which third-pane tab this is showing — status copy names it. */
+    tab?: ThirdPaneTab;
   }>(),
-  { state: "ready" },
+  { state: "ready", tab: "inner-observation" },
 );
 
 const emit = defineEmits<{ reload: [] }>();
 
 const { t, locale } = useI18n();
+const contentAttrs = useReaderPaneContentAttrs();
+
+// One key family per tab (`reader.innerObservationFailed`,
+// `reader.questionsFailed`, `reader.answersFailed`, ...): the sentences name
+// the layer, so they cannot be shared without telling a reader on Answers
+// that "Inner Observation could not be loaded".
+const COPY_PREFIX: Record<ThirdPaneTab, string> = {
+  "inner-observation": "innerObservation",
+  questions: "questions",
+  answers: "answers",
+};
+const copy = (suffix: "Loading" | "Loaded" | "Failed" | "Empty"): string =>
+  t(`reader.${COPY_PREFIX[props.tab]}${suffix}`);
 
 const statusMessage = computed(() => {
-  if (props.state === "pending") return t("reader.innerObservationLoading");
-  if (props.state === "failed") return t("reader.innerObservationFailed");
-  return props.sections.length > 0
-    ? t("reader.innerObservationLoaded")
-    : t("reader.innerObservationEmpty");
+  if (props.state === "pending") return copy("Loading");
+  if (props.state === "failed") return copy("Failed");
+  return props.sections.length > 0 ? copy("Loaded") : copy("Empty");
 });
 </script>
 
@@ -104,7 +120,7 @@ const statusMessage = computed(() => {
       data-testid="inner-observation-failed"
     >
       <p class="text-sm text-(--text-muted)">
-        {{ t("reader.innerObservationFailed") }}
+        {{ copy("Failed") }}
       </p>
       <button
         type="button"
@@ -129,16 +145,23 @@ const statusMessage = computed(() => {
         open
       >
         <summary class="tes-prose-section-heading">
-          <h3 class="tes-eyebrow">
-            {{ localizedText(section.title, locale) }}
-          </h3>
+          <span class="flex min-w-0 flex-wrap items-center gap-2">
+            <h3 class="tes-eyebrow">
+              {{ localizedText(section.title, locale) }}
+            </h3>
+            <ReaderProvenanceBadge :meta="section.meta ?? null" />
+          </span>
           <span
             aria-hidden="true"
             class="tes-icon tes-icon-chevron-down tes-disclosure-chevron h-4 w-4"
           />
         </summary>
 
-        <ol v-if="section.items.length > 0" class="flex flex-col gap-6">
+        <ol
+          v-if="section.items.length > 0"
+          class="flex flex-col gap-6"
+          v-bind="contentAttrs"
+        >
           <li
             v-for="segment in section.items"
             :key="segment.n"
@@ -151,7 +174,7 @@ const statusMessage = computed(() => {
     </div>
 
     <p v-else class="text-sm text-(--text-muted)">
-      {{ t("reader.innerObservationEmpty") }}
+      {{ copy("Empty") }}
     </p>
   </div>
 </template>

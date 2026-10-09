@@ -24,11 +24,13 @@ const props = defineProps<{
   modelValue: string | null;
   /** The RESOLVED version — drives the badge, and `dir`/`lang` in `ReaderPane`. */
   meta: ContentVersion | null;
+  /** The third pane badges each section itself — one tab can mix editions. */
+  hideProvenance?: boolean;
 }>();
 
 const emit = defineEmits<{ "update:modelValue": [value: string] }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const selectId = useId();
 
@@ -41,16 +43,19 @@ const languageLabel = computed(() =>
   t("reader.paneLanguageLabel", { pane: props.title }),
 );
 
-const provenance = computed(() => {
-  const meta = props.meta;
-  if (!meta || meta.language === "he") return null;
-  if (meta.source === "ai") {
-    return { label: t("reader.aiTranslated"), tone: "warning" as const };
-  }
-  if (meta.source === "sefaria") {
-    return { label: t("reader.sefariaTranslated"), tone: "muted" as const };
-  }
-  return null;
+// The pane's options always name the language genuinely on screen
+// (`paneLanguageOptions`), so a UI locale missing from them means this layer
+// has no text in the reader's language and a fallback is showing. That must
+// be said in words, not left to a 12px <select>. Hebrew is exempt: a Hebrew
+// reader is shown the original, which is never a "fallback".
+const fallbackNotice = computed(() => {
+  if (locale.value === "he" || !props.modelValue) return null;
+  if (props.languageOptions.length === 0) return null;
+  if (props.languageOptions.includes(locale.value)) return null;
+  return t("reader.languageFallback", {
+    language: nativeLanguageName(locale.value),
+    shown: nativeLanguageName(props.modelValue),
+  });
 });
 
 const onLanguageChange = (event: Event) => {
@@ -74,19 +79,7 @@ const onLanguageChange = (event: Event) => {
     </slot>
 
     <div class="flex min-w-0 shrink-0 items-center gap-2">
-      <span
-        v-if="provenance"
-        class="tes-provenance-badge shrink-0"
-        :title="provenance.label"
-        :class="
-          provenance.tone === 'warning'
-            ? 'border-orange-cta text-(--warning-text)'
-            : 'border-(--border) text-(--text-muted)'
-        "
-      >
-        <span class="@max-sm:sr-only">{{ provenance.label }}</span>
-        <span aria-hidden="true" class="hidden @max-sm:inline">&#10022;</span>
-      </span>
+      <ReaderProvenanceBadge v-if="!hideProvenance" :meta="meta" />
 
       <template v-if="languageOptions.length > 1">
         <label :for="selectId" class="sr-only">{{ languageLabel }}</label>
@@ -106,5 +99,13 @@ const onLanguageChange = (event: Event) => {
         </select>
       </template>
     </div>
+
+    <p
+      v-if="fallbackNotice"
+      class="basis-full text-xs text-(--text-muted)"
+      data-testid="language-fallback-notice"
+    >
+      {{ fallbackNotice }}
+    </p>
   </div>
 </template>

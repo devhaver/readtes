@@ -82,6 +82,31 @@ describe("StudyStream", () => {
     Element.prototype.scrollIntoView = vi.fn();
   });
 
+  it("says Inner Light is not digitized on an Ari chapter without commentary, but never on other page kinds", async () => {
+    const noCommentary = {
+      ...baseProps,
+      commentaryItems: [],
+      commentaryLanguageOptions: [],
+    };
+
+    const chapter = await mountSuspended(StudyStream, {
+      props: { ...noCommentary, chapterKind: "chapter" },
+    });
+    expect(chapter.find('aside[role="note"]').exists()).toBe(true);
+
+    for (const chapterKind of [
+      "introduction",
+      "inner-observation",
+      "answers-topics",
+      "questions-topics",
+    ] as const) {
+      const wrapper = await mountSuspended(StudyStream, {
+        props: { ...noCommentary, chapterKind },
+      });
+      expect(wrapper.find('aside[role="note"]').exists()).toBe(false);
+    }
+  });
+
   it("unfolds an anchor's commentary inline on tap, and folds it back on a second tap", async () => {
     const wrapper = await mountSuspended(StudyStream, { props: baseProps });
 

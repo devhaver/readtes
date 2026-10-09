@@ -206,3 +206,23 @@ describe("InnerObservationPane collapsible sections", () => {
     ).toContain("First passage.");
   });
 });
+
+describe("InnerObservationPane copy follows the active tab", () => {
+  it("never calls the Answers or Questions tabs Inner Observation", async () => {
+    for (const [tab, word] of [
+      ["answers", "answers"],
+      ["questions", "questions"],
+    ] as const) {
+      const failed = await mountSuspended(InnerObservationPane, {
+        props: { sections: [], state: "failed", tab },
+      });
+      expect(failed.text()).toContain(word);
+      expect(failed.text()).not.toContain("Inner Observation");
+
+      const empty = await mountSuspended(InnerObservationPane, {
+        props: { sections: [], tab },
+      });
+      expect(empty.text()).not.toContain("Inner Observation");
+    }
+  });
+});

@@ -57,6 +57,15 @@
     "innerObservationLoaded": "Observação Interior carregada.",
     "innerObservationFailed": "Não foi possível carregar a Observação Interior.",
     "innerObservationReload": "Recarregar a página",
+    "questionsEmpty": "Ainda não há perguntas disponíveis para este capítulo.",
+    "questionsLoading": "Carregando as perguntas…",
+    "questionsLoaded": "Perguntas carregadas.",
+    "questionsFailed": "Não foi possível carregar as perguntas.",
+    "answersEmpty": "Ainda não há respostas disponíveis para este capítulo.",
+    "answersLoading": "Carregando as respostas…",
+    "answersLoaded": "Respostas carregadas.",
+    "answersFailed": "Não foi possível carregar as respostas.",
+    "languageFallback": "Ainda não disponível em {language} — exibindo: {shown}",
     "innerObservationNeverWritten": "Baal HaSulam não escreveu a Observação Interior (Histaklut Pnimit) para esta parte — onze das dezesseis partes a têm, e esta não está entre elas. Não há texto aqui para uma edição apresentar, portanto não se trata de uma lacuna de digitalização.",
     "miniTocTitle": "Neste capítulo",
     "miniTocTruncated": "…e mais {count} — role para baixo para ler todos.",
@@ -140,8 +149,8 @@
       }
     },
     "thirdPane": {
-      "collapse": "Ocultar o painel da Observação Interior",
-      "expand": "Mostrar o painel da Observação Interior"
+      "collapse": "Ocultar o painel: {pane}",
+      "expand": "Mostrar o painel: {pane}"
     }
   },
   "home": {

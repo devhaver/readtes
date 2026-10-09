@@ -41,6 +41,12 @@ const COLLAPSED_READER_CHROME_KEY: InjectionKey<CollapsedReaderChrome> = Symbol(
 const createCollapsedReaderChrome = (): CollapsedReaderChrome => {
   const persisted = useLocalStorage<boolean>(STORAGE_KEY, false);
 
+  // Pre-hydration hook for CSS — see `useRootDataAttribute`.
+  useRootDataAttribute(
+    "data-pref-chrome",
+    computed(() => (persisted.value ? "collapsed" : null)),
+  );
+
   // Gates the persisted read until after mount, same reason as
   // `useReadingPreferences`: prerendering has no `localStorage`, so
   // consulting it during the first client render would diverge from the

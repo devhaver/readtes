@@ -47,6 +47,11 @@ const createReadingPreferences = (): ReadingPreferences => {
     DEFAULT_READING_SCALE,
   );
 
+  useRootDataAttribute(
+    "data-pref-scale",
+    computed(() => String(persisted.value)),
+  );
+
   // Gates the persisted read until after mount — see the module doc above.
   const hydrated = ref(false);
   onMounted(() => {

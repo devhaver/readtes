@@ -457,6 +457,56 @@ a.tes-anchor::after {
 }
 
 /*
+ * Pre-hydration preferences. An inline head script (`nuxt.config.ts`,
+ * `READER_PREFS_HEAD_SCRIPT`) copies the visitor's persisted choices onto
+ * <html> as `data-pref-*` before first paint, and `useRootDataAttribute`
+ * keeps them current afterwards. The reader layout's own `data-reading-scale`
+ * and the grid classes only reflect a stored choice after hydration, so
+ * these rules (more specific, and always in step) are what stops a
+ * returning visitor's layout jumping once the page hydrates.
+ *
+ * Not covered here: `data-pref-chrome` (collapsed toolbar/navbar) and
+ * `data-pref-mode` (study vs panes) are set on <html> too, but the toolbar
+ * and mode trees are `v-if`-rendered in the page, so hiding them before
+ * hydration needs the toolbar/layout markup to carry stable hooks.
+ */
+html[data-pref-scale="1"] [data-reading-scale] {
+  --reading-scale: 0.875;
+}
+
+html[data-pref-scale="2"] [data-reading-scale] {
+  --reading-scale: 1;
+}
+
+html[data-pref-scale="3"] [data-reading-scale] {
+  --reading-scale: 1.125;
+}
+
+html[data-pref-scale="4"] [data-reading-scale] {
+  --reading-scale: 1.3125;
+}
+
+/* A collapsed third pane (desktop only — below `lg` it is a swipe slide).
+   The grid keeps the trailing rail track either way. */
+@media (min-width: 64rem) {
+  html[data-pref-third-pane="closed"] #reader-inner-observation-pane {
+    display: none;
+  }
+
+  html[data-pref-third-pane="closed"]
+    .tes-swipe-track:has(#reader-inner-observation-pane) {
+    grid-template-columns: 1fr auto;
+  }
+
+  html[data-pref-third-pane="closed"]
+    .tes-swipe-track:has(#reader-inner-observation-pane):has(
+      #reader-commentary-pane
+    ) {
+    grid-template-columns: minmax(28rem, 1fr) minmax(0, 1fr) auto;
+  }
+}
+
+/*
  * ---------------------------------------------------------------------
  * Component classes (issue #92: "page chrome diet").
  *
