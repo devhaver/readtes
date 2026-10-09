@@ -20,12 +20,16 @@
     "themeToggleToLight": "Switch to light mode",
     "themeToggleToSepia": "Switch to sepia mode",
     "languageSwitcherLabel": "Switch language",
-    "breadcrumbLabel": "Breadcrumb"
+    "breadcrumbLabel": "Breadcrumb",
+    "aboutLink": "About"
   },
   "footer": {
     "attribution": "Made by students of {academy}",
     "academy": "Bnei Baruch Kabbalah Academy",
-    "sourcesLinkTitle": "Bnei Baruch's source library on Kabbalah Media"
+    "navLabel": "Site links",
+    "licenses": "Licenses",
+    "newTab": "opens in a new tab",
+    "sourceLibrary": "Bnei Baruch's source library on Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "AI translated",
@@ -154,7 +158,7 @@
     }
   },
   "home": {
-    "description": "Talmud Eser Sefirot, read through the Ari's text, Inner Light, and Inner Observation — in English, Hebrew, and seven more languages.",
+    "description": "Talmud Eser Sefirot, read through the Ari's text, Inner Light, and Inner Observation — in Hebrew and English, with Bnei Baruch translations of some parts in Russian, Ukrainian, Spanish, and French, and an interface in nine languages.",
     "browseVolumes": "Browse the six volumes",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Page not found",
-    "notFoundMessage": "This page doesn't exist yet, or has moved.",
+    "notFoundMessage": "This page doesn't exist, or it has moved. Talmud Eser Sefirot here runs to six volumes and sixteen parts — start from the volumes, the glossary or the home page.",
     "notFoundBackHome": "Back to home",
     "genericTitle": "Something went wrong",
     "genericMessage": "An unexpected error occurred. Try reloading, or head back home."
@@ -202,34 +206,44 @@
   },
   "about": {
     "title": "About Read TES",
-    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baal HaSulam's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely, in Hebrew, in English, or in any of the reader's seven other languages.",
+    "intro": "Read TES is an independent, interactive reading of Talmud Eser Sefirot — Baal HaSulam's foundational commentary on the Kabbalah of the Ari — built by students of Bnei Baruch Kabbalah Academy for anyone studying the text closely. The text is in Hebrew and English, with Bnei Baruch translations of some parts in Russian, Ukrainian, Spanish, and French; the interface is available in nine languages.",
     "readingModelTitle": "The reading model",
     "readingModelBody": "The reader follows the structure of Talmud Eser Sefirot itself: the Ari's numbered text, Baal HaSulam's Inner Light explanation anchored directly to it, and Inner Observation as the deeper systematic explanation for the part. Inner Observation is continuous rather than paragraph-linked, so it remains an independent reading pane.",
     "licensesTitle": "Texts, editions, and licenses",
-    "licensesIntro": "Every text edition on this site is listed below with its language, license, and source.",
-    "licensesTableCaption": "Text editions used in Read TES",
-    "tableHeaderTitle": "Edition",
+    "licensesIntro": "Every text edition on this site is listed below, grouped by source, with its language and license.",
     "tableHeaderLanguage": "Language",
     "tableHeaderLicense": "License",
-    "tableHeaderSource": "Source",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "AI translation",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "English",
-    "languageLabelHe": "Hebrew",
     "attributionTitle": "With thanks",
-    "attributionBody": "Source texts are drawn from Sefaria's open library, and the lessons this reading is inspired by are from KabbalahMedia.info — both used with permission.",
+    "attributionBody": "Source texts are drawn from Sefaria's open library. The Bnei Baruch translations come from KabbalahMedia.info and the Bnei Baruch web edition from Kabbalah.info, both used with permission, and the lessons this reading is inspired by are from KabbalahMedia.info.",
     "portraitAlt": "Portrait of Rav Yehuda Ashlag, Baal HaSulam",
-    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — author of Talmud Eser Sefirot"
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam — author of Talmud Eser Sefirot",
+    "languageNames": {
+      "en": "English",
+      "he": "Hebrew",
+      "ru": "Russian",
+      "uk": "Ukrainian",
+      "es": "Spanish",
+      "fr": "French"
+    },
+    "licenseNames": {
+      "publicDomain": "Public domain",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "Used with permission",
+      "unknown": "License not stated"
+    }
   },
   "glossary": {
     "title": "Glossary",
     "titleHebrew": "מונחים",
     "lede": "{count} terms of Talmud Eser Sefirot, and the English the official edition actually uses for each one.",
     "evidence": "Every term here was read off the {chapters} chapters where the 1956 Jerusalem Hebrew and the Bnei Baruch English could be laid side by side, item against item — {items} aligned pairs in all.",
-    "languageNote": "The Hebrew is quoted from the 1956 Jerusalem edition, the English from the Bnei Baruch edition. Notes and rules describe the English, and are written in English.",
+    "languageNote": "The Hebrew is quoted from the 1956 Jerusalem edition, the English from the Bnei Baruch edition. The short notes on individual terms are written in English.",
     "coverageParts": "Parts {parts} of sixteen",
     "coverageStripDescription": "The English edition covers parts {parts} of the sixteen parts of Talmud Eser Sefirot.",
     "filtersLabel": "Find a term",
@@ -248,7 +262,7 @@
     "attestedNowhere": "Not attested in any aligned part.",
     "variantsTitle": "What the edition writes",
     "variantsHint": "Counts are occurrences inside the aligned passages, not across the whole book.",
-    "citationsTitle": "Read off",
+    "citationsTitle": "Passages",
     "citationsLoading": "Loading passages…",
     "citationsFailed": "The passages could not be loaded.",
     "citationsRetry": "Try again",
@@ -268,19 +282,84 @@
     "emptyBody": "Try another spelling, in Hebrew or English — quotation marks inside acronyms are ignored.",
     "clearFilters": "Clear filters",
     "conventionsTitle": "How the English is set",
-    "conventionsIntro": "Rules the official edition follows beyond single words — how item markers, commentary openings, citations and honorifics are handled — each with the evidence behind it.",
-    "conventionEvidenceLabel": "Evidence:",
+    "conventionsIntro": "Rules the official edition follows beyond single words — how item markers, commentary openings, citations and honorifics are handled — each with passages as examples.",
     "limitsTitle": "Where the evidence stops",
     "limitsIntro": "This glossary is only as wide as the English edition. Read these before leaning on a count.",
     "methodTitle": "How the glossary was built",
     "methodSource": "English edition",
     "methodReference": "Hebrew reference",
-    "methodGeneratedOn": "Compiled"
+    "methodGeneratedOn": "Compiled",
+    "methodBody": "Wherever the Hebrew (Jerusalem edition) and the official Bnei Baruch English both exist for the same chapter and layer, the two were laid side by side and matched item for item; a match was accepted only when the numbering and anchors lined up exactly. For each Hebrew term, the English renderings that turn up unusually often in the items containing it were gathered as candidates, and every candidate was then confirmed by reading real pairs. Every quoted passage was pulled out of the matched text by program, not typed by hand.",
+    "editionNames": {
+      "en-bb": "Bnei Baruch English (KabbalahMedia)",
+      "he-jerusalem-1956": "Hebrew, Jerusalem edition, 1956–1966"
+    },
+    "limits": {
+      "coverage": "The Bnei Baruch English covers only parts {parts} of the sixteen. For the other parts, no term is evidenced here.",
+      "runningProse": "Most of the evidence comes from the Tables of Questions and Answers, which are terminological by nature. Only a handful of running chapters could be compared, so what the glossary shows about prose style is thinner than what it shows about single terms.",
+      "thinTerms": "A few terms occur in only one to three compared passages. That is too little to settle them, so they are left out rather than guessed.",
+      "wholeChapters": "A few chapters could be compared only as a whole, not item by item, so passages quoted from them are weaker evidence.",
+      "aiNotUsed": "The AI English translation on this site was not used to build the glossary; it was only checked against the finished glossary."
+    },
+    "conventionCopy": {
+      "item-markers-gematria": {
+        "topic": "Item markers",
+        "rule": "A Hebrew letter used as an inline marker is written as its numerical value in Arabic numerals (gematria): aleph is 1, yod is 10, lamed is 30, qof is 100, tav is 400. The letter itself is never kept, and markers are never renumbered in sequence."
+      },
+      "commentary-lemma": {
+        "topic": "Commentary items",
+        "rule": "Each English commentary item opens with a bold lemma — the phrase from the source it comments on — followed by a colon, and then the explanation. The Hebrew commentary has no lemma and is identified only by its anchor, so a translation has to draw the lemma from the aligned source text."
+      },
+      "nav-links-dropped": {
+        "topic": "Navigation links",
+        "rule": "The Hebrew links that lead from a question to its answer and back (“to the question”, “to the answer”) are dropped entirely. They have no English rendering."
+      },
+      "answer-headword-dropped": {
+        "topic": "Table-of-Answers items",
+        "rule": "The bold Hebrew headword that opens an answer is not repeated in English; the item starts directly with the definition. A citation that follows the headword is moved to the end of the item or dropped, never left at the start."
+      },
+      "question-punctuation": {
+        "topic": "Table-of-Questions items",
+        "rule": "Hebrew questions end with a full stop; the English edition writes them as questions ending in a question mark. When a citation is appended, the question mark is usually dropped and the item ends with the closing parenthesis."
+      },
+      "abbreviation-expansion": {
+        "topic": "Citation abbreviations",
+        "rule": "Hebrew abbreviations in citations are written out in English, never transliterated: part and chapter references become “Part 3, Chapter 5”, the two commentary layers are named in full as “Inner Light” and “Inner Observation”, and “item”, “page” and “see answer” take Arabic numerals. Back-references become “ibid.” or “see above item”. Every Hebrew letter-numeral becomes an Arabic numeral."
+      },
+      "honorifics-dropped": {
+        "topic": "Honorifics and pious formulae",
+        "rule": "“Blessed be He” after Ein Sof is always dropped, so “Ein Sof” stands alone. The honorific on the Creator’s name is dropped or absorbed into “His” and “Him”. The Hebrew idiom for “God forbid” becomes the adverb “whatsoever” in negative clauses, or is dropped, and is never rendered “God forbid”. “See there” is usually dropped."
+      },
+      "harav-is-ari": {
+        "topic": "Author references",
+        "rule": "In this text the Hebrew “the Rav” means the Ari (Isaac Luria), author of the Etz Chaim text being quoted. The English always says “the ARI” and never “the Rav”. Baal HaSulam, the commentator, is not named in the running text."
+      },
+      "gloss-brackets": {
+        "topic": "Transliteration glosses",
+        "rule": "A transliterated term is followed by a short English gloss in square brackets the first time it appears in an item, and is then used bare: “Rosh [head]”, “Guf [body]”, “Ein Sof [infinity]”, “Katnut [smallness]”, “Gadlut [greatness]”. The gloss is used sparingly, not on every occurrence."
+      },
+      "phase-ordinals": {
+        "topic": "Numbers in prose",
+        "rule": "Phase ordinals are spelled as words in lower case — “phase one”, “phase two”, “phase three”, “phase four” — and never as digits. In the same way “ten Sefirot” keeps “ten” as a lower-case word."
+      },
+      "feminine-malchut": {
+        "topic": "Grammatical gender",
+        "rule": "Malchut, phase four and the Nukva keep their Hebrew feminine grammar in English: “she”, “her”, “herself”. They are never turned into “it”."
+      },
+      "typography": {
+        "topic": "Typography",
+        "rule": "Quoted terms use curly typographic quotes, never straight ASCII quotes, and glosses use square brackets. Hebrew letters appear in the English only inside letter glosses."
+      },
+      "layer-names": {
+        "topic": "Commentary layer names",
+        "rule": "“Inner Light”, the name of Baal HaSulam’s first commentary layer, is written in title case; the same words in lower case, “inner light”, are the technical term for light clothed inside a vessel. “Inner Observation” names the second layer. The difference in case is the only thing that tells the layer name from the term."
+      }
+    }
   },
   "seo": {
     "ogImageAlt": "Read TES — an open book beside the ARI's Tzimtzum circles, on a night-field background",
     "home": {
-      "description": "A free, multilingual reading of Talmud Eser Sefirot — the Ari's text with Baal HaSulam's Inner Light and Inner Observation explanations, in English, Hebrew, and seven more languages."
+      "description": "A free reading of Talmud Eser Sefirot — the Ari's text with Baal HaSulam's Inner Light and Inner Observation explanations, in Hebrew and English, with some parts also in Russian, Ukrainian, Spanish, and French, and an interface in nine languages."
     },
     "about": {
       "description": "What Read TES is, how its three reading layers work, and the licenses and sources behind every text edition on the site."
@@ -298,7 +377,7 @@
       "description": "{chapter} of {part} — the Ari's text beside its Inner Light explanation and the part's Inner Observation."
     },
     "notFound": {
-      "description": "This page doesn't exist yet, or has moved — find your way back to Read TES's volumes or home page."
+      "description": "This page doesn't exist, or it has moved — find your way back to Read TES's volumes, glossary or home page."
     }
   }
 }

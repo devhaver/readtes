@@ -20,12 +20,16 @@
     "themeToggleToLight": "Açık moda geç",
     "themeToggleToSepia": "Sepya moduna geç",
     "languageSwitcherLabel": "Dili değiştir",
-    "breadcrumbLabel": "Gezinti yolu"
+    "breadcrumbLabel": "Gezinti yolu",
+    "aboutLink": "Hakkında"
   },
   "footer": {
     "attribution": "{academy} öğrencileri tarafından hazırlandı",
     "academy": "Bnei Baruch Kabala Akademisi",
-    "sourcesLinkTitle": "Bnei Baruch'un Kabbalah Media üzerindeki kaynak kütüphanesi"
+    "navLabel": "Site bağlantıları",
+    "licenses": "Lisanslar",
+    "newTab": "yeni sekmede açılır",
+    "sourceLibrary": "Bnei Baruch'un Kabbalah Media üzerindeki kaynak kütüphanesi"
   },
   "reader": {
     "aiTranslated": "Yapay zekâ çevirisi",
@@ -154,7 +158,7 @@
     }
   },
   "home": {
-    "description": "On Sefirot'un Çalışması, Ari'nin metni, İç Işık ve İç Gözlem aracılığıyla okunur — Türkçe, İngilizce ve İbranice.",
+    "description": "On Sefirot'un Çalışması, Ari'nin metni, İç Işık ve İç Gözlem aracılığıyla okunur — İbranice ve İngilizce olarak; bazı kısımları ayrıca Bnei Baruch'un Rusça, Ukraynaca, İspanyolca ve Fransızca çevirileriyle, arayüzü ise dokuz dilde.",
     "browseVolumes": "Altı cilde göz at",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Sayfa bulunamadı",
-    "notFoundMessage": "Bu sayfa henüz yok ya da taşınmış.",
+    "notFoundMessage": "Bu sayfa yok ya da taşınmış. On Sefirot'un Çalışması burada altı cilt ve on altı kısımdan oluşur — ciltlerden, sözlükten ya da ana sayfadan başlayın.",
     "notFoundBackHome": "Ana sayfaya dön",
     "genericTitle": "Bir şeyler ters gitti",
     "genericMessage": "Beklenmeyen bir hata oluştu. Sayfayı yeniden yüklemeyi deneyin ya da ana sayfaya dönün."
@@ -202,34 +206,44 @@
   },
   "about": {
     "title": "Read TES hakkında",
-    "intro": "Read TES, On Sefirot'un Çalışması'nın — Baal HaSulam'ın Ari'nin Kabalası üzerine temel şerhinin — bağımsız ve etkileşimli bir okumasıdır. Metni yakından inceleyen herkes için, İbranice ya da Türkçe, Bnei Baruch Kabala Akademisi öğrencileri tarafından hazırlanmıştır.",
+    "intro": "Read TES, On Sefirot'un Çalışması'nın — Baal HaSulam'ın Ari'nin Kabalası üzerine temel şerhinin — bağımsız ve etkileşimli bir okumasıdır. Metni yakından inceleyen herkes için Bnei Baruch Kabala Akademisi öğrencileri tarafından hazırlanmıştır. Metin İbranice ve İngilizcedir; bazı kısımlarının ayrıca Bnei Baruch'un Rusça, Ukraynaca, İspanyolca ve Fransızca çevirileri vardır; arayüz dokuz dilde kullanılabilir.",
     "readingModelTitle": "Okuma modeli",
     "readingModelBody": "Okuyucu, On Sefirot'un Çalışması'nın kendi yapısını izler: Ari'nin numaralı metni, ona doğrudan bağlanan Baal HaSulam'ın İç Işık açıklaması ve kısım için daha derin, sistematik açıklama olan İç Gözlem. İç Gözlem paragraflara bağlı değil süreklidir; bu yüzden bağımsız bir okuma paneli olarak kalır.",
     "licensesTitle": "Metinler, baskılar ve lisanslar",
-    "licensesIntro": "Bu sitedeki her metin baskısı, dili, lisansı ve kaynağıyla birlikte aşağıda listelenmiştir.",
-    "licensesTableCaption": "Read TES'te kullanılan metin baskıları",
-    "tableHeaderTitle": "Baskı",
+    "licensesIntro": "Bu sitedeki her metin baskısı, kaynağa göre gruplanmış olarak, dili ve lisansıyla birlikte aşağıda listelenmiştir.",
     "tableHeaderLanguage": "Dil",
     "tableHeaderLicense": "Lisans",
-    "tableHeaderSource": "Kaynak",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "Yapay zekâ çevirisi",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "İngilizce",
-    "languageLabelHe": "İbranice",
     "attributionTitle": "Teşekkürler",
-    "attributionBody": "Kaynak metinler Sefaria'nın açık kütüphanesinden alınmıştır; bu okumaya ilham veren dersler ise KabbalahMedia.info'dandır — ikisi de izinle kullanılmaktadır.",
+    "attributionBody": "Kaynak metinler Sefaria'nın açık kütüphanesinden alınmıştır. Bnei Baruch çevirileri KabbalahMedia.info'dan, Bnei Baruch web baskısı Kabbalah.info'dan gelir; ikisi de izinle kullanılmaktadır. Bu okumaya ilham veren dersler ise KabbalahMedia.info'dandır.",
     "portraitAlt": "Baal HaSulam, Rav Yehuda Aşlag'ın portresi",
-    "portraitCaption": "Rav Yehuda Aşlag (1884–1954), Baal HaSulam — On Sefirot'un Çalışması'nın yazarı"
+    "portraitCaption": "Rav Yehuda Aşlag (1884–1954), Baal HaSulam — On Sefirot'un Çalışması'nın yazarı",
+    "languageNames": {
+      "en": "İngilizce",
+      "he": "İbranice",
+      "ru": "Rusça",
+      "uk": "Ukraynaca",
+      "es": "İspanyolca",
+      "fr": "Fransızca"
+    },
+    "licenseNames": {
+      "publicDomain": "Kamu malı",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "İzinle kullanılmıştır",
+      "unknown": "Lisans belirtilmemiş"
+    }
   },
   "glossary": {
     "title": "Sözlük",
     "titleHebrew": "מונחים",
     "lede": "On Sefirot'un Çalışması'ndan {count} terim ve resmî baskının her biri için gerçekte kullandığı İngilizce karşılık.",
     "evidence": "Buradaki her terim, 1956 Kudüs İbranice metni ile Bnei Baruch İngilizcesinin öğe öğe yan yana konabildiği {chapters} bölümden çıkarılmıştır — toplam {items} eşleşmiş çift.",
-    "languageNote": "İbranice metin 1956 Kudüs baskısından, İngilizce metin Bnei Baruch baskısından alıntılanmıştır. Notlar ve kurallar İngilizceyi anlatır ve İngilizce yazılmıştır.",
+    "languageNote": "İbranice metin 1956 Kudüs baskısından, İngilizce metin Bnei Baruch baskısından alıntılanmıştır. Tek tek terimlere ilişkin kısa notlar İngilizce yazılmıştır.",
     "coverageParts": "On altı kısımdan {parts}",
     "coverageStripDescription": "İngilizce baskı, On Sefirot'un Çalışması'nın on altı kısmından {parts} kısımlarını kapsar.",
     "filtersLabel": "Terim bul",
@@ -248,7 +262,7 @@
     "attestedNowhere": "Eşleşmiş hiçbir kısımda geçmez.",
     "variantsTitle": "Baskının yazdığı biçimler",
     "variantsHint": "Sayılar tüm kitaptaki değil, eşleşmiş pasajlardaki geçiş sayılarıdır.",
-    "citationsTitle": "Çıkarıldığı yerler",
+    "citationsTitle": "Pasajlar",
     "citationsLoading": "Pasajlar yükleniyor…",
     "citationsFailed": "Pasajlar yüklenemedi.",
     "citationsRetry": "Tekrar dene",
@@ -268,19 +282,84 @@
     "emptyBody": "İbranice ya da İngilizce başka bir yazım deneyin — kısaltmalardaki tırnak işaretleri yok sayılır.",
     "clearFilters": "Süzgeçleri temizle",
     "conventionsTitle": "İngilizce metin nasıl düzenlenir",
-    "conventionsIntro": "Resmî baskının tek tek sözcüklerin ötesinde izlediği kurallar — madde işaretleri, şerh başlangıçları, atıflar ve unvanların nasıl ele alındığı — her biri dayanağıyla birlikte.",
-    "conventionEvidenceLabel": "Dayanak:",
+    "conventionsIntro": "Resmî baskının tek tek sözcüklerin ötesinde izlediği kurallar — madde işaretleri, şerh başlangıçları, atıflar ve unvanların nasıl ele alındığı — her biri örnek pasajlarla birlikte.",
     "limitsTitle": "Kanıtın bittiği yer",
     "limitsIntro": "Bu sözlük yalnızca İngilizce baskı kadar geniştir. Bir sayıya dayanmadan önce bunları okuyun.",
     "methodTitle": "Sözlük nasıl oluşturuldu",
     "methodSource": "İngilizce baskı",
     "methodReference": "İbranice kaynak",
-    "methodGeneratedOn": "Derlenme tarihi"
+    "methodGeneratedOn": "Derlenme tarihi",
+    "methodBody": "Aynı bölüm ve katman için hem İbranice (Kudüs baskısı) hem de Bnei Baruch'un resmî İngilizcesi bulunan her yerde, ikisi yan yana konup öğe öğe eşleştirildi; bir eşleşme ancak numaralandırma ve çıpalar tam örtüştüğünde kabul edildi. Her İbranice terim için, onu içeren öğelerde alışılmadık sıklıkta görülen İngilizce karşılıklar aday olarak toplandı ve her aday gerçek çiftler okunarak doğrulandı. Alıntılanan her pasaj, eşleştirilmiş metinden elle yazılarak değil, bir program aracılığıyla çıkarıldı.",
+    "editionNames": {
+      "en-bb": "Bnei Baruch İngilizcesi (KabbalahMedia)",
+      "he-jerusalem-1956": "İbranice, Kudüs baskısı, 1956–1966"
+    },
+    "limits": {
+      "coverage": "Bnei Baruch İngilizcesi on altı kısımdan yalnızca şunları kapsar: {parts}. Diğer kısımlar için burada hiçbir terim belgelenmemiştir.",
+      "runningProse": "Kanıtların çoğu, doğası gereği terimlerle ilgili olan Sorular ve Cevaplar Tablolarından gelir. Yalnızca birkaç sürekli bölüm karşılaştırılabildi; bu yüzden sözlüğün düzyazı üslubu hakkında gösterdikleri, tek tek terimler hakkında gösterdiklerinden daha azdır.",
+      "thinTerms": "Bazı terimler karşılaştırılan yalnızca bir ila üç pasajda geçer. Bu, onları kesinleştirmek için çok azdır; bu yüzden tahmin edilmek yerine dışarıda bırakıldılar.",
+      "wholeChapters": "Bazı bölümler öğe öğe değil, yalnızca bütün olarak karşılaştırılabildi; bu yüzden onlardan alıntılanan pasajlar daha zayıf bir kanıttır.",
+      "aiNotUsed": "Bu sitedeki yapay zekâ İngilizce çevirisi sözlüğü oluşturmak için kullanılmadı; yalnızca sözlük tamamlandıktan sonra onunla karşılaştırıldı."
+    },
+    "conventionCopy": {
+      "item-markers-gematria": {
+        "topic": "Madde işaretleri",
+        "rule": "Metin içinde işaret olarak kullanılan bir İbrani harfi, sayısal değeriyle Arap rakamlarıyla yazılır (gematriya): alef 1, yod 10, lamed 30, kof 100, tav 400. Harfin kendisi asla korunmaz ve işaretler baştan sıralı olarak yeniden numaralandırılmaz."
+      },
+      "commentary-lemma": {
+        "topic": "Şerh maddeleri",
+        "rule": "İngilizce şerhin her maddesi, üzerinde durduğu kaynak ifadeyi gösteren kalın bir başlık sözcüğüyle (lemma), ardından iki nokta ve açıklamayla başlar. İbranice şerhte lemma yoktur, yalnızca çıpasıyla tanınır; bu yüzden bir çeviride lemma, karşılık gelen kaynak metinden çıkarılmalıdır."
+      },
+      "nav-links-dropped": {
+        "topic": "Gezinme bağlantıları",
+        "rule": "Bir sorudan cevabına, cevaptan da soruya götüren İbranice bağlantılar (“soruya”, “cevaba”) tamamen atlanır. İngilizcede karşılıkları yoktur."
+      },
+      "answer-headword-dropped": {
+        "topic": "Cevaplar Tablosu maddeleri",
+        "rule": "Bir cevabı açan kalın İbranice başlık sözcüğü İngilizcede tekrarlanmaz; madde doğrudan tanımla başlar. Başlık sözcüğünü izleyen atıf maddenin sonuna taşınır ya da atlanır, asla başta bırakılmaz."
+      },
+      "question-punctuation": {
+        "topic": "Sorular Tablosu maddeleri",
+        "rule": "İbranice sorular noktayla biter; İngilizce baskı bunları soru işaretiyle biten sorular olarak yazar. Bir atıf eklendiğinde soru işareti çoğunlukla atlanır ve madde kapanış parantezi ile biter."
+      },
+      "abbreviation-expansion": {
+        "topic": "Atıflardaki kısaltmalar",
+        "rule": "Atıflardaki İbranice kısaltmalar İngilizcede açık yazılır, asla harf çevirisiyle bırakılmaz: kısım ve bölüm göndermeleri “Part 3, Chapter 5” olur, iki şerh katmanı tam adlarıyla “Inner Light” ve “Inner Observation” diye anılır, “item”, “page” ve “see answer” Arap rakamlarıyla yazılır. Geri göndermeler “ibid.” ya da “see above item” olur. İbrani harfleriyle yazılmış her sayı Arap rakamına çevrilir."
+      },
+      "honorifics-dropped": {
+        "topic": "Unvanlar ve dua kalıpları",
+        "rule": "Ein Sof'tan sonra gelen “O mübarektir” ifadesi her zaman atlanır; yalnızca “Ein Sof” kalır. Yaratıcı'nın adının yanındaki saygı ifadesi atlanır ya da “His” ve “Him” içinde erir. “Allah korusun” karşılığı İbranice deyim olumsuz tümcelerde “whatsoever” zarfına dönüşür ya da atlanır; hiçbir zaman “God forbid” diye çevrilmez. “Oraya bakınız” çoğunlukla atlanır."
+      },
+      "harav-is-ari": {
+        "topic": "Yazara göndermeler",
+        "rule": "Bu metinde İbranice “Rav”, alıntılanan Etz Chaim metninin yazarı Ari'yi (Isaac Luria) ifade eder. İngilizce her zaman “the ARI” der, asla “the Rav” demez. Şerhi yazan Baal HaSulam ise ana metinde adıyla anılmaz."
+      },
+      "gloss-brackets": {
+        "topic": "Harf çevirisi açıklamaları",
+        "rule": "Harf çevirisiyle yazılmış bir terimin ardından, bir maddede ilk göründüğünde köşeli parantez içinde kısa bir İngilizce açıklama gelir; sonra terim tek başına kullanılır: “Rosh [head]”, “Guf [body]”, “Ein Sof [infinity]”, “Katnut [smallness]”, “Gadlut [greatness]”. Açıklama her geçişte değil, ölçülü biçimde kullanılır."
+      },
+      "phase-ordinals": {
+        "topic": "Metin içinde sayılar",
+        "rule": "Evre sıra sayıları küçük harfle, yazıyla yazılır — “phase one”, “phase two”, “phase three”, “phase four” — asla rakamla yazılmaz. Aynı şekilde “ten Sefirot” içindeki “ten” küçük harfli bir sözcük olarak kalır."
+      },
+      "feminine-malchut": {
+        "topic": "Dilbilgisel cinsiyet",
+        "rule": "Malchut, dördüncü evre ve Nukva, İngilizcede İbranice dişil dilbilgisini korur: “she”, “her”, “herself”. Asla “it” olmazlar."
+      },
+      "typography": {
+        "topic": "Tipografi",
+        "rule": "Alıntılanan terimler düz değil, kıvrık tipografik tırnak içine alınır; açıklamalar köşeli parantez içindedir. İbrani harfleri İngilizce metinde yalnızca harf açıklamalarının içinde görünür."
+      },
+      "layer-names": {
+        "topic": "Şerh katmanı adları",
+        "rule": "Baal HaSulam'ın ilk şerh katmanının adı olan “Inner Light” baş harfleri büyük yazılır; aynı sözcüklerin küçük harfli hâli “inner light” ise bir kabın içine giydirilmiş ışığı anlatan teknik terimdir. “Inner Observation” ikinci katmanın adıdır. Katman adını terimden ayıran tek şey büyük-küçük harf farkıdır."
+      }
+    }
   },
   "seo": {
     "ogImageAlt": "Read TES — gece alanı arka planında, Ari'nin Tsimtsum çemberlerinin yanında açık bir kitap",
     "home": {
-      "description": "On Sefirot'un Çalışması'nın ücretsiz, çok dilli okuması — Ari'nin metni ile Baal HaSulam'ın İç Işık ve İç Gözlem açıklamaları, Türkçe, İngilizce ve İbranice."
+      "description": "On Sefirot'un Çalışması'nın ücretsiz okuması — Ari'nin metni ile Baal HaSulam'ın İç Işık ve İç Gözlem açıklamaları, İbranice ve İngilizce; bazı kısımlar ayrıca Rusça, Ukraynaca, İspanyolca ve Fransızca; arayüz dokuz dilde."
     },
     "about": {
       "description": "Read TES nedir, üç okuma katmanı nasıl işler ve sitedeki her metin baskısının arkasındaki lisanslar ve kaynaklar."
@@ -298,7 +377,7 @@
       "description": "{part} kısmının {chapter} — Ari'nin metni, yanında İç Işık açıklaması ve kısmın İç Gözlemi."
     },
     "notFound": {
-      "description": "Bu sayfa henüz yok ya da taşınmış — Read TES'in ciltlerine ya da ana sayfasına dönün."
+      "description": "Bu sayfa yok ya da taşınmış — Read TES'in ciltlerine, sözlüğüne ya da ana sayfasına dönün."
     }
   }
 }

@@ -35,9 +35,15 @@ useLocalizedSeo({
       : t("errors.genericMessage"),
 });
 
-// clearError resets Nuxt's error boundary before navigating away — a plain
-// NuxtLink navigation can leave the error state stuck.
-const goTo = (path: string) => clearError({ redirect: path });
+// Real links, so they can be opened in a new tab or copied; `clearError` on
+// click resets Nuxt's error boundary, which a plain NuxtLink navigation can
+// otherwise leave stuck.
+const actions = computed(() => [
+  { to: localePath("/"), label: t("errors.notFoundBackHome"), primary: true },
+  { to: localePath("/volumes"), label: t("nav.volumesLink") },
+  { to: localePath("/glossary"), label: t("nav.glossaryLink") },
+  { to: localePath("/about"), label: t("nav.aboutLink") },
+]);
 </script>
 
 <template>
@@ -53,7 +59,7 @@ const goTo = (path: string) => clearError({ redirect: path });
     <AppNavBar />
     <main
       id="main-content"
-      class="mx-auto flex max-w-2xl flex-1 flex-col items-start justify-center gap-6 px-4 py-16 sm:px-6"
+      class="mx-auto flex w-full max-w-5xl flex-1 flex-col items-start justify-center gap-6 px-4 py-16 sm:px-6"
     >
       <p class="font-display text-sm tracking-widest text-(--text-muted)">
         {{ error.statusCode }}
@@ -66,20 +72,20 @@ const goTo = (path: string) => clearError({ redirect: path });
       </p>
 
       <div class="flex flex-wrap items-center gap-4">
-        <button
-          type="button"
-          class="inline-flex items-center gap-2 rounded-button bg-navy-primary px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:bg-teal-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-          @click="goTo(localePath('/'))"
+        <NuxtLink
+          v-for="action in actions"
+          :key="action.to"
+          :to="action.to"
+          class="inline-flex items-center gap-2 rounded-button px-5 py-2.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          :class="
+            action.primary
+              ? 'bg-teal-strong text-surface-white hover:bg-navy-primary'
+              : 'border border-(--border) text-(--text-primary) hover:border-teal hover:text-(--accent-text)'
+          "
+          @click="clearError()"
         >
-          {{ t("errors.notFoundBackHome") }}
-        </button>
-        <button
-          type="button"
-          class="inline-flex items-center gap-2 rounded-button border border-(--border) px-5 py-2.5 text-sm font-medium text-(--text-primary) transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
-          @click="goTo(localePath('/volumes'))"
-        >
-          {{ t("home.browseVolumes") }}
-        </button>
+          {{ action.label }}
+        </NuxtLink>
       </div>
     </main>
     <AppFooter />

@@ -23,7 +23,7 @@ useLocalizedSeo({
 </script>
 
 <template>
-  <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
     <AppBreadcrumb :items="breadcrumbItems" class="mb-6" />
 
     <h1 class="font-display text-3xl text-(--text-primary) sm:text-4xl">

@@ -27,6 +27,7 @@
  */
 import {
   glossaryAttestationTicks,
+  glossaryPartList,
   glossaryVariantShares,
 } from "~/utils/glossary";
 import type {
@@ -71,7 +72,7 @@ const attestationDescription = computed(() =>
   attestedPartNumbers.value.length === 0
     ? t("glossary.attestedNowhere")
     : t("glossary.attestedIn", {
-        parts: attestedPartNumbers.value.join(", "),
+        parts: glossaryPartList(attestedPartNumbers.value),
       }),
 );
 

@@ -229,3 +229,26 @@ export const glossaryVariantShares = (
     sharePct: max === 0 ? 0 : Math.round((variant.occurrences / max) * 100),
   }));
 };
+
+/**
+ * Part numbers as a comma list that keeps its order inside a right-to-left
+ * sentence: wrapped in a left-to-right isolate, because the bidi algorithm
+ * otherwise reverses digits separated by ", " ("6 ,5 ,3 ,2 ,1" under /he).
+ */
+export const glossaryPartList = (numbers: number[]): string =>
+  `⁦${numbers.join(", ")}⁩`;
+
+/**
+ * The edition id at the front of the artifact's own description of an
+ * edition — `"en-bb (Bnei Baruch / KabbalahMedia official English)"` →
+ * `"en-bb"`. The id is what the page maps to a name a reader knows.
+ */
+export const glossaryEditionId = (raw: string): string =>
+  raw.split(" ")[0] ?? raw;
+
+/**
+ * A convention example's Hebrew side, minus the pipeline's own
+ * `(marker ל on op-12)` annotation — an anchor id means nothing to a reader.
+ */
+export const glossaryExampleHebrew = (he: string): string =>
+  he.replace(/\s*\(marker [^)]*\)/g, "");

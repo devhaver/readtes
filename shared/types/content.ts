@@ -194,10 +194,27 @@ export type Toc = z.infer<typeof tocSchema>;
 export const languageAvailabilitySchema = z.enum(["none", "partial", "full"]);
 export type LanguageAvailability = z.infer<typeof languageAvailabilitySchema>;
 
+/**
+ * `he`/`en` count any edition in that language. `enOfficial` is English from
+ * any source but the AI translation, `enAi` only that translation; `ru`/`uk`/
+ * `es`/`fr` are the Bnei Baruch translations — together they let a volume
+ * card say which English is official and show the reader's own language.
+ */
 const partAvailableSummarySchema = z.object({
   he: languageAvailabilitySchema,
   en: languageAvailabilitySchema,
-}) satisfies z.ZodType<Record<"he" | "en", LanguageAvailability>>;
+  enOfficial: languageAvailabilitySchema,
+  enAi: languageAvailabilitySchema,
+  ru: languageAvailabilitySchema,
+  uk: languageAvailabilitySchema,
+  es: languageAvailabilitySchema,
+  fr: languageAvailabilitySchema,
+}) satisfies z.ZodType<
+  Record<
+    "he" | "en" | "enOfficial" | "enAi" | "ru" | "uk" | "es" | "fr",
+    LanguageAvailability
+  >
+>;
 export type PartAvailableSummary = z.infer<typeof partAvailableSummarySchema>;
 
 /**

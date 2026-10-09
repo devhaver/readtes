@@ -76,7 +76,7 @@ describe("glossary page", () => {
     const text = wrapper.text();
 
     expect(text).toContain(String(glossaryIndex.meta.alignedChapters));
-    expect(text).toContain("Parts 1, 2, 3, 5, 6");
+    expect(text).toContain("Parts \u20661, 2, 3, 5, 6\u2069");
   });
 
   it("prerenders every house rule as a collapsed native disclosure", async () => {
@@ -88,15 +88,30 @@ describe("glossary page", () => {
     expect(
       details.every((detail) => detail.attributes("open") === undefined),
     ).toBe(true);
-    expect(wrapper.text()).toContain(glossaryIndex.conventions[0]?.topic);
+    expect(wrapper.text()).toContain("Item markers");
   });
 
-  it("renders the known gaps verbatim rather than hiding the coverage caveat", async () => {
+  it("states the coverage caveat in reader-facing copy, not the artifact's build notes", async () => {
     const wrapper = await mountSuspended(GlossaryPage);
+    const text = wrapper.text();
 
-    for (const gap of glossaryIndex.knownGaps) {
-      expect(wrapper.text()).toContain(gap.slice(0, 60));
+    expect(text).toContain(
+      "covers only parts \u20661, 2, 3, 5, 6\u2069 of the sixteen",
+    );
+    for (const note of glossaryIndex.knownGaps) {
+      expect(text).not.toContain(note.slice(0, 40));
     }
+    expect(text).not.toContain(glossaryIndex.meta.method.slice(0, 40));
+  });
+
+  it("names the editions instead of printing version ids", async () => {
+    const wrapper = await mountSuspended(GlossaryPage);
+    const text = wrapper.text();
+
+    expect(text).toContain("Bnei Baruch English (KabbalahMedia)");
+    expect(text).toContain("Hebrew, Jerusalem edition, 1956–1966");
+    expect(text).not.toContain("he-jerusalem-1956");
+    expect(text).not.toContain("en-bb");
   });
 
   it("has exactly one h1", async () => {

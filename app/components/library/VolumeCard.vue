@@ -2,8 +2,12 @@
 import type { LocaleObject } from "@nuxtjs/i18n";
 import type {
   LanguageAvailability,
+  PartAvailableSummary,
   TocVolumeSkeleton,
 } from "~~/shared/types/content";
+
+/** UI locales that have a Bnei Baruch edition of their own to surface. */
+const ownLanguageKeys = ["ru", "uk", "es", "fr"] as const;
 
 const props = defineProps<{
   volume: TocVolumeSkeleton;
@@ -21,32 +25,49 @@ const href = computed(() => localePath(`/volumes/${volumeSlug(props.volume)}`));
 // `~/utils/contentAvailability`'s `partLanguageAvailability` implements —
 // this card never needs a part's full `TocChapter[]`/the versions registry
 // just to render its language chips.
-const partSummaries = computed(() =>
-  props.volume.parts.map((part) => ({
-    part,
-    title: localizedText(part.title, locale.value),
-    chapterCount: part.chapterCount,
-    languages: part.availableSummary,
-  })),
-);
-
 const localeObjects = computed(() => locales.value as LocaleObject[]);
 
 const localeName = (code: string): string =>
   localeObjects.value.find((entry) => entry.code === code)?.name ?? code;
 
-/** e.g. "עברית" when fully available, "English (partial)" when only some chapters have it. */
+/** e.g. "English" when fully available, "English (partial)" when only some chapters have it. */
 const languageLabel = (
-  code: "he" | "en",
+  name: string,
   state: LanguageAvailability,
 ): string | null => {
   if (state === "none") return null;
 
-  const name = localeName(code);
   return state === "partial"
     ? `${name} (${t("volumes.partialLanguage")})`
     : name;
 };
+
+/**
+ * Chips that can differ from part to part: Hebrew only when it is not
+ * complete (it is the source, so a chip on every part says nothing),
+ * English split into official and AI translated, and the reader's own
+ * language when a Bnei Baruch edition of that part exists.
+ */
+const editionChips = (summary: PartAvailableSummary): string[] => {
+  const english = localeName("en");
+  const own = ownLanguageKeys.find((code) => code === locale.value);
+
+  return [
+    summary.he === "full" ? null : languageLabel(localeName("he"), summary.he),
+    languageLabel(english, summary.enOfficial),
+    languageLabel(`${english}, ${t("reader.aiTranslated")}`, summary.enAi),
+    own ? languageLabel(localeName(own), summary[own]) : null,
+  ].filter((label): label is string => label !== null);
+};
+
+const partSummaries = computed(() =>
+  props.volume.parts.map((part) => ({
+    part,
+    title: localizedText(part.title, locale.value),
+    chapterCount: part.chapterCount,
+    chips: editionChips(part.availableSummary),
+  })),
+);
 </script>
 
 <template>
@@ -106,16 +127,11 @@ const languageLabel = (
               t("volumes.chapterCount", { count: summary.chapterCount })
             }}</span>
             <span
-              v-if="languageLabel('he', summary.languages.he)"
+              v-for="chip in summary.chips"
+              :key="chip"
               class="rounded-button border border-teal/50 px-1.5 py-0.5 text-(--accent-text)"
             >
-              {{ languageLabel("he", summary.languages.he) }}
-            </span>
-            <span
-              v-if="languageLabel('en', summary.languages.en)"
-              class="rounded-button border border-teal/50 px-1.5 py-0.5 text-(--accent-text)"
-            >
-              {{ languageLabel("en", summary.languages.en) }}
+              {{ chip }}
             </span>
           </span>
         </li>

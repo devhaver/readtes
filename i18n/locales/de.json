@@ -20,12 +20,16 @@
     "themeToggleToLight": "Zum hellen Modus wechseln",
     "themeToggleToSepia": "Zum Sepia-Modus wechseln",
     "languageSwitcherLabel": "Sprache wechseln",
-    "breadcrumbLabel": "Brotkrumennavigation"
+    "breadcrumbLabel": "Brotkrumennavigation",
+    "aboutLink": "Über das Projekt"
   },
   "footer": {
     "attribution": "Erstellt von Schülern der {academy}",
     "academy": "Bnei Baruch Kabbala-Akademie",
-    "sourcesLinkTitle": "Die Quellenbibliothek von Bnei Baruch auf Kabbalah Media"
+    "navLabel": "Links der Website",
+    "licenses": "Lizenzen",
+    "newTab": "öffnet in einem neuen Tab",
+    "sourceLibrary": "Die Quellenbibliothek von Bnei Baruch auf Kabbalah Media"
   },
   "reader": {
     "aiTranslated": "KI-übersetzt",
@@ -154,7 +158,7 @@
     }
   },
   "home": {
-    "description": "Talmud Eser Sefirot, gelesen anhand des Ari-Textes, des Inneren Lichts und der Inneren Betrachtung – auf Deutsch, Englisch und Hebräisch.",
+    "description": "Talmud Eser Sefirot, gelesen anhand des Ari-Textes, des Inneren Lichts und der Inneren Betrachtung – auf Hebräisch und Englisch, mit Übersetzungen von Bnei Baruch für einzelne Teile ins Russische, Ukrainische, Spanische und Französische sowie einer Benutzeroberfläche in neun Sprachen.",
     "browseVolumes": "Die sechs Bände durchsuchen",
     "heroTitle": "Talmud Eser Sefirot",
     "heroTitleHebrew": "תלמוד עשר הספירות",
@@ -178,7 +182,7 @@
   },
   "errors": {
     "notFoundTitle": "Seite nicht gefunden",
-    "notFoundMessage": "Diese Seite existiert noch nicht oder wurde verschoben.",
+    "notFoundMessage": "Diese Seite existiert nicht oder wurde verschoben. Talmud Eser Sefirot umfasst hier sechs Bände und sechzehn Teile – beginne bei den Bänden, dem Glossar oder der Startseite.",
     "notFoundBackHome": "Zurück zur Startseite",
     "genericTitle": "Etwas ist schiefgelaufen",
     "genericMessage": "Ein unerwarteter Fehler ist aufgetreten. Lade die Seite neu oder kehre zur Startseite zurück."
@@ -202,34 +206,44 @@
   },
   "about": {
     "title": "Über Read TES",
-    "intro": "Read TES ist eine unabhängige, interaktive Lesefassung von Talmud Eser Sefirot – Baal HaSulams grundlegendem Kommentar zur Kabbala des Ari –, erstellt von Schülern der Bnei Baruch Kabbala-Akademie für alle, die den Text eingehend studieren, auf Hebräisch, Englisch oder Deutsch.",
+    "intro": "Read TES ist eine unabhängige, interaktive Lesefassung von Talmud Eser Sefirot – Baal HaSulams grundlegendem Kommentar zur Kabbala des Ari –, erstellt von Schülern der Bnei Baruch Kabbala-Akademie für alle, die den Text eingehend studieren. Der Text liegt auf Hebräisch und Englisch vor, einzelne Teile zusätzlich in Übersetzungen von Bnei Baruch ins Russische, Ukrainische, Spanische und Französische; die Benutzeroberfläche gibt es in neun Sprachen.",
     "readingModelTitle": "Das Lesemodell",
     "readingModelBody": "Der Reader folgt dem Aufbau von Talmud Eser Sefirot selbst: dem nummerierten Text des Ari, Baal HaSulams direkt darin verankerter Erklärung im Inneren Licht und der Inneren Betrachtung als tieferer, systematischer Erklärung zum jeweiligen Teil. Die Innere Betrachtung ist fortlaufend statt an einzelne Absätze gebunden und bleibt daher eine eigenständige Lesespalte.",
     "licensesTitle": "Texte, Ausgaben und Lizenzen",
-    "licensesIntro": "Jede Textausgabe dieser Seite ist unten mit Sprache, Lizenz und Quelle aufgeführt.",
-    "licensesTableCaption": "In Read TES verwendete Textausgaben",
-    "tableHeaderTitle": "Ausgabe",
+    "licensesIntro": "Jede Textausgabe dieser Seite ist unten nach Quelle gruppiert mit Sprache und Lizenz aufgeführt.",
     "tableHeaderLanguage": "Sprache",
     "tableHeaderLicense": "Lizenz",
-    "tableHeaderSource": "Quelle",
     "sourceLabelSefaria": "Sefaria",
     "sourceLabelCurated": "Read TES",
     "sourceLabelAi": "KI-Übersetzung",
     "sourceLabelKabbalahmedia": "KabbalahMedia.info",
     "sourceLabelKabbalahInfo": "Kabbalah.info",
-    "languageLabelEn": "Englisch",
-    "languageLabelHe": "Hebräisch",
     "attributionTitle": "Mit Dank",
-    "attributionBody": "Die Quelltexte stammen aus der offenen Bibliothek von Sefaria, und die Lektionen, an denen sich diese Lesefassung orientiert, von KabbalahMedia.info – beides mit Erlaubnis verwendet.",
+    "attributionBody": "Die Quelltexte stammen aus der offenen Bibliothek von Sefaria. Die Übersetzungen von Bnei Baruch kommen von KabbalahMedia.info, die Web-Ausgabe von Bnei Baruch von Kabbalah.info – beides mit Erlaubnis verwendet. Die Lektionen, an denen sich diese Lesefassung orientiert, stammen von KabbalahMedia.info.",
     "portraitAlt": "Porträt von Rav Yehuda Ashlag, Baal HaSulam",
-    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam – Autor von Talmud Eser Sefirot"
+    "portraitCaption": "Rav Yehuda Ashlag (1884–1954), Baal HaSulam – Autor von Talmud Eser Sefirot",
+    "languageNames": {
+      "en": "Englisch",
+      "he": "Hebräisch",
+      "ru": "Russisch",
+      "uk": "Ukrainisch",
+      "es": "Spanisch",
+      "fr": "Französisch"
+    },
+    "licenseNames": {
+      "publicDomain": "Gemeinfrei",
+      "cc0": "CC0",
+      "ccBy": "CC-BY",
+      "usedWithPermission": "Mit Genehmigung verwendet",
+      "unknown": "Lizenz nicht angegeben"
+    }
   },
   "glossary": {
     "title": "Glossar",
     "titleHebrew": "מונחים",
     "lede": "{count} Begriffe aus Talmud Eser Sefirot und das Englisch, das die offizielle Ausgabe tatsächlich für jeden von ihnen verwendet.",
     "evidence": "Jeder Begriff hier wurde aus den {chapters} Kapiteln abgelesen, in denen sich das Jerusalemer Hebräisch von 1956 und das Englisch von Bnei Baruch Eintrag für Eintrag nebeneinanderlegen ließen – insgesamt {items} zugeordnete Paare.",
-    "languageNote": "Das Hebräische ist der Jerusalemer Ausgabe von 1956 entnommen, das Englische der Ausgabe von Bnei Baruch. Hinweise und Regeln beschreiben das Englische und sind auf Englisch verfasst.",
+    "languageNote": "Das Hebräische ist der Jerusalemer Ausgabe von 1956 entnommen, das Englische der Ausgabe von Bnei Baruch. Die kurzen Hinweise zu einzelnen Begriffen sind auf Englisch verfasst.",
     "coverageParts": "Teile {parts} von sechzehn",
     "coverageStripDescription": "Die englische Ausgabe deckt die Teile {parts} der sechzehn Teile von Talmud Eser Sefirot ab.",
     "filtersLabel": "Einen Begriff finden",
@@ -248,7 +262,7 @@
     "attestedNowhere": "In keinem zugeordneten Teil belegt.",
     "variantsTitle": "Was die Ausgabe schreibt",
     "variantsHint": "Die Zahlen geben Vorkommen in den zugeordneten Passagen an, nicht im ganzen Buch.",
-    "citationsTitle": "Abgelesen aus",
+    "citationsTitle": "Textstellen",
     "citationsLoading": "Passagen werden geladen …",
     "citationsFailed": "Die Passagen konnten nicht geladen werden.",
     "citationsRetry": "Erneut versuchen",
@@ -268,19 +282,84 @@
     "emptyBody": "Versuche eine andere Schreibweise, auf Hebräisch oder Englisch – Anführungszeichen in Akronymen werden ignoriert.",
     "clearFilters": "Filter zurücksetzen",
     "conventionsTitle": "Wie das Englische gesetzt ist",
-    "conventionsIntro": "Regeln, denen die offizielle Ausgabe über einzelne Wörter hinaus folgt – wie Absatzmarkierungen, Kommentaranfänge, Zitate und Ehrentitel behandelt werden –, jeweils mit den zugehörigen Belegen.",
-    "conventionEvidenceLabel": "Beleg:",
+    "conventionsIntro": "Regeln, denen die offizielle Ausgabe über einzelne Wörter hinaus folgt – wie Absatzmarkierungen, Kommentaranfänge, Zitate und Ehrentitel behandelt werden –, jeweils mit Textstellen als Beispiel.",
     "limitsTitle": "Wo die Belege enden",
     "limitsIntro": "Dieses Glossar reicht nur so weit wie die englische Ausgabe. Bitte vor dem Verwenden einer Zahl lesen.",
     "methodTitle": "Wie das Glossar erstellt wurde",
     "methodSource": "Englische Ausgabe",
     "methodReference": "Hebräische Referenz",
-    "methodGeneratedOn": "Zusammengestellt"
+    "methodGeneratedOn": "Zusammengestellt",
+    "methodBody": "Überall, wo für dasselbe Kapitel und dieselbe Schicht sowohl das Hebräische (Jerusalemer Ausgabe) als auch das offizielle Englisch von Bnei Baruch vorliegen, wurden beide nebeneinandergelegt und Eintrag für Eintrag zugeordnet; eine Zuordnung galt nur, wenn Nummerierung und Anker genau übereinstimmten. Für jeden hebräischen Begriff wurden die englischen Wiedergaben, die in den Einträgen mit diesem Begriff auffallend häufig vorkommen, als Kandidaten gesammelt, und jeder Kandidat wurde anschließend am Lesen echter Paare überprüft. Jede zitierte Textstelle wurde per Programm aus dem zugeordneten Text gezogen, nicht von Hand abgetippt.",
+    "editionNames": {
+      "en-bb": "Englisch von Bnei Baruch (KabbalahMedia)",
+      "he-jerusalem-1956": "Hebräisch, Jerusalemer Ausgabe, 1956–1966"
+    },
+    "limits": {
+      "coverage": "Das Englisch von Bnei Baruch deckt nur die Teile {parts} von sechzehn ab. Für die übrigen Teile ist hier kein Begriff belegt.",
+      "runningProse": "Der Großteil der Belege stammt aus den Tafeln der Fragen und Antworten, die ihrer Natur nach terminologisch sind. Nur wenige fortlaufende Kapitel ließen sich vergleichen; was das Glossar über den Prosastil zeigt, ist daher dünner als das, was es über einzelne Begriffe zeigt.",
+      "thinTerms": "Einige Begriffe kommen nur in einer bis drei verglichenen Textstellen vor. Das reicht nicht, um sie festzulegen, daher werden sie weggelassen, statt sie zu raten.",
+      "wholeChapters": "Einige Kapitel ließen sich nur als Ganzes vergleichen, nicht Eintrag für Eintrag; daraus zitierte Textstellen sind daher ein schwächerer Beleg.",
+      "aiNotUsed": "Die KI-Übersetzung ins Englische auf dieser Website wurde nicht zum Erstellen des Glossars verwendet; sie wurde erst nach dessen Fertigstellung daran geprüft."
+    },
+    "conventionCopy": {
+      "item-markers-gematria": {
+        "topic": "Absatzmarkierungen",
+        "rule": "Ein hebräischer Buchstabe als Markierung im Text wird durch seinen Zahlenwert in arabischen Ziffern wiedergegeben (Gematria): Alef ist 1, Jod 10, Lamed 30, Kuf 100, Taw 400. Der Buchstabe selbst bleibt nie stehen, und die Markierungen werden nicht fortlaufend neu nummeriert."
+      },
+      "commentary-lemma": {
+        "topic": "Kommentareinträge",
+        "rule": "Jeder englische Kommentareintrag beginnt mit einem fett gesetzten Lemma – der Wendung aus dem Quelltext, auf die er sich bezieht –, gefolgt von einem Doppelpunkt und der Erklärung. Der hebräische Kommentar hat kein Lemma und ist nur über seinen Anker erkennbar; eine Übersetzung muss das Lemma daher aus dem zugehörigen Quelltext gewinnen."
+      },
+      "nav-links-dropped": {
+        "topic": "Navigationslinks",
+        "rule": "Die hebräischen Verweise, die von einer Frage zur Antwort und zurück führen („zur Frage“, „zur Antwort“), entfallen vollständig. Sie haben im Englischen keine Entsprechung."
+      },
+      "answer-headword-dropped": {
+        "topic": "Einträge der Antworttafel",
+        "rule": "Das fett gesetzte hebräische Stichwort, mit dem eine Antwort beginnt, wird im Englischen nicht wiederholt; der Eintrag beginnt direkt mit der Definition. Ein Beleg, der auf das Stichwort folgt, wird ans Ende des Eintrags verschoben oder weggelassen, nie am Anfang belassen."
+      },
+      "question-punctuation": {
+        "topic": "Einträge der Fragetafel",
+        "rule": "Hebräische Fragen enden mit einem Punkt; die englische Ausgabe schreibt sie als Fragen mit Fragezeichen. Wird ein Beleg angehängt, entfällt das Fragezeichen meist, und der Eintrag endet mit der schließenden Klammer."
+      },
+      "abbreviation-expansion": {
+        "topic": "Abkürzungen in Belegen",
+        "rule": "Hebräische Abkürzungen in Belegen werden im Englischen ausgeschrieben, nie transliteriert: Teil- und Kapitelangaben werden zu “Part 3, Chapter 5”, die beiden Kommentarschichten heißen ausgeschrieben “Inner Light” und “Inner Observation”, und “item”, “page” und “see answer” stehen mit arabischen Ziffern. Rückverweise werden zu “ibid.” oder “see above item”. Jede Zahl in hebräischen Buchstaben wird zu arabischen Ziffern."
+      },
+      "honorifics-dropped": {
+        "topic": "Ehrentitel und fromme Formeln",
+        "rule": "„Gelobt sei Er“ nach Ein Sof entfällt stets, es steht allein “Ein Sof”. Der Ehrentitel beim Namen des Schöpfers entfällt oder geht in “His” und “Him” auf. Die hebräische Wendung für „Gott behüte“ wird in verneinten Sätzen zum Adverb “whatsoever” oder entfällt und wird nie mit “God forbid” wiedergegeben. „Siehe dort“ entfällt meist."
+      },
+      "harav-is-ari": {
+        "topic": "Verweise auf den Verfasser",
+        "rule": "In diesem Text bedeutet das hebräische „der Rav“ den Ari (Isaak Luria), den Verfasser des zitierten Etz-Chaim-Textes. Das Englische sagt immer “the ARI”, nie “the Rav”. Baal HaSulam, der Kommentator, wird im laufenden Text nicht genannt."
+      },
+      "gloss-brackets": {
+        "topic": "Erläuterungen zu Transliterationen",
+        "rule": "Auf einen transliterierten Begriff folgt bei seinem ersten Auftreten in einem Eintrag eine kurze englische Erläuterung in eckigen Klammern; danach steht er allein: “Rosh [head]”, “Guf [body]”, “Ein Sof [infinity]”, “Katnut [smallness]”, “Gadlut [greatness]”. Die Erläuterung wird sparsam eingesetzt, nicht bei jedem Vorkommen."
+      },
+      "phase-ordinals": {
+        "topic": "Zahlen im Fließtext",
+        "rule": "Ordnungszahlen der Phasen werden als Wörter in Kleinschreibung ausgeschrieben – “phase one”, “phase two”, “phase three”, “phase four” – und nie als Ziffern. Ebenso behält “ten Sefirot” das “ten” als kleingeschriebenes Wort."
+      },
+      "feminine-malchut": {
+        "topic": "Grammatisches Geschlecht",
+        "rule": "Malchut, die vierte Phase und die Nukva behalten im Englischen ihre hebräische weibliche Grammatik: “she”, “her”, “herself”. Sie werden nie zu “it”."
+      },
+      "typography": {
+        "topic": "Typografie",
+        "rule": "Zitierte Begriffe stehen in geschwungenen typografischen Anführungszeichen, nie in geraden, und Erläuterungen in eckigen Klammern. Hebräische Buchstaben erscheinen im Englischen nur innerhalb von Buchstabenerläuterungen."
+      },
+      "layer-names": {
+        "topic": "Namen der Kommentarschichten",
+        "rule": "“Inner Light”, der Name der ersten Kommentarschicht von Baal HaSulam, wird mit großen Anfangsbuchstaben geschrieben; dieselben Wörter klein, “inner light”, sind der Fachbegriff für das in einem Gefäß bekleidete Licht. “Inner Observation” ist der Name der zweiten Schicht. Allein die Groß- und Kleinschreibung unterscheidet den Schichtnamen vom Begriff."
+      }
+    }
   },
   "seo": {
     "ogImageAlt": "Read TES – ein aufgeschlagenes Buch neben den Tzimtzum-Kreisen des Ari vor einem nächtlichen Himmel",
     "home": {
-      "description": "Eine kostenlose, mehrsprachige Lesefassung von Talmud Eser Sefirot – der Text des Ari mit Baal HaSulams Erklärungen im Inneren Licht und in der Inneren Betrachtung, auf Deutsch, Englisch und Hebräisch."
+      "description": "Eine kostenlose Lesefassung von Talmud Eser Sefirot – der Text des Ari mit Baal HaSulams Erklärungen im Inneren Licht und in der Inneren Betrachtung, auf Hebräisch und Englisch, einzelne Teile auch auf Russisch, Ukrainisch, Spanisch und Französisch; Benutzeroberfläche in neun Sprachen."
     },
     "about": {
       "description": "Was Read TES ist, wie die drei Leseebenen funktionieren und welche Lizenzen und Quellen hinter jeder Textausgabe der Seite stehen."
@@ -298,7 +377,7 @@
       "description": "{chapter} von {part} – der Text des Ari neben seiner Erklärung im Inneren Licht und der Inneren Betrachtung des Teils."
     },
     "notFound": {
-      "description": "Diese Seite existiert noch nicht oder wurde verschoben – finde zurück zu den Bänden oder zur Startseite von Read TES."
+      "description": "Diese Seite existiert nicht oder wurde verschoben – finde zurück zu den Bänden, zum Glossar oder zur Startseite von Read TES."
     }
   }
 }

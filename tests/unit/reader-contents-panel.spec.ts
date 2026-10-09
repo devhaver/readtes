@@ -22,7 +22,16 @@ const part = (
   lastChapterId: firstChapterId,
   firstChapterTitle: firstChapterId ? { en: "Chapter 1", he: "פרק א׳" } : null,
   lastChapterTitle: firstChapterId ? { en: "Chapter 1", he: "פרק א׳" } : null,
-  availableSummary: { he: "full", en: "none" },
+  availableSummary: {
+    he: "full",
+    en: "none",
+    enOfficial: "none",
+    enAi: "none",
+    ru: "none",
+    uk: "none",
+    es: "none",
+    fr: "none",
+  },
 });
 
 const volumes: TocVolumeSkeleton[] = [

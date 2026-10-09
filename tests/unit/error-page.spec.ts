@@ -34,10 +34,11 @@ describe("error page", () => {
         error: createError({ statusCode: 404, statusMessage: "Not Found" }),
       },
     });
-    const buttons = wrapper.findAll("button");
+    const main = wrapper.get("main");
+    const hrefs = main.findAll("a").map((link) => link.attributes("href"));
 
-    expect(buttons.length).toBeGreaterThanOrEqual(2);
-    expect(wrapper.text()).toContain("Back to home");
-    expect(wrapper.text()).toContain("Browse the six volumes");
+    expect(main.findAll("button")).toHaveLength(0);
+    expect(main.text()).toContain("Back to home");
+    expect(hrefs).toEqual(["/", "/volumes", "/glossary", "/about"]);
   });
 });

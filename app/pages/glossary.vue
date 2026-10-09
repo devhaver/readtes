@@ -22,14 +22,16 @@ import {
   filteredGlossaryEntries,
   GLOSSARY_STRATEGIES,
   glossaryAttestationTicks,
+  glossaryEditionId,
+  glossaryPartList,
   glossaryStrategyCounts,
   partNumberFromId,
 } from "~/utils/glossary";
 import type { GlossaryStrategy } from "~~/shared/types/content";
 
-const { t, locale } = useI18n();
+const { t, te, locale } = useI18n();
 
-const { meta, entries, conventions, knownGaps } = await useGlossaryIndex();
+const { meta, entries, conventions } = await useGlossaryIndex();
 const { citationsFor, hasFailed, hasLoaded, loadCitations } =
   useGlossaryCitations();
 const { formatDate } = useFormattedDate();
@@ -80,13 +82,32 @@ const coverageTicks = computed(() => {
 });
 
 const coveredPartNumbers = computed(() =>
-  meta.value.partsCovered
-    .flatMap((partId) => {
+  glossaryPartList(
+    meta.value.partsCovered.flatMap((partId) => {
       const number = partNumberFromId(partId);
       return number === null ? [] : [number];
-    })
-    .join(", "),
+    }),
+  ),
 );
+
+/**
+ * The reader-facing limits of the glossary, written in i18n rather than
+ * rendered from the artifact's own build notes (which talk about briefs,
+ * fields and file names). Each entry is a key under `glossary.limits`.
+ */
+const limits = computed(() => [
+  t("glossary.limits.coverage", { parts: coveredPartNumbers.value }),
+  t("glossary.limits.runningProse"),
+  t("glossary.limits.thinTerms"),
+  t("glossary.limits.wholeChapters"),
+  t("glossary.limits.aiNotUsed"),
+]);
+
+/** An edition id from the artifact ("en-bb (…)") as the name a reader knows it by. */
+const editionName = (raw: string): string => {
+  const key = `glossary.editionNames.${glossaryEditionId(raw)}`;
+  return te(key) ? t(key) : raw;
+};
 
 useLocalizedSeo({
   title: () => t("glossary.title"),
@@ -97,7 +118,7 @@ useLocalizedSeo({
 <template>
   <div class="pb-16">
     <header class="border-b border-(--border) bg-(--surface-reading)">
-      <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+      <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
         <!-- The Hebrew lockup over the English title, as on the homepage
              hero. Dropped under /he/, where the h1 is already Hebrew. -->
         <p
@@ -150,7 +171,7 @@ useLocalizedSeo({
       </div>
     </header>
 
-    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
       <!-- Lookup bar. Sticky, because looking a term up is why anyone is
            here and 125 rows is well past a screenful. -->
       <section
@@ -267,15 +288,15 @@ useLocalizedSeo({
         </p>
         <ul class="mt-4 space-y-3">
           <li
-            v-for="(gap, index) in knownGaps"
-            :key="index"
+            v-for="limit in limits"
+            :key="limit"
             class="flex items-start gap-2 text-sm/relaxed text-(--text-muted)"
           >
             <span
               aria-hidden="true"
               class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-cta"
             />
-            <span dir="ltr" lang="en">{{ gap }}</span>
+            <span>{{ limit }}</span>
           </li>
         </ul>
 
@@ -286,28 +307,24 @@ useLocalizedSeo({
             {{ t("glossary.methodTitle") }}
           </summary>
           <div class="px-4 pb-5 sm:px-6">
-            <p
-              class="max-w-prose text-sm/relaxed text-(--text-muted)"
-              dir="ltr"
-              lang="en"
-            >
-              {{ meta.method }}
+            <p class="max-w-prose text-sm/relaxed text-(--text-muted)">
+              {{ t("glossary.methodBody") }}
             </p>
             <dl class="mt-4 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2">
               <div>
                 <dt class="text-xs text-(--text-muted)">
                   {{ t("glossary.methodSource") }}
                 </dt>
-                <dd class="text-(--text-primary)" dir="ltr" lang="en">
-                  {{ meta.sourceVersion }}
+                <dd class="text-(--text-primary)">
+                  {{ editionName(meta.sourceVersion) }}
                 </dd>
               </div>
               <div>
                 <dt class="text-xs text-(--text-muted)">
                   {{ t("glossary.methodReference") }}
                 </dt>
-                <dd class="text-(--text-primary)" dir="ltr" lang="en">
-                  {{ meta.referenceVersion }}
+                <dd class="text-(--text-primary)">
+                  {{ editionName(meta.referenceVersion) }}
                 </dd>
               </div>
               <div>
