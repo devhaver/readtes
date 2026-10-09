@@ -163,7 +163,7 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "On Sefirot'un Çalışması",
     "beginReading": "Okumaya başla",
-    "quoteSource": "On Sefirot'un Çalışması, Kısım I, Bölüm 1",
+    "quoteSource": "On Sefirot'un Çalışması, Kısım 1, Bölüm 1",
     "howItWorksTitle": "Bu okuyucu nasıl çalışır",
     "howItWorksSourceTitle": "Ari'nin Metni",
     "howItWorksSourceHebrew": "כתבי האר״י",
@@ -177,7 +177,8 @@
     "coverageTitle": "Metnin durumu",
     "coverageHebrew": "İbranice külliyatın tamamı 1956 Kudüs baskısından sunulmaktadır.",
     "coverageEnglish": "Çeviri kapsamı kısma ve baskıya göre değişir; resmî ve yapay zekâ destekli çeviriler açıkça etiketlenir.",
-    "coverageMore": "Her bölüm için mevcut katmanları ve baskıları görmek üzere ciltlere göz atın."
+    "coverageMore": "Her bölüm için mevcut katmanları ve baskıları görmek üzere ciltlere göz atın.",
+    "pauseMotion": "Arka plan animasyonunu duraklat"
   },
   "errors": {
     "notFoundTitle": "Sayfa bulunamadı",
@@ -190,7 +191,10 @@
     "indexTitle": "Ciltler",
     "indexDescription": "Altı cilt ve on altı kısımdan oluşan On Sefirot'un Çalışması — Ari'nin metni, İç Işık ve İç Gözlem ile.",
     "comingSoon": "Yakında",
-    "chapterCount": "{count} bölüm",
+    "chapterCount": {
+      "one": "{count} bölüm",
+      "other": "{count} bölüm"
+    },
     "partialLanguage": "kısmi",
     "partComingSoon": "Bu kısım henüz eklenmedi — yakında tekrar bakın.",
     "answersTerminologyCluster": "Cevaplar — Terminoloji ({count})",
@@ -201,7 +205,10 @@
       "inner-observation": "İç Gözlem",
       "questions": "Sorular",
       "answers": "Cevaplar"
-    }
+    },
+    "partIndexLabel": "Bu ciltteki kısımlar",
+    "backToTop": "Başa dön",
+    "aiPartNote": "Bu kısımdaki tüm bölümlerin İngilizcesi yapay zekâ çevirisidir."
   },
   "about": {
     "title": "Read TES hakkında",
@@ -242,7 +249,7 @@
     "titleHebrew": "מונחים",
     "lede": "On Sefirot'un Çalışması'ndan {count} terim ve resmî baskının her biri için gerçekte kullandığı İngilizce karşılık.",
     "evidence": "Buradaki her terim, 1956 Kudüs İbranice metni ile Bnei Baruch İngilizcesinin öğe öğe yan yana konabildiği {chapters} bölümden çıkarılmıştır — toplam {items} eşleşmiş çift.",
-    "languageNote": "İbranice metin 1956 Kudüs baskısından, İngilizce metin Bnei Baruch baskısından alıntılanmıştır. Tek tek terimlere ilişkin kısa notlar İngilizce yazılmıştır.",
+    "languageNote": "İbranice metin 1956 Kudüs baskısından, İngilizce metin Bnei Baruch baskısından alıntılanmıştır. Kısa notlar arayüz dilinde gösterilir.",
     "coverageParts": "On altı kısımdan {parts}",
     "coverageStripDescription": "İngilizce baskı, On Sefirot'un Çalışması'nın on altı kısmından {parts} kısımlarını kapsar.",
     "filtersLabel": "Terim bul",
@@ -257,7 +264,10 @@
       "transliterate-with-gloss": "Harf çevirisi ve açıklamalı",
       "acronym": "Kısaltma"
     },
-    "attestedIn": "{parts}. kısımlarda geçer.",
+    "attestedIn": {
+      "one": "Geçtiği kısım: {parts}.",
+      "other": "Geçtiği kısımlar: {parts}."
+    },
     "attestedNowhere": "Eşleşmiş hiçbir kısımda geçmez.",
     "variantsTitle": "Baskının yazdığı biçimler",
     "variantsHint": "Sayılar tüm kitaptaki değil, eşleşmiş pasajlardaki geçiş sayılarıdır.",
@@ -265,6 +275,7 @@
     "citationsLoading": "Pasajlar yükleniyor…",
     "citationsFailed": "Pasajlar yüklenemedi.",
     "citationsRetry": "Tekrar dene",
+    "permalink": "Bu terime bağlantı",
     "citationChapter": "Kısım {part} · {chapter}",
     "chapterKind": {
       "chapter": "Bölüm {n}",
@@ -292,6 +303,41 @@
     "editionNames": {
       "en-bb": "Bnei Baruch İngilizcesi (KabbalahMedia)",
       "he-jerusalem-1956": "İbranice, Kudüs baskısı, 1956–1966"
+    },
+    "noteCopy": {
+      "or": "Hiçbir zaman Ohr diye çevriyazılmaz. Yalnızca “İç Işık” ve “İç Gözlem” başlıklarında büyük harfle yazılır.",
+      "kli": "Çevriyazılmaz, çevrilir. Kli bütün İngilizce derlemde yalnızca bir kez geçer.",
+      "zakut": "הזדככות gibi “arınma” olarak da karşılanır; tutarsızlıklara bakın.",
+      "reshimo": "Her zaman çevrilir. Reshimo ve Reshimot resmî İngilizcede hiç geçmez.",
+      "zivug": "Bu derlemin tamamında İbranice זווג yazılır; זיווג geçmez.",
+      "histaklut-pnimit": "Baal HaSulam’ın ikinci yorum katmanının adıdır. İki sözcük de büyük harfle başlar.",
+      "histaklut": "Malhut’un ışığa bakışını anlatan teknik terim olarak “bakış” ya da “bakmak”tır; “gözlem” değildir.",
+      "or-pnimi": "İki anlamı vardır: Baal HaSulam’ın ilk yorum katmanının başlığı ve küçük harfli teknik terim.",
+      "behina": "Baskı “ayırt etme”yi הבחן veya הבחנה için kullanır; derece anlamındaki בחינה için değil.",
+      "behina-dalet": "Safha sıraları sözcükle yazılır: birinci, ikinci, üçüncü ve dördüncü safha.",
+      "madrega": "קומה “seviye”, מדרגה “derece”dir. İkisi birlikte geçebilir.",
+      "atzmut": "עצמותו ית׳ “O’nun benliği”dir. “Öz” מהות için ayrılmıştır.",
+      "taamim": "Yalnızca 6. Kısımda tanıklanmıştır.",
+      "nekudot": "Resmî İngilizce burada gerçekten değişkendir; tutarsızlıklara bakın.",
+      "hassadim": "אור דחסדים, “Hassadim ışığı”dır.",
+      "partzufim": "Bir maddede ilk geçtiğinde “Partzufim [Partzuf’un çoğulu]” açıklaması verilir.",
+      "rosh": "İlk kullanımda “[baş]” açıklaması verilir.",
+      "toch": "Yalnızca bir Partzuf’un teknik orta üçte biri için çevriyazılır; sıradan תוך veya בתוך “içinde”dir.",
+      "sof": "אין סוף, yani Ein Sof’tan ayrıdır. İlk kullanımda “[son]” veya “[son/bitiş]” açıklaması verilir.",
+      "ein-sof": "א״ס ב״ה, “Ein Sof” olur; ב״ה saygı ifadesi atılır.",
+      "atzilut": "Dünya “Atzilut”tur; yayılma eylemi küçük harfli “emanation”dır.",
+      "adam-kadmon": "1–2. Kısımlarda açık yazılır, 3. Kısımdan itibaren “AK” diye kısaltılır.",
+      "hochma": "“Bilgelik” yalnızca “Kabala bilgeliği” ifadesinde kullanılır.",
+      "bon": "BAN değil BON. “MA and BON” çifti olarak geçer.",
+      "za": "1–3. Kısımlarda açık yazılır, 5. Kısımdan itibaren kısaltılır.",
+      "einayim": "Resmî İngilizce burada gerçekten değişkendir; tutarsızlıklara bakın.",
+      "klipot": "Çoğunlukla “kabuklar” diye çevrilir; bir kez “Klipot [shells]” geçer.",
+      "harav": "TES’te הרב, ARI’yi belirtir; resmî İngilizce daima “the ARI”, asla “the Rav” yazmaz.",
+      "akudim": "Daima büyük harfle: “world of Akudim”, “Keter of Akudim”.",
+      "ohr-hozer-abbrev": "Kısaltma אור חוזר ile aynı biçimde çevrilir; asla “Ohr Hozer” değildir.",
+      "ohr-yashar-abbrev": "אור ישר ile aynıdır. Sürüm 2’de eklenmiş, sürüm 1’de yoktur.",
+      "reshimot-plural": "רשימו sözcüğünün çoğulu: kayıtlar.",
+      "bitushim-plural": "Sabit tekil ביטוש sözcüğünden türetilir: çarpışma. Tanıklanmamıştır; her kullanım incelenmelidir."
     },
     "limits": {
       "coverage": "Bnei Baruch İngilizcesi on altı kısımdan yalnızca şunları kapsar: {parts}. Diğer kısımlar için burada hiçbir terim belgelenmemiştir.",
@@ -373,7 +419,13 @@
       "description": "{title} kısımları ve bölümleri; Ari'nin metni, İç Işık ve İç Gözlem ile."
     },
     "chapter": {
-      "description": "{part} kısmının {chapter} — Ari'nin metni, yanında İç Işık açıklaması ve kısmın İç Gözlemi."
+      "description": {
+        "chapter": "{chapter} — {part}. Ari'nin metni, yanında İç Işık açıklaması ve kısmın İç Gözlemi.",
+        "introduction": "{chapter} — {part}. Talmud Eser Sefirot'un bu kısmına giriş.",
+        "inner-observation": "{chapter} — {part}. Baal HaSulam'ın kısmın bütününe ilişkin derinlemesine açıklaması.",
+        "questions": "{chapter} — {part}. Talmud Eser Sefirot'un bu kısmını gözden geçirme soruları.",
+        "answers": "{chapter} — {part}. Talmud Eser Sefirot'un bu kısmını gözden geçirme cevapları."
+      }
     },
     "notFound": {
       "description": "Bu sayfa yok ya da taşınmış — Read TES'in ciltlerine, sözlüğüne ya da ana sayfasına dönün."

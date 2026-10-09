@@ -341,7 +341,14 @@ const anchorMarkers = computed(() =>
 // the commentary pane's followed view reads it. Called here, ahead of
 // `ReaderShell`, so this page is the provider both panes inject — neither
 // can see the other's scroll container on its own.
-useCurrentSeif();
+const { currentSeif } = useCurrentSeif();
+
+watch(mode, async () => {
+  const seif = currentSeif.value;
+  if (seif === null) return;
+  await nextTick();
+  document.getElementById(`seif-${seif}`)?.scrollIntoView({ block: "start" });
+});
 
 // `ReaderContentsPanel` (T90): the toolbar's Contents button opens the
 // whole volumes -> parts tree. `useContentsPanel` owns the open/closed
@@ -351,11 +358,16 @@ useCurrentSeif();
 useContentsPanel();
 
 const partTitle = computed(() => localizedTitle(partFile.part.title));
+const seoDescriptionKind = computed(() => {
+  if (chapter.kind.startsWith("questions-")) return "questions";
+  if (chapter.kind.startsWith("answers-")) return "answers";
+  return chapter.kind;
+});
 
 useLocalizedSeo({
   title: () => `${readerTitle.value} · ${t("common.siteName")}`,
   description: () =>
-    t("seo.chapter.description", {
+    t(`seo.chapter.description.${seoDescriptionKind.value}`, {
       chapter: chapterTitle.value,
       part: partTitle.value,
     }),
@@ -382,6 +394,7 @@ useLocalizedSeo({
 
     <ReaderShell
       v-if="mode === 'panes'"
+      data-reader-mode="panes"
       class="min-h-0 flex-1"
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"
@@ -390,6 +403,7 @@ useLocalizedSeo({
     >
       <template #source>
         <ReaderPane
+          pane-id="source"
           :title="t(sourceLabelKey)"
           :language-options="sourceLanguageOptions"
           :model-value="readerLanguages.source.value"
@@ -420,6 +434,7 @@ useLocalizedSeo({
 
       <template v-if="hasCommentary" #commentary>
         <ReaderPane
+          pane-id="commentary"
           :title="t('reader.pane.innerLight')"
           :language-options="commentaryLanguageOptions"
           :model-value="readerLanguages.commentary.value"
@@ -450,6 +465,7 @@ useLocalizedSeo({
 
       <template v-if="availableThirdPaneTabs.length > 0" #inner-observation>
         <ReaderPane
+          pane-id="inner-observation"
           :title="thirdPaneTitle"
           :language-options="thirdPane.languageOptions.value"
           :model-value="thirdPane.language.value"
@@ -488,7 +504,7 @@ useLocalizedSeo({
       </template>
     </ReaderShell>
 
-    <template v-else-if="mode === 'study'">
+    <div v-else-if="mode === 'study'" data-reader-mode="study">
       <ReaderStudyStream
         :source-label-key="sourceLabelKey"
         :chapter-kind="chapter.kind"
@@ -535,9 +551,9 @@ useLocalizedSeo({
           <span>{{ localizedText(next.title, locale) }}</span>
         </NuxtLink>
       </nav>
-    </template>
+    </div>
 
-    <template v-else>
+    <div v-else data-reader-mode="original">
       <ReaderOriginalStream
         :source-segments="sourceSegments"
         :commentary-items="commentaryItems"
@@ -545,7 +561,7 @@ useLocalizedSeo({
         :commentary-meta="commentaryMeta"
         :pagination="originalPagination"
       />
-    </template>
+    </div>
 
     <ReaderCommentarySheet
       :open="commentarySheetSeif !== null"

@@ -36,6 +36,12 @@ const { t } = useI18n();
 const { mode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const { scale } = useReadingPreferences();
+onMounted(() => {
+  document.documentElement.setAttribute("data-reader-hydrated", "");
+});
+onBeforeUnmount(() => {
+  document.documentElement.removeAttribute("data-reader-hydrated");
+});
 // The reader's chrome (navbar, toolbar, breadcrumb) sits ahead of the text,
 // and in panes mode the text is a scroll container, not a landmark. Move
 // focus to the first visible passage so the next Tab starts inside the text.
@@ -109,6 +115,8 @@ onBeforeUnmount(() => {
     </a>
     <div
       ref="navbarRef"
+      data-reader-navbar
+      :inert="isChromeCollapsed || (isStudyMode && !chromeVisible) || undefined"
       :class="[
         isChromeCollapsed && 'hidden',
         // Phone landscape (~390px tall): the site navbar is the first thing

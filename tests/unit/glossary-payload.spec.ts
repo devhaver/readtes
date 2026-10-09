@@ -68,16 +68,15 @@ describe("guardrail: the glossary composables stay payload-safe", () => {
     );
   });
 
-  it("useGlossaryCitations keeps the citations chunk behind loadCitations()", () => {
+  it("useGlossaryCitations fetches the citations asset only from loadCitations()", () => {
     const contents = read("composables/useGlossaryCitations.ts");
-    const importIndex = contents.indexOf(
-      'import("~~/content/glossary/tes-en.citations.json")',
-    );
+    const fetchIndex = contents.indexOf("fetch(CITATIONS_URL");
     const loaderIndex = contents.indexOf("const loadCitations");
 
-    expect(importIndex).toBeGreaterThan(-1);
+    expect(contents).toContain("new URL(");
+    expect(fetchIndex).toBeGreaterThan(-1);
     expect(loaderIndex).toBeGreaterThan(-1);
-    expect(importIndex).toBeGreaterThan(loaderIndex);
+    expect(fetchIndex).toBeGreaterThan(loaderIndex);
   });
 
   it("the page never calls loadCitations on setup", () => {
@@ -86,7 +85,9 @@ describe("guardrail: the glossary composables stay payload-safe", () => {
     // Wired to the row's `open` event, never invoked at the top level.
     expect(contents).toContain('@open="loadCitations"');
     expect(contents).not.toContain("await loadCitations(");
-    expect(contents).not.toContain("loadCitations()");
+    expect(contents.indexOf("loadCitations()")).toBeGreaterThan(
+      contents.indexOf("onMounted("),
+    );
   });
 });
 

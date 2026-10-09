@@ -13,6 +13,7 @@ const part = (
   title: { en: `Part ${number}`, he: `חלק ${number}` },
   sefariaNode: `Talmud Eser HaSefirot, Section ${number}`,
   chapterCount: firstChapterId ? 1 : 0,
+  mainChapterCount: firstChapterId ? 1 : 0,
   kindsPresent: firstChapterId ? ["chapter"] : [],
   firstChapterId,
   lastChapterId: firstChapterId,

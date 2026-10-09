@@ -11,6 +11,7 @@
           "title": { "en": "Part 1" },
           "sefariaNode": "Fixture Node",
           "chapterCount": 5,
+          "mainChapterCount": 5,
           "kindsPresent": ["chapter"],
           "firstChapterId": "part-01/chapter-01",
           "lastChapterId": "part-01/chapter-01",

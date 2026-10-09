@@ -186,6 +186,8 @@ export const deriveTocVolumesFile = (
         title: part.title,
         sefariaNode: part.sefariaNode,
         chapterCount: part.chapters.length,
+        mainChapterCount: part.chapters.filter((c) => c.kind === "chapter")
+          .length,
         kindsPresent,
         firstChapterId: first?.id ?? null,
         lastChapterId: last?.id ?? null,

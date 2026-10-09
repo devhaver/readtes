@@ -11,7 +11,9 @@
  * speculatively.
  *
  * The in-flight promise is shared, so opening three terms in quick
- * succession still only fetches the chunk once.
+ * succession still only fetches the asset once. This deliberately uses
+ * `fetch()` rather than a rejected dynamic import: browsers cache failed
+ * module imports, which made the row's "Try again" button unable to retry.
  *
  * `loadCitations()` never rejects. It is wired straight to a `@open` handler
  * on 125 rows, so a rejected promise would be an unhandled rejection and
@@ -25,6 +27,11 @@ import type {
   GlossaryCitation,
   GlossaryCitationsFile,
 } from "~~/shared/types/content";
+
+const CITATIONS_URL = new URL(
+  "../../content/glossary/tes-en.citations.json",
+  import.meta.url,
+).href;
 
 export const useGlossaryCitations = () => {
   const citationsByEntry = ref<Record<string, GlossaryCitation[]>>({});
@@ -40,11 +47,12 @@ export const useGlossaryCitations = () => {
 
     isLoading.value = true;
     hasFailed.value = false;
-    inFlight = import("~~/content/glossary/tes-en.citations.json")
-      .then((citationsModule) => {
-        citationsByEntry.value = (
-          citationsModule.default as GlossaryCitationsFile
-        ).citations;
+    inFlight = fetch(CITATIONS_URL, { cache: "force-cache" })
+      .then(async (response) => {
+        if (!response.ok)
+          throw new Error(`Glossary citations: ${response.status}`);
+        const citationsFile = (await response.json()) as GlossaryCitationsFile;
+        citationsByEntry.value = citationsFile.citations;
         hasLoaded.value = true;
       })
       .catch(() => {

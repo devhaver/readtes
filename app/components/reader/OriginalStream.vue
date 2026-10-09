@@ -73,6 +73,7 @@ const markerFor = (item: CommentaryItem): string =>
 
     <ol
       v-if="sourceSegments.length > 0"
+      :data-version="sourceMeta?.id"
       class="flex flex-col gap-6"
       :dir="sourceMeta?.direction ?? 'ltr'"
       :lang="sourceMeta?.language"
@@ -115,6 +116,7 @@ const markerFor = (item: CommentaryItem): string =>
         <ReaderProvenanceBadge :meta="commentaryMeta" />
       </p>
       <ol
+        :data-version="commentaryMeta?.id"
         class="flex flex-col gap-4"
         :dir="commentaryMeta?.direction ?? 'ltr'"
         :lang="commentaryMeta?.language"

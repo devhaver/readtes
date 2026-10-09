@@ -44,20 +44,36 @@ const props = withDefaults(
     citations: GlossaryCitation[] | null;
     /** True once the citations chunk has failed to load, so rows can offer a retry. */
     citationsFailed?: boolean;
+    /** Opens a term restored from the page URL. */
+    initiallyOpen?: boolean;
   }>(),
-  { citationsFailed: false },
+  { citationsFailed: false, initiallyOpen: false },
 );
 
-const emit = defineEmits<{ open: []; retry: [] }>();
+const emit = defineEmits<{
+  open: [];
+  retry: [];
+  "open-change": [open: boolean];
+}>();
 
-const { t } = useI18n();
+const { t, te } = useI18n();
+const { formatNumber } = useCountedLabel();
 
-const isOpen = ref(false);
+const isOpen = ref(props.initiallyOpen);
 const panelId = computed(() => `glossary-entry-${props.entry.id}`);
+
+watch(
+  () => props.initiallyOpen,
+  (open) => {
+    isOpen.value = open;
+    if (open) emit("open");
+  },
+);
 
 const toggle = () => {
   isOpen.value = !isOpen.value;
   if (isOpen.value) emit("open");
+  emit("open-change", isOpen.value);
 };
 
 const ticks = computed(() =>
@@ -79,10 +95,15 @@ const attestationDescription = computed(() =>
 const variantShares = computed(() =>
   glossaryVariantShares(props.entry.variants ?? []),
 );
+const localizedNote = computed(() => {
+  if (!props.entry.note) return null;
+  const key = `glossary.noteCopy.${props.entry.id}`;
+  return te(key) ? t(key) : props.entry.note;
+});
 </script>
 
 <template>
-  <li class="glossary-row-item">
+  <li :id="`term-${entry.id}`" class="glossary-row-item scroll-mt-36">
     <h3>
       <button
         type="button"
@@ -140,13 +161,18 @@ const variantShares = computed(() =>
       </p>
 
       <p
-        v-if="entry.note"
+        v-if="localizedNote"
         class="mt-2 max-w-prose text-sm/relaxed text-(--text-primary)"
-        dir="ltr"
-        lang="en"
       >
-        {{ entry.note }}
+        {{ localizedNote }}
       </p>
+
+      <NuxtLink
+        :to="{ query: { term: entry.id }, hash: `#term-${entry.id}` }"
+        class="mt-3 inline-flex text-xs text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
+      >
+        {{ t("glossary.permalink") }}
+      </NuxtLink>
 
       <p
         v-if="entry.attestation && entry.attestation !== 'attested'"
@@ -171,7 +197,7 @@ const variantShares = computed(() =>
               {{ variant.en }}
             </span>
             <span class="text-xs tabular-nums text-(--text-muted)">
-              {{ variant.occurrences }}
+              {{ formatNumber(variant.occurrences) }}
             </span>
             <span aria-hidden="true" class="glossary-variant-track col-span-2">
               <span
@@ -256,6 +282,7 @@ const variantShares = computed(() =>
   padding-inline: 1rem;
   text-align: start;
   transition: background-color 150ms ease;
+  min-block-size: 4.25rem;
 }
 
 @media (hover: hover) {

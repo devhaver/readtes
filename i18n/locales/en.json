@@ -163,7 +163,7 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "The Study of the Ten Sefirot",
     "beginReading": "Begin reading",
-    "quoteSource": "Talmud Eser Sefirot, Section I, Chapter 1",
+    "quoteSource": "Talmud Eser Sefirot, Part 1, Chapter 1",
     "howItWorksTitle": "How this reader works",
     "howItWorksSourceTitle": "The Ari's Text",
     "howItWorksSourceHebrew": "כתבי האר״י",
@@ -177,7 +177,8 @@
     "coverageTitle": "Where the text stands",
     "coverageHebrew": "The complete Hebrew corpus is available from the 1956 Jerusalem edition.",
     "coverageEnglish": "English coverage varies by part and edition; official and AI-assisted translations are clearly labeled.",
-    "coverageMore": "Browse the volumes to see the available layers and editions for each section."
+    "coverageMore": "Browse the volumes to see the available layers and editions for each section.",
+    "pauseMotion": "Pause background animation"
   },
   "errors": {
     "notFoundTitle": "Page not found",
@@ -190,7 +191,10 @@
     "indexTitle": "Volumes",
     "indexDescription": "Talmud Eser Sefirot in six volumes and sixteen parts — the Ari's text with Inner Light and Inner Observation.",
     "comingSoon": "Coming soon",
-    "chapterCount": "{count} chapters",
+    "chapterCount": {
+      "one": "{count} chapter",
+      "other": "{count} chapters"
+    },
     "partialLanguage": "partial",
     "partComingSoon": "This part hasn't been added yet — check back soon.",
     "answersTerminologyCluster": "Answers — Terminology ({count})",
@@ -201,7 +205,10 @@
       "inner-observation": "Inner Observation",
       "questions": "Questions",
       "answers": "Answers"
-    }
+    },
+    "partIndexLabel": "Parts in this volume",
+    "backToTop": "Back to top",
+    "aiPartNote": "The English for every chapter in this part is AI translated."
   },
   "about": {
     "title": "About Read TES",
@@ -242,7 +249,7 @@
     "titleHebrew": "מונחים",
     "lede": "{count} terms of Talmud Eser Sefirot, and the English the official edition actually uses for each one.",
     "evidence": "Every term here was read off the {chapters} chapters where the 1956 Jerusalem Hebrew and the Bnei Baruch English could be laid side by side, item against item — {items} aligned pairs in all.",
-    "languageNote": "The Hebrew is quoted from the 1956 Jerusalem edition, the English from the Bnei Baruch edition. The short notes on individual terms are written in English.",
+    "languageNote": "The Hebrew is quoted from the 1956 Jerusalem edition and the English from the Bnei Baruch edition. The short notes are shown in your interface language.",
     "coverageParts": "Parts {parts} of sixteen",
     "coverageStripDescription": "The English edition covers parts {parts} of the sixteen parts of Talmud Eser Sefirot.",
     "filtersLabel": "Find a term",
@@ -257,7 +264,10 @@
       "transliterate-with-gloss": "Transliterated with a gloss",
       "acronym": "Acronym"
     },
-    "attestedIn": "Attested in parts {parts}.",
+    "attestedIn": {
+      "one": "Attested in part {parts}.",
+      "other": "Attested in parts {parts}."
+    },
     "attestedNowhere": "Not attested in any aligned part.",
     "variantsTitle": "What the edition writes",
     "variantsHint": "Counts are occurrences inside the aligned passages, not across the whole book.",
@@ -265,6 +275,7 @@
     "citationsLoading": "Loading passages…",
     "citationsFailed": "The passages could not be loaded.",
     "citationsRetry": "Try again",
+    "permalink": "Link to this term",
     "citationChapter": "Part {part} · {chapter}",
     "chapterKind": {
       "chapter": "Chapter {n}",
@@ -292,6 +303,41 @@
     "editionNames": {
       "en-bb": "Bnei Baruch English (KabbalahMedia)",
       "he-jerusalem-1956": "Hebrew, Jerusalem edition, 1956–1966"
+    },
+    "noteCopy": {
+      "or": "Never transliterated as Ohr. Capitalised only inside the section names “Inner Light” and “Inner Observation.”",
+      "kli": "Translated, not transliterated. “Kli” occurs once in the whole English corpus.",
+      "zakut": "Also rendered as “refinement,” like הזדככות; see the inconsistencies.",
+      "reshimo": "Always translated. “Reshimo” and “Reshimot” never appear in the official English.",
+      "zivug": "Hebrew is spelled זווג throughout this corpus; זיווג does not occur.",
+      "histaklut-pnimit": "The name of Baal HaSulam’s second commentary layer. Both words are capitalised.",
+      "histaklut": "As a technical term for Malchut looking at the light, this is “a look” or “looking,” not “observation.”",
+      "or-pnimi": "Two senses: the title of Baal HaSulam’s first commentary layer, and the lower-case technical term.",
+      "behina": "The edition reserves “discernment” for הבחן or הבחנה, not בחינה as a level.",
+      "behina-dalet": "Phase ordinals are written as words: phase one, two, three and four.",
+      "madrega": "קומה is “level”; מדרגה is “degree.” Both can occur together.",
+      "atzmut": "עצמותו ית׳ is “His self.” “Essence” is reserved for מהות.",
+      "taamim": "Attested only in Part 6.",
+      "nekudot": "The official English genuinely varies here; see the inconsistencies.",
+      "hassadim": "אור דחסדים is “light of Hassadim.”",
+      "partzufim": "The first occurrence in an item is glossed “Partzufim [pl. of Partzuf].”",
+      "rosh": "Glossed “[head]” on first use.",
+      "toch": "Transliterated only for the technical middle third of a Partzuf; ordinary תוך or בתוך is “inside” or “within.”",
+      "sof": "Distinct from אין סוף, “Ein Sof.” Glossed “[end]” or “[end/conclusion]” on first use.",
+      "ein-sof": "א״ס ב״ה is “Ein Sof”; the ב״ה honorific is omitted.",
+      "atzilut": "The world is “Atzilut”; the act of emanating is lower-case “emanation.”",
+      "adam-kadmon": "Spelled out in Parts 1–2 and abbreviated “AK” from Part 3 onward.",
+      "hochma": "“Wisdom” is used only in the phrase “wisdom of Kabbalah.”",
+      "bon": "BON, not BAN. Paired as “MA and BON.”",
+      "za": "Spelled out in Parts 1–3 and abbreviated from Part 5 onward.",
+      "einayim": "The official English genuinely varies here; see the inconsistencies.",
+      "klipot": "Usually translated as “shells”; once transliterated as “Klipot [shells].”",
+      "harav": "In TES הרב denotes the ARI, and the official English always renders it “the ARI,” never “the Rav.”",
+      "akudim": "Always capitalised: “world of Akudim,” “Keter of Akudim.”",
+      "ohr-hozer-abbrev": "The abbreviation uses the same rendering as אור חוזר; it is never “Ohr Hozer.”",
+      "ohr-yashar-abbrev": "Matches אור ישר. Added in version 2 and absent from version 1.",
+      "reshimot-plural": "Plural of רשימו: records.",
+      "bitushim-plural": "Derived from the fixed singular ביטוש: clash. Unattested; flag any use for review."
     },
     "limits": {
       "coverage": "The Bnei Baruch English covers only parts {parts} of the sixteen. For the other parts, no term is evidenced here.",
@@ -373,7 +419,13 @@
       "description": "The parts and chapters of {title}, with the Ari's text, Inner Light, and Inner Observation."
     },
     "chapter": {
-      "description": "{chapter} of {part} — the Ari's text beside its Inner Light explanation and the part's Inner Observation."
+      "description": {
+        "chapter": "{chapter} — {part}. The Ari's text beside its Inner Light explanation and the part's Inner Observation.",
+        "introduction": "{chapter} — {part}. The introduction to this part of Talmud Eser Sefirot.",
+        "inner-observation": "{chapter} — {part}. Baal HaSulam's deeper, part-wide explanation.",
+        "questions": "{chapter} — {part}. Study questions for this part of Talmud Eser Sefirot.",
+        "answers": "{chapter} — {part}. Answers for reviewing this part of Talmud Eser Sefirot."
+      }
     },
     "notFound": {
       "description": "This page doesn't exist, or it has moved — find your way back to Read TES's volumes, glossary or home page."

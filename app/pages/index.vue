@@ -25,6 +25,10 @@ const openingLine: Record<string, string> = {
   tr: "Kısıtlamadan önce Sonsuzluk tüm gerçekliği dolduruyordu.",
 };
 
+// The hero's twinkle and entrance animations run on their own for as long as
+// the page is open, so they get a pause control (WCAG 2.2.2).
+const motionPaused = ref(false);
+
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);
 
 // Twinkling stars over the two tile layers in `.tes-starfield`. Same
@@ -114,7 +118,27 @@ const layers = computed(() => [
     <section
       ref="heroEl"
       class="tes-starfield hero-section relative overflow-hidden"
+      :class="{ 'hero-paused': motionPaused }"
     >
+      <button
+        type="button"
+        :aria-pressed="motionPaused"
+        :aria-label="t('home.pauseMotion')"
+        :title="t('home.pauseMotion')"
+        class="absolute end-3 top-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-button border border-surface-white/30 text-surface-white/80 hover:border-teal hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring-inverse)"
+        :class="{ 'bg-surface-white/15': motionPaused }"
+        @click="motionPaused = !motionPaused"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-3.5 w-3.5"
+          aria-hidden="true"
+        >
+          <rect x="6" y="5" width="4" height="14" rx="1" />
+          <rect x="14" y="5" width="4" height="14" rx="1" />
+        </svg>
+      </button>
       <!-- Decorative layers are positioned against this capped frame, not the
            viewport: past ~1920px they would otherwise drift to the far edges
            and leave the composition strung out across the middle. The night
@@ -224,7 +248,7 @@ const layers = computed(() => [
           <div class="mt-8 flex flex-wrap items-center gap-4">
             <NuxtLink
               :to="localePath('/read/part-01/chapter-01')"
-              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--focus-ring-inverse)"
             >
               {{ t("home.beginReading") }}
               <svg
@@ -242,7 +266,7 @@ const layers = computed(() => [
             </NuxtLink>
             <NuxtLink
               :to="localePath('/volumes')"
-              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--focus-ring-inverse)"
             >
               {{ t("home.browseVolumes") }}
             </NuxtLink>
@@ -257,7 +281,7 @@ const layers = computed(() => [
               :class="locale === 'he' ? 'font-hebrew' : 'font-display italic'"
               :lang="locale === 'he' ? 'he' : undefined"
             >
-              “{{ quote }}”
+              <q>{{ quote }}</q>
             </p>
             <cite class="mt-2 block text-sm text-surface-white/60 not-italic">
               {{ t("home.quoteSource") }}
@@ -327,7 +351,7 @@ const layers = computed(() => [
         <p class="mt-3 text-sm">
           <NuxtLink
             :to="localePath('/volumes')"
-            class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
           >
             {{ t("home.coverageMore") }}
           </NuxtLink>
@@ -405,6 +429,29 @@ const layers = computed(() => [
     opacity: 0.3;
     transform: scale(0.9);
   }
+}
+
+.hero-paused .hero-star,
+.hero-paused .hero-enter-content,
+.hero-paused .hero-enter-portrait {
+  animation-play-state: paused;
+}
+
+/* The opening line is a real quotation: the marks come from the language
+   (`<q>` + `quotes`), not from hard-coded curly quotes in the template. */
+q {
+  quotes: "\201C" "\201D";
+}
+
+q:lang(ru),
+q:lang(uk),
+q:lang(es),
+q:lang(fr) {
+  quotes: "\00AB" "\00BB";
+}
+
+q:lang(de) {
+  quotes: "\201E" "\201C";
 }
 
 .hero-frame {

@@ -9,11 +9,14 @@ import type {
 /** UI locales that have a Bnei Baruch edition of their own to surface. */
 const ownLanguageKeys = ["ru", "uk", "es", "fr"] as const;
 
+const NuxtLink = resolveComponent("NuxtLink");
+
 const props = defineProps<{
   volume: TocVolumeSkeleton;
 }>();
 
 const { locale, locales, t } = useI18n();
+const { countedLabel } = useCountedLabel();
 const localePath = useLocalePath();
 
 const active = computed(() => volumeHasContent(props.volume));
@@ -64,7 +67,8 @@ const partSummaries = computed(() =>
   props.volume.parts.map((part) => ({
     part,
     title: localizedText(part.title, locale.value),
-    chapterCount: part.chapterCount,
+    chapterCount: part.mainChapterCount,
+    href: localePath(`/volumes/${volumeSlug(props.volume)}#${part.id}`),
     chips: editionChips(part.availableSummary),
   })),
 );
@@ -110,30 +114,46 @@ const partSummaries = computed(() =>
       <!-- Name on its own line, facts beneath: name, count and two chips on
            one wrapping line broke mid-row on a phone and left a chip
            stranded on a line of its own. -->
-      <ul class="flex flex-col gap-2.5 text-sm">
+      <!-- Each part is its own link, above the card's stretched one, to
+           that part's section on the volume page. Two columns from `md` so
+           the card's width is used instead of a third of it. -->
+      <ul class="grid gap-x-6 gap-y-2 text-sm md:grid-cols-2">
         <li
           v-for="summary in partSummaries"
           :key="summary.part.id"
-          class="flex flex-col gap-0.5"
+          class="relative z-10"
         >
-          <span class="text-(--text-primary)">
-            <span class="text-(--text-muted)"
-              >{{ t("common.part") }} {{ summary.part.number }}</span
-            >
-            {{ summary.title }}
-          </span>
-          <span class="flex items-center gap-2 text-xs text-(--text-muted)">
-            <span>{{
-              t("volumes.chapterCount", { count: summary.chapterCount })
-            }}</span>
-            <span
-              v-for="chip in summary.chips"
-              :key="chip"
-              class="rounded-button border border-teal/50 px-1.5 py-0.5 text-(--accent-text)"
-            >
-              {{ chip }}
+          <component
+            :is="active ? NuxtLink : 'div'"
+            :to="active ? summary.href : undefined"
+            class="-mx-2 flex flex-col gap-0.5 rounded-button px-2 py-1.5"
+            :class="
+              active
+                ? 'hover:bg-(--surface-raised) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)'
+                : ''
+            "
+          >
+            <span class="text-(--text-primary)">
+              <span class="text-(--text-muted)"
+                >{{ t("common.part") }} {{ summary.part.number }} ·</span
+              >
+              {{ summary.title }}
             </span>
-          </span>
+            <span
+              class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-(--text-muted)"
+            >
+              <span>{{
+                countedLabel("volumes.chapterCount", summary.chapterCount)
+              }}</span>
+              <span
+                v-for="chip in summary.chips"
+                :key="chip"
+                class="rounded-button border border-teal/50 px-1.5 py-0.5 text-(--accent-text)"
+              >
+                {{ chip }}
+              </span>
+            </span>
+          </component>
         </li>
       </ul>
     </div>

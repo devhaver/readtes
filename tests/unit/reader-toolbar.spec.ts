@@ -27,6 +27,7 @@ const volumes: TocVolumeSkeleton[] = [
         title: { en: "Part 1", he: "חלק 1" },
         sefariaNode: "Talmud Eser HaSefirot, Section I",
         chapterCount: 1,
+        mainChapterCount: 1,
         kindsPresent: ["chapter"],
         firstChapterId: "part-01/chapter-01",
         lastChapterId: "part-01/chapter-01",

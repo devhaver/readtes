@@ -11,7 +11,7 @@
  * markup — showing the tags verbatim is the correct rendering, not an
  * escaping bug.
  */
-import { glossaryCitationTarget } from "~/utils/glossary";
+import { glossaryCitationHash, glossaryCitationTarget } from "~/utils/glossary";
 import type { LayerKind } from "~~/shared/types/content";
 
 const props = defineProps<{
@@ -39,22 +39,28 @@ const chapterLabel = computed(() => {
     }),
   });
 });
+
+const chapterHref = computed(() =>
+  props.chapterId
+    ? `${localePath(`/read/${props.chapterId}`)}${glossaryCitationHash(props.item)}`
+    : "",
+);
 </script>
 
 <template>
   <figure class="border-s-2 border-(--border) ps-3">
     <blockquote>
       <p class="font-hebrew text-base/relaxed" dir="rtl" lang="he">
-        {{ he }}
+        <bdi dir="rtl">{{ he }}</bdi>
       </p>
       <p class="mt-1 text-sm/relaxed text-(--text-muted)" dir="ltr" lang="en">
-        {{ en }}
+        <bdi dir="ltr">{{ en }}</bdi>
       </p>
     </blockquote>
     <figcaption class="mt-1.5 flex flex-wrap items-center gap-x-2 text-xs">
       <NuxtLink
         v-if="chapterId && chapterLabel"
-        :to="localePath(`/read/${chapterId}`)"
+        :to="chapterHref"
         class="inline-flex items-center gap-1 text-(--accent-text) hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
       >
         {{ chapterLabel }}

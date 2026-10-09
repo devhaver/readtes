@@ -179,6 +179,12 @@ export interface GlossaryCitationTarget {
   chapterNumber: number;
 }
 
+/** `"item 13"` → the reader's stable item fragment, `#seif-13`. */
+export const glossaryCitationHash = (item?: string): string => {
+  const match = item ? /^item\s+(\d+)$/i.exec(item.trim()) : null;
+  return match ? `#seif-${Number(match[1])}` : "";
+};
+
 const CHAPTER_KINDS: readonly ChapterKind[] = CHAPTER_KIND_ORDER;
 
 export const glossaryCitationTarget = (

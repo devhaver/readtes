@@ -30,14 +30,69 @@ import {
 import type { GlossaryStrategy } from "~~/shared/types/content";
 
 const { t, te, locale } = useI18n();
+const route = useRoute();
+const router = useRouter();
 
 const { meta, entries, conventions } = await useGlossaryIndex();
 const { citationsFor, hasFailed, hasLoaded, loadCitations } =
   useGlossaryCitations();
 const { formatDate } = useFormattedDate();
+const { formatNumber } = useCountedLabel();
 
-const query = ref("");
-const strategy = ref<GlossaryStrategy | null>(null);
+const queryValue = Array.isArray(route.query.q)
+  ? route.query.q[0]
+  : route.query.q;
+const strategyValue = Array.isArray(route.query.strategy)
+  ? route.query.strategy[0]
+  : route.query.strategy;
+const termValue = Array.isArray(route.query.term)
+  ? route.query.term[0]
+  : route.query.term;
+const query = ref(queryValue ?? "");
+const strategy = ref<GlossaryStrategy | null>(
+  GLOSSARY_STRATEGIES.includes(strategyValue as GlossaryStrategy)
+    ? (strategyValue as GlossaryStrategy)
+    : null,
+);
+const openTerm = ref(termValue ?? null);
+
+watch([query, strategy, openTerm], ([nextQuery, nextStrategy, nextTerm]) => {
+  const next = { ...route.query };
+  if (nextQuery) next.q = nextQuery;
+  else delete next.q;
+  if (nextStrategy) next.strategy = nextStrategy;
+  else delete next.strategy;
+  if (nextTerm) next.term = nextTerm;
+  else delete next.term;
+  void router.replace({
+    query: next,
+    hash: nextTerm ? `#term-${nextTerm}` : "",
+  });
+});
+
+watch(
+  () => route.query,
+  (nextQuery) => {
+    const nextQ = Array.isArray(nextQuery.q) ? nextQuery.q[0] : nextQuery.q;
+    const nextStrategy = Array.isArray(nextQuery.strategy)
+      ? nextQuery.strategy[0]
+      : nextQuery.strategy;
+    const nextTerm = Array.isArray(nextQuery.term)
+      ? nextQuery.term[0]
+      : nextQuery.term;
+    query.value = nextQ ?? "";
+    strategy.value = GLOSSARY_STRATEGIES.includes(
+      nextStrategy as GlossaryStrategy,
+    )
+      ? (nextStrategy as GlossaryStrategy)
+      : null;
+    openTerm.value = nextTerm ?? null;
+  },
+);
+
+onMounted(() => {
+  if (openTerm.value) void loadCitations();
+});
 
 const visibleEntries = computed(() =>
   filteredGlossaryEntries(entries.value, {
@@ -55,6 +110,14 @@ const selectStrategy = (value: GlossaryStrategy | null) => {
 const clearFilters = () => {
   query.value = "";
   strategy.value = null;
+};
+
+const setOpenTerm = (entryId: string, open: boolean) => {
+  openTerm.value = open
+    ? entryId
+    : openTerm.value === entryId
+      ? null
+      : openTerm.value;
 };
 
 /**
@@ -135,7 +198,7 @@ useLocalizedSeo({
           {{ t("glossary.title") }}
         </h1>
         <p class="mt-4 max-w-prose text-lg text-(--text-muted)">
-          {{ t("glossary.lede", { count: meta.entryCount }) }}
+          {{ t("glossary.lede", { count: formatNumber(meta.entryCount) }) }}
         </p>
 
         <!-- Evidence, stated before anything is claimed. -->
@@ -145,8 +208,8 @@ useLocalizedSeo({
           <p class="max-w-prose text-sm/relaxed text-(--text-muted)">
             {{
               t("glossary.evidence", {
-                chapters: meta.alignedChapters,
-                items: meta.alignedItemPairs,
+                chapters: formatNumber(meta.alignedChapters),
+                items: formatNumber(meta.alignedItemPairs),
               })
             }}
           </p>
@@ -185,7 +248,9 @@ useLocalizedSeo({
             type="search"
             autocomplete="off"
             :placeholder="
-              t('glossary.searchPlaceholder', { count: meta.entryCount })
+              t('glossary.searchPlaceholder', {
+                count: formatNumber(meta.entryCount),
+              })
             "
             class="w-full rounded-input border border-(--border-control) bg-(--surface) px-3 py-2 text-sm text-(--text-primary) placeholder:text-(--text-muted) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
           />
@@ -210,9 +275,11 @@ useLocalizedSeo({
             @click="selectStrategy(option)"
           >
             {{ t(`glossary.strategy.${option}`) }}
-            <span class="tabular-nums opacity-70">{{
-              strategyCounts[option]
-            }}</span>
+            <span
+              class="tabular-nums"
+              :class="strategy === option ? 'text-surface-white' : 'opacity-70'"
+              >{{ strategyCounts[option] }}</span
+            >
           </button>
         </div>
       </section>
@@ -227,8 +294,8 @@ useLocalizedSeo({
         <p class="text-xs text-(--text-muted)" aria-live="polite">
           {{
             t("glossary.resultCount", {
-              shown: visibleEntries.length,
-              total: meta.entryCount,
+              shown: formatNumber(visibleEntries.length),
+              total: formatNumber(meta.entryCount),
             })
           }}
         </p>
@@ -244,8 +311,10 @@ useLocalizedSeo({
             :parts-covered="meta.partsCovered"
             :citations="hasLoaded ? citationsFor(entry.id) : null"
             :citations-failed="hasFailed"
+            :initially-open="openTerm === entry.id"
             @open="loadCitations"
             @retry="loadCitations"
+            @open-change="setOpenTerm(entry.id, $event)"
           />
         </ul>
 

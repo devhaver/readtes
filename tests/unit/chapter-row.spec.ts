@@ -100,10 +100,10 @@ describe("ChapterRow", () => {
     });
 
     expect(wrapper.text()).toContain("Introduction");
-    expect(wrapper.find("span.tabular-nums").exists()).toBe(false);
+    expect(wrapper.get("span.tabular-nums").text()).toBe("");
   });
 
-  it("still shows the ordinal on an ordinary chapter", async () => {
+  it("puts the ordinal in a fixed tabular column without repeating it in the title", async () => {
     const wrapper = await mountSuspended(ChapterRow, {
       props: {
         entry: { type: "chapter", chapter: aiTranslatedChapter },
@@ -112,7 +112,9 @@ describe("ChapterRow", () => {
       global: { stubs: { NuxtLink: { template: "<a><slot /></a>" } } },
     });
 
-    expect(wrapper.find("span.tabular-nums").text()).toBe("1");
+    expect(wrapper.get("span.tabular-nums").text()).toBe("1");
+    expect(wrapper.text()).toContain("Inner Observation");
+    expect(wrapper.text()).not.toContain("Inner Observation 1");
   });
 
   it("renders a cluster entry with its count and links to the first chapter", async () => {
