@@ -1,0 +1,3472 @@
+{
+  "language": "pt",
+  "sources": {
+    "I": "km-intro/intro.pt.txt — Introdução ao Estudo das Dez Sefirot (BB official; abridged, sections are <li> items)",
+    "P": "km-intro/pticha.pt.txt — Prefácio à Sabedoria da Cabalá (BB official)"
+  },
+  "quotes": {
+    "open": "“",
+    "close": "”",
+    "innerOpen": "‘",
+    "innerClose": "’"
+  },
+  "required": [
+    {
+      "he": "ד\"ה",
+      "heRegex": "(?<![א-ת])[וב]?ד\"ה(?![א-ת])",
+      "pattern": "trecho que começa",
+      "why": "PROPOSED formula; BB Portuguese drops every ד\"ה. One wording for every batch: o trecho que começa com “…”."
+    },
+    {
+      "he": "עש\"ה",
+      "pattern": "estude bem ali",
+      "why": "PROPOSED formula; BB drops it."
+    },
+    {
+      "he": "עכ\"ל",
+      "pattern": "(?i)fim da citação",
+      "why": "PROPOSED formula; BB drops it."
+    },
+    {
+      "he": "וז\"ל",
+      "pattern": "(?i)estas são suas palavras",
+      "why": "PROPOSED formula; BB drops it."
+    },
+    {
+      "he": "אכמ\"ל",
+      "pattern": "não é o lugar para se estender",
+      "why": "PROPOSED formula."
+    },
+    {
+      "he": "דף",
+      "heRegex": "(?<![א-ת])[ובמל]{0,2}דף\\s+(?!ד\"ה)",
+      "pattern": "\\bp\\. \\d",
+      "why": "BB: p 31b / p. 3 (10). Write \"p.\" with the dot; Arabic numerals by gematria, thousand rule as in English."
+    },
+    {
+      "he": "אות",
+      "heRegex": "(?<![א-ת])[ובמ]{0,2}אות\\s+\\(?(?!יו\"ד|וא\"ו|וי\"ו|ה\"י|ה\"א|אל\"ף)[א-ת]{0,3}(?:\"[א-ת]|[׳'])(?!\\s*של(?![א-ת]))",
+      "pattern": "\\bite(?:m|ns) \\d",
+      "why": "item 90 : Item 26, lower-case. Heuristic trigger: אות can be \"letter\" (אות ה' = a letra Hey)."
+    },
+    {
+      "he": "תשובה",
+      "heRegex": "(?<![א-ת])[ובמ]{0,2}תשובה\\s+[א-ת]{0,3}(?:\"[א-ת]|[׳'])",
+      "pattern": "\\brespostas? \\d",
+      "why": "PROPOSED label, lower-case like item; the numeral keeps out תשובה = repentance."
+    },
+    {
+      "he": "חלק",
+      "heRegex": "(?<![א-ת])[ובמ]{0,2}חלק\\s+[א-ת]{0,3}(?:\"[א-ת]|[׳'])",
+      "pattern": "\\bParte \\d",
+      "why": "PROPOSED; as the repo UI \"Parte 1, Capítulo 1\"."
+    },
+    {
+      "he": "זו\"ן",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}זו\"ן(?![א-ת])",
+      "pattern": "\\bZON\\b",
+      "why": "ZON 124."
+    },
+    {
+      "he": "ג\"ר",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}ג\"ר(?![א-ת])",
+      "pattern": "\\bGAR\\b",
+      "why": "GAR 60."
+    },
+    {
+      "he": "ז\"ת",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}ז\"ת(?![א-ת])",
+      "pattern": "\\bZAT\\b",
+      "why": "ZAT 69."
+    },
+    {
+      "he": "ו\"ק",
+      "heRegex": "(?<![א-ת])(?!ודו\"ק)(?!דו\"ק)[בלמדשוה]{0,2}ו\"ק(?![א-ת])",
+      "pattern": "\\bVAK\\b",
+      "why": "VAK 49. Trigger excludes ודו\"ק (\"understand it\")."
+    },
+    {
+      "he": "מ\"ן",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}מ\"ן(?![א-ת])",
+      "pattern": "\\bMAN\\b",
+      "why": "MAN 58."
+    },
+    {
+      "he": "או\"א",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}או\"א(?![א-ת])",
+      "pattern": "\\bAVI\\b",
+      "why": "AVI 152."
+    },
+    {
+      "he": "אח\"פ",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}אח\"פ(?![א-ת])",
+      "pattern": "\\bAHP\\b",
+      "why": "AHP 87."
+    },
+    {
+      "he": "נה\"י",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}נה\"י(?![א-ת])",
+      "pattern": "\\bNHY\\b",
+      "why": "NHY 20. Trigger excludes תנה\"י and נהי\"מ."
+    },
+    {
+      "he": "נהי\"מ",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}נהי\"מ(?![א-ת])",
+      "pattern": "\\bNHYM\\b",
+      "why": "NHYM 14."
+    },
+    {
+      "he": "חג\"ת",
+      "heRegex": "(?<![א-ת])[בלמשוה]{0,2}חג\"ת(?![א-ת])",
+      "pattern": "\\bHGT\\b",
+      "why": "HGT 22. Trigger excludes דחג\"ת."
+    },
+    {
+      "he": "כח\"ב",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}כח\"ב(?![א-ת])",
+      "pattern": "\\bKHB\\b",
+      "why": "KHB 27."
+    },
+    {
+      "he": "חב\"ד",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}חב\"ד(?![א-ת])",
+      "pattern": "\\bHBD\\b",
+      "why": "HBD 1. Trigger excludes כחב\"ד."
+    },
+    {
+      "he": "חו\"ב",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}חו\"ב(?![א-ת])",
+      "pattern": "\\bHB\\b",
+      "why": "HB 17."
+    },
+    {
+      "he": "ישסו\"ת",
+      "pattern": "\\bYESHSUT\\b",
+      "why": "YESHSUT 35."
+    },
+    {
+      "he": "א\"ק",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}א\"ק(?![א-ת])",
+      "pattern": "\\bAK\\b",
+      "why": "AK 339."
+    },
+    {
+      "he": "אבי\"ע",
+      "pattern": "\\bABYA\\b",
+      "why": "ABYA 39."
+    },
+    {
+      "he": "בי\"ע",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}בי\"ע(?![א-ת])",
+      "pattern": "\\bBYA\\b",
+      "why": "BYA 73. Trigger excludes אבי\"ע."
+    },
+    {
+      "he": "ה\"ת",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}ה\"ת(?![א-ת])",
+      "pattern": "Hey inferior",
+      "why": "a Hey inferior 27."
+    },
+    {
+      "he": "או\"ח",
+      "pattern": "Ohr Hozer",
+      "why": "Ohr Hozer 45 : Luz Refletida 1 (gloss)."
+    },
+    {
+      "he": "אור חוזר",
+      "pattern": "Ohr Hozer",
+      "why": "Ohr Hozer 45."
+    },
+    {
+      "he": "או\"י",
+      "pattern": "Ohr Yashar",
+      "why": "Ohr Yashar, ruled with the other named lights."
+    },
+    {
+      "he": "אור ישר",
+      "pattern": "Ohr Yashar",
+      "why": "Ohr Yashar."
+    },
+    {
+      "he": "או\"מ",
+      "pattern": "Ohr Makif",
+      "why": "Ohr Makif 48 : Luz Circundante 1 (gloss)."
+    },
+    {
+      "he": "אור מקיף",
+      "pattern": "Ohr Makif",
+      "why": "Ohr Makif 48."
+    },
+    {
+      "he": "אור עליון",
+      "pattern": "Luz Superior",
+      "why": "Luz Superior 79."
+    },
+    {
+      "he": "מסך",
+      "pattern": "\\bMassach",
+      "why": "Massach 240 : tela 1 (gloss)."
+    },
+    {
+      "he": "עביות",
+      "pattern": "\\bAviut\\b",
+      "why": "Aviut 181."
+    },
+    {
+      "he": "רשימו",
+      "pattern": "\\bReshimo",
+      "why": "Reshimo 32 / Reshimot 37."
+    },
+    {
+      "he": "זווג",
+      "pattern": "\\bZivug|\\bacopl",
+      "why": "Zivug 102 (verb acoplar-se)."
+    },
+    {
+      "he": "ביטוש",
+      "pattern": "\\bBitush",
+      "why": "Bitush 30."
+    },
+    {
+      "he": "הזדככות",
+      "pattern": "\\bHizdakchut\\b|\\bpurific",
+      "why": "Hizdakchut 28; verb purificar-se."
+    },
+    {
+      "he": "צמצום",
+      "pattern": "\\bTzimtzum\\b",
+      "why": "Tzimtzum 66 : restrição 10."
+    },
+    {
+      "he": "רצון לקבל",
+      "pattern": "desejo de receber",
+      "why": "desejo de receber 47."
+    },
+    {
+      "he": "רצון להשפיע",
+      "pattern": "desejo de doar",
+      "why": "desejo de doar 5."
+    },
+    {
+      "he": "שינוי צורה",
+      "pattern": "disparidade de forma",
+      "why": "disparidade de forma 13."
+    },
+    {
+      "he": "השתוות",
+      "heRegex": "השתוות\\s+ה?צורה",
+      "pattern": "equivalência de forma",
+      "why": "equivalência de forma 9."
+    },
+    {
+      "he": "אין סוף",
+      "pattern": "\\bEin Sof\\b",
+      "why": "Ein Sof 33."
+    },
+    {
+      "he": "נקבי",
+      "heRegex": "נקבי\\s+ה?עינים",
+      "pattern": "Nikvey Eynaim",
+      "why": "Nikvey 45 : Nikvei 1."
+    },
+    {
+      "he": "קטנות",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}קטנות(?![א-ת])",
+      "pattern": "\\bKatnut\\b",
+      "why": "Katnut 23 : pequenez 2."
+    },
+    {
+      "he": "גדלות",
+      "heRegex": "(?<![א-ת])[בלמדשוה]{0,2}גדלות(?![א-ת])",
+      "pattern": "\\bGadlut\\b",
+      "why": "Gadlut 37 : grandeza 1."
+    },
+    {
+      "he": "מוחין",
+      "pattern": "\\bMochin\\b",
+      "why": "Mochin 98."
+    },
+    {
+      "he": "פרצוף",
+      "pattern": "\\bPartzuf",
+      "why": "Partzuf 300 / Partzufim 172."
+    },
+    {
+      "he": "ספירות",
+      "pattern": "\\bSefirot\\b",
+      "why": "Sefirot 267."
+    },
+    {
+      "he": "פרסא",
+      "pattern": "\\bParsa\\b",
+      "why": "Parsa 42."
+    },
+    {
+      "he": "טבור",
+      "pattern": "\\bTabur\\b",
+      "why": "Tabur 95."
+    },
+    {
+      "he": "הרב",
+      "heRegex": "(?<![א-ת])[ושכ]?הרב(?![א-ת])",
+      "pattern": "\\bAri\\b",
+      "why": "o Ari (4) for הרב. Trigger excludes הרבה."
+    },
+    {
+      "he": "הסתכלות פנימית",
+      "pattern": "Observação Interior",
+      "why": "Section name (PROPOSED, as the shipped UI)."
+    }
+  ],
+  "banned": [
+    {
+      "pattern": "\\bKéter\\b",
+      "why": "BB 0; write Keter (138)."
+    },
+    {
+      "pattern": "\\b(?:Chochm|Chokhm|Hokhm|Jojm|Hojm)[aá]h?\\b|\\bHochm(?:ah|á)\\b",
+      "why": "BB 0; write Hochma (114)."
+    },
+    {
+      "pattern": "\\bBin(?:ah|á)\\b",
+      "why": "BB 0; write Bina (127)."
+    },
+    {
+      "pattern": "\\b(?:Chesed|Jésed|Hessed)\\b",
+      "why": "BB 0; write Hesed (6)."
+    },
+    {
+      "pattern": "\\bTiff?éret\\b|\\bTifferet\\b",
+      "why": "BB 0; write Tiferet (65)."
+    },
+    {
+      "pattern": "\\b(?:Netzah|Netzaj|Nétzaj)\\b",
+      "why": "BB 0; write Netzach (6)."
+    },
+    {
+      "pattern": "\\b(?:Maljut|Malhut|Malkhut)\\b",
+      "why": "BB 0; write Malchut (145)."
+    },
+    {
+      "pattern": "\\bMasa(?:ch|j|kh)\\b",
+      "why": "BB 0; write Massach (240)."
+    },
+    {
+      "pattern": "\\bSefir(?:á|ah)\\b|\\bsefirot\\b|\\bSfirot\\b",
+      "why": "BB 0; write Sefira (24) / Sefirot (267), capitalized."
+    },
+    {
+      "pattern": "\\b(?:Hasadim|Jasadim|Chasadim)\\b",
+      "why": "BB 0; write Hassadim (23)."
+    },
+    {
+      "pattern": "\\b(?:Mojin|Mochim)\\b",
+      "why": "BB 0; write Mochin (98)."
+    },
+    {
+      "pattern": "\\bAjor\\w*",
+      "why": "BB 0; write Achoraim (40) / Achor (9)."
+    },
+    {
+      "pattern": "\\b(?:Einaim|Einayim|Eynayim)\\b",
+      "why": "BB 0; write Eynaim (53)."
+    },
+    {
+      "pattern": "\\bKelip\\w+|\\bQlip\\w+",
+      "why": "BB 0; write Klipot (18) / Klipa (7)."
+    },
+    {
+      "pattern": "\\bCabala\\b",
+      "why": "BB 0; write Cabalá (36)."
+    },
+    {
+      "pattern": "\\bPe\\b",
+      "why": "BB 0; write Peh (96)."
+    },
+    {
+      "pattern": "\\b(?:Toj|Tokh)\\b",
+      "why": "BB 0; write Toch (12)."
+    },
+    {
+      "pattern": "\\bJaz[eé]\\b",
+      "why": "BB 0; write Chazeh (68)."
+    },
+    {
+      "pattern": "\\bParsá\\b",
+      "why": "BB 0; write Parsa (42)."
+    },
+    {
+      "pattern": "\\bÁtik\\b",
+      "why": "BB 0; write Atik (55)."
+    },
+    {
+      "pattern": "\\b(?:Beriá|Yetzirá|Asiá|Assiá|Assiyá|Asiya)\\b",
+      "why": "BB 0; write Beria (58), Yetzira (64), Assia (54)."
+    },
+    {
+      "pattern": "\\b(?:AJaP|AJP|JaGaT|NeHY|KaJaB|ZoN|GaR|ZaT|VaK|MaN|HaGaT)\\b",
+      "why": "BB 0 (Spanish-style); write AHP, HGT, NHY, KHB, ZON, GAR, ZAT, VAK, MAN in capitals."
+    },
+    {
+      "pattern": "\\bBAN\\b",
+      "why": "BB 0; write BON (48)."
+    },
+    {
+      "pattern": "\\bYeshsut\\b",
+      "why": "BB 0; write YESHSUT (35), all caps."
+    },
+    {
+      "pattern": "\\bAbba\\b",
+      "why": "BB 0; write Aba (6)."
+    },
+    {
+      "pattern": "\\bPartzufin\\b",
+      "why": "BB 0; write Partzufim (172)."
+    },
+    {
+      "pattern": "\\b(?:Behinah|Behiná|Bejiná)\\b",
+      "why": "BB 0; write Behina (337)."
+    },
+    {
+      "pattern": "(?i)\\bluz (?:retornante|envolvente)\\b",
+      "why": "BB 0; write Ohr Hozer (45) / Ohr Makif (48)."
+    },
+    {
+      "pattern": "(?i)vontade de (?:receber|doar)",
+      "why": "BB 0; write desejo de receber (47) / desejo de doar (5)."
+    },
+    {
+      "pattern": "(?i)desejo de outorgar",
+      "why": "BB 0; write desejo de doar (5)."
+    },
+    {
+      "pattern": "(?i)igualdade de forma",
+      "why": "BB 0; write equivalência de forma (9)."
+    },
+    {
+      "pattern": "\\b(?:Néfesh|Rúaj|Ruaj|Neshamá|Jayá|Yejidá)\\b",
+      "why": "BB 0 (Spanish-style); write Nefesh (25), Ruach (23), Neshama (60), Haya (44), Yehida (44)."
+    },
+    {
+      "pattern": "\\bDáat\\b",
+      "why": "BB 0; write Daat (18)."
+    },
+    {
+      "pattern": "\\bGimel\\b",
+      "why": "BB 0; write Guimel (49)."
+    },
+    {
+      "pattern": "\\bAleph\\b",
+      "why": "BB 0; write Alef (60)."
+    },
+    {
+      "pattern": "\\b(?:Rabbi|Rabí)\\b",
+      "why": "BB 0; write Rabino (43)."
+    },
+    {
+      "pattern": "\\bReshimos\\b",
+      "why": "BB 0; write Reshimot (37)."
+    },
+    {
+      "pattern": "\\b(?:vasijas?|pantalla|grosor|acoplamiento)\\b",
+      "why": "Spanish, never Portuguese; write Kli/Kelim, Massach, Aviut, Zivug."
+    }
+  ],
+  "terms": [
+    {
+      "he": "אור",
+      "en": "light",
+      "target": "Luz",
+      "officialCount": 340,
+      "status": "OFFICIAL",
+      "evidence": "Luz 340 (I73 P267) · luz 9 (I7 P2) · Ohr (only in named lights) 161 (I0 P161)",
+      "note": "Always capitalized for אור. Lower-case luz only for mundane light. Ohr appears only inside the named lights (Ohr Hozer, Ohr Makif, …), never alone.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "or"
+    },
+    {
+      "he": "אורות",
+      "en": "lights",
+      "target": "Luzes",
+      "officialCount": 103,
+      "status": "OFFICIAL",
+      "evidence": "Luzes 103 (I8 P95) · luzes 4 (I1 P3)",
+      "note": "Capitalized like Luz.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "orot"
+    },
+    {
+      "he": "אור עליון",
+      "en": "upper light",
+      "target": "a Luz Superior",
+      "officialCount": 79,
+      "status": "OFFICIAL",
+      "evidence": "a Luz Superior 79 (I0 P79) · Luz superior 0 (I0 P0) · Ohr Elyon 0 (I0 P0)",
+      "note": "Fixed name, both words capitalized.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "or-elyon"
+    },
+    {
+      "he": "כלי",
+      "en": "vessel",
+      "target": "Kli",
+      "officialCount": 110,
+      "status": "OFFICIAL",
+      "evidence": "Kli 110 (I0 P110) · vaso 15 (I0 P15)",
+      "note": "Transliterated, masculine: o Kli (46). Gloss once: Kli (vaso), P §1. Exceptions BB keeps in Portuguese: כלי קבלה → vaso de recepção; שבירת הכלים → a quebra dos vasos.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "kli"
+    },
+    {
+      "he": "כלים",
+      "en": "vessels",
+      "target": "Kelim",
+      "officialCount": 181,
+      "status": "OFFICIAL",
+      "evidence": "Kelim 181 (I0 P181) · vasos 33 (I5 P28)",
+      "note": "os Kelim (55). Gloss once: Kelim (plural de Kli), P. The 28 P \"vasos\" are the fixed phrases quebra dos vasos / vasos de recepção.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "kelim"
+    },
+    {
+      "he": "כלי קבלה",
+      "en": "vessel of reception",
+      "target": "vaso de recepção",
+      "officialCount": 25,
+      "status": "OFFICIAL",
+      "evidence": "vaso de recepção 25 (I1 P24) · Kli de recepção 0 (I0 P0)",
+      "note": "Plural vasos de recepção (12). BB never writes \"Kli de recepção\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "kli-kabbala"
+    },
+    {
+      "he": "מסך",
+      "en": "screen",
+      "target": "Massach",
+      "officialCount": 240,
+      "status": "OFFICIAL",
+      "evidence": "Massach 240 (I0 P240) · tela 1 (I0 P1) · Masach 0 (I0 P0)",
+      "note": "Double s, masculine: o Massach (84). Gloss once: Massach (tela), P §14. Never Masach / Masaj / \"tela\" in prose.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "masach"
+    },
+    {
+      "he": "עביות",
+      "en": "coarseness",
+      "target": "Aviut",
+      "officialCount": 181,
+      "status": "OFFICIAL",
+      "evidence": "Aviut 181 (I0 P181) · espessura 2 (I0 P2) · grossura 1 (I0 P1)",
+      "note": "Feminine: a Aviut (30). Gloss once: Aviut (espessura), P §1/§18. Levels: Aviut Shoresh / Alef / Bet / Guimel / Dalet.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "aviut"
+    },
+    {
+      "he": "עב",
+      "en": "coarse",
+      "target": "espesso, espessa",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "espesso, espessa 3 (I0 P3) · grosseiro 4 (I4 P0)",
+      "note": "Comparative: mais espesso / com mais Aviut. \"grosseiras\" (4) is the Intro's moral sense (coarse garments), not the screen.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "av"
+    },
+    {
+      "he": "זכות",
+      "en": "refinement",
+      "target": "Zakut",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Zakut 1 (I0 P1) · pureza 4 (I2 P2)",
+      "note": "Thin (1): \"sua Aviut torna-se Zakut (pureza)\", P. Gloss once. Keep apart from Hizdakchut (the process).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "zakut"
+    },
+    {
+      "he": "זך",
+      "en": "refined",
+      "target": "puro, pura",
+      "officialCount": 12,
+      "status": "OFFICIAL",
+      "evidence": "puro, pura 12 (I7 P5) · Zach 0 (I0 P0)",
+      "note": "\"um Kli muito puro\", \"a mais pura de todas\" (P). Superlative o mais puro.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "zach"
+    },
+    {
+      "he": "הזדככות",
+      "en": "refinement",
+      "target": "Hizdakchut",
+      "officialCount": 28,
+      "status": "OFFICIAL",
+      "evidence": "Hizdakchut 28 (I0 P28) · purificação 12 (I4 P8)",
+      "note": "a Hizdakchut (7). Gloss once: Hizdakchut (purificação), P §35. Verb purificar-se (\"o Massach se purifica\").",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hizdakchut"
+    },
+    {
+      "he": "רשימו",
+      "en": "record",
+      "target": "Reshimo",
+      "officialCount": 32,
+      "status": "OFFICIAL",
+      "evidence": "Reshimo 32 (I0 P32) · registro 1 (I0 P1)",
+      "note": "Masculine: o Reshimo (18). Gloss once: Reshimo (singular de Reshimot), P §40. Reshimo de Aviut / Reshimo de Hitlabshut.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "reshimo"
+    },
+    {
+      "he": "זווג",
+      "en": "coupling",
+      "target": "Zivug",
+      "officialCount": 102,
+      "status": "OFFICIAL",
+      "evidence": "Zivug 102 (I0 P102) · acoplamento 4 (I0 P4)",
+      "note": "Masculine: o Zivug (34), um Zivug (20). Plural Zivugim (P writes \"Zivug im (plural de Zivug – acoplamento)\"). Verbs: fazer um Zivug, acoplar-se (P \"se acopla em um Zivug de Hakaa\"). The repo ToC writes \"acoplamentos\" — §4.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "zivug"
+    },
+    {
+      "he": "הכאה",
+      "en": "striking",
+      "target": "golpe",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "golpe 6 (I0 P6) · Hakaa outside Zivug de Hakaa 0 (I0 P0)",
+      "note": "Hakaa (52) occurs only inside \"Zivug de Hakaa\". The striking itself is um golpe (6); \"choque\" is BB's gloss of golpe, don't alternate.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hakaa"
+    },
+    {
+      "he": "זווג דהכאה",
+      "en": "coupling by striking",
+      "target": "Zivug de Hakaa",
+      "officialCount": 52,
+      "status": "OFFICIAL",
+      "evidence": "Zivug de Hakaa 52 (I0 P52) · acoplamento por golpe 1 (I0 P1)",
+      "note": "Gloss once: Zivug de Hakaa (acoplamento por golpe), P §14.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "zivug-dehakaa"
+    },
+    {
+      "he": "עולם",
+      "en": "world",
+      "target": "mundo",
+      "officialCount": 445,
+      "status": "OFFICIAL",
+      "evidence": "mundo 445 (I208 P237) · Mundo 17 (I13 P4)",
+      "note": "Lower-case: o mundo de Atzilut (32), o mundo de Nekudim (30). Capitalized only in the fixed name Mundos Superiores (6) and in headings.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "olam"
+    },
+    {
+      "he": "צמצום",
+      "en": "restriction",
+      "target": "Tzimtzum",
+      "officialCount": 66,
+      "status": "OFFICIAL",
+      "evidence": "Tzimtzum 66 (I0 P66) · restrição 10 (I1 P9)",
+      "note": "Transliterated, masculine: o Tzimtzum (28). Gloss once: Tzimtzum Alef (Primeira Restrição), P. \"restrição\" (10) is BB's gloss and the moral sense. The repo ToC titles Part 1 \"Restrição e linha\" — §4.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "tzimtzum"
+    },
+    {
+      "he": "קו",
+      "en": "line",
+      "target": "linha",
+      "officialCount": 12,
+      "status": "OFFICIAL",
+      "evidence": "linha 12 (I0 P12) · Kav 0 (I0 P0)",
+      "note": "Translated (12 : Kav 0). קו דק → uma linha fina. Right / left / middle line → linha direita / esquerda / média.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "kav"
+    },
+    {
+      "he": "עיגולים",
+      "en": "circles",
+      "target": "círculos",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "círculos 0 (I0 P0) · Igulim 0 (I0 P0)",
+      "note": "BB Portuguese is silent (0 : 0). Translated by analogy with BB's linha for קו, and matches the repo ToC \"Círculos e retidão\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "igulim"
+    },
+    {
+      "he": "עיגול",
+      "en": "circle",
+      "target": "círculo",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "círculo 0 (I0 P0) · Igul 0 (I0 P0)",
+      "note": "As círculos.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "igul"
+    },
+    {
+      "he": "יושר",
+      "en": "straightness",
+      "target": "retidão",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "retidão 0 (I0 P0) · Yosher 0 (I0 P0)",
+      "note": "Silent in BB; matches the repo ToC \"Círculos e retidão\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "yosher"
+    },
+    {
+      "he": "הסתכלות פנימית",
+      "en": "Inner Observation",
+      "target": "Observação Interior",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Observação Interior 0 (I0 P0) · Histaklut Pnimit 0 (I0 P0)",
+      "note": "BB Portuguese never names the section (its Intro is abridged before §156's reading guide). Adopts the shipped UI string. Title case.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "histaklut-pnimit"
+    },
+    {
+      "he": "הסתכלות",
+      "en": "look",
+      "target": "olhar",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "olhar 0 (I0 P0) · observação 3 (I3 P0)",
+      "note": "The look of the Eyes (הסתכלות). Verb olhar. Never \"observação\" (collides with the section name). BB has \"olhar\" only in non-technical senses.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "histaklut"
+    },
+    {
+      "he": "אור פנימי",
+      "en": "inner light",
+      "target": "Ohr Pnimi",
+      "officialCount": 25,
+      "status": "OFFICIAL",
+      "evidence": "Ohr Pnimi 25 (I0 P25) · Luz Interna 1 (I0 P1)",
+      "note": "The technical inner light. Gloss once: Ohr Pnimi (Luz Interna), P §33. The commentary is Luz Interior (§2.7) — never swap them.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "or-pnimi"
+    },
+    {
+      "he": "אור מקיף",
+      "en": "surrounding light",
+      "target": "Ohr Makif",
+      "officialCount": 48,
+      "status": "OFFICIAL",
+      "evidence": "Ohr Makif 48 (I0 P48) · Luz Circundante 1 (I1 P0)",
+      "note": "Gloss once: Ohr Makif (Luz Circundante). The Intro's non-technical \"Luzes Circundantes\" (1) is the reader's soul-lights, not TES vocabulary.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "or-makif"
+    },
+    {
+      "he": "אור ישר",
+      "en": "direct light",
+      "target": "Ohr Yashar",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Ohr Yashar 2 (I0 P2) · Luz Direta 3 (I0 P3)",
+      "note": "Near tie (2 : 3, one of the 3 is the gloss and one a heading). Ruled Ohr Yashar so the four named lights share one form. Gloss once: Ohr Yashar (Luz Direta).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "or-yashar"
+    },
+    {
+      "he": "אור חוזר",
+      "en": "reflected light",
+      "target": "Ohr Hozer",
+      "officialCount": 45,
+      "status": "OFFICIAL",
+      "evidence": "Ohr Hozer 45 (I0 P45) · Ohr Chozer 3 (I0 P3) · Luz Refletida 1 (I0 P1)",
+      "note": "Feminine: a Ohr Hozer (6). Gloss once: Ohr Hozer (Luz Refletida). Ohr Chozer (3) is a minority spelling.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "or-hozer"
+    },
+    {
+      "he": "התלבשות",
+      "en": "clothing",
+      "target": "Hitlabshut",
+      "officialCount": 34,
+      "status": "OFFICIAL",
+      "evidence": "Hitlabshut 34 (I0 P34) · vestimenta 51 (I32 P19)",
+      "note": "Technical: Reshimo de Hitlabshut, a Hitlabshut da Luz nos Kelim. Gloss once: Hitlabshut (vestimenta). Verbs vestir / vestir-se (\"a Luz se veste no Kli\"). לבוש (a garment) → vestimenta.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hitlabshut"
+    },
+    {
+      "he": "ביטוש",
+      "en": "clash",
+      "target": "Bitush",
+      "officialCount": 30,
+      "status": "OFFICIAL",
+      "evidence": "Bitush 30 (I0 P30) · batida 6 (I0 P6)",
+      "note": "o Bitush (13). Gloss once: Bitush (batida), P §33. \"o Bitush de Ohr Makif e Ohr Pnimi\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "bitush"
+    },
+    {
+      "he": "נאצל",
+      "en": "emanated being",
+      "target": "o ser emanado",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "o ser emanado 6 (I0 P6) · o emanado 1 (I0 P1)",
+      "note": "Plural os seres emanados.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "neetzal"
+    },
+    {
+      "he": "מאציל",
+      "en": "Emanator",
+      "target": "o Emanador",
+      "officialCount": 18,
+      "status": "OFFICIAL",
+      "evidence": "o Emanador 18 (I0 P18) · emanador 0 (I0 P0)",
+      "note": "Capitalized (18 : 0).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "maatzil"
+    },
+    {
+      "he": "השתלשלות",
+      "en": "cascading",
+      "target": "cascateamento",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "cascateamento 6 (I0 P6) · evolução 5 (I5 P0)",
+      "note": "Noun cascateamento (\"a ordem do cascateamento\", P §3); verb cascatear (P 3). \"evolução\" (4) is the Intro's causal sense (generations, causa e consequência) — keep that for התפתחות.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hishtalshelut"
+    },
+    {
+      "he": "סבה ומסובב",
+      "en": "cause and consequence",
+      "target": "causa e consequência",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "causa e consequência 4 (I3 P1) · causa e efeito 0 (I0 P0)",
+      "note": "BB 4 : 0. The repo UI/ToC write \"Causa e efeito\" — §4. מסובב alone → consequência.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "siba-mesubav"
+    },
+    {
+      "he": "בחינה",
+      "en": "phase",
+      "target": "Behina",
+      "officialCount": 337,
+      "status": "OFFICIAL",
+      "evidence": "Behina 337 (I0 P337) · Behinot 15 (I0 P15) · discernimento(s) 94 (I47 P47) · fase 2 (I1 P1)",
+      "note": "Two attested uses, split by sense: the named phases are Behina + Hebrew ordinal (Behina Alef/Bet/Guimel/Dalet/Shoresh, 267 of the 337). Generic בחינת X → \"o discernimento de X\" (BB 94). Feminine: a Behina. Plural Behinot. Never \"fase\" in prose (BB uses it only inside glosses).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "behina"
+    },
+    {
+      "he": "ד' בחינות",
+      "en": "four phases",
+      "target": "os quatro discernimentos",
+      "officialCount": 12,
+      "status": "OFFICIAL",
+      "evidence": "os quatro discernimentos 12 (I5 P7) · quatro Behinot 4 (I0 P4) · quatro fases 2 (I0 P2)",
+      "note": "P 7 : 4 (I adds 5 in another sense). The four phases of Ohr Yashar, P §§4-6: \"os quatro discernimentos\". Each one by name is Behina X. \"as quatro Behinot\" is BB too — not wrong, but write the majority.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "dalet-behinot"
+    },
+    {
+      "he": "בחי\"ד",
+      "en": "phase four",
+      "target": "Behina Dalet",
+      "officialCount": 119,
+      "status": "OFFICIAL",
+      "evidence": "Behina Dalet 119 (I0 P119) · quarta Behina 0 (I0 P0) · Fase Quatro 1 (I0 P1)",
+      "note": "Hebrew letter ordinal after the noun: Behina Shoresh (9), Alef (44), Bet (46), Guimel (49), Dalet (119). Gloss once: Behina Dalet (Fase Quatro), P §5.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "behina-dalet"
+    },
+    {
+      "he": "שבירה",
+      "en": "breaking",
+      "target": "quebra",
+      "officialCount": 20,
+      "status": "OFFICIAL",
+      "evidence": "quebra 20 (I0 P20) · ruptura 0 (I0 P0) · Shevira 0 (I0 P0)",
+      "note": "שבירת הכלים → a quebra dos vasos. Verb quebrar-se (\"os Kelim se quebram\", 12 quebraram).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "shevira"
+    },
+    {
+      "he": "תיקון",
+      "en": "correction",
+      "target": "correção",
+      "officialCount": 24,
+      "status": "OFFICIAL",
+      "evidence": "correção 24 (I5 P19) · Tikun 9 (I1 P8)",
+      "note": "Generic correção (24 : Tikun 9). The world is o mundo do Tikun (§2.4). Verb corrigir. Gmar Tikun → o final da correção.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "tikkun"
+    },
+    {
+      "he": "התפשטות",
+      "en": "expansion",
+      "target": "expansão",
+      "officialCount": 12,
+      "status": "OFFICIAL",
+      "evidence": "expansão 12 (I0 P12) · Hitpashtut 12 (I0 P12)",
+      "note": "Exact tie (12 : 12). Ruled expansão: translated nouns are BB's default for process words, BB glosses Hitpashtut (expansão), and the repo ToC says \"segunda expansão\". Verb expandir-se / estender-se.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hitpashtut"
+    },
+    {
+      "he": "הסתלקות",
+      "en": "departure",
+      "target": "saída",
+      "officialCount": 27,
+      "status": "OFFICIAL",
+      "evidence": "saída 27 (I1 P26) · Histalkut 0 (I0 P0) · partida 0 (I0 P0)",
+      "note": "BB renders הסתלקות as saída (P §17, \"a expansão da Luz e sua saída\"; \"a força de Din da saída das Luzes\"). Verbs sair, retirar-se. יציאה (emergence) → surgimento / emergir, not saída.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "histalkut"
+    },
+    {
+      "he": "מדרגה",
+      "en": "degree",
+      "target": "grau",
+      "officialCount": 127,
+      "status": "OFFICIAL",
+      "evidence": "grau 127 (I5 P122) · degrau 27 (I25 P2)",
+      "note": "Never nível (that is קומה). \"degrau\" (27) is the Intro's ladder-rung image.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "madrega"
+    },
+    {
+      "he": "קומה",
+      "en": "level",
+      "target": "nível",
+      "officialCount": 295,
+      "status": "OFFICIAL",
+      "evidence": "nível 295 (I1 P294) · estatura 1 (I1 P0)",
+      "note": "\"o nível de Keter\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "koma"
+    },
+    {
+      "he": "שורש",
+      "en": "root",
+      "target": "raiz",
+      "officialCount": 32,
+      "status": "OFFICIAL",
+      "evidence": "raiz 32 (I2 P30) · Shoresh 19 (I0 P19)",
+      "note": "Translated; Shoresh (19) only as the phase name Behina Shoresh and Aviut Shoresh.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "shoresh"
+    },
+    {
+      "he": "רצון לקבל",
+      "en": "will to receive",
+      "target": "desejo de receber",
+      "officialCount": 47,
+      "status": "OFFICIAL",
+      "evidence": "desejo de receber 47 (I2 P45) · vontade de receber 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ratzon-lekabel"
+    },
+    {
+      "he": "רצון להשפיע",
+      "en": "will to bestow",
+      "target": "desejo de doar",
+      "officialCount": 5,
+      "status": "OFFICIAL",
+      "evidence": "desejo de doar 5 (I0 P5) · desejo de outorgar 0 (I0 P0)",
+      "note": "השפעה → doação (16).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ratzon-lehashpia"
+    },
+    {
+      "he": "שינוי צורה",
+      "en": "disparity of form",
+      "target": "disparidade de forma",
+      "officialCount": 13,
+      "status": "OFFICIAL",
+      "evidence": "disparidade de forma 13 (I0 P13) · diferença de forma 1 (I0 P1) · oposição de forma 3 (I0 P3)",
+      "note": "שינוי צורה → disparidade; הפכיות הצורה → oposição de forma (3).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "shinui-tzura"
+    },
+    {
+      "he": "השתוות הצורה",
+      "en": "equivalence of form",
+      "target": "equivalência de forma",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "equivalência de forma 9 (I0 P9) · igualdade de forma 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hashvaat-tzura"
+    },
+    {
+      "he": "פנימיות",
+      "en": "internality",
+      "target": "internalidade",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "internalidade 6 (I0 P6) · interioridade 0 (I0 P0)",
+      "note": "P 6.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "pnimiut"
+    },
+    {
+      "he": "חיצוניות",
+      "en": "externality",
+      "target": "externalidade",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "externalidade 4 (I0 P4) · exterioridade 0 (I0 P0)",
+      "note": "P 4. Adjectives interno / externo (\"as dez Sefirot externas\").",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hitzoniut"
+    },
+    {
+      "he": "חלל",
+      "en": "space",
+      "target": "espaço vazio",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "espaço vazio 9 (I0 P9) · espaço restrito 1 (I0 P1)",
+      "note": "חלל → espaço vazio (9). חלל המצומצם → o espaço restrito (1).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "halal"
+    },
+    {
+      "he": "מקום פנוי",
+      "en": "vacant place",
+      "target": "espaço vazio",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "espaço vazio 9 (I0 P9) · lugar vazio 0 (I0 P0)",
+      "note": "Same Portuguese as חלל; BB does not distinguish them.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "makom-panui"
+    },
+    {
+      "he": "עצמות",
+      "en": "self",
+      "target": "Essência",
+      "officialCount": 13,
+      "status": "OFFICIAL",
+      "evidence": "Essência 13 (I0 P13) · essência 12 (I5 P7)",
+      "note": "\"Sua Essência\" (P §1). Capitalized for the Creator's Essence. בעצמותו → em Si mesmo.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "atzmut"
+    },
+    {
+      "he": "בורא",
+      "en": "Creator",
+      "target": "o Criador",
+      "officialCount": 134,
+      "status": "OFFICIAL",
+      "evidence": "o Criador 134 (I128 P6) · criador 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "boreh"
+    },
+    {
+      "he": "טעמים",
+      "en": "tastes",
+      "target": "Taamim",
+      "officialCount": 30,
+      "status": "OFFICIAL",
+      "evidence": "Taamim 30 (I9 P21) · Taamin 2 (I2 P0) · sabores 4 (I4 P0)",
+      "note": "Gloss once: Taamim (sabores), P. os Taamim. טעם = reason → razão.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "taamim"
+    },
+    {
+      "he": "נקודות",
+      "en": "Nekudot",
+      "target": "Nekudot",
+      "officialCount": 48,
+      "status": "OFFICIAL",
+      "evidence": "Nekudot 48 (I0 P48) · pontos 5 (I0 P5)",
+      "note": "Feminine: as Nekudot. Gloss once: Nekudot (pontos). Singular Nekuda (5); a geometric/vowel point → ponto.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "nekudot"
+    },
+    {
+      "he": "אותיות",
+      "en": "letters",
+      "target": "Otiot",
+      "officialCount": 25,
+      "status": "OFFICIAL",
+      "evidence": "Otiot 25 (I0 P25) · letras 7 (I3 P4)",
+      "note": "TaNTA / vessel sense (25). Letters of a word or name → letras (as vinte e duas letras, a letra Yod).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "otiot"
+    },
+    {
+      "he": "חסדים",
+      "en": "Hassadim",
+      "target": "Hassadim",
+      "officialCount": 23,
+      "status": "OFFICIAL",
+      "evidence": "Hassadim 23 (I0 P23) · Hasadim 0 (I0 P0) · Chassadim 0 (I0 P0)",
+      "note": "אור החסדים → Ohr Hassadim (§2.5).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hassadim"
+    },
+    {
+      "he": "ספירה",
+      "en": "Sefira",
+      "target": "Sefira",
+      "officialCount": 24,
+      "status": "OFFICIAL",
+      "evidence": "Sefira 24 (I0 P24) · Sefirá 0 (I0 P0)",
+      "note": "Feminine: a Sefira (18). Gloss once: Sefira (singular de Sefirot).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "sefira"
+    },
+    {
+      "he": "ספירות",
+      "en": "Sefirot",
+      "target": "Sefirot",
+      "officialCount": 267,
+      "status": "OFFICIAL",
+      "evidence": "Sefirot 267 (I16 P251) · sefirot 0 (I0 P0)",
+      "note": "Always capitalized.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "sefirot"
+    },
+    {
+      "he": "עשר ספירות / ע\"ס",
+      "en": "ten Sefirot",
+      "target": "dez Sefirot",
+      "officialCount": 213,
+      "status": "OFFICIAL",
+      "evidence": "dez Sefirot 213 (I3 P210) · Dez Sefirot 3 (I1 P2)",
+      "note": "Lower-case dez (213 : 3, the 3 are titles). ע\"ס / י\"ס alike.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "eser-sefirot"
+    },
+    {
+      "he": "פרצוף",
+      "en": "Partzuf",
+      "target": "Partzuf",
+      "officialCount": 300,
+      "status": "OFFICIAL",
+      "evidence": "Partzuf 300 (I7 P293) · Partzufs 0 (I0 P0)",
+      "note": "o Partzuf (74). No article before a name: Partzuf AB (31), Partzuf Atik (14).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "partzuf"
+    },
+    {
+      "he": "פרצופים",
+      "en": "Partzufim",
+      "target": "Partzufim",
+      "officialCount": 172,
+      "status": "OFFICIAL",
+      "evidence": "Partzufim 172 (I0 P172) · Partzufin 0 (I0 P0)",
+      "note": "Gloss once: Partzufim (plural de Partzuf), P §16.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "partzufim"
+    },
+    {
+      "he": "ראש",
+      "en": "Rosh",
+      "target": "Rosh",
+      "officialCount": 226,
+      "status": "OFFICIAL",
+      "evidence": "Rosh 226 (I8 P218) · cabeça 2 (I0 P2)",
+      "note": "Gloss Rosh (cabeça). Plural Roshim (8).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "rosh"
+    },
+    {
+      "he": "תוך",
+      "en": "Toch",
+      "target": "Toch",
+      "officialCount": 12,
+      "status": "OFFICIAL",
+      "evidence": "Toch 12 (I0 P12) · Toj 0 (I0 P0)",
+      "note": "Gloss Toch (interior). The preposition תוך/בתוך → dentro de.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "toch"
+    },
+    {
+      "he": "סוף",
+      "en": "Sof",
+      "target": "Sof",
+      "officialCount": 48,
+      "status": "OFFICIAL",
+      "evidence": "Sof 48 (I0 P48) · fim 39 (I19 P20)",
+      "note": "Gloss Sof (fim). Not Ein Sof.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "sof"
+    },
+    {
+      "he": "גוף",
+      "en": "Guf",
+      "target": "Guf",
+      "officialCount": 183,
+      "status": "OFFICIAL",
+      "evidence": "Guf 183 (I3 P180) · corpo 27 (I17 P10)",
+      "note": "Gloss Guf (corpo). Plural Gufim (25).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "guf"
+    },
+    {
+      "he": "אין סוף / א\"ס",
+      "en": "Ein Sof",
+      "target": "Ein Sof",
+      "officialCount": 33,
+      "status": "OFFICIAL",
+      "evidence": "Ein Sof 33 (I0 P33) · Infinito 0 (I0 P0)",
+      "note": "א\"ס ב\"ה → Ein Sof (honorific dropped).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ein-sof"
+    },
+    {
+      "he": "אצילות",
+      "en": "Atzilut",
+      "target": "Atzilut",
+      "officialCount": 226,
+      "status": "OFFICIAL",
+      "evidence": "Atzilut 226 (I26 P200) · Atziluth 1 (I0 P1)",
+      "note": "ATZILUTH (1) is a heading typo.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "atzilut"
+    },
+    {
+      "he": "בריאה",
+      "en": "Beria",
+      "target": "Beria",
+      "officialCount": 58,
+      "status": "OFFICIAL",
+      "evidence": "Beria 58 (I13 P45) · Beriá 0 (I0 P0)",
+      "note": "No accent in BB. The repo ToC writes \"Beriá\" — §4.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "beria"
+    },
+    {
+      "he": "יצירה",
+      "en": "Yetzira",
+      "target": "Yetzira",
+      "officialCount": 64,
+      "status": "OFFICIAL",
+      "evidence": "Yetzira 64 (I16 P48) · Yetzirá 0 (I0 P0)",
+      "note": "No accent. The repo ToC writes \"Yetzirá\" — §4.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "yetzira"
+    },
+    {
+      "he": "עשיה",
+      "en": "Assiya",
+      "target": "Assia",
+      "officialCount": 54,
+      "status": "OFFICIAL",
+      "evidence": "Assia 54 (I12 P42) · Assiya 1 (I0 P1) · Assiyá 0 (I0 P0)",
+      "note": "Assia 54 : Assiya 1. The repo ToC writes \"Assiyá\" — §4.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "assiya"
+    },
+    {
+      "he": "אבי\"ע",
+      "en": "ABYA",
+      "target": "ABYA",
+      "officialCount": 39,
+      "status": "OFFICIAL",
+      "evidence": "ABYA 39 (I7 P32)",
+      "note": "Gloss once: ABYA (Atzilut, Beria, Yetzira, Assia), P.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "abya"
+    },
+    {
+      "he": "אדם קדמון / א\"ק",
+      "en": "Adam Kadmon / AK",
+      "target": "Adam Kadmon / AK",
+      "officialCount": 339,
+      "status": "OFFICIAL",
+      "evidence": "Adam Kadmon / AK 339 (I0 P339) · Adam Kadmon 0 (I0 P0)",
+      "note": "BB writes only AK (339). Where the Hebrew spells it out, write Adam Kadmon (PROPOSED form, no accent).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "adam-kadmon"
+    },
+    {
+      "he": "כתר",
+      "en": "Keter",
+      "target": "Keter",
+      "officialCount": 138,
+      "status": "OFFICIAL",
+      "evidence": "Keter 138 (I3 P135) · Kéter 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "keter"
+    },
+    {
+      "he": "חכמה",
+      "en": "Hochma",
+      "target": "Hochma",
+      "officialCount": 114,
+      "status": "OFFICIAL",
+      "evidence": "Hochma 114 (I2 P112) · Chochma 0 (I0 P0) · Sabedoria (Sefira) 1 (I0 P1)",
+      "note": "Sabedoria only for חכמת הקבלה (a sabedoria da Cabalá) and BB's gloss Ohr Hochma (Luz de Sabedoria).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hochma"
+    },
+    {
+      "he": "בינה",
+      "en": "Bina",
+      "target": "Bina",
+      "officialCount": 127,
+      "status": "OFFICIAL",
+      "evidence": "Bina 127 (I2 P125) · Binah 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "bina"
+    },
+    {
+      "he": "חסד",
+      "en": "Hesed",
+      "target": "Hesed",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "Hesed 6 (I0 P6) · Chessed 2 (I2 P0)",
+      "note": "6 : 2 (both Chessed in Intro/Pticha glosses). Initial ח → H, as Hochma, Hassadim, Haya.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hesed"
+    },
+    {
+      "he": "גבורה",
+      "en": "Gevura",
+      "target": "Guevura",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "Guevura 6 (I0 P6) · Gevura 1 (I1 P0)",
+      "note": "6 : 1. gu before e, as Guimel (49). Plural: see Guevurot, §2.6.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "gevura"
+    },
+    {
+      "he": "תפארת",
+      "en": "Tifferet",
+      "target": "Tiferet",
+      "officialCount": 65,
+      "status": "OFFICIAL",
+      "evidence": "Tiferet 65 (I1 P64) · Tifferet 0 (I0 P0)",
+      "note": "Single f (64 : 0).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "tifferet"
+    },
+    {
+      "he": "נצח",
+      "en": "Netzah",
+      "target": "Netzach",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "Netzach 6 (I1 P5) · Netzah 0 (I0 P0)",
+      "note": "Final ח → ch here (6 : 0), unlike initial ח.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "netzah"
+    },
+    {
+      "he": "הוד",
+      "en": "Hod",
+      "target": "Hod",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "Hod 6 (I1 P5)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hod"
+    },
+    {
+      "he": "יסוד",
+      "en": "Yesod",
+      "target": "Yessod",
+      "officialCount": 13,
+      "status": "OFFICIAL",
+      "evidence": "Yessod 13 (I1 P12) · Yesod 1 (I0 P1)",
+      "note": "Double s between vowels (13 : 1, the 1 is \"Ateret Yesod\"), as Massach, Assia.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "yesod"
+    },
+    {
+      "he": "מלכות",
+      "en": "Malchut",
+      "target": "Malchut",
+      "officialCount": 145,
+      "status": "OFFICIAL",
+      "evidence": "Malchut 145 (I4 P141) · Malchuts 1 (I0 P1)",
+      "note": "Feminine: a Malchut. Plural Malchuyot (PROPOSED, Hebrew plural; BB's single \"Malchuts\" is not a model).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "malchut"
+    },
+    {
+      "he": "גלגלתא",
+      "en": "Galgalta",
+      "target": "Galgalta",
+      "officialCount": 38,
+      "status": "OFFICIAL",
+      "evidence": "Galgalta 38 (I0 P38)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "galgalta"
+    },
+    {
+      "he": "ע\"ב",
+      "en": "AB",
+      "target": "AB",
+      "officialCount": 98,
+      "status": "OFFICIAL",
+      "evidence": "AB 98 (I0 P98)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ab"
+    },
+    {
+      "he": "ס\"ג",
+      "en": "SAG",
+      "target": "SAG",
+      "officialCount": 128,
+      "status": "OFFICIAL",
+      "evidence": "SAG 128 (I0 P128)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "sag"
+    },
+    {
+      "he": "מ\"ה",
+      "en": "MA",
+      "target": "MA",
+      "officialCount": 104,
+      "status": "OFFICIAL",
+      "evidence": "MA 104 (I0 P104)",
+      "note": "מ\"ה החדש → o novo MA (25).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ma"
+    },
+    {
+      "he": "ב\"ן",
+      "en": "BON",
+      "target": "BON",
+      "officialCount": 48,
+      "status": "OFFICIAL",
+      "evidence": "BON 48 (I0 P48) · BAN 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "bon"
+    },
+    {
+      "he": "נקודים",
+      "en": "Nekudim",
+      "target": "Nekudim",
+      "officialCount": 169,
+      "status": "OFFICIAL",
+      "evidence": "Nekudim 169 (I0 P169)",
+      "note": "o mundo de Nekudim.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "nekudim"
+    },
+    {
+      "he": "ג\"ר",
+      "en": "GAR",
+      "target": "GAR",
+      "officialCount": 60,
+      "status": "OFFICIAL",
+      "evidence": "GAR 60 (I0 P60) · GaR 0 (I0 P0)",
+      "note": "All caps (60 : 0).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "gar"
+    },
+    {
+      "he": "ז\"ת",
+      "en": "ZAT",
+      "target": "ZAT",
+      "officialCount": 69,
+      "status": "OFFICIAL",
+      "evidence": "ZAT 69 (I0 P69) · ZaT 0 (I0 P0)",
+      "note": "Gloss once: ZAT (sete Sefirot inferiores), P.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "zat"
+    },
+    {
+      "he": "ו\"ק",
+      "en": "VAK",
+      "target": "VAK",
+      "officialCount": 49,
+      "status": "OFFICIAL",
+      "evidence": "VAK 49 (I0 P49) · VaK 0 (I0 P0)",
+      "note": "\"VAK sem Rosh\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "vak"
+    },
+    {
+      "he": "כח\"ב",
+      "en": "KHB",
+      "target": "KHB",
+      "officialCount": 27,
+      "status": "OFFICIAL",
+      "evidence": "KHB 27 (I0 P27) · KaJaB 0 (I0 P0)",
+      "note": "Gloss once: KHB (Keter - Hochma - Bina), P.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "khb"
+    },
+    {
+      "he": "חג\"ת",
+      "en": "HGT",
+      "target": "HGT",
+      "officialCount": 22,
+      "status": "OFFICIAL",
+      "evidence": "HGT 22 (I0 P22) · JaGaT 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hgt"
+    },
+    {
+      "he": "נה\"י",
+      "en": "NHY",
+      "target": "NHY",
+      "officialCount": 20,
+      "status": "OFFICIAL",
+      "evidence": "NHY 20 (I0 P20) · NeHY 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "nhy"
+    },
+    {
+      "he": "זו\"ן",
+      "en": "ZON",
+      "target": "ZON",
+      "officialCount": 124,
+      "status": "OFFICIAL",
+      "evidence": "ZON 124 (I0 P124) · ZoN 0 (I0 P0)",
+      "note": "",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "zon"
+    },
+    {
+      "he": "ז\"א",
+      "en": "ZA",
+      "target": "ZA",
+      "officialCount": 70,
+      "status": "OFFICIAL",
+      "evidence": "ZA 70 (I0 P70)",
+      "note": "Spelled-out זעיר אנפין → Zeir Anpin (§2.3, PROPOSED).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "za"
+    },
+    {
+      "he": "א\"א",
+      "en": "AA",
+      "target": "AA",
+      "officialCount": 60,
+      "status": "OFFICIAL",
+      "evidence": "AA 60 (I0 P60)",
+      "note": "Spelled-out אריך אנפין → Arich Anpin (1).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "aa"
+    },
+    {
+      "he": "נוקבא",
+      "en": "Nukva",
+      "target": "Nukva",
+      "officialCount": 48,
+      "status": "OFFICIAL",
+      "evidence": "Nukva 48 (I0 P48)",
+      "note": "Feminine: a Nukva. Gloss Nukva (feminino), P.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "nukva"
+    },
+    {
+      "he": "אח\"פ",
+      "en": "AHP",
+      "target": "AHP",
+      "officialCount": 87,
+      "status": "OFFICIAL",
+      "evidence": "AHP 87 (I0 P87) · AJaP 0 (I0 P0)",
+      "note": "Gloss once: AHP (Ozen, Hotem, Peh).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ahap"
+    },
+    {
+      "he": "אחורים",
+      "en": "posterior",
+      "target": "Achoraim",
+      "officialCount": 40,
+      "status": "OFFICIAL",
+      "evidence": "Achoraim 40 (I0 P40) · posterior(es) 3 (I0 P3)",
+      "note": "Gloss once: Achoraim (Kelim posteriores), P. Singular Achor (9). Kelim de Achoraim (24).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "achoraim"
+    },
+    {
+      "he": "עינים",
+      "en": "Einayim",
+      "target": "Eynaim",
+      "officialCount": 53,
+      "status": "OFFICIAL",
+      "evidence": "Eynaim 53 (I0 P53) · Eyanim 7 (I0 P7) · Einaim 0 (I0 P0)",
+      "note": "53 : 7 (Eyanim is a typo pattern). Gloss Eynaim (olhos).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "einayim"
+    },
+    {
+      "he": "נקבי עינים",
+      "en": "Nikvey Einayim",
+      "target": "Nikvey Eynaim",
+      "officialCount": 41,
+      "status": "OFFICIAL",
+      "evidence": "Nikvey Eynaim 41 (I0 P41) · Nikvey Eyanim 4 (I0 P4) · Nikvei 1 (I0 P1)",
+      "note": "Nikvey 45 : Nikvei 1. Gloss (pupilas).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "nikvey-einayim"
+    },
+    {
+      "he": "פה",
+      "en": "Peh",
+      "target": "Peh",
+      "officialCount": 96,
+      "status": "OFFICIAL",
+      "evidence": "Peh 96 (I0 P96) · Pe 0 (I0 P0)",
+      "note": "Gloss Peh (boca). Masculine: o Peh. Plural Peyot (P \"Peyot (Plural de Peh)\").",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "peh"
+    },
+    {
+      "he": "חוטם",
+      "en": "Hotem",
+      "target": "Hotem",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "Hotem 3 (I0 P3) · Chotem 0 (I0 P0)",
+      "note": "Gloss Hotem (nariz).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hotem"
+    },
+    {
+      "he": "אזן",
+      "en": "Ozen",
+      "target": "Ozen",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "Ozen 3 (I0 P3)",
+      "note": "Gloss Ozen (orelha).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ozen"
+    },
+    {
+      "he": "טבור",
+      "en": "Tabur",
+      "target": "Tabur",
+      "officialCount": 95,
+      "status": "OFFICIAL",
+      "evidence": "Tabur 95 (I0 P95) · umbigo 1 (I0 P1)",
+      "note": "Gloss Tabur (umbigo). o Tabur.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "tabur"
+    },
+    {
+      "he": "פרסא",
+      "en": "Parsa",
+      "target": "Parsa",
+      "officialCount": 42,
+      "status": "OFFICIAL",
+      "evidence": "Parsa 42 (I0 P42) · Parsá 0 (I0 P0)",
+      "note": "Feminine: a Parsa (da Parsa 24).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "parsa"
+    },
+    {
+      "he": "סיום",
+      "en": "Sium",
+      "target": "Sium",
+      "officialCount": 46,
+      "status": "OFFICIAL",
+      "evidence": "Sium 46 (I0 P46)",
+      "note": "Gloss Sium (final). o Sium.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "sium"
+    },
+    {
+      "he": "קטנות",
+      "en": "Katnut",
+      "target": "Katnut",
+      "officialCount": 23,
+      "status": "OFFICIAL",
+      "evidence": "Katnut 23 (I0 P23) · pequenez 2 (I1 P1)",
+      "note": "Transliterated (23 : 2). Gloss once: Katnut (pequenez). Feminine: a Katnut.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "katnut"
+    },
+    {
+      "he": "גדלות",
+      "en": "Gadlut",
+      "target": "Gadlut",
+      "officialCount": 37,
+      "status": "OFFICIAL",
+      "evidence": "Gadlut 37 (I0 P37) · grandeza 1 (I0 P1)",
+      "note": "Mochin de Gadlut. Gloss once: Gadlut (grandeza).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "gadlut"
+    },
+    {
+      "he": "מוחין",
+      "en": "Mochin",
+      "target": "Mochin",
+      "officialCount": 98,
+      "status": "OFFICIAL",
+      "evidence": "Mochin 98 (I0 P98) · Mojin 0 (I0 P0)",
+      "note": "Masculine plural: os Mochin (43).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "mochin"
+    },
+    {
+      "he": "נרנח\"י (נפש/רוח/נשמה/חיה/יחידה)",
+      "en": "Nefesh, Ruach, Neshama, Haya, Yechida",
+      "target": "NRNHY",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "NRNHY 3 (I0 P3)",
+      "note": "The five lights: Nefesh, Ruach, Neshama, Haya, Yehida (§2.5). נר\"ן → NRN (20); חנר\"ן → HNRN (1).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "nrnhy"
+    },
+    {
+      "he": "הויה",
+      "en": "HaVaYaH",
+      "target": "HaVaYaH",
+      "officialCount": 10,
+      "status": "OFFICIAL",
+      "evidence": "HaVaYaH 10 (I1 P9)",
+      "note": "Gloss once: HaVaYaH (Yod, Hey, Vav, Hey).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "havayah"
+    },
+    {
+      "he": "ה\"ת",
+      "en": "bottom Hey",
+      "target": "a Hey inferior",
+      "officialCount": 27,
+      "status": "OFFICIAL",
+      "evidence": "a Hey inferior 27 (I0 P27)",
+      "note": "Also for ה' תתאה.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hey-tataa"
+    },
+    {
+      "he": "ה\"ר",
+      "en": "first Hey",
+      "target": "a primeira Hey",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "a primeira Hey 0 (I0 P0)",
+      "note": "Silent in BB. Formed like a Hey inferior. ה\"ר can also be ה' ראשונות → as cinco primeiras.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "hey-rishona"
+    },
+    {
+      "he": "קליפות",
+      "en": "shells",
+      "target": "Klipot",
+      "officialCount": 18,
+      "status": "OFFICIAL",
+      "evidence": "Klipot 18 (I9 P9) · cascas 4 (I1 P3)",
+      "note": "Gloss once: Klipot (cascas). Singular a Klipa (7).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "klipot"
+    },
+    {
+      "he": "חכמת הקבלה",
+      "en": "the wisdom of Kabbalah",
+      "target": "a sabedoria da Cabalá",
+      "officialCount": 22,
+      "status": "OFFICIAL",
+      "evidence": "a sabedoria da Cabalá 22 (I22 P0) · Cabala 0 (I0 P0) · Kabbalah 1 (I0 P1)",
+      "note": "Cabalá with accent (36 : 0). sabedoria lower-case in running text (12 : 10, the capitals open the Intro and the Pticha title).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "kabbalah"
+    },
+    {
+      "he": "הרב",
+      "en": "the ARI",
+      "target": "o Ari",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "o Ari 4 (I4 P0) · ARI 0 (I0 P0) · Rav 0 (I0 P0)",
+      "note": "BB names him \"o Ari\" (4). Use it for הרב, which in TES is the Ari. Never \"o Rav\" / \"o Mestre\".",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "harav"
+    },
+    {
+      "he": "עקודים",
+      "en": "Akudim",
+      "target": "Akudim",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Akudim 1 (I0 P1)",
+      "note": "o mundo de Akudim.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "akudim"
+    },
+    {
+      "he": "או\"ח",
+      "en": "reflected light",
+      "target": "a Ohr Hozer",
+      "officialCount": 45,
+      "status": "OFFICIAL",
+      "evidence": "a Ohr Hozer 45 (I0 P45)",
+      "note": "Expand the abbreviation.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ohr-hozer-abbrev"
+    },
+    {
+      "he": "או\"י",
+      "en": "direct light",
+      "target": "a Ohr Yashar",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "a Ohr Yashar 2 (I0 P2)",
+      "note": "Expand the abbreviation.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "ohr-yashar-abbrev"
+    },
+    {
+      "he": "רשימות",
+      "en": "records",
+      "target": "Reshimot",
+      "officialCount": 37,
+      "status": "OFFICIAL",
+      "evidence": "Reshimot 37 (I0 P37) · registros 1 (I0 P1)",
+      "note": "Masculine plural: os Reshimot (16).",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "reshimot-plural"
+    },
+    {
+      "he": "בטישות",
+      "en": "clashes",
+      "target": "Bitushim",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Bitushim 0 (I0 P0) · batidas 1 (I0 P1)",
+      "note": "BB has no plural; Hebrew plural as Zivugim, Partzufim.",
+      "group": "2.1 The 125 entries of tes-en.index.json (in its order)",
+      "id": "bitushim-plural"
+    },
+    {
+      "he": "דעת",
+      "en": "Daat",
+      "target": "Daat",
+      "officialCount": 18,
+      "status": "OFFICIAL",
+      "evidence": "Daat 18 (I0 P18) · Dáat 0 (I0 P0)",
+      "note": "Melech ha Daat (Rei Daat), P.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "חב\"ד",
+      "en": "HBD",
+      "target": "HBD",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "HBD 1 (I0 P1)",
+      "note": "",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "כחב\"ד",
+      "en": "KHBD",
+      "target": "KHBD",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "KHBD 3 (I0 P3)",
+      "note": "",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "חו\"ב",
+      "en": "HB",
+      "target": "HB",
+      "officialCount": 17,
+      "status": "OFFICIAL",
+      "evidence": "HB 17 (I0 P17)",
+      "note": "HB de AVI, P.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "חו\"ג",
+      "en": "HG",
+      "target": "HG",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "HG 0 (I0 P0)",
+      "note": "Formed like HB.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "נהי\"מ",
+      "en": "NHYM",
+      "target": "NHYM",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "NHYM 14 (I0 P14)",
+      "note": "",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "תנה\"י",
+      "en": "TNHY",
+      "target": "TNHY",
+      "officialCount": 7,
+      "status": "OFFICIAL",
+      "evidence": "TNHY 7 (I0 P7)",
+      "note": "Gloss once: TNHY (Tiferet, Netzach, Hod, Yessod), P.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "תנהי\"מ",
+      "en": "TNHYM",
+      "target": "TNHYM",
+      "officialCount": 5,
+      "status": "OFFICIAL",
+      "evidence": "TNHYM 5 (I0 P5)",
+      "note": "",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "דחג\"ת",
+      "en": "DHGT",
+      "target": "DHGT",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "DHGT 0 (I0 P0)",
+      "note": "Formed like KHBD. Read whether the ד is a prefix (de HGT).",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "חו\"ב תו\"מ",
+      "en": "HB TM",
+      "target": "HB TM",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "HB TM 4 (I0 P4) · KHB TM 8 (I0 P8)",
+      "note": "Also KHB TM (8).",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "גו\"ע",
+      "en": "GE",
+      "target": "GE",
+      "officialCount": 21,
+      "status": "OFFICIAL",
+      "evidence": "GE 21 (I0 P21)",
+      "note": "Gloss once: GE (Galgalta Eynaim).",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "גלגלתא ועינים",
+      "en": "Galgalta ve Einayim",
+      "target": "Galgalta ve Eynaim",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "Galgalta ve Eynaim 3 (I0 P3) · Galgalta Eyanim 3 (I0 P3)",
+      "note": "",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "ה' קצוות",
+      "en": "the five extremities",
+      "target": "as cinco extremidades",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "as cinco extremidades 0 (I0 P0)",
+      "note": "Silent in BB.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "ו\"ת",
+      "en": "the lower six",
+      "target": "VAT",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "VAT 0 (I0 P0)",
+      "note": "Formed like VAK / ZAT, all caps.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "נר\"ן",
+      "en": "NRN",
+      "target": "NRN",
+      "officialCount": 20,
+      "status": "OFFICIAL",
+      "evidence": "NRN 20 (I0 P20)",
+      "note": "Gloss once: NRN (Nefesh, Ruach, Neshama).",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "טנת\"א",
+      "en": "TNTA",
+      "target": "TANTA",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "TANTA 2 (I0 P2)",
+      "note": "Gloss once: TANTA (Taamim, Nekudot, Tagin, Otiot), P.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "תגין",
+      "en": "Tagin",
+      "target": "Tagin",
+      "officialCount": 8,
+      "status": "OFFICIAL",
+      "evidence": "Tagin 8 (I0 P8) · coroas 0 (I0 P0)",
+      "note": "Gloss once: Tagin (coroas) — gloss PROPOSED.",
+      "group": "2.2 Sefirot and their groupings"
+    },
+    {
+      "he": "עתיק",
+      "en": "Atik",
+      "target": "Atik",
+      "officialCount": 55,
+      "status": "OFFICIAL",
+      "evidence": "Atik 55 (I8 P47) · Átik 0 (I0 P0)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "עתיק יומין",
+      "en": "Atik Yomin",
+      "target": "Atik Yomin",
+      "officialCount": 8,
+      "status": "OFFICIAL",
+      "evidence": "Atik Yomin 8 (I8 P0)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "פרצוף עתיק",
+      "en": "Partzuf Atik",
+      "target": "Partzuf Atik",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "Partzuf Atik 14 (I0 P14)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "אריך אנפין",
+      "en": "Arich Anpin",
+      "target": "Arich Anpin",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Arich Anpin 1 (I0 P1)",
+      "note": "א\"א → AA. The repo ToC agrees.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "זעיר אנפין",
+      "en": "Zeir Anpin",
+      "target": "Zeir Anpin",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Zeir Anpin 0 (I0 P0)",
+      "note": "Formed like Arich Anpin; the repo ToC already says Zeir Anpin.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "אבא",
+      "en": "Aba",
+      "target": "Aba",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "Aba 6 (I0 P6) · Abba 0 (I0 P0)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "אמא",
+      "en": "Ima",
+      "target": "Ima",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "Ima 14 (I0 P14)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "אבא ואמא",
+      "en": "Aba ve Ima",
+      "target": "Aba ve Ima",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Aba ve Ima 2 (I0 P2) · Aba e Ima 0 (I0 P0)",
+      "note": "Only where the Hebrew spells it out; או\"א → AVI.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "או\"א",
+      "en": "AVI",
+      "target": "AVI",
+      "officialCount": 152,
+      "status": "OFFICIAL",
+      "evidence": "AVI 152 (I0 P152)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "או\"א עילאין",
+      "en": "the upper AVI",
+      "target": "AVI Superior",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "AVI Superior 2 (I0 P2)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "ישסו\"ת",
+      "en": "YESHSUT",
+      "target": "YESHSUT",
+      "officialCount": 35,
+      "status": "OFFICIAL",
+      "evidence": "YESHSUT 35 (I0 P35) · Yeshsut 0 (I0 P0)",
+      "note": "All caps.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "ישראל סבא ותבונה",
+      "en": "Israel Saba and Tevuna",
+      "target": "Israel Saba ve Tevuna",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Israel Saba ve Tevuna 0 (I0 P0)",
+      "note": "Silent in BB; joined with ve as Aba ve Ima. The pair is YESHSUT.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "תבונה",
+      "en": "Tevuna",
+      "target": "Tevuna",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Tevuna 0 (I0 P0) · Tvuna 0 (I0 P0)",
+      "note": "Vocal sheva as e, as Neshama, Guevura.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "רחל",
+      "en": "Rachel",
+      "target": "Rachel",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Rachel 0 (I0 P0)",
+      "note": "Medial ח → ch, as Achoraim, Chazeh.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "לאה",
+      "en": "Leah",
+      "target": "Lea",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Lea 0 (I0 P0)",
+      "note": "Standard Portuguese form of the name.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "חזה",
+      "en": "Chazeh",
+      "target": "Chazeh",
+      "officialCount": 68,
+      "status": "OFFICIAL",
+      "evidence": "Chazeh 68 (I0 P68) · peito 1 (I0 P1)",
+      "note": "Gloss Chazeh (peito). o Chazeh.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "מוחא סתימאה",
+      "en": "Mocha Stimaa",
+      "target": "Mocha Stimaa",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Mocha Stimaa 1 (I0 P1)",
+      "note": "Mocha attested once (P, KHB TM \"Mocha, Atzamot, Gidim, Bassar e Or\"); Stimaa PROPOSED. Gloss once: Mocha Stimaa (o cérebro oculto).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "דיקנא",
+      "en": "Dikna",
+      "target": "Dikna",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Dikna 0 (I0 P0) · barba 0 (I0 P0)",
+      "note": "Gloss Dikna (barba).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "שבולת הזקן",
+      "en": "the Shibolet of the beard",
+      "target": "Shibolet HaZakan",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Shibolet HaZakan 0 (I0 P0)",
+      "note": "Gloss once (a espiga da barba).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "שערות",
+      "en": "Se'arot [hair]",
+      "target": "Searot",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Searot 0 (I0 P0)",
+      "note": "Gloss Searot (cabelos).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "מזלא",
+      "en": "Mazla",
+      "target": "Mazla",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Mazla 0 (I0 P0)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "מצח",
+      "en": "Metzach",
+      "target": "Metzach",
+      "officialCount": 8,
+      "status": "OFFICIAL",
+      "evidence": "Metzach 8 (I0 P8)",
+      "note": "Gloss Metzach (testa).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "רגלים / רגלין",
+      "en": "Raglayim",
+      "target": "Raglaim / Raglin",
+      "officialCount": 24,
+      "status": "OFFICIAL",
+      "evidence": "Raglaim / Raglin 24 (I0 P24) · Raglim 1 (I0 P1)",
+      "note": "Follow the Hebrew form: רגלים → Raglaim (6), רגלין → Raglin (18).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "סיום רגלין",
+      "en": "Sium Raglin",
+      "target": "Sium Raglin",
+      "officialCount": 16,
+      "status": "OFFICIAL",
+      "evidence": "Sium Raglin 16 (I0 P16)",
+      "note": "Gloss (fim das pernas).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "אצבעות רגלין",
+      "en": "toes",
+      "target": "Etzbaot Raglin",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Etzbaot Raglin 2 (I0 P2)",
+      "note": "Gloss (dedos dos pés).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "עטרת יסוד",
+      "en": "Atara of Yesod",
+      "target": "Ateret Yessod",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Ateret Yessod 1 (I0 P1)",
+      "note": "Ateret attested (1, \"Ateret Yesod\"); Yessod spelled as the Sefira (13 : 1).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "פרקין",
+      "en": "joints",
+      "target": "articulações",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "articulações 0 (I0 P0)",
+      "note": "Silent in BB.",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "ירכין",
+      "en": "legs",
+      "target": "Yerechin",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Yerechin 0 (I0 P0)",
+      "note": "Hebrew form kept, gloss (coxas).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "כלים דפנים",
+      "en": "the anterior vessels",
+      "target": "Kelim de Panim",
+      "officialCount": 21,
+      "status": "OFFICIAL",
+      "evidence": "Kelim de Panim 21 (I0 P21)",
+      "note": "Gloss once: Kelim de Panim (Kelim anteriores).",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "כלים דאחורים",
+      "en": "the posterior vessels",
+      "target": "Kelim de Achoraim",
+      "officialCount": 24,
+      "status": "OFFICIAL",
+      "evidence": "Kelim de Achoraim 24 (I0 P24)",
+      "note": "",
+      "group": "2.3 Partzufim and their parts"
+    },
+    {
+      "he": "בי\"ע",
+      "en": "BYA",
+      "target": "BYA",
+      "officialCount": 73,
+      "status": "OFFICIAL",
+      "evidence": "BYA 73 (I0 P73)",
+      "note": "",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "עולם הנקודים",
+      "en": "the world of Nekudim",
+      "target": "o mundo de Nekudim",
+      "officialCount": 30,
+      "status": "OFFICIAL",
+      "evidence": "o mundo de Nekudim 30 (I0 P30)",
+      "note": "",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "עולם התיקון",
+      "en": "the world of correction",
+      "target": "o mundo do Tikun",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "o mundo do Tikun 6 (I0 P6) · mundo de Tikun 2 (I0 P2) · mundo da correção 0 (I0 P0)",
+      "note": "Gloss once: o mundo do Tikun (correção).",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "העולמות העליונים",
+      "en": "the upper worlds",
+      "target": "os Mundos Superiores",
+      "officialCount": 6,
+      "status": "OFFICIAL",
+      "evidence": "os Mundos Superiores 6 (I2 P4) · mundos superiores 0 (I0 P0)",
+      "note": "",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "העולם הזה",
+      "en": "this world",
+      "target": "este mundo",
+      "officialCount": 31,
+      "status": "OFFICIAL",
+      "evidence": "este mundo 31 (I8 P23)",
+      "note": "",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "מ\"ה החדש",
+      "en": "the new MA",
+      "target": "o novo MA",
+      "officialCount": 25,
+      "status": "OFFICIAL",
+      "evidence": "o novo MA 25 (I0 P25)",
+      "note": "",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "עולם הבא",
+      "en": "the next world",
+      "target": "o mundo vindouro",
+      "officialCount": 24,
+      "status": "OFFICIAL",
+      "evidence": "o mundo vindouro 24 (I24 P0)",
+      "note": "",
+      "group": "2.4 Worlds"
+    },
+    {
+      "he": "נפש",
+      "en": "Nefesh",
+      "target": "Nefesh",
+      "officialCount": 25,
+      "status": "OFFICIAL",
+      "evidence": "Nefesh 25 (I0 P25) · Néfesh 0 (I0 P0)",
+      "note": "Light: a Luz de Nefesh (7).",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "רוח",
+      "en": "Ruach",
+      "target": "Ruach",
+      "officialCount": 23,
+      "status": "OFFICIAL",
+      "evidence": "Ruach 23 (I0 P23) · Ruaj 0 (I0 P0)",
+      "note": "",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "נשמה",
+      "en": "Neshama",
+      "target": "Neshama",
+      "officialCount": 60,
+      "status": "OFFICIAL",
+      "evidence": "Neshama 60 (I0 P60)",
+      "note": "Gloss Neshama (alma). Plural Neshamot.",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "חיה",
+      "en": "Haya",
+      "target": "Haya",
+      "officialCount": 44,
+      "status": "OFFICIAL",
+      "evidence": "Haya 44 (I0 P44) · Chaya 0 (I0 P0)",
+      "note": "a Luz de Haya (10) : Ohr Haya (4) — for the NRNHY lights write \"a Luz de X\".",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "יחידה",
+      "en": "Yechida",
+      "target": "Yehida",
+      "officialCount": 44,
+      "status": "OFFICIAL",
+      "evidence": "Yehida 44 (I0 P44) · Yechida 1 (I0 P1)",
+      "note": "44 : 1.",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "אור החכמה",
+      "en": "Ohr Hochma",
+      "target": "Ohr Hochma",
+      "officialCount": 16,
+      "status": "OFFICIAL",
+      "evidence": "Ohr Hochma 16 (I0 P16) · Luz de Hochma 3 (I0 P3)",
+      "note": "Gloss once: Ohr Hochma (Luz de Sabedoria).",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "אור החסדים",
+      "en": "Ohr Hassadim",
+      "target": "Ohr Hassadim",
+      "officialCount": 15,
+      "status": "OFFICIAL",
+      "evidence": "Ohr Hassadim 15 (I0 P15) · Luz de Hassadim 3 (I0 P3)",
+      "note": "Gloss once: Ohr Hassadim (Luz de Misericórdia).",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "עיבור",
+      "en": "Ibur [impregnation]",
+      "target": "Ibur",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "Ibur 14 (I0 P14)",
+      "note": "Gloss (concepção). עיבור ב' → Ibur Bet (2).",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "יניקה",
+      "en": "nursing",
+      "target": "Yenika",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "Yenika 9 (I0 P9) · Yeniká 0 (I0 P0) · amamentação 1 (I0 P1)",
+      "note": "Gloss once: Yenika (amamentação). The repo ToC writes \"Yeniká\" — §4.",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "עובר",
+      "en": "Ubar",
+      "target": "Ubar",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Ubar 2 (I0 P2)",
+      "note": "Gloss Ubar (embrião).",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "עי\"מ",
+      "en": "IYM",
+      "target": "Ibur, Yenika e Mochin",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "Ibur, Yenika e Mochin 14 (I0 P14)",
+      "note": "Expand. Components attested; the triple itself PROPOSED.",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "הארה",
+      "en": "illumination",
+      "target": "iluminação",
+      "officialCount": 41,
+      "status": "OFFICIAL",
+      "evidence": "iluminação 41 (I4 P37)",
+      "note": "",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "התכללות",
+      "en": "inclusion",
+      "target": "Hitkalelut",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "Hitkalelut 3 (I0 P3) · integração 3 (I0 P3) · inclusão 2 (I0 P2)",
+      "note": "Technical Hitkalelut (3) \"Hitkalelut de Behina Alef dentro de Behina Bet\". Verb integrar-se / incluir-se.",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "בקיעה",
+      "en": "breaching",
+      "target": "fenda",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "fenda 0 (I0 P0) · ruptura 0 (I0 P0) · fendas (Intro, non-technical) 1 (I1 P0)",
+      "note": "Silent in BB (the Intro's one \"fendas\" is non-technical). \"abrir uma fenda\" na Parsa. Never quebra (that is שבירה).",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "שפע",
+      "en": "abundance",
+      "target": "abundância",
+      "officialCount": 24,
+      "status": "OFFICIAL",
+      "evidence": "abundância 24 (I4 P20)",
+      "note": "",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "ניצוצין",
+      "en": "sparks",
+      "target": "centelhas",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "centelhas 2 (I0 P2) · faíscas 0 (I0 P0)",
+      "note": "The repo ToC agrees (\"centelhas\").",
+      "group": "2.5 Lights, growth, illumination"
+    },
+    {
+      "he": "צמצום א'",
+      "en": "the first restriction",
+      "target": "Tzimtzum Alef",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "Tzimtzum Alef 14 (I0 P14) · primeira restrição 6 (I0 P6)",
+      "note": "Gloss once: Tzimtzum Alef (Primeira Restrição).",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "צמצום ב'",
+      "en": "the second restriction",
+      "target": "Tzimtzum Bet",
+      "officialCount": 30,
+      "status": "OFFICIAL",
+      "evidence": "Tzimtzum Bet 30 (I0 P30) · segunda restrição 3 (I0 P3)",
+      "note": "",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "צמצום נה\"י",
+      "en": "the restriction of NHY",
+      "target": "Tzimtzum NHY",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Tzimtzum NHY 2 (I0 P2)",
+      "note": "",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "פנים",
+      "en": "anterior / face",
+      "target": "Panim",
+      "officialCount": 34,
+      "status": "OFFICIAL",
+      "evidence": "Panim 34 (I2 P32) · face 148 (I117 P31)",
+      "note": "Gloss once: Panim (Kelim anteriores). The face of the Creator (Intro sense) → face.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "אחור",
+      "en": "posterior",
+      "target": "Achor",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "Achor 9 (I0 P9) · costas 11 (I1 P10)",
+      "note": "Gloss Achor (costas).",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "פב\"פ",
+      "en": "face to face",
+      "target": "face a face",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "face a face 14 (I0 P14) · Panim be Panim 1 (I0 P1)",
+      "note": "14 : 1 (the 1 is a gloss). Translated, unlike Panim / Achoraim.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "אב\"א",
+      "en": "back to back",
+      "target": "costas com costas",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "costas com costas 2 (I0 P2) · achor be achor 2 (I0 P2)",
+      "note": "",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "פב\"א",
+      "en": "face to back",
+      "target": "face com costas",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "face com costas 0 (I0 P0)",
+      "note": "Formed like costas com costas.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "אב\"פ",
+      "en": "back to face",
+      "target": "costas com face",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "costas com face 0 (I0 P0)",
+      "note": "Mirror.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "זכר",
+      "en": "male",
+      "target": "masculino",
+      "officialCount": 30,
+      "status": "OFFICIAL",
+      "evidence": "masculino 30 (I0 P30)",
+      "note": "Noun: o masculino.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "נקבה",
+      "en": "female",
+      "target": "feminino",
+      "officialCount": 27,
+      "status": "OFFICIAL",
+      "evidence": "feminino 27 (I0 P27)",
+      "note": "",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מ\"ן",
+      "en": "MAN",
+      "target": "MAN",
+      "officialCount": 58,
+      "status": "OFFICIAL",
+      "evidence": "MAN 58 (I0 P58) · MaN 0 (I0 P0)",
+      "note": "Gloss once: MAN (Mayin Nukvin).",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מיין נוקבין",
+      "en": "Mayin Nukvin",
+      "target": "Mayin Nukvin",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Mayin Nukvin 2 (I0 P2)",
+      "note": "BB glosses \"águas femininas\".",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מ\"ד",
+      "en": "MAD",
+      "target": "MAD",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "MAD 0 (I0 P0)",
+      "note": "Formed like MAN.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מיין דוכרין",
+      "en": "Mayin Duchrin",
+      "target": "Mayin Duchrin",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Mayin Duchrin 0 (I0 P0)",
+      "note": "Formed like Mayin Nukvin; כ → ch.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "דבקות",
+      "en": "adhesion",
+      "target": "Dvekut",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "Dvekut 4 (I0 P4) · adesão 5 (I2 P3)",
+      "note": "4 : 5 where 2 adesão are glosses of Dvekut. Gloss Dvekut (adesão).",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "קדושה",
+      "en": "holiness",
+      "target": "Kedusha",
+      "officialCount": 22,
+      "status": "OFFICIAL",
+      "evidence": "Kedusha 22 (I12 P10) · santidade 10 (I7 P3)",
+      "note": "Gloss Kedusha (santidade).",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "קליפה",
+      "en": "shell",
+      "target": "a Klipa",
+      "officialCount": 7,
+      "status": "OFFICIAL",
+      "evidence": "a Klipa 7 (I7 P0) · casca 1 (I1 P0)",
+      "note": "",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "גמר התיקון",
+      "en": "the end of correction",
+      "target": "o final da correção",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "o final da correção 4 (I0 P4) · fim da correção 3 (I0 P3)",
+      "note": "4 : 3.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מדת הדין",
+      "en": "the quality of judgment",
+      "target": "a qualidade de Din",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "a qualidade de Din 4 (I0 P4) · Midat haDin 4 (I0 P4) · qualidade d* julgamento 2 (I0 P2)",
+      "note": "Tie with Midat haDin (4 : 4), which BB uses with a gloss. Write a qualidade de Din.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מדת הרחמים",
+      "en": "the quality of mercy",
+      "target": "a qualidade de Rachamim",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "a qualidade de Rachamim 2 (I0 P2) · qualidade da misericórdia 2 (I0 P2) · Midat haRachamim 2 (I0 P2)",
+      "note": "2 : 2 : 2. Ruled parallel to a qualidade de Din.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "רחמים",
+      "en": "Rachamim / mercy",
+      "target": "misericórdia",
+      "officialCount": 16,
+      "status": "OFFICIAL",
+      "evidence": "misericórdia 16 (I9 P7) · Rachamim 4 (I0 P4)",
+      "note": "Generic mercy → misericórdia; inside מדת הרחמים → Rachamim.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "דין, דינים",
+      "en": "judgment(s)",
+      "target": "Din, Dinim",
+      "officialCount": 10,
+      "status": "OFFICIAL",
+      "evidence": "Din, Dinim 10 (I0 P10) · julgamento 8 (I3 P5)",
+      "note": "Gloss Din (julgamento).",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "גבורות",
+      "en": "Gevurot",
+      "target": "Guevurot",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Guevurot 0 (I0 P0) · Gevurot 2 (I0 P2)",
+      "note": "BB writes Gevurot (2) but Guevura (6). Ruled Guevurot so singular and plural match.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "ה\"ח וה\"ג",
+      "en": "the five Hassadim and five Gevurot",
+      "target": "cinco Hassadim e cinco Guevurot",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "cinco Hassadim e cinco Guevurot 2 (I0 P2)",
+      "note": "See Guevurot.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "מלכים",
+      "en": "kings",
+      "target": "Melachim",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Melachim 1 (I0 P1) · Reis 1 (I0 P1)",
+      "note": "Technical kings of Nekudim: Melech (22), Melachim (1); gloss Melech (Rei). מלך הדעת → Melech ha Daat. Parables keep rei. The repo ToC says \"Os sete reis\" — §4.",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "השפעה",
+      "en": "bestowal",
+      "target": "doação",
+      "officialCount": 16,
+      "status": "OFFICIAL",
+      "evidence": "doação 16 (I0 P16)",
+      "note": "",
+      "group": "2.6 Restrictions, positions, gender, MAN"
+    },
+    {
+      "he": "אור פנימי / או\"פ (the commentary)",
+      "en": "Inner Light",
+      "target": "Luz Interior",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Luz Interior 0 (I0 P0)",
+      "note": "BB Portuguese never names the commentary. Adopts the shipped UI (\"Luz Interior\"). Distinct from the technical Ohr Pnimi.",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "הסתכלות פנימית (the commentary)",
+      "en": "Inner Observation",
+      "target": "Observação Interior",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Observação Interior 0 (I0 P0)",
+      "note": "As the UI.",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "לוח השאלות",
+      "en": "Table of Questions",
+      "target": "a tabela de perguntas",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "a tabela de perguntas 1 (I1 P0)",
+      "note": "Intro §156.",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "לוח התשובות",
+      "en": "Table of Answers",
+      "target": "a tabela de respostas",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "a tabela de respostas 1 (I1 P0)",
+      "note": "Intro §156.",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "לפירוש המלות",
+      "en": "(on) the meaning of the words — terminology",
+      "target": "sobre o significado das palavras",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "sobre o significado das palavras 0 (I0 P0)",
+      "note": "The UI cluster label says \"Terminologia\".",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "לענינים",
+      "en": "(on) the topics",
+      "target": "sobre os temas",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "sobre os temas 0 (I0 P0)",
+      "note": "As the repo ToC (\"Respostas sobre os temas\").",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "תלמוד עשר הספירות",
+      "en": "Talmud Eser Sefirot",
+      "target": "Talmud Eser Sefirot (O Estudo das Dez Sefirot)",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Talmud Eser Sefirot (O Estudo das Dez Sefirot) 1 (I1 P0)",
+      "note": "Intro §156.",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "פנים (the Ari's text)",
+      "en": "Panim",
+      "target": "o texto do Ari",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "o texto do Ari 0 (I0 P0)",
+      "note": "As the UI pane name.",
+      "group": "2.7 Section names of TES"
+    },
+    {
+      "he": "האר\"י ז\"ל",
+      "en": "the ARI",
+      "target": "o Ari",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "o Ari 4 (I4 P0) · ARI 0 (I0 P0)",
+      "note": "ז\"ל dropped.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "בעל הסולם",
+      "en": "Baal HaSulam",
+      "target": "Baal HaSulam",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Baal HaSulam 0 (I0 P0)",
+      "note": "Not named in these texts; the UI uses it.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "רבי / ר'",
+      "en": "Rabbi",
+      "target": "Rabino",
+      "officialCount": 43,
+      "status": "OFFICIAL",
+      "evidence": "Rabino 43 (I41 P2) · Rabi 2 (I2 P0)",
+      "note": "43 : 2.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "רשב\"י",
+      "en": "Rabbi Shimon Bar Yochai",
+      "target": "Rabino Shimon Bar Yochai",
+      "officialCount": 12,
+      "status": "OFFICIAL",
+      "evidence": "Rabino Shimon Bar Yochai 12 (I12 P0)",
+      "note": "Rabino Shimon attested (12); Bar Yochai PROPOSED.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "הרח\"ו",
+      "en": "Rav Chaim Vital",
+      "target": "Rabino Chaim Vital",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "Rabino Chaim Vital 4 (I4 P0)",
+      "note": "",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "עץ חיים / ע\"ח",
+      "en": "Etz Chaim",
+      "target": "A Árvore da Vida",
+      "officialCount": 7,
+      "status": "OFFICIAL",
+      "evidence": "A Árvore da Vida 7 (I7 P0) · Etz Chaim 0 (I0 P0)",
+      "note": "Title, italic-free. Gate N → Portão N (§2.9).",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "הזהר",
+      "en": "The Zohar",
+      "target": "o Zohar",
+      "officialCount": 15,
+      "status": "OFFICIAL",
+      "evidence": "o Zohar 15 (I14 P1) · Zóhar 0 (I0 P0)",
+      "note": "\"o Livro do Zohar\" (2), \"do Zohar\".",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "התיקונים / תיקוני זהר",
+      "en": "the Tikkunim",
+      "target": "os Tikkunim do Zohar",
+      "officialCount": 4,
+      "status": "OFFICIAL",
+      "evidence": "os Tikkunim do Zohar 4 (I4 P0) · Tikunim 0 (I0 P0)",
+      "note": "",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "תיקון N (תקוני זהר)",
+      "en": "Tikkun N",
+      "target": "Tikun N",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Tikun N 1 (I1 P0)",
+      "note": "\"(Tikun 30)\", Intro.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "מבוא שערים",
+      "en": "Mevo She'arim",
+      "target": "Mevo Shearim",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Mevo Shearim 0 (I0 P0)",
+      "note": "Formed like Shaar HaHakdamot.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "שער הכוונות",
+      "en": "Sha'ar HaKavanot",
+      "target": "Shaar HaKavanot",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Shaar HaKavanot 0 (I0 P0)",
+      "note": "Formed like Shaar HaHakdamot.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "שער ההקדמות",
+      "en": "Sha'ar HaHakdamot",
+      "target": "Shaar HaHakdamot",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Shaar HaHakdamot 1 (I1 P0)",
+      "note": "BB glosses (Portão das Introduções).",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "אדרא זוטא",
+      "en": "Idra Zuta",
+      "target": "Idra Zuta",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Idra Zuta 0 (I0 P0)",
+      "note": "",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "אד\"ר",
+      "en": "the Idra Rabba",
+      "target": "a Idra Raba",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "a Idra Raba 0 (I0 P0)",
+      "note": "Formed like Bereshit Raba (BB).",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "ספר יצירה",
+      "en": "Sefer Yetzira",
+      "target": "o Sefer Yetzira",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "o Sefer Yetzira 1 (I1 P0) · Livro da Criação 2 (I1 P1)",
+      "note": "Gloss once (Livro da Criação).",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "אדם הראשון / אה\"ר",
+      "en": "Adam HaRishon",
+      "target": "Adam HaRishon",
+      "officialCount": 8,
+      "status": "OFFICIAL",
+      "evidence": "Adam HaRishon 8 (I1 P7) · Adão 6 (I0 P6)",
+      "note": "8 : 6 (Adão in the Pticha's narrative passages).",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "הקב\"ה / השי\"ת",
+      "en": "the Creator",
+      "target": "o Criador",
+      "officialCount": 134,
+      "status": "OFFICIAL",
+      "evidence": "o Criador 134 (I128 P6)",
+      "note": "",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "חז\"ל",
+      "en": "our sages",
+      "target": "nossos sábios",
+      "officialCount": 41,
+      "status": "OFFICIAL",
+      "evidence": "nossos sábios 41 (I39 P2)",
+      "note": "",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "שכינה",
+      "en": "the Shechina",
+      "target": "a Shechinah",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "a Shechinah 3 (I3 P0)",
+      "note": "Gloss once: a Santa Divindade (Shechinah).",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "משנה / גמרא / תלמוד",
+      "en": "Mishna / Gemara / Talmud",
+      "target": "Mishna / Gemara / Talmude",
+      "officialCount": 27,
+      "status": "OFFICIAL",
+      "evidence": "Mishna / Gemara / Talmude 27 (I27 P0) · Talmud 1 (I1 P0)",
+      "note": "Talmude (6) for the work; Talmud only in the title Talmud Eser Sefirot.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "ז\"ל, זצ\"ל, זיע\"א, ית', ב\"ה",
+      "en": "honorifics",
+      "target": "(dropped)",
+      "officialCount": 0,
+      "status": "OFFICIAL",
+      "evidence": "(dropped) 0 (I0 P0)",
+      "note": "Same rule as the English run; BB drops them.",
+      "group": "2.8 Names, books, honorifics"
+    },
+    {
+      "he": "ד\"ה",
+      "en": "the passage beginning",
+      "target": "o trecho que começa com “…”",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "o trecho que começa com “…” 0 (I0 P0)",
+      "note": "BB never renders ד\"ה (Intro, 72 in Hebrew: all dropped). Catchword in “…”.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "עש\"ה",
+      "en": "study it there well",
+      "target": "estude bem ali",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "estude bem ali 0 (I0 P0)",
+      "note": "BB drops it (41 in Hebrew). Imperative você-form, as BB's \"Saiba\" (15), \"Lembre\" (5).",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "ע\"ש",
+      "en": "See there",
+      "target": "veja ali",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "veja ali 0 (I0 P0)",
+      "note": "BB drops it. Two senses: ע\"ש = על שם → \"recebe o nome de\".",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "עכ\"ל",
+      "en": "End of quote",
+      "target": "Fim da citação.",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Fim da citação. 0 (I0 P0)",
+      "note": "BB drops it (Intro 6×).",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "וז\"ל",
+      "en": "and these are his words",
+      "target": "e estas são suas palavras:",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "e estas são suas palavras: 0 (I0 P0)",
+      "note": "BB drops it (Intro 4×).",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "אכמ\"ל",
+      "en": "this is not the place to elaborate",
+      "target": "aqui não é o lugar para se estender",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "aqui não é o lugar para se estender 0 (I0 P0)",
+      "note": "Not in I/P.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "דף N",
+      "en": "page N",
+      "target": "p. N",
+      "officialCount": 10,
+      "status": "OFFICIAL",
+      "evidence": "p. N 10 (I10 P0) · página N 0 (I0 P0)",
+      "note": "BB: \"p 31b\", \"p. 3\" (10; 8 without the dot). Write p. with the dot. Gematria → Arabic numerals, thousand rule as in English.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "אות N",
+      "en": "item N",
+      "target": "item N",
+      "officialCount": 90,
+      "status": "OFFICIAL",
+      "evidence": "item N 90 (I0 P90) · Item N 26 (I4 P22)",
+      "note": "Lower-case (90 : 26). Plural itens (5 : 2): \"itens 89-94\". אות = letter → a letra.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "תשובה N",
+      "en": "answer N",
+      "target": "resposta N",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "resposta N 0 (I0 P0)",
+      "note": "Lower-case like item. The numeral keeps out תשובה = repentance (arrependimento).",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "שאלה N",
+      "en": "question N",
+      "target": "pergunta N",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "pergunta N 0 (I0 P0)",
+      "note": "As resposta.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "חלק N",
+      "en": "Part N",
+      "target": "Parte N",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Parte N 0 (I0 P0)",
+      "note": "Capitalized like the UI (\"Parte 1, Capítulo 1\").",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "פרק N",
+      "en": "chapter N",
+      "target": "Capítulo N",
+      "officialCount": 2,
+      "status": "OFFICIAL",
+      "evidence": "Capítulo N 2 (I2 P0) · capítulo 1 (I1 P0)",
+      "note": "Capítulo 2 : capítulo 1. Also פ\"ו → Capítulo 6.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "שער N (Etz Chaim)",
+      "en": "Gate N",
+      "target": "Portão N",
+      "officialCount": 1,
+      "status": "OFFICIAL",
+      "evidence": "Portão N 1 (I1 P0)",
+      "note": "\"(Portão 48, Capítulo Três)\", Intro. Write the numeral.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "כנ\"ל / הנ\"ל",
+      "en": "as mentioned above",
+      "target": "mencionado acima",
+      "officialCount": 10,
+      "status": "OFFICIAL",
+      "evidence": "mencionado acima 10 (I2 P8) · acima mencionado 1 (I0 P1)",
+      "note": "Agree in gender/number. BB often turns \"כנ\"ל באות X\" into \"(item X)\".",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "עי' / עיין",
+      "en": "see",
+      "target": "veja",
+      "officialCount": 7,
+      "status": "OFFICIAL",
+      "evidence": "veja 7 (I7 P0)",
+      "note": "",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "וכו'",
+      "en": "etc.",
+      "target": "etc.",
+      "officialCount": 16,
+      "status": "OFFICIAL",
+      "evidence": "etc. 16 (I6 P10)",
+      "note": "",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "inline (ב)",
+      "en": "(2)",
+      "target": "(2)",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "(2) 0 (I0 P0)",
+      "note": "Keep them, gematria → Arabic numerals, exactly as the English run.",
+      "group": "2.9 Citation formulae"
+    },
+    {
+      "he": "י' / יו\"ד",
+      "en": "Yod",
+      "target": "Yod",
+      "officialCount": 11,
+      "status": "OFFICIAL",
+      "evidence": "Yod 11 (I1 P10)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ה' (letter)",
+      "en": "Hey",
+      "target": "Hey",
+      "officialCount": 36,
+      "status": "OFFICIAL",
+      "evidence": "Hey 36 (I0 P36) · Heh 2 (I0 P2)",
+      "note": "36 : 2.",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ו' / וי\"ו",
+      "en": "Vav",
+      "target": "Vav",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "Vav 9 (I0 P9)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "א' / אל\"ף",
+      "en": "Aleph",
+      "target": "Alef",
+      "officialCount": 60,
+      "status": "OFFICIAL",
+      "evidence": "Alef 60 (I0 P60) · Aleph 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ב'",
+      "en": "Bet",
+      "target": "Bet",
+      "officialCount": 78,
+      "status": "OFFICIAL",
+      "evidence": "Bet 78 (I0 P78)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ג'",
+      "en": "Gimel",
+      "target": "Guimel",
+      "officialCount": 49,
+      "status": "OFFICIAL",
+      "evidence": "Guimel 49 (I0 P49) · Gimel 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ד'",
+      "en": "Dalet",
+      "target": "Dalet",
+      "officialCount": 122,
+      "status": "OFFICIAL",
+      "evidence": "Dalet 122 (I0 P122)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ז'",
+      "en": "Zayin",
+      "target": "Zayin",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Zayin 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ע' / עין",
+      "en": "Ayin",
+      "target": "Ayin",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Ayin 0 (I0 P0)",
+      "note": "The Eye (עין) → olho; Eynaim.",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ח' ט' כ' ל' מ' נ' ס' פ' צ' ק' ר' ש' ת'",
+      "en": "Het … Tav",
+      "target": "Het, Tet, Kaf, Lamed, Mem, Nun, Samech, Peh, Tzadi, Kuf, Resh, Shin, Tav",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Het, Tet, Kaf, Lamed, Mem, Nun, Samech, Peh, Tzadi, Kuf, Resh, Shin, Tav 0 (I0 P0)",
+      "note": "BB's letter scheme (Alef, Bet, Guimel, Dalet, Hey, Vav, Yod).",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "חולם",
+      "en": "Holam",
+      "target": "Holam",
+      "officialCount": 9,
+      "status": "OFFICIAL",
+      "evidence": "Holam 9 (I0 P9)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "שורק / מלאפום",
+      "en": "Shuruk / Melafum",
+      "target": "Shuruk / Melafom",
+      "officialCount": 14,
+      "status": "OFFICIAL",
+      "evidence": "Shuruk / Melafom 14 (I0 P14)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "חירק",
+      "en": "Hirik",
+      "target": "Hirik",
+      "officialCount": 8,
+      "status": "OFFICIAL",
+      "evidence": "Hirik 8 (I0 P8)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "קמץ, פתח",
+      "en": "Kamatz, Patach",
+      "target": "Kamatz, Patach",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Kamatz, Patach 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "צירי, סגול, שבא, קבוץ",
+      "en": "Tzere, Segol, Shva, Kubutz",
+      "target": "Tzere, Segol, Shva, Kubutz",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Tzere, Segol, Shva, Kubutz 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "ניקוד",
+      "en": "Nikud",
+      "target": "Nikud",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Nikud 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "גימטריא",
+      "en": "Gematria",
+      "target": "Gematria",
+      "officialCount": 3,
+      "status": "OFFICIAL",
+      "evidence": "Gematria 3 (I2 P1)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "עם הכולל / ע\"ה",
+      "en": "with the kollel",
+      "target": "com o Kolel",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "com o Kolel 0 (I0 P0)",
+      "note": "",
+      "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "אהי\"ה",
+      "en": "EKYE",
+      "target": "EKYE",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "EKYE 0 (I0 P0)",
+      "note": "English-style acronym, as BB writes KHB, HGT.",
+      "group": "2.10 Letters, vowel points, numerology"
+    }
+  ]
+}

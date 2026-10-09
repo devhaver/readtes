@@ -1,0 +1,7927 @@
+{
+  "language": "fr",
+  "quotes": {
+    "open": "«",
+    "close": "»",
+    "innerOpen": "‘",
+    "innerClose": "’",
+    "note": "No-break space (U+00A0) inside the guillemets; typographic apostrophe ’; straight \" never. Space before : ; ? ! (French typography)."
+  },
+  "required": [
+    {
+      "he": "ד\"ה",
+      "heRegex": "(?<![א-ת])ד\"ה(?![א-ת])",
+      "pattern": "(?i)passage commençant par",
+      "why": "PROPOSED. BB drops ד״ה (or converts the page into Partie/point); our pipeline keeps the page, so the catchword must be introduced: « page 397, passage commençant par « AVI » »."
+    },
+    {
+      "he": "עש\"ה",
+      "heRegex": "(?<![א-ת])עש\"ה(?![א-ת])",
+      "pattern": "(?i)étudiez-le bien là-bas",
+      "why": "PROPOSED. BB omits it (Préface: 18 Hebrew occurrences, 0 rendered)."
+    },
+    {
+      "he": "ע\"ש",
+      "heRegex": "(?<![א-ת])ו?ע\"ש(?![א-ת])",
+      "pattern": "(?i)voir là-bas",
+      "why": "PROPOSED. BB omits it."
+    },
+    {
+      "he": "עכ\"ל",
+      "heRegex": "(?<![א-ת])ו?עכ\"ל(?![א-ת])",
+      "pattern": "(?i)fin de citation",
+      "why": "PROPOSED. BB closes the guillemets without a formula."
+    },
+    {
+      "he": "וז\"ל",
+      "heRegex": "(?<![א-ת])וז\"ל(?![א-ת])",
+      "pattern": "(?i)et je cite\\s?:",
+      "why": "BB Introduction §19 renders וזה לשונו « et je cite : » (1)."
+    },
+    {
+      "he": "אכמ\"ל",
+      "heRegex": "(?<![א-ת])ו?אכמ\"ל(?![א-ת])",
+      "pattern": "(?i)n['’]est pas nécessaire de s['’]étendre ici",
+      "why": "BB TES p6 ch. 35 renders ואין זה מקום להאריך « il n’est pas nécessaire de s’étendre ici » (1)."
+    },
+    {
+      "he": "דף",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}דף\\s+\\(?[א-ת]{1,4}[\"\\'״׳][א-ת]?\\)?",
+      "pattern": "(?i)\\bpages? \\d",
+      "why": "Page citations: « page N » in Arabic numerals (BB Introduction: page 30, page 119, page 6b). Pages past 999 written in full."
+    },
+    {
+      "he": "אות",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}אות\\s+\\(?[א-ת]{1,4}[\"\\'״׳][א-ת]?\\)?",
+      "pattern": "(?i)\\bpoints? \\d",
+      "why": "Item citations: BB « (Point 35) » 113, « point N » 25; never item/paragraphe/article. אות can also mean letter — read the sentence before obeying the gate."
+    },
+    {
+      "he": "תשובה",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}תשובה\\s+\\(?[א-ת]{1,4}[\"\\'״׳][א-ת]?\\)?",
+      "pattern": "(?i)\\bréponses? \\d",
+      "why": "PROPOSED « réponse N » (BB: « le tableau des réponses »; UI « Réponses »)."
+    },
+    {
+      "he": "חלק",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}חלק\\s+\\(?[א-ת]{1,4}[\"\\'״׳][א-ת]?\\)?",
+      "pattern": "(?i)\\bparties? \\d",
+      "why": "BB TES p6: « (Partie 5, Lumière intérieure, point 40) »."
+    },
+    {
+      "he": "פרק",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}פרק\\s+\\(?[א-ת]{1,4}[\"\\'״׳][א-ת]?\\)?",
+      "pattern": "(?i)\\bchapitres? \\d",
+      "why": "BB TES p6: « Chapitre 5 »."
+    },
+    {
+      "he": "הרב",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}הרב(?![א-ת])",
+      "pattern": "\\bARI\\b",
+      "why": "In TES הרב is the ARI: « le ARI » (no elision). BB TES p6 does this in 5/5 aligned items. (In BB’s Introduction הרב is R. Haim Vital, « le Rav » — not TES usage.)"
+    },
+    {
+      "he": "האר\"י",
+      "heRegex": "(?<![א-ת])[ובלמה]{0,2}האר\"י(?![א-ת])",
+      "pattern": "\\bARI\\b",
+      "why": "« le ARI », honorific dropped."
+    },
+    {
+      "he": "באו\"פ",
+      "heRegex": "באו\"פ",
+      "pattern": "(?i)Lumière intérieure|\\bOhr Pnimi\\b",
+      "why": "Two senses: the commentary cited by name → « Lumière intérieure » (BB TES p6 8, UI); the light itself (« le Bitouch de Ohr Makif dans Ohr Pnimi ») → « Ohr Pnimi ». The gate only checks that one of them is present."
+    },
+    {
+      "he": "בהסתכלות פנימית",
+      "heRegex": "הסתכלות פנימית|הסת\"פ",
+      "pattern": "(?i)Regard intérieur",
+      "why": "BB Intro: « Histaklout Pnimit [Regard intérieur] ». Flagged against the UI’s « Observation intérieure »."
+    },
+    {
+      "he": "מסך",
+      "heRegex": "מסך",
+      "pattern": "\\bMassakh\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 62/62, TES p6 0/4. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "עביות",
+      "heRegex": "עביות",
+      "pattern": "\\bAviout\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 49/49, TES p6 0/1. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "זווג",
+      "heRegex": "זו?וג",
+      "pattern": "\\bZivou|accoupl",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 56/56, TES p6 3/6. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "רשימו",
+      "heRegex": "רשימו(?!ת)",
+      "pattern": "\\bRechimo\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 8/8, TES p6 1/1. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "רשימות",
+      "heRegex": "רשימות",
+      "pattern": "\\bRechimot\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 18/18. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "צמצום",
+      "heRegex": "צמצום",
+      "pattern": "\\bTsimtsoum\\b|restriction|restrein",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 42/42, Intro 1/1, TES p6 9/9. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "פרצוף",
+      "heRegex": "פרצוף|פרצופים",
+      "pattern": "\\bPartsouf",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 91/91, Intro 1/1, TES p6 0/5. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "ספירות",
+      "heRegex": "ספירות|ספירה|ע\"ס",
+      "pattern": "\\bSefir",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 96/97, Intro 5/5, TES p6 6/6. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "אצילות",
+      "heRegex": "אצילות",
+      "pattern": "\\bAtsilout\\b|(?i:émanation)",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 69/72, Intro 14/14, TES p6 1/14. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "מלכות",
+      "heRegex": "מלכות",
+      "pattern": "\\bMalkhout\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 58/58, Intro 1/1, TES p6 5/5. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "טבור",
+      "heRegex": "טבור",
+      "pattern": "\\bTabour\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 40/40, TES p6 23/23. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "פרסא",
+      "heRegex": "פרסא",
+      "pattern": "\\bParsa\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 22/22, TES p6 12/12. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "מוחין",
+      "heRegex": "מוחין",
+      "pattern": "\\bMokhin\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 38/38, TES p6 6/6. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "נקודים",
+      "heRegex": "נקודים",
+      "pattern": "\\bNikoudim\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 61/63, TES p6 0/22. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "אור חוזר",
+      "heRegex": "אור חוזר|או\"ח(?!ס)",
+      "pattern": "\\bOhr Hozer\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 18/19. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "אור מקיף",
+      "heRegex": "אור מקיף|או\"מ",
+      "pattern": "\\bOhr Makif\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 21/21. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "חזה",
+      "heRegex": "(?<![א-ת])[ובלמהד]{0,2}חזה(?![א-ת])",
+      "pattern": "\\bKhaz[ée]\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 26/26, TES p6 0/7. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "אח\"פ",
+      "heRegex": "אח\"פ",
+      "pattern": "\\bAHP\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 40/40, TES p6 17/17. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "זו\"ן",
+      "heRegex": "זו\"ן",
+      "pattern": "\\bZON\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 52/52, TES p6 12/12. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "או\"א",
+      "heRegex": "או\"א",
+      "pattern": "\\bAVI\\b|\\bAbba\\b|\\bIma\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 52/52, TES p6 7/16. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "ישסו\"ת",
+      "heRegex": "ישסו\"ת",
+      "pattern": "\\bYESHOUT\\b",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 23/23, TES p6 0/4. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "ה\"ת",
+      "heRegex": "ה\"ת",
+      "pattern": "Hey inf[ée]rieur",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 17/18, TES p6 4/4. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "בחי\"ד",
+      "heRegex": "בחי\"ד",
+      "pattern": "Bekhina Dalet",
+      "why": "Only the abbreviation: spelled-out בחינה ד׳ is also the Introduction’s non-technical « quatrième discernement » (of love, of Providence). BB recall on aligned sections (Hebrew has the term → French has the form): Préface 45/45, Intro 0/2, TES p6 0/2. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "כלים",
+      "heRegex": "(?<![א-ת])[ובלמהד]{0,2}כלים(?![א-ת])",
+      "pattern": "\\bKélim\\b|(?i:récipients)",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 61/61, Intro 1/1, TES p6 0/22. TES p6 uses other forms where it fails."
+    },
+    {
+      "he": "כלי",
+      "heRegex": "(?<![א-ת])[ובלמהד]{0,2}כלי(?![א-ת])",
+      "pattern": "\\bKli\\b|(?i:récipient)",
+      "why": "BB recall on aligned sections (Hebrew has the term → French has the form): Préface 33/33, Intro 1/2, TES p6 0/12. TES p6 uses other forms where it fails."
+    }
+  ],
+  "banned": [
+    {
+      "pattern": "\\bZivug(?:im)?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Zivoug (97 official)."
+    },
+    {
+      "pattern": "\\bMasa(?:ch|kh)\\b|\\bMassach\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Massakh (242 official)."
+    },
+    {
+      "pattern": "\\bAviut\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Aviout (180 official)."
+    },
+    {
+      "pattern": "\\bPart[sz]uf(?:im)?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Partsouf / Partsoufim (469 official)."
+    },
+    {
+      "pattern": "\\bT[sz]imt[sz]um\\b|\\bTzimtzoum\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Tsimtsoum (68 official)."
+    },
+    {
+      "pattern": "\\bReshimot?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Rechimo / Rechimot (70 official)."
+    },
+    {
+      "pattern": "\\bBe(?:c)?hin(?:a|ot|at)\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Bekhina / phase (314 official)."
+    },
+    {
+      "pattern": "\\bMal(?:ch|kh|h)ut\\b|\\bMalchout\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Malkhout (173 official)."
+    },
+    {
+      "pattern": "\\bCho[ck]h?mah?\\b|\\bHokhmah\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Hokhma (153 official)."
+    },
+    {
+      "pattern": "\\bGe?vurah?\\b|\\bGevoura\\b|\\bGvoura\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Guevoura (14 official)."
+    },
+    {
+      "pattern": "\\bHesed\\b|\\bChesed\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Hessed (25 official)."
+    },
+    {
+      "pattern": "\\bYesod\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Yessod (29 official)."
+    },
+    {
+      "pattern": "\\bTiferet\\b|\\bTiphereth?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Tifferet (83 official)."
+    },
+    {
+      "pattern": "\\bNetzach\\b|\\bNetzakh\\b|\\bNetsah\\b|\\bNetsach\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Netsakh (15 official)."
+    },
+    {
+      "pattern": "\\bKelim\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Kélim (181 official)."
+    },
+    {
+      "pattern": "\\bAt[sz]ilut\\b|\\bAtziluth\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Atsilout (225 official)."
+    },
+    {
+      "pattern": "\\bBeri[ay]ah?\\b|\\bBriyah\\b|\\bBriah\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Briya (66 official)."
+    },
+    {
+      "pattern": "\\bYetzirah?\\b|\\bYetsirah\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Yetsira (66 official)."
+    },
+    {
+      "pattern": "\\bAssiyah\\b|\\bAsiyah?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Assiya (46 official)."
+    },
+    {
+      "pattern": "\\bNekud(?:im|ot|a|ah)\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Nikoudim / Nekoudot / Nekouda (261 official)."
+    },
+    {
+      "pattern": "\\bAkudim\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Akoudim (11 official)."
+    },
+    {
+      "pattern": "\\bTabur\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Tabour (160 official)."
+    },
+    {
+      "pattern": "\\bSiyum\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Sioum (46 official)."
+    },
+    {
+      "pattern": "\\bGuf(?:im)?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Gouf / Goufim (247 official)."
+    },
+    {
+      "pattern": "\\bChazeh?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Khazé (67 official)."
+    },
+    {
+      "pattern": "\\bNukva\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Noukva (53 official)."
+    },
+    {
+      "pattern": "\\b(?:Katnut|Gadlut)\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Katnout / Gadlout (70 official)."
+    },
+    {
+      "pattern": "\\bMochin\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Mokhin (106 official)."
+    },
+    {
+      "pattern": "\\bIbur\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Ibour (14 official)."
+    },
+    {
+      "pattern": "\\bTikk?un(?:im)?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write correction / Tikoun / Tikounim (46 official)."
+    },
+    {
+      "pattern": "\\bKelipot\\b|\\bKlipoth\\b|\\bQliphoth\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Klipot (18 official)."
+    },
+    {
+      "pattern": "\\bOr (?:Hozer|Makif|Pnimi|Yashar|Hokhma|Hassadim)\\b|\\bOhr Chozer\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Ohr Hozer / Ohr Makif / … (141 official)."
+    },
+    {
+      "pattern": "\\bYe(?:ch|h)ida\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Yekhida (41 official)."
+    },
+    {
+      "pattern": "\\bRu(?:ach|akh)\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Rouakh (22 official)."
+    },
+    {
+      "pattern": "\\bChaya\\b|\\bHayah\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Haya (43 official)."
+    },
+    {
+      "pattern": "Baal HaSulam",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Baal HaSoulam (2 official)."
+    },
+    {
+      "pattern": "\\bKabbalah?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Kabbale (40 official)."
+    },
+    {
+      "pattern": "\\b[lL]['’]\\s?ARI\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write le ARI / du ARI (21 official)."
+    },
+    {
+      "pattern": "\\bd['’]\\s?(?:AK|AA|AHP|AVI)\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write de AK / de AA / de AHP / de AVI (475 official)."
+    },
+    {
+      "pattern": "\\bSe(?:ph|f)iroth\\b|\\bSephirot\\b|\\bSéfirot\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Sefirot (294 official)."
+    },
+    {
+      "pattern": "\\bYESHSUT\\b|\\bYeshsut\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write YESHOUT (34 official)."
+    },
+    {
+      "pattern": "\\bHasadim\\b|\\bChass?adim\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Hassadim (26 official)."
+    },
+    {
+      "pattern": "\\bHit(?:lab|pa)shut\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write revêtement / Hitlabchout; expansion (21 official)."
+    },
+    {
+      "pattern": "\\bHizdakchut\\b|\\bHizdakhut\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Hizdakhout (24 official)."
+    },
+    {
+      "pattern": "\\bBitush(?:im)?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Bitouch (27 official)."
+    },
+    {
+      "pattern": "\\bAwzen\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Ozen (52 official)."
+    },
+    {
+      "pattern": "\\bEyn Sof\\b|\\bEin Soph\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Ein Sof (37 official)."
+    },
+    {
+      "pattern": "\\bNukvin\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Mayin Noukvin (4 official)."
+    },
+    {
+      "pattern": "\\bShe?vira\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write brisure (22 official)."
+    },
+    {
+      "pattern": "Émanateur",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Emanateur (20 official)."
+    },
+    {
+      "pattern": "\\bDe?vekut\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Dvékout (4 official)."
+    },
+    {
+      "pattern": "\\bAc?horaim\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Akhoraim (40 official)."
+    },
+    {
+      "pattern": "\\bBAN\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write BON (59 official)."
+    },
+    {
+      "pattern": "\\bKedushah?\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Kedoucha (18 official)."
+    },
+    {
+      "pattern": "\\bSefirah\\b",
+      "why": "0 in BB French (Introduction + Préface + TES partie 6); write Sefira (41 official)."
+    }
+  ],
+  "terms": [
+    {
+      "he": "אור",
+      "en": "light",
+      "target": "lumière",
+      "officialCount": 526,
+      "note": "Translated, lower case (lumière 377 / Lumière 149 — capital only inside « Lumière Supérieure » and BB's headings). « Ohr » only as the first word of a named light (Ohr Hozer, Ohr Makif …).",
+      "id": "or",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "lumière",
+          "count": 526,
+          "bySource": {
+            "I": 81,
+            "P": 294,
+            "T": 151
+          }
+        },
+        {
+          "form": "Ohr (bare, outside a named light)",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אורות",
+      "en": "lights",
+      "target": "lumières",
+      "officialCount": 163,
+      "note": "Plural of lumière.",
+      "id": "orot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "lumières",
+          "count": 163,
+          "bySource": {
+            "I": 9,
+            "P": 96,
+            "T": 58
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור עליון",
+      "en": "upper light",
+      "target": "la Lumière Supérieure",
+      "officialCount": 46,
+      "note": "Most frequent single spelling; BB capitalises both words. Do not write « la lumière supérieure » (lower case is attested but minority).",
+      "id": "or-elyon",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Lumière Supérieure",
+          "count": 46,
+          "bySource": {
+            "I": 0,
+            "P": 46,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière Supérieure",
+          "count": 18,
+          "bySource": {
+            "I": 0,
+            "P": 18,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière supérieure",
+          "count": 19,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 5
+          }
+        },
+        {
+          "form": "Lumière supérieure",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "כלי",
+      "en": "vessel",
+      "target": "Kli",
+      "officialCount": 110,
+      "note": "Transliterated and capitalised. Gloss on first use: Kli (récipient). In fixed compounds BB says récipient: see kli-kabbala, shvirat-hakelim.",
+      "id": "kli",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Kli",
+          "count": 110,
+          "bySource": {
+            "I": 1,
+            "P": 109,
+            "T": 0
+          }
+        },
+        {
+          "form": "kli (TES p6, lower case)",
+          "count": 41,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 41
+          }
+        },
+        {
+          "form": "récipient",
+          "count": 16,
+          "bySource": {
+            "I": 1,
+            "P": 15,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "כלים",
+      "en": "vessels",
+      "target": "Kélim",
+      "officialCount": 181,
+      "note": "With the accent: Kélim. Gloss once: Kélim (pluriel de Kli).",
+      "id": "kelim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Kélim",
+          "count": 181,
+          "bySource": {
+            "I": 3,
+            "P": 178,
+            "T": 0
+          }
+        },
+        {
+          "form": "kelim (TES p6)",
+          "count": 53,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 53
+          }
+        },
+        {
+          "form": "récipients",
+          "count": 29,
+          "bySource": {
+            "I": 1,
+            "P": 28,
+            "T": 0
+          }
+        },
+        {
+          "form": "Kelim (no accent)",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "כלי קבלה",
+      "en": "vessel of reception",
+      "target": "récipient de réception",
+      "officialCount": 23,
+      "note": "BB translates כלי inside this compound (23:4).",
+      "id": "kli-kabbala",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "récipient(s) de réception",
+          "count": 23,
+          "bySource": {
+            "I": 0,
+            "P": 23,
+            "T": 0
+          }
+        },
+        {
+          "form": "Kli de réception",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 2
+          }
+        },
+        {
+          "form": "Kélim de réception",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "מסך",
+      "en": "screen",
+      "target": "Massakh",
+      "officialCount": 242,
+      "note": "Masculine: le Massakh (225:0).",
+      "id": "masach",
+      "status": "OFFICIAL",
+      "gloss": "Massakh [écran]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Massakh",
+          "count": 242,
+          "bySource": {
+            "I": 0,
+            "P": 242,
+            "T": 0
+          }
+        },
+        {
+          "form": "écran",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 6
+          }
+        }
+      ]
+    },
+    {
+      "he": "עביות",
+      "en": "coarseness",
+      "target": "Aviout",
+      "officialCount": 180,
+      "note": "Feminine (l'Aviout restante). Articles elide: l'Aviout (90).",
+      "id": "aviut",
+      "status": "OFFICIAL",
+      "gloss": "Aviout [épaisseur]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Aviout",
+          "count": 180,
+          "bySource": {
+            "I": 0,
+            "P": 180,
+            "T": 0
+          }
+        },
+        {
+          "form": "épaisseur",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 1
+          }
+        },
+        {
+          "form": "grossièreté",
+          "count": 2,
+          "bySource": {
+            "I": 1,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עב",
+      "en": "coarse",
+      "target": "épais (plus épais)",
+      "officialCount": 3,
+      "note": "« Bekhina Bet est un peu plus épaisse … » (Préface §19). Adjective only; the noun is Aviout.",
+      "id": "av",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "épais/épaisse",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "זכות",
+      "en": "refinement",
+      "target": "pureté",
+      "officialCount": 4,
+      "note": "Technical sense (Préface §18: « son Aviout se transforme en pureté »). Distinct from הזדככות (Hizdakhout). In the Introduction זכות is « mérite » (merit) — a different sense; read the sentence.",
+      "id": "zakut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "pureté",
+          "count": 4,
+          "bySource": {
+            "I": 2,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "זך",
+      "en": "refined",
+      "target": "pur (plus pur)",
+      "officialCount": 12,
+      "note": "« la plus pure », « le Kli le plus pur ».",
+      "id": "zach",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "pur/pure",
+          "count": 12,
+          "bySource": {
+            "I": 6,
+            "P": 6,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הזדככות",
+      "en": "refinement",
+      "target": "Hizdakhout",
+      "officialCount": 24,
+      "note": "Noun transliterated; the verb is translated: se purifier (« le Massakh se purifie »).",
+      "id": "hizdakchut",
+      "status": "OFFICIAL",
+      "gloss": "Hizdakhout [purification]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hizdakhout",
+          "count": 24,
+          "bySource": {
+            "I": 0,
+            "P": 24,
+            "T": 0
+          }
+        },
+        {
+          "form": "Hizdakkout / Hisdakhout (typos)",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "purification",
+          "count": 17,
+          "bySource": {
+            "I": 4,
+            "P": 13,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רשימו",
+      "en": "record",
+      "target": "Rechimo",
+      "officialCount": 34,
+      "note": "Masculine (le Rechimo 29). Plural: Rechimot (see reshimot-plural).",
+      "id": "reshimo",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Rechimo",
+          "count": 34,
+          "bySource": {
+            "I": 0,
+            "P": 32,
+            "T": 2
+          }
+        },
+        {
+          "form": "Reshimo",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "זווג",
+      "en": "coupling",
+      "target": "Zivoug",
+      "officialCount": 97,
+      "note": "Masculine (le Zivoug 71). Plural Zivouguim (2:1). The verb is translated: s'accoupler (« la Lumière Supérieure s'accouple avec le Massakh »); « Malkhout d'accouplement » = מלכות המזדווגת.",
+      "id": "zivug",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Zivoug",
+          "count": 97,
+          "bySource": {
+            "I": 0,
+            "P": 97,
+            "T": 0
+          }
+        },
+        {
+          "form": "Zivouguim (pl.)",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "Zivougim (pl.)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "couplage (TES p6)",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 14
+          }
+        },
+        {
+          "form": "accouplement",
+          "count": 20,
+          "bySource": {
+            "I": 0,
+            "P": 12,
+            "T": 8
+          }
+        }
+      ]
+    },
+    {
+      "he": "הכאה",
+      "en": "striking",
+      "target": "Hakaa (in Zivoug de Hakaa); otherwise coup / frappe",
+      "officialCount": 52,
+      "note": "Free-standing striking is translated: le coup, la frappe; « frapper le Massakh ».",
+      "id": "hakaa",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hakaa",
+          "count": 52,
+          "bySource": {
+            "I": 0,
+            "P": 52,
+            "T": 0
+          }
+        },
+        {
+          "form": "coup(s)",
+          "count": 11,
+          "bySource": {
+            "I": 1,
+            "P": 10,
+            "T": 0
+          }
+        },
+        {
+          "form": "frappe/frapper",
+          "count": 15,
+          "bySource": {
+            "I": 1,
+            "P": 14,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "זווג דהכאה",
+      "en": "coupling by striking",
+      "target": "Zivoug de Hakaa",
+      "officialCount": 52,
+      "note": "Plural: les Zivouguim de Hakaa.",
+      "id": "zivug-dehakaa",
+      "status": "OFFICIAL",
+      "gloss": "Zivoug de Hakaa [accouplement par coup]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Zivoug de Hakaa",
+          "count": 52,
+          "bySource": {
+            "I": 0,
+            "P": 52,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עולם",
+      "en": "world",
+      "target": "monde",
+      "officialCount": 481,
+      "note": "Lower case; « le monde de Atsilout » (no elision before the name).",
+      "id": "olam",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "monde(s)",
+          "count": 481,
+          "bySource": {
+            "I": 225,
+            "P": 234,
+            "T": 22
+          }
+        },
+        {
+          "form": "Monde(s)",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 10,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "צמצום",
+      "en": "restriction",
+      "target": "Tsimtsoum",
+      "officialCount": 68,
+      "note": "Masculine (le Tsimtsoum 49). « restriction » survives in BB glosses and in TES p6; the binding term is Tsimtsoum. Verb: se restreindre.",
+      "id": "tzimtzum",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Tsimtsoum",
+          "count": 68,
+          "bySource": {
+            "I": 0,
+            "P": 68,
+            "T": 0
+          }
+        },
+        {
+          "form": "restriction",
+          "count": 27,
+          "bySource": {
+            "I": 3,
+            "P": 12,
+            "T": 12
+          }
+        }
+      ]
+    },
+    {
+      "he": "קו",
+      "en": "line",
+      "target": "ligne",
+      "officialCount": 18,
+      "note": "« la ligne de Ein Sof » (Préface §163). Translated, never Kav.",
+      "id": "kav",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "ligne(s)",
+          "count": 18,
+          "bySource": {
+            "I": 0,
+            "P": 11,
+            "T": 7
+          }
+        },
+        {
+          "form": "Kav",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עיגולים",
+      "en": "circles",
+      "target": "cercles",
+      "officialCount": 0,
+      "note": "No עיגולים in the evidence. Proposed on the pattern of קו → ligne (BB translates the geometric pair). Gloss once: cercles [Igoulim].",
+      "id": "igulim",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "cercle(s)",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Igoulim",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עיגול",
+      "en": "circle",
+      "target": "cercle",
+      "officialCount": 0,
+      "note": "As igulim.",
+      "id": "igul",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "cercle",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "יושר",
+      "en": "straightness",
+      "target": "droiture",
+      "officialCount": 0,
+      "note": "No יושר in the evidence. Proposed translation paired with cercles; « droit » in BB means right (side). Gloss once: droiture [Yosher].",
+      "id": "yosher",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "droiture",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Yosher",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הסתכלות פנימית",
+      "en": "Inner Observation",
+      "target": "Regard intérieur",
+      "officialCount": 1,
+      "note": "Title of the second commentary. BB's only translation of the title (Intro §156: « Histaklout Pnimit [Regard intérieur] »), and BB renders הסתכלות as regard (its 3 « observation » all mean keeping the Torah). CONFLICTS with the app UI and ToC (« Observation intérieure ») — see Traps.",
+      "id": "histaklut-pnimit",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Regard intérieur",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Histaklout Pnimit",
+          "count": 3,
+          "bySource": {
+            "I": 3,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Observation intérieure",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הסתכלות",
+      "en": "look",
+      "target": "regard (regarder)",
+      "officialCount": 12,
+      "note": "Technical « looking »: « le regard de Ayin », « elle regarde ces lumières de AHP ». BB never uses observation for הסתכלות; its 3 « observation » are the keeping of the Torah.",
+      "id": "histaklut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "regard/regarder",
+          "count": 12,
+          "bySource": {
+            "I": 3,
+            "P": 3,
+            "T": 6
+          }
+        },
+        {
+          "form": "observation (all 3 = « l’observation de la Torah », שמירה)",
+          "count": 3,
+          "bySource": {
+            "I": 3,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור פנימי",
+      "en": "inner light",
+      "target": "Ohr Pnimi (the light); Lumière intérieure (the commentary)",
+      "officialCount": 21,
+      "note": "Two senses. Technical light: Ohr Pnimi (Préface 21 vs lumière intérieure 3). The commentary layer cited by name: Lumière intérieure (TES p6 8 — every TES p6 use is the title; Intro gloss 1; the UI agrees) vs « Ohr Pnimi » as the title 3 (Intro).",
+      "id": "or-pnimi",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ohr Pnimi — the light (Préface)",
+          "count": 21,
+          "bySource": {
+            "P": 21
+          }
+        },
+        {
+          "form": "lumière intérieure — the light (Préface)",
+          "count": 3,
+          "bySource": {
+            "P": 3
+          }
+        },
+        {
+          "form": "Lumière intérieure — the commentary (TES p6)",
+          "count": 8,
+          "bySource": {
+            "T": 8
+          }
+        },
+        {
+          "form": "Ohr Pnimi — the commentary (Intro)",
+          "count": 3,
+          "bySource": {
+            "I": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור מקיף",
+      "en": "surrounding light",
+      "target": "Ohr Makif",
+      "officialCount": 46,
+      "note": "Feminine, like lumière: « cette Ohr Makif ».",
+      "id": "or-makif",
+      "status": "OFFICIAL",
+      "gloss": "Ohr Makif [Lumière Environnante]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ohr Makif",
+          "count": 46,
+          "bySource": {
+            "I": 0,
+            "P": 46,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière environnante",
+          "count": 6,
+          "bySource": {
+            "I": 1,
+            "P": 5,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור ישר",
+      "en": "direct light",
+      "target": "Ohr Yashar",
+      "officialCount": 2,
+      "note": "Near-tie (2:3) decided by the family rule: BB writes « Ohr X » for the named lights 141 times against 34 « lumière + qualifier » (Hozer 45:2 once T’s Hebel glosses are set aside, Makif 46:6, Pnimi 21:3, Hassadim 12:7).",
+      "id": "or-yashar",
+      "status": "OFFICIAL",
+      "gloss": "Ohr Yashar [lumière directe]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ohr Yashar",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière directe",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור חוזר",
+      "en": "reflected light",
+      "target": "Ohr Hozer",
+      "officialCount": 45,
+      "note": "Feminine: « la Ohr Hozer », « cette Ohr Hozer » (la/cette Ohr 8 : le/ce Ohr 0). 5 of the 7 « lumière(s) réfléchie(s) » are TES p6 glosses for הבל (Hebel), not אור חוזר.",
+      "id": "or-hozer",
+      "status": "OFFICIAL",
+      "gloss": "Ohr Hozer [Lumière Réfléchie]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ohr Hozer",
+          "count": 45,
+          "bySource": {
+            "I": 0,
+            "P": 45,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière réfléchie",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 5
+          }
+        }
+      ]
+    },
+    {
+      "he": "התלבשות",
+      "en": "clothing",
+      "target": "revêtement (verb: se revêtir); Hitlabchout only in Rechimo de Hitlabchout",
+      "officialCount": 27,
+      "note": "Distinct senses: the act of clothing = revêtement / se revêtir (« les lumières se revêtent dans les Kélim »); the record type = Rechimo de Hitlabchout, Bekhina Bet de Hitlabchout (BB transliterates only there).",
+      "id": "hitlabshut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "revêtement",
+          "count": 27,
+          "bySource": {
+            "I": 3,
+            "P": 20,
+            "T": 4
+          }
+        },
+        {
+          "form": "(se) revêtir — verb forms",
+          "count": 190,
+          "bySource": {
+            "I": 13,
+            "P": 149,
+            "T": 28
+          }
+        },
+        {
+          "form": "Hitlabchout",
+          "count": 21,
+          "bySource": {
+            "I": 0,
+            "P": 21,
+            "T": 0
+          }
+        },
+        {
+          "form": "Hitlabshout",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        },
+        {
+          "form": "habiller",
+          "count": 14,
+          "bySource": {
+            "I": 11,
+            "P": 0,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "ביטוש",
+      "en": "clash",
+      "target": "Bitouch",
+      "officialCount": 27,
+      "note": "« le Bitouch de Ohr Makif dans Ohr Pnimi ».",
+      "id": "bitush",
+      "status": "OFFICIAL",
+      "gloss": "Bitouch [frappe]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Bitouch",
+          "count": 27,
+          "bySource": {
+            "I": 0,
+            "P": 27,
+            "T": 0
+          }
+        },
+        {
+          "form": "Bitoush",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נאצל",
+      "en": "emanated being",
+      "target": "être émané",
+      "officialCount": 8,
+      "note": "",
+      "id": "neetzal",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "être(s) émané(s)",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "émané(e)(s)",
+          "count": 14,
+          "bySource": {
+            "I": 1,
+            "P": 12,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "מאציל",
+      "en": "Emanator",
+      "target": "Emanateur",
+      "officialCount": 20,
+      "note": "BB writes the capital without accent (20:0). « l'Emanateur ».",
+      "id": "maatzil",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Emanateur",
+          "count": 20,
+          "bySource": {
+            "I": 0,
+            "P": 17,
+            "T": 3
+          }
+        },
+        {
+          "form": "Emanteur (typo)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Émanateur",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "השתלשלות",
+      "en": "cascading",
+      "target": "enchaînement (verb: s’enchaîner)",
+      "officialCount": 2,
+      "note": "« l’ordre d’enchaînement » (Préface §3); spell with î.",
+      "id": "hishtalshelut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "enchaînement/enchainement",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "s'enchaîner (verb forms)",
+          "count": 3,
+          "bySource": {
+            "I": 2,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "סבה ומסובב",
+      "en": "cause and consequence",
+      "target": "cause et effet",
+      "officialCount": 3,
+      "note": "",
+      "id": "siba-mesubav",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "cause et effet / de cause à effet",
+          "count": 3,
+          "bySource": {
+            "I": 3,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "cause et (la) conséquence",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "בחינה",
+      "en": "phase",
+      "target": "phase (generic); Bekhina + letter for the named phases",
+      "officialCount": 159,
+      "note": "Generic בחינה/בחינת X → la phase de X (« la phase de Atik », TES p6 96 constructs) — BB's own gloss for Bekhina is phase. Préface/Intro also write discernement (counted 80) and Bekhinat X (23): attested, not binding. The act of discerning (הבחנה) is discernement; נבחן ל = est considéré comme.",
+      "id": "behina",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "phase(s)",
+          "count": 159,
+          "bySource": {
+            "I": 3,
+            "P": 15,
+            "T": 141
+          }
+        },
+        {
+          "form": "discernement(s)",
+          "count": 80,
+          "bySource": {
+            "I": 46,
+            "P": 31,
+            "T": 3
+          }
+        },
+        {
+          "form": "Bekhinat X (construct)",
+          "count": 23,
+          "bySource": {
+            "I": 0,
+            "P": 23,
+            "T": 0
+          }
+        },
+        {
+          "form": "aspect(s)",
+          "count": 10,
+          "bySource": {
+            "I": 9,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "ד' בחינות",
+      "en": "four phases",
+      "target": "les quatre phases",
+      "officialCount": 8,
+      "note": "The four phases of direct light as a set.",
+      "id": "dalet-behinot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "quatre phases",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "quatre Bekhinot",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 4,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "בחי\"ד",
+      "en": "phase four",
+      "target": "Bekhina Dalet",
+      "officialCount": 121,
+      "note": "Feminine: la Bekhina Dalet. Same pattern: Bekhina Aleph 44, Bekhina Bet 46, Bekhina Guimel 49, Bekhina Shoresh 9 (vs phase un 4 / deux 6 / quatre 3 in TES p6).",
+      "id": "behina-dalet",
+      "status": "OFFICIAL",
+      "gloss": "Bekhina Dalet [quatrième phase]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Bekhina Dalet",
+          "count": 121,
+          "bySource": {
+            "I": 0,
+            "P": 121,
+            "T": 0
+          }
+        },
+        {
+          "form": "phase quatre",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 3
+          }
+        },
+        {
+          "form": "quatrième phase",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "שבירה",
+      "en": "breaking",
+      "target": "brisure",
+      "officialCount": 22,
+      "note": "« la brisure des récipients » (10:0, see shvirat-hakelim); verb se briser.",
+      "id": "shevira",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "brisure",
+          "count": 22,
+          "bySource": {
+            "I": 0,
+            "P": 20,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "תיקון",
+      "en": "correction",
+      "target": "correction",
+      "officialCount": 32,
+      "note": "Translated. Exceptions BB keeps: le monde du Tikoun (8:1, see olam-hatikkun), Tikoun N for a chapter of the Tikounim; גמר התיקון → la réparation finale (see gmar-tikkun).",
+      "id": "tikkun",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "correction(s)",
+          "count": 32,
+          "bySource": {
+            "I": 4,
+            "P": 12,
+            "T": 16
+          }
+        },
+        {
+          "form": "Tikoun",
+          "count": 10,
+          "bySource": {
+            "I": 2,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "Tikkoun",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "réparation",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "התפשטות",
+      "en": "expansion",
+      "target": "expansion (verb: s’étendre)",
+      "officialCount": 8,
+      "note": "Most frequent single form; the transliteration is split over two spellings (6+5) and BB glosses it « Hitpachtout [expansion] ». « extension » renders התפשטות 3× (Préface §26, 46, 139) and המשכה 2× (§31, 32).",
+      "id": "hitpashtut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "expansion",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 7,
+            "T": 1
+          }
+        },
+        {
+          "form": "expension (typo)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Hitpachtout",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 6,
+            "T": 0
+          }
+        },
+        {
+          "form": "Hitpashtout",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 0
+          }
+        },
+        {
+          "form": "extension",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "הסתלקות",
+      "en": "departure",
+      "target": "départ (verb: partir, s’en aller)",
+      "officialCount": 27,
+      "note": "« l’expansion de la Lumière et son départ ».",
+      "id": "histalkut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "départ",
+          "count": 27,
+          "bySource": {
+            "I": 0,
+            "P": 23,
+            "T": 4
+          }
+        },
+        {
+          "form": "Histalkout",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מדרגה",
+      "en": "degree",
+      "target": "degré",
+      "officialCount": 157,
+      "note": "מדרגה = degré; קומה = niveau — both occur together, keep them apart.",
+      "id": "madrega",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "degré(s)",
+          "count": 157,
+          "bySource": {
+            "I": 25,
+            "P": 125,
+            "T": 7
+          }
+        },
+        {
+          "form": "échelon",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "קומה",
+      "en": "level",
+      "target": "niveau",
+      "officialCount": 329,
+      "note": "« le niveau de Keter », « le niveau de ZA ».",
+      "id": "koma",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "niveau(x)",
+          "count": 329,
+          "bySource": {
+            "I": 0,
+            "P": 313,
+            "T": 16
+          }
+        },
+        {
+          "form": "stature",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "שורש",
+      "en": "root",
+      "target": "racine",
+      "officialCount": 41,
+      "note": "Translated, except the phase name Bekhina Shoresh / Aviout Shoresh (BB transliterates there, 19).",
+      "id": "shoresh",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "racine(s)",
+          "count": 41,
+          "bySource": {
+            "I": 3,
+            "P": 34,
+            "T": 4
+          }
+        },
+        {
+          "form": "Shoresh",
+          "count": 19,
+          "bySource": {
+            "I": 0,
+            "P": 19,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רצון לקבל",
+      "en": "will to receive",
+      "target": "désir de recevoir",
+      "officialCount": 47,
+      "note": "",
+      "id": "ratzon-lekabel",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "désir de recevoir",
+          "count": 47,
+          "bySource": {
+            "I": 1,
+            "P": 46,
+            "T": 0
+          }
+        },
+        {
+          "form": "volonté de recevoir",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רצון להשפיע",
+      "en": "will to bestow",
+      "target": "désir de donner",
+      "officialCount": 5,
+      "note": "Bestowal (השפעה) = le don; משפיע = le Donneur; לתת/להשפיע = donner.",
+      "id": "ratzon-lehashpia",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "désir de donner",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 0
+          }
+        },
+        {
+          "form": "volonté de donner",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "שינוי צורה",
+      "en": "disparity of form",
+      "target": "disparité de forme",
+      "officialCount": 10,
+      "note": "",
+      "id": "shinui-tzura",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "disparité de forme",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 10,
+            "T": 0
+          }
+        },
+        {
+          "form": "différence de forme",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 7,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "השתוות הצורה",
+      "en": "equivalence of form",
+      "target": "équivalence de forme",
+      "officialCount": 9,
+      "note": "Verb: égaliser sa forme avec.",
+      "id": "hashvaat-tzura",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "équivalence de forme",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 0
+          }
+        },
+        {
+          "form": "égaliser sa forme (verb)",
+          "count": 11,
+          "bySource": {
+            "I": 0,
+            "P": 11,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "פנימיות",
+      "en": "internality",
+      "target": "intériorité",
+      "officialCount": 10,
+      "note": "",
+      "id": "pnimiut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "intériorité",
+          "count": 10,
+          "bySource": {
+            "I": 2,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "internalité (TES p6)",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 6
+          }
+        }
+      ]
+    },
+    {
+      "he": "חיצוניות",
+      "en": "externality",
+      "target": "extériorité",
+      "officialCount": 8,
+      "note": "",
+      "id": "hitzoniut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "extériorité",
+          "count": 8,
+          "bySource": {
+            "I": 2,
+            "P": 4,
+            "T": 2
+          }
+        },
+        {
+          "form": "externalité",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "חלל",
+      "en": "space",
+      "target": "espace",
+      "officialCount": 15,
+      "note": "חלל פנוי = un espace vide (8).",
+      "id": "halal",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "espace(s)",
+          "count": 15,
+          "bySource": {
+            "I": 3,
+            "P": 11,
+            "T": 1
+          }
+        },
+        {
+          "form": "espace vide",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מקום פנוי",
+      "en": "vacant place",
+      "target": "lieu vacant",
+      "officialCount": 0,
+      "note": "No מקום פנוי in the evidence. « espace vide » is taken by חלל פנוי; keep the two apart.",
+      "id": "makom-panui",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "lieu vacant",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עצמות",
+      "en": "self",
+      "target": "Son Essence (עצמותו ית׳); soi (the self-light of a Partsouf)",
+      "officialCount": 13,
+      "note": "BB uses « Son Essence » 13:0 for עצמותו ית׳. TES p6 renders עצמות in « עצמות, אורות וכלים » as soi (3). מהות (essence) stays lower-case « essence » — the capital keeps the two apart.",
+      "id": "atzmut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Son Essence",
+          "count": 13,
+          "bySource": {
+            "I": 0,
+            "P": 13,
+            "T": 0
+          }
+        },
+        {
+          "form": "soi (TES p6)",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 3
+          }
+        },
+        {
+          "form": "essence (lower case, = מהות)",
+          "count": 12,
+          "bySource": {
+            "I": 5,
+            "P": 5,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "בורא",
+      "en": "Creator",
+      "target": "le Créateur",
+      "officialCount": 137,
+      "note": "Also הקב״ה → le Créateur (« le Saint béni soit-Il » 2, Intro only).",
+      "id": "boreh",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Créateur",
+          "count": 137,
+          "bySource": {
+            "I": 131,
+            "P": 6,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "טעמים",
+      "en": "tastes",
+      "target": "Taamim",
+      "officialCount": 30,
+      "note": "TNTA sense: Taamim (Préface 22) vs goûts (TES p6 19); the Intro's 8 « goûts » are טעמי תורה. Masculine plural.",
+      "id": "taamim",
+      "status": "OFFICIAL",
+      "gloss": "Taamim [goûts]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Taamim",
+          "count": 30,
+          "bySource": {
+            "I": 8,
+            "P": 22,
+            "T": 0
+          }
+        },
+        {
+          "form": "Ta'amim",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "goûts",
+          "count": 27,
+          "bySource": {
+            "I": 8,
+            "P": 0,
+            "T": 19
+          }
+        }
+      ]
+    },
+    {
+      "he": "נקודות",
+      "en": "Nekudot",
+      "target": "Nekoudot",
+      "officialCount": 85,
+      "note": "Feminine plural. The vowel points as such stay « point(s) »: le point de Holam, les trois points Holam, Shourouk, Hirik. Singular נקודה = la Nekouda (6).",
+      "id": "nekudot",
+      "status": "OFFICIAL",
+      "gloss": "Nekoudot [points]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Nekoudot",
+          "count": 85,
+          "bySource": {
+            "I": 0,
+            "P": 48,
+            "T": 37
+          }
+        },
+        {
+          "form": "Nekkoudot (typo)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "points",
+          "count": 39,
+          "bySource": {
+            "I": 0,
+            "P": 13,
+            "T": 26
+          }
+        }
+      ]
+    },
+    {
+      "he": "אותיות",
+      "en": "letters",
+      "target": "Otiot",
+      "officialCount": 21,
+      "note": "Otiot in the TNTA / Kélim sense; Hebrew letters as letters = lettres (« la lettre Vav », « vingt-deux lettres »).",
+      "id": "otiot",
+      "status": "OFFICIAL",
+      "gloss": "Otiot (lettres)",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Otiot",
+          "count": 21,
+          "bySource": {
+            "I": 0,
+            "P": 21,
+            "T": 0
+          }
+        },
+        {
+          "form": "lettres",
+          "count": 43,
+          "bySource": {
+            "I": 6,
+            "P": 10,
+            "T": 27
+          }
+        }
+      ]
+    },
+    {
+      "he": "חסדים",
+      "en": "Hassadim",
+      "target": "Hassadim",
+      "officialCount": 26,
+      "note": "« la lumière de Hassadim » / Ohr Hassadim; ה״ח = cinq Hassadim (2).",
+      "id": "hassadim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hassadim",
+          "count": 26,
+          "bySource": {
+            "I": 0,
+            "P": 23,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "ספירה",
+      "en": "Sefira",
+      "target": "Sefira",
+      "officialCount": 41,
+      "note": "Feminine: la Sefira (34).",
+      "id": "sefira",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Sefira",
+          "count": 41,
+          "bySource": {
+            "I": 0,
+            "P": 25,
+            "T": 16
+          }
+        },
+        {
+          "form": "Sefirah",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ספירות",
+      "en": "Sefirot",
+      "target": "Sefirot",
+      "officialCount": 294,
+      "note": "No accent, capital S.",
+      "id": "sefirot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Sefirot",
+          "count": 294,
+          "bySource": {
+            "I": 15,
+            "P": 250,
+            "T": 29
+          }
+        },
+        {
+          "form": "sefirot (lower case)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "Séfirot",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עשר ספירות / ע\"ס",
+      "en": "ten Sefirot",
+      "target": "les dix Sefirot",
+      "officialCount": 232,
+      "note": "Lower-case dix.",
+      "id": "eser-sefirot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "dix Sefirot",
+          "count": 232,
+          "bySource": {
+            "I": 6,
+            "P": 211,
+            "T": 15
+          }
+        },
+        {
+          "form": "Dix Sefirot",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "פרצוף",
+      "en": "Partzuf",
+      "target": "Partsouf",
+      "officialCount": 303,
+      "note": "Masculine (le Partsouf 190).",
+      "id": "partzuf",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Partsouf",
+          "count": 303,
+          "bySource": {
+            "I": 4,
+            "P": 299,
+            "T": 0
+          }
+        },
+        {
+          "form": "Partzouf (TES p6)",
+          "count": 26,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 26
+          }
+        },
+        {
+          "form": "Parsouf (typo)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "פרצופים",
+      "en": "Partzufim",
+      "target": "Partsoufim",
+      "officialCount": 166,
+      "note": "",
+      "id": "partzufim",
+      "status": "OFFICIAL",
+      "gloss": "Partsoufim (pluriel de Partsouf)",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Partsoufim",
+          "count": 166,
+          "bySource": {
+            "I": 0,
+            "P": 166,
+            "T": 0
+          }
+        },
+        {
+          "form": "Partzoufim (TES p6)",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 7
+          }
+        }
+      ]
+    },
+    {
+      "he": "ראש",
+      "en": "Rosh",
+      "target": "Roch",
+      "officialCount": 226,
+      "note": "Plural Rochim (Rochim (pluriel de Roch)).",
+      "id": "rosh",
+      "status": "OFFICIAL",
+      "gloss": "Roch [tête]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Roch",
+          "count": 226,
+          "bySource": {
+            "I": 7,
+            "P": 219,
+            "T": 0
+          }
+        },
+        {
+          "form": "Rochim (pl.)",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "Rosh (TES p6)",
+          "count": 82,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 80
+          }
+        }
+      ]
+    },
+    {
+      "he": "תוך",
+      "en": "Toch",
+      "target": "Tokh",
+      "officialCount": 14,
+      "note": "Only the middle third of a Partsouf; the preposition תוך/בתוך = à l’intérieur de, dans.",
+      "id": "toch",
+      "status": "OFFICIAL",
+      "gloss": "Tokh [l’intérieur]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Tokh",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 11,
+            "T": 3
+          }
+        },
+        {
+          "form": "Toch",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "Toh/Tohh (typos)",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "סוף",
+      "en": "Sof",
+      "target": "Sof",
+      "officialCount": 55,
+      "note": "Distinct from Ein Sof.",
+      "id": "sof",
+      "status": "OFFICIAL",
+      "gloss": "Sof [la fin]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Sof",
+          "count": 55,
+          "bySource": {
+            "I": 0,
+            "P": 47,
+            "T": 8
+          }
+        }
+      ]
+    },
+    {
+      "he": "גוף",
+      "en": "Guf",
+      "target": "Gouf",
+      "officialCount": 219,
+      "note": "Masculine (le Gouf 59).",
+      "id": "guf",
+      "status": "OFFICIAL",
+      "gloss": "Gouf [corps]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Gouf",
+          "count": 219,
+          "bySource": {
+            "I": 2,
+            "P": 180,
+            "T": 37
+          }
+        },
+        {
+          "form": "Goufim (pl.)",
+          "count": 28,
+          "bySource": {
+            "I": 0,
+            "P": 26,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "אין סוף / א\"ס",
+      "en": "Ein Sof",
+      "target": "Ein Sof",
+      "officialCount": 37,
+      "note": "« de Ein Sof » (13) more often than « d’Ein Sof » (6). א״ס ב״ה → Ein Sof (the honorific is dropped).",
+      "id": "ein-sof",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ein Sof",
+          "count": 37,
+          "bySource": {
+            "I": 0,
+            "P": 32,
+            "T": 5
+          }
+        },
+        {
+          "form": "Infini",
+          "count": 7,
+          "bySource": {
+            "I": 5,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אצילות",
+      "en": "Atzilut",
+      "target": "Atsilout",
+      "officialCount": 225,
+      "note": "The world. The act of emanating (סדר אצילות) = émanation. « le monde de Atsilout » (189:3 without elision).",
+      "id": "atzilut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Atsilout",
+          "count": 225,
+          "bySource": {
+            "I": 26,
+            "P": 199,
+            "T": 0
+          }
+        },
+        {
+          "form": "Atzilout (TES p6)",
+          "count": 25,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 25
+          }
+        },
+        {
+          "form": "émanation (process sense)",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 5
+          }
+        }
+      ]
+    },
+    {
+      "he": "בריאה",
+      "en": "Beria",
+      "target": "Briya",
+      "officialCount": 66,
+      "note": "",
+      "id": "beria",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Briya",
+          "count": 66,
+          "bySource": {
+            "I": 13,
+            "P": 44,
+            "T": 9
+          }
+        },
+        {
+          "form": "Bryia (typo)",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "יצירה",
+      "en": "Yetzira",
+      "target": "Yetsira",
+      "officialCount": 66,
+      "note": "",
+      "id": "yetzira",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Yetsira",
+          "count": 66,
+          "bySource": {
+            "I": 16,
+            "P": 50,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עשיה",
+      "en": "Assiya",
+      "target": "Assiya",
+      "officialCount": 46,
+      "note": "",
+      "id": "assiya",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Assiya",
+          "count": 46,
+          "bySource": {
+            "I": 2,
+            "P": 44,
+            "T": 0
+          }
+        },
+        {
+          "form": "Assya (Intro)",
+          "count": 10,
+          "bySource": {
+            "I": 10,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אבי\"ע",
+      "en": "ABYA",
+      "target": "ABYA",
+      "officialCount": 39,
+      "note": "",
+      "id": "abya",
+      "status": "OFFICIAL",
+      "gloss": "ABYA (Atsilout, Briya, Yetsira, Assiya)",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "ABYA",
+          "count": 39,
+          "bySource": {
+            "I": 7,
+            "P": 32,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אדם קדמון / א\"ק",
+      "en": "Adam Kadmon / AK",
+      "target": "AK (spelled out: Adam Kadmon)",
+      "officialCount": 392,
+      "note": "« de AK » 356 : « d’AK » 0.",
+      "id": "adam-kadmon",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "AK",
+          "count": 392,
+          "bySource": {
+            "I": 0,
+            "P": 337,
+            "T": 55
+          }
+        },
+        {
+          "form": "Adam Kadmon",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "כתר",
+      "en": "Keter",
+      "target": "Keter",
+      "officialCount": 195,
+      "note": "",
+      "id": "keter",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Keter",
+          "count": 195,
+          "bySource": {
+            "I": 2,
+            "P": 136,
+            "T": 57
+          }
+        },
+        {
+          "form": "Kéter",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "חכמה",
+      "en": "Hochma",
+      "target": "Hokhma",
+      "officialCount": 153,
+      "note": "Wisdom in « la sagesse de la Kabbale » is translated.",
+      "id": "hochma",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hokhma",
+          "count": 153,
+          "bySource": {
+            "I": 6,
+            "P": 112,
+            "T": 35
+          }
+        },
+        {
+          "form": "Hochma",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "בינה",
+      "en": "Bina",
+      "target": "Bina",
+      "officialCount": 129,
+      "note": "Feminine.",
+      "id": "bina",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Bina",
+          "count": 129,
+          "bySource": {
+            "I": 2,
+            "P": 125,
+            "T": 2
+          }
+        },
+        {
+          "form": "Binah (TES p6)",
+          "count": 62,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 62
+          }
+        }
+      ]
+    },
+    {
+      "he": "חסד",
+      "en": "Hesed",
+      "target": "Hessed",
+      "officialCount": 25,
+      "note": "",
+      "id": "hesed",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hessed",
+          "count": 25,
+          "bySource": {
+            "I": 8,
+            "P": 6,
+            "T": 11
+          }
+        },
+        {
+          "form": "Hesed",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "גבורה",
+      "en": "Gevura",
+      "target": "Guevoura",
+      "officialCount": 14,
+      "note": "ה״ג = cinq Guevourot.",
+      "id": "gevura",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Guevoura",
+          "count": 14,
+          "bySource": {
+            "I": 1,
+            "P": 6,
+            "T": 7
+          }
+        },
+        {
+          "form": "Guevourot (pl.)",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 3
+          }
+        },
+        {
+          "form": "Gevoura",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "תפארת",
+      "en": "Tifferet",
+      "target": "Tifferet",
+      "officialCount": 83,
+      "note": "ת״ת = Tifferet.",
+      "id": "tifferet",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Tifferet",
+          "count": 83,
+          "bySource": {
+            "I": 0,
+            "P": 64,
+            "T": 19
+          }
+        },
+        {
+          "form": "Tifféret",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נצח",
+      "en": "Netzah",
+      "target": "Netsakh",
+      "officialCount": 6,
+      "note": "Near-tie against the raw count (6:9 — all 9 from one TES p6 item). Ruled by BB’s scheme: צ→ts, final ח→kh (Atsilout 225:25, Partsouf 469:33, Rouakh 22:0, Mokhin 106:0, Metzakh 9:2). See least-sure list.",
+      "id": "netzah",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Netsakh",
+          "count": 6,
+          "bySource": {
+            "I": 1,
+            "P": 5,
+            "T": 0
+          }
+        },
+        {
+          "form": "Netzah (TES p6)",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 9
+          }
+        }
+      ]
+    },
+    {
+      "he": "הוד",
+      "en": "Hod",
+      "target": "Hod",
+      "officialCount": 14,
+      "note": "",
+      "id": "hod",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hod",
+          "count": 14,
+          "bySource": {
+            "I": 1,
+            "P": 5,
+            "T": 8
+          }
+        }
+      ]
+    },
+    {
+      "he": "יסוד",
+      "en": "Yesod",
+      "target": "Yessod",
+      "officialCount": 29,
+      "note": "Double s.",
+      "id": "yesod",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Yessod",
+          "count": 29,
+          "bySource": {
+            "I": 1,
+            "P": 13,
+            "T": 15
+          }
+        },
+        {
+          "form": "Yesod",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מלכות",
+      "en": "Malchut",
+      "target": "Malkhout",
+      "officialCount": 173,
+      "note": "Feminine (la Malkhout).",
+      "id": "malchut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Malkhout",
+          "count": 173,
+          "bySource": {
+            "I": 4,
+            "P": 140,
+            "T": 29
+          }
+        },
+        {
+          "form": "Makhout (typo)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "גלגלתא",
+      "en": "Galgalta",
+      "target": "Galgalta",
+      "officialCount": 44,
+      "note": "",
+      "id": "galgalta",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Galgalta",
+          "count": 44,
+          "bySource": {
+            "I": 0,
+            "P": 35,
+            "T": 9
+          }
+        }
+      ]
+    },
+    {
+      "he": "ע\"ב",
+      "en": "AB",
+      "target": "AB",
+      "officialCount": 122,
+      "note": "« de AB » 36 : « d’AB » 1.",
+      "id": "ab",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "AB",
+          "count": 122,
+          "bySource": {
+            "I": 0,
+            "P": 98,
+            "T": 24
+          }
+        }
+      ]
+    },
+    {
+      "he": "ס\"ג",
+      "en": "SAG",
+      "target": "SAG",
+      "officialCount": 190,
+      "note": "",
+      "id": "sag",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "SAG",
+          "count": 190,
+          "bySource": {
+            "I": 0,
+            "P": 127,
+            "T": 63
+          }
+        }
+      ]
+    },
+    {
+      "he": "מ\"ה",
+      "en": "MA",
+      "target": "MA",
+      "officialCount": 117,
+      "note": "« le nouveau MA ».",
+      "id": "ma",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "MA",
+          "count": 117,
+          "bySource": {
+            "I": 0,
+            "P": 105,
+            "T": 12
+          }
+        }
+      ]
+    },
+    {
+      "he": "ב\"ן",
+      "en": "BON",
+      "target": "BON",
+      "officialCount": 59,
+      "note": "« MA et BON ».",
+      "id": "bon",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "BON",
+          "count": 59,
+          "bySource": {
+            "I": 0,
+            "P": 48,
+            "T": 11
+          }
+        },
+        {
+          "form": "BAN",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נקודים",
+      "en": "Nekudim",
+      "target": "Nikoudim",
+      "officialCount": 170,
+      "note": "The world: « le monde des Nikoudim ». Note the vowel differs from Nekoudot (points) — both are BB.",
+      "id": "nekudim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Nikoudim",
+          "count": 170,
+          "bySource": {
+            "I": 0,
+            "P": 170,
+            "T": 0
+          }
+        },
+        {
+          "form": "Nekoudim (TES p6)",
+          "count": 81,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 79
+          }
+        }
+      ]
+    },
+    {
+      "he": "ג\"ר",
+      "en": "GAR",
+      "target": "GAR",
+      "officialCount": 89,
+      "note": "Plural agreement (« GAR sont »).",
+      "id": "gar",
+      "status": "OFFICIAL",
+      "gloss": "GAR [trois premières Sefirot]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "GAR",
+          "count": 89,
+          "bySource": {
+            "I": 0,
+            "P": 60,
+            "T": 29
+          }
+        }
+      ]
+    },
+    {
+      "he": "ז\"ת",
+      "en": "ZAT",
+      "target": "ZAT",
+      "officialCount": 73,
+      "note": "",
+      "id": "zat",
+      "status": "OFFICIAL",
+      "gloss": "ZAT (sept inférieures)",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "ZAT",
+          "count": 73,
+          "bySource": {
+            "I": 0,
+            "P": 68,
+            "T": 5
+          }
+        }
+      ]
+    },
+    {
+      "he": "ו\"ק",
+      "en": "VAK",
+      "target": "VAK",
+      "officialCount": 54,
+      "note": "ו״ק בלי ראש = VAK sans Roch (18).",
+      "id": "vak",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "VAK",
+          "count": 54,
+          "bySource": {
+            "I": 0,
+            "P": 49,
+            "T": 5
+          }
+        }
+      ]
+    },
+    {
+      "he": "כח\"ב",
+      "en": "KHB",
+      "target": "KHB",
+      "officialCount": 29,
+      "note": "",
+      "id": "khb",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "KHB",
+          "count": 29,
+          "bySource": {
+            "I": 0,
+            "P": 27,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "חג\"ת",
+      "en": "HGT",
+      "target": "HGT",
+      "officialCount": 46,
+      "note": "",
+      "id": "hgt",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "HGT",
+          "count": 46,
+          "bySource": {
+            "I": 0,
+            "P": 23,
+            "T": 23
+          }
+        }
+      ]
+    },
+    {
+      "he": "נה\"י",
+      "en": "NHY",
+      "target": "NHY",
+      "officialCount": 64,
+      "note": "",
+      "id": "nhy",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "NHY",
+          "count": 64,
+          "bySource": {
+            "I": 0,
+            "P": 19,
+            "T": 45
+          }
+        }
+      ]
+    },
+    {
+      "he": "זו\"ן",
+      "en": "ZON",
+      "target": "ZON",
+      "officialCount": 143,
+      "note": "Plural verb (« ZON sont » 12:1).",
+      "id": "zon",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "ZON",
+          "count": 143,
+          "bySource": {
+            "I": 0,
+            "P": 121,
+            "T": 22
+          }
+        },
+        {
+          "form": "Zon",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ז\"א",
+      "en": "ZA",
+      "target": "ZA",
+      "officialCount": 69,
+      "note": "Spelled out: Zeir Anpin (see zeir-anpin).",
+      "id": "za",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "ZA",
+          "count": 69,
+          "bySource": {
+            "I": 0,
+            "P": 69,
+            "T": 0
+          }
+        },
+        {
+          "form": "Z'A (TES p6)",
+          "count": 50,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 50
+          }
+        }
+      ]
+    },
+    {
+      "he": "א\"א",
+      "en": "AA",
+      "target": "AA (spelled out: Arikh Anpin)",
+      "officialCount": 76,
+      "note": "",
+      "id": "aa",
+      "status": "OFFICIAL",
+      "gloss": "Arikh Anpin [AA]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "AA",
+          "count": 76,
+          "bySource": {
+            "I": 0,
+            "P": 60,
+            "T": 16
+          }
+        },
+        {
+          "form": "Arikh Anpin",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נוקבא",
+      "en": "Nukva",
+      "target": "Noukva",
+      "officialCount": 53,
+      "note": "Feminine.",
+      "id": "nukva",
+      "status": "OFFICIAL",
+      "gloss": "Noukva [femelle]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Noukva",
+          "count": 53,
+          "bySource": {
+            "I": 0,
+            "P": 48,
+            "T": 5
+          }
+        },
+        {
+          "form": "Nukva",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אח\"פ",
+      "en": "AHP",
+      "target": "AHP",
+      "officialCount": 135,
+      "note": "« de AHP » 28 : « d’AHP » 0.",
+      "id": "ahap",
+      "status": "OFFICIAL",
+      "gloss": "Ozen, Hotem, Pé [AHP]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "AHP",
+          "count": 135,
+          "bySource": {
+            "I": 0,
+            "P": 89,
+            "T": 46
+          }
+        }
+      ]
+    },
+    {
+      "he": "אחורים",
+      "en": "posterior",
+      "target": "Akhoraim",
+      "officialCount": 40,
+      "note": "« les Kélim de Akhoraim [Kélim de dos] ». The positional state אב״א stays plain words: dos à dos.",
+      "id": "achoraim",
+      "status": "OFFICIAL",
+      "gloss": "Akhoraim [dos]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Akhoraim",
+          "count": 40,
+          "bySource": {
+            "I": 0,
+            "P": 40,
+            "T": 0
+          }
+        },
+        {
+          "form": "dos (TES p6)",
+          "count": 19,
+          "bySource": {
+            "T": 19
+          }
+        }
+      ]
+    },
+    {
+      "he": "עינים",
+      "en": "Einayim",
+      "target": "Eynaim",
+      "officialCount": 60,
+      "note": "",
+      "id": "einayim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Eynaim",
+          "count": 60,
+          "bySource": {
+            "I": 0,
+            "P": 59,
+            "T": 1
+          }
+        },
+        {
+          "form": "Einayim (TES p6)",
+          "count": 33,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 33
+          }
+        }
+      ]
+    },
+    {
+      "he": "נקבי עינים",
+      "en": "Nikvey Einayim",
+      "target": "Nikvey Eynaim",
+      "officialCount": 46,
+      "note": "",
+      "id": "nikvey-einayim",
+      "status": "OFFICIAL",
+      "gloss": "Nikvey Eynaim [pupilles]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Nikvey Eynaim",
+          "count": 46,
+          "bySource": {
+            "I": 0,
+            "P": 46,
+            "T": 0
+          }
+        },
+        {
+          "form": "Nikvey Einayim (TES p6)",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 7
+          }
+        }
+      ]
+    },
+    {
+      "he": "פה",
+      "en": "Peh",
+      "target": "Pé",
+      "officialCount": 94,
+      "note": "« Pé de Roch ».",
+      "id": "peh",
+      "status": "OFFICIAL",
+      "gloss": "Pé [bouche]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Pé",
+          "count": 94,
+          "bySource": {
+            "I": 0,
+            "P": 94,
+            "T": 0
+          }
+        },
+        {
+          "form": "Peh (TES p6)",
+          "count": 38,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 38
+          }
+        }
+      ]
+    },
+    {
+      "he": "חוטם",
+      "en": "Hotem",
+      "target": "Hotem",
+      "officialCount": 32,
+      "note": "",
+      "id": "hotem",
+      "status": "OFFICIAL",
+      "gloss": "Hotem [nez]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hotem",
+          "count": 32,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 29
+          }
+        }
+      ]
+    },
+    {
+      "he": "אזן",
+      "en": "Ozen",
+      "target": "Ozen",
+      "officialCount": 52,
+      "note": "Never « Awzen ».",
+      "id": "ozen",
+      "status": "OFFICIAL",
+      "gloss": "Ozen [oreille]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ozen",
+          "count": 52,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 49
+          }
+        }
+      ]
+    },
+    {
+      "he": "טבור",
+      "en": "Tabur",
+      "target": "Tabour",
+      "officialCount": 160,
+      "note": "Masculine (le Tabour 107).",
+      "id": "tabur",
+      "status": "OFFICIAL",
+      "gloss": "Tabour [nombril]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Tabour",
+          "count": 160,
+          "bySource": {
+            "I": 0,
+            "P": 95,
+            "T": 65
+          }
+        }
+      ]
+    },
+    {
+      "he": "פרסא",
+      "en": "Parsa",
+      "target": "Parsa",
+      "officialCount": 76,
+      "note": "Feminine (la Parsa 66:1).",
+      "id": "parsa",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Parsa",
+          "count": 76,
+          "bySource": {
+            "I": 0,
+            "P": 43,
+            "T": 33
+          }
+        }
+      ]
+    },
+    {
+      "he": "סיום",
+      "en": "Sium",
+      "target": "Sioum",
+      "officialCount": 46,
+      "note": "סיום רגלין = Sioum Raglin.",
+      "id": "sium",
+      "status": "OFFICIAL",
+      "gloss": "Sioum [fin]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Sioum",
+          "count": 46,
+          "bySource": {
+            "I": 0,
+            "P": 46,
+            "T": 0
+          }
+        },
+        {
+          "form": "Siyoum (TES p6)",
+          "count": 11,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 11
+          }
+        },
+        {
+          "form": "Sium",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "קטנות",
+      "en": "Katnut",
+      "target": "Katnout",
+      "officialCount": 26,
+      "note": "",
+      "id": "katnut",
+      "status": "OFFICIAL",
+      "gloss": "Katnout [petitesse]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Katnout",
+          "count": 26,
+          "bySource": {
+            "I": 0,
+            "P": 24,
+            "T": 2
+          }
+        },
+        {
+          "form": "petitesse",
+          "count": 3,
+          "bySource": {
+            "I": 1,
+            "P": 1,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "גדלות",
+      "en": "Gadlut",
+      "target": "Gadlout",
+      "officialCount": 44,
+      "note": "",
+      "id": "gadlut",
+      "status": "OFFICIAL",
+      "gloss": "Gadlout [grandeur]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Gadlout",
+          "count": 44,
+          "bySource": {
+            "I": 0,
+            "P": 38,
+            "T": 6
+          }
+        },
+        {
+          "form": "grandeur",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "מוחין",
+      "en": "Mochin",
+      "target": "Mokhin",
+      "officialCount": 106,
+      "note": "Masculine plural (« les Mokhin »).",
+      "id": "mochin",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Mokhin",
+          "count": 106,
+          "bySource": {
+            "I": 0,
+            "P": 99,
+            "T": 7
+          }
+        },
+        {
+          "form": "Mochin",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נרנח\"י (נפש/רוח/נשמה/חיה/יחידה)",
+      "en": "Nefesh, Ruach, Neshama, Haya, Yechida",
+      "target": "NRNHY (Nefesh, Rouakh, Neshama, Haya, Yekhida)",
+      "officialCount": 3,
+      "note": "See the five names under lights (nefesh … yechida).",
+      "id": "nrnhy",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "NRNHY",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        },
+        {
+          "form": "NRN",
+          "count": 20,
+          "bySource": {
+            "I": 0,
+            "P": 20,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הויה",
+      "en": "HaVaYaH",
+      "target": "HaVaYaH",
+      "officialCount": 13,
+      "note": "Spelled letters with hyphens: Yod-Hey-Vav-Hey.",
+      "id": "havayah",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "HaVaYaH",
+          "count": 13,
+          "bySource": {
+            "I": 1,
+            "P": 9,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "ה\"ת",
+      "en": "bottom Hey",
+      "target": "le Hey inférieur",
+      "officialCount": 31,
+      "note": "Masculine (le Hey 22 : la Hey 0). ה״ת המסיימת = le Hey inférieur final.",
+      "id": "hey-tataa",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Hey inférieur",
+          "count": 31,
+          "bySource": {
+            "I": 0,
+            "P": 26,
+            "T": 5
+          }
+        },
+        {
+          "form": "Hey inférieure",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ה\"ר",
+      "en": "first Hey",
+      "target": "le premier Hey",
+      "officialCount": 2,
+      "note": "TES p6 only. Read the sentence: ה״ר can also be ה׳ ראשונות (the first five).",
+      "id": "hey-rishona",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "premier Hey",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 2
+          }
+        },
+        {
+          "form": "première (lettre) Hey",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "קליפות",
+      "en": "shells",
+      "target": "Klipot",
+      "officialCount": 18,
+      "note": "Feminine plural; singular Klipa.",
+      "id": "klipot",
+      "status": "OFFICIAL",
+      "gloss": "Klipot [coquilles]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Klipot",
+          "count": 18,
+          "bySource": {
+            "I": 11,
+            "P": 7,
+            "T": 0
+          }
+        },
+        {
+          "form": "klipot (lower case)",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 3
+          }
+        },
+        {
+          "form": "Klipa (sg.)",
+          "count": 6,
+          "bySource": {
+            "I": 5,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "coquilles",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 1
+          }
+        },
+        {
+          "form": "écorces",
+          "count": 2,
+          "bySource": {
+            "I": 2,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "חכמת הקבלה",
+      "en": "the wisdom of Kabbalah",
+      "target": "la sagesse de la Kabbale",
+      "officialCount": 25,
+      "note": "Never Kabbalah.",
+      "id": "kabbalah",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "sagesse de la Kabbale",
+          "count": 25,
+          "bySource": {
+            "I": 24,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Kabbale",
+          "count": 40,
+          "bySource": {
+            "I": 39,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Kabbalah",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הרב",
+      "en": "the ARI",
+      "target": "le ARI",
+      "officialCount": 15,
+      "note": "In TES הרב is the ARI: TES p6 renders it « le ARI » in 5/5 aligned items. No elision: le ARI, du ARI, au ARI (21 : l'ARI 0).",
+      "id": "harav",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "le/du ARI for הרב (TES p6)",
+          "count": 15,
+          "bySource": {
+            "T": 15
+          }
+        },
+        {
+          "form": "le/du/au ARI (all)",
+          "count": 21,
+          "bySource": {
+            "I": 6,
+            "P": 0,
+            "T": 15
+          }
+        },
+        {
+          "form": "l'ARI",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "le Rav (Intro, = R. Haim Vital)",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עקודים",
+      "en": "Akudim",
+      "target": "Akoudim",
+      "officialCount": 11,
+      "note": "« le monde des Akoudim ».",
+      "id": "akudim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Akoudim",
+          "count": 11,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 10
+          }
+        }
+      ]
+    },
+    {
+      "he": "או\"ח",
+      "en": "reflected light",
+      "target": "Ohr Hozer",
+      "officialCount": 45,
+      "note": "Same as אור חוזר.",
+      "id": "ohr-hozer-abbrev",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ohr Hozer",
+          "count": 45,
+          "bySource": {
+            "I": 0,
+            "P": 45,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "או\"י",
+      "en": "direct light",
+      "target": "Ohr Yashar",
+      "officialCount": 2,
+      "note": "Same as אור ישר.",
+      "id": "ohr-yashar-abbrev",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Ohr Yashar",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רשימות",
+      "en": "records",
+      "target": "Rechimot",
+      "officialCount": 36,
+      "note": "",
+      "id": "reshimot-plural",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Rechimot",
+          "count": 36,
+          "bySource": {
+            "I": 0,
+            "P": 36,
+            "T": 0
+          }
+        },
+        {
+          "form": "Reshimot",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "בטישות",
+      "en": "clashes",
+      "target": "Bitouchim",
+      "officialCount": 0,
+      "note": "Not attested. Plural on BB’s own pattern Zivoug → Zivouguim.",
+      "id": "bitushim-plural",
+      "status": "PROPOSED",
+      "gloss": "Bitouchim [frappes]",
+      "group": "Index",
+      "fromEnglishIndex": true,
+      "variants": [
+        {
+          "form": "Bitouchim",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "דעת",
+      "en": "Daat",
+      "target": "Daat",
+      "officialCount": 20,
+      "note": "Near-tie (20:21, the 21 all in one TES p6 item). Ruled by BB's scheme: no apostrophe in transliterations (Taamim 30:1, ZA 69:50, YESHOUT 34:18). Also « Melekh ha Daat », « Moakh ha Daat ».",
+      "id": "daat",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sefirot",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Daat",
+          "count": 20,
+          "bySource": {
+            "I": 0,
+            "P": 20,
+            "T": 0
+          }
+        },
+        {
+          "form": "Da'at (TES p6)",
+          "count": 21,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 21
+          }
+        }
+      ]
+    },
+    {
+      "he": "חב\"ד",
+      "en": "HBD",
+      "target": "HBD",
+      "officialCount": 7,
+      "note": "",
+      "id": "hbd",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sefirot",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "HBD",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 6
+          }
+        }
+      ]
+    },
+    {
+      "he": "כחב\"ד",
+      "en": "KHBD",
+      "target": "KHBD",
+      "officialCount": 4,
+      "note": "",
+      "id": "khbd",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sefirot",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "KHBD",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "נהי\"מ",
+      "en": "NHYM",
+      "target": "NHYM",
+      "officialCount": 15,
+      "note": "",
+      "id": "nhym",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sefirot",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "NHYM",
+          "count": 15,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "חו\"ב",
+      "en": "HB",
+      "target": "HB",
+      "officialCount": 19,
+      "note": "חו״ב תו״מ = HB TM (14).",
+      "id": "hb",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sefirot",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "HB",
+          "count": 19,
+          "bySource": {
+            "I": 0,
+            "P": 17,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "תנה\"י / תנהי\"מ",
+      "en": "TNHY / TNHYM",
+      "target": "TNHY / TNHYM",
+      "officialCount": 8,
+      "note": "",
+      "id": "tnhy",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sefirot",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "TNHY",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "TNHYM",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 6,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "עתיק",
+      "en": "Atik",
+      "target": "Atik",
+      "officialCount": 66,
+      "note": "עתיק יומין = Atik Yomin (15).",
+      "id": "atik",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Atik",
+          "count": 66,
+          "bySource": {
+            "I": 8,
+            "P": 47,
+            "T": 11
+          }
+        }
+      ]
+    },
+    {
+      "he": "עתיק יומין",
+      "en": "Atik Yomin",
+      "target": "Atik Yomin",
+      "officialCount": 11,
+      "note": "",
+      "id": "atik-yomin",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Atik Yomin",
+          "count": 11,
+          "bySource": {
+            "I": 8,
+            "P": 0,
+            "T": 3
+          }
+        },
+        {
+          "form": "Atik Yomine",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 4
+          }
+        }
+      ]
+    },
+    {
+      "he": "אריך אנפין",
+      "en": "Arich Anpin",
+      "target": "Arikh Anpin",
+      "officialCount": 1,
+      "note": "Spelled out only where the Hebrew spells it out; א״א = AA.",
+      "id": "arich-anpin",
+      "status": "OFFICIAL",
+      "gloss": "Arikh Anpin [AA]",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Arikh Anpin",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Arich Anpin",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אבא",
+      "en": "Aba",
+      "target": "Abba",
+      "officialCount": 8,
+      "note": "Strict majority (8:6). Not a scheme question.",
+      "id": "abba",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Abba",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 8
+          }
+        },
+        {
+          "form": "Aba (Préface)",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 6,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אמא",
+      "en": "Ima",
+      "target": "Ima",
+      "officialCount": 22,
+      "note": "",
+      "id": "ima",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Ima",
+          "count": 22,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 8
+          }
+        }
+      ]
+    },
+    {
+      "he": "או\"א",
+      "en": "AVI",
+      "target": "AVI",
+      "officialCount": 151,
+      "note": "Plural verb (« AVI sont » 13:5). או״א עילאין = les AVI supérieurs.",
+      "id": "avi",
+      "status": "OFFICIAL",
+      "gloss": "AVI (Abba et Ima)",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "AVI",
+          "count": 151,
+          "bySource": {
+            "I": 0,
+            "P": 151,
+            "T": 0
+          }
+        },
+        {
+          "form": "AvI (TES p6)",
+          "count": 23,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 23
+          }
+        }
+      ]
+    },
+    {
+      "he": "ישסו\"ת",
+      "en": "YESHSUT",
+      "target": "YESHOUT",
+      "officialCount": 34,
+      "note": "All capitals.",
+      "id": "yeshsut",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "YESHOUT",
+          "count": 34,
+          "bySource": {
+            "I": 0,
+            "P": 34,
+            "T": 0
+          }
+        },
+        {
+          "form": "YISH'SOUT (TES p6)",
+          "count": 18,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 18
+          }
+        },
+        {
+          "form": "YESHSUT",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ישראל סבא ותבונה",
+      "en": "Israel Saba and Tevuna",
+      "target": "Israël Saba et Tvouna",
+      "officialCount": 2,
+      "note": "TES p6 only (« Israël Saba et Tvouna (YISH’SOUT) »). Pair abbreviated = YESHOUT.",
+      "id": "israel-saba-tevuna",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Israël Saba",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 2
+          }
+        },
+        {
+          "form": "Tvouna",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 2
+          }
+        },
+        {
+          "form": "Tevouna",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "זעיר אנפין",
+      "en": "Zeir Anpin",
+      "target": "Zeir Anpin",
+      "officialCount": 0,
+      "note": "Never spelled out in the evidence. Proposed on BB’s « Arikh Anpin ». Use only where the Hebrew spells it out; ז״א = ZA.",
+      "id": "zeir-anpin",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Zeir Anpin",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רחל",
+      "en": "Rachel",
+      "target": "Rachel",
+      "officialCount": 0,
+      "note": "French Bible form.",
+      "id": "rachel",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Rachel",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "לאה",
+      "en": "Leah",
+      "target": "Léa",
+      "officialCount": 0,
+      "note": "French Bible form.",
+      "id": "leah",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Léa",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "חזה",
+      "en": "Chazeh",
+      "target": "Khazé",
+      "officialCount": 67,
+      "note": "Masculine (le Khazé 27).",
+      "id": "chazeh",
+      "status": "OFFICIAL",
+      "gloss": "Khazé (torse)",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Khazé",
+          "count": 67,
+          "bySource": {
+            "I": 0,
+            "P": 67,
+            "T": 0
+          }
+        },
+        {
+          "form": "Hazeh (TES p6)",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 10
+          }
+        }
+      ]
+    },
+    {
+      "he": "גו\"ע / גלגלתא ועינים",
+      "en": "GE / Galgalta ve Einayim",
+      "target": "GE / Galgalta ve Eynaim",
+      "officialCount": 27,
+      "note": "",
+      "id": "ge",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "GE",
+          "count": 27,
+          "bySource": {
+            "I": 0,
+            "P": 22,
+            "T": 5
+          }
+        },
+        {
+          "form": "Galgalta ve Eynaim",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "Galgalta Eynaim",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 1
+          }
+        },
+        {
+          "form": "Galgalta (et) Einayim (TES p6)",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "מוחא סתימאה",
+      "en": "Mocha Stimaa",
+      "target": "Mokha Stimaa",
+      "officialCount": 0,
+      "note": "Only « Mokha » (מוחא, Préface §31) is attested; Stimaa proposed.",
+      "id": "mocha-stimaa",
+      "status": "PROPOSED",
+      "gloss": "Mokha Stimaa [le cerveau caché]",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Mokha Stimaa",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Mokha (מוחא)",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "דיקנא",
+      "en": "Dikna",
+      "target": "Dikna",
+      "officialCount": 17,
+      "note": "",
+      "id": "dikna",
+      "status": "OFFICIAL",
+      "gloss": "Dikna (barbe)",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Dikna",
+          "count": 17,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 17
+          }
+        },
+        {
+          "form": "barbe",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 6
+          }
+        }
+      ]
+    },
+    {
+      "he": "מצח",
+      "en": "Metzach",
+      "target": "Metzakh",
+      "officialCount": 9,
+      "note": "« le nouveau MA sorti de Metzakh ».",
+      "id": "metzach",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Metzakh",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 0
+          }
+        },
+        {
+          "form": "Metzach (TES p6)",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "שבולת הזקן",
+      "en": "Shibolet of the beard",
+      "target": "Shibbolet HaZakan",
+      "officialCount": 26,
+      "note": "TES p6.",
+      "id": "shibolet",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Shibbolet HaZakan",
+          "count": 26,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 26
+          }
+        },
+        {
+          "form": "Shibbolet",
+          "count": 34,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 34
+          }
+        }
+      ]
+    },
+    {
+      "he": "שערות",
+      "en": "hairs",
+      "target": "cheveux",
+      "officialCount": 12,
+      "note": "« Se'arot Dikna (cheveux de la barbe) » once as a name.",
+      "id": "searot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "cheveux",
+          "count": 12,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 12
+          }
+        },
+        {
+          "form": "Se'arot",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 5
+          }
+        }
+      ]
+    },
+    {
+      "he": "מזלא",
+      "en": "Mazal",
+      "target": "Mazla",
+      "officialCount": 4,
+      "note": "TES p6.",
+      "id": "mazla",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Mazla",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 4
+          }
+        }
+      ]
+    },
+    {
+      "he": "רגלין / רגלים",
+      "en": "Raglin / legs",
+      "target": "Raglin (סיום רגלין); Raglayim (רגלים)",
+      "officialCount": 21,
+      "note": "Follow the Hebrew form: Aramaic רגלין → Raglin, Hebrew רגלים → Raglayim.",
+      "id": "raglin",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Raglin",
+          "count": 21,
+          "bySource": {
+            "I": 0,
+            "P": 21,
+            "T": 0
+          }
+        },
+        {
+          "form": "Raglayim",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 8
+          }
+        },
+        {
+          "form": "Raglaim / Raglim",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 4,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ו\"ק בלי ראש",
+      "en": "VAK without a Rosh",
+      "target": "VAK sans Roch",
+      "officialCount": 18,
+      "note": "",
+      "id": "vak-bli-rosh",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Partsoufim",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "VAK sans Roch",
+          "count": 18,
+          "bySource": {
+            "I": 0,
+            "P": 18,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "בי\"ע",
+      "en": "BYA",
+      "target": "BYA",
+      "officialCount": 73,
+      "note": "",
+      "id": "bya",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Mondes",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "BYA",
+          "count": 73,
+          "bySource": {
+            "I": 0,
+            "P": 73,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נפש",
+      "en": "Nefesh",
+      "target": "Nefesh",
+      "officialCount": 8,
+      "note": "Ruled jointly with Neshama: the ש of the two names is sh 53 : ch 29 (Nefesh 8 + Neshama 45 vs Nefech 16 + Nechama 13). Per-word count alone would give Nefech (16:8) next to Neshama. See least-sure list.",
+      "id": "nefesh",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Nefesh",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "Nefech",
+          "count": 16,
+          "bySource": {
+            "I": 0,
+            "P": 16,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רוח",
+      "en": "Ruach",
+      "target": "Rouakh",
+      "officialCount": 22,
+      "note": "",
+      "id": "ruach",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Rouakh",
+          "count": 22,
+          "bySource": {
+            "I": 0,
+            "P": 22,
+            "T": 0
+          }
+        },
+        {
+          "form": "Ruach",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נשמה",
+      "en": "Neshama",
+      "target": "Neshama",
+      "officialCount": 45,
+      "note": "Gloss: Neshama (âme).",
+      "id": "neshama",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Neshama",
+          "count": 45,
+          "bySource": {
+            "I": 0,
+            "P": 44,
+            "T": 1
+          }
+        },
+        {
+          "form": "Nechama",
+          "count": 13,
+          "bySource": {
+            "I": 0,
+            "P": 13,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "חיה",
+      "en": "Haya",
+      "target": "Haya",
+      "officialCount": 43,
+      "note": "",
+      "id": "haya",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Haya",
+          "count": 43,
+          "bySource": {
+            "I": 0,
+            "P": 43,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "יחידה",
+      "en": "Yechida",
+      "target": "Yekhida",
+      "officialCount": 41,
+      "note": "",
+      "id": "yechida",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Yekhida",
+          "count": 41,
+          "bySource": {
+            "I": 0,
+            "P": 41,
+            "T": 0
+          }
+        },
+        {
+          "form": "Yékhida",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור חכמה",
+      "en": "light of Hochma",
+      "target": "Ohr Hokhma",
+      "officialCount": 12,
+      "note": "Near-tie (12:13) decided by the family rule (see or-yashar). « la lumière de Hokhma » is BB too — not an error.",
+      "id": "ohr-hochma",
+      "status": "OFFICIAL",
+      "gloss": "Ohr Hokhma [Lumière de la Sagesse]",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Ohr Hokhma",
+          "count": 12,
+          "bySource": {
+            "I": 0,
+            "P": 12,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière de Hokhma",
+          "count": 13,
+          "bySource": {
+            "I": 4,
+            "P": 7,
+            "T": 2
+          }
+        },
+        {
+          "form": "lumière de la Sagesse (gloss)",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור חסדים",
+      "en": "light of Hassadim",
+      "target": "Ohr Hassadim",
+      "officialCount": 12,
+      "note": "",
+      "id": "ohr-hassadim",
+      "status": "OFFICIAL",
+      "gloss": "Ohr Hassadim [Lumière de la Miséricorde]",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Ohr Hassadim",
+          "count": 12,
+          "bySource": {
+            "I": 0,
+            "P": 12,
+            "T": 0
+          }
+        },
+        {
+          "form": "lumière de Hassadim",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 7,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עיבור",
+      "en": "Ibur",
+      "target": "Ibour",
+      "officialCount": 14,
+      "note": "עובר = Oubar [embryon] (2).",
+      "id": "ibur",
+      "status": "OFFICIAL",
+      "gloss": "Ibour [fécondation]",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Ibour",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 0
+          }
+        },
+        {
+          "form": "fécondation",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "יניקה",
+      "en": "nursing (Yenika)",
+      "target": "Yenika",
+      "officialCount": 9,
+      "note": "BB transliterates (English canon translates « nursing »).",
+      "id": "yenika",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Lumières",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Yenika",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 0
+          }
+        },
+        {
+          "form": "allaitement",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "צמצום א'",
+      "en": "first restriction",
+      "target": "Tsimtsoum Aleph",
+      "officialCount": 14,
+      "note": "",
+      "id": "tzimtzum-aleph",
+      "status": "OFFICIAL",
+      "gloss": "Tsimtsoum Aleph [première restriction]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Tsimtsoum Aleph",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 0
+          }
+        },
+        {
+          "form": "première restriction",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 7,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "צמצום ב'",
+      "en": "second restriction",
+      "target": "Tsimtsoum Bet",
+      "officialCount": 31,
+      "note": "צמצום נה״י דא״ק = Tsimtsoum NHY de AK.",
+      "id": "tzimtzum-bet",
+      "status": "OFFICIAL",
+      "gloss": "Tsimtsoum Bet [seconde restriction]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Tsimtsoum Bet",
+          "count": 31,
+          "bySource": {
+            "I": 0,
+            "P": 31,
+            "T": 0
+          }
+        },
+        {
+          "form": "seconde / deuxième restriction",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "פנים",
+      "en": "Panim / face",
+      "target": "Panim",
+      "officialCount": 36,
+      "note": "Technical: Kélim de Panim. « face » counts are mostly the Introduction’s הסתר פנים (dissimulation de la face) — a different sense, translated.",
+      "id": "panim",
+      "status": "OFFICIAL",
+      "gloss": "Panim [face]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Panim",
+          "count": 36,
+          "bySource": {
+            "I": 6,
+            "P": 30,
+            "T": 0
+          }
+        },
+        {
+          "form": "face (any)",
+          "count": 178,
+          "bySource": {
+            "I": 122,
+            "P": 42,
+            "T": 14
+          }
+        }
+      ]
+    },
+    {
+      "he": "אחור",
+      "en": "Achor",
+      "target": "Akhor",
+      "officialCount": 10,
+      "note": "« Partsouf de Akhor », « dans son Akhor ».",
+      "id": "achor",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Akhor",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "פב\"פ / פנים בפנים",
+      "en": "face to face",
+      "target": "face à face",
+      "officialCount": 14,
+      "note": "Plain words, like English.",
+      "id": "face-to-face",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "face à face",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אב\"א / אחור באחור",
+      "en": "back to back",
+      "target": "dos à dos",
+      "officialCount": 8,
+      "note": "Plain words.",
+      "id": "back-to-back",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "dos à dos",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "זכר",
+      "en": "male",
+      "target": "mâle",
+      "officialCount": 47,
+      "note": "",
+      "id": "zachar",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "mâle(s)",
+          "count": 47,
+          "bySource": {
+            "I": 0,
+            "P": 31,
+            "T": 16
+          }
+        },
+        {
+          "form": "Zakhar",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "נקבה",
+      "en": "female",
+      "target": "femelle",
+      "officialCount": 40,
+      "note": "",
+      "id": "nekeva",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "femelle(s)",
+          "count": 40,
+          "bySource": {
+            "I": 0,
+            "P": 27,
+            "T": 13
+          }
+        },
+        {
+          "form": "Nekeva",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מ\"ן",
+      "en": "MAN",
+      "target": "MAN",
+      "officialCount": 63,
+      "note": "BB once glosses « [MAN /eau femelle] ».",
+      "id": "man",
+      "status": "OFFICIAL",
+      "gloss": "MAN [Mayin Noukvin]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "MAN",
+          "count": 63,
+          "bySource": {
+            "I": 0,
+            "P": 58,
+            "T": 5
+          }
+        },
+        {
+          "form": "Mayin Noukvin",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "מ\"ד",
+      "en": "MAD",
+      "target": "MAD",
+      "officialCount": 0,
+      "note": "Not attested; built on BB’s « Mayin Noukvin » (ou, kh).",
+      "id": "mad",
+      "status": "PROPOSED",
+      "gloss": "MAD [Mayin Doukhrin]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "MAD",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Mayin Doukhrin",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "קדושה",
+      "en": "holiness / Kedusha",
+      "target": "Kedoucha",
+      "officialCount": 10,
+      "note": "Technical (Partsoufim/mondes de Kedoucha vs Klipot). Ordinary holiness stays sainteté.",
+      "id": "kedusha",
+      "status": "OFFICIAL",
+      "gloss": "Kedoucha [sainteté]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Kedoucha",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 10,
+            "T": 0
+          }
+        },
+        {
+          "form": "Kedousha (Intro)",
+          "count": 8,
+          "bySource": {
+            "I": 8,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "sainteté",
+          "count": 12,
+          "bySource": {
+            "I": 9,
+            "P": 2,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "דין / דינים",
+      "en": "judgment",
+      "target": "Din (sg.); jugements (pl. דינים)",
+      "officialCount": 14,
+      "note": "« la force de Din », « Midat ha Din ». The plural דינים is translated (TES p6: « les jugements et Guevourot »).",
+      "id": "din",
+      "status": "OFFICIAL",
+      "gloss": "Din [jugement]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Din",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 0
+          }
+        },
+        {
+          "form": "jugement(s)",
+          "count": 23,
+          "bySource": {
+            "I": 4,
+            "P": 6,
+            "T": 13
+          }
+        }
+      ]
+    },
+    {
+      "he": "רחמים",
+      "en": "mercy",
+      "target": "Rakhamim",
+      "officialCount": 9,
+      "note": "מדת הרחמים = Midat ha Rakhamim (3); מדת הדין = Midat ha Din (5).",
+      "id": "rachamim",
+      "status": "OFFICIAL",
+      "gloss": "Rakhamim [clémence]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Rakhamim",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 6,
+            "T": 3
+          }
+        },
+        {
+          "form": "miséricorde",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 4,
+            "T": 0
+          }
+        },
+        {
+          "form": "clémence",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 4,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מלכות המסיימת",
+      "en": "the ending Malchut",
+      "target": "la Malkhout terminale",
+      "officialCount": 16,
+      "note": "",
+      "id": "malchut-mesayemet",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Malkhout terminale",
+          "count": 16,
+          "bySource": {
+            "I": 0,
+            "P": 16,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מלכות המזדווגת",
+      "en": "the coupling Malchut",
+      "target": "la Malkhout d'accouplement",
+      "officialCount": 8,
+      "note": "",
+      "id": "malchut-mizdaveget",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Malkhout d'accouplement",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "Malkhout qui s'accouple",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "התכללות",
+      "en": "inclusion",
+      "target": "Hitkalelout",
+      "officialCount": 14,
+      "note": "Verb: s’inclure, s’intégrer.",
+      "id": "hitkalelut",
+      "status": "OFFICIAL",
+      "gloss": "Hitkalelout (inclusion)",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Hitkalelout",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 0
+          }
+        },
+        {
+          "form": "inclusion",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "קשיות",
+      "en": "hardness",
+      "target": "Kachiout",
+      "officialCount": 5,
+      "note": "",
+      "id": "kashiut",
+      "status": "OFFICIAL",
+      "gloss": "Kachiout [dureté]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Kachiout",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 0
+          }
+        },
+        {
+          "form": "dureté",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "דבקות",
+      "en": "adhesion",
+      "target": "Dvékout",
+      "officialCount": 2,
+      "note": "Tie 2:2 — BB’s glossed occurrence is Dvékout.",
+      "id": "dvekut",
+      "status": "OFFICIAL",
+      "gloss": "Dvékout [adhésion]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Dvékout",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "Dvekout",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "adhésion",
+          "count": 5,
+          "bySource": {
+            "I": 2,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "מלכים / מלך",
+      "en": "kings / king",
+      "target": "rois (les sept rois); Melekh only in BB’s fixed names",
+      "officialCount": 29,
+      "note": "The plural is translated (TES p6 25 : Melakhim 1). Keep BB’s names Melekh ha Daat, Melekh ha Hessed, Melekh ha Guevoura.",
+      "id": "melachim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "roi(s) (Préface + TES p6)",
+          "count": 29,
+          "bySource": {
+            "P": 4,
+            "T": 25
+          }
+        },
+        {
+          "form": "Melekh",
+          "count": 22,
+          "bySource": {
+            "I": 0,
+            "P": 22,
+            "T": 0
+          }
+        },
+        {
+          "form": "Melakhim",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ביטול המלכים",
+      "en": "the nullification of the kings",
+      "target": "la révocation des rois",
+      "officialCount": 8,
+      "note": "TES p6 fixed phrase (8). Other ביטול = annulation, verb s’annuler (Préface).",
+      "id": "bitul-hamelachim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "révocation",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 8
+          }
+        },
+        {
+          "form": "annulation",
+          "count": 7,
+          "bySource": {
+            "I": 0,
+            "P": 6,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "שבירת הכלים",
+      "en": "the breaking of the vessels",
+      "target": "la brisure des récipients",
+      "officialCount": 10,
+      "note": "",
+      "id": "shvirat-hakelim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "brisure des récipients",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 10,
+            "T": 0
+          }
+        },
+        {
+          "form": "brisure des Kélim",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "גמר התיקון",
+      "en": "the end of correction",
+      "target": "la réparation finale",
+      "officialCount": 5,
+      "note": "",
+      "id": "gmar-tikkun",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "réparation finale",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 0
+          }
+        },
+        {
+          "form": "fin de la correction",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        },
+        {
+          "form": "Gmar Tikoun",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עולם התיקון",
+      "en": "the world of correction",
+      "target": "le monde du Tikoun",
+      "officialCount": 8,
+      "note": "",
+      "id": "olam-hatikkun",
+      "status": "OFFICIAL",
+      "gloss": "le monde du Tikoun [la correction]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "monde du Tikoun",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 0
+          }
+        },
+        {
+          "form": "monde de la correction",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "העליון (noun)",
+      "en": "the upper one",
+      "target": "le Supérieur",
+      "officialCount": 45,
+      "note": "The lower one (התחתון) is lower case: l’inférieur (23).",
+      "id": "haelyon",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "le/du/au Supérieur",
+          "count": 45,
+          "bySource": {
+            "I": 0,
+            "P": 45,
+            "T": 0
+          }
+        },
+        {
+          "form": "le/du/au supérieur",
+          "count": 21,
+          "bySource": {
+            "I": 0,
+            "P": 19,
+            "T": 2
+          }
+        }
+      ]
+    },
+    {
+      "he": "התחתון (noun)",
+      "en": "the lower one",
+      "target": "l'inférieur",
+      "officialCount": 23,
+      "note": "",
+      "id": "hatachton",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "l'inférieur",
+          "count": 23,
+          "bySource": {
+            "I": 0,
+            "P": 22,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "נבחן ל־",
+      "en": "is regarded as",
+      "target": "est considéré comme",
+      "officialCount": 144,
+      "note": "",
+      "id": "nivchan",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "considéré(e)(s) comme",
+          "count": 144,
+          "bySource": {
+            "I": 26,
+            "P": 108,
+            "T": 10
+          }
+        },
+        {
+          "form": "discerné(e)(s) comme",
+          "count": 28,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 27
+          }
+        }
+      ]
+    },
+    {
+      "he": "הבחנה / הבחן",
+      "en": "discernment",
+      "target": "discernement",
+      "officialCount": 80,
+      "note": "Only for the act of discerning; בחינה itself is phase.",
+      "id": "havchana",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "discernement(s)",
+          "count": 80,
+          "bySource": {
+            "I": 46,
+            "P": 31,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "טנת\"א",
+      "en": "Taamim, Nekudot, Tagin and letters",
+      "target": "TANTA (Taamim, Nekoudot, Taguin, Otiot)",
+      "officialCount": 2,
+      "note": "",
+      "id": "tanta",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "TANTA",
+          "count": 2,
+          "bySource": {
+            "I": 0,
+            "P": 2,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "תגין",
+      "en": "Tagin",
+      "target": "Taguin",
+      "officialCount": 9,
+      "note": "",
+      "id": "tagin",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Taguin",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 0
+          }
+        },
+        {
+          "form": "Tagim / Taggim (TES p6)",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 5
+          }
+        }
+      ]
+    },
+    {
+      "he": "אהי\"ה",
+      "en": "EKYH",
+      "target": "Ekié",
+      "officialCount": 6,
+      "note": "TES p6.",
+      "id": "ekye",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Ekié",
+          "count": 6,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 6
+          }
+        }
+      ]
+    },
+    {
+      "he": "גימטריא",
+      "en": "gematria",
+      "target": "Guématrie",
+      "officialCount": 7,
+      "note": "",
+      "id": "gematria",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Guématrie / Guématria",
+          "count": 7,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 6
+          }
+        },
+        {
+          "form": "Gématrie",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 1,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עם הכולל",
+      "en": "with the kollel",
+      "target": "avec le Kolel",
+      "officialCount": 3,
+      "note": "",
+      "id": "kolel",
+      "status": "OFFICIAL",
+      "gloss": "Kolel [totalité]",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Kolel",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "חולם / שורק / חירק / קמץ / פתח",
+      "en": "Holam, Shuruk, Hirik, Kamatz, Patach",
+      "target": "Holam, Shourouk, Hirik, Kamatz, Patakh",
+      "officialCount": 17,
+      "note": "Patakh 5 : Patach 4 (TES p6). Melafom (2).",
+      "id": "vowels",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Holam",
+          "count": 17,
+          "bySource": {
+            "I": 0,
+            "P": 10,
+            "T": 7
+          }
+        },
+        {
+          "form": "Shourouk",
+          "count": 22,
+          "bySource": {
+            "I": 0,
+            "P": 14,
+            "T": 8
+          }
+        },
+        {
+          "form": "Hirik",
+          "count": 10,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 1
+          }
+        },
+        {
+          "form": "Kamatz",
+          "count": 8,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 8
+          }
+        },
+        {
+          "form": "Patakh",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 5
+          }
+        },
+        {
+          "form": "Patach",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 4
+          }
+        }
+      ]
+    },
+    {
+      "he": "יו\"ד / ה\"א / וי\"ו / אל\"ף / גימ\"ל / דל\"ת",
+      "en": "Yod, Hey, Vav, Aleph, Gimel, Dalet",
+      "target": "Yod, Hey, Vav, Aleph, Guimel, Dalet",
+      "officialCount": 14,
+      "note": "Yod 14 : Youd 8. Spelled fillings hyphenated: Yod-Vav-Dalet, Hey-Yod.",
+      "id": "letters",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Yod",
+          "count": 14,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 14
+          }
+        },
+        {
+          "form": "Youd",
+          "count": 8,
+          "bySource": {
+            "I": 1,
+            "P": 7,
+            "T": 0
+          }
+        },
+        {
+          "form": "Hey",
+          "count": 57,
+          "bySource": {
+            "I": 0,
+            "P": 35,
+            "T": 22
+          }
+        },
+        {
+          "form": "Vav",
+          "count": 25,
+          "bySource": {
+            "I": 0,
+            "P": 8,
+            "T": 17
+          }
+        },
+        {
+          "form": "Aleph",
+          "count": 61,
+          "bySource": {
+            "I": 1,
+            "P": 58,
+            "T": 2
+          }
+        },
+        {
+          "form": "Guimel",
+          "count": 49,
+          "bySource": {
+            "I": 0,
+            "P": 49,
+            "T": 0
+          }
+        },
+        {
+          "form": "Dalet",
+          "count": 123,
+          "bySource": {
+            "I": 0,
+            "P": 122,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "אדם הראשון",
+      "en": "Adam HaRishon",
+      "target": "Adam haRishon",
+      "officialCount": 4,
+      "note": "Near-tie; joined lower-case ha is BB’s commonest.",
+      "id": "adam-harishon",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Adam haRishon / haRichon",
+          "count": 4,
+          "bySource": {
+            "I": 0,
+            "P": 4,
+            "T": 0
+          }
+        },
+        {
+          "form": "Adam ha Rishon",
+          "count": 3,
+          "bySource": {
+            "I": 0,
+            "P": 3,
+            "T": 0
+          }
+        },
+        {
+          "form": "Adam HaRishon",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ספר האילן / ציור",
+      "en": "The Book of the Tree / drawing",
+      "target": "Sefer HaIlan, schéma N",
+      "officialCount": 5,
+      "note": "",
+      "id": "sefer-hailan",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Concepts",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Sefer HaIlan",
+          "count": 5,
+          "bySource": {
+            "I": 0,
+            "P": 5,
+            "T": 0
+          }
+        },
+        {
+          "form": "schéma",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 9,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אור פנימי / או\"פ (the commentary)",
+      "en": "Inner Light",
+      "target": "Lumière intérieure",
+      "officialCount": 8,
+      "note": "See or-pnimi. Matches the UI.",
+      "id": "or-pnimi-title",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sections",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Lumière intérieure (TES p6)",
+          "count": 8,
+          "bySource": {
+            "T": 8
+          }
+        },
+        {
+          "form": "[Lumière intérieure] gloss (Intro)",
+          "count": 1,
+          "bySource": {
+            "I": 1
+          }
+        },
+        {
+          "form": "Ohr Pnimi as the title (Intro)",
+          "count": 3,
+          "bySource": {
+            "I": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "שאלות ותשובות",
+      "en": "Questions and Answers",
+      "target": "Questions et réponses",
+      "officialCount": 1,
+      "note": "« le tableau des questions », « le tableau des réponses » (Intro §156).",
+      "id": "qa",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sections",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "questions et réponses",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "tableau des questions / des réponses",
+          "count": 3,
+          "bySource": {
+            "I": 3,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "לפירוש המלות",
+      "en": "(on) Terminology",
+      "target": "l'explication des mots",
+      "officialCount": 1,
+      "note": "BB: « l’explication des mots » = פירוש המלות (Intro §156). ToC uses « sens des mots » — see Traps.",
+      "id": "qa-terminology",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sections",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "explication des mots",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "sens des mots",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "לענינים",
+      "en": "(on) Topics",
+      "target": "les sujets",
+      "officialCount": 1,
+      "note": "BB: « pour tous les mots et sujets » (Intro §156). ToC uses « thèmes » — see Traps.",
+      "id": "qa-topics",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Sections",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "mots et sujets",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "thèmes",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "האר\"י ז\"ל / האריז\"ל",
+      "en": "the ARI",
+      "target": "le ARI",
+      "officialCount": 21,
+      "note": "Honorific ז״ל dropped; no elision.",
+      "id": "ari",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "le/du/au ARI",
+          "count": 21,
+          "bySource": {
+            "I": 6,
+            "P": 0,
+            "T": 15
+          }
+        },
+        {
+          "form": "le/du Ari",
+          "count": 2,
+          "bySource": {
+            "I": 2,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "l'ARI",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "בעל הסולם",
+      "en": "Baal HaSulam",
+      "target": "Baal HaSoulam",
+      "officialCount": 2,
+      "note": "Matches the UI.",
+      "id": "baal-hasulam",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Baal HaSoulam",
+          "count": 2,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "Baal HaSulam",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "רבי שמעון בר יוחאי / רשב\"י",
+      "en": "Rabbi Shimon Bar Yochai",
+      "target": "Rabbi Shimon Bar Yokhaï",
+      "officialCount": 0,
+      "note": "« Rabbi Shimon » is attested (12); the patronymic is proposed on the kh scheme. רשב״י = Rashbi (like BB’s « Rashbam »).",
+      "id": "rashbi",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Rabbi Shimon Bar Yokhaï",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Rabbi Shimon",
+          "count": 12,
+          "bySource": {
+            "I": 12,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Rashbam (BB, for רשב״ם)",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הרח\"ו / ר׳ חיים ויטאל",
+      "en": "Rav Chaim Vital",
+      "target": "Rabbi Haim Vital",
+      "officialCount": 4,
+      "note": "",
+      "id": "rav-chaim-vital",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Rabbi Haim Vital",
+          "count": 4,
+          "bySource": {
+            "I": 4,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עץ חיים / ע\"ח",
+      "en": "Etz Chaim",
+      "target": "L'arbre de vie",
+      "officialCount": 6,
+      "note": "BB translates the title; often « dans le livre « L’arbre de vie » ». שער N = porte N.",
+      "id": "etz-chaim",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "L'arbre de vie",
+          "count": 6,
+          "bySource": {
+            "I": 6,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "L'Arbre de vie / de Vie",
+          "count": 3,
+          "bySource": {
+            "I": 3,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "הזוהר / ספר הזהר",
+      "en": "the Zohar",
+      "target": "le Zohar",
+      "officialCount": 21,
+      "note": "",
+      "id": "zohar",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Zohar",
+          "count": 21,
+          "bySource": {
+            "I": 14,
+            "P": 1,
+            "T": 6
+          }
+        },
+        {
+          "form": "le livre du Zohar",
+          "count": 2,
+          "bySource": {
+            "I": 2,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "תיקוני זוהר / התיקונים",
+      "en": "the Tikkunim",
+      "target": "les Tikounim du Zohar",
+      "officialCount": 4,
+      "note": "« (Tikoun 30) » for a numbered Tikkun.",
+      "id": "tikkunim",
+      "status": "OFFICIAL",
+      "gloss": "Tikounim [corrections]",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Tikounim",
+          "count": 4,
+          "bySource": {
+            "I": 4,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Tikoun N",
+          "count": 2,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "Corrections (TES p6)",
+          "count": 3,
+          "bySource": {
+            "I": 2,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "מבוא שערים",
+      "en": "Mevo She'arim",
+      "target": "Mevo Shearim",
+      "officialCount": 0,
+      "note": "Not attested. BB writes Shaar without apostrophe (« Shaar HaHakdamot »).",
+      "id": "mevo-shearim",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Mevo Shearim",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Shaar HaHakdamot (BB model)",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "שער הכוונות",
+      "en": "Sha'ar HaKavanot",
+      "target": "Shaar HaKavanot",
+      "officialCount": 0,
+      "note": "On BB’s « Shaar HaHakdamot » (1).",
+      "id": "shaar-hakavanot",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Shaar HaKavanot",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "Shaar HaHakdamot (BB)",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "תלמוד עשר הספירות",
+      "en": "Talmud Eser Sefirot",
+      "target": "le Talmud des dix Sefirot",
+      "officialCount": 3,
+      "note": "As a book cited inside the text. The UI brand « Talmud Eser Sefirot » is not text.",
+      "id": "tes-title",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Talmud des dix Sefirot",
+          "count": 3,
+          "bySource": {
+            "I": 2,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Talmud Esser Sefirot",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "פנים מאירות ופנים מסבירות",
+      "en": "Panim Meirot uPanim Masbirot",
+      "target": "Panim Meirot et Panim Masbirot",
+      "officialCount": 3,
+      "note": "",
+      "id": "panim-meirot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Noms",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Panim Masbirot",
+          "count": 3,
+          "bySource": {
+            "I": 2,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "Panim Meirot",
+          "count": 2,
+          "bySource": {
+            "I": 2,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ד\"ה",
+      "en": "the passage beginning",
+      "target": "le passage commençant par « … »",
+      "officialCount": 0,
+      "note": "BB never renders it: Intro/Préface drop it and keep the point number; TES p6 converts « page N ד״ה X » into « Partie N, Lumière intérieure, point M ». Our pipeline keeps pages, so it must be said.",
+      "id": "cite-dh",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "passage commençant par",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עש\"ה",
+      "en": "study it there well",
+      "target": "étudiez-le bien là-bas",
+      "officialCount": 0,
+      "note": "BB drops it every time (Préface 18 ×, e.g. §69 « (Point 35) »). Nearest BB phrase: « et vous pouvez l’étudier là » (TES p6, for ומשם תדרשנו).",
+      "id": "cite-ashe",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "étudiez-le bien",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "ע\"ש",
+      "en": "see there",
+      "target": "voir là-bas",
+      "officialCount": 0,
+      "note": "BB drops it.",
+      "id": "cite-as",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "voir là-bas",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "עכ\"ל",
+      "en": "End of quote",
+      "target": "fin de citation",
+      "officialCount": 0,
+      "note": "BB just closes the guillemets (Intro §19, §76, §86, §122). Write « … ». Fin de citation.",
+      "id": "cite-akl",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "fin de citation",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "וז\"ל / וזה לשונו",
+      "en": "and these are his words",
+      "target": "et je cite :",
+      "officialCount": 1,
+      "note": "Intro §19 (וזה לשונו → « et je cite : »). Other BB renderings are ad hoc (« Il exprime : », « Traduction abrégée : »).",
+      "id": "cite-vzl",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "et je cite",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אכמ\"ל / אין כאן מקום להאריך",
+      "en": "this is not the place to elaborate",
+      "target": "il n'est pas nécessaire de s'étendre ici",
+      "officialCount": 1,
+      "note": "TES p6 ch. 35 (ואין זה מקום להאריך בו). Préface §111 « je ne le développerai pas plus avant » for לא אאריך בו.",
+      "id": "cite-ekml",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "il n'est pas nécessaire de s'étendre ici",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "דף N (ע\"א / ע\"ב)",
+      "en": "page N (Na / Nb)",
+      "target": "page N",
+      "officialCount": 5,
+      "note": "Arabic numerals. Folio side: « page 6b », « Taanit 7a » (Intro). TES pages past 999 keep the full number (page 1007).",
+      "id": "cite-daf",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "page N",
+          "count": 5,
+          "bySource": {
+            "I": 5,
+            "P": 0,
+            "T": 0
+          }
+        },
+        {
+          "form": "p. N (four spellings)",
+          "count": 7,
+          "bySource": {
+            "I": 7,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "אות N",
+      "en": "item N",
+      "target": "point N",
+      "officialCount": 113,
+      "note": "BB capitalises the first word of a parenthetical reference: « (Point 35) » (113), « (Partie 5, point 27) »; mid-sentence « au point 15 ». Never paragraphe/article/item. אות can also mean letter — read the sentence.",
+      "id": "cite-ot",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "(Point N) — parenthesis-initial",
+          "count": 113,
+          "bySource": {
+            "I": 0,
+            "P": 113,
+            "T": 0
+          }
+        },
+        {
+          "form": "point N — elsewhere",
+          "count": 23,
+          "bySource": {
+            "I": 4,
+            "P": 8,
+            "T": 11
+          }
+        },
+        {
+          "form": "Point N — elsewhere",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "תשובה N",
+      "en": "answer N",
+      "target": "réponse N",
+      "officialCount": 0,
+      "note": "No numbered answer is cited in the evidence; « le tableau des réponses » is BB, « Réponses » is the UI.",
+      "id": "cite-teshuva",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "réponse N",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "שאלה N",
+      "en": "question N",
+      "target": "question N",
+      "officialCount": 0,
+      "note": "",
+      "id": "cite-sheela",
+      "status": "PROPOSED",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "question N",
+          "count": 0,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "חלק N",
+      "en": "Part N",
+      "target": "partie N (Partie N at the start of a parenthesis)",
+      "officialCount": 9,
+      "note": "TES p6: « (Partie 5, Lumière intérieure, point 40) », « (voir partie 5, point 27) ». Matches the UI label « Partie ».",
+      "id": "cite-helek",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Partie N / partie N",
+          "count": 9,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 9
+          }
+        }
+      ]
+    },
+    {
+      "he": "פרק N",
+      "en": "chapter N",
+      "target": "chapitre N",
+      "officialCount": 1,
+      "note": "TES p6 « (Partie 4, Chapitre 5, Lumière intérieure, point 2) ».",
+      "id": "cite-perek",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Chapitre N",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        },
+        {
+          "form": "ch. N",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "שער N (in Etz Chaim)",
+      "en": "Gate N",
+      "target": "porte N",
+      "officialCount": 1,
+      "note": "Intro « (porte 48 ch.3) » for ע״ח שער מ״ח פ״ג.",
+      "id": "cite-shaar",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "porte N",
+          "count": 1,
+          "bySource": {
+            "I": 1,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "סעיף N",
+      "en": "paragraph N",
+      "target": "point N",
+      "officialCount": 1,
+      "note": "TES p6 renders סעיף ב׳ as « point 2 » (1 instance, ch. 25).",
+      "id": "cite-seif",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "« Lumière intérieure, point 2 » for סעיף ב׳",
+          "count": 1,
+          "bySource": {
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "כנ\"ל / הנ\"ל",
+      "en": "as above / the above",
+      "target": "ci-dessus (mentionné ci-dessus)",
+      "officialCount": 40,
+      "note": "לעיל = plus haut (20) / ci-dessus; להלן = ci-dessous (4) / plus loin (2).",
+      "id": "cite-knl",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "ci-dessus",
+          "count": 40,
+          "bySource": {
+            "I": 11,
+            "P": 14,
+            "T": 15
+          }
+        },
+        {
+          "form": "susmentionné",
+          "count": 5,
+          "bySource": {
+            "I": 2,
+            "P": 3,
+            "T": 0
+          }
+        }
+      ]
+    },
+    {
+      "he": "כמ\"ש",
+      "en": "as is written",
+      "target": "comme il est écrit",
+      "officialCount": 40,
+      "note": "",
+      "id": "cite-kms",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "comme il est écrit",
+          "count": 40,
+          "bySource": {
+            "I": 31,
+            "P": 6,
+            "T": 3
+          }
+        }
+      ]
+    },
+    {
+      "he": "וכו'",
+      "en": "etc.",
+      "target": "etc.",
+      "officialCount": 23,
+      "note": "Inside a lemma too: « Il examine ces lumières de AHP, etc. » (TES p6).",
+      "id": "cite-vchu",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "etc.",
+          "count": 23,
+          "bySource": {
+            "I": 8,
+            "P": 7,
+            "T": 8
+          }
+        }
+      ]
+    },
+    {
+      "he": "בדבור הסמוך",
+      "en": "the adjacent item",
+      "target": "le point précédent",
+      "officialCount": 1,
+      "note": "TES p6 ch. 17 (1). Use « le point suivant » when the item referred to follows.",
+      "id": "cite-samuch",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "point précédent",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "ומשם תדרשנו",
+      "en": "and from there you will seek it",
+      "target": "et vous pouvez l'étudier là",
+      "officialCount": 1,
+      "note": "TES p6 ch. 25.",
+      "id": "cite-tidr",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "vous pouvez l'étudier là",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "והבן / ודו\"ק",
+      "en": "and understand / examine closely",
+      "target": "et comprenez cela",
+      "officialCount": 5,
+      "note": "BB addresses the reader as vous (Sachez 28, vous savez 20 vs tu forms 2).",
+      "id": "cite-vehaven",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "comprenez",
+          "count": 5,
+          "bySource": {
+            "I": 4,
+            "P": 1,
+            "T": 0
+          }
+        },
+        {
+          "form": "comprends",
+          "count": 1,
+          "bySource": {
+            "I": 0,
+            "P": 0,
+            "T": 1
+          }
+        }
+      ]
+    },
+    {
+      "he": "ותדע / ודע",
+      "en": "and know",
+      "target": "Sachez",
+      "officialCount": 28,
+      "note": "כבר ידעת = vous savez déjà.",
+      "id": "cite-vetada",
+      "status": "OFFICIAL",
+      "gloss": "",
+      "group": "Citations",
+      "fromEnglishIndex": false,
+      "variants": [
+        {
+          "form": "Sachez",
+          "count": 28,
+          "bySource": {
+            "I": 5,
+            "P": 20,
+            "T": 3
+          }
+        },
+        {
+          "form": "Sache",
+          "count": 3,
+          "bySource": {
+            "I": 3,
+            "P": 0,
+            "T": 0
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "sources": {
+      "I": "Introduction à l’étude des dix Sefirot (BB, KabbalahMedia OqZMFGHu, fr)",
+      "P": "Préface à la sagesse de la Kabbale (BB, fr)",
+      "T": "TES partie 6, fr-bb in content/parts/part-06 (54 source items + 8 Lumière intérieure items)"
+    },
+    "counting": "Whole-word Python regexes over the plain text, U+2019 normalised to an apostrophe; per-source breakdown in variants[].bySource.",
+    "rows": 234,
+    "official": 215,
+    "proposed": 19
+  }
+}

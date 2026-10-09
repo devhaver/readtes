@@ -262,3 +262,37 @@ different vocabulary than this commentary corpus.
 - Expansion runs ≈1.75× the Hebrew character count — every abbreviation
   Baal HaSulam compresses expands to a full English phrase. The run is
   generation-bound; bigger batch budgets save nothing, only parallelism helps.
+
+## Languages other than English
+
+Every language except Hebrew and English starts from zero (about 4.8 million
+Hebrew characters each), so the run order is **the book's reading order,
+part by part, across all languages at once** — a reader in any language gets
+the beginning of the book first. Within a part, the **source layer** (the
+Ari's text, Inner Observation, Questions and Answers) goes first, so the
+commentary run that follows has the Ari's text in its own language as
+`context.targetText` and its bolded lemmas can match it.
+
+What differs from the English run:
+
+- **Official translations first.** Run the importers before exporting:
+  anything a Bnei Baruch edition in that language covers is never exported.
+- **The English reference.** For a non-English target, every exported item
+  also carries `en` — the English a reader of that passage sees (the reader's
+  own edition chain, `shared/utils/versionChains.ts`). The Hebrew stays the
+  source; the English decodes abbreviations, citations and syntax that
+  thirteen English rounds already resolved.
+- **Terminology** comes from `docs/translation/terms-<lang>.md` (+ `.json`),
+  mined from Bnei Baruch's own translations into that language (the
+  Introduction, the Preface to the Wisdom of Kabbalah, and any `<lang>-bb`
+  TES text) with counts. `translation-split.py --lang <code>` appends it and
+  `docs/translation/rules-multilingual.md` to the brief, and refuses to run
+  without it.
+- **Gate 1** is `scripts/translation-gates/polycheck.py --lang <code>`:
+  item set and order, tags, Hebrew leakage, quotes, the script (Ukrainian
+  that is really Russian is the commonest machine failure), the expansion
+  ratio, and the terminology table's `required`/`banned` patterns.
+  Citation numbers are checked by the same independent gematria
+  recomputation as English — numbers are digits in every language.
+- **Register** the language's `ai` edition in `content/versions.json` (all
+  seven are registered) with `translatedFrom: "he-jerusalem-1956"`.
