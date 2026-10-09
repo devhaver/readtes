@@ -98,7 +98,15 @@ const SEGMENT_BY_PANE: Record<PaneId, Segment> = {
 const segments = computed<Segment[]>(() =>
   props.panes.map((pane) =>
     pane === "inner-observation"
-      ? { ...SEGMENT_BY_PANE[pane], labelKey: props.thirdPaneLabelKey }
+      ? {
+          ...SEGMENT_BY_PANE[pane],
+          labelKey: props.thirdPaneLabelKey,
+          // The eye is Inner Observation's; Questions/Answers get their own.
+          iconClass:
+            props.thirdPaneLabelKey === "reader.mobilePane.innerObservation"
+              ? SEGMENT_BY_PANE[pane].iconClass
+              : "tes-icon-pane-qa",
+        }
       : pane === "source"
         ? { ...SEGMENT_BY_PANE[pane], labelKey: props.sourceLabelKey }
         : SEGMENT_BY_PANE[pane],
@@ -127,14 +135,19 @@ const focusTabAt = (index: number) => {
 };
 
 const onKeydown = (event: KeyboardEvent, index: number) => {
+  // Arrow keys follow what is drawn: in an RTL pill the tab to the right is
+  // the previous one in reading order.
+  const rtl =
+    event.currentTarget instanceof HTMLElement &&
+    getComputedStyle(event.currentTarget).direction === "rtl";
   switch (event.key) {
     case "ArrowRight":
       event.preventDefault();
-      focusTabAt(index + 1);
+      focusTabAt(index + (rtl ? -1 : 1));
       break;
     case "ArrowLeft":
       event.preventDefault();
-      focusTabAt(index - 1);
+      focusTabAt(index + (rtl ? 1 : -1));
       break;
     case "Home":
       event.preventDefault();
@@ -168,7 +181,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
         :aria-selected="activePane === segment.pane"
         :aria-controls="segment.controls"
         :tabindex="activePane === segment.pane ? 0 : -1"
-        class="tes-pill-tab flex-1"
+        class="tes-pill-tab min-w-0 flex-1 basis-0"
         :class="
           activePane === segment.pane
             ? 'bg-teal-strong text-surface-white'
@@ -182,7 +195,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
           :class="segment.iconClass"
           aria-hidden="true"
         />
-        <span>{{ t(segment.labelKey) }}</span>
+        <span class="min-w-0 text-center">{{ t(segment.labelKey) }}</span>
       </button>
     </div>
   </div>

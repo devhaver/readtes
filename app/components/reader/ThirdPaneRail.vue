@@ -24,7 +24,7 @@ const label = computed(() =>
 
 <template>
   <div
-    class="hidden lg:flex lg:h-full lg:shrink-0 lg:items-start lg:justify-center lg:border-s lg:border-(--border) lg:py-2.5"
+    class="hidden lg:col-start-[-2] lg:row-start-1 lg:flex lg:h-full lg:shrink-0 lg:items-start lg:justify-center lg:border-s lg:border-(--border) lg:py-2.5"
   >
     <button
       type="button"

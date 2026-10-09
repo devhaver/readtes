@@ -247,19 +247,18 @@ watch(activePane, (pane) => {
   scrollToPane(pane);
 });
 
-// The Ari's column is deliberately the narrowest. Equal thirds split the
-// space backwards for what these layers actually hold: a seif is a short
-// numbered unit (`part-01/chapter-01` is 5 of them) while its commentary is
-// long-form prose many times the length — 22 items for those same 5 seifim,
-// averaging over 1,000 characters each. Giving the reading pair's longer
-// half more room is what shortens its lines toward a comfortable measure;
-// the Ari's shorter text reaches its own `max-w-[65ch]` cap well before its
-// column runs out either way, so it loses nothing by being narrower.
+// The Ari's column is the primary one and never the narrowest: a companion
+// layer (Inner Light, Inner Observation) only accompanies it, so it never
+// gets more width than the text it accompanies. The primary column has a
+// floor (`minmax(28rem,1fr)` — about 50 characters at the default size, so
+// it can no longer collapse to a 24-character sliver at 1024px) and every
+// companion takes an equal share of the rest. Equal shares also keep the
+// type comparable: Inner Light and Inner Observation read at the same body
+// size, so neither looks like the headline of the pair.
 //
-// Still comparable, not a rail: all three carry running prose (unlike the
-// old 280px summary rail, which was really just a chapter navigator), so
-// Source stays a reading column — Inner Observation likewise gets real
-// estate as reference material rather than a cramped side column. A single
+// Surplus width is not stretched into line length — the reading columns cap
+// their own measure (~62ch) and centre, so a wide window gives margins, and
+// a collapsed pane's space still goes to the columns that remain. A single
 // remaining pane just takes the full row and caps its own measure.
 //
 // The third pane is collapsible (`useReaderThirdPane`), so what the grid
@@ -289,14 +288,14 @@ const desktopColumnCount = computed(
 const gridColsClass = computed(() => {
   if (!hasThirdPane.value) {
     return desktopColumnCount.value === 2
-      ? "lg:grid-cols-[0.85fr_1.15fr]"
+      ? "lg:grid-cols-[minmax(28rem,1fr)_minmax(0,1fr)]"
       : "lg:grid-cols-[1fr]";
   }
 
   if (desktopColumnCount.value >= 3)
-    return "lg:grid-cols-[0.8fr_1.1fr_1.1fr_auto]";
+    return "lg:grid-cols-[minmax(28rem,1fr)_minmax(0,1fr)_minmax(0,1fr)_auto]";
   if (desktopColumnCount.value === 2)
-    return "lg:grid-cols-[0.85fr_1.15fr_auto]";
+    return "lg:grid-cols-[minmax(28rem,1fr)_minmax(0,1fr)_auto]";
   return "lg:grid-cols-[1fr_auto]";
 });
 </script>
@@ -307,6 +306,10 @@ const gridColsClass = computed(() => {
     class="tes-swipe-track flex min-h-0 w-full flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden overscroll-x-contain [contain:layout] lg:grid lg:snap-none lg:gap-0 lg:overflow-hidden lg:[contain:none]"
     :class="gridColsClass"
   >
+    <!-- First in the DOM (so first in Tab order, not last after every
+         pane's content) but placed in the last grid column, top row, where
+         it is drawn. -->
+    <ReaderThirdPaneRail v-if="hasThirdPane" />
     <div
       id="reader-source-pane"
       ref="sourceRef"
@@ -345,8 +348,6 @@ const gridColsClass = computed(() => {
     >
       <slot name="inner-observation" />
     </div>
-
-    <ReaderThirdPaneRail v-if="hasThirdPane" />
   </div>
 
   <ReaderMobilePanePill

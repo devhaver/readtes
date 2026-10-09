@@ -289,6 +289,38 @@ test.describe("mobile reader", () => {
     expect(await heightOf()).toBe(expanded);
   });
 
+  test("study mode's navbar and toolbar return together on scroll-up, deep in a long chapter", async ({
+    page,
+  }) => {
+    // The reader root used to be `h-dvh`, so the sticky chrome could only
+    // stick within the first viewport: scrolled thousands of px down it sat
+    // far above the page and never came back on scroll-up.
+    await page.goto("/read/part-01/introduction-01");
+    await waitForHydration(page);
+
+    const navbar = page.locator("header").first();
+    const toolbar = page.getByRole("navigation", {
+      name: "Chapter navigation",
+    });
+
+    await page.evaluate(() => window.scrollTo(0, 12000));
+    await page.mouse.wheel(0, 400);
+    await expect(navbar).not.toBeInViewport();
+    await expect(toolbar).not.toBeInViewport();
+
+    await page.mouse.wheel(0, -120);
+    await page.mouse.wheel(0, -120);
+    await expect(navbar).toBeInViewport({ ratio: 1 });
+    await expect(toolbar).toBeInViewport({ ratio: 1 });
+
+    // One unit: the toolbar sits directly below the navbar, not under it.
+    const navbarBox = (await navbar.boundingBox())!;
+    const toolbarBox = (await toolbar.boundingBox())!;
+    expect(toolbarBox.y).toBeGreaterThanOrEqual(
+      Math.round(navbarBox.y + navbarBox.height),
+    );
+  });
+
   test("switches pane on a tap with motion enabled — the real-device path", async ({
     page,
   }) => {

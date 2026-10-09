@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useElementSize } from "@vueuse/core";
+
 // This layout is only ever used by the `/read/[part]/[chapter]` page, so
 // it's safe (and the only place it makes sense) to establish the reader's
 // shared mode/auto-hide-chrome/reading-preferences state here:
@@ -20,22 +22,15 @@
 // navbar/toolbar don't reference the variable at all) even though it
 // technically cascades through them too.
 //
-// `h-dvh` (not `min-h-screen`) is deliberate and load-bearing: panes
-// mode's whole "each pane scrolls independently" design (desktop grid
-// *and* T9's mobile swipe track alike) needs this root to have a
-// genuinely bounded height, not just a floor — `ReaderPane`'s own
-// `overflow-y-auto` container only ever gets something to actually clip/
-// scroll against if every ancestor between it and here resolves to a
-// *definite* height (`h-full`/`flex-1 min-h-0`, all the way down through
-// `ReaderShell` and `MobileSwipePanes`' track). `min-h-screen` is only a
-// minimum, so content taller than the viewport would just grow this root
-// (and the whole page) taller instead of clipping/scrolling inside the
-// track — which is exactly the "blank first paint" bug this fixes: the
-// track/slides never got a real height to snap within. Study mode is
-// unaffected: nothing in *its* chain (`ReaderToolbar` + `StudyStream`,
-// no `ReaderShell`) sets `overflow` to anything but the default
-// `visible`, so its content still overflows this box and the page still
-// scrolls normally, exactly as before.
+// Root height depends on the mode. Panes mode's whole "each pane scrolls
+// independently" design (desktop grid *and* the mobile swipe track) needs a
+// genuinely bounded height, so it is `h-dvh` and every ancestor down to
+// `ReaderPane`'s `overflow-y-auto` resolves to a *definite* height.
+// Study and original modes scroll the whole document instead, so the root
+// is `min-h-dvh`: a bounded root would make the sticky chrome stick only
+// within the first viewport, then sit thousands of px above the reader and
+// never come back. The navbar and the toolbar (the page's) are ONE sticky
+// unit — see `.tes-reader-toolbar-sticky` in `main.css`.
 const { t } = useI18n();
 
 const { mode } = useReaderMode();
@@ -52,25 +47,56 @@ const { collapsed } = useCollapsedReaderChrome();
 const isChromeCollapsed = computed(
   () => mode.value === "panes" && collapsed.value,
 );
+
+// The navbar's height is the toolbar's sticky offset and half of the
+// document's `scroll-padding-top` (the toolbar publishes the other half),
+// so anchor jumps and focus scrolling land below the chrome in study mode.
+const navbarRef = ref<HTMLElement | null>(null);
+const { height: navbarHeight } = useElementSize(navbarRef, undefined, {
+  box: "border-box",
+});
+watchEffect(() => {
+  if (!import.meta.client) return;
+  const root = document.documentElement;
+  root.style.setProperty("--reader-navbar-h", `${navbarHeight.value}px`);
+  if (isStudyMode.value) {
+    root.style.setProperty(
+      "scroll-padding-top",
+      "calc(var(--reader-navbar-h, 0px) + var(--reader-toolbar-h, 0px) + 0.5rem)",
+    );
+  } else {
+    root.style.removeProperty("scroll-padding-top");
+  }
+});
+onBeforeUnmount(() => {
+  const root = document.documentElement;
+  root.style.removeProperty("--reader-navbar-h");
+  root.style.removeProperty("scroll-padding-top");
+});
 </script>
 
 <template>
   <div
     :data-reading-scale="scale"
-    class="flex h-dvh flex-col bg-(--surface) font-body text-(--text-primary)"
+    class="flex flex-col bg-(--surface) font-body text-(--text-primary)"
+    :class="mode === 'panes' ? 'h-dvh' : 'min-h-dvh'"
   >
     <a href="#main-content" class="tes-skip-link">
       {{ t("common.skipToContent") }}
     </a>
     <div
+      ref="navbarRef"
       :class="[
-        isChromeCollapsed && 'hidden lg:block',
+        isChromeCollapsed && 'hidden',
+        // Phone landscape (~390px tall): the site navbar is the first thing
+        // to go, so the toolbar and the text keep the height.
+        '[@media(max-height:32rem)]:hidden',
         isStudyMode &&
           'sticky top-0 z-40 transition-transform duration-200 ease-out motion-reduce:transition-none',
         isStudyMode && !chromeVisible && '-translate-y-full',
       ]"
     >
-      <AppNavBar />
+      <AppNavBar full-width />
     </div>
     <main id="main-content" class="min-h-0 flex-1">
       <slot />

@@ -39,10 +39,6 @@ useReaderState();
 
 <template>
   <div class="tes-pane-shell">
-    <div class="shrink-0">
-      <slot name="toolbar" />
-    </div>
-
     <ReaderMobileSwipePanes
       :panes="panes"
       :third-pane-label-key="thirdPaneLabelKey"

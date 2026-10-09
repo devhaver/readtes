@@ -1,4 +1,8 @@
 <script setup lang="ts">
+// The reader is full-bleed, so its layout renders the navbar on the same
+// gutters as the toolbar below it instead of the site's centred 5xl column.
+defineProps<{ fullWidth?: boolean }>();
+
 const { t } = useI18n();
 const localePath = useLocalePath();
 
@@ -16,7 +20,8 @@ const closeMobileMenu = () => {
 <template>
   <header class="bg-navy-primary text-surface-white">
     <div
-      class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+      class="flex items-center justify-between gap-4 py-3"
+      :class="fullWidth ? 'px-3 sm:px-5' : 'mx-auto max-w-5xl px-4 sm:px-6'"
     >
       <div class="flex items-center gap-3">
         <button

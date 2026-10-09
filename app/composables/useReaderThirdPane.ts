@@ -32,7 +32,7 @@
  * rail owns the toggle and the pane reads the tab, and they are not in each
  * other's subtree.
  */
-import { useLocalStorage } from "@vueuse/core";
+import { useLocalStorage, useMediaQuery } from "@vueuse/core";
 import type { ComputedRef, InjectionKey } from "vue";
 
 export const THIRD_PANE_TABS = [
@@ -47,10 +47,15 @@ const OPEN_STORAGE_KEY = "readtes:reader-third-pane-open";
 const TAB_STORAGE_KEY = "readtes:reader-third-pane-tab";
 
 /**
- * Open by default: the pane is what the reader had before this became
- * collapsible, and a reader who has never touched the control should not
- * have to discover it to find Inner Observation where it has always been.
+ * Open by default only where there is room for it: three columns below
+ * 1280px squeeze the Ari's text to a sliver (24 characters per line at
+ * 1024px), so a reader who has never touched the control gets two columns
+ * there, with the rail to open the third. Once they choose, the choice is
+ * remembered and wins at every width.
  */
+const WIDE_QUERY = "(min-width: 80rem)";
+
+/** The pre-hydration value: what the prerendered HTML contains. */
 const DEFAULT_OPEN = true;
 
 export interface ReaderThirdPane {
@@ -91,10 +96,18 @@ export const resolveThirdPaneTab = (
 };
 
 const createReaderThirdPane = (): ReaderThirdPane => {
-  const persistedOpen = useLocalStorage<boolean>(
+  // `null` = the reader never chose, so the viewport decides.
+  const persistedOpen = useLocalStorage<boolean | null>(
     OPEN_STORAGE_KEY,
-    DEFAULT_OPEN,
+    null,
+    {
+      serializer: {
+        read: (raw) => (raw === "true" ? true : raw === "false" ? false : null),
+        write: (value) => String(value),
+      },
+    },
   );
+  const isWide = useMediaQuery(WIDE_QUERY);
   const persistedTab = useLocalStorage<string>(
     TAB_STORAGE_KEY,
     THIRD_PANE_TABS[0],
@@ -109,9 +122,10 @@ const createReaderThirdPane = (): ReaderThirdPane => {
     hydrated.value = true;
   });
 
-  const open = computed(() =>
-    hydrated.value ? persistedOpen.value : DEFAULT_OPEN,
-  );
+  const open = computed(() => {
+    if (!hydrated.value) return DEFAULT_OPEN;
+    return persistedOpen.value ?? isWide.value;
+  });
 
   const tab = computed<ThirdPaneTab>(() => {
     if (!hydrated.value) return THIRD_PANE_TABS[0];

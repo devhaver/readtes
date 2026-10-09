@@ -1,17 +1,19 @@
 <script setup lang="ts">
 // Breadcrumb ("Six volumes › Volume N › Part N · Chapter title") + prev/next
 // chapter links, disabled at the corpus edges, plus the study/panes mode
-// toggle (T8). In study mode this whole bar becomes sticky and
-// auto-hides on scroll-down (`useAutoHidingChrome`, shared with
-// `layouts/reader.vue`'s navbar wrapper so both pieces of chrome move
-// together) — panes mode leaves it in normal flow, untouched, exactly as
-// T7 shipped it.
+// toggle (T8). In study mode this whole bar becomes sticky just below the
+// layout's navbar and auto-hides on scroll-down (`useAutoHidingChrome`,
+// shared with `layouts/reader.vue`'s navbar wrapper) — the two are ONE
+// sticky unit: this bar sticks at `--reader-navbar-h` (published by the
+// layout) and slides up by its own height plus the navbar's, so they leave
+// and return together. Panes and original modes leave it in normal flow.
+import { useElementSize } from "@vueuse/core";
 import type { BreadcrumbItem } from "~/components/app/AppBreadcrumb.vue";
 import type { ReaderMode } from "~/utils/readerMode";
 import type { ChapterLink } from "~/utils/toc";
 import type { TocChapter, TocVolumeSkeleton } from "~~/shared/types/content";
 
-defineProps<{
+const props = defineProps<{
   // The reader page renders no other heading — this is that page's ONE
   // `h1` (see AGENTS.md "Accessibility"), visually hidden since the
   // breadcrumb right below already shows the same title on-screen.
@@ -32,6 +34,35 @@ const localePath = useLocalePath();
 const { mode, setMode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
 const isStudyMode = computed(() => mode.value === "study");
+
+// Published for `scroll-padding-top` (see below) — anchor jumps and focus
+// scrolling must land below the chrome, not under it.
+const rootRef = ref<HTMLElement | null>(null);
+const { height: toolbarHeight } = useElementSize(rootRef, undefined, {
+  box: "border-box",
+});
+watchEffect(() => {
+  if (!import.meta.client) return;
+  document.documentElement.style.setProperty(
+    "--reader-toolbar-h",
+    `${toolbarHeight.value}px`,
+  );
+});
+onBeforeUnmount(() => {
+  document.documentElement.style.removeProperty("--reader-toolbar-h");
+});
+
+// "Part N · " prefix for a prev/next link that crosses into another part, so
+// "Chapter 1" at the end of Part 3 does not read as this part's chapter 1.
+const linkLabel = (link: ChapterLink): string => {
+  const title = localizedText(link.title, locale.value);
+  const [linkPartId] = link.id.split("/");
+  if (!linkPartId || linkPartId === props.currentPartId) return title;
+  const partNumber = Number(linkPartId.replace(/^part-/, ""));
+  return Number.isNaN(partNumber)
+    ? title
+    : `${t("common.part")} ${partNumber} · ${title}`;
+};
 
 const modeOptions = computed(() => [
   { value: "study" as ReaderMode, label: t("reader.mode.study") },
@@ -71,29 +102,65 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
        prev/next, then a full-width collapse handle — ~130px of chrome on
        desktop and ~240px on a phone before the first word of text. -->
   <div
+    ref="rootRef"
     class="flex flex-col border-b border-(--border) bg-(--surface) px-3 sm:px-5"
     :class="[
       isCollapsed ? 'py-1' : 'py-2',
       isStudyMode &&
-        'sticky top-0 z-30 transition-transform duration-200 ease-out motion-reduce:transition-none',
-      isStudyMode && !chromeVisible && '-translate-y-full',
+        'tes-reader-toolbar-sticky sticky z-30 transition-transform duration-200 ease-out motion-reduce:transition-none',
+      isStudyMode && !chromeVisible && 'tes-reader-toolbar-hidden',
     ]"
   >
     <h1 class="sr-only">{{ chapterTitle }}</h1>
 
-    <button
-      v-if="isCollapsed"
-      type="button"
-      class="tes-chrome-handle justify-between"
-      :aria-label="t('reader.toolbar.expandChrome')"
-      :aria-expanded="false"
-      @click="toggleCollapsed"
-    >
-      <span class="truncate text-sm text-(--text-muted)">
-        {{ chapterTitle }}
-      </span>
-      <span class="tes-icon tes-icon-chevron-down h-5 w-5" aria-hidden="true" />
-    </button>
+    <!-- Collapsed: where you are, and the way on. Prev/next stay reachable
+         (the whole point of keeping a bar at all) at a 44px target. -->
+    <div v-if="isCollapsed" class="flex min-w-0 items-center gap-1">
+      <NuxtLink
+        v-if="prev"
+        :to="localePath(`/read/${prev.id}`)"
+        class="tes-icon-btn tes-icon-btn-lg shrink-0"
+        :title="linkLabel(prev)"
+      >
+        <span
+          class="tes-icon tes-icon-chevron-down h-5 w-5 rotate-90 rtl:-rotate-90"
+          aria-hidden="true"
+        />
+        <span class="sr-only">{{ t("reader.prevChapter") }}</span>
+      </NuxtLink>
+      <span v-else class="size-11 shrink-0" aria-hidden="true" />
+
+      <button
+        type="button"
+        class="tes-chrome-handle justify-between"
+        :aria-label="t('reader.toolbar.expandChrome')"
+        :title="t('reader.toolbar.expandChrome')"
+        :aria-expanded="false"
+        @click="toggleCollapsed"
+      >
+        <span class="truncate text-sm text-(--text-primary)">
+          {{ chapterTitle }}
+        </span>
+        <span
+          class="tes-icon tes-icon-chevron-down h-5 w-5 shrink-0"
+          aria-hidden="true"
+        />
+      </button>
+
+      <NuxtLink
+        v-if="next"
+        :to="localePath(`/read/${next.id}`)"
+        class="tes-icon-btn tes-icon-btn-lg shrink-0"
+        :title="linkLabel(next)"
+      >
+        <span
+          class="tes-icon tes-icon-chevron-down h-5 w-5 -rotate-90 rtl:rotate-90"
+          aria-hidden="true"
+        />
+        <span class="sr-only">{{ t("reader.nextChapter") }}</span>
+      </NuxtLink>
+      <span v-else class="size-11 shrink-0" aria-hidden="true" />
+    </div>
 
     <!-- Phones get two short rows — chapter navigation, then controls —
          because the three-way mode control alone is half a 390px screen. -->
@@ -108,13 +175,16 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
         <NuxtLink
           v-if="prev"
           :to="localePath(`/read/${prev.id}`)"
-          class="tes-chapter-nav-link shrink-0"
-          :title="localizedText(prev.title, locale)"
+          class="tes-chapter-nav-link shrink-0 lg:shrink lg:max-w-[28%]"
+          :title="linkLabel(prev)"
         >
-          <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
+          <span
+            class="tes-icon tes-icon-chevron-down h-4 w-4 shrink-0 rotate-90 rtl:-rotate-90"
+            aria-hidden="true"
+          />
           <span class="sr-only">{{ t("reader.prevChapter") }}:</span>
-          <span class="hidden max-w-[12rem] truncate xl:inline">{{
-            localizedText(prev.title, locale)
+          <span class="hidden min-w-0 truncate lg:inline">{{
+            linkLabel(prev)
           }}</span>
         </NuxtLink>
         <span
@@ -123,12 +193,15 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
           class="tes-chapter-nav-disabled shrink-0"
           :title="t('reader.prevChapter')"
         >
-          <span aria-hidden="true" class="rtl:rotate-180">&larr;</span>
+          <span
+            class="tes-icon tes-icon-chevron-down h-4 w-4 rotate-90 rtl:-rotate-90"
+            aria-hidden="true"
+          />
           <span class="sr-only">{{ t("reader.prevChapter") }}</span>
         </span>
 
         <ReaderBreadcrumb
-          class="min-w-0 flex-1 px-1"
+          class="min-w-0 flex-1 px-1 lg:order-last"
           :items="breadcrumbItems"
           :volumes="volumes"
           :current-volume-id="currentVolumeId"
@@ -138,14 +211,17 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
         <NuxtLink
           v-if="next"
           :to="localePath(`/read/${next.id}`)"
-          class="tes-chapter-nav-link shrink-0"
-          :title="localizedText(next.title, locale)"
+          class="tes-chapter-nav-link shrink-0 lg:shrink lg:max-w-[28%]"
+          :title="linkLabel(next)"
         >
           <span class="sr-only">{{ t("reader.nextChapter") }}:</span>
-          <span class="hidden max-w-[12rem] truncate xl:inline">{{
-            localizedText(next.title, locale)
+          <span class="hidden min-w-0 truncate lg:inline">{{
+            linkLabel(next)
           }}</span>
-          <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
+          <span
+            class="tes-icon tes-icon-chevron-down h-4 w-4 shrink-0 -rotate-90 rtl:rotate-90"
+            aria-hidden="true"
+          />
         </NuxtLink>
         <span
           v-else
@@ -154,11 +230,16 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
           :title="t('reader.nextChapter')"
         >
           <span class="sr-only">{{ t("reader.nextChapter") }}</span>
-          <span aria-hidden="true" class="rtl:rotate-180">&rarr;</span>
+          <span
+            class="tes-icon tes-icon-chevron-down h-4 w-4 -rotate-90 rtl:rotate-90"
+            aria-hidden="true"
+          />
         </span>
       </nav>
 
-      <div class="ms-auto flex shrink-0 items-center gap-1 sm:gap-2">
+      <div
+        class="ms-auto flex max-w-full flex-wrap items-center justify-end gap-1 sm:shrink-0 sm:flex-nowrap sm:gap-2"
+      >
         <button
           type="button"
           class="tes-icon-btn"
@@ -191,10 +272,12 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
           @update:model-value="(value) => setMode(value)"
         />
 
+        <!-- Always occupies its slot, so the mode toggle does not shift
+             when switching into a mode that has no collapse control. -->
         <button
           v-if="isCollapsible"
           type="button"
-          class="tes-icon-btn hidden lg:inline-flex"
+          class="tes-icon-btn"
           :aria-label="t('reader.toolbar.collapseChrome')"
           :title="t('reader.toolbar.collapseChrome')"
           :aria-expanded="true"
@@ -205,6 +288,7 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
             aria-hidden="true"
           />
         </button>
+        <span v-else class="size-8 shrink-0" aria-hidden="true" />
       </div>
     </div>
 
