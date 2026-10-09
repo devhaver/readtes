@@ -25,6 +25,10 @@ const openingLine: Record<string, string> = {
   tr: "Kısıtlamadan önce Sonsuzluk tüm gerçekliği dolduruyordu.",
 };
 
+// The hero's twinkle and entrance animations run on their own for as long as
+// the page is open, so they get a pause control (WCAG 2.2.2).
+const motionPaused = ref(false);
+
 const quote = computed(() => openingLine[locale.value] ?? openingLine.en);
 
 // Twinkling stars over the two tile layers in `.tes-starfield`. Same
@@ -114,7 +118,27 @@ const layers = computed(() => [
     <section
       ref="heroEl"
       class="tes-starfield hero-section relative overflow-hidden"
+      :class="{ 'hero-paused': motionPaused }"
     >
+      <button
+        type="button"
+        :aria-pressed="motionPaused"
+        :aria-label="t('home.pauseMotion')"
+        :title="t('home.pauseMotion')"
+        class="absolute end-3 top-3 z-10 inline-flex h-8 w-8 items-center justify-center rounded-button border border-surface-white/30 text-surface-white/80 hover:border-teal hover:text-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+        :class="{ 'bg-surface-white/15': motionPaused }"
+        @click="motionPaused = !motionPaused"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-3.5 w-3.5"
+          aria-hidden="true"
+        >
+          <rect x="6" y="5" width="4" height="14" rx="1" />
+          <rect x="14" y="5" width="4" height="14" rx="1" />
+        </svg>
+      </button>
       <!-- Decorative layers are positioned against this capped frame, not the
            viewport: past ~1920px they would otherwise drift to the far edges
            and leave the composition strung out across the middle. The night
@@ -257,7 +281,7 @@ const layers = computed(() => [
               :class="locale === 'he' ? 'font-hebrew' : 'font-display italic'"
               :lang="locale === 'he' ? 'he' : undefined"
             >
-              “{{ quote }}”
+              <q>{{ quote }}</q>
             </p>
             <cite class="mt-2 block text-sm text-surface-white/60 not-italic">
               {{ t("home.quoteSource") }}
@@ -405,6 +429,29 @@ const layers = computed(() => [
     opacity: 0.3;
     transform: scale(0.9);
   }
+}
+
+.hero-paused .hero-star,
+.hero-paused .hero-enter-content,
+.hero-paused .hero-enter-portrait {
+  animation-play-state: paused;
+}
+
+/* The opening line is a real quotation: the marks come from the language
+   (`<q>` + `quotes`), not from hard-coded curly quotes in the template. */
+q {
+  quotes: "\201C" "\201D";
+}
+
+q:lang(ru),
+q:lang(uk),
+q:lang(es),
+q:lang(fr) {
+  quotes: "\00AB" "\00BB";
+}
+
+q:lang(de) {
+  quotes: "\201E" "\201C";
 }
 
 .hero-frame {

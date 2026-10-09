@@ -163,7 +163,7 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "El Estudio de las Diez Sefirot",
     "beginReading": "Empezar a leer",
-    "quoteSource": "El Estudio de las Diez Sefirot, Parte 1, capítulo 1",
+    "quoteSource": "El Estudio de las Diez Sefirot, Parte 1, capítulo 1",
     "howItWorksTitle": "Cómo funciona este lector",
     "howItWorksSourceTitle": "El texto del Ari",
     "howItWorksSourceHebrew": "כתבי האר״י",
@@ -177,7 +177,8 @@
     "coverageTitle": "Estado del texto",
     "coverageHebrew": "El corpus hebreo completo está disponible en la edición de Jerusalén de 1956.",
     "coverageEnglish": "La cobertura en otros idiomas varía según la parte y la edición; las traducciones oficiales y las asistidas por IA están claramente señaladas.",
-    "coverageMore": "Explore los volúmenes para ver las capas y ediciones disponibles de cada sección."
+    "coverageMore": "Explore los volúmenes para ver las capas y ediciones disponibles de cada sección.",
+    "pauseMotion": "Pausar la animación de fondo"
   },
   "errors": {
     "notFoundTitle": "Página no encontrada",

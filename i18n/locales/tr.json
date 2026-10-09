@@ -163,7 +163,7 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "On Sefirot'un Çalışması",
     "beginReading": "Okumaya başla",
-    "quoteSource": "On Sefirot'un Çalışması, Kısım I, Bölüm 1",
+    "quoteSource": "On Sefirot'un Çalışması, Kısım 1, Bölüm 1",
     "howItWorksTitle": "Bu okuyucu nasıl çalışır",
     "howItWorksSourceTitle": "Ari'nin Metni",
     "howItWorksSourceHebrew": "כתבי האר״י",
@@ -177,7 +177,8 @@
     "coverageTitle": "Metnin durumu",
     "coverageHebrew": "İbranice külliyatın tamamı 1956 Kudüs baskısından sunulmaktadır.",
     "coverageEnglish": "Çeviri kapsamı kısma ve baskıya göre değişir; resmî ve yapay zekâ destekli çeviriler açıkça etiketlenir.",
-    "coverageMore": "Her bölüm için mevcut katmanları ve baskıları görmek üzere ciltlere göz atın."
+    "coverageMore": "Her bölüm için mevcut katmanları ve baskıları görmek üzere ciltlere göz atın.",
+    "pauseMotion": "Arka plan animasyonunu duraklat"
   },
   "errors": {
     "notFoundTitle": "Sayfa bulunamadı",

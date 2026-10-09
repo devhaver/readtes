@@ -163,7 +163,7 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "Das Studium der Zehn Sefirot",
     "beginReading": "Mit dem Lesen beginnen",
-    "quoteSource": "Talmud Eser Sefirot, Teil 1, Kapitel 1",
+    "quoteSource": "Talmud Eser Sefirot, Teil 1, Kapitel 1",
     "howItWorksTitle": "So funktioniert dieser Reader",
     "howItWorksSourceTitle": "Der Text des Ari",
     "howItWorksSourceHebrew": "כתבי האר״י",
@@ -177,7 +177,8 @@
     "coverageTitle": "Der aktuelle Stand des Textes",
     "coverageHebrew": "Der vollständige hebräische Text liegt in der Jerusalemer Ausgabe von 1956 vor.",
     "coverageEnglish": "Die Abdeckung der Übersetzungen unterscheidet sich je nach Teil und Ausgabe; offizielle und KI-gestützte Übersetzungen sind klar gekennzeichnet.",
-    "coverageMore": "Die Übersicht der Bände zeigt, welche Ebenen und Ausgaben es für jeden Teil gibt."
+    "coverageMore": "Die Übersicht der Bände zeigt, welche Ebenen und Ausgaben es für jeden Teil gibt.",
+    "pauseMotion": "Hintergrundanimation anhalten"
   },
   "errors": {
     "notFoundTitle": "Seite nicht gefunden",
