@@ -224,7 +224,7 @@ const layers = computed(() => [
           <div class="mt-8 flex flex-wrap items-center gap-4">
             <NuxtLink
               :to="localePath('/read/part-01/chapter-01')"
-              class="inline-flex items-center gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button bg-surface-warm px-5 py-2.5 text-sm font-medium text-navy-primary transition-colors hover:bg-surface-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
             >
               {{ t("home.beginReading") }}
               <svg
@@ -242,7 +242,7 @@ const layers = computed(() => [
             </NuxtLink>
             <NuxtLink
               :to="localePath('/volumes')"
-              class="inline-flex items-center gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+              class="inline-flex w-full items-center justify-center sm:w-auto gap-2 rounded-button border border-surface-white/30 px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
             >
               {{ t("home.browseVolumes") }}
             </NuxtLink>
@@ -277,12 +277,12 @@ const layers = computed(() => [
           <article
             v-for="(layer, index) in layers"
             :key="layer.title"
-            class="layer-card relative overflow-hidden rounded-card border border-(--border) bg-(--surface) p-6 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-teal-strong/45 hover:shadow-lg"
+            class="layer-card relative overflow-hidden rounded-card border border-(--border) bg-(--surface) p-6"
             :style="{ '--layer-index': index }"
           >
             <span
               aria-hidden="true"
-              class="absolute inset-block-0 inset-inline-start-0 w-1 bg-teal-strong"
+              class="absolute inset-y-0 start-0 w-1 bg-teal-strong"
             />
             <p
               class="font-hebrew text-sm text-(--text-muted)"
@@ -305,7 +305,7 @@ const layers = computed(() => [
       <section
         class="mt-12 rounded-card border border-(--border) bg-(--surface-raised) p-6"
       >
-        <h2 class="font-display text-lg text-(--text-primary)">
+        <h2 class="font-display text-2xl text-(--text-primary)">
           {{ t("home.coverageTitle") }}
         </h2>
         <ul class="mt-3 space-y-2 text-sm text-(--text-muted)">
@@ -324,8 +324,13 @@ const layers = computed(() => [
             <span>{{ t("home.coverageEnglish") }}</span>
           </li>
         </ul>
-        <p class="mt-3 text-sm text-(--text-muted)">
-          {{ t("home.coverageMore") }}
+        <p class="mt-3 text-sm">
+          <NuxtLink
+            :to="localePath('/volumes')"
+            class="rounded-button text-(--accent-text) underline underline-offset-2 hover:text-(--text-primary) focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+          >
+            {{ t("home.coverageMore") }}
+          </NuxtLink>
         </p>
       </section>
     </div>
@@ -505,10 +510,6 @@ const layers = computed(() => [
      of the composition, only their motion is the problem. */
   .hero-star {
     opacity: 0.55;
-  }
-
-  .layer-card:hover {
-    transform: none;
   }
 }
 </style>

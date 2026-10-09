@@ -1189,6 +1189,12 @@ html[data-pref-scale="4"] [data-reading-scale] {
   font-family: var(--font-cyrillic-display);
 }
 
+/* Hebrew UI (/he/): Taviraj is Latin-only, so display headings fell back to
+   a system serif. Same unlayered override, to the Hebrew display face. */
+.font-display:lang(he) {
+  font-family: var(--font-hebrew-display);
+}
+
 /*
  * ---------------------------------------------------------------------
  * Night-sky atmosphere (homepage hero; portrait treatment shared with
