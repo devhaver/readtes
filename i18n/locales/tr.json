@@ -190,7 +190,10 @@
     "indexTitle": "Ciltler",
     "indexDescription": "Altı cilt ve on altı kısımdan oluşan On Sefirot'un Çalışması — Ari'nin metni, İç Işık ve İç Gözlem ile.",
     "comingSoon": "Yakında",
-    "chapterCount": "{count} bölüm",
+    "chapterCount": {
+      "one": "{count} bölüm",
+      "other": "{count} bölüm"
+    },
     "partialLanguage": "kısmi",
     "partComingSoon": "Bu kısım henüz eklenmedi — yakında tekrar bakın.",
     "answersTerminologyCluster": "Cevaplar — Terminoloji ({count})",
@@ -201,7 +204,10 @@
       "inner-observation": "İç Gözlem",
       "questions": "Sorular",
       "answers": "Cevaplar"
-    }
+    },
+    "partIndexLabel": "Bu ciltteki kısımlar",
+    "backToTop": "Başa dön",
+    "aiPartNote": "Bu kısımdaki tüm bölümlerin İngilizcesi yapay zekâ çevirisidir."
   },
   "about": {
     "title": "Read TES hakkında",
@@ -257,7 +263,10 @@
       "transliterate-with-gloss": "Harf çevirisi ve açıklamalı",
       "acronym": "Kısaltma"
     },
-    "attestedIn": "{parts}. kısımlarda geçer.",
+    "attestedIn": {
+      "one": "Geçtiği kısım: {parts}.",
+      "other": "Geçtiği kısımlar: {parts}."
+    },
     "attestedNowhere": "Eşleşmiş hiçbir kısımda geçmez.",
     "variantsTitle": "Baskının yazdığı biçimler",
     "variantsHint": "Sayılar tüm kitaptaki değil, eşleşmiş pasajlardaki geçiş sayılarıdır.",

@@ -103,7 +103,7 @@ describe("ChapterRow", () => {
     expect(wrapper.find("span.tabular-nums").exists()).toBe(false);
   });
 
-  it("still shows the ordinal on an ordinary chapter", async () => {
+  it("does not repeat the ordinal already present in an ordinary chapter title", async () => {
     const wrapper = await mountSuspended(ChapterRow, {
       props: {
         entry: { type: "chapter", chapter: aiTranslatedChapter },
@@ -112,7 +112,8 @@ describe("ChapterRow", () => {
       global: { stubs: { NuxtLink: { template: "<a><slot /></a>" } } },
     });
 
-    expect(wrapper.find("span.tabular-nums").text()).toBe("1");
+    expect(wrapper.text()).toContain("Histaklut Pnimit 1");
+    expect(wrapper.find("span.tabular-nums").exists()).toBe(false);
   });
 
   it("renders a cluster entry with its count and links to the first chapter", async () => {

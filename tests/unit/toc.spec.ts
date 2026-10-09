@@ -87,6 +87,7 @@ const skeletonVolumes: TocVolumeSkeleton[] = [
         title: { en: "Part 1", he: "חלק 1" },
         sefariaNode: "x",
         chapterCount: 2,
+        mainChapterCount: 2,
         kindsPresent: ["chapter"],
         firstChapterId: "part-01/chapter-01",
         lastChapterId: "part-01/chapter-02",
@@ -109,6 +110,7 @@ const skeletonVolumes: TocVolumeSkeleton[] = [
         title: { en: "Part 2", he: "חלק 2" },
         sefariaNode: "y",
         chapterCount: 1,
+        mainChapterCount: 1,
         kindsPresent: ["chapter"],
         firstChapterId: "part-02/chapter-01",
         lastChapterId: "part-02/chapter-01",
@@ -138,6 +140,7 @@ const skeletonVolumes: TocVolumeSkeleton[] = [
         title: { en: "Part 3", he: "חלק 3" },
         sefariaNode: "z",
         chapterCount: 1,
+        mainChapterCount: 1,
         kindsPresent: ["chapter"],
         firstChapterId: "part-03/chapter-01",
         lastChapterId: "part-03/chapter-01",
@@ -179,6 +182,7 @@ describe("volumeHasContent", () => {
       parts: skeletonVolumes[0]!.parts.map((part) => ({
         ...part,
         chapterCount: 0,
+        mainChapterCount: 0,
       })),
     };
 

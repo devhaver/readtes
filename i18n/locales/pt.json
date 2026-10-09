@@ -190,7 +190,10 @@
     "indexTitle": "Volumes",
     "indexDescription": "Talmud Eser Sefirot em seis volumes e dezesseis partes — o texto do Ari com a Luz Interior e a Observação Interior.",
     "comingSoon": "Em breve",
-    "chapterCount": "{count} capítulos",
+    "chapterCount": {
+      "one": "{count} capítulo",
+      "other": "{count} capítulos"
+    },
     "partialLanguage": "parcial",
     "partComingSoon": "Esta parte ainda não foi adicionada — volte em breve.",
     "answersTerminologyCluster": "Respostas — Terminologia ({count})",
@@ -201,7 +204,10 @@
       "inner-observation": "Observação Interior",
       "questions": "Perguntas",
       "answers": "Respostas"
-    }
+    },
+    "partIndexLabel": "Partes deste volume",
+    "backToTop": "Voltar ao topo",
+    "aiPartNote": "O inglês de todos os capítulos desta parte é traduzido por IA."
   },
   "about": {
     "title": "Sobre o Read TES",
@@ -257,7 +263,10 @@
       "transliterate-with-gloss": "Transliterado com glosa",
       "acronym": "Sigla"
     },
-    "attestedIn": "Atestado nas partes {parts}.",
+    "attestedIn": {
+      "one": "Atestado na parte {parts}.",
+      "other": "Atestado nas partes {parts}."
+    },
     "attestedNowhere": "Não atestado em nenhuma parte alinhada.",
     "variantsTitle": "O que a edição escreve",
     "variantsHint": "As contagens são ocorrências dentro das passagens alinhadas, não do livro inteiro.",

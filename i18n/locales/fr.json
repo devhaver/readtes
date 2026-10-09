@@ -190,7 +190,10 @@
     "indexTitle": "Volumes",
     "indexDescription": "Talmud Eser Sefirot en six volumes et seize parties — le texte du Ari avec la Lumière intérieure et l'Observation intérieure.",
     "comingSoon": "Bientôt disponible",
-    "chapterCount": "{count} chapitres",
+    "chapterCount": {
+      "one": "{count} chapitre",
+      "other": "{count} chapitres"
+    },
     "partialLanguage": "partiel",
     "partComingSoon": "Cette partie n'a pas encore été ajoutée — revenez bientôt.",
     "answersTerminologyCluster": "Réponses — Terminologie ({count})",
@@ -201,7 +204,10 @@
       "inner-observation": "Observation intérieure",
       "questions": "Questions",
       "answers": "Réponses"
-    }
+    },
+    "partIndexLabel": "Parties de ce volume",
+    "backToTop": "Haut de page",
+    "aiPartNote": "L'anglais de tous les chapitres de cette partie est traduit par IA."
   },
   "about": {
     "title": "À propos de Read TES",
@@ -257,7 +263,10 @@
       "transliterate-with-gloss": "Translittéré avec glose",
       "acronym": "Acronyme"
     },
-    "attestedIn": "Attesté dans les parties {parts}.",
+    "attestedIn": {
+      "one": "Attesté dans la partie {parts}.",
+      "other": "Attesté dans les parties {parts}."
+    },
     "attestedNowhere": "Non attesté dans les parties alignées.",
     "variantsTitle": "Ce que l'édition écrit",
     "variantsHint": "Les nombres sont des occurrences dans les passages alignés, et non dans tout le livre.",

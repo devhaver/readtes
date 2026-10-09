@@ -232,6 +232,8 @@ export const tocPartSkeletonSchema = z.object({
   title: localizedTitleSchema,
   sefariaNode: z.string(),
   chapterCount: z.number().int().nonnegative(),
+  /** Entries of kind `chapter` only — what a reader means by "N chapters" (the count above also includes the introduction, Inner Observation and the Q&A lists). */
+  mainChapterCount: z.number().int().nonnegative(),
   kindsPresent: z.array(chapterKindSchema),
   firstChapterId: z.string().nullable(),
   lastChapterId: z.string().nullable(),

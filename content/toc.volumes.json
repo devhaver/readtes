@@ -31,6 +31,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
           "chapterCount": 17,
+          "mainChapterCount": 2,
           "kindsPresent": [
             "introduction",
             "chapter",
@@ -91,6 +92,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section II",
           "chapterCount": 16,
+          "mainChapterCount": 2,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -150,6 +152,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section III",
           "chapterCount": 34,
+          "mainChapterCount": 15,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -209,6 +212,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IV",
           "chapterCount": 16,
+          "mainChapterCount": 6,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -285,6 +289,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section V",
           "chapterCount": 66,
+          "mainChapterCount": 62,
           "kindsPresent": [
             "chapter",
             "questions-terminology",
@@ -343,6 +348,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VI",
           "chapterCount": 62,
+          "mainChapterCount": 54,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -404,6 +410,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VII",
           "chapterCount": 79,
+          "mainChapterCount": 73,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -480,6 +487,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
           "chapterCount": 99,
+          "mainChapterCount": 94,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -539,6 +547,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IX",
           "chapterCount": 114,
+          "mainChapterCount": 109,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -598,6 +607,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section X",
           "chapterCount": 164,
+          "mainChapterCount": 159,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -674,6 +684,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XI",
           "chapterCount": 160,
+          "mainChapterCount": 156,
           "kindsPresent": [
             "chapter",
             "questions-terminology",
@@ -732,6 +743,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XII",
           "chapterCount": 298,
+          "mainChapterCount": 293,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -808,6 +820,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
           "chapterCount": 225,
+          "mainChapterCount": 220,
           "kindsPresent": [
             "chapter",
             "inner-observation",
@@ -867,6 +880,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
           "chapterCount": 232,
+          "mainChapterCount": 228,
           "kindsPresent": [
             "chapter",
             "questions-terminology",
@@ -942,6 +956,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XV",
           "chapterCount": 233,
+          "mainChapterCount": 229,
           "kindsPresent": [
             "chapter",
             "questions-terminology",
@@ -1000,6 +1015,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
           "chapterCount": 276,
+          "mainChapterCount": 272,
           "kindsPresent": [
             "chapter",
             "questions-terminology",

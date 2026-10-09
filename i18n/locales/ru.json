@@ -190,7 +190,12 @@
     "indexTitle": "Тома",
     "indexDescription": "«Учение десяти сфирот» в шести томах и шестнадцати частях — текст АРИ с «Ор пними» и «Внутренним созерцанием».",
     "comingSoon": "Скоро",
-    "chapterCount": "Глав: {count}",
+    "chapterCount": {
+      "one": "{count} глава",
+      "few": "{count} главы",
+      "many": "{count} глав",
+      "other": "{count} главы"
+    },
     "partialLanguage": "частично",
     "partComingSoon": "Эта часть ещё не добавлена — загляните позже.",
     "answersTerminologyCluster": "Ответы — значения слов ({count})",
@@ -201,7 +206,10 @@
       "inner-observation": "Внутреннее созерцание",
       "questions": "Вопросы",
       "answers": "Ответы"
-    }
+    },
+    "partIndexLabel": "Части этого тома",
+    "backToTop": "Наверх",
+    "aiPartNote": "Английский текст всех глав этой части переведён ИИ."
   },
   "about": {
     "title": "О проекте Read TES",
@@ -257,7 +265,10 @@
       "transliterate-with-gloss": "Транслитерирован с пояснением",
       "acronym": "Аббревиатура"
     },
-    "attestedIn": "Встречается в частях {parts}.",
+    "attestedIn": {
+      "one": "Встречается в части {parts}.",
+      "other": "Встречается в частях {parts}."
+    },
     "attestedNowhere": "Не встречается ни в одной сопоставленной части.",
     "variantsTitle": "Как пишет издание",
     "variantsHint": "Подсчитаны вхождения в сопоставленных отрывках, а не во всей книге.",

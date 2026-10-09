@@ -17,6 +17,7 @@
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
           "chapterCount": 4,
+          "mainChapterCount": 4,
           "kindsPresent": ["chapter", "answers-terminology"],
           "firstChapterId": "part-01/chapter-01",
           "lastChapterId": "part-01/answers-terminology-03",

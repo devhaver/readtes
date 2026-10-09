@@ -190,7 +190,10 @@
     "indexTitle": "Bände",
     "indexDescription": "Talmud Eser Sefirot in sechs Bänden und sechzehn Teilen – der Text des Ari mit Innerem Licht und Innerer Betrachtung.",
     "comingSoon": "Demnächst",
-    "chapterCount": "{count} Kapitel",
+    "chapterCount": {
+      "one": "{count} Kapitel",
+      "other": "{count} Kapitel"
+    },
     "partialLanguage": "teilweise",
     "partComingSoon": "Dieser Teil wurde noch nicht hinzugefügt – schau bald wieder vorbei.",
     "answersTerminologyCluster": "Antworten – Terminologie ({count})",
@@ -201,7 +204,10 @@
       "inner-observation": "Innere Betrachtung",
       "questions": "Fragen",
       "answers": "Antworten"
-    }
+    },
+    "partIndexLabel": "Teile dieses Bandes",
+    "backToTop": "Nach oben",
+    "aiPartNote": "Das Englisch aller Kapitel dieses Teils ist KI-übersetzt."
   },
   "about": {
     "title": "Über Read TES",
@@ -257,7 +263,10 @@
       "transliterate-with-gloss": "Transliteriert mit Erläuterung",
       "acronym": "Akronym"
     },
-    "attestedIn": "Belegt in den Teilen {parts}.",
+    "attestedIn": {
+      "one": "Belegt in Teil {parts}.",
+      "other": "Belegt in den Teilen {parts}."
+    },
     "attestedNowhere": "In keinem zugeordneten Teil belegt.",
     "variantsTitle": "Was die Ausgabe schreibt",
     "variantsHint": "Die Zahlen geben Vorkommen in den zugeordneten Passagen an, nicht im ganzen Buch.",

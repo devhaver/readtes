@@ -190,7 +190,10 @@
     "indexTitle": "כרכים",
     "indexDescription": "תלמוד עשר הספירות בשישה כרכים ושישה עשר חלקים — כתבי האר״י עם אור פנימי והסתכלות פנימית.",
     "comingSoon": "בקרוב",
-    "chapterCount": "{count} פרקים",
+    "chapterCount": {
+      "one": "{count} פרק",
+      "other": "{count} פרקים"
+    },
     "partialLanguage": "חלקי",
     "partComingSoon": "חלק זה טרם נוסף — בקרו שוב בקרוב.",
     "answersTerminologyCluster": "תשובות — פירוש המלות ({count})",
@@ -201,7 +204,10 @@
       "inner-observation": "הסתכלות פנימית",
       "questions": "שאלות",
       "answers": "תשובות"
-    }
+    },
+    "partIndexLabel": "החלקים בכרך זה",
+    "backToTop": "חזרה לראש העמוד",
+    "aiPartNote": "האנגלית בכל פרקי החלק הזה היא תרגום בינה מלאכותית."
   },
   "about": {
     "title": "אודות Read TES",
@@ -257,7 +263,10 @@
       "transliterate-with-gloss": "בתעתיק עם ביאור",
       "acronym": "ראשי תיבות"
     },
-    "attestedIn": "מתועד בחלקים {parts}.",
+    "attestedIn": {
+      "one": "מתועד בחלק {parts}.",
+      "other": "מתועד בחלקים {parts}."
+    },
     "attestedNowhere": "אינו מתועד באף חלק מיושר.",
     "variantsTitle": "כיצד המהדורה כותבת",
     "variantsHint": "המספרים הם היקרויות בתוך הקטעים המיושרים בלבד, ולא בכל הספר.",

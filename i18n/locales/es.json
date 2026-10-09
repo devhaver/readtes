@@ -190,7 +190,10 @@
     "indexTitle": "Volúmenes",
     "indexDescription": "El Estudio de las Diez Sefirot en seis volúmenes y dieciséis partes: el texto del Ari con la Luz Interior y la Observación Interior.",
     "comingSoon": "Próximamente",
-    "chapterCount": "{count} capítulos",
+    "chapterCount": {
+      "one": "{count} capítulo",
+      "other": "{count} capítulos"
+    },
     "partialLanguage": "parcial",
     "partComingSoon": "Esta parte aún no se ha añadido: vuelva pronto.",
     "answersTerminologyCluster": "Respuestas — Terminología ({count})",
@@ -201,7 +204,10 @@
       "inner-observation": "Observación Interior",
       "questions": "Preguntas",
       "answers": "Respuestas"
-    }
+    },
+    "partIndexLabel": "Partes de este volumen",
+    "backToTop": "Volver arriba",
+    "aiPartNote": "El inglés de todos los capítulos de esta parte está traducido con IA."
   },
   "about": {
     "title": "Acerca de Read TES",
@@ -257,7 +263,10 @@
       "transliterate-with-gloss": "Transliterado con glosa",
       "acronym": "Acrónimo"
     },
-    "attestedIn": "Documentado en las partes {parts}.",
+    "attestedIn": {
+      "one": "Documentado en la parte {parts}.",
+      "other": "Documentado en las partes {parts}."
+    },
     "attestedNowhere": "No documentado en ninguna parte alineada.",
     "variantsTitle": "Lo que escribe la edición",
     "variantsHint": "Las cifras son apariciones dentro de los pasajes alineados, no en todo el libro.",

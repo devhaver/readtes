@@ -190,7 +190,12 @@
     "indexTitle": "Томи",
     "indexDescription": "«Вчення про десять сфірот» у шести томах і шістнадцяти частинах — текст АРІ з «Ор пнімі» та «Внутрішнім спогляданням».",
     "comingSoon": "Незабаром",
-    "chapterCount": "Розділів: {count}",
+    "chapterCount": {
+      "one": "{count} розділ",
+      "few": "{count} розділи",
+      "many": "{count} розділів",
+      "other": "{count} розділу"
+    },
     "partialLanguage": "частково",
     "partComingSoon": "Цю частину ще не додано — завітайте пізніше.",
     "answersTerminologyCluster": "Відповіді — значення слів ({count})",
@@ -201,7 +206,10 @@
       "inner-observation": "Внутрішнє споглядання",
       "questions": "Запитання",
       "answers": "Відповіді"
-    }
+    },
+    "partIndexLabel": "Частини цього тому",
+    "backToTop": "Нагору",
+    "aiPartNote": "Англійський текст усіх розділів цієї частини перекладено ШІ."
   },
   "about": {
     "title": "Про проєкт Read TES",
@@ -257,7 +265,10 @@
       "transliterate-with-gloss": "Транслітеровано з поясненням",
       "acronym": "Абревіатура"
     },
-    "attestedIn": "Трапляється в частинах {parts}.",
+    "attestedIn": {
+      "one": "Трапляється в частині {parts}.",
+      "other": "Трапляється в частинах {parts}."
+    },
     "attestedNowhere": "Не трапляється в жодній зіставленій частині.",
     "variantsTitle": "Як пише видання",
     "variantsHint": "Підраховано входження у зіставлених уривках, а не в усій книзі.",
