@@ -103,10 +103,17 @@
           "uk-ai"
         ],
         "commentary": [
+          "de-ai",
           "en-bb",
           "en-sefaria-community",
+          "es-ai",
+          "fr-ai",
           "he-bb",
-          "he-jerusalem-1956"
+          "he-jerusalem-1956",
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -145,11 +152,17 @@
           "uk-ai"
         ],
         "commentary": [
-          "ru-bb",
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-bb",
-          "he-jerusalem-1956"
+          "he-jerusalem-1956",
+          "pt-ai",
+          "ru-bb",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
