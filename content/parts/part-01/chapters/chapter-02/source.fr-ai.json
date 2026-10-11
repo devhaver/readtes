@@ -1,0 +1,59 @@
+{
+  "chapterId": "part-01/chapter-02",
+  "layer": "source",
+  "versionId": "fr-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I 2",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:1",
+      "heading": "מבאר אשר מאור א\"ס ב\"ה המשיך קו אור לעולמות, שנאצלו ונבראו במקום החלל, שנצטמצם. ובו ה' ענינים: — מן אין סוף המשיך קו אור לתוך החלל",
+      "html": "Or, après le Tsimtsoum mentionné ci-dessus, lorsque resta alors le lieu de l’espace et un air vacant et vide au milieu même de la lumière de Ein Sof, comme ci-dessus <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>, il y eut déjà un lieu où pouvaient se trouver les êtres émanés, les êtres créés, les êtres formés et les êtres faits. Et alors Il tira, de la lumière de Ein Sof <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>, une ligne droite, de sa lumière circulaire <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>, de haut en bas <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>, et elle s’enchaîne et descend à l’intérieur de cet espace.",
+      "anchors": [
+        "op-1",
+        "op-2",
+        "op-3",
+        "op-4"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:2",
+      "heading": "ראש הקו נוגע באין סוף ולא סיומו",
+      "html": "Et le Roch [tête] supérieur de la ligne <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a> est tiré de Ein Sof Lui-même et le touche <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>, mais le Sioum [fin] de cette ligne, en bas, à son extrémité <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>, ne touche pas la lumière de Ein Sof.",
+      "anchors": [
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:3",
+      "heading": "דרך הקו מתפשט אור אין סוף לעולמות",
+      "html": "Et par cette ligne, la lumière de Ein Sof est tirée et s’étend vers le bas.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:4",
+      "heading": "כל העולמות הם במקום החלל ההוא שנצטמצם",
+      "html": "Et dans le lieu de cet espace, Il émana, créa, forma et fit <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a> tous les mondes, sans exception.",
+      "anchors": [
+        "op-8"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:5",
+      "heading": "קודם הצמצום היה הוא ושמו אחד, ואין שכל יכול להשיגו",
+      "html": "<span class=\"tes-footnote\" title=\"Porte des paroles de nos Sages, Chabbat, passage commençant par « Et pour comprendre ».\">*</span>Avant ces quatre mondes <a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">9</a>, Ein Sof était, Il est un et Son nom est un <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">10</a>, dans une unité merveilleuse et cachée, de sorte qu’il n’y a pas de force, même chez les anges qui Lui sont proches <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">20</a>, et qu’ils n’ont aucune atteinte de Ein Sof, car il n’existe aucun intellect créé qui puisse L’atteindre, puisqu’Il n’a ni lieu, ni limite, ni nom <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">30</a>.",
+      "anchors": [
+        "op-9",
+        "op-10",
+        "op-11",
+        "op-12"
+      ]
+    }
+  ]
+}

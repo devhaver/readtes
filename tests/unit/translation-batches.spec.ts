@@ -256,6 +256,15 @@ describe("source-layer batching", () => {
     ]);
   });
 
+  it("counts repeated source numbers instead of treating them as one segment", () => {
+    const source = [segment(51, "first"), segment(51, "continuation")];
+
+    expect(untranslatedItems(source, [segment(51, "translated")])).toEqual([
+      source[1],
+    ]);
+    expect(untranslatedItems(source, [])).toEqual(source);
+  });
+
   it("orders source segments by n", () => {
     expect(
       untranslatedItems([segment(9, "a"), segment(2, "b")], []).map(itemKey),

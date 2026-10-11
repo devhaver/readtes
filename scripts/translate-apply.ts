@@ -64,11 +64,12 @@ const resultPath = arg("--file");
 const isDryRun = process.argv.includes("--dry-run");
 
 const targetFlag = arg("--target");
-const layer = arg("--layer") ?? "commentary";
-if (layer !== "commentary" && layer !== "source") {
-  console.error(`--layer must be "commentary" or "source", got ${layer}`);
+const layerArg = arg("--layer") ?? "commentary";
+if (layerArg !== "commentary" && layerArg !== "source") {
+  console.error(`--layer must be "commentary" or "source", got ${layerArg}`);
   process.exit(2);
 }
+const layer: "commentary" | "source" = layerArg;
 
 if (!resultPath) {
   console.error(
@@ -177,12 +178,13 @@ for (const [chapterId, translations] of byChapter) {
     JSON.parse(readFileSync(sourcePath, "utf8")),
   );
   if (parsedSource.layer !== layer) continue;
-  const sourceByKey = new Map(
-    (parsedSource.items as TranslatableItem[]).map((item) => [
-      itemKey(item),
-      item,
-    ]),
-  );
+  const sourceByKey = new Map<string, TranslatableItem[]>();
+  for (const item of parsedSource.items as TranslatableItem[]) {
+    const key = itemKey(item);
+    const matching = sourceByKey.get(key) ?? [];
+    matching.push(item);
+    sourceByKey.set(key, matching);
+  }
 
   const targetPath = join(dir, `${layer}.${targetVersion.id}.json`);
   const existing = existsSync(targetPath)
@@ -192,28 +194,30 @@ for (const [chapterId, translations] of byChapter) {
     existing?.layer === layer
       ? [...(existing.items as TranslatableItem[])]
       : [];
-  const alreadyPresent = new Set(items.map(itemKey));
+  const alreadyPresent = new Map<string, number>();
+  for (const item of items) {
+    const key = itemKey(item);
+    alreadyPresent.set(key, (alreadyPresent.get(key) ?? 0) + 1);
+  }
 
-  const seen = new Set<string>();
+  const seen = new Map<string, number>();
   let added = 0;
 
   for (const { key: anchorId, html } of translations) {
-    if (seen.has(anchorId)) {
-      errors.push(`${chapterId}: ${anchorId} returned more than once`);
-      continue;
-    }
-    seen.add(anchorId);
-
-    const sourceItem = sourceByKey.get(anchorId);
-    if (!sourceItem) {
+    const occurrence = seen.get(anchorId) ?? 0;
+    seen.set(anchorId, occurrence + 1);
+    const present = alreadyPresent.get(anchorId) ?? 0;
+    const sourceItems = sourceByKey.get(anchorId) ?? [];
+    const sourceItem = sourceItems[present + occurrence];
+    if (!sourceItem && sourceItems.length === 0) {
       errors.push(
         `${chapterId}: ${anchorId} does not exist in ${sourceVersionId}`,
       );
       continue;
     }
-    if (alreadyPresent.has(anchorId)) {
+    if (!sourceItem) {
       errors.push(
-        `${chapterId}: ${anchorId} is already translated — refusing to overwrite`,
+        `${chapterId}: ${anchorId} is already fully translated or was returned too many times — refusing to overwrite`,
       );
       continue;
     }
@@ -299,18 +303,15 @@ for (const volume of toc.volumes) {
   for (const part of volume.parts) {
     for (const chapter of part.chapters) {
       if (!touched.has(chapter.id)) continue;
-      if (!chapter.availableVersions.commentary.includes(targetVersion.id)) {
-        chapter.availableVersions.commentary = [
-          ...chapter.availableVersions.commentary,
+      if (!chapter.availableVersions[layer].includes(targetVersion.id)) {
+        chapter.availableVersions[layer] = [
+          ...chapter.availableVersions[layer],
           targetVersion.id,
         ].sort();
         tocChanged++;
       }
-      if (!chapter.availableLayers.includes("commentary")) {
-        chapter.availableLayers = [
-          ...chapter.availableLayers,
-          "commentary" as const,
-        ].sort();
+      if (!chapter.availableLayers.includes(layer)) {
+        chapter.availableLayers = [...chapter.availableLayers, layer].sort();
       }
     }
   }

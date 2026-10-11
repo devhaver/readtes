@@ -28,11 +28,10 @@ CYRILLIC = re.compile(r"[Ѐ-ӿ]")
 LATIN = re.compile(r"[A-Za-zÀ-ɏ]")
 CYRILLIC_LANGS = {"ru", "uk"}
 
-# Output chars / Hebrew chars. Deliberately wide until calibrated on merged
-# batches; the English run measured 1.35–2.30 (median ≈1.79). Bnei Baruch's
-# own translations of the Introduction and the Preface run 1.27 (tr) to 1.81
-# (de) against the same Hebrew, so this band is wider still on both sides.
-RATIO = (1.1, 2.9)
+# Output chars / Hebrew chars. The seven-language Part 1 source round measured
+# 1.25–2.18 across 390 items of at least 200 Hebrew characters (median 1.67).
+# Keep a small margin around that observed corpus rather than a speculative one.
+RATIO = (1.2, 2.25)
 
 args = sys.argv[1:]
 if "--lang" not in args:

@@ -53,7 +53,7 @@ def run(batch):
                 if tok.rstrip("'׳") not in ("אלף", "א") and not is_numeral(tok):
                     continue
                 if tok in IDIOM:
-                    rows.append((ch["chapterId"], it["anchorId"], m.group(0), "— idiom 'the passage beginning', NOT a page"))
+                    rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0), "— idiom 'the passage beginning', NOT a page"))
                     continue
                 if tok.rstrip("'׳") in ("אלף", "א"):
                     n = 1000 + (0 if (not nxt or nxt in IDIOM) else value(nxt))
@@ -68,7 +68,7 @@ def run(batch):
                 else:
                     n = value(tok)
                     amud = {'ע"א': "a", 'ע"ב': "b"}.get(nxt or "", "")
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {n}{amud}"))
+                rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0), f"page {n}{amud}"))
             ref_spans = [(m.start(), m.end()) for m in REF.finditer(he)]
             for m in BARE.finditer(he):
                 # 'דף א\' שע"ז' is one citation, not two: skip a bare match that
@@ -89,7 +89,7 @@ def run(batch):
                        or "ד\"ה" in after or "אות" in after)
                 if not cue:
                     continue
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"page {1000 + value(m.group(1))} (cited without דף)"))
+                rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0), f"page {1000 + value(m.group(1))} (cited without דף)"))
             PAGEITEM = re.compile(rf"(?<![א-ת])({NUMERAL})\s+אות\s+{NUMERAL}")
             for m in PAGEITEM.finditer(he):
                 tok = m.group(1)
@@ -102,7 +102,7 @@ def run(batch):
                 kind = ("part" if re.search(r"ב?חלק\s*$", he[max(0, m.start() - 8):m.start()])
                         else "page")
                 note = "" if kind == "part" else " (cited without דף)"
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0),
+                rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0),
                              f"{kind} {value(tok)}{note}"))
             for m in ANSWER.finditer(he):
                 if not is_numeral(m.group(1)):
@@ -110,13 +110,13 @@ def run(batch):
                 # 'עשרת ימי תשובה' — the Ten Days of Repentance, not answer N.
                 if "ימי" in he[max(0, m.start() - 14):m.start()]:
                     continue
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0), f"answer {value(m.group(1))}"))
+                rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0), f"answer {value(m.group(1))}"))
                 tail = he[m.end():m.end() + 60]
                 while True:
                     c = re.match(rf"[\s,]+ו?({NUMERAL})", tail)
                     if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
                         break
-                    rows.append((ch["chapterId"], it["anchorId"], c.group(1),
+                    rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), c.group(1),
                                  f"answer {value(c.group(1))} (continues the list)"))
                     tail = tail[c.end():]
             for m in ITEM.finditer(he):
@@ -125,14 +125,14 @@ def run(batch):
                 # מאות is also the plural 'hundreds' — say so instead of ruling.
                 note = (" — or 'hundreds', read the sentence"
                         if m.group(0).lstrip().startswith("מאות") else "")
-                rows.append((ch["chapterId"], it["anchorId"], m.group(0),
+                rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0),
                              f"item {value(m.group(1))}{note}"))
                 # A list continues without repeating אות: 'אות קי"ז קי"ח וקי"ט'.
                 tail = he[m.end():m.end() + 80]
                 while True:
                     r = re.match(rf"\s+עד\s+({NUMERAL})", tail)
                     if r and is_numeral(r.group(1)) and r.group(1) not in IDIOM | STOP:
-                        rows.append((ch["chapterId"], it["anchorId"], r.group(0).strip(),
+                        rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), r.group(0).strip(),
                                      f"item {value(r.group(1))} (end of the range)"))
                         tail = tail[r.end():]
                         continue
@@ -144,7 +144,7 @@ def run(batch):
                     # the next PAGE in the list, not another item number.
                     kind = ("page" if re.match(r"\s+ו?אות(?![א-ת])", tail[c.end():])
                             else "item")
-                    rows.append((ch["chapterId"], it["anchorId"], tok,
+                    rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), tok,
                                  f"{kind} {value(tok)} (continues the list)"))
                     tail = tail[c.end():]
     lines = [f"# Pre-computed citations for {batch}", "",

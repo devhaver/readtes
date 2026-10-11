@@ -294,5 +294,12 @@ What differs from the English run:
   ratio, and the terminology table's `required`/`banned` patterns.
   Citation numbers are checked by the same independent gematria
   recomputation as English — numbers are digits in every language.
+- **Expansion calibration (Part 1 source round).** Across the 390 translated
+  items with at least 200 Hebrew characters, output/Hebrew character ratios
+  measured 1.25–2.18 with a 1.67 median. By language (minimum / median /
+  maximum): ru 1.35 / 1.54 / 1.94; es 1.52 / 1.75 / 1.95; fr 1.56 / 1.83 /
+  2.12; de 1.59 / 1.87 / 2.18; pt 1.52 / 1.72 / 1.97; tr 1.27 / 1.48 /
+  1.73; uk 1.25 / 1.50 / 1.82. `polycheck.py` therefore uses 1.20–2.25,
+  retaining a small margin around the observed corpus.
 - **Register** the language's `ai` edition in `content/versions.json` (all
   seven are registered) with `translatedFrom: "he-jerusalem-1956"`.

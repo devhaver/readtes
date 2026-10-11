@@ -77,9 +77,19 @@ export const untranslatedItems = (
   sourceItems: readonly TranslatableItem[],
   targetItems: readonly TranslatableItem[],
 ): TranslatableItem[] => {
-  const covered = new Set(targetItems.map(itemKey));
+  const covered = new Map<string, number>();
+  for (const item of targetItems) {
+    const key = itemKey(item);
+    covered.set(key, (covered.get(key) ?? 0) + 1);
+  }
   return sourceItems
-    .filter((item) => !covered.has(itemKey(item)))
+    .filter((item) => {
+      const key = itemKey(item);
+      const remaining = covered.get(key) ?? 0;
+      if (remaining === 0) return true;
+      covered.set(key, remaining - 1);
+      return false;
+    })
     .sort((a, b) => readingPosition(a) - readingPosition(b));
 };
 

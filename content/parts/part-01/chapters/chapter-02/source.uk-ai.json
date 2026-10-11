@@ -1,0 +1,59 @@
+{
+  "chapterId": "part-01/chapter-02",
+  "layer": "source",
+  "versionId": "uk-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section I 2",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:1",
+      "heading": "מבאר אשר מאור א\"ס ב\"ה המשיך קו אור לעולמות, שנאצלו ונבראו במקום החלל, שנצטמצם. ובו ה' ענינים: — מן אין סוף המשיך קו אור לתוך החלל",
+      "html": "І ось, після згаданого вище цимцуму, <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>коли залишилося місце простору й вільне та порожнє повітря точно посередині світла Нескінченності, як згадано вище, вже було місце, де могли б бути утворене, створене, сформоване та зроблене. І тоді <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>Він протягнув зі світла Нескінченності одну пряму лінію <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>зі Свого круглого світла <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>згори вниз, і вона спускається та опускається всередину цього простору.",
+      "anchors": [
+        "op-1",
+        "op-2",
+        "op-3",
+        "op-4"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:2",
+      "heading": "ראש הקו נוגע באין סוף ולא סיומו",
+      "html": "<a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a>А верхній рош лінії простягається від самої Нескінченності <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>і торкається Нескінченності, однак сіюм цієї лінії <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>внизу, в її кінці, не торкається світла Нескінченності.",
+      "anchors": [
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:3",
+      "heading": "דרך הקו מתפשט אור אין סוף לעולמות",
+      "html": "І через цю лінію світло Нескінченності простягається й поширюється вниз.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:4",
+      "heading": "כל העולמות הם במקום החלל ההוא שנצטמצם",
+      "html": "А в місці цього простору <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>Він утворив і створив, сформував і зробив усі світи, всі разом.",
+      "anchors": [
+        "op-8"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section I 2:5",
+      "heading": "קודם הצמצום היה הוא ושמו אחד, ואין שכל יכול להשיגו",
+      "html": "<span class=\"tes-footnote\" title=\"Шаар маамарей мудреців, Шабат, зі слів «І щоб зрозуміти».\">*</span><a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">9</a>Перед цими чотирма світами була Нескінченність, <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">10</a>Він – один, і ім’я Його – одне, у дивній і прихованій єдності, <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">20</a>так що навіть ангели, близькі до Нього, не мають сили й не мають осягнення Нескінченності, бо немає жодного створеного розуму, який міг би осягнути Його, оскільки <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">30</a>у Нього немає ні місця, ні межі, ні імені.",
+      "anchors": [
+        "op-9",
+        "op-10",
+        "op-11",
+        "op-12"
+      ]
+    }
+  ]
+}
