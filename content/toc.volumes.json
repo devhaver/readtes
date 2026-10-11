@@ -70,10 +70,10 @@
             "en": "full",
             "enOfficial": "partial",
             "enAi": "partial",
-            "ru": "partial",
-            "uk": "partial",
-            "es": "partial",
-            "fr": "partial"
+            "ru": "full",
+            "uk": "full",
+            "es": "full",
+            "fr": "full"
           }
         },
         {
