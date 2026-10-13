@@ -1147,7 +1147,7 @@ const processQaDialect = async (
           return {
             ok: false,
             kind: "structure-unsupported",
-            reason: "no h6 question blocks",
+            reason: "no supported h6 or question-marked h4 question blocks",
           };
         }
         const pairs = parseKmQaPairs(blocks);

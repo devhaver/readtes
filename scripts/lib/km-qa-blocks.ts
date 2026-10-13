@@ -13,8 +13,13 @@
  * printed number — see `km-order-align.ts`.
  *
  * Structural rules:
- * - An `h6` opens a new pair; its text (leading `"N. "` stripped if present)
- *   is the question.
+ * - In the ordinary dialect, an `h6` opens a new pair.
+ * - Some whole-table documents style questions as `h4`. In that dialect an
+ *   `h4` ending in a question mark opens a pair; an `h4` without one is
+ *   mis-styled answer prose and is appended to the current answer. This is a
+ *   structural rule observed in Part 3, not positional guessing; the exact
+ *   Hebrew question/answer counts still have to match before import.
+ * - A question's leading `"N. "` is stripped when present.
  * - A `p` appends to the current pair's answer (there is always a current
  *   pair once the first `h6` is seen — any `p` before that, e.g. the table's
  *   own intro paragraph, is structural noise and dropped).
@@ -34,12 +39,25 @@ export interface KmQaPair {
 const appendHtml = (base: string, addition: string): string =>
   base.length > 0 ? `${base} ${addition}` : addition;
 
+const blockText = (html: string): string =>
+  html
+    .replace(/<[^>]*>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const h4Question = (block: DocBlock): boolean =>
+  block.tag === "h4" && /[?？؟]\s*$/.test(blockText(block.html));
+
 export const parseKmQaPairs = (blocks: DocBlock[]): KmQaPair[] => {
   const pairs: KmQaPair[] = [];
   let current: KmQaPair | undefined;
+  const questionTag = blocks.some((block) => block.tag === "h6") ? "h6" : "h4";
 
   for (const block of blocks) {
-    if (block.tag === "h6") {
+    if (
+      block.tag === questionTag &&
+      (questionTag === "h6" || h4Question(block))
+    ) {
       const leading = matchLeadingNumber(block.html);
       current = {
         position: pairs.length + 1,
@@ -50,7 +68,10 @@ export const parseKmQaPairs = (blocks: DocBlock[]): KmQaPair[] => {
       continue;
     }
 
-    if (block.tag === "p" && current) {
+    if (
+      current &&
+      (block.tag === "p" || (questionTag === "h4" && block.tag === "h4"))
+    ) {
       current.answerHtml = appendHtml(current.answerHtml, block.html);
       continue;
     }
@@ -62,9 +83,9 @@ export const parseKmQaPairs = (blocks: DocBlock[]): KmQaPair[] => {
   return pairs;
 };
 
-/** True when a document has at least one `h6` — the shape this module parses. Anything else is reported and skipped, never force-parsed. */
+/** True when a document has an h6 question or the verified question-marked h4 dialect. */
 export const isSupportedKmQaStructure = (blocks: DocBlock[]): boolean =>
-  blocks.some((b) => b.tag === "h6");
+  blocks.some((block) => block.tag === "h6") || blocks.some(h4Question);
 
 export const validateKmQaPairs = (
   pairs: readonly KmQaPair[],
