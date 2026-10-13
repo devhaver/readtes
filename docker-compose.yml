@@ -35,7 +35,7 @@ services:
       target: static
       args:
         # Baked in at build time; a static site has no runtime config.
-        NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-https://readtes.org}
+        NUXT_PUBLIC_SITE_URL: ${NUXT_PUBLIC_SITE_URL:-https://readtes.com}
     container_name: readtes-prod
     image: readtes:prod
     ports:

@@ -1,9 +1,20 @@
 ---
 name: tes-seo-ssg
-description: Static-generation and SEO wiring — siteUrl runtime config, canonical/hreflang/og meta, prerendered sitemap.xml and robots.txt, Hebrew font subsetting, the 404.html shell, and the accessibility/contrast token conventions. Use when touching nuxt.config.ts, server/routes/, useLocalizedSeo, fonts, og-card assets, or any focus-ring/contrast styling.
+description: Server/static SEO wiring — siteUrl runtime config, canonical/hreflang/og meta, sitemap.xml and robots.txt, server cache headers, Hebrew font subsetting, the static 404.html shell, and accessibility/contrast tokens. Use when touching nuxt.config.ts, server/routes/, useLocalizedSeo, fonts, og-card assets, or any focus-ring/contrast styling.
 ---
 
 # SSG / SEO
+
+- **Production is the Nitro server on Coolify.** Every locale is rendered on
+  request and included in the sitemap. `SERVER_HTML_ROUTES` applies shared CDN
+  cache headers to every page family. Static-only `prerender: false` rules must
+  stay conditional on `DEPLOY_TARGET === "static"`: Nuxt replaces later route
+  rules instead of merging them, so an unconditional static rule silently
+  removes the production cache header for the same route.
+- **Static generation is a regression gate, not deployment.** `task check`
+  still generates the en/he/ru route set and runs Playwright against it. The
+  remaining locale reader routes are deliberately absent from that artifact;
+  the server build returns real HTTP 200 pages for all nine locales.
 
 - **`runtimeConfig.public.siteUrl`** (`nuxt.config.ts`) is the single source
   of truth for every absolute URL the app emits — canonical links, hreflang
@@ -24,9 +35,9 @@ description: Static-generation and SEO wiring — siteUrl runtime config, canoni
   `designs/og-card.html`) is the shared `og:image` for every page — don't
   modify either file.
 - **`sitemap.xml`/`robots.txt`** are Nitro server routes
-  (`server/routes/sitemap.xml.ts`, `robots.txt.ts`), prerendered into the
-  static output (both listed in `nitro.prerender.routes`, since nothing
-  links to them for the crawler to find). The URL-list logic is a pure,
+  (`server/routes/sitemap.xml.ts`, `robots.txt.ts`), and are also prerendered
+  into the static regression output (both listed in `nitro.prerender.routes`,
+  since nothing links to them for the crawler to find). The URL-list logic is a pure,
   unit-tested function (`shared/utils/sitemap.ts`,
   `tests/unit/sitemap.spec.ts`) over `content/toc.json` — the site's route
   universe is a pure function of the ToC, so no heavyweight sitemap/SEO
