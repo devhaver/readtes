@@ -1,6 +1,6 @@
 # Ukrainian (`uk`) terminology — Talmud Eser Sefirot (binding)
 
-Translator brief for machine-translating TES from Hebrew into Ukrainian. **Bnei Baruch’s own Ukrainian decides**; where BB is silent the row is marked **PROPOSED** and says which BB convention it follows. 215 rows: 186 official, 29 proposed. The machine-readable twin is `terms-uk.json` (same rows + `required` / `banned` gate patterns).
+Translator brief for machine-translating TES from Hebrew into Ukrainian. **Bnei Baruch’s own Ukrainian decides**; where BB is silent the row is marked **PROPOSED** and says which BB convention it follows. 216 rows: 186 official, 30 proposed. The machine-readable twin is `terms-uk.json` (same rows + `required` / `banned` gate patterns).
 
 **Evidence base (all official BB, all counted):**
 
@@ -287,6 +287,7 @@ Legend for the evidence column: **bold** = the binding form; `T` = official BB T
 | 139 | אחור                      | back                            | **ахор**                                          | **ахор 50 (T23 P27)** · спина/зворотн* 18 (I12 P6)                                                                                         | «ахор бе-ахор».                                                                                                                                                                |
 | 140 | זכר                       | Zachar (male)                   | **захар**                                         | _*захар* 73 (T43 P30)_* · чоловіч* 4 (T3 P1)                                                                                               | Declined: «захара», «з захаром».                                                                                                                                               |
 | 141 | נקבה                      | Nekeva (female)                 | **некева**                                        | _*некев* 48 (T24 P24)_* · нэкева (Russian) 0 · жіноч* 6 (T3 P3)                                                                            |                                                                                                                                                                                |
+| 216 | צלם / צל                  | Tzelem / Tzel                   | **PROPOSED** целем / цель                         | **целем / цель 0**                                                                                                                         | Part 2 ruling: preserve the Hebrew wordplay as «целем» (образ), from «цель» (тінь), following BB’s Ukrainian transliteration scheme (צ → ц, segol → е).                        |
 
 ### J. Worlds
 
