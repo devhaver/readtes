@@ -1222,12 +1222,48 @@ describe("parseKmQaPairs", () => {
     expect(pairs.map((p) => p.position)).toEqual([1, 2]);
     expect(pairs[0]?.questionHtml).toBe("What terms are absent?");
   });
+
+  it("parses the h4 question dialect and keeps mis-styled prose in the preceding answer", () => {
+    const blocks = parseDocBlocks(
+      [
+        "<h2>Questions and Answers on Topics</h2>",
+        "<h4>102. Why does the light strike the screen?</h4>",
+        "<p>Because the screen rejects the light.</p>",
+        "<h4>There is no screen in Atzilut because rejection occurs below it.</h4>",
+        "<h4>B. What is the difference between direct and reflected light?</h4>",
+        "<p>They travel in opposite directions.</p>",
+      ].join("\n"),
+    );
+
+    expect(parseKmQaPairs(blocks)).toEqual([
+      {
+        position: 1,
+        questionHtml: "Why does the light strike the screen?",
+        answerHtml:
+          "Because the screen rejects the light. There is no screen in Atzilut because rejection occurs below it.",
+      },
+      {
+        position: 2,
+        questionHtml:
+          "B. What is the difference between direct and reflected light?",
+        answerHtml: "They travel in opposite directions.",
+      },
+    ]);
+  });
 });
 
 describe("isSupportedKmQaStructure", () => {
   it("is true when the document has at least one h6", () => {
     expect(
       isSupportedKmQaStructure(parseDocBlocks("<h6>1. Q</h6><p>A</p>")),
+    ).toBe(true);
+  });
+
+  it("is true for the h4 question dialect", () => {
+    expect(
+      isSupportedKmQaStructure(
+        parseDocBlocks("<h4>What is a vessel?</h4><p>A desire to receive.</p>"),
+      ),
     ).toBe(true);
   });
 
