@@ -1,0 +1,91 @@
+{
+  "chapterId": "part-02/chapter-02",
+  "layer": "source",
+  "versionId": "tr-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section II 2",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:1",
+      "heading": "מבאר עשר ספירות דיושר, יציאתן, והשתלשלותן ומה שנכלל בהן. ובו ז' ענינים: — סדר יציאת עשר ספירות דיושר",
+      "html": "Şimdi on Sefirot’ta bulunan ikinci safhayı, yani üst Adam’ın biçimindeki üç çizgiye benzeyen Or Yaşar’ı açıklayacağız. Ve işte, yukarıdan aşağıya doğru genişleyen ve dairelerin kendisinden genişlediği yukarıda sözü edilen çizgi aracılığıyla, bu çizgi de doğrusallık içinde yukarıdan aşağıya, <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>tüm dairelerin en üstündeki dairenin üst çatısından aşağıya, bütün dairelerin bitiminin alt ucunun altına kadar genişler. Yukarıdan aşağıya on Sefirot’u içerir; <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>doğru bir Adam suretinin sırrında, <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>dik bir boyla, <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>248 organdan oluşmuş ve sağ, sol ve orta olmak üzere üç çizgi biçiminde tasvir edilmiştir. Genel olarak on Sefirot’u içerir ve bunların her bir Sefira’sı sonsuza dek on Sefirot olarak ayrıntılanır.",
+      "anchors": [
+        "op-1",
+        "op-2",
+        "op-3",
+        "op-4"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:2",
+      "heading": "ה' חלקי נשמה שבאדם התחתון, נפש רוח נשמה חיה יחידה",
+      "html": "Alt Adam’da <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a>beş Işık safhası vardır; bunlar: <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>Nefeş, Ruah, Neşama, Haya ve Yehida’dır. Bunlar <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>biri diğerinin üzerinde olan beş derecedir ve Berahot risalesinde (sayfa 10a) belirtildiği üzere, Neşama’da bulunan beş safhaya karşılık gelen “Rabb’i kutsa, ey ruhum, vb.” ayetinin beş kez söylenmesinin sırrı budur.",
+      "anchors": [
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:3",
+      "heading": "הן בעגולים והן ביושר יש או\"מ ואו\"פ, כלי חיצון וכלי פנימי",
+      "html": "Ve işte, dairelerin tüm on Sefirot safhasında yukarıda sözü edilen bütün safhalar vardır; bunlar: <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>Işıklar ve Kelim’dir; <a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">9</a>Işık, Or Pinimi ve Or Makif olarak ayrılır, <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">10</a>Kli ise dışsallık ve içsellik olarak ayrılır. Aynı şekilde, Adam biçimindeki doğrusallığın on Sefirot safhasında da bu safhaların tümü aynen vardır.",
+      "anchors": [
+        "op-8",
+        "op-9",
+        "op-10"
+      ]
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:4",
+      "heading": "אור העגולים הוא אור הנפש, ואור היושר אור הרוח. תחילה אנצלו העגולים ואח\"כ היושר",
+      "html": "Ancak daireler ile doğrusallık arasındaki fark şudur: <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">20</a>Dairelerin on Sefirot’u, Nefeş denilen Işığın safhasıdır ve bunlarda Or Pinimi ve Or Makif, iç ve dış vardır. On Sefirot’luk Kelim’e sahiptirler ve her Kli’de içsellik ile dışsallık bulunur; ayrıca on Sefirot’luk Işıklar vardır ve her Işıkta Or Pinimi ile Or Makif bulunur. Fakat doğrusallığın on Sefirot’u, <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">30</a>Ruah denilen Işığın safhasıdır; bilindiği gibi bu, Nefeş derecesinden daha yüksek bir derecedir. Onlar da Or Pinimi ve Or Makif’i içerir; ayrıca on Sefirot’luk Kelim’e sahiptirler ve her Kli’de içsellik ile dışsallık vardır. Nefeş safhasının önce, Ruah’ın ise daha sonra yayıldığı açıktır.",
+      "anchors": [
+        "op-11",
+        "op-12"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:5",
+      "heading": "א\"א דעגולים, מאיר לאו\"א דעגולים, בבחינת חלונות מג' קוין, ימין שמאל ואמצע שבו. ומהם נמשך האור לכל העגולים באופן, שכל הפרטים שיש ביושר, יש ג\"כ בעגולים",
+      "html": "<span class=\"tes-footnote\" title=\"Şaar HaHakdamot, sayfa 11 (Kudüs baskısı).\">*</span>On Sefirot <a class=\"tes-anchor\" href=\"#op-13\" data-anchor=\"op-13\">40</a>biri diğerinin içinde daireler biçiminde olduğunda bile, <a class=\"tes-anchor\" href=\"#op-14\" data-anchor=\"op-14\">50</a>doğrusallık çizgisindeki on Sefirot’ta bulunan ışık bolluğunu alma safhalarının tümü onlarda vardır. Çünkü düzeltmeden sonra <a class=\"tes-anchor\" href=\"#op-15\" data-anchor=\"op-15\">60</a>Arih Anpin denilen Keter dairesinde, <a class=\"tes-anchor\" href=\"#op-16\" data-anchor=\"op-16\">70</a>bir delik ve pencere <a class=\"tes-anchor\" href=\"#op-17\" data-anchor=\"op-17\">80</a>dairenin sağ tarafında bulunur ve oradan <a class=\"tes-anchor\" href=\"#op-18\" data-anchor=\"op-18\">90</a>Arih’in Işığı Aba dairesine iner ve onu aydınlatır. Arih dairesinin sol tarafında ikinci bir pencere daha vardır; Işık, onun içinde bulunan Aba dairesinin sol tarafına kadar çıkar, <a class=\"tes-anchor\" href=\"#op-19\" data-anchor=\"op-19\">100</a>onu deler ve onda bir pencere oluşturur. Oradan Işık, Aba dairesinin içindeki İma dairesine uzanır ve onu aydınlatır. Böylece Işık Aba dairesinin solundan geçerken Aba’nın kendisi için değildir ve <a class=\"tes-anchor\" href=\"#op-20\" data-anchor=\"op-20\">200</a>orada yalnızca bir geçiş yolu olarak geçer; asıl aydınlanma İma içindir. Böylece AA, kendi doğrusallıklarında olduğu gibi Aba ile İma’yı birlikte aydınlatır. Biri diğerinin içinde daireler olmalarına rağmen, içlerindeki bu pencereler aracılığıyla <a class=\"tes-anchor\" href=\"#op-21\" data-anchor=\"op-21\">300</a>sağ, sol ve orta olmak üzere düz çizgilere sahiptirler. Işık oradan, Ruah’ın düz çizgisindeki on Sefirot’ta bulunan tüm ayrıntıların aynısıyla, gerçekten düz çizgiler aracılığıyla dairelerin on Sefirot’una uzanır.",
+      "anchors": [
+        "op-13",
+        "op-14",
+        "op-15",
+        "op-16",
+        "op-17",
+        "op-18",
+        "op-19",
+        "op-20",
+        "op-21"
+      ]
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:6",
+      "heading": "אדם קדמון נמשך מא\"ס עד סוף האצילות, ובו נכללים כל העולמות. ואין לנו רשות לעסוק בו",
+      "html": "<span class=\"tes-footnote\" title=\"Etz Hayim, Kapı 1, Dal 2.\">*</span>Ve işte, <a class=\"tes-anchor\" href=\"#op-22\" data-anchor=\"op-22\">400</a>bu AK, <a class=\"tes-anchor\" href=\"#op-23\" data-anchor=\"op-23\">1</a>yukarıda sözü edilen Atzilut boşluğunun tamamında, üst uçtan alt uca, bir uçtan diğer uca uzanır. Açıklayacağımız üzere bütün dünyalar bu Adam’a dâhildir; fakat <a class=\"tes-anchor\" href=\"#op-24\" data-anchor=\"op-24\">2</a>bu Adam’ın içselliği ve özü hakkında konuşmaya ve bunlarla hiç ilgilenmeye iznimiz yoktur.",
+      "anchors": [
+        "op-22",
+        "op-23",
+        "op-24"
+      ]
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II 2:7",
+      "heading": "תחילה יצאו העגולים ואחר כך היושר. אין אנו עוסקים בעגולים אלא ביושר בלבד",
+      "html": "Ancak <a class=\"tes-anchor\" href=\"#op-25\" data-anchor=\"op-25\">3</a>başlangıçta on Sefirot, biri diğerinin içinde daire biçiminde ortaya çıktı. Daha sonra dairelerin içinde doğrusallık, tek bir Adam suretinde, <a class=\"tes-anchor\" href=\"#op-26\" data-anchor=\"op-26\">4</a>yukarıda sözü edilen bütün dairelerin uzunluğu boyunca uzandı; <a class=\"tes-anchor\" href=\"#op-27\" data-anchor=\"op-27\">5</a>biz ise daireler safhasıyla hiç ilgilenmeyip yalnızca doğrusallık safhasıyla ilgileniriz.",
+      "anchors": [
+        "op-25",
+        "op-26",
+        "op-27"
+      ]
+    }
+  ]
+}
