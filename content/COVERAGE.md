@@ -72,8 +72,9 @@ Both are right; they are listing different things.
   create this corpus's first source chapter with no Hebrew, which
   `checkTranslatedVersionIntegrity` exists to prevent.
 
-English for the part 6 table is on KabbalahMedia, not Sefaria, and is
-blocked on issue #111 rather than on anything about this material.
+English for the part 6 table comes from KabbalahMedia rather than Sefaria and
+is imported as `en-bb` for both the questions and answers chapters. Issue #111,
+which previously blocked that import, is resolved.
 
 ## Section I (`part-01`)
 
