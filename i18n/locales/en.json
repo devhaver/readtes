@@ -16,11 +16,30 @@
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "volumesLink": "Volumes",
+    "searchLink": "Search",
     "glossaryLink": "Glossary",
     "languageSwitcherLabel": "Switch language",
     "breadcrumbLabel": "Breadcrumb",
     "themeToggleLabel": "Theme: {current}. Switch to {next}.",
     "aboutLink": "About"
+  },
+  "search": {
+    "title": "Search the full text",
+    "description": "Search the Ari's text, Inner Light commentary, and summaries across the library.",
+    "label": "Search query",
+    "placeholder": "Search words or phrases…",
+    "submit": "Search",
+    "searching": "Searching…",
+    "hint": "Enter at least two characters.",
+    "resultCount": "{count} result | {count} results",
+    "noResults": "No results found.",
+    "error": "Search could not be completed. Please try again.",
+    "browseGlossary": "Browse the vocabulary glossary",
+    "layers": {
+      "source": "Source text",
+      "commentary": "Commentary",
+      "summary": "Summary"
+    }
   },
   "footer": {
     "attribution": "Made by students of {academy}",

@@ -226,6 +226,13 @@ const siteUrl = (
   process.env.NUXT_PUBLIC_SITE_URL ?? "https://readtes.com"
 ).replace(/\/$/, "");
 
+const searchServerAssets = [
+  {
+    baseName: "search-content",
+    dir: fileURLToPath(new URL("./content/parts", import.meta.url)),
+  },
+];
+
 // Runs before first paint and mirrors the reader's persisted layout
 // preferences onto <html> as `data-pref-*` attributes, which `main.css`
 // reads. The preference composables cannot apply them during hydration
@@ -345,6 +352,12 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2025-07-15",
+  nitro: {
+    // The production-only full-text endpoint reads the committed chapter JSON
+    // from Nitro storage. Keeping it as a server asset avoids bundling the
+    // corpus into the browser or requiring a runtime database.
+    serverAssets: searchServerAssets,
+  },
   // T14 scaling fix — artifact is over Cloudflare Pages' 20,000-file limit
   // without this: `experimental.payloadExtraction` emits one `_payload.json`
   // per prerendered route (10,314 extra files). Safe here because chapter

@@ -5,8 +5,8 @@
  * thin Nitro route that calls this at generate time and serves the
  * result.
  *
- * Route universe: the four static top-level pages (the home page, the
- * about page, the glossary, the volumes index) plus every volume's contents
+ * Route universe: the five static top-level pages (the home page, the
+ * about page, search, the glossary, the volumes index) plus every volume's contents
  * page and every chapter's reader page — the same universe as
  * `nitro.prerender.routes` in `nuxt.config.ts` plus the crawled static
  * pages. `/design-tokens` is a dev-only debug route with no entry in
@@ -32,7 +32,7 @@ export interface SitemapEntry {
   urls: Record<SitemapLocale, string>;
 }
 
-const STATIC_PATHS = ["/", "/about", "/glossary", "/volumes"];
+const STATIC_PATHS = ["/", "/about", "/search", "/glossary", "/volumes"];
 
 /**
  * Escapes the five XML predefined entities so `siteUrl`/path values are

@@ -16,11 +16,30 @@
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu",
     "volumesLink": "Volumes",
+    "searchLink": "Rechercher",
     "glossaryLink": "Glossaire",
     "languageSwitcherLabel": "Changer de langue",
     "breadcrumbLabel": "Fil d'Ariane",
     "themeToggleLabel": "Thème : {current}. Passer à : {next}.",
     "aboutLink": "À propos"
+  },
+  "search": {
+    "title": "Rechercher dans le texte intégral",
+    "description": "Recherchez dans le texte du Ari, le commentaire Lumière intérieure et les résumés de toute la bibliothèque.",
+    "label": "Requête de recherche",
+    "placeholder": "Rechercher des mots ou des expressions…",
+    "submit": "Rechercher",
+    "searching": "Recherche…",
+    "hint": "Saisissez au moins deux caractères.",
+    "resultCount": "{count} résultat | {count} résultats",
+    "noResults": "Aucun résultat trouvé.",
+    "error": "La recherche n’a pas pu aboutir. Veuillez réessayer.",
+    "browseGlossary": "Parcourir le glossaire du vocabulaire",
+    "layers": {
+      "source": "Texte source",
+      "commentary": "Commentaire",
+      "summary": "Résumé"
+    }
   },
   "footer": {
     "attribution": "Réalisé par des étudiants de {academy}",

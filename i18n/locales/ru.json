@@ -16,11 +16,30 @@
     "menuOpen": "Открыть меню",
     "menuClose": "Закрыть меню",
     "volumesLink": "Тома",
+    "searchLink": "Поиск",
     "glossaryLink": "Глоссарий",
     "languageSwitcherLabel": "Сменить язык",
     "breadcrumbLabel": "Навигационная цепочка",
     "themeToggleLabel": "Тема: {current}. Переключить на: {next}.",
     "aboutLink": "О проекте"
+  },
+  "search": {
+    "title": "Поиск по полному тексту",
+    "description": "Поиск по тексту Ари, комментарию «Внутренний свет» и кратким изложениям всей библиотеки.",
+    "label": "Поисковый запрос",
+    "placeholder": "Поиск слов или фраз…",
+    "submit": "Найти",
+    "searching": "Поиск…",
+    "hint": "Введите не менее двух символов.",
+    "resultCount": "{count} результат | {count} результата | {count} результатов",
+    "noResults": "Ничего не найдено.",
+    "error": "Не удалось выполнить поиск. Попробуйте ещё раз.",
+    "browseGlossary": "Открыть словарь терминов",
+    "layers": {
+      "source": "Исходный текст",
+      "commentary": "Комментарий",
+      "summary": "Краткое изложение"
+    }
   },
   "footer": {
     "attribution": "Сделано учениками {academy}",
