@@ -16,11 +16,30 @@
     "menuOpen": "Menüyü aç",
     "menuClose": "Menüyü kapat",
     "volumesLink": "Ciltler",
+    "searchLink": "Ara",
     "glossaryLink": "Sözlük",
     "languageSwitcherLabel": "Dili değiştir",
     "breadcrumbLabel": "Gezinti yolu",
     "themeToggleLabel": "Tema: {current}. Şuna geç: {next}.",
     "aboutLink": "Hakkında"
+  },
+  "search": {
+    "title": "Tam metinde ara",
+    "description": "Tüm kütüphanede Ari'nin metnini, İçsel Işık yorumunu ve özetleri arayın.",
+    "label": "Arama sorgusu",
+    "placeholder": "Kelime veya ifade ara…",
+    "submit": "Ara",
+    "searching": "Aranıyor…",
+    "hint": "En az iki karakter girin.",
+    "resultCount": "{count} sonuç",
+    "noResults": "Sonuç bulunamadı.",
+    "error": "Arama tamamlanamadı. Lütfen tekrar deneyin.",
+    "browseGlossary": "Terimler sözlüğüne göz atın",
+    "layers": {
+      "source": "Kaynak metin",
+      "commentary": "Yorum",
+      "summary": "Özet"
+    }
   },
   "footer": {
     "attribution": "{academy} öğrencileri tarafından hazırlandı",

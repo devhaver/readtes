@@ -14,6 +14,7 @@ const route = useRoute();
 const navLinks = computed(() =>
   [
     { key: "volumes", path: "/volumes", label: t("nav.volumesLink") },
+    { key: "search", path: "/search", label: t("nav.searchLink") },
     { key: "glossary", path: "/glossary", label: t("nav.glossaryLink") },
     { key: "about", path: "/about", label: t("nav.aboutLink") },
   ].map((link) => {

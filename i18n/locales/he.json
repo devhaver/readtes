@@ -16,11 +16,30 @@
     "menuOpen": "פתח תפריט",
     "menuClose": "סגור תפריט",
     "volumesLink": "כרכים",
+    "searchLink": "חיפוש",
     "glossaryLink": "מילון מונחים",
     "languageSwitcherLabel": "החלף שפה",
     "breadcrumbLabel": "פירורי לחם",
     "themeToggleLabel": "ערכת נושא: {current}. מעבר אל: {next}.",
     "aboutLink": "אודות"
+  },
+  "search": {
+    "title": "חיפוש בטקסט המלא",
+    "description": "חיפוש בדברי האר״י, בפירוש אור פנימי ובסיכומים בכל הספרייה.",
+    "label": "שאילתת חיפוש",
+    "placeholder": "חיפוש מילים או ביטויים…",
+    "submit": "חיפוש",
+    "searching": "מחפש…",
+    "hint": "יש להזין לפחות שני תווים.",
+    "resultCount": "{count} תוצאה | {count} תוצאות",
+    "noResults": "לא נמצאו תוצאות.",
+    "error": "לא ניתן להשלים את החיפוש. נא לנסות שוב.",
+    "browseGlossary": "עיון במילון המונחים",
+    "layers": {
+      "source": "טקסט המקור",
+      "commentary": "פירוש",
+      "summary": "סיכום"
+    }
   },
   "footer": {
     "attribution": "נוצר על ידי תלמידי {academy}",

@@ -16,11 +16,30 @@
     "menuOpen": "Відкрити меню",
     "menuClose": "Закрити меню",
     "volumesLink": "Томи",
+    "searchLink": "Пошук",
     "glossaryLink": "Глосарій",
     "languageSwitcherLabel": "Змінити мову",
     "breadcrumbLabel": "Навігаційний ланцюжок",
     "themeToggleLabel": "Тема: {current}. Перемкнути на: {next}.",
     "aboutLink": "Про проєкт"
+  },
+  "search": {
+    "title": "Пошук у повному тексті",
+    "description": "Шукайте в тексті Арі, коментарі «Внутрішнє світло» та стислих викладах усієї бібліотеки.",
+    "label": "Пошуковий запит",
+    "placeholder": "Пошук слів або фраз…",
+    "submit": "Знайти",
+    "searching": "Пошук…",
+    "hint": "Введіть щонайменше два символи.",
+    "resultCount": "{count} результат | {count} результати | {count} результатів",
+    "noResults": "Нічого не знайдено.",
+    "error": "Не вдалося виконати пошук. Спробуйте ще раз.",
+    "browseGlossary": "Переглянути словник термінів",
+    "layers": {
+      "source": "Вихідний текст",
+      "commentary": "Коментар",
+      "summary": "Стислий виклад"
+    }
   },
   "footer": {
     "attribution": "Зроблено учнями {academy}",

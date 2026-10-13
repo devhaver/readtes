@@ -16,11 +16,30 @@
     "menuOpen": "Menü öffnen",
     "menuClose": "Menü schließen",
     "volumesLink": "Bände",
+    "searchLink": "Suche",
     "glossaryLink": "Glossar",
     "languageSwitcherLabel": "Sprache wechseln",
     "breadcrumbLabel": "Brotkrumennavigation",
     "themeToggleLabel": "Farbschema: {current}. Wechseln zu: {next}.",
     "aboutLink": "Über das Projekt"
+  },
+  "search": {
+    "title": "Volltextsuche",
+    "description": "Durchsuchen Sie den Text des Ari, den Kommentar Inneres Licht und die Zusammenfassungen der gesamten Bibliothek.",
+    "label": "Suchanfrage",
+    "placeholder": "Wörter oder Ausdrücke suchen…",
+    "submit": "Suchen",
+    "searching": "Suche…",
+    "hint": "Geben Sie mindestens zwei Zeichen ein.",
+    "resultCount": "{count} Ergebnis | {count} Ergebnisse",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "error": "Die Suche konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+    "browseGlossary": "Das Begriffsglossar durchsuchen",
+    "layers": {
+      "source": "Quelltext",
+      "commentary": "Kommentar",
+      "summary": "Zusammenfassung"
+    }
   },
   "footer": {
     "attribution": "Erstellt von Schülern der {academy}",

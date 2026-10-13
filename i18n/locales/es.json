@@ -16,11 +16,30 @@
     "menuOpen": "Abrir menú",
     "menuClose": "Cerrar menú",
     "volumesLink": "Volúmenes",
+    "searchLink": "Buscar",
     "glossaryLink": "Glosario",
     "languageSwitcherLabel": "Cambiar de idioma",
     "breadcrumbLabel": "Ruta de navegación",
     "themeToggleLabel": "Tema: {current}. Cambiar a: {next}.",
     "aboutLink": "Acerca de"
+  },
+  "search": {
+    "title": "Buscar en el texto completo",
+    "description": "Busca en el texto del Ari, el comentario Luz Interior y los resúmenes de toda la biblioteca.",
+    "label": "Consulta de búsqueda",
+    "placeholder": "Buscar palabras o frases…",
+    "submit": "Buscar",
+    "searching": "Buscando…",
+    "hint": "Introduce al menos dos caracteres.",
+    "resultCount": "{count} resultado | {count} resultados",
+    "noResults": "No se encontraron resultados.",
+    "error": "No se pudo completar la búsqueda. Inténtalo de nuevo.",
+    "browseGlossary": "Explorar el glosario de vocabulario",
+    "layers": {
+      "source": "Texto fuente",
+      "commentary": "Comentario",
+      "summary": "Resumen"
+    }
   },
   "footer": {
     "attribution": "Hecho por estudiantes de la {academy}",

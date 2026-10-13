@@ -27,6 +27,7 @@ const sourcesUrl = computed(
 const links = computed(() => [
   { to: localePath("/about"), label: t("nav.aboutLink") },
   { to: localePath("/volumes"), label: t("nav.volumesLink") },
+  { to: localePath("/search"), label: t("nav.searchLink") },
   { to: localePath("/glossary"), label: t("nav.glossaryLink") },
   { to: `${localePath("/about")}#licenses`, label: t("footer.licenses") },
 ]);
