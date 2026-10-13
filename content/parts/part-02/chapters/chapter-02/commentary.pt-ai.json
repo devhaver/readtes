@@ -1,0 +1,359 @@
+{
+  "chapterId": "part-02/chapter-02",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "pt": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Keter em um mundo ou em uma Sefira é considerado o “teto” daquele mundo ou daquela Sefira, e Malchut em cada mundo e Sefira é considerada o “solo” daquele mundo ou daquela Sefira. O círculo Superior é a Sefira de Keter, e o teto desse Keter é Keter nas dez Sefirot desse Keter."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "pt": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "As vestimentas dos Mochin são chamadas Tzelem (imagem), da palavra “Tzel” (sombra). A iluminação de retidão que inclui as três primeiras Sefirot é chamada “Adam”, porque recebe GAR nas vestimentas de Tzelem. Este é um assunto extenso, e aqui não é o lugar para explicá-lo."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "pt": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "O Rosh (cabeça) de cada Sefira e Partzuf são as três primeiras Sefirot: Keter, Hochma e Bina. As sete Sefirot inferiores — Hesed, Guevura, Tiferet, Netzach, Hod, Yessod e Malchut — de cada Sefira e Partzuf são consideradas o Guf (corpo) daquela Sefira e daquele Partzuf. Quando estão em ordem, isto é, as Luzes de GAR nos Kelim de GAR e as Luzes de ZAT nos Kelim de ZAT, o Partzuf é considerado “de postura ereta”. Mas, se as Luzes do Guf se encontram nos Kelim de GAR, e não as Luzes que lhes correspondem, esse Partzuf é considerado sem postura ereta, pois o discernimento do Rosh não é mais importante do que o discernimento do Guf, visto que, mesmo no Rosh, atuam apenas os discernimentos das Luzes do Guf. Isso é chamado inclinação da cabeça, pois o Rosh e o Guf estão no mesmo grau."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "pt": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Isto significa que há 248 discernimentos de Hesed no Partzuf Superior, dos quais se estendem os 248 órgãos nos inferiores, detalhados na Mishná Ohalot. Aqui não é o lugar para se estender; isso será explicado em seu devido lugar."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "pt": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:5",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Não há nenhuma essência em todos os mundos, seja nos Mundos Superiores, seja neste mundo, na qual não se discernam as dez Sefirot acima mencionadas, que são os quatro discernimentos conhecidos e sua raiz. É isso que ele diz: também no homem inferior deste mundo se encontram igualmente cinco discernimentos, e assim por diante."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "pt": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:6",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Os Kelim das dez Sefirot são chamados Keter, Hochma, Bina, ZA e Malchut. As Luzes neles são chamadas Yehida, Haya, Neshama, Ruach e Nefesh (como está escrito em Devarim Rabá, Capítulo 2, 26): a Luz de Yehida se veste no Kli de Keter; a Luz de Haya, no Kli de Hochma; a Luz de Neshama, no Kli de Bina; a Luz de Ruach, no Kli de Zeir Anpin; e a Luz de Nefesh, no Kli de Malchut."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "pt": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:7",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Você já sabe que a distinção entre os graus se dá segundo a Zakut e a Aviut neles, e que todo “mais elevado” significa a medida que é mais pura do que a outra."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "pt": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:8",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "As Luzes são NRNHY, e os Kelim são KHB ZON, como explicado acima."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "pt": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:9",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "A divisão na espiritualidade ocorre por causa da disparidade de forma que ali se renovou (como explicado acima, Parte 1, Capítulo 1, item 30, no trecho que começa com “Entretanto”). Tudo o que é Superior a outro significa que é mais puro do que o outro, e tudo o que é inferior a outro significa que é mais espesso do que o outro. Por essa disparidade de forma da Aviut, ele se separou e saiu do outro e tornou-se inferior a ele. Sabe-se que as Luzes são doadas de cada Superior ao inferior a ele. Por essa razão, o inferior precisa receber a abundância em seu discernimento mais elevado e mais puro, enquanto o Superior lhe dá a abundância somente a partir do discernimento mais baixo e mais espesso que há nele. Desse modo, a forma da Luz que vem do Superior se torna equivalente à forma do Kli que há no inferior, pois o discernimento mais espesso e grosseiro no Superior possui equivalência com o discernimento mais fino e mais puro no inferior. Verifica-se que o inferior não pode receber toda a Luz que lhe cabe receber, mas apenas uma parte muito pequena, isto é, somente o quanto o Kli mais puro nele pode receber. Os demais discernimentos nele, que não são tão puros, precisam permanecer sem a Luz que lhes corresponde por causa de sua disparidade de forma em relação ao Superior que lhes doa.<br>Por isso, considera-se aqui que a Luz que pertence ao inferior se divide em dois discernimentos. O primeiro é a pequena medida de Luz que ele recebe do Superior dentro do Kli mais elevado nele, como explicado acima; essa Luz que ele recebe é chamada Ohr Pnimi (Luz Interna) do inferior. O segundo é toda a medida de Luz que pertence aos discernimentos restantes no inferior, que não puderam receber do Superior por causa de sua disparidade de forma, como explicado acima. Toda essa medida é considerada como tendo permanecido no Superior, sem descer ao inferior, e é chamada Ohr Makif (Luz Circundante). Ela é assim chamada porque circunda o inferior, isto é, ilumina-o à distância, embora não esteja vestida nele, sendo apenas uma iluminação distante e pequena. Essa iluminação distante é capaz de purificar os discernimentos de Aviut no inferior até que as formas de todos os discernimentos no inferior se tornem equivalentes à forma do Superior; então ele poderá receber toda a Luz que lhe pertence. Isso é chamado entrada das Ohr Makif, isto é, as Ohr Makif entraram e se vestiram nos Kelim do inferior, que foram purificados e todos se tornaram o discernimento de Ohr Pnimi."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "pt": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:10",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Isto é, como as Luzes se dividiram em Ohr Pnimi e Ohr Makif, como explicado acima, há consequentemente dois tipos de recepção no Kli: recepção no interior do Kli e recepção a partir da externalidade do Kli (veja a Tabela de Respostas, Parte 1, item 102). A Ohr Pnimi é recebida na parte mais interna do Kli, enquanto a Ohr Makif, que o purifica de sua Aviut (como explicado na passagem anterior), é considerada como recebida através da externalidade do Kli, isto é, sem qualquer Hitlabshut no Kli.<br>A referida divisão do Kli em externalidade e internalidade ocorre segundo a distinção entre a Zakut e a Aviut no Kli. Somente a Aviut nele é apta a receber a Ohr Pnimi, pois o principal vaso de recepção do ser emanado é Behina Dalet. Entretanto, os três primeiros discernimentos não são aptos à recepção; eles apenas fazem com que Behina Dalet seja revelada. Por isso, cada Kli é considerado, em si mesmo, como quatro discernimentos do Kli. A Luz é recebida principalmente em Behina Dalet nele; por isso ela é chamada internalidade do Kli, sua parte mais interna, onde repousa a abundância.<br>Os três discernimentos que apenas causam a revelação de Behina Dalet no Kli, mas não são eles próprios capazes de receber, são considerados como circundando Behina Dalet por sua externalidade. Isso se assemelha à espessura da parede de um Kli corpóreo, que contém quatro camadas que circundam umas às outras. Tudo o que é recebido no Kli está em sua internalidade, isto é, na camada interna, enquanto as outras três camadas na espessura da parede apenas fortalecem a camada interna, para que ela tenha força para suportar o preenchimento nela. Do mesmo modo, deve-se compreender aqui, na espiritualidade, que o principal discernimento que sustenta a abundância dentro de si é Behina Dalet do Kli; os três primeiros discernimentos são as causas que revelam Behina Dalet com toda a sua força, até que se torne apta a sustentar a abundância, mas eles próprios não são capazes de receber a Ohr Pnimi.<br>Por isso, são chamados externalidade do Kli, pois estão fora do discernimento da recepção da Ohr Pnimi: Behina Guimel é externalidade em relação a Behina Dalet; Behina Bet é externalidade em relação a Behina Guimel; e Behina Alef é a externalidade de todas, circundando todas elas. Acima de todas há um discernimento externo sem nenhuma Aviut, que é o discernimento da raiz de todos os quatro discernimentos no Kli. Saiba que esse discernimento completamente puro é o Kli de recepção da Ohr Makif, pois, devido à extraordinária Zakut nele, pode receber a iluminação da Ohr Makif, embora ela venha à distância.<br>Assim foi explicada a divisão do Kli: a internalidade nele significa o discernimento mais espesso no Kli, isto é, Behina Dalet do Kli, que recebe a Ohr Pnimi; e a externalidade nele significa o discernimento mais puro no Kli, isto é, o discernimento da raiz do Kli, como explicado acima, que recebe a Ohr Makif à distância. Não se deve objetar que Behina Dalet não é apta à recepção por força do Tzimtzum e do Massach, pois tratamos aqui somente do discernimento da Ohr Hozer que sobe de dentro de Behina Dalet (veja Observação Interior)."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20",
+        "pt": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:11",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Em todas as Sefirot capazes apenas de receber Luzes, sem capacidade de doar aos outros, a Luz nelas é chamada Luz de Nefesh. Já foi explicado que toda a Luz nos círculos precisa ser recebida da Luz da linha (como explicado acima, Parte 2, Capítulo 1, item 30). A razão é que é impossível que a Luz Superior se vincule aos Kelim, exceto por meio de um Zivug com o Massach que eleva Ohr Hozer, pois essa Ohr Hozer vincula a Luz aos Kelim, como explicado acima (Parte 2, Capítulo 2, item 20). Portanto, nos Kelim em que não há esse Massach, a Luz Superior não se vincula a eles de modo que possam doar aos outros de Cima para baixo. Eles são aptos apenas a receber Luz do grau anterior, de baixo para Cima, somente para sua própria vitalidade; essa Luz é chamada Luz de Nefesh, como explicado acima. Como não há Massach nos Kelim dos círculos, como acima, a Luz Superior não se vincula a eles próprios; eles precisam receber a Luz da linha, e isso somente na medida de sua própria vitalidade, não para doar, como foi explicado. Por isso, a Luz nos círculos é chamada Luz de Nefesh."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "30",
+        "pt": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:12",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "As dez Sefirot de Ruach são discernimentos que doam; por isso, a Luz de Ruach é chamada Luz masculina, isto é, ela doa. As dez Sefirot de Nefesh, porém, são chamadas Luz feminina, isto é, recebem e não podem doar. Por isso, as dez Sefirot da Luz da linha são chamadas dez Sefirot de Ruach, para indicar que são o discernimento de Luz masculina que doa. A razão já foi explicada acima, na passagem anterior; estude bem ali. Portanto, Ruach é mais elevado do que o grau de Nefesh, pois é ele que doa a Nefesh."
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "40",
+        "pt": "40"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:13",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Isto é, os cinco graus KHB ZON não se estendem em retidão, cujo significado seria um abaixo do outro, isto é, do puro ao espesso (Parte 2, Capítulo 1, item 5). Em vez disso, os cinco graus são iguais entre si, e nenhum está abaixo do outro, isto é, nenhum é mais espesso do que o outro. Entretanto, certamente existe entre eles ao menos a distinção de causa e consequência, pois saem uns dos outros e se estendem uns dos outros: Hochma saiu de Keter, Bina de Hochma, ZA de Bina e Malchut de Zeir Anpin (como explicado acima em Luz Interior, Parte 1, Capítulo 1, item 50, no trecho que começa com “Agora”). Contudo, essa distinção de causa e consequência é definida pelo fato de se encontrarem um dentro do outro, pois cada causa ocasiona sua consequência: Hochma é ocasionada por Keter, Bina é ocasionada por Hochma, e assim por diante. Portanto, “um dentro do outro” significa que este é ocasionado por aquele, como foi explicado. Mas não há entre eles distinção alguma de Cima e baixo (como explicado acima, Parte 1, Capítulo 1, item 100)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "50",
+        "pt": "50"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:14",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "A Luz recebe a impressão do Kli em que está vestida; mesmo quando sai dali para outro Kli, não muda os caminhos que tinha no Kli anterior. Portanto, enquanto a Luz estava na linha de retidão, ela se estendia e descia, uma abaixo da outra, isto é, tornava-se progressivamente mais espessa segundo a ordem dos graus por causa do Massach que ali existe, como explicado acima (Parte 2, Capítulo 1, item 6). Por isso, mesmo depois de sair dali e chegar às dez Sefirot dos círculos, nas quais não há Massach, e necessariamente tornar-se circular nelas, ainda assim ela não muda seus caminhos ao se expandir de grau em grau. Por exemplo, quando a Luz da linha chega à Sefira de Keter, torna-se circular ali, isto é, recebe a forma daquele Kli, no qual não há distinção de Cima e baixo. Entretanto, quando a Luz se expande do círculo de Keter ao círculo de Hochma, ela não se torna circular (veja a Tabela de Respostas, Parte 1, item 3), mas se estende em retidão, isto é, com a distinção de Cima e baixo. Por isso, a Sefira do círculo de Hochma encontra-se abaixo do círculo de Keter e é mais espessa do que Keter, pois suas formas não são equivalentes. Do mesmo modo, quando a Luz vem de Hochma a Bina, estende-se até ela em retidão, e Bina é considerada abaixo de Hochma, isto é, mais espessa do que Hochma. O mesmo ocorre com todas as Sefirot. Assim, embora as dez Sefirot dos círculos tenham formas equivalentes, sem distinção de Cima e baixo por parte dos Kelim, como explicado acima, ainda assim existe nelas a distinção de Cima e baixo porque “contêm todos os discernimentos da recepção da abundância que existem nas dez Sefirot da linha de retidão”."
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "60",
+        "pt": "60"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:15",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Isto significa que, depois que os quatro mundos ABYA foram corrigidos, cada Sefira tornou-se um Partzuf completo com Rosh (cabeça), Toch (interior) e Sof (fim), e por isso receberam outros nomes. O Partzuf formado de Keter é chamado Arich Anpin; o Partzuf formado de Hochma é chamado Aba; o Partzuf formado de Bina é chamado Ima; o Partzuf formado das seis Sefirot HGT NHY é chamado Zeir Anpin; e o Partzuf formado de Malchut é chamado Nukva. O significado desses nomes será explicado em seu devido lugar, com a ajuda de Deus."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "70",
+        "pt": "70"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:16",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Isto significa que você já sabe que, por causa da Luz das dez Sefirot da linha recebida nos círculos, todos os discernimentos de retidão necessariamente ficam impressos também nos círculos (como explicado acima, item 50, no trecho que começa com “Há”). Esse discernimento que existe na linha, chamado Massach, cuja Ohr Hozer vincula a Luz Superior aos Kelim (como explicado acima, Parte 2, Capítulo 1, item 20), também fica impresso nos círculos, mas sem a Aviut nele. A Aviut não pode subir de um grau inferior a um grau mais elevado, nem minimamente; ele é chamado mais elevado precisamente porque não possui a mesma Aviut que o inferior. Compreenda isto. Somente o discernimento da abertura que esse Massach revela no inferior, isto é, nas dez Sefirot de retidão, sobe do Massach da linha de retidão e fica impresso nos círculos. A abertura proveniente desse Massach é chamada “janela”, como uma janela instalada em um aposento para levar Luz a esse aposento. Do mesmo modo, por sua propriedade, esse Massach revela a Ohr Hozer para vincular a Luz ao ser emanado. Se o Massach desaparecesse dali, a Luz sairia do ser emanado e ele permaneceria na escuridão, como um aposento cuja janela foi fechada. Portanto, quando queremos denominar somente a abertura proveniente do Massach, excluindo sua Aviut, nós a definimos como “janela ou orifício”."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "80",
+        "pt": "80"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:17",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Isto é, ela ficou igualmente impressa nos valores de direita e esquerda que atuavam nas dez Sefirot de retidão (veja a Tabela de Respostas, Parte 1, item 23)."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "90",
+        "pt": "90"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:18",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Isto é, por causa da janela mencionada, surgiu ali o discernimento da extensão e da descida da Luz, ou seja, ela se torna progressivamente mais espessa segundo a ordem dos graus, em que o grau inferior é mais espesso do que o anterior. É isso que ele diz: “e dali Arich desce ao círculo de Aba”. Por causa da janela, a Luz recebeu um discernimento de Aviut e um discernimento de baixo em Aba dos círculos, isto é, Hochma, que foi rebaixada em grau e agora não é equivalente a Keter dos círculos, como era antes de receberem a Luz de retidão através da janela. Do mesmo modo, Bina está abaixo de Hochma."
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "100",
+        "pt": "100"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:19",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Ele nos ensina que essa janela se forma nas Sefirot junto com a descida da Luz até ela a partir do círculo Superior. Isto é, então essa Luz imprime nela o Massach incluído nela, como explicado acima; por isso, considera-se como se a Luz a perfurasse e fizesse nela uma janela."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "200",
+        "pt": "200"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:20",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Esse assunto já foi bem explicado acima (Parte 2, Capítulo 1, item 4, no trecho que começa com “Isto significa”)."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "300",
+        "pt": "300"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:21",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Isto é, a Luz desce de círculo em círculo por uma extensão em retidão, em linhas retas. Entretanto, isso não é considerado uma verdadeira correção das linhas que descem “do Massach” e contêm Luz masculina, de modo que possam doar aos outros. Em vez disso, essas linhas dos círculos não possuem força de doação, pois descem sob o discernimento de “janelas”, que bastam somente para receber a Luz para sua própria necessidade, e não para doar aos outros. Esta é a regra: tudo o que não possui o discernimento de Massach não possui Luz masculina, mas Luz feminina, que é a Luz de Nefesh."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "400",
+        "pt": "400"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:22",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Não se deve estranhar o nome Adam usado aqui, pois é como está escrito no Midrash Rabá, Bereshit 27: o Rabino Yudan disse: “Grande é o poder dos profetas, que comparam a forma a Quem a formou, como foi dito: ‘E ouvi a voz de um homem entre as margens do Ulai’, e assim por diante; e: ‘Sobre a semelhança do trono havia uma semelhança com a aparência de um homem, acima dele’”. Fim da citação. A razão disso será explicada em seu devido lugar, com a ajuda de Deus."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "pt": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:23",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Isto é, desde Ein Sof, o mais puro de todos os mundos, até o ponto central, que é o discernimento mais espesso de todos os mundos. Assim, toda a realidade diante de nós, tanto os Superiores quanto os inferiores, são ramos que cascatearam dele, dependem dele e o vestem. Por isso, ele conecta todos eles."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "pt": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:24",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "A internalidade é o discernimento da Luz de Ein Sof vestida nele, e sua essência própria é o discernimento de GAR nele. Já foi explicado (Introdução, item 27, no trecho que começa com “Além disso”) que não temos permissão para falar de nenhum dos discernimentos de GAR em qualquer grau ou Partzuf, nem mesmo no mundo de Assia. Entretanto, é permitido tratar de ZAT, até mesmo de ZAT de GAR de Adam Kadmon; estude bem ali."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "pt": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:25",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Já foi explicado acima que os círculos foram revelados imediatamente com o Tzimtzum e a saída da Luz, e depois foi revelada a retidão. Assim, os círculos são considerados a causa e o fator causador da Luz da linha; por isso, são considerados anteriores a ela (como está escrito na Tabela de Respostas desta Parte, item 42)."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "pt": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:26",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Isto é, da extremidade Superior até a extremidade inferior, como explicado acima. Observe um comprimento corpóreo imaginário e, por meio dele, estude sua raiz espiritual. Compreendemos o comprimento imaginário segundo três discernimentos: sua extremidade Superior, sua extremidade inferior e a distância entre elas. Exatamente do mesmo modo, você discernirá o comprimento espiritual. Primeiro, discernirá a extremidade inferior do grau, isto é, seu último e mais espesso discernimento, abaixo do qual não há outro em Aviut. Ao conhecer a extremidade inferior, você também conhecerá imediatamente a extremidade Superior, pois a medida da Aviut no último discernimento é a medida do nível da Ohr Hozer (como está escrito em Observação Interior, item 86, no trecho que começa com “E eis”; estude bem ali). Por exemplo, a Aviut de Behina Dalet dentro de Behina Dalet alcança o nível de Keter de Keter; a Aviut de Behina Guimel dentro de Behina Dalet alcança somente o nível de Keter de Hochma; e Behina Bet dentro de Behina Dalet alcança somente o nível de Keter de Bina, e assim por diante. Portanto, ao conhecer a extremidade inferior, a extremidade Superior torna-se imediatamente conhecida. Depois de conhecer as duas extremidades do grau, a distância entre elas também se torna conhecida por si mesma, pois distância espiritual significa disparidade de forma entre dois discernimentos: quanto maior a disparidade de forma, maior a distância entre eles. Por exemplo, se a extremidade inferior é Behina Alef dentro de Behina Dalet, a extremidade Superior alcança somente o nível de Keter de ZA (estude bem a referida Observação Interior); assim, a distância não é tão grande. Mas, se a extremidade inferior é Behina Bet, a extremidade Superior é o nível de Keter de Bina; então a distância entre elas corresponde a dois discernimentos de Aviut, Behina Alef e Behina Bet. E, se a extremidade inferior é a Aviut de Behina Guimel dentro de Behina Dalet, a extremidade Superior é Keter de Hochma; nesse caso, a distância em comprimento corresponde a três discernimentos, e assim por diante. Compreenda bem."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "pt": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:27",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Isso ocorre porque os círculos circundam o discernimento das três primeiras Sefirot de retidão (como explicado acima, Parte 2, Capítulo 1, item 90, no trecho que começa com “E a razão”). Sabe-se que, pelo discernimento de seus Kelim, eles ainda são incomparavelmente mais elevados do que GAR de retidão, como explicado acima. Você já sabe que nos é proibido falar de GAR ou tratar delas; por isso, não temos permissão para tratar de nenhum discernimento dos círculos."
+    }
+  ]
+}
