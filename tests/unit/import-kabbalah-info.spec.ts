@@ -28,6 +28,7 @@ import {
 import {
   alignWholePartCommentary,
   alignWholePartSource,
+  independentlyVouchedStructuralPlacement,
 } from "../../scripts/lib/ki-whole-part-align.ts";
 import {
   kiDibburHtml,
@@ -387,6 +388,48 @@ describe("alignWholePartCommentary", () => {
     );
     expect(verdicts.get(1)?.status).toBe("refused");
     expect(verdicts.get(2)?.status).toBe("refused");
+  });
+
+  it("allows only an unclaimed, independently confident structural fallback", () => {
+    const unitHtml = ["official note", "another note"];
+    const score = () => 0.13;
+
+    expect(
+      independentlyVouchedStructuralPlacement(
+        "reference",
+        [0],
+        unitHtml,
+        new Set(),
+        score,
+      ),
+    ).toEqual([0]);
+    expect(
+      independentlyVouchedStructuralPlacement(
+        "reference",
+        [0],
+        unitHtml,
+        new Set([0]),
+        score,
+      ),
+    ).toBeUndefined();
+    expect(
+      independentlyVouchedStructuralPlacement(
+        "reference",
+        [0, 1],
+        unitHtml,
+        new Set(),
+        score,
+      ),
+    ).toBeUndefined();
+    expect(
+      independentlyVouchedStructuralPlacement(
+        "reference",
+        [0],
+        unitHtml,
+        new Set(),
+        () => 0.11,
+      ),
+    ).toBeUndefined();
   });
 });
 

@@ -30,6 +30,8 @@ import { kiParagraphs } from "./ki-page.ts";
 import {
   acceptedPairs,
   alignBySimilarity,
+  CONFIDENT_SIMILARITY,
+  similarityScorer,
   type AlignmentStep,
 } from "./ki-similarity-align.ts";
 import {
@@ -77,11 +79,27 @@ type Placement = number[];
 const sameUnits = (a: Placement, b: Placement): boolean =>
   a.length === b.length && a.every((unit, i) => unit === b[i]);
 
+export const independentlyVouchedStructuralPlacement = (
+  reference: string,
+  placement: Placement | undefined,
+  unitHtml: string[],
+  contentOwners: ReadonlySet<number>,
+  scorePair: (a: string, b: string) => number,
+): Placement | undefined => {
+  if (placement?.length !== 1) return undefined;
+  const unit = placement[0] as number;
+  if (contentOwners.has(unit)) return undefined;
+  return scorePair(reference, unitHtml[unit] ?? "") >= CONFIDENT_SIMILARITY
+    ? placement
+    : undefined;
+};
+
 export const alignWholePartCommentary = (
   chapters: WholePartCommentaryChapter[],
   seifim: KiWholePartSeif[],
 ): Map<number, ChapterVerdict<CommentaryItem>> => {
   const units: KiDibbur[] = seifim.flatMap((seif) => seif.dibburim);
+  const unitHtml = units.map(kiDibburHtml);
   const firstUnitOfSeif = new Map<number, number>();
   let offset = 0;
   for (const seif of seifim) {
@@ -109,7 +127,7 @@ export const alignWholePartCommentary = (
   );
   const steps: AlignmentStep[] = alignBySimilarity(
     targets.map((target) => target.reference),
-    units.map(kiDibburHtml),
+    unitHtml,
   );
   const content = new Map<string, Placement>();
   const withinWindow = (targetIndex: number, unitIndex: number): boolean =>
@@ -135,6 +153,20 @@ export const alignWholePartCommentary = (
     }
   }
 
+  // The global monotone alignment can sacrifice an otherwise strong pair to
+  // recover from an omission elsewhere on the page. Structure may restore
+  // that pair only when the printed seif has the exact Hebrew note count,
+  // the two texts independently clear the normal confidence threshold, and
+  // no globally accepted target owns the printed note. This keeps structure
+  // from overriding a contradictory content placement while rescuing notes
+  // such as part 6 chapter 23, whose official and en-ai openings agree but
+  // whose pair is skipped by the whole-page dynamic programme.
+  const scorePair = similarityScorer([
+    ...targets.flatMap(({ reference }) => (reference ? [reference] : [])),
+    ...unitHtml,
+  ]);
+  const contentOwners = new Set([...content.values()].flat());
+
   const verdicts = new Map<number, ChapterVerdict<CommentaryItem>>();
   for (const { chapter, heItems, aiItems } of chapters) {
     const items: CommentaryItem[] = [];
@@ -150,7 +182,19 @@ export const alignWholePartCommentary = (
       }
       // Where en-ai exists, content must vouch for the note: structure alone
       // only stands in for a chapter that has nothing to compare against.
-      const placement = aiItems ? byContent : byStructure;
+      const structuralFallback =
+        aiItems &&
+        !byContent &&
+        independentlyVouchedStructuralPlacement(
+          aiItems[i]?.html ?? "",
+          byStructure,
+          unitHtml,
+          contentOwners,
+          scorePair,
+        );
+      const placement = aiItems
+        ? (byContent ?? structuralFallback)
+        : byStructure;
       if (!placement) {
         refusal = `${he.anchorId}: no printed note could be placed on it`;
         break;

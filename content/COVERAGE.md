@@ -3488,7 +3488,7 @@ whatever English they had.
 | part-04 | source | 16 | 0 | 0 |
 | part-05 | commentary | 48 | 0 | 4 |
 | part-05 | source | 0 | 66 | 0 |
-| part-06 | commentary | 37 | 0 | 1 |
+| part-06 | commentary | 38 | 0 | 0 |
 | part-06 | source | 0 | 58 | 2 |
 | part-07 | commentary | 46 | 0 | 2 |
 | part-07 | source | 0 | 73 | 5 |
@@ -3508,7 +3508,6 @@ whatever English they had.
 - `part-03/inner-observation-07` source: segment 2: its first paragraph reads as the previous segment's
 - `part-03/answers-topics-01` source: page has 136 entries, the Hebrew 135
 - `part-03/questions-topics-01` source: its answers were refused
-- `part-06/chapter-23` commentary: op-1: no printed note could be placed on it
 - `part-05/chapter-47` commentary: op-1: no printed note could be placed on it
 - `part-05/chapter-51` commentary: op-1: no printed note could be placed on it
 - `part-05/chapter-53` commentary: op-1: English is 0.28x its Hebrew
