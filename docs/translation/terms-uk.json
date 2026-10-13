@@ -381,6 +381,14 @@
       "why": "«кліпот / кліпа» 24.",
       "officialTriggerUnits": 9,
       "officialMatchingUnits": 9
+    },
+    {
+      "he": "צלם",
+      "heRegex": "צלם",
+      "pattern": "(?i)\\bцелем\\b",
+      "why": "PROPOSED Part 2 ruling; preserve the צלם / צל wordplay as «целем / цель» using BB’s Ukrainian transliteration scheme.",
+      "officialTriggerUnits": 0,
+      "officialMatchingUnits": 0
     }
   ],
   "banned": [
@@ -7498,6 +7506,27 @@
           "intro": 0,
           "pticha": 0,
           "chosen": false
+        }
+      ],
+      "inEnglishGlossary": false
+    },
+    {
+      "id": "tzelem-tzel",
+      "he": "צלם / צל",
+      "en": "Tzelem / Tzel",
+      "target": "целем / цель",
+      "status": "PROPOSED",
+      "officialCount": 0,
+      "officialCountBasis": "global",
+      "note": "Part 2 ruling: preserve the Hebrew wordplay as «целем» (образ), from «цель» (тінь), following BB’s Ukrainian transliteration scheme (צ → ц, segol → е).",
+      "evidence": [
+        {
+          "form": "целем / цель",
+          "count": 0,
+          "tes": 0,
+          "intro": 0,
+          "pticha": 0,
+          "chosen": true
         }
       ],
       "inEnglishGlossary": false
