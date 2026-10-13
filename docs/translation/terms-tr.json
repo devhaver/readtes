@@ -165,7 +165,7 @@
     },
     {
       "he": "ה\"ת",
-      "heRegex": "(?<![א-ת])(?!לו?ה\"ת)[בלמדשוהכ]{0,2}ה\"ת(?![א-ת])",
+      "heRegex": "(?<![א-ת])(?!ב?לו?ה\"ת)[בלמדשוהכ]{0,2}ה\"ת(?![א-ת])",
       "pattern": "\\b[Aa]lt Hey",
       "why": "alt Hey 23."
     },
@@ -206,6 +206,11 @@
       "he": "אור עליון",
       "pattern": "Üst Işı[kğ]",
       "why": "Üst Işık 79."
+    },
+    {
+      "he": "צלם",
+      "pattern": "\\bTzelem\\b",
+      "why": "PROPOSED Part 2 ruling; preserve the Tzelem/Tzel wordplay using BB's Turkish transliteration scheme."
     },
     {
       "he": "מסך",
@@ -3438,6 +3443,16 @@
       "evidence": "Kral 10 (I8 P2) · Hebrew 32",
       "note": "Capitalised for the divine King.",
       "group": "2.11 Religious vocabulary — BB's universal register"
+    },
+    {
+      "he": "צלם / צל",
+      "en": "Tzelem / Tzel",
+      "target": "Tzelem / Tzel",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Tzelem / Tzel 0 (I0 P0)",
+      "note": "Part 2 ruling: preserve the Hebrew wordplay as Tzelem (imge), from Tzel (gölge), following BB's Turkish transliteration scheme.",
+      "group": "2.3 Partzufim and their parts"
     }
   ]
 }
