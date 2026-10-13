@@ -1,0 +1,359 @@
+{
+  "chapterId": "part-02/chapter-02",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "tr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Bir dünyadaki ya da Sefira’daki Keter, o dünyanın ya da o Sefira’nın “çatısı” olarak kabul edilir. Her dünya ve Sefira’daki Malhut ise o dünyanın ya da o Sefira’nın “zemini” olarak kabul edilir. Üst daire Keter Sefira’sıdır ve bu Keter’in çatısı, bu Keter’in on Sefirot’undaki Keter’dir."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "tr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Mohin’in kıyafetlerine, “Tzel” (gölge) sözcüğünden gelen Tzelem denir. İlk üç Sefirot’tan oluşan doğrusal aydınlatmaya “Adam” denir; çünkü GAR’ı Tzelem kıyafetleri içinde alır. Bu uzun bir meseledir ve burası onun yeri değildir."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "tr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Her Sefira ve Partzuf’un Roş’u ilk üç Sefirot’tur: Keter, Hohma ve Bina. Her Sefira ve Partzuf’taki yedi alt Sefirot—Hesed, Gevura, Tiferet, Netzah, Hod, Yesod ve Malhut—o Sefira ve Partzuf’un Guf Behina’sı olarak kabul edilir. Bunlar düzende olduğunda, yani GAR’ın Işıkları GAR’ın Kelim’inde ve ZAT’ın Işıkları ZAT’ın Kelim’inde bulunduğunda, Partzuf “dik duruş sahibi” kabul edilir. Ancak Guf’un Işıkları GAR’ın Kelim’inde bulunuyor ve onlara ait Işıklar bulunmuyorsa, o Partzuf’un dik duruşu olmadığı kabul edilir. Çünkü Roş Behina’sı Guf Behina’sından daha önemli değildir; zira Roş’ta bile yalnızca Guf’un Işık Behinot’u hizmet eder. Buna başın eğilmesi denir; Roş ile Guf tek bir derecededir."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "tr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Anlamı şudur: Üst Partzuf’ta Hesed’in 248 ayrımı vardır; alt olanlardaki, Mişna Ohalot’ta ayrıntıları verilen 248 organ bunlardan uzanır. Burada ayrıntıya girmenin yeri değil; kendi yerlerinde açıklanacaktır."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "tr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:5",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "İster Üst Dünyalarda ister bu dünyada olsun, bütün dünyalarda yukarıdaki on Sefirot’un—bilinen dört Behinot ve köklerinin—ayırt edilmediği hiçbir öz yoktur. Ari’nin, bu dünyadaki aşağı insanda da beş Behinot bulunduğunu ve devamını söylemesinin anlamı budur."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "tr": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:6",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "On Sefirot’taki Kelim’e Keter, Hohma, Bina, ZA ve Malhut denir. İçlerindeki Işıklara ise Yehida, Haya, Neşama, Ruah ve Nefeş denir (Devarim Raba, Bölüm 2, 26’da yazıldığı gibi). Yehida Işığı Keter Kli’sinde, Haya Işığı Hohma Kli’sinde, Neşama Işığı Bina Kli’sinde, Ruah Işığı Zeir Anpin Kli’sinde ve Nefeş Işığı Malhut Kli’sinde kıyafetlenir."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "tr": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:7",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Dereceler arasındaki ayrımın onların arılığına ve Aviut’una göre olduğunu zaten biliyorsunuz. Her “Yukarı”, diğerinden daha arı olan ölçü anlamına gelir."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "tr": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:8",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Işıklar NRNHY, Kelim ise yukarıda açıklandığı üzere KHB ZON’dur."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "tr": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:9",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Maneviyattaki bölünme meselesi, orada yenilenen form eşitsizliğinden kaynaklanır (yukarıda Kısım 1, Bölüm 1, Madde 30’da “Ancak” diye başlayan pasaja bakın). Bir şeyin diğerinden daha Üstte olması, ondan daha arı olması; bir şeyin diğerinden daha altta olması ise ondan daha bayağı olması demektir. Bu Aviut’un form eşitsizliği nedeniyle diğerinden ayrılıp çıkmış ve ondan daha altta olmuştur. Işıkların her Üsttekinden altındakine ihsan edildiği bilinir. Bu nedenle alttaki, bolluğu kendi içindeki en Üst ve en arı Behina’da almak zorundadır; Üstteki ise bolluğu ona yalnızca kendi içindeki en alt ve en bayağı Behina’dan verir. Böylece Üsttekinden gelen Işığın formu, alttakindeki Kli’nin formuyla eşitlenir; çünkü Üsttekindeki en bayağı ve kaba Behina, alttakindeki daha ince ve arı Behina ile eşitliğe sahiptir. Dolayısıyla alttaki, kendisine ait Işığın tümünü değil, yalnızca çok küçük bir bölümünü, yani yalnızca kendi içindeki en arı Kli’nin alabildiği kadarını alabilir. İçindeki o kadar arı olmayan diğer Behinot ise kendilerine ihsan eden Üsttekine göre form eşitsizlikleri nedeniyle kendilerine ait Işıktan yoksun kalmak zorundadır.<br>Bu nedenle, alttakine ait Işığın burada iki Behinot’a ayrıldığı kabul edilir. Birincisi, yukarıda açıklandığı üzere kendi içindeki en Üst Kli’de Üsttekinden aldığı küçük Işık ölçüsüdür; aldığı bu Işığa alttakinin “Or Pinimi’si” denir. İkincisi, alttakinde kalan ve yukarıda açıklandığı üzere Üsttekine göre form eşitsizlikleri nedeniyle alamayan Behinot’a ait Işığın bütün ölçüsüdür. Bu ölçünün tamamının Üsttekinde kaldığı ve alttakine inmediği kabul edilir; buna “Or Makif” denir. Alttakini sardığı, yani içinde kıyafetlenmeden onu uzaktan aydınlattığı için bu adı alır; bu yalnızca uzak ve küçük bir aydınlatmadır. Bu uzak aydınlatma, alttakindeki Aviut Behinot’unu, alttakindeki bütün Behinot’un formları Üsttekinin formuyla eşitleninceye kadar arındırmaya elverişlidir. O zaman alttaki kendisine ait Işığın tamamını alabilir. Buna Makifim’in girişi denir; yani Saran Işıklar içeri girmiş, arınan alttakinin Kelim’inde kıyafetlenmiş ve hepsi Or Pinimi Behina’sı olmuştur."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "tr": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:10",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Yani Işıklar yukarıda açıklandığı üzere Or Pinimi ve Or Makif olarak ayrıldığından, Kli’de iki tür alım bulunur: Kli’nin içinden alım ve Kli’nin dışsallığından alım (Cevaplar Tablosu, Kısım 1, Madde 102’ye bakın). Or Pinimi Kli’nin en iç kısmında alınır. Kli’yi Aviut’undan arındıran Or Makif’in ise (yukarıdaki bitişik pasajda açıklandığı üzere) Kli’de hiçbir şekilde kıyafetlenmeden, Kli’nin dışsallığı yoluyla alındığı kabul edilir.<br>Kli’de sözü edilen dışsallık ve içsellik ayrımı, Kli’deki arılık ve Aviut ayrımına dayanır. Yalnızca içindeki Aviut, Or Pinimi’yi almaya uygundur; çünkü yaratılan varlığın temel alma Kli’si Behina Dalet’dir. Ancak ilk üç Behinot almaya uygun değildir; yalnızca Behina Dalet’in açığa çıkmasına neden olurlar. Bu nedenle her Kli kendi içinde dört Behinot olarak kabul edilir. Işık esas olarak onun Behina Dalet’inde alınır; bu yüzden ona Kli’nin içselliği ve bolluğun bulunduğu en iç kısmı denir.<br>Yalnızca Kli’deki Behina Dalet’in açığa çıkmasına neden olan ve kendileri almaya uygun olmayan üç Behinot, Behina Dalet’i dışından çevreliyor sayılır. Bu, birbirini çevreleyen dört tabakayı tutan fiziksel bir Kli’nin duvar kalınlığına benzer. Kli’de alınan her şey onun içselliğinde, yani en iç tabakada bulunur; duvar kalınlığındaki diğer üç tabaka ise yalnızca iç tabakayı güçlendirerek içindeki dolumu taşıyabilmesini sağlar. Maneviyatta da bunu aynı şekilde anlamalıyız: Bolluğu içinde tutan temel Behina, Kli’deki Behina Dalet’dir. İlk üç Behinot ise Behina Dalet’i, bolluğu taşıyabilecek duruma gelinceye kadar bütün gücüyle açığa çıkaran nedenlerdir; fakat kendileri Or Pinimi’yi almaya uygun değildir.<br>Bu yüzden onlara Kli’nin dışsallığı denir; çünkü Or Pinimi’yi alma Behina’sının dışındadırlar. Behina Gimel, Behina Dalet’e göre dışsallıktır; Behina Bet, Behina Gimel’e göre dışsallıktır; Behina Alef ise hepsine göre dışsallıktır ve hepsini çevreler. Bunların hepsinin üzerinde, Kli’deki dört Behinot’un tümünün kökü olan, hiçbir Aviut taşımayan bir dış Behina bulunur. Bilin ki tamamen arı olan bu Behina, Or Makif’in alma Kli’sidir; olağanüstü arılığı sayesinde Or Makif’in aydınlatmasını uzaktan olsa bile alabilir.<br>Böylece Kli’nin bölünmesi açıklanmıştır: İçselliği, Kli’deki daha bayağı Behina, yani Kli’deki Behina Dalet anlamına gelir ve Or Pinimi’yi alan odur. Dışsallığı ise yukarıda açıklandığı üzere Kli’deki daha arı Behina, yani Kli’nin kök Behina’sı anlamına gelir ve Or Makif’i uzaktan alan odur. Behina Dalet’in Tsimtsum ve Masah nedeniyle almaya uygun olmadığı ileri sürülmemelidir; çünkü burada yalnızca Behina Dalet’in içinden yükselen Or Hozer Behina’sıyla ilgileniyoruz (İç Gözlem’e bakın)."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20",
+        "tr": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:11",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yalnızca Işıkları alabilen ve başkalarına ihsan etme yeteneği bulunmayan bütün Sefirot’un içindeki Işığa Nefeş Işığı denir. Dairelerdeki bütün Işığın çizginin Işığından alınmak zorunda olduğu zaten açıklanmıştır (yukarıda Kısım 2, Bölüm 1, Madde 30). Bunun nedeni, Üst Işığın Kelim’le yalnızca Or Hozer’i yükselten Masah ile yapılan Zivug aracılığıyla bağlanabilmesidir; bu Or Hozer, yukarıda açıklandığı üzere Işığı Kelim’e bağlar (Kısım 2, Bölüm 2, Madde 20). Bu nedenle, böyle bir Masah’ın bulunmadığı Kelim’de Üst Işık onlara, başkalarına Yukarıdan aşağıya ihsan edebilecekleri şekilde bağlanmaz. Bunlar yalnızca kendi canlılıkları için, aşağıdan Yukarıya doğru önceki dereceden Işık almaya uygundur; bu Işığa yukarıda açıklandığı üzere Nefeş Işığı denir. Dolayısıyla dairelerin Kelim’inde Masah bulunmadığından, Üst Işık onların kendilerine bağlanmaz; Işığı çizgiden almak zorundadırlar. Bunu da ihsan etmek için değil, yalnızca kendi canlılıkları ölçüsünde alırlar. Bu nedenle dairelerdeki Işığa Nefeş Işığı denir."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "30",
+        "tr": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:12",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Ruah’ın on Sefirot’u ihsan eden Behinot’tur. Bu nedenle Ruah Işığına erkek Işık, yani ihsan eden Işık denir. Nefeş’in on Sefirot’una ise dişi Işık denir; yani alır ve ihsan edemez. Bu yüzden çizginin Işığının on Sefirot’una, erkek ve ihsan eden Işık Behina’sında olduklarını göstermek üzere Ruah’ın on Sefirot’u denir. Bunun nedeni yukarıdaki bitişik pasajda zaten açıklanmıştır; orada iyice inceleyin. Dolayısıyla Ruah, Nefeş derecesinden daha yüksektir; çünkü Nefeş’e ihsan eden odur."
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "40",
+        "tr": "40"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:13",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani KHB ZON’dan oluşan beş derece doğrusallıkta—birinin diğerinin altında, başka bir deyişle arıdan bayağıya doğru—uzanmaz (Kısım 2, Bölüm 1, Madde 5). Aksine beş derece birbirine eşittir ve hiçbiri diğerinin altında, yani diğerinden daha bayağı değildir. Bununla birlikte, aralarında en azından neden ve sonuç ayrımı kesinlikle vardır; çünkü birbirlerinden çıkar ve birbirlerinden uzanırlar: Hohma Keter’den, Bina Hohma’dan, ZA Bina’dan ve Malhut Zeir Anpin’den çıkmıştır (yukarıda İç Işık, Kısım 1, Bölüm 1, Madde 50’de “Şimdi” diye başlayan pasaja bakın). Ancak sözü edilen neden ve sonuç ayrımı, birbirlerinin içinde bulunmaları Behina’sıyla tanımlanır; her neden kendi sonucuna neden olur. Hohma’ya Keter, Bina’ya Hohma neden olur ve böyle devam eder. Böylece “birinin diğerinin içinde olması”, birine diğerinin neden olması demektir. Fakat aralarında hiçbir şekilde Yukarı ve aşağı ayrımı yoktur (yukarıda Kısım 1, Bölüm 1, Madde 100)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "50",
+        "tr": "50"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:14",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Işık, içinde kıyafetlendiği Kli’den izlenim alır; oradan başka bir Kli’ye çıktığında bile önceki Kli’de sahip olduğu yolları değiştirmez. Bu nedenle Işık doğrusallığın çizgisinde bulunduğu sırada, oradaki Masah nedeniyle derecelerin düzeni içinde giderek bayağılaşarak biri diğerinin altına doğru uzanıp inmiştir (yukarıda Kısım 2, Bölüm 1, Madde 6). Oradan çıkıp Masah bulunmayan dairelerin on Sefirot’una geldikten ve zorunlu olarak onlarda daire biçimini aldıktan sonra bile, dereceden dereceye Hitpaştut’undaki yollarını değiştirmez. Örneğin çizginin Işığı Keter Sefira’sına geldiğinde orada daire biçimini alır; yani Yukarı ve aşağı ayrımı bulunmayan o Kli’nin formunu edinir. Ancak Işık Keter dairesinden Hohma dairesine yayıldığında daire biçimini almaz (Cevaplar Tablosu, Kısım 1, Madde 3’e bakın); doğrusallık içinde, yani Yukarı ve aşağı ayrımıyla uzanır. Bu nedenle Hohma dairesinin Sefira’sı Keter dairesinin altında ve Keter’den daha bayağıdır; formları eşit değildir. Aynı şekilde Işık Hohma’dan Bina’ya geldiğinde ona doğrusallık içinde uzanır. Bina’nın Hohma’nın altında, yani Hohma’dan daha bayağı olduğu kabul edilir; bütün Sefirot’ta da böyledir. Böylece dairelerin on Sefirot’u Kelim açısından Yukarı ve aşağı ayrımı olmaksızın eşit formda olsa da, “doğrusallık çizgisinin on Sefirot’undaki bütün bolluk alımı Behinot’unu içlerinde bulundurmaları” nedeniyle içlerinde Yukarı ve aşağı ayrımı vardır."
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "60",
+        "tr": "60"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:15",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Anlamı şudur: Dört ABYA dünyası ıslah edildikten sonra her Sefira Roş, Toh ve Sof’tan oluşan eksiksiz bir Partzuf hâline geldi ve bu nedenle başka adlar aldı. Keter’den oluşan Partzuf’a Arih Anpin; Hohma’dan oluşan Partzuf’a Aba; Bina’dan oluşan Partzuf’a İma; HGT NHY’den oluşan altı Sefirot’un Partzuf’una Zeir Anpin; Malhut’tan oluşan Partzuf’a ise Nukva denir. Bu adların anlamı, Yaradan’ın izniyle kendi yerlerinde açıklanacaktır."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "70",
+        "tr": "70"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:16",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Anlamı şudur: Dairelerde alınan çizginin on Sefirot’unun Işığı nedeniyle, doğrusallığın bütün Behinot’unun da zorunlu olarak dairelerde iz bıraktığını zaten biliyorsunuz (yukarıda Madde 50’de “Vardır” diye başlayan pasaja bakın). Çizgide bulunan ve Masah denilen bu Behina’nın Or Hozer’i, Üst Işığı Kelim’e bağlar (yukarıda Kısım 2, Bölüm 1, Madde 20). Bu Masah da dairelerde iz bırakır, fakat içindeki Aviut olmadan. Çünkü Aviut, alt dereceden kendisinden daha Üst bir dereceye en küçük ölçüde bile yükselemez; zaten Üst derece, alt derecedeki Aviut’a sahip olmadığı için bu adı alır. Bunu anlayın. Yalnızca bu Masah’ın alttakinde, yani doğrusallığın on Sefirot’unda açığa çıkardığı açıklık Behina’sı, doğrusallık çizgisinin Masah’ından yükselir ve dairelerde iz bırakır. Masah’dan gelen bu açıklığa “pencere” denir. Bir odaya Işığı getirmek için odaya yerleştirilen pencere gibi, bu Masah da kendi niteliğiyle Or Hozer’i açığa çıkararak Işığı yaratılan varlığa bağlar. Masah oradan kaybolsaydı, Işık yaratılan varlıktan ayrılır ve bir odanın penceresinin kapatılmasında olduğu gibi yaratılan varlık karanlıkta kalırdı. Bu nedenle yalnızca Masah’dan gelen açıklığı adlandırmak ve Aviut’unu hariç tutmak istediğimizde buna “pencere ya da delik” deriz."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "80",
+        "tr": "80"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:17",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani doğrusallığın on Sefirot’unda hizmet eden sağ ve sol değerlerinde de iz bırakmıştır (Cevaplar Tablosu, Kısım 1, Madde 23’e bakın)."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "90",
+        "tr": "90"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:18",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani sözü edilen pencere nedeniyle, Işığın uzanması ve inmesi ayrımı orada oluşmuştur; Işık derecelerin düzeni içinde giderek bayağılaşır ve alt derece kendisinden öncekinden daha bayağı olur. Ari’nin “ve Arih oradan Aba’nın dairesine iner” demesinin anlamı budur. Başka bir deyişle, pencere nedeniyle Işık, dairelerin Aba’sında—yani Hohma’da—Aviut ve aşağı Behina’sı edinmiştir. Böylece Hohma derecede alçalmış ve Işığı doğrusallıktan pencere yoluyla almadan önce olduğu gibi artık dairelerin Keter’ine eşit değildir. Aynı şekilde Bina da Hohma’nın altındadır."
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "100",
+        "tr": "100"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:19",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Bize, bu pencere meselesinin, Işığın Üst daireden Sefirot’a inmesiyle birlikte oluştuğunu bildirir. Yani o sırada bu Işık, yukarıda açıklandığı üzere kendi içinde bulunan Masah meselesini onda iz bırakır. Bu nedenle Işığın onu delip içinde bir pencere açtığı kabul edilir."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "200",
+        "tr": "200"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:20",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Bu mesele yukarıda zaten iyice açıklanmıştır (Kısım 2, Bölüm 1, Madde 4’te “Anlamı” diye başlayan pasaj)."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "300",
+        "tr": "300"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:21",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani Işık, düz çizgiler içinde doğrusallık yoluyla daireden daireye iner. Ancak bu, başkalarına ihsan edebilmeleri için içlerinde erkek Işık bulunan ve “Masah’dan” inen gerçek çizgiler ıslahı Behina’sı sayılmaz. Dairelerin bu çizgilerinde ihsan etme gücü yoktur; çünkü yalnızca kendi gereksinimleri için Işık almaya yeten, fakat başkalarına ihsan etmeye yetmeyen “pencereler” Behina’sında inerler. Kural şudur: İçinde Masah Behina’sı bulunmayan hiçbir şeyde erkek Işık yoktur; yalnızca Nefeş Işığı olan dişi Işık vardır."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "400",
+        "tr": "400"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:22",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Burada kullanılan Adam adına şaşırılmamalıdır. Midraş Raba, Bereşit 27’de aktarıldığı gibi Kabalist Yudan şöyle der: “Formu Yaratıcısına benzeten peygamberlerin gücü büyüktür; söylendiği üzere, ‘Ulai kıyıları arasında bir insan sesi işittim’ ve devamı; ayrıca ‘tahtın benzerliği üzerinde, Yukarıdan bir insan görünümüne benzeyen bir suret vardı.’” Alıntının sonu. Bunun nedeni, Yaradan’ın izniyle kendi yerinde açıklanacaktır."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "tr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:23",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Anlamı, bütün dünyaların en arısı olan Eyn Sof’tan bütün dünyaların en bayağı Behina’sı olan orta noktaya kadardır. Böylece önümüzdeki bütün gerçeklik—hem Üsttekiler hem alttakiler—ondan basamaklanmış, ona bağlı ve onu kıyafetlendiren dallarıdır. Bu nedenle hepsini birbirine bağlar."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "tr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:24",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "İçsellik, içinde kıyafetlenen Eyn Sof’un Işığı Behina’sıdır; Özü ise içindeki GAR Behina’sıdır. Her derece ve Partzuf’taki GAR Behinot’unun hiçbirinden, hatta Asiya dünyasında bile, söz etmeye iznimiz olmadığı zaten açıklanmıştır (Giriş, Madde 27’de “Ayrıca” diye başlayan pasaj). Ancak ZAT Behina’sını, hatta Adam Kadmon’un GAR’ının ZAT’ını incelememize izin vardır; oraya bakın."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "tr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:25",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Dairelerin Tsimtsum ve Işığın ayrılmasıyla hemen açığa çıktığı, doğrusallığın ise daha sonra açığa çıktığı yukarıda zaten açıklanmıştır. Böylece daireler çizginin Işığının nedeni ve sebebi sayılır; bu nedenle ondan önce geldikleri kabul edilir (Cevaplar Tablosu, bu Kısım, Madde 42’de yazıldığı gibi)."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "tr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:26",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Yani yukarıda açıklandığı üzere Üst uçtan alt uca kadar. Hayalî fiziksel uzunluğu inceleyin ve onun aracılığıyla manevi kökünü öğrenin. Hayalî uzunluğu üç ayrımla anlarız: Üst ucu, alt ucu ve aralarındaki mesafe. Manevi uzunluğu da tam olarak aynı şekilde ayırt edebilirsiniz. Önce derecenin alt ucunu, yani Aviut açısından altında hiçbir Behina bulunmayan son ve en bayağı Behina’sını ayırt edin. Alt ucu bildiğinizde Üst ucunu da hemen öğrenirsiniz; çünkü son Behina’daki Aviut ölçüsü, Or Hozer’in seviye ölçüsüdür (İç Gözlem, Madde 86’da “Ve işte” diye başlayan pasaj; orada iyice inceleyin). Örneğin Behina Dalet içindeki Behina Dalet’in Aviut’u Keter’in Keter seviyesine; Behina Dalet içindeki Behina Gimel’in Aviut’u yalnızca Hohma’nın Keter seviyesine; Behina Dalet içindeki Behina Bet ise yalnızca Bina’nın Keter seviyesine ulaşır ve böyle devam eder. Böylece alt ucu bilmekle Üst ucu da hemen bilinir. Derecenin iki ucunu bildikten sonra aralarındaki mesafeyi de kendiliğinden bilirsiniz; çünkü manevi mesafe, iki Behinot arasındaki form eşitsizliği demektir. Form değişiminin büyüklüğü ne kadarsa aralarındaki mesafe de o kadardır. Örneğin alt uç Behina Dalet içindeki Behina Alef ise Üst uç yalnızca ZA’nın Keter seviyesine ulaşır (yukarıda sözü edilen İç Gözlem’de iyice inceleyin); bu durumda mesafe o kadar büyük değildir. Fakat alt uç Behina Bet ise Üst uç Bina’nın Keter seviyesidir; aralarındaki mesafe Behina Alef ve Behina Bet olan iki Aviut Behina’sıdır. Alt uç Behina Dalet içindeki Behina Gimel’in Aviut’u ise Üst uç Hohma’nın Keter’idir; burada mesafe üç Behinot uzunluğundadır ve aynı şekilde devam eder. Bunu iyice anlayın."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "tr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:27",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Bunun nedeni, dairelerin doğrusallığın ilk üç Sefirot Behina’sını çevrelemesidir (yukarıda Kısım 2, Bölüm 1, Madde 90’da “Ve nedeni” diye başlayan pasaja bakın). Kelim açısından dairelerin doğrusallığın GAR’ından ölçülemeyecek kadar yüksek olduğu bilinir. GAR’dan söz etmemizin ve onu incelememizin yasak olduğunu zaten biliyorsunuz. Bu nedenle dairelerin hiçbir Behina’sını incelemeye iznimiz yoktur."
+    }
+  ]
+}

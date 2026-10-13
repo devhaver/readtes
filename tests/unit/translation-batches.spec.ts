@@ -366,3 +366,19 @@ describe("Portuguese terminology triggers", () => {
     expect(pattern.test('עי\' לה"ת ח"א אות ק"ב')).toBe(false);
   });
 });
+
+describe("Turkish terminology triggers", () => {
+  it("distinguishes the lower Hey from Table of Answers citations", () => {
+    const terms = JSON.parse(
+      readFileSync(resolve("docs/translation/terms-tr.json"), "utf8"),
+    ) as {
+      required: Array<{ he: string; heRegex?: string }>;
+    };
+    const trigger = terms.required.find(({ he }) => he === 'ה"ת');
+    const pattern = new RegExp(trigger?.heRegex ?? "");
+
+    expect(pattern.test('ה"ת המסיימת')).toBe(true);
+    expect(pattern.test('עי\' בלה"ת חלק זה אות מ"ב')).toBe(false);
+    expect(pattern.test('עי\' לה"ת ח"א אות ק"ב')).toBe(false);
+  });
+});
