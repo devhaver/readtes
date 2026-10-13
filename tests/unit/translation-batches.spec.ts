@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   itemKey,
@@ -299,5 +301,20 @@ describe("source-layer batching", () => {
         b.chapters.every((c) => c.chapterId === "part-01/introduction-01"),
       ),
     ).toBe(true);
+  });
+});
+
+describe("Russian terminology triggers", () => {
+  it("distinguishes the Sefira Tifferet from an inflected ordinary word", () => {
+    const terms = JSON.parse(
+      readFileSync(resolve("docs/translation/terms-ru.json"), "utf8"),
+    ) as {
+      required: Array<{ he: string; heRegex: string }>;
+    };
+    const trigger = terms.required.find(({ he }) => he === 'תפארת / ת"ת');
+    const pattern = new RegExp(trigger?.heRegex ?? "");
+
+    expect(pattern.test("ספירת תפארת")).toBe(true);
+    expect(pattern.test("תפארתם ושלימותם")).toBe(false);
   });
 });
