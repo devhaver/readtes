@@ -9,7 +9,8 @@
       "order": 1,
       "label": {
         "he": "א",
-        "en": "1"
+        "en": "1",
+        "ru": "1"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:1",
       "targetSeif": 1,
@@ -21,7 +22,8 @@
       "order": 2,
       "label": {
         "he": "ב",
-        "en": "2"
+        "en": "2",
+        "ru": "2"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:2",
       "targetSeif": 1,
@@ -33,7 +35,8 @@
       "order": 3,
       "label": {
         "he": "ג",
-        "en": "3"
+        "en": "3",
+        "ru": "3"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:3",
       "targetSeif": 1,
@@ -45,7 +48,8 @@
       "order": 4,
       "label": {
         "he": "ד",
-        "en": "4"
+        "en": "4",
+        "ru": "4"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:4",
       "targetSeif": 1,
@@ -57,7 +61,8 @@
       "order": 5,
       "label": {
         "he": "ה",
-        "en": "5"
+        "en": "5",
+        "ru": "5"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:5",
       "targetSeif": 2,
@@ -69,7 +74,8 @@
       "order": 6,
       "label": {
         "he": "ו",
-        "en": "6"
+        "en": "6",
+        "ru": "6"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:6",
       "targetSeif": 2,
@@ -81,7 +87,8 @@
       "order": 7,
       "label": {
         "he": "ז",
-        "en": "7"
+        "en": "7",
+        "ru": "7"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:7",
       "targetSeif": 2,
@@ -93,7 +100,8 @@
       "order": 8,
       "label": {
         "he": "ח",
-        "en": "8"
+        "en": "8",
+        "ru": "8"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:8",
       "targetSeif": 2,
@@ -105,7 +113,8 @@
       "order": 9,
       "label": {
         "he": "ט",
-        "en": "9"
+        "en": "9",
+        "ru": "9"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:9",
       "targetSeif": 3,
@@ -117,7 +126,8 @@
       "order": 10,
       "label": {
         "he": "י",
-        "en": "10"
+        "en": "10",
+        "ru": "10"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:10",
       "targetSeif": 3,
@@ -129,7 +139,8 @@
       "order": 11,
       "label": {
         "he": "כ",
-        "en": "20"
+        "en": "20",
+        "ru": "20"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:11",
       "targetSeif": 3,
@@ -141,7 +152,8 @@
       "order": 12,
       "label": {
         "he": "ל",
-        "en": "30"
+        "en": "30",
+        "ru": "30"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:12",
       "targetSeif": 3,
@@ -153,7 +165,8 @@
       "order": 13,
       "label": {
         "he": "מ",
-        "en": "40"
+        "en": "40",
+        "ru": "40"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:13",
       "targetSeif": 4,
@@ -165,7 +178,8 @@
       "order": 14,
       "label": {
         "he": "נ",
-        "en": "50"
+        "en": "50",
+        "ru": "50"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:14",
       "targetSeif": 4,
@@ -177,7 +191,8 @@
       "order": 15,
       "label": {
         "he": "ס",
-        "en": "60"
+        "en": "60",
+        "ru": "60"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:15",
       "targetSeif": 4,
@@ -189,7 +204,8 @@
       "order": 16,
       "label": {
         "he": "ע",
-        "en": "70"
+        "en": "70",
+        "ru": "70"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:16",
       "targetSeif": 4,
@@ -201,7 +217,8 @@
       "order": 17,
       "label": {
         "he": "פ",
-        "en": "80"
+        "en": "80",
+        "ru": "80"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:17",
       "targetSeif": 5,
@@ -213,7 +230,8 @@
       "order": 18,
       "label": {
         "he": "צ",
-        "en": "90"
+        "en": "90",
+        "ru": "90"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:18",
       "targetSeif": 5,
@@ -225,7 +243,8 @@
       "order": 19,
       "label": {
         "he": "ק",
-        "en": "100"
+        "en": "100",
+        "ru": "100"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:19",
       "targetSeif": 5,
@@ -237,7 +256,8 @@
       "order": 20,
       "label": {
         "he": "ר וש",
-        "en": "200"
+        "en": "200",
+        "ru": "200"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:20",
       "targetSeif": 5,
@@ -249,7 +269,8 @@
       "order": 21,
       "label": {
         "he": "ת",
-        "en": "400"
+        "en": "400",
+        "ru": "400"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:21",
       "targetSeif": 5,
@@ -261,7 +282,8 @@
       "order": 22,
       "label": {
         "he": "א",
-        "en": "1"
+        "en": "1",
+        "ru": "1"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:22",
       "targetSeif": 5,
@@ -273,7 +295,8 @@
       "order": 23,
       "label": {
         "he": "ב",
-        "en": "2"
+        "en": "2",
+        "ru": "2"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:23",
       "targetSeif": 5,
@@ -285,7 +308,8 @@
       "order": 24,
       "label": {
         "he": "ג",
-        "en": "3"
+        "en": "3",
+        "ru": "3"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:24",
       "targetSeif": 6,
@@ -297,7 +321,8 @@
       "order": 25,
       "label": {
         "he": "ד",
-        "en": "4"
+        "en": "4",
+        "ru": "4"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:25",
       "targetSeif": 6,
@@ -309,7 +334,8 @@
       "order": 26,
       "label": {
         "he": "ה",
-        "en": "5"
+        "en": "5",
+        "ru": "5"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:26",
       "targetSeif": 6,
@@ -321,7 +347,8 @@
       "order": 27,
       "label": {
         "he": "ו",
-        "en": "6"
+        "en": "6",
+        "ru": "6"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:27",
       "targetSeif": 6,
@@ -333,7 +360,8 @@
       "order": 28,
       "label": {
         "he": "ז",
-        "en": "7"
+        "en": "7",
+        "ru": "7"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:28",
       "targetSeif": 6,
@@ -345,7 +373,8 @@
       "order": 29,
       "label": {
         "he": "ח",
-        "en": "8"
+        "en": "8",
+        "ru": "8"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:29",
       "targetSeif": 7,
@@ -357,7 +386,8 @@
       "order": 30,
       "label": {
         "he": "ט",
-        "en": "9"
+        "en": "9",
+        "ru": "9"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:30",
       "targetSeif": 7,
@@ -369,7 +399,8 @@
       "order": 31,
       "label": {
         "he": "י",
-        "en": "10"
+        "en": "10",
+        "ru": "10"
       },
       "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:31",
       "targetSeif": 8,
