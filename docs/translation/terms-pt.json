@@ -163,7 +163,7 @@
     },
     {
       "he": "ה\"ת",
-      "heRegex": "(?<![א-ת])(?!לו?ה\"ת)[בלמדשוה]{0,2}ה\"ת(?![א-ת])",
+      "heRegex": "(?<![א-ת])(?!ב?לו?ה\"ת)[בלמדשוה]{0,2}ה\"ת(?![א-ת])",
       "pattern": "Hey inferior",
       "why": "a Hey inferior 27."
     },
@@ -201,6 +201,11 @@
       "he": "אור עליון",
       "pattern": "Luz Superior",
       "why": "Luz Superior 79."
+    },
+    {
+      "he": "צלם",
+      "pattern": "\\bTzelem\\b",
+      "why": "PROPOSED Part 2 ruling; preserve the Tzelem/Tzel wordplay using BB's English-style transliteration scheme."
     },
     {
       "he": "מסך",
@@ -3467,6 +3472,16 @@
       "evidence": "EKYE 0 (I0 P0)",
       "note": "English-style acronym, as BB writes KHB, HGT.",
       "group": "2.10 Letters, vowel points, numerology"
+    },
+    {
+      "he": "צלם / צל",
+      "en": "Tzelem / Tzel",
+      "target": "Tzelem / Tzel",
+      "officialCount": 0,
+      "status": "PROPOSED",
+      "evidence": "Tzelem / Tzel 0 (I0 P0)",
+      "note": "Part 2 ruling: preserve the Hebrew wordplay as Tzelem (imagem), from Tzel (sombra), following BB's English-style transliteration scheme.",
+      "group": "2.3 Partzufim and their parts"
     }
   ]
 }
