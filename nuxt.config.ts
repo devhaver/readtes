@@ -336,12 +336,10 @@ export default defineNuxtConfig({
       siteUrl,
       // Read by `server/routes/sitemap.xml.ts` — see INDEXED_LOCALES.
       indexedLocales: INDEXED_LOCALES,
-      // Umami analytics, both empty by default. There is no runtime config
-      // on a static site — Cloudflare Pages serves prerendered HTML, so
-      // these are only ever settable at `pnpm generate` time via
-      // `NUXT_PUBLIC_UMAMI_SRC`/`NUXT_PUBLIC_UMAMI_WEBSITE_ID` and get baked
-      // into the output. Empty means "no analytics": local/dev/CI builds
-      // stay clean, and app.vue only emits the script tag when both are set.
+      // Umami analytics, both empty by default. Production may override these
+      // through Coolify's runtime environment. Empty means "no analytics":
+      // local/dev/CI builds stay clean, and app.vue only emits the script tag
+      // when both are set.
       umamiSrc: "",
       umamiWebsiteId: "",
     },
@@ -376,14 +374,18 @@ export default defineNuxtConfig({
     "/design-tokens": { prerender: false },
     "/he/design-tokens": { prerender: false },
     "/ru/design-tokens": { prerender: false },
-    // See `SPA_READER_LOCALES`: the crawler would otherwise follow every
-    // volume page's chapter links and prerender them anyway.
-    ...Object.fromEntries(
-      SPA_READER_LOCALES.flatMap(({ code }) => [
-        [`/${code}/read/**`, { prerender: false }],
-        [`/${code}/design-tokens`, { prerender: false }],
-      ]),
-    ),
+    // Static verification builds intentionally omit these six locales' reader
+    // pages. Do not apply these rules to the server build: a later matching
+    // rule replaces the server route's cache headers rather than merging with
+    // them, which previously left six languages uncached in production.
+    ...(DEPLOY_TARGET === "static"
+      ? Object.fromEntries(
+          SPA_READER_LOCALES.flatMap(({ code }) => [
+            [`/${code}/read/**`, { prerender: false }],
+            [`/${code}/design-tokens`, { prerender: false }],
+          ]),
+        )
+      : {}),
   },
   // T12 scaling fix — dev-only route-rules matcher bloat: Nuxt turns every
   // explicit `nitro.prerender.routes` entry into a client route rule, and

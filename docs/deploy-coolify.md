@@ -1,17 +1,11 @@
 # Deploying the Node server with Coolify
 
-Read TES runs in two shapes from the same code:
+Read TES is deployed as a Nuxt/Nitro Node server on Coolify. Static generation
+remains a local and CI regression gate, but it is not a deployment target.
 
-|                                      | `static` (GitHub Pages, current)                                                                      | `server` (Coolify)                                          |
-| ------------------------------------ | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Build                                | `pnpm generate`                                                                                       | `READTES_DEPLOY_TARGET=server pnpm build`                   |
-| Reader pages                         | prerendered for en/he/ru; the other six languages render in the browser from the 404 shell (HTTP 404) | rendered on request by Node, every language a real 200 page |
-| Sitemap                              | en, he, ru                                                                                            | all nine languages                                          |
-| Size limits                          | GitHub Pages' 1 GB                                                                                    | none                                                        |
-| Runtime features (search, accounts…) | impossible                                                                                            | possible                                                    |
-
-`server` is a superset of `static` for readers: the same pages, plus the six
-newer languages becoming indexable.
+Every language is rendered on request as a real HTTP 200 page and included in
+the sitemap. HTML responses carry shared-cache headers so Cloudflare can cache
+them whenever its DNS proxy is enabled.
 
 ## What the image is
 
@@ -28,11 +22,13 @@ newer languages becoming indexable.
 
 ## The build runs in GitHub Actions, not on the server
 
-`.github/workflows/server-image.yml` builds the image on every push to `main`
-and publishes `ghcr.io/devhaver/readtes:latest` (and `:<commit sha>`). A full
-`generate` peaks around 7 GB of RAM; even the server build wants a few GB, and
-the VPS should spend its memory serving. GitHub's runners for public repos
-have 16 GB.
+After the `CI` workflow passes on `main`,
+`.github/workflows/server-image.yml` builds the exact validated commit and
+publishes `ghcr.io/devhaver/readtes:latest` and `:<commit sha>`. It then calls
+Coolify's deployment webhook when both deployment secrets are configured. A
+full `generate` peaks around 7 GB of RAM; even the server build wants a few
+GB, and the VPS should spend its memory serving. GitHub's runners for public
+repos have 16 GB.
 
 ## Coolify setup
 
@@ -52,9 +48,12 @@ have 16 GB.
    workflow calls the webhook after pushing the image.
 6. **Resources**: 512 MB of memory is ample; one CPU core.
 
-## Cloudflare in front
+## Production domains and Cloudflare
 
-Cloudflare already proxies readtes.com. Two settings make it cache the HTML:
+`readtes.com` and `www.readtes.com` resolve to the Coolify server. Coolify
+redirects `www` to the canonical apex domain and manages both certificates.
+Cloudflare may proxy the records after origin TLS is healthy. Two settings
+make it cache the HTML:
 
 - **Cache Rule**: hostname equals `readtes.com` → _Eligible for cache_, edge
   TTL _Use cache-control header if present_. (Cloudflare does not cache HTML
@@ -62,14 +61,9 @@ Cloudflare already proxies readtes.com. Two settings make it cache the HTML:
 - **After a deploy**, either wait out the 10-minute `s-maxage` or purge the
   cache (Caching → Purge Everything).
 
-## Switching over from GitHub Pages
-
-1. Deploy the image in Coolify on a temporary domain and check it:
-   `/`, `/es/read/part-06/chapter-01` (Spanish text, HTTP 200),
-   `/sitemap.xml` (nine languages), `/nope` (HTTP 404), `/healthz`.
-2. Point readtes.com's DNS (in Cloudflare) at the Coolify server.
-3. Once traffic has moved, disable `.github/workflows/deploy-pages.yml` (or
-   leave it running as a fallback — it does not interfere).
+GitHub Pages was retired after the production cutover on 2026-10-13. Do not
+re-enable it: a second publisher can silently diverge from the image Coolify
+serves.
 
 ## Locally
 

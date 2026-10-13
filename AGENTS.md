@@ -1,11 +1,11 @@
 # Read TES — Agent Notes
 
-Read TES is a static (SSG) web app for reading _Talmud Eser Sefirot_ in its
+Read TES is a Nuxt/Nitro web app for reading _Talmud Eser Sefirot_ in its
 three-part study structure: the Ari's source text, Baal HaSulam's _Ohr Pnimi_
 (Inner Light) explanation, and _Histaklut Pnimit_ (Inner Observation) as the
 deeper part-level explanation. It is multilingual including Hebrew RTL and
-fully self-contained — no runtime APIs, everything ships as a prerendered
-static site.
+fully self-contained — no content API or database. Production runs as a Node
+server on Coolify, with CDN-compatible cache headers on rendered HTML.
 
 ## Operating brief — read this first
 
@@ -75,7 +75,7 @@ the same name.
 | `task qa`                | `pnpm lint && pnpm format:check`                                |
 | `task test`              | `vitest run`                                                    |
 | `task test:e2e`          | Playwright against the generated production artifact            |
-| `task generate`          | Static site generation — this is what gets deployed             |
+| `task generate`          | Static regression build used by the full gate                   |
 | `task import -- <flags>` | `pnpm import:sefaria <flags>`, e.g. `task import -- --part 1`   |
 | `task clean`             | Remove `.nuxt`, `.output`, `coverage`, `node_modules`, `.task`  |
 | `task docker:prod`       | Build + serve the static output via nginx — :6219               |
@@ -83,7 +83,7 @@ the same name.
 | `task docker:clean`      | Remove this project's containers, volumes, images               |
 | `task prod`              | Build the SSR bundle + serve with the Nitro Node server — :6219 |
 
-Other pnpm scripts: `build` (SSR build, not the deploy target — needs
+Other pnpm scripts: `build` (the production SSR build — needs
 `NODE_OPTIONS=--max-old-space-size=8192`, the full-corpus SSR bundle exceeds
 V8's default heap; `task prod` sets this), `preview`, `start` (run the built
 `.output/server/index.mjs`), `lint:fix`, `format`, `typecheck` (`nuxi
@@ -127,15 +127,13 @@ dev server directly (proxies, browser automation) rather than guessing 3000.
 - **`PNPM_HOME=/pnpm` is load-bearing.** pnpm's store goes to
   `$PNPM_HOME/store`, which is what the `--mount=type=cache` targets. Without
   it the cache mount is a silent no-op and every build re-downloads.
-- **`production` is nginx, not node.** `nuxt generate` emits static files with
-  no server entrypoint, so there is nothing for `node .output/server/index.mjs`
-  to run. `docker/nginx.conf` handles the 404 status, immutable asset caching,
-  and gzip. (The static image is for verifying the _deploy artifact_; to run
-  the actual Nitro Node server instead — the weburz production shape — use
-  `task prod`, which builds the SSR bundle with an 8GB heap and runs
-  `node .output/server/index.mjs` on :6219.)
-- **`NUXT_PUBLIC_SITE_URL` is a build arg**, baked into every absolute URL. A
-  static site has no runtime config to correct it afterwards.
+- **`server` is production.** GitHub Actions builds this target after CI,
+  publishes it to GHCR, and tells Coolify to redeploy. It runs Nitro as the
+  unprivileged `node` user on port 3000. The `static` nginx target remains a
+  local regression/debugging shape only.
+- **`NUXT_PUBLIC_SITE_URL` is a server build arg** and may also be overridden
+  by Coolify at runtime. It drives canonical, hreflang, Open Graph, sitemap,
+  and robots URLs.
 - Dev bind-mounts the whole repo root with anonymous volumes shadowing
   `node_modules` and `.nuxt` — the host's are glibc, the container is
   alpine/musl.
@@ -225,8 +223,9 @@ pnpm lint && pnpm format:check && pnpm typecheck && pnpm validate:content && pnp
 All of it must pass before committing.
 
 GitHub Actions runs the same gate for every pull request and push to `main`.
-Successful `main` builds retain `.output/public` as a seven-day deployment
-artifact built with `NUXT_PUBLIC_SITE_URL=https://readtes.com`.
+After CI passes on `main`, the server-image workflow publishes immutable
+`:<commit sha>` and moving `:latest` GHCR tags, then triggers Coolify when its
+webhook secrets are configured.
 
 ## Instruction files
 

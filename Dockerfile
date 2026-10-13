@@ -55,7 +55,7 @@ FROM base AS build
 # Baked into every absolute URL the site emits (canonical, hreflang, og:url,
 # sitemap, robots). Must be correct at BUILD time — this is a static site,
 # there is no runtime config to override later.
-ARG NUXT_PUBLIC_SITE_URL=https://readtes.org
+ARG NUXT_PUBLIC_SITE_URL=https://readtes.com
 ENV NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL}
 
 COPY --from=deps /app/node_modules ./node_modules

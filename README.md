@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Vitest](https://img.shields.io/badge/Vitest-4.1-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev)
 [![pnpm](https://img.shields.io/badge/pnpm-11.15-F69220?logo=pnpm&logoColor=white)](https://pnpm.io)
-[![Static](https://img.shields.io/badge/deploy-static%20SSG-0EA5E9)](#deployment)
+[![Deploy](https://img.shields.io/badge/deploy-Nuxt%20server-0EA5E9)](#deployment)
 
 </div>
 
@@ -161,73 +161,26 @@ the change is wrong, not the test.
 
 ## Deployment
 
-`task generate` emits a static site to `.output/public`. Any static host will
-serve it.
+Production is the Nuxt/Nitro Node image published to GHCR and run by Coolify.
+Reader pages render on request, so all nine locales have real indexable pages
+without a static host's artifact limits. HTML responses carry shared-cache
+headers for an optional CDN. No database or runtime content API is required.
 
-Set `NUXT_PUBLIC_SITE_URL` at **build** time — it is baked into every canonical
-link, hreflang alternate, `og:url`, and the sitemap. There is no runtime config
-to correct it afterwards.
-
-```bash
-NUXT_PUBLIC_SITE_URL=https://your-domain task generate
-```
-
-To run the real production server (SSR via the Nitro Node server, the same
-shape weburz uses) — 404 status codes, prerendered sitemap, live rendering:
+Run the production shape locally with:
 
 ```bash
 task prod                # http://localhost:6219
 ```
 
-To check the static deploy artifact — 404 status codes, cache headers, the
-prerendered sitemap — before shipping:
+Or build and run the exact container Coolify deploys:
 
 ```bash
-task docker:prod         # http://localhost:6219
+task docker:server       # http://localhost:6220
 ```
 
-### Cloudflare Pages
-
-| Setting                | Value           |
-| ---------------------- | --------------- |
-| Build command          | `pnpm generate` |
-| Build output directory | `dist`          |
-| `NODE_VERSION`         | `24`            |
-
-Unlike this org's server-rendered Nuxt apps (which deploy with `pnpm build`),
-this site ships as fully prerendered static output — the Pages build command
-must be `pnpm generate`. A `nuxt build` here would try to bundle the entire
-corpus into a server worker, which OOMs on Pages' build machines and would
-deploy an unverified SSR site.
-
-The output directory is `dist` (not the local `.output/public`): on Pages'
-build machines Nitro detects the Cloudflare environment and switches to its
-`cloudflare_pages` preset, which emits the static site to `dist/` and merges
-the committed `public/_headers` with its own generated `_headers`/`_redirects`.
-
-The generated artifact is ~15,600 files — comfortably under Cloudflare Pages'
-free-plan 20,000-file deployment cap. Two build-time measures keep it there:
-payload extraction is disabled (`experimental.payloadExtraction: false`), so
-routes ship no per-page `_payload.json`, and the per-chapter content JSON is
-bundled one chunk per chapter (`vite.build.rollupOptions.output.manualChunks`)
-instead of one chunk per JSON file.
-
-pnpm 11 is picked up automatically on Cloudflare's v2/v3 build system via
-corepack and the `packageManager` field in `package.json` — no separate pnpm
-install step needed.
-
-Environment variables (Pages project → Settings → Environment variables):
-
-| Variable                       | Required | Effect                                                                                                                    |
-| ------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `NUXT_PUBLIC_SITE_URL`         | Yes      | Baked into every canonical link, hreflang alternate, `og:url`, and the sitemap                                            |
-| `NODE_OPTIONS`                 | Yes      | `--max-old-space-size=6144` — prerendering ~20k routes needs more than Node's default ~4 GB heap on Pages' build machines |
-| `NUXT_PUBLIC_UMAMI_SRC`        | No       | Umami script `src` — set together with the website ID to enable analytics                                                 |
-| `NUXT_PUBLIC_UMAMI_WEBSITE_ID` | No       | Umami `data-website-id` — leave both unset for no analytics tag                                                           |
-
-`public/_headers` ships with the generated output and gives `/_nuxt/*` and
-`/_fonts/*` (content-hashed filenames only) immutable caching automatically —
-no Pages-side configuration needed.
+The full gate still runs `pnpm generate` as an independent static regression
+check, followed by browser acceptance tests. It is validation, not the
+deployment artifact. See `docs/deploy-coolify.md` for production operations.
 
 ---
 
