@@ -1,0 +1,125 @@
+{
+  "chapterId": "part-02/chapter-02",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "es": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Kéter en un mundo o en una Sefirá se considera el techo de ese mundo o de esa Sefirá, y Maljut en cada mundo y Sefirá se considera el suelo de ese mundo o de esa Sefirá. El círculo superior es la Sefirá de Kéter, y el techo de este Kéter es Kéter de las diez Sefirot de ese Kéter."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "es": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Las vestiduras de los Mojin se denominan Tzelem, de la palabra “Tzel” [sombra]. La iluminación de Yosher que comprende las tres primeras Sefirot se denomina “Adam”, porque recibe GaR en las vestiduras de Tzelem. Este es un asunto extenso y no corresponde explicarlo aquí."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "es": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "El Rosh de cada Sefirá y Partzuf son las tres primeras Sefirot: Kéter, Jojmá y Biná. Las siete Sefirot inferiores —Jésed, Guevurá, Tiféret, Nétzaj, Hod, Yesod y Maljut— de cada Sefirá y Partzuf se consideran el Guf de esa Sefirá y Partzuf. Cuando están en el orden correcto, es decir, las Luces de GaR en las vasijas de GaR y las Luces de ZaT en las vasijas de ZaT, se considera que el Partzuf tiene “una estatura erguida”. Pero si las Luces del Guf se encuentran en las vasijas de GaR y no las Luces que les corresponden, se considera que ese Partzuf no tiene una estatura erguida, porque el Rosh no es más importante que el Guf, ya que incluso en el Rosh actúan únicamente las Luces del Guf. Esto se denomina inclinación del Rosh, cuando el Rosh y el Guf están en un mismo grado."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "es": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Explicación: en el Partzuf superior hay 248 discernimientos de Jésed, de los cuales se extienden los 248 órganos en los inferiores, detallados en la Mishná, Ohalot; no hay necesidad de elaborar aquí, y se explicará en su lugar."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "es": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:5",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "No existe esencia alguna en todos los mundos, tanto en los mundos superiores como en este mundo, en la cual no se distingan las diez Sefirot antes mencionadas, que son las cuatro fases conocidas y su raíz. Por eso afirma que también en el Adam inferior de este mundo se encuentran las cinco fases, etc."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "es": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:6",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Las vasijas de las diez Sefirot se denominan Kéter, Jojmá, Biná, Zeir Anpin y Maljut. Las Luces que hay en ellas se denominan Yejidá, Jayá, Neshamá, Rúaj y Néfesh (como está escrito en Midrash Rabá, Devarim, capítulo 2, 26): la Luz de Yejidá se reviste en la vasija de Kéter; la Luz de Jayá, en la vasija de Jojmá; la Luz de Neshamá, en la vasija de Biná; la Luz de Rúaj, en la vasija de Zeir Anpin; y la Luz de Néfesh, en la vasija de Maljut."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "es": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:7",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Ya sabes que los grados se distinguen según la pureza y el grosor que hay en ellos, y que todo término “superior” significa que es más puro que otro."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "es": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:8",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Las Luces son NaRaNJaY, y las vasijas son KaJaB ZoN, como se explicó anteriormente."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "es": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:9",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "La división de lo espiritual se debe a la disparidad de forma que se renovó allí (como se explicó arriba, Parte 1, capítulo 1, Ítem 30, el pasaje que comienza “Sin embargo”). Todo lo que es superior a otro es más puro que él, y todo lo que es inferior a otro es más denso que él. Mediante la disparidad de forma de este grosor, uno se separa y sale del otro, y se vuelve inferior a él. Es sabido que las Luces se otorgan desde cada superior al inferior. Por esta razón, el inferior debe recibir la abundancia en el aspecto más elevado y puro que hay en él, mientras que el superior le otorga la abundancia únicamente desde el aspecto más bajo y denso que hay en él. De esta manera, la forma de la Luz que llega desde el superior se iguala con la forma de la vasija del inferior, pues el aspecto más denso y burdo del superior posee equivalencia con el aspecto más fino y puro del inferior. Resulta que el inferior no puede recibir toda la Luz que le corresponde, sino únicamente una parte muy pequeña, hasta la medida que pueda recibir la vasija más pura que hay en él. Los demás aspectos que hay en él, que no son tan puros, deben permanecer sin la Luz que les corresponde debido a su disparidad de forma respecto del superior que les otorga. <br>Por consiguiente, se considera aquí que la Luz que corresponde al inferior se divide en dos aspectos. El primero es la pequeña medida de Luz que recibe del superior dentro de la vasija más elevada que hay en él, como se explicó anteriormente; esta Luz recibida se denomina “Luz Interior” del inferior. El segundo es toda la medida de Luz que corresponde a los aspectos restantes del inferior y que estos no pudieron recibir debido a su disparidad de forma respecto del superior, como se explicó. Se considera que toda esta medida permanece en el superior y no desciende al inferior, y se denomina “Luz Circundante”. Se llama así porque circunda al inferior, es decir, lo ilumina desde lejos aunque no se revista en él, sino como una iluminación distante y reducida. Esta iluminación distante es capaz de purificar los aspectos de grosor del inferior hasta que las formas de todos sus aspectos se igualen con la forma del superior; entonces podrá recibir toda la Luz que le corresponde. Esto se denomina la entrada de las Luces Circundantes, es decir, que las Luces Circundantes entraron y se revistieron en las vasijas del inferior, las cuales se purificaron y se convirtieron todas en Luz Interior."
+    }
+  ]
+}
