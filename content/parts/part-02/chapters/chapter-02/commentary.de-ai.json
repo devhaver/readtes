@@ -1,0 +1,359 @@
+{
+  "chapterId": "part-02/chapter-02",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "de": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Keter in einer Welt oder einer Sefira wird das „Dach“ jener Welt oder Sefira genannt, und Malchut in jeder Welt und Sefira wird der „Boden“ jener Welt oder Sefira genannt. Der Höhere Kreis ist die Sefira Keter, und das Dach dieses Keter ist Keter in den Zehn Sefirot dieses Keter."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "de": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Die Einkleidungen der Mochin werden Zelem (Bild) genannt, vom Wort „Zel“ (Schatten). Das geradlinige Leuchten, das aus den ersten drei Sefirot besteht, wird „Adam“ genannt, weil es GaR in den Einkleidungen von Zelem empfängt. Dies ist eine lange Angelegenheit, für die hier nicht der Ort ist."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "de": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Der Rosh jeder Sefira und jedes Parzuf sind die ersten drei Sefirot: Keter, Chochma und Bina. Die sieben unteren Sefirot Chessed, Gwura, Tiferet, Nezach, Hod, Jessod und Malchut in jeder Sefira und jedem Parzuf gelten als der Guf jener Sefira und jenes Parzuf. Wenn sie in ihrer Ordnung sind, das heißt die Lichter von GaR in den Kelim von GaR und die Lichter von SaT in den Kelim von SaT, gilt der Parzuf als „von aufrechter Statur“. Befinden sich jedoch die Lichter des Guf in den Kelim von GaR und nicht die ihnen zugehörigen Lichter, gilt jener Parzuf als ohne aufrechte Statur. Denn die Bchina des Rosh ist dann nicht bedeutender als die Bchina des Guf, da selbst im Rosh nur die Bchinot der Lichter des Guf wirken. Dies wird das Neigen des Kopfes genannt, weil Rosh und Guf auf derselben Stufe stehen."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "de": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Das bedeutet, dass es im Höheren Parzuf 248 Unterscheidungen von Chessed gibt, von denen sich die 248 Organe in den Unteren herleiten, die in der Mishna Ohalot aufgeführt sind. Doch hier ist nicht der Ort, dies auszuführen; sie werden an der entsprechenden Stelle erklärt."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "de": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:5",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Es gibt in allen Welten kein Wesen – weder in den Höheren Welten noch in dieser Welt –, in dem nicht die oben genannten Zehn Sefirot unterschieden würden, nämlich die vier bekannten Bchinot und ihre Wurzel. Dies meint er damit, dass sich auch im Unteren Menschen dieser Welt fünf Bchinot befinden und so weiter."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "de": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:6",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Die Kelim in den Zehn Sefirot werden Keter, Chochma, Bina, SA und Malchut genannt. Die Lichter in ihnen werden Yechida, Chaja, Neshama, Ruach und Nefesh genannt (wie in Devarim Rabba, Kap. 2, 26, geschrieben steht): Das Licht Yechida kleidet sich in das Kli Keter, das Licht Chaja in das Kli Chochma, das Licht Neshama in das Kli Bina, das Licht Ruach in das Kli Seir Anpin und das Licht Nefesh in das Kli Malchut."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "de": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:7",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Du weißt bereits, dass die Unterscheidung der Stufen gemäß der Sakut und der Awiut in ihnen erfolgt und dass jedes „Höhere“ ein Maß bezeichnet, das reiner als das ihm gegenüberstehende ist."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "de": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:8",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Die Lichter sind NaRaNCHaY, und die Kelim sind KaCHaB SoN, wie oben."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "de": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:9",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Die Teilung im Geistigen entsteht durch die dort neu entstandene Unterschiedlichkeit der Form (wie oben, Teil 1, Kap. 1, Punkt 30, Abschnitt beginnend mit „Jedoch“). Jeder, der höher als ein anderer ist, ist reiner als dieser; und jeder, der niedriger als ein anderer ist, ist gröber als dieser. Durch diese Unterschiedlichkeit der Form der Awiut trennte er sich von dem anderen, trat aus ihm hervor und wurde niedriger als er. Es ist bekannt, dass die Lichter von jedem Höheren an den unter ihm befindlichen gegeben werden. Daher muss der Untere die Fülle in der höchsten und reinsten Bchina in sich empfangen, während der Höhere ihm die Fülle nur aus der niedrigsten und gröbsten Bchina in sich gibt. Auf diese Weise gleicht sich die Form des vom Höheren kommenden Lichts der Form des Kli im Unteren an, denn die gröbste und dichteste Bchina im Höheren besitzt Gleichheit mit der feineren und reineren Bchina im Unteren. Somit kann der Untere nicht das gesamte Licht empfangen, das ihm zusteht, sondern nur einen sehr kleinen Teil – nämlich nur so viel, wie das reinste Kli in ihm empfangen kann. Die übrigen Bchinot in ihm, die nicht ebenso rein sind, müssen wegen ihrer Unterschiedlichkeit der Form gegenüber dem Höheren, der ihnen gibt, ohne das ihnen zugehörige Licht bleiben.<br>Daher gilt hier, dass das dem Unteren zugehörige Licht in zwei Bchinot geteilt wird. Die erste ist das geringe Maß an Licht, das er, wie oben, vom Höheren in seinem höchsten Kli empfängt; dieses empfangene Licht wird das „Or Pnimi“ des Unteren genannt. Die zweite ist das gesamte Maß des Lichts, das den im Unteren verbliebenen Bchinot zugehört, die wegen ihrer Unterschiedlichkeit der Form vom Höheren nicht empfangen konnten, wie oben. Dieses gesamte Maß gilt als im Höheren verblieben und nicht zum Unteren hinabgestiegen; es wird „Or Makif“ genannt. Es heißt so, weil es den Unteren umgibt, das heißt, ihn aus der Ferne beleuchtet. Obwohl es nicht in ihn eingekleidet ist, empfängt er ein fernes und geringes Leuchten. Dieses ferne Leuchten ist dazu geeignet, die Bchinot der Awiut im Unteren durch Hisdakchut zu reinigen, bis sich die Formen aller Bchinot im Unteren der Form des Höheren angleichen. Dann kann er das gesamte ihm zugehörige Licht empfangen. Dies wird das Eintreten der Orot Makifim genannt: Die umgebenden Lichter traten ein und kleideten sich in die Kelim des Unteren, die durch Hisdakchut gereinigt worden waren und alle zur Bchina des Or Pnimi wurden."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "de": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:10",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, da die Lichter, wie oben, in Or Pnimi und Or Makif geteilt wurden, gibt es infolgedessen zwei Arten des Empfangs im Kli: den Empfang im Inneren des Kli und den Empfang von der Äußerlichkeit des Kli (siehe Antworttabelle, Teil 1, Punkt 102). Das Or Pnimi wird im innersten Teil des Kli empfangen. Das Or Makif, das es von seiner Awiut reinigt (wie oben in der unmittelbar vorausgehenden Erklärung), gilt dagegen als durch die Äußerlichkeit des Kli empfangen, das heißt ohne irgendeine Einkleidung in das Kli.<br>Die erwähnte Teilung des Kli in Äußerlichkeit und Innerlichkeit erfolgt entsprechend der Unterscheidung von Sakut und Awiut im Kli. Nur die Awiut in ihm ist für den Empfang des Or Pnimi geeignet, denn das hauptsächliche Empfangs-Kli des ausgeströmten Seienden ist Bchina Dalet. Die ersten drei Bchinot dagegen sind nicht für den Empfang geeignet, sondern bewirken lediglich, dass Bchina Dalet enthüllt wird. Daher wird jedes Kli für sich in vier Bchinot im Kli unterschieden. Das Licht wird hauptsächlich in Bchina Dalet in ihm empfangen; deshalb wird sie die Innerlichkeit des Kli und sein innerster Teil genannt, wo die Fülle ruht.<br>Die drei Bchinot, die lediglich die Enthüllung von Bchina Dalet im Kli bewirken und selbst nicht zum Empfang fähig sind, gelten als Bchina Dalet von ihrer Äußerlichkeit her umgebend. Dies gleicht der Dicke der Wand eines körperlichen Gefäßes, die aus vier Schichten besteht, welche einander umgeben. Alles, was im Gefäß empfangen wird, befindet sich in seinem Inneren, nämlich in der inneren Schicht. Die übrigen drei Schichten in der Dicke der Wand stärken lediglich die innere Schicht, damit sie die Kraft besitzt, ihre Füllung zu tragen. Ebenso muss man es hier im Geistigen verstehen: Die hauptsächliche Bchina, welche die Fülle in sich hält, ist Bchina Dalet im Kli. Die ersten drei Bchinot sind die Ursachen, die Bchina Dalet in ihrer ganzen Kraft enthüllen, bis sie geeignet ist, die Fülle zu halten; sie selbst sind jedoch nicht zum Empfang des Or Pnimi fähig.<br>Daher werden sie die Äußerlichkeit des Kli genannt, da sie außerhalb der Bchina des Empfangs des Or Pnimi liegen: Bchina Gimel ist die Äußerlichkeit von Bchina Dalet, Bchina Bet die Äußerlichkeit von Bchina Gimel, und Bchina Alef ist die äußerste von allen und umgibt sie alle. Über ihnen allen gibt es eine äußere Bchina ohne jegliche Awiut; sie ist die Wurzel aller vier Bchinot im Kli. Wisse, dass diese vollkommen reine Bchina das Empfangs-Kli für das Or Makif ist, denn aufgrund ihrer wunderbaren Sakut kann sie das Leuchten des Or Makif empfangen, obwohl es aus der Ferne kommt.<br>Damit ist die Teilung des Kli erklärt: Seine Innerlichkeit bedeutet die gröbere Bchina im Kli, nämlich Bchina Dalet im Kli, die das Or Pnimi empfängt. Seine Äußerlichkeit bedeutet die reinere Bchina im Kli, nämlich, wie oben, die Wurzel des Kli, die das Or Makif aus der Ferne empfängt. Man darf nicht einwenden, Bchina Dalet sei aufgrund des Zimzum und des Massach nicht zum Empfang geeignet. Denn wir behandeln hier ausschließlich das Or Choser, das aus Bchina Dalet aufsteigt (siehe auch die Innere Betrachtung)."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20",
+        "de": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:11",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Bei allen Sefirot, die nur Lichter empfangen können und nicht die Fähigkeit besitzen, anderen zu geben, wird das Licht in ihnen Or Nefesh genannt. Es wurde bereits erklärt, dass das gesamte Licht in den Kreisen vom Licht der Linie empfangen werden muss (wie oben, Teil 2, Kap. 1, Punkt 30). Der Grund dafür ist, dass sich das Höhere Licht nur durch einen Siwug mit dem Massach, der Or Choser erhebt, mit den Kelim verbinden kann; dieses Or Choser verbindet das Licht mit den Kelim, wie oben (Teil 2, Kap. 2, Punkt 20). Daher verbindet sich das Höhere Licht nicht mit Kelim, in denen es keinen solchen Massach gibt, sodass diese anderen von oben nach unten geben könnten. Sie sind lediglich dazu geeignet, Licht von der vorhergehenden Stufe von unten nach oben zu empfangen, und zwar ausschließlich für ihre eigene Lebenskraft. Dieses Licht wird, wie oben, Or Nefesh genannt. Da es, wie oben, keinen Massach in den Kelim der Kreise gibt, verbindet sich das Höhere Licht nicht mit ihnen selbst; sie müssen das Licht vielmehr von der Linie empfangen, und auch dies nur im Maß ihrer eigenen Lebenskraft und nicht, um zu geben, wie erklärt. Daher wird das Licht in den Kreisen Or Nefesh genannt, wie erklärt."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "30",
+        "de": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:12",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Die Zehn Sefirot von Ruach sind gebende Bchinot; deshalb wird Or Ruach männliches Licht genannt, das heißt, es gibt. Die Zehn Sefirot von Nefesh dagegen werden weibliches Licht genannt, das heißt, es empfängt und kann nicht geben. Daher werden die Zehn Sefirot des Lichts der Linie Zehn Sefirot von Ruach genannt, um darauf hinzuweisen, dass sie männliches und gebendes Licht sind. Der Grund wurde bereits oben in der unmittelbar vorausgehenden Erklärung erläutert; siehe dort. Deshalb ist Ruach höher als die Stufe Nefesh, denn Ruach gibt an Nefesh."
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "40",
+        "de": "40"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:13",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, die fünf Stufen KaCHaB SoN erstrecken sich nicht in Geradheit, was bedeutet, dass eine unterhalb der anderen liegt, nämlich vom Reinen zum Groben (Teil 2, Kap. 1, Punkt 5). Vielmehr sind die fünf Stufen einander gleich, und keine liegt unterhalb einer anderen, das heißt, keine ist gröber als eine andere. Dennoch besteht zwischen ihnen zumindest die Unterscheidung von Ursache und Wirkung, denn sie treten auseinander hervor und erstrecken sich auseinander: Chochma trat aus Keter hervor, Bina aus Chochma, SA aus Bina und Malchut aus Seir Anpin (wie oben im Inneren Licht, Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Nun“). Diese erwähnte Unterscheidung von Ursache und Wirkung wird jedoch dadurch bestimmt, dass sie sich ineinander befinden: Jede Ursache bewirkt ihre Wirkung; Chochma wird durch Keter bewirkt, Bina durch Chochma und so weiter. Somit bedeutet „eines im anderen“, dass eines durch das andere bewirkt wird, wie erklärt. Zwischen ihnen besteht jedoch überhaupt keine Unterscheidung von oben und unten (wie oben, Teil 1, Kap. 1, Punkt 100)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "50",
+        "de": "50"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:14",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Denn das Licht wird durch das Kli geprägt, in das es eingekleidet ist. Selbst wenn es dieses verlässt und in ein anderes Kli eintritt, ändert es die Wege nicht, die es im vorherigen Kli hatte. Solange das Licht in der Linie der Geradheit war, erstreckte es sich und stieg eines unter das andere hinab, das heißt, es wurde in der Ordnung der Stufen zunehmend gröber, und zwar aufgrund des dort befindlichen Massach, wie oben (Teil 2, Kap. 1, Punkt 6). Daher ändert es selbst dann seine Wege bei der Ausbreitung von Stufe zu Stufe nicht, nachdem es von dort ausgetreten und zu den Zehn Sefirot der Kreise gelangt ist, in denen es keinen Massach gibt und in denen es notwendigerweise kreisförmig wird. Wenn beispielsweise das Licht der Linie zur Sefira Keter gelangt, wird es dort kreisförmig, das heißt, es nimmt die Form jenes Kli an, in dem es keine Unterscheidung von oben und unten gibt. Wenn sich das Licht jedoch vom Kreis Keter zum Kreis Chochma ausbreitet, wird es nicht kreisförmig (siehe Antworttabelle, Teil 1, Punkt 3), sondern erstreckt sich in Geradheit, das heißt mit einer Unterscheidung von oben und unten. Dadurch befindet sich die Sefira des Kreises Chochma unterhalb des Kreises Keter und ist gröber als Keter, denn ihre Formen sind nicht gleich. Ebenso erstreckt sich das Licht in Geradheit zu Bina, wenn es von Chochma zu Bina gelangt. Bina gilt als unterhalb von Chochma, das heißt als gröber als Chochma. Ebenso verhält es sich mit allen Sefirot. Obwohl die Zehn Sefirot der Kreise vonseiten der Kelim, wie oben, in ihrer Form gleich sind und keine Unterscheidung von oben und unten besitzen, gibt es in ihnen dennoch vonseiten dessen eine Unterscheidung von oben und unten, „dass sie alle Bchinot des Empfangs der Fülle enthalten, die in den Zehn Sefirot der Linie der Geradheit sind“."
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "60",
+        "de": "60"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:15",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Das bedeutet: Nachdem die vier Welten ABYA korrigiert worden waren, wurde jede Sefira zu einem vollständigen Parzuf mit Rosh, Toch und Sof. Daher erhielten sie andere Namen. Der aus Keter entstandene Parzuf wird Arich Anpin genannt. Der aus Chochma entstandene Parzuf wird Aba genannt. Der aus Bina entstandene Parzuf wird Ima genannt. Der aus den sechs Sefirot CHaGaT NeHJ entstandene Parzuf wird Seir Anpin genannt. Der aus Malchut entstandene Parzuf wird Nukwa genannt. Die Bedeutung dieser Namen wird, so Gott will, an ihrer entsprechenden Stelle erklärt."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "70",
+        "de": "70"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:16",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Die Bedeutung ist folgende: Du weißt bereits, dass aufgrund des in den Kreisen empfangenen Lichts der Zehn Sefirot der Linie notwendigerweise auch alle Bchinot der Geradheit in den Kreisen eingeprägt werden (wie oben, Punkt 50, Abschnitt beginnend mit „Es gibt“). In der Linie gibt es die als Massach bezeichnete Bchina, deren Or Choser das Höhere Licht mit den Kelim verbindet (wie oben, Teil 2, Kap. 1, Punkt 20). Auch dieser Massach wird in den Kreisen eingeprägt, jedoch ohne die in ihm enthaltene Awiut. Denn Awiut kann nicht im Geringsten von einer Unteren Stufe zu einer Höheren aufsteigen; gerade weil diese nicht dieselbe Awiut wie die Untere besitzt, wird sie Höhere genannt. Verstehe dies. Nur die Öffnung, die dieser Massach im Unteren – den Zehn Sefirot der Geradheit – enthüllt, steigt vom Massach der Linie der Geradheit auf und wird in den Kreisen eingeprägt. Diese vom Massach stammende Öffnung wird „Fenster“ genannt, gleich einem Fenster, das in einem Raum angebracht wird, um Licht in diesen Raum zu bringen. Ebenso enthüllt dieser Massach kraft seiner Eigenschaft das Or Choser, um das Licht mit dem ausgeströmten Seienden zu verbinden. Würde der Massach von dort verschwinden, würde das Licht aus dem ausgeströmten Seienden verschwinden und dieser in Dunkelheit verbleiben, wie ein Raum, dessen Fenster verschlossen wurde. Wenn wir daher nur die vom Massach stammende Öffnung bezeichnen und seine Awiut ausschließen wollen, nennen wir sie „Fenster oder Öffnung“."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "80",
+        "de": "80"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:17",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, auch die Werte von rechts und links, die in den Zehn Sefirot der Geradheit wirkten, wurden darin eingeprägt (siehe Antworttabelle, Teil 1, Punkt 23)."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "90",
+        "de": "90"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:18",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, aufgrund des erwähnten Fensters entstand dort die Unterscheidung der Ausbreitung und des Abstiegs des Lichts: Es wird in der Ordnung der Stufen zunehmend gröber, wobei die Untere Stufe gröber als die ihr vorausgehende ist. Dies meint er mit den Worten: „Und von dort steigt Arich zum Kreis von Aba hinab.“ Das heißt, aufgrund des Fensters nahm das Licht bei Aba der Kreise – Chochma – eine Bchina der Awiut und eine Bchina des Unten an. Chochma wurde in ihrer Stufe erniedrigt und ist nun Keter der Kreise nicht mehr gleich, wie sie es war, bevor sie das Licht der Geradheit durch das Fenster empfingen. Ebenso befindet sich Bina unterhalb von Chochma."
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "100",
+        "de": "100"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:19",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Er lehrt uns, dass dieses Fenster in den Sefirot zusammen mit dem Abstieg des Lichts aus dem Höheren Kreis zu ihnen entstand. Das heißt, jenes Licht prägt dann, wie oben, den in ihm enthaltenen Massach in ihnen ein. Daher gilt es, als durchbohre das Licht sie und schaffe in ihnen ein Fenster."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "200",
+        "de": "200"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:20",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Diese Sache wurde bereits oben ausführlich erklärt (Teil 2, Kap. 1, Punkt 4, Abschnitt beginnend mit „Die Bedeutung“)."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "300",
+        "de": "300"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:21",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, das Licht steigt von einem Kreis zum nächsten auf dem Weg einer Ausbreitung in Geradheit, in geraden Linien, hinab. Dies gilt jedoch nicht als eigentliche Korrektur der Linien, die „vom Massach“ hinabsteigen und männliches Licht enthalten, sodass sie anderen geben können. Diese Linien der Kreise besitzen vielmehr keine Kraft des Gebens, weil sie als „Fenster“ hinabsteigen, die nur ausreichen, um Licht für ihren eigenen Bedarf zu empfangen, nicht aber, um anderen zu geben. Dies ist die Regel: Alles, was keine Bchina des Massach besitzt, enthält kein männliches Licht, sondern weibliches Licht, welches Or Nefesh ist."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "400",
+        "de": "400"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:22",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Man darf sich nicht über die hier verwendete Bezeichnung Adam wundern. Denn es heißt (Midrash Rabba, Bereshit 27): Rabbi Yudan sagte: „Groß ist die Kraft der Propheten, die die Form ihrem Schöpfer vergleichen, wie es heißt: ‚Und ich hörte die Stimme eines Menschen zwischen den Ufern des Ulai‘ und so weiter; und: ‚Über dem Abbild des Thrones war ein Abbild wie das Aussehen eines Menschen, oben darauf.‘“ Ende des Zitats. Der Grund dafür wird, so Gott will, an der entsprechenden Stelle erklärt."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "de": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:23",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Das bedeutet: von Ejn Sof, dem Reinsten in allen Welten, bis zum mittleren Punkt, der gröbsten Bchina in allen Welten. Somit sind die gesamte vor uns liegende Wirklichkeit – sowohl die Höheren als auch die Unteren – seine Zweige, die sich aus ihm absteigend entwickelt haben, von ihm abhängen und ihn einkleiden. Daher verbindet er sie alle."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "de": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:24",
+      "targetSeif": 6,
+      "section": "ohr-pnimi",
+      "html": "Die Innerlichkeit ist das in ihm eingekleidete Licht Ejn Sof, und sein Wesen sind seine GaR. Es wurde bereits erklärt (Einführung, Punkt 27, Abschnitt beginnend mit „Ferner“), dass wir nicht befugt sind, über irgendwelche Bchinot von GaR auf irgendeiner Stufe oder in irgendeinem Parzuf zu sprechen, selbst nicht in der Welt Assija. Mit SaT dürfen wir uns jedoch beschäftigen, sogar mit SaT de GaR von Adam Kadmon; siehe dort."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "de": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:25",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Oben wurde bereits erklärt, dass die Kreise unmittelbar mit dem Zimzum und dem Verschwinden des Lichts enthüllt wurden und danach die Geradheit enthüllt wurde. Somit gelten die Kreise als Ursache und Verursacher des Lichts der Linie und daher als ihm vorausgehend (wie in der Antworttabelle dieses Teils, Punkt 42, geschrieben steht)."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "de": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:26",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Das heißt vom oberen Ende bis zum unteren Ende, wie oben. Betrachte eine vorgestellte körperliche Länge und lerne durch sie ihre spirituelle Wurzel kennen. Eine vorgestellte Länge verstehen wir anhand dreier Unterscheidungen: ihres oberen Endes, ihres unteren Endes und des Abstands zwischen ihnen. Genau auf diese Weise unterscheidest du auch eine spirituelle Länge. Zuerst unterscheidest du das untere Ende der Stufe, nämlich ihre letzte und gröbste Bchina, unterhalb derer es keine gröbere gibt. Sobald du das untere Ende kennst, erkennst du dadurch sogleich auch das obere Ende, denn das Maß der Awiut in der letzten Bchina bestimmt das Maß der Stufe des Or Choser (wie in der Inneren Betrachtung, Punkt 86, Abschnitt beginnend mit „Und siehe“, geschrieben steht; studiere es dort gut). Beispielsweise reicht die Awiut von Bchina Dalet in Bchina Dalet bis zur Stufe Keter de Keter; die Awiut von Bchina Gimel in Bchina Dalet reicht nur bis zur Stufe Keter de Chochma; und Bchina Bet in Bchina Dalet reicht nur bis zur Stufe Keter de Bina und so weiter. Mit der Kenntnis des unteren Endes wird somit sogleich auch das obere Ende bekannt. Nachdem du beide Enden der Stufe kennst, wird dir auch der Abstand zwischen ihnen von selbst bekannt, denn spiritueller Abstand bedeutet die Unterschiedlichkeit der Form zwischen zwei Bchinot. Entsprechend dem Maß der Veränderung der Form bemisst sich der Abstand zwischen ihnen. Wenn beispielsweise das untere Ende Bchina Alef in Bchina Dalet ist, reicht das obere Ende nur bis zur Stufe Keter de SA – studiere es dort gut in der oben genannten Inneren Betrachtung. Der Abstand ist dann nicht besonders groß. Ist das untere Ende jedoch Bchina Bet, dann ist das obere Ende die Stufe Keter de Bina; der Abstand zwischen ihnen umfasst somit zwei Bchinot der Awiut, Bchina Alef und Bchina Bet. Ist das untere Ende die Awiut von Bchina Gimel in Bchina Dalet, dann ist das obere Ende Keter de Chochma; hier umfasst der Abstand in der Länge drei Bchinot. Ebenso verhält es sich weiter. Verstehe dies gut."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "de": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:2:27",
+      "targetSeif": 7,
+      "section": "ohr-pnimi",
+      "html": "Dies ist so, weil die Kreise die ersten drei Sefirot der Geradheit umgeben (wie oben, Teil 2, Kap. 1, Punkt 90, Abschnitt beginnend mit „Den Grund“). Bekanntlich sind sie hinsichtlich ihrer Kelim den GaR der Geradheit noch unermesslich überlegen, wie oben. Du weißt bereits, dass es uns untersagt ist, über GaR zu sprechen und uns mit ihnen zu beschäftigen. Daher sind wir nicht befugt, uns mit irgendwelchen Bchinot der Kreise zu beschäftigen."
+    }
+  ]
+}
