@@ -7,10 +7,10 @@
 # spend its RAM serving, not building. GitHub's runners for public repos have
 # 16 GB.
 #
-# After a push, Coolify is told to redeploy when the two secrets below are set
-# (Coolify → the resource → Webhooks): COOLIFY_WEBHOOK (the deploy URL) and
-# COOLIFY_TOKEN (an API token with deploy permission). Unset, the image is
-# still published and Coolify can pull it on its own schedule.
+# After a push, Coolify is told to redeploy through its authenticated deploy
+# webhook. Both COOLIFY_WEBHOOK and COOLIFY_TOKEN are required repository
+# secrets; a missing secret fails the release instead of silently leaving the
+# newly published image undeployed.
 name: Server image
 
 on:
@@ -74,8 +74,12 @@ jobs:
         env:
           COOLIFY_WEBHOOK: ${{ secrets.COOLIFY_WEBHOOK }}
           COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
-        if: ${{ env.COOLIFY_WEBHOOK != '' && env.COOLIFY_TOKEN != '' }}
         run: |
+          if [ -z "${COOLIFY_WEBHOOK}" ] || [ -z "${COOLIFY_TOKEN}" ]; then
+            echo "COOLIFY_WEBHOOK and COOLIFY_TOKEN must both be configured" >&2
+            exit 1
+          fi
           curl --fail --silent --show-error \
+            --request POST \
             --header "Authorization: Bearer ${COOLIFY_TOKEN}" \
             "${COOLIFY_WEBHOOK}"
