@@ -5,6 +5,149 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "es": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Es decir, la línea que se extiende desde la Luz de Ein Sof, bendito sea Él, hacia el interior del espacio después del Tzimtzum (véase arriba, Parte 1, capítulo 2, Ítem 2)."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "es": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Las vasijas de las diez Sefirot de Yosher se denominan “conducto” o conductos porque limitan, con gran dominio y precisión, los caminos de la Luz que se extiende por ellas, de modo que solo se expanda por los caminos específicos de esas vasijas. Son como un conducto que limita con suma precisión el agua que lo atraviesa, la cual se extiende y sale de él con la misma forma del conducto, ya sea estrecho o ancho, sin ningún cambio. Por la misma razón, las Luces que pasan por aquellos conductos se denominan las diez Sefirot de Yosher, pues se extienden conforme a las leyes de estos conductos con rectitud y justicia: la Luz más importante se reviste en la vasija más pura, y así sucesivamente, sin cambio alguno, debido al fuerte dominio que los conductos ejercen sobre ellas.<br>La fuerza de dominio que existe en estos conductos se debe a que todo lo que es deseo en el grado superior se convierte en una fuerza obligatoria en el grado inferior emanado por su causa. Por eso, el Tzimtzum sobre la cuarta fase que existe en las vasijas de los círculos como libre deseo se convierte, en las vasijas de Yosher causadas por ellas, en una fuerza y un dominio que las obligan. Esta fuerza se denomina “pantalla”, como se explicará más adelante.<br>Este es el secreto de lo escrito en los Tikkunim: invierte “Ratzón” [deseo] y encontrarás “Tzinor” [conducto]. Hasta aquí sus palabras. Es como hemos dicho: el “conducto”, al ser una pantalla —es decir, un Tzimtzum impuesto por dominio, que retiene su deseo de recibir en la cuarta fase debido a la fuerza del superior que lo gobierna— es lo opuesto a la materia misma de la vasija, es decir, al “deseo de recibir”, pues se contiene de realizar este deseo propio. Por eso insinuaron: invierte “Ratzón” y encontrarás “Tzinor”; el conducto es opuesto al deseo, ya que obliga al deseo y hace lo contrario de lo que este quiere. Así, en todos los discursos y escritos, cuando queremos designar y destacar la retirada de la Luz de la cuarta fase, la llamamos Tzimtzum. Cuando queremos destacar la fuerza restrictiva adicional proveniente de la Luz de la línea que no se expandió hacia la cuarta fase, la definimos como “pantalla”, la fuerza que impide que la Luz se expanda hacia la cuarta fase. Cuando hablamos de la vasija en su conjunto, es decir, la vasija y la pantalla juntas, la definimos como “conducto”. Cuando hablamos conjuntamente de Luz, vasija y pantalla, es decir, de la Luz revestida según la medida del conducto, la definimos como “línea”. Y cuando hablamos de una vasija sin pantalla, la definimos como “círculo”."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "es": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "La precisión del ARI en la palabra “uno” excluye la corrección de las tres líneas realizada en el mundo de Atzilut. Nos enseña que en el mundo de Adam Kadmón todavía no existe esta corrección de tres líneas, sino únicamente “una línea”. La razón es que la corrección de las tres líneas se realiza después, en el mundo de Atzilut, y se extiende de la asociación de la cualidad de misericordia con el juicio, como se explicará en su lugar. Aquí tratamos del mundo de Adam Kadmón, donde esta asociación todavía no se había realizado; por eso aquí solo existe una línea.<br>La llegada de la Luz a la vasija de recepción del ser emanado se denomina “expansión” (véase Tabla de respuestas, Parte 1, Ítem 14). Ya se explicó arriba que la vasija de recepción de este ser emanado se denomina conducto; estúdialo bien allí, pues se explica su razón."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "es": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Existe una relación conocida para distinguir los grados del nacimiento de un Partzuf, donde las cuatro fases del deseo reciben los nombres Luz, agua, firmamento, cien bendiciones o cien puertas. Esto se debe al intercambio de las Luces fuera de su lugar, por el cual la Luz adquiere forma de agua, como se explicará en su lugar. El ARI nos enseña que la raíz de este asunto se forma aquí con la llegada de la línea: la Luz que se expande como línea se considera “agua” respecto de la Luz Superior. Por eso precisa “las aguas de la Luz Superior de la Luz de Ein Sof”: al expandirse la Luz hacia el conducto delgado, disminuye mucho respecto de su valor en Ein Sof y se considera agua en comparación con su estado anterior."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "es": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:5",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "La Luz que se expande gradualmente conforme a las leyes de las cuatro fases, de lo puro a lo denso, y se detiene en la cuarta fase, se denomina “línea recta”."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "es": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:6",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "No te equivoques interpretando lo “inmediato” y lo “gradual” mencionados aquí como un orden temporal, pues es sabido que la espiritualidad está por encima del tiempo. “Inmediatamente hasta abajo” significa sin cambio de grados, mientras que “gradualmente” significa conforme a la concatenación de los grados. Se refiere a la concatenación del orden de las cuatro fases conocidas, como continúa explicando más adelante."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "es": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:7",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Explicación de “la raíz” de la nueva expansión llamada línea: puesto que es una nueva emanación, se distingue en ella una raíz particular que la ilumina en su renovación, denominada la Sefirá de Kéter de la línea. Desde este Kéter, la Luz de Ein Sof se expande hacia la línea mediante las cuatro fases conocidas: la primera fase se denomina Jojmá; la segunda, Biná; la tercera, Zeir Anpin; y la cuarta, Maljut. Según este orden, el ARI dice arriba que “se expandió gradualmente”: primero se expandió Kéter; después, Jojmá; luego, Biná; después, Zeir Anpin; y así sucesivamente (véase Tabla de respuestas, Parte 1, Ítem 8, para la explicación de la palabra “después”)."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "es": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:8",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Para la explicación de la palabra “círculo”, véase Tabla de respuestas, Parte 1, Ítem 41. Véase también Parte 1, capítulo 1, Ítem 100. Cuando la Luz de la línea se reviste en un círculo, se denomina esfera."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "es": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:9",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Es decir, toda la Luz que hay en los círculos procede únicamente de lo que reciben de la línea, cuya iluminación es una iluminación nueva que solo contiene tres fases, como se explicó anteriormente. Por eso es diferente de la Luz de Ein Sof que rodea como Luz circular (véase Parte 1, capítulo 2, Ítem 3). Esto es lo que quiere decir el ARI cuando afirma que “no está adherida” a la Luz de Ein Sof: la forma de la Luz circular de Kéter de los círculos no es igual a la Luz que hay en Ein Sof, pues la equivalencia de forma es el Dvekut en lo espiritual (véase Tabla de respuestas, Parte 1, Ítem 12, y Or Pnimí, Parte 1, capítulo 2, Ítem 1, el pasaje que comienza “Y de lo anterior”). “Rodea” significa la causa que produce."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "es": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:10",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Es decir, si su iluminación hubiera estado también en las cuatro fases como la Luz de Ein Sof, su forma habría sido igual y adherida a Ein Sof; entonces se habría anulado en Ein Sof y sería completamente imperceptible."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20",
+        "es": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 2:1:11",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "La Luz que se expande desde Ein Sof hacia el ser emanado se denomina Luz Directa. Esta Luz se conecta con el ser emanado mediante una vestidura de Luz Retornante que asciende desde la pantalla hacia arriba por la fuerza del acoplamiento mediante golpe, asunto que se explicará más adelante. Se denomina “conexión” porque esta Luz Retornante que asciende desde la pantalla de la cuarta fase de la línea recta sostiene y sujeta la Luz Superior en el círculo. Allí donde la Luz Retornante no reviste la Luz Superior, esa Luz se considera inexistente respecto del ser emanado, pues este no puede alcanzarla sin la vestidura denominada Luz Retornante, como se explicará más adelante. Para establecer una distinción, esto se asemeja a una vela de sebo: aunque la principal fuerza de iluminación se extiende de la cantidad de sebo que contiene, la Luz no se conecta con el sebo sino con la mecha. Cuando la mecha se acaba, la vela se apaga aunque aún quede mucho sebo."
+    },
+    {
       "anchorId": "op-12",
       "order": 12,
       "label": {
