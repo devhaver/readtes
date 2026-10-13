@@ -317,6 +317,19 @@ describe("Russian terminology triggers", () => {
     expect(pattern.test("ספירת תפארת")).toBe(true);
     expect(pattern.test("תפארתם ושלימותם")).toBe(false);
   });
+
+  it("distinguishes the SAG acronym from the item number 63", () => {
+    const terms = JSON.parse(
+      readFileSync(resolve("docs/translation/terms-ru.json"), "utf8"),
+    ) as {
+      required: Array<{ he: string; heRegex: string }>;
+    };
+    const trigger = terms.required.find(({ he }) => he === 'ס"ג');
+    const pattern = new RegExp(trigger?.heRegex ?? "");
+
+    expect(pattern.test('פרצוף ס"ג דא"ק')).toBe(true);
+    expect(pattern.test('הסת"פ ח"ב אות ס"ג')).toBe(false);
+  });
 });
 
 describe("French terminology triggers", () => {
