@@ -694,8 +694,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
