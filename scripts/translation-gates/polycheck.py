@@ -26,7 +26,7 @@ TAGS = ("<b>", "</b>", "<small>", "</small>")
 BR = re.compile(r"<br\s*/?>")
 CYRILLIC = re.compile(r"[Ѐ-ӿ]")
 LATIN = re.compile(r"[A-Za-zÀ-ɏ]")
-CYRILLIC_LANGS = {"ru", "uk"}
+CYRILLIC_LANGS = {"bg", "ru", "uk"}
 
 # Output chars / Hebrew chars. The seven-language Part 1 source round measured
 # 1.25–2.18 across 390 items of at least 200 Hebrew characters (median 1.67).
