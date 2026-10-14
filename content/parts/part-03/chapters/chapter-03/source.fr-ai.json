@@ -1,0 +1,54 @@
+{
+  "chapterId": "part-03/chapter-03",
+  "layer": "source",
+  "versionId": "fr-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III 3",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:1",
+      "heading": "מבאר ד' זווגי הכאה בד' בחינות המסך, המוציאים ד' קומות חו\"ב תו\"מ, זו למטה מזו, בד' עולמות אבי\"ע. ובו ה' ענינים: — א. בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה. ב. בעולם הבריאה נעלמת קומת חכמה ומתלבשת בקומת בינה. ג. בעולם היצירה נעלמת גם קומת בינה ומתלבשת בקומת תפארת. ד. בעולם עשיה נעלמת גם קומת ז\"א ומתלבשת בקומת מלכות. ה. קומת חכמה שיצאה באצילות נמשכה מזווג דהכאה שלמעלה מעולם אצילות. וכן קומת בינה שיצאה בבריאה נמשכה מזווג דהכאה שלמעלה מבריאה. דהיינו ממסך שבין אצילות לבריאה. וכן קומת ז\"א שביצירה נמשכת מזווג דהכאה של המסך שבסוף הבריאה. וכן קומת מלכות שבעשיה יצאה ממסך שבסוף היצירה. — בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה.",
+      "html": "<span class=\"tes-footnote\" title=\"L’arbre de vie, porte 47, chapitre 2.\">*</span>Sachez également que, pour que la lumière de Ein Sof puisse briller dans tout Atsilout, Son Essence doit se revêtir à l’intérieur de Hokhma <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>. Après s’être revêtue dans Hokhma, elle s’étend dans tout Atsilout, et ce n’est que par ce revêtement que tout Atsilout peut recevoir de Ein Sof <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>. Tel est le sens de « Tu les as tous faits avec sagesse ».",
+      "anchors": [
+        "op-1",
+        "op-2"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:2",
+      "heading": "בעולם הבריאה מאיר על ידי התלבשותו בקומת בינה, והחכמה נעלמת שם.",
+      "html": "Mais pour briller dans Briya, Hokhma doit également se revêtir dans Bina. Par ces deux-là, lorsque la lumière de Ein Sof se revêt en elles, elle brille dans Briya. Tel est le sens du Massakh [écran] entre Atsilout et Briya, car ce Massakh s’étend de Bina, dans laquelle Hokhma se revêt afin de briller dans Briya.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:3",
+      "heading": "בעולם היצירה מאיר ע\"י התלבשותו בקומת תפארת וגם הבינה נעלמת שם. ובעולם העשיה מאיר ע\"י התלבשות בקומת מלכות וגם תפארת נעלמת שם.",
+      "html": "Pour briller dans Yetsira, Il ajoute un Massakh [écran] et un revêtement : Bina se revêt également dans Tifferet, puis Ein Sof brille dans Yetsira par Tifferet. Pour briller dans Assiya, Il ajoute encore un revêtement et un Massakh : Tifferet se revêt également dans Malkhout, et par Malkhout, Ein Sof brille dans toute Assiya. Tel est le sens de « Ima supérieure niche dans le trône, le pilier médian niche dans Yetsira, et Malkhout niche dans Assiya ».",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:4",
+      "heading": "הזווג דהכאה להוציא ע\"ס דאצילות נעשה בעולם א\"ק שלמעלה מאצילות. במסך דבחי\"ג שהוא קומת חכמה.",
+      "html": "Cependant, pour que vous compreniez mieux, sachez que le verset dit : « Tu les as tous faits avec sagesse ». Cela signifie que, dans Atsilout, la lumière de Ein Sof se revêt dans Hokhma <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>, et par elle, elle brille dans tout Atsilout. Le sens de cette Hokhma vous sera expliqué par ce que je vous ai enseigné : « Car un plus élevé que l’élevé veille », etc. <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>. Il y a plusieurs mondes au-dessus de Atsilout, et Ein Sof se revêt dans cette Hokhma qui se trouve au-dessus de Atsilout <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a> et brille dans Atsilout.",
+      "anchors": [
+        "op-3",
+        "op-4",
+        "op-5"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:5",
+      "heading": "הזווג דהכאה להוציא עשר הספירות דבריאה נעשה בעולם האצילות במסך דבחי\"ב שהוא קומת בינה. הזווג דהכאה להוציא עשר הספירות דיצירה, נעשה בעולם הבריאה במסך דבחי\"א שהוא קומת תפארת. וכן הזווג דהכאה להוציא עשר הספירות דעשיה נעשה ביצירה במסך דשורש שהוא קומת מלכות. ולצורך עשר הספירות דאצילות, נעשה הזווג דהכאה למעלה מאצילות במסך דבחי\"ג אשר שם היא קומת חכמה.",
+      "html": "Par conséquent, lorsqu’Il voulut briller dans Briya <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>, Il se revêtit également dans Bina de Atsilout, qui est au-dessus de Briya, et par cette Bina, Il brille dans Briya <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>. De même, pour briller dans Yetsira <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>, Il se revêt également dans Tifferet de Briya. De même, de Yetsira à Assiya, Il se revêt dans Malkhout de Yetsira. Il en va de même dans Atsilout : pour briller dans Atsilout, Il se revêtit dans la Hokhma susmentionnée, qui est au-dessus de Atsilout, et par elle, Il brille dans Atsilout. Ne pensez donc pas qu’il s’agit de la Hokhma de Atsilout elle-même.",
+      "anchors": [
+        "op-6",
+        "op-7",
+        "op-8"
+      ]
+    }
+  ]
+}

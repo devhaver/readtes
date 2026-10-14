@@ -1,0 +1,54 @@
+{
+  "chapterId": "part-03/chapter-03",
+  "layer": "source",
+  "versionId": "es-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III 3",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:1",
+      "heading": "מבאר ד' זווגי הכאה בד' בחינות המסך, המוציאים ד' קומות חו\"ב תו\"מ, זו למטה מזו, בד' עולמות אבי\"ע. ובו ה' ענינים: — א. בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה. ב. בעולם הבריאה נעלמת קומת חכמה ומתלבשת בקומת בינה. ג. בעולם היצירה נעלמת גם קומת בינה ומתלבשת בקומת תפארת. ד. בעולם עשיה נעלמת גם קומת ז\"א ומתלבשת בקומת מלכות. ה. קומת חכמה שיצאה באצילות נמשכה מזווג דהכאה שלמעלה מעולם אצילות. וכן קומת בינה שיצאה בבריאה נמשכה מזווג דהכאה שלמעלה מבריאה. דהיינו ממסך שבין אצילות לבריאה. וכן קומת ז\"א שביצירה נמשכת מזווג דהכאה של המסך שבסוף הבריאה. וכן קומת מלכות שבעשיה יצאה ממסך שבסוף היצירה. — בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה.",
+      "html": "<span class=\"tes-footnote\" title=\"Árbol de Vida, Puerta 47, Capítulo 2.\">*</span>Has de saber también que, para que la Luz de Ein Sof pueda iluminar en todo Atzilut, Su Esencia debe revestirse dentro de Jojmá <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>. Después de revestirse en Jojmá, se expande por todo Atzilut, y solo mediante esta revestidura puede todo Atzilut recibir de Ein Sof <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>. Este es el secreto de «Con sabiduría los hiciste a todos».",
+      "anchors": [
+        "op-1",
+        "op-2"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:2",
+      "heading": "בעולם הבריאה מאיר על ידי התלבשותו בקומת בינה, והחכמה נעלמת שם.",
+      "html": "Pero para iluminar en Beriá, también Jojmá debe revestirse en Biná. Por medio de estas dos, cuando la Luz de Ein Sof se reviste dentro de ellas, ilumina en Beriá. Este es el secreto de la pantalla entre Atzilut y Beriá, pues esta pantalla se extiende desde Biná, en la que Jojmá se reviste para iluminar en Beriá.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:3",
+      "heading": "בעולם היצירה מאיר ע\"י התלבשותו בקומת תפארת וגם הבינה נעלמת שם. ובעולם העשיה מאיר ע\"י התלבשות בקומת מלכות וגם תפארת נעלמת שם.",
+      "html": "Para iluminar en Yetzirá, añade otra pantalla y una revestidura: también Biná se reviste en Tiféret, y entonces Ein Sof ilumina en Yetzirá por medio de Tiféret. Para iluminar en Asiá, añade otra revestidura y otra pantalla: también Tiféret se reviste en Maljut, y por medio de Maljut Ein Sof ilumina en toda Asiá. Este es el secreto de «Ima Superior anida en el trono, el pilar central anida en Yetzirá y Maljut anida en Asiá».",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:4",
+      "heading": "הזווג דהכאה להוציא ע\"ס דאצילות נעשה בעולם א\"ק שלמעלה מאצילות. במסך דבחי\"ג שהוא קומת חכמה.",
+      "html": "Para que lo comprendas mejor, sabe que el versículo dice: «Con sabiduría los hiciste a todos». Esto significa que, en Atzilut, la Luz de Ein Sof se reviste en Jojmá <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>, y por medio de ella ilumina en todo Atzilut. El secreto de esta Jojmá se te aclarará por lo que te he dado a conocer: «Pues uno más alto que el alto vigila», etc. <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>. Hay varios mundos por encima de Atzilut, y Ein Sof se reviste dentro de aquella Jojmá que está por encima de Atzilut <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a> e ilumina en Atzilut.",
+      "anchors": [
+        "op-3",
+        "op-4",
+        "op-5"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:5",
+      "heading": "הזווג דהכאה להוציא עשר הספירות דבריאה נעשה בעולם האצילות במסך דבחי\"ב שהוא קומת בינה. הזווג דהכאה להוציא עשר הספירות דיצירה, נעשה בעולם הבריאה במסך דבחי\"א שהוא קומת תפארת. וכן הזווג דהכאה להוציא עשר הספירות דעשיה נעשה ביצירה במסך דשורש שהוא קומת מלכות. ולצורך עשר הספירות דאצילות, נעשה הזווג דהכאה למעלה מאצילות במסך דבחי\"ג אשר שם היא קומת חכמה.",
+      "html": "Por lo tanto, cuando quiso iluminar en Beriá <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>, también se revistió en Biná de Atzilut, que está por encima de Beriá, y por medio de aquella Biná ilumina en Beriá <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>. Asimismo, para iluminar en Yetzirá <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>, también se reviste en Tiféret de Beriá. De manera similar, de Yetzirá a Asiá se reviste en Maljut de Yetzirá. Lo mismo sucede en Atzilut: para iluminar en Atzilut se revistió en la Jojmá antes mencionada, que está por encima de Atzilut, y por medio de ella ilumina en Atzilut. No pienses que se trata de la propia Jojmá de Atzilut.",
+      "anchors": [
+        "op-6",
+        "op-7",
+        "op-8"
+      ]
+    }
+  ]
+}

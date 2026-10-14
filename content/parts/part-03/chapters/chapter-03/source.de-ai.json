@@ -1,0 +1,54 @@
+{
+  "chapterId": "part-03/chapter-03",
+  "layer": "source",
+  "versionId": "de-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III 3",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:1",
+      "heading": "מבאר ד' זווגי הכאה בד' בחינות המסך, המוציאים ד' קומות חו\"ב תו\"מ, זו למטה מזו, בד' עולמות אבי\"ע. ובו ה' ענינים: — א. בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה. ב. בעולם הבריאה נעלמת קומת חכמה ומתלבשת בקומת בינה. ג. בעולם היצירה נעלמת גם קומת בינה ומתלבשת בקומת תפארת. ד. בעולם עשיה נעלמת גם קומת ז\"א ומתלבשת בקומת מלכות. ה. קומת חכמה שיצאה באצילות נמשכה מזווג דהכאה שלמעלה מעולם אצילות. וכן קומת בינה שיצאה בבריאה נמשכה מזווג דהכאה שלמעלה מבריאה. דהיינו ממסך שבין אצילות לבריאה. וכן קומת ז\"א שביצירה נמשכת מזווג דהכאה של המסך שבסוף הבריאה. וכן קומת מלכות שבעשיה יצאה ממסך שבסוף היצירה. — בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה.",
+      "html": "<span class=\"tes-footnote\" title=\"„Baum des Lebens“, Tor 47, Kapitel 2.\">*</span>Wisse außerdem: Damit das Licht von Ejn Sof in ganz Azilut leuchten kann, muss sich Sein Wesen in Chochma einkleiden <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>. Nachdem es sich in Chochma eingekleidet hat, breitet es sich in ganz Azilut aus, und nur durch diese Einkleidung kann ganz Azilut von Ejn Sof empfangen <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>. Dies ist das Geheimnis von „Du hast sie alle mit Weisheit gemacht.“",
+      "anchors": [
+        "op-1",
+        "op-2"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:2",
+      "heading": "בעולם הבריאה מאיר על ידי התלבשותו בקומת בינה, והחכמה נעלמת שם.",
+      "html": "Um aber in Brija zu leuchten, muss sich auch Chochma in Bina einkleiden. Durch diese beiden leuchtet das Licht von Ejn Sof in Brija, wenn es sich in sie einkleidet. Dies ist das Geheimnis des Massach (Schirm) zwischen Azilut und Brija, denn dieser Massach erstreckt sich von Bina, in der sich Chochma einkleidet, um in Brija zu leuchten.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:3",
+      "heading": "בעולם היצירה מאיר ע\"י התלבשותו בקומת תפארת וגם הבינה נעלמת שם. ובעולם העשיה מאיר ע\"י התלבשות בקומת מלכות וגם תפארת נעלמת שם.",
+      "html": "Um in Yezira zu leuchten, fügt Er einen weiteren Massach (Schirm) und eine Einkleidung hinzu: Auch Bina kleidet sich in Tiferet ein, und dann leuchtet Ejn Sof durch Tiferet in Yezira. Um in Assija zu leuchten, fügt Er eine weitere Einkleidung und einen Massach hinzu: Auch Tiferet kleidet sich in Malchut ein, und durch Malchut leuchtet Ejn Sof in ganz Assija. Dies ist das Geheimnis von „Die Höhere Ima nistet im Thron, die mittlere Säule nistet in Yezira, und Malchut nistet in Assija.“",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:4",
+      "heading": "הזווג דהכאה להוציא ע\"ס דאצילות נעשה בעולם א\"ק שלמעלה מאצילות. במסך דבחי\"ג שהוא קומת חכמה.",
+      "html": "Damit du es besser verstehst, wisse, dass der Vers sagt: „Du hast sie alle mit Weisheit gemacht.“ Das bedeutet, dass sich das Licht von Ejn Sof in Azilut in Chochma einkleidet <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a> und durch sie in ganz Azilut leuchtet. Das Geheimnis dieser Chochma wird dir durch das erklärt, was ich dir mitgeteilt habe: „Denn ein Höherer über dem Hohen wacht“, usw. <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>. Es gibt mehrere Welten über Azilut, und Ejn Sof kleidet sich in jene Chochma ein, die sich über Azilut befindet <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a>, und leuchtet in Azilut.",
+      "anchors": [
+        "op-3",
+        "op-4",
+        "op-5"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:5",
+      "heading": "הזווג דהכאה להוציא עשר הספירות דבריאה נעשה בעולם האצילות במסך דבחי\"ב שהוא קומת בינה. הזווג דהכאה להוציא עשר הספירות דיצירה, נעשה בעולם הבריאה במסך דבחי\"א שהוא קומת תפארת. וכן הזווג דהכאה להוציא עשר הספירות דעשיה נעשה ביצירה במסך דשורש שהוא קומת מלכות. ולצורך עשר הספירות דאצילות, נעשה הזווג דהכאה למעלה מאצילות במסך דבחי\"ג אשר שם היא קומת חכמה.",
+      "html": "Als Er daher in Brija leuchten wollte <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>, kleidete Er sich auch in Bina de Azilut ein, die über Brija steht, und durch jene Bina leuchtet Er in Brija <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>. Ebenso kleidet Er sich, um in Yezira zu leuchten <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>, auch in Tiferet de Brija ein. Ebenso kleidet Er sich von Yezira zu Assija in Malchut de Yezira ein. Dasselbe gilt in Azilut: Um in Azilut zu leuchten, kleidete Er sich in die oben erwähnte Chochma ein, die über Azilut steht, und durch sie leuchtet Er in Azilut. Denke daher nicht, dass es sich um Chochma de Azilut selbst handelt.",
+      "anchors": [
+        "op-6",
+        "op-7",
+        "op-8"
+      ]
+    }
+  ]
+}

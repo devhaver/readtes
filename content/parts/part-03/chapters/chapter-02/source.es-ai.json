@@ -1,0 +1,41 @@
+{
+  "chapterId": "part-03/chapter-02",
+  "layer": "source",
+  "versionId": "es-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III 2",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 2:1",
+      "heading": "מבאר ענין ד' עולמות אבי\"ע, וההפרש שביניהם. ובו ו' ענינים: — א. כל הפרטים שבעולם אצילות נבחנים ע\"פ ד' בחינות עביות הנ\"ל. ב. בעולם אצילות מתפשט אור א\"ס בלי מסך כלל. ג. למטה מאצילות אין אור א\"ס מתפשט רק בהארה היוצאת ממנו דרך מסך. ד. מזווג דהכאה של אור העליון במסך שבין אצילות לבריאה, יוצאות עשר ספירות דעולם הבריאה. ומזווג דהכאה שבין בריאה ליצירה יוצאות ע\"ס דעולם היצירה. וכן מיצירה לעשיה. ה. ההפרש שבין ד' העולמות הוא שבאצילות אין מסך כלל. ובבריאה יש מסך א'. וביצירה ב' מסכים. ובעשיה ג' מסכים. ו. אבל בד' בחינות עביות אין הפרש כלל בין עולם לעולם כמו שהם באצילות כך הם בבי\"ע. — אין מסך בעולם האצילות.",
+      "html": "Estas son cuatro fases mediante las cuales se distinguen entre sí los detalles de Atzilut; sin embargo, todas carecen por completo de pantalla <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>. Por eso se llama mundo de Atzilut, pues la propia Luz de Ein Sof se expandió por todo él sin pantalla.",
+      "anchors": [
+        "op-1"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 2:2",
+      "heading": "למטה מאצילות אין א\"ס מתפשט אלא דרך זווג דהכאה במסך שבסיום עולם האצילות. ועה\"ס עוברות דרך המסך לעולם הבריאה. וכן ע\"י זווג דהכאה במסך שבסיום הבריאה עוברות העה\"ס לעולם היצירה. וכן מיצירה לעשיה.",
+      "html": "Sin embargo, desde allí hacia abajo no se expande el propio Ein Sof, sino solo una iluminación que sale de Él a través de una pantalla <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>. La pantalla y la cortina que separan Atzilut de Beriá, como se explicó anteriormente, fueron golpeadas por la Luz Superior que llega hasta allí <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>. Por la fuerza de aquellas diez Sefirot de Atzilut que llegaron hasta allí y golpearon con su Luz, Luces centellearon de ellas <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>, atravesaron aquella pantalla y se convirtieron abajo en las diez Sefirot de Beriá, por el centelleo de las diez Sefirot de Atzilut que están sobre ellas a través de la pantalla. Por la fuerza de las diez Sefirot de vasijas se hicieron otras diez Sefirot de vasijas, y por la fuerza de las diez Sefirot de esencia se hicieron otras diez Sefirot de esencia de Beriá. Asimismo, al final de Beriá se hizo allí otra pantalla <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a>, y por el golpe de las diez Sefirot de Beriá, en la fase de esencia y vasijas, contra la pantalla <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>, se hicieron las diez Sefirot de Yetzirá. Lo mismo ocurrió de Yetzirá a Asiá por medio de aquella pantalla. Con esto entenderás por qué uno se llama Atzilut, otro Beriá, otro Yetzirá y otro Asiá: hay una pantalla que separa uno de otro y no se parecen en absoluto <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>.",
+      "anchors": [
+        "op-2",
+        "op-3",
+        "op-4",
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 2:3",
+      "heading": "החילוק שבין אצילות לבי\"ע שבאצילות אין מסך כלל. ובבריאה מתמעט האור ע\"י מסך א'. וביצירה ע\"י ב' מסכים. ובעשיה ע\"י ג' מסכים. אבל בד' בחינות של התעבות האור העליון אין שום הפרש בין עולם לעולם.",
+      "html": "La diferencia entre Atzilut y los tres mundos es que, en Atzilut, la Luz de Ein Sof perfora y pasa por él hasta el final de Atzilut sin pantalla alguna; pero desde allí hacia abajo hay una pantalla. La diferencia entre Beriá y Yetzirá es que Beriá tiene una pantalla separadora, Yetzirá tiene dos pantallas y Asiá tiene tres. Sin embargo, en los detalles de cada mundo <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>, así como hay cuatro fases particulares en Atzilut, como se explicó anteriormente <a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">9</a>, también existen esas cuatro fases en la propia Beriá y en la propia Yetzirá.",
+      "anchors": [
+        "op-8",
+        "op-9"
+      ]
+    }
+  ]
+}
