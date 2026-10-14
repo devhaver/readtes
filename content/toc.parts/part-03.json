@@ -373,10 +373,12 @@
       "availableVersions": {
         "summary": [],
         "source": [
-          "en-bb-kabbalah-info",
-          "ru-bb",
           "en-ai",
-          "he-jerusalem-1956"
+          "en-bb-kabbalah-info",
+          "es-ai",
+          "he-jerusalem-1956",
+          "pt-ai",
+          "ru-bb"
         ],
         "commentary": [
           "en-bb-kabbalah-info",
