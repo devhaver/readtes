@@ -124,6 +124,15 @@
     "source": "kabbalahmedia"
   },
   {
+    "id": "bg-ai",
+    "language": "bg",
+    "direction": "ltr",
+    "title": "Български (AI translation)",
+    "license": "CC0",
+    "source": "ai",
+    "translatedFrom": "he-jerusalem-1956"
+  },
+  {
     "id": "ru-ai",
     "language": "ru",
     "direction": "ltr",
