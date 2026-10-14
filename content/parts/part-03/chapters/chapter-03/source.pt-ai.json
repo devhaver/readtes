@@ -1,0 +1,54 @@
+{
+  "chapterId": "part-03/chapter-03",
+  "layer": "source",
+  "versionId": "pt-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III 3",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:1",
+      "heading": "מבאר ד' זווגי הכאה בד' בחינות המסך, המוציאים ד' קומות חו\"ב תו\"מ, זו למטה מזו, בד' עולמות אבי\"ע. ובו ה' ענינים: — א. בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה. ב. בעולם הבריאה נעלמת קומת חכמה ומתלבשת בקומת בינה. ג. בעולם היצירה נעלמת גם קומת בינה ומתלבשת בקומת תפארת. ד. בעולם עשיה נעלמת גם קומת ז\"א ומתלבשת בקומת מלכות. ה. קומת חכמה שיצאה באצילות נמשכה מזווג דהכאה שלמעלה מעולם אצילות. וכן קומת בינה שיצאה בבריאה נמשכה מזווג דהכאה שלמעלה מבריאה. דהיינו ממסך שבין אצילות לבריאה. וכן קומת ז\"א שביצירה נמשכת מזווג דהכאה של המסך שבסוף הבריאה. וכן קומת מלכות שבעשיה יצאה ממסך שבסוף היצירה. — בעולם אצילות מאיר א\"ס ע\"י התלבשותו בקומת חכמה.",
+      "html": "<span class=\"tes-footnote\" title=\"A Árvore da Vida, Portão 47, Capítulo 2.\">*</span>Saiba também que, para que a Luz de Ein Sof possa iluminar em todo Atzilut, Sua Essência deve vestir-se dentro de Hochma <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>. Depois de vestir-se em Hochma, ela se expande por todo Atzilut, e somente por meio dessa vestimenta todo Atzilut pode receber de Ein Sof <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>. Este é o segredo de “Tu os fizeste todos com sabedoria”.",
+      "anchors": [
+        "op-1",
+        "op-2"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:2",
+      "heading": "בעולם הבריאה מאיר על ידי התלבשותו בקומת בינה, והחכמה נעלמת שם.",
+      "html": "Mas, para iluminar em Beria, Hochma também deve vestir-se em Bina. Por meio dessas duas, quando a Luz de Ein Sof se veste dentro delas, ela ilumina em Beria. Este é o segredo do Massach (tela) entre Atzilut e Beria, pois esse Massach estende-se de Bina, na qual Hochma se veste para iluminar em Beria.",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:3",
+      "heading": "בעולם היצירה מאיר ע\"י התלבשותו בקומת תפארת וגם הבינה נעלמת שם. ובעולם העשיה מאיר ע\"י התלבשות בקומת מלכות וגם תפארת נעלמת שם.",
+      "html": "Para iluminar em Yetzira, Ele acrescenta outro Massach (tela) e uma vestimenta: Bina também se veste em Tiferet, e então Ein Sof ilumina em Yetzira por meio de Tiferet. Para iluminar em Assia, Ele acrescenta outra vestimenta e outro Massach: Tiferet também se veste em Malchut, e por meio de Malchut Ein Sof ilumina em toda Assia. Este é o segredo de “Ima Superior aninha-se no trono, o pilar central aninha-se em Yetzira, e Malchut aninha-se em Assia”.",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:4",
+      "heading": "הזווג דהכאה להוציא ע\"ס דאצילות נעשה בעולם א\"ק שלמעלה מאצילות. במסך דבחי\"ג שהוא קומת חכמה.",
+      "html": "Para que você compreenda melhor, saiba que o versículo diz: “Tu os fizeste todos com sabedoria”. Isso significa que, em Atzilut, a Luz de Ein Sof veste-se em Hochma <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>, e por meio dela ilumina em todo Atzilut. O segredo dessa Hochma será esclarecido pelo que lhe dei a conhecer: “Pois um mais alto que o alto vigia”, etc. <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>. Há vários mundos acima de Atzilut, e Ein Sof veste-se dentro daquela Hochma que está acima de Atzilut <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a> e ilumina em Atzilut.",
+      "anchors": [
+        "op-3",
+        "op-4",
+        "op-5"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III 3:5",
+      "heading": "הזווג דהכאה להוציא עשר הספירות דבריאה נעשה בעולם האצילות במסך דבחי\"ב שהוא קומת בינה. הזווג דהכאה להוציא עשר הספירות דיצירה, נעשה בעולם הבריאה במסך דבחי\"א שהוא קומת תפארת. וכן הזווג דהכאה להוציא עשר הספירות דעשיה נעשה ביצירה במסך דשורש שהוא קומת מלכות. ולצורך עשר הספירות דאצילות, נעשה הזווג דהכאה למעלה מאצילות במסך דבחי\"ג אשר שם היא קומת חכמה.",
+      "html": "Portanto, quando Ele quis iluminar em Beria <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>, também Se vestiu em Bina de Atzilut, que está acima de Beria, e por meio daquela Bina Ele ilumina em Beria <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>. Do mesmo modo, para iluminar em Yetzira <a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>, Ele também Se veste em Tiferet de Beria. Da mesma forma, de Yetzira para Assia, Ele Se veste em Malchut de Yetzira. O mesmo ocorre em Atzilut: para iluminar em Atzilut, Ele Se vestiu na Hochma acima mencionada, que está acima de Atzilut, e por meio dela ilumina em Atzilut. Portanto, não pense que se trata da própria Hochma de Atzilut.",
+      "anchors": [
+        "op-6",
+        "op-7",
+        "op-8"
+      ]
+    }
+  ]
+}
