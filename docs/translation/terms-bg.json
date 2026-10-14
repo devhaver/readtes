@@ -1,0 +1,67 @@
+{
+  "language": "bg",
+  "quotes": {
+    "open": "„",
+    "close": "“",
+    "innerOpen": "‘",
+    "innerClose": "’"
+  },
+  "required": [
+    {
+      "he": "מסך",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,3}מס(ך|כים|כא)(?![א-ת])",
+      "pattern": "(?i)\\bекран",
+      "why": "OFFICIAL Bulgarian form: екран."
+    },
+    {
+      "he": "רצון לקבל",
+      "heRegex": "רצון לקבל",
+      "pattern": "(?i)желание за получаване",
+      "why": "OFFICIAL Bulgarian form."
+    },
+    {
+      "he": "אור חוזר",
+      "heRegex": "או\"ח|אור חוזר|אור החוזר",
+      "pattern": "(?i)отразен\\w* светлин",
+      "why": "OFFICIAL Bulgarian form: отразена светлина."
+    },
+    {
+      "he": "אור עליון",
+      "heRegex": "אור עליון|האור העליון",
+      "pattern": "Висш\\w* светлин",
+      "why": "OFFICIAL Bulgarian form; fixed name is capitalized."
+    },
+    {
+      "he": "אין סוף",
+      "heRegex": "(?<![א-ת])[ובלמהשד]{0,2}א\"ס(?![א-ת])|אין סוף",
+      "pattern": "Безкрайност",
+      "why": "OFFICIAL Bulgarian form."
+    },
+    {
+      "he": "בחי\"ד",
+      "heRegex": "בחי\"ד|בחינה ד['׳]?|בחינה רביעית",
+      "pattern": "(?i)бхина далет",
+      "why": "OFFICIAL Bulgarian transliteration."
+    },
+    {
+      "he": "עש\"ה",
+      "heRegex": "עש\"ה",
+      "pattern": "(?i)виж добре там",
+      "why": "PROPOSED fixed reference formula."
+    }
+  ],
+  "banned": [
+    {
+      "pattern": "(?i)\\bмасах",
+      "why": "The official Bulgarian source translates מסך as екран."
+    },
+    {
+      "pattern": "(?i)\\bжелание за приемане",
+      "why": "Use official желание за получаване."
+    },
+    {
+      "pattern": "(?i)\\bобратна светлина",
+      "why": "Use official отразена светлина."
+    }
+  ]
+}
