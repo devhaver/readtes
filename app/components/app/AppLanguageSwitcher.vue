@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { LocaleObject } from "@nuxtjs/i18n";
 
-// A disclosure menu rather than a row of links: nine languages in a row
+// A disclosure menu rather than a row of links: ten languages in a row
 // pushed the site name onto two lines on desktop and ran off a phone's
 // edge. A native `<details>` keeps every link in the server-rendered markup
 // — the prerender crawler discovers each language's pages through them —

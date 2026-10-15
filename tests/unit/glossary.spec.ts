@@ -14,6 +14,7 @@ import {
   partNumberFromId,
 } from "~/utils/glossary";
 import glossaryIndex from "~~/content/glossary/tes-en.index.json";
+import bg from "~~/i18n/locales/bg.json";
 import de from "~~/i18n/locales/de.json";
 import en from "~~/i18n/locales/en.json";
 import es from "~~/i18n/locales/es.json";
@@ -333,6 +334,7 @@ describe("glossary reader-facing copy", () => {
   const locales = {
     en: en as GlossaryCopy,
     he: he as GlossaryCopy,
+    bg: bg as GlossaryCopy,
     ru: ru as GlossaryCopy,
     uk: uk as GlossaryCopy,
     es: es as GlossaryCopy,
@@ -342,7 +344,7 @@ describe("glossary reader-facing copy", () => {
     tr: tr as GlossaryCopy,
   };
 
-  it("writes every house rule's topic and rule in all nine languages", () => {
+  it("writes every house rule's topic and rule in all ten languages", () => {
     for (const [code, catalog] of Object.entries(locales)) {
       for (const convention of glossaryIndex.conventions) {
         const copy = catalog.glossary.conventionCopy[convention.id];
@@ -352,7 +354,7 @@ describe("glossary reader-facing copy", () => {
     }
   });
 
-  it("names the two editions the artifact cites, in all nine languages", () => {
+  it("names the two editions the artifact cites, in all ten languages", () => {
     for (const [code, catalog] of Object.entries(locales)) {
       for (const raw of [
         glossaryIndex.meta.sourceVersion,
@@ -367,7 +369,7 @@ describe("glossary reader-facing copy", () => {
     }
   });
 
-  it("translates every reader-facing term note in all nine languages", () => {
+  it("translates every reader-facing term note in all ten languages", () => {
     const notedEntries = glossaryIndex.entries.filter((entry) => entry.note);
     expect(notedEntries).toHaveLength(33);
 
