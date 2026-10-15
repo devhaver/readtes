@@ -11,6 +11,7 @@ describe("AppLanguageSwitcher", () => {
       "English",
       "עברית",
       "Русский",
+      "Български",
       "Español",
       "Français",
       "Deutsch",

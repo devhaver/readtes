@@ -154,7 +154,18 @@ describe("sitemap URL builder", () => {
   });
 
   it("lists every given locale on the server build", () => {
-    const locales = ["en", "he", "ru", "es", "fr", "de", "pt", "tr", "uk"];
+    const locales = [
+      "en",
+      "he",
+      "ru",
+      "bg",
+      "es",
+      "fr",
+      "de",
+      "pt",
+      "tr",
+      "uk",
+    ];
     const entries = buildSitemapEntries(realToc, SITE_URL, locales);
     const home = entries.find((entry) => entry.path === "/");
     expect(Object.keys(home?.urls ?? {})).toEqual(locales);

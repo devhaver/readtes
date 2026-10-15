@@ -126,7 +126,7 @@ const DEPLOY_TARGET =
 // Interface languages whose READER pages are not prerendered. The site is
 // served by GitHub Pages (`.github/workflows/deploy-pages.yml`), which caps
 // a site at 1 GB; a fully prerendered locale is ~75 MB (~2,100 chapter
-// pages), so all nine would be ~720 MB and leave little headroom. These
+// pages), so all ten would be ~800 MB and leave little headroom. These
 // locales get their home/volumes/glossary/about pages prerendered; a
 // `/<code>/read/*` URL has no file, so GitHub Pages answers with
 // `404.html` — the app shell — which renders the chapter in the browser.
@@ -134,6 +134,7 @@ const DEPLOY_TARGET =
 // these (mostly English-fallback) pages. A locale moves to full
 // prerendering by leaving this list.
 const SPA_READER_LOCALES = [
+  { code: "bg", language: "bg-BG" },
   { code: "es", language: "es-ES" },
   { code: "fr", language: "fr-FR" },
   { code: "de", language: "de-DE" },
