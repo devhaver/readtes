@@ -1,0 +1,73 @@
+{
+  "chapterId": "part-03/chapter-14",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "fr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "La lumière est appelée ici intériorité, et le Kli extériorité. Quant au sujet de l’intériorité et de l’extériorité, nous devons toujours le comprendre selon ce dont il est question à l’endroit en question."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "fr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Les Kélim du monde de Assiya sont appelés Ofanim, et les lumières qui sont dans le monde de Assiya sont appelées Nefesh."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "fr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "C’est-à-dire par rapport aux dix Sefirot « générales », qui sont les cinq mondes AK et ABYA, correspondant à KHB, ZA, Malkhout, dans lesquels se revêtent : Yekhida, Haya, Neshama, Rouakh, Nefesh. Or par rapport à cela, toutes les lumières de Assiya ne sont que la phase de Malkhout et de Nefesh. Cependant, par rapport au monde de Assiya lui-même, dans le détail, s’y trouvent tous les NRNHY, comme il l’explique ensuite."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "fr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:4",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "C’est-à-dire cinq Partsoufim, où dans chaque Partsouf il y a NRNHY. Et sachez que ces 25 phases sont nécessaires dans chaque monde du fait de l’émanation de ce seul degré, dans lequel ce monde est considéré, comme il est écrit dans Regard intérieur ici. C’est pourquoi il est nécessaire de discerner aussi dans le monde de Adam Kadmon cinq Partsoufim, dans chacun desquels il y a dix Sefirot : KHB, ZA, Noukva, l’une en dessous de l’autre, dans lesquelles se revêt le NRNHY de ce Partsouf particulier.<br>Il faut discerner ici qu’il y a deux sortes de dix Sefirot : la première, ce sont les dix Sefirot KHB, ZA et Malkhout de niveau égal, c’est-à-dire qui sortent d’un seul Zivoug de Hakaa, d’une seule phase. Et la seconde, ce sont les dix Sefirot KHB, ZON, qui sont l’une en dessous de l’autre, c’est-à-dire qui sortent par cinq Zivouguim de Hakaa, du fait de la Hizdakhout du Massakh, comme écrit plus haut dans l’ordre de l’émanation des cinq mondes AK et ABYA.<br>Et sachez que ces 25 phases nécessaires dans chaque monde, mentionnées dans les paroles du ARI, ne concernent que la phase de dix Sefirot l’une en dessous de l’autre, car les dix Sefirot de niveau égal ne sont comptées que comme une seule Sefira, qui prend le nom de la lumière la plus haute de ce niveau (comme ci-dessus, chapitre 9, point 3)."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "fr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:5",
+      "targetSeif": 10,
+      "section": "ohr-pnimi",
+      "html": "C’est une connaissance très importante, dont on a besoin pour comprendre beaucoup de sujets, et il faut toujours s’en souvenir. La première compréhension est que, de ce fait, lorsqu’un mouvement et un renouvellement se produisent dans un monde, et dans une phase quelconque, même légère, de ce monde, ce mouvement particulier provoque un renouvellement dans l’ensemble de tous les mondes, du début de la ligne jusqu’à la fin de Assiya, que ce soit pour le châtiment ou pour la grâce. Cela est tout à fait semblable à un seul homme : on ne peut imaginer que seule une petite partie de l’un de ses organes ait mal ou jouisse, sans que tout le corps, de la tête aux ongles des pieds, le ressente. Il en va de même ici ; et comprenez cela très bien."
+    }
+  ]
+}

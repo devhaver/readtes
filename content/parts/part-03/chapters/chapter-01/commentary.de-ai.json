@@ -1,0 +1,411 @@
+{
+  "chapterId": "part-03/chapter-01",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "de": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Es gibt fünf Welten, die Adam Kadmon, Azilut, Brija, Yezira und Assija genannt werden. Das Wort „Olam“ (Welt) stammt von „Ha’alem“ (Verbergung), denn das Licht von Ejn Sof verbirgt sich in ihnen jedes Mal mehr, wie der ARI uns weiter unten erklärt."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "de": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Siehe Antworttabelle, Teil 2, Punkt 56."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "de": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Siehe Antworttabelle, Teil 1, Punkt 25."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "de": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, der Anfang von allem in jeder einzelnen Welt."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "de": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:5",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Siehe Antworttabelle, Teil 2, Punkt 14."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "de": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:6",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Seine Bedeutung ist: unerreichbar. Er wird Ejn Sof genannt, um anzudeuten, dass die Sefira Malchut, welche alle Stufen abschließt und unterbricht (siehe Antworttabelle, Teil 1, Punkt 40), hier überhaupt keinen Sium (Abschluss) und keine Unterbrechung des Höheren Lichts bewirkt, sondern im Gegenteil: In ihr beginnt das Geben des Lichts."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "de": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:7",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Die Ausbreitung zeigt an, dass das Licht gröber wurde, als es im Ausströmenden war. Denn wenn nicht, wodurch träte dieses Licht aus dem Bereich des Ausströmenden heraus, sodass es „Ausbreitung des Lichts von Ihm nach außen“ genannt wird? Die Sache dieses Gröberwerdens ist die Unterschiedlichkeit der Form, die das Licht dadurch erwirbt, dass es in den Bereich des Ausgeströmten gelangt, wie oben geschrieben steht (in der Inneren Betrachtung, Teil 2, Punkt 5, Abschnitt beginnend mit „Und siehe“, studiere es dort gut)."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "de": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:8",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Siehe oben in der Inneren Betrachtung, Teil 2, Punkt 5, Abschnitt beginnend mit „Und siehe“."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "de": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:9",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Damit lehrt er uns, dass die Kelim die Folge des Lichts selbst sind. Denn das Licht steigt auf seinem Weg der Ausbreitung zum Empfang des Ausgeströmten durch die vier Bchinot hinab – CHuB SoN –, bis es im Ausgeströmten das Verlangen zu empfangen bewirkt. Dieses Verlangen, das Bchina Dalet ist, ist das Haupt-Kli des Ausgeströmten, und es ist die Awiut (Grobheit), die das Licht auf seinem Weg der Ausbreitung erworben hat. Die ersten drei Bchinot sind jedoch nur Ursachen dafür, dass Bchina Dalet enthüllt wird. Die Notwendigkeit und die Ordnung dieser vier Bchinot wurden in den vorangehenden Teilen erklärt, und man muss sie jetzt nicht ausführen (siehe Inneres Licht, Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Und der Grund“)."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "de": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:10",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Einkleidung bedeutet so viel wie Verbergung, denn das Gewand verbirgt den, der es trägt. Dies geschieht jedoch aufgrund seines Verlangens, enthüllt zu werden, und weil er ohne die Korrektur dieser Verbergung nicht enthüllt werden kann, verbirgt er sich in ihm und wird durch es enthüllt. Eine solche Korrektur wird immer „Gewand“ oder „Kleid“ genannt. Somit dient das Kleid zwei Dingen: der Verbergung und der Enthüllung. Auch in unserem Fall gilt: Weil es für die Unteren unmöglich ist, das Licht ohne ein Kli zu erlangen, kleidet sich das Licht in ein Kli ein und verbirgt sich in ihm, damit der Untere es durch dieses Kli, in das es sich einkleidet, erlangen kann. Und verstehe dies gut."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20",
+        "de": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:11",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Nachdem sich das Licht bereits in den ersten drei Bchinot ausgebreitet hatte, die Chochma, Bina und SA genannt werden, und nachdem es seine Ausbreitung in SA vollendet hatte, gelangte es dazu, sich in Bchina Dalet auszubreiten, die Malchut genannt wird. Bevor sich das Licht in den drei vorangehenden Bchinot ausgebreitet hat, kann es sich nicht in Malchut ausbreiten, denn sie verursachen einander auf dem Weg von Ursache und Wirkung."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "30",
+        "de": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:12",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Denn die Kraft des Zimzum reitet auf Bchina Dalet, und deshalb hat Bchina Dalet, die die unterste von allen ist, keine Kraft, Licht zu empfangen (siehe Antworttabelle, Teil 1, Punkt 81, und siehe Teil 1, Kap. 2, Punkt 2)."
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "40",
+        "de": "40"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:13",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Das heißt Bchina Dalet, die Malchut genannt wird. Damit lässt er uns hören, dass wir unterscheiden sollen: Das Kli der Malchut und der Massach in ihm sind zwei gesonderte Angelegenheiten. Denn das Kli der Malchut ist das Licht, das bis Bchina Dalet gröber wurde, wie oben, auf der die Kraft des Zimzum reitet, wie oben. Der Massach und der Vorhang über ihr wurden erst danach in ihr gebildet (siehe Antworttabelle, Teil 2, Punkt 43)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "50",
+        "de": "50"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:14",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Massach und Vorhang sind eine einzige Sache, das heißt: Dort wurde eine hindernde Kraft gebildet, gleich einer Trennwand, die oberhalb von Malchut schützt, damit das Höhere Licht nicht in sie eindringt (siehe Antworttabelle, Teil 2, Punkt 43)."
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "60",
+        "de": "60"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:15",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, dieser Massach hat außer seinem Schutz für Malchut, wie oben, noch eine weitere Aufgabe: Er trennt die Welt Azilut von den übrigen Welten."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "70",
+        "de": "70"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:16",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Das Zusammentreffen des Lichts von Ejn Sof mit dem Massach gleicht zwei harten Dingen, von denen das eine in die Grenze des anderen einbrechen will, während sich das andere mit aller Kraft vor ihm aufrichtet und es daran hindert, irgendetwas von seiner Grenze zu erreichen. Ein solches Zusammentreffen wird Schlag (Hakaa) genannt. Anders ist es beim Zusammentreffen von Flüssigkeiten, die einander nicht daran hindern, eine Grenze zu erreichen, sondern sich miteinander vermischen; daher versteht man bei ihnen keinen Schlag. Ebenso wird bei zwei weichen Dingen ihr Aufeinanderschlagen nicht so stark wahrgenommen, weil sie einander erlauben, ein wenig in ihre Grenze einzutreten und sie ein wenig an ihre äußere Schale zu drängen. Bei harten Dingen hingegen, bei denen das eine dem anderen nicht erlaubt, auch nur ein wenig aus seiner Grenze zu weichen, versteht sich ihr Zusammentreffen als Schlag.<br>Da nun die ganze Einschränkung vonseiten des Ausgeströmten geschah und überhaupt nicht vonseiten des Ausströmenden, legt das Licht von Ejn Sof auf den Zimzum, der in Malchut ist, überhaupt keinen Wert, sondern es erstreckt sich und steigt hinab, um sich auch innerhalb von Malchut auszubreiten. Es versteht sich auch, dass es dorthin in Kraft hinabsteigt, und zwar deshalb, weil Ejn Sof vor dem Zimzum auch Bchina Dalet dort erfüllte (wie oben geschrieben steht, Teil 1, Kap. 1, im Inneren Licht, Punkt 20 und Punkt 50, Abschnitt beginnend mit „Und siehe“, studiere es dort gut). Daher hat es kein Anliegen, seinen Weg zu ändern, und steigt stets hinab, um auch das Kli der Malchut mit Seinem Licht zu erfüllen. Doch der Massach und der Vorhang, die in Malchut gebildet wurden, hindern es und unterbrechen das Licht und lassen es sich nicht einmal ein wenig in ihm ausbreiten. Daher ist verständlich, dass es heißt: „Dann schlug das Licht von Ejn Sof, gesegnet sei Er, das sich bis dorthin ausbreitet, auf jenen Massach“ (siehe Antworttabelle, Teil 2, Punkt 43)."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "80",
+        "de": "80"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:17",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Dies wurde bereits im vorangehenden Abschnitt erklärt."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "90",
+        "de": "90"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:18",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Jenes Maß an Licht, das in Malchut hätte empfangen werden sollen und das sie wegen des Hindernisses des Massach nicht empfing – dieses ganze Maß kehrte zurück und stieg nach oben und bekleidete alle drei Bchinot des Höheren Lichts, das heißt bis Chochma, die als der „Platz“ dieses Or Choser gilt, wie weiter unten geschrieben steht. Und dies meint der ARI: „kehrte als Or Choser nach oben an seinen Platz zurück“ (siehe Teil 2, Innere Betrachtung, Punkt 62)."
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "100",
+        "de": "100"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:19",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Denn der Aufstieg des Or Choser und seine Einkleidung des Höheren Lichts von unten nach oben, wie oben, bildet die Bchina von Kelim für das Höhere Licht."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "200",
+        "de": "200"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:20",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Nachdem das Or Choser nach oben aufgestiegen ist, wie oben, befindet sich das Licht von Ejn Sof in diesem Or Choser eingekleidet, im Geheimnis des Wesens, das in den Kelim eingekleidet ist."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "300",
+        "de": "300"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:21",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Das heißt bis zum Massach im Kli der Malchut, denn der Massach ließ es nach oben zurückkehren und ließ es sich nicht weiter ausbreiten, wie oben."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "400",
+        "de": "400"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:22",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Er will sagen: Die Kraft der Hinderung im Massach wirkte überhaupt nicht auf die Sefirot de Azilut oberhalb von Malchut, sondern nur von Malchut abwärts. Daher breitet sich das Licht von Ejn Sof bis zum Massach in Malchut als Azilut ohne jegliche Hinderung aus. Das Licht von Ejn Sof hingegen, das aufblitzt und durch den Massach hindurch nach unten geht, wird aus diesem Grund stark vermindert und gilt nicht mehr als das Wesen des Lichts von Ejn Sof, wie weiter unten geschrieben steht."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "de": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:23",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Diese Awiut wurde bereits erklärt: Sie enthüllt sich nicht auf einmal im Licht, da sie das Gegenteil des Lichts ist, sondern sie entwickelt sich absteigend und geht vom Reinen zum ein wenig Groben hinab und danach zu dem, was noch gröber ist, bis sie zur Größe der Awiut gelangt, die Bchina Dalet oder Malchut genannt wird. Diese vier Bchinot heißen Chochma, Bina, SA und Malchut. Sie müssen in jedem Ausgeströmten vorhanden sein. Der Grund der Notwendigkeit und die Definition dieser vier Bchinot wurden oben bereits gut erklärt (in Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Und der Grund“, und in der Inneren Betrachtung, Teil 2, Abschnitt beginnend mit „Und um zu geben“). Studiere dort die ganze Fortsetzung, auf die ich mich stütze und die ich hier wegen der Länge nicht wiedergebe, obwohl sie hier bei jedem einzelnen Wort sehr notwendig ist."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "de": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:24",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Jede Welt und jeder Parzuf, wo auch immer er sich befindet, muss seine Fülle von Ejn Sof empfangen. Daher wird das Ruhen von Ejn Sof, das der Welt oder dem Parzuf zugeschrieben wird, das Keter der Welt und das Keter des Parzuf genannt und auch mit dem Namen Ausströmender jener Welt bezeichnet. Dies meint die Aussage: „Und siehe, in dem Keter de Azilut leuchtet Ejn Sof.“ Das heißt, dort ist das Ruhen von Ejn Sof in seinem Bezug zur Welt Azilut, und deshalb wird es Keter Ejn Sof oder Ausströmender genannt."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "de": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:25",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Die Ausbreitung des Lichts von Ejn Sof, das sich zuerst von Keter zur Welt erstreckt, wird Or Chochma genannt. Notwendigerweise ist in diesem Or Chochma sogleich ein Verlangen, das Licht zu empfangen, enthalten, denn sonst würde das Licht von Ejn Sof nicht als „sich ausbreitend“ bezeichnet, wie erklärt wurde (in der Inneren Betrachtung, Teil 2, Abschnitt beginnend mit „Jetzt“, studiere es dort gut). Dieses Verlangen zu empfangen gilt jedoch nicht so sehr als Unterschiedlichkeit der Form und als Awiut, weil dieses Verlangen zu empfangen ihr von einer höheren Kraft zukam, nämlich von Keter, denn das Verlangen zu geben in Keter bedingt unbedingt das Verlangen zu empfangen in Chochma. Dies meint der ARI: „Chochma empfängt durch Keter“. Das heißt, die Bchina des Empfangens in Chochma kam ihr durch Keter und durch dessen Kraft zu, und daher ist die Awiut aufgrund dieses Verlangens zu empfangen sehr schwach. Sie wird Bchina Alef genannt."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "de": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:26",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Chochma neigt dazu, auf dem Weg ihrer Ausbreitung gröber zu werden, denn am Ende ihrer Ausbreitung verstärkt sich in ihr das Verlangen, und sie zieht das Or Chassadim von Ejn Sof herab und entfernt sich vom Or Chochma, wie oben ausführlich geschrieben steht (Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Und der Grund“). Da diese Verstärkung aus ihrer eigenen Erweckung geschah und nicht aus der Kraft eines Höheren, gilt dieses Verlangen als geringe Awiut, die jedoch größer ist als die Awiut in Chochma. Daher wurde sie notwendigerweise durch diese Veränderung von Chochma getrennt zu einer besonderen Bchina und wird Bina oder Bchina Bet genannt. Dies meint der ARI: „Bina empfing das Licht von Ejn Sof durch Entfernung“, denn die Awiut von Bchina Bet wird „Entfernung“ genannt, weil sie sich davon entfernte, das Or Chochma zu empfangen, um das Or Chassadim zu empfangen, wie oben erklärt wurde. Dennoch gilt diese Verstärkung des Verlangens nicht als vollständige Awiut, denn sie gehört zur Bchina des Verlangens zu geben und der Angleichung der Form an den Ausströmenden, wie oben geschrieben steht (Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Und der Grund“). Sie ist jedoch gröber als Bchina Alef, denn bei Bchina Alef gehört das ganze Verlangen, das in ihr ist, nicht ihr, sondern kommt durch Keter, wie oben; Bchina Bet hingegen hat das Verlangen, das in ihr ist, bereits aus ihrer eigenen Verstärkung heraus bewirkt. Daher gilt Bchina Bet, die immerhin die Wurzel des vollständigen Verlangens zu empfangen ist, als gröber als Bchina Alef. Und verstehe es gut."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "de": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:27",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Nachdem Bina erwacht war, das Or Chassadim vom Ausströmenden herabzuziehen, befindet sie sich entfernt vom Or Chochma, denn sonst hätte sie das Or Chassadim nicht empfangen können. Denn das Or Chochma wird durch das Verlangen zu empfangen herabgezogen, und das Or Chassadim wird durch das Verlangen zu geben herabgezogen (wie in Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Und der Grund“ geschrieben steht). Daher sind Bchina Alef und Bchina Bet einander von Beginn ihrer Ausströmung an entgegengesetzt. Dies meint der ARI: „denn Ejn Sof ist nun weit von ihr entfernt, und sie kann Ihn empfangen“. Das heißt, sie entfernte sich und wurde zur dritten Stufe von Ejn Sof, die zwischen Bina und Ejn Sof vermittelt, und sie ging aus ihr hervor. Denn nun, da sie das Or Chochma entfernt hat und zur dritten Stufe geworden ist – wobei Chochma Bchina Alef ist und die zweite von Ejn Sof, Bina aber Bchina Bet und die dritte von Ejn Sof –, kann sie nun das Or Chassadim empfangen, das sie herabgezogen hat; hätte sie sich nicht zur dritten Stufe entfernt, hätte sie nicht empfangen können, wie erklärt wurde. Man muss wissen, dass das Wort „fern“ eine Bezeichnung für die Minderung der Erlangung von Chochma ist, im Sinne des Verses: „Ich sagte: Ich will weise werden, doch sie ist fern von mir.“ Dies ist auch der Sinn des Verses: „Und seine Schwester stellte sich von fern hin.“ Hier ist nicht der Ort, dies auszuführen."
+    },
+    {
+      "anchorId": "op-28",
+      "order": 28,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "de": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:28",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Auch Bina neigt dazu, am Ende ihrer Ausbreitung gröber zu werden, und zwar aus dem Grund, dass sie das Or Chochma von sich entfernte; und es ist bekannt, dass das Or Chochma das Hauptleben und das Wesen des Ausgeströmten ist. Daher verstärkte sich in ihr am Ende ihrer Ausbreitung das Verlangen, das Leuchten von Chochma in das Or Chassadim hinein zu empfangen. Und da der ganze Unterschied zwischen den Geistigen allein auf der Unterschiedlichkeit der Form beruht, ging dieses neue Leuchten hervor, das heißt das Or Chassadim, in dem sich das Leuchten von Chochma befindet, und erwarb dort einen eigenen Namen, nämlich den Namen Seir Anpin. Er wird so genannt, weil das Or Chochma Licht des „Angesichts“ genannt wird, wie es heißt: „Die Weisheit des Menschen lässt sein Angesicht leuchten“. Da er nur ein Leuchten von Chochma hat, sein Wesentliches aber nur das Or Chassadim von Bina ist, wird er Seir Anpin genannt, was „Kleinheit des Angesichts“ bedeutet, das heißt nur ein geringes Maß an Or Chochma. Und verstehe dies.<br>Er wird auch Bchina Gimel genannt. Seine Awiut wird „Fenster“ und „enge Öffnung“ genannt, denn oben wurde erklärt (Teil 2, Kap. 2, Inneres Licht, Punkt 70), dass ein Massach, der im Höheren aufgrund der Einbeziehung des Unteren in ihn entsteht, „Fenster“ genannt wird, weil in ihm keine Dinim sind, sondern nur ein Anlass für das Leuchten, wie bei einem Fenster; siehe dort. Und da alle Awiut und alle Massachim in Azilut aufgrund der Einbeziehung von BYA in sie entstehen, wird die Awiut von SA „Fenster“ für das Leuchten des Lichts der Gadlut genannt und „enge Öffnung“ für das Leuchten der Katnut. Bchina Bet hingegen wird nicht einmal „Fenster“ genannt, sondern „Entfernung“."
+    },
+    {
+      "anchorId": "op-29",
+      "order": 29,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "de": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:29",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, in ihm ist nicht jene Entfernung von Chochma, die in Bina ist, wie oben, weil der ganze Unterschied zwischen ihm und Bina darin besteht, dass er ein Leuchten vom Or Chochma hat. Dies meint der ARI: „Er ist jedoch nahe“, das heißt, es gibt in ihm keine Entfernung."
+    },
+    {
+      "anchorId": "op-30",
+      "order": 30,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "de": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:30",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, die Ausbreitung des Lichts von Bina zu Bchina Gimel, die SA ist, verursacht keine Entfernung, sondern im Gegenteil: Sie verursacht die Nähe von Chochma, wie oben. Und es wurde bereits oben erklärt, dass „nah“ und „fern“ Definitionen von Chochma sind."
+    },
+    {
+      "anchorId": "op-31",
+      "order": 31,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "de": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:31",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt: Nachdem sich die drei Bchinot der Awiut in ihrer Fülle bis zum Ende der Ausbreitung von SA ausgebreitet hatten, erwachte das Verlangen zu empfangen in seinem vollen Maß, das für den Empfang geeignet ist. „Und sie wird Bchina Dalet oder Malchut oder Nukwa de SA genannt (siehe oben, Inneres Licht, Teil 1, Kap. 1, Punkt 30, Abschnitt beginnend mit „Und jetzt“), und in ihr geschah der Zimzum, wie oben (Teil 1, Kap. 1, Punkt 40), sodass diese Bchina Dalet vom Zimzum an das Licht von Ejn Sof nicht mehr empfängt, und deshalb wird die Bchina der Awiut in ihr „Entfernung“ genannt. Auch in ihr gibt es zwei Stufen, Fenster und enge Öffnung, wie in SA: Das Geben der Gadlut wird Fenster genannt, und das Geben der Katnut wird enge Öffnung genannt. Zwischen der Entfernung in Bchina Bet und der Entfernung in Bchina Dalet besteht ein großer Unterschied, denn die Entfernung von Bchina Bet ist eine Entfernung aus freiem Willen, im Sinne des Verses: „Denn Er hat Gefallen an Barmherzigkeit“, das heißt, sie sehnt sich nach Chassadim und nicht nach Chochma. Die Entfernung von Bchina Dalet hingegen ist eine erzwungene Entfernung, das heißt aufgrund des Massach, der in Bchina Dalet gebildet wurde."
+    }
+  ]
+}

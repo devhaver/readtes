@@ -1,0 +1,73 @@
+{
+  "chapterId": "part-03/chapter-13",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:13",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "tr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:13:1",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani bakış denilen Zivug de Hakaa’dan çıkan Or Hozer’in on Sefirot’unda, “Et” denilen Pe olan Malhut, Or Hozer’in on Sefirot’unun köküdür. Bu yüzden köküne, yani Pe’deki Malhut Behina’sına daha çok yapışan daha önemli ve daha yücedir; çünkü Or Hozer, yukarıda yazıldığı gibi, aşağıdan Yukarıya ondan çekilmiş ve çıkmıştır."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "tr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:13:2",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani Or Yaşar’ın on Sefirot’unda Ayin’in yanındaki Keter ilk çıkandır ve Or Yaşar’ın bütün on Sefirot’unun köküdür; seviyesi hepsinden daha Üst sayılır. Oysa Malhut’ta bakış aracılığıyla çıkan Or Hozer’in on Sefirot’unda bunun tersi bulunur; çünkü Pe’deki Malhut, Or Hozer’in on Sefirot’u için kök olur ve Işığı on Sefirot’un hepsine o verir. Bu yüzden Yesod üstünlükte ikincidir, Hod üçüncüdür vb., ta ki son alan olan Ayin’in yanındaki Keter’e kadar. Ari’nin sözü şudur: Ayin’in yanındaki Keter en son çıktı; yani Or Hozer’in Hitpaştut’unu Malhut’tan alan sonuncu odur."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "tr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:13:3",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani Or Yaşar bakımından Keter üstünlükte ilk, Malhut ise üstünlükte sonuncudur; çünkü en son alır ve kökten en uzaktır. Or Hozer’in Hitpaştut’u bakımından ise tersi vardır: Malhut Sefira’sı kök olmuştur ve üstünlükte ilktir, Keter ise sonuncudur. Böylece Or Hozer’in Or Yaşar’ı giydirmesinin gücüyle bütün Kelim tamamen aynı seviyede eşitlenir. Çünkü Or Yaşar’ın on Sefirot’unda daha iyi olan her şey, Or Hozer’in on Sefirot’unda daha kötü sayılır; tersi de böyledir: Or Hozer’in on Sefirot’unda daha iyi olan her şey, Or Yaşar’ın on Sefirot’unda daha kötü sayılır. Böylece Kelim’in bütün Behina’sı eşit olur. Bunu anlayın."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "tr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:13:4",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani Malhut’tan aşağıdan Yukarıya çıkan Or Hozer aracılığıyla bütün Sefirot, yukarıda söylendiği gibi Ayin’in yanındaki Keter’e kadar aynı seviyede Hitpaştut edip yükselmiştir. Ancak bunun hepsi, yukarıda söylendiği gibi Pe’deki Malhut sayesindedir. Ari’nin, Yesod’un daha fazla öne doğru genişlemesi demesinin anlamı budur: Yani Malhut onu bilindiği gibi dışarıdan giydirdiği için Yesod Malhut’tan daha içsel olsa da, bu yine de üstünlük sayılmaz; çünkü Keter’e kadar bütün Hitpaştut’u Malhut’un gücü sayesindedir, böylece bu seviyesinin Hitpaştut’unda ve bu değerinde kökü Malhut’tur. Ari’nin, Yesod’un Malhut’un Işığının çokluğu sayesinde daha fazla genişleme gücüne sahip olması demesinin anlamı da budur: Yani Malhut’un Or Hozer’i, onun seviyesinde Or Yaşar’ın on Sefirot’undaki ölçüsünden daha fazla Hitpaştut etmesine neden oldu. Bu yüzden kökü olan Malhut’tan daha üstün değildir."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "tr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:13:5",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani yine de Yesod’un Malhut’a karşı elbette bir üstünlüğü vardır; çünkü Malhut’un bütün değeri yalnızca Or Hozer Behina’sındadır, oysa Yesod ondan üstündür, çünkü bilindiği gibi Or Hozer’den çok daha üstün olan Or Yaşar’ın on Sefirot’unda önce gelir. Ancak bu yalnızca Işıklar bakımındandır; Kelim bakımından ise asılları yalnızca Or Hozer’dendir. Ari’nin sözü de budur: Ancak Kelim’in kendileri Behina’sında eşittirler; çünkü Kelim’in seviye ölçüsü ve üstünlüğü yalnızca Or Hozer’den çekilir, bunu anlayın. Ayrıca Kısım 1’de Panim Masbirot’ta, 3. Dal’a bakın; bütün bunlar orada uzun uzadıya açıklanmıştır."
+    }
+  ]
+}

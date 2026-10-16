@@ -1,0 +1,138 @@
+{
+  "chapterId": "part-03/chapter-06",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "fr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Il veut dire que l’allégorie qu’il a apportée, à savoir qu’il y a une phase intermédiaire entre une phase et une autre, il ne faut pas en conclure, pour ce qu’elle illustre, qu’il y aurait de ce fait cinq phases aussi dans les supérieurs, c’est-à-dire quatre phases et une phase intermédiaire. C’est pourquoi il avertit et dit qu’il n’y a dans les supérieurs rien de plus que quatre éléments, le feu, le vent, l’eau et la poussière, qui sont les quatre lettres de HaVaYaH, car la phase intermédiaire n’est pas comptée avec les quatre phases. Et c’est ce que conclut le ARI : « C’est pourquoi Hokhma est appelée le commencement », pour indiquer qu’aucune phase n’est comptée avant elle : car la phase intermédiaire, à savoir l’étincelle du Créateur, est le secret de Ein Sof, qui n’entre pas du tout dans le compte du degré. Quant à la phase de l’étincelle créée, appelée Yekhida ou Keter, il a été expliqué que tout son essentiel n’est que la racine des quatre phases HB TM (comme ci-dessus, chapitre 5, point 20, étudiez-le bien là-bas). Ainsi, le commencement de Yekhida est aussi Bekhina Aleph [première phase], appelée Hokhma ; c’est pourquoi on ne trouve que quatre lettres dans le nom HaVaYaH, et il n’y a pas de lettre propre aux Sefirot de Keter, comme il a été expliqué."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "fr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:2",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "L’intention porte sur l’étincelle du Créateur qui est revêtue dans Keter, comme ci-dessus, laquelle est le secret de Ein Sof et n’appartient nullement à la phase du Partsouf lui-même, comme il est expliqué dans le point précédent. Étudiez-le bien là-bas."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "fr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:3",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Voir Tableau des réponses, Partie 2, point 26 : le désir de recevoir qui est dans l’être émané est le secret de la lumière qui s’est épaissie ; c’est l’ensemble de la matière de l’être émané, de laquelle ont été façonnés et faits ses récipients de réception. Et il est certain qu’en Ein Sof il ne se trouve rien de cette phase de désir de recevoir, pas même un peu (comme il est écrit plus haut dans Lumière intérieure, Partie 1, chapitre 1, point 50, le passage commençant par « Et la raison »). C’est ce que dit le ARI : « Ein Sof est appelé ‘néant’, car il n’y a en Lui aucune perception ; il n’y a là aucune matière », etc., c’est-à-dire de la phase du désir de recevoir précité ; et il n’y a aucune atteinte dans la lumière sans Kli, comme on le sait."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "fr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:4",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Les quatre phases HB TM sont appelées « quatre formes », parce qu’elles sont des mesures de degrés les uns en dessous des autres, qui se dessinent dans la matière de l’être émané (comme il est écrit dans Lumière intérieure, Partie 1, chapitre 1, point 50, le passage commençant par « Maintenant »), et que tout cela n’existe pas en Ein Sof, comme il est expliqué dans le point précédent et dans Lumière intérieure, à cet endroit."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "fr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:5",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "C’est-à-dire intermédiaire entre l’Emanateur et l’être émané, car s’y trouvent déjà incluses les racines des quatre formes de l’être émané « en puissance », mais non en acte."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "fr": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:6",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "C’est-à-dire que les quatre phases HB TM sont aussi appelées quatre éléments, dont aucune phase ne se trouve dans Tohu, comme ci-dessus."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "fr": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:7",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "C’est-à-dire qu’il est déjà sorti du domaine de l’Emanateur, qui est Ein Sof, appelé néant. Et comprenez cela."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "fr": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:8",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "À savoir les quatre phases HB TM, appelées aussi quatre formes, comme ci-dessus, juste avant. Cependant, elles n’y sont qu’« en puissance » et non en acte, comme ci-dessus. Mais dans « Bohu », qui est le secret de l’étincelle créée, comme ci-dessus, se trouvent déjà les racines des quatre formes en acte véritable, qui sont le secret de l’expansion de Ein Sof pour faire des Kélim par la frappe sur le Massakh (comme ci-dessus dans les paroles du ARI, Partie 3, chapitre 1, point 1), car les quatre phases de Ohr Yashar qui se sont étendues de Ein Sof sont déjà revêtues dans Ohr Hozer qui monte de bas en haut, et l’Essence de Ein Sof est déjà revêtue dans cette Ohr Hozer, dans le secret du « Roch » du degré. Toutefois, ces Kélim sont appelés racines de Kélim et ne sont achevés qu’après leur expansion en dessous du Massakh, comme ci-dessus."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "fr": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:9",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "C’est-à-dire celle qui est appelée « Bohu », laquelle est déjà appelée Roch du degré, comme ci-dessus dans le point précédent. Étudiez-le bien là-bas."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "fr": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:10",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Cela se rapporte au début des propos, c’est-à-dire que la phase la plus dernière possible en Ein Sof est appelée Tohu."
+    }
+  ]
+}
