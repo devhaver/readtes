@@ -1,0 +1,428 @@
+{
+  "chapterId": "part-02/questions-terminology-01",
+  "layer": "source",
+  "versionId": "es-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 1",
+      "html": "¿Qué es Adam Kadmón? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 2",
+      "html": "¿Qué es la Luz Retornante? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 3",
+      "html": "¿Qué es la Luz Directa? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 4",
+      "html": "¿Qué es la Luz Circundante? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 5",
+      "html": "¿Qué es la Luz Interna? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 6",
+      "html": "¿Qué es la longitud? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 7",
+      "html": "¿Qué es Biná? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 8",
+      "html": "¿Qué es «no adherido»? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 9",
+      "html": "¿Qué es un límite? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 10",
+      "html": "¿Qué es un techo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 11",
+      "html": "¿Qué es Guf (cuerpo)? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 12",
+      "html": "¿Qué es una rueda? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 13",
+      "html": "¿Qué son GaR? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 14",
+      "html": "¿Qué es la corporeidad? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 15",
+      "html": "Por vía de traspaso. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 16",
+      "html": "Iluminación desde lejos. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 17",
+      "html": "Refinación de la pantalla. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 18",
+      "html": "Alejamiento completo. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 19",
+      "html": "¿Qué es la inclinación del Rosh (cabeza)? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 20",
+      "html": "¿Qué es la inclusión de las Sefirot? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 21",
+      "html": "¿Qué es la atadura? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 22",
+      "html": "¿Qué es uno dentro del otro? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 23",
+      "html": "¿Qué es el acoplamiento mediante golpe? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 24",
+      "html": "¿Qué es Zeir Anpin, ZA? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 25",
+      "html": "¿Qué son ZaT? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 26",
+      "html": "¿Qué es la materia? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 27",
+      "html": "¿Qué es Jayá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 28",
+      "html": "¿Qué es la exterioridad? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 29",
+      "html": "¿Qué es Jojmá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 30",
+      "html": "¿Qué es una ventana? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 31",
+      "html": "¿Qué es Yejidá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 32",
+      "html": "¿Qué es salir hacia afuera? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 33",
+      "html": "¿Qué es un descenso? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 34",
+      "html": "¿Qué es lo recto? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 35",
+      "html": "¿Qué es Kéter? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 36",
+      "html": "¿Qué es «poco a poco»? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 37",
+      "html": "¿Qué es un conector? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 38",
+      "html": "¿Qué son las aguas de Luz? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 39",
+      "html": "¿Qué es Maljut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 40",
+      "html": "¿Qué es de arriba hacia abajo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 41",
+      "html": "¿Qué es de abajo hacia arriba? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 42",
+      "html": "Quien causa. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 43",
+      "html": "Pantalla. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 44",
+      "html": "Circundante. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 45",
+      "html": "Se anula. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 46",
+      "html": "Extendido. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 47",
+      "html": "Néfesh. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 48",
+      "html": "NaRaNJaY. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 49",
+      "html": "Neshamá. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 50",
+      "html": "Causante. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 51",
+      "html": "¿Qué es Sium? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 52",
+      "html": "¿Qué es lo cercano? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 53",
+      "html": "¿Qué es el grosor? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 54",
+      "html": "¿Qué es pasar? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 55",
+      "html": "¿Qué son superior e inferior? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_55\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 56",
+      "html": "¿Qué es la esencia? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_56\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 57",
+      "html": "¿Qué es la interioridad? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_57\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 58",
+      "html": "¿Qué son la interioridad y la exterioridad? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_58\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 59",
+      "html": "¿Qué es un canal? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_59\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 60",
+      "html": "¿Qué es una línea? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_60\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 61",
+      "html": "¿Qué es un nivel erguido? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_61\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 62",
+      "html": "¿Qué es una asignación? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_62\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 63",
+      "html": "¿Qué es el suelo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_63\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 64",
+      "html": "¿Qué es Rosh (cabeza)? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_64\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 65",
+      "html": "¿Qué es Rúaj? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_65\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 66",
+      "html": "Espiritualidad. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_66\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 67",
+      "html": "Lejano. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_67\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 68",
+      "html": "Comienzo de la expansión. <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_68\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 69",
+      "html": "¿Qué es «de inmediato»? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_69\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section II, List of Questions on Terminology 70",
+      "html": "¿Qué es el fin de todos ellos? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_II,_List_of_Answers_on_Terminology_70\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    }
+  ]
+}
