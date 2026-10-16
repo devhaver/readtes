@@ -1,0 +1,41 @@
+{
+  "chapterId": "part-06/chapter-04",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Keter’in saçları Roş’unu dışarıdan Metzah’a (alın) ve Avzen’lere (kulaklar) kadar çevreler</b>: Yukarıda, sayfa 392, “Ve işte her ne kadar” diye başlayan pasajda açıklandı ki saçlar iki Behina’ya bölünür: Roş ve Guf. Bina olan Avzen’lere kadar olan Roş Behina’sı sayılır, çünkü Zivug’un yeri Hohma olan Roş’un Nikvey Eynaim’indeydi; bu yüzden Işıklar oradan aşağıya Avzen, Hotem, Pe’ye, Guf denen Hitlabşut Behina’sına genişledi. Zaten biliyorsun ki Roş ile Guf arasındaki fark çok büyüktür. Saçların Avzen’lere kadar uzandığı sözü budur; çünkü oraya kadar Roş Behina’sı sayılır, ancak Avzen’lerden aşağısı artık Guf Behina’sı sayılır, devamında yazıldığı gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>genel SAG’dan, Nekudim denen, uzanan sakal saçları</b>. Bil ki Roş Behina’sından Guf Behina’sına çıkan bu AHP’ye her zaman genel SAG denir. Sebep, Ari’nin ileride yazdığı gibi, üzerinde çalıştığımız AK’ın bu SAG’ının tamamı <b>(8)</b> AB Behina’sı sayılır; yalnızca içindeki alt yarısı olan, ileride YEŞSUT denen Nekudot dışında. Yalnızca o SAG sayılır; çünkü yalnızca o Nikvey Eynaim yoluyla Guf’un AHP Behina’sına çıktı ve bu YEŞSUT her yerde genel SAG denir; Nekudim’in on Sefirot’unun Roş’udur, önümüzde uzun uzun yazıldığı gibi.<br>Ve yukarıda açıklandı ki Nikvey Eynaim’deki, AHP’yi Guf Behina’sına çıkaran Zivug’un başlangıcı SAG’ın Roş’unun kendisinde yapıldı, ama saçlar sırrıyla: Avzen’lere kadar olan Roş saçları aşağıdan Yukarıya Behina’da, yani Roş olarak değerlendirilir, <b>(9)</b> bu yüzden hâlâ AB Behina’sı sayılır; çünkü alt Hey’in Nikvey Eynaim’e yükselmesi yüzünden onda henüz hiçbir değişiklik fark edilmez. Ancak Nikvey Eynaim’den aşağısı, yani Dikna saçları, artık Roş’tan çıkıp Guf Behina’sı olmuş AHP sayılır; bu yüzden Dikna saçları denen saçların AHP’si yalnızca genel SAG sayılır, bu da Nekudim Behina’sıdır. Bunların hepsi ileride genişçe açıklanacaktır, çünkü yerleri orasıdır.<br>Ve onun sözü şudur: Sonra genel SAG’dan, Nekudim denen, uzanan sakal saçlarını çıkardı. Yani Avzen’ler Behina’sından aşağısı, Nekudim denen genel SAG Behina’sında sakal saçları uzandı; ama Nikvey Eynaim’den, yani Hohma’daki Malhut’tan aşağıdan Yukarıya çıkan o saçlar hâlâ AB sayılır ve yukarıda bahsedildiği gibi genel SAG’ın dalları değildir. Böylece Roş saçları AB’dan uzanan dallar, Dikna saçları ise genel SAG’dan uzanan dallardır. Bunu hatırla."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "3",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:4:3",
+      "section": "ohr-pnimi",
+      "html": "<br><b>üç Mohin’in genelliği</b>. Yani Nekudim’in KHB olan ilk üç Sefirot’u bu sakal saçlarından yapılır; kendisinden değil, Şibolet ha Zakan denen sakal saçlarının dördüncü Tikun’unda toplanan onlardaki Genellik’ten. Bunların hepsi ileride genişçe yazıldığı gibi. Ve onun, bunlardan onda bulunan üç Mohin’in genelliği yapıldı sözü budur."
+    }
+  ]
+}

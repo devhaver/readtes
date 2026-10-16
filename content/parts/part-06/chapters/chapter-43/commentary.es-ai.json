@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>completamente bajo el lugar de Maljut de Atzilut</b>: Es decir, bajo el nuevo punto de la restricción, donde concluye la fase de Atzilut y comienza el lugar de los mundos de separación. Como se mencionó antes."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>su lugar debajo de la Sefirá de Biná permaneció vacante</b>. Pues los GaR, que son KaJaB, subsistieron, y solo los reyes de Biná hacia abajo se rompieron, <b>(51)</b> y su lugar permaneció vacante. Y este es el lugar donde se sitúa el mundo de Atzilut tras la corrección."
+    }
+  ]
+}

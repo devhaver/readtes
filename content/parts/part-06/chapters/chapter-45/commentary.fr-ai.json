@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-45",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Ani Yeshena, correspondant au dernier Hey, puisqu’en révoquant la lumière des Nikoudim, Ani Yeshena</b> : Car l’essentiel de la brisure des récipients provenait de la phase du dernier Hey, et de là lui est venu le secret du sommeil ; c’est pourquoi le sommeil est évoqué dans le dernier Hey."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Hokhma est le premier Hey, etc. les points sont Hokhma</b>. Comme il est écrit plus haut (à la page 432, le passage commençant par « lorsque vous compterez », et à la page 433, le passage commençant par « la lettre Yod »), les lumières qui sont montées en MAN depuis les NHY de AK comprennent toutes les Nekoudot de SAG, qui sont de Hokhma vers le bas, avec les ZON de AK. Et l’on sait que le Partsouf est appelé du nom de sa Sefira supérieure ; c’est pourquoi les Nekoudot sont appelées Hokhma."
+    }
+  ]
+}

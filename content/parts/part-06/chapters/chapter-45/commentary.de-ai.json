@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-45",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Ani Yeshena, entsprechend dem unteren Hej, denn bei der Aufhebung des Lichts der Nekudim: Ani Yeshena</b>: Denn die Hauptsache des Zerbrechens der Gefäße war von der Bchina des unteren Hej, und daraus erstreckt sich zu ihr das Geheimnis des Schlafes, und darum wird der Schlaf im unteren Hej angedeutet."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Chochma ist das erste Hej usw. und die Nekudot sind Chochma</b>. Wie oben geschrieben steht (S. 432, Abschnitt beginnend mit „Wenn du zählst“, und Abschnitt beginnend mit „Der Buchstabe Yud“ auf S. 433), umfassen die Lichter, die zu MaN aus NeHJ de AK aufstiegen, alle Nekudot de SaG, die von Chochma abwärts sind, zusammen mit den SoN de AK. Und es ist bekannt, dass der Parzuf nach der obersten Sefira benannt wird, und darum werden die Nekudot Chochma genannt."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>complètement sous la place de Malkhout d’Atzilout</b> : C’est-à-dire sous le nouveau point de Tsimtsoum, là où se termine la phase de Atsilout et où commence le lieu des mondes de séparation, comme ci-dessus."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Leur place sous la Sefira de Binah resta vacante</b>. Car les GAR, qui sont KHB, ont subsisté, et seuls les rois de Bina et en dessous se sont brisés, <b>(51)</b> et leur place est restée vacante. Et c’est dans ce lieu que se tient le monde de Atsilout après la correction."
+    }
+  ]
+}

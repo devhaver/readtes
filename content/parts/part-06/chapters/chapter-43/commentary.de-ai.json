@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ganz unter den Platz der Malchut de Azilut</b>: Das heißt unter den neuen Punkt des Zimzum, wo die Bchina Azilut endet und der Platz von BYA der Trennung beginnt. Wie oben erwähnt."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ihr Platz blieb frei unter der Sefira Bina</b>. Denn die GaR, das sind KaCHaB, bestanden fort, und nur die Könige von der Bina abwärts zerbrachen, <b>(51)</b> und ihr Platz blieb frei. An diesem Platz befindet sich der Stand der Welt Azilut nach der Korrektur."
+    }
+  ]
+}

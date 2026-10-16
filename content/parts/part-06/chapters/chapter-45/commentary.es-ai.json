@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-45",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Ani Yeshená, correspondiente a la última Hey, pues en la anulación de la Luz de Nekudim, Ani Yeshená</b>: Pues el rompimiento de las vasijas fue principalmente de la fase de la última Hey, y de esto le deriva el secreto del sueño, y por eso el sueño está aludido en la última Hey."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Jojmá es la primera Hey, etc., y las Nekudot son Jojmá</b>. Como se escribe arriba (Página 432, el pasaje que comienza «cuando cuentes»; y el pasaje que comienza «la letra Yod», en la Página 433), que las Luces que subieron como MaN desde NeHY de AK incluyen todas las Nekudot de SAG, que son de Jojmá hacia abajo, con los ZoN de AK. Y es sabido que el Partzuf se denomina por la Sefirá superior, y por eso las Nekudot se denominan con el nombre de Jojmá."
+    }
+  ]
+}
