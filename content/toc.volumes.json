@@ -449,9 +449,9 @@
             "enOfficial": "partial",
             "enAi": "full",
             "ru": "full",
-            "uk": "none",
-            "es": "none",
-            "fr": "none"
+            "uk": "partial",
+            "es": "partial",
+            "fr": "partial"
           }
         }
       ]
@@ -585,7 +585,7 @@
             "en": "full",
             "enOfficial": "none",
             "enAi": "full",
-            "ru": "partial",
+            "ru": "full",
             "uk": "none",
             "es": "none",
             "fr": "none"
@@ -645,7 +645,7 @@
             "en": "full",
             "enOfficial": "none",
             "enAi": "full",
-            "ru": "none",
+            "ru": "partial",
             "uk": "none",
             "es": "none",
             "fr": "none"

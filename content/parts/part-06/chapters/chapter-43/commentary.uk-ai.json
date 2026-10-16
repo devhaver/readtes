@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "uk-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Повністю під місце малхут Ацилуту</b>: Тобто під новою точкою цимцуму, де закінчується бхіна Ацилут і починається місце світів відокремлення. Як сказано вище."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Їхнє місце залишилося вільним під сфірою біна</b>. Бо ҐАР, тобто КАХАБ, втрималися, і розбилися лише мелахім від біни й нижче, <b>(51)</b> і їхнє місце залишилося вільним. І в цьому місці перебуває світ Ацилут після виправлення."
+    }
+  ]
+}
