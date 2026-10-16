@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "ru-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Полностью ниже места малхут де-Ацилут</b>: то есть ниже новой точки сокращения, где оканчивается категория Ацилута и начинается место миров «алмин де-перуда». Как сказано выше."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Остались их места свободными ниже сфиры бина</b>. Ибо ГАР, то есть КАХАБ, удержались, и разбились лишь мелахим от бины и ниже, <b>(51)</b> и осталось их место свободным. А в этом месте после исправления находится мир Ацилут."
+    }
+  ]
+}
