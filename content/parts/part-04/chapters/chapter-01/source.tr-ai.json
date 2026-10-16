@@ -1,0 +1,117 @@
+{
+  "chapterId": "part-04/chapter-01",
+  "layer": "source",
+  "versionId": "tr-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section IV 1",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:1",
+      "heading": "מבאר ראש וגוף דאדם קדמון עד הטבור, אשר בע\"ס דראש אין עוד מציאות כלי, ובע\"ס דגוף ישנה מציאות כלי א' שנקרא כתר, ועה\"ס נבחנות בכלי זה ע\"פ התרחקותן מבחינה ד'. ולהיותן בכלי א' נקראות עקודים, ובו י\"א ענינים: — אין לנו כח לעסוק קודם עולם האצילות",
+      "html": "<span class=\"tes-footnote\" title=\"Hayat Ağacı, Heyhal AK, Kapı 4, Bölüm 1.\">*</span>Zaten biliyorsun ki on Sefirot’un ortaya çıkışından önceki durumu incelemeye de, <a class=\"tes-anchor\" href=\"#op-1\" data-anchor=\"op-1\">1</a>hiçbir benzetme ve biçim hayal etmeye de asla gücümüz yoktur. Ancak kulağı yatıştırmak için <a class=\"tes-anchor\" href=\"#op-2\" data-anchor=\"op-2\">2</a>örnekler ve benzetmelerle konuşmamız gerekir; bu nedenle orada yukarıda bir resmin varlığından söz etsek bile, bu yalnızca kulağı yatıştırmak içindir.",
+      "anchors": [
+        "op-1",
+        "op-2"
+      ]
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:2",
+      "heading": "י\"ס דאצילות הן אורות וכלים, ובכדי לקשר בשרשן שלמעלה, צריכים לדבר בסדר המדרגה מראש עד סוף",
+      "html": "Ancak şunu bil ki, <a class=\"tes-anchor\" href=\"#op-3\" data-anchor=\"op-3\">3</a>Atzilut’un on Sefirot’u iki meseledir: Birincisi maneviyatın Hitpaştut’udur (yayılma-genişleme), ikincisi ise Öz’ün içlerinde genişlediği Kelim ve organlardır. İşte bu iki Behina için bütün bunların yukarıda bir kökü olması gerekir; bu yüzden dereceler sırasını Roş’dan (baş) Sof’a (son) kadar anlatmamız gerekir.",
+      "anchors": [
+        "op-3"
+      ]
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:3",
+      "heading": "האורות דגוף דא\"ק מפה עד הטבור נקראים עקודים",
+      "html": "<span class=\"tes-footnote\" title=\"Hayat Ağacı, Heyhal AK, Kapı 6, Bölüm 1.\">*</span>Şöyle yazılmıştır: “Rüyada gördüm ve işte sürünün üzerine çıkan tekeler <a class=\"tes-anchor\" href=\"#op-4\" data-anchor=\"op-4\">4</a>Akudim, Nekudim ve Brudim idi.” Ayrıca şöyle yazılmıştır: “Çünkü Lavan’ın sana yaptığı her şeyi gördüm.” Bu ayette, burada konuştuğumuz bütün bu Behinot ima edilmiştir; çünkü Lavan, Üst Beyazlık’ın sırrıdır; o, bu Atzilut’un tamamından önce gelendir ve bütün bu Behinot’u, yani Akudim, Nekudim ve Brudim’i, onlardan sonra Yaakov adıyla anılan Atzilut’u yaratacak olan bu Atzilut’un ihtiyacı için yapandır. Akudim ile başladı; çünkü onlar Adam Kadmon’un Pe’inden (ağız) çıkan Işıklardır ve Kelim’in varoluşlarının ortaya çıkışı onlarla başladı: on Or Pinimi ve Or Makif Işığı, tek bir Kli’nin içinde birbirine bağlanmış ve birleşmişti. Bu nedenle onlara Akudim denir; “ve Yitzhak’ı bağladı” sözünden gelir, yani bağladı demektir.",
+      "anchors": [
+        "op-4"
+      ]
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:4",
+      "heading": "מהכאת או\"מ ואו\"פ זה בזה מחוץ לפה, נולדו הויות כלים",
+      "html": "İşte Or Pinimi Işıkları, Pe’in (ağız) içinde <a class=\"tes-anchor\" href=\"#op-5\" data-anchor=\"op-5\">5</a>Or Makif Işıklarıyla birbirine bağlı olduğundan, birlikte <a class=\"tes-anchor\" href=\"#op-6\" data-anchor=\"op-6\">6</a>Pe’in dışına çıktıklarında da birbirine bağlı oldukları için, <a class=\"tes-anchor\" href=\"#op-7\" data-anchor=\"op-7\">7</a>birbirine vurur ve çarpışırlar; bu çarpışmalarından Kelim Behina’sının varoluşları doğar.",
+      "anchors": [
+        "op-5",
+        "op-6",
+        "op-7"
+      ]
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:5",
+      "heading": "קודם עקודים, דהיינו בע\"ס דראש א\"ק, אין כלים,",
+      "html": "<span class=\"tes-footnote\" title=\"Hayat Ağacı, Heyhal AK, Kapı 7, Bölüm 1.\">*</span><a class=\"tes-anchor\" href=\"#op-8\" data-anchor=\"op-8\">8</a>Akudim’in varlığından önce Üst Işık hiçbir Kli’de kıyafetlenemezdi, çünkü <a class=\"tes-anchor\" href=\"#op-9\" data-anchor=\"op-9\">9</a>Kelim’de onu taşıyacak güç yoktu; Işık, <a class=\"tes-anchor\" href=\"#op-10\" data-anchor=\"op-10\">10</a>o büyük Işığın Hitpaştut’u Akudim Behina’sına ulaşana kadar bir Kli’de kıyafetlenmeden kaldı. Orada o büyük Işık için tek bir Kli varlığı oluştu ve o zaman <a class=\"tes-anchor\" href=\"#op-11\" data-anchor=\"op-11\">20</a>ortaya çıkışta Işığın bir tür sınırlanması başladı; <a class=\"tes-anchor\" href=\"#op-12\" data-anchor=\"op-12\">30</a>bu, şimdiye kadar mümkün olmamıştı.",
+      "anchors": [
+        "op-8",
+        "op-9",
+        "op-10",
+        "op-11",
+        "op-12"
+      ]
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:6",
+      "heading": "כלי דעקודים ה\"ס כתר. למטה מעקודים יצאו יוד כלים כח\"ב תו\"מ ובעקודים נעשתה מציאות כלי אחד לע\"ס",
+      "html": "Ancak başlangıçta Atzilut’a ulaşan kısımların Işığının tamamı yalnızca tek bir Kli’nin içinde gizlenmişti ve o Kli’de Üst Keter’in Kli Behina’sı vardı. Sonra Işık, Akudim denen yukarıdaki Behina’dan daha aşağıya genişledi ve o zaman on Kli yapıldı.",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:7",
+      "heading": "יש כח ע\"ס באור העליון",
+      "html": "Akudim’in varlığının ne olduğunu açıklamaya başlayalım. Şunu bil ki, Atzilut’da kıyafetlenmeye uygun olan kısım olan ve on Sefirot’un gücünü taşıyan Üst Işık, <a class=\"tes-anchor\" href=\"#op-13\" data-anchor=\"op-13\">40</a>on Işık olduklarının fark edilmesi ancak Akudim’in tamamlanmasından sonra olsa da, şüphesiz <a class=\"tes-anchor\" href=\"#op-14\" data-anchor=\"op-14\">50</a>bu on Işığın gücü başlangıçta onlarda vardı; yalnızca <a class=\"tes-anchor\" href=\"#op-15\" data-anchor=\"op-15\">60</a>Işık Kli’nin içinde sınırlanmadığı için, <a class=\"tes-anchor\" href=\"#op-16\" data-anchor=\"op-16\">70</a>onların on oldukları varlığı henüz fark edilmiyordu.",
+      "anchors": [
+        "op-13",
+        "op-14",
+        "op-15",
+        "op-16"
+      ]
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:8",
+      "heading": "המשיך אור העקודים מפה עד הטבור, וחזר ונסתלק למקורו לפה",
+      "html": "İşte Üst Yaratıcı, Akudim denen o Kli Behina’sını çıkarmak istediğinde ne yaptı? Işığını aşağıya doğru, ondan <a class=\"tes-anchor\" href=\"#op-17\" data-anchor=\"op-17\">80</a>Akudim Behina’sı yapılmasına uygun ölçünün sonuna kadar çekti; bu da Pe’den (ağız) Tabur’a (göbek) kadardır. <a class=\"tes-anchor\" href=\"#op-18\" data-anchor=\"op-18\">90</a>Işığı çektikten sonra o Işık yukarıya doğru <a class=\"tes-anchor\" href=\"#op-19\" data-anchor=\"op-19\">100</a>Pe’deki kaynağına geri döndü ve ayrıldı.",
+      "anchors": [
+        "op-17",
+        "op-18",
+        "op-19"
+      ]
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:9",
+      "heading": "רשימה שנשארה אחר הסתלקות האור נתהווה לבחינת כלי",
+      "html": "Bilinir ki Üst Işık genişleyip sonra geri dönüp gizlendiğinde, aşağıda mutlaka bir mühür izi bırakır. İşte aşağıda kalan Işık Reşimo’dur (izlenim). Üst Işık ayrılıp kaynağında gizlendiğinde, o Reşimo Işığı o Üst Işık olmaksızın aşağıda kalır; o zaman kalan Işığın uzaklaşması yoluyla bir Kli Behina’sı oluşur, <a class=\"tes-anchor\" href=\"#op-20\" data-anchor=\"op-20\">200</a>çünkü Işığın Hitpaştut’unun ve ardından ayrılmasının sebebi, bir Kli varlığının yapılmasına yol açtı.",
+      "anchors": [
+        "op-20"
+      ]
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:10",
+      "heading": "לפי שהאור נסתלק בבת אחת נעשה רק כלי אחד, ונקרא כתר",
+      "html": "Birinci Işık geri dönüp ayrıldığında, <a class=\"tes-anchor\" href=\"#op-21\" data-anchor=\"op-21\">300</a>bir anda ve tek bir an içinde ayrıldığı için, kalan Işığın bütün varlığı tek bir Kli oldu ve o, Keter denen Kli Behina’sı olarak anılır; çünkü Üst Işık henüz on Sefirot olarak ayrılmamıştı, çünkü on Sefirot oldukları henüz fark edilmiyordu. Bunun başka bir Sefira değil de Keter diye anılmasının nedeni ise Keter’in her zaman Yaratıcı’ya yakın olmasıdır.",
+      "anchors": [
+        "op-21"
+      ]
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section IV 1:11",
+      "heading": "ונבחנות ע\"ס בכלי זה, ע\"פ התרחקותן מבחי\"ד, דהיינו ע\"פ ד' בחינות שבאור העליון",
+      "html": "Ancak biz bu Kli’de Malhut’un Kli’si, Yesod’un Kli’si vb. bulunduğunu açıklamış olsak da, bu yüzden onlara on Kli denmez; çünkü henüz on Sefirot oldukları fark edilmiyor, ayrıca Işık da birlikte ayrıldı. Mesele, parçaları eşit olmayan tek bir uzun Kli’ye benzer; <a class=\"tes-anchor\" href=\"#op-22\" data-anchor=\"op-22\">400</a>bu parçaların birbirinden uzaklığına göre.",
+      "anchors": [
+        "op-22"
+      ]
+    }
+  ]
+}

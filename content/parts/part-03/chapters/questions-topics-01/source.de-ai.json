@@ -1,0 +1,818 @@
+{
+  "chapterId": "part-03/questions-topics-01",
+  "layer": "source",
+  "versionId": "de-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 102",
+      "html": "Warum schlägt das Licht von Ejn Sof auf den Massach im Kli der Malchut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_102\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 103",
+      "html": "Was bedeutet es, dass das Licht durch ein Fenster und ein Loch ohne Massach kommt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_103\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 104",
+      "html": "Warum gilt der Massach in der Malchut des Höheren als Gebender für die Stufe unter ihm? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_104\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 105",
+      "html": "Was ist die Ursache für das Funkeln der Lichter vom Massach abwärts? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_105\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 106",
+      "html": "Was bedeutet ein Leuchten durch einen Massach? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_106\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 107",
+      "html": "Was ist der Unterschied zwischen dem Weg des Durchgangs und dem Weg der Einkleidung? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_107\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 108",
+      "html": "Was ist die Bedeutung der Einkleidung in Chochma oder der Einkleidung in Bina und dergleichen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_108\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 109",
+      "html": "Was ist der Maßstab des Massach? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_109\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 110",
+      "html": "Was ist der Massach zwischen Azilut und Brija? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_110\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 111",
+      "html": "Wie gibt der Massach von Bchina Bet an Brija und der Massach von Bchina Alef an Yezira? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_111\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 112",
+      "html": "Warum wurde Bina in Brija zu einem verschlossenen Massach? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_112\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 113",
+      "html": "Warum durchbricht und zerbricht der Punkt der Malchut von Azilut den Massach? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_113\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 114",
+      "html": "Warum durchbrechen die GaR des AA den Massach nicht? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_114\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 115",
+      "html": "Warum offenbart sich die Awiut nicht auf einmal, sondern nur in der Ordnung von vier Stufen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_115\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 116",
+      "html": "Was sind die zwei Bchinot im Licht des Schauens? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_116\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 117",
+      "html": "Sind die vier Stufen in der Awiut des Or Yashar wie von oben nach unten begrenzt, und warum? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_117\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 118",
+      "html": "Wer bewirkt, dass die vier Bchinot des Or Yashar in der Stufe erkennbar und erfassbar sind? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_118\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 119",
+      "html": "Woher kommen die vier Bchinot im Or Choser? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_119\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 120",
+      "html": "Was ist der Unterschied im Or Choser, bevor sich das Or Yashar in ihm eingekleidet hat, und nachdem sich das Or Yashar in ihm eingekleidet hat? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_120\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 121",
+      "html": "Was ist der Grund für die Ausbreitung der Zehn Sefirot de Rosh zur Bchina Guf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_121\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 122",
+      "html": "Sind die vier Bchinot der Stufen des Or Choser, die ABYA begrenzen, im Sinne von oben nach unten, und warum? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_122\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 123",
+      "html": "Warum bewirkt die Awiut von Bchina Gimel die Stufe Chochma? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_123\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 124",
+      "html": "Wie kommen Siwugim de Hakaa im ACHaP zustande? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_124\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 125",
+      "html": "Warum schließen Zehn Sefirot von Or Choser ohne Or Yashar den Parzuf ab? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_125\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 126",
+      "html": "Was ist der Dampf, der aus der Stufe hervorgeht? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_126\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 127",
+      "html": "Warum geht aus den Ejnaim kein eigentlicher Dampf hervor? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_127\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 128",
+      "html": "Welche Wirklichkeit entsteht in den Sefirot durch das Licht des Schauens? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_128\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 129",
+      "html": "Welche Wirklichkeit entsteht in den Sefirot durch die Dämpfe des ACHaP? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_129\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 130",
+      "html": "Warum entsteht aus den Lichtern des ACHaP überhaupt keine Wirklichkeit?\n131/1) Was bedeutet es, dass es in der Welt Azilut überhaupt keinen Massach gibt?\n131/2) Was ist der Unterschied zwischen dem Licht des Wesens und dem Licht der Folge? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_130\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 131",
+      "html": "Warum wird jede Stufe der Zehn Sefirot nur nach der einen obersten Sefira benannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_131\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 132",
+      "html": "Warum befinden sich die beiden Lichtspender, SoN, auf einer Stufe? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_132\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 133",
+      "html": "Wie geschieht ein Siwug de Hakaa für die Zehn Sefirot von Brija und von Yezira? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_133\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 134",
+      "html": "Wie leuchtet Ejn Sof in Azilut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_134\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 135",
+      "html": "Warum empfängt Azilut nicht oberhalb von Chochma? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_135\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 136",
+      "html": "In welchem Gewand empfängt die Welt Azilut das Licht von Ejn Sof? Und die Welt Brija? Und die Welt Yezira? Und die Welt Assija? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_136\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 137",
+      "html": "Warum wird das Funkeln vom Höheren zum Unteren Siegel und Abdruck genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_137\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 138",
+      "html": "Woraus wurden die Kelim gemacht? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_138\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 139",
+      "html": "Warum gingen die Lichter den Kelim voraus? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_139\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 140",
+      "html": "Wie entstehen die Kelim de Rosh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_140\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 141",
+      "html": "Wie entstehen die Kelim de Toch? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_141\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 142",
+      "html": "Wie entstehen die Kelim de Sof? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_142\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 143",
+      "html": "Warum muss jeder Parzuf die drei Stufen Rosh, Toch und Sof haben? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_143\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 144",
+      "html": "Was ist der Aufstieg der Malchut zum Ausströmenden? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_144\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 145",
+      "html": "Wer bewirkt den Aufstieg der Malchut zum Ausströmenden? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_145\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 146",
+      "html": "Wann kleidet sich das Licht von Ejn Sof in den Kelim ein? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_146\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 147",
+      "html": "Warum gelten die Zehn Sefirot de Rosh nicht als Kelim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_147\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 148",
+      "html": "Wie sind die Kelim entstanden, einer oberhalb des anderen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_148\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 149",
+      "html": "Warum wurde aus der Bchina der Ejnaim kein Kli gemacht? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_149\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 150",
+      "html": "Warum gibt es in den ersten drei Bchinot des Or Yashar nichts von der Bchina eines Kli, sondern nur in Bchina Dalet allein? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_150\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 151",
+      "html": "Warum werden Ruach und Neshama Licht genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_151\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 152",
+      "html": "Woher werden die Wurzeln der Kelim gezogen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_152\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 153",
+      "html": "Woher kommen vollständige Kelim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_153\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 154",
+      "html": "Wie und wo prägen sich die drei Kelim des Guf – Bina, SA, Malchut – ein? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_154\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 155",
+      "html": "Wie werden die vier Bchinot der Awiut des Rosh genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_155\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 156",
+      "html": "Was sind die Bchina des Ziehens und die Bchina des Empfangens für das Licht von Yechida? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_156\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 157",
+      "html": "Was sind die Bchina des Ziehens und die Bchina des Empfangens: für das Licht von Chaja? Für das Licht von Neshama? Für das Licht von Ruach? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_157\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 158",
+      "html": "Warum werden die Stufen aller Kelim im Siwug de Hakaa gleich? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_158\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 159",
+      "html": "Woher gibt es fünf Bchinot im Kli der Malchut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_159\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 160",
+      "html": "Wie kann sich die Malchut de Rosh „aus ihr und in ihr“ erweitern, bis sie Zehn Sefirot vom Rosh in sich aufnimmt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_160\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 161",
+      "html": "Bis wohin breiten sich die Zehn Sefirot de Guf aus? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_161\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 162",
+      "html": "Warum gibt es für Chaja und Yechida jedes Parzuf keine entsprechenden Kelim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_162\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 163",
+      "html": "Was sind die Bezeichnungen: Shibolet, Chase, Tabur? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_163\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 164",
+      "html": "Wann werden die Kelim, einer oberhalb des anderen, mit Licht gefüllt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_164\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 165",
+      "html": "Warum kleidet sich das Licht von Yechida in Galgalta ein und nicht im Pe? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_165\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 166",
+      "html": "Warum kleidet sich das Licht von Chaja nicht im Chotem ein? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_166\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 167",
+      "html": "Wie wurde AB aus dem Parzuf Galgalta ausgeströmt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_167\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 168",
+      "html": "Wie wurde der Parzuf SaG aus dem Parzuf AB ausgeströmt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_168\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 169",
+      "html": "Was ist die Ursache für die Hisdakchut der Awiut in der Malchut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_169\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 170",
+      "html": "Warum geschieht der Siwug de Hakaa für die Zehn Sefirot de Rosh des Unteren am Ort des Chase des Höheren? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_170\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 171",
+      "html": "Warum liegt die Wurzel jedes unteren Parzuf im Pe des Höheren? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_171\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 172",
+      "html": "Warum kleidet der Rosh des Parzuf AB am Ort vom Pe bis zum Chase im Parzuf Galgalta ein? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_172\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 173",
+      "html": "Warum kann der Rosh von AB nicht oberhalb des Pe von Galgalta einkleiden, und ebenso SaG auf AB usw.? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_173\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 174",
+      "html": "Was sind die Bezeichnungen: Wurzel, Neshama, Guf, Gewand, Halle? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_174\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 175",
+      "html": "Warum trennten sich das Gewand und die Halle von den inneren Kelim und wurden zu Makifim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_175\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 176",
+      "html": "Warum werden die fünf Bchinot mit den Namen angedeutet: Wurzel, Neshama, Guf, Gewand, Halle? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_176\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 177",
+      "html": "Warum werden NaRaN, die zu den Unteren gehören, in der Bchina Wurzel, Neshama und Guf eingekleidet, die zu den Höheren gehören? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_177\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 178",
+      "html": "Wie werden die fünf Bchinot in der Neshama genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_178\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 179",
+      "html": "Wie werden die fünf Bchinot im Guf genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_179\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 180",
+      "html": "Wie werden die fünf Bchinot im Gewand genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_180\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 181",
+      "html": "Wie werden die fünf Bchinot in der Halle genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_181\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 182",
+      "html": "Warum ist jede der fünf Bchinot in Wurzel, Neshama, Guf, Gewand und Halle in allen vier enthalten? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_182\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 183",
+      "html": "Welche Bchina von SA und Malchut befindet sich nach dem Zimzum Bet? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_183\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 184",
+      "html": "Wie kleiden Wurzel, Neshama, Guf, Gewand und Halle von Atik de Azilut AK ein? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_184\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 185",
+      "html": "Von welcher Welt an beginnt die Wurzel für die Unteren? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_185\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 186",
+      "html": "Welcher Parzuf von AK gilt als die Bchina Wurzel für die allgemeinen Zehn Sefirot? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_186\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 187",
+      "html": "Warum zählt man einmal vier Bchinot und einmal fünf Bchinot? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_187\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 188",
+      "html": "Warum beginnen die Zehn Sefirot nicht mit Keter? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_188\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 189",
+      "html": "Was sind die allgemeinen Zehn Sefirot? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_189\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 190",
+      "html": "Was sind die vielen Welten oberhalb von Azilut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_190\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 191",
+      "html": "Was ist der Unterschied zwischen den einzelnen NaRaNCHaY in jedem Parzuf und den fünf Parzufim AB, SaG, MaH, BoN in jeder einzelnen Welt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_191\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 192",
+      "html": "Was ist der Unterschied zwischen den fünf Parzufim und den fünf Welten? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_192\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 193",
+      "html": "Wie werden die Zehn Sefirot von Or Yashar und Or Choser genannt, die durch einen einzigen Siwug de Hakaa hervorgehen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_193\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 194",
+      "html": "Wonach werden die fünf Stufen benannt, die eine oberhalb der anderen hervorgehen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_194\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 195",
+      "html": "Warum werden die fünf Parzufim mit den Namen AB, SaG, MaH und BoN bezeichnet? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_195\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 196",
+      "html": "Warum wird der Guf „die sieben Unteren“ genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_196\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 197",
+      "html": "Gibt es irgendeine Unterscheidung in AK und ABYA hinsichtlich der vier Bchinot des Or Yashar, und warum? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_197\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 198",
+      "html": "Warum werden ABYA mit den vier Buchstaben der HaWaYaH bezeichnet? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_198\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 199",
+      "html": "Warum werden alle Bchinot in Azilut Neshamot genannt und die in Brija Gufim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_199\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 200",
+      "html": "Was ist der Unterschied zwischen einem Punkt und einer Sefira? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_200\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 201",
+      "html": "Was ist der Unterschied zwischen einer Sefira und einem Parzuf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_201\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 202",
+      "html": "Wie viele Bchinot von Zehn Sefirot müssen hervorgehen, um eine einzige Stufe zu vollenden? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_202\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 203",
+      "html": "Warum wird Keter Ejn Sof genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_203\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 103,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 204",
+      "html": "Warum wird Keter „das Mittlere“ zwischen dem Ausströmenden und dem Ausgeströmten genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_204\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 104,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 205",
+      "html": "Warum werden die Rashim aller Stufen Ejn Sof genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_205\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 105,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 206",
+      "html": "Was ist die Bedeutung der Einkleidung von Ejn Sof in Keter? In Chochma? In Bina? In SA? In Malchut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_206\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 106,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 207",
+      "html": "Warum braucht man eine mittlere Bchina zwischen dem Schöpfer und dem Geschaffenen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_207\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 107,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 208",
+      "html": "Warum gehört Keter nicht zur Gesamtheit der Zehn Sefirot und wird in den Buchstaben der HaWaYaH nur durch die Spitze des Yud angedeutet? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_208\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 108,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 209",
+      "html": "Was ist die Wurzel der vier Bchinot in Potenz? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_209\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 109,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 210",
+      "html": "Was ist die Wurzel der vier Bchinot tatsächlich? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_210\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 110,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 211",
+      "html": "Warum wurde die Malchut de Malchut von Azilut zu Atik in der Welt Brija? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_211\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 111,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 212",
+      "html": "Aus welcher Bchina wird Keter „Ich bin der Letzte“ genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_212\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 112,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 213",
+      "html": "Aus welcher Bchina wird Keter „Ich bin der Erste“ genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_213\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 113,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 214",
+      "html": "Woher empfängt Keter de Brija, und wer gilt als seine Wurzel? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_214\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 114,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 215",
+      "html": "Warum gelten alle Bchinot in AK als Bchinot von Ketarim für die Bchinot in ABYA? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_215\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 115,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 216",
+      "html": "Warum gelten CHaGaT des AA als ein Rosh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_216\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 116,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 217",
+      "html": "Warum ist die Bchina des AA nicht in jeder Welt erkennbar? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_217\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 117,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 218",
+      "html": "Warum wird die Malchut „Aspaklaria, die von sich aus nichts hat“ genannt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_218\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 118,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 219",
+      "html": "Was ist die Bedeutung des Hinabsteigens eines Punktes von einer höheren Welt in eine untere Welt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_219\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 119,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 220",
+      "html": "Wie verringerte sich der Mond, das heißt die Malchut von Azilut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_220\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 120,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 221",
+      "html": "Warum gilt der Punkt, der von Welt zu Welt hinabsteigt, als aus der Bchina ihrer eigenen Wirklichkeit? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_221\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 121,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 222",
+      "html": "Warum saugt der hinabsteigende Punkt von allen Höheren, obwohl er kleiner ist als sie alle? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_222\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 122,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 223",
+      "html": "Warum wird das Or Yashar in allen Stufen von Ejn Sof gezogen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_223\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 123,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 224",
+      "html": "Warum gibt es keinerlei Unterscheidung in den vier Bchinot des Or Yashar, vom Rosh der Linie bis zum Ende von Assija? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_224\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 124,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 225",
+      "html": "Warum kann das Or Yashar nicht vom Tabur abwärts hindurchgehen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_225\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 125,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 226",
+      "html": "Warum gilt die höhere Stufe stets als Ausströmende im Verhältnis zur Stufe unter ihr? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_226\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 126,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 227",
+      "html": "Was sind die zwei Wurzeln, die für jede Bchina unterschieden werden? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_227\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 127,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 228",
+      "html": "Wie werden die Zehn Sefirot genannt, deren Stufe gleich ist? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_228\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 128,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 229",
+      "html": "Warum liegt der Wohnort der Klipot zwischen der Haut und dem Gewand? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_229\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 129,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 230",
+      "html": "Warum ist das Or Pnimi in der Haut schlechter als in Fleisch, Sehnen, Knochen und Mark des Parzuf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_230\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 130,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 231",
+      "html": "Warum hinterlässt alles, was in der Kedusha ist, einen Eindruck? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_231\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 131,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 232",
+      "html": "Bis zu welchem Maß kann der Mensch erlangen? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_232\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 132,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 233",
+      "html": "Warum gilt das Nefesh des Höheren als niedriger als die Bchina Ruach? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_233\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 133,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 234",
+      "html": "Woher kommen NaRaNCHaY des Nefesh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_234\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 134,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 235",
+      "html": "Was ist der Unterschied zwischen: Welt, Parzuf, Sefira und Punkt? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_235\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 135,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 236",
+      "html": "Was ist der Unterschied zwischen: Zehn Sefirot des Or Yashar, Zehn Sefirot des Or Choser, Zehn Sefirot, deren Stufe gleich ist, Zehn Sefirot, die eine oberhalb der anderen stehen, Zehn Sefirot, die eine unterhalb der anderen stehen, Zehn Sefirot des Rosh, Zehn Sefirot des Toch, Zehn Sefirot des Sof, den fünf Bchinot im Kli der Malchut, den fünf Bchinot der Kelim in Potenz und den fünf Bchinot der Kelim tatsächlich? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_236\" target=\"_blank\" rel=\"noopener noreferrer\">zur Antwort</a>)</small>",
+      "anchors": []
+    }
+  ]
+}

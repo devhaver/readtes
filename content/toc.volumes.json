@@ -191,9 +191,9 @@
             "enOfficial": "partial",
             "enAi": "partial",
             "ru": "full",
-            "uk": "partial",
-            "es": "partial",
-            "fr": "partial"
+            "uk": "full",
+            "es": "full",
+            "fr": "full"
           }
         },
         {
@@ -250,10 +250,10 @@
             "en": "full",
             "enOfficial": "full",
             "enAi": "full",
-            "ru": "partial",
-            "uk": "none",
-            "es": "none",
-            "fr": "none"
+            "ru": "full",
+            "uk": "full",
+            "es": "full",
+            "fr": "full"
           }
         }
       ]
@@ -326,7 +326,7 @@
             "en": "full",
             "enOfficial": "full",
             "enAi": "partial",
-            "ru": "none",
+            "ru": "full",
             "uk": "partial",
             "es": "none",
             "fr": "none"
@@ -388,7 +388,7 @@
             "en": "full",
             "enOfficial": "partial",
             "enAi": "partial",
-            "ru": "partial",
+            "ru": "full",
             "uk": "none",
             "es": "partial",
             "fr": "partial"

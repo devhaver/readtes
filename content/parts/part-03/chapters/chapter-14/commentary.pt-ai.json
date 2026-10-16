@@ -1,0 +1,73 @@
+{
+  "chapterId": "part-03/chapter-14",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "pt": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "A Luz é designada aqui pelo nome de internalidade, e o Kli pelo nome de externalidade. E o assunto de internalidade e externalidade devemos sempre entender segundo o que se diz no lugar."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "pt": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Os Kelim do mundo de Assia são chamados Ofanim, e as Luzes que há no mundo de Assia são chamadas Nefesh."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "pt": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Isto é, em relação às dez Sefirot “abrangentes”, que são os cinco mundos AK e ABYA, correspondentes a KHB, ZA e Malchut, nos quais se vestem Yehida, Haya, Neshama, Ruach e Nefesh. E em relação a isso, todas as Luzes de Assia são apenas o discernimento de Malchut e Nefesh. Contudo, em relação particular ao próprio mundo de Assia, há ali todo o NRNHY, como ele explica adiante."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "pt": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:4",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Isto é, cinco Partzufim, em cada Partzuf e Partzuf dos quais há NRNHY. E saiba que esses 25 discernimentos são necessários em cada mundo por causa da emanação daquele único grau pelo qual aquele mundo é discernido, como está escrito na Observação Interior aqui. E por isso é forçoso discernir também no mundo de Adam Kadmon cinco Partzufim, em cada um dos quais há dez Sefirot: KHB, ZA, Nukva, uma abaixo da outra, dentro das quais se veste o NRNHY daquele Partzuf particular.<br>E é preciso que você discirna aqui que há dois tipos de dez Sefirot: o primeiro são as dez Sefirot KHB, ZA e Malchut, cujo nível é igual, isto é, que saem de um só Zivug de Hakaa, ou seja, de um só discernimento. E o segundo são as dez Sefirot KHB, ZON, que estão uma abaixo da outra, isto é, que saem por meio de cinco Zivugim de Hakaa, devido à Hizdakchut do Massach, como dito acima na ordem da emanação dos cinco mundos AK e ABYA.<br>E saiba que aqueles 25 discernimentos necessários em cada mundo, mencionados nas palavras do Ari, referem-se apenas ao discernimento das dez Sefirot uma abaixo da outra, pois aquelas dez Sefirot cujo nível é igual são consideradas apenas uma Sefira, que recebe o nome da Luz mais elevada que há no nível (como dito acima, Capítulo 9, item 3)."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "pt": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:14:5",
+      "targetSeif": 10,
+      "section": "ohr-pnimi",
+      "html": "Este é um conhecimento muito importante, de que se necessita para compreender muitos assuntos, e é preciso lembrá-lo sempre. E a primeira compreensão é que, por causa disso, quando se faz algum movimento e novidade em algum mundo, e em algum discernimento leve deles, esse movimento particular provoca uma novidade na totalidade de todos os mundos, desde o Rosh da linha até o fim de Assia, seja para o castigo, seja para a bondade; isso é exatamente semelhante a um homem: não é possível imaginar que apenas uma pequena parte de algum de seus órgãos sinta dor ou deleite ali, e todo o corpo, da cabeça até as unhas dos pés, não o sinta; assim é este assunto, e compreenda isso muito bem."
+    }
+  ]
+}

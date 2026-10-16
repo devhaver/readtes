@@ -1,0 +1,136 @@
+{
+  "chapterId": "part-03/chapter-08",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "tr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:1",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Söz konusu olan, BYA’nın bütünlük içinde olduğu, Atzilut’a yükseldikleri zamandır. Örneğin Şabat’ta; o zaman birbirlerine kıyafetlenirler, tıpkı ruh, beden ve giysi olan ve Kral’ın sarayında oturan Üst insan gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "tr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:2",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Bunlar Partzuf’un on Sefirot’unun adlarıdır: Roş, içindeki Keter Sefira’sıdır. Kollar HG’dir: Hesed Sefira’sı sağ kol, Gevura Sefira’sı ise sol koldur. Beden Tiferet Sefira’sıdır ve Tabur’dan aşağısı dört Sefirot’tur: NHY ve Malhut."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "tr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:3",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yukarıdaki sözlerine dairdir (Bölüm 5, Madde 1): Hohma ruhtur, Bina bedendir, ZA giysidir ve Malhut saraydır. Işık yönünden hiçbir sınır olmadığı, hatta Kelim’deki sınıra bile aldırmadığı zaten açıklanmıştır, çünkü bu nedenle çarpışma yapar (yukarıda İç Işık’ta, Bölüm 1, Madde 70). Sınırlayan Kelim ise on Sefirot’ta yalnızca Bina’dan aşağıya doğru başlar: beden, giysi, saray; bunlar Behina Bet, Behina Gimel ve Behina Dalet’tir. Ruh denilen Hohma olan Behina Alef ise Kli sayılmaz. Ari’nin bedenin on Sefirot’una on ölçü denmesini söylemesi bundandır; çünkü sınır ve ölçü yapan Kelim Behina Bet’ten başlar. Oysa ruhun on Sefirot’unda, yani Hohma denilen Behina Alef’te “hiçbir ölçü yoktur”; çünkü Behina Alef Aviut sayılmaz, yukarıda anılan İç Işık’ta yazıldığı gibi; bu nedenle onda Kli ve ölçü Behina’sı yoktur."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "tr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:4",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "O, giysidir."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "tr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:5",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Yani Eyn Sof denilen Keter’e göre, Aviut’u olan Hohma da öyle ele alınır; çünkü Eyn Sof’ta alma arzusundan hiçbir şey yoktur; bunların hepsi uzun uzadıya yazıldığı gibi (İç Işık, Kısım 1, Bölüm 1, Madde 50’de “Ve sebep” diye başlayan pasaj). Bu nedenle ona Behina Alef adı verilir."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "tr": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:6",
+      "targetSeif": 8,
+      "section": "ohr-pnimi",
+      "html": "Yukarıda yazıldığı gibi, Keter’de bile ruh, beden, giysi, saray denilen dört Behina ayırt edilir; bunlar HB TM’dir, ancak yalnızca kökler Behina’sı olarak."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "tr": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:7",
+      "targetSeif": 9,
+      "section": "ohr-pnimi",
+      "html": "Derecelerin Sium’u, nerede olursa olsun, yalnızca onlardaki Malhut Kli’sinde bulunan Masah nedeniyledir; önceki Kısımlarda iyice yazıldığı gibi. Öyle ki derecelerin Eyn Sof’tan yaratılan varlığa doğru genişlemesi, Masah’a dokunduğu anda kesilir ve “duran” olarak kalır, genişlemekten alıkonur; tıpkı zeminin üstünde duran birinin, zeminin onun içinde ve içine genişlemesine izin vermemesi gibi. Aynı şekilde Masah da Işığı, kendi içinde ve içine genişlemekten alıkoyup durdurur; bu nedenle Masah’a “zemin” adı verilir.<br>Yukarıda İç Işık’ta (Kısım 3, Bölüm 3, Madde 6) zaten açıklandı ki Beria dünyasının on Sefirot’u, Atzilut dünyasındaki Behina Gimel’in Masah’ının Behina Bet’e Hizdakhut’u aracılığıyla yaratıldı, orada iyice inceleyin (ayrıca İç Gözlem, Kısım 2, Madde 72’de “Ve ... için” diye başlayan pasaja bakın, bütün devamını orada iyice inceleyin). Şu sözün anlamı da budur: Atzilut sarayının zemini olan Masah aracılığıyla ışık aşağıya parladı vb.; yani onun Hizdakhut’u nedeniyle, orada açıklandığı gibi."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "tr": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:8",
+      "targetSeif": 9,
+      "section": "ohr-pnimi",
+      "html": "Yani damga, damgalananın üzerinde bulunan biçimlerin hiçbirini eksik bırakmadığı gibi, Atzilut dünyasında bulunan bütün biçimler Beria dünyasında ortaya çıkar. Bu nedenle buna damga ve damgalanan adı verilir. Daha da özgün bir neden vardır: Üst Işığın Beria’ya bütün gelişi, Atzilut’un zemininde bulunan Behina Bet’in Masah’ı üzerindeki Zivug de Hakaa’nın gücüyle, ondan Yukarıya, Atzilut’un kendisinde yükselen Or Hozer’in gücü sayesindedir. İşte bu Or Hozer’in aynısı geri döndü, parladı, Masah’tan geçti ve Malhut Kli’sini kendisinden ve kendi içinde on Sefirot’a genişletti, onda Yukarıdan aşağıya yayıldı (yukarıda İç Işık’ta iyice açıklandığı gibi, Kısım 3, Bölüm 2, Madde 3). Böylece Or Hozer’in Atzilut’ta zeminden Yukarıya kıyafetlendirdiği bütün Behinot’un geri döndüğü, çekildiği ve zeminden aşağıya da geldiği ortaya çıkar. İşte bu Or Hozer tamamen bir damga gibidir: Üzerine kazınan her şey, ondan damgalananın üzerine kopyalanmış bulunur. Aynı şekilde o Or Hozer, aşağıdan Yukarıya kıyafetlendirdiği bütün Behinot’u ve seviyenin ölçüsünü geri getirdi, Yukarıdan aşağıya Beria’ya getirdi ve onları orada, Beria’da hiçbir eksiklik ve değişiklik olmaksızın kopyaladı. Bu nedenle bu eyleme damga ve damgalanan adı verilir."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "tr": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:9",
+      "targetSeif": 9,
+      "section": "ohr-pnimi",
+      "html": "Genel kural şudur: Or Hozer’in aşağıdan Yukarıya yükseldiği ayırt edilen her yerde, orada bu Or Hozer’e Üst Işığın Özü’nün kıyafetlenmiş olduğu bulunur; bu, Ari’nin yukarıda söz ettiği (Kısım 1, Bölüm 1, Madde 1), Kelim yapmak için Eyn Sof Işığının genişlemesini gösterir. Oysa Or Hozer’in Beria’nın on Sefirot’unda yukarıdaki biçimde Yukarıdan aşağıya genişlediği ayırt edilen yerde, hemen önceki pasajda yazıldığı gibi, burada bu Or Hozer’e kıyafetlenen Üst Işık artık Üst Işığın Özü değildir; Üst Işıktan uzanan “türemiş ışık” gibi ele alınır ve “Üst Işığın kendi ışığı değildir”. Sebebi şudur: Masah’taki alıkoyma nedeniyle Or Hozer’i yükselten Masah’ın gücüyle uzandığından, yukarıda bahsedildiği gibi, alttakinin gücü artık ona karışmıştır ve o da Masah’taki Kelim’in ölçüsüyle ve seviyenin ölçüsüyle sınırlıdır; çünkü Masah bu on Sefirot’un genişlemesinden önce gelir. Yani Masah, bu on Sefirot’un ortaya çıkmasına neden olan sebeptir ve bu yüzden Işık onun tarafından sınırlanır; Üst Işığın Özü kapsamından zaten çıkmıştır ve türemiş ışık sayılır. Oysa Masah’tan Yukarıya yükselen Or Hozer, oradaki Aviut’tan azıcık bir şey bile yükseltemez (yukarıda bahsedildiği gibi, Kısım 3, Bölüm 4, İç Işık, Madde 50), orada iyice inceleyin. Ancak bu, Beria dünyasından ve aşağısından söylenmiştir; Atzilut’ta ise yukarıda bahsedildiği gibi Masah hiç yoktur, bu nedenle orada Sium Raglin’e kadar bütün Işık, Işığın Özü sayılır."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "10",
+        "en": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:8:10",
+      "section": "ohr-pnimi",
+      "html": "Çünkü Üstteki Malhut, yukarıda bahsedildiği gibi, bu nedenle Yaradan kıvılcımı diye adlandırılır; çünkü kendisinin altındaki dereceyi uzatan ve ortaya çıkaran odur. Yukarıda yazıldığı gibi, çizginin başından Asiya’nın sonuna kadar bütün dereceler, Partzufim ve dünyalar birbirinden sebep ve sonuç yoluyla çıkar ve ortaya çıkar; yani her Üstteki’nin Malhut de-Malhut’u kendi derecesinin altına iner ve alttakinin dört Behinot’unun hepsini uzatan odur. Bu, Kısım 2’de, İç Gözlem’de, Bölüm 5, Madde 59’da uzun uzadıya iyice açıklanmıştır. (Çünkü bütün bu sözleri buraya yazmak gerekliydi, baskı masraflarını gözetmeseydim.)"
+    }
+  ]
+}

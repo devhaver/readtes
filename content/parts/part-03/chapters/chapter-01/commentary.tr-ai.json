@@ -1,0 +1,411 @@
+{
+  "chapterId": "part-03/chapter-01",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "tr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Beş dünya vardır ve bunlara Adam Kadmon, Atzilut, Beria, Yetzira ve Asiya denir. “Olam” (dünya) sözcüğü “He’elem” (gizlenme) sözcüğünden gelir; çünkü Ari’nin önümüzde açıklayacağı gibi, Eyn Sof Işığı bu dünyalarda her seferinde daha fazla gizlenir."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "tr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:2",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Cevaplar Tablosu, Kısım 2, Madde 56’ya bakın."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "tr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:3",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Cevaplar Tablosu, Kısım 1, Madde 25’e bakın."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "tr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:4",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Yani her bir dünyadaki her şeyin başlangıcı."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "tr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:5",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Cevaplar Tablosu, Kısım 2, Madde 14’e bakın."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "tr": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:6",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Bunun anlamı kavranamaz olmasıdır. “Eyn Sof” denmesi, bütün dereceleri sonlandıran ve kesen Malhut Sefira’sının (Cevaplar Tablosu, Kısım 1, Madde 40’a bakın) burada Üst Işık üzerinde hiçbir son ve kesinti yapmadığını ima etmek içindir; tam tersine, Işığın ihsan edilmesi onda başlar."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "tr": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:7",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Hitpaştut, Işığın Yaratıcı’dayken olduğundan daha kalın hâle geldiğini gösterir; aksi hâlde o Işık, Yaratıcı’nın sınırından nasıl çıkardı da “Işığın O’ndan dışarıya doğru Hitpaştut’u” adını alırdı? Bu kalınlaşmanın anlamı form eşitsizliğidir; Işık, yaratılan varlık sınırına girdiği için bunu edinir, yukarıda yazıldığı gibi (İç Gözlem, Kısım 2, Madde 5’te “Ve işte” diye başlayan pasaja bakın, orada iyice inceleyin)."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "tr": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:8",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Yukarıda İç Gözlem, Kısım 2, Madde 5’te “Ve işte” diye başlayan pasaja bakın."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "tr": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:9",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Bununla bize Kelim’in Işığın kendisinin sonucu olduğunu öğretir; çünkü Işık, yaratılan varlığa alma amacıyla genişlerken dört Behinot, HB ZON boyunca iner ve sonunda yaratılan varlıkta alma arzusunu doğurur. Behina Dalet olan bu arzu, yaratılan varlığın asıl Kli’sidir ve Işığın Hitpaştut’u sırasında edindiği Aviut’tur. İlk üç Behina ise yalnızca Behina Dalet’in ortaya çıkmasına sebep olur. Bu dört Behinot’un gerekliliği ve düzeni önceki Kısımlarda açıklanmıştır ve şimdi bunları uzatmaya gerek yoktur (İç Işık, Kısım 1, Bölüm 1, Madde 50’de “Ve nedeni” diye başlayan pasaja bakın)."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "tr": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:10",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Hitlabşut, gizlenme gibi bir anlama gelir; çünkü giysi onu giyeni gizler. Ancak bu, onun ortaya çıkma arzusundan kaynaklanır; bu gizlenmenin ıslahı olmadan ortaya çıkması mümkün olmadığı için onun içinde gizlenir ve onun aracılığıyla ortaya çıkar. Böyle bir ıslaha her zaman giysi ya da elbise denir. Demek ki giysi iki şeye hizmet eder: gizlenmeye ve ortaya çıkmaya. Bizim konumuzda da öyledir: Alt olanlar Işığı Kli olmadan kavrayamayacakları için Işık Kli’de kıyafetlenir ve gizlenir; böylece alt olan, içinde kıyafetlendiği o Kli aracılığıyla onu kavrayabilir. Bunu iyice anlayın."
+    },
+    {
+      "anchorId": "op-11",
+      "order": 11,
+      "label": {
+        "he": "כ",
+        "en": "20",
+        "tr": "20"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:11",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Yani Işık, Hohma, Bina ve ZA denilen ilk üç Behina’da genişledikten ve ZA’da genişlemesini tamamladıktan sonra, Malhut denilen Behina Dalet’te genişlemeye geldi. Işık, önceki üç Behina’da genişlemeden önce Malhut’ta genişleyemez; çünkü bunlar birbirlerinin sebebidir, sebep ve sonuç yoluyla."
+    },
+    {
+      "anchorId": "op-12",
+      "order": 12,
+      "label": {
+        "he": "ל",
+        "en": "30",
+        "tr": "30"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:12",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Çünkü Tsimtsum’un gücü Behina Dalet’in üzerine biner; bu nedenle hepsinin en altında olan Behina Dalet’te Işığı alacak güç yoktur (Cevaplar Tablosu, Kısım 1, Madde 81’e ve Kısım 1, Bölüm 2, Madde 2’ye bakın)."
+    },
+    {
+      "anchorId": "op-13",
+      "order": 13,
+      "label": {
+        "he": "מ",
+        "en": "40",
+        "tr": "40"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:13",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Yani Malhut denilen Behina Dalet. Bununla bize, Malhut’un Kli’si ile içindeki Masah’ın iki ayrı mesele olduğunu ayırt etmemizi bildirir: Malhut’un Kli’si, yukarıda bahsedildiği gibi Behina Dalet’e kadar kalınlaşan Işıktır ve üzerinde yukarıda bahsedildiği gibi Tsimtsum’un gücü biner; üzerindeki Masah ve örtü ise ona sonradan ıslah edilmiştir (Cevaplar Tablosu, Kısım 2, Madde 43’e bakın)."
+    },
+    {
+      "anchorId": "op-14",
+      "order": 14,
+      "label": {
+        "he": "נ",
+        "en": "50",
+        "tr": "50"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:14",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Masah ve örtü tek şeydir; yani orada, Malhut’un üstünde, bir tür koruyucu bölme gibi alıkoyucu bir güç oluşturuldu ki Üst Işık onun içine zorla girmesin (Cevaplar Tablosu, Kısım 2, Madde 43’e bakın)."
+    },
+    {
+      "anchorId": "op-15",
+      "order": 15,
+      "label": {
+        "he": "ס",
+        "en": "60",
+        "tr": "60"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:15",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Yani bu Masah, yukarıda bahsedildiği gibi Malhut’u korumasının yanı sıra bir görevi daha vardır: Atzilut dünyası ile diğer dünyaların arasını ayırır."
+    },
+    {
+      "anchorId": "op-16",
+      "order": 16,
+      "label": {
+        "he": "ע",
+        "en": "70",
+        "tr": "70"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:16",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Eyn Sof Işığının Masah ile karşılaşması, biri diğerinin sınırına zorla girmek isteyen, diğeri ise ona karşı bütün gücüyle dikilip sınırından hiçbir şeyi kavramasına izin vermeyen iki sert şeye benzetilir; işte böyle bir karşılaşmaya vuruş denir. Buna karşılık, birbirinin sınırına ulaşmayı engellemeyen ve birbirine karışan sıvıların karşılaşmasında vuruş anlaşılmaz. Aynı şekilde iki yumuşak şeyin vuruşu da o kadar hissedilmez; çünkü birbirlerinin sınırına biraz girmesine ve dış kabuklarını bir miktar sıkıştırmasına izin verirler. Sert şeylerde ise biri diğerinin sınırından en ufak bir şey bile oynatmasına izin vermez; dolayısıyla karşılaşmaları vuruş olarak anlaşılır.<br>Tsimtsum’un tamamı yaratılan varlık tarafından yapıldığı ve Yaratıcı tarafından hiç yapılmadığı için, Eyn Sof Işığı Malhut’taki o Tsimtsum’a hiç aldırmaz; aksine uzanır ve Malhut’un içinde de genişlemek üzere iner. Oraya güçle indiği de anlaşılır; çünkü Tsimtsum’dan önce Eyn Sof’ta Behina Dalet’i de doldurmaktaydı (yukarıda Kısım 1, Bölüm 1, İç Işık, Madde 20’de ve Madde 50’de “Ve işte” diye başlayan pasajda yazıldığı gibi, orada iyice inceleyin). Bu yüzden yolunu değiştirmesi için bir sebep yoktur ve Malhut’un Kli’sini de her zaman Işığıyla doldurmak üzere iner. Ne var ki Malhut’ta yapılan Masah ve örtü onu alıkoyar ve Işığı durdurur; onun içinde en ufak bir şekilde bile genişlemesine izin vermez. Bu nedenle şu söz anlaşılır: “Sonra oraya kadar genişleyen Eyn Sof Işığı o Masah’a vurdu” (Cevaplar Tablosu, Kısım 2, Madde 43’e bakın)."
+    },
+    {
+      "anchorId": "op-17",
+      "order": 17,
+      "label": {
+        "he": "פ",
+        "en": "80",
+        "tr": "80"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:17",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Bu, yukarıdaki bitişik pasajda zaten açıklandı."
+    },
+    {
+      "anchorId": "op-18",
+      "order": 18,
+      "label": {
+        "he": "צ",
+        "en": "90",
+        "tr": "90"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:18",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Yani Malhut’ta alınması gereken, ancak Masah’ın alıkoyması nedeniyle onun almadığı Işık miktarının tamamı geri döndü, Yukarıya yükseldi ve Üst Işığın üç Behina’sının hepsini, yani Hohma’ya kadar olan kısmı kıyafetlendirdi; aşağıda yazıldığı gibi bu Hohma, bu Or Hozer’in “yeri” sayılır. Ari’nin “Or Hozer olarak Yukarıya, kendi yerine geri yükseldi” sözünün anlamı budur (İç Gözlem, Kısım 2, Madde 62’ye bakın)."
+    },
+    {
+      "anchorId": "op-19",
+      "order": 19,
+      "label": {
+        "he": "ק",
+        "en": "100",
+        "tr": "100"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:19",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Çünkü Or Hozer’in yükselmesi ve Üst Işığı aşağıdan Yukarıya doğru kıyafetlendirmesi, yukarıda bahsedildiği gibi Üst Işık için Kelim Behina’sını oluşturur."
+    },
+    {
+      "anchorId": "op-20",
+      "order": 20,
+      "label": {
+        "he": "ר",
+        "en": "200",
+        "tr": "200"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:20",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Yani Or Hozer yukarıda bahsedildiği gibi Yukarıya yükseldikten sonra, Eyn Sof Işığı bu Or Hozer’in içinde, Kelim’de kıyafetlenen Öz sırrıyla kıyafetlenir."
+    },
+    {
+      "anchorId": "op-21",
+      "order": 21,
+      "label": {
+        "he": "ש",
+        "en": "300",
+        "tr": "300"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:21",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Yani Malhut’un Kli’sindeki Masah’a kadar; çünkü Masah onu Yukarıya geri çevirdi ve yukarıda bahsedildiği gibi daha fazla genişlemesine izin vermedi."
+    },
+    {
+      "anchorId": "op-22",
+      "order": 22,
+      "label": {
+        "he": "ת",
+        "en": "400",
+        "tr": "400"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:22",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Yani Masah’taki alıkoyma gücü, Malhut’un üstündeki Atzilut Sefirot’una hiçbir şey yapmadı; yalnızca Malhut’tan aşağıya etki etti. Bu nedenle Eyn Sof Işığı, Atzilut Behina’sında Malhut’taki Masah’a kadar hiçbir alıkoyma olmaksızın genişler. Buna karşılık Masah’tan ve aşağısından geçerek kıvılcımlanan Eyn Sof Işığı, bu sebeple çok azalır ve artık önümüzde yazıldığı gibi Eyn Sof Işığının Özü sayılmaz."
+    },
+    {
+      "anchorId": "op-23",
+      "order": 23,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "tr": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:23",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Bu Aviut’un Işıkta bir anda ortaya çıkmadığı, çünkü Işığın zıddı olduğu daha önce açıklandı; bunun yerine arıdan biraz daha bayağıya, oradan da daha bayağıya doğru basamak basamak iner ve Behina Dalet ya da Malhut denilen Aviut’un büyüklüğüne ulaşır. Bu dört Behinot’a Hohma, Bina, ZA ve Malhut denir ve her yaratılan varlıkta bulunmaları zorunludur. Bu dört Behinot’un gerekliliğinin ve tanımının nedeni yukarıda iyice açıklanmıştır (Kısım 1, Bölüm 1, Madde 50’de “Ve nedeni” diye başlayan pasaja ve İç Gözlem, Kısım 2’de “Ve vermek için” diye başlayan pasaja bakın). Devamının tamamını orada iyice inceleyin; ben ona dayanıyorum ve uzun olduğu için buraya getirmiyorum, oysa burada her bir sözcük için çok gereklidir."
+    },
+    {
+      "anchorId": "op-24",
+      "order": 24,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "tr": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:24",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Her dünya ve her Partzuf, nerede olursa olsun, bolluğunu Eyn Sof’tan almak zorundadır. Bu nedenle bir dünyaya ya da Partzuf’a atfedilen Eyn Sof’un ilhamına o dünyanın Keter’i ve o Partzuf’un Keter’i denir; aynı zamanda o dünyanın Yaratıcı’sı da denir. “Eyn Sof, Atzilut’un Keter’inde parlar” sözü bu demektir; yani orada, Atzilut dünyasına göre Eyn Sof’un ilhamı vardır. Bu yüzden Keter’e Eyn Sof ya da Yaratıcı denir."
+    },
+    {
+      "anchorId": "op-25",
+      "order": 25,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "tr": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:25",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Eyn Sof Işığının önce Keter’den dünyaya uzanan Hitpaştut’una Or Hohma denir. Bu Or Hohma’ya hemen Işığı alma arzusunun dahil olması zorunludur; aksi hâlde Eyn Sof Işığına yayılan denmezdi (İç Gözlem, Kısım 2’de “Şimdi” diye başlayan pasajda açıklandığı gibi, orada iyice inceleyin). Ne var ki bu alma arzusu pek de form eşitsizliği ve Aviut sayılmaz; çünkü bu alma arzusu ona Üst bir güçten, yani Keter’den gelmiştir: Keter’deki ihsan etme arzusu, Hohma’daki alma arzusunu kesin olarak gerektirir. Ari’nin “Hohma, Keter aracılığıyla alır” sözünün anlamı budur; yani Hohma’daki alma niteliği ona Keter aracılığıyla ve Keter’in gücüyle gelmiştir. Bu yüzden bu alma arzusundan doğan Aviut çok zayıftır ve ona Behina Alef denir."
+    },
+    {
+      "anchorId": "op-26",
+      "order": 26,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "tr": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:26",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yani Hohma, Hitpaştut’u sırasında kalınlaşma eğilimindedir; çünkü Hitpaştut’unun sonunda arzu onda güçlenir, Eyn Sof’tan Or Hasadim çeker ve kendini Or Hohma’dan uzaklaştırır; yukarıda uzun uzun yazıldığı gibi (Kısım 1, Bölüm 1, Madde 50’de “Ve nedeni” diye başlayan pasaja bakın). Bu güçlenme kendi uyanışıyla olmuş, Üst bir güçle olmamış olduğundan, bu arzu az Aviut sayılır, ama Hohma’daki Aviut’tan fazladır. Bu nedenle bu değişim sayesinde zorunlu olarak Hohma’dan ayrılıp özel bir Behina oldu ve Bina ya da Behina Bet adını aldı. Ari’nin “Bina, Eyn Sof Işığını uzaklaştırma yoluyla aldı” sözünün anlamı budur; çünkü yukarıda bahsedilen Behina Bet’in Aviut’una “uzaklaştırma” denir, zira yukarıda açıklandığı gibi Or Hasadim’i almak için kendini Or Hohma’yı almaktan uzaklaştırmıştır. Yine de bu arzunun güçlenmesi tam Aviut sayılmaz; çünkü ihsan etme arzusundandır ve Yaratıcı ile form eşitliğindendir (Kısım 1, Bölüm 1, Madde 50’de “Ve nedeni” diye başlayan pasajda yazıldığı gibi). Ne var ki Behina Alef’ten daha bayağıdır; çünkü Behina Alef’te arzunun tamamı ona ait değildir, yukarıda bahsedildiği gibi Keter aracılığıyla gelmiştir. Behina Bet ise kendi güçlenmesiyle içindeki arzuyu kendisi meydana getirmiştir. Bu yüzden Behina Bet, her hâlükârda tam alma arzusunun kökü olduğundan Behina Alef’ten daha bayağı sayılır. Bunu iyice anlayın."
+    },
+    {
+      "anchorId": "op-27",
+      "order": 27,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "tr": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:27",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yani Bina, Or Hasadim’i Yaratıcı’dan çekmek üzere uyandıktan sonra Or Hohma’dan uzaklaşmış olur; aksi hâlde Or Hasadim’i alamazdı: çünkü Hohma’nın Işığı alma arzusuyla, Hasadim’in Işığı ise ihsan etme arzusuyla çekilir (Kısım 1, Bölüm 1, Madde 50’de “Ve nedeni” diye başlayan pasajda yazıldığı gibi). Bu yüzden Behina Alef ile Behina Bet, Atzilut’larının başlangıcından itibaren birbirinin zıddıdır. Ari’nin “çünkü Eyn Sof artık ondan uzaktadır ve o, O’nu alabilir” sözünün anlamı budur; yani Bina, Eyn Sof’tan itibaren üçüncü bir derece oldu ve Bina ile Eyn Sof arasında aracılık eden Hohma’dan çıktı. Çünkü artık Or Hohma’yı uzaklaştırmış ve üçüncü bir derece olmuştur; Hohma Eyn Sof’tan sonra ikinci olan Behina Alef, Bina ise Eyn Sof’tan sonra üçüncü olan Behina Bet’tir. Böylece artık çektiği Or Hasadim’i alabilir; kendini üçüncü bir dereceye uzaklaştırmasaydı, açıklandığı gibi alamazdı. Ayrıca şunu bilmek gerekir ki “uzak” sözcüğü, Hohma’yı kavramanın azlığına verilen bir addır: “Hohma’yı edineceğim dedim, ama o benden uzaktı” ayetinin ve “Kız kardeşi uzakta durdu” ayetinin anlamı da budur. Bunu uzatmanın yeri burası değil."
+    },
+    {
+      "anchorId": "op-28",
+      "order": 28,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "tr": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:28",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yani Bina da Hitpaştut’unun sonunda kalınlaşma eğilimindedir; çünkü Or Hohma’yı kendisinden uzaklaştırmıştır ve bilindiği gibi Or Hohma, yaratılan varlığın asıl canlılığı ve Özüdür. Bu nedenle Hitpaştut’unun sonunda Or Hasadim’in içine Hohma’nın aydınlanmasını alma arzusu onda güçlendi. Ruhani varlıklar arasındaki bütün fark yalnızca form eşitsizliğinden kaynaklandığı için, bu yeni aydınlanma, yani içinde Hohma’nın aydınlanması bulunan Or Hasadim ortaya çıktı ve ayrı bir isim edindi, yani Zeir Anpin adını. Böyle denmesinin nedeni, Or Hohma’ya “yüz” Işığı denmesidir: “İnsanın Hohma’sı yüzünü aydınlatır”. Onda yalnızca Hohma’dan bir aydınlanma olduğundan, ama asıl özü yalnızca Bina’nın Or Hasadim’i olduğundan ona Zeir Anpin denir; bunun anlamı yüzün küçüklüğüdür, yani Or Hohma’dan yalnızca az bir miktar. Bunu iyice anlayın.<br>Ona ayrıca Behina Gimel de denir. Aviut’una “pencere ve dar açıklık” denir; çünkü yukarıda açıklanmıştır (Kısım 2, Bölüm 2, İç Işık, Madde 70) ki alt olanın kendisine dahil olması nedeniyle üst olanda ortaya çıkan Masah’a “pencere” denir; çünkü onda yargılar yoktur, yalnızca pencere gibi aydınlanmanın sebebi vardır, orada iyice inceleyin. Atzilut’taki bütün Aviut ve Masahlar, içindeki BYA’nın dahil olmasından geldiği için ZA’nın Aviut’una Gadlut Işığının aydınlanması bakımından “pencere”, Katnut aydınlanması bakımından ise “dar açıklık” denir. Behina Bet’e ise pencere bile denmez; uzaklaştırma denir."
+    },
+    {
+      "anchorId": "op-29",
+      "order": 29,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "tr": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:29",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yani onda Bina’daki gibi Hohma’nın uzaklaştırılması yoktur; çünkü onunla Bina arasındaki tek fark, onda Or Hohma’dan bir aydınlanma bulunmasıdır. Ari’nin “Bununla birlikte o yakındır” sözünün anlamı budur; yani onda uzaklaştırma yoktur."
+    },
+    {
+      "anchorId": "op-30",
+      "order": 30,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "tr": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:30",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yani Bina’nın Işığının Behina Gimel olan ZA’ya Hitpaştut’u uzaklaştırmaya neden olmaz; tam tersine, yukarıda bahsedildiği gibi Hohma’nın yakınlaşmasına neden olur. “Yakın” ve “uzak”ın Hohma’nın tanımları olduğu yukarıda zaten açıklanmıştır."
+    },
+    {
+      "anchorId": "op-31",
+      "order": 31,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "tr": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:1:31",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Yani Aviut’un üç Behina’sı tam olarak, ZA’nın Hitpaştut’unun sonuna kadar genişledikten sonra alma arzusu, almaya uygun olan tam ölçüsünde uyandı. “Ona Behina Dalet ya da Malhut ya da ZA’nın Nukva’sı denir (yukarıda İç Işık, Kısım 1, Bölüm 1, Madde 30’da “Ve şimdi” diye başlayan pasaja bakın) ve Tsimtsum onda oldu, yukarıda bahsedildiği gibi (Kısım 1, Bölüm 1, Madde 40); öyle ki Tsimtsum’dan itibaren bu Behina Dalet artık Eyn Sof Işığını almaz. Bu yüzden onun Aviut’una “uzaklaştırma” denir. Onda da ZA’daki gibi “pencere” ve “dar açıklık” olmak üzere iki derece vardır: Gadlut’un ihsan edilmesine pencere, Katnut’un ihsan edilmesine dar açıklık denir. Behina Bet’teki uzaklaştırma ile Behina Dalet’teki uzaklaştırma arasında büyük fark vardır: Behina Bet’in uzaklaştırması isteyerek yapılan uzaklaştırmadır, “çünkü O Hesed’i diler” ayetindeki gibi; yani Hasadim’i arzular, Hohma’yı değil. Behina Dalet’in uzaklaştırması ise zorunlu uzaklaştırmadır, yani Behina Dalet’te ıslah edilen Masah nedeniyledir."
+    }
+  ]
+}

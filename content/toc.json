@@ -1297,10 +1297,16 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1337,9 +1343,15 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
+                  "de-ai",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1376,9 +1388,15 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
+                  "de-ai",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1416,10 +1434,16 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1457,10 +1481,16 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1498,10 +1528,16 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1539,10 +1575,16 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1579,8 +1621,15 @@
                   "uk-ai"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1618,10 +1667,16 @@
                   "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1647,16 +1702,28 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1682,15 +1749,28 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1716,16 +1796,28 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1751,15 +1843,28 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1785,16 +1890,28 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1820,15 +1937,28 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -1853,10 +1983,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -1882,10 +2018,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -1911,10 +2053,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -1940,10 +2088,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -1969,9 +2123,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -1997,10 +2157,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2026,9 +2192,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2054,10 +2226,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2083,10 +2261,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2112,10 +2296,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2141,10 +2331,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2170,10 +2366,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2199,10 +2401,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2228,10 +2436,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2257,10 +2471,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2286,9 +2506,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2314,9 +2540,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2342,9 +2574,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2370,9 +2608,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2417,16 +2661,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -2452,16 +2703,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -2487,10 +2745,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-bb-kabbalah-info",
@@ -2522,10 +2786,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-bb-kabbalah-info",
@@ -2557,10 +2827,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-bb-kabbalah-info",
@@ -2592,10 +2868,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
-                  "ru-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-bb-kabbalah-info",
@@ -2626,9 +2908,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2654,9 +2943,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2682,9 +2978,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2710,9 +3013,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2738,9 +3048,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2766,9 +3083,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2794,9 +3118,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2822,9 +3153,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2850,9 +3188,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2878,9 +3223,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -2942,14 +3294,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -2975,14 +3329,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3007,9 +3363,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -3035,9 +3392,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -3064,14 +3422,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3096,9 +3456,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -3125,14 +3486,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3158,14 +3521,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3191,14 +3556,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3224,14 +3591,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3257,14 +3626,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3290,14 +3661,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3323,14 +3696,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3356,14 +3731,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3389,14 +3766,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3422,14 +3801,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3455,15 +3836,17 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "uk-bb",
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ]
               }
             },
@@ -3489,14 +3872,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3521,9 +3906,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -3550,14 +3936,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3583,14 +3971,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3616,15 +4006,17 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "uk-bb",
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ]
               }
             },
@@ -3650,14 +4042,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3683,14 +4077,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3716,14 +4112,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3749,15 +4147,17 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "uk-bb",
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ]
               }
             },
@@ -3783,15 +4183,17 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "uk-bb",
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ]
               }
             },
@@ -3817,15 +4219,17 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "uk-bb",
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ]
               }
             },
@@ -3851,14 +4255,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3884,14 +4290,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3917,14 +4325,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -3949,9 +4359,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -3977,9 +4388,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -4005,9 +4417,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -4034,14 +4447,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4067,14 +4482,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4100,14 +4517,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4133,14 +4552,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4166,14 +4587,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4199,14 +4622,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4232,14 +4657,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4265,15 +4692,17 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "uk-bb",
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ]
               }
             },
@@ -4299,14 +4728,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4332,14 +4763,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4365,14 +4798,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4398,14 +4833,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4431,13 +4868,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4462,9 +4901,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -4491,14 +4931,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4523,9 +4965,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -4552,13 +4995,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4584,14 +5029,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4617,13 +5064,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4649,14 +5098,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4682,14 +5133,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4715,14 +5168,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4748,14 +5203,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4781,14 +5238,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4813,9 +5272,10 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": []
               }
@@ -4842,14 +5302,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4875,14 +5337,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4908,13 +5372,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "uk-bb",
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai",
+                  "uk-bb"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -4940,7 +5406,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -4967,7 +5434,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -4994,7 +5462,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -5021,7 +5490,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -6968,7 +7438,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -6995,7 +7466,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -7022,7 +7494,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -7049,7 +7522,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -7076,7 +7550,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -7103,7 +7578,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -7130,7 +7606,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -7157,7 +7634,8 @@
                 "summary": [],
                 "source": [
                   "en-bb",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }

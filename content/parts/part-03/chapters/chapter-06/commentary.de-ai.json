@@ -1,0 +1,138 @@
+{
+  "chapterId": "part-03/chapter-06",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "א",
+        "en": "1",
+        "de": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:1",
+      "targetSeif": 1,
+      "section": "ohr-pnimi",
+      "html": "Er will sagen: Das Gleichnis, das er brachte – dass es zwischen einer Bchina und der nächsten eine mittlere Bchina gibt –, sollst du nicht auf das Gemeinte übertragen, als gäbe es deswegen auch in den Höheren fünf Bchinot, nämlich vier Bchinot und eine mittlere Bchina. Darum warnt er und sagt, dass es in den Höheren nicht mehr als vier Elemente gibt, Feuer, Wind, Wasser und Staub, die die vier Buchstaben von HaWaYaH sind, denn die mittlere Bchina wird nicht zu den vier Bchinot gezählt. Und das ist es, womit der ARI schließt: „Deshalb wird Chochma als der Anfang bezeichnet“, um zu zeigen, dass keine Bchina vor ihr gezählt wird. Denn die mittlere Bchina, nämlich der Funke des Schöpfers, ist das Geheimnis von Ejn Sof, der überhaupt nicht in der Rechnung der Stufe ist. Und die Bchina des erschaffenen Funkens, der Yechida oder Keter genannt wird – es wurde erklärt, dass er dem Kern nach nur die Wurzel der vier Bchinot CHuB, TuM ist (wie oben, Kap. 5, Punkt 20; studiere es dort gut). Folglich ist der Anfang von Yechida ebenfalls Bchina Alef, die Chochma genannt wird, und deshalb finden sich im Namen HaWaYaH nur vier Buchstaben, und es gibt dort keinen besonderen Buchstaben für die Sefirot von Keter, wie erklärt."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "ב",
+        "en": "2",
+        "de": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:2",
+      "targetSeif": 2,
+      "section": "ohr-pnimi",
+      "html": "Gemeint ist der Funke des Schöpfers, der sich in Keter einkleidet, wie oben erwähnt, der das Geheimnis von Ejn Sof ist und überhaupt nicht zur Bchina des Parzuf selbst gehört, wie im vorhergehenden Abschnitt erklärt; studiere es dort gut."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "ג",
+        "en": "3",
+        "de": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:3",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Siehe Tabelle der Antworten, Teil 2, Punkt 26: Das Verlangen zu empfangen im Ausgeströmten ist das Licht, das grob wurde, und es ist die gesamte Materie im Ausgeströmten, aus der seine Empfangsgefäße gebildet und gemacht wurden. Und gewiss findet sich in Ejn Sof von jener Bchina des Verlangens zu empfangen überhaupt nichts (wie oben im Inneren Licht, Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Und der Grund“, geschrieben steht). Und das ist es, was der ARI sagt: „Ejn Sof wird ‚Nichts‘ genannt, weil es dort keinerlei Wahrnehmung gibt: Dort gibt es weder Materie“, und so weiter, das heißt, von der Bchina des oben erwähnten Verlangens zu empfangen; und es gibt keine Erreichung im Licht ohne Kli, wie bekannt ist."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "ד",
+        "en": "4",
+        "de": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:4",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Die vier Bchinot CHuB, TuM werden „vier Formen“ genannt, da sie Maße von Stufen sind, eine unter der anderen, die sich in der Materie des Ausgeströmten abzeichnen (wie im Inneren Licht, Teil 1, Kap. 1, Punkt 50, Abschnitt beginnend mit „Jetzt“, geschrieben steht), während all dies nicht in Ejn Sof ist, wie im vorhergehenden Abschnitt und im Inneren Licht dort erklärt."
+    },
+    {
+      "anchorId": "op-5",
+      "order": 5,
+      "label": {
+        "he": "ה",
+        "en": "5",
+        "de": "5"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:5",
+      "targetSeif": 3,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, ein Mittleres zwischen dem Ausströmenden und dem Ausgeströmten, weil in ihm bereits die Wurzeln der vier Formen des Ausgeströmten enthalten sind, „der Kraft nach“, aber nicht tatsächlich."
+    },
+    {
+      "anchorId": "op-6",
+      "order": 6,
+      "label": {
+        "he": "ו",
+        "en": "6",
+        "de": "6"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:6",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, dass die vier Bchinot CHuB, TuM auch vier Elemente genannt werden, von denen es in Tohu keine einzige Bchina gibt, wie oben erwähnt."
+    },
+    {
+      "anchorId": "op-7",
+      "order": 7,
+      "label": {
+        "he": "ז",
+        "en": "7",
+        "de": "7"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:7",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, dass es bereits aus dem Bereich des Ausströmenden hervorgetreten ist, der Ejn Sof ist und Nichts genannt wird; und verstehe."
+    },
+    {
+      "anchorId": "op-8",
+      "order": 8,
+      "label": {
+        "he": "ח",
+        "en": "8",
+        "de": "8"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:8",
+      "targetSeif": 4,
+      "section": "ohr-pnimi",
+      "html": "Das sind die vier Bchinot CHuB, TuM, die auch vier Formen genannt werden, wie oben im Unmittelbaren erwähnt. Jedoch sind sie in ihm nur „der Kraft nach“ und nicht tatsächlich, wie oben erwähnt. Dagegen sind in „Bohu“, das der erschaffene Funke ist, wie oben erwähnt, die Wurzeln der vier Formen bereits tatsächlich enthalten, was das Geheimnis der Ausbreitung von Ejn Sof ist, um Kelim durch Schlagen auf den Massach zu machen (wie oben in den Worten des ARI, Teil 3, Kap. 1, Punkt 1). Denn die vier Bchinot de Or Yashar, die sich von Ejn Sof ausbreiteten, sind bereits im Or Choser eingekleidet, das von unten nach oben aufsteigt, und das Wesen von Ejn Sof ist bereits in diesem Or Choser eingekleidet, im Geheimnis des „Rosh“ der Stufe. Jedoch werden diese Kelim Wurzeln von Kelim genannt und sind nicht vollendet, außer nach ihrer Ausbreitung unterhalb des Massach, wie oben erwähnt."
+    },
+    {
+      "anchorId": "op-9",
+      "order": 9,
+      "label": {
+        "he": "ט",
+        "en": "9",
+        "de": "9"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:9",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Das heißt, was „Bohu“ genannt wird, das bereits Rosh der Stufe genannt wird, wie im vorhergehenden Abschnitt erwähnt; studiere es dort gut."
+    },
+    {
+      "anchorId": "op-10",
+      "order": 10,
+      "label": {
+        "he": "י",
+        "en": "10",
+        "de": "10"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 3:6:10",
+      "targetSeif": 5,
+      "section": "ohr-pnimi",
+      "html": "Es bezieht sich auf den Anfang der Ausführungen, nämlich dass die allerletzte mögliche Bchina in Ejn Sof Tohu genannt wird."
+    }
+  ]
+}

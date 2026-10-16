@@ -1,0 +1,818 @@
+{
+  "chapterId": "part-03/questions-topics-01",
+  "layer": "source",
+  "versionId": "es-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 102",
+      "html": "¿Por qué la Luz de Ein Sof golpea la pantalla que hay en la vasija de Maljut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_102\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 103",
+      "html": "¿Cuál es el significado de que la Luz viene por medio de una ventana y un orificio sin pantalla? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_103\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 104",
+      "html": "¿Por qué la pantalla que hay en Maljut del superior se discierne como otorgante al grado que está debajo de él? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_104\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 105",
+      "html": "¿Cuál es la causa del centelleo de las Luces desde la pantalla hacia abajo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_105\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 106",
+      "html": "¿Cuál es el significado de la iluminación a través de una pantalla? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_106\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 107",
+      "html": "¿Cuál es la diferencia entre la vía de paso y la vía de revestidura? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_107\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 108",
+      "html": "¿Cuál es el significado de la revestidura en Jojmá o la revestidura en Biná, y similares? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_108\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 109",
+      "html": "¿Cuál es el criterio de medida de la pantalla? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_109\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 110",
+      "html": "¿Qué es la pantalla que hay entre Atzilut y Beriá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_110\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 111",
+      "html": "¿Cómo otorga la pantalla de la segunda fase a Beriá, y la pantalla de la primera fase a Yetzirá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_111\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 112",
+      "html": "¿Por qué Biná se convirtió en una pantalla cerrada en Beriá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_112\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 113",
+      "html": "¿Por qué el punto de Maljut de Atzilut traspasa y rompe la pantalla? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_113\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 114",
+      "html": "¿Por qué las GaR de AA no traspasan la pantalla? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_114\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 115",
+      "html": "¿Por qué el grosor no se revela de una sola vez, sino solo en el orden de cuatro grados? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_115\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 116",
+      "html": "¿Cuáles son las dos fases que hay en la Luz de la mirada? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_116\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 117",
+      "html": "Los cuatro grados del grosor de la Luz Directa, ¿están delimitados de arriba hacia abajo, y por qué? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_117\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 118",
+      "html": "¿Quién hace que las cuatro fases de la Luz Directa sean reconocibles y perceptibles en el grado? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_118\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 119",
+      "html": "¿De dónde vienen las cuatro fases en la Luz Retornante? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_119\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 120",
+      "html": "¿Cuál es la diferencia en la Luz Retornante antes de que se revista en ella la Luz Directa y después de que se reviste en ella la Luz Directa? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_120\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 121",
+      "html": "¿Cuál es la causa de la expansión de las diez Sefirot del Rosh a la fase de Guf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_121\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 122",
+      "html": "Las cuatro fases, los niveles de la Luz Retornante que limitan a ABYA, ¿son de arriba hacia abajo, y por qué? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_122\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 123",
+      "html": "¿Por qué el grosor de la tercera fase hace un nivel de Jojmá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_123\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 124",
+      "html": "¿Cómo se realizan los acoplamientos mediante golpe en AJaP? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_124\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 125",
+      "html": "¿Por qué diez Sefirot de Luz Retornante sin Luz Directa concluyen el Partzuf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_125\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 126",
+      "html": "¿Qué es el vapor que sale del grado? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_126\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 127",
+      "html": "¿Por qué no sale vapor verdadero de los Einaim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_127\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 128",
+      "html": "¿Qué realidad se produce en las Sefirot por la Luz de la mirada? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_128\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 129",
+      "html": "¿Qué realidad se produce en las Sefirot por los vapores de AJaP? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_129\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 130",
+      "html": "¿Por qué no se produce ninguna realidad de las Luces de AJaP?\n131/1) ¿Cuál es el significado de que en el mundo de Atzilut no hay pantalla en absoluto?\n131/2) ¿Cuál es la distinción entre Luz de esencia y Luz derivada? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_130\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 131",
+      "html": "¿Por qué cada nivel de diez Sefirot se denomina solo por el nombre de la única Sefirá superior? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_131\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 132",
+      "html": "¿Por qué las dos luminarias, ZoN, están en el primer nivel? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_132\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 133",
+      "html": "¿Cómo se realiza el acoplamiento mediante golpe para las diez Sefirot de Beriá y de Yetzirá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_133\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 134",
+      "html": "¿Cómo ilumina Ein Sof en Atzilut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_134\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 135",
+      "html": "¿Por qué Atzilut no recibe por encima de Jojmá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_135\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 136",
+      "html": "¿En qué vestimenta recibe el mundo de Atzilut la Luz de Ein Sof? ¿Y el mundo de Beriá? ¿Y el mundo de Yetzirá? ¿Y el mundo de Asiá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_136\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 137",
+      "html": "¿Por qué el centelleo del superior al inferior se denomina sello y sellado? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_137\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 138",
+      "html": "¿De dónde se hicieron las vasijas? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_138\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 139",
+      "html": "¿Por qué las Luces precedieron a las vasijas? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_139\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 140",
+      "html": "¿Cómo se hacen las vasijas del Rosh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_140\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 141",
+      "html": "¿Cómo se hacen las vasijas del Toj? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_141\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 142",
+      "html": "¿Cómo se hacen las vasijas del Sof? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_142\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 143",
+      "html": "¿Por qué todo Partzuf necesita obligatoriamente los tres grados Rosh, Toj, Sof? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_143\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 144",
+      "html": "¿Qué es la elevación de Maljut al Emanador? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_144\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 145",
+      "html": "¿Quién es la causa de la elevación de Maljut al Emanador? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_145\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 146",
+      "html": "¿Cuándo se reviste la Luz de Ein Sof en las vasijas? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_146\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 147",
+      "html": "¿Por qué las diez Sefirot del Rosh no se consideran vasijas? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_147\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 148",
+      "html": "¿Cómo se originaron las vasijas una por encima de otra? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_148\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 149",
+      "html": "¿Por qué no se hizo una vasija de la fase de los Einaim? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_149\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 150",
+      "html": "¿Por qué las tres primeras fases de la Luz Directa no tienen nada de la fase de vasija, sino solo la cuarta fase? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_150\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 151",
+      "html": "¿Por qué Rúaj y Neshamá se llaman Luz? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_151\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 152",
+      "html": "¿De dónde se extienden las raíces a las vasijas? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_152\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 153",
+      "html": "¿De dónde vienen las vasijas completas? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_153\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 154",
+      "html": "¿Cómo y dónde se registran las tres vasijas del Guf: Biná, ZA, Maljut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_154\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 155",
+      "html": "¿Cómo se denominan las cuatro fases del grosor del Rosh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_155\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 156",
+      "html": "¿Cuáles son la fase de extensión y la fase de recepción de la Luz de Yejidá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_156\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 157",
+      "html": "¿Cuáles son la fase de extensión y la fase de recepción de la Luz de Jayá? ¿De la Luz de Neshamá? ¿De la Luz de Rúaj? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_157\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 158",
+      "html": "¿Por qué se igualan los niveles de todas las vasijas en el acoplamiento mediante golpe? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_158\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 159",
+      "html": "¿De dónde se encuentran cinco fases en la vasija de Maljut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_159\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 160",
+      "html": "¿Cómo puede Maljut del Rosh ensancharse de ella y en ella, hasta recibir dentro de sí diez Sefirot del Rosh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_160\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 161",
+      "html": "¿Hasta dónde se expanden las diez Sefirot del Guf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_161\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 162",
+      "html": "¿Por qué no hay vasijas correspondientes a Jayá y Yejidá de cada Partzuf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_162\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 163",
+      "html": "¿Qué son los apelativos: Shibolet, Jazé, Tabur? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_163\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 164",
+      "html": "¿Cuándo se llenan de Luz las vasijas que están una por encima de otra? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_164\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 165",
+      "html": "¿Por qué la Luz de Yejidá se reviste en Galgalta y no en el Pe? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_165\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 166",
+      "html": "¿Por qué la Luz de Jayá no se reviste en el Jótem? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_166\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 167",
+      "html": "¿Cómo fue emanado AB del Partzuf Galgalta? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_167\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 168",
+      "html": "¿Cómo fue emanado el Partzuf SAG del Partzuf AB? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_168\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 169",
+      "html": "¿Qué causa la refinación del grosor que hay en Maljut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_169\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 170",
+      "html": "¿Por qué el acoplamiento mediante golpe para las diez Sefirot del Rosh del inferior se realiza en el lugar del Jazé del superior? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_170\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 171",
+      "html": "¿Por qué la raíz de todo Partzuf inferior está en el Pe del superior? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_171\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 172",
+      "html": "¿Por qué el Rosh del Partzuf AB reviste en el lugar que va desde el Pe hasta el Jazé del Partzuf Galgalta? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_172\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 173",
+      "html": "¿Por qué el Rosh de AB no puede revestir por encima del Pe de Galgalta, y así SAG respecto de AB, etc.? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_173\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 174",
+      "html": "¿Qué son los apelativos raíz, Neshamá, Guf, vestimenta, palacio? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_174\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 175",
+      "html": "¿Por qué se separaron la vestimenta y el palacio de las vasijas internas y se convirtieron en circundantes? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_175\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 176",
+      "html": "¿Por qué las cinco fases están insinuadas en los nombres: raíz, Neshamá, Guf, vestimenta, palacio? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_176\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 177",
+      "html": "¿Por qué NaRaN, que son inferiores, se revisten en las fases de raíz, Neshamá y Guf, que son superiores? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_177\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 178",
+      "html": "¿Cómo se denominan las cinco fases que hay en la Neshamá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_178\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 179",
+      "html": "¿Cómo se denominan las cinco fases que hay en el Guf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_179\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 180",
+      "html": "¿Cómo se denominan las cinco fases que hay en la vestimenta? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_180\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 181",
+      "html": "¿Cómo se denominan las cinco fases que hay en el palacio? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_181\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 182",
+      "html": "¿Por qué cada una de las cinco fases de ShaNGuLaH está comprendida de las cuatro? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_182\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 183",
+      "html": "¿Qué fase de ZA y Maljut se encuentra después de la segunda restricción? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_183\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 184",
+      "html": "¿Cómo revisten ShaNGuLaH de Átik de Atzilut a AK? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_184\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 185",
+      "html": "¿Desde qué mundo comienza la raíz de los inferiores? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_185\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 186",
+      "html": "¿Qué Partzuf de AK se considera la fase de raíz de las diez Sefirot generales? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_186\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 187",
+      "html": "¿Por qué se cuentan a veces cuatro fases y a veces cinco fases? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_187\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 188",
+      "html": "¿Por qué las diez Sefirot no comienzan desde Kéter? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_188\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 189",
+      "html": "¿Qué son las diez Sefirot generales? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_189\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 190",
+      "html": "¿Cuáles son los numerosos mundos que hay por encima de Atzilut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_190\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 191",
+      "html": "¿Cuál es la diferencia entre los NaRaNJaY particulares que hay en cada Partzuf y los cinco Partzufim: AB, SAG, MA, BON, que hay en cada mundo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_191\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 91,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 192",
+      "html": "¿Cuál es la diferencia entre los cinco Partzufim y los cinco mundos? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_192\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 92,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 193",
+      "html": "¿Cómo se denominan las diez Sefirot de Luz Directa y de Luz Retornante que salen de una sola vez por medio de un acoplamiento mediante golpe? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_193\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 93,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 194",
+      "html": "Los cinco niveles que salen uno por encima de otro, ¿por el nombre de quién se denominan? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_194\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 94,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 195",
+      "html": "¿Por qué los cinco Partzufim se denominan con los nombres: AB, SAG, MA y BON? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_195\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 95,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 196",
+      "html": "¿Por qué el Guf se denomina siete inferiores? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_196\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 96,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 197",
+      "html": "¿Hay alguna distinción en AK y ABYA desde el lado de las cuatro fases de la Luz Directa, y por qué? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_197\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 97,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 198",
+      "html": "¿Por qué ABYA se denomina con las cuatro letras de HaVaYaH? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_198\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 98,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 199",
+      "html": "¿Por qué todas las fases que hay en Atzilut se denominan Neshamot (almas), y las de Beriá, Gufim (cuerpos)? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_199\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 99,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 200",
+      "html": "¿Cuál es la diferencia entre un punto y una Sefirá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_200\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 100,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 201",
+      "html": "¿Cuál es la diferencia entre una Sefirá y un Partzuf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_201\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 101,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 202",
+      "html": "¿Cuántas fases de diez Sefirot deben necesariamente salir para completar un solo grado? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_202\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 102,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 203",
+      "html": "¿Por qué Kéter se denomina Ein Sof? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_203\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 103,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 204",
+      "html": "¿Por qué Kéter se denomina medio entre el Emanador y el ser emanado? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_204\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 104,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 205",
+      "html": "¿Por qué los Roshim de todos los grados se denominan Ein Sof? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_205\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 105,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 206",
+      "html": "¿Cuál es el significado de la revestidura de Ein Sof en Kéter? ¿En Jojmá? ¿En Biná? ¿En ZA? ¿En Maljut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_206\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 106,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 207",
+      "html": "¿Por qué se necesita una fase intermedia entre el Creador y el ser creado? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_207\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 107,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 208",
+      "html": "¿Por qué Kéter no forma parte de las diez Sefirot y no está insinuado en las letras de HaVaYaH sino en la punta de la Yod? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_208\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 108,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 209",
+      "html": "¿Cuál es la raíz de las cuatro fases en potencia? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_209\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 109,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 210",
+      "html": "¿Cuál es la raíz de las cuatro fases en acto? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_210\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 110,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 211",
+      "html": "¿Por qué Maljut de Maljut de Atzilut se convirtió en Átik en el mundo de Beriá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_211\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 111,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 212",
+      "html": "¿Desde qué fase se llama a Kéter «Yo soy el último»? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_212\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 112,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 213",
+      "html": "¿Desde qué fase se llama a Kéter «Yo soy el primero»? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_213\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 113,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 214",
+      "html": "¿De dónde recibe el Kéter de Beriá, y quién se considera su raíz? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_214\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 114,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 215",
+      "html": "¿Por qué todas las fases que hay en AK se consideran fases de Kéter respecto de las fases que hay en ABYA? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_215\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 115,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 216",
+      "html": "¿Por qué JaGaT de AA se consideran Rosh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_216\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 116,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 217",
+      "html": "¿Por qué la fase de AA no se reconoce en todo mundo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_217\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 117,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 218",
+      "html": "¿Por qué Maljut se denomina Aspaklaria que no tiene nada de sí misma? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_218\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 118,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 219",
+      "html": "¿Cuál es el asunto del descenso de un punto de un mundo superior a un mundo inferior? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_219\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 119,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 220",
+      "html": "¿Cómo disminuyó la luna, es decir, Maljut de Atzilut? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_220\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 120,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 221",
+      "html": "¿Por qué el punto que desciende de mundo en mundo se discierne como de la fase de su propia existencia? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_221\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 121,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 222",
+      "html": "¿Por qué el punto que desciende succiona de todos los superiores aunque es más pequeño que todos ellos? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_222\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 122,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 223",
+      "html": "¿Por qué la Luz Directa en todos los grados se extiende desde Ein Sof? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_223\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 123,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 224",
+      "html": "¿Por qué no hay ninguna distinción en las cuatro fases de la Luz Directa, desde el Rosh de la línea hasta el final de Asiá? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_224\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 124,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 225",
+      "html": "¿Por qué la Luz Directa no puede pasar del Tabur hacia abajo? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_225\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 125,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 226",
+      "html": "¿Por qué el grado superior se considera siempre Emanador respecto del grado inferior a él? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_226\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 126,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 227",
+      "html": "¿Cuáles son las dos raíces que se disciernen en cada fase? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_227\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 127,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 228",
+      "html": "¿Cómo se denominan las diez Sefirot cuyo nivel es igual? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_228\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 128,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 229",
+      "html": "¿Por qué la morada de las Klipot (cáscaras) está entre la piel y la vestimenta? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_229\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 129,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 230",
+      "html": "¿Por qué la Luz Interna que hay en la piel es peor que la que hay en la carne, los tendones, los huesos y la Moja del Partzuf? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_230\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 130,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 231",
+      "html": "¿Por qué todo lo que hay en la Kedushá (santidad) deja una impresión? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_231\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 131,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 232",
+      "html": "¿Hasta dónde puede percibir el hombre? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_232\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 132,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 233",
+      "html": "¿Por qué el Néfesh del superior se considera inferior respecto de la fase de Rúaj? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_233\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 133,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 234",
+      "html": "¿De dónde vienen los NaRaNJaY del Néfesh? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_234\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 134,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 235",
+      "html": "¿Cuál es la diferencia entre: mundo, Partzuf, Sefirá y punto? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_235\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 135,
+      "sefariaRef": "Talmud Eser HaSefirot, Section III, List of Questions on Topics 236",
+      "html": "¿Cuál es la diferencia entre: diez Sefirot de Luz Directa, diez Sefirot de Luz Retornante, diez Sefirot cuyo nivel es igual, diez Sefirot que están una por encima de otra, diez Sefirot que están una por debajo de otra, diez Sefirot del Rosh, diez Sefirot del Toj, diez Sefirot del Sof, las cinco fases que hay en la vasija de Maljut, las cinco fases de vasijas en potencia y las cinco fases de vasijas en acto? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_III,_List_of_Answers_on_Topics_236\" target=\"_blank\" rel=\"noopener noreferrer\">a la respuesta</a>)</small>",
+      "anchors": []
+    }
+  ]
+}
