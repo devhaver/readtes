@@ -3,7 +3,7 @@
 
 Usage: python3 cites.py en-001 [en-002 ...]  ->  writes cites-<batch>.md
 """
-import json, re, sys, os
+import html, json, re, sys, os
 OUT = os.environ.get("TX_SCRATCH") or os.getcwd()  # holds chs-<batch>.json
 VALUES = {"א":1,"ב":2,"ג":3,"ד":4,"ה":5,"ו":6,"ז":7,"ח":8,"ט":9,"י":10,
           "כ":20,"ך":20,"ל":30,"מ":40,"ם":40,"נ":50,"ן":50,"ס":60,"ע":70,
@@ -42,7 +42,9 @@ def run(batch):
     BARE = re.compile(rf"(?<![א-ת])(?:אלף|א['׳])\s+({NUMERAL})")
     for ch in json.load(open(f"{OUT}/chs-{batch}.json", encoding="utf-8")):
         for it in ch["items"]:
-            he = it["he"]
+            # Footnote titles carry `&quot;` for gershayim ('דף ל&quot;א' is
+            # page 31, not page 30): scan the decoded text.
+            he = html.unescape(it["he"])
             for m in REF.finditer(he):
                 tok, nxt = m.group(1), m.group(2)
                 # 'אלף' is the thousand written as a word — it carries no
@@ -83,6 +85,10 @@ def run(batch):
                 before = he[max(0, m.start() - 18):m.start()]
                 if re.search(r"ב?חלק\s*$", before):
                     continue
+                # 'אות א\' ב\'' is an item list (items 1, 2), not page 1002;
+                # 'א\' ובאו"פ' is item 1 followed by Ohr Pnimi, not page 1095.
+                if re.search(r"אות\s*$", before) or 'או"פ' in m.group(1) or "או״פ" in m.group(1):
+                    continue
                 after = he[m.end():m.end() + 12]
                 cue = ("(" in before or "לעיל" in before or "כנ\"ל" in before
                        or "עי'" in before or "ועי" in before or "ע\"ש" in after
@@ -95,15 +101,34 @@ def run(batch):
                 tok = m.group(1)
                 if any(a <= m.start() < b for a, b in ref_spans):
                     continue
-                if tok in KEYWORDS | STOP | IDIOM or not re.search(r'["״]', tok):
-                    continue
                 # '(חלק י"ד אות מ"ו)' is PART 14, item 46 — not page 14. Report
-                # the part rather than dropping the row.
-                kind = ("part" if re.search(r"ב?חלק\s*$", he[max(0, m.start() - 8):m.start()])
+                # the part rather than dropping the row; '(בפרק ב' אות א')' is
+                # Chapter 2, item 1 even though ב' carries no gershayim.
+                lead = he[max(0, m.start() - 8):m.start()]
+                kind = ("part" if re.search(r"ב?חלק\s*$", lead)
+                        else "chapter" if re.search(r"ב?פרק\s*$", lead)
                         else "page")
-                note = "" if kind == "part" else " (cited without דף)"
+                if tok in KEYWORDS | STOP | IDIOM or (kind == "page" and not re.search(r'["״]', tok)):
+                    continue
+                # 'ובאו"פ אות ג\'', 'וכנ"ל אות קי"ב', 'בלוה"ת אות רכ"ט': an
+                # abbreviation before אות is never a page number.
+                if any(tok.rstrip("'׳").endswith(stop) for stop in ('או"פ', 'או״פ', 'נ"ל', 'נ״ל', 'ה"ת', 'ה״ת', 'ה"ס', 'ה״ס')):
+                    continue
+                # 'ח"ב אות נ"ב' is Part 2, item 52 and 'פ"א אות ד\'' is Chapter 1,
+                # item 4 — abbreviations, not page 10 / page 81. 'הסת"פ אות י"ח'
+                # is the Inner Observation, which has no page at all.
+                bare = tok.rstrip("'׳")
+                abbr = re.fullmatch(r'[ובמ]{0,2}([חפ])([א-ת]*["״][א-ת]{1,2})', bare)
+                if abbr:
+                    kind = "part" if abbr.group(1) == "ח" else "chapter"
+                    num = value(abbr.group(2))
+                elif bare in ('הסת"פ', 'הסת״פ', 'בהסת"פ', 'בהסת״פ'):
+                    continue
+                else:
+                    num = value(tok)
+                note = " (cited without דף)" if kind == "page" else ""
                 rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0),
-                             f"{kind} {value(tok)}{note}"))
+                             f"{kind} {num}{note}"))
             for m in ANSWER.finditer(he):
                 if not is_numeral(m.group(1)):
                     continue
@@ -113,14 +138,17 @@ def run(batch):
                 rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), m.group(0), f"answer {value(m.group(1))}"))
                 tail = he[m.end():m.end() + 60]
                 while True:
-                    c = re.match(rf"[\s,]+ו?({NUMERAL})", tail)
-                    if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
+                    c = re.match(rf"[\s,]+ו?ב?({NUMERAL})", tail)
+                    if (not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP
+                            or c.group(1).rstrip("'׳") in STOP - {'ע"א', 'ע"ב'}
+                            or re.fullmatch(r'(?:ב?או["״][חפמי]|ב?ד["״]ה)', c.group(1))):
                         break
                     rows.append((ch["chapterId"], it.get("anchorId", it.get("n")), c.group(1),
                                  f"answer {value(c.group(1))} (continues the list)"))
                     tail = tail[c.end():]
             for m in ITEM.finditer(he):
-                if not is_numeral(m.group(1)):
+                # רק 'only', גם 'also' … scan as numerals; ע"א / ע"ב stay items here.
+                if not is_numeral(m.group(1)) or m.group(1).rstrip("'׳") in STOP - {'ע"א', 'ע"ב'}:
                     continue
                 # מאות is also the plural 'hundreds' — say so instead of ruling.
                 note = (" — or 'hundreds', read the sentence"
@@ -136,8 +164,10 @@ def run(batch):
                                      f"item {value(r.group(1))} (end of the range)"))
                         tail = tail[r.end():]
                         continue
-                    c = re.match(rf"[\s,]+ו?({NUMERAL})", tail)
-                    if not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP:
+                    c = re.match(rf"[\s,]+ו?ב?({NUMERAL})", tail)
+                    if (not c or not is_numeral(c.group(1)) or c.group(1) in IDIOM | STOP
+                            or c.group(1).rstrip("'׳") in STOP - {'ע"א', 'ע"ב'}
+                            or re.fullmatch(r'(?:ב?או["״][חפמי]|ב?ד["״]ה)', c.group(1))):
                         break
                     tok = c.group(1)
                     # 'דף A אות B  C אות D' — a continuation followed by אות is
@@ -198,6 +228,23 @@ CASES = [
     # the mouth" and must still not be scanned as 74.
     ("""דף תקל"א מאות נ"א עד נ"ג""", ["page 531", "item 51", "item 53"]),
     ("""דתיקון א' עד פומא""", []),
+    # ח"ב / פ"א before אות are Part 2 / Chapter 1, never page 10 / page 81;
+    # הסת"פ is the Inner Observation and carries no page.
+    ("""(ח"ב אות נ"ב)""", ["part 2", "item 52"]),
+    ("""(פ"א אות ד')""", ["chapter 1", "item 4"]),
+    ("""(הסת"פ אות י"ח)""", ["item 18"]),
+    ("""(פט"ו אות ו')""", ["chapter 15", "item 6"]),
+    ("""(חי"ד אות מ"ו)""", ["part 14", "item 46"]),
+    ("""המובאות כאן (בפרק ב' אות א' ב')""", ["chapter 2", "item 1", "item 2"]),
+    ("""(בפרק י"ד אות א' ב' ג')""", ["chapter 14", "item 1", "item 2", "item 3"]),
+    ("""(פי"ב אות א' ובאו"פ שם אות ב')""", ["chapter 12", "item 1", "item 2"]),
+    ("""(ועיין באו"פ ח"ג פ"ב אות ג' ובפ"ג אות א')""", ["chapter 2", "item 3", "chapter 3", "item 1"]),
+    ("""ובאו"פ אות ג' וכנ"ל אות קי"ב ובלוה"ת אות רכ"ט""", ["item 3", "item 112", "item 229"]),
+    # 'באות רק' is "come only"; או"ח / בד"ה after an item never continue the list.
+    ("""הן באות רק לתקן אותה""", []),
+    ("""<span title="שער הקדמות דף ל&quot;א דרוש ב'">*</span>""", ["page 31"]),
+    ("""(עי' לעיל אות ב', או"ח)""", ["item 2"]),
+    ("""כנ"ל אות צ"ט בד"ה ומהמתבאר עש"ה""", ["item 99"]),
     # עש"ה is "study it there well", not item 375.
     ("""כנ"ל (אות ע"ו) עש"ה""", ["item 76"]),
     # ויש is "and there is", not item 310.
