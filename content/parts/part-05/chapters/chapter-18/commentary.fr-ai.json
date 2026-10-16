@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-18",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Keter avec la Lumière Supérieure sont dos à dos</b> :<br>et c’est parce que la Bekhina Dalet n’a pas laissé de Rechimo. Et l’on sait que c’est la Bekhina Dalet qui attire la lumière de Keter ; et bien que la lumière de Keter elle-même ait laissé un Rechimo dans son Kli, ce n’est cependant qu’un Rechimo de Hitlabchout et non un Rechimo d’attraction, comme ci-dessus (dans la Lumière intérieure, page 294, passage commençant par « lo Mati dans Keter », étudiez-le bien là-bas). Celui-ci est considéré comme la phase d’Akhor par rapport à la phase d’attraction, et il est donc considéré que son Akhor est en haut et ses Panim en bas."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Keter et Hokhma soient face à face.</b> Car Hokhma a un Rechimo complet, y compris de la phase d’attraction, et ce Rechimo remet sa face vers le haut. Et Keter, à qui manque le Rechimo d’attraction, comme ci-dessus, a son Akhor en haut ; ainsi ils se trouvent égaux l’un à l’autre, ce qui est appelé face à face. Et cela sera encore expliqué plus loin."
+    }
+  ]
+}

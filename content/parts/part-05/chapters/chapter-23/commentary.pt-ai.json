@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Yod e Vav são dois discernimentos de expansão, Hey e Hey são dois discernimentos de saída:</b> Pois a primeira expansão é o segredo de Yod, e a segunda expansão é o segredo de Vav. E a primeira saída é o segredo da primeira Hey, e a segunda saída é o segredo da Hey inferior. Como está escrito adiante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>O nome HaVaYaH não começa senão de Hochma para baixo.</b> Como é sabido, Yod é o segredo de Hochma, Vav é o segredo de ZA, a primeira Hey é o segredo de Bina e a Hey inferior é o segredo de Malchut. Mas Keter não é aludido nas quatro letras, a não ser no ápice do Yod. E isso pela razão que o Ari explica aqui adiante."
+    }
+  ]
+}

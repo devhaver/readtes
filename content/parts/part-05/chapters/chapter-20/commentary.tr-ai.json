@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Mati ve Lo Mati. Bu iki Behina’ya Hitpaştut ve ayrılma denir; dört Behina bunlarla tamamlanır:</b> Yani HaVaYaH İsmi’nin dört harfi. Çünkü yukarıda (Madde 19) getirdiği Akudim’in birinci Hitpaştut’unun Hitpaştut ve ayrılma diye bu iki Behina’sı, HaVaYaH’ın Yud ve Hey harfleridir. Mati ve Lo Mati denen Akudim’in ikinci Hitpaştut’undaki Hitpaştut ve ayrılma diye bu iki Behina ise, HaVaYaH’ın Vav ve Hey harfleridir. Ari’nin aşağıda yazdığı gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Işık Keter Kli’sinin içine Mati olur vb.:</b> Aşağıda açıklanacaktır."
+    }
+  ]
+}

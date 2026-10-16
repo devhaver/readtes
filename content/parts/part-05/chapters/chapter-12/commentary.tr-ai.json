@@ -1,0 +1,52 @@
+{
+  "chapterId": "part-05/chapter-12",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Keter köküne yakın olduğunda ışık veremez ve Işığı Keter’den çekilen Işıkta iptal olur:</b> Yani dereceler inmemiş olsaydı, Keter Işığı Keter Kli’sinde ve Hohma Işığı Hohma Kli’sinde vb. olsaydı, o zaman Hohma Işığı Guf’a ihsan edemezdi; çünkü o zaman Keter Işığı’nda iptal olur, zira bütün alt Sefirot iptal olur ve derecedeki en üst Sefira’ya karşı fark edilmez olur. Bu yüzden her derece, on Sefirot’u olsa bile, bilindiği gibi yalnızca içlerindeki en üst olanın adıyla anılır. Bu nedenle Hohma Işığı’nın aşağıda açığa çıkması, ancak Zivug yalnızca Behina Gimel üzerinde yapılırsa mümkündür; çünkü o zaman dereceler iner ve Hohma Işığı Keter Kli’sine gelir; o zaman Hohma Işığı en üst Sefira olur ve aydınlanması fark edilir."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ZON kendi Kli’sinin dışındadır; öyleyse Hohma ihsan edemez:</b> Yani Roş’ta oldukları sürece Kli’siz olurlar. Bu yüzden dereceler yerlerinde ve Üst Keter Işığı kendi Kli Behina’sında olduğu sürece, onun aydınlanması her zaman ZON’a ulaşır ve onlar ondan daha küçük başka bir Işıktan almaya hazır değildirler. Bu yüzden derecelerin inmesine ihtiyaç vardır; öyle ki Keter’in Kli’sinde Keter Işığı değil, Hohma Işığı aydınlatsın. Yukarıda bahsedildiği gibi."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "3",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:3",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Hohma uzaklaşıp Bina’nın yerine aşağıya indiğinde vb. o zaman onun yeri boş kalır.</b> Yani Hohma derecesi Bina’nın derecesine indiğinde, Hohma’nın derecesi boş kalır ve Hohma Işığı’nın kıyafetlenebileceği Keter Kli’sinden başka yer yoktur, çünkü kendi Kli’si Bina Işığı’na hizmet eder."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "4",
+        "en": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:4",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Keter kökünden akan bolluk o boş yeri, o boşluğu doldururken Hohma aşağıya ihsan eder:</b> Yani Keter Kli’sinden çekilen Işık eksik Hohma derecesini doldururken; yani Hohma Işığı’nın kendisi orada kıyafetlenirken, yukarıda bahsedildiği gibi, o zaman Hohma derecesi aşağıya ihsan eder ve yukarıda bahsedildiği gibi Keter Işığı’nda iptal olmaz, çünkü şimdi Roş’taki en üst Sefira’dır ve onun üstünde başka bir derece yoktur."
+    }
+  ]
+}

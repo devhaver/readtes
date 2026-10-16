@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Mati ve Lo Mati. E esses dois discernimentos são chamados expansão e saída, pelos quais se completarão os quatro discernimentos:</b> isto é, as quatro letras do Nome HaVaYaH. Pois estes dois discernimentos de expansão e saída da primeira expansão de Akudim, que ele trouxe acima, item 19, são as duas letras Yod, Hey de HaVaYaH. E estes dois discernimentos de expansão e saída da segunda expansão de Akudim, chamados Mati ve Lo Mati, são as duas letras Vav, Hey de HaVaYaH. Como o Ari escreve adiante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Mati: a Luz chega ao interior do Kli de Keter etc.:</b> será explicado adiante."
+    }
+  ]
+}

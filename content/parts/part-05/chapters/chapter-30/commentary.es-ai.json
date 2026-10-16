@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<b>La mirada de su visión y su contemplación en la Luz de los Akudim, llamados Néfesh:</b> El Pe (boca) del Rosh se llama Néfesh, como está escrito más adelante. Y la expansión de la Luz se llama con el nombre mirada y contemplación. Y por eso la expansión de la Luz Superior hacia la pantalla que hay en la vasija de Maljut para el acoplamiento mediante golpe se llama con el nombre mirada y contemplación en el Néfesh, es decir, en la pantalla que hay en Maljut, como está escrito más adelante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>El Emanador ve y contempla el Néfesh llamado «et».</b> Como está escrito en el pasaje anterior, que la pantalla que hay en la vasija de Maljut se llama Néfesh y se llama «et». Como el ARI lo escribió muy bien arriba (Parte 3, Capítulo 3, Ítem 3; estúdialo bien allí)."
+    }
+  ]
+}

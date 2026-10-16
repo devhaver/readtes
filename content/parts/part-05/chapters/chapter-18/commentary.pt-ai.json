@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-18",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Keter e a Luz Superior estão costas com costas:</b><br>E é porque Behina Dalet não deixou Reshimo. E é sabido que Behina Dalet é a que atrai a Luz de Keter; e embora a própria Luz de Keter tenha deixado Reshimo no seu Kli, esse é apenas um discernimento de Reshimo de Hitlabshut e não um discernimento de Reshimo de atração, como mencionado acima (na Luz Interior, p. 294, no trecho que começa com “Lo Mati em Keter”; estude bem ali), que é discernido como o discernimento de Achor em relação ao discernimento de atração, e por isso é discernido como tendo o seu Achor para cima e o seu Panim para baixo."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Que Keter e Hochma estejam face a face.</b> Pois Hochma tem um Reshimo completo também do discernimento de atração, e esse Reshimo faz a sua face virar para cima. E Keter, a quem falta o Reshimo de atração, como mencionado acima, resulta que o seu Achor está para cima, e assim se encontram em equivalência um com o outro, o que é chamado face a face. E isso será explicado adiante."
+    }
+  ]
+}

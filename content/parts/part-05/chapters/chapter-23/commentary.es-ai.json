@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Yod-Vav son dos fases de expansión, y las dos Hey son dos fases de partida:</b> Porque la primera expansión es el secreto de la Yod, y la segunda expansión es el secreto de la Vav. Y la primera partida es el secreto de la primera Hey, y la segunda partida es el secreto de la Hey inferior. Como está escrito más adelante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>El Nombre HaVaYaH no comienza sino de Jojmá hacia abajo.</b> Como es sabido, la Yod es el secreto de Jojmá, la Vav es el secreto de ZA, la primera Hey es el secreto de Biná, y la Hey inferior es el secreto de Maljut. Pero Kéter no está aludida en las cuatro letras, salvo en la punta de la Yod. Y esto por la razón que el ARI explica aquí más adelante."
+    }
+  ]
+}

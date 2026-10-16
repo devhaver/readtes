@@ -1,0 +1,41 @@
+{
+  "chapterId": "part-05/chapter-29",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:29",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:29:1",
+      "section": "ohr-pnimi",
+      "html": "<b>AK’ın AHP’sinden çıkan üç tür Işık NRN Behina’sıdır:</b> Bu zaten Ari’nin yukarıdaki sözlerinde (Kısım 4, Bölüm 6, Madde 6) ve oradaki devamında açıklanmıştır; İç Işık’ta da oraya bakın."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:29:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Eynaim’inden çıkan Işık vb. yeri orada, yukarıda, Ayin’dedir vb. Or Makif Behina’sı olarak</b>. Yani ZA’ya Yehida’nın Or Makif Behina’sıdır; Nukva’ya ise Or Makif Behina’sından bile hiç ulaşmaz. Ari’nin sözleri gibi (Kısım 4, Bölüm 6, Madde 17); orada İç Işık’a da bakın."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "3",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:29:3",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Görme denen çok ince, az bir Işık. Bu tam bir Hevel (buhar) değildir; AHP’den çıkan Hevelim gibi değil, ki onlar tam Hevelim’dir:</b> Yukarıdan aşağıya Guf denen on Sefirot’a, içindeki Or Yaşar ile birlikte yayılan Or Hozer’e “Hevel” denir, çünkü Masah’taki Aviut’ta Zivug de Hakaa’dan çıkar. Aviut çoksa Or Hozer daha büyük ve seviye daha büyük olur, bilindiği gibi. Bu yüzden Behina Bet’e kadar, Masah’taki Aviut’un Or Hozer’i yükseltip Işığı aşağıdan yukarıya çekmeye yetecek ölçüde olduğu, sonradan da yukarıdan aşağıya Guf Behina’sına yayılacak kadar olduğu sayılır ve Or Hozer bu sebeple tam Hevel diye adlandırılır. Oysa Eynaim denen Behina Alef’in Aviut’u çok ince ve zayıftır; yukarıdan aşağıya da yayılabilecek tam bir Hevel değildir ve bu yüzden ondan Guf’un içine hiçbir Işık ulaşmaz.<br>Ari’nin “çok ince ve zayıf bir Işık olduğundan, ondan Akudim’in Kelim Behina’sı yapıldı, Işıklar yapılmadı” sözü şu demektir: Eynaim Işığı’nda yalnızca içindeki Or Yaşar Behina’sını ayırt ederiz; bu, AHP’nin Işıkları üzerinde Zivug de Hakaa yapan ve onlar için Kelim’i çıkaran Işığın Özü Behina’sıdır, aşağıda açıkladığı gibi. Ancak kendisinde Zivug, AHP gibi Guf’a bir Işık seviyesi çıkarmaya yetmez; yalnızca zayıf bir Işık olarak yeter."
+    }
+  ]
+}

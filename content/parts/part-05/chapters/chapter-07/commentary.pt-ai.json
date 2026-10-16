@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-07",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:1",
+      "section": "ohr-pnimi",
+      "html": "<b>inclusão 1 etc., duas Luzes em dois Kelim etc., uma se incluiu na outra em um único Kli</b>: Isto é, toda separação espiritual se dá por disparidade de forma, e toda ligação espiritual é equivalência de forma. Por isso, se por exemplo uma Luz está vestida em Behina Dalet e a outra em Behina Guimel, elas são consideradas duas, pois a disparidade de forma que há entre elas as separa, e discerne-se que são duas Luzes separadas, cada uma por si, em dois Kelim. Mas, quando o Kli de Behina Dalet se purifica e permanece também em Behina Guimel, então os dois Kelim se incluem e se tornam um único Kli, por estarem ambos na mesma forma; e do mesmo modo as duas Luzes se incluem uma na outra em sua iluminação, embora, do lado de sua origem no discernimento das dez Sefirot da Ohr Yashar, sejam dois tipos, como por exemplo uma ser Ruach e a outra Nefesh."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>duas Luzes etc. em dois Kelim etc., o segredo do amor.</b> Isto é, o discernimento do Zivug de Neshikin, e será esclarecido em seu lugar."
+    }
+  ]
+}

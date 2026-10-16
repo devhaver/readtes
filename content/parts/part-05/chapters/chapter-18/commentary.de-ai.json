@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-18",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Keter ist mit dem Höheren Licht Rücken an Rücken:</b><br>Und das ist, weil Bchina Dalet keine Reshimo zurückgelassen hat. Und es ist bekannt, dass Bchina Dalet es ist, die das Licht von Keter zieht. Und obwohl das Licht von Keter selbst eine Reshimo in seinem Kli zurückließ, ist es nur eine Bchina der Reshimo de Hitlabshut und nicht eine Bchina der Reshimo de Hamshacha, wie oben erwähnt (im Inneren Licht, S. 294, Abschnitt beginnend mit „lo Mati in Keter“, studiere es dort gut). Dies wird als Bchina des Achor in Bezug auf die Bchina der Hamshacha betrachtet, und deshalb wird es so betrachtet, dass seine Achoraim oben und sein Panim unten sind."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Keter und Chochma werden von Angesicht zu Angesicht sein.</b> Denn die Chochma hat eine vollständige Reshimo auch von der Bchina der Hamshacha, und diese Reshimo wendet ihr Panim wieder nach oben. Und der Keter, dem die Reshimo de Hamshacha fehlt, wie oben erwähnt, hat seine Achoraim oben, und so sind sie einander gleich, was „von Angesicht zu Angesicht“ genannt wird. Und das wird weiter vorn noch erklärt."
+    }
+  ]
+}
