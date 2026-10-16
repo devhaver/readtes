@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>la phase de Malkhout, dévoilée à part, ne se trouve pas dans AA, etc. et de même dans Atik Yomin</b> : Comme il est expliqué au point précédent (page 613, le passage commençant par « et sachez »), le Hey inférieur de MA a été caché dans la Roch de Atik, et son essence ne se dévoile dans tout Atsilout. Étudiez-le bien là-bas."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>la Malkhout s’est dévoilée à partir du secret de cette tête supérieure à toutes, qui n’est pas connue, etc.</b> : Celle-ci est appelée Roch de Atik Yomin, qui est la première Roch de Atsilout, et c’est là que le Hey inférieur a été caché, comme ci-dessus. Son illumination se dévoile dans la Malkhout du monde de Atsilout, c’est-à-dire dans la Malkhout qui devient un Partsouf complet, la Noukva de ZA."
+    }
+  ]
+}

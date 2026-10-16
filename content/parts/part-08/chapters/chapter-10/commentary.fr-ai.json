@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-10",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:1",
+      "section": "ohr-pnimi",
+      "html": "<b>il clarifia, des Nekoudot de SAG où avait eu lieu la brisure, ce qu’il put en clarifier</b> : cette clarification commence depuis le deuxième Roch de Nikoudim, qui est Keter de Nikoudim. Mais le premier Roch de Nikoudim, qui se tient au-dessus du Tabour, ne s’est pas joint à ce nouveau MA, parce qu’il n’y a eu en lui aucune brisure, du fait que le Massakh se tient au-dessous de lui, et que l’Aviout du Massakh ne peut pas porter atteinte au-dessus de son lieu d’origine. Comme ci-dessus dans les parties 6 et 7. Et cela sera encore expliqué plus loin."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>et SAG devint la phase de la Noukva</b> : cela ne désigne pas SAG de AK, mais les dix Sefirot de Nikoudim, que le ARI appelle du nom de SAG parce que leurs Kélim sont de la phase des neuf inférieures de SAG, appelées Nekoudot de SAG. Comme ci-dessus, page 463, au passage commençant par « les rois ». Voir là-bas."
+    }
+  ]
+}

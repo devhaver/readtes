@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-72",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:1",
+      "section": "ohr-pnimi",
+      "html": "<b>de BON, Aba tomó el VaK de Jojmá de BON, etc.</b>: Y es necesario comprender bien la razón de este orden de división de MA y BON entre AVI Superior y YESHSUT, y ya lo explicamos arriba (Página 654, en el pasaje que comienza «y en verdad»), y de allí lo estudiarás."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>las cinco puntas de Biná de BON, que son las tres inferiores NeHY</b>: Debe decir: Guevurá, Tiféret y las tres inferiores NeHY."
+    }
+  ]
+}

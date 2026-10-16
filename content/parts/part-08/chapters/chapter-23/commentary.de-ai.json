@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Die offenbare Malchut allein ist in AA nicht zu finden usw., und ebenso in Atik Yomin</b>: Wie im vorhergehenden Abschnitt erklärt wurde (S. 613, Abschnitt beginnend mit „Und wisse“), wurde das untere Hej de MaH im Rosh de Atik verborgen, und ihr Wesen wird in der ganzen Azilut nicht offenbart. Studiere es dort gut."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Die Malchut wurde offenbart aus dem Geheimnis jenes Rosh, der höher ist als alle, der nicht erkannt wird usw.</b>: Er wird Rosh de Atik Yomin genannt, der der erste Rosh der Azilut ist, und dort wurde das untere Hej verborgen, wie oben erwähnt. Und ihr Leuchten wird in der Malchut der Welt Azilut offenbart, das heißt in der Malchut, die zu einem vollständigen Parzuf wurde, zur Nukwa de SA."
+    }
+  ]
+}

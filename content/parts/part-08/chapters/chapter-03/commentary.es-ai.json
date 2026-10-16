@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-03",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:3",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:3:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ascendieron también las vasijas que habían descendido en Beriá, hacia arriba en Atzilut</b>: Nos hace saber que el ascenso de las Luces, es decir, los registros en la corrección de los MaN, corrige junto con ellos también sus vasijas, en la misma medida en que fueron corregidos los registros en este ascenso. Pues los registros reciben siempre la corrección de las vasijas. Y esto es lo que dice: cuando ascendieron las siete Luces hacia arriba, ascendieron también las vasijas que habían descendido en Beriá, hacia arriba en Atzilut."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:3:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>pero no se unieron entre sí</b>: Es decir, aunque el lugar de los registros está en sus vasijas, y aunque las vasijas ya recibieron corrección por medio de ellos para ascender a Atzilut, como se mencionó antes en el pasaje anterior, aun así los registros todavía no pueden revestirse en sus vasijas, y eso se debe a que los registros mismos todavía no recibieron su corrección completa por medio de aquel ascenso de MaN, pues todavía necesitan acoplamientos llamados meses de Ibur, cuyo asunto se explicará en su lugar; y por medio de la permanencia de los registros allí, en el vientre de Biná, reciben allí todo el MaD de los acoplamientos de Ibur, y se corrigen por completo, y entonces se revisten en sus vasijas."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Yalnızca açığa çıkmış Malhut Behina’sı AA’da bulunmaz vb. Atik Yomin’de de böyle</b>: Bitişik pasajda açıklandığı gibi (sayfa 613, “Ve bil ki” diye başlayan pasaj), MA’nın alt Hey’i Atik’in Roş’unda gizlenmiştir ve Özü bütün Atzilut’ta açığa çıkmaz. Orada iyice inceleyin."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Malhut, “bilinmeyen, hepsinden üstün olan o baş”ın sırrından açığa çıktı vb.</b>: Ki o Atik Yomin’in Roş’u denir; Atzilut’un birinci Roş’udur ve alt Hey orada gizlenmiştir, yukarıda bahsedildiği gibi. Aydınlanması Atzilut dünyasının Malhut’unda, yani ZA’nın Nukva’sı için tam bir Partzuf hâline gelen Malhut’ta açığa çıkar."
+    }
+  ]
+}

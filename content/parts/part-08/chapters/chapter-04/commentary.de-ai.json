@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-04",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Selbst GaR sind nicht korrigiert</b>: Denn in ihnen blieb von allen Mochin de Gadlut, die sie in Nekudim empfangen hatten, nichts übrig, sondern nur das, was in ihnen bei ihrer Azilut selbst hervorging, durch die Kraft des Siwug des unteren Hej in den Nikwej Ejnaim, wie im vorigen Teil erklärt, und darum fehlen ihnen alle Bchinot der Gadlut. Und das ist es, was er sagt, dass selbst die GaR nicht korrigiert sind."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Dieses Hinaufbringen von MaN war oben in AB SaG de AK</b>: Das heißt: Denn es gibt keinen Aufstieg von MaN außer von einem Unteren zu seinem Höheren um eine Stufe, das heißt von SoN zu AwI und von AwI zu AA und dergleichen, aber nicht zu dem, der zwei Stufen höher ist als er. Und das ist es, was er sagt: Da auch die GaR Korrektur brauchen und auch sie das Hinaufbringen von MaN brauchen, ist es notwendig, dass die oberste Bchina des Hinaufbringens von MaN der Rosh de SaG sein wird, denn das MaN de SaT wird in AwI de Nekudim korrigiert, und das MaN de AwI im Keter de Nekudim, und das MaN des Keter im ersten Rosh de Nekudim, und das MaN des ersten Rosh de Nekudim wird im Rosh de SaG korrigiert, das heißt jeder Untere in seinem Höheren.<br>Und obwohl er oben sagt, dass das ganze MaN zusammen, sowohl das von den SaT de Nekudim als auch das von den GaR de Nekudim, zu den GaR de Nekudim aufstieg, das sind sieben Reshimot der sieben Lichter de SaT, mit den Achoraim de CHuB und Keter, ist damit nicht gemeint, dass sie dort alle zusammen korrigiert wurden, sondern nur der Reihe nach der Stufe, wie oben erwähnt, dass jeder Untere das MaN seines Höheren zum Höheren seines Höheren hinaufbrachte, wobei der Höhere seines Höheren sie für den Höheren korrigiert. So dass jeder herabstieg, ein Teil aus der Gesamtheit des MaN, und sie zum Höheren seines Höheren hinaufbrachte, wie weiter unten geschrieben, bis sie zu AB SaG, den Höheren, aufstiegen."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-10",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:1",
+      "section": "ohr-pnimi",
+      "html": "<b>aclaró de las Nekudot de SAG, en las que había estado el rompimiento, lo que pudo aclarar de ellas</b>: Esta aclaración comienza desde el segundo Rosh de Nekudim, que es Kéter de Nekudim; pero el primer Rosh de Nekudim, que está por encima del Tabur, no se unió con este nuevo MA, porque en él no hubo ningún rompimiento, porque la pantalla está por debajo de él, y el grosor que hay en la pantalla no puede dañar por encima del lugar de su existencia. Como se mencionó arriba en las Partes 6 y 7. Y se explicará todavía más adelante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>y SAG se hizo fase de Nukva</b>: No se refiere a SAG de AK, sino a las diez Sefirot de Nekudim, que el ARI llama con el nombre SAG porque sus vasijas son de la fase de las nueve inferiores de SAG, llamadas Nekudot de SAG. Como se mencionó arriba, Página 463, en el pasaje que comienza «Los reyes». Estúdialo bien allí."
+    }
+  ]
+}

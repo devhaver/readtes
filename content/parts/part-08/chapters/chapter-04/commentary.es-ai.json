@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-04",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ni siquiera las GaR están corregidas</b>: Pues no quedó en ellas nada de todos los Mojin de grandeza que recibieron en Nekudim, sino solo lo que salió en ellas en su misma emanación, por efecto del acoplamiento de la Hey inferior en los Níkvey Einaim, como se explicó en la parte anterior; y por eso les faltan todas las fases de la grandeza. Y esto es lo que dice: que ni siquiera las GaR están corregidas."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>la elevación de estos MaN fue arriba, en AB y SAG de AK</b>: Es decir, pues no hay ascenso de MaN sino de un inferior a su superior, un solo grado, es decir, de ZoN a AVI, y de AVI a AA, y así sucesivamente, pero no a lo que está dos grados por encima de él. Y esto es lo que dice: puesto que también las GaR necesitan corrección, y también ellas necesitan la elevación de MaN, por eso es forzoso que la fase superior de la elevación de MaN sea el Rosh de SAG, porque los MaN de ZaT se corrigen en AVI de Nekudim, y los MaN de AVI en Kéter de Nekudim, y los MaN de Kéter en el primer Rosh de Nekudim, y los MaN del primer Rosh de Nekudim se corrigen en el Rosh de SAG, es decir, cada inferior en su superior.<br>Y aunque dice arriba que todos los MaN juntos, tanto los de ZaT de Nekudim como los de las GaR de Nekudim, ascendieron a las GaR de Nekudim, que son siete registros de las siete Luces de ZaT, con los Ajoraim de JuB y Kéter, no se refiere a que se corrigieron allí todos juntos, sino solo por la vía del grado mencionada, que cada inferior elevó los MaN de su superior al superior de su superior, y el superior del superior los corrige para el superior. De modo que cada uno descendió una parte de la totalidad de los MaN y los elevó a su superior del superior, como se escribe más adelante, hasta que ascendieron a AB y SAG superiores."
+    }
+  ]
+}

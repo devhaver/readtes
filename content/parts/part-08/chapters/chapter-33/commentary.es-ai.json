@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-33",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:1",
+      "section": "ohr-pnimi",
+      "html": "<b>y cada Partzuf se corrigió y se aclaró por medio del Partzuf superior y más alto que él</b>: Como se escribió arriba en el pasaje anterior, tanto el Ibur como el acoplamiento de grandeza de cada inferior se hacen en el superior a él. Pues los dos acoplamientos de Átik se hicieron en el Rosh de SAG, y los dos acoplamientos de AA se hicieron en el Rosh de Átik, y los dos acoplamientos de AVI se hicieron en el Rosh de AA, y el acoplamiento de ZoN se hizo en el Rosh de AVI, como se mencionó arriba en su razón y fundamento."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>que, al acoplarse con la Nukva, aclaraba las partes necesarias para este inferior:</b> Como se mencionó arriba en el pasaje anterior, todas las aclaraciones a partir de los registros y las vasijas de BON se hicieron mediante el acoplamiento del masculino y la Nukva del Partzuf superior. Pues la Nukva del superior elevó hacia sí las aclaraciones que le corresponden, por la fase de haber estado con ella en un mismo grado en el tiempo de los reyes, y el masculino del superior las corrigió con su iluminación."
+    }
+  ]
+}

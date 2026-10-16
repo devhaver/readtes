@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-33",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Her Partzuf, kendisinden üstteki yüksek Partzuf aracılığıyla ıslah oldu ve ayıklandı</b>: Önceki pasajda yazıldığı gibi, hem İbur hem de Gadlut Zivug’u, her altın kendisinden üsttekinde yapılır: çünkü Atik’in iki Zivug’u SAG’ın Roş’unda yapıldı. AA’nın iki Zivug’u Atik’in Roş’unda yapıldı. AVİ’nin iki Zivug’u AA’nın Roş’unda yapıldı. ZON’un Zivug’u ise AVİ’nin Roş’unda yapıldı, sebebi ve gerekçesiyle yukarıda bahsedildiği gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>O, Nukva ile çiftleştiğinde bu alt için gerekli kısımları ayıklıyordu:</b> Önceki pasajda yukarıda bahsedildiği gibi, BON’un Reşimot ve Kelim’inden gelen bütün ayıklamalar, üst Partzuf’un erkek ve Nukva Zivug’uyla yapıldı. Üstün Nukva’sı, krallar zamanında onunla aynı derecede olmaları bakımından kendisine ait olan ayıklamaları kendisine yükseltti; üstün erkeği ise onları kendi aydınlanmasıyla ıslah etti."
+    }
+  ]
+}

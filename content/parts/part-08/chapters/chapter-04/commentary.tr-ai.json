@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-04",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>GAR bile ıslah olmamıştır</b>: Çünkü onlarda, Nekudim’de aldıkları Gadlut Mohin’inden hiçbir şey kalmadı; yalnızca asıl Atzilut’larında, Nikvey Eynaim’deki alt Hey’in Zivug’u sayesinde onlarda çıkan kaldı, önceki Kısım’da açıklandığı gibi. Bu yüzden Gadlut’un bütün Behinot’u onlarda eksiktir. İşte GAR bile ıslah olmamıştır sözü budur."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Bu MAN’ın yükseltilmesi yukarıda, AK’ın AB SAG’ında oldu</b>: Yani MAN yükseltmesi ancak alttan, kendi Üst’üne, bir derece öteye olur; yani ZON’dan AVİ’ye, AVİ’den AA’ya ve benzerlerine; ama kendinden iki derece yüksek olana olmaz. İşte şunu söylüyor: GAR da ıslaha muhtaç olduğundan ve onlar da MAN yükseltmeye muhtaç olduğundan, MAN yükseltmenin en Üst Behina’sının SAG’ın Roş’u olması zorunludur. Çünkü ZAT’ın MAN’ı Nekudim’in AVİ’sinde, AVİ’nin MAN’ı Nekudim’in Keter’inde, Keter’in MAN’ı Nekudim’in Birinci Roş’unda ıslah olur, Nekudim’in Birinci Roş’unun MAN’ı ise SAG’ın Roş’unda ıslah olur; yani her alt, kendi Üst’ünde.<br>Yukarıda, bütün MAN’ın birlikte, hem Nekudim’in ZAT’ından hem Nekudim’in GAR’ından, Nekudim’in GAR’ına yükseldiğini söylese de — ki bunlar, HB ve Keter’in Ahoraim’i ile birlikte, ZAT’ın yedi Işığının yedi Reşimot’udur — bu, hepsinin orada birlikte ıslah olduğu anlamına gelmez; yalnızca yukarıda anıldığı gibi derece yoluyla: her alt, kendi Üst’ünün MAN’ını Üst’ün Üst’üne yükseltti ve Üst’ün Üst’ü onları Üst için ıslah eder. Öyle ki her biri genel MAN’dan bir kısmı ayıkladı ve onları kendi Üst’ün Üst’üne yükseltti, önümüzde yazıldığı gibi, ta ki üst AB SAG’a yükselene kadar."
+    }
+  ]
+}

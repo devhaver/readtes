@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-72",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:1",
+      "section": "ohr-pnimi",
+      "html": "<b>BON’dan Aba, BON’un Hohma’sının VAK’ını aldı vb.</b>: MA ve BON’un Üst AVİ ile YEŞSUT arasındaki bu bölünme düzeninin sebebini iyice anlamak gerekir. Bunu yukarıda zaten açıkladık (sayfa 654, “Ve gerçekten” diye başlayan pasaj) ve onu oradan araştırırsın."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>BON’un Bina’sının beş ucu, yani üç alt olan NHY</b>: Şöyle olmalı: Gevura, Tiferet ve üç alt olan NHY."
+    }
+  ]
+}

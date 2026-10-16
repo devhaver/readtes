@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-10",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Kırılmanın olduğu SAG’ın Nekudot’undan, onlardan ayıklayabileceğini ayıkladı</b>: Bu ayıklama Nekudim’in İkinci Roş’undan, yani Nekudim’in Keter’inden başlar. Ancak Tabur’un üstünde duran Nekudim’in Birinci Roş’u bu yeni MA ile bağlanmadı, çünkü onda hiçbir kırılma olmamıştı; çünkü Masah onun altında durur ve Masah’taki Aviut, olduğu yerin üstünü bozamaz. Kısım 6 ve 7’de yukarıda anıldığı gibi. Önümüzde daha da açıklanacak."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>SAG ise Nukva Behina’sı oldu</b>: Bununla AK’ın SAG’ı kastedilmiyor, yalnızca Nekudim’in on Sefirot’u kastediliyor; Ari onlara SAG adını verir, çünkü onların Kelim’i SAG’ın Nekudot’u denen SAG’ın alt dokuzu Behina’sındandır. Yukarıda bahsedildiği gibi, sayfa 463, “Krallar” diye başlayan pasaj; orada iyice inceleyin."
+    }
+  ]
+}

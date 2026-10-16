@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-60",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60:1",
+      "section": "ohr-pnimi",
+      "html": "<b>e aquele é Hochma completa de BON:</b> Isto é, Hochma verdadeira de BON, pois são os ZAT de Hochma de BON, ou seja, o segundo ponto dos GAR de Nekudim, que é Hochma verdadeira. Mas o MA não é senão a Hochma de Bina de MA, e não Hochma verdadeira. E não se deve interpretar que seja Hochma completa nos GAR, pois os GAR Atik tomou, como é sabido, e não restou para AVI senão os ZAT de Hochma e Bina."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ambos são chamados Aba, ou Hochma, apenas, pois ela não se revela de modo algum</b>: Como mencionado acima, que na Nukva não há mais do que aquilo que ela toma do masculino, e, como no masculino não há senão o nível de Bina, sendo assim o discernimento de Hochma que há na Nukva não se revela de modo algum, mas apenas a partir do nível de Bina somente. Como mencionado acima; veja ali."
+    }
+  ]
+}
