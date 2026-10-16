@@ -4873,6 +4873,7 @@
                   "he-jerusalem-1956",
                   "pt-ai",
                   "ru-ai",
+                  "tr-ai",
                   "uk-ai"
                 ]
               }
@@ -4918,6 +4919,7 @@
                   "he-jerusalem-1956",
                   "pt-ai",
                   "ru-ai",
+                  "tr-ai",
                   "uk-ai"
                 ]
               }
@@ -4962,7 +4964,9 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5006,7 +5010,9 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5050,7 +5056,9 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5094,7 +5102,9 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5139,6 +5149,7 @@
                   "he-jerusalem-1956",
                   "pt-ai",
                   "ru-ai",
+                  "tr-ai",
                   "uk-bb"
                 ]
               }
@@ -5176,10 +5187,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5216,10 +5233,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5256,10 +5279,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5296,10 +5325,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5336,9 +5371,15 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5409,10 +5450,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5483,9 +5530,15 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5522,10 +5575,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5562,9 +5621,15 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5601,10 +5666,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5641,10 +5712,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5681,10 +5758,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5721,10 +5804,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5761,10 +5850,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5835,10 +5930,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5875,10 +5976,16 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -5915,9 +6022,15 @@
                   "uk-bb"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ]
               }
             },
@@ -6097,18 +6210,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -6134,18 +6252,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -6171,18 +6294,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -6208,14 +6336,19 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
+                  "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
                   "he-jerusalem-1956",
@@ -6245,18 +6378,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -6282,18 +6420,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -6319,18 +6462,23 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
-                  "ru-bb",
-                  "en-bb-kabbalah-info",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-bb"
                 ]
               }
             },
@@ -6355,12 +6503,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6387,12 +6539,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6425,12 +6581,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -6461,12 +6621,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6493,12 +6657,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -6529,12 +6697,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6560,12 +6732,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6591,12 +6767,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6623,12 +6803,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6662,12 +6846,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6700,12 +6888,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6732,12 +6924,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6771,12 +6967,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -6808,12 +7008,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -6846,12 +7050,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -6878,12 +7086,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6917,12 +7129,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6956,12 +7172,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "es-bb",
@@ -6995,12 +7215,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7034,12 +7258,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -7072,12 +7300,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7108,12 +7340,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7140,12 +7376,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7177,12 +7417,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7214,12 +7458,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7251,12 +7499,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -7287,12 +7539,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7318,12 +7574,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7349,12 +7609,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7380,12 +7644,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7412,12 +7680,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7449,12 +7721,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7486,12 +7762,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7523,12 +7803,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7560,12 +7844,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -7597,12 +7885,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7634,12 +7926,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7671,12 +7967,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7707,12 +8007,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7739,12 +8043,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -7776,12 +8084,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7813,12 +8125,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -7850,12 +8166,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -7886,12 +8206,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7917,12 +8241,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7948,12 +8276,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -7980,12 +8312,16 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
-                  "ru-bb",
-                  "en-bb",
-                  "fr-bb",
-                  "es-bb",
+                  "de-ai",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb",
+                  "es-bb",
+                  "fr-bb",
+                  "he-jerusalem-1956",
+                  "pt-ai",
+                  "ru-bb",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": [
                   "ru-bb",
@@ -8016,9 +8352,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8044,9 +8386,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-ai",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8072,9 +8420,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8100,9 +8454,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8128,9 +8488,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8156,9 +8522,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8184,9 +8556,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -8212,9 +8590,15 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "de-ai",
                   "en-bb",
+                  "es-ai",
+                  "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "pt-ai",
+                  "ru-ai",
+                  "tr-ai",
+                  "uk-ai"
                 ],
                 "commentary": []
               }
@@ -9581,7 +9965,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9613,9 +9998,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9647,9 +10033,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9681,9 +10068,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9715,9 +10103,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9749,9 +10138,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9783,9 +10173,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9817,9 +10208,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9851,9 +10243,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9885,9 +10278,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -9948,9 +10342,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10011,9 +10406,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10074,9 +10470,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10108,9 +10505,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10171,9 +10569,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10205,9 +10604,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10239,9 +10639,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10273,9 +10674,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10336,9 +10738,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10370,9 +10773,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10520,9 +10924,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10612,9 +11017,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10849,9 +11255,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10883,9 +11290,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10917,9 +11325,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10951,9 +11360,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -10985,9 +11395,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11019,9 +11430,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11053,9 +11465,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11145,9 +11558,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11179,9 +11593,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11213,9 +11628,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11247,9 +11663,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11281,9 +11698,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11373,9 +11791,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11407,9 +11826,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11441,9 +11861,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11475,9 +11896,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11567,9 +11989,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11601,9 +12024,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11635,9 +12059,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11669,9 +12094,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11703,9 +12129,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11737,9 +12164,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11771,9 +12199,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11834,9 +12263,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11897,9 +12327,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -11960,9 +12391,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12052,9 +12484,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12086,9 +12519,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12178,9 +12612,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12212,9 +12647,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12246,9 +12682,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12280,9 +12717,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12314,9 +12752,10 @@
                   "ru-ai"
                 ],
                 "commentary": [
-                  "en-bb-kabbalah-info",
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "en-bb-kabbalah-info",
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12348,7 +12787,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12464,7 +12904,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12496,7 +12937,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12528,7 +12970,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12560,7 +13003,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12620,7 +13064,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12680,7 +13125,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12712,7 +13158,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12744,7 +13191,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12776,7 +13224,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12808,7 +13257,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12868,7 +13318,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12900,7 +13351,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12932,7 +13384,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -12964,7 +13417,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13080,7 +13534,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13112,7 +13567,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13144,7 +13600,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13176,7 +13633,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13236,7 +13694,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13268,7 +13727,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13328,7 +13788,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13388,7 +13849,8 @@
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13415,11 +13877,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13445,7 +13909,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -13473,11 +13938,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13503,7 +13970,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -13531,11 +13999,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13562,11 +14032,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13593,11 +14065,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13624,11 +14098,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13655,11 +14131,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13686,11 +14164,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13717,11 +14197,13 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ]
               }
             },
@@ -13747,7 +14229,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -13774,7 +14257,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -13801,7 +14285,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -13912,7 +14397,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -13958,7 +14444,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -13989,7 +14476,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14020,7 +14508,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14050,7 +14539,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14077,7 +14567,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14105,7 +14596,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14136,7 +14628,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14167,7 +14660,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14198,7 +14692,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14229,7 +14724,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14260,7 +14756,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14291,7 +14788,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14322,7 +14820,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14353,7 +14852,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14383,7 +14883,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14411,7 +14912,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14442,7 +14944,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14472,7 +14975,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14500,7 +15004,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14531,7 +15036,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14562,7 +15068,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14593,7 +15100,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14623,7 +15131,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14651,7 +15160,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14682,7 +15192,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14713,7 +15224,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14744,7 +15256,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14775,7 +15288,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14805,7 +15319,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14833,7 +15348,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14863,7 +15379,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14890,7 +15407,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -14918,7 +15436,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14949,7 +15468,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -14980,7 +15500,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15011,7 +15532,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15042,7 +15564,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15073,7 +15596,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15103,7 +15627,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15131,7 +15656,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15161,7 +15687,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15189,7 +15716,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15219,7 +15747,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15247,7 +15776,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15277,7 +15807,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15305,7 +15836,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15335,7 +15867,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15362,7 +15895,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15390,7 +15924,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15421,7 +15956,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15452,7 +15988,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15483,7 +16020,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15514,7 +16052,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15544,7 +16083,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15571,7 +16111,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15598,7 +16139,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15625,7 +16167,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15653,7 +16196,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15683,7 +16227,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15711,7 +16256,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15742,7 +16288,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15773,7 +16320,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15803,7 +16351,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15831,7 +16380,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15861,7 +16411,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -15889,7 +16440,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15920,7 +16472,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15951,7 +16504,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -15982,7 +16536,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16012,7 +16567,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16039,7 +16595,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16067,7 +16624,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16098,7 +16656,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16128,7 +16687,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16155,7 +16715,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16182,7 +16743,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16209,7 +16771,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16237,7 +16800,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16267,7 +16831,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16294,7 +16859,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16321,7 +16887,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16349,7 +16916,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16379,7 +16947,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16406,7 +16975,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16433,7 +17003,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16460,7 +17031,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16487,7 +17059,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16514,7 +17087,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16541,7 +17115,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16568,7 +17143,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16595,7 +17171,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16622,7 +17199,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16649,7 +17227,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16677,7 +17256,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16707,7 +17287,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16734,7 +17315,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16761,7 +17343,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16788,7 +17371,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16815,7 +17399,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -16843,7 +17428,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16874,7 +17460,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16905,7 +17492,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16936,7 +17524,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16967,7 +17556,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -16998,7 +17588,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -17029,7 +17620,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -17060,7 +17652,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -17091,7 +17684,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -17122,7 +17716,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": [
                   "en-ai",
@@ -17152,7 +17747,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -17179,7 +17775,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }
@@ -17206,7 +17803,8 @@
                 "summary": [],
                 "source": [
                   "en-ai",
-                  "he-jerusalem-1956"
+                  "he-jerusalem-1956",
+                  "ru-ai"
                 ],
                 "commentary": []
               }

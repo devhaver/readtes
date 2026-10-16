@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-72",
+  "layer": "commentary",
+  "versionId": "ru-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:1",
+      "section": "ohr-pnimi",
+      "html": "<b>из БОН же Аба взял ВАК хохма де-БОН и т.д.</b>: Нужно хорошо понять причину этого порядка деления МА и БОН между высшими АВИ и ИШСУТ, и мы уже выясняли это выше (стр. 654, со слов «а в действительности»), оттуда ты и изучи это."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>пять краев бины де-БОН, то есть три нижних, НЕХИ</b>: Следует читать: гвура, тиферет и три нижние — НЕХИ."
+    }
+  ]
+}
