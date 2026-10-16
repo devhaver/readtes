@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-07/chapter-04",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Von ihren Achoraim gab es ein gewisses Zerbrechen usw., und es gibt in ihnen keinen wirklichen Abfall</b>: Das heißt: Obwohl auch die GaR de Azilut nicht vollständig ausgesondert wurden und die Achoraim, die zur Zeit des Zerbrechens der Gefäße von ihnen fielen, nicht vollständig an ihren Platz aufstiegen bis zur Endkorrektur, gibt dies den Klipot dennoch keinerlei Festhalten, weil diese Achoraim niemals aus der Welt Azilut hinausgingen, sondern nur von einer hohen Stufe auf eine niedrige Stufe herabstiegen. Anders die SaT de Nekudim, die SoN genannt werden: In ihnen gibt es wirklichen Abfall, wie oben geschrieben, denn deshalb starben sie und fielen in die Welten der Trennung. Und da diese Kelim nicht vollständig ausgesondert wurden, sondern viel Abfall im Inneren der Klipot blieb, haben die Klipot in dem Maß, in dem sie von diesen Kelim de SaT in ihrem Herrschaftsbereich halten, auch an SoN ein Festhalten, wie dies an seinem Ort gut geschrieben ist."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Die Klipot haften nur an SoN und nicht von Ima aufwärts</b>: Wie oben im vorhergehenden Abschnitt geschrieben, blieben nur von den Kelim de SA unausgesonderte Teile im Inneren der Klipot, und darum haben sie an ihm ein Festhalten; von Ima aufwärts hingegen fiel nichts auf den Anteil der Klipot. Darum haben die Klipot von Ima aufwärts überhaupt kein Festhalten."
+    }
+  ]
+}

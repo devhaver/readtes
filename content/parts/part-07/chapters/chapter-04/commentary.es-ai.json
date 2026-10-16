@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-07/chapter-04",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>de sus Ajoraim hubo algo de rompimiento, etc., y no hay en ellos escorias verdaderas</b>: Explicación: aunque también los GaR de Atzilut no se aclararon por completo, y los Ajoraim (posteriores) que cayeron de ellos en el momento del rompimiento de las vasijas no fueron elevados por completo a su lugar hasta el final de la corrección, con todo, esto no da ningún aferramiento a las Klipot (cáscaras), porque estos Ajoraim nunca salieron en absoluto del mundo de Atzilut, sino que descendieron de un grado alto a un grado bajo. No así ZaT de Nekudim, que se llaman ZoN: en ellos hay escorias verdaderas, como se mencionó arriba, pues por eso murieron y cayeron a los mundos de separación. Y por tanto, dado que estas vasijas no se aclararon por completo, sino que quedaron muchas escorias dentro de las Klipot, en la medida en que ellas retienen en su dominio de estas vasijas de ZaT, tienen aferramiento también en ZoN, como se explica bien en su lugar."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>las Klipot se aferran solo a ZoN y no de Ima hacia arriba</b>: Como se mencionó arriba en el pasaje anterior, pues solo de las vasijas de ZA quedaron partes sin aclarar dentro de las Klipot, y por eso tienen aferramiento en él; a diferencia de Ima hacia arriba, donde nada cayó a la parte de las Klipot. Y por eso las Klipot no tienen aferramiento alguno de Ima hacia arriba."
+    }
+  ]
+}

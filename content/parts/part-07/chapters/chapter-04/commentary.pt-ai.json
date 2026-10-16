@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-07/chapter-04",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>dos Achoraim deles houve certa quebra etc. e não há neles escórias propriamente ditas</b>: Explicação: embora também os GAR de Atzilut não tenham sido completamente depurados, e os Achoraim que caíram deles na época da quebra dos Kelim não tenham subido completamente ao seu lugar até o final da correção, ainda assim isso não dá nenhuma preensão às Klipot, porque esses Achoraim nunca saíram do mundo de Atzilut, mas desceram de um grau elevado para um grau baixo. O que não é o caso dos ZAT de Nekudim, chamados ZON, pois neles há escórias propriamente ditas, como está escrito acima, uma vez que por isso morreram e caíram nos mundos de Peruda. E por isso, visto que esses Kelim não foram completamente depurados, mas muitas escórias permaneceram dentro das Klipot, então, na medida em que elas retêm em seu domínio desses Kelim de ZAT, elas têm preensão também em ZON, como está bem escrito em seu lugar."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>as Klipot se prendem apenas a ZON, e não de Ima para cima</b>: Como está escrito acima no trecho anterior, pois somente dos Kelim de ZA permaneceram partes não depuradas dentro das Klipot, e por isso elas têm preensão nele; ao passo que de Ima para cima nada caiu na porção das Klipot. E por isso as Klipot não têm preensão alguma de Ima para cima."
+    }
+  ]
+}
