@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<b>atteint et n’atteint pas (Mati ve lo Mati). Et ces deux phases sont appelées expansion et départ, et par elles les quatre phases sont complétées</b> : c’est-à-dire les quatre lettres du nom HaVaYaH, car ces deux phases d’expansion et de départ de la première expansion des Akoudim, rapportées plus haut (point 19), sont les deux lettres Yod, Hey de HaVaYaH. Et ces deux phases d’expansion et de départ de la seconde expansion des Akoudim, appelées Mati et lo Mati, sont les deux lettres Vav, Hey de HaVaYaH, comme le ARI l’écrit plus loin."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>la lumière atteint (Mati) à l’intérieur du Kli de Keter, etc.</b> : cela sera expliqué plus loin."
+    }
+  ]
+}

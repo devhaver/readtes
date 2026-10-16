@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<b>görmesi ve bakışı yoluyla, Akudim’in Işığına, yani anılan Nefeş’e bakmasıyla:</b> Roş’un Pe’ine Nefeş denir, aşağıda yazıldığı gibi. Işığın Hitpaştut’una Bakış ve Bakma denir. Bu yüzden Üst Işık’ın Zivug de Hakaa için Malhut Kli’sindeki Masah’a yayılmasına, Nefeş’e, yani Malhut’taki Masah’a bakış ve bakma denir, aşağıda yazıldığı gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Yaratıcı “et” denen Nefeş’i görüp ona baktığında.</b> Bir önceki pasajda yazıldığı gibi, Malhut Kli’sindeki Masah’a Nefeş denir ve “et” denir; Ari’nin yukarıda iyice açıkladığı gibi (Kısım 3, Bölüm 3, Madde 3, orada iyice inceleyin)."
+    }
+  ]
+}

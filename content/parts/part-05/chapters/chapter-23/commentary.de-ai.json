@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Yud-Waw sind die zwei Bchinot der Ausbreitung, und Hej-Hej sind die zwei Bchinot des Verschwindens:</b> Denn die erste Ausbreitung ist das Geheimnis von Yud, und die zweite Ausbreitung ist das Geheimnis von Waw. Und das erste Verschwinden ist das Geheimnis des ersten Hej, und das zweite Verschwinden ist das Geheimnis des letzten Hej. Wie weiter vorn geschrieben steht."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>der Name HaWaYaH erst von Chochma abwärts beginnt.</b> Wie bekannt, ist das Yud das Geheimnis von Chochma, das Waw das Geheimnis von SA, das erste Hej das Geheimnis von Bina und das letzte Hej das Geheimnis von Malchut. Keter aber wird in den vier Buchstaben nicht angedeutet, außer in der Spitze des Yud. Und das aus dem Grund, den der ARI weiter vorn hier erklärt."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-16",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:16",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:16:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Üst Işık da ayrıldığı sırada Ahor (arka) diye adlandırılır:</b> Panim ve Ahor adlandırmaları yalnızca Kelim için geçerlidir; çünkü Işıkta bunlara Hitpaştut ve ayrılma denir. Ari’nin burada Işığın ayrılmasına Ahor demesi bir ödünç alma yoluyladır; çünkü Işığın ayrılması meselesini Kelim’deki Ahor meselesiyle kıyaslamak ve bunlara sırt-sırta demek istemiştir. Boş Kelim’e inen Or Hozer’in Ahor ve ayrılma diye adlandırılmasını ise Ari Kısım 4, Bölüm 3, Madde 4’te zaten açıklamıştır, orada iyice inceleyin."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:16:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Işık ondan uzaklaştığı için yüzünü yukarıya çevirebilir</b>. Çünkü Zivug üst Behina’dan da kesildiğinde ve Zivug’un aydınlanması Kli’ye inmekten kesildiğinde, Reşimo Kli’de yeniden aydınlatmaya döner; böylece Kli başlangıçtaki gibi yüzünü yukarıya çevirmiş olur. Panim, Reşimo Behina’sından aydınlanır; Kli’nin Ahor’u ise başlangıçtaki gibi aşağıdadır, çünkü şimdi hiçbir aydınlanma almaz. “O zaman Kli” diye başlayan pasajda yukarıda bahsedildiği gibi; orada bunu uzun uzun açıkladık, orada iyice inceleyin."
+    }
+  ]
+}

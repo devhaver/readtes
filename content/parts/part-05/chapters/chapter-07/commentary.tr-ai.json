@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-07",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Hitkalelut: Birincisi vb., iki Işık iki Kli’de vb. biri ötekinin içine tek bir Kli’de katılmıştır</b>: Yani her ruhani ayrılık form eşitsizliğiyle olur, her ruhani birleşme ise form eşitliğidir. Bu yüzden örneğin bir Işık Behina Dalet’e, diğeri Behina Gimel’e kıyafetlenmişse, ikisi sayılırlar; çünkü aralarındaki form eşitsizliği onları birbirinden ayırır ve kendi başlarına iki Kli’de iki ayrı Işık oldukları kabul edilir. Ancak Behina Dalet’in Kli’si arındığında ve o da Behina Gimel’de kaldığında, işte o zaman iki Kli birbirine katılır ve tek bir Kli olur, çünkü ikisi de eşit formdadır. Aynı şekilde iki Işık da aydınlanmalarında birbirine katılır; her ne kadar Or Yaşar’ın on Sefirot’undan çıkışları bakımından iki çeşit olsalar da, örneğin biri Ruah, diğeri Nefeş gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>İki Işık vb. iki Kli’de vb. sevgi sırrı.</b> Yani Zivug de Neşikin (öpüşme) Behina’sı; kendi yerinde açıklanacaktır."
+    }
+  ]
+}

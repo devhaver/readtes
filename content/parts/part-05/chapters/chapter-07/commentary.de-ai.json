@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-07",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Einschluss, erstens usw., zwei Lichter in zwei Kelim usw., dass das eine im anderen in einem Kli einbezogen wird</b>: Das heißt: Jede geistige Trennung geschieht durch die Unterschiedlichkeit der Form, und jede geistige Verbindung ist Gleichheit der Form. Wenn daher zum Beispiel ein Licht in Bchina Dalet eingekleidet ist und das andere in Bchina Gimel, gelten sie als zwei, denn die Unterschiedlichkeit der Form zwischen ihnen trennt sie, und man erkennt, dass sie zwei voneinander getrennte Lichter in zwei Kelim sind. Zu der Zeit aber, da sich das Kli de Bchina Dalet reinigt und ebenfalls in Bchina Gimel bleibt, werden die beiden Kelim einbezogen und zu einem Kli, weil beide in gleicher Form sind, und ebenso werden die beiden Lichter in ihrem Leuchten ineinander einbezogen, obwohl sie ihrem Ursprung nach, aus der Bchina der Zehn Sefirot des Or Yashar, zwei Arten sind, wie zum Beispiel das eine Ruach und das andere Nefesh ist."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Zwei Lichter usw. in zwei Kelim usw., das Geheimnis der Liebe (Ahawa).</b> Das ist die Bchina des Siwug de Neshikin (Küsse), und das wird an seinem Ort erklärt."
+    }
+  ]
+}

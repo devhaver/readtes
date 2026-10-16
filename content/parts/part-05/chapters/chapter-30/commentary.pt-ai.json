@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<b>O olhar da sua visão e do seu fitar a Luz dos Akudim, chamados Nefesh:</b> O Peh de Rosh é chamado Nefesh, como está escrito adiante. E a expansão da Luz é designada pelo nome olhar e fitar. E por isso a expansão da Luz Superior para o Massach no Kli de Malchut, para o Zivug de Hakaa, é designada pelo nome olhar e fitar no Nefesh, isto é, no Massach que há na Malchut, como está escrito adiante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>O Emanador vê e fita o Nefesh chamado “Et”.</b> Como está escrito no trecho anterior, o Massach que há no Kli de Malchut é designado Nefesh e é designado “Et”. Como o Ari explicou bem acima (Parte 3, Capítulo 3, item 3; estude bem ali)."
+    }
+  ]
+}

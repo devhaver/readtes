@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-30",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:1",
+      "section": "ohr-pnimi",
+      "html": "<b>le regard de sa vision et de son coup d’œil sur la lumière des Akoudim, appelés Nefesh</b> : le Pé du Roch est appelé Nefesh, comme il est écrit plus loin. Et l’expansion de la lumière est appelée regard et coup d’œil. C’est pourquoi l’expansion de la Lumière Supérieure vers le Massakh qui est dans le Kli de Malkhout, en vue du Zivoug de Hakaa, est appelée regard et coup d’œil dans le Nefesh, c’est-à-dire dans le Massakh qui est dans la Malkhout, comme il est écrit plus loin."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:30:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>l’Emanateur voit et regarde dans le Nefesh appelé Et.</b> Comme il est écrit dans le point précédent, le Massakh qui est dans le Kli de Malkhout est appelé Nefesh et est appelé « Et », comme le ARI l’a bien expliqué plus haut (Partie 3, chapitre 3, point 3, étudiez-le bien là-bas)."
+    }
+  ]
+}

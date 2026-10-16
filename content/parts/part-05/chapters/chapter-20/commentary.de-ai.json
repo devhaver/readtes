@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Mati we lo Mati. Und diese zwei Bchinot werden Ausbreitung und Verschwinden genannt, durch die die vier Bchinot vollendet werden:</b> Das heißt, die vier Buchstaben des Namens HaWaYaH, denn jene zwei Bchinot der Ausbreitung und des Verschwindens der Ausbreitung Alef de Akudim, die er oben in Punkt 19 brachte, sind die zwei Buchstaben Yud und Hej von HaWaYaH. Und diese zwei Bchinot der Ausbreitung und des Verschwindens in der Ausbreitung Bet de Akudim, die Mati we lo Mati genannt werden, sind die zwei Buchstaben Waw und Hej von HaWaYaH. Wie der ARI weiter vorn schreibt."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>das Licht ist innerhalb des Kli von Keter Mati usw.:</b> Wird weiter unten erklärt."
+    }
+  ]
+}

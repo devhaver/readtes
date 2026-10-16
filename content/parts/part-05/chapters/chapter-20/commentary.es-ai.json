@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-20",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Matei ve Lo Matei, y estas dos fases se llaman expansión y partida, por las cuales se completarán las cuatro fases:</b> Es decir, las cuatro letras del Nombre HaVaYaH, pues estas dos fases de expansión y partida de la primera expansión de Akudim, que trajo arriba en el Ítem 19, son las dos letras Yod y Hey de HaVaYaH. Y estas dos fases de expansión y partida de la segunda expansión de Akudim, llamadas Matei ve Lo Matei, son las dos letras Vav y Hey de HaVaYaH. Como escribe el ARI más adelante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:20:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Matei de la Luz dentro de la vasija de Kéter, etc.:</b> Se explicará más adelante."
+    }
+  ]
+}

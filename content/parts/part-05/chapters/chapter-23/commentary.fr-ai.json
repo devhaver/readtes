@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Yod et Vav sont les deux phases d’expansion, et les deux Hey sont les deux phases de départ</b> : car la première expansion est le secret du Yod, et la seconde expansion est le secret du Vav. Et le premier départ est le secret du premier Hey, et le second départ est le secret du dernier Hey, comme il est écrit plus loin."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>le nom HaVaYaH ne commence qu’à partir de Hokhma et en bas.</b> Comme on le sait, le Yod est le secret de Hokhma, le Vav le secret de ZA, le premier Hey le secret de Bina, et le dernier Hey le secret de Malkhout. Quant à Keter, il n’est évoqué dans les quatre lettres que dans la pointe du Yod, et cela pour la raison que le ARI expliquera plus loin."
+    }
+  ]
+}

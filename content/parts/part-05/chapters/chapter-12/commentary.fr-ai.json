@@ -1,0 +1,52 @@
+{
+  "chapterId": "part-05/chapter-12",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:1",
+      "section": "ohr-pnimi",
+      "html": "<b>proche de la racine de Keter, elle ne peut pas éclairer et sa lumière est annulée dans la lumière qui s’étend de Keter</b> : C’est-à-dire que si les degrés ne descendaient pas, mais que la lumière de Keter était dans le Kli de Keter et la lumière de Hokhma dans le Kli de Hokhma, etc., alors la lumière de Hokhma ne pourrait pas donner au Gouf, parce qu’elle est alors annulée dans la lumière de Keter, car toutes les Sefirot inférieures sont annulées et ne sont pas reconnues par rapport à la Sefira supérieure du degré. C’est pourquoi chaque degré, bien qu’il ait dix Sefirot, n’est appelé que du nom de la supérieure d’entre elles, comme on le sait ; et c’est pourquoi il est impossible que la lumière de Hokhma se révèle en bas, à moins que le Zivoug ne se fasse sur la Bekhina Guimel seule, car alors les degrés descendent, et la lumière de Hokhma vient dans le Kli de Keter, où la lumière de Hokhma sera la Sefira supérieure et son illumination sera reconnue."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>les ZON sont en dehors de leur Kli, et donc la Hokhma ne peut pas donner</b> : C’est-à-dire que tant qu’ils sont dans le Roch, ils s’y trouvent sans Kli. C’est pourquoi, tant que les degrés sont à leur place et que la lumière du Keter supérieur est dans la phase de son Kli, son illumination parvient toujours aux ZON, et ils ne sont pas prêts à recevoir d’une autre lumière plus petite que lui. Et c’est pourquoi il faut la descente des degrés, afin que la lumière de Keter n’éclaire pas dans son Kli, mais la lumière de Hokhma, comme ci-dessus."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "3",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:3",
+      "section": "ohr-pnimi",
+      "html": "<br><b>la Hokhma s’éloigne et descend à la place de Bina, etc., et alors sa place reste vide</b>. C’est-à-dire que lorsque le degré de Hokhma descend au degré de Bina, il se trouve que le degré de Hokhma est vacant, et il n’y a pas d’autre place où la lumière de Hokhma puisse se revêtir, si ce n’est dans le Kli de Keter, car son propre Kli sert à la lumière de Bina."
+    },
+    {
+      "anchorId": "op-4",
+      "order": 4,
+      "label": {
+        "he": "4",
+        "en": "4"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:12:4",
+      "section": "ohr-pnimi",
+      "html": "<br><b>tandis que l’abondance qui est donnée par la racine de Keter remplit cette place, l’espace vide, la Hokhma donne vers le bas</b> : C’est-à-dire que tandis que la lumière qui s’étend du Kli de Keter remplit ce degré manquant de Hokhma, c’est-à-dire que la lumière de Hokhma elle-même s’y revêt, comme ci-dessus, alors le degré de Hokhma donne vers le bas et n’est pas annulé dans la lumière de Keter, comme ci-dessus, étant maintenant la Sefira supérieure du Roch, et il n’y a pas d’autre degré au-dessus d’elle."
+    }
+  ]
+}

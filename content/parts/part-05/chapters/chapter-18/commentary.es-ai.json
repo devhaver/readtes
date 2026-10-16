@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-18",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Kéter con la Luz Superior están Ajor be Ajor:</b><br>Y esto es porque la cuarta fase no dejó registro, y es sabido que la cuarta fase es la que extiende la Luz de Kéter; y aunque la Luz de Kéter misma dejó un registro en su vasija, este es solo un registro de revestidura y no un registro de extensión, como se mencionó (en la Luz Interior, Página 294, en el pasaje que comienza «no llega a Kéter»; estúdialo bien allí). Por eso se considera Ajor respecto de la fase de extensión, y se considera por ello que su Ajor está hacia arriba y su Panim hacia abajo."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:18:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Es forzoso que Kéter y Jojmá estén Panim be Panim.</b> Porque Jojmá tiene un registro completo también de la fase de extensión, registro que vuelve su Panim hacia arriba. Y Kéter, a la cual le falta el registro de extensión, como se mencionó, resulta que su Ajor está hacia arriba, y por eso están ambas equiparadas una con otra, lo cual se llama Panim be Panim. Y se explicará más adelante."
+    }
+  ]
+}

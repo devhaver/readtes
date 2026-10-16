@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-07",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:1",
+      "section": "ohr-pnimi",
+      "html": "<b>La première : lorsque deux lumières sont dans deux Kélim, etc., elles s’incluent l’une dans l’autre dans un seul Kli</b> : C’est-à-dire que toute séparation spirituelle se produit par la disparité de forme, et toute union spirituelle est l’équivalence de forme. C’est pourquoi si, par exemple, une lumière est revêtue dans la Bekhina Dalet et l’autre dans la Bekhina Guimel, elles sont considérées comme deux, car la disparité de forme qui est en elles les sépare, et il est discerné qu’il y a deux lumières distinctes en elles-mêmes dans deux Kélim. Mais lorsque le Kli de la Bekhina Dalet se purifie et reste lui aussi dans la Bekhina Guimel, alors les deux Kélim s’incluent et deviennent un seul Kli, car ils sont tous deux de forme égale, et de même les deux lumières s’incluent l’une dans l’autre dans leur illumination, bien que, du côté de leur origine, des dix Sefirot de la Ohr Yashar, elles soient deux espèces, par exemple l’une Rouakh et l’autre Nefesh."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:7:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>deux lumières, etc., dans deux Kélim, etc., le secret de l’amour</b>. C’est-à-dire la phase du Zivoug de Neshikin, et cela sera expliqué à sa place."
+    }
+  ]
+}

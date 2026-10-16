@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-05/chapter-23",
+  "layer": "commentary",
+  "versionId": "uk-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Юд і вав — це дві категорії поширення, а гей і гей — дві категорії відходу:</b> Адже перше поширення — це суть юд, а друге поширення — суть вав; перший відхід — суть першої гей, а другий відхід — суть останньої гей. Як буде сказано далі."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 5:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Ім’я АВАЯ починається тільки з хохми й вниз.</b> Як відомо, юд — це хохма, вав — зеїр анпін, перша гей — біна, а остання гей — малхут. Але кетер не вказаний у цих чотирьох буквах, окрім як у вістрі юда. А причина цього — та, яку рав пояснює тут далі."
+    }
+  ]
+}
