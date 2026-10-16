@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-04",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>nem mesmo as GAR estão corrigidas</b>: Pois não restou neles nada de todos os Mochin de Gadlut que receberam em Nekudim, mas somente o que saiu neles na sua própria emanação, por força do Zivug da Hey inferior nos Nikvey Eynaim, como explicado na Parte anterior; e por isso lhes faltam todos os discernimentos de Gadlut. E isto é o que ele diz: que nem mesmo os GAR estão corrigidos."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>o discernimento da elevação desses MAN foi em cima, em AB SAG de AK</b>: Explicação: não há subida de MAN senão do inferior ao seu Superior, em um grau, isto é, de ZON a AVI, e de AVI a AA, e assim por diante, mas não ao que é mais alto que ele em dois graus. E isto é o que ele diz: visto que também os GAR precisam de correção, e também eles precisam da elevação de MAN, é por isso necessário que o discernimento mais alto da elevação de MAN seja o Rosh de SAG. Pois o MAN dos ZAT é corrigido em AVI de Nekudim, o MAN de AVI no Keter de Nekudim, o MAN de Keter no primeiro Rosh de Nekudim, e o MAN do primeiro Rosh de Nekudim é corrigido no Rosh de SAG, isto é, cada inferior em seu Superior.<br>E embora ele diga acima que todo o MAN junto, tanto o dos ZAT de Nekudim quanto o dos GAR de Nekudim, subiu aos GAR de Nekudim, que são os sete Reshimot das sete Luzes dos ZAT, com os Achoraim de HB e Keter, não se quer dizer que foram corrigidos ali todos juntos, mas somente por meio do grau, como mencionado acima: que cada inferior fez subir o MAN do seu Superior ao Superior do seu Superior, e este Superior do Superior o corrige em benefício do Superior. De modo que cada um depurou uma parte do conjunto do MAN e a fez subir ao Superior do seu Superior, como escrito adiante, até que subiram ao AB SAG Superior."
+    }
+  ]
+}

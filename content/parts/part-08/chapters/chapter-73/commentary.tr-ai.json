@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-73",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ZA’nın BON’un VAK’ı ve MA’nın VAK’ı vardır</b>: Ve onlar tek bir Guf sayılırlar; Aba’nın Guf’undaki MA ve BON ya da İma’nın Guf’undaki MA ve BON gibi — içlerindeki MA erkek tarafı, BON ise dişi tarafıdır ve eşit seviyede birbirlerine yapışıktırlar. Ancak ZA’nın Guf’undaki MA ve BON ile AVİ’nin Guflarındaki MA ve BON arasında büyük bir fark vardır. Çünkü Aba’nın Guf’undaki MA ve BON birbirine yüz-yüze yapışıktır, bu tam bir bağlanmadır. İma’nın MA ve BON’u da öyledir. Ama ZA’nın Guf’undaki MA ve BON sırt-sırta durur ve tam bir bağlanma sayılmaz; Ari’nin sözlerinde yukarıda bahsedildiği gibi, sayfa 663, Madde 64. Orada İç Işık’a da bakın."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ZA’da MA ve BON olan HG vardır, Nukva’da da öyle</b>: Bu, Ari’nin yukarıda (sayfa 663, Madde 65) ZA’nın hepsi MA Behina’sıdır, Nukva’nın hepsi BON Behina’sıdır yazdığıyla çelişmez; orada İç Işık’ta iyice yazıldığı gibi; oraya bakın."
+    }
+  ]
+}

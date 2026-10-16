@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-08/chapter-12",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:12",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:12:1",
+      "section": "ohr-pnimi",
+      "html": "<b>una fase que se une con los Teamim de MA, etc.</b>: Pues las diez Sefirot de Nekudim salieron en los cinco Partzufim Galgalta, AB, SAG, MA y BON, como se mencionó arriba en la Parte 7. Y por eso hay también en ellas mismas TaNTA, de modo que cada fase de ellas se une con la fase que le corresponde en TaNTA del nuevo MA, solo que hay en ellas algunos cambios, que se explicarán más adelante."
+    }
+  ]
+}

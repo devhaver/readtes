@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-33",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Und jeder Parzuf wurde durch den Parzuf, der über ihm und höher als er ist, korrigiert und ausgesondert</b>: Wie oben im unmittelbar vorangehenden Abschnitt geschrieben steht, werden sowohl der Ibur als auch der Siwug de Gadlut jedes Unteren im Höheren von ihm gemacht. Denn die zwei Siwugim de Atik wurden im Rosh de SaG gemacht. Und die zwei Siwugim de AA wurden im Rosh de Atik gemacht. Und die zwei Siwugim de AwI wurden im Rosh de AA gemacht. Und der Siwug von SoN wurde im Rosh de AwI gemacht, wie oben in seinem Grund und seiner Begründung erwähnt."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Wenn er sich mit der Nukwa paarte, sonderte er die für diesen Unteren nötigen Teile aus</b>: Wie oben im unmittelbar vorangehenden Abschnitt erwähnt, wurden alle Aussonderungen aus den Reshimot und den Kelim de BoN durch den Siwug von Sachar und Nukwa des Höheren Parzuf gemacht. Dabei erhob die Nukwa des Höheren die Aussonderungen, die sich auf sie beziehen, aus dem Aspekt dessen, dass sie zur Zeit der Könige mit ihr auf einer Stufe waren, und der Sachar des Höheren korrigierte sie durch sein Leuchten."
+    }
+  ]
+}

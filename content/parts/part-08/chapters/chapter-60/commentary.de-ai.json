@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-60",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Und das ist die vollständige Chochma de BoN:</b> Das heißt, die wahre Chochma de BoN, denn sie sind die SaT der Chochma de BoN, das heißt der zweite Punkt der GaR de Nekudim, der die wahre Chochma ist. MaH aber ist nur die Chochma der Bina de MaH, nicht aber die wahre Chochma. Und man darf nicht erklären, dass es eine vollständige Chochma in den GaR ist, denn die GaR nahm Atik, wie bekannt. Und für AwI blieben nur die SaT der Chochma und Bina."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Beide heißen Aba oder Chochma allein, denn sie wird überhaupt nicht offenbart</b>: Wie oben geschrieben, denn in der Nekewa ist nicht mehr als das, was sie vom Sachar nimmt, und da im Sachar nur die Stufe Bina ist, wird die Bchina Chochma in der Nekewa überhaupt nicht offenbart, sondern nur von der Stufe Bina allein. Wie oben, siehe dort."
+    }
+  ]
+}

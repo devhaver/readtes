@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-73",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ZA tiene VaK de BON y VaK de MA</b>: Y se consideran un solo Guf, como el MA y el BON que hay en el Guf (cuerpo) de Aba, o el MA y el BON que hay en el Guf de Ima, donde el MA es el lado masculino que hay en él, y el BON es el lado de la Nukva (femenina) que hay en él, y están pegados uno con otro en un nivel igual. Pero hay una gran diferencia entre el MA y el BON que hay en el Guf de ZA, y el MA y el BON que hay en los Gufim de AVI. Pues el MA y el BON que hay en el Guf de Aba están pegados uno con otro Panim be Panim, que es una unión completa. Y asimismo el MA y el BON de Ima. Pero el MA y el BON que hay en el Guf de ZA están Ajor be Ajor, y no se consideran una unión completa, como se dijo arriba en las palabras del ARI, Página 663, Ítem 64. Y ver allí en la Luz Interior."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>como ZA, hay en él JuG, que son MA y BON, y asimismo en la Nukva</b>: Esto no contradice lo que escribió el ARI arriba (Página 663, Ítem 65), que todo ZA es fase de MA y toda la Nukva es fase de BON, como se explicó bien allí en la Luz Interior; ver allí."
+    }
+  ]
+}

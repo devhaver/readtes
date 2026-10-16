@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-73",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ZA a VAK de BON et VAK de MA</b> : et ils sont considérés comme un seul Gouf, comme MA et BON dans le Gouf de Abba, ou MA et BON dans le Gouf de Ima, où MA est le côté mâle qui s’y trouve et BON le côté Noukva qui s’y trouve, attachés l’un à l’autre à un niveau égal. Toutefois, il y a une grande différence entre MA et BON dans le Gouf de ZA et MA et BON dans les Goufim de AVI. Car MA et BON dans le Gouf de Abba sont attachés l’un à l’autre face à face, ce qui est une liaison complète. Et de même MA et BON de Ima. Mais MA et BON dans le Gouf de ZA se tiennent dos à dos, et ne sont pas considérés comme une liaison complète, comme ci-dessus dans les paroles du ARI, page 663, point 64. Et voyez dans la Lumière intérieure à cet endroit."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>dans ZA il y a HG qui sont MA et BON, et de même dans la Noukva</b> : Cela ne contredit pas ce qu’a écrit le ARI ci-dessus (page 663, point 65), que ZA est tout entier la phase de MA et la Noukva tout entière la phase de BON, comme il est bien écrit là-bas dans la Lumière intérieure, voir là-bas."
+    }
+  ]
+}

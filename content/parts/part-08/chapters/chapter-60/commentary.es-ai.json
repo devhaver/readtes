@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-60",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60:1",
+      "section": "ohr-pnimi",
+      "html": "<b>y aquella es Jojmá completa de BON</b>: Es decir, Jojmá verdadera de BON, pues son los ZaT (siete inferiores) de Jojmá de BON, es decir, el segundo punto de los GaR (las tres primeras) de Nekudim, que es Jojmá verdadera. Pero el MA no es sino Jojmá de Biná de MA, pero no Jojmá verdadera. Y no hay que interpretar que es Jojmá completa en GaR, pues los GaR los tomó Átik, como es sabido, y no quedó para AVI sino ZaT de Jojmá y Biná."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:60:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>ambos se llaman Aba o solamente Jojmá, porque ella no se revela en absoluto</b>: Como se dijo arriba, que no hay más en la femenina sino lo que toma del masculino, y dado que no hay en el masculino sino el nivel de Biná, si es así, la fase de Jojmá que hay en la femenina no se revela en absoluto, sino solo desde el nivel de Biná únicamente. Como se dijo, ver allí."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-33",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Et chaque Partsouf a été corrigé et clarifié par le Partsouf supérieur et plus haut que lui</b> : Ainsi qu’il est écrit plus haut au point précédent, tant l’Ibour que le Zivoug de Gadlout de chaque inférieur se font dans son supérieur. En effet, les deux Zivouguim de Atik se sont faits dans le Roch de SAG, et les deux Zivouguim de AA se sont faits dans le Roch de Atik, et les deux Zivouguim de AVI se sont faits dans le Roch de AA, et le Zivoug de ZON s’est fait dans le Roch de AVI, comme ci-dessus avec sa raison et son motif."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:33:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>qui, du fait qu’il s’accouplait dans la Noukva, clarifiait les parties nécessaires à cet inférieur</b> : Comme ci-dessus au point précédent, toutes les clarifications issues des Rechimot et des Kélim de BON se sont faites par le Zivoug de mâle et Noukva du Partsouf supérieur. La Noukva du supérieur a fait monter vers elle les clarifications qui lui sont rattachées, du fait qu’elles étaient avec elle dans un seul degré au temps des rois, et le mâle du supérieur les a corrigées par son illumination."
+    }
+  ]
+}

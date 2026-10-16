@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-03",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:3",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:3:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Beria’ya inmiş olan Kelim de Atzilut’a yukarı çıktı</b>: Bize şunu duyuruyor: Işıkların yükselmesi, yani MAN’ın ıslahındaki Reşimot, Reşimot’un bu yükselişte ıslah olduğu ölçüde, kendi Kelim’ini de onlarla birlikte ıslah eder. Çünkü Reşimot daima Kelim’in ıslahını alır. İşte “yedi Işık yukarı çıktığında, Beria’ya inmiş olan Kelim de Atzilut’a yukarı çıktı” sözü budur."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:3:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Ancak birbirine bağlanmadılar</b>: Yani Reşimot’un yeri kendi Kelim’indedir ve Kelim, yukarıda önceki pasajda anıldığı gibi, onlar aracılığıyla Atzilut’a yükselmek üzere zaten ıslah almış olsa da, Reşimot henüz kendi Kelim’ine kıyafetlenemez. Bunun sebebi, Reşimot’un kendilerinin bu MAN yükselmesiyle henüz tam ıslahlarını almamış olmasıdır; çünkü onlar hâlâ İbur ayları denen Zivugim’e ihtiyaç duyar, bunların meselesi yerinde açıklanacaktır. Reşimot’un Bina’nın karnında kalması sayesinde, İbur Zivugim’inden bütün MAD’ı alırlar ve tamamen ıslah olurlar; o zaman kendi Kelim’ine kıyafetlenirler."
+    }
+  ]
+}

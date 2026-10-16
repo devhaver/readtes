@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-23",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Malchut revelada, sozinha, não se encontra em AA etc. e assim também em Atik Yomin</b>: Como foi explicado no trecho anterior (p. 613, o trecho que começa com “E saiba”), a Hey inferior de MA foi ocultada no Rosh de Atik, e a essência dela não se revela em todo Atzilut. Estude bem ali."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:23:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>a Malchut se revelou do segredo de esse Rosh superior a todos eles, que não é conhecido etc.</b>: Que é chamado Rosh de Atik Yomin, que é o primeiro Rosh de Atzilut, e ali foi ocultada a Hey inferior, como mencionado acima. E a iluminação dela se revela na Malchut do mundo de Atzilut, isto é, na Malchut que se tornou um Partzuf completo para a Nukva de ZA."
+    }
+  ]
+}

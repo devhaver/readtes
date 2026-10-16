@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-28",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:28",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:28:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Atzilut’un on Sefirot’u beş Partzufim’e bölünür</b>: Bu, bilinen beş Behina’ya göredir: Behina Dalet’in Masah’ı üzerinde Keter seviyesi çıkar, Behina Gimel’in Masah’ı üzerinde Hohma seviyesi çıkar, Behina Bet’in Masah’ı üzerinde Bina seviyesi çıkar, Behina Alef’in Masah’ı üzerinde ZA seviyesi çıkar, Keter Behina’sının Masah’ı üzerinde Malhut seviyesi çıkar. Zaten biliyorsun ki Behina Alef üzerinde çıkan ZA seviyesi altı Sefira olan HGT NHY’yi kapsar; bu yüzden yukarıdaki beş seviye on Sefirot sayılır."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:28:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>MA ve BON’un bu birleşmelerinden yapılan Atzilut’un on Sefirot’u onları bu düzene göre almaz</b>: MA ile BON arasındaki fark yüzünden. Çünkü Atzilut’ta çıkan yukarıdaki beş seviyeye yeni MA denir; zira krallar zamanında Kelim’de zaten bulunan BON Işıklarına ek olarak Atzilut’ta çıkan her yeni Işık yeni MA adıyla anılır. Krallar zamanında zaten var olan eski Işıklara ise BON denir. Bununla, Masah’taki beş Behina üzerinde, Atzilut’un kendisinde çıkan yukarıdaki beş seviyenin bütün Işıklarının yeni MA adı altında sayıldığını anlarsın. Ne var ki MA’nın her bir seviyesi, kendisi için dişi Behina’sı olarak BON’dan bir Sefira alır; önümüzde yazıldığı gibi. Bunlarda değişiklikler vardır: BON’un Keter’i ikiye bölünür, üst yarısı MA’nın Keter seviyesine bağlanır, alt yarısı MA’nın Hohma seviyesine bağlanır; başka değişiklikler de vardır. Bu yüzden Atzilut Partzufim’i seviyelerin düzenine göre pek kesin değildir; çünkü Partzuf’taki BON Behinot’unu da hesaba katmak gerekir. Yazıldığı gibi."
+    }
+  ]
+}

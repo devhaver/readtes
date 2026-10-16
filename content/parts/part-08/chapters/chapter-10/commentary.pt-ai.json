@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-10",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:1",
+      "section": "ohr-pnimi",
+      "html": "<b>depurou das Nekudot de SAG, nas quais houve a quebra, o que pôde depurar delas</b>: Esta depuração começa do segundo Rosh de Nekudim, que é o Keter de Nekudim; mas o primeiro Rosh de Nekudim, que está acima do Tabur, não se uniu a este novo MA, porque nele não houve nenhuma quebra, uma vez que o Massach está abaixo dele, e a Aviut que há no Massach não pode danificar acima do lugar do seu ser. Como mencionado acima nas Partes 6 e 7. E será ainda explicado adiante."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:10:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>e SAG se tornou discernimento de Nukva</b>: Não se refere ao SAG de AK, mas às dez Sefirot de Nekudim, que o Ari chama pelo nome SAG porque os Kelim delas são do discernimento dos nove inferiores de SAG, chamados Nekudot de SAG. Como mencionado acima, p. 463, no trecho que começa com “Os Melachim”; estude bem ali."
+    }
+  ]
+}

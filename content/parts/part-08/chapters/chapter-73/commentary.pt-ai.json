@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-73",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:1",
+      "section": "ohr-pnimi",
+      "html": "<b>ZA tem VAK de BON e VAK de MA</b>: E eles são considerados um só Guf, como o MA e o BON que há no Guf de Aba, ou o MA e o BON que há no Guf de Ima, onde MA é o lado masculino que há nele e BON é o lado da Nukva que há nele, e estão colados um ao outro em nível igual. Contudo, há uma grande diferença entre o MA e o BON que há no Guf de ZA e o MA e o BON que há nos Gufim de AVI. Pois o MA e o BON que há no Guf de Aba estão colados um ao outro face a face, o que é uma união completa. E assim também o MA e o BON de Ima. Mas o MA e o BON que há no Guf de ZA estão costas com costas, e não são considerados uma união completa, como mencionado acima nas palavras do Ari, p. 663, item 64. E veja na Luz Interior ali."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:73:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>em ZA há HG, que são MA e BON, e assim também na Nukva</b>: Isto não contradiz o que o Ari escreveu acima (p. 663, item 65), que ZA é inteiramente o discernimento de MA e a Nukva é inteiramente o discernimento de BON, como está bem escrito ali na Luz Interior; veja ali."
+    }
+  ]
+}

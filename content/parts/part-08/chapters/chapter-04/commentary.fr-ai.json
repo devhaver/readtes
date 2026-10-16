@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-04",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>même les GAR ne sont pas corrigés</b> : car il n’est resté en eux rien du tout de tous les Mokhin de Gadlout qu’ils avaient reçus dans Nikoudim, sinon seulement ce qui est sorti en eux lors de leur émanation même, en vertu du Zivoug du Hey inférieur dans les Nikvey Eynaim, comme il est expliqué dans la partie précédente. C’est pourquoi il leur manque toutes les phases de la Gadlout. Et c’est ce qu’il dit : que même les GAR ne sont pas corrigés."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>cette élévation de MAN eut lieu en haut, dans AB SAG de AK</b> : c’est-à-dire qu’il n’y a d’élévation de MAN que de l’inférieur vers son supérieur d’un seul degré, c’est-à-dire de ZON à AVI, de AVI à AA, et ainsi de suite, mais non vers celui qui est plus haut que lui de deux degrés. Et c’est ce qu’il dit : puisque les GAR eux aussi ont besoin de correction, et qu’eux aussi ont besoin de l’élévation de MAN, il est nécessaire que la phase supérieure de l’élévation de MAN soit le Roch de SAG, car le MAN de ZAT est corrigé dans AVI de Nikoudim, le MAN de AVI dans Keter de Nikoudim, le MAN de Keter dans le premier Roch de Nikoudim, et le MAN du premier Roch de Nikoudim est corrigé dans le Roch de SAG, c’est-à-dire chaque inférieur dans son supérieur.<br>Et bien qu’il dise plus haut que tous les MAN ensemble, tant ceux de ZAT de Nikoudim que ceux des GAR de Nikoudim, sont montés vers les GAR de Nikoudim, qui sont les sept Rechimot des sept lumières de ZAT, avec les Akhoraim de HB et de Keter, cela ne veut pas dire qu’ils y ont tous été corrigés ensemble, mais seulement selon l’ordre des degrés susdit, chaque inférieur ayant fait monter le MAN de son supérieur vers le supérieur de son supérieur, qui les corrige pour le supérieur. De sorte que chacun a trié une part de la totalité du MAN et l’a fait monter vers le supérieur de son supérieur, comme il est écrit plus loin, jusqu’à ce qu’ils soient montés vers AB SAG supérieurs."
+    }
+  ]
+}
