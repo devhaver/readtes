@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-07/chapter-04",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Onların Ahoraim’inde bir miktar kırılma oldu vb. ve onlarda gerçek tortular yoktur</b>: Yani Atzilut’un GAR’ı da tamamen ayıklanmamış olsa ve kapların kırılması sırasında onlardan düşen Ahoraim, ıslahın sonuna kadar tamamen yerlerine yükselmemiş olsa da, bu yine de Klipot’a hiçbir Tutuş vermez; çünkü bu Ahoraim hiçbir zaman Atzilut dünyasından çıkmadı, yalnızca yüksek bir dereceden alçak bir dereceye indi. Oysa ZON denen Nekudim’in ZAT’ında gerçek tortular vardır, yukarıda yazıldığı gibi; çünkü bu yüzden öldüler ve ayrılık dünyalarına düştüler. Bu yüzden bu Kelim tamamen ayıklanmadığı, tersine Klipot’un içinde pek çok tortu kaldığı için, bu ZAT Kelim’inden kendi hâkimiyetlerinde tuttukları ölçüde, ZON’da da onların Tutuş’u vardır; yerinde iyice yazıldığı gibi."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 7:4:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Klipot yalnızca ZON’a tutunur, İma’dan yukarıya değil</b>: Hemen önceki pasajda yukarıda yazıldığı gibi, yalnızca ZA’nın Kelim’inden Klipot’un içinde ayıklanmamış kısımlar kaldı; bu yüzden onda Tutuş’ları vardır. Oysa İma’dan yukarıya Klipot’un payına hiçbir şey düşmedi. Bu yüzden Klipot’un İma’dan yukarıda hiçbir Tutuş’u yoktur."
+    }
+  ]
+}
