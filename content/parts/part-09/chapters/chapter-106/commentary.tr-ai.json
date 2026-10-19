@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-09/chapter-106",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:106",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:106:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Başlangıçta Katnut’un Mohin’i vasıtasıyla sırt sırta bağlıydılar</b>: Yani Nukva, yukarıda belirtildiği üzere ZA’nın Hazeh’sinin [göğsünün] arkasından aldığı sırada, Nukva’nın Katnut’unun Mohin’i vasıtasıyla ona sırt sırta bağlıydı. ZA’nın kendisi zorunlu olarak Gadlut’ta olmalıdır; çünkü Gadlut’un Mohin’ine sahip olmadığı sürece Nukva’nın hiçbir şeyini ıslah edemez, zira yukarıdaki gibi onu MAN olarak yükselten kabın idrakine sahip değildir. Gadlut’u sırasında ona geri verilen AHP, onu önce biçimsiz olarak MAN şeklinde yükselten şeydir; sonra ZA kendi yerine döndüğünde, yukarıda uzun uzadıya ve Ari’nin yukarıda yazdığı gibi (sayfa 772, Madde 60), onun MAN’ına biçim vermeye başlar. Bununla birlikte Nukva ondan yalnızca posterioru idrakinden alabilir ve bu nedenle ona sırt sırta bağlı sayılır. Yukarıya bakınız (sayfa 803, «Sırt sırta» diye başlayan pasaj)."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:106:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Emzirme, çünkü uyku budur</b>: Gadlut, Partzuf’un canlılığının idrakidir. Bu yüzden Gadlut’undan yoksun olduğu sürece, canlılığı onda seçilemediği için uyuyormuş gibi sayılır. Her Partzuf’taki her MAN yükselişinde durum böyledir; çünkü o zaman içselliği, yani Mohin’i yükselip üst Partzuf’a dâhil olur. Bu nedenle Partzuf o sırada kendi idraki bakımından GAR’dan yoksun VAK’ta kalır; bu da emzirmenin Mohin’idir."
+    }
+  ]
+}
