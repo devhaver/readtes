@@ -3,18 +3,9 @@ import { expect, test } from "@playwright/test";
 const CHAPTER_PATH = "/read/part-01/chapter-01";
 
 const waitForHydration = async (page: import("@playwright/test").Page) => {
-  await page.waitForFunction(() =>
-    Boolean(
-      (
-        document.querySelector("#__nuxt") as {
-          __vue_app__?: {
-            config?: {
-              globalProperties?: { $nuxt?: { isHydrating?: boolean } };
-            };
-          };
-        } | null
-      )?.__vue_app__?.config?.globalProperties?.$nuxt?.isHydrating === false,
-    ),
+  await expect(page.locator("html")).toHaveAttribute(
+    "data-readtes-hydrated",
+    "true",
   );
 };
 

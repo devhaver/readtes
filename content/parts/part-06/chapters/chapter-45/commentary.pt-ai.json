@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-45",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Eu durmo, em correspondência à última Hey, pois, na anulação da Luz dos Nekudim, eu durmo</b>: Pois o essencial da quebra dos vasos foi a partir do discernimento da última Hey, e disso se derivou para ela o segredo do sono; e por isso o sono é aludido na última Hey."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Hochma é a primeira Hey, etc., e os Nekudot são Hochma</b>. Como escrito acima (p. 432, no trecho que começa com “Quando você contar”, e no trecho que começa com “A letra Yod”, na p. 433), as Luzes que subiram como MAN de NHY de AK incluem todos os Nekudot de SAG, que são de Hochma para baixo, juntamente com ZON de AK. E é sabido que o Partzuf é chamado pelo nome da Sefira Superior, e por isso os Nekudot são chamados pelo nome Hochma."
+    }
+  ]
+}

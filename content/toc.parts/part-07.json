@@ -26,7 +26,8 @@
       "pt": "Volume 2",
       "fr": "Volume 2",
       "de": "Band 2",
-      "tr": "Cilt 2"
+      "tr": "Cilt 2",
+      "bg": "Том 2"
     }
   },
   "chapters": [
@@ -2830,10 +2831,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": [
           "de-ai",
@@ -2870,10 +2877,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": []
       }
@@ -2899,10 +2912,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": []
       }
@@ -2928,10 +2947,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": []
       }
@@ -2957,10 +2982,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": []
       }
@@ -2987,10 +3018,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": [
           "de-ai",
@@ -3027,10 +3064,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": []
       }
@@ -3056,10 +3099,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": []
       }
@@ -3086,10 +3135,16 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "de-ai",
           "en-ai",
           "en-bb",
+          "es-ai",
+          "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ],
         "commentary": [
           "de-ai",

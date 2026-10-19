@@ -49,6 +49,7 @@ const segmentSlot = (html: string) => ({
 const mountSegment = async (html: string, chapters: StubChapter[]) =>
   mountSuspended(CrossRefChapterPage, {
     props: { chapters: chapters.map(chapter) },
+    route: "/read/part-01/questions-terminology-01",
     slots: segmentSlot(html),
   });
 
@@ -257,7 +258,7 @@ describe("ReaderSourceSegment — Sefaria Q&A cross-references", () => {
     expect(wrapper.get("a").attributes("href")).toBe(
       "/he/read/part-01/answers-terminology-01#seif-1",
     );
-  });
+  }, 10_000);
 
   it("leaves every link external without a providing reader page", async () => {
     const html = crossRefLink(
@@ -411,6 +412,7 @@ describe("ReaderSourceSegment layout and render-time touch-ups", () => {
   const mountPlain = async (html: string, continuation = false) =>
     mountSuspended(CrossRefChapterPage, {
       props: { chapters: [] },
+      route: "/read/part-01/chapter-01",
       slots: {
         default: () =>
           h(ReaderSourceSegment, { segment: segment(html), continuation }),

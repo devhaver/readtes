@@ -11,7 +11,8 @@
       "pt": "Akudim na segunda expansão: Matei ve Lo Matei",
       "fr": "Akoudim dans la seconde expansion : Matei ve Lo Matei",
       "de": "Akudim in der zweiten Ausbreitung: Matei ve Lo Matei",
-      "tr": "İkinci yayılımda Akudim: Matei ve Lo Matei"
+      "tr": "İkinci yayılımda Akudim: Matei ve Lo Matei",
+      "bg": "Акудим във второто разпространение: Мати ве ло мати"
     }
   },
   "volume": {
@@ -26,7 +27,8 @@
       "pt": "Volume 2",
       "fr": "Volume 2",
       "de": "Band 2",
-      "tr": "Cilt 2"
+      "tr": "Cilt 2",
+      "bg": "Том 2"
     }
   },
   "chapters": [
@@ -43,7 +45,8 @@
         "pt": "Capítulo 1",
         "fr": "Chapitre 1",
         "de": "Kapitel 1",
-        "tr": "Bölüm 1"
+        "tr": "Bölüm 1",
+        "bg": "Глава 1"
       },
       "availableLayers": [
         "source",
@@ -52,6 +55,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -63,6 +67,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -89,7 +94,8 @@
         "pt": "Capítulo 2",
         "fr": "Chapitre 2",
         "de": "Kapitel 2",
-        "tr": "Bölüm 2"
+        "tr": "Bölüm 2",
+        "bg": "Глава 2"
       },
       "availableLayers": [
         "source",
@@ -98,6 +104,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -109,6 +116,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -135,7 +143,8 @@
         "pt": "Capítulo 3",
         "fr": "Chapitre 3",
         "de": "Kapitel 3",
-        "tr": "Bölüm 3"
+        "tr": "Bölüm 3",
+        "bg": "Глава 3"
       },
       "availableLayers": [
         "source"
@@ -143,6 +152,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -169,7 +179,8 @@
         "pt": "Capítulo 4",
         "fr": "Chapitre 4",
         "de": "Kapitel 4",
-        "tr": "Bölüm 4"
+        "tr": "Bölüm 4",
+        "bg": "Глава 4"
       },
       "availableLayers": [
         "source"
@@ -177,6 +188,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -203,7 +215,8 @@
         "pt": "Capítulo 5",
         "fr": "Chapitre 5",
         "de": "Kapitel 5",
-        "tr": "Bölüm 5"
+        "tr": "Bölüm 5",
+        "bg": "Глава 5"
       },
       "availableLayers": [
         "source",
@@ -212,6 +225,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -223,6 +237,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -249,7 +264,8 @@
         "pt": "Capítulo 6",
         "fr": "Chapitre 6",
         "de": "Kapitel 6",
-        "tr": "Bölüm 6"
+        "tr": "Bölüm 6",
+        "bg": "Глава 6"
       },
       "availableLayers": [
         "source"
@@ -257,6 +273,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -283,7 +300,8 @@
         "pt": "Capítulo 7",
         "fr": "Chapitre 7",
         "de": "Kapitel 7",
-        "tr": "Bölüm 7"
+        "tr": "Bölüm 7",
+        "bg": "Глава 7"
       },
       "availableLayers": [
         "source",
@@ -292,6 +310,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -303,6 +322,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -329,7 +349,8 @@
         "pt": "Capítulo 8",
         "fr": "Chapitre 8",
         "de": "Kapitel 8",
-        "tr": "Bölüm 8"
+        "tr": "Bölüm 8",
+        "bg": "Глава 8"
       },
       "availableLayers": [
         "source",
@@ -338,6 +359,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -349,6 +371,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -375,7 +398,8 @@
         "pt": "Capítulo 9",
         "fr": "Chapitre 9",
         "de": "Kapitel 9",
-        "tr": "Bölüm 9"
+        "tr": "Bölüm 9",
+        "bg": "Глава 9"
       },
       "availableLayers": [
         "source",
@@ -384,6 +408,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -395,6 +420,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -421,7 +447,8 @@
         "pt": "Capítulo 10",
         "fr": "Chapitre 10",
         "de": "Kapitel 10",
-        "tr": "Bölüm 10"
+        "tr": "Bölüm 10",
+        "bg": "Глава 10"
       },
       "availableLayers": [
         "source",
@@ -430,6 +457,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -441,6 +469,7 @@
           "uk-bb"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -467,7 +496,8 @@
         "pt": "Capítulo 11",
         "fr": "Chapitre 11",
         "de": "Kapitel 11",
-        "tr": "Bölüm 11"
+        "tr": "Bölüm 11",
+        "bg": "Глава 11"
       },
       "availableLayers": [
         "source",
@@ -476,6 +506,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -513,7 +544,8 @@
         "pt": "Capítulo 12",
         "fr": "Chapitre 12",
         "de": "Kapitel 12",
-        "tr": "Bölüm 12"
+        "tr": "Bölüm 12",
+        "bg": "Глава 12"
       },
       "availableLayers": [
         "source",
@@ -522,6 +554,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -559,7 +592,8 @@
         "pt": "Capítulo 13",
         "fr": "Chapitre 13",
         "de": "Kapitel 13",
-        "tr": "Bölüm 13"
+        "tr": "Bölüm 13",
+        "bg": "Глава 13"
       },
       "availableLayers": [
         "source",
@@ -568,6 +602,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -605,7 +640,8 @@
         "pt": "Capítulo 14",
         "fr": "Chapitre 14",
         "de": "Kapitel 14",
-        "tr": "Bölüm 14"
+        "tr": "Bölüm 14",
+        "bg": "Глава 14"
       },
       "availableLayers": [
         "source",
@@ -614,6 +650,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -651,7 +688,8 @@
         "pt": "Capítulo 15",
         "fr": "Chapitre 15",
         "de": "Kapitel 15",
-        "tr": "Bölüm 15"
+        "tr": "Bölüm 15",
+        "bg": "Глава 15"
       },
       "availableLayers": [
         "source",
@@ -660,6 +698,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",

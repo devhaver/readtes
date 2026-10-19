@@ -11,7 +11,8 @@
       "pt": "Restrição e linha",
       "fr": "Restriction et ligne",
       "de": "Einschränkung und Linie",
-      "tr": "Kısıtlama ve çizgi"
+      "tr": "Kısıtlama ve çizgi",
+      "bg": "Съкращение и линия"
     }
   },
   "volume": {
@@ -26,7 +27,8 @@
       "pt": "Volume 1",
       "fr": "Volume 1",
       "de": "Band 1",
-      "tr": "Cilt 1"
+      "tr": "Cilt 1",
+      "bg": "Том 1"
     }
   },
   "chapters": [
@@ -43,7 +45,8 @@
         "pt": "Introdução",
         "fr": "Introduction",
         "de": "Einleitung",
-        "tr": "Giriş"
+        "tr": "Giriş",
+        "bg": "Предисловие"
       },
       "availableLayers": [
         "source"
@@ -51,16 +54,17 @@
       "availableVersions": {
         "summary": [],
         "source": [
-          "pt-bb",
+          "bg-ai",
           "de-bb",
-          "tr-bb",
           "en-bb",
-          "uk-bb",
-          "es-bb",
-          "ru-bb",
-          "fr-bb",
           "en-sefaria-sulam",
-          "he-jerusalem-1956"
+          "es-bb",
+          "fr-bb",
+          "he-jerusalem-1956",
+          "pt-bb",
+          "ru-bb",
+          "tr-bb",
+          "uk-bb"
         ],
         "commentary": []
       }
@@ -78,7 +82,8 @@
         "pt": "Capítulo 1",
         "fr": "Chapitre 1",
         "de": "Kapitel 1",
-        "tr": "Bölüm 1"
+        "tr": "Bölüm 1",
+        "bg": "Глава 1"
       },
       "availableLayers": [
         "summary",
@@ -90,6 +95,7 @@
           "en-curated"
         ],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "en-sefaria-community",
@@ -103,6 +109,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "en-sefaria-community",
@@ -130,7 +137,8 @@
         "pt": "Capítulo 2",
         "fr": "Chapitre 2",
         "de": "Kapitel 2",
-        "tr": "Bölüm 2"
+        "tr": "Bölüm 2",
+        "bg": "Глава 2"
       },
       "availableLayers": [
         "source",
@@ -139,6 +147,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "en-sefaria-community",
@@ -152,6 +161,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb",
@@ -179,7 +189,8 @@
         "pt": "Observação Interior 1",
         "fr": "Observation intérieure 1",
         "de": "Innere Betrachtung 1",
-        "tr": "İç Gözlem 1"
+        "tr": "İç Gözlem 1",
+        "bg": "Вътрешно съзерцание 1"
       },
       "availableLayers": [
         "source"
@@ -187,6 +198,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -214,7 +226,8 @@
         "pt": "Observação Interior 2",
         "fr": "Observation intérieure 2",
         "de": "Innere Betrachtung 2",
-        "tr": "İç Gözlem 2"
+        "tr": "İç Gözlem 2",
+        "bg": "Вътрешно съзерцание 2"
       },
       "availableLayers": [
         "source"
@@ -222,6 +235,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -249,7 +263,8 @@
         "pt": "Observação Interior 3",
         "fr": "Observation intérieure 3",
         "de": "Innere Betrachtung 3",
-        "tr": "İç Gözlem 3"
+        "tr": "İç Gözlem 3",
+        "bg": "Вътрешно съзерцание 3"
       },
       "availableLayers": [
         "source"
@@ -257,6 +272,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -284,7 +300,8 @@
         "pt": "Observação Interior 4",
         "fr": "Observation intérieure 4",
         "de": "Innere Betrachtung 4",
-        "tr": "İç Gözlem 4"
+        "tr": "İç Gözlem 4",
+        "bg": "Вътрешно съзерцание 4"
       },
       "availableLayers": [
         "source"
@@ -292,6 +309,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -319,7 +337,8 @@
         "pt": "Observação Interior 5",
         "fr": "Observation intérieure 5",
         "de": "Innere Betrachtung 5",
-        "tr": "İç Gözlem 5"
+        "tr": "İç Gözlem 5",
+        "bg": "Вътрешно съзерцание 5"
       },
       "availableLayers": [
         "source"
@@ -327,6 +346,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -354,7 +374,8 @@
         "pt": "Observação Interior 6",
         "fr": "Observation intérieure 6",
         "de": "Innere Betrachtung 6",
-        "tr": "İç Gözlem 6"
+        "tr": "İç Gözlem 6",
+        "bg": "Вътрешно съзерцание 6"
       },
       "availableLayers": [
         "source"
@@ -362,6 +383,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -389,7 +411,8 @@
         "pt": "Observação Interior 7",
         "fr": "Observation intérieure 7",
         "de": "Innere Betrachtung 7",
-        "tr": "İç Gözlem 7"
+        "tr": "İç Gözlem 7",
+        "bg": "Вътрешно съзерцание 7"
       },
       "availableLayers": [
         "source"
@@ -397,6 +420,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -424,7 +448,8 @@
         "pt": "Observação Interior 8",
         "fr": "Observation intérieure 8",
         "de": "Innere Betrachtung 8",
-        "tr": "İç Gözlem 8"
+        "tr": "İç Gözlem 8",
+        "bg": "Вътрешно съзерцание 8"
       },
       "availableLayers": [
         "source"
@@ -432,6 +457,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -459,7 +485,8 @@
         "pt": "Observação Interior 9",
         "fr": "Observation intérieure 9",
         "de": "Innere Betrachtung 9",
-        "tr": "İç Gözlem 9"
+        "tr": "İç Gözlem 9",
+        "bg": "Вътрешно съзерцание 9"
       },
       "availableLayers": [
         "source"
@@ -467,6 +494,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -494,7 +522,8 @@
         "pt": "Observação Interior 10",
         "fr": "Observation intérieure 10",
         "de": "Innere Betrachtung 10",
-        "tr": "İç Gözlem 10"
+        "tr": "İç Gözlem 10",
+        "bg": "Вътрешно съзерцание 10"
       },
       "availableLayers": [
         "source"
@@ -502,6 +531,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -529,7 +559,8 @@
         "pt": "Perguntas sobre o significado das palavras",
         "fr": "Questions sur le sens des mots",
         "de": "Fragen zur Bedeutung der Wörter",
-        "tr": "Kelimelerin anlamı üzerine sorular"
+        "tr": "Kelimelerin anlamı üzerine sorular",
+        "bg": "Въпроси по терминологията"
       },
       "availableLayers": [
         "source"
@@ -537,6 +568,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -563,7 +595,8 @@
         "pt": "Perguntas sobre os temas",
         "fr": "Questions sur les thèmes",
         "de": "Fragen zu den Themen",
-        "tr": "Konular üzerine sorular"
+        "tr": "Konular üzerine sorular",
+        "bg": "Въпроси по темите"
       },
       "availableLayers": [
         "source"
@@ -571,6 +604,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
@@ -597,7 +631,8 @@
         "pt": "Respostas sobre o significado das palavras",
         "fr": "Réponses sur le sens des mots",
         "de": "Antworten zur Bedeutung der Wörter",
-        "tr": "Kelimelerin anlamı üzerine cevaplar"
+        "tr": "Kelimelerin anlamı üzerine cevaplar",
+        "bg": "Отговори по терминологията"
       },
       "availableLayers": [
         "source"
@@ -605,6 +640,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -633,7 +669,8 @@
         "pt": "Respostas sobre os temas",
         "fr": "Réponses sur les thèmes",
         "de": "Antworten zu den Themen",
-        "tr": "Konular üzerine cevaplar"
+        "tr": "Konular üzerine cevaplar",
+        "bg": "Отговори по темите"
       },
       "availableLayers": [
         "source"
@@ -641,6 +678,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-bb",
           "es-ai",
