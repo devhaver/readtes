@@ -1,0 +1,16 @@
+{
+  "chapterId": "part-10/chapter-80",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 10:80",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": { "he": "1", "en": "1" },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 10:80:1",
+      "section": "ohr-pnimi",
+      "html": "<b>La exterioridad del superior se convierte en Panim para la interioridad del inferior que está debajo de él, y la interioridad de aquel inferior retorna al secreto de la exterioridad, y entonces la primera exterioridad, etc.:</b> La intención se refiere al orden del descenso de los Mojin de Partzuf en Partzuf. Por ejemplo, cuando AVI alcanzan los Mojin de AA, que son la fase de la exterioridad de AA, como se dijo arriba, AVI también dan los Mojin a su inferior, que es YESHSUT. Así, la exterioridad de AVI desciende y se convierte en interioridad para YESHSUT, y la interioridad de YESHSUT se convierte en exterioridad respecto de los Mojin que alcanzó de AVI. Después, la exterioridad de YESHSUT desciende y se convierte en Mojin para ZA, y la interioridad de ZA se convierte en exterioridad respecto de los Mojin que recibió de YESHSUT. Luego, la propia exterioridad de ZA desciende nuevamente y se convierte en interioridad para Nukva, y así sucesivamente. De este modo se considera que cada inferior tiene interioridad y exterioridad, es decir, lo que pertenece a su propio grado, y también una fase de grosor y una pantalla inferiores a su grado. Cuando alcanza la exterioridad de su superior, que son sus Mojin, él también hace descender su propia exterioridad como Mojin para su inferior; y esto es sencillo."
+    }
+  ]
+}
