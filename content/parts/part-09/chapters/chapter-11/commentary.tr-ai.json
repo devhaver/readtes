@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-09/chapter-11",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:11",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:11:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Onun içine attığı Ruah [ruh]</b>: Yani yukarıdaki maddede sözü edilen MAN’ı yükselten kabın içinde, kabın içinde kıyafetlenen ışığın idraki de seçilir; bu ışığa onun içine attığı Ruah adı verilir. Aşağıda söyleneceği üzere, kocanın ilk birleşmede onun içinde bıraktığı Ruah adıyla da anılır."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:11:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Nefeş’in bu idraki onun içine girmeden önce eksiktir ve doğurmaya elverişli değildir</b>: Çünkü on Sefirot’unun AHP’si olan posterioru Atzilut’un Nukva’sının derecesine dönmediği sürece, yukarıdaki gibi kapların NHY’sinden [Netzah, Hod, Yesod] ve ışıkların GAR’ından yoksundur. Bu nedenle Nefeş’i tam hâline gelene, yani Gadlut’unun ilk çiftleşmesinden sonra AHP’si ona dönüp kapların NHY’si ve ışıkların GAR’ı vasıtasıyla Nefeş onda tamamlanana dek doğurmaya elverişli değildir. Burada AHP ile NHY’nin aynı ölçü olduğunu hatırlayın."
+    }
+  ]
+}

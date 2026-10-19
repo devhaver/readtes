@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-09/chapter-38",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:38",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:38:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Los Mojin para su Nukva atraviesan la pantalla y las vasijas de ZA por sus Ajoraim, etc., y entonces su fuerza se debilita mucho</b>: Esto se refiere a los Mojin de pequeñez para la Nukva, pues él da estos Mojin a la Nukva durante su pequeñez, hasta que crece y es separada de él, como se explica en su lugar. Por ello las Guevurot no proceden de un acoplamiento propio de JuB de ella, sino que las recibe a través de los Ajoraim del Jazé de ZA, como se explica en su lugar; por eso se debilitan mucho y no iluminan."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 9:38:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Y Él perforó un orificio en los Ajoraim del Guf de ZA, frente al Jazé</b>: Esto se explicará más adelante."
+    }
+  ]
+}
