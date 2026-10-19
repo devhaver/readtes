@@ -481,7 +481,14 @@ export const checkTranslatedVersionIntegrity = (
         translated.file.layer === "source" &&
         source.file.layer === "source"
       ) {
-        if (consolidatedQaChapterIds.has(translated.chapterDirId)) {
+        // Imported editions may legitimately publish only a subset of a
+        // consolidated answer table. An AI translation, however, is created
+        // from the complete Hebrew file by translate:apply and must preserve
+        // every physical segment, including repeated answer numbers.
+        if (
+          consolidatedQaChapterIds.has(translated.chapterDirId) &&
+          version.source !== "ai"
+        ) {
           checkSourceConsolidatedQaSubset(
             translated,
             source,
@@ -808,6 +815,66 @@ const checkCommentaryEnglishLabelIsGematria = (
       errors.push(
         `${entry.relativePath}: anchor "${item.anchorId}" is labelled "${item.label.en}" (en) but "${item.label.he}" reads ${expected} — run \`pnpm migrate:commentary-labels\``,
       );
+    }
+  }
+};
+
+/**
+ * A reader must not switch back to English in breadcrumbs, contents, or SEO
+ * merely because the prose itself is available in the selected language.
+ * Every language represented below a ToC node therefore needs a title at the
+ * chapter, part, and volume levels.
+ */
+export const checkTocTitlesCoverAvailableLanguages = (
+  toc: Toc,
+  versions: ContentVersion[],
+  errors: string[],
+): void => {
+  const languageByVersion = new Map(
+    versions.map((version) => [version.id, version.language]),
+  );
+
+  for (const volume of toc.volumes) {
+    const volumeLanguages = new Set<string>();
+
+    for (const part of volume.parts) {
+      const partLanguages = new Set<string>();
+
+      for (const chapter of part.chapters) {
+        const chapterLanguages = new Set(
+          LAYER_KINDS.flatMap((layer) =>
+            chapter.availableVersions[layer]
+              .map((versionId) => languageByVersion.get(versionId))
+              .filter((language): language is string => language !== undefined),
+          ),
+        );
+
+        for (const language of chapterLanguages) {
+          partLanguages.add(language);
+          volumeLanguages.add(language);
+          if (!chapter.title[language]) {
+            errors.push(
+              `toc.json: chapter "${chapter.id}" has content in language "${language}" but no title.${language}`,
+            );
+          }
+        }
+      }
+
+      for (const language of partLanguages) {
+        if (!part.title[language]) {
+          errors.push(
+            `toc.json: part "${part.id}" has content in language "${language}" but no title.${language}`,
+          );
+        }
+      }
+    }
+
+    for (const language of volumeLanguages) {
+      if (!volume.title[language]) {
+        errors.push(
+          `toc.json: volume "${volume.id}" has content in language "${language}" but no title.${language}`,
+        );
+      }
     }
   }
 };
@@ -1160,6 +1227,13 @@ export const validateContent = (contentDir: string): ValidationResult => {
 
   if (tocParsed.success) {
     checkTocFileCrossReferences(tocParsed.data, loaded, versionIds, errors);
+    if (versionsParsed.success) {
+      checkTocTitlesCoverAvailableLanguages(
+        tocParsed.data,
+        versionsParsed.data,
+        errors,
+      );
+    }
     checkTocSplitEquivalence(
       contentDir,
       tocParsed.data,

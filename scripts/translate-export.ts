@@ -45,6 +45,7 @@ import {
 } from "../shared/types/content.ts";
 import { versionChainForLanguage } from "../shared/utils/versionChains.ts";
 import {
+  alignEditionHtml,
   packBatches,
   proseLength,
   untranslatedItems,
@@ -156,23 +157,22 @@ const chapters: TranslatableChapter[] = [];
 const ENGLISH_CRIB_CHAIN =
   targetLanguage === "en" ? [] : versionChainForLanguage("en");
 
-const englishCrib = (dir: string): Map<string, string> => {
-  const crib = new Map<string, string>();
-  // Walk worst-first so a better edition overwrites a worse one per item.
+const englishCrib = (
+  dir: string,
+  sourceItems: readonly TranslatableItem[],
+): Map<TranslatableItem, string> => {
+  const editions: TranslatableItem[][] = [];
+  // Walk worst-first so a better edition overwrites a worse one per item and
+  // occurrence without collapsing legitimate repeated source numbers.
   for (const versionId of [...ENGLISH_CRIB_CHAIN].reverse()) {
     const file = readLayer(dir, `${layer}.${versionId}.json`);
     if (!file || file.layer !== layer) continue;
-    const byKey = new Map<string, string[]>();
-    for (const item of file.items) {
-      const key = "anchorId" in item ? item.anchorId : String(item.n);
-      byKey.set(key, [...(byKey.get(key) ?? []), item.html]);
-    }
-    for (const [key, parts] of byKey) crib.set(key, parts.join("<br>"));
+    editions.push(file.items as TranslatableItem[]);
   }
-  return crib;
+  return alignEditionHtml(sourceItems, editions);
 };
 
-const cribs = new Map<string, Map<string, string>>();
+const cribs = new Map<string, Map<TranslatableItem, string>>();
 
 for (const chapterId of chapterIds) {
   const [partId, slug] = chapterId.split("/");
@@ -204,7 +204,8 @@ for (const chapterId of chapterIds) {
   const sourceText = readLayer(dir, `source.${SOURCE_VERSION_ID}.json`);
   const targetText = readLayer(dir, `source.${targetVersion.id}.json`);
 
-  if (ENGLISH_CRIB_CHAIN.length > 0) cribs.set(chapterId, englishCrib(dir));
+  if (ENGLISH_CRIB_CHAIN.length > 0)
+    cribs.set(chapterId, englishCrib(dir, source.items as TranslatableItem[]));
 
   chapters.push({
     chapterId,
@@ -301,8 +302,7 @@ for (const batch of batches) {
       // commentary, `n` for a source segment. Never produced by the model —
       // `translate-apply.ts` copies it from the Hebrew.
       items: chapter.items.map((item) => {
-        const key = "anchorId" in item ? item.anchorId : String(item.n);
-        const en = cribs.get(chapter.chapterId)?.get(key);
+        const en = cribs.get(chapter.chapterId)?.get(item);
         return {
           ...("anchorId" in item ? { anchorId: item.anchorId } : { n: item.n }),
           he: item.html,

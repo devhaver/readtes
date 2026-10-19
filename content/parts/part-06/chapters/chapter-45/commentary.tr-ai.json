@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-45",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:1",
+      "section": "ohr-pnimi",
+      "html": "<b>“Ben uyurum”, son Hey’e karşılıktır, çünkü Nekudim Işığının iptalinde “ben uyurum”</b>: Çünkü kapların kırılmasının aslı son Hey Behina’sındandı ve bundan ona uyku sırrı geldi; bu yüzden uyku son Hey’de ima edilmiştir."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:45:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Hohma ilk Hey’dir vb. ve Nekudot Hohma’dır</b>. Yukarıda yazıldığı gibi (sayfa 432, “Saydığında” diye başlayan pasaj ve sayfa 433, “Yud harfi” diye başlayan pasaj): AK’ın NHY’sinden MAN olarak yükselen Işıklar, SAG’ın Hohma’dan aşağıya olan bütün Nekudot’unu AK’ın ZON’uyla birlikte kapsar. Bilindiği gibi Partzuf, üstteki Sefira’nın adıyla anılır; bu yüzden Nekudot’a Hohma denir."
+    }
+  ]
+}

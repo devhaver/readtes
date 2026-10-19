@@ -142,9 +142,12 @@ describe("positive control: the same needles do appear once the browser loads", 
     const wrapper = await mountSuspended(InnerObservationSubtree);
 
     // Real dynamic imports of the part's committed JSON, not a stub — poll
-    // rather than guess a microtask depth.
-    await vi.waitFor(() =>
-      expect(wrapper.html()).toContain('data-state="ready"'),
+    // rather than guess a microtask depth. The full suite transforms thousands
+    // of content modules in parallel, so use an explicit integration timeout
+    // instead of waitFor's unit-scale one-second default.
+    await vi.waitFor(
+      () => expect(wrapper.html()).toContain('data-state="ready"'),
+      { timeout: 5_000 },
     );
     const rendered = visibleText(wrapper.html());
     expect(needles.length).toBeGreaterThan(0);

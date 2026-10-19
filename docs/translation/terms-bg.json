@@ -26,6 +26,12 @@
       "why": "OFFICIAL Bulgarian form: отразена светлина."
     },
     {
+      "he": "אור מקיף",
+      "heRegex": "או\"מ|אור מקיף|האור המקיף",
+      "pattern": "(?i)обкръжаващ\\w* светлин",
+      "why": "OFFICIAL Bulgarian form: обкръжаваща светлина."
+    },
+    {
       "he": "אור עליון",
       "heRegex": "אור עליון|האור העליון",
       "pattern": "Висш\\w* светлин",
@@ -48,6 +54,12 @@
       "heRegex": "עש\"ה",
       "pattern": "(?i)виж добре там",
       "why": "PROPOSED fixed reference formula."
+    },
+    {
+      "he": "הזדככות",
+      "heRegex": "הזדככות|מזדכך|להזדכך|ויזדכך",
+      "pattern": "(?i)изтъняв",
+      "why": "PROPOSED technical form for reduction of the screen's авиют."
     }
   ],
   "banned": [

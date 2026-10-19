@@ -2,12 +2,17 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { readOffsetNodes } from "../../scripts/lib/sefaria-offset-nodes.ts";
 import {
+  checkTocTitlesCoverAvailableLanguages,
   checkTranslatedVersionIntegrity,
   checkVersionTextMatchesItsScript,
   validateContent,
   type LoadedChapterFile,
 } from "../../scripts/validate-content.ts";
-import type { ContentVersion } from "../../shared/types/content.ts";
+import type {
+  ContentVersion,
+  SourceSegment,
+  Toc,
+} from "../../shared/types/content.ts";
 
 const contentDir = join(process.cwd(), "content");
 const fixturesDir = join(process.cwd(), "tests/fixtures/content-integrity");
@@ -29,6 +34,61 @@ describe("content integrity", () => {
 
     expect(offsets).not.toBeNull();
     expect(Object.keys(offsets?.nodes ?? {}).length).toBeGreaterThan(0);
+  });
+});
+
+describe("content integrity — localized ToC titles", () => {
+  it("requires chapter, part, and volume titles for every available content language", () => {
+    const versions: ContentVersion[] = [
+      {
+        id: "bg-ai",
+        language: "bg",
+        direction: "ltr",
+        title: "Български",
+        license: "CC0",
+        source: "ai",
+      },
+    ];
+    const toc: Toc = {
+      volumes: [
+        {
+          id: "volume-01",
+          number: 1,
+          title: { en: "Volume 1" },
+          parts: [
+            {
+              id: "part-01",
+              number: 1,
+              sefariaNode: "TES I",
+              title: { en: "Part 1" },
+              chapters: [
+                {
+                  id: "part-01/chapter-01",
+                  kind: "chapter",
+                  number: 1,
+                  title: { en: "Chapter 1" },
+                  availableLayers: ["source"],
+                  availableVersions: {
+                    summary: [],
+                    source: ["bg-ai"],
+                    commentary: [],
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+    const errors: string[] = [];
+
+    checkTocTitlesCoverAvailableLanguages(toc, versions, errors);
+
+    expect(errors).toEqual([
+      'toc.json: chapter "part-01/chapter-01" has content in language "bg" but no title.bg',
+      'toc.json: part "part-01" has content in language "bg" but no title.bg',
+      'toc.json: volume "volume-01" has content in language "bg" but no title.bg',
+    ]);
   });
 });
 
@@ -70,16 +130,17 @@ describe("content integrity — negative fixtures", () => {
   });
 });
 
-// These fixtures don't carry `toc.volumes.json` / `toc.parts/*.json` /
-// `glossary/tes-en.json` — irrelevant to what's under test here — so ignore
-// the boilerplate "missing, run the emit script" errors those produce and
-// assert on the commentary/anchor checks specifically.
+// These fixtures don't carry complete split/glossary data or localized ToC
+// titles — irrelevant to what's under test here — so ignore those boilerplate
+// errors and assert on the commentary/anchor checks specifically. Localized
+// title failures have their own focused test above.
 const nonBoilerplateErrors = (errors: string[]): string[] =>
   errors.filter(
     (error) =>
       !error.startsWith("content/toc.volumes.json:") &&
       !error.startsWith("content/toc.parts/") &&
-      !error.startsWith("content/glossary/"),
+      !error.startsWith("content/glossary/") &&
+      !error.includes("has content in language"),
   );
 
 describe("content integrity — unanchored commentary items", () => {
@@ -227,7 +288,7 @@ describe("content integrity — translated versions", () => {
       direction: "ltr",
       title: "English",
       license: "CC0",
-      source: "ai",
+      source: "kabbalahmedia",
       translatedFrom: "he-source",
     },
   ];
@@ -487,6 +548,34 @@ describe("content integrity — translated versions", () => {
       'translated source has 1 item(s), but "he-source" has 2',
     );
   });
+
+  it("requires AI translations of consolidated Q&A chapters to preserve every source segment", () => {
+    const errors: string[] = [];
+    const chapterId = "part-01/answers-topics-01";
+    const hebrew = sourceFile("he-source");
+    hebrew.chapterDirId = chapterId;
+    hebrew.file.chapterId = chapterId;
+    (hebrew.file.items as SourceSegment[]).push({
+      n: 1,
+      sefariaRef: "TES 1:1:2",
+      html: "<p>Second physical segment of answer 1</p>",
+      anchors: [],
+    });
+    const translation = sourceFile("en-ai");
+    translation.chapterDirId = chapterId;
+    translation.file.chapterId = chapterId;
+
+    checkTranslatedVersionIntegrity(
+      [versions[0]!, { ...versions[1]!, id: "en-ai", source: "ai" }],
+      [hebrew, translation],
+      errors,
+      new Set([chapterId]),
+    );
+
+    expect(errors[0]).toContain(
+      'translated source has 1 item(s), but "he-source" has 2',
+    );
+  });
 });
 
 describe("content integrity — Q&A subset translations (issue #91)", () => {
@@ -541,7 +630,7 @@ describe("content integrity — Q&A subset translations (issue #91)", () => {
         direction: "ltr",
         title: "English",
         license: "CC0",
-        source: "ai",
+        source: "kabbalahmedia",
         translatedFrom: "he-source",
       },
     ];

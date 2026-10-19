@@ -12,7 +12,8 @@
         "pt": "Volume 1",
         "fr": "Volume 1",
         "de": "Band 1",
-        "tr": "Cilt 1"
+        "tr": "Cilt 1",
+        "bg": "Том 1"
       },
       "parts": [
         {
@@ -27,7 +28,8 @@
             "pt": "Restrição e linha",
             "fr": "Restriction et ligne",
             "de": "Einschränkung und Linie",
-            "tr": "Kısıtlama ve çizgi"
+            "tr": "Kısıtlama ve çizgi",
+            "bg": "Съкращение и линия"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section I",
           "chapterCount": 17,
@@ -52,7 +54,8 @@
             "pt": "Introdução",
             "fr": "Introduction",
             "de": "Einleitung",
-            "tr": "Giriş"
+            "tr": "Giriş",
+            "bg": "Предисловие"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -63,7 +66,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
@@ -88,7 +92,8 @@
             "pt": "Círculos e retidão",
             "fr": "Cercles et droiture",
             "de": "Kreise und Geradheit",
-            "tr": "Daireler ve doğruluk"
+            "tr": "Daireler ve doğruluk",
+            "bg": "Кръгове и праволинейност"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section II",
           "chapterCount": 16,
@@ -112,7 +117,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -123,7 +129,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
@@ -131,9 +138,9 @@
             "enOfficial": "partial",
             "enAi": "partial",
             "ru": "full",
-            "uk": "partial",
-            "es": "partial",
-            "fr": "partial"
+            "uk": "full",
+            "es": "full",
+            "fr": "full"
           }
         },
         {
@@ -148,7 +155,8 @@
             "pt": "Luz direta e luz refletida",
             "fr": "Lumière directe et lumière réfléchie",
             "de": "Direktes Licht und reflektiertes Licht",
-            "tr": "Doğrudan Işık ve Yansıyan Işık"
+            "tr": "Doğrudan Işık ve Yansıyan Işık",
+            "bg": "Пряка светлина и отразена светлина"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section III",
           "chapterCount": 34,
@@ -172,7 +180,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -183,7 +192,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
@@ -208,7 +218,8 @@
             "pt": "As dez Sefirot de Akudim",
             "fr": "Les dix Sefirot d'Akoudim",
             "de": "Die zehn Sefirot von Akudim",
-            "tr": "Akudim'in on Sefirot'u"
+            "tr": "Akudim'in on Sefirot'u",
+            "bg": "Десетте сфирот на Акудим"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IV",
           "chapterCount": 16,
@@ -232,7 +243,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -243,7 +255,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
@@ -270,7 +283,8 @@
         "pt": "Volume 2",
         "fr": "Volume 2",
         "de": "Band 2",
-        "tr": "Cilt 2"
+        "tr": "Cilt 2",
+        "bg": "Том 2"
       },
       "parts": [
         {
@@ -285,7 +299,8 @@
             "pt": "Akudim na segunda expansão: Matei ve Lo Matei",
             "fr": "Akoudim dans la seconde expansion : Matei ve Lo Matei",
             "de": "Akudim in der zweiten Ausbreitung: Matei ve Lo Matei",
-            "tr": "İkinci yayılımda Akudim: Matei ve Lo Matei"
+            "tr": "İkinci yayılımda Akudim: Matei ve Lo Matei",
+            "bg": "Акудим във второто разпространение: Мати ве ло мати"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section V",
           "chapterCount": 66,
@@ -308,7 +323,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -449,9 +465,9 @@
             "enOfficial": "partial",
             "enAi": "full",
             "ru": "full",
-            "uk": "partial",
-            "es": "partial",
-            "fr": "partial"
+            "uk": "full",
+            "es": "full",
+            "fr": "full"
           }
         }
       ]

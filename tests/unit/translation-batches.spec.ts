@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  alignEditionHtml,
   itemKey,
   packBatches,
   proseLength,
@@ -79,6 +80,41 @@ describe("untranslatedItems", () => {
   it("returns nothing when the chapter is fully covered", () => {
     const source = [item("op-1", 1, "a")];
     expect(untranslatedItems(source, source)).toEqual([]);
+  });
+});
+
+describe("alignEditionHtml", () => {
+  it("keeps repeated source numbers aligned by occurrence", () => {
+    const source = [
+      { n: 51, html: "תשובה", anchors: [] },
+      { n: 51, html: "נשלם חלק ראשון", anchors: [] },
+    ];
+    const english = [
+      { n: 51, html: "See Inner Observation, item 19.", anchors: [] },
+      { n: 51, html: "Part One completed.", anchors: [] },
+    ];
+
+    const aligned = alignEditionHtml(source, [english]);
+
+    expect(aligned.get(source[0]!)).toBe("See Inner Observation, item 19.");
+    expect(aligned.get(source[1]!)).toBe("Part One completed.");
+  });
+
+  it("overlays a better edition without discarding fallback occurrences", () => {
+    const source = [
+      { n: 7, html: "א", anchors: [] },
+      { n: 7, html: "ב", anchors: [] },
+    ];
+    const fallback = [
+      { n: 7, html: "fallback one", anchors: [] },
+      { n: 7, html: "fallback two", anchors: [] },
+    ];
+    const preferred = [{ n: 7, html: "preferred one", anchors: [] }];
+
+    const aligned = alignEditionHtml(source, [fallback, preferred]);
+
+    expect(aligned.get(source[0]!)).toBe("preferred one");
+    expect(aligned.get(source[1]!)).toBe("fallback two");
   });
 });
 

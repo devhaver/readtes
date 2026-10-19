@@ -11,7 +11,8 @@
       "pt": "As dez Sefirot de Akudim",
       "fr": "Les dix Sefirot d'Akoudim",
       "de": "Die zehn Sefirot von Akudim",
-      "tr": "Akudim'in on Sefirot'u"
+      "tr": "Akudim'in on Sefirot'u",
+      "bg": "Десетте сфирот на Акудим"
     }
   },
   "volume": {
@@ -26,7 +27,8 @@
       "pt": "Volume 1",
       "fr": "Volume 1",
       "de": "Band 1",
-      "tr": "Cilt 1"
+      "tr": "Cilt 1",
+      "bg": "Том 1"
     }
   },
   "chapters": [
@@ -43,7 +45,8 @@
         "pt": "Capítulo 1",
         "fr": "Chapitre 1",
         "de": "Kapitel 1",
-        "tr": "Bölüm 1"
+        "tr": "Bölüm 1",
+        "bg": "Глава 1"
       },
       "availableLayers": [
         "source",
@@ -52,6 +55,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -64,6 +68,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -90,7 +95,8 @@
         "pt": "Capítulo 2",
         "fr": "Chapitre 2",
         "de": "Kapitel 2",
-        "tr": "Bölüm 2"
+        "tr": "Bölüm 2",
+        "bg": "Глава 2"
       },
       "availableLayers": [
         "source",
@@ -99,6 +105,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -111,6 +118,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -137,7 +145,8 @@
         "pt": "Capítulo 3",
         "fr": "Chapitre 3",
         "de": "Kapitel 3",
-        "tr": "Bölüm 3"
+        "tr": "Bölüm 3",
+        "bg": "Глава 3"
       },
       "availableLayers": [
         "source",
@@ -146,6 +155,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -158,6 +168,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -184,7 +195,8 @@
         "pt": "Capítulo 4",
         "fr": "Chapitre 4",
         "de": "Kapitel 4",
-        "tr": "Bölüm 4"
+        "tr": "Bölüm 4",
+        "bg": "Глава 4"
       },
       "availableLayers": [
         "source",
@@ -193,6 +205,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -205,6 +218,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -231,7 +245,8 @@
         "pt": "Capítulo 5",
         "fr": "Chapitre 5",
         "de": "Kapitel 5",
-        "tr": "Bölüm 5"
+        "tr": "Bölüm 5",
+        "bg": "Глава 5"
       },
       "availableLayers": [
         "source",
@@ -240,6 +255,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -252,6 +268,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -278,7 +295,8 @@
         "pt": "Capítulo 6",
         "fr": "Chapitre 6",
         "de": "Kapitel 6",
-        "tr": "Bölüm 6"
+        "tr": "Bölüm 6",
+        "bg": "Глава 6"
       },
       "availableLayers": [
         "source",
@@ -287,6 +305,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -299,6 +318,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -325,7 +345,8 @@
         "pt": "Observação Interior 1",
         "fr": "Observation intérieure 1",
         "de": "Innere Betrachtung 1",
-        "tr": "İç Gözlem 1"
+        "tr": "İç Gözlem 1",
+        "bg": "Вътрешно съзерцание 1"
       },
       "availableLayers": [
         "source"
@@ -333,6 +354,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -360,7 +382,8 @@
         "pt": "Observação Interior 2",
         "fr": "Observation intérieure 2",
         "de": "Innere Betrachtung 2",
-        "tr": "İç Gözlem 2"
+        "tr": "İç Gözlem 2",
+        "bg": "Вътрешно съзерцание 2"
       },
       "availableLayers": [
         "source"
@@ -368,6 +391,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -395,7 +419,8 @@
         "pt": "Observação Interior 3",
         "fr": "Observation intérieure 3",
         "de": "Innere Betrachtung 3",
-        "tr": "İç Gözlem 3"
+        "tr": "İç Gözlem 3",
+        "bg": "Вътрешно съзерцание 3"
       },
       "availableLayers": [
         "source"
@@ -403,6 +428,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -430,7 +456,8 @@
         "pt": "Observação Interior 4",
         "fr": "Observation intérieure 4",
         "de": "Innere Betrachtung 4",
-        "tr": "İç Gözlem 4"
+        "tr": "İç Gözlem 4",
+        "bg": "Вътрешно съзерцание 4"
       },
       "availableLayers": [
         "source"
@@ -438,6 +465,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -465,7 +493,8 @@
         "pt": "Observação Interior 5",
         "fr": "Observation intérieure 5",
         "de": "Innere Betrachtung 5",
-        "tr": "İç Gözlem 5"
+        "tr": "İç Gözlem 5",
+        "bg": "Вътрешно съзерцание 5"
       },
       "availableLayers": [
         "source"
@@ -473,6 +502,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -500,7 +530,8 @@
         "pt": "Observação Interior 6",
         "fr": "Observation intérieure 6",
         "de": "Innere Betrachtung 6",
-        "tr": "İç Gözlem 6"
+        "tr": "İç Gözlem 6",
+        "bg": "Вътрешно съзерцание 6"
       },
       "availableLayers": [
         "source"
@@ -508,6 +539,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -535,7 +567,8 @@
         "pt": "Perguntas sobre o significado das palavras",
         "fr": "Questions sur le sens des mots",
         "de": "Fragen zur Bedeutung der Wörter",
-        "tr": "Kelimelerin anlamı üzerine sorular"
+        "tr": "Kelimelerin anlamı üzerine sorular",
+        "bg": "Въпроси за значението на думите"
       },
       "availableLayers": [
         "source"
@@ -543,6 +576,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -570,7 +604,8 @@
         "pt": "Perguntas sobre os temas",
         "fr": "Questions sur les thèmes",
         "de": "Fragen zu den Themen",
-        "tr": "Konular üzerine sorular"
+        "tr": "Konular üzerine sorular",
+        "bg": "Въпроси по темите"
       },
       "availableLayers": [
         "source"
@@ -578,6 +613,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -605,7 +641,8 @@
         "pt": "Respostas sobre o significado das palavras",
         "fr": "Réponses sur le sens des mots",
         "de": "Antworten zur Bedeutung der Wörter",
-        "tr": "Kelimelerin anlamı üzerine cevaplar"
+        "tr": "Kelimelerin anlamı üzerine cevaplar",
+        "bg": "Отговори за значението на думите"
       },
       "availableLayers": [
         "source"
@@ -613,6 +650,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",
@@ -641,7 +679,8 @@
         "pt": "Respostas sobre os temas",
         "fr": "Réponses sur les thèmes",
         "de": "Antworten zu den Themen",
-        "tr": "Konular üzerine cevaplar"
+        "tr": "Konular üzerine cevaplar",
+        "bg": "Отговори по темите"
       },
       "availableLayers": [
         "source"
@@ -649,6 +688,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "en-bb-kabbalah-info",

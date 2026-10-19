@@ -26,7 +26,8 @@
       "pt": "Volume 2",
       "fr": "Volume 2",
       "de": "Band 2",
-      "tr": "Cilt 2"
+      "tr": "Cilt 2",
+      "bg": "Том 2"
     }
   },
   "chapters": [
@@ -1947,7 +1948,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -1991,7 +1995,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -2070,7 +2077,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-bb"
+          "pt-ai",
+          "ru-bb",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -2114,7 +2124,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -2158,7 +2171,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-bb"
+          "pt-ai",
+          "ru-bb",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -2202,7 +2218,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },
@@ -2351,7 +2370,10 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-bb"
+          "pt-ai",
+          "ru-bb",
+          "tr-ai",
+          "uk-ai"
         ]
       }
     },

@@ -37,6 +37,40 @@ export type TranslatableItem = CommentaryItem | SourceSegment;
 export const itemKey = (item: TranslatableItem): string =>
   "anchorId" in item ? item.anchorId : `seif-${item.n}`;
 
+/**
+ * Aligns edition text to the authoritative source by key AND occurrence.
+ *
+ * Source chapters occasionally contain legitimate repeated segment numbers
+ * (Part 1's topical answers end with answer 51 and a separately sourced
+ * colophon that is also numbered 51). A plain `Map<key, html>` collapses those
+ * records and gives both export items the same English crib. Each successive
+ * edition is better than the previous one and overlays only the occurrences
+ * it actually contains, leaving the lower-priority fallback for the rest.
+ */
+export const alignEditionHtml = (
+  sourceItems: readonly TranslatableItem[],
+  editionsWorstFirst: readonly (readonly TranslatableItem[])[],
+): Map<TranslatableItem, string> => {
+  const sourceByKey = new Map<string, TranslatableItem[]>();
+  for (const item of sourceItems) {
+    const key = itemKey(item);
+    sourceByKey.set(key, [...(sourceByKey.get(key) ?? []), item]);
+  }
+
+  const aligned = new Map<TranslatableItem, string>();
+  for (const edition of editionsWorstFirst) {
+    const occurrences = new Map<string, number>();
+    for (const item of edition) {
+      const key = itemKey(item);
+      const occurrence = occurrences.get(key) ?? 0;
+      occurrences.set(key, occurrence + 1);
+      const sourceItem = sourceByKey.get(key)?.[occurrence];
+      if (sourceItem) aligned.set(sourceItem, item.html);
+    }
+  }
+  return aligned;
+};
+
 /** Reading-order position: a commentary item's `order`, a source segment's `n`. */
 const readingPosition = (item: TranslatableItem): number =>
   "order" in item ? item.order : item.n;
