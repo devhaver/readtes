@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-10/chapter-83",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 10:83",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 10:83:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Üst olandan aşağı inen dışsallık, onun tamamından değil, yalnızca onun içindeki Malchut'un dışsallığındaki Malchut'tandır:</b> Yukarıda uzun uzadıya yazıldığı gibi, alt olan üst olanın Gadlut'unun NHY'sine bağlı olsa da, yalnızca üst olanın Chazeh'inde duran Malchut'tan alır. Çünkü üst olanın Katnut'unun Yesod'u, Chazeh'e kadar Tifferet olur; üst olanın Katnut'unun Malchut'u ise Katnut'un Yesod'unun altındaki bir nokta niteliğidir. Böylece alt olanın Katnut'unun bütün seviyesi üst olanın Malchut'undan çıkar; fakat üst olanın Malchut'unun kendisinden değil, o Malchut'un dışsallığı niteliğinden, yani bu Malchut'tan daha aşağı bir dereceden çıkar. Örneğin, YESHSUT yükselip AVI'nin birleşmesine, yani Chazeh yerindeki Malchut'a dahil olduğunda, birleşme üçüncü safhanın Einayim'indeki alt Hey niteliği üzerinde yapılmaz; bu, söz konusu Malchut'un içselliği ve özü niteliğidir. Yalnızca ikinci safhanın Einayim'indeki alt Hey niteliğinden yapılır; bu da o Malchut için dışsallık ve arka taraftır. Bu birleşmeyle ortaya çıkan seviye, yine dışsallığın NHY'si olan giysileriyle birlikte alt olanın Mochin'ine iner. Gadlut'un Mochin'inde de aynı şekildedir: Söz konusu alt Hey Einayim'den iner ve AHP'yi yükseltir; o zaman yukarıda ayrıntılı biçimde açıklandığı gibi Haya seviyesi değil, Neshama ortaya çıkar. Böylece üst olandan inen Mochin ve NHY, üst olanın Malchut'unun içindeki Malchut'un dışsallığından gelir."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 10:83:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Dışsallığın NHY'si vb., yalnızca o Partzuf'un Malchut'unun on Sefirot'udur:</b> Çünkü Chazeh yerinde duran üst olanın bu Malchut'unda, onun dışsallığı niteliklerinden hem Katnut birleşmesi hem Gadlut birleşmesi yapılır. Bu nedenle dışsallığın on Sefirot'u olan GAR ve VAK olarak kabul edilir: Onun içindeki dışsallığın VAK'ı, yani Katnut seviyesi, alt olanın VAK'ı için içsellik olur; onun içindeki dışsallığın GAR'ı, yani Gadlut seviyesi de alt olanın GAR'ı için içsellik olur. Yukarıda uzun uzadıya açıklandığı gibi; oraya bakınız."
+    }
+  ]
+}
