@@ -9388,7 +9388,8 @@
                 "pt": "Capítulo 1",
                 "fr": "Chapitre 1",
                 "de": "Kapitel 1",
-                "tr": "Bölüm 1"
+                "tr": "Bölüm 1",
+                "bg": "Глава 1"
               },
               "availableLayers": [
                 "source",
@@ -9397,6 +9398,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9435,7 +9437,8 @@
                 "pt": "Capítulo 2",
                 "fr": "Chapitre 2",
                 "de": "Kapitel 2",
-                "tr": "Bölüm 2"
+                "tr": "Bölüm 2",
+                "bg": "Глава 2"
               },
               "availableLayers": [
                 "source",
@@ -9444,6 +9447,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9482,7 +9486,8 @@
                 "pt": "Capítulo 3",
                 "fr": "Chapitre 3",
                 "de": "Kapitel 3",
-                "tr": "Bölüm 3"
+                "tr": "Bölüm 3",
+                "bg": "Глава 3"
               },
               "availableLayers": [
                 "source",
@@ -9491,6 +9496,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9529,7 +9535,8 @@
                 "pt": "Capítulo 4",
                 "fr": "Chapitre 4",
                 "de": "Kapitel 4",
-                "tr": "Bölüm 4"
+                "tr": "Bölüm 4",
+                "bg": "Глава 4"
               },
               "availableLayers": [
                 "source",
@@ -9538,6 +9545,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9576,7 +9584,8 @@
                 "pt": "Capítulo 5",
                 "fr": "Chapitre 5",
                 "de": "Kapitel 5",
-                "tr": "Bölüm 5"
+                "tr": "Bölüm 5",
+                "bg": "Глава 5"
               },
               "availableLayers": [
                 "source",
@@ -9585,6 +9594,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9623,7 +9633,8 @@
                 "pt": "Capítulo 6",
                 "fr": "Chapitre 6",
                 "de": "Kapitel 6",
-                "tr": "Bölüm 6"
+                "tr": "Bölüm 6",
+                "bg": "Глава 6"
               },
               "availableLayers": [
                 "source"
@@ -9631,6 +9642,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9658,7 +9670,8 @@
                 "pt": "Capítulo 7",
                 "fr": "Chapitre 7",
                 "de": "Kapitel 7",
-                "tr": "Bölüm 7"
+                "tr": "Bölüm 7",
+                "bg": "Глава 7"
               },
               "availableLayers": [
                 "source",
@@ -9667,6 +9680,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9705,7 +9719,8 @@
                 "pt": "Capítulo 8",
                 "fr": "Chapitre 8",
                 "de": "Kapitel 8",
-                "tr": "Bölüm 8"
+                "tr": "Bölüm 8",
+                "bg": "Глава 8"
               },
               "availableLayers": [
                 "source",
@@ -9714,6 +9729,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9752,7 +9768,8 @@
                 "pt": "Capítulo 9",
                 "fr": "Chapitre 9",
                 "de": "Kapitel 9",
-                "tr": "Bölüm 9"
+                "tr": "Bölüm 9",
+                "bg": "Глава 9"
               },
               "availableLayers": [
                 "source",
@@ -9761,6 +9778,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9799,7 +9817,8 @@
                 "pt": "Capítulo 10",
                 "fr": "Chapitre 10",
                 "de": "Kapitel 10",
-                "tr": "Bölüm 10"
+                "tr": "Bölüm 10",
+                "bg": "Глава 10"
               },
               "availableLayers": [
                 "source",
@@ -9808,6 +9827,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9846,7 +9866,8 @@
                 "pt": "Capítulo 11",
                 "fr": "Chapitre 11",
                 "de": "Kapitel 11",
-                "tr": "Bölüm 11"
+                "tr": "Bölüm 11",
+                "bg": "Глава 11"
               },
               "availableLayers": [
                 "source"
@@ -9854,6 +9875,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9881,7 +9903,8 @@
                 "pt": "Capítulo 12",
                 "fr": "Chapitre 12",
                 "de": "Kapitel 12",
-                "tr": "Bölüm 12"
+                "tr": "Bölüm 12",
+                "bg": "Глава 12"
               },
               "availableLayers": [
                 "source"
@@ -9889,6 +9912,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9916,7 +9940,8 @@
                 "pt": "Capítulo 13",
                 "fr": "Chapitre 13",
                 "de": "Kapitel 13",
-                "tr": "Bölüm 13"
+                "tr": "Bölüm 13",
+                "bg": "Глава 13"
               },
               "availableLayers": [
                 "source"
@@ -9924,6 +9949,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9951,7 +9977,8 @@
                 "pt": "Capítulo 14",
                 "fr": "Chapitre 14",
                 "de": "Kapitel 14",
-                "tr": "Bölüm 14"
+                "tr": "Bölüm 14",
+                "bg": "Глава 14"
               },
               "availableLayers": [
                 "source"
@@ -9959,6 +9986,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -9986,7 +10014,8 @@
                 "pt": "Capítulo 15",
                 "fr": "Chapitre 15",
                 "de": "Kapitel 15",
-                "tr": "Bölüm 15"
+                "tr": "Bölüm 15",
+                "bg": "Глава 15"
               },
               "availableLayers": [
                 "source"
@@ -9994,6 +10023,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10021,7 +10051,8 @@
                 "pt": "Capítulo 16",
                 "fr": "Chapitre 16",
                 "de": "Kapitel 16",
-                "tr": "Bölüm 16"
+                "tr": "Bölüm 16",
+                "bg": "Глава 16"
               },
               "availableLayers": [
                 "source"
@@ -10029,6 +10060,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10056,7 +10088,8 @@
                 "pt": "Capítulo 17",
                 "fr": "Chapitre 17",
                 "de": "Kapitel 17",
-                "tr": "Bölüm 17"
+                "tr": "Bölüm 17",
+                "bg": "Глава 17"
               },
               "availableLayers": [
                 "source"
@@ -10064,6 +10097,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10091,7 +10125,8 @@
                 "pt": "Capítulo 18",
                 "fr": "Chapitre 18",
                 "de": "Kapitel 18",
-                "tr": "Bölüm 18"
+                "tr": "Bölüm 18",
+                "bg": "Глава 18"
               },
               "availableLayers": [
                 "source"
@@ -10099,6 +10134,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10126,7 +10162,8 @@
                 "pt": "Capítulo 19",
                 "fr": "Chapitre 19",
                 "de": "Kapitel 19",
-                "tr": "Bölüm 19"
+                "tr": "Bölüm 19",
+                "bg": "Глава 19"
               },
               "availableLayers": [
                 "source"
@@ -10134,6 +10171,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10161,7 +10199,8 @@
                 "pt": "Capítulo 20",
                 "fr": "Chapitre 20",
                 "de": "Kapitel 20",
-                "tr": "Bölüm 20"
+                "tr": "Bölüm 20",
+                "bg": "Глава 20"
               },
               "availableLayers": [
                 "source",
@@ -10170,6 +10209,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10208,7 +10248,8 @@
                 "pt": "Capítulo 21",
                 "fr": "Chapitre 21",
                 "de": "Kapitel 21",
-                "tr": "Bölüm 21"
+                "tr": "Bölüm 21",
+                "bg": "Глава 21"
               },
               "availableLayers": [
                 "source"
@@ -10216,6 +10257,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10243,7 +10285,8 @@
                 "pt": "Capítulo 22",
                 "fr": "Chapitre 22",
                 "de": "Kapitel 22",
-                "tr": "Bölüm 22"
+                "tr": "Bölüm 22",
+                "bg": "Глава 22"
               },
               "availableLayers": [
                 "source",
@@ -10252,6 +10295,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10290,7 +10334,8 @@
                 "pt": "Capítulo 23",
                 "fr": "Chapitre 23",
                 "de": "Kapitel 23",
-                "tr": "Bölüm 23"
+                "tr": "Bölüm 23",
+                "bg": "Глава 23"
               },
               "availableLayers": [
                 "source",
@@ -10299,6 +10344,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10337,7 +10383,8 @@
                 "pt": "Capítulo 24",
                 "fr": "Chapitre 24",
                 "de": "Kapitel 24",
-                "tr": "Bölüm 24"
+                "tr": "Bölüm 24",
+                "bg": "Глава 24"
               },
               "availableLayers": [
                 "source",
@@ -10346,6 +10393,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10384,7 +10432,8 @@
                 "pt": "Capítulo 25",
                 "fr": "Chapitre 25",
                 "de": "Kapitel 25",
-                "tr": "Bölüm 25"
+                "tr": "Bölüm 25",
+                "bg": "Глава 25"
               },
               "availableLayers": [
                 "source",
@@ -10393,6 +10442,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10431,7 +10481,8 @@
                 "pt": "Capítulo 26",
                 "fr": "Chapitre 26",
                 "de": "Kapitel 26",
-                "tr": "Bölüm 26"
+                "tr": "Bölüm 26",
+                "bg": "Глава 26"
               },
               "availableLayers": [
                 "source",
@@ -10440,6 +10491,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10478,7 +10530,8 @@
                 "pt": "Capítulo 27",
                 "fr": "Chapitre 27",
                 "de": "Kapitel 27",
-                "tr": "Bölüm 27"
+                "tr": "Bölüm 27",
+                "bg": "Глава 27"
               },
               "availableLayers": [
                 "source",
@@ -10487,6 +10540,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10525,7 +10579,8 @@
                 "pt": "Capítulo 28",
                 "fr": "Chapitre 28",
                 "de": "Kapitel 28",
-                "tr": "Bölüm 28"
+                "tr": "Bölüm 28",
+                "bg": "Глава 28"
               },
               "availableLayers": [
                 "source",
@@ -10534,6 +10589,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10572,7 +10628,8 @@
                 "pt": "Capítulo 29",
                 "fr": "Chapitre 29",
                 "de": "Kapitel 29",
-                "tr": "Bölüm 29"
+                "tr": "Bölüm 29",
+                "bg": "Глава 29"
               },
               "availableLayers": [
                 "source",
@@ -10581,6 +10638,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10619,7 +10677,8 @@
                 "pt": "Capítulo 30",
                 "fr": "Chapitre 30",
                 "de": "Kapitel 30",
-                "tr": "Bölüm 30"
+                "tr": "Bölüm 30",
+                "bg": "Глава 30"
               },
               "availableLayers": [
                 "source",
@@ -10628,6 +10687,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10666,7 +10726,8 @@
                 "pt": "Capítulo 31",
                 "fr": "Chapitre 31",
                 "de": "Kapitel 31",
-                "tr": "Bölüm 31"
+                "tr": "Bölüm 31",
+                "bg": "Глава 31"
               },
               "availableLayers": [
                 "source",
@@ -10675,6 +10736,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10713,7 +10775,8 @@
                 "pt": "Capítulo 32",
                 "fr": "Chapitre 32",
                 "de": "Kapitel 32",
-                "tr": "Bölüm 32"
+                "tr": "Bölüm 32",
+                "bg": "Глава 32"
               },
               "availableLayers": [
                 "source"
@@ -10721,6 +10784,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10748,7 +10812,8 @@
                 "pt": "Capítulo 33",
                 "fr": "Chapitre 33",
                 "de": "Kapitel 33",
-                "tr": "Bölüm 33"
+                "tr": "Bölüm 33",
+                "bg": "Глава 33"
               },
               "availableLayers": [
                 "source",
@@ -10757,6 +10822,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10795,7 +10861,8 @@
                 "pt": "Capítulo 34",
                 "fr": "Chapitre 34",
                 "de": "Kapitel 34",
-                "tr": "Bölüm 34"
+                "tr": "Bölüm 34",
+                "bg": "Глава 34"
               },
               "availableLayers": [
                 "source",
@@ -10804,6 +10871,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10842,7 +10910,8 @@
                 "pt": "Capítulo 35",
                 "fr": "Chapitre 35",
                 "de": "Kapitel 35",
-                "tr": "Bölüm 35"
+                "tr": "Bölüm 35",
+                "bg": "Глава 35"
               },
               "availableLayers": [
                 "source",
@@ -10851,6 +10920,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10888,7 +10958,8 @@
                 "pt": "Capítulo 36",
                 "fr": "Chapitre 36",
                 "de": "Kapitel 36",
-                "tr": "Bölüm 36"
+                "tr": "Bölüm 36",
+                "bg": "Глава 36"
               },
               "availableLayers": [
                 "source"
@@ -10896,6 +10967,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10923,7 +10995,8 @@
                 "pt": "Capítulo 37",
                 "fr": "Chapitre 37",
                 "de": "Kapitel 37",
-                "tr": "Bölüm 37"
+                "tr": "Bölüm 37",
+                "bg": "Глава 37"
               },
               "availableLayers": [
                 "source"
@@ -10931,6 +11004,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -10958,7 +11032,8 @@
                 "pt": "Capítulo 38",
                 "fr": "Chapitre 38",
                 "de": "Kapitel 38",
-                "tr": "Bölüm 38"
+                "tr": "Bölüm 38",
+                "bg": "Глава 38"
               },
               "availableLayers": [
                 "source",
@@ -10967,6 +11042,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11005,7 +11081,8 @@
                 "pt": "Capítulo 39",
                 "fr": "Chapitre 39",
                 "de": "Kapitel 39",
-                "tr": "Bölüm 39"
+                "tr": "Bölüm 39",
+                "bg": "Глава 39"
               },
               "availableLayers": [
                 "source",
@@ -11014,6 +11091,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11052,7 +11130,8 @@
                 "pt": "Capítulo 40",
                 "fr": "Chapitre 40",
                 "de": "Kapitel 40",
-                "tr": "Bölüm 40"
+                "tr": "Bölüm 40",
+                "bg": "Глава 40"
               },
               "availableLayers": [
                 "source",
@@ -11061,6 +11140,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11099,7 +11179,8 @@
                 "pt": "Capítulo 41",
                 "fr": "Chapitre 41",
                 "de": "Kapitel 41",
-                "tr": "Bölüm 41"
+                "tr": "Bölüm 41",
+                "bg": "Глава 41"
               },
               "availableLayers": [
                 "source",
@@ -11108,6 +11189,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11145,7 +11227,8 @@
                 "pt": "Capítulo 42",
                 "fr": "Chapitre 42",
                 "de": "Kapitel 42",
-                "tr": "Bölüm 42"
+                "tr": "Bölüm 42",
+                "bg": "Глава 42"
               },
               "availableLayers": [
                 "source",
@@ -11154,6 +11237,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11192,7 +11276,8 @@
                 "pt": "Capítulo 43",
                 "fr": "Chapitre 43",
                 "de": "Kapitel 43",
-                "tr": "Bölüm 43"
+                "tr": "Bölüm 43",
+                "bg": "Глава 43"
               },
               "availableLayers": [
                 "source",
@@ -11201,6 +11286,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11239,7 +11325,8 @@
                 "pt": "Capítulo 44",
                 "fr": "Chapitre 44",
                 "de": "Kapitel 44",
-                "tr": "Bölüm 44"
+                "tr": "Bölüm 44",
+                "bg": "Глава 44"
               },
               "availableLayers": [
                 "source",
@@ -11248,6 +11335,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11286,7 +11374,8 @@
                 "pt": "Capítulo 45",
                 "fr": "Chapitre 45",
                 "de": "Kapitel 45",
-                "tr": "Bölüm 45"
+                "tr": "Bölüm 45",
+                "bg": "Глава 45"
               },
               "availableLayers": [
                 "source",
@@ -11295,6 +11384,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11333,7 +11423,8 @@
                 "pt": "Capítulo 46",
                 "fr": "Chapitre 46",
                 "de": "Kapitel 46",
-                "tr": "Bölüm 46"
+                "tr": "Bölüm 46",
+                "bg": "Глава 46"
               },
               "availableLayers": [
                 "source",
@@ -11342,6 +11433,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11380,7 +11472,8 @@
                 "pt": "Capítulo 47",
                 "fr": "Chapitre 47",
                 "de": "Kapitel 47",
-                "tr": "Bölüm 47"
+                "tr": "Bölüm 47",
+                "bg": "Глава 47"
               },
               "availableLayers": [
                 "source",
@@ -11389,6 +11482,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11427,7 +11521,8 @@
                 "pt": "Capítulo 48",
                 "fr": "Chapitre 48",
                 "de": "Kapitel 48",
-                "tr": "Bölüm 48"
+                "tr": "Bölüm 48",
+                "bg": "Глава 48"
               },
               "availableLayers": [
                 "source",
@@ -11436,6 +11531,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11474,7 +11570,8 @@
                 "pt": "Capítulo 49",
                 "fr": "Chapitre 49",
                 "de": "Kapitel 49",
-                "tr": "Bölüm 49"
+                "tr": "Bölüm 49",
+                "bg": "Глава 49"
               },
               "availableLayers": [
                 "source",
@@ -11483,6 +11580,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11521,7 +11619,8 @@
                 "pt": "Capítulo 50",
                 "fr": "Chapitre 50",
                 "de": "Kapitel 50",
-                "tr": "Bölüm 50"
+                "tr": "Bölüm 50",
+                "bg": "Глава 50"
               },
               "availableLayers": [
                 "source",
@@ -11530,6 +11629,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11568,7 +11668,8 @@
                 "pt": "Capítulo 51",
                 "fr": "Chapitre 51",
                 "de": "Kapitel 51",
-                "tr": "Bölüm 51"
+                "tr": "Bölüm 51",
+                "bg": "Глава 51"
               },
               "availableLayers": [
                 "source"
@@ -11576,6 +11677,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11603,7 +11705,8 @@
                 "pt": "Capítulo 52",
                 "fr": "Chapitre 52",
                 "de": "Kapitel 52",
-                "tr": "Bölüm 52"
+                "tr": "Bölüm 52",
+                "bg": "Глава 52"
               },
               "availableLayers": [
                 "source",
@@ -11612,6 +11715,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11650,7 +11754,8 @@
                 "pt": "Capítulo 53",
                 "fr": "Chapitre 53",
                 "de": "Kapitel 53",
-                "tr": "Bölüm 53"
+                "tr": "Bölüm 53",
+                "bg": "Глава 53"
               },
               "availableLayers": [
                 "source"
@@ -11658,6 +11763,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11685,7 +11791,8 @@
                 "pt": "Capítulo 54",
                 "fr": "Chapitre 54",
                 "de": "Kapitel 54",
-                "tr": "Bölüm 54"
+                "tr": "Bölüm 54",
+                "bg": "Глава 54"
               },
               "availableLayers": [
                 "source",
@@ -11694,6 +11801,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11732,7 +11840,8 @@
                 "pt": "Capítulo 55",
                 "fr": "Chapitre 55",
                 "de": "Kapitel 55",
-                "tr": "Bölüm 55"
+                "tr": "Bölüm 55",
+                "bg": "Глава 55"
               },
               "availableLayers": [
                 "source"
@@ -11740,6 +11849,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11767,7 +11877,8 @@
                 "pt": "Capítulo 56",
                 "fr": "Chapitre 56",
                 "de": "Kapitel 56",
-                "tr": "Bölüm 56"
+                "tr": "Bölüm 56",
+                "bg": "Глава 56"
               },
               "availableLayers": [
                 "source",
@@ -11776,6 +11887,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11814,7 +11926,8 @@
                 "pt": "Capítulo 57",
                 "fr": "Chapitre 57",
                 "de": "Kapitel 57",
-                "tr": "Bölüm 57"
+                "tr": "Bölüm 57",
+                "bg": "Глава 57"
               },
               "availableLayers": [
                 "source",
@@ -11823,6 +11936,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11861,7 +11975,8 @@
                 "pt": "Capítulo 58",
                 "fr": "Chapitre 58",
                 "de": "Kapitel 58",
-                "tr": "Bölüm 58"
+                "tr": "Bölüm 58",
+                "bg": "Глава 58"
               },
               "availableLayers": [
                 "source"
@@ -11869,6 +11984,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11896,7 +12012,8 @@
                 "pt": "Capítulo 59",
                 "fr": "Chapitre 59",
                 "de": "Kapitel 59",
-                "tr": "Bölüm 59"
+                "tr": "Bölüm 59",
+                "bg": "Глава 59"
               },
               "availableLayers": [
                 "source",
@@ -11905,6 +12022,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11943,7 +12061,8 @@
                 "pt": "Capítulo 60",
                 "fr": "Chapitre 60",
                 "de": "Kapitel 60",
-                "tr": "Bölüm 60"
+                "tr": "Bölüm 60",
+                "bg": "Глава 60"
               },
               "availableLayers": [
                 "source",
@@ -11952,6 +12071,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -11990,7 +12110,8 @@
                 "pt": "Capítulo 61",
                 "fr": "Chapitre 61",
                 "de": "Kapitel 61",
-                "tr": "Bölüm 61"
+                "tr": "Bölüm 61",
+                "bg": "Глава 61"
               },
               "availableLayers": [
                 "source",
@@ -11999,6 +12120,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12037,7 +12159,8 @@
                 "pt": "Capítulo 62",
                 "fr": "Chapitre 62",
                 "de": "Kapitel 62",
-                "tr": "Bölüm 62"
+                "tr": "Bölüm 62",
+                "bg": "Глава 62"
               },
               "availableLayers": [
                 "source",
@@ -12046,6 +12169,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12084,7 +12208,8 @@
                 "pt": "Capítulo 63",
                 "fr": "Chapitre 63",
                 "de": "Kapitel 63",
-                "tr": "Bölüm 63"
+                "tr": "Bölüm 63",
+                "bg": "Глава 63"
               },
               "availableLayers": [
                 "source"
@@ -12092,6 +12217,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12119,7 +12245,8 @@
                 "pt": "Capítulo 64",
                 "fr": "Chapitre 64",
                 "de": "Kapitel 64",
-                "tr": "Bölüm 64"
+                "tr": "Bölüm 64",
+                "bg": "Глава 64"
               },
               "availableLayers": [
                 "source",
@@ -12128,6 +12255,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12166,7 +12294,8 @@
                 "pt": "Capítulo 65",
                 "fr": "Chapitre 65",
                 "de": "Kapitel 65",
-                "tr": "Bölüm 65"
+                "tr": "Bölüm 65",
+                "bg": "Глава 65"
               },
               "availableLayers": [
                 "source",
@@ -12175,6 +12304,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12213,7 +12343,8 @@
                 "pt": "Capítulo 66",
                 "fr": "Chapitre 66",
                 "de": "Kapitel 66",
-                "tr": "Bölüm 66"
+                "tr": "Bölüm 66",
+                "bg": "Глава 66"
               },
               "availableLayers": [
                 "source"
@@ -12221,6 +12352,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12248,7 +12380,8 @@
                 "pt": "Capítulo 67",
                 "fr": "Chapitre 67",
                 "de": "Kapitel 67",
-                "tr": "Bölüm 67"
+                "tr": "Bölüm 67",
+                "bg": "Глава 67"
               },
               "availableLayers": [
                 "source"
@@ -12256,6 +12389,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12283,7 +12417,8 @@
                 "pt": "Capítulo 68",
                 "fr": "Chapitre 68",
                 "de": "Kapitel 68",
-                "tr": "Bölüm 68"
+                "tr": "Bölüm 68",
+                "bg": "Глава 68"
               },
               "availableLayers": [
                 "source"
@@ -12291,6 +12426,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12318,7 +12454,8 @@
                 "pt": "Capítulo 69",
                 "fr": "Chapitre 69",
                 "de": "Kapitel 69",
-                "tr": "Bölüm 69"
+                "tr": "Bölüm 69",
+                "bg": "Глава 69"
               },
               "availableLayers": [
                 "source"
@@ -12326,6 +12463,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12353,7 +12491,8 @@
                 "pt": "Capítulo 70",
                 "fr": "Chapitre 70",
                 "de": "Kapitel 70",
-                "tr": "Bölüm 70"
+                "tr": "Bölüm 70",
+                "bg": "Глава 70"
               },
               "availableLayers": [
                 "source",
@@ -12362,6 +12501,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12400,7 +12540,8 @@
                 "pt": "Capítulo 71",
                 "fr": "Chapitre 71",
                 "de": "Kapitel 71",
-                "tr": "Bölüm 71"
+                "tr": "Bölüm 71",
+                "bg": "Глава 71"
               },
               "availableLayers": [
                 "source"
@@ -12408,6 +12549,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12435,7 +12577,8 @@
                 "pt": "Capítulo 72",
                 "fr": "Chapitre 72",
                 "de": "Kapitel 72",
-                "tr": "Bölüm 72"
+                "tr": "Bölüm 72",
+                "bg": "Глава 72"
               },
               "availableLayers": [
                 "source"
@@ -12443,6 +12586,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
@@ -12470,7 +12614,8 @@
                 "pt": "Capítulo 73",
                 "fr": "Chapitre 73",
                 "de": "Kapitel 73",
-                "tr": "Bölüm 73"
+                "tr": "Bölüm 73",
+                "bg": "Глава 73"
               },
               "availableLayers": [
                 "source",
@@ -12479,6 +12624,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-ai",
                   "en-bb",
