@@ -1,0 +1,548 @@
+{
+  "chapterId": "part-07/questions-terminology-01",
+  "layer": "source",
+  "versionId": "bg-ai",
+  "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology",
+  "items": [
+    {
+      "n": 1,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 1",
+      "html": "Какво е Ахор бе-Ахор [гръб в гръб]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_1\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 2,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 2",
+      "html": "Какво е Ахор бе-Паним [гръб към лице]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_2\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 3,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 3",
+      "html": "Какво е светлина, която излиза навън? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_3\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 4,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 4",
+      "html": "Какво е светлина, която се огрубява? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_4\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 5,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 5",
+      "html": "Какво са буквите? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_5\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 6,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 6",
+      "html": "Какво е задната страна на ЗА? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_6\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 7,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 7",
+      "html": "Какво е задната страна на Нуква? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_7\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 8,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 8",
+      "html": "Какво е задната страна на Аба? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_8\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 9,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 9",
+      "html": "Какво е задната страна на АВИ [Аба ве-Има]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_9\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 10,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 10",
+      "html": "Какво е падналата задна страна на Има? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_10\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 11,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 11",
+      "html": "Какво е пълната задна страна на ЗА? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_11\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 12,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 12",
+      "html": "Какво е пълната задна страна на Нуква? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_12\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 13,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 13",
+      "html": "Какво е захващане? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_13\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 14,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 14",
+      "html": "Какво са БДК ХЙХ? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_14\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 15,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 15",
+      "html": "Какво е анулиране? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_15\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 16,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 16",
+      "html": "Какво са изясняванията? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_16\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 17,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 17",
+      "html": "Какво са двете долни трети на Тиферет? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_17\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 18,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 18",
+      "html": "Какво са Гвурот? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_18\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 19,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 19",
+      "html": "Какво е „голям“? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_19\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 20,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 20",
+      "html": "Какво е Гадлут [големина/зрялост]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_20\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 21,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 21",
+      "html": "Какво е гуфът [тялото] на Аба? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_21\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 22,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 22",
+      "html": "Какво е гуфът [тялото] на Има? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_22\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 23,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 23",
+      "html": "Какво е гуфът [тялото] на Исраел Саба? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_23\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 24,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 24",
+      "html": "Какво е гуфът [тялото] на Твуна? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_24\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 25,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 25",
+      "html": "Какво е завършването на изграждането на задната страна? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_25\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 26,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 26",
+      "html": "Какво е пълно сливане? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_26\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 27,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 27",
+      "html": "Какво са съжденията? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_27\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 28,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 28",
+      "html": "Какво са силните съждения? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_28\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 29,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 29",
+      "html": "Какво е съзерцанието на лицето? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_29\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 30,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 30",
+      "html": "Какво е уголемяването на половината задна страна? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_30\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 31,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 31",
+      "html": "Какво са петте Хасадим и петте Гвурот? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_31\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 32,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 32",
+      "html": "Какво е намаляването на светлината? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_32\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 33,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 33",
+      "html": "Какво е поглеждането на очите на АВИ [Аба ве-Има]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_33\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 34,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 34",
+      "html": "Какво е поглеждането на очите на ЙЕШСУТ [Исраел Саба ве-Твуна]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_34\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 35,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 35",
+      "html": "Какво е издигането на МАН? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_35\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 36,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 36",
+      "html": "Какво е сливането Паним бе-Паним [лице в лице]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_36\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 37,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 37",
+      "html": "Какво е сливането на обвивките? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_37\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 38,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 38",
+      "html": "Какво е разпространението на петте Гвурот? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_38\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 39,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 39",
+      "html": "Какво е „пречистен“? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_39\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 40,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 40",
+      "html": "Какво е Хад Самха [една опора]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_40\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 41,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 41",
+      "html": "Какво е жизнеността на обвивките? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_41\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 42,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 42",
+      "html": "Какво са войнствата на Малхут? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_42\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 43,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 43",
+      "html": "Какво са частите на Нуква? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_43\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 44,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 44",
+      "html": "Какво е половината задна страна? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_44\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 45,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 45",
+      "html": "Какво е половин стена? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_45\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 46,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 46",
+      "html": "Какво е долната половина на Тиферет? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_46\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 47,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 47",
+      "html": "Какво е горната половина на Тиферет? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_47\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 48,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 48",
+      "html": "Какво е капката, която отглежда детето? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_48\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 49,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 49",
+      "html": "Какво е Йеника [кърменето] на обвивките? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_49\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 50,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 50",
+      "html": "Какво са ЙЕШСУТ [Исраел Саба ве-Твуна]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_50\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 51,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 51",
+      "html": "Какво е силата на обвивките? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_51\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 52,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 52",
+      "html": "Какво е общността на Бина и Твуна? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_52\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 53,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 53",
+      "html": "Какво е общността на петте Хасадим и петте Гвурот? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_53\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 54,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 54",
+      "html": "Какво е „разкрит“? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_54\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 55,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 55",
+      "html": "Какво са Мохин? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_55\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 56,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 56",
+      "html": "Какво е смърт? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_56\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 57,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 57",
+      "html": "Какво е смъртта на царете? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_57\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 58,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 58",
+      "html": "Какво е „покрит“? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_58\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 59,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 59",
+      "html": "Какво са МАН? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_59\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 60,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 60",
+      "html": "Какво е екранът на Бина? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_60\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 61,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 61",
+      "html": "Какво е „смесен с обвивките“? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_61\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 62,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 62",
+      "html": "Какво е мястото на захващането на обвивките? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_62\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 63,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 63",
+      "html": "Какво е мястото на БЕА? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_63\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 64,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 64",
+      "html": "Какво е мястото на рош [главата]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_64\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 65,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 65",
+      "html": "Какво е Нехиро Дакик [тънко светене]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_65\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 66,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 66",
+      "html": "Какво са угасналите искри? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_66\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 67,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 67",
+      "html": "Какво са неизяснените искри? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_67\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 68,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 68",
+      "html": "Какво са силните искри? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_68\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 69,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 69",
+      "html": "Какво е падане? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_69\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 70,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 70",
+      "html": "Какво е шлака? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_70\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 71,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 71",
+      "html": "Какво е огрубяването в задната страна? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_71\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 72,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 72",
+      "html": "Какво е Дървото на познанието за доброто и злото? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_72\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 73,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 73",
+      "html": "Какво е Паним бе-Паним [лице в лице]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_73\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 74,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 74",
+      "html": "Какво са Палгей де-Гуфа [половините на гуф]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_74\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 75,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 75",
+      "html": "Какво е лицето на мъжкото? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_75\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 76,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 76",
+      "html": "Какво е лицето на женското? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_76\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 77,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 77",
+      "html": "Какво е Паним бе-Ахор [лице към гръб]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_77\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 78,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 78",
+      "html": "Какво е отпадък? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_78\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 79,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 79",
+      "html": "Какво е „малък“? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_79\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 80,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 80",
+      "html": "Какво е Катнут [малкост/младенчество]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_80\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 81,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 81",
+      "html": "Какво са пълните обвивки? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_81\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 82,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 82",
+      "html": "Какво е обвивката Нога? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_82\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 83,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 83",
+      "html": "Какво е частично сливане? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_83\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 84,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 84",
+      "html": "Какво е частично разбиване? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_84\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 85,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 85",
+      "html": "Какво е частично поправяне? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_85\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 86,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 86",
+      "html": "Какво е свързване? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_86\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 87,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 87",
+      "html": "Какво е Рейша де-АВИ [рош на Аба ве-Има]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_87\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 88,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 88",
+      "html": "Какво са Рейшайху де-ЙЕШСУТ [рошим на Исраел Саба ве-Твуна]? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_88\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 89,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 89",
+      "html": "Какво е разбиването на съсъдите? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_89\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    },
+    {
+      "n": 90,
+      "sefariaRef": "Talmud Eser HaSefirot, Section VII, List of Questions on Terminology 90",
+      "html": "Какво е горната третина на Тиферет? <small>(<a href=\"https://www.sefaria.org/Talmud_Eser_HaSefirot,_Section_VII,_List_of_Answers_on_Terminology_90\" target=\"_blank\" rel=\"noopener noreferrer\">към отговора</a>)</small>",
+      "anchors": []
+    }
+  ]
+}
