@@ -738,9 +738,9 @@
             "enOfficial": "none",
             "enAi": "full",
             "ru": "full",
-            "uk": "none",
-            "es": "none",
-            "fr": "none"
+            "uk": "partial",
+            "es": "partial",
+            "fr": "partial"
           }
         },
         {
