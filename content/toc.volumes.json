@@ -633,7 +633,8 @@
             "pt": "O primeiro Ibur de Zeir Anpin",
             "fr": "Le premier Ibour de Zeir Anpin",
             "de": "Der erste Ibur von Seir Anpin",
-            "tr": "Zeir Anpin'in ilk İbur'u"
+            "tr": "Zeir Anpin'in ilk İbur'u",
+            "bg": "Първият Ибур на Зеир Анпин"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section X",
           "chapterCount": 164,
@@ -657,7 +658,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -668,7 +670,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
