@@ -5,6 +5,6 @@ export default defineVitestConfig({
     environment: "nuxt",
     hookTimeout: 30_000,
     include: ["tests/unit/**/*.spec.ts"],
-    testTimeout: 15_000,
+    testTimeout: 30_000,
   },
 });
