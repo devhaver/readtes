@@ -776,7 +776,8 @@
             "pt": "Nascimento e Yeniká de Zeir Anpin",
             "fr": "Naissance et allaitement de Zeir Anpin",
             "de": "Geburt und Jenika von Seir Anpin",
-            "tr": "Zeir Anpin'in doğumu ve Yenika'sı"
+            "tr": "Zeir Anpin'in doğumu ve Yenika'sı",
+            "bg": "Раждането и еника на Зеир Анпин"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XII",
           "chapterCount": 298,
@@ -800,7 +801,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -811,7 +813,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",

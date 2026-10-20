@@ -11,7 +11,8 @@
       "pt": "Nascimento e Yeniká de Zeir Anpin",
       "fr": "Naissance et allaitement de Zeir Anpin",
       "de": "Geburt und Jenika von Seir Anpin",
-      "tr": "Zeir Anpin'in doğumu ve Yenika'sı"
+      "tr": "Zeir Anpin'in doğumu ve Yenika'sı",
+      "bg": "Раждането и еника на Зеир Анпин"
     }
   },
   "volume": {
@@ -44,7 +45,8 @@
         "pt": "Capítulo 1",
         "fr": "Chapitre 1",
         "de": "Kapitel 1",
-        "tr": "Bölüm 1"
+        "tr": "Bölüm 1",
+        "bg": "Глава 1"
       },
       "availableLayers": [
         "source",
@@ -53,6 +55,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -64,6 +67,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -82,7 +86,8 @@
         "pt": "Capítulo 2",
         "fr": "Chapitre 2",
         "de": "Kapitel 2",
-        "tr": "Bölüm 2"
+        "tr": "Bölüm 2",
+        "bg": "Глава 2"
       },
       "availableLayers": [
         "source"
@@ -90,6 +95,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -116,7 +122,8 @@
         "pt": "Capítulo 3",
         "fr": "Chapitre 3",
         "de": "Kapitel 3",
-        "tr": "Bölüm 3"
+        "tr": "Bölüm 3",
+        "bg": "Глава 3"
       },
       "availableLayers": [
         "source",
@@ -125,6 +132,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -136,6 +144,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -154,7 +163,8 @@
         "pt": "Capítulo 4",
         "fr": "Chapitre 4",
         "de": "Kapitel 4",
-        "tr": "Bölüm 4"
+        "tr": "Bölüm 4",
+        "bg": "Глава 4"
       },
       "availableLayers": [
         "source"
@@ -162,6 +172,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -188,7 +199,8 @@
         "pt": "Capítulo 5",
         "fr": "Chapitre 5",
         "de": "Kapitel 5",
-        "tr": "Bölüm 5"
+        "tr": "Bölüm 5",
+        "bg": "Глава 5"
       },
       "availableLayers": [
         "source"
@@ -196,6 +208,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -222,7 +235,8 @@
         "pt": "Capítulo 6",
         "fr": "Chapitre 6",
         "de": "Kapitel 6",
-        "tr": "Bölüm 6"
+        "tr": "Bölüm 6",
+        "bg": "Глава 6"
       },
       "availableLayers": [
         "source",
@@ -231,6 +245,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -242,6 +257,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -260,7 +276,8 @@
         "pt": "Capítulo 7",
         "fr": "Chapitre 7",
         "de": "Kapitel 7",
-        "tr": "Bölüm 7"
+        "tr": "Bölüm 7",
+        "bg": "Глава 7"
       },
       "availableLayers": [
         "source"
@@ -268,6 +285,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -294,7 +312,8 @@
         "pt": "Capítulo 8",
         "fr": "Chapitre 8",
         "de": "Kapitel 8",
-        "tr": "Bölüm 8"
+        "tr": "Bölüm 8",
+        "bg": "Глава 8"
       },
       "availableLayers": [
         "source",
@@ -303,6 +322,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -314,6 +334,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -332,7 +353,8 @@
         "pt": "Capítulo 9",
         "fr": "Chapitre 9",
         "de": "Kapitel 9",
-        "tr": "Bölüm 9"
+        "tr": "Bölüm 9",
+        "bg": "Глава 9"
       },
       "availableLayers": [
         "source"
@@ -340,6 +362,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -366,7 +389,8 @@
         "pt": "Capítulo 10",
         "fr": "Chapitre 10",
         "de": "Kapitel 10",
-        "tr": "Bölüm 10"
+        "tr": "Bölüm 10",
+        "bg": "Глава 10"
       },
       "availableLayers": [
         "source",
@@ -375,6 +399,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -386,6 +411,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -404,7 +430,8 @@
         "pt": "Capítulo 11",
         "fr": "Chapitre 11",
         "de": "Kapitel 11",
-        "tr": "Bölüm 11"
+        "tr": "Bölüm 11",
+        "bg": "Глава 11"
       },
       "availableLayers": [
         "source"
@@ -412,6 +439,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -438,7 +466,8 @@
         "pt": "Capítulo 12",
         "fr": "Chapitre 12",
         "de": "Kapitel 12",
-        "tr": "Bölüm 12"
+        "tr": "Bölüm 12",
+        "bg": "Глава 12"
       },
       "availableLayers": [
         "source"
@@ -446,6 +475,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -472,7 +502,8 @@
         "pt": "Capítulo 13",
         "fr": "Chapitre 13",
         "de": "Kapitel 13",
-        "tr": "Bölüm 13"
+        "tr": "Bölüm 13",
+        "bg": "Глава 13"
       },
       "availableLayers": [
         "source"
@@ -480,6 +511,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -506,7 +538,8 @@
         "pt": "Capítulo 14",
         "fr": "Chapitre 14",
         "de": "Kapitel 14",
-        "tr": "Bölüm 14"
+        "tr": "Bölüm 14",
+        "bg": "Глава 14"
       },
       "availableLayers": [
         "source"
@@ -514,6 +547,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -540,7 +574,8 @@
         "pt": "Capítulo 15",
         "fr": "Chapitre 15",
         "de": "Kapitel 15",
-        "tr": "Bölüm 15"
+        "tr": "Bölüm 15",
+        "bg": "Глава 15"
       },
       "availableLayers": [
         "source",
@@ -549,6 +584,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -560,6 +596,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -578,7 +615,8 @@
         "pt": "Capítulo 16",
         "fr": "Chapitre 16",
         "de": "Kapitel 16",
-        "tr": "Bölüm 16"
+        "tr": "Bölüm 16",
+        "bg": "Глава 16"
       },
       "availableLayers": [
         "source"
@@ -586,6 +624,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -612,7 +651,8 @@
         "pt": "Capítulo 17",
         "fr": "Chapitre 17",
         "de": "Kapitel 17",
-        "tr": "Bölüm 17"
+        "tr": "Bölüm 17",
+        "bg": "Глава 17"
       },
       "availableLayers": [
         "source"
@@ -620,6 +660,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -646,7 +687,8 @@
         "pt": "Capítulo 18",
         "fr": "Chapitre 18",
         "de": "Kapitel 18",
-        "tr": "Bölüm 18"
+        "tr": "Bölüm 18",
+        "bg": "Глава 18"
       },
       "availableLayers": [
         "source"
@@ -654,6 +696,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -680,7 +723,8 @@
         "pt": "Capítulo 19",
         "fr": "Chapitre 19",
         "de": "Kapitel 19",
-        "tr": "Bölüm 19"
+        "tr": "Bölüm 19",
+        "bg": "Глава 19"
       },
       "availableLayers": [
         "source"
@@ -688,6 +732,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -714,7 +759,8 @@
         "pt": "Capítulo 20",
         "fr": "Chapitre 20",
         "de": "Kapitel 20",
-        "tr": "Bölüm 20"
+        "tr": "Bölüm 20",
+        "bg": "Глава 20"
       },
       "availableLayers": [
         "source"
@@ -722,6 +768,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -748,7 +795,8 @@
         "pt": "Capítulo 21",
         "fr": "Chapitre 21",
         "de": "Kapitel 21",
-        "tr": "Bölüm 21"
+        "tr": "Bölüm 21",
+        "bg": "Глава 21"
       },
       "availableLayers": [
         "source",
@@ -757,6 +805,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -768,6 +817,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -786,7 +836,8 @@
         "pt": "Capítulo 22",
         "fr": "Chapitre 22",
         "de": "Kapitel 22",
-        "tr": "Bölüm 22"
+        "tr": "Bölüm 22",
+        "bg": "Глава 22"
       },
       "availableLayers": [
         "source"
@@ -794,6 +845,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -820,7 +872,8 @@
         "pt": "Capítulo 23",
         "fr": "Chapitre 23",
         "de": "Kapitel 23",
-        "tr": "Bölüm 23"
+        "tr": "Bölüm 23",
+        "bg": "Глава 23"
       },
       "availableLayers": [
         "source"
@@ -828,6 +881,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -854,7 +908,8 @@
         "pt": "Capítulo 24",
         "fr": "Chapitre 24",
         "de": "Kapitel 24",
-        "tr": "Bölüm 24"
+        "tr": "Bölüm 24",
+        "bg": "Глава 24"
       },
       "availableLayers": [
         "source"
@@ -862,6 +917,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -888,7 +944,8 @@
         "pt": "Capítulo 25",
         "fr": "Chapitre 25",
         "de": "Kapitel 25",
-        "tr": "Bölüm 25"
+        "tr": "Bölüm 25",
+        "bg": "Глава 25"
       },
       "availableLayers": [
         "source",
@@ -897,6 +954,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -908,6 +966,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -926,7 +985,8 @@
         "pt": "Capítulo 26",
         "fr": "Chapitre 26",
         "de": "Kapitel 26",
-        "tr": "Bölüm 26"
+        "tr": "Bölüm 26",
+        "bg": "Глава 26"
       },
       "availableLayers": [
         "source",
@@ -935,6 +995,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -946,6 +1007,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -964,7 +1026,8 @@
         "pt": "Capítulo 27",
         "fr": "Chapitre 27",
         "de": "Kapitel 27",
-        "tr": "Bölüm 27"
+        "tr": "Bölüm 27",
+        "bg": "Глава 27"
       },
       "availableLayers": [
         "source",
@@ -973,6 +1036,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -984,6 +1048,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1002,7 +1067,8 @@
         "pt": "Capítulo 28",
         "fr": "Chapitre 28",
         "de": "Kapitel 28",
-        "tr": "Bölüm 28"
+        "tr": "Bölüm 28",
+        "bg": "Глава 28"
       },
       "availableLayers": [
         "source",
@@ -1011,6 +1077,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1022,6 +1089,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1040,7 +1108,8 @@
         "pt": "Capítulo 29",
         "fr": "Chapitre 29",
         "de": "Kapitel 29",
-        "tr": "Bölüm 29"
+        "tr": "Bölüm 29",
+        "bg": "Глава 29"
       },
       "availableLayers": [
         "source"
@@ -1048,6 +1117,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1074,7 +1144,8 @@
         "pt": "Capítulo 30",
         "fr": "Chapitre 30",
         "de": "Kapitel 30",
-        "tr": "Bölüm 30"
+        "tr": "Bölüm 30",
+        "bg": "Глава 30"
       },
       "availableLayers": [
         "source",
@@ -1083,6 +1154,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1094,6 +1166,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1112,7 +1185,8 @@
         "pt": "Capítulo 31",
         "fr": "Chapitre 31",
         "de": "Kapitel 31",
-        "tr": "Bölüm 31"
+        "tr": "Bölüm 31",
+        "bg": "Глава 31"
       },
       "availableLayers": [
         "source"
@@ -1120,6 +1194,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1146,7 +1221,8 @@
         "pt": "Capítulo 32",
         "fr": "Chapitre 32",
         "de": "Kapitel 32",
-        "tr": "Bölüm 32"
+        "tr": "Bölüm 32",
+        "bg": "Глава 32"
       },
       "availableLayers": [
         "source"
@@ -1154,6 +1230,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1180,7 +1257,8 @@
         "pt": "Capítulo 33",
         "fr": "Chapitre 33",
         "de": "Kapitel 33",
-        "tr": "Bölüm 33"
+        "tr": "Bölüm 33",
+        "bg": "Глава 33"
       },
       "availableLayers": [
         "source"
@@ -1188,6 +1266,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1214,7 +1293,8 @@
         "pt": "Capítulo 34",
         "fr": "Chapitre 34",
         "de": "Kapitel 34",
-        "tr": "Bölüm 34"
+        "tr": "Bölüm 34",
+        "bg": "Глава 34"
       },
       "availableLayers": [
         "source"
@@ -1222,6 +1302,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1248,7 +1329,8 @@
         "pt": "Capítulo 35",
         "fr": "Chapitre 35",
         "de": "Kapitel 35",
-        "tr": "Bölüm 35"
+        "tr": "Bölüm 35",
+        "bg": "Глава 35"
       },
       "availableLayers": [
         "source"
@@ -1256,6 +1338,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1282,7 +1365,8 @@
         "pt": "Capítulo 36",
         "fr": "Chapitre 36",
         "de": "Kapitel 36",
-        "tr": "Bölüm 36"
+        "tr": "Bölüm 36",
+        "bg": "Глава 36"
       },
       "availableLayers": [
         "source"
@@ -1290,6 +1374,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1316,7 +1401,8 @@
         "pt": "Capítulo 37",
         "fr": "Chapitre 37",
         "de": "Kapitel 37",
-        "tr": "Bölüm 37"
+        "tr": "Bölüm 37",
+        "bg": "Глава 37"
       },
       "availableLayers": [
         "source"
@@ -1324,6 +1410,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1350,7 +1437,8 @@
         "pt": "Capítulo 38",
         "fr": "Chapitre 38",
         "de": "Kapitel 38",
-        "tr": "Bölüm 38"
+        "tr": "Bölüm 38",
+        "bg": "Глава 38"
       },
       "availableLayers": [
         "source"
@@ -1358,6 +1446,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1384,7 +1473,8 @@
         "pt": "Capítulo 39",
         "fr": "Chapitre 39",
         "de": "Kapitel 39",
-        "tr": "Bölüm 39"
+        "tr": "Bölüm 39",
+        "bg": "Глава 39"
       },
       "availableLayers": [
         "source"
@@ -1392,6 +1482,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1418,7 +1509,8 @@
         "pt": "Capítulo 40",
         "fr": "Chapitre 40",
         "de": "Kapitel 40",
-        "tr": "Bölüm 40"
+        "tr": "Bölüm 40",
+        "bg": "Глава 40"
       },
       "availableLayers": [
         "source",
@@ -1427,6 +1519,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1438,6 +1531,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1456,7 +1550,8 @@
         "pt": "Capítulo 41",
         "fr": "Chapitre 41",
         "de": "Kapitel 41",
-        "tr": "Bölüm 41"
+        "tr": "Bölüm 41",
+        "bg": "Глава 41"
       },
       "availableLayers": [
         "source"
@@ -1464,6 +1559,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1490,7 +1586,8 @@
         "pt": "Capítulo 42",
         "fr": "Chapitre 42",
         "de": "Kapitel 42",
-        "tr": "Bölüm 42"
+        "tr": "Bölüm 42",
+        "bg": "Глава 42"
       },
       "availableLayers": [
         "source",
@@ -1499,6 +1596,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1510,6 +1608,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1528,7 +1627,8 @@
         "pt": "Capítulo 43",
         "fr": "Chapitre 43",
         "de": "Kapitel 43",
-        "tr": "Bölüm 43"
+        "tr": "Bölüm 43",
+        "bg": "Глава 43"
       },
       "availableLayers": [
         "source"
@@ -1536,6 +1636,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1562,7 +1663,8 @@
         "pt": "Capítulo 44",
         "fr": "Chapitre 44",
         "de": "Kapitel 44",
-        "tr": "Bölüm 44"
+        "tr": "Bölüm 44",
+        "bg": "Глава 44"
       },
       "availableLayers": [
         "source"
@@ -1570,6 +1672,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1596,7 +1699,8 @@
         "pt": "Capítulo 45",
         "fr": "Chapitre 45",
         "de": "Kapitel 45",
-        "tr": "Bölüm 45"
+        "tr": "Bölüm 45",
+        "bg": "Глава 45"
       },
       "availableLayers": [
         "source",
@@ -1605,6 +1709,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1616,6 +1721,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1634,7 +1740,8 @@
         "pt": "Capítulo 46",
         "fr": "Chapitre 46",
         "de": "Kapitel 46",
-        "tr": "Bölüm 46"
+        "tr": "Bölüm 46",
+        "bg": "Глава 46"
       },
       "availableLayers": [
         "source"
@@ -1642,6 +1749,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1668,7 +1776,8 @@
         "pt": "Capítulo 47",
         "fr": "Chapitre 47",
         "de": "Kapitel 47",
-        "tr": "Bölüm 47"
+        "tr": "Bölüm 47",
+        "bg": "Глава 47"
       },
       "availableLayers": [
         "source"
@@ -1676,6 +1785,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1702,7 +1812,8 @@
         "pt": "Capítulo 48",
         "fr": "Chapitre 48",
         "de": "Kapitel 48",
-        "tr": "Bölüm 48"
+        "tr": "Bölüm 48",
+        "bg": "Глава 48"
       },
       "availableLayers": [
         "source"
@@ -1710,6 +1821,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1736,7 +1848,8 @@
         "pt": "Capítulo 49",
         "fr": "Chapitre 49",
         "de": "Kapitel 49",
-        "tr": "Bölüm 49"
+        "tr": "Bölüm 49",
+        "bg": "Глава 49"
       },
       "availableLayers": [
         "source",
@@ -1745,6 +1858,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1756,6 +1870,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -1774,7 +1889,8 @@
         "pt": "Capítulo 50",
         "fr": "Chapitre 50",
         "de": "Kapitel 50",
-        "tr": "Bölüm 50"
+        "tr": "Bölüm 50",
+        "bg": "Глава 50"
       },
       "availableLayers": [
         "source"
@@ -1782,6 +1898,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1808,7 +1925,8 @@
         "pt": "Capítulo 51",
         "fr": "Chapitre 51",
         "de": "Kapitel 51",
-        "tr": "Bölüm 51"
+        "tr": "Bölüm 51",
+        "bg": "Глава 51"
       },
       "availableLayers": [
         "source"
@@ -1816,6 +1934,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1842,7 +1961,8 @@
         "pt": "Capítulo 52",
         "fr": "Chapitre 52",
         "de": "Kapitel 52",
-        "tr": "Bölüm 52"
+        "tr": "Bölüm 52",
+        "bg": "Глава 52"
       },
       "availableLayers": [
         "source"
@@ -1850,6 +1970,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1876,7 +1997,8 @@
         "pt": "Capítulo 53",
         "fr": "Chapitre 53",
         "de": "Kapitel 53",
-        "tr": "Bölüm 53"
+        "tr": "Bölüm 53",
+        "bg": "Глава 53"
       },
       "availableLayers": [
         "source"
@@ -1884,6 +2006,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1910,7 +2033,8 @@
         "pt": "Capítulo 54",
         "fr": "Chapitre 54",
         "de": "Kapitel 54",
-        "tr": "Bölüm 54"
+        "tr": "Bölüm 54",
+        "bg": "Глава 54"
       },
       "availableLayers": [
         "source"
@@ -1918,6 +2042,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1944,7 +2069,8 @@
         "pt": "Capítulo 55",
         "fr": "Chapitre 55",
         "de": "Kapitel 55",
-        "tr": "Bölüm 55"
+        "tr": "Bölüm 55",
+        "bg": "Глава 55"
       },
       "availableLayers": [
         "source"
@@ -1952,6 +2078,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -1978,7 +2105,8 @@
         "pt": "Capítulo 56",
         "fr": "Chapitre 56",
         "de": "Kapitel 56",
-        "tr": "Bölüm 56"
+        "tr": "Bölüm 56",
+        "bg": "Глава 56"
       },
       "availableLayers": [
         "source"
@@ -1986,6 +2114,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2012,7 +2141,8 @@
         "pt": "Capítulo 57",
         "fr": "Chapitre 57",
         "de": "Kapitel 57",
-        "tr": "Bölüm 57"
+        "tr": "Bölüm 57",
+        "bg": "Глава 57"
       },
       "availableLayers": [
         "source"
@@ -2020,6 +2150,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2046,7 +2177,8 @@
         "pt": "Capítulo 58",
         "fr": "Chapitre 58",
         "de": "Kapitel 58",
-        "tr": "Bölüm 58"
+        "tr": "Bölüm 58",
+        "bg": "Глава 58"
       },
       "availableLayers": [
         "source"
@@ -2054,6 +2186,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2080,7 +2213,8 @@
         "pt": "Capítulo 59",
         "fr": "Chapitre 59",
         "de": "Kapitel 59",
-        "tr": "Bölüm 59"
+        "tr": "Bölüm 59",
+        "bg": "Глава 59"
       },
       "availableLayers": [
         "source"
@@ -2088,6 +2222,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2114,7 +2249,8 @@
         "pt": "Capítulo 60",
         "fr": "Chapitre 60",
         "de": "Kapitel 60",
-        "tr": "Bölüm 60"
+        "tr": "Bölüm 60",
+        "bg": "Глава 60"
       },
       "availableLayers": [
         "source",
@@ -2123,6 +2259,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2134,6 +2271,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2152,7 +2290,8 @@
         "pt": "Capítulo 61",
         "fr": "Chapitre 61",
         "de": "Kapitel 61",
-        "tr": "Bölüm 61"
+        "tr": "Bölüm 61",
+        "bg": "Глава 61"
       },
       "availableLayers": [
         "source"
@@ -2160,6 +2299,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2186,7 +2326,8 @@
         "pt": "Capítulo 62",
         "fr": "Chapitre 62",
         "de": "Kapitel 62",
-        "tr": "Bölüm 62"
+        "tr": "Bölüm 62",
+        "bg": "Глава 62"
       },
       "availableLayers": [
         "source"
@@ -2194,6 +2335,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2220,7 +2362,8 @@
         "pt": "Capítulo 63",
         "fr": "Chapitre 63",
         "de": "Kapitel 63",
-        "tr": "Bölüm 63"
+        "tr": "Bölüm 63",
+        "bg": "Глава 63"
       },
       "availableLayers": [
         "source",
@@ -2229,6 +2372,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2240,6 +2384,7 @@
           "uk-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2258,7 +2403,8 @@
         "pt": "Capítulo 64",
         "fr": "Chapitre 64",
         "de": "Kapitel 64",
-        "tr": "Bölüm 64"
+        "tr": "Bölüm 64",
+        "bg": "Глава 64"
       },
       "availableLayers": [
         "source"
@@ -2266,6 +2412,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2292,7 +2439,8 @@
         "pt": "Capítulo 65",
         "fr": "Chapitre 65",
         "de": "Kapitel 65",
-        "tr": "Bölüm 65"
+        "tr": "Bölüm 65",
+        "bg": "Глава 65"
       },
       "availableLayers": [
         "source"
@@ -2300,6 +2448,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2326,7 +2475,8 @@
         "pt": "Capítulo 66",
         "fr": "Chapitre 66",
         "de": "Kapitel 66",
-        "tr": "Bölüm 66"
+        "tr": "Bölüm 66",
+        "bg": "Глава 66"
       },
       "availableLayers": [
         "source"
@@ -2334,6 +2484,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2360,7 +2511,8 @@
         "pt": "Capítulo 67",
         "fr": "Chapitre 67",
         "de": "Kapitel 67",
-        "tr": "Bölüm 67"
+        "tr": "Bölüm 67",
+        "bg": "Глава 67"
       },
       "availableLayers": [
         "source"
@@ -2368,6 +2520,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2394,7 +2547,8 @@
         "pt": "Capítulo 68",
         "fr": "Chapitre 68",
         "de": "Kapitel 68",
-        "tr": "Bölüm 68"
+        "tr": "Bölüm 68",
+        "bg": "Глава 68"
       },
       "availableLayers": [
         "source"
@@ -2402,6 +2556,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2428,7 +2583,8 @@
         "pt": "Capítulo 69",
         "fr": "Chapitre 69",
         "de": "Kapitel 69",
-        "tr": "Bölüm 69"
+        "tr": "Bölüm 69",
+        "bg": "Глава 69"
       },
       "availableLayers": [
         "source"
@@ -2436,6 +2592,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2462,7 +2619,8 @@
         "pt": "Capítulo 70",
         "fr": "Chapitre 70",
         "de": "Kapitel 70",
-        "tr": "Bölüm 70"
+        "tr": "Bölüm 70",
+        "bg": "Глава 70"
       },
       "availableLayers": [
         "source"
@@ -2470,6 +2628,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2496,7 +2655,8 @@
         "pt": "Capítulo 71",
         "fr": "Chapitre 71",
         "de": "Kapitel 71",
-        "tr": "Bölüm 71"
+        "tr": "Bölüm 71",
+        "bg": "Глава 71"
       },
       "availableLayers": [
         "source"
@@ -2504,6 +2664,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2530,7 +2691,8 @@
         "pt": "Capítulo 72",
         "fr": "Chapitre 72",
         "de": "Kapitel 72",
-        "tr": "Bölüm 72"
+        "tr": "Bölüm 72",
+        "bg": "Глава 72"
       },
       "availableLayers": [
         "source"
@@ -2538,6 +2700,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2564,7 +2727,8 @@
         "pt": "Capítulo 73",
         "fr": "Chapitre 73",
         "de": "Kapitel 73",
-        "tr": "Bölüm 73"
+        "tr": "Bölüm 73",
+        "bg": "Глава 73"
       },
       "availableLayers": [
         "source"
@@ -2572,6 +2736,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -2598,7 +2763,8 @@
         "pt": "Capítulo 74",
         "fr": "Chapitre 74",
         "de": "Kapitel 74",
-        "tr": "Bölüm 74"
+        "tr": "Bölüm 74",
+        "bg": "Глава 74"
       },
       "availableLayers": [
         "source"
@@ -2606,6 +2772,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2626,7 +2793,8 @@
         "pt": "Capítulo 75",
         "fr": "Chapitre 75",
         "de": "Kapitel 75",
-        "tr": "Bölüm 75"
+        "tr": "Bölüm 75",
+        "bg": "Глава 75"
       },
       "availableLayers": [
         "source"
@@ -2634,6 +2802,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2654,7 +2823,8 @@
         "pt": "Capítulo 76",
         "fr": "Chapitre 76",
         "de": "Kapitel 76",
-        "tr": "Bölüm 76"
+        "tr": "Bölüm 76",
+        "bg": "Глава 76"
       },
       "availableLayers": [
         "source"
@@ -2662,6 +2832,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2682,7 +2853,8 @@
         "pt": "Capítulo 77",
         "fr": "Chapitre 77",
         "de": "Kapitel 77",
-        "tr": "Bölüm 77"
+        "tr": "Bölüm 77",
+        "bg": "Глава 77"
       },
       "availableLayers": [
         "source"
@@ -2690,6 +2862,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2710,7 +2883,8 @@
         "pt": "Capítulo 78",
         "fr": "Chapitre 78",
         "de": "Kapitel 78",
-        "tr": "Bölüm 78"
+        "tr": "Bölüm 78",
+        "bg": "Глава 78"
       },
       "availableLayers": [
         "source"
@@ -2718,6 +2892,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2738,7 +2913,8 @@
         "pt": "Capítulo 79",
         "fr": "Chapitre 79",
         "de": "Kapitel 79",
-        "tr": "Bölüm 79"
+        "tr": "Bölüm 79",
+        "bg": "Глава 79"
       },
       "availableLayers": [
         "source"
@@ -2746,6 +2922,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2766,7 +2943,8 @@
         "pt": "Capítulo 80",
         "fr": "Chapitre 80",
         "de": "Kapitel 80",
-        "tr": "Bölüm 80"
+        "tr": "Bölüm 80",
+        "bg": "Глава 80"
       },
       "availableLayers": [
         "source"
@@ -2774,6 +2952,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2794,7 +2973,8 @@
         "pt": "Capítulo 81",
         "fr": "Chapitre 81",
         "de": "Kapitel 81",
-        "tr": "Bölüm 81"
+        "tr": "Bölüm 81",
+        "bg": "Глава 81"
       },
       "availableLayers": [
         "source",
@@ -2803,11 +2983,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2826,7 +3008,8 @@
         "pt": "Capítulo 82",
         "fr": "Chapitre 82",
         "de": "Kapitel 82",
-        "tr": "Bölüm 82"
+        "tr": "Bölüm 82",
+        "bg": "Глава 82"
       },
       "availableLayers": [
         "source",
@@ -2835,11 +3018,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2858,7 +3043,8 @@
         "pt": "Capítulo 83",
         "fr": "Chapitre 83",
         "de": "Kapitel 83",
-        "tr": "Bölüm 83"
+        "tr": "Bölüm 83",
+        "bg": "Глава 83"
       },
       "availableLayers": [
         "source",
@@ -2867,11 +3053,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2890,7 +3078,8 @@
         "pt": "Capítulo 84",
         "fr": "Chapitre 84",
         "de": "Kapitel 84",
-        "tr": "Bölüm 84"
+        "tr": "Bölüm 84",
+        "bg": "Глава 84"
       },
       "availableLayers": [
         "source",
@@ -2899,11 +3088,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2922,7 +3113,8 @@
         "pt": "Capítulo 85",
         "fr": "Chapitre 85",
         "de": "Kapitel 85",
-        "tr": "Bölüm 85"
+        "tr": "Bölüm 85",
+        "bg": "Глава 85"
       },
       "availableLayers": [
         "source"
@@ -2930,6 +3122,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -2950,7 +3143,8 @@
         "pt": "Capítulo 86",
         "fr": "Chapitre 86",
         "de": "Kapitel 86",
-        "tr": "Bölüm 86"
+        "tr": "Bölüm 86",
+        "bg": "Глава 86"
       },
       "availableLayers": [
         "source",
@@ -2959,11 +3153,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -2982,7 +3178,8 @@
         "pt": "Capítulo 87",
         "fr": "Chapitre 87",
         "de": "Kapitel 87",
-        "tr": "Bölüm 87"
+        "tr": "Bölüm 87",
+        "bg": "Глава 87"
       },
       "availableLayers": [
         "source"
@@ -2990,6 +3187,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3010,7 +3208,8 @@
         "pt": "Capítulo 88",
         "fr": "Chapitre 88",
         "de": "Kapitel 88",
-        "tr": "Bölüm 88"
+        "tr": "Bölüm 88",
+        "bg": "Глава 88"
       },
       "availableLayers": [
         "source"
@@ -3018,6 +3217,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3038,7 +3238,8 @@
         "pt": "Capítulo 89",
         "fr": "Chapitre 89",
         "de": "Kapitel 89",
-        "tr": "Bölüm 89"
+        "tr": "Bölüm 89",
+        "bg": "Глава 89"
       },
       "availableLayers": [
         "source",
@@ -3047,11 +3248,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3070,7 +3273,8 @@
         "pt": "Capítulo 90",
         "fr": "Chapitre 90",
         "de": "Kapitel 90",
-        "tr": "Bölüm 90"
+        "tr": "Bölüm 90",
+        "bg": "Глава 90"
       },
       "availableLayers": [
         "source"
@@ -3078,6 +3282,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3098,7 +3303,8 @@
         "pt": "Capítulo 91",
         "fr": "Chapitre 91",
         "de": "Kapitel 91",
-        "tr": "Bölüm 91"
+        "tr": "Bölüm 91",
+        "bg": "Глава 91"
       },
       "availableLayers": [
         "source"
@@ -3106,6 +3312,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3126,7 +3333,8 @@
         "pt": "Capítulo 92",
         "fr": "Chapitre 92",
         "de": "Kapitel 92",
-        "tr": "Bölüm 92"
+        "tr": "Bölüm 92",
+        "bg": "Глава 92"
       },
       "availableLayers": [
         "source"
@@ -3134,6 +3342,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3154,7 +3363,8 @@
         "pt": "Capítulo 93",
         "fr": "Chapitre 93",
         "de": "Kapitel 93",
-        "tr": "Bölüm 93"
+        "tr": "Bölüm 93",
+        "bg": "Глава 93"
       },
       "availableLayers": [
         "source",
@@ -3163,11 +3373,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3186,7 +3398,8 @@
         "pt": "Capítulo 94",
         "fr": "Chapitre 94",
         "de": "Kapitel 94",
-        "tr": "Bölüm 94"
+        "tr": "Bölüm 94",
+        "bg": "Глава 94"
       },
       "availableLayers": [
         "source"
@@ -3194,6 +3407,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3214,7 +3428,8 @@
         "pt": "Capítulo 95",
         "fr": "Chapitre 95",
         "de": "Kapitel 95",
-        "tr": "Bölüm 95"
+        "tr": "Bölüm 95",
+        "bg": "Глава 95"
       },
       "availableLayers": [
         "source"
@@ -3222,6 +3437,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3242,7 +3458,8 @@
         "pt": "Capítulo 96",
         "fr": "Chapitre 96",
         "de": "Kapitel 96",
-        "tr": "Bölüm 96"
+        "tr": "Bölüm 96",
+        "bg": "Глава 96"
       },
       "availableLayers": [
         "source"
@@ -3250,6 +3467,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3270,7 +3488,8 @@
         "pt": "Capítulo 97",
         "fr": "Chapitre 97",
         "de": "Kapitel 97",
-        "tr": "Bölüm 97"
+        "tr": "Bölüm 97",
+        "bg": "Глава 97"
       },
       "availableLayers": [
         "source",
@@ -3279,11 +3498,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3302,7 +3523,8 @@
         "pt": "Capítulo 98",
         "fr": "Chapitre 98",
         "de": "Kapitel 98",
-        "tr": "Bölüm 98"
+        "tr": "Bölüm 98",
+        "bg": "Глава 98"
       },
       "availableLayers": [
         "source",
@@ -3311,11 +3533,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3334,7 +3558,8 @@
         "pt": "Capítulo 99",
         "fr": "Chapitre 99",
         "de": "Kapitel 99",
-        "tr": "Bölüm 99"
+        "tr": "Bölüm 99",
+        "bg": "Глава 99"
       },
       "availableLayers": [
         "source",
@@ -3343,11 +3568,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3366,7 +3593,8 @@
         "pt": "Capítulo 100",
         "fr": "Chapitre 100",
         "de": "Kapitel 100",
-        "tr": "Bölüm 100"
+        "tr": "Bölüm 100",
+        "bg": "Глава 100"
       },
       "availableLayers": [
         "source",
@@ -3375,11 +3603,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3398,7 +3628,8 @@
         "pt": "Capítulo 101",
         "fr": "Chapitre 101",
         "de": "Kapitel 101",
-        "tr": "Bölüm 101"
+        "tr": "Bölüm 101",
+        "bg": "Глава 101"
       },
       "availableLayers": [
         "source"
@@ -3406,6 +3637,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3426,7 +3658,8 @@
         "pt": "Capítulo 102",
         "fr": "Chapitre 102",
         "de": "Kapitel 102",
-        "tr": "Bölüm 102"
+        "tr": "Bölüm 102",
+        "bg": "Глава 102"
       },
       "availableLayers": [
         "source",
@@ -3435,11 +3668,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3458,7 +3693,8 @@
         "pt": "Capítulo 103",
         "fr": "Chapitre 103",
         "de": "Kapitel 103",
-        "tr": "Bölüm 103"
+        "tr": "Bölüm 103",
+        "bg": "Глава 103"
       },
       "availableLayers": [
         "source",
@@ -3467,11 +3703,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3490,7 +3728,8 @@
         "pt": "Capítulo 104",
         "fr": "Chapitre 104",
         "de": "Kapitel 104",
-        "tr": "Bölüm 104"
+        "tr": "Bölüm 104",
+        "bg": "Глава 104"
       },
       "availableLayers": [
         "source"
@@ -3498,6 +3737,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3518,7 +3758,8 @@
         "pt": "Capítulo 105",
         "fr": "Chapitre 105",
         "de": "Kapitel 105",
-        "tr": "Bölüm 105"
+        "tr": "Bölüm 105",
+        "bg": "Глава 105"
       },
       "availableLayers": [
         "source",
@@ -3527,11 +3768,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3550,7 +3793,8 @@
         "pt": "Capítulo 106",
         "fr": "Chapitre 106",
         "de": "Kapitel 106",
-        "tr": "Bölüm 106"
+        "tr": "Bölüm 106",
+        "bg": "Глава 106"
       },
       "availableLayers": [
         "source",
@@ -3559,11 +3803,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3582,7 +3828,8 @@
         "pt": "Capítulo 107",
         "fr": "Chapitre 107",
         "de": "Kapitel 107",
-        "tr": "Bölüm 107"
+        "tr": "Bölüm 107",
+        "bg": "Глава 107"
       },
       "availableLayers": [
         "source",
@@ -3591,11 +3838,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3614,7 +3863,8 @@
         "pt": "Capítulo 108",
         "fr": "Chapitre 108",
         "de": "Kapitel 108",
-        "tr": "Bölüm 108"
+        "tr": "Bölüm 108",
+        "bg": "Глава 108"
       },
       "availableLayers": [
         "source",
@@ -3623,11 +3873,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3646,7 +3898,8 @@
         "pt": "Capítulo 109",
         "fr": "Chapitre 109",
         "de": "Kapitel 109",
-        "tr": "Bölüm 109"
+        "tr": "Bölüm 109",
+        "bg": "Глава 109"
       },
       "availableLayers": [
         "source",
@@ -3655,11 +3908,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3678,7 +3933,8 @@
         "pt": "Capítulo 110",
         "fr": "Chapitre 110",
         "de": "Kapitel 110",
-        "tr": "Bölüm 110"
+        "tr": "Bölüm 110",
+        "bg": "Глава 110"
       },
       "availableLayers": [
         "source"
@@ -3686,6 +3942,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3706,7 +3963,8 @@
         "pt": "Capítulo 111",
         "fr": "Chapitre 111",
         "de": "Kapitel 111",
-        "tr": "Bölüm 111"
+        "tr": "Bölüm 111",
+        "bg": "Глава 111"
       },
       "availableLayers": [
         "source"
@@ -3714,6 +3972,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3734,7 +3993,8 @@
         "pt": "Capítulo 112",
         "fr": "Chapitre 112",
         "de": "Kapitel 112",
-        "tr": "Bölüm 112"
+        "tr": "Bölüm 112",
+        "bg": "Глава 112"
       },
       "availableLayers": [
         "source",
@@ -3743,11 +4003,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3766,7 +4028,8 @@
         "pt": "Capítulo 113",
         "fr": "Chapitre 113",
         "de": "Kapitel 113",
-        "tr": "Bölüm 113"
+        "tr": "Bölüm 113",
+        "bg": "Глава 113"
       },
       "availableLayers": [
         "source",
@@ -3775,11 +4038,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3798,7 +4063,8 @@
         "pt": "Capítulo 114",
         "fr": "Chapitre 114",
         "de": "Kapitel 114",
-        "tr": "Bölüm 114"
+        "tr": "Bölüm 114",
+        "bg": "Глава 114"
       },
       "availableLayers": [
         "source"
@@ -3806,6 +4072,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3826,7 +4093,8 @@
         "pt": "Capítulo 115",
         "fr": "Chapitre 115",
         "de": "Kapitel 115",
-        "tr": "Bölüm 115"
+        "tr": "Bölüm 115",
+        "bg": "Глава 115"
       },
       "availableLayers": [
         "source"
@@ -3834,6 +4102,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3854,7 +4123,8 @@
         "pt": "Capítulo 116",
         "fr": "Chapitre 116",
         "de": "Kapitel 116",
-        "tr": "Bölüm 116"
+        "tr": "Bölüm 116",
+        "bg": "Глава 116"
       },
       "availableLayers": [
         "source"
@@ -3862,6 +4132,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3882,7 +4153,8 @@
         "pt": "Capítulo 117",
         "fr": "Chapitre 117",
         "de": "Kapitel 117",
-        "tr": "Bölüm 117"
+        "tr": "Bölüm 117",
+        "bg": "Глава 117"
       },
       "availableLayers": [
         "source",
@@ -3891,11 +4163,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3914,7 +4188,8 @@
         "pt": "Capítulo 118",
         "fr": "Chapitre 118",
         "de": "Kapitel 118",
-        "tr": "Bölüm 118"
+        "tr": "Bölüm 118",
+        "bg": "Глава 118"
       },
       "availableLayers": [
         "source"
@@ -3922,6 +4197,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -3942,7 +4218,8 @@
         "pt": "Capítulo 119",
         "fr": "Chapitre 119",
         "de": "Kapitel 119",
-        "tr": "Bölüm 119"
+        "tr": "Bölüm 119",
+        "bg": "Глава 119"
       },
       "availableLayers": [
         "source",
@@ -3951,11 +4228,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -3974,7 +4253,8 @@
         "pt": "Capítulo 120",
         "fr": "Chapitre 120",
         "de": "Kapitel 120",
-        "tr": "Bölüm 120"
+        "tr": "Bölüm 120",
+        "bg": "Глава 120"
       },
       "availableLayers": [
         "source"
@@ -3982,6 +4262,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4002,7 +4283,8 @@
         "pt": "Capítulo 121",
         "fr": "Chapitre 121",
         "de": "Kapitel 121",
-        "tr": "Bölüm 121"
+        "tr": "Bölüm 121",
+        "bg": "Глава 121"
       },
       "availableLayers": [
         "source"
@@ -4010,6 +4292,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4030,7 +4313,8 @@
         "pt": "Capítulo 122",
         "fr": "Chapitre 122",
         "de": "Kapitel 122",
-        "tr": "Bölüm 122"
+        "tr": "Bölüm 122",
+        "bg": "Глава 122"
       },
       "availableLayers": [
         "source",
@@ -4039,11 +4323,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4062,7 +4348,8 @@
         "pt": "Capítulo 123",
         "fr": "Chapitre 123",
         "de": "Kapitel 123",
-        "tr": "Bölüm 123"
+        "tr": "Bölüm 123",
+        "bg": "Глава 123"
       },
       "availableLayers": [
         "source"
@@ -4070,6 +4357,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4090,7 +4378,8 @@
         "pt": "Capítulo 124",
         "fr": "Chapitre 124",
         "de": "Kapitel 124",
-        "tr": "Bölüm 124"
+        "tr": "Bölüm 124",
+        "bg": "Глава 124"
       },
       "availableLayers": [
         "source",
@@ -4099,11 +4388,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4122,7 +4413,8 @@
         "pt": "Capítulo 125",
         "fr": "Chapitre 125",
         "de": "Kapitel 125",
-        "tr": "Bölüm 125"
+        "tr": "Bölüm 125",
+        "bg": "Глава 125"
       },
       "availableLayers": [
         "source"
@@ -4130,6 +4422,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4150,7 +4443,8 @@
         "pt": "Capítulo 126",
         "fr": "Chapitre 126",
         "de": "Kapitel 126",
-        "tr": "Bölüm 126"
+        "tr": "Bölüm 126",
+        "bg": "Глава 126"
       },
       "availableLayers": [
         "source"
@@ -4158,6 +4452,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4178,7 +4473,8 @@
         "pt": "Capítulo 127",
         "fr": "Chapitre 127",
         "de": "Kapitel 127",
-        "tr": "Bölüm 127"
+        "tr": "Bölüm 127",
+        "bg": "Глава 127"
       },
       "availableLayers": [
         "source",
@@ -4187,11 +4483,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4210,7 +4508,8 @@
         "pt": "Capítulo 128",
         "fr": "Chapitre 128",
         "de": "Kapitel 128",
-        "tr": "Bölüm 128"
+        "tr": "Bölüm 128",
+        "bg": "Глава 128"
       },
       "availableLayers": [
         "source"
@@ -4218,6 +4517,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4238,7 +4538,8 @@
         "pt": "Capítulo 129",
         "fr": "Chapitre 129",
         "de": "Kapitel 129",
-        "tr": "Bölüm 129"
+        "tr": "Bölüm 129",
+        "bg": "Глава 129"
       },
       "availableLayers": [
         "source"
@@ -4246,6 +4547,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4266,7 +4568,8 @@
         "pt": "Capítulo 130",
         "fr": "Chapitre 130",
         "de": "Kapitel 130",
-        "tr": "Bölüm 130"
+        "tr": "Bölüm 130",
+        "bg": "Глава 130"
       },
       "availableLayers": [
         "source"
@@ -4274,6 +4577,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4294,7 +4598,8 @@
         "pt": "Capítulo 131",
         "fr": "Chapitre 131",
         "de": "Kapitel 131",
-        "tr": "Bölüm 131"
+        "tr": "Bölüm 131",
+        "bg": "Глава 131"
       },
       "availableLayers": [
         "source"
@@ -4302,6 +4607,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4322,7 +4628,8 @@
         "pt": "Capítulo 132",
         "fr": "Chapitre 132",
         "de": "Kapitel 132",
-        "tr": "Bölüm 132"
+        "tr": "Bölüm 132",
+        "bg": "Глава 132"
       },
       "availableLayers": [
         "source"
@@ -4330,6 +4637,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4350,7 +4658,8 @@
         "pt": "Capítulo 133",
         "fr": "Chapitre 133",
         "de": "Kapitel 133",
-        "tr": "Bölüm 133"
+        "tr": "Bölüm 133",
+        "bg": "Глава 133"
       },
       "availableLayers": [
         "source"
@@ -4358,6 +4667,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4378,7 +4688,8 @@
         "pt": "Capítulo 134",
         "fr": "Chapitre 134",
         "de": "Kapitel 134",
-        "tr": "Bölüm 134"
+        "tr": "Bölüm 134",
+        "bg": "Глава 134"
       },
       "availableLayers": [
         "source"
@@ -4386,6 +4697,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4406,7 +4718,8 @@
         "pt": "Capítulo 135",
         "fr": "Chapitre 135",
         "de": "Kapitel 135",
-        "tr": "Bölüm 135"
+        "tr": "Bölüm 135",
+        "bg": "Глава 135"
       },
       "availableLayers": [
         "source"
@@ -4414,6 +4727,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4434,7 +4748,8 @@
         "pt": "Capítulo 136",
         "fr": "Chapitre 136",
         "de": "Kapitel 136",
-        "tr": "Bölüm 136"
+        "tr": "Bölüm 136",
+        "bg": "Глава 136"
       },
       "availableLayers": [
         "source"
@@ -4442,6 +4757,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4462,7 +4778,8 @@
         "pt": "Capítulo 137",
         "fr": "Chapitre 137",
         "de": "Kapitel 137",
-        "tr": "Bölüm 137"
+        "tr": "Bölüm 137",
+        "bg": "Глава 137"
       },
       "availableLayers": [
         "source"
@@ -4470,6 +4787,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4490,7 +4808,8 @@
         "pt": "Capítulo 138",
         "fr": "Chapitre 138",
         "de": "Kapitel 138",
-        "tr": "Bölüm 138"
+        "tr": "Bölüm 138",
+        "bg": "Глава 138"
       },
       "availableLayers": [
         "source"
@@ -4498,6 +4817,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4518,7 +4838,8 @@
         "pt": "Capítulo 139",
         "fr": "Chapitre 139",
         "de": "Kapitel 139",
-        "tr": "Bölüm 139"
+        "tr": "Bölüm 139",
+        "bg": "Глава 139"
       },
       "availableLayers": [
         "source",
@@ -4527,11 +4848,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4550,7 +4873,8 @@
         "pt": "Capítulo 140",
         "fr": "Chapitre 140",
         "de": "Kapitel 140",
-        "tr": "Bölüm 140"
+        "tr": "Bölüm 140",
+        "bg": "Глава 140"
       },
       "availableLayers": [
         "source"
@@ -4558,6 +4882,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4578,7 +4903,8 @@
         "pt": "Capítulo 141",
         "fr": "Chapitre 141",
         "de": "Kapitel 141",
-        "tr": "Bölüm 141"
+        "tr": "Bölüm 141",
+        "bg": "Глава 141"
       },
       "availableLayers": [
         "source"
@@ -4586,6 +4912,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4606,7 +4933,8 @@
         "pt": "Capítulo 142",
         "fr": "Chapitre 142",
         "de": "Kapitel 142",
-        "tr": "Bölüm 142"
+        "tr": "Bölüm 142",
+        "bg": "Глава 142"
       },
       "availableLayers": [
         "source",
@@ -4615,11 +4943,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4638,7 +4968,8 @@
         "pt": "Capítulo 143",
         "fr": "Chapitre 143",
         "de": "Kapitel 143",
-        "tr": "Bölüm 143"
+        "tr": "Bölüm 143",
+        "bg": "Глава 143"
       },
       "availableLayers": [
         "source",
@@ -4647,11 +4978,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4670,7 +5003,8 @@
         "pt": "Capítulo 144",
         "fr": "Chapitre 144",
         "de": "Kapitel 144",
-        "tr": "Bölüm 144"
+        "tr": "Bölüm 144",
+        "bg": "Глава 144"
       },
       "availableLayers": [
         "source"
@@ -4678,6 +5012,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4698,7 +5033,8 @@
         "pt": "Capítulo 145",
         "fr": "Chapitre 145",
         "de": "Kapitel 145",
-        "tr": "Bölüm 145"
+        "tr": "Bölüm 145",
+        "bg": "Глава 145"
       },
       "availableLayers": [
         "source",
@@ -4707,11 +5043,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4730,7 +5068,8 @@
         "pt": "Capítulo 146",
         "fr": "Chapitre 146",
         "de": "Kapitel 146",
-        "tr": "Bölüm 146"
+        "tr": "Bölüm 146",
+        "bg": "Глава 146"
       },
       "availableLayers": [
         "source"
@@ -4738,6 +5077,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4758,7 +5098,8 @@
         "pt": "Capítulo 147",
         "fr": "Chapitre 147",
         "de": "Kapitel 147",
-        "tr": "Bölüm 147"
+        "tr": "Bölüm 147",
+        "bg": "Глава 147"
       },
       "availableLayers": [
         "source",
@@ -4767,11 +5108,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4790,7 +5133,8 @@
         "pt": "Capítulo 148",
         "fr": "Chapitre 148",
         "de": "Kapitel 148",
-        "tr": "Bölüm 148"
+        "tr": "Bölüm 148",
+        "bg": "Глава 148"
       },
       "availableLayers": [
         "source"
@@ -4798,6 +5142,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4818,7 +5163,8 @@
         "pt": "Capítulo 149",
         "fr": "Chapitre 149",
         "de": "Kapitel 149",
-        "tr": "Bölüm 149"
+        "tr": "Bölüm 149",
+        "bg": "Глава 149"
       },
       "availableLayers": [
         "source"
@@ -4826,6 +5172,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4846,7 +5193,8 @@
         "pt": "Capítulo 150",
         "fr": "Chapitre 150",
         "de": "Kapitel 150",
-        "tr": "Bölüm 150"
+        "tr": "Bölüm 150",
+        "bg": "Глава 150"
       },
       "availableLayers": [
         "source"
@@ -4854,6 +5202,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4874,7 +5223,8 @@
         "pt": "Capítulo 151",
         "fr": "Chapitre 151",
         "de": "Kapitel 151",
-        "tr": "Bölüm 151"
+        "tr": "Bölüm 151",
+        "bg": "Глава 151"
       },
       "availableLayers": [
         "source"
@@ -4882,6 +5232,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4902,7 +5253,8 @@
         "pt": "Capítulo 152",
         "fr": "Chapitre 152",
         "de": "Kapitel 152",
-        "tr": "Bölüm 152"
+        "tr": "Bölüm 152",
+        "bg": "Глава 152"
       },
       "availableLayers": [
         "source",
@@ -4911,11 +5263,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -4934,7 +5288,8 @@
         "pt": "Capítulo 153",
         "fr": "Chapitre 153",
         "de": "Kapitel 153",
-        "tr": "Bölüm 153"
+        "tr": "Bölüm 153",
+        "bg": "Глава 153"
       },
       "availableLayers": [
         "source"
@@ -4942,6 +5297,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4962,7 +5318,8 @@
         "pt": "Capítulo 154",
         "fr": "Chapitre 154",
         "de": "Kapitel 154",
-        "tr": "Bölüm 154"
+        "tr": "Bölüm 154",
+        "bg": "Глава 154"
       },
       "availableLayers": [
         "source"
@@ -4970,6 +5327,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -4990,7 +5348,8 @@
         "pt": "Capítulo 155",
         "fr": "Chapitre 155",
         "de": "Kapitel 155",
-        "tr": "Bölüm 155"
+        "tr": "Bölüm 155",
+        "bg": "Глава 155"
       },
       "availableLayers": [
         "source"
@@ -4998,6 +5357,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5018,7 +5378,8 @@
         "pt": "Capítulo 156",
         "fr": "Chapitre 156",
         "de": "Kapitel 156",
-        "tr": "Bölüm 156"
+        "tr": "Bölüm 156",
+        "bg": "Глава 156"
       },
       "availableLayers": [
         "source"
@@ -5026,6 +5387,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5046,7 +5408,8 @@
         "pt": "Capítulo 157",
         "fr": "Chapitre 157",
         "de": "Kapitel 157",
-        "tr": "Bölüm 157"
+        "tr": "Bölüm 157",
+        "bg": "Глава 157"
       },
       "availableLayers": [
         "source",
@@ -5055,11 +5418,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5078,7 +5443,8 @@
         "pt": "Capítulo 158",
         "fr": "Chapitre 158",
         "de": "Kapitel 158",
-        "tr": "Bölüm 158"
+        "tr": "Bölüm 158",
+        "bg": "Глава 158"
       },
       "availableLayers": [
         "source"
@@ -5086,6 +5452,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5106,7 +5473,8 @@
         "pt": "Capítulo 159",
         "fr": "Chapitre 159",
         "de": "Kapitel 159",
-        "tr": "Bölüm 159"
+        "tr": "Bölüm 159",
+        "bg": "Глава 159"
       },
       "availableLayers": [
         "source"
@@ -5114,6 +5482,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5134,7 +5503,8 @@
         "pt": "Capítulo 160",
         "fr": "Chapitre 160",
         "de": "Kapitel 160",
-        "tr": "Bölüm 160"
+        "tr": "Bölüm 160",
+        "bg": "Глава 160"
       },
       "availableLayers": [
         "source",
@@ -5143,11 +5513,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5166,7 +5538,8 @@
         "pt": "Capítulo 161",
         "fr": "Chapitre 161",
         "de": "Kapitel 161",
-        "tr": "Bölüm 161"
+        "tr": "Bölüm 161",
+        "bg": "Глава 161"
       },
       "availableLayers": [
         "source",
@@ -5175,11 +5548,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5198,7 +5573,8 @@
         "pt": "Capítulo 162",
         "fr": "Chapitre 162",
         "de": "Kapitel 162",
-        "tr": "Bölüm 162"
+        "tr": "Bölüm 162",
+        "bg": "Глава 162"
       },
       "availableLayers": [
         "source",
@@ -5207,11 +5583,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5230,7 +5608,8 @@
         "pt": "Capítulo 163",
         "fr": "Chapitre 163",
         "de": "Kapitel 163",
-        "tr": "Bölüm 163"
+        "tr": "Bölüm 163",
+        "bg": "Глава 163"
       },
       "availableLayers": [
         "source"
@@ -5238,6 +5617,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5258,7 +5638,8 @@
         "pt": "Capítulo 164",
         "fr": "Chapitre 164",
         "de": "Kapitel 164",
-        "tr": "Bölüm 164"
+        "tr": "Bölüm 164",
+        "bg": "Глава 164"
       },
       "availableLayers": [
         "source",
@@ -5267,11 +5648,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5290,7 +5673,8 @@
         "pt": "Capítulo 165",
         "fr": "Chapitre 165",
         "de": "Kapitel 165",
-        "tr": "Bölüm 165"
+        "tr": "Bölüm 165",
+        "bg": "Глава 165"
       },
       "availableLayers": [
         "source"
@@ -5298,6 +5682,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5318,7 +5703,8 @@
         "pt": "Capítulo 166",
         "fr": "Chapitre 166",
         "de": "Kapitel 166",
-        "tr": "Bölüm 166"
+        "tr": "Bölüm 166",
+        "bg": "Глава 166"
       },
       "availableLayers": [
         "source"
@@ -5326,6 +5712,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5346,7 +5733,8 @@
         "pt": "Capítulo 167",
         "fr": "Chapitre 167",
         "de": "Kapitel 167",
-        "tr": "Bölüm 167"
+        "tr": "Bölüm 167",
+        "bg": "Глава 167"
       },
       "availableLayers": [
         "source"
@@ -5354,6 +5742,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5374,7 +5763,8 @@
         "pt": "Capítulo 168",
         "fr": "Chapitre 168",
         "de": "Kapitel 168",
-        "tr": "Bölüm 168"
+        "tr": "Bölüm 168",
+        "bg": "Глава 168"
       },
       "availableLayers": [
         "source"
@@ -5382,6 +5772,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5402,7 +5793,8 @@
         "pt": "Capítulo 169",
         "fr": "Chapitre 169",
         "de": "Kapitel 169",
-        "tr": "Bölüm 169"
+        "tr": "Bölüm 169",
+        "bg": "Глава 169"
       },
       "availableLayers": [
         "source"
@@ -5410,6 +5802,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5430,7 +5823,8 @@
         "pt": "Capítulo 170",
         "fr": "Chapitre 170",
         "de": "Kapitel 170",
-        "tr": "Bölüm 170"
+        "tr": "Bölüm 170",
+        "bg": "Глава 170"
       },
       "availableLayers": [
         "source"
@@ -5438,6 +5832,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5458,7 +5853,8 @@
         "pt": "Capítulo 171",
         "fr": "Chapitre 171",
         "de": "Kapitel 171",
-        "tr": "Bölüm 171"
+        "tr": "Bölüm 171",
+        "bg": "Глава 171"
       },
       "availableLayers": [
         "source"
@@ -5466,6 +5862,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5486,7 +5883,8 @@
         "pt": "Capítulo 172",
         "fr": "Chapitre 172",
         "de": "Kapitel 172",
-        "tr": "Bölüm 172"
+        "tr": "Bölüm 172",
+        "bg": "Глава 172"
       },
       "availableLayers": [
         "source",
@@ -5495,11 +5893,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5518,7 +5918,8 @@
         "pt": "Capítulo 173",
         "fr": "Chapitre 173",
         "de": "Kapitel 173",
-        "tr": "Bölüm 173"
+        "tr": "Bölüm 173",
+        "bg": "Глава 173"
       },
       "availableLayers": [
         "source"
@@ -5526,6 +5927,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5546,7 +5948,8 @@
         "pt": "Capítulo 174",
         "fr": "Chapitre 174",
         "de": "Kapitel 174",
-        "tr": "Bölüm 174"
+        "tr": "Bölüm 174",
+        "bg": "Глава 174"
       },
       "availableLayers": [
         "source"
@@ -5554,6 +5957,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5574,7 +5978,8 @@
         "pt": "Capítulo 175",
         "fr": "Chapitre 175",
         "de": "Kapitel 175",
-        "tr": "Bölüm 175"
+        "tr": "Bölüm 175",
+        "bg": "Глава 175"
       },
       "availableLayers": [
         "source",
@@ -5583,11 +5988,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5606,7 +6013,8 @@
         "pt": "Capítulo 176",
         "fr": "Chapitre 176",
         "de": "Kapitel 176",
-        "tr": "Bölüm 176"
+        "tr": "Bölüm 176",
+        "bg": "Глава 176"
       },
       "availableLayers": [
         "source"
@@ -5614,6 +6022,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5634,7 +6043,8 @@
         "pt": "Capítulo 177",
         "fr": "Chapitre 177",
         "de": "Kapitel 177",
-        "tr": "Bölüm 177"
+        "tr": "Bölüm 177",
+        "bg": "Глава 177"
       },
       "availableLayers": [
         "source",
@@ -5643,11 +6053,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5666,7 +6078,8 @@
         "pt": "Capítulo 178",
         "fr": "Chapitre 178",
         "de": "Kapitel 178",
-        "tr": "Bölüm 178"
+        "tr": "Bölüm 178",
+        "bg": "Глава 178"
       },
       "availableLayers": [
         "source"
@@ -5674,6 +6087,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5694,7 +6108,8 @@
         "pt": "Capítulo 179",
         "fr": "Chapitre 179",
         "de": "Kapitel 179",
-        "tr": "Bölüm 179"
+        "tr": "Bölüm 179",
+        "bg": "Глава 179"
       },
       "availableLayers": [
         "source"
@@ -5702,6 +6117,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5722,7 +6138,8 @@
         "pt": "Capítulo 180",
         "fr": "Chapitre 180",
         "de": "Kapitel 180",
-        "tr": "Bölüm 180"
+        "tr": "Bölüm 180",
+        "bg": "Глава 180"
       },
       "availableLayers": [
         "source"
@@ -5730,6 +6147,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5750,7 +6168,8 @@
         "pt": "Capítulo 181",
         "fr": "Chapitre 181",
         "de": "Kapitel 181",
-        "tr": "Bölüm 181"
+        "tr": "Bölüm 181",
+        "bg": "Глава 181"
       },
       "availableLayers": [
         "source"
@@ -5758,6 +6177,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5778,7 +6198,8 @@
         "pt": "Capítulo 182",
         "fr": "Chapitre 182",
         "de": "Kapitel 182",
-        "tr": "Bölüm 182"
+        "tr": "Bölüm 182",
+        "bg": "Глава 182"
       },
       "availableLayers": [
         "source"
@@ -5786,6 +6207,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5806,7 +6228,8 @@
         "pt": "Capítulo 183",
         "fr": "Chapitre 183",
         "de": "Kapitel 183",
-        "tr": "Bölüm 183"
+        "tr": "Bölüm 183",
+        "bg": "Глава 183"
       },
       "availableLayers": [
         "source"
@@ -5814,6 +6237,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5834,7 +6258,8 @@
         "pt": "Capítulo 184",
         "fr": "Chapitre 184",
         "de": "Kapitel 184",
-        "tr": "Bölüm 184"
+        "tr": "Bölüm 184",
+        "bg": "Глава 184"
       },
       "availableLayers": [
         "source"
@@ -5842,6 +6267,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5862,7 +6288,8 @@
         "pt": "Capítulo 185",
         "fr": "Chapitre 185",
         "de": "Kapitel 185",
-        "tr": "Bölüm 185"
+        "tr": "Bölüm 185",
+        "bg": "Глава 185"
       },
       "availableLayers": [
         "source",
@@ -5871,11 +6298,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5894,7 +6323,8 @@
         "pt": "Capítulo 186",
         "fr": "Chapitre 186",
         "de": "Kapitel 186",
-        "tr": "Bölüm 186"
+        "tr": "Bölüm 186",
+        "bg": "Глава 186"
       },
       "availableLayers": [
         "source",
@@ -5903,11 +6333,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -5926,7 +6358,8 @@
         "pt": "Capítulo 187",
         "fr": "Chapitre 187",
         "de": "Kapitel 187",
-        "tr": "Bölüm 187"
+        "tr": "Bölüm 187",
+        "bg": "Глава 187"
       },
       "availableLayers": [
         "source"
@@ -5934,6 +6367,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5954,7 +6388,8 @@
         "pt": "Capítulo 188",
         "fr": "Chapitre 188",
         "de": "Kapitel 188",
-        "tr": "Bölüm 188"
+        "tr": "Bölüm 188",
+        "bg": "Глава 188"
       },
       "availableLayers": [
         "source"
@@ -5962,6 +6397,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -5982,7 +6418,8 @@
         "pt": "Capítulo 189",
         "fr": "Chapitre 189",
         "de": "Kapitel 189",
-        "tr": "Bölüm 189"
+        "tr": "Bölüm 189",
+        "bg": "Глава 189"
       },
       "availableLayers": [
         "source"
@@ -5990,6 +6427,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6010,7 +6448,8 @@
         "pt": "Capítulo 190",
         "fr": "Chapitre 190",
         "de": "Kapitel 190",
-        "tr": "Bölüm 190"
+        "tr": "Bölüm 190",
+        "bg": "Глава 190"
       },
       "availableLayers": [
         "source"
@@ -6018,6 +6457,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6038,7 +6478,8 @@
         "pt": "Capítulo 191",
         "fr": "Chapitre 191",
         "de": "Kapitel 191",
-        "tr": "Bölüm 191"
+        "tr": "Bölüm 191",
+        "bg": "Глава 191"
       },
       "availableLayers": [
         "source"
@@ -6046,6 +6487,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6066,7 +6508,8 @@
         "pt": "Capítulo 192",
         "fr": "Chapitre 192",
         "de": "Kapitel 192",
-        "tr": "Bölüm 192"
+        "tr": "Bölüm 192",
+        "bg": "Глава 192"
       },
       "availableLayers": [
         "source"
@@ -6074,6 +6517,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6094,7 +6538,8 @@
         "pt": "Capítulo 193",
         "fr": "Chapitre 193",
         "de": "Kapitel 193",
-        "tr": "Bölüm 193"
+        "tr": "Bölüm 193",
+        "bg": "Глава 193"
       },
       "availableLayers": [
         "source"
@@ -6102,6 +6547,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6122,7 +6568,8 @@
         "pt": "Capítulo 194",
         "fr": "Chapitre 194",
         "de": "Kapitel 194",
-        "tr": "Bölüm 194"
+        "tr": "Bölüm 194",
+        "bg": "Глава 194"
       },
       "availableLayers": [
         "source"
@@ -6130,6 +6577,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6150,7 +6598,8 @@
         "pt": "Capítulo 195",
         "fr": "Chapitre 195",
         "de": "Kapitel 195",
-        "tr": "Bölüm 195"
+        "tr": "Bölüm 195",
+        "bg": "Глава 195"
       },
       "availableLayers": [
         "source"
@@ -6158,6 +6607,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6178,7 +6628,8 @@
         "pt": "Capítulo 196",
         "fr": "Chapitre 196",
         "de": "Kapitel 196",
-        "tr": "Bölüm 196"
+        "tr": "Bölüm 196",
+        "bg": "Глава 196"
       },
       "availableLayers": [
         "source"
@@ -6186,6 +6637,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6206,7 +6658,8 @@
         "pt": "Capítulo 197",
         "fr": "Chapitre 197",
         "de": "Kapitel 197",
-        "tr": "Bölüm 197"
+        "tr": "Bölüm 197",
+        "bg": "Глава 197"
       },
       "availableLayers": [
         "source"
@@ -6214,6 +6667,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6234,7 +6688,8 @@
         "pt": "Capítulo 198",
         "fr": "Chapitre 198",
         "de": "Kapitel 198",
-        "tr": "Bölüm 198"
+        "tr": "Bölüm 198",
+        "bg": "Глава 198"
       },
       "availableLayers": [
         "source"
@@ -6242,6 +6697,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6262,7 +6718,8 @@
         "pt": "Capítulo 199",
         "fr": "Chapitre 199",
         "de": "Kapitel 199",
-        "tr": "Bölüm 199"
+        "tr": "Bölüm 199",
+        "bg": "Глава 199"
       },
       "availableLayers": [
         "source"
@@ -6270,6 +6727,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6290,7 +6748,8 @@
         "pt": "Capítulo 200",
         "fr": "Chapitre 200",
         "de": "Kapitel 200",
-        "tr": "Bölüm 200"
+        "tr": "Bölüm 200",
+        "bg": "Глава 200"
       },
       "availableLayers": [
         "source",
@@ -6299,11 +6758,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6322,7 +6783,8 @@
         "pt": "Capítulo 201",
         "fr": "Chapitre 201",
         "de": "Kapitel 201",
-        "tr": "Bölüm 201"
+        "tr": "Bölüm 201",
+        "bg": "Глава 201"
       },
       "availableLayers": [
         "source",
@@ -6331,11 +6793,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6354,7 +6818,8 @@
         "pt": "Capítulo 202",
         "fr": "Chapitre 202",
         "de": "Kapitel 202",
-        "tr": "Bölüm 202"
+        "tr": "Bölüm 202",
+        "bg": "Глава 202"
       },
       "availableLayers": [
         "source",
@@ -6363,11 +6828,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6386,7 +6853,8 @@
         "pt": "Capítulo 203",
         "fr": "Chapitre 203",
         "de": "Kapitel 203",
-        "tr": "Bölüm 203"
+        "tr": "Bölüm 203",
+        "bg": "Глава 203"
       },
       "availableLayers": [
         "source"
@@ -6394,6 +6862,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6414,7 +6883,8 @@
         "pt": "Capítulo 204",
         "fr": "Chapitre 204",
         "de": "Kapitel 204",
-        "tr": "Bölüm 204"
+        "tr": "Bölüm 204",
+        "bg": "Глава 204"
       },
       "availableLayers": [
         "source"
@@ -6422,6 +6892,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6442,7 +6913,8 @@
         "pt": "Capítulo 205",
         "fr": "Chapitre 205",
         "de": "Kapitel 205",
-        "tr": "Bölüm 205"
+        "tr": "Bölüm 205",
+        "bg": "Глава 205"
       },
       "availableLayers": [
         "source",
@@ -6451,11 +6923,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6474,7 +6948,8 @@
         "pt": "Capítulo 206",
         "fr": "Chapitre 206",
         "de": "Kapitel 206",
-        "tr": "Bölüm 206"
+        "tr": "Bölüm 206",
+        "bg": "Глава 206"
       },
       "availableLayers": [
         "source",
@@ -6483,11 +6958,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6506,7 +6983,8 @@
         "pt": "Capítulo 207",
         "fr": "Chapitre 207",
         "de": "Kapitel 207",
-        "tr": "Bölüm 207"
+        "tr": "Bölüm 207",
+        "bg": "Глава 207"
       },
       "availableLayers": [
         "source",
@@ -6515,11 +6993,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6538,7 +7018,8 @@
         "pt": "Capítulo 208",
         "fr": "Chapitre 208",
         "de": "Kapitel 208",
-        "tr": "Bölüm 208"
+        "tr": "Bölüm 208",
+        "bg": "Глава 208"
       },
       "availableLayers": [
         "source"
@@ -6546,6 +7027,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6566,7 +7048,8 @@
         "pt": "Capítulo 209",
         "fr": "Chapitre 209",
         "de": "Kapitel 209",
-        "tr": "Bölüm 209"
+        "tr": "Bölüm 209",
+        "bg": "Глава 209"
       },
       "availableLayers": [
         "source",
@@ -6575,11 +7058,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6598,7 +7083,8 @@
         "pt": "Capítulo 210",
         "fr": "Chapitre 210",
         "de": "Kapitel 210",
-        "tr": "Bölüm 210"
+        "tr": "Bölüm 210",
+        "bg": "Глава 210"
       },
       "availableLayers": [
         "source",
@@ -6607,11 +7093,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6630,7 +7118,8 @@
         "pt": "Capítulo 211",
         "fr": "Chapitre 211",
         "de": "Kapitel 211",
-        "tr": "Bölüm 211"
+        "tr": "Bölüm 211",
+        "bg": "Глава 211"
       },
       "availableLayers": [
         "source"
@@ -6638,6 +7127,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6658,7 +7148,8 @@
         "pt": "Capítulo 212",
         "fr": "Chapitre 212",
         "de": "Kapitel 212",
-        "tr": "Bölüm 212"
+        "tr": "Bölüm 212",
+        "bg": "Глава 212"
       },
       "availableLayers": [
         "source",
@@ -6667,11 +7158,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6690,7 +7183,8 @@
         "pt": "Capítulo 213",
         "fr": "Chapitre 213",
         "de": "Kapitel 213",
-        "tr": "Bölüm 213"
+        "tr": "Bölüm 213",
+        "bg": "Глава 213"
       },
       "availableLayers": [
         "source"
@@ -6698,6 +7192,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6718,7 +7213,8 @@
         "pt": "Capítulo 214",
         "fr": "Chapitre 214",
         "de": "Kapitel 214",
-        "tr": "Bölüm 214"
+        "tr": "Bölüm 214",
+        "bg": "Глава 214"
       },
       "availableLayers": [
         "source",
@@ -6727,11 +7223,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -6750,7 +7248,8 @@
         "pt": "Capítulo 215",
         "fr": "Chapitre 215",
         "de": "Kapitel 215",
-        "tr": "Bölüm 215"
+        "tr": "Bölüm 215",
+        "bg": "Глава 215"
       },
       "availableLayers": [
         "source"
@@ -6758,6 +7257,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6778,7 +7278,8 @@
         "pt": "Capítulo 216",
         "fr": "Chapitre 216",
         "de": "Kapitel 216",
-        "tr": "Bölüm 216"
+        "tr": "Bölüm 216",
+        "bg": "Глава 216"
       },
       "availableLayers": [
         "source"
@@ -6786,6 +7287,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6806,7 +7308,8 @@
         "pt": "Capítulo 217",
         "fr": "Chapitre 217",
         "de": "Kapitel 217",
-        "tr": "Bölüm 217"
+        "tr": "Bölüm 217",
+        "bg": "Глава 217"
       },
       "availableLayers": [
         "source"
@@ -6814,6 +7317,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6834,7 +7338,8 @@
         "pt": "Capítulo 218",
         "fr": "Chapitre 218",
         "de": "Kapitel 218",
-        "tr": "Bölüm 218"
+        "tr": "Bölüm 218",
+        "bg": "Глава 218"
       },
       "availableLayers": [
         "source"
@@ -6842,6 +7347,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6862,7 +7368,8 @@
         "pt": "Capítulo 219",
         "fr": "Chapitre 219",
         "de": "Kapitel 219",
-        "tr": "Bölüm 219"
+        "tr": "Bölüm 219",
+        "bg": "Глава 219"
       },
       "availableLayers": [
         "source"
@@ -6870,6 +7377,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6890,7 +7398,8 @@
         "pt": "Capítulo 220",
         "fr": "Chapitre 220",
         "de": "Kapitel 220",
-        "tr": "Bölüm 220"
+        "tr": "Bölüm 220",
+        "bg": "Глава 220"
       },
       "availableLayers": [
         "source"
@@ -6898,6 +7407,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6918,7 +7428,8 @@
         "pt": "Capítulo 221",
         "fr": "Chapitre 221",
         "de": "Kapitel 221",
-        "tr": "Bölüm 221"
+        "tr": "Bölüm 221",
+        "bg": "Глава 221"
       },
       "availableLayers": [
         "source"
@@ -6926,6 +7437,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6946,7 +7458,8 @@
         "pt": "Capítulo 222",
         "fr": "Chapitre 222",
         "de": "Kapitel 222",
-        "tr": "Bölüm 222"
+        "tr": "Bölüm 222",
+        "bg": "Глава 222"
       },
       "availableLayers": [
         "source"
@@ -6954,6 +7467,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -6974,7 +7488,8 @@
         "pt": "Capítulo 223",
         "fr": "Chapitre 223",
         "de": "Kapitel 223",
-        "tr": "Bölüm 223"
+        "tr": "Bölüm 223",
+        "bg": "Глава 223"
       },
       "availableLayers": [
         "source",
@@ -6983,11 +7498,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7006,7 +7523,8 @@
         "pt": "Capítulo 224",
         "fr": "Chapitre 224",
         "de": "Kapitel 224",
-        "tr": "Bölüm 224"
+        "tr": "Bölüm 224",
+        "bg": "Глава 224"
       },
       "availableLayers": [
         "source",
@@ -7015,11 +7533,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7038,7 +7558,8 @@
         "pt": "Capítulo 225",
         "fr": "Chapitre 225",
         "de": "Kapitel 225",
-        "tr": "Bölüm 225"
+        "tr": "Bölüm 225",
+        "bg": "Глава 225"
       },
       "availableLayers": [
         "source",
@@ -7047,11 +7568,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7070,7 +7593,8 @@
         "pt": "Capítulo 226",
         "fr": "Chapitre 226",
         "de": "Kapitel 226",
-        "tr": "Bölüm 226"
+        "tr": "Bölüm 226",
+        "bg": "Глава 226"
       },
       "availableLayers": [
         "source",
@@ -7079,11 +7603,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7102,7 +7628,8 @@
         "pt": "Capítulo 227",
         "fr": "Chapitre 227",
         "de": "Kapitel 227",
-        "tr": "Bölüm 227"
+        "tr": "Bölüm 227",
+        "bg": "Глава 227"
       },
       "availableLayers": [
         "source"
@@ -7110,6 +7637,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7130,7 +7658,8 @@
         "pt": "Capítulo 228",
         "fr": "Chapitre 228",
         "de": "Kapitel 228",
-        "tr": "Bölüm 228"
+        "tr": "Bölüm 228",
+        "bg": "Глава 228"
       },
       "availableLayers": [
         "source",
@@ -7139,11 +7668,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7162,7 +7693,8 @@
         "pt": "Capítulo 229",
         "fr": "Chapitre 229",
         "de": "Kapitel 229",
-        "tr": "Bölüm 229"
+        "tr": "Bölüm 229",
+        "bg": "Глава 229"
       },
       "availableLayers": [
         "source",
@@ -7171,11 +7703,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7194,7 +7728,8 @@
         "pt": "Capítulo 230",
         "fr": "Chapitre 230",
         "de": "Kapitel 230",
-        "tr": "Bölüm 230"
+        "tr": "Bölüm 230",
+        "bg": "Глава 230"
       },
       "availableLayers": [
         "source",
@@ -7203,11 +7738,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7226,7 +7763,8 @@
         "pt": "Capítulo 231",
         "fr": "Chapitre 231",
         "de": "Kapitel 231",
-        "tr": "Bölüm 231"
+        "tr": "Bölüm 231",
+        "bg": "Глава 231"
       },
       "availableLayers": [
         "source"
@@ -7234,6 +7772,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7254,7 +7793,8 @@
         "pt": "Capítulo 232",
         "fr": "Chapitre 232",
         "de": "Kapitel 232",
-        "tr": "Bölüm 232"
+        "tr": "Bölüm 232",
+        "bg": "Глава 232"
       },
       "availableLayers": [
         "source",
@@ -7263,11 +7803,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7286,7 +7828,8 @@
         "pt": "Capítulo 233",
         "fr": "Chapitre 233",
         "de": "Kapitel 233",
-        "tr": "Bölüm 233"
+        "tr": "Bölüm 233",
+        "bg": "Глава 233"
       },
       "availableLayers": [
         "source"
@@ -7294,6 +7837,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7314,7 +7858,8 @@
         "pt": "Capítulo 234",
         "fr": "Chapitre 234",
         "de": "Kapitel 234",
-        "tr": "Bölüm 234"
+        "tr": "Bölüm 234",
+        "bg": "Глава 234"
       },
       "availableLayers": [
         "source",
@@ -7323,11 +7868,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7346,7 +7893,8 @@
         "pt": "Capítulo 235",
         "fr": "Chapitre 235",
         "de": "Kapitel 235",
-        "tr": "Bölüm 235"
+        "tr": "Bölüm 235",
+        "bg": "Глава 235"
       },
       "availableLayers": [
         "source"
@@ -7354,6 +7902,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7374,7 +7923,8 @@
         "pt": "Capítulo 236",
         "fr": "Chapitre 236",
         "de": "Kapitel 236",
-        "tr": "Bölüm 236"
+        "tr": "Bölüm 236",
+        "bg": "Глава 236"
       },
       "availableLayers": [
         "source",
@@ -7383,11 +7933,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7406,7 +7958,8 @@
         "pt": "Capítulo 237",
         "fr": "Chapitre 237",
         "de": "Kapitel 237",
-        "tr": "Bölüm 237"
+        "tr": "Bölüm 237",
+        "bg": "Глава 237"
       },
       "availableLayers": [
         "source"
@@ -7414,6 +7967,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7434,7 +7988,8 @@
         "pt": "Capítulo 238",
         "fr": "Chapitre 238",
         "de": "Kapitel 238",
-        "tr": "Bölüm 238"
+        "tr": "Bölüm 238",
+        "bg": "Глава 238"
       },
       "availableLayers": [
         "source",
@@ -7443,11 +7998,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7466,7 +8023,8 @@
         "pt": "Capítulo 239",
         "fr": "Chapitre 239",
         "de": "Kapitel 239",
-        "tr": "Bölüm 239"
+        "tr": "Bölüm 239",
+        "bg": "Глава 239"
       },
       "availableLayers": [
         "source"
@@ -7474,6 +8032,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7494,7 +8053,8 @@
         "pt": "Capítulo 240",
         "fr": "Chapitre 240",
         "de": "Kapitel 240",
-        "tr": "Bölüm 240"
+        "tr": "Bölüm 240",
+        "bg": "Глава 240"
       },
       "availableLayers": [
         "source"
@@ -7502,6 +8062,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7522,7 +8083,8 @@
         "pt": "Capítulo 241",
         "fr": "Chapitre 241",
         "de": "Kapitel 241",
-        "tr": "Bölüm 241"
+        "tr": "Bölüm 241",
+        "bg": "Глава 241"
       },
       "availableLayers": [
         "source"
@@ -7530,6 +8092,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7550,7 +8113,8 @@
         "pt": "Capítulo 242",
         "fr": "Chapitre 242",
         "de": "Kapitel 242",
-        "tr": "Bölüm 242"
+        "tr": "Bölüm 242",
+        "bg": "Глава 242"
       },
       "availableLayers": [
         "source"
@@ -7558,6 +8122,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7578,7 +8143,8 @@
         "pt": "Capítulo 243",
         "fr": "Chapitre 243",
         "de": "Kapitel 243",
-        "tr": "Bölüm 243"
+        "tr": "Bölüm 243",
+        "bg": "Глава 243"
       },
       "availableLayers": [
         "source"
@@ -7586,6 +8152,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7606,7 +8173,8 @@
         "pt": "Capítulo 244",
         "fr": "Chapitre 244",
         "de": "Kapitel 244",
-        "tr": "Bölüm 244"
+        "tr": "Bölüm 244",
+        "bg": "Глава 244"
       },
       "availableLayers": [
         "source",
@@ -7615,11 +8183,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7638,7 +8208,8 @@
         "pt": "Capítulo 245",
         "fr": "Chapitre 245",
         "de": "Kapitel 245",
-        "tr": "Bölüm 245"
+        "tr": "Bölüm 245",
+        "bg": "Глава 245"
       },
       "availableLayers": [
         "source"
@@ -7646,6 +8217,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7666,7 +8238,8 @@
         "pt": "Capítulo 246",
         "fr": "Chapitre 246",
         "de": "Kapitel 246",
-        "tr": "Bölüm 246"
+        "tr": "Bölüm 246",
+        "bg": "Глава 246"
       },
       "availableLayers": [
         "source"
@@ -7674,6 +8247,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7694,7 +8268,8 @@
         "pt": "Capítulo 247",
         "fr": "Chapitre 247",
         "de": "Kapitel 247",
-        "tr": "Bölüm 247"
+        "tr": "Bölüm 247",
+        "bg": "Глава 247"
       },
       "availableLayers": [
         "source"
@@ -7702,6 +8277,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7722,7 +8298,8 @@
         "pt": "Capítulo 248",
         "fr": "Chapitre 248",
         "de": "Kapitel 248",
-        "tr": "Bölüm 248"
+        "tr": "Bölüm 248",
+        "bg": "Глава 248"
       },
       "availableLayers": [
         "source"
@@ -7730,6 +8307,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7750,7 +8328,8 @@
         "pt": "Capítulo 249",
         "fr": "Chapitre 249",
         "de": "Kapitel 249",
-        "tr": "Bölüm 249"
+        "tr": "Bölüm 249",
+        "bg": "Глава 249"
       },
       "availableLayers": [
         "source"
@@ -7758,6 +8337,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7778,7 +8358,8 @@
         "pt": "Capítulo 250",
         "fr": "Chapitre 250",
         "de": "Kapitel 250",
-        "tr": "Bölüm 250"
+        "tr": "Bölüm 250",
+        "bg": "Глава 250"
       },
       "availableLayers": [
         "source"
@@ -7786,6 +8367,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7806,7 +8388,8 @@
         "pt": "Capítulo 251",
         "fr": "Chapitre 251",
         "de": "Kapitel 251",
-        "tr": "Bölüm 251"
+        "tr": "Bölüm 251",
+        "bg": "Глава 251"
       },
       "availableLayers": [
         "source",
@@ -7815,11 +8398,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -7838,7 +8423,8 @@
         "pt": "Capítulo 252",
         "fr": "Chapitre 252",
         "de": "Kapitel 252",
-        "tr": "Bölüm 252"
+        "tr": "Bölüm 252",
+        "bg": "Глава 252"
       },
       "availableLayers": [
         "source"
@@ -7846,6 +8432,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7866,7 +8453,8 @@
         "pt": "Capítulo 253",
         "fr": "Chapitre 253",
         "de": "Kapitel 253",
-        "tr": "Bölüm 253"
+        "tr": "Bölüm 253",
+        "bg": "Глава 253"
       },
       "availableLayers": [
         "source"
@@ -7874,6 +8462,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7894,7 +8483,8 @@
         "pt": "Capítulo 254",
         "fr": "Chapitre 254",
         "de": "Kapitel 254",
-        "tr": "Bölüm 254"
+        "tr": "Bölüm 254",
+        "bg": "Глава 254"
       },
       "availableLayers": [
         "source"
@@ -7902,6 +8492,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7922,7 +8513,8 @@
         "pt": "Capítulo 255",
         "fr": "Chapitre 255",
         "de": "Kapitel 255",
-        "tr": "Bölüm 255"
+        "tr": "Bölüm 255",
+        "bg": "Глава 255"
       },
       "availableLayers": [
         "source"
@@ -7930,6 +8522,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7950,7 +8543,8 @@
         "pt": "Capítulo 256",
         "fr": "Chapitre 256",
         "de": "Kapitel 256",
-        "tr": "Bölüm 256"
+        "tr": "Bölüm 256",
+        "bg": "Глава 256"
       },
       "availableLayers": [
         "source"
@@ -7958,6 +8552,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -7978,7 +8573,8 @@
         "pt": "Capítulo 257",
         "fr": "Chapitre 257",
         "de": "Kapitel 257",
-        "tr": "Bölüm 257"
+        "tr": "Bölüm 257",
+        "bg": "Глава 257"
       },
       "availableLayers": [
         "source"
@@ -7986,6 +8582,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8006,7 +8603,8 @@
         "pt": "Capítulo 258",
         "fr": "Chapitre 258",
         "de": "Kapitel 258",
-        "tr": "Bölüm 258"
+        "tr": "Bölüm 258",
+        "bg": "Глава 258"
       },
       "availableLayers": [
         "source"
@@ -8014,6 +8612,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8034,7 +8633,8 @@
         "pt": "Capítulo 259",
         "fr": "Chapitre 259",
         "de": "Kapitel 259",
-        "tr": "Bölüm 259"
+        "tr": "Bölüm 259",
+        "bg": "Глава 259"
       },
       "availableLayers": [
         "source",
@@ -8043,11 +8643,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8066,7 +8668,8 @@
         "pt": "Capítulo 260",
         "fr": "Chapitre 260",
         "de": "Kapitel 260",
-        "tr": "Bölüm 260"
+        "tr": "Bölüm 260",
+        "bg": "Глава 260"
       },
       "availableLayers": [
         "source"
@@ -8074,6 +8677,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8094,7 +8698,8 @@
         "pt": "Capítulo 261",
         "fr": "Chapitre 261",
         "de": "Kapitel 261",
-        "tr": "Bölüm 261"
+        "tr": "Bölüm 261",
+        "bg": "Глава 261"
       },
       "availableLayers": [
         "source"
@@ -8102,6 +8707,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8122,7 +8728,8 @@
         "pt": "Capítulo 262",
         "fr": "Chapitre 262",
         "de": "Kapitel 262",
-        "tr": "Bölüm 262"
+        "tr": "Bölüm 262",
+        "bg": "Глава 262"
       },
       "availableLayers": [
         "source"
@@ -8130,6 +8737,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8150,7 +8758,8 @@
         "pt": "Capítulo 263",
         "fr": "Chapitre 263",
         "de": "Kapitel 263",
-        "tr": "Bölüm 263"
+        "tr": "Bölüm 263",
+        "bg": "Глава 263"
       },
       "availableLayers": [
         "source"
@@ -8158,6 +8767,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8178,7 +8788,8 @@
         "pt": "Capítulo 264",
         "fr": "Chapitre 264",
         "de": "Kapitel 264",
-        "tr": "Bölüm 264"
+        "tr": "Bölüm 264",
+        "bg": "Глава 264"
       },
       "availableLayers": [
         "source"
@@ -8186,6 +8797,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8206,7 +8818,8 @@
         "pt": "Capítulo 265",
         "fr": "Chapitre 265",
         "de": "Kapitel 265",
-        "tr": "Bölüm 265"
+        "tr": "Bölüm 265",
+        "bg": "Глава 265"
       },
       "availableLayers": [
         "source"
@@ -8214,6 +8827,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8234,7 +8848,8 @@
         "pt": "Capítulo 266",
         "fr": "Chapitre 266",
         "de": "Kapitel 266",
-        "tr": "Bölüm 266"
+        "tr": "Bölüm 266",
+        "bg": "Глава 266"
       },
       "availableLayers": [
         "source"
@@ -8242,6 +8857,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8262,7 +8878,8 @@
         "pt": "Capítulo 267",
         "fr": "Chapitre 267",
         "de": "Kapitel 267",
-        "tr": "Bölüm 267"
+        "tr": "Bölüm 267",
+        "bg": "Глава 267"
       },
       "availableLayers": [
         "source"
@@ -8270,6 +8887,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8290,7 +8908,8 @@
         "pt": "Capítulo 268",
         "fr": "Chapitre 268",
         "de": "Kapitel 268",
-        "tr": "Bölüm 268"
+        "tr": "Bölüm 268",
+        "bg": "Глава 268"
       },
       "availableLayers": [
         "source"
@@ -8298,6 +8917,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8318,7 +8938,8 @@
         "pt": "Capítulo 269",
         "fr": "Chapitre 269",
         "de": "Kapitel 269",
-        "tr": "Bölüm 269"
+        "tr": "Bölüm 269",
+        "bg": "Глава 269"
       },
       "availableLayers": [
         "source"
@@ -8326,6 +8947,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8346,7 +8968,8 @@
         "pt": "Capítulo 270",
         "fr": "Chapitre 270",
         "de": "Kapitel 270",
-        "tr": "Bölüm 270"
+        "tr": "Bölüm 270",
+        "bg": "Глава 270"
       },
       "availableLayers": [
         "source"
@@ -8354,6 +8977,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8374,7 +8998,8 @@
         "pt": "Capítulo 271",
         "fr": "Chapitre 271",
         "de": "Kapitel 271",
-        "tr": "Bölüm 271"
+        "tr": "Bölüm 271",
+        "bg": "Глава 271"
       },
       "availableLayers": [
         "source",
@@ -8383,11 +9008,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8406,7 +9033,8 @@
         "pt": "Capítulo 272",
         "fr": "Chapitre 272",
         "de": "Kapitel 272",
-        "tr": "Bölüm 272"
+        "tr": "Bölüm 272",
+        "bg": "Глава 272"
       },
       "availableLayers": [
         "source"
@@ -8414,6 +9042,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8434,7 +9063,8 @@
         "pt": "Capítulo 273",
         "fr": "Chapitre 273",
         "de": "Kapitel 273",
-        "tr": "Bölüm 273"
+        "tr": "Bölüm 273",
+        "bg": "Глава 273"
       },
       "availableLayers": [
         "source",
@@ -8443,11 +9073,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8466,7 +9098,8 @@
         "pt": "Capítulo 274",
         "fr": "Chapitre 274",
         "de": "Kapitel 274",
-        "tr": "Bölüm 274"
+        "tr": "Bölüm 274",
+        "bg": "Глава 274"
       },
       "availableLayers": [
         "source"
@@ -8474,6 +9107,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8494,7 +9128,8 @@
         "pt": "Capítulo 275",
         "fr": "Chapitre 275",
         "de": "Kapitel 275",
-        "tr": "Bölüm 275"
+        "tr": "Bölüm 275",
+        "bg": "Глава 275"
       },
       "availableLayers": [
         "source"
@@ -8502,6 +9137,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8522,7 +9158,8 @@
         "pt": "Capítulo 276",
         "fr": "Chapitre 276",
         "de": "Kapitel 276",
-        "tr": "Bölüm 276"
+        "tr": "Bölüm 276",
+        "bg": "Глава 276"
       },
       "availableLayers": [
         "source",
@@ -8531,11 +9168,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8554,7 +9193,8 @@
         "pt": "Capítulo 277",
         "fr": "Chapitre 277",
         "de": "Kapitel 277",
-        "tr": "Bölüm 277"
+        "tr": "Bölüm 277",
+        "bg": "Глава 277"
       },
       "availableLayers": [
         "source"
@@ -8562,6 +9202,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8582,7 +9223,8 @@
         "pt": "Capítulo 278",
         "fr": "Chapitre 278",
         "de": "Kapitel 278",
-        "tr": "Bölüm 278"
+        "tr": "Bölüm 278",
+        "bg": "Глава 278"
       },
       "availableLayers": [
         "source"
@@ -8590,6 +9232,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8610,7 +9253,8 @@
         "pt": "Capítulo 279",
         "fr": "Chapitre 279",
         "de": "Kapitel 279",
-        "tr": "Bölüm 279"
+        "tr": "Bölüm 279",
+        "bg": "Глава 279"
       },
       "availableLayers": [
         "source"
@@ -8618,6 +9262,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8638,7 +9283,8 @@
         "pt": "Capítulo 280",
         "fr": "Chapitre 280",
         "de": "Kapitel 280",
-        "tr": "Bölüm 280"
+        "tr": "Bölüm 280",
+        "bg": "Глава 280"
       },
       "availableLayers": [
         "source"
@@ -8646,6 +9292,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8666,7 +9313,8 @@
         "pt": "Capítulo 281",
         "fr": "Chapitre 281",
         "de": "Kapitel 281",
-        "tr": "Bölüm 281"
+        "tr": "Bölüm 281",
+        "bg": "Глава 281"
       },
       "availableLayers": [
         "source"
@@ -8674,6 +9322,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8694,7 +9343,8 @@
         "pt": "Capítulo 282",
         "fr": "Chapitre 282",
         "de": "Kapitel 282",
-        "tr": "Bölüm 282"
+        "tr": "Bölüm 282",
+        "bg": "Глава 282"
       },
       "availableLayers": [
         "source"
@@ -8702,6 +9352,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8722,7 +9373,8 @@
         "pt": "Capítulo 283",
         "fr": "Chapitre 283",
         "de": "Kapitel 283",
-        "tr": "Bölüm 283"
+        "tr": "Bölüm 283",
+        "bg": "Глава 283"
       },
       "availableLayers": [
         "source"
@@ -8730,6 +9382,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8750,7 +9403,8 @@
         "pt": "Capítulo 284",
         "fr": "Chapitre 284",
         "de": "Kapitel 284",
-        "tr": "Bölüm 284"
+        "tr": "Bölüm 284",
+        "bg": "Глава 284"
       },
       "availableLayers": [
         "source",
@@ -8759,11 +9413,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8782,7 +9438,8 @@
         "pt": "Capítulo 285",
         "fr": "Chapitre 285",
         "de": "Kapitel 285",
-        "tr": "Bölüm 285"
+        "tr": "Bölüm 285",
+        "bg": "Глава 285"
       },
       "availableLayers": [
         "source",
@@ -8791,11 +9448,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8814,7 +9473,8 @@
         "pt": "Capítulo 286",
         "fr": "Chapitre 286",
         "de": "Kapitel 286",
-        "tr": "Bölüm 286"
+        "tr": "Bölüm 286",
+        "bg": "Глава 286"
       },
       "availableLayers": [
         "source"
@@ -8822,6 +9482,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8842,7 +9503,8 @@
         "pt": "Capítulo 287",
         "fr": "Chapitre 287",
         "de": "Kapitel 287",
-        "tr": "Bölüm 287"
+        "tr": "Bölüm 287",
+        "bg": "Глава 287"
       },
       "availableLayers": [
         "source"
@@ -8850,6 +9512,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8870,7 +9533,8 @@
         "pt": "Capítulo 288",
         "fr": "Chapitre 288",
         "de": "Kapitel 288",
-        "tr": "Bölüm 288"
+        "tr": "Bölüm 288",
+        "bg": "Глава 288"
       },
       "availableLayers": [
         "source",
@@ -8879,11 +9543,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -8902,7 +9568,8 @@
         "pt": "Capítulo 289",
         "fr": "Chapitre 289",
         "de": "Kapitel 289",
-        "tr": "Bölüm 289"
+        "tr": "Bölüm 289",
+        "bg": "Глава 289"
       },
       "availableLayers": [
         "source"
@@ -8910,6 +9577,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8930,7 +9598,8 @@
         "pt": "Capítulo 290",
         "fr": "Chapitre 290",
         "de": "Kapitel 290",
-        "tr": "Bölüm 290"
+        "tr": "Bölüm 290",
+        "bg": "Глава 290"
       },
       "availableLayers": [
         "source"
@@ -8938,6 +9607,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8958,7 +9628,8 @@
         "pt": "Capítulo 291",
         "fr": "Chapitre 291",
         "de": "Kapitel 291",
-        "tr": "Bölüm 291"
+        "tr": "Bölüm 291",
+        "bg": "Глава 291"
       },
       "availableLayers": [
         "source"
@@ -8966,6 +9637,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -8986,7 +9658,8 @@
         "pt": "Capítulo 292",
         "fr": "Chapitre 292",
         "de": "Kapitel 292",
-        "tr": "Bölüm 292"
+        "tr": "Bölüm 292",
+        "bg": "Глава 292"
       },
       "availableLayers": [
         "source",
@@ -8995,11 +9668,13 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
         ],
         "commentary": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956"
         ]
@@ -9018,7 +9693,8 @@
         "pt": "Capítulo 293",
         "fr": "Chapitre 293",
         "de": "Kapitel 293",
-        "tr": "Bölüm 293"
+        "tr": "Bölüm 293",
+        "bg": "Глава 293"
       },
       "availableLayers": [
         "source"
@@ -9026,6 +9702,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -9046,7 +9723,8 @@
         "pt": "Observação Interior",
         "fr": "Observation intérieure",
         "de": "Innere Betrachtung",
-        "tr": "İç Gözlem"
+        "tr": "İç Gözlem",
+        "bg": "Вътрешно съзерцание"
       },
       "availableLayers": [
         "source"
@@ -9054,6 +9732,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -9074,7 +9753,8 @@
         "pt": "Perguntas sobre o significado das palavras",
         "fr": "Questions sur le sens des mots",
         "de": "Fragen zur Bedeutung der Wörter",
-        "tr": "Kelimelerin anlamı üzerine sorular"
+        "tr": "Kelimelerin anlamı üzerine sorular",
+        "bg": "Въпроси за значението на думите"
       },
       "availableLayers": [
         "source"
@@ -9082,6 +9762,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -9102,7 +9783,8 @@
         "pt": "Perguntas sobre os temas",
         "fr": "Questions sur les thèmes",
         "de": "Fragen zu den Themen",
-        "tr": "Konular üzerine sorular"
+        "tr": "Konular üzerine sorular",
+        "bg": "Въпроси по темите"
       },
       "availableLayers": [
         "source"
@@ -9110,6 +9792,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -9130,7 +9813,8 @@
         "pt": "Respostas sobre o significado das palavras",
         "fr": "Réponses sur le sens des mots",
         "de": "Antworten zur Bedeutung der Wörter",
-        "tr": "Kelimelerin anlamı üzerine cevaplar"
+        "tr": "Kelimelerin anlamı üzerine cevaplar",
+        "bg": "Отговори за значението на думите"
       },
       "availableLayers": [
         "source"
@@ -9138,6 +9822,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
@@ -9159,7 +9844,8 @@
         "pt": "Respostas sobre os temas",
         "fr": "Réponses sur les thèmes",
         "de": "Antworten zu den Themen",
-        "tr": "Konular üzerine cevaplar"
+        "tr": "Konular üzerine cevaplar",
+        "bg": "Отговори по темите"
       },
       "availableLayers": [
         "source"
@@ -9167,6 +9853,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "en-ai",
           "he-jerusalem-1956",
           "ru-ai"
