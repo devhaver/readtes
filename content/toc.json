@@ -6381,7 +6381,8 @@
                 "pt": "Perguntas sobre o significado das palavras",
                 "fr": "Questions sur le sens des mots",
                 "de": "Fragen zur Bedeutung der Wörter",
-                "tr": "Kelimelerin anlamı üzerine sorular"
+                "tr": "Kelimelerin anlamı üzerine sorular",
+                "bg": "Въпроси за значението на думите"
               },
               "availableLayers": [
                 "source"
@@ -6389,6 +6390,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-bb",
                   "es-ai",
@@ -6415,7 +6417,8 @@
                 "pt": "Perguntas sobre os temas",
                 "fr": "Questions sur les thèmes",
                 "de": "Fragen zu den Themen",
-                "tr": "Konular üzerine sorular"
+                "tr": "Konular üzerine sorular",
+                "bg": "Въпроси по темите"
               },
               "availableLayers": [
                 "source"
@@ -6423,6 +6426,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-bb",
                   "es-ai",
@@ -6449,7 +6453,8 @@
                 "pt": "Respostas sobre o significado das palavras",
                 "fr": "Réponses sur le sens des mots",
                 "de": "Antworten zur Bedeutung der Wörter",
-                "tr": "Kelimelerin anlamı üzerine cevaplar"
+                "tr": "Kelimelerin anlamı üzerine cevaplar",
+                "bg": "Отговори за значението на думите"
               },
               "availableLayers": [
                 "source"
@@ -6457,6 +6462,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-bb",
                   "es-ai",
@@ -6483,7 +6489,8 @@
                 "pt": "Respostas sobre os temas",
                 "fr": "Réponses sur les thèmes",
                 "de": "Antworten zu den Themen",
-                "tr": "Konular üzerine cevaplar"
+                "tr": "Konular üzerine cevaplar",
+                "bg": "Отговори по темите"
               },
               "availableLayers": [
                 "source"
@@ -6491,6 +6498,7 @@
               "availableVersions": {
                 "summary": [],
                 "source": [
+                  "bg-ai",
                   "de-ai",
                   "en-bb",
                   "es-ai",
