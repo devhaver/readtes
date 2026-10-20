@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-06/chapter-43",
+  "layer": "commentary",
+  "versionId": "bg-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Изцяло под мястото на Малхут на Ацилут</b>: Тоест под новата точка на съкращението, където завършва фазата Ацилут и започва мястото на световете на разделението, както беше обяснено по-горе."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 6:43:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Тяхното място останало празно под Сфира Бина</b>. Защото ГАР, които са КХБ, се запазили и само царете от Бина надолу се разбили, <b>(51)</b> а мястото им останало празно. На това място стои светът Ацилут след поправянето."
+    }
+  ]
+}
