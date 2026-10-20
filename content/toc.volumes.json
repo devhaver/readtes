@@ -361,7 +361,8 @@
             "pt": "O mundo de Nekudim",
             "fr": "Le monde de Nekoudim",
             "de": "Die Welt Nekudim",
-            "tr": "Nekudim dünyası"
+            "tr": "Nekudim dünyası",
+            "bg": "Светът Некудим"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VI",
           "chapterCount": 62,
@@ -387,7 +388,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Cause and Effect",
