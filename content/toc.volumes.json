@@ -570,7 +570,8 @@
             "pt": "Os acoplamentos das Sefirot",
             "fr": "Les accouplements des Sefirot",
             "de": "Die Vereinigungen der Sefirot",
-            "tr": "Sefirot'un çiftleşmeleri"
+            "tr": "Sefirot'un çiftleşmeleri",
+            "bg": "Съвкупленията на сфирот"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section IX",
           "chapterCount": 114,
@@ -594,7 +595,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -605,7 +607,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
