@@ -698,7 +698,8 @@
         "pt": "Volume 4",
         "fr": "Volume 4",
         "de": "Band 4",
-        "tr": "Cilt 4"
+        "tr": "Cilt 4",
+        "bg": "Том 4"
       },
       "parts": [
         {
@@ -713,7 +714,8 @@
             "pt": "Correção das luzes, centelhas e vasos no embrião, e o segundo Ibur",
             "fr": "Correction des lumières, étincelles et récipients dans l'embryon, et le second Ibour",
             "de": "Korrektur der Lichter, Funken und Gefäße im Embryo und der zweite Ibur",
-            "tr": "Embriyoda ışıkların, kıvılcımların ve kapların ıslahı ve ikinci İbur"
+            "tr": "Embriyoda ışıkların, kıvılcımların ve kapların ıslahı ve ikinci İbur",
+            "bg": "Поправяне на светлините, искрите и съсъдите в плода и вторият ибур"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XI",
           "chapterCount": 160,
@@ -736,7 +738,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -747,7 +750,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
