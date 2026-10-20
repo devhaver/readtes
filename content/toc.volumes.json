@@ -426,7 +426,8 @@
             "pt": "Os sete reis que morreram",
             "fr": "Les sept rois morts",
             "de": "Die sieben Könige, die starben",
-            "tr": "Ölen yedi kral"
+            "tr": "Ölen yedi kral",
+            "bg": "Седемте царе, които умряха"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VII",
           "chapterCount": 79,
@@ -461,7 +462,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
