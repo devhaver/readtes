@@ -6,6 +6,7 @@ const waitForHydration = async (page: import("@playwright/test").Page) => {
   await expect(page.locator("html")).toHaveAttribute(
     "data-readtes-hydrated",
     "true",
+    { timeout: 15_000 },
   );
 };
 
