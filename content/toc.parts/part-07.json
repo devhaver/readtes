@@ -3320,7 +3320,8 @@
         "pt": "Observação Interior 1",
         "fr": "Observation intérieure 1",
         "de": "Innere Betrachtung 1",
-        "tr": "İç Gözlem 1"
+        "tr": "İç Gözlem 1",
+        "bg": "Вътрешно съзерцание 1"
       },
       "availableLayers": [
         "source"
@@ -3328,6 +3329,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
@@ -3354,7 +3356,8 @@
         "pt": "Observação Interior 2",
         "fr": "Observation intérieure 2",
         "de": "Innere Betrachtung 2",
-        "tr": "İç Gözlem 2"
+        "tr": "İç Gözlem 2",
+        "bg": "Вътрешно съзерцание 2"
       },
       "availableLayers": [
         "source"
@@ -3362,6 +3365,7 @@
       "availableVersions": {
         "summary": [],
         "source": [
+          "bg-ai",
           "de-ai",
           "en-ai",
           "es-ai",
