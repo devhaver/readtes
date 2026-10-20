@@ -663,8 +663,8 @@
             "enAi": "full",
             "ru": "full",
             "uk": "full",
-            "es": "partial",
-            "fr": "partial"
+            "es": "full",
+            "fr": "full"
           }
         }
       ]
