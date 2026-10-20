@@ -491,7 +491,8 @@
         "pt": "Volume 3",
         "fr": "Volume 3",
         "de": "Band 3",
-        "tr": "Cilt 3"
+        "tr": "Cilt 3",
+        "bg": "Том 3"
       },
       "parts": [
         {
@@ -506,7 +507,8 @@
             "pt": "As dez Sefirot do mundo de Atzilut",
             "fr": "Les dix Sefirot du monde d'Atsilout",
             "de": "Die zehn Sefirot der Welt Azilut",
-            "tr": "Atzilut dünyasının on Sefirot'u"
+            "tr": "Atzilut dünyasının on Sefirot'u",
+            "bg": "Десетте сфирот на света Ацилут"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section VIII",
           "chapterCount": 99,
@@ -530,7 +532,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
