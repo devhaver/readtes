@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-08/chapter-72",
+  "layer": "commentary",
+  "versionId": "bg-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:1",
+      "section": "ohr-pnimi",
+      "html": "<b>От БОН Аба взел ВАК на Хохма на БОН и т.н.</b>: Трябва добре да разберем причината за този ред на разделянето на МА и БОН между горните Аба ве Има и ИСШСУТ. Вече обяснихме това по-горе (стр. 654, пасажът, започващ с „И действително“); потърси го там."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:72:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Петте края на Бина на БОН, които са трите долни НХЙ</b>: Трябва да се чете: Гвура, Тиферет и трите долни НХЙ."
+    }
+  ]
+}

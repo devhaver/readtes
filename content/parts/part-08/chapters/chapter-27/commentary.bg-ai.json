@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-08/chapter-27",
+  "layer": "commentary",
+  "versionId": "bg-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:27",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 8:27:1",
+      "section": "ohr-pnimi",
+      "html": "<b>БОН, който е изясняването на седемте царе заедно с обратните страни на Аба ве-Има</b>: Тоест от АА надолу, а също и в седемте долни сфирот на Атик. Но в ГАР на Атик няма нищо от обратните страни на Аба ве-Има и Кетер, а още по-малко има от ЗАТ на Некудим, както е написано по-нататък."
+    }
+  ]
+}
