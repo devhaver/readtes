@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-12/chapter-113",
+  "layer": "commentary",
+  "versionId": "bg-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Десетте сфирот на ЗА се броят от Хохма надолу, наречена начало, а не от Кетер надолу:</b> Причината е, че Кетер на ЗА — освен че съсъдът му е от Тиферет на Твуна — и светлината в него също е от бхината Твуна. Затова Кетер не се причислява към ЗА и той започва едва от Хохма, както е обяснено на мястото му."
+    }
+  ]
+}
