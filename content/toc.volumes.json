@@ -841,7 +841,8 @@
         "pt": "Volume 5",
         "fr": "Volume 5",
         "de": "Band 5",
-        "tr": "Cilt 5"
+        "tr": "Cilt 5",
+        "bg": "Том 5"
       },
       "parts": [
         {
@@ -856,7 +857,8 @@
             "pt": "As correções da cabeça e da barba de Arich Anpin",
             "fr": "Les corrections de la tête et de la barbe d'Arikh Anpin",
             "de": "Die Korrekturen von Kopf und Bart von Arich Anpin",
-            "tr": "Arih Anpin'in başının ve sakalının ıslahları"
+            "tr": "Arih Anpin'in başının ve sakalının ıslahları",
+            "bg": "Поправянията на главата и брадата на Арих Анпин"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIII",
           "chapterCount": 225,
@@ -880,7 +882,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -891,7 +894,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
