@@ -920,7 +920,8 @@
             "pt": "Os Mochin de Gadlut de Zeir Anpin",
             "fr": "Les Mokhin de Gadlout de Zeir Anpin",
             "de": "Die Mochin de Gadlut von Seir Anpin",
-            "tr": "Zeir Anpin'in Gadlut Mohin'i"
+            "tr": "Zeir Anpin'in Gadlut Mohin'i",
+            "bg": "Мохин де Гадлут на Зеир Анпин"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XIV",
           "chapterCount": 232,
@@ -943,7 +944,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -954,7 +956,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
