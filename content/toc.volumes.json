@@ -823,8 +823,8 @@
             "enAi": "full",
             "ru": "full",
             "uk": "partial",
-            "es": "partial",
-            "fr": "partial"
+            "es": "full",
+            "fr": "full"
           }
         }
       ]
@@ -902,10 +902,10 @@
             "en": "full",
             "enOfficial": "none",
             "enAi": "full",
-            "ru": "none",
+            "ru": "full",
             "uk": "none",
-            "es": "none",
-            "fr": "none"
+            "es": "full",
+            "fr": "full"
           }
         },
         {
@@ -964,10 +964,10 @@
             "en": "full",
             "enOfficial": "none",
             "enAi": "full",
-            "ru": "none",
+            "ru": "partial",
             "uk": "none",
-            "es": "none",
-            "fr": "none"
+            "es": "full",
+            "fr": "full"
           }
         }
       ]
@@ -984,7 +984,8 @@
         "pt": "Volume 6",
         "fr": "Volume 6",
         "de": "Band 6",
-        "tr": "Cilt 6"
+        "tr": "Cilt 6",
+        "bg": "Том 6"
       },
       "parts": [
         {
@@ -999,7 +1000,8 @@
             "pt": "A construção da Nukva de Zeir Anpin",
             "fr": "La construction de la Noukva de Zeir Anpin",
             "de": "Der Aufbau der Nukwa von Seir Anpin",
-            "tr": "Zeir Anpin'in Nukva'sının inşası"
+            "tr": "Zeir Anpin'in Nukva'sının inşası",
+            "bg": "Изграждане на Нуква на Зеир Анпин"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XV",
           "chapterCount": 233,
@@ -1022,7 +1024,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -1033,7 +1036,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",
@@ -1042,8 +1046,8 @@
             "enAi": "full",
             "ru": "none",
             "uk": "none",
-            "es": "none",
-            "fr": "none"
+            "es": "partial",
+            "fr": "partial"
           }
         },
         {
@@ -1058,7 +1062,8 @@
             "pt": "Os três mundos: Beriá, Yetzirá e Assiyá",
             "fr": "Les trois mondes : Bria, Yetsira et Assiya",
             "de": "Die drei Welten: Beria, Jezira und Assija",
-            "tr": "Üç dünya: Beria, Yetzira ve Assiya"
+            "tr": "Üç dünya: Beria, Yetzira ve Assiya",
+            "bg": "Трите свята: Брия, Ецира и Асия"
           },
           "sefariaNode": "Talmud Eser HaSefirot, Section XVI",
           "chapterCount": 276,
@@ -1081,7 +1086,8 @@
             "pt": "Capítulo 1",
             "fr": "Chapitre 1",
             "de": "Kapitel 1",
-            "tr": "Bölüm 1"
+            "tr": "Bölüm 1",
+            "bg": "Глава 1"
           },
           "lastChapterTitle": {
             "en": "List of Answers on Topics",
@@ -1092,7 +1098,8 @@
             "pt": "Respostas sobre os temas",
             "fr": "Réponses sur les thèmes",
             "de": "Antworten zu den Themen",
-            "tr": "Konular üzerine cevaplar"
+            "tr": "Konular üzerine cevaplar",
+            "bg": "Отговори по темите"
           },
           "availableSummary": {
             "he": "full",

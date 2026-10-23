@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "bg-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Атик де-Брия е точката Малхут де-Ацилут.</b> Това вече беше обяснено по-горе, стр. 1979, пасажът, започващ с „И на пръв поглед“. Ще бъде обяснено още по-долу, стр. 2012, пасажът, започващ с „ГАР“."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>И се облича като ГАР на ВАК де-АА, които са разкритите ХАГАТ.</b> Вече беше обяснено по-горе в съседния пасаж, че тези ХАГАТ де-АА са дошли в Брия само като одеяние на НХЙ де-Атик. Затова и сега са станали одеяние за Атик де-Брия. Виж там."
+    }
+  ]
+}
