@@ -17,6 +17,10 @@ Breaking these produces code that looks fine and is wrong:
   commit subjects. The one exception: the `en-ai` translation version **must**
   be badged "AI translated" in the UI.
 - **Git only when asked.** Otherwise leave changes in the working tree.
+- **Keep translation scratch local.** `.translation/`, `.translation-work/`,
+  and root `.translation-*-stage.json` files are excluded from lint/format
+  checks. Preserve unfinished staging and apply reviewed results with the
+  translation scripts; never commit scratch files.
 
 ## Definition of done
 
