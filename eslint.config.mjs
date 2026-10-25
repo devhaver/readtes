@@ -11,7 +11,7 @@ export default withNuxt({
   // Agent worktrees live under .claude/worktrees/ inside the repo — each has
   // its own checkout and lint run; the root lint must never crawl into them.
   .prepend({
-    ignores: ["**/.claude/**"],
+    ignores: ["**/.claude/**", ".translation/**", ".translation-work/**"],
   })
   // Override Vue rules to disable multi-word component names
   .override("nuxt/vue/rules", {

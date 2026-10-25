@@ -47,6 +47,8 @@ test-results
 .claude/settings.local.json
 .claude/worktrees/
 .translation/
+.translation-work/
+.translation-*-stage.json
 
 # Python bytecode from the translation gates
 __pycache__/

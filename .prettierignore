@@ -3,6 +3,9 @@ pnpm-lock.yaml
 .output
 content/
 .claude/
+.translation/
+.translation-work/
+.translation-*-stage.json
 
 # Symlink to AGENTS.md — formatting the target once is enough
 .github/copilot-instructions.md
