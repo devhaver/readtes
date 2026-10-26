@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-12/chapter-82",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:1",
+      "section": "ohr-pnimi",
+      "html": "<b>En la corrección fueron gestados en un primer Ibur, y las vasijas de VaK se fueron seleccionando poco a poco:</b> Como se explicó en el ítem adyacente, toda la corrección de ZA, desde la fase de su esencia y sustancia, concierne solamente a las vasijas de Panim, que son únicamente GE: las seis vasijas de JaGaT NeHY. El tiempo de su selección se denomina primer Ibur, y son seleccionadas mediante dos acoplamientos: el primer acoplamiento para la vasija de Galgalta, denominada JaGaT, y el segundo acoplamiento para la vasija de Einaim, denominada NeHY. También en el primer acoplamiento hay acoplamientos particulares hasta que se completa NaRaNJaY de Néfesh, y del mismo modo, en el segundo acoplamiento hay acoplamientos particulares hasta que se completa NaRaNJaY de Rúaj, los cuales se extienden durante los días de Yeniká. Y esto es lo que dice: las vasijas de VaK se fueron seleccionando poco a poco."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Aquello de las vasijas que no fue seleccionado y permaneció mezclado de bien y mal quedó en el vientre de Ima:</b> Se refiere a las vasijas de Hod, Yesod y Maljut, que no fueron seleccionadas durante el Ibur, sino durante el período de Yeniká, como se explicó arriba."
+    }
+  ]
+}
