@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-272",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Les sept rois se trouvent sous chaque aspect, dans Bina, dans ZA et dans Malkhout.</b> L’aspect principal consiste en Kélim de Panim : GE dans le Rosh et HGT jusqu’au Khazé dans le Gouf. Sous eux se trouvent les Kélim d’Akhoraim, soit la moitié de Bina, ZA et Malkhout, tant dans le Rosh que dans le Gouf ; ils sont considérés comme les sept rois, qui sont ZAT."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Et au Sioum de chacun d’eux, dans leurs trois inférieures, dans les Akhoraim, car cela est appelé « sous » :</b> la moitié de Bina, ZA et Malkhout du Gouf et du Rosh sont appelés par tous ces noms : les sept rois, ZAT, Sioum, les trois inférieures, Akhoraim et « sous ». En correspondance, les Kélim de Panim sont appelés l’aspect principal et sont appelés GAR ou les sept premières."
+    }
+  ]
+}
