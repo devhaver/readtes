@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "ru-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Атик де-Брия — точка малхут де-Ацилут.</b> Это уже объяснено выше, стр.1979, со слов «и на первый взгляд», и будет еще объяснено ниже, стр.2012, со слов «ГАР»."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>И облачается как ГАР де-ВАК де-АА, то есть раскрытые ХАГАТ.</b> В предыдущем пункте объяснено, что эти ХАГАТ АА пришли в Брия лишь как облачение НЕХИ Атика, и потому теперь также стали облачением Атика де-Брия. Посмотри там."
+    }
+  ]
+}
