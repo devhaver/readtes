@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-12/chapter-82",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Lors de la correction, ils furent conçus dans un premier Ibour et les Kélim de VAK furent clarifiés peu à peu :</b> Comme dans le point précédent, toute la correction de ZA, du côté de son essentiel et de son essence, concerne seulement les Kélim de Panim, qui sont uniquement GE, qui sont les six Kélim de HGT NHY, dont le temps de clarification est appelé premier Ibour ; et ils sont clarifiés par deux Zivouguim : le premier Zivoug pour le Kli de Galgalta, appelé HGT, et le second Zivoug pour le Kli des Eynaim, appelé NHY. Dans le premier Zivoug aussi il y a des Zivouguim particuliers jusqu’à ce qu’il complète les NRNHY de Nefesh, et de même dans le second Zivoug il y a des Zivouguim particuliers jusqu’à ce qu’il complète les NRNHY de Rouakh, qui se prolongent durant les jours de Yenika. Et c’est ce que dit : et les Kélim de VAK furent clarifiés peu à peu."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Ce qui n’avait pas été clarifié parmi les Kélim et resta mêlé de bien et de mal resta dans le ventre de Ima :</b> c’est-à-dire les Kélim de Hod, Yessod et Malkhout, qui ne furent pas clarifiés durant le temps de l’Ibour, mais seulement durant le temps de Yenika, comme ci-dessus."
+    }
+  ]
+}
