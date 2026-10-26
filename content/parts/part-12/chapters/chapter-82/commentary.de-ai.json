@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-12/chapter-82",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Und in der Korrektur wurden sie in einem ersten Ibur empfangen, und die Kelim de WaK wurden nach und nach geklärt:</b> Wie im vorigen Punkt erklärt wurde, betrifft die gesamte Korrektur de SA hinsichtlich seines Wesenskerns und seiner Substanz nur die Kelim de Panim, also allein GE. Dies sind die sechs Kelim CHaGaT NeHJ, und die Zeit ihrer Klärung wird erster Ibur genannt. Sie werden durch zwei Siwugim geklärt: der erste Siwug für das Kli de Galgalta, das CHaGaT genannt wird, und der zweite Siwug für das Kli de Ejnaim, das NeHJ genannt wird. Auch im ersten Siwug gibt es einzelne Siwugim, bis er NaRaNCHaJ de Nefesh vervollständigt; ebenso gibt es im zweiten Siwug einzelne Siwugim, bis er NaRaNCHaJ de Ruach vervollständigt, die sich im Verlauf der Tage der Yenika erstrecken. Dies ist, was er sagt: Die Kelim de WaK wurden nach und nach geklärt."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Und was von den Kelim nicht geklärt wurde und vermischt, gut und böse, verblieb, blieb im Bauch von Ima:</b> Dies bezieht sich auf die Kelim Hod, Jessod und Malchut, die nicht während der Zeit des Ibur, sondern erst im Verlauf der Zeit der Yenika geklärt wurden, wie oben beschrieben."
+    }
+  ]
+}
