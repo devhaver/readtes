@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Atik de Beria est le point de Malkhout de Atsilout.</b> Cela a déjà été expliqué plus haut, page 1979, passage commençant par « Et à première vue ». Cela sera encore expliqué plus loin, page 2012, passage commençant par « Les GAR »."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Et il se revêt comme GAR de VAK de AA, qui sont HGT révélées.</b> Il a déjà été expliqué plus haut, dans le passage adjacent, que ces HGT de AA ne vinrent dans Beria que comme vêtement de NHY de Atik ; elles devinrent donc maintenant elles aussi un vêtement pour Atik de Beria. Voir là-bas."
+    }
+  ]
+}
