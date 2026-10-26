@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Átik de Beriá es el punto de Maljut de Atzilut.</b> Esto ya se explicó arriba, Página 1979, el pasaje que comienza «Y a primera vista». Y se explicará más adelante, Página 2012, el pasaje que comienza «Los GaR»."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Y se reviste como GaR de VaK de AA, que son JaGaT revelados.</b> Ya se explicó arriba, en el pasaje adyacente, que estos JaGaT de AA no vinieron a Beriá sino en la fase de vestidura de NeHY de Átik, y por eso también ahora se hicieron una vestidura para Átik de Beriá. Ver allí."
+    }
+  ]
+}

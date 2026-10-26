@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-272",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:1",
+      "section": "ohr-pnimi",
+      "html": "<b>La existencia de los siete reyes debajo de cada fase, en Biná, en ZA y en Maljut.</b> La fase principal son las vasijas de Panim: GE en el Rosh y JaGaT hasta el Jazé en el Guf. Debajo de ellas están las vasijas de Ajoraim, que son la mitad de Biná, ZA y Maljut, tanto en el Rosh como en el Guf, y se consideran los siete reyes, que son ZaT."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Y en el Sium de cada una de ellas, y en sus tres inferiores, en Ajoraim, pues esto se llama «debajo»:</b> La mitad de Biná, ZA y Maljut del Guf y del Rosh reciben todos estos nombres: los siete reyes, ZaT, Sium, las tres inferiores, Ajoraim y «debajo». Frente a ellas, las vasijas de Panim se denominan la fase principal y se llaman GaR o las siete primeras."
+    }
+  ]
+}
