@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-12/chapter-152",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:152",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:152:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Los Vatikin lo concluían antes de la salida del sol y, gracias a ello, no necesitaban leer el Shemá dos veces en la oración matutina:</b> Pues los Mojin de la primera cópula, que tuvo lugar en el Shemá de antes de dormir, no se retiran hasta la salida del sol. Por lo tanto, como adelantaban el Shemá del día para leerlo antes de la salida del sol, podían elevar de inmediato, mediante este Shemá, a ZoN como MaN hacia AVI superiores, a fin de recibir los Mojin de GaR. No necesitaban adelantar el Shemá de los sacrificios para hacerla vasija, pues en ese momento la vasija aún permanecía desde el acoplamiento de medianoche. Y esto es lo que dice: “Gracias a ello no necesitaban leer el Shemá dos veces en la oración matutina”, pues no necesitaban la primera cópula."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:152:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Otros Mojin nuevos, superiores a los que había a medianoche:</b> Pues a medianoche el acoplamiento no era para los Mojin efectivos, sino para completar las vasijas, como se explicó arriba. Pero en el Shemá del día el acoplamiento tiene como propósito extender GaR de Mojin propiamente dichos: VaK de estos Mojin se extiende en el Shemá de Yotzer, y su GaR se extiende en la bendición de los Patriarcas. Entonces ZoN mismos son aptos para el acoplamiento en la bendición Sim Shalom."
+    }
+  ]
+}

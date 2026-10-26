@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-13/chapter-02",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Hay siete correcciones en esta Reisha, etc.:</b> Es decir, proceden de la iluminación de ZaT de Átik que ilumina en ellas. Estas son las siete Sefirot JaGaT NeHYM, cuyo significado se explicará más adelante."
+    }
+  ]
+}

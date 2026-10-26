@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-12/chapter-112",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:112",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:112:1",
+      "section": "ohr-pnimi",
+      "html": "<b>La tercera Tevuná, que es la segunda:</b> La tercera pertenece a AVI superiores, y la segunda es del discernimiento de YESHSUT. Durante el nacimiento, AVI y YESHSUT vuelven a dividirse en dos Partzufim, y YESHSUT mismos también se dividen en interior y exterior: los YESHSUT interiores se denominan los primeros YESHSUT, y los YESHSUT exteriores se denominan los segundos YESHSUT. Por tanto, esta segunda Tevuná se considera la tercera Tevuná respecto de Ima superior, como se explicó en las partes anteriores."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:112:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>El cuerpo se conduce según la espiritualidad que hay en ellos:</b> Pues las Luces son lo esencial en el Partzuf, y no hay revelación en una vasija sino conforme al discernimiento de las Luces que contiene. Por tanto, puesto que en estos NeHY no hay ninguna Luz de Tevuná, sino únicamente las Luces de ZA, ellos también se consideran del discernimiento de ZA, al igual que las Luces."
+    }
+  ]
+}
