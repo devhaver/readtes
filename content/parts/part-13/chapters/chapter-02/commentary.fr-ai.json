@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-13/chapter-02",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Il existe sept corrections dans cette Rosh de AA</b>, etc. Elles proviennent de l’illumination des ZAT de Atik qui brillent en elles. Ce sont les sept Sefirot HGT NHYM, dont l’explication sera donnée plus loin."
+    }
+  ]
+}
