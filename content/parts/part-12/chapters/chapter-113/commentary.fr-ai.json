@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-12/chapter-113",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Les dix Sefirot de ZA sont comptées à partir de Hokhma vers le bas, appelée Rechit, et non à partir de Keter vers le bas :</b> C’est-à-dire parce que le Keter de ZA, outre que son Kli provient de Tifferet de Tvouna, a aussi sa lumière de la phase de Tvouna ; c’est pourquoi le Keter n’est pas considéré comme une phase de ZA, qui commence seulement à partir de Hokhma, comme il est écrit à sa place."
+    }
+  ]
+}
