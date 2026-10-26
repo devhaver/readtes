@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-12/chapter-113",
+  "layer": "commentary",
+  "versionId": "es-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Las diez Sefirot de ZA se cuentan desde Jojmá hacia abajo, llamado el comienzo, y no desde Kéter hacia abajo:</b> Esto se debe a que el Kéter de ZA, además de que su vasija procede de Tiféret de Tevuná, también la Luz que contiene pertenece al discernimiento de Tevuná. Por ello, Kéter no se cuenta en el discernimiento de ZA, y este comienza únicamente desde Jojmá, como se explica en su lugar."
+    }
+  ]
+}
