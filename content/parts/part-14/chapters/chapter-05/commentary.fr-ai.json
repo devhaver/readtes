@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-14/chapter-05",
+  "layer": "commentary",
+  "versionId": "fr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:5",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:5:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Les âmes des justes ne montent dans le secret de MAN qu’au cours de la nuit, etc., mais ZON monte dans le secret de MAN le jour comme la nuit.</b> Cela sera expliqué plus loin, page 1517, au passage commençant par « Et en cela »."
+    }
+  ]
+}
