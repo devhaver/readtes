@@ -1,0 +1,4232 @@
+{
+  "batch": "de-part-15-001",
+  "targetLanguage": "de",
+  "targetVersionId": "de-ai",
+  "layer": "source",
+  "sourceVersionId": "he-jerusalem-1956",
+  "itemCount": 76,
+  "sourceChars": 19713,
+  "instructions": "Translate the items in this batch (the Ari's text, an Introduction, Inner Observation, or Questions and Answers) from Hebrew into de.\n\nReturn JSON of the shape:\n  { \"batch\": \"<this batch id>\", \"translations\": [ { \"chapterId\": \"...\", \"anchorId\": \"op-N\", \"html\": \"...\" } ] }\n\nRules:\n1. Translate ONLY the `html` of each item in `chapters[].items`. Return one entry per item, no more and no fewer.\n2. Terminology: the de terminology table (docs/translation/terms-de.md, drawn from Bnei Baruch's own de translations) is binding. `glossary.entries` maps each Hebrew term to its settled English, which helps you recognise the term — it does not decide the de form. Each item's `en` is the published English of the same passage: use it to resolve abbreviations, citations and difficult syntax, never as the source. Where it and the Hebrew disagree, the Hebrew wins; report the disagreement.\n3. `chapters[].context` is NOT for translation. It is the Ari's text these notes gloss — match its terminology, especially `targetText` where present, since the reader sees it in the pane beside these notes.\n4. Preserve inline HTML exactly (`<b>`, `<br>`, `<small>`, quotation marks). The html is rendered, not escaped.\n5. Write in Rav Laitman's voice, using Bnei Baruch terminology.\n6. Do not add commentary, notes, or bracketed explanations of your own. Bracketed glosses on first use of a transliterated term are the one exception, per the glossary's conventions.\n\nEverything else about each item — its number, label, target seif, section and reference — is assembled mechanically from the Hebrew source and must NOT be returned.",
+  "glossary": {
+    "conventions": [
+      {
+        "id": "item-markers-gematria",
+        "topic": "Inline item markers / anchor labels",
+        "rule": "A Hebrew letter used as an inline marker (א׳, ב׳ … ק, ר, ש, ת) is rendered as its gematria value in Arabic numerals: א→1 … ט→9, י→10, כ→20, ל→30, מ→40, נ→50, ס→60, ע→70, פ→80, צ→90, ק→100, ר→200, ש→300, ת→400. Never keep the Hebrew letter, never renumber sequentially.",
+        "evidence": "51 marker pairs across the four chapters that carry anchors; 51/51 follow the gematria mapping with no exception.",
+        "examples": [
+          {
+            "chapterId": "part-01/chapter-01",
+            "layer": "source",
+            "he": "וכאשר לעלה ברצונו הפשוט (marker ל on op-12)",
+            "en": "When it arose in His simple will 30"
+          },
+          {
+            "chapterId": "part-01/chapter-01",
+            "layer": "source",
+            "he": "תמונת המשולש (marker ת on op-22)",
+            "en": "the image of the triangle 400"
+          }
+        ]
+      },
+      {
+        "id": "commentary-lemma",
+        "topic": "Commentary items",
+        "rule": "Every en-bb commentary item opens with a bolded lemma quoting the source phrase it comments on, followed by a colon: '<strong> Upper, simple light:</strong> It refers to …'. The Hebrew commentary item has NO lemma — it is identified only by its anchor. A translation run must synthesise the lemma from the aligned source text.",
+        "evidence": "51/51 en-bb commentary items begin with <strong>…</strong>; 0/51 Hebrew commentary items do.",
+        "examples": [
+          {
+            "chapterId": "part-01/chapter-01",
+            "layer": "commentary",
+            "he": "היינו האור המתפשט מעצמות הבורא יתברך.",
+            "en": "<strong> Upper, simple light:</strong> It refers to the light that expands from the Creator Himself."
+          },
+          {
+            "chapterId": "part-01/chapter-02",
+            "layer": "commentary",
+            "he": "היינו בחינה ראשונה מד' הבחינות כנ\"ל בדיבור הסמוך.",
+            "en": "<strong> The upper beginning of the line is extended from Ein Sof Himself:</strong> Meaning the first phase of the four phases (see above item)."
+          }
+        ]
+      },
+      {
+        "id": "nav-links-dropped",
+        "topic": "Navigation links",
+        "rule": "The Sefaria cross-links '(לשאלה)' (to the question) and '(לתשובה)' (to the answer) that open/close Table-of-Questions and Table-of-Answers items are dropped entirely. They have no English rendering.",
+        "evidence": "663 occurrences of each in the Hebrew of aligned items; zero English counterparts anywhere in en-bb.",
+        "examples": [
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "(לשאלה) זווג דהכאה (ח\"ב הסת\"פ י\"ח) פעולת המסך…",
+            "en": "The act of the screen, which detains and conceals the light…"
+          },
+          {
+            "chapterId": "part-01/questions-topics-01",
+            "layer": "source",
+            "he": "מהו גמר התיקון. (לתשובה)",
+            "en": "What is the end of correction?"
+          }
+        ]
+      },
+      {
+        "id": "answer-headword-dropped",
+        "topic": "Table-of-Answers items",
+        "rule": "The bolded Hebrew headword that opens a Table-of-Answers item is NOT repeated in English — the item begins directly with the definition body. The head-position citation that follows the headword is either moved to the very end of the item or dropped; it is never left in first position.",
+        "evidence": "243 aligned answer items follow the '(לשאלה) <b>headword</b> (citation)<br>body' shape. Of the 189 that carry a citation, 124 (66%) move it to the end and 65 (34%) drop it; 0 keep it at the start.",
+        "examples": [
+          {
+            "chapterId": "part-03/answers-terminology-01",
+            "layer": "source",
+            "he": "(לשאלה) <b>הסתכלות</b> (ח\"ג פי\"ב אות א')<br>התפשטות אור א\"ס ב\"ה לזווג דהכאה במסך…",
+            "en": "The expansion of the light of Ein Sof for coupling by striking in the screen … or look. (Part 3, Chapter 12, item 1)"
+          },
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "(לשאלה) <b>ראש</b> (ח\"ג פ\"ו)<br>ט\"ס של אור עליון…",
+            "en": "The nine Sefirot of the upper light that expand to a coupling by striking … are called the “Rosh” [head] of the degree…"
+          }
+        ]
+      },
+      {
+        "id": "question-punctuation",
+        "topic": "Table-of-Questions items",
+        "rule": "Hebrew question items end with a full stop; en-bb renders them as English questions ending in '?'. Where a citation is appended the question mark is usually dropped and the item ends with the closing parenthesis.",
+        "evidence": "663 aligned question items: 477 end in '?', 65 end in ')', 13 end in '.', 108 end without terminal punctuation.",
+        "examples": [
+          {
+            "chapterId": "part-01/questions-topics-01",
+            "layer": "source",
+            "he": "מהו החומר הראשון של כל נאצל. (לתשובה)",
+            "en": "What is the first substance of every emanated being?"
+          },
+          {
+            "chapterId": "part-02/questions-terminology-01",
+            "layer": "source",
+            "he": "מהו זווג דהכאה. (לתשובה)",
+            "en": "What is coupling by striking (Part Two, Inner Observation, 18)"
+          }
+        ]
+      },
+      {
+        "id": "abbreviation-expansion",
+        "topic": "Citation abbreviations",
+        "rule": "Hebrew citation abbreviations are expanded to English words, never transliterated: ח\"א/ח\"ב/ח\"ג/ח\"ו → Part 1/2/3/6 (see inconsistency 'part-numbering'); פ\"א / פרק א' → Chapter 1; או\"פ → Inner Light; הסת\"פ / הסתכלות פנימית → Inner Observation; אות + gematria → item/Item + Arabic numeral; דף + gematria → page/Item + Arabic numeral; עי' תשובה + gematria → see answer + Arabic numeral; שם → ibid. / (There); בדיבור הסמוך → (previous item) / (in the above item) / (see above item); ד\"ה X → Sub Header, “X” (Part 5) or dropped elsewhere. All Hebrew letter-numerals become Arabic numerals.",
+        "evidence": "Verified pair by pair across the aligned parenthetical citations in all five parts.",
+        "examples": [
+          {
+            "chapterId": "part-01/answers-topics-01",
+            "layer": "source",
+            "he": "(או\"פ ח\"א פ\"א ק')",
+            "en": "(Inner Light, Part 1, Chap 1, item 100)"
+          },
+          {
+            "chapterId": "part-03/answers-terminology-01",
+            "layer": "source",
+            "he": "(ח\"ג פ\"ה אות א')",
+            "en": "(Part 3, Chapter 5, item 1)"
+          },
+          {
+            "chapterId": "part-02/answers-topics-01",
+            "layer": "source",
+            "he": "(עי' תשובה מ\"ג)",
+            "en": "(See answer 43)"
+          },
+          {
+            "chapterId": "part-05/answers-terminology-01",
+            "layer": "source",
+            "he": "(דף ש\"ד אות ט\"ו ובאו\"פ ד\"ה חלקים)",
+            "en": "(Item 15, and Inner Light, Sub Header, “Parts”)"
+          }
+        ]
+      },
+      {
+        "id": "honorifics-dropped",
+        "topic": "Honorifics and pious formulae",
+        "rule": "ב\"ה (ברוך הוא) after א\"ס is always dropped: 'א\"ס ב\"ה' → 'Ein Sof'. ית' / יתברך is dropped or absorbed into 'His'/'Him'. ח\"ו (חס ושלום) becomes the adverb 'whatsoever' in negative clauses, or is dropped — it is never rendered 'God forbid'. ע\"ש / עש\"ה (עיין שם) is usually dropped. ז\"ל / זצ\"ל do not occur anywhere in the aligned Hebrew, so no rendering is attested for them.",
+        "evidence": "79 occurrences of ב\"ה in the aligned Hebrew; 0 occurrences of 'blessed' in en-bb. 206 occurrences of ית' with no dedicated English token. 12 rows with ח\"ו; those rendered use 'whatsoever'.",
+        "examples": [
+          {
+            "chapterId": "part-01/answers-topics-01",
+            "layer": "source",
+            "he": "אע\"פ שבחינה ד' שבא\"ס ב\"ה צמצמה את עצמה",
+            "en": "Although phase four in Ein Sof restricted herself"
+          },
+          {
+            "chapterId": "part-01/chapter-01",
+            "layer": "commentary",
+            "he": "אין הכוונה על אויר גשמי ח\"ו",
+            "en": "This does not refer to corporeal air whatsoever."
+          }
+        ]
+      },
+      {
+        "id": "harav-is-ari",
+        "topic": "Author references",
+        "rule": "In TES, 'הרב' means the ARI (Isaac Luria), the author of the quoted Etz Chaim text. en-bb always renders it 'the ARI'; 'the Rav' never occurs. Baal HaSulam, the commentator, is not named in the running text.",
+        "evidence": "'the ARI' 19 occurrences, 'the Rav' 0.",
+        "examples": [
+          {
+            "chapterId": "part-01/chapter-01",
+            "layer": "commentary",
+            "he": "וז\"ש הרב, אשר אור העליון הנמשך מעצמותו ית'…",
+            "en": "The ARI writes that the upper light that is extended from His self…"
+          },
+          {
+            "chapterId": "part-03/answers-terminology-01",
+            "layer": "source",
+            "he": "כמ\"ש הרב בע\"ח שער י\"ח פ\"א",
+            "en": "As written by the ARI, the root of the lights and their essence are the four simple letters of HaVaYaH"
+          }
+        ]
+      },
+      {
+        "id": "gloss-brackets",
+        "topic": "Transliteration glosses",
+        "rule": "A transliterated term is followed by a square-bracketed English gloss on its first appearance in an item, then used bare: 'Rosh [head]', 'Guf [body]', 'Sof [end/conclusion]', 'Ein Sof [infinity]', 'Katnut [smallness/infancy]', 'Gadlut [greatness/adulthood]', 'Partzufim [pl. of Partzuf]', 'Klipot [shells]', 'Peh [mouth]', 'Hotem [nose]', 'Ozen [ear]', 'Nekudot [dots]', 'RTS [Rosh-Toch-Sof]'. The gloss is optional and is used sparsely — do not gloss on every occurrence.",
+        "evidence": "All bracketed glosses in en-bb were enumerated; the list above is exhaustive for the technical vocabulary.",
+        "examples": [
+          {
+            "chapterId": "part-01/chapter-01",
+            "layer": "source",
+            "he": "מן אור א\"ס פשוט ההוא",
+            "en": "with that simple light of Ein Sof [infinity]"
+          },
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "וכל כלי קבלה שבפרצופים",
+            "en": "All the vessels of reception in the Partzufim [pl. of Partzuf]"
+          }
+        ]
+      },
+      {
+        "id": "phase-ordinals",
+        "topic": "Numbers in prose",
+        "rule": "בחינה א'/ב'/ג'/ד' and בחי\"א…בחי\"ד are 'phase one', 'phase two', 'phase three', 'phase four' — ordinals spelled as words, lower-case 'phase'. Digits are not used ('phase 4' never occurs). 'ten Sefirot' likewise keeps 'ten' as a lower-case word.",
+        "evidence": "'phase four' 159 occurrences vs 'phase 4' 0; 'ten Sefirot' 213 vs 'Ten Sefirot' 1.",
+        "examples": [
+          {
+            "chapterId": "part-01/answers-topics-01",
+            "layer": "source",
+            "he": "כח העיכוב שנעשה על בחינה ד' לאחר הצמצום",
+            "en": "a detaining force that was placed on phase four after the restriction"
+          },
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "ע\"ס הנמשכות ממסך ולמטה",
+            "en": "The ten Sefirot that are extended from the screen and below"
+          }
+        ]
+      },
+      {
+        "id": "feminine-malchut",
+        "topic": "Grammatical gender",
+        "rule": "Malchut, בחינה ד' (phase four) and the Nukva keep Hebrew feminine grammar in English: 'she', 'her', 'herself'. Do not neuter them to 'it'.",
+        "evidence": "35 'Malchut … she/her' contexts, 18 'phase four … she/her' contexts, 13 'herself'.",
+        "examples": [
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "והיא אינה מקבלתו, מסבת המסך המעכב אותו",
+            "en": "which she does not receive because of the screen that detains it"
+          },
+          {
+            "chapterId": "part-01/answers-topics-01",
+            "layer": "source",
+            "he": "אע\"פ שבחינה ד' שבא\"ס ב\"ה צמצמה את עצמה",
+            "en": "Although phase four in Ein Sof restricted herself"
+          }
+        ]
+      },
+      {
+        "id": "typography",
+        "topic": "Typography",
+        "rule": "en-bb uses curly typographic quotes (“ ”, ’) for quoted terms and never straight ASCII quotes. Bracketed glosses use square brackets. Hebrew letters appear in English only inside letter glosses such as 'Vav [ו]'.",
+        "evidence": "330 curly opening double quotes, 0 straight double quotes, 21 curly apostrophes; 32 Hebrew characters total, all inside letter glosses.",
+        "examples": [
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "הנה פעולה זו מכונה \"זווג דהכאה\"",
+            "en": "is called coupling by striking … On the one hand, it “strikes” the light"
+          },
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "ומכונה ע\"כ פנימיות הכלי",
+            "en": "is therefore called the “internality” of the vessel"
+          }
+        ]
+      },
+      {
+        "id": "layer-names",
+        "topic": "Commentary layer names",
+        "rule": "אור פנימי as the name of Baal HaSulam's first commentary layer is 'Inner Light' in Title Case; the same words in lower case ('inner light') are the technical term for the light clothed inside a vessel. הסתכלות פנימית is 'Inner Observation'. Keep the case distinction — it is the only thing separating the layer name from the term.",
+        "evidence": "'Inner Light' 226, 'inner light' (the term) 10; 'Inner Observation' 106.",
+        "examples": [
+          {
+            "chapterId": "part-02/answers-terminology-01",
+            "layer": "source",
+            "he": "(לשאלה) אור פנימי (ח\"ב פ\"א או\"פ מ') הוא האור המלובש בכלי.",
+            "en": "Inner light is the light that is clothed in the vessel."
+          },
+          {
+            "chapterId": "part-05/answers-topics-01",
+            "layer": "source",
+            "he": "מכח הביטוש דאו\"מ ואו\"פ",
+            "en": "because of the clash of surrounding light and inner light"
+          }
+        ]
+      }
+    ],
+    "knownGaps": [
+      "en-bb covers 737 of the 5,148 Hebrew source chapters (14%) and only 4 of the 25 Hebrew commentary chapters. Parts 4 and 7-16 have no en-bb text at all, so no terminology from those parts is evidenced here.",
+      "Coverage is dominated by the Tables of Questions and Answers, which are terminological by nature. Only 6 running chapters (part-01/chapter-01, part-01/chapter-02, part-03/chapter-03, part-05/chapter-32 and their commentary layers) are aligned, so prose-level style evidence is much thinner than term-level evidence.",
+      "Terms requested in the brief but not evidenced strongly enough to lock: תע\"ס and אדר\"ז do not occur in the aligned Hebrew at all; ס\"ה occurs once; זצ\"ל occurs zero times, so no honorific rendering is attested for it.",
+      "עיבור, יניקה, דבקות, תגין each occur in 1-3 aligned items — too thin to lock and therefore omitted rather than guessed.",
+      "The 9 fallback chapters were aligned only at whole-chapter granularity, so citations drawn from them (marked 'whole-chapter (item counts differ)') are weaker evidence than item-level ones.",
+      "Frequency counts in `variants` are occurrence counts inside the subset of aligned items whose Hebrew matches the term's pattern; they are not corpus-wide counts and a single item can contribute several.",
+      "The en-ai version was deliberately not mined. It was only checked against the finished glossary; see the audit reported alongside this file."
+    ],
+    "entries": [
+      {
+        "id": "or",
+        "he": "אור",
+        "canonicalEn": "light",
+        "strategy": "translate",
+        "heItemCount": 449,
+        "alignedItemCount": 441,
+        "coveragePct": 98,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "light",
+            "occurrences": 1250
+          },
+          {
+            "en": "Light (title case, in section names)",
+            "occurrences": 7
+          }
+        ],
+        "note": "Never transliterated as Ohr. Capitalised only inside the section names 'Inner Light' / 'Inner Observation'.",
+        "citationCount": 3
+      },
+      {
+        "id": "orot",
+        "he": "אורות",
+        "canonicalEn": "lights",
+        "strategy": "translate",
+        "heItemCount": 153,
+        "alignedItemCount": 149,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "lights",
+            "occurrences": 242
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "or-elyon",
+        "he": "אור עליון",
+        "canonicalEn": "upper light",
+        "strategy": "translate",
+        "heItemCount": 79,
+        "alignedItemCount": 79,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "upper light",
+            "occurrences": 124
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "kli",
+        "he": "כלי",
+        "canonicalEn": "vessel",
+        "strategy": "translate",
+        "heItemCount": 296,
+        "alignedItemCount": 293,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "vessel/vessels",
+            "occurrences": 754
+          }
+        ],
+        "note": "Translated, not transliterated. 'Kli' occurs once in the whole en-bb corpus.",
+        "citationCount": 3
+      },
+      {
+        "id": "kelim",
+        "he": "כלים",
+        "canonicalEn": "vessels",
+        "strategy": "translate",
+        "heItemCount": 159,
+        "alignedItemCount": 157,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "vessels",
+            "occurrences": 273
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "kli-kabbala",
+        "he": "כלי קבלה",
+        "canonicalEn": "vessel of reception",
+        "strategy": "translate",
+        "heItemCount": 25,
+        "alignedItemCount": 23,
+        "coveragePct": 92,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "vessels of reception",
+            "occurrences": 20
+          },
+          {
+            "en": "vessel of reception",
+            "occurrences": 12
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "masach",
+        "he": "מסך",
+        "canonicalEn": "screen",
+        "strategy": "translate",
+        "heItemCount": 145,
+        "alignedItemCount": 142,
+        "coveragePct": 98,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "screen",
+            "occurrences": 296
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "aviut",
+        "he": "עביות",
+        "canonicalEn": "coarseness",
+        "strategy": "translate",
+        "heItemCount": 98,
+        "alignedItemCount": 95,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "coarseness",
+            "occurrences": 160
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "av",
+        "he": "עב",
+        "canonicalEn": "coarse",
+        "strategy": "translate",
+        "heItemCount": 15,
+        "alignedItemCount": 11,
+        "coveragePct": 73,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "coarse/coarser",
+            "occurrences": 20
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "zakut",
+        "he": "זכות",
+        "canonicalEn": "refinement",
+        "strategy": "translate",
+        "heItemCount": 6,
+        "alignedItemCount": 6,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03"
+        ],
+        "variants": [
+          {
+            "en": "refinement",
+            "occurrences": 10
+          }
+        ],
+        "note": "Collides with הזדככות, also 'refinement'. See inconsistencies.",
+        "citationCount": 3
+      },
+      {
+        "id": "zach",
+        "he": "זך",
+        "canonicalEn": "refined",
+        "strategy": "translate",
+        "heItemCount": 18,
+        "alignedItemCount": 17,
+        "coveragePct": 94,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "refined",
+            "occurrences": 22
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hizdakchut",
+        "he": "הזדככות",
+        "canonicalEn": "refinement",
+        "strategy": "translate",
+        "heItemCount": 56,
+        "alignedItemCount": 53,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "refine/refines/refined (verb)",
+            "occurrences": 53
+          },
+          {
+            "en": "refinement (noun)",
+            "occurrences": 44
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "reshimo",
+        "he": "רשימו",
+        "canonicalEn": "record",
+        "strategy": "translate",
+        "heItemCount": 59,
+        "alignedItemCount": 58,
+        "coveragePct": 98,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "record",
+            "occurrences": 71
+          },
+          {
+            "en": "records",
+            "occurrences": 42
+          }
+        ],
+        "note": "Always translated. 'Reshimo'/'Reshimot' never appear in en-bb.",
+        "citationCount": 3
+      },
+      {
+        "id": "zivug",
+        "he": "זווג",
+        "canonicalEn": "coupling",
+        "strategy": "translate",
+        "heItemCount": 120,
+        "alignedItemCount": 118,
+        "coveragePct": 98,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "coupling",
+            "occurrences": 181
+          }
+        ],
+        "note": "Hebrew is spelled זווג (defective) throughout this corpus; זיווג does not occur.",
+        "citationCount": 3
+      },
+      {
+        "id": "hakaa",
+        "he": "הכאה",
+        "canonicalEn": "striking",
+        "strategy": "translate",
+        "heItemCount": 25,
+        "alignedItemCount": 24,
+        "coveragePct": 96,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "striking",
+            "occurrences": 32
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "zivug-dehakaa",
+        "he": "זווג דהכאה",
+        "canonicalEn": "coupling by striking",
+        "strategy": "translate",
+        "heItemCount": 18,
+        "alignedItemCount": 18,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "coupling by striking",
+            "occurrences": 21
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "olam",
+        "he": "עולם",
+        "canonicalEn": "world",
+        "strategy": "translate",
+        "heItemCount": 101,
+        "alignedItemCount": 87,
+        "coveragePct": 86,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "world/worlds",
+            "occurrences": 173
+          },
+          {
+            "en": "Olam",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "tzimtzum",
+        "he": "צמצום",
+        "canonicalEn": "restriction",
+        "strategy": "translate",
+        "heItemCount": 70,
+        "alignedItemCount": 68,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "restriction",
+            "occurrences": 125
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "kav",
+        "he": "קו",
+        "canonicalEn": "line",
+        "strategy": "translate",
+        "heItemCount": 29,
+        "alignedItemCount": 29,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "line",
+            "occurrences": 45
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "igulim",
+        "he": "עיגולים",
+        "canonicalEn": "circles",
+        "strategy": "translate",
+        "heItemCount": 41,
+        "alignedItemCount": 41,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02"
+        ],
+        "variants": [
+          {
+            "en": "circles",
+            "occurrences": 64
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "igul",
+        "he": "עיגול",
+        "canonicalEn": "circle",
+        "strategy": "translate",
+        "heItemCount": 12,
+        "alignedItemCount": 9,
+        "coveragePct": 75,
+        "attestedInParts": [
+          "part-01",
+          "part-02"
+        ],
+        "variants": [
+          {
+            "en": "circle",
+            "occurrences": 16
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "yosher",
+        "he": "יושר",
+        "canonicalEn": "straightness",
+        "strategy": "translate",
+        "heItemCount": 30,
+        "alignedItemCount": 30,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02"
+        ],
+        "variants": [
+          {
+            "en": "straightness",
+            "occurrences": 47
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "histaklut-pnimit",
+        "he": "הסתכלות פנימית",
+        "canonicalEn": "Inner Observation",
+        "strategy": "translate",
+        "heItemCount": 110,
+        "alignedItemCount": 91,
+        "coveragePct": 83,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Inner Observation",
+            "occurrences": 93
+          }
+        ],
+        "note": "Name of Baal HaSulam's second commentary layer. Title case, both words capitalised (one stray 'Inner observation').",
+        "citationCount": 3
+      },
+      {
+        "id": "histaklut",
+        "he": "הסתכלות",
+        "canonicalEn": "look",
+        "strategy": "translate",
+        "heItemCount": 16,
+        "alignedItemCount": 13,
+        "coveragePct": 81,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "look/looking",
+            "occurrences": 18
+          }
+        ],
+        "note": "As a technical term (Malchut looking at the light) it is 'a look' / 'looking', NOT 'observation'.",
+        "citationCount": 3
+      },
+      {
+        "id": "or-pnimi",
+        "he": "אור פנימי",
+        "canonicalEn": "inner light",
+        "strategy": "translate",
+        "heItemCount": 230,
+        "alignedItemCount": 189,
+        "coveragePct": 82,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Inner Light (commentary title)",
+            "occurrences": 172
+          },
+          {
+            "en": "inner light (the term)",
+            "occurrences": 10
+          }
+        ],
+        "note": "Two senses: the title of Baal HaSulam's first commentary layer (Title Case) and the technical term (lower case).",
+        "citationCount": 3
+      },
+      {
+        "id": "or-makif",
+        "he": "אור מקיף",
+        "canonicalEn": "surrounding light",
+        "strategy": "translate",
+        "heItemCount": 17,
+        "alignedItemCount": 14,
+        "coveragePct": 82,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "surrounding light",
+            "occurrences": 14
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "or-yashar",
+        "he": "אור ישר",
+        "canonicalEn": "direct light",
+        "strategy": "translate",
+        "heItemCount": 70,
+        "alignedItemCount": 68,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "direct light",
+            "occurrences": 108
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "or-hozer",
+        "he": "אור חוזר",
+        "canonicalEn": "reflected light",
+        "strategy": "translate",
+        "heItemCount": 103,
+        "alignedItemCount": 99,
+        "coveragePct": 96,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "reflected light",
+            "occurrences": 170
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hitlabshut",
+        "he": "התלבשות",
+        "canonicalEn": "clothing",
+        "strategy": "translate",
+        "heItemCount": 82,
+        "alignedItemCount": 81,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "clothe/clothes/clothed",
+            "occurrences": 112
+          },
+          {
+            "en": "clothing (noun)",
+            "occurrences": 67
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "bitush",
+        "he": "ביטוש",
+        "canonicalEn": "clash",
+        "strategy": "translate",
+        "heItemCount": 5,
+        "alignedItemCount": 5,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "clash",
+            "occurrences": 5
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "neetzal",
+        "he": "נאצל",
+        "canonicalEn": "emanated being",
+        "strategy": "translate",
+        "heItemCount": 65,
+        "alignedItemCount": 65,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "emanated",
+            "occurrences": 122
+          },
+          {
+            "en": "emanated being",
+            "occurrences": 82
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "maatzil",
+        "he": "מאציל",
+        "canonicalEn": "Emanator",
+        "strategy": "translate",
+        "heItemCount": 36,
+        "alignedItemCount": 27,
+        "coveragePct": 75,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "Emanator",
+            "occurrences": 65
+          },
+          {
+            "en": "emanator (lower case)",
+            "occurrences": 6
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hishtalshelut",
+        "he": "השתלשלות",
+        "canonicalEn": "cascading",
+        "strategy": "translate",
+        "heItemCount": 11,
+        "alignedItemCount": 10,
+        "coveragePct": 91,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "cascading",
+            "occurrences": 4
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "siba-mesubav",
+        "he": "סבה ומסובב",
+        "canonicalEn": "cause and consequence",
+        "strategy": "translate",
+        "heItemCount": 10,
+        "alignedItemCount": 9,
+        "coveragePct": 90,
+        "attestedInParts": [
+          "part-02",
+          "part-03"
+        ],
+        "variants": [
+          {
+            "en": "cause and consequence",
+            "occurrences": 7
+          },
+          {
+            "en": "cause and effect",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "behina",
+        "he": "בחינה",
+        "canonicalEn": "phase",
+        "strategy": "translate",
+        "heItemCount": 369,
+        "alignedItemCount": 284,
+        "coveragePct": 77,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "phase",
+            "occurrences": 659
+          },
+          {
+            "en": "discernment",
+            "occurrences": 9
+          }
+        ],
+        "note": "en-bb also uses 'discernment' for הבחן/הבחנה (the act of discerning), never for בחינה as a level.",
+        "citationCount": 3
+      },
+      {
+        "id": "dalet-behinot",
+        "he": "ד' בחינות",
+        "canonicalEn": "four phases",
+        "strategy": "translate",
+        "heItemCount": 38,
+        "alignedItemCount": 35,
+        "coveragePct": 92,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "four phases",
+            "occurrences": 43
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "behina-dalet",
+        "he": "בחי\"ד",
+        "canonicalEn": "phase four",
+        "strategy": "translate",
+        "heItemCount": 97,
+        "alignedItemCount": 92,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "phase four",
+            "occurrences": 159
+          }
+        ],
+        "note": "Phase ordinals are spelled out as words: phase one / two / three / four.",
+        "citationCount": 3
+      },
+      {
+        "id": "shevira",
+        "he": "שבירה",
+        "canonicalEn": "breaking",
+        "strategy": "translate",
+        "heItemCount": 5,
+        "alignedItemCount": 3,
+        "coveragePct": 60,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "breaking",
+            "occurrences": 3
+          },
+          {
+            "en": "broken",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "tikkun",
+        "he": "תיקון",
+        "canonicalEn": "correction",
+        "strategy": "translate",
+        "heItemCount": 19,
+        "alignedItemCount": 19,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "correction",
+            "occurrences": 26
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hitpashtut",
+        "he": "התפשטות",
+        "canonicalEn": "expansion",
+        "strategy": "translate",
+        "heItemCount": 95,
+        "alignedItemCount": 94,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "expansion",
+            "occurrences": 122
+          },
+          {
+            "en": "expand/expands/expanded",
+            "occurrences": 81
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "histalkut",
+        "he": "הסתלקות",
+        "canonicalEn": "departure",
+        "strategy": "translate",
+        "heItemCount": 92,
+        "alignedItemCount": 83,
+        "coveragePct": 90,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "departure",
+            "occurrences": 95
+          },
+          {
+            "en": "departed",
+            "occurrences": 31
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "madrega",
+        "he": "מדרגה",
+        "canonicalEn": "degree",
+        "strategy": "translate",
+        "heItemCount": 112,
+        "alignedItemCount": 103,
+        "coveragePct": 92,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "degree/degrees",
+            "occurrences": 158
+          },
+          {
+            "en": "level",
+            "occurrences": 27
+          }
+        ],
+        "note": "Careful: קומה is 'level'; מדרגה is 'degree'. Both appear together.",
+        "citationCount": 3
+      },
+      {
+        "id": "koma",
+        "he": "קומה",
+        "canonicalEn": "level",
+        "strategy": "translate",
+        "heItemCount": 53,
+        "alignedItemCount": 50,
+        "coveragePct": 94,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "level",
+            "occurrences": 103
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "shoresh",
+        "he": "שורש",
+        "canonicalEn": "root",
+        "strategy": "translate",
+        "heItemCount": 83,
+        "alignedItemCount": 80,
+        "coveragePct": 96,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "root/roots",
+            "occurrences": 162
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ratzon-lekabel",
+        "he": "רצון לקבל",
+        "canonicalEn": "will to receive",
+        "strategy": "translate",
+        "heItemCount": 34,
+        "alignedItemCount": 31,
+        "coveragePct": 91,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03"
+        ],
+        "variants": [
+          {
+            "en": "will to receive",
+            "occurrences": 75
+          },
+          {
+            "en": "desire to receive",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ratzon-lehashpia",
+        "he": "רצון להשפיע",
+        "canonicalEn": "will to bestow",
+        "strategy": "translate",
+        "heItemCount": 29,
+        "alignedItemCount": 28,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "bestow/bestowal",
+            "occurrences": 53
+          },
+          {
+            "en": "will to bestow",
+            "occurrences": 15
+          },
+          {
+            "en": "give/giving",
+            "occurrences": 4
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "shinui-tzura",
+        "he": "שינוי צורה",
+        "canonicalEn": "disparity of form",
+        "strategy": "translate",
+        "heItemCount": 29,
+        "alignedItemCount": 26,
+        "coveragePct": 90,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "disparity of form",
+            "occurrences": 46
+          },
+          {
+            "en": "change of form",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hashvaat-tzura",
+        "he": "השתוות הצורה",
+        "canonicalEn": "equivalence of form",
+        "strategy": "translate",
+        "heItemCount": 18,
+        "alignedItemCount": 15,
+        "coveragePct": 83,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "equivalence",
+            "occurrences": 19
+          },
+          {
+            "en": "equivalence of form",
+            "occurrences": 15
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "pnimiut",
+        "he": "פנימיות",
+        "canonicalEn": "internality",
+        "strategy": "translate",
+        "heItemCount": 15,
+        "alignedItemCount": 13,
+        "coveragePct": 87,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "internality",
+            "occurrences": 13
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hitzoniut",
+        "he": "חיצוניות",
+        "canonicalEn": "externality",
+        "strategy": "translate",
+        "heItemCount": 7,
+        "alignedItemCount": 6,
+        "coveragePct": 86,
+        "attestedInParts": [
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "externality",
+            "occurrences": 7
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "halal",
+        "he": "חלל",
+        "canonicalEn": "space",
+        "strategy": "translate",
+        "heItemCount": 10,
+        "alignedItemCount": 10,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "space",
+            "occurrences": 18
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "makom-panui",
+        "he": "מקום פנוי",
+        "canonicalEn": "vacant place",
+        "strategy": "translate",
+        "heItemCount": 5,
+        "alignedItemCount": 4,
+        "coveragePct": 80,
+        "attestedInParts": [
+          "part-01"
+        ],
+        "variants": [
+          {
+            "en": "vacant place",
+            "occurrences": 6
+          }
+        ],
+        "citationCount": 2
+      },
+      {
+        "id": "atzmut",
+        "he": "עצמות",
+        "canonicalEn": "self",
+        "strategy": "translate",
+        "heItemCount": 47,
+        "alignedItemCount": 40,
+        "coveragePct": 85,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "self",
+            "occurrences": 57
+          },
+          {
+            "en": "essence",
+            "occurrences": 6
+          }
+        ],
+        "note": "עצמותו ית' → 'His self'. 'Essence' is reserved for מהות.",
+        "citationCount": 3
+      },
+      {
+        "id": "boreh",
+        "he": "בורא",
+        "canonicalEn": "Creator",
+        "strategy": "translate",
+        "heItemCount": 4,
+        "alignedItemCount": 4,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-03"
+        ],
+        "variants": [
+          {
+            "en": "the Creator",
+            "occurrences": 8
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "taamim",
+        "he": "טעמים",
+        "canonicalEn": "tastes",
+        "strategy": "translate",
+        "heItemCount": 17,
+        "alignedItemCount": 13,
+        "coveragePct": 76,
+        "attestedInParts": [
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "tastes",
+            "occurrences": 19
+          }
+        ],
+        "note": "Only attested in Part 6.",
+        "citationCount": 3
+      },
+      {
+        "id": "nekudot",
+        "he": "נקודות",
+        "canonicalEn": "Nekudot",
+        "strategy": "transliterate",
+        "heItemCount": 29,
+        "alignedItemCount": 26,
+        "coveragePct": 90,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "dots",
+            "occurrences": 29
+          },
+          {
+            "en": "Nekudot",
+            "occurrences": 14
+          }
+        ],
+        "note": "Genuinely split in en-bb. See inconsistencies.",
+        "citationCount": 3
+      },
+      {
+        "id": "otiot",
+        "he": "אותיות",
+        "canonicalEn": "letters",
+        "strategy": "translate",
+        "heItemCount": 36,
+        "alignedItemCount": 35,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-01",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "letters",
+            "occurrences": 73
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hassadim",
+        "he": "חסדים",
+        "canonicalEn": "Hassadim",
+        "strategy": "transliterate",
+        "heItemCount": 30,
+        "alignedItemCount": 30,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Hassadim",
+            "occurrences": 67
+          },
+          {
+            "en": "mercy",
+            "occurrences": 3
+          }
+        ],
+        "note": "אור דחסדים → 'light of Hassadim'.",
+        "citationCount": 3
+      },
+      {
+        "id": "sefira",
+        "he": "ספירה",
+        "canonicalEn": "Sefira",
+        "strategy": "transliterate",
+        "heItemCount": 35,
+        "alignedItemCount": 34,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Sefira",
+            "occurrences": 60
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "sefirot",
+        "he": "ספירות",
+        "canonicalEn": "Sefirot",
+        "strategy": "transliterate",
+        "heItemCount": 80,
+        "alignedItemCount": 79,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Sefirot",
+            "occurrences": 188
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "eser-sefirot",
+        "he": "עשר ספירות / ע\"ס",
+        "canonicalEn": "ten Sefirot",
+        "strategy": "transliterate",
+        "heItemCount": 89,
+        "alignedItemCount": 86,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "ten Sefirot (lower-case ten)",
+            "occurrences": 180
+          },
+          {
+            "en": "Ten Sefirot",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "partzuf",
+        "he": "פרצוף",
+        "canonicalEn": "Partzuf",
+        "strategy": "transliterate",
+        "heItemCount": 125,
+        "alignedItemCount": 125,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Partzuf",
+            "occurrences": 223
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "partzufim",
+        "he": "פרצופים",
+        "canonicalEn": "Partzufim",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 31,
+        "alignedItemCount": 31,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Partzufim",
+            "occurrences": 39
+          },
+          {
+            "en": "Partzufim [pl. of Partzuf]",
+            "occurrences": 4
+          }
+        ],
+        "note": "First occurrence in an item is glossed 'Partzufim [pl. of Partzuf]'.",
+        "citationCount": 3
+      },
+      {
+        "id": "rosh",
+        "he": "ראש",
+        "canonicalEn": "Rosh",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 148,
+        "alignedItemCount": 142,
+        "coveragePct": 96,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Rosh",
+            "occurrences": 240
+          },
+          {
+            "en": "head",
+            "occurrences": 9
+          },
+          {
+            "en": "Rosh [head]",
+            "occurrences": 5
+          }
+        ],
+        "note": "Glossed '[head]' on first use in an item.",
+        "citationCount": 3
+      },
+      {
+        "id": "toch",
+        "he": "תוך",
+        "canonicalEn": "Toch",
+        "strategy": "transliterate",
+        "heItemCount": 3,
+        "alignedItemCount": 3,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "Toch",
+            "occurrences": 3
+          }
+        ],
+        "note": "Only transliterated when it is the technical middle third of a Partzuf. As the ordinary preposition תוך/בתוך it is 'inside'/'within'.",
+        "citationCount": 3
+      },
+      {
+        "id": "sof",
+        "he": "סוף",
+        "canonicalEn": "Sof",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 8,
+        "alignedItemCount": 8,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-03",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "Sof",
+            "occurrences": 26
+          },
+          {
+            "en": "end",
+            "occurrences": 7
+          },
+          {
+            "en": "Sof [end/conclusion]",
+            "occurrences": 1
+          }
+        ],
+        "note": "Distinct from אין סוף → 'Ein Sof'. Glossed '[end]' / '[end/conclusion]' on first use.",
+        "citationCount": 3
+      },
+      {
+        "id": "guf",
+        "he": "גוף",
+        "canonicalEn": "Guf",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 68,
+        "alignedItemCount": 65,
+        "coveragePct": 96,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Guf",
+            "occurrences": 103
+          },
+          {
+            "en": "body",
+            "occurrences": 6
+          },
+          {
+            "en": "Guf [body]",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ein-sof",
+        "he": "אין סוף / א\"ס",
+        "canonicalEn": "Ein Sof",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 78,
+        "alignedItemCount": 77,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Ein Sof",
+            "occurrences": 166
+          },
+          {
+            "en": "Ein Sof [infinity]",
+            "occurrences": 1
+          }
+        ],
+        "note": "א\"ס ב\"ה → 'Ein Sof'; the ב\"ה honorific is always dropped.",
+        "citationCount": 3
+      },
+      {
+        "id": "atzilut",
+        "he": "אצילות",
+        "canonicalEn": "Atzilut",
+        "strategy": "transliterate",
+        "heItemCount": 52,
+        "alignedItemCount": 38,
+        "coveragePct": 73,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Atzilut",
+            "occurrences": 96
+          },
+          {
+            "en": "emanation (process sense)",
+            "occurrences": 10
+          }
+        ],
+        "note": "Two senses. The world -> 'Atzilut'; the act of emanating (סדר אצילות העולמות) -> 'emanation', lower case.",
+        "citationCount": 3
+      },
+      {
+        "id": "beria",
+        "he": "בריאה",
+        "canonicalEn": "Beria",
+        "strategy": "transliterate",
+        "heItemCount": 33,
+        "alignedItemCount": 31,
+        "coveragePct": 94,
+        "attestedInParts": [
+          "part-01",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Beria",
+            "occurrences": 68
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "yetzira",
+        "he": "יצירה",
+        "canonicalEn": "Yetzira",
+        "strategy": "transliterate",
+        "heItemCount": 15,
+        "alignedItemCount": 15,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Yetzira",
+            "occurrences": 27
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "assiya",
+        "he": "עשיה",
+        "canonicalEn": "Assiya",
+        "strategy": "transliterate",
+        "heItemCount": 17,
+        "alignedItemCount": 16,
+        "coveragePct": 94,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Assiya",
+            "occurrences": 20
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "abya",
+        "he": "אבי\"ע",
+        "canonicalEn": "ABYA",
+        "strategy": "acronym",
+        "heItemCount": 3,
+        "alignedItemCount": 3,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "ABYA",
+            "occurrences": 3
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "adam-kadmon",
+        "he": "אדם קדמון / א\"ק",
+        "canonicalEn": "Adam Kadmon / AK",
+        "strategy": "acronym",
+        "heItemCount": 90,
+        "alignedItemCount": 90,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "AK",
+            "occurrences": 113
+          },
+          {
+            "en": "Adam Kadmon",
+            "occurrences": 13
+          }
+        ],
+        "note": "Spelled out in Parts 1-2, abbreviated 'AK' from Part 3 on. See inconsistencies.",
+        "citationCount": 3
+      },
+      {
+        "id": "keter",
+        "he": "כתר",
+        "canonicalEn": "Keter",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 270,
+        "alignedItemCount": 269,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Keter",
+            "occurrences": 554
+          },
+          {
+            "en": "Keter [crown]",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hochma",
+        "he": "חכמה",
+        "canonicalEn": "Hochma",
+        "strategy": "transliterate",
+        "heItemCount": 208,
+        "alignedItemCount": 205,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Hochma",
+            "occurrences": 464
+          },
+          {
+            "en": "wisdom",
+            "occurrences": 11
+          }
+        ],
+        "note": "'wisdom' is used only for חכמה in the phrase 'wisdom of Kabbalah' (חכמת הקבלה).",
+        "citationCount": 3
+      },
+      {
+        "id": "bina",
+        "he": "בינה",
+        "canonicalEn": "Bina",
+        "strategy": "transliterate",
+        "heItemCount": 169,
+        "alignedItemCount": 168,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Bina",
+            "occurrences": 339
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hesed",
+        "he": "חסד",
+        "canonicalEn": "Hesed",
+        "strategy": "transliterate",
+        "heItemCount": 69,
+        "alignedItemCount": 68,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "Hesed",
+            "occurrences": 142
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "gevura",
+        "he": "גבורה",
+        "canonicalEn": "Gevura",
+        "strategy": "transliterate",
+        "heItemCount": 36,
+        "alignedItemCount": 36,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-05"
+        ],
+        "variants": [
+          {
+            "en": "Gevura",
+            "occurrences": 65
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "tifferet",
+        "he": "תפארת",
+        "canonicalEn": "Tifferet",
+        "strategy": "transliterate",
+        "heItemCount": 44,
+        "alignedItemCount": 43,
+        "coveragePct": 98,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Tifferet",
+            "occurrences": 75
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "netzah",
+        "he": "נצח",
+        "canonicalEn": "Netzah",
+        "strategy": "transliterate",
+        "heItemCount": 31,
+        "alignedItemCount": 30,
+        "coveragePct": 97,
+        "attestedInParts": [
+          "part-02",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Netzah",
+            "occurrences": 59
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hod",
+        "he": "הוד",
+        "canonicalEn": "Hod",
+        "strategy": "transliterate",
+        "heItemCount": 36,
+        "alignedItemCount": 36,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Hod",
+            "occurrences": 77
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "yesod",
+        "he": "יסוד",
+        "canonicalEn": "Yesod",
+        "strategy": "transliterate",
+        "heItemCount": 78,
+        "alignedItemCount": 74,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Yesod",
+            "occurrences": 148
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "malchut",
+        "he": "מלכות",
+        "canonicalEn": "Malchut",
+        "strategy": "transliterate",
+        "heItemCount": 214,
+        "alignedItemCount": 212,
+        "coveragePct": 99,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Malchut",
+            "occurrences": 350
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "galgalta",
+        "he": "גלגלתא",
+        "canonicalEn": "Galgalta",
+        "strategy": "transliterate",
+        "heItemCount": 11,
+        "alignedItemCount": 8,
+        "coveragePct": 73,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Galgalta",
+            "occurrences": 8
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ab",
+        "he": "ע\"ב",
+        "canonicalEn": "AB",
+        "strategy": "acronym",
+        "heItemCount": 56,
+        "alignedItemCount": 53,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "AB",
+            "occurrences": 79
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "sag",
+        "he": "ס\"ג",
+        "canonicalEn": "SAG",
+        "strategy": "acronym",
+        "heItemCount": 98,
+        "alignedItemCount": 98,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "SAG",
+            "occurrences": 149
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ma",
+        "he": "מ\"ה",
+        "canonicalEn": "MA",
+        "strategy": "acronym",
+        "heItemCount": 29,
+        "alignedItemCount": 26,
+        "coveragePct": 90,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "MA",
+            "occurrences": 34
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "bon",
+        "he": "ב\"ן",
+        "canonicalEn": "BON",
+        "strategy": "acronym",
+        "heItemCount": 26,
+        "alignedItemCount": 26,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "BON",
+            "occurrences": 33
+          }
+        ],
+        "note": "Note: BON, not BAN. Paired as 'MA and BON'.",
+        "citationCount": 3
+      },
+      {
+        "id": "nekudim",
+        "he": "נקודים",
+        "canonicalEn": "Nekudim",
+        "strategy": "transliterate",
+        "heItemCount": 62,
+        "alignedItemCount": 62,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Nekudim",
+            "occurrences": 87
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "gar",
+        "he": "ג\"ר",
+        "canonicalEn": "GAR",
+        "strategy": "acronym",
+        "heItemCount": 75,
+        "alignedItemCount": 75,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "GAR",
+            "occurrences": 146
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "zat",
+        "he": "ז\"ת",
+        "canonicalEn": "ZAT",
+        "strategy": "acronym",
+        "heItemCount": 19,
+        "alignedItemCount": 19,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "ZAT",
+            "occurrences": 31
+          },
+          {
+            "en": "ZAT [Seven lower Sefirot]",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "vak",
+        "he": "ו\"ק",
+        "canonicalEn": "VAK",
+        "strategy": "acronym",
+        "heItemCount": 49,
+        "alignedItemCount": 49,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "VAK",
+            "occurrences": 111
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "khb",
+        "he": "כח\"ב",
+        "canonicalEn": "KHB",
+        "strategy": "acronym",
+        "heItemCount": 20,
+        "alignedItemCount": 20,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "KHB",
+            "occurrences": 21
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hgt",
+        "he": "חג\"ת",
+        "canonicalEn": "HGT",
+        "strategy": "acronym",
+        "heItemCount": 17,
+        "alignedItemCount": 17,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "HGT",
+            "occurrences": 27
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "nhy",
+        "he": "נה\"י",
+        "canonicalEn": "NHY",
+        "strategy": "acronym",
+        "heItemCount": 21,
+        "alignedItemCount": 21,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "NHY",
+            "occurrences": 36
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "zon",
+        "he": "זו\"ן",
+        "canonicalEn": "ZON",
+        "strategy": "acronym",
+        "heItemCount": 119,
+        "alignedItemCount": 119,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "ZON",
+            "occurrences": 210
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "za",
+        "he": "ז\"א",
+        "canonicalEn": "ZA",
+        "strategy": "acronym",
+        "heItemCount": 43,
+        "alignedItemCount": 41,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "ZA",
+            "occurrences": 49
+          },
+          {
+            "en": "Zeir Anpin",
+            "occurrences": 13
+          }
+        ],
+        "note": "Spelled out in Parts 1-3, abbreviated from Part 5 on.",
+        "citationCount": 3
+      },
+      {
+        "id": "aa",
+        "he": "א\"א",
+        "canonicalEn": "AA",
+        "strategy": "acronym",
+        "heItemCount": 8,
+        "alignedItemCount": 8,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-02",
+          "part-03"
+        ],
+        "variants": [
+          {
+            "en": "Arich Anpin",
+            "occurrences": 7
+          },
+          {
+            "en": "AA",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "nukva",
+        "he": "נוקבא",
+        "canonicalEn": "Nukva",
+        "strategy": "transliterate",
+        "heItemCount": 20,
+        "alignedItemCount": 20,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Nukva",
+            "occurrences": 35
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ahap",
+        "he": "אח\"פ",
+        "canonicalEn": "AHP",
+        "strategy": "acronym",
+        "heItemCount": 25,
+        "alignedItemCount": 25,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "AHP",
+            "occurrences": 32
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "achoraim",
+        "he": "אחורים",
+        "canonicalEn": "posterior",
+        "strategy": "translate",
+        "heItemCount": 26,
+        "alignedItemCount": 26,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "posterior",
+            "occurrences": 49
+          },
+          {
+            "en": "back",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "einayim",
+        "he": "עינים",
+        "canonicalEn": "Einayim",
+        "strategy": "transliterate",
+        "heItemCount": 50,
+        "alignedItemCount": 47,
+        "coveragePct": 94,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Einayim",
+            "occurrences": 61
+          },
+          {
+            "en": "Eynaim",
+            "occurrences": 9
+          }
+        ],
+        "note": "Genuinely split. See inconsistencies.",
+        "citationCount": 3
+      },
+      {
+        "id": "nikvey-einayim",
+        "he": "נקבי עינים",
+        "canonicalEn": "Nikvey Einayim",
+        "strategy": "transliterate",
+        "heItemCount": 21,
+        "alignedItemCount": 21,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Nikvey Einayim",
+            "occurrences": 32
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "peh",
+        "he": "פה",
+        "canonicalEn": "Peh",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 22,
+        "alignedItemCount": 21,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Peh",
+            "occurrences": 22
+          },
+          {
+            "en": "Peh [mouth]",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hotem",
+        "he": "חוטם",
+        "canonicalEn": "Hotem",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 6,
+        "alignedItemCount": 6,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Hotem",
+            "occurrences": 7
+          },
+          {
+            "en": "Hotem [nose]",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "ozen",
+        "he": "אזן",
+        "canonicalEn": "Ozen",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 14,
+        "alignedItemCount": 13,
+        "coveragePct": 93,
+        "attestedInParts": [
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Ozen",
+            "occurrences": 14
+          },
+          {
+            "en": "Ozen [ear]",
+            "occurrences": 1
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "tabur",
+        "he": "טבור",
+        "canonicalEn": "Tabur",
+        "strategy": "transliterate",
+        "heItemCount": 35,
+        "alignedItemCount": 35,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Tabur",
+            "occurrences": 55
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "parsa",
+        "he": "פרסא",
+        "canonicalEn": "Parsa",
+        "strategy": "transliterate",
+        "heItemCount": 29,
+        "alignedItemCount": 29,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Parsa",
+            "occurrences": 42
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "sium",
+        "he": "סיום",
+        "canonicalEn": "Sium",
+        "strategy": "transliterate",
+        "heItemCount": 24,
+        "alignedItemCount": 20,
+        "coveragePct": 83,
+        "attestedInParts": [
+          "part-01",
+          "part-02",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Sium",
+            "occurrences": 33
+          },
+          {
+            "en": "conclusion",
+            "occurrences": 5
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "katnut",
+        "he": "קטנות",
+        "canonicalEn": "Katnut",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 11,
+        "alignedItemCount": 9,
+        "coveragePct": 82,
+        "attestedInParts": [
+          "part-01",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Katnut",
+            "occurrences": 10
+          },
+          {
+            "en": "Katnut [smallness/infancy]",
+            "occurrences": 2
+          },
+          {
+            "en": "smallness",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "gadlut",
+        "he": "גדלות",
+        "canonicalEn": "Gadlut",
+        "strategy": "transliterate-with-gloss",
+        "heItemCount": 18,
+        "alignedItemCount": 14,
+        "coveragePct": 78,
+        "attestedInParts": [
+          "part-01",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Gadlut",
+            "occurrences": 17
+          },
+          {
+            "en": "Gadlut [greatness/adulthood]",
+            "occurrences": 5
+          },
+          {
+            "en": "greatness",
+            "occurrences": 5
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "mochin",
+        "he": "מוחין",
+        "canonicalEn": "Mochin",
+        "strategy": "transliterate",
+        "heItemCount": 4,
+        "alignedItemCount": 4,
+        "coveragePct": 100,
+        "attestedInParts": [
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Mochin",
+            "occurrences": 4
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "nrnhy",
+        "he": "נרנח\"י (נפש/רוח/נשמה/חיה/יחידה)",
+        "canonicalEn": "Nefesh, Ruach, Neshama, Haya, Yechida",
+        "strategy": "transliterate",
+        "heItemCount": 18,
+        "alignedItemCount": 15,
+        "coveragePct": 83,
+        "attestedInParts": [
+          "part-02",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "Neshama",
+            "occurrences": 12
+          },
+          {
+            "en": "Yechida",
+            "occurrences": 8
+          },
+          {
+            "en": "Nefesh",
+            "occurrences": 6
+          },
+          {
+            "en": "Ruach",
+            "occurrences": 5
+          },
+          {
+            "en": "Haya",
+            "occurrences": 3
+          },
+          {
+            "en": "NRNHY",
+            "occurrences": 2
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "havayah",
+        "he": "הויה",
+        "canonicalEn": "HaVaYaH",
+        "strategy": "transliterate",
+        "heItemCount": 22,
+        "alignedItemCount": 21,
+        "coveragePct": 95,
+        "attestedInParts": [
+          "part-01",
+          "part-03",
+          "part-05",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "HaVaYaH",
+            "occurrences": 41
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hey-tataa",
+        "he": "ה\"ת",
+        "canonicalEn": "bottom Hey",
+        "strategy": "translate",
+        "heItemCount": 62,
+        "alignedItemCount": 50,
+        "coveragePct": 81,
+        "attestedInParts": [
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "bottom Hey",
+            "occurrences": 88
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "hey-rishona",
+        "he": "ה\"ר",
+        "canonicalEn": "first Hey",
+        "strategy": "translate",
+        "heItemCount": 19,
+        "alignedItemCount": 9,
+        "coveragePct": 47,
+        "attestedInParts": [
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "first Hey",
+            "occurrences": 11
+          }
+        ],
+        "citationCount": 3
+      },
+      {
+        "id": "klipot",
+        "he": "קליפות",
+        "canonicalEn": "shells",
+        "strategy": "translate",
+        "heItemCount": 4,
+        "alignedItemCount": 3,
+        "coveragePct": 75,
+        "attestedInParts": [
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "shells",
+            "occurrences": 3
+          },
+          {
+            "en": "Klipot",
+            "occurrences": 1
+          },
+          {
+            "en": "Klipot [shells]",
+            "occurrences": 1
+          }
+        ],
+        "note": "Mostly translated 'shells'; transliterated 'Klipot [shells]' once (as a question headword).",
+        "citationCount": 3
+      },
+      {
+        "id": "kabbalah",
+        "he": "חכמת הקבלה",
+        "canonicalEn": "the wisdom of Kabbalah",
+        "strategy": "translate",
+        "heItemCount": 4,
+        "alignedItemCount": 3,
+        "coveragePct": 75,
+        "attestedInParts": [
+          "part-01"
+        ],
+        "variants": [
+          {
+            "en": "wisdom of Kabbalah",
+            "occurrences": 3
+          }
+        ],
+        "citationCount": 2
+      },
+      {
+        "id": "harav",
+        "he": "הרב",
+        "canonicalEn": "the ARI",
+        "strategy": "translate",
+        "heItemCount": 21,
+        "alignedItemCount": 13,
+        "coveragePct": 62,
+        "attestedInParts": [
+          "part-01",
+          "part-03",
+          "part-06"
+        ],
+        "variants": [
+          {
+            "en": "the ARI",
+            "occurrences": 19
+          }
+        ],
+        "note": "In TES 'הרב' denotes the ARI (author of the quoted Etz Chaim text), and en-bb renders it 'the ARI', never 'the Rav'.",
+        "citationCount": 3
+      },
+      {
+        "id": "akudim",
+        "he": "עקודים",
+        "canonicalEn": "Akudim",
+        "strategy": "transliterate",
+        "note": "Always capitalised. 'world of Akudim', 'Keter of Akudim'.",
+        "attestation": "attested",
+        "citationCount": 1
+      },
+      {
+        "id": "ohr-hozer-abbrev",
+        "he": "או\"ח",
+        "canonicalEn": "reflected light",
+        "strategy": "acronym",
+        "note": "The abbreviation expands to the same rendering as אור חוזר — never transliterated as 'Ohr Hozer'.",
+        "attestation": "attested",
+        "citationCount": 2
+      },
+      {
+        "id": "ohr-yashar-abbrev",
+        "he": "או\"י",
+        "canonicalEn": "direct light",
+        "strategy": "acronym",
+        "note": "Matches אור ישר. Added in v2 — was absent from v1.",
+        "attestation": "attested",
+        "citationCount": 1
+      },
+      {
+        "id": "reshimot-plural",
+        "he": "רשימות",
+        "canonicalEn": "records",
+        "strategy": "translate",
+        "note": "Plural of רשימו → record.",
+        "attestation": "attested",
+        "citationCount": 1
+      },
+      {
+        "id": "bitushim-plural",
+        "he": "בטישות",
+        "canonicalEn": "clashes",
+        "strategy": "translate",
+        "note": "Derived from the locked singular ביטוש → clash. Not attested; flag any use for review.",
+        "attestation": "DERIVED — zero aligned occurrences in en-bb",
+        "citationCount": 0
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "chapterId": "part-15/chapter-01",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "<span class=\"tes-footnote\" title=\"ע&quot;ח ח&quot;ב שער מיעוט הירח פרק א' מ&quot;ק.\">*</span>דע כי בעת עיבור זו\"ן באמא עילאה, אז היה ז\"א בבחי' ו\"ק לבד, והנוקבא בבחי' נקודה א' כלולה מיוד, שהוא בחינת מלכות שבה לבד, ואז ע\"י העיבור יניקה ומוחין, נתגדל בחינת ז\"א עד שנשלם לי\"ס כנודע.",
+          "en": "<span class=\"tes-footnote\" title=\"Etz Chaim, Part 2, Gate of the Waning of the Moon, Chapter 1, M&quot;K.\">*</span>Know that at the time of the Ibur of ZON in the upper Ima, ZA was then in the aspect of VAK alone, and the Nukva in the aspect of a single point included of ten, which is the aspect of the Malchut within her alone. And then, through the Ibur, Yenika, and Mochin, the aspect of ZA grew until he was completed to ten Sefirot, as is known."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-02",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואמנם גידול המלכות אינה אלא ע\"י אמצעית ז\"א עצמו. כי אמא עילאה כאשר גדלה אותו, נתנה בו עוד כח גידול להמלכות. ואח\"כ יצאה בחי' גידול זה של המלכות לחוץ באמצעית ת\"ת, ואז נגדלת המלכות ג\"כ עד תכלית הגידול שבה, שהוא עד שתשלם גם היא לי\"ס שלימות שבה.",
+          "en": "And indeed, the growth of Malchut is only through the medium of ZA himself. For the upper Ima, when she grew him, gave him further a power of growth for Malchut. And afterwards this aspect of the growth of Malchut went out to the outside, through the medium of Tifferet; and then Malchut also grows to the limit of her growth, which is until she too is completed to her complete ten Sefirot."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-03",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וא\"כ מוכרח היא, שכל זמן שעדין לא נתגדל המלכות, שאותן הט\"ס עליונים שחסרים מנוקבא, יהיו כלולים בז\"א בט\"ס שבו כנודע, שאין בו רק עד היסוד, והנוקבא משלימתו ליוד, ואז הם י\"ט ספירות: ט' שלו ויוד שלה, ונקרא עשירית, כיון שהיא עשירית אליו, ונשלם הוא בי\"ס עמה, וגם היא יש בה יוד ספירות.",
+          "en": "Hence, it is necessarily true that as long as Malchut has not yet grown, those upper ten Sefirot that are lacking from the Nukva must be included in ZA, in his ten Sefirot, as is known — that he has only until the Yesod, and the Nukva completes him to ten. And then they are nineteen Sefirot: his nine and her ten; and she is called the tenth, since she is the tenth to him; and he is completed in ten Sefirot together with her, and she too has ten Sefirot."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-04",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואמנם טרם התגלות בה הט\"ס העליונות שלה, היו כולם נכללין בט\"ס שלו. נמצא, כי בכל ספירה וספירה מן הט\"ס דז\"א, יש בה בחינת ספירה א' של הנוקבא, אך היא אינה רק חלק העשירית שבה בלבד, שהוא ספירת המלכות שבה. והנה גידול המלכות, אינה בפעם א' רק בזמנים הרבה נתקנת ונתגדלת מעט מעט כנ\"ל.",
+          "en": "And indeed, before her upper ten Sefirot were revealed in her, they were all included in his ten Sefirot. Hence, in each and every Sefira of the ten Sefirot of ZA, there is in it the aspect of one Sefira of the Nukva, but it is only her tenth part alone, namely her Sefira of Malchut. And the growth of Malchut is not at one time, but over many times she is corrected and grows little by little, as above."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-05",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ונבאר עתה באורך כללותם, אע\"פ שיש פרטים הרבה, הנה תכלית המיעוט אשר בה, אינה פחות מנקודה א' כלולה מיוד, שהיא נקודת מלכות האחרונה שבה, כנ\"ל, ותכלית גידול שלה הוא, שיהיה בה כל הי\"ס שלה, ותהיה עם ז\"א פב\"פ שוה לגמרי, וישתמשו ב' מלכים בכתר אחד, שהוא מה שקטרגה הירח, כנודע.",
+          "en": "And we shall now explain at length their generalities, although there are many particulars. The limit of her diminution is not less than a single point included of ten, which is the point of her last Malchut, as above; and the limit of her growth is that she will have all her ten Sefirot, and will be with ZA face to face, completely equal, and the two kings will use one crown — which is what the moon complained about, as is known."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-06",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והענין הוא, כי נודע, כי מת\"ת של אמא נעשה כתר לז\"א, וכאשר גם היא תעלה עד שם, ויהיה כתרה בת\"ת של אמא כמוהו, יהיה כתריהן שוין, ויהיו שניהם אחד, כי שניהם יהיו בחינת ת\"ת דאמא שהיא ספירה אחת, ואז לא תצטרך היא לקבל הארתה על ידי ז\"א, אלא יהיו שניהם מקבלים הארתם מאמא, כל אחד בפני עצמו ולא יצטרכו זה לזה, ויהיו זו\"ן שוין במציאותם כמו או\"א, כנזכר באדרא, או\"א כחדא נפקין וכחדא שריין. וזה תכלית הגידול שלה, ואז כל העולמות בתכלית התיקון.",
+          "en": "And the matter is, as is known, that from the Tifferet of Ima a crown is made for ZA; and when she too ascends up to there, and her crown will be in the Tifferet of Ima like his, their crowns will be equal, and they will both be one, for both will be the aspect of the Tifferet of Ima, which is a single Sefira. Then she will not need to receive her illumination through ZA, but they will both receive their illumination from Ima, each one by himself, and they will not need one another; and ZON will be equal in their existence, like AVI, as mentioned in the Idra: “AVI come out as one and dwell as one.” And this is the limit of her growth, and then all the worlds are at the ultimate correction."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-07",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואמנם בין זה לזה יש בחינות רבות, ובין כולם הם ד' בחינות. וזה סדרן ממטה למעלה: א', תכלית המיעוט הנ\"ל, שתהיה היא נקודה כלולה מיוד, והיא בחינת המלכות שבה, ואז אין לה פרצוף, ואז היא עומדת למטה מהיסוד שלו.",
+          "en": "And indeed, between this and that there are many aspects, and among them all there are four aspects. And this is their order from below upward: first, the aforementioned limit of diminution, that she is a point included of ten, which is the aspect of her Malchut; and then she has no Partzuf, and she stands below his Yesod."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-08",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ב' היותה פרצוף גמור ביוד ספירות, אלא ששיעור קומתה היא באחור ז\"א מחזה ולמטה. אבל עדיין האורות שלה שיש בה\"ר של ז\"א: כח\"ב ח\"ג לא האירו בד' תחתונות שבו, לכן לא נמשכו בה ולא האירו בה. והבן זה עם הנ\"ל.",
+          "en": "Second, her being a complete Partzuf of ten Sefirot, except that the measure of her stature is in the back of ZA, from the chest and below. But her lights, which are in the five Sefirot of ZA — KHB and HG — have not illuminated in his four lower [Sefirot], and therefore they were not drawn into her and did not illuminate in her. And understand this with the above."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-09",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ג' בהיותה מקבלת אורות שלה מן ה' ראשונות של זא ואז נגדלת כמוהו אלא שעדיין כל זה בחינות אורות אב\"א. והרי הם ג' בחי' בבחינת אחור. והטעם שאין ד' בחינות באחור, הוא ג\"כ, מפני שאין הכתר ניכר אלא בפנים, ולזה ג' בחינות באחור.",
+          "en": "Third, her receiving her lights from the first five Sefirot of ZA, and then she grows like him, except that all this is still the aspect of the lights of back to back. And these are the three aspects in the aspect of the back. And the reason that there are not four aspects in the back is also because Keter is not evident except in the face; and therefore there are three aspects in the back."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-10",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "עוד יש ד' בחינות בבחינות פב\"פ, והם אלו: א' שתהיה היא פרצוף שלם פב\"פ, אלא ששיעור קומתה היא מחזה ולמטה דז\"א, ועדיין אורות שלה דבחינת פנים שיש בה' ראשונות של ז\"א לא נמשכו להאיר בה. והנה בחינה ראשונה, שהיא, שתהיה ג\"כ בחינת נקודה א' כלולה מיוד כנגד היסוד פב\"פ, אין כאן מקום ביאורו, ונתבאר במקום אחר, בפירוש תפלת השחר בברכת אבות.",
+          "en": "There are further four aspects in the aspects of face to face, and they are these: first, that she is a complete Partzuf face to face, except that the measure of her stature is from the chest and below of ZA, and her lights of the aspect of the face, which are in the first five Sefirot of ZA, have not yet been drawn to illuminate in her. And the first aspect — that she is also the aspect of a single point included of ten, opposite the Yesod, face to face — there is no place here to explain it, and it was explained elsewhere, in the commentary on the morning prayer, in the blessing of the Patriarchs (Avot)."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-11",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "הב' הוא, שהה' ראשונות של ז\"א האירו בה מלמעלה, אבל עדיין הוא מחזה ולמטה, ואז הוא יורד בנצח שלו, והיא עולה בהוד שלו, בבחינת שם בוכ\"ו, והוא כופף קומתו ומזדווג שם עמה.",
+          "en": "The second is that the first five Sefirot of ZA illuminated in her from above, but he is still from the chest and below; and then he descends in his Netzah, and she ascends in his Hod, in the aspect of the name Bochu (BUKHV), and he bends his stature and couples with her there."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-12",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "הג' הוא, שתהיה גדולה כמוהו בשיעור קומתו פב\"פ, ותקבל האורות של ה' ראשונות בהיותה שם למעלה עמהם. ואמנם עדיין היא אינה מקבלת אורותיה אלא באמצעית ז\"א, והכתר שלו יהיה גדול מכתרה, כי הוא יותר גדול וגבוה למעלה מכתרה.",
+          "en": "The third is that she be as great as he, in the measure of his stature, face to face, and receive the lights of the first five Sefirot while being there above with them. And indeed, she still does not receive her lights except through the medium of ZA, and his Keter will be greater than her Keter, for he is greater and higher above her Keter."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-13",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "נמצא, שהמלכות שבה אין לה בן זוג כנגדה בזכר, כי היא למטה מן היסוד שלו, לכן היא צריכה לו שהמלכיות שבה היא למטה מכל שיעור קומתו, ואז צריכה הוא לקבל ע\"י, ואז המלכות שלה אין לה בן זוג, ונתעלה עד היסוד שבה עצמה, ונכללין יחד שם בסוד הכללות, כנודע אצלינו, ואז תוכל לקבל מן היסוד של ז\"א. ונמצא כי בבחי' זו יש בה פרצוף ט\"ס עליונות שבה לבד, כי העשירית שבה נכללת ביסוד שבה, ואז ג\"כ הכתר שלו גבוה מכתרה.",
+          "en": "It is found that the Malchut within her has no partner opposite it in the male, for she is below his Yesod; therefore it is necessary that the Malchuts within her, being below his entire stature, be raised through him; and then her Malchut, which has no partner, ascends up to her own Yesod, and they are included together there, in the secret of inclusion, as is known to us; and then she is able to receive from the Yesod of ZA. And it is found that in this aspect there is in her a Partzuf of only her upper nine Sefirot, for her tenth is included in her Yesod; and then his Keter is also higher than her Keter."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-14",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "הד' שתהיה גם היא משמשת בכתר א' כמותו, ומקבלת אורותיה מאמא עצמה שלא ע\"י ז\"א, דמיון או\"א, ותהיה שלימה בכל י\"\"ס, וזהו תכלית הגידול שלה.",
+          "en": "The fourth is that she too serves in one crown, like him, and receives her lights from Ima herself, not through ZA, like AVI; and she will be complete in all her ten Sefirot. And this is the limit of her growth."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-15",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "<span class=\"tes-footnote\" title=\"ע&quot;ח ח&quot;ב שער מיעוט הירח פ&quot;ב.\">*</span>ועתה נבאר ג' בחי' אלו, איך היו מתחלת בריאת העולם עד עתה. הנה בזמן העיבור היתה היא עדיין בבחי' נקודה א' כלולה מי', והיתה למטה מאחורי היסוד דז\"א.",
+          "en": "<span class=\"tes-footnote\" title=\"Etz Chaim, Part 2, Gate of the Waning of the Moon, Chapter 2.\">*</span>And now we shall explain these three aspects, how they were from the beginning of the creation of the world until now. At the time of the Ibur, she was still in the aspect of a single point included of ten, and she was below, behind the Yesod of ZA."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-16",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וכאשר נברא העולם של אצילות, ונולדו זו\"ן, התחילה היא להתגדל עד יום ד' של ימי בראשית, ואז נגדלה כל ג' בחי' הנ\"ל שיש בבחי' אחור באחור, והוא עד שתהיה בחי' פרצוף גמור בי\"ס באחור באחורי החזה, ושם היה שיעור קומתה משם ולמטה, וגם האורות של ה' ספירות ראשונות דז\"א היו מאירין בה מלמעלה למטה אב\"א.",
+          "en": "And when the world of Atzilut was created, and ZON were born, she began to grow until the fourth day of the days of Genesis; and then she grew all the three aspects mentioned above that there are in the aspect of the back in the back, namely until she became the aspect of a complete Partzuf of ten Sefirot, in the back, opposite the back of the chest. And there the measure of her stature was from there and below; and also the lights of the first five Sefirot of ZA were illuminating in her, from above downward, back to back."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-17",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וכאשר הירח קטרגה, אז נתמעטה מן שיעור הנ\"ל, וחזרה להיות כבתחלה בבחינת המיעוט היותר גדול שאפשר להיות, והוא שהי' ספירות שלה חזרו ונתעלו ונסתלקו בשרשיהן בט\"ס של ז\"א, כי משם יצאו כנ\"ל, ולא נשאר רק המלכות שבה, שהיא נקודה א' כלולה מי', תחת אחורי היסוד של ז\"א.",
+          "en": "And when the moon complained, she was diminished from the above measure and returned to be as at first, in the aspect of the greatest diminution possible, which is that her ten Sefirot returned and ascended and departed into their roots in the ten Sefirot of ZA, for from there they came out, as above; and nothing remained but her Malchut, which is a single point included of ten, under the back of the Yesod of ZA."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-18",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו ענין לכי ומעטי את עצמך, שנסתלקו ט\"ס שלה העליונים, ועלו בז\"א, והיא נשארת נקודה מעוטה, וירדה תחת אחורי היסוד. וענין מיעוט הירח היה ביום ד'.",
+          "en": "And this is the matter of “Go and diminish yourself” (Lekhi U-Ma'ati Atzmech): that her upper ten Sefirot departed and ascended in ZA, and she remained a diminished point, and descended under the back of the Yesod. And the matter of the waning of the moon was on the fourth day."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-19",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אח\"כ ביום ו', חזרה להתגדל בבחי' הג' הנ\"ל, היותה פרצוף שלם בבחי' אחור באחור נגד החזה דז\"א, ואז יש בה ה' אורות של ה\"ס ראשונות דז\"א, שהם בחי' ה' ימים ראשונים דימי בראשית, כולם האירו ביום ו', שהוא הת\"ת שבו, ואז ניבנית המלכות ונגלית שם, וה\"ר מאירין בה מרחוק.",
+          "en": "Afterwards, on the sixth day, she returned to grow in the third aspect mentioned above — her being a complete Partzuf in the aspect of back to back, opposite the chest of ZA; and then there are in her the five lights of the first five Sefirot of ZA, which are the aspect of the first five days of the days of Genesis — all of them illuminated on the sixth day, which is his Tifferet; and then Malchut is built and revealed there, and the five lights illuminate in her from afar."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-20",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואז ביום ו' נזדווגו זו\"ן בבחי' אב\"א, ונברא אדה\"ר בבחי' זו לבדו. ואלו לא חטא אדם הראשון, היה מעורר מ\"נ באותו שבת הראשון, ועל ידי זה היו מזדווגין זו\"נ פנים בפנים בבחי' יותר עליונה שבכולם, שישתמשו שניהן בכתר אחד ופנים בפנים, אשר אין הגדלה גדולה מזה, ותהיה היא מקבלת מאמא עלאה שלא על ידו.",
+          "en": "And then, on the sixth day, ZON coupled in the aspect of back to back, and Adam HaRishon was created in this aspect alone. And had the first man not sinned, he would have awakened MAN on that first Shabbat, and through this ZON would have coupled face to face, in the more exalted aspect of all — that they would both use one crown, face to face, than which there is no greater growth; and she would receive from the upper Ima, not through him."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-21",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והנה כאשר חטא אדם הראשון ביום ו', חזרה למטה תחת היסוד באחוריו, ונשארה שם בבחי' נקודה לבד כלול מי', ואז אותן הט\"ס עליונים שבה לא חזרו לעלות ולהסתלק ולהתעלם בזעיר אנפין עצמו, כמו בעת מיעוט הירח ביום ד'.",
+          "en": "And when the first man sinned on the sixth day, she returned below, under the Yesod, in his back, and remained there in the aspect of a point alone included of ten. And then those upper ten Sefirot within her did not return to ascend and depart and become hidden in Zeir Anpin himself, as at the time of the waning of the moon on the fourth day."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-22",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אמנם כיון שהיה מפני חטא, לכן כל אלו הט\"ס ירדו למטה בקליפות כמ\"ש בע\"ה. והרי היא בתכלית המיעוט האחרון שבכולם, ואז היא ילדה קין והבל ע\"י זווג זו\"ן, כנזכר אצלינו בדרוש קין והבל וחטא אדה\"ר ע\"ש איך היו למעלה בשעה זו.",
+          "en": "However, since it was because of a sin, all these ten Sefirot descended below, into the Klipot, as written in the Etz Chaim. And she is at the final limit of diminution of them all; and then she gave birth to Cain and Hevel, through the coupling of ZON, as mentioned by us in the discourse on Cain and Hevel and the sin of the first man — see there how they were above at this hour."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-23",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואח\"כ כשבא יום שבת ראשון, חזרה הנוקבא להתתקן בכל הו' בחי' הנ\"ל, ונגמרה בחי' הו', והוא שחזרה עמו פב\"פ בכל שיעור קומתו, זולת בחינת הכתר לבד שהיה גדול מכתרה, אחר שהיא בחי' יותר עליונה מכולם, וגבוה ממנה. ולכן היתה עדיין צריכה לקב מאמא על ידו, ואז לא היו משתמשין בכתר אחד, שהיא הבחי' היותר עליונה מכולם כנ\"ל.",
+          "en": "And afterwards, when the first Shabbat came, the Nukva returned to be corrected in all the six aspects mentioned above, and the sixth aspect was completed — that she returned with him face to face, in all the measure of his stature, except the aspect of Keter alone, which was greater than her Keter, being the aspect higher than all of them and higher than her. Therefore she still needed to receive from Ima, through him; and then they did not use one crown, which is the most exalted aspect of all, as above."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-24",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואח\"כ ביום ראשון דחול, חזרה לבחי' הב', והיתה פרצוף שלם מי\"ס באחורי החזה דז\"א, ועדיין ג\"כ לא היו מאירין בה ה' ראשונות דז\"א. והנה ענין זה נמשך מבריאת אדה\"ר עד שיצאו ישראל ממצרים, כי בכל יום שבת, חוזרת עמו פב\"פ שוה בשוה בבחינת ו' הנ\"ל, ובימי החול, היתה חוזרת אחור באחור פרצוף שלם בבחינה ב' הנ\"ל, וה\"ר דז\"א לא היו מאירין בה. וזה נמשך עד צאת ישראל ממצרים בליל פסח.",
+          "en": "And afterwards, on the first weekday, she returned to the second aspect, and was a complete Partzuf of ten Sefirot, in the back of the chest of ZA; and the first five Sefirot of ZA still did not illuminate in her. And this matter continued from the creation of the first man until Israel came out of Egypt: for on every Shabbat she returns with him face to face, equal for equal, in the sixth aspect mentioned above; and on weekdays she would return back to back, a complete Partzuf, in the second aspect mentioned above, and the five lights of ZA did not illuminate in her. And this continued until the exodus of Israel from Egypt, on the night of Passover."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-25",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אמנם, אע\"פ שבחינה זאת היתה כך, יש בו קצת שינוי בהמשך זמן הנ\"ל, והוא כמ\"ש רז\"ל, שאדה\"ר סילק את השכינה לרקיע ראשון ודור אנוש כו', עד שהעלוה למעלה מז' רקיעים, עד שבא אברהם ויצחק ויעקב לוי קהת ועמרם ומשה והורידוה למטה מן רקיעים כבתחלה.",
+          "en": "However, although this aspect was so, there is a certain change in it during the aforementioned period, and it is as the Sages said: that the first man removed the Shechina to the first firmament, and the generation of Enosh, etc., until they raised it above the seven firmaments; until Abraham, Isaac, and Jacob, Levi, Kehat, Amram, and Moses came and brought it down below the firmaments, as at first."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-26",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והענין הוא, כי כבר נתבאר, כי בשבת ראשון חזרו פב\"פ, ועדיין כתרו גדול מכתרה וגבוה ממנה, נמצא כי המלכות שבה למטה מכל בחינת ז\"א, ואין לה מקום יניקה כנגד הזכר כנ\"ל. וע\"כ צריך שתתעלה המלכות ביסוד שבה, ואז יהיה מקום יניקה גם אל המלכות שבה. וא\"כ נמצא, ששבעה רקיעים התחתונים שבה, כבר עלתה בימי אדה\"ר רקיע ראשון מלמטה למעלה, שהיא בחי' המלכות שבה ועלתה אל יסוד שבה.",
+          "en": "And the matter is that it was already explained that on the first Shabbat they returned face to face, and still his Keter is greater than her Keter and higher than her; hence the Malchut within her is below all the aspects of ZA, and she has no place of suckling opposite the male, as above. Therefore the Malchut must ascend into her Yesod, and then there will also be a place of suckling for her Malchut. Hence it is found that of the seven lower firmaments within her, she already ascended, in the days of the first man, the first firmament from below upward, which is the aspect of her Malchut, and it ascended into her Yesod."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-27",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ונמצא שאין לה עתה פרצוף רק מט\"ס עליונות שבה בלבד, וזה היה בכל השבתות, וגם בחול כאשר היתה חוזרת עמו אב\"א מהחזה ולמטה, לא היה לה רק פרצוף מט\"ס עליונים שבה נכללין כשיעור קומה ד' תחתונות שבו, כי המלכות שבה שהיא רקיע א' נסתלקה משם, ועלתה ביסוד.",
+          "en": "And it is found that she now has a Partzuf of only her upper nine Sefirot; and this was on all the Shabbatot, and also on weekdays, when she would return with him back to back, from the chest and below, she had only a Partzuf of her upper nine Sefirot, included in the measure of the stature of his four lower [Sefirot], because her Malchut, which is the first firmament, had departed from there and ascended into the Yesod."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-28",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וכן עשו כל הז' דורות, עד שהעלוה למעלה מז' רקיעים תחתונים שבה, ואז נכללין כל הז\"ת שלה בג\"ר שבה, ואותן ג\"ר שבה היו עומדין נגד ג\"פ עילאין דנה\"י דז\"א, ונאחזות בהם אב\"א, וכל הז\"ת שבה נכללין שם. ונשארו כל שארית נה\"י דז\"א מגולין בלתי לבוש, ומשתלשלין למטה מן שיעור קומת הנוקבא, ואז היתה עולם מתנהג ע\"י ז\"א.",
+          "en": "And so did all the seven generations, until they raised her above the seven lower firmaments within her; and then all her ZAT are included in her GAR, and those GAR within her stood opposite the three upper of the NHY of ZA, and held onto them back to back, and all her ZAT are included there. And all the remainder of the NHY of ZA remained revealed, without a garment, and hang down below the measure of the stature of the Nukva; and then the world was conducted by ZA."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-29",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וז\"ש באנשי סדום וה' המטיר על סדום מאת ה' מן השמים. כי עיקר ההנהגה מן השמים, שהוא ז\"א. אמנם, להיות כי גם נוקבא היתה כלולה בג\"פ עליונים דנה\"י דז\"א, לכן נזכרת בכללות עמו, כמ\"ש וה' המטיר וגו' הוא וב\"ד.",
+          "en": "And this is what is said of the people of Sodom: “And the Lord rained upon Sodom, from the Lord, out of heaven.” For the principal conduct is from heaven, which is ZA. However, because the Nukva was also included in the three upper of the NHY of ZA, she is therefore mentioned together with him, as it says, “And the Lord rained, etc., He and His court.”"
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-30",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו ענין מ\"ש בזוהר דינין דדכורא תקיפין ברישא ונייחין בסיפא, כי כל דיני הז\"א הם בנה\"י שלו, וכאשר הם מתפשטין בנוקבא ונעשין בה מוחין, אז נייחין שם בסופם, שחזרו להיות בחי' מוחין. אמנם כאשר הוא בבחי' הנ\"ל, שנכללין ז\"ת שבה בג\"ר שבה בריש נה\"י שלו, אז הם דינין תקיפין בסופם, וע\"כ וה' המטיר גפרית ואש, שהם דינין תקיפין, מן השמים, לפי שאז הז\"א אינו רחמים אלא דין, ואם הוא נקרא רחמים, הוא כאשר נה\"י שלו נעשין מוחין ברישא דנוקבא.",
+          "en": "And this is the matter of what is said in the Zohar: “The judgments of the male are harsh in the beginning and rest in the end.” For all the judgments of ZA are in his NHY; and when they expand in the Nukva and become Mochin in her, then they rest there at their end, for they returned to be the aspect of Mochin. However, when he is in the aforementioned aspect, that her ZAT are included in her GAR, in the head of his NHY, then they are harsh judgments at their end; and therefore “And the Lord rained brimstone and fire”, which are harsh judgments, “out of heaven” — because then ZA is not mercy but judgment; and if he is called mercy, it is when his NHY become Mochin in the head of the Nukva."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-31",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו נמי ענין הוצאת חמה מנרתקה, הנזכר בדרז\"ל ובתיקונים, שהם הוי\"ה אדנ\"י, כנזכר בתיקון כ\"א דנ\"ח. והענין, כי חמה הוא ז\"א, ונרתקה הוא נוקבא שמלבשת נה\"י שבו, שהם דינין תקיפין, הנקרא חמה בתוך נרתקה דנוקבא, ונחלש כוחם ובצאת חמה מנרתקה כנ\"ל, שורפת העולם כולו בדינים הקשים, וכבר נת\"ל, כי אין דבר זה אלא בימי החול, אבל בשבתות היה פב\"פ ע\"ד הנ\"ל.",
+          "en": "And this is also the matter of the bringing out of the sun from its sheath, mentioned in the words of the Sages and in the Tikkunim, that they are HaVaYaH Adonai, as mentioned in Tikkun 21. And the matter is that the sun is ZA, and its sheath is the Nukva, which clothes his NHY, which are harsh judgments, called “the sun within its sheath of the Nukva”; and their force is weakened. And at the going out of the sun from its sheath, as above, it burns the entire world with the harsh judgments. And it was already explained above that this thing is only on weekdays, but on the Shabbatot it was face to face, in the above manner."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-32",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזה נמשך עד שבא אברהם והורידה רקיע א', והוא בחינת החסד אשר בה שנתפשט למטה כנודע, כי אברהם איש חסד, וככן עשו השאר עד משה, ואז נתפשטה גם המלכות שבה, ונתפשטו ט\"ס שבה בבחינת אב\"א למטה מהחזה, ועדיין אין האור ה\"ר שבו מאירין בה, וכ\"ז בימי החול כנ\"ל.",
+          "en": "And this continued until Abraham came and brought her down one firmament, which is the aspect of the Hesed within her, which spread downward, as is known — for Abraham was a man of Hesed. And so did the rest, until Moses, when also her Malchut spread, and her ten Sefirot spread in the aspect of back to back, below the chest; and still the light of his five [Sefirot] does not illuminate in her. And all this on weekdays, as above."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-33",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וטעם הדבר הוא, לפי שכל הנשמות שבאותן הדורות שהיו מבחי' ישראל, היו מעורבים בדור הפלגה ובדור סדום ובדור מצרים, והיה הטוב מעורב ברע, וכמ\"ש בדרוש בפ\"ע בע\"ה, וע\"כ לא יכלו הצדיקים ההם להמשיך אור הה\"ר למטה שיאירו בה, וכמ\"ש בע\"ה בענין גלות מצרים.",
+          "en": "And the reason of the matter is that all the souls of those generations that were from the aspect of Israel were intermingled in the generation of the division (Dor HaPalaga), the generation of Sodom, and the generation of Egypt; and the good was intermingled in the evil, as said in a separate discourse, with the help of God. Therefore those righteous could not draw down the light of the five [Sefirot] below, to illuminate in her, as said, with the help of God, in the matter of the exile of Egypt."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-34",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו טעם ד' מאות שנה של גלות מצרים, שהיה גלות ההוא בחינת הסתלקות הה\"ר דז\"א מד' תחתונים שבו, אשר שם קומת המלכות, וכנגד ד' אלו שחסר מהם אור הנ\"ל, נמשך הגלות ת' שנה.",
+          "en": "And this is the reason of the four hundred years of the exile of Egypt — that this exile was the aspect of the departure of the five [Sefirot] of ZA from his four lower [Sefirot], which is where the stature of Malchut is; and opposite these four that were lacking the aforementioned light, the exile lasted four hundred years."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-35",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אח\"כ בהגיע תור גאולת מצרים בעשרה לחודש, לקחו הפסח, להורות כי אז היתה פרצוף שלם בסוד אב\"א בי\"ס, ולכן לקחו מבעשור. ואח\"כ המתינו עד ה' ימים, והאירו בה עוד ה\"ר שבו, ואז היה ליל פסח בט\"ו לחודש.",
+          "en": "Afterwards, when the time of the redemption of Egypt arrived, on the tenth of the month, they took the Paschal lamb, to indicate that then she was a complete Partzuf, in the secret of back to back, of ten Sefirot; and therefore they took it on the tenth. And afterwards they waited five days, and his five [Sefirot] illuminated in her again; and then was the night of Passover, on the fifteenth of the month."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-36",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וז\"ס מ\"ש בזוהר אמור דקי\"ב על בט\"ו לחודש, כי כדין, קיימא סיהרא באשלמותא: ה' על י'. פי': בהיותה בסוד אחור הוא בחי' י\"ס, ושיעור קומתה אינה רק ד\"ס תחתונות דז\"א, וה\"ר דז\"א גבוהין עליהן. וכאשר היא נגדלת עמו למעלה, לוקחת מקומם, ונמצא שהיא עתה בחי' ה' על י'. וזהו בליל פסח, שהוא בט\"ו לחודש, כי אז חזרה פב\"פ עמו בבחי' ו' הנ\"ל, ולכן אנו אומרים בלילה ההוא הלל גמור. ותכף ירדה כבתחילה, לכן אין הלל גמור בז' ימי הפסח.",
+          "en": "And this is the secret of what is said in the Zohar, Emor: on the fifteenth of the month, for then the moon stands in its completeness: the Hey upon the Yud. Meaning: when she is in the aspect of the back, she is the aspect of ten Sefirot, and the measure of her stature is only the four lower Sefirot of ZA, and the five [Sefirot] of ZA are higher than them. And when she grows with him above, she takes their place, and it is found that she is now the aspect of “Hey upon Yud.” And this is on the night of Passover, which is on the fifteenth of the month, for then she returned face to face with him, in the sixth aspect mentioned above; and therefore we recite complete Hallel on that night. And immediately she descended, as at first; therefore there is no complete Hallel in the seven days of Passover."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-37",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אח\"כ מאז ואילך עד שבנה שלמה בית ראשון היתה בכל ימי שבתות פב\"פ בבחינה ו' כנ\"ל, ובכל ו' ימי החול היתה אב\"א בבחינה הג' הנ\"ל, שהיתה בפרצוף שלם י\"ס מהחזה ולמטה, וגם אור ה\"ר דז\"א האירו בה תמיד. וזהו טעם זכירת יציאת מצרים, כי היתה גאולה גדולה מבחינת היותה בתחילה בימי הגלות בבחי' ב' לבד, והוא פרצוף י\"ס באחור מהחזה ולמטה בלי הארות ה\"ר שלו בה, משא\"כ בחורבן בית ראשון, כמ\"ש בע\"ה.",
+          "en": "Afterwards, from then on, until Solomon built the First Temple, she was on all the Shabbatot face to face, in the sixth aspect, as above; and on all the six weekdays she was back to back, in the third aspect mentioned above — that she was in a complete Partzuf of ten Sefirot, from the chest and below, and also the light of the five [Sefirot] of ZA illuminated in her always. And this is the reason for the remembrance of the exodus from Egypt, for it was a great redemption in relation to her being, at first, in the days of the exile, only in the second aspect — a Partzuf of ten Sefirot, in the back, from the chest and below, without the illuminations of his five [Sefirot] in her; unlike the destruction of the First Temple, as will be said, with the help of God."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-38",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואח\"כ, כאשר נבנה בית ראשון ע\"י שלמה, נתוסף עוד בה בחי' אחרת, והוא: כי בין בשבת בין בחול, לעולם היתה עמו פב\"פ בחי' ו', אמנם הבחינה ז', שהיא היות ב' מלכים משתמשין בכתר אחד כנ\"ל, לא היתה כך לעולם עד לע\"ל, ואלו היה כן בבית ראשון, לא היתה אומה ולשון שולטת בנו כלל עוד.",
+          "en": "And afterwards, when the First Temple was built by Solomon, another aspect was added in her: that whether on Shabbat or on weekdays, she was always with him face to face, in the sixth aspect. However, the seventh aspect, which is the two kings using one crown, as above, was not so — not ever, until the future; and had it been so in the First Temple, no nation or language would have ruled over us at all."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-39",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואמנם עוד נתוסף עתה בבית א' הארה גדולה, והוא זה הענין כמ\"ש במ\"א, כי הז\"א היה ו\"ק חג\"ת נה\"י, ואח\"כ עלו חג\"ת ונעשו חב\"ד, ונה\"י נעשו חג\"ת, והוצרכו הבינה להתפשט בו ולעשות נה\"י חדשים.",
+          "en": "And indeed, now in the First Temple, a great illumination was further added, and this is the matter as said elsewhere: that ZA was VAK, HGT NHY; and afterwards the HGT ascended and became KHB, and the NHY became HGT; and Bina needed to expand in him and make new NHY."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-40",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "נמצא. כי יש בז\"א הוד ראשון והוד אחרון, והוד הראשון נעשה אח\"כ בו גבורות. ונודע, כי הבינה בז\"א אתפשט עד הוד שבו. ואמנם קודם בית א' היתה הבינה בו עד הוד ראשון, שהיה אח\"כ בחי' גבורה. נמצא כי התפשטות בינה תוך ז\"א לא היתה כי אם בה\"ר, שהם חב\"ד ח\"ג. וכתר אינו נמנה, מפני שהכתר ודעת הכל א', כנודע.",
+          "en": "It is found that ZA has a first Hod and a last Hod, and the first Hod was afterward made in him into Gevurot. And it is known that Bina in ZA expands until his Hod. And indeed, before the First Temple, Bina was in him until the first Hod, which was afterward the aspect of Gevura. It is found that the expansion of Bina within ZA was only in the five [Sefirot], which are KHB and HG. And Keter is not counted, because Keter and Daat are all one, as is known."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-41",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "גם ת\"ת דז\"א, לא נתפשט בו הבינה, כי נ\"ה דאמא ארוכים ומתפשטין הרבה בב' קוין ימין ושמאל, אך היסוד שלה שהוא בקו האמצעי, מסתיים בדעת שלו. ואז ה\"ר לבד היתה הבינה מתפשטת, אך אחר בנין בית א' נתפשט בינה עד הוד ב' דז\"א, והם עתה ז\"ס שמתפשטות בהם הבינה תוך ז\"א.",
+          "en": "Also the Tifferet of ZA — Bina did not expand in it, for the NHY of Ima are long and expand greatly in the two lines, right and left; but her Yesod, which is in the middle line, ends in his Daat. And then Bina would expand only in the five [Sefirot]; but after the building of the First Temple, Bina expanded until the second Hod of ZA, and they are now the seven Sefirot in which Bina expands within ZA."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-42",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ואח\"כ כשגרמו העונות נחרב בית ראשון, ובעת חורבן עצמה ירדה המלכות אחורי היסוד דז\"א. אמנם ט\"ס העליונים שבה לא ירדו לקליפות כמו שהיה בחטאו של אדה\"ר, אמנם עלו למעלה בתוך ז\"א בשרשיהן, כנ\"ל בענין מיעוט הירח. ואלולי שנתמעט מיעוט הזה הגדול, לא היה יכולת אל הקליפות ולאה\"ע להחריב בהמ\"ק. אך אמנם, חזרו ט\"ס עליונים להתעלם למעלה בז\"א, ולא שלטו בהם הקליפות.",
+          "en": "And afterwards, when the sins caused the First Temple to be destroyed, at the very time of the destruction, Malchut descended behind the Yesod of ZA. However, her upper ten Sefirot did not descend into the Klipot, as was at the sin of the first man, but ascended above, within ZA, into their roots, as above in the matter of the waning of the moon. And had this great diminution not been made, the Klipot and the nations of the world would not have had the ability to destroy the Holy Temple. However, the upper ten Sefirot returned to become hidden above, in ZA, and the Klipot did not rule over them."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-43",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אמנם תכף אחר החרבן, חזרה הנוקבא להתקן בבחי' ג', ונעשה פרצוף של י\"ס אב\"א מהחזה ולמטה, ואף כי גם אז היו מאירין בה ה\"ר של ז\"א. וכל זה בחול, כי בשבת היתה פב\"פ בבחי' ו', נמצא כי בעת חרבן בית ראשון באותו גלות של ע' שנה דבבל, היתה הנוקבא ממש כמו שהיתה ביציאת מצרים ודור המדבר. וזש\"ה המדבר הייתי לישראל וגו'.",
+          "en": "However, immediately after the destruction, the Nukva returned to be corrected in the third aspect, and became a Partzuf of ten Sefirot, back to back, from the chest and below; and even then the five [Sefirot] of ZA illuminated in her. And all this on weekdays, for on Shabbat she was face to face, in the sixth aspect. It is found that at the time of the destruction of the First Temple, in that exile of the seventy years of Babylon, the Nukva was exactly as she was at the exodus from Egypt and in the generation of the wilderness. And this is what is written: “I have been a wilderness to Israel, etc.”"
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-44",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ומה שהיה אז בחינת גאולת מצרים נחשב עתה לגלות, לפי שבתחילה בגלות מצרים היתה גלות גמור, שאפילו בהיותה אב\"א בימי החול, לא היו אור ה\"ר שלו מאירין בה, ולכן כאשר נתוסף הארת ה\"ר, נחשב לגאולה. אבל עתה שבזמן בית ראשון אפילו בימי החול היו פב\"פ וקומתן שוה, ואח\"כ כשחזר לבחי' ג' דאב\"א, אע\"פ שאור הה\"ר מאירין בה, נחשב לגלות גמור.",
+          "en": "And what was then considered the redemption of Egypt is now considered exile, because at first, in the exile of Egypt, it was a complete exile, so that even when she was back to back on weekdays, the light of his five [Sefirot] did not illuminate in her; and therefore, when the illumination of the five [Sefirot] was added, it was considered a redemption. But now, since in the time of the First Temple, even on weekdays, they were face to face and their statures equal, and afterwards when it returned to the third aspect of back to back, although the light of the five [Sefirot] illuminates in her, it is considered a complete exile."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-45",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אמנם הגירעון שהיתה עתה בגלות בבל, הוא, כי אותן הארות שהיו מאירין ז\"ס עליונים, שבהם נתפשטה בינה בז\"א כנ\"ל בימי בית המקדש ראשון, וכולם היו מאירין בה בבחינת פב\"פ כנ\"ל, הנה אלו האורות ירדו כולם ונמשכו אל הקליפות בעו\"ה. אך לא ט\"ס ראשונים עצמם שבה, כנ\"ל, שעלו בז\"א, אך אלו הז' האורות ירדו בקליפות והיא חזרה אב\"א בימי החול.",
+          "en": "However, the deficiency that was now in the exile of Babylon is that those illuminations that the seven upper [Sefirot] illuminated — in which Bina expanded in ZA, as above, in the days of the First Temple, and all of them illuminated in her in the aspect of face to face, as above — these lights all descended and were drawn into the Klipot, alas. But not her own first ten Sefirot, as above, which ascended in ZA; rather, these seven lights descended into the Klipot, and she returned back to back, on weekdays."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-46",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו ענין גלות בבל ע' שנה, נגד ז' אורות אלו שהוא ז' בחי' כל א' כלול מי', לכן נקרא גלות בבל שהוא גימטריא ד\"ל, כנודע כי מלכות נבנית ע\"י בוכ\"ו חילוף אהי\"ה, שהוא גימטריא ד\"ל, ואז שיעור קומת המלכות היא אורך היריעה שלשים באמה, ורוחב ארבע באמה, כמנין ד\"ל. ועתה נתמעטה בניינה וקומתה הראשון שהוא גימטריא ד\"ל.",
+          "en": "And this is the matter of the exile of Babylon of seventy years, opposite these seven lights, which are seven aspects, each one included of ten; therefore it is called the exile of Babylon, which is the Gematria of DL (34), as is known — for Malchut is built through Bochu (BUKHV), the reverse of Ehyeh, which is the Gematria of 34. And then the measure of the stature of Malchut is the length of the curtain of thirty cubits and the breadth of four cubits, the count of 34. And now her building and her first stature, which is the Gematria of 34, was diminished."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-47",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "אח\"כ בבית שני עלתה בימי השבת פב\"פ בבחי' ו', אך בימי החול עלתה פב\"פ של בחינה הה', שהיתה פרצוף בי\"ס שלימות ושיעור קומתה, מהחזה שלו ולמטה פב\"פ, והיו ה\"ר שלו מאירין בה מרחוק, אמנם לא עלתה היא כנגדן ממש, כמו שהיתה בבית א' בימי החול.",
+          "en": "Afterwards, in the Second Temple, she ascended on the days of Shabbat face to face, in the sixth aspect; but on weekdays she ascended face to face in the fifth aspect — that she was a Partzuf of complete ten Sefirot, and the measure of her stature was from his chest and below, face to face; and his five [Sefirot] illuminated in her from afar, but she did not ascend opposite them exactly, as she was in the First Temple on weekdays."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-48",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזה הענין שחסר ה' דברים בבית שני, ואלו הם, אורים ותומים וכו'. וזהו ענין מ\"ש בזוהר פרשת שמות, כי בית ראשון לקבל ה' עלאה ובית שני לקבל ה' תתאה.",
+          "en": "And this is the matter that five things were lacking in the Second Temple, and they are the Urim veTumim, etc. And this is the matter of what is said in the Zohar, Parashat Shemot: that the First Temple was corresponding to the upper Hey, and the Second Temple corresponding to the lower Hey."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-49",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והענין היא, שכבר בארנו, שבבית ראשון היו פב\"פ עד למעלה בבחי' ו' והיו ה\"ר מאירין בה, ואז נקרא סיהרא באשלמותא, במלוי הלבנה בט\"ו לחודש, בסוד חמשה עשר: ה' על י', כנ\"ל. נמצא כי בהיותן שם למעלה נקרא גם היא ה' עלאה, אך בבית שני שהיתה בימי החול פב\"פ בד' תחתונות שבו והיא חמישית להם, אז נקרא ה' תתאה.",
+          "en": "And the matter is that we already explained that in the First Temple they were face to face up above, in the sixth aspect, and the five [Sefirot] illuminated in her; and then she is called “the moon in its completeness,” in the fullness of the moon on the fifteenth of the month, in the secret of fifteen: the Hey upon the Yud, as above. It is found that when they are there above, she is also called the upper Hey. But in the Second Temple, when on weekdays she was face to face in his four lower [Sefirot], and she was the fifth to them, then she is called the lower Hey."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-50",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ועוד ט\"א עם הנ\"ל, כי בבית ראשון אמא עלאה הנקראת ה' עלאה, נתפשטה עד הוד ב' דז\"א, ואמנם המלכות היתה יונקת ממנה, כי שם מקום המלכות. אך בבית שני, לא נתפשטה הבינה רק עד הוד ראשון דז\"א בלבד, שהוא בחינת גבורה של עתה, כנ\"ל.",
+          "en": "And there is another reason, with the above: that in the First Temple, the upper Ima, called the upper Hey, expanded until the second Hod of ZA; and indeed, Malchut would suckle from her, for there is the place of Malchut. But in the Second Temple, Bina expanded only until the first Hod of ZA alone, which is the aspect of the present Gevura, as above."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-51",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "נמצא, כי המלכות עתה בחול בבית ב', אע\"פ שהוא פב\"פ, היא מחזה ולמטה, ואינה יונקת מה' עלאה, לכן נקרא ה' תתאה, לפי שאינה יונקת מה\"ר. ושמור הקדמה זו, על ענין בינה המתפשטת עד הוד א' אימתי הוא, ואימתי מתפשטת עד הוד ב'.",
+          "en": "It is found that Malchut, now on weekdays in the Second Temple, although she is face to face, is from the chest and below, and does not suckle from the upper Hey; therefore she is called the lower Hey, because she does not suckle from the five [Sefirot]. And guard this introduction, regarding the matter of Bina expanding until the first Hod — when it is, and when it expands until the second Hod."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-52",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והנה אח\"כ בחורבן בית שני, היתה המיעוט היותר מועט שבכל הזמנים, והוא דומה ממש אל זמן חטא אדה\"ר, והוא כמו שהיתה בבחינה ראשונה של אצילות אב\"א, שהיתה בבחינת נקודה כלולה מי', שהוא המלכות שבה בלבד אב\"א תחת היסוד שלו, ונתוסף בה פגם, שאותן הט\"ס שלה ירדו למטה בין הקליפות, ואז סמכין אתאבידו, שהם נה\"י ז\"א הסומכים אותה.",
+          "en": "And afterwards, in the destruction of the Second Temple, there was the smallest diminution of all the times, and it is exactly like the time of the sin of the first man — like her being in the first aspect of Atzilut, back to back, being a point included of ten, namely her Malchut alone, back to back, under his Yesod. And a blemish was added in her: that those ten Sefirot of hers descended below, among the Klipot; and then “the supports were lost” (Samkhin Et'avidu), which are the NHY of ZA that support her."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-53",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וז\"ס השליך משמים ארץ וגו'. כי ת\"ת ישראל שהוא ז\"א, השליך את המלכות הנקרא ארץ, שהיתה תחלה בת\"ת שבו הנקרא שמים, ומשם השליכה אפילו למטה מהדום רגליו, שהם נה\"י שבו, ונפלה תחת היסוד שבו באחוריו.",
+          "en": "And this is the secret of “He cast down from heaven to earth”: that the Tifferet of Israel, which is ZA, cast down Malchut, called earth, which was first in his Tifferet, called heaven; and from there he cast it even below the stool of his feet, which are his NHY; and she fell under his Yesod, in his back."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-54",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו ויגדל עון בת עמי מחטאת סדום, כי בדור אנשי סדום היתה המלכות באחורי נה\"י דז\"א כנ\"ל, בסוד וה' המטיר. אך עתה, נפלה בסוד נקודה לבד תחת היסוד, וט\"ס שלה ירדו אל הקליפות, מכ\"ש הארת ה\"ר שנפלו בחרבן בית ראשון.",
+          "en": "And this is “and the iniquity of the daughter of my people is greater than the sin of Sodom”: for in the generation of the people of Sodom, Malchut was in the back of the NHY of ZA, as above, in the secret of “And the Lord rained.” But now, she fell in the secret of a point alone, under the Yesod, and her ten Sefirot descended into the Klipot — all the more so the illumination of the five [Sefirot] that fell in the destruction of the First Temple."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-55",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "נמצא, כי חטא אדה\"ר וחטא חורבן בית שני הכל א', אלא שחטא אדה\"ר תיקן ממש את הקליפות, מה שמתחלה היו בלתי תיקון, כמ\"ש בע\"ה. אבל בעת החרבן בחטא ישראל, כבר היו הקליפות מתוקנים, ומה שגרמו הם, הוא להחזיר ולהלביש בהם את הקדושה כנ\"ל.",
+          "en": "It is found that the sin of the first man and the sin of the destruction of the Second Temple are all one, except that the sin of the first man actually corrected the Klipot, which at first were without correction, as said, with the help of God. But at the time of the destruction, through the sin of Israel, the Klipot were already corrected, and what they caused was to return and clothe the holiness in them, as above."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-56",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "<span class=\"tes-footnote\" title=\"שער הכונות ענין ראש השנה דרוש ה'\">*</span>בענין השבת ויו\"ט ור\"ה, וכבר ביארנו למעלה בענין השינוי והחילוק שיש בין השבת ליו\"ט ולר\"ה וע\"ש. ונבאר כאן עניינם בקיצור. הנה שם נתבאר כי בבחי' היות שנוקבא דז\"א עולה ביום שבת בתפלת חזרת המוסף עד הכתר של או\"א, והיא שוה אליו עתה ממש בכל שיעור קומתו, לכן קדושת השבת היא יותר גדולה מקדושת יו\"ט, אבל בבחינת כי ביום השבת היא מקבלת ההארה שלה ע\"י ז\"א, לכן אין זה שלימות אליה, משא\"כ בר\"ח ויו\"ט, שהיא והוא שוין ויונקין מכתר א', ואינה מקבלת הארתה על ידו. אבל להבין זה, צריכין אנו להודיעך ענין זה.",
+          "en": "<span class=\"tes-footnote\" title=\"Sha'ar ha-Kavvanot, the matter of Rosh HaShanah, Derush 5\">*</span>Regarding Shabbat, the festivals, and Rosh HaShanah — we have already explained above the matter of the difference and distinction between Shabbat, the festivals, and Rosh HaShanah, and see there. And we shall explain here their matter briefly. There it was explained that in the aspect of the Nukva of ZA ascending on the day of Shabbat, in the prayer of the repetition of the Musaf, up to the Keter of AVI, and she is now equal to him exactly, in all the measure of his stature — therefore the holiness of Shabbat is greater than the holiness of the festival. But in the aspect that on the day of Shabbat she receives her illumination through ZA, therefore this is not perfection for her; unlike Rosh Chodesh and the festivals, where she and he are equal and suckle from one crown, and she does not receive her illumination through him. But to understand this, we need to inform you of this matter."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-57",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "דע, כי כל הזווגים שיש בזו\"ן, שכולם צריך שזו\"ן יקבלום שפע והארה מן ט\"ס דא\"א, ובכח זה יוכלו להזדווג, אבל אין כל הזווגים שוים: כי הנה בימי החול, אז הז\"א מקבל הארתו מן הנצח דא\"א, וכל בחינותיו של ז\"א נכללין בקו הימין בנצח דא\"א, ומלכות מקבלת הארתה מן ההוד דא\"א, וכל בחינותיה נכללות בקו שמאלי הוד דא\"א, ועי\"כ אין זו\"ן שוים כאחד.",
+          "en": "Know that all the couplings that there are in ZON, all of them require that ZON receive influx and illumination from the ten Sefirot of AA, and by this power they can couple. But all the couplings are not equal: for on weekdays, ZA receives his illumination from the Netzah of AA, and all the aspects of ZA are included in the right line, in the Netzah of AA; and Malchut receives her illumination from the Hod of AA, and all her aspects are included in the left line, the Hod of AA; and by this, ZON are not equal as one."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-58",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ובר\"ח, אז זו\"ן משמשין בכתר א', ר\"ל שניהם נכללים בנצח דא\"א, והם מקבלים הארתם בהשואה א', ואין יתרון לזכר על הנקבה. ובשבתות אז עולין זו\"ן עד הכתר דאו\"א, וזה נכלל באבא, וזו נכללת באימא ואין שניהם שוים בהשואה אחת, ולכן היא מקבלת הארתה על ידו.",
+          "en": "And on Rosh Chodesh, ZON use one crown — meaning they are both included in the Netzah of AA, and they receive their illumination in one equivalence, and the male has no advantage over the female. And on the Shabbatot, ZON ascend up to the Keter of AVI, and he is included in Aba, and she is included in Ima; and the two are not equal in one equivalence, and therefore she receives her illumination through him."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-59",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזהו הטעם, שהשבת נקרא קדש ממש, כמש\"ה ושמרתם את השבת כי קדש היא לכם. אבל הי\"ט נקרא מקראי קדש, לפי שביום שבת ז\"א מקבל מן הקדש דאו\"א, ונותן על ידו חלקה אל הנוקבא. ונמצא כי ז\"א עצמו שהוא בחי' יום השבת נקרא קדש ממש, אבל שאר היו\"ט אינם עולים עד המקום שעלו ביום שבת אבל בכל יו\"ט עולים כפי בחינתו כמ\"ש.",
+          "en": "And this is the reason that Shabbat is called actual holiness (Kodesh), as it is written: “And you shall keep the Shabbat, for it is holy to you.” But the festivals are called “holy convocations” (Mikraei Kodesh), because on the day of Shabbat ZA receives from the holiness of AVI and gives her share to the Nukva through him. And it is found that ZA himself, who is the aspect of the day of Shabbat, is called actual holiness; but the rest of the festivals do not ascend to the place they ascend on the day of Shabbat, but on every festival they ascend according to their aspect, as said."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-60",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "<span class=\"tes-footnote\" title=\"ע&quot;ח ח&quot;ב דרוש מ' שער פנימיות וחצוניות דרוש ח'.\">*</span>בזה תבין סוד הנסירה שנותן בה הדינים שהם האחורים. כי תחלה היה בו החיצוניות הנקרא אחור, הוא הקטנות. והבן זה, כי האמצעי אינו נקרא אחורים, והיה בו אחור ואמצעי. ובבוא הפנים שהוא גדלות, אז מה שהיתה המלכות בסוד עיבור לבד כלי אחד באחור (הגדיל אותה מאחוריו פרצוף גמור עד כנגד החזה שהוא חצי שיעורו, והרי נשלמה כמוהו, עם היותה חצי שיעורו, ועדיין חסרה ממנה יסוד ומלכות, וזה לפי שעדיין אינה שלמה כמוהו רק חציו דוגמת זמן יניקתו, וחסר ממנה כלי ג' הפנימי.) כי בזמן שיש לו עיבור, אין לה מדה כלל רק עטרת היסוד, שהוא חצי מדה שבה, ועתה נגדלה (כיסוד שלו) כמוהו.",
+          "en": "<span class=\"tes-footnote\" title=\"Etz Chaim, Part 2, Derush 40, Gate of Internality and Externality, Derush 8.\">*</span>With this you will understand the secret of the Nesira, which gives her the Dinim, which are the Achoraim. For at first, he had the externality called Achor, which is the smallness. And understand this — the intermediate is not called Achoraim, and he had Achor and intermediate. And when the face comes, which is the greatness, then what was Malchut, in the secret of Ibur alone, a single vessel in the back (he grew her from his back into a complete Partzuf, up to opposite the chest, which is half his measure; and behold, she is completed like him, although she is half his measure, and she is still lacking Yesod and Malchut — and this is because she is not yet complete like him, but only half of him, like the time of his suckling; and the third inner vessel is lacking from her), for at the time that he has Ibur, she has no measure at all, only the Atara of the Yesod, which is half the measure within her; and now she grew (like his Yesod) like him."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-61",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וזה כלל גדול שתבין בו הכל, כי לעולם פרצוף הב' הוא חצי העליון, כנזכר במקום אחר. וכיון שז\"א בסוד העיבור היה חצי מדה, גם היא היתה חצי מדה, כי הוא ו\"ק (ונשארו) ונעשו ג'. והיא קצה הז' שהוא כשיעור היסוד שלו הקטן שבכולם, שאין בו רק ב' פרקין.",
+          "en": "And this is a great rule with which you will understand everything: that always the second Partzuf is the upper half, as mentioned elsewhere. And since ZA, in the secret of the Ibur, was half a measure, she too was half a measure, for he is VAK, (and remained) and became three; and she is the seventh point, which is like the measure of his Yesod, the smallest of them all, which has only two joints (Perakin)."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-62",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והבן זה היטב, כי בזמן היניקה, חזרה להתקן כל מה שהיה בו טרם מיתת המלכים, שהרי הוא ו\"ק מחוברות, והיא קצה הז' מתוקן. ובהכרח שבזמן מיתת המלכים היה בהם ב' בחינות שהם פנים ואחור, ולכן אלו הב' בחינות אינם נחסרים משום פרצוף שבעולם.",
+          "en": "And understand this well, for at the time of the suckling, everything that was in him before the death of the kings returned to be corrected — for he is six connected VAK, and she is the corrected seventh point. And necessarily, at the time of the death of the kings there were in them two aspects, which are face and back; and therefore these two aspects are not lacking from any Partzuf in the world."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-63",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ועתה צריכין להתתקן ג\"ר דז\"א וט' אחרונות דמלכותשמעולם לא באו אפילו בזמן המלכים, ואלו באים בסוד תוספות. ועתה באים מעורבים ומתוקנים עם מ\"ה וב\"ן בגדלות.",
+          "en": "And now the first three Sefirot of ZA and the last nine of Malchut, which never came even during the time of the kings, must be corrected, and these come in the aspect of additions. And now they come mixed and corrected with MaH and BaN in Gadlut."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-64",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "כי בקטנות, כולם דב\"ן, כנודע. כי ז' מלכים כולם מב\"ן היו. גם לאחר התיקון לקחו כל אחד מהם מ\"ה וב\"ן, כנודע. ואז נשלמו. והבן זה היטב, כי אין מ\"ה בקטנות כלל רק בגדלות: והוא מ\"ה, כל יוד דיליה ודילה. וב\"ן, ג' דיליה וט' דילה.",
+          "en": "For in Katnut all of them are of BaN, as is known, for the seven kings were all of BaN. Also after the correction each of them took MaH and BaN, as is known, and then they were completed. And understand this well: for there is no MaH in Katnut at all, only in Gadlut. And it is: MaH — all the ten of his and of hers; and BaN — the three of his and the nine of hers."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-65",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והנה א\"א ועתיק, הזכר לקח כל המ\"ה והנוקבא לקחה כל הב\"ן להיותה נמתקת ואינה צריכה אליו, אך מאו\"א ואילך הוצרכו הזכרים ליקח תחלה הב\"ן של נקבה אפילו הקטנות שבה כדי למתקו, ואח\"כ ניתנו אליה לגמרי ונשאר בהם שרשו מן הקטנות.",
+          "en": "And behold, in AA and Atik, the male took all of MaH and the female took all of BaN, because she is sweetened and does not need him. But from Aba and Ima onward, the males had to first take the BaN of the female, even its Katnut, in order to sweeten it, and afterward it was given to her entirely, while its root from the Katnut remained in them."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-66",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ובגדלות לוקח ג\"כ שלו ושלה, ואח\"כ ניתן לה הב\"ן לבדו לפרצופה, והמ\"ה הארתו לבד, שהם הארת החסדים לבד, ולא עיקרא, כי עיקרא נשאר בו. וההיפך בב\"ן, כי עיקרו בה ובו הארה בלבד, אך עכ\"ז כיון שתחלה לקחו, הרי יש לו שורש גדול ממנו, לכן דעתו שלם. אך הנקבה אינה לקחת ממ\"ה רק הארתו לבד ועיקרה מב\"ן, ולכן דעתה קלה אפילו בגדלות.",
+          "en": "And in Gadlut he also takes his own and hers, and afterward only her BaN is given to her for her Partzuf, and of MaH only its illumination, which are only the illumination of the Hasadim, and not its essence, for its essence remains in him. And the opposite in BaN, for its essence is in her and in him there is only illumination. Nevertheless, since he took it first, he has a root greater than hers, and therefore his Daat is complete. But the female did not take from MaH except its illumination alone, and her essence is from BaN, and therefore her Daat is light even in Gadlut."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-67",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וכל זה המ\"ה וב\"ן דגדלות, נקרא תוספת המסתלק, ולא נשאר כי אם ב\"ן דקטנות בשניהם, וזה בזו\"נ, כי באו\"א לעולם נשארים בהם, כי כבר שם ב\"ן שלם היה להם תחלה בעת המלכים כל י\"ס, אמנם גם הם הוצרכו למ\"ה וב\"ן עד\"ז הנ\"ל בזו\"נ.",
+          "en": "And all this MaH and BaN of Gadlut is called the passing addition, and nothing remains but the BaN of Katnut in both of them. And this is in ZON, for in Aba and Ima they always remain within them, for they already had a complete BaN at first, during the time of the kings, all ten Sefirot. However, they too needed MaH and BaN in the manner described above for ZON."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-68",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ועיקר מ\"ה בזכר, והארתו בנוקבא, ולהיפך בב\"ן, ויען היות חו\"ב מבינה דמ\"ה לבד, לכן שרשם דינים ולא רחמים עם שהם מ\"ה. ואפשר, כי מ\"ה בחכמת אבא ובחכמת אמא, וב\"ן בבינת אבא ובבינת אמא, וכן יהיה בז\"א.",
+          "en": "And the essence of MaH is in the male, and its illumination in the female; and the reverse in BaN. And since Hochma and Bina are from Bina of MaH alone, their root is judgments and not mercy, even though they are MaH. And it is possible that MaH is in the Hochma of Aba and in the Hochma of Ima, and BaN is in the Bina of Aba and in the Bina of Ima, and so it will be in ZA."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-69",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ונחזור לענין, כי ביניקה נשלמו כבראשונה, ואז לא היה לכל א' מהם רק ב' כלים, שהם אחור ואמצעי. ובבא הגדלות לקח ז\"א כלי הפנימי הג', ואז הגדיל את הנוקבא מאחוריו פרצוף גמור עד כנגד החזה, שהוא חצי שיעורו כנ\"ל, והרי נשלמה כמוהו, עם היותה חצי שיעורו.",
+          "en": "And let us return to the matter: for in nursing they were completed as at first, and then each of them had only two vessels, which are the posterior and the middle. And when Gadlut came, ZA took the third inner vessel, and then he enlarged the Nukva from his back into a complete Partzuf up to opposite the Chazeh, which is half his measure, as above; and behold, she was completed like him, although she is half his measure."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-70",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ועדיין חסר ממנה נקודת יסוד ומלכות שבה. וזה לפי שעדיין אינה שלימה כמוהו רק חציו דוגמת זמן יניקתו, וחסר ממנה כלי הג' הפנימי של אותן ב' בחי', וגם מן הדעת שלה לא היה תוספת גדלות, רק כבזמן הקטנות.",
+          "en": "And she is still missing the point of Yesod and its Malchut. And this is because she is still not complete like him, only half of him, like the time of his nursing; and the third inner vessel of those two aspects is missing from her, and also her Daat had no addition of Gadlut, only as in the time of Katnut."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-71",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "וכשננסרה, שהוא שלקחה היא המוחין חצים לבד, שהם בינה וגבורה (כנזכר במ\"א בענין שופר) אז נמשך לה שם ב\"ן שלה, כנודע, כי בינה וגבורה של ז\"א הם ב\"ן כנ\"ל, ואז נשלם יסוד ומלכות שבה, ועדיין חסרה הארת שם מ\"ה, ואז ניתנו בה האחורים של החיצונים דעיבור, ונעשה פנימיות בה.",
+          "en": "And when she was sawed — that is, she took only half the mochin, namely Bina and Gevura (as mentioned elsewhere in the matter of the Shofar) — then her name of BaN was drawn to her, as is known, for the Bina and Gevura of ZA are BaN, as above. And then her Yesod and Malchut were completed, yet she was still lacking the illumination of the name MaH; and then the Achoraim of the external aspects of the pregnancy were given into her, and an inner aspect was made in her."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-72",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והרי נשלמו בה ג' חלוקות: יסוד, ומלכות, ודעת שבה, שהם איברי ההולדה שאינם נעשים אלא ממ\"ה. ובחזרתן פב\"פ נתן בה בזווג א' שם ב\"ן בבחי' הגדלות, ונשלמה. ואח\"כ בזווג הב' נתן לה המ\"ה, שהם החסדים לצורך נשמות.",
+          "en": "And behold, three divisions were completed in her: her Yesod, her Malchut, and her Daat, which are the organs of procreation, which are made only from MaH. And upon their return face to face, he gave her, in the first coupling, the name BaN in the aspect of Gadlut, and she was completed. And afterward, in the second coupling, he gave her the MaH, which are the Hasadim, for the sake of the souls."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-73",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ונמצא כי בזמן הנסירה, היא לוקחת הגבורות מז\"א והוא נשאר רק מהחסדים ולוקח הוא הפנימיות (ונראה לי, כי נר\"ן נקרא פנימיות העולמות. וגם במ\"א ע\"ש כי ציצית קטן, קטנות שהיא עשייהשביצירה, וציצית גדול, גדלות שביצירה. ובמ\"א נתבאר כי שניהם נקראו חיצונות שביצירה, ובמ\"א ע\"ש (מהרח\"ו ז\"ל) כי כל מה שנותן הזכר לנוקבא בעת הנסירה, גם מה שנתון לה מאמא, אינם רק הגבורות, והם נקראים אחורים.",
+          "en": "And it follows that at the time of the sawing she takes the Gevurot from ZA, and he remains only with the Hasadim, and he takes the inner aspect. (And it seems to me that NRN is called the inner aspect of the worlds. And also in another place, see there: the small Tzitzit is the Katnut, which is the Asiya within Yetzirah, and the large Tzitzit is the Gadlut within Yetzirah. And in another place it was explained that both are called the external aspects of Yetzirah. And in another place, see there — from the Ari, of blessed memory — that everything the male gives to the female at the time of the sawing, even what was given to her from Ima, is only the Gevurot, and they are called Achoraim.)"
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-74",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "ויש גבורות באחורים דזכר ויש גבורות במוחין ג\"כ, ושניהם ננסרין וניתנין אליה (נראה מזה כי הפנימיות הם המוחין, שבהם ג\"כ בחי' גבורות ב\"ן הניתנין אליה, וכעד\"ז בכלים מבחוץ. והוא נשאר במ\"ה, ועיין במ\"א היטב ענין הגבורות והחיבוק בימין ובשמאל והזווג, וכמה מיני חסדים וכמה מיני גבורות הם (מהרח\"ו ז\"ל).",
+          "en": "And there are Gevurot in the Achoraim of the male, and there are also Gevurot in the mochin, and both are sawed off and given to her. (It appears from this that the inner aspects are the mochin, in which there are also aspects of Gevurot of BaN given to her, and likewise in the vessels from without. And he remains in MaH. And see in another place well the matter of the Gevurot and the embrace with the right and the left, and the coupling, and how many kinds of Hasadim and how many kinds of Gevurot there are — from the Ari, of blessed memory.)"
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-75",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "והענין, כי בחינת החיצונית והאמצעית שבנ\"ה הם תרי פלגי גופא, שהם גוף א' לבד, כי שם ראש הנוקבא א' לבד, וזו\"ן משתמשין בהם, וכותל א' לשניהן, אך בבואם של החסדים אז הנ\"ה נפרדין זה מזה.",
+          "en": "And the matter is that the external and middle aspects in Netzah and Hod are two halves of one body, for they are a single body, since there the head of the Nukva is a single one, and ZON use them, and they have one wall for both. But when the Hasadim come, then Netzah and Hod separate from each other."
+        }
+      ]
+    },
+    {
+      "chapterId": "part-15/chapter-76",
+      "context": {
+        "sourceText": [],
+        "targetText": null
+      },
+      "items": [
+        {
+          "n": 1,
+          "he": "כי נעשה בזכר בחי' ה\"ג הפנימית, כי אז הכותל ההוא לו לבדו מן החסדים, ולכן נחלקים נ\"ה, ולה כותל א' לבדו מן הגבורה, והם מחוברים נ\"ה לבחי' ראשה, והנוקבא לעולם היא סוד אחורים של הזכר, והזכר הוא בחינת הפנים אף בהיותם אב\"א, והבן זה.",
+          "en": "For an aspect of the inner five Gevurot is made in the male, for then that wall is his alone, from the Hasadim; therefore Netzah and Hod are divided, and she has but one wall alone, from the Gevura. And Netzah and Hod remain joined to the aspect of her head. And the Nukva is always the secret of the Achoraim of the male, and the male is the aspect of the Panim even when they are back to back; and understand this."
+        }
+      ]
+    }
+  ]
+}
