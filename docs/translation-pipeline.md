@@ -275,8 +275,12 @@ commentary run that follows has the Ari's text in its own language as
 
 What differs from the English run:
 
-- **Official translations first.** Run the importers before exporting:
-  anything a Bnei Baruch edition in that language covers is never exported.
+- **Official translations first.** Run the importers before exporting. A
+  complete Bnei Baruch chapter is never exported. If an official source
+  chapter is incomplete, however, the exporter emits the whole chapter for
+  the AI edition: source files are selected as whole editions, validation
+  requires AI source files to be structurally complete, and copying official
+  prose into an AI-badged file would misstate its provenance.
 - **The English reference.** For a non-English target, every exported item
   also carries `en` — the English a reader of that passage sees (the reader's
   own edition chain, `shared/utils/versionChains.ts`). The Hebrew stays the
