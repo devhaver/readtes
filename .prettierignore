@@ -4,6 +4,7 @@ pnpm-lock.yaml
 content/
 .claude/
 .translation/
+.translation-*/
 .translation-work/
 .translation-*-stage.json
 
