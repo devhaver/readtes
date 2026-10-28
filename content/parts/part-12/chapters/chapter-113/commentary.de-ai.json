@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-12/chapter-113",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Die zehn Sefirot von SA werden von Chochma abwärts gerechnet, die Reshit genannt wird, und nicht von Keter abwärts:</b> Denn sowohl das Kli von Keter de-SA als auch sein Licht stammen aus Tiferet de-Tvuna. Daher wird Keter nicht als Eigenschaft von SA betrachtet; SA beginnt erst mit Chochma, wie an seiner Stelle erklärt wird."
+    }
+  ]
+}

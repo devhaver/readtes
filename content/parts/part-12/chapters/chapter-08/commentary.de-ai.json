@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-12/chapter-08",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:8",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:8:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Die NeHJ de Ima müssen sich von ihren Lichtern entleeren, damit unmittelbar nach der Geburt die Mochin de SA in sie eintreten können:</b> Das heißt, sie müssen sich entsprechend dem Zustand von Katnut de SA vermindern, wie oben erklärt wurde. Die Lichter von Gadlut in Tvuna müssen notwendigerweise aus ihnen verschwinden, denn sie sind für SA nicht geeignet; wie könnten sie sich sonst in ihn einkleiden? Dies schrieb der ARI oben auf S. 949, Punkt 154; siehe dort."
+    }
+  ]
+}
