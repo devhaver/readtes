@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "de-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Atik de Brija ist der Punkt der Malchut de Azilut.</b> Dies wurde bereits oben erklärt, S. 1979, Abschnitt beginnend mit „Und auf den ersten Blick“. Und es wird weiter unten erklärt werden, S. 2012, Abschnitt beginnend mit „Die GaR“."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Und sie kleidet sich wie die GaR der WaK de AA ein, das sind die enthüllten CHaGaT.</b> Es wurde bereits im vorhergehenden Abschnitt erklärt, dass diese CHaGaT de AA nur in der Bchina eines Gewands der NeHJ de Atik nach Brija kamen, und daher wurden sie auch jetzt zu einem Gewand für Atik de Brija; siehe dort."
+    }
+  ]
+}
