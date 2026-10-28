@@ -46,9 +46,9 @@ import {
 import { versionChainForLanguage } from "../shared/utils/versionChains.ts";
 import {
   alignEditionHtml,
+  itemsForTranslation,
   packBatches,
   proseLength,
-  untranslatedItems,
   type TranslatableChapter,
   type TranslatableItem,
 } from "./lib/translation-batches.ts";
@@ -123,7 +123,7 @@ if (!targetVersion) {
   process.exit(1);
 }
 
-/** Every version in the target language, so an item already covered by a human edition is never re-translated. */
+/** Every version in the target language, used to detect chapter-level coverage. */
 const targetLanguageVersionIds = new Set(
   versions.filter((v) => v.language === targetLanguage).map((v) => v.id),
 );
@@ -188,17 +188,32 @@ for (const chapterId of chapterIds) {
   const source = readLayer(dir, `${layer}.${SOURCE_VERSION_ID}.json`);
   if (!source || source.layer !== layer) continue;
 
-  // Anything any edition in the target language already covers is done.
-  const covered: TranslatableItem[] = [];
+  // Commentary composes coverage across editions. Source editions are
+  // file-level choices, so a partially covered chapter needs a complete AI
+  // edition rather than a gap-only file; `itemsForTranslation` enforces that.
+  const editions: TranslatableItem[][] = [];
+  const targetItems: TranslatableItem[] = [];
+  let targetExists = false;
   const layerFileRe = new RegExp(`^${layer}\\.(.+)\\.json$`);
   for (const fileName of readdirSync(dir)) {
     const match = layerFileRe.exec(fileName);
     if (!match || !targetLanguageVersionIds.has(match[1] as string)) continue;
     const existing = readLayer(dir, fileName);
-    if (existing?.layer === layer) covered.push(...existing.items);
+    if (existing?.layer !== layer) continue;
+    editions.push(existing.items as TranslatableItem[]);
+    if (match[1] === targetVersion.id) {
+      targetExists = true;
+      targetItems.push(...existing.items);
+    }
   }
 
-  const items = untranslatedItems(source.items, covered);
+  const items = itemsForTranslation(
+    source.items,
+    targetItems,
+    editions,
+    layer,
+    targetExists,
+  );
   if (items.length === 0) continue;
 
   const sourceText = readLayer(dir, `source.${SOURCE_VERSION_ID}.json`);

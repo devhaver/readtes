@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   alignEditionHtml,
   itemKey,
+  itemsForTranslation,
   packBatches,
   proseLength,
   untranslatedItems,
@@ -80,6 +81,105 @@ describe("untranslatedItems", () => {
   it("returns nothing when the chapter is fully covered", () => {
     const source = [item("op-1", 1, "a")];
     expect(untranslatedItems(source, source)).toEqual([]);
+  });
+});
+
+describe("itemsForTranslation", () => {
+  it("exports a complete AI source chapter when sibling editions leave a gap", () => {
+    const source = [
+      { n: 1, html: "a", anchors: [] },
+      { n: 2, html: "b", anchors: [] },
+      { n: 3, html: "c", anchors: [] },
+    ];
+    const officialCoverage = source.slice(0, 2);
+
+    expect(
+      itemsForTranslation(source, [], [officialCoverage], "source", false).map(
+        itemKey,
+      ),
+    ).toEqual(["seif-1", "seif-2", "seif-3"]);
+  });
+
+  it("skips a source chapter fully covered by a sibling edition", () => {
+    const source = [
+      { n: 1, html: "a", anchors: [] },
+      { n: 2, html: "b", anchors: [] },
+    ];
+
+    expect(itemsForTranslation(source, [], [source], "source", false)).toEqual(
+      [],
+    );
+  });
+
+  it("tops up the AI source edition when the chapter still has a language gap", () => {
+    const source = [
+      { n: 1, html: "a", anchors: [] },
+      { n: 2, html: "b", anchors: [] },
+      { n: 3, html: "c", anchors: [] },
+    ];
+
+    expect(
+      itemsForTranslation(
+        source,
+        [source[0]!],
+        [[source[0]!, source[1]!]],
+        "source",
+        true,
+      ).map(itemKey),
+    ).toEqual(["seif-2", "seif-3"]);
+  });
+
+  it("keeps commentary coverage composable across all editions", () => {
+    const source = [
+      item("op-1", 1, "a"),
+      item("op-2", 2, "b"),
+      item("op-3", 3, "c"),
+    ];
+
+    expect(
+      itemsForTranslation(
+        source,
+        [],
+        [source.slice(0, 2)],
+        "commentary",
+        false,
+      ).map(itemKey),
+    ).toEqual(["op-3"]);
+  });
+
+  it("finishes a partial AI source edition even when sibling editions cover the gaps", () => {
+    const source = [
+      { n: 1, html: "a", anchors: [] },
+      { n: 2, html: "b", anchors: [] },
+      { n: 3, html: "c", anchors: [] },
+    ];
+
+    expect(
+      itemsForTranslation(
+        source,
+        [source[2]!],
+        [source.slice(0, 2), [source[2]!]],
+        "source",
+        true,
+      ).map(itemKey),
+    ).toEqual(["seif-1", "seif-2"]);
+  });
+
+  it("does not combine repeated-number coverage from sibling source editions", () => {
+    const source = [
+      { n: 51, html: "first", anchors: [] },
+      { n: 51, html: "continuation", anchors: [] },
+    ];
+
+    expect(
+      itemsForTranslation(
+        source,
+        [],
+        [[source[0]!], [source[0]!]],
+        "source",
+        false,
+      ).map((entry) => entry.html),
+    ).toEqual(["first", "continuation"]);
   });
 });
 
@@ -284,7 +384,7 @@ describe("source-layer batching", () => {
   });
 
   it("finds the untranslated segments of a partly translated chapter", () => {
-    // The Introduction ships 15 of its 443 paragraphs in English.
+    // A large source chapter may be applied across several AI batches.
     const source = [segment(1, "a"), segment(2, "b"), segment(3, "c")];
     const target = [segment(2, "translated")];
 

@@ -98,11 +98,10 @@ export interface TranslationBatch {
  * The items of `sourceItems` that `targetItems` does not already cover, matched
  * on `itemKey` — `anchorId` for commentary, `n` for source segments.
  *
- * Partial chapters are normal and supported: `checkTranslatedVersionIntegrity`
- * explicitly allows a translated commentary file to be a subset, so a batch may
- * top up a chapter that an earlier run half-finished. The source layer has the
- * same shape of gap — the Introduction ships 15 of its 443 paragraphs in
- * English (issue #133) — and needs the same top-up behaviour.
+ * Partial chapters are normal while a run is in progress: commentary may stay
+ * a subset, while source batches top up the same AI edition until its chapter
+ * is complete. Whether a sibling edition counts as coverage is decided by
+ * `itemsForTranslation`, not here.
  *
  * Ordered by `order` where the layer has one (commentary) and by `n` otherwise,
  * so batches follow the reading order of the text either way.
@@ -125,6 +124,32 @@ export const untranslatedItems = (
       return false;
     })
     .sort((a, b) => readingPosition(a) - readingPosition(b));
+};
+
+/**
+ * Selects the items a translation run must produce.
+ *
+ * Commentary can compose coverage across editions item by item. Source files
+ * are selected as whole editions by the reader, and AI source files must be
+ * structurally complete. If sibling source editions leave any gap, the AI
+ * edition must therefore cover the chapter itself instead of becoming an
+ * invalid gap-only file.
+ */
+export const itemsForTranslation = (
+  sourceItems: readonly TranslatableItem[],
+  targetItems: readonly TranslatableItem[],
+  targetLanguageEditions: readonly (readonly TranslatableItem[])[],
+  layer: "commentary" | "source",
+  targetExists: boolean,
+): TranslatableItem[] => {
+  if (layer === "commentary") {
+    return untranslatedItems(sourceItems, targetLanguageEditions.flat());
+  }
+  if (targetExists) return untranslatedItems(sourceItems, targetItems);
+  const hasCompleteEdition = targetLanguageEditions.some(
+    (edition) => untranslatedItems(sourceItems, edition).length === 0,
+  );
+  return hasCompleteEdition ? [] : untranslatedItems(sourceItems, []);
 };
 
 /**
