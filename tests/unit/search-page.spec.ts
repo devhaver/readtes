@@ -51,6 +51,7 @@ describe("search page", () => {
       query: { q: "searched phrase", lang: "en" },
     });
     expect(wrapper.text()).toContain("The searched phrase appears here.");
+    expect(wrapper.get("mark").text()).toBe("searched phrase");
     expect(wrapper.get("ol a").attributes("href")).toBe(
       "/read/part-01/chapter-01#seif-1",
     );
