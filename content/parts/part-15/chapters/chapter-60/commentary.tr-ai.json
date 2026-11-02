@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-15/chapter-60",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:60",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:60:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Kesilmenin sırrı, ona posterior olan yargıları vermesidir.</b> Aşağıda açıklanacağı üzere yargılar ondan kesilip Nukva’ya verilir. Başlangıçta yalnız İma vasıtasıyla tatlandırılırlar ve o zaman henüz tam mükemmelliklerinde değildirler. Daha sonra ZA vasıtasıyla ikinci kez yeniden tatlandırılırlar. ZA onları ikinci kez verdiğinde tam mükemmelliklerinde tatlandırılırlar. Ari’nin ona posterior olan yargıları verdiğini söylemesinin anlamı budur; yani bunlar İma vasıtasıyla ona verildikten sonradır, kendi yerinde yazıldığı üzere."
+    },
+    {
+      "anchorId": "op-3",
+      "order": 3,
+      "label": {
+        "he": "3",
+        "en": "3"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:60:3",
+      "section": "ohr-pnimi",
+      "html": "<br><b>O zaman Malhut, İbur sırrında yalnızca posterior tarafta tek bir Kli idi</b> vb. Burada sonucun tamamı atlanmıştır ve Ari’nin aşağıda, Madde 69’daki sözlerinde aktarılır. İnceleyenin işini kolaylaştırmak için onu burada parantez içinde kopyaladık; çünkü yeri burasıdır. Bundan sonraki sözler bu sonucun açıklamasıdır."
+    }
+  ]
+}
