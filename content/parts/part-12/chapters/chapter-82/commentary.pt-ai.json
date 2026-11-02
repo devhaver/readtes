@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-12/chapter-82",
+  "layer": "commentary",
+  "versionId": "pt-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:1",
+      "section": "ohr-pnimi",
+      "html": "<b>E, na correção, eles foram concebidos no primeiro Ibur, e os vasos de VAK foram sendo esclarecidos pouco a pouco:</b> Como está escrito na passagem adjacente, toda a correção de ZA quanto à sua essência e substância principal ocorre somente nos vasos anteriores, que são apenas GE, os seis vasos de HGT NHY. O período de seu esclarecimento é chamado primeiro Ibur, e eles são esclarecidos por meio de dois Zivugim: o primeiro Zivug para o vaso de Galgalta, chamado HGT, e o segundo Zivug para os vasos de Eynaim, chamados NHY. Também no primeiro Zivug há Zivugim particulares até que se complete NRNHY de Nefesh; do mesmo modo, no segundo Zivug há Zivugim particulares até que se complete NRNHY de Ruach, estendidos durante os dias de amamentação. É isso que está escrito: \"e os vasos de VAK foram sendo esclarecidos pouco a pouco\"."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:82:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>E aquilo que não foi esclarecido dos vasos, permanecendo o bem e o mal misturados, ficou no ventre de Ima:</b> Isto se refere aos vasos de Hod, Yesod e Malchut, que não foram esclarecidos durante o período do Ibur, mas ao longo do período de amamentação, como foi explicado acima."
+    }
+  ]
+}
