@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-272",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Bina’da, ZA’da ve Malhut’ta her Behina’nın altında yedi kralın bulunması.</b> Esas Behina anterior Kelim’dir: Roş’ta GE ve Guf’ta Hazeh’ye kadar HGT. Bunların altında ise hem Roş’ta hem Guf’ta Bina’nın yarısı ile ZA ve Malhut olan posterior Kelim bulunur. Bunlar ZAT olan yedi kral sayılır."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:272:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Her birinin Sium’unda, onların üç alt Sefirot’unda ve posteriorlarında; çünkü buna ‘alt’ denir:</b> Guf ile Roş’un Bina’sının yarısı, ZA’sı ve Malhut’u şu adların tümüyle anılır: yedi kral, ZAT, Sium, üç alt Sefirot, posterior ve ‘alt.’ Bunların karşısındaki anterior Kelim ise esas Behina diye adlandırılır ve GAR ya da ilk yedi olarak anılır."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-39",
+  "layer": "commentary",
+  "versionId": "tr-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:39",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:39:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Atzilut ile Beria arasındaki temel, Atzilut’un Bina’sından yapılmıştır.</b> Yukarıdaki bitişik maddede açıklandığı üzere bu, uzaklaştırma Masah’ıdır. Ancak Zivug Atzilut’un ZON’unda yapılır; çünkü her alt olan, sayfa 1903, Madde 20’de yazıldığı üzere üst olanın Nukva’sında yapılan Zivug vasıtasıyla çıkar. Yalnızca Behina Bet’in Masah’ı, yani Bina’nın Masah’ı üzerinde yapıldığı için Atzilut’un Bina’sında yapılmış sayılır; zira Behina Bet’in Masah’ı Bina seviyesini çıkarır."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:39:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>Beria ile Yetzira arasındaki Masah, Beria’nın ZA’sından yapılmıştır.</b> Yukarıdaki bitişik maddede, ‘Açığa çıkar’ diye başlayan pasajda açıklandığı üzere bu, pencere Masah’ıdır. Ancak İbur Beria’nın Nukva’sında yapılır; çünkü yukarıda bu kısmın Madde 20’sinde açıklandığı üzere, her alt olan kendisine bitişik derecenin Nukva’sının karnında ayıklanır. Zivug, pencere olan ve ZA seviyesinde on Sefirot çıkaran Behina Alef’in Masah’ı üzerinde yapıldığı için Beria’nın ZA’sının, yani onun Masah’ının adıyla anılır."
+    }
+  ]
+}
