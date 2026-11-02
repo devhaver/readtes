@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-12/chapter-113",
+  "layer": "commentary",
+  "versionId": "uk-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 12:113:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Десять сфірот зеїр анпіна рахуються від хохми й нижче, що зветься початком, а не від кетера й нижче:</b> клі кетера зеїр анпіна походить від тіферет Твуни, і світло в ньому також належить Твуні. Тому кетер не вважається властивістю зеїр анпіна, який починається лише з хохми."
+    }
+  ]
+}

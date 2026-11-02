@@ -1,0 +1,30 @@
+{
+  "chapterId": "part-16/chapter-223",
+  "layer": "commentary",
+  "versionId": "uk-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Атік де-Брія – це точка малхут де-Ацилут.</b> Це вже пояснено вище, стор. 1979, зі слів «І на перший погляд», і буде додатково пояснено нижче, стор. 2012, зі слів «ҐАР»."
+    },
+    {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:223:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>І облачається як ҐАР де-ВАК Аріх Анпіна, тобто розкриті ХАҐАТ.</b> У сусідньому пункті вже пояснено, що ці ХАҐАТ Аріх Анпіна прийшли до Брії лише як облачення НЕГІ Атіка, тому й тепер стали облаченням Атіка де-Брія. Дивись там."
+    }
+  ]
+}

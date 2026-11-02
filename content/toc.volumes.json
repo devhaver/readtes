@@ -903,7 +903,7 @@
             "enOfficial": "none",
             "enAi": "full",
             "ru": "full",
-            "uk": "none",
+            "uk": "partial",
             "es": "full",
             "fr": "full"
           }
@@ -965,7 +965,7 @@
             "enOfficial": "none",
             "enAi": "full",
             "ru": "full",
-            "uk": "none",
+            "uk": "partial",
             "es": "full",
             "fr": "full"
           }
@@ -1045,7 +1045,7 @@
             "enOfficial": "partial",
             "enAi": "full",
             "ru": "partial",
-            "uk": "none",
+            "uk": "partial",
             "es": "full",
             "fr": "full"
           }
@@ -1107,7 +1107,7 @@
             "enOfficial": "partial",
             "enAi": "full",
             "ru": "partial",
-            "uk": "none",
+            "uk": "partial",
             "es": "full",
             "fr": "full"
           }
