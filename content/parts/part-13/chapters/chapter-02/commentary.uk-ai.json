@@ -1,0 +1,19 @@
+{
+  "chapterId": "part-13/chapter-02",
+  "layer": "commentary",
+  "versionId": "uk-ai",
+  "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2",
+  "items": [
+    {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:2:1",
+      "section": "ohr-pnimi",
+      "html": "<b>У цьому рош є сім виправлень тощо:</b> тобто від світіння ЗАТ (семи нижніх сфірот) Атіка, що світять у них. Це сім сфірот ХАҐАТ НЕГІМ, і їхнє пояснення буде наведено нижче."
+    }
+  ]
+}
