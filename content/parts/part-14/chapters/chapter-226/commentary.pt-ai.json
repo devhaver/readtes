@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:226",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:226:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Por que foi necessário que os dois Hey iluminassem aqui? Para iluminar nos três últimos, que são \"visita a iniquidade dos pais\"</b> etc. Esses três últimos, que são \"não absolverá\", \"visita\" etc. e \"sobre a terceira geração\", ele os alcança depois de obter novos NHY, quando o Hey inferior desce do lugar do Chazeh ao lugar de Ateret Yesod dos novos NHY, como é sabido. Assim, os Hey dos dois HaVaYaH, o primeiro e o segundo das treze correções da Dikna de AA, que agora lhe iluminam para a fase de Rosh e para NHY de Gadlut dos vasos, antes, durante o Katnut, estavam fechados e incluídos no ponto do Chazeh, como acima. E este é o sentido de que esses dois Hey, agora incluídos de forma fechada no ponto do Chazeh, precisam iluminá-lo depois, quando ele obtém seus novos NHY. Então Malchut desce do Chazeh ao novo Yesod, ele adquire GAR das luzes e, então, adquire os três últimos que lhe completam as nove correções da Dikna, como foi explicado."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
