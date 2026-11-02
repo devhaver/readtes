@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:39",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:39:1",
+      "section": "ohr-pnimi",
+      "html": "<b>As três Roshim são NRN em AA: Galgalta é Neshamá, Avira é Ruach e Mocha Stimaa é Nefesh.</b> Adiante, porém, o Rav diz que Galgalta é AB, Avira é SAG e Mocha Stimaa é MA, que são Chaya, Neshamá e Ruach. À primeira vista, isso contradiz o que escreve aqui, que são NRN, isto é, SAG, MA e BON.<br>Isso já foi bem explicado acima. Quando se fala dos vasos, nas dez Sefirot há somente Bina, ZA e Malchut, que segundo a correção das linhas são CHBD, HGT e NHY; os vasos de Chaya e Yechidá faltam completamente. Mesmo no extremo Gadlut possível antes do fim da correção, eles não podem alcançar esses vasos de Keter e Chochmá. Contudo, quando se fala das luzes, eles alcançam também Yechidá e Chaya, mas estas se vestem no vaso de Bina, dentro de Ohr Neshamá. Então o vaso de Bina se divide em GAR e sete inferiores: GAR neles é HaVaYaH de AB, e as sete inferiores são HaVaYaH de SAG. Ambos são vasos de Bina, que segundo a correção das linhas são vasos de CHBD. Os vasos de ZA e Malchut, que segundo a correção das linhas são HGT-NHY, tornam-se HaVaYaH de MA, como extensamente explicado acima. Dessa fase, ele divide as três Roshim entre os três HaVaYaH AB, SAG e MA. Mas na primeira fase, dos vasos, são apenas Bina, ZA e Malchut, nos quais se vestem Nefesh, Ruach e Neshamá. A distinção é que sua fase de AB, embora doe iluminação de Chochmá a SAG, permanece por si mesma como a luz de GAR de Bina, a fase de Neshamá. É discernida como AB porque doa iluminação de Chochmá. Entenda bem."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
