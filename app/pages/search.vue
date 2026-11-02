@@ -20,6 +20,11 @@ interface SearchResponse {
   meta: { count: number; query: string };
 }
 
+interface HighlightedExcerptPart {
+  highlighted: boolean;
+  text: string;
+}
+
 const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
@@ -36,6 +41,32 @@ const failed = ref(false);
 
 const layerLabel = (layer: SearchResultAttributes["layer"]): string =>
   t(`search.layers.${layer}`);
+
+const escapeRegExp = (value: string): string =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const highlightedExcerpt = (excerpt: string): HighlightedExcerptPart[] => {
+  const phrase = submittedQuery.value.trim();
+  if (phrase === "") return [{ highlighted: false, text: excerpt }];
+
+  const exactPattern = new RegExp(escapeRegExp(phrase), "iu");
+  const terms = exactPattern.test(excerpt)
+    ? [phrase]
+    : phrase
+        .split(/\s+/)
+        .filter(Boolean)
+        .sort((a, b) => b.length - a.length);
+  if (terms.length === 0) return [{ highlighted: false, text: excerpt }];
+
+  const source = terms.map(escapeRegExp).join("|");
+  const splitPattern = new RegExp(`(${source})`, "giu");
+  const matchPattern = new RegExp(`^(?:${source})$`, "iu");
+
+  return excerpt
+    .split(splitPattern)
+    .filter((text) => text !== "")
+    .map((text) => ({ highlighted: matchPattern.test(text), text }));
+};
 
 const search = async () => {
   const normalizedQuery = query.value.trim();
@@ -137,7 +168,19 @@ useLocalizedSeo({
           {{ result.attributes.versionTitle }}
         </p>
         <p class="mt-3 max-w-prose text-(--text-primary)">
-          {{ result.attributes.excerpt }}
+          <template
+            v-for="(part, index) in highlightedExcerpt(
+              result.attributes.excerpt,
+            )"
+            :key="index"
+          >
+            <mark
+              v-if="part.highlighted"
+              class="rounded-sm bg-orange-cta/30 px-0.5 text-inherit"
+              >{{ part.text }}</mark
+            >
+            <template v-else>{{ part.text }}</template>
+          </template>
         </p>
       </li>
     </ol>
