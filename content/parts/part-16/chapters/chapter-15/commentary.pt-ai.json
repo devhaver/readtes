@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:15",
   "items": [
     {
+      "anchorId": "op-2",
+      "order": 2,
+      "label": {
+        "he": "2",
+        "en": "2"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:15:2",
+      "section": "ohr-pnimi",
+      "html": "<br><b>17) A luz antiga, chamada mundo de Nekudim</b> etc., <b>a nova luz, chamada HaVaYaH de MA.</b> Pois as luzes que saem em Atzilut esclarecem os vasos dos sete reis que se quebraram, conforme o nível da luz. As luzes que saem em Atzilut são chamadas MA porque cada Partzuf de Atzilut tomou somente o nível de MA do Partzuf correspondente nos cinco Partzufim de AK: Atik tomou MA do Partzuf Keter de AK; AA tomou MA do Partzuf AB de AK; AVI tomaram MA do Partzuf SAG de AK; YESHSUT tomou MA do Partzuf MA de AK; e ZON tomaram MA do Partzuf BON de AK, como explicado em Beit Shaar HaKavanot, item 151, em Ohr Pashut. Veja ali. Esses níveis de MA são permanentes em Atzilut e jamais diminuirão. Eles esclareceram os vasos correspondentes que lhes eram atribuídos dentre os sete reis quebrados. Esses vasos esclarecidos da quebra são chamados luz antiga ou BON. Os níveis de Atzilut são os masculinos dos cinco Partzufim de Atzilut, e os vasos de Nekudim que eles esclareceram dentre os sete reis são as fêmeas dos cinco Partzufim de Atzilut. O Rav chama os vasos esclarecidos dos sete reis de luz antiga porque, depois de serem esclarecidos da quebra, as luzes de Nekudim voltaram a vestir-se neles. Por isso, chama-os luz antiga, isto é, as luzes que já haviam servido no mundo de Nekudim antes da quebra dos vasos."
+    },
+    {
       "anchorId": "op-4",
       "order": 4,
       "label": {

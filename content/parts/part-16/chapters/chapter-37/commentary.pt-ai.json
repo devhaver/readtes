@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:37",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:37:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Um Masach e também por meio do afastamento.</b> Explicação: os Chassadim cobertos, doados pelo nível de Neshamá, não podem estender GAR a ZON, pois estes precisam da iluminação de Chochmá, à maneira de ZON de Ohr Yashar, como é sabido. Assim, o mundo de Yetzirá, que é a fase de ZA do corpo e necessita da iluminação de Chochmá, alcança agora apenas VAK sem Rosh, pois o Masach de afastamento repousa sobre ele e ele não pode receber a iluminação de Chochmá de Atzilut. Por isso, afastou-se de GAR. E este é o sentido de \"o Masach de Beriá é um Masach próximo, pois foi feito de Bina\": como ele foi esclarecido dos dois terços inferiores de Tiferet, discernidos como YESHSUT do corpo, pode receber o nível de Bina de Atzilut. Embora este seja Chassadim cobertos sem iluminação de Chochmá, YESHSUT não necessita para si da iluminação de Chochmá, pois é a fase do vaso de Bina. Mas \"o mundo de Yetzirá recebe sua luz, estendida a ele de Beriá, somente por meio de um Masach e também por meio do afastamento\". Isto é, como ele é o vaso de ZA do corpo, acrescenta-se nele a fase de afastamento de GAR, e ele não está próximo de GAR como Beriá."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {

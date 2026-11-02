@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:234",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:234:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Sua raiz inicialmente é apenas um ponto; depois, por acréscimo mediante ZA, chegam nove outros pontos.</b> Pois ela é o segredo do ponto do Chazeh das sete inferiores de Nekudim. Pelo segredo da ascensão do Hey inferior aos Nikvey Eynaim, Malchut que concluía os pés de AK ascendeu a Bina do corpo, que é Tiferet, ao ponto de seu Chazeh, e ali concluiu as sete inferiores de Nekudim. Essa Malchut conclusiva no lugar do Chazeh de Nekudim é o segredo da raiz de Malchut de Atzilut. Embora, no Gadlut de Nekudim, quando voltaram a expandir-se ao lugar de BYA, essa Malchut conclusiva tenha se tornado ali um Partzuf completo — pois os vasos separados em BYA retornaram a ela e se tornaram suas nove inferiores — isso não subsistiu, pois morreram e quebraram, como é sabido. Portanto, em Atzilut, quando os cinco Partzufim de Atzilut foram corrigidos com Mochin permanentes, ZON saíram somente com os vasos anteriores, CHBD-HGT do Katnut de Nekudim até o Chazeh, com as luzes HGT-NHYM. Esta é a fase essencial de ZON, que jamais diminui. Assim, a Nukva voltou a ser apenas o ponto final de ZA. Quanto aos vasos, esse ponto é chamado Keter e também ponto do Chazeh, pois é o fim dos vasos CHBD-HGT, chamado Chazeh. Quanto às luzes, porém, eles possuem somente HGT-NHYM, e o ponto é apenas Malchut. Com isso entenderá por que o Rav às vezes chama esse ponto Malchut e às vezes Keter, como explicado. Também entenderá a continuação das palavras do Rav."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
