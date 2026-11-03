@@ -123,6 +123,10 @@
       "unalignedCommentaryTitle": "עוד פירוש (טרם הותאם לסעיפים)"
     },
     "progressLabel": "התקדמות בקריאה",
+    "copyLink": {
+      "label": "העתק קישור לסעיף זה",
+      "copied": "הקישור הועתק"
+    },
     "toolbar": {
       "preferencesButton": "העדפות קריאה",
       "contentsButton": "תוכן העניינים",

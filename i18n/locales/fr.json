@@ -123,6 +123,10 @@
       "unalignedCommentaryTitle": "Autres commentaires (pas encore rattachés aux paragraphes)"
     },
     "progressLabel": "Progression de la lecture",
+    "copyLink": {
+      "label": "Copier le lien vers ce seif",
+      "copied": "Lien copié"
+    },
     "toolbar": {
       "preferencesButton": "Préférences de lecture",
       "contentsButton": "Sommaire",
