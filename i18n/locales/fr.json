@@ -182,6 +182,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "L'Étude des Dix Sefirot",
     "beginReading": "Commencer la lecture",
+    "continue": {
+      "title": "Reprendre la lecture",
+      "cta": "Reprendre"
+    },
     "quoteSource": "Talmud Eser Sefirot, partie 1, chapitre 1",
     "howItWorksTitle": "Comment fonctionne ce lecteur",
     "howItWorksSourceTitle": "Le texte du Ari",

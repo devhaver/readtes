@@ -182,6 +182,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "On Sefirot'un Çalışması",
     "beginReading": "Okumaya başla",
+    "continue": {
+      "title": "Okumaya devam et",
+      "cta": "Devam et"
+    },
     "quoteSource": "On Sefirot'un Çalışması, Kısım 1, Bölüm 1",
     "howItWorksTitle": "Bu okuyucu nasıl çalışır",
     "howItWorksSourceTitle": "Ari'nin Metni",

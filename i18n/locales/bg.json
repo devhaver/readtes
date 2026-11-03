@@ -182,6 +182,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "Учението за десетте сфирот",
     "beginReading": "Започни да четеш",
+    "continue": {
+      "title": "Продължи четенето",
+      "cta": "Продължи"
+    },
     "quoteSource": "Талмуд Есер Сфирот, част 1, глава 1",
     "howItWorksTitle": "Как работи този четец",
     "howItWorksSourceTitle": "Текстът на Ари",
