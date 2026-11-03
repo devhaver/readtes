@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="relative bg-navy-primary text-surface-white">
+  <header data-print="hide" class="relative bg-navy-primary text-surface-white">
     <div
       class="flex items-center justify-between gap-4 py-3"
       :class="fullWidth ? 'px-3 sm:px-5' : 'mx-auto max-w-5xl px-4 sm:px-6'"

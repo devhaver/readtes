@@ -104,6 +104,7 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
   <div
     ref="rootRef"
     data-reader-toolbar
+    data-print="hide"
     :inert="isStudyMode && !chromeVisible ? true : undefined"
     class="flex flex-col border-b border-(--border) bg-(--surface) px-3 sm:px-5"
     :class="[

@@ -1587,3 +1587,60 @@ small.tes-synopsis {
 :is(.tes-seif-body, .tes-commentary-body) a:not(.tes-anchor):hover {
   text-decoration-thickness: 2px;
 }
+
+/*
+ * Print: the text alone, on paper. Chrome opts out with `data-print="hide"`
+ * (navbar, footer, reader toolbar, third-pane rail, progress rail, mobile
+ * pane pill); buttons, tablists and skip links are hidden by element/role.
+ * The theme tokens are pinned to their light values so a dark or sepia
+ * reader still prints dark-on-white. Link URLs are deliberately not
+ * appended. The panes are bounded, independently scrolling columns on
+ * screen, so they are unrolled into one full-width column in DOM order.
+ * Direction is never touched, so Hebrew stays RTL.
+ */
+@media print {
+  :root,
+  :root.dark,
+  :root.sepia {
+    --surface: var(--color-surface-white);
+    --surface-raised: var(--color-surface-white);
+    --surface-reading: var(--color-surface-white);
+    --text-primary: var(--color-heading);
+    --text-muted: var(--color-heading);
+    --border: var(--color-border-subtle);
+    --accent-text: var(--color-heading);
+    --warning-text: var(--color-heading);
+    color-scheme: light;
+  }
+
+  [data-print="hide"],
+  .tes-skip-link,
+  button,
+  [role="tablist"] {
+    display: none !important;
+  }
+
+  html,
+  body,
+  div[data-reading-scale] {
+    height: auto !important;
+    overflow: visible !important;
+    background: var(--surface) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .tes-swipe-track,
+  .tes-pane-shell,
+  .tes-pane-body,
+  [data-pane] {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .tes-seif,
+  .tes-commentary-item {
+    break-inside: avoid;
+  }
+}

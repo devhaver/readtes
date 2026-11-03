@@ -45,6 +45,7 @@ const percent = computed(() => Math.round(progress.value * 100));
 
 <template>
   <div
+    data-print="hide"
     class="pointer-events-none fixed bottom-0 end-0 z-20 w-1 transition-[inset-block-start] duration-200 motion-reduce:transition-none"
     :style="{
       insetBlockStart: chromeVisible

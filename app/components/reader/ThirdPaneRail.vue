@@ -30,6 +30,7 @@ const label = computed(() =>
 
 <template>
   <div
+    data-print="hide"
     class="hidden lg:col-start-[-2] lg:row-start-1 lg:flex lg:h-full lg:shrink-0 lg:items-start lg:justify-center lg:border-s lg:border-(--border) lg:py-2.5"
   >
     <button
