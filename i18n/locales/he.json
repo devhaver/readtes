@@ -182,6 +182,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "ביאורו של בעל הסולם לכתבי האר״י",
     "beginReading": "להתחיל לקרוא",
+    "continue": {
+      "title": "להמשיך לקרוא",
+      "cta": "המשך"
+    },
     "quoteSource": "תלמוד עשר הספירות, חלק א׳, פרק א׳",
     "howItWorksTitle": "כך פועלת הקריאה באתר",
     "howItWorksSourceTitle": "כתבי האר״י",
