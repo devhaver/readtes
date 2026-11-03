@@ -108,6 +108,10 @@
       "panes": "Paneller",
       "original": "Orijinal"
     },
+    "shortcuts": {
+      "prev": "Klavye: [ önceki",
+      "next": "] sonraki"
+    },
     "original": {
       "prev": "Önceki",
       "next": "Sonraki",

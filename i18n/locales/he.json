@@ -108,6 +108,10 @@
       "panes": "עמודות",
       "original": "מקורי"
     },
+    "shortcuts": {
+      "prev": "מקלדת: [ הקודם",
+      "next": "] הבא"
+    },
     "original": {
       "prev": "הקודם",
       "next": "הבא",
