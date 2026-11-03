@@ -92,6 +92,11 @@
     "miniTocTitle": "Bu bölümde",
     "miniTocTruncated": "…ve {count} tane daha — hepsini okumak için aşağı kaydırın.",
     "seifLabel": "Madde {n}",
+    "jump": {
+      "label": "Seif’e git",
+      "placeholder": "Seif no.",
+      "outOfRange": "1 ile {max} arasında bir seif numarası girin."
+    },
     "noteLabel": "Not {n}",
     "printMark": "Orijinal baskıda yer alan bir işaret",
     "missingAnchor": {

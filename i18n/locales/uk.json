@@ -92,6 +92,11 @@
     "miniTocTitle": "У цьому розділі",
     "miniTocTruncated": "…і ще {count} — прокрутіть униз, щоб прочитати всі.",
     "seifLabel": "Пункт {n}",
+    "jump": {
+      "label": "Перейти до сеіфу",
+      "placeholder": "№ сеіфу",
+      "outOfRange": "Введіть номер сеіфу від 1 до {max}."
+    },
     "noteLabel": "Примітка {n}",
     "printMark": "Знак, надрукований в оригінальному виданні",
     "missingAnchor": {

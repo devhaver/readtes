@@ -92,6 +92,11 @@
     "miniTocTitle": "В этой главе",
     "miniTocTruncated": "…и ещё {count} — прокрутите вниз, чтобы прочитать все.",
     "seifLabel": "Пункт {n}",
+    "jump": {
+      "label": "Перейти к сеифу",
+      "placeholder": "№ сеифа",
+      "outOfRange": "Введите номер сеифа от 1 до {max}."
+    },
     "noteLabel": "Примечание {n}",
     "printMark": "Знак, напечатанный в оригинальном издании",
     "missingAnchor": {

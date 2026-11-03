@@ -237,6 +237,9 @@ const commentaryFile = computed(() =>
 );
 
 const sourceSegments = computed(() => sourceFile.value?.items ?? []);
+const seifNumbers = computed(() => [
+  ...new Set(sourceSegments.value.map((segment) => segment.n)),
+]);
 const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
 
 const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
@@ -390,6 +393,7 @@ useLocalizedSeo({
       :next="next"
       :current-part-chapters="partFile.chapters"
       :current-chapter-id="chapter.id"
+      :seif-numbers="seifNumbers"
     />
 
     <ReaderShell

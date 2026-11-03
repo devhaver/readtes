@@ -92,6 +92,11 @@
     "miniTocTitle": "In this chapter",
     "miniTocTruncated": "…and {count} more — scroll down to read them all.",
     "seifLabel": "Seif {n}",
+    "jump": {
+      "label": "Go to seif",
+      "placeholder": "Seif no.",
+      "outOfRange": "Enter a seif number from 1 to {max}."
+    },
     "noteLabel": "Note {n}",
     "printMark": "A mark printed in the original edition",
     "missingAnchor": {
