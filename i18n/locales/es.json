@@ -123,6 +123,10 @@
       "unalignedCommentaryTitle": "Más comentario (aún sin asociar a incisos)"
     },
     "progressLabel": "Progreso de lectura",
+    "copyLink": {
+      "label": "Copiar el enlace a este seif",
+      "copied": "Enlace copiado"
+    },
     "toolbar": {
       "preferencesButton": "Preferencias de lectura",
       "contentsButton": "Contenido",

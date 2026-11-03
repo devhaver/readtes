@@ -123,6 +123,10 @@
       "unalignedCommentaryTitle": "More commentary (not yet matched to seifim)"
     },
     "progressLabel": "Reading progress",
+    "copyLink": {
+      "label": "Copy link to this seif",
+      "copied": "Link copied"
+    },
     "toolbar": {
       "preferencesButton": "Reading preferences",
       "contentsButton": "Contents",
