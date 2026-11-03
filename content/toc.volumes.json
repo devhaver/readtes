@@ -903,7 +903,7 @@
             "enOfficial": "none",
             "enAi": "full",
             "ru": "full",
-            "uk": "partial",
+            "uk": "full",
             "es": "full",
             "fr": "full"
           }
@@ -1044,7 +1044,7 @@
             "en": "full",
             "enOfficial": "partial",
             "enAi": "full",
-            "ru": "partial",
+            "ru": "full",
             "uk": "partial",
             "es": "full",
             "fr": "full"
@@ -1106,7 +1106,7 @@
             "en": "full",
             "enOfficial": "partial",
             "enAi": "full",
-            "ru": "partial",
+            "ru": "full",
             "uk": "partial",
             "es": "full",
             "fr": "full"
