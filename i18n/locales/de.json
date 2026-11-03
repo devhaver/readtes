@@ -108,6 +108,10 @@
       "panes": "Spalten",
       "original": "Original"
     },
+    "shortcuts": {
+      "prev": "Tastatur: [ zurück",
+      "next": "] weiter"
+    },
     "original": {
       "prev": "Zurück",
       "next": "Weiter",
