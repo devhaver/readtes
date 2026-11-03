@@ -164,6 +164,7 @@ const onKeydown = (event: KeyboardEvent, index: number) => {
 <template>
   <div
     v-if="segments.length > 1"
+    data-print="hide"
     :inert="isSheetOpen || isContentsOpen"
     class="shrink-0 border-t border-(--border) bg-(--surface-raised) pb-[env(safe-area-inset-bottom)] lg:hidden"
   >

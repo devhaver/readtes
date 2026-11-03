@@ -38,6 +38,7 @@ const linkClass =
 
 <template>
   <footer
+    data-print="hide"
     class="border-t border-(--border) bg-(--surface) px-4 py-8 text-sm text-(--text-muted) sm:px-6"
   >
     <div
