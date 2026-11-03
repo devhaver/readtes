@@ -92,6 +92,11 @@
     "miniTocTitle": "בפרק זה",
     "miniTocTruncated": "ועוד {count} נוספים — גללו למטה כדי לקרוא את כולם.",
     "seifLabel": "סעיף {n}",
+    "jump": {
+      "label": "מעבר לסעיף",
+      "placeholder": "מס׳ סעיף",
+      "outOfRange": "יש להזין מספר סעיף בין 1 ל-{max}."
+    },
     "noteLabel": "הערה {n}",
     "printMark": "סימן שהודפס במהדורה המקורית",
     "missingAnchor": {

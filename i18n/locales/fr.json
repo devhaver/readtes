@@ -92,6 +92,11 @@
     "miniTocTitle": "Dans ce chapitre",
     "miniTocTruncated": "…et {count} de plus — faites défiler vers le bas pour tout lire.",
     "seifLabel": "Paragraphe {n}",
+    "jump": {
+      "label": "Aller au seif",
+      "placeholder": "N° de seif",
+      "outOfRange": "Saisissez un numéro de seif de 1 à {max}."
+    },
     "noteLabel": "Note {n}",
     "printMark": "Signe imprimé dans l'édition originale",
     "missingAnchor": {
