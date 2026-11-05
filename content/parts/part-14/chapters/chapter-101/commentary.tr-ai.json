@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:101",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:101:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Moha Stimaa’dan, içindeki Ziv’den, yani içindeki Işık ve Öz’den çıkar; bu Üst Hesed’dir. Keter, Hohma ve Bina’daki Işık ile Öz üç üst Roş’ta yayılır</b>. Açıklama: Burada, otuz iki yolun bu Hohma’sının çıktığı kökü gösterir ve onun Üst Hesed’den, yani AA’nın Galgalta’sı içinde kıyafetlenmiş olan Atik’in Hesed’inden çıktığını ve oradan Moha Stimaa’ya ihsan edildiğini söyler. “Çünkü KHB’nin Işığı ve Özü AA’nın üç Roşim’inde yayılır” sözünü şöyle açıklar: Yukarıda açıklandığı üzere AB’ın Hohma’sı ancak Partzufim’in Atik’in GAR’ına yükselmesiyle açığa çıkar. Bu, önceki kısımlarda zaten açıklanmıştır: AB SAG’ın aydınlatması aracılığıyla her Partzuf’un alt Hey’i Eynaim’den iner ve alt dereceye düşmüş olan AHP’ı ilk yerlerine geri yükseltir. Çünkü Üst Olan’ın Roş’unun bütün AHP’ı Toh’un GE’sinde, Toh’unki Sof’un GE’sinde kıyafetlenmiştir; bilindiği üzere Partzuf’dan Partzuf’a da böyledir. Böylece Atik’in HGT’sinde kıyafetlenmiş olan Atik’in Roş’unun AHP’ı şimdi onun GAR Behina’sına geri döner. Atik’in HGT’si, AA’nın üç Roşim’iyle birlikte Atik’in HBD’si olur. Aynı şekilde AA’nın HGT’sindeki AHP da kendi GAR Behina’larına geri döner ve AA’nın HGT’si, onların üzerinde kıyafetlenmiş AVİ ile birlikte yükselip AA’nın HBD’si olur. Ardından AA’nın HGT’sinde kıyafetlenmiş olan Dikna (sakal) da AA’nın HBD’sine ve şimdi tek bir Behina olmuş Atik’in HBD’sine yükselir. O zaman Atik’in HBD’sinde, içselliğe girmiş Dikna’nın MAN’ı (Mayin Nukvin) üzerinde Zivug yapılır; açığa çıkmış AB’ın seviyesi Atik’in HBD’sinde çıkar ve oradan AVİ ile ZON’a yayılır.<br>Çünkü AA’nın Galgalta’sı şimdi Atik’in Hohma’sı olmuştur; zira yukarıda belirtildiği gibi Atik’in Hesed’i onun Hohma’sı olmuştur. Onlarla birlikte, AA’nın Hesed’iyle yükselip AA’nın Galgalta Behina’sı olan Üst Aba da bağlanır; bunların tümü Zivug’un erkek Behinot’udur. Aynı şekilde Moha Stimaa da şimdi Atik’in Bina’sı olmuştur; bu, yükselip Atik’in Bina’sı olan Atik’in Gevura’sının gücüyledir. Onlarla birlikte, AA’nın Gevura’sıyla yükselip onun Moha Stimaa’sı olan Üst İma da bağlanır; bunlar Zivug’un dişi Behinot’udur. Aynı şekilde AA’nın Moha de Avira’sı şimdi Atik’in Daat’ı olmuştur; bu, şimdi onun Daat’ı olan Atik’in Tiferet’iyle birlikte yükselmesinin gücüyledir. Onlarla birlikte, AA’nın şimdi Moha de Avira olan ve şimdi de yukarıda belirtildiği gibi Atik’in Daat’ı olan Tiferet’inde kıyafetlenmiş iki Mazal, Notzer ile VeNakeh de yükselir. Bunlar Zivug’un karar verici Behinot’udur."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
