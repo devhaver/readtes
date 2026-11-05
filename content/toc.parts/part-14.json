@@ -2462,6 +2462,7 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
+          "pt-ai",
           "ru-ai"
         ]
       }
@@ -4381,6 +4382,7 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
+          "pt-ai",
           "ru-ai"
         ]
       }
@@ -7635,6 +7637,7 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
+          "pt-ai",
           "ru-ai"
         ]
       }
@@ -9162,7 +9165,9 @@
           "es-ai",
           "fr-ai",
           "he-jerusalem-1956",
-          "ru-ai"
+          "pt-ai",
+          "ru-ai",
+          "tr-ai"
         ],
         "commentary": []
       },
@@ -9197,7 +9202,8 @@
           "fr-ai",
           "he-jerusalem-1956",
           "pt-ai",
-          "ru-ai"
+          "ru-ai",
+          "tr-ai"
         ],
         "commentary": []
       },
