@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:234",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:234:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Kökleri başlangıçta yalnızca tek bir noktadır ve sonra ZA aracılığıyla ek olarak dokuz nokta daha gelir.</b> Çünkü o, Nekudim’in ZAT’ının Hazeh noktasının sırrıdır; alt Hey’in Nikvey Eynaim’e yükselmesi sırrında AK’ın ayaklarını sonlandıran Malhut, Guf’un Bina’sına, yani Tiferet’e, onun Hazeh noktasına yükseldi ve Nekudim’in ZAT’ını orada sonlandırdı. Ve Nekudim’in Hazeh yerinde bulunan bu sonlandıran Malhut, Atzilut’un Malhut’unun kökünün sırrıdır; Nekudim’in Gadlut’u zamanında, BYA yerine geri yayıldıklarında bu sonlandıran Malhut orada bütün bir Partzuf oldu, çünkü BYA’ya ayrılan Kelim ona geri döndü ve onun dokuz alt Sefirot’u oldu; ama varlıklarını sürdüremediler, çünkü bilindiği gibi öldüler ve kırıldılar. Bu nedenle Atzilut’ta Atzilut’un beş Partzufim’i sabit Mohin Behina’sında ıslah edildiklerinde, ZON yalnızca Panim’in Kelim’i sırrında çıktı; bunlar HGT NHYM Işıklarıyla Hazeh’e kadar Nekudim’in Katnut’unun HBD HGT’sidir. Bu, ZON’un asıl Behina’sıdır ve onlarda asla azalma yoktur; böylece Nukva’nın geri döndüğü ve ZA için yalnızca bir sonlandırma noktası olduğu ortaya çıkar; Kelim Behina’sından bu nokta Keter adıyla ayırt edilir, aynı zamanda Hazeh noktası adıyla da, çünkü o, Hazeh denen Kelim’in HBD HGT’sinin Sium’udur. Ancak Işıklar tarafından onlarda HGT NHYM’den başkası yoktur, bu nedenle nokta yalnızca Malhut Behina’sıdır. Bununla Ari’nin bu noktaya bazen Malhut, bazen Keter demesini, yani açıklandığı gibi anlarsın. Bununla Ari’nin sözlerinin devamını anlarsın."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
