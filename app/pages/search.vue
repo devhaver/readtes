@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { highlightedSearchExcerpt } from "~~/shared/utils/searchHighlights";
+
 interface SearchResultAttributes {
   chapterTitle: string;
   excerpt: string;
@@ -20,11 +22,6 @@ interface SearchResponse {
   meta: { count: number; query: string };
 }
 
-interface HighlightedExcerptPart {
-  highlighted: boolean;
-  text: string;
-}
-
 const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
@@ -41,32 +38,6 @@ const failed = ref(false);
 
 const layerLabel = (layer: SearchResultAttributes["layer"]): string =>
   t(`search.layers.${layer}`);
-
-const escapeRegExp = (value: string): string =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const highlightedExcerpt = (excerpt: string): HighlightedExcerptPart[] => {
-  const phrase = submittedQuery.value.trim();
-  if (phrase === "") return [{ highlighted: false, text: excerpt }];
-
-  const exactPattern = new RegExp(escapeRegExp(phrase), "iu");
-  const terms = exactPattern.test(excerpt)
-    ? [phrase]
-    : phrase
-        .split(/\s+/)
-        .filter(Boolean)
-        .sort((a, b) => b.length - a.length);
-  if (terms.length === 0) return [{ highlighted: false, text: excerpt }];
-
-  const source = terms.map(escapeRegExp).join("|");
-  const splitPattern = new RegExp(`(${source})`, "giu");
-  const matchPattern = new RegExp(`^(?:${source})$`, "iu");
-
-  return excerpt
-    .split(splitPattern)
-    .filter((text) => text !== "")
-    .map((text) => ({ highlighted: matchPattern.test(text), text }));
-};
 
 const search = async () => {
   const normalizedQuery = query.value.trim();
@@ -169,8 +140,9 @@ useLocalizedSeo({
         </p>
         <p class="mt-3 max-w-prose text-(--text-primary)">
           <template
-            v-for="(part, index) in highlightedExcerpt(
+            v-for="(part, index) in highlightedSearchExcerpt(
               result.attributes.excerpt,
+              submittedQuery,
             )"
             :key="index"
           >
