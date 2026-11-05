@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:85",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:85:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Kadim Üst Hohma</b> vb., <b>ZA’daki bu Hohma’nın içselliğinde, Üst Hohma olan Neşama sırrında ve Daat’ın sırrında</b>. Açıklama: Atzilut’ta iki tür Hohma bulunduğu zaten bilinmektedir. Biri, gerçek Hohma olan AA’nın Hohma Stimaa’sıdır; yani KHB TM’nin beş Behinot’unun Hohma’sıdır. İkincisi, otuz iki yolun Hohma’sıdır ve bu ZA’nın Hohma Behina’sıdır; yani yukarıda sayfa 1543’de (Madde 84) güneş denilen Üst AVİ uğruna Hohma aydınlanmasını taşıyan Tiferet’tir. Oraya bakınız. Bu nedenle AB seviyesindeki AVİ’de bulunan otuz iki yolun bu Hohma’sı, ona neden olan kapsayıcı Tiferet olan ZA’nın adıyla adlandırılır, yukarıda açıklandığı gibi. AA’daki Hohma Stimaa’ya Kadim Hohma denir. Bunun nedeni, ZA’nın Hohma’sından önce gelmesidir; zira otuz iki yolun Hohma’sı ancak Bina’nın Hohma Stimaa ile tek bir Behina olmak üzere yükselmesiyle açığa çıkar. O zaman, yani AVİ’nin AA’nın GAR’ına yükselmesi aracılığıyla, Tiferet’e Hohma aydınlanmasını uzatır, yukarıda açıklandığı gibi. Böylece otuz iki yolun Hohma’sı Hohma Stimaa’dan uzanır ve bu nedenle Hohma Stimaa, Kadim Hohma adıyla anılır.<br>Şöyle der: “Malhut’a alt Hohma denildiği gibi”: ZA’nın otuz iki yolunun Hohma’sına kıyasla, Malhut’un yükselttiği Or Hozer (Yansıyan Işık) onun Hohma’sına kadar ulaştığından, Yukarıdan aşağıya dokuz, onun ZA’ya yükselttiği aşağıdan Yukarıya dokuzun içine uzanır. Yukarıda Yosef ve Binyamin sırrında açıklandığı gibi. ZA’da da durum aynıdır; çünkü Nukva’nın ZA’dan aldığı biçimde, o da Mohin’ini kendi Üst Derecesi’nden almalıdır. Yani önce bu Zivug, Üst AVİ’nin Mohin’inde, onlar AA’nın GAR’ını kıyafetlendirirken yapılır: Aba, AA’nın Galgalta’sının yerindedir ve İma, AA’nın Moha Stimaa’sının yerindedir. Sonra otuz iki yolun Mohin’i, AA’nın damak ve boğaz Zivug’u aracılığıyla ZA’ya ihsan edilir. Bunlar, AA’nın Moha Stimaa’sına dahil olan AVİ’nin Yesod Behinot’udur. Onların Zivug düzeni, ZA’nın Yesod’ları ile onun Nukva’sında açıklanan yolun tamamen aynısıdır: damaktaki Üst Işık’tan, boğaza dahil olan iki Masah Behina’sı üzerinde Zivug de Hakaa (çarpışarak çiftleşme) sırrındadır. Bunlar Hohma Stimaa’ya kadar ulaşan Or Hozer’i yükseltir. Ardından Moha Stimaa’daki İma, damak olan Aba’nın Yesod’undan aldığı dokuz Or Yaşar Sefirot’u ve dokuz Or Hozer Sefirot’u ZA’nın Mohin’ine ihsan eder.<br>Böylece yukarıda ZON’un Zivug’unda açıklanan bütün ayrıntılar, yani yıldızlar, burçlar, yedi gezegen vb., Moha Stimaa’daki AVİ’nin Zivug’unda da geçerlidir. Aynı şekilde Zivug önce damağın kendisinde, yani Aba’nın Yesod’unda yapılır; bu da kendi içinde Yosef ve Binyamin’in iki Behina’sını kapsar. Ardından AVİ’nin birlikte Zivug’u yapılır ve kendi Zivug’unda ortaya çıkan Mohin’in bütün ayrıntılarını, kendi Yesod Behina’sı olan damaktan İma’nın Yesod Behina’sı olan boğaza ihsan eder. Ancak bu Zivug, Kadim Hohma Behina’sını Moha Stimaa’nın kendi Öz’ünden değil, hava Mohası’nın yükseldiği Radla’nın Daat Behina’sından uzatır. Bu, Kısım 13’de yazıldığı gibi Tzelem’in <b>Lamed</b> Behina’sıdır."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
