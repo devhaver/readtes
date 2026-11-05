@@ -353,6 +353,14 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2025-07-15",
+  // The committed corpus produces thousands of large client and server
+  // chunks. Retaining their production sourcemaps makes Nitro's server build
+  // exceed the GitHub runner's memory limit as translation coverage grows;
+  // production does not publish or consume those maps.
+  sourcemap: {
+    client: false,
+    server: false,
+  },
   nitro: {
     // The production-only full-text endpoint reads the committed chapter JSON
     // from Nitro storage. Keeping it as a server asset avoids bundling the
