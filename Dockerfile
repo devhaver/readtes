@@ -90,7 +90,7 @@ FROM base AS server-build
 ARG NUXT_PUBLIC_SITE_URL=https://readtes.com
 ENV NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL}
 ENV READTES_DEPLOY_TARGET=server
-ENV NODE_OPTIONS=--max-old-space-size=8192
+ENV NODE_OPTIONS=--max-old-space-size=12288
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .

@@ -181,9 +181,9 @@ tasks:
       to https://readtes.com.
 
       The build needs a large Node heap: the full-corpus SSR bundle is bigger
-      than V8's default, so this task sets --max-old-space-size=8192.
+      than V8's default, so this task sets --max-old-space-size=12288.
     cmds:
-      - NODE_OPTIONS="--max-old-space-size=8192" NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://readtes.com} pnpm build
+      - NODE_OPTIONS="--max-old-space-size=12288" NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL:-https://readtes.com} pnpm build
       - NODE_ENV=production HOST=0.0.0.0 PORT=6219 pnpm start
 
   docker:server:

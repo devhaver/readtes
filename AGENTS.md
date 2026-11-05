@@ -84,7 +84,7 @@ the same name.
 | `task prod`              | Build the SSR bundle + serve with the Nitro Node server — :6219 |
 
 Other pnpm scripts: `build` (the production SSR build — needs
-`NODE_OPTIONS=--max-old-space-size=8192`, the full-corpus SSR bundle exceeds
+`NODE_OPTIONS=--max-old-space-size=12288`, the full-corpus SSR bundle exceeds
 V8's default heap; `task prod` sets this), `preview`, `start` (run the built
 `.output/server/index.mjs`), `lint:fix`, `format`, `typecheck` (`nuxi
 typecheck` **and** `vue-tsc -p tsconfig.scripts.json` for
