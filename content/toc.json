@@ -62,12 +62,16 @@
                   "en-sefaria-sulam",
                   "es-ai",
                   "es-bb",
+                  "fr-ai",
                   "fr-bb",
                   "he-jerusalem-1956",
+                  "pt-ai",
                   "pt-bb",
                   "ru-ai",
                   "ru-bb",
+                  "tr-ai",
                   "tr-bb",
+                  "uk-ai",
                   "uk-bb"
                 ],
                 "commentary": []
@@ -6650,6 +6654,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -6702,6 +6707,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -6754,6 +6760,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -6806,6 +6813,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -6857,6 +6865,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -6909,6 +6918,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -6961,6 +6971,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7012,6 +7023,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7051,6 +7063,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7065,6 +7078,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-ai",
                   "he-jerusalem-1956",
@@ -7103,6 +7117,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7154,6 +7169,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7193,6 +7209,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7243,6 +7260,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7281,6 +7299,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7319,6 +7338,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7358,6 +7378,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7372,6 +7393,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7410,6 +7432,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7424,6 +7447,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7461,6 +7485,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7500,6 +7525,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7514,6 +7540,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7552,6 +7579,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7603,6 +7631,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7617,6 +7646,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7653,6 +7683,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7692,6 +7723,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7706,6 +7738,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7744,6 +7777,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7758,6 +7792,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7796,6 +7831,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7810,6 +7846,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7848,6 +7885,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7862,6 +7900,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb-kabbalah-info",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7899,6 +7938,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -7951,6 +7991,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8001,6 +8042,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8040,6 +8082,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8091,6 +8134,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8142,6 +8186,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8193,6 +8238,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8244,6 +8290,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8282,6 +8329,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8320,6 +8368,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8358,6 +8407,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8397,6 +8447,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8448,6 +8499,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8499,6 +8551,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8550,6 +8603,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8601,6 +8655,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8653,6 +8708,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8704,6 +8760,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8755,6 +8812,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8805,6 +8863,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8844,6 +8903,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8896,6 +8956,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8947,6 +9008,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -8999,6 +9061,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -9049,6 +9112,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -9087,6 +9151,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -9125,6 +9190,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -9164,6 +9230,7 @@
                   "de-ai",
                   "en-ai",
                   "en-bb",
+                  "es-ai",
                   "es-bb",
                   "fr-bb",
                   "he-jerusalem-1956",
@@ -44326,7 +44393,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -44575,7 +44643,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -44800,7 +44869,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -45061,7 +45131,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -45883,7 +45954,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -46000,7 +46072,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -46298,7 +46371,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -46344,7 +46418,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -46915,6 +46990,7 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
+                  "pt-ai",
                   "ru-ai"
                 ]
               }
@@ -54238,6 +54314,7 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
+                  "pt-ai",
                   "ru-ai"
                 ]
               }
@@ -55512,6 +55589,7 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
+                  "pt-ai",
                   "ru-ai"
                 ],
                 "commentary": []
@@ -55578,6 +55656,7 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
+                  "pt-ai",
                   "ru-ai"
                 ],
                 "commentary": []
@@ -55611,6 +55690,7 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
+                  "pt-ai",
                   "ru-ai"
                 ],
                 "commentary": []
@@ -73112,7 +73192,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -73377,7 +73458,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -74215,7 +74297,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -74257,7 +74340,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -74703,7 +74787,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -75818,7 +75903,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -75910,7 +75996,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -75989,7 +76076,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -76420,7 +76508,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -76528,7 +76617,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -76782,6 +76872,7 @@
                   "he-jerusalem-1956",
                   "pt-ai",
                   "ru-ai",
+                  "tr-ai",
                   "uk-ai"
                 ]
               }
@@ -77088,7 +77179,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -77527,7 +77619,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -77603,7 +77696,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -77678,7 +77772,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -77720,7 +77815,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -77937,7 +78033,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -78079,7 +78176,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -78188,7 +78286,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -78264,7 +78363,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -78415,7 +78515,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -78557,7 +78658,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -78864,7 +78966,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -79155,7 +79258,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -79363,7 +79467,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -79505,7 +79610,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -79548,7 +79654,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -79690,7 +79797,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -79832,7 +79940,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -80108,7 +80217,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -80514,7 +80624,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -80800,7 +80911,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -81371,7 +81483,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -81459,7 +81572,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -81787,7 +81901,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -81904,7 +82019,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -81980,7 +82096,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -82089,7 +82206,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -82231,7 +82349,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -82612,7 +82731,8 @@
                   "es-ai",
                   "fr-ai",
                   "he-jerusalem-1956",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -82829,7 +82949,8 @@
                   "fr-ai",
                   "he-jerusalem-1956",
                   "pt-ai",
-                  "ru-ai"
+                  "ru-ai",
+                  "tr-ai"
                 ]
               }
             },
@@ -82963,6 +83084,7 @@
                   "he-jerusalem-1956",
                   "pt-ai",
                   "ru-ai",
+                  "tr-ai",
                   "uk-ai"
                 ]
               }
