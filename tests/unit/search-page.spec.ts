@@ -57,6 +57,39 @@ describe("search page", () => {
     );
   });
 
+  it("highlights normalized matches while rendering excerpt markup as text", async () => {
+    const excerpt = '<img src=x onerror="alert(1)"> Café café';
+    fetchMock.mockResolvedValue({
+      data: [
+        {
+          type: "search-result",
+          id: "accented",
+          attributes: {
+            chapterTitle: "Chapter One",
+            excerpt,
+            language: "en",
+            layer: "source",
+            partTitle: "Part One",
+            versionTitle: "English",
+          },
+          links: { reader: "/read/part-01/chapter-01" },
+        },
+      ],
+      meta: { count: 1, query: "cafe" },
+    });
+    const wrapper = await mountSuspended(SearchPage);
+    await wrapper.get('input[type="search"]').setValue("cafe");
+    await wrapper.get("form").trigger("submit");
+    await flushPromises();
+
+    expect(wrapper.findAll("mark").map((mark) => mark.text())).toEqual([
+      "Café",
+      "café",
+    ]);
+    expect(wrapper.text()).toContain(excerpt);
+    expect(wrapper.find("img").exists()).toBe(false);
+  });
+
   it("announces an empty result set", async () => {
     fetchMock.mockResolvedValue({
       data: [],

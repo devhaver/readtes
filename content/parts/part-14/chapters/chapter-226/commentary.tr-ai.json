@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:226",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 14:226:1",
+      "section": "ohr-pnimi",
+      "html": "<b>İki Hey’in burada aydınlatmasının gerekmesi, ‘babaların suçunu ziyaret eden’ son üçte aydınlatmak içindir</b> vb. Bu son üç, yani ‘temize çıkarmaz’, ‘ziyaret eden’ vb. ve ‘üçüncü kuşaklar üzerine’, yeni NHY’yi edindikten sonra elde edilir. O zaman alt Hey, Hazeh yerinden yeni NHY’nin Yesod Atara’sının yerine iner, bilindiği üzere. Böylece AA’nın Dikna ıslahlarının birinci ve ikincisi olan iki HaVaYaH’ın, şimdi Roş Behina’sına ve Kelim’in Gadlut’unun NHY’sine aydınlatan Hey’leri, daha önce Katnut sırasında yukarıda açıklandığı üzere Hazeh noktasında kapalı ve dahil durumdaydı. Şimdi Hazeh noktasına kapalı biçimde dahil olan bu iki Hey’in, daha sonra yeni NHY’sini edindiğinde ona aydınlatması gerektiğini söyler. Çünkü o zaman Malhut Hazeh’den yeni Yesod’a iner, Işıkların GAR’ını edinir ve Dikna’nın dokuz ıslahını tamamlayan son üçü elde eder, açıklandığı üzere."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {

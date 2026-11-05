@@ -908,3 +908,18 @@ because it is far more often Rosh HaShanah; translators compute it by hand.
 Open: the part-16/chapter-138 pane renders `ואמר הדור האחרון` (Deut. 29:21)
 as "and you shall say to the last generation"; the Hebrew is "and the last
 generation shall say". The commentary lemma follows the Hebrew.
+
+## Multilingual source review — Part 13, Turna
+
+In part-13/chapter-87, `טורנא` means **Atara / crown**, not “path”. The
+book itself defines it: part-13/answers-terminology-01, item 39, begins
+`טורנא, פירושו עטרה`. Its English source translation also says “Turneya
+means 'crown'”. The chapter-87 English reference instead uses “path” twice;
+there is no official `en-bb` file for either of these source chapters to
+arbitrate that disagreement. The explicit Hebrew definition decides it.
+
+Use the target language's established rendering of `עטרה`: Portuguese
+**coroa**, Turkish **taç**, Ukrainian **атара**. Do not copy the misleading
+English reference or invent a new sense for the Aramaic word. These renderings
+were checked in the two source tranches of part 13; this does not certify or
+silently amend the older English corpus.

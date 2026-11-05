@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:37",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 16:37:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Bir Masah ve ayrıca uzaklık aracılığıyla.</b> Açıklama: Neşama seviyesinden ihsan edilen örtülü Hasadim Behina’sı ZON’a GAR’ı çekemez; çünkü bilindiği üzere onlar, Or Yaşar’ın ZON’u gibi Hohma aydınlatmasına ihtiyaç duyarlar. Böylece Hohma aydınlatmasına ihtiyaç duyan Guf’un ZA’sı Behina’sındaki Yetzira dünyası şimdi yalnızca Roş’suz VAK elde eder; zira uzaklaştırma Masah’ı onun üzerinde durur ve Atzilut’tan Hohma aydınlatmasını alamaz. Bu nedenle GAR’dan uzaklaşmıştır. ‘Beria’nın Masah’ı yakın bir Masah’tır, çünkü Bina’dan yapılmıştır’ denmesinin anlamı şudur: Tiferet’in alt üçte ikisi, yani Guf’un YEŞSUT’u Behina’sından ayıklandığı için Atzilut’un Bina seviyesini alabilir. Bu seviye Hohma aydınlatması olmaksızın örtülü Hasadim Behina’sında olsa da YEŞSUT’un kendisi Hohma aydınlatmasına hiç ihtiyaç duymaz; çünkü o Bina’nın Kli’si Behina’sındadir. Fakat ‘Yetzira dünyası, Beria’dan kendisine uzanan Işığı yalnızca bir Masah ve ayrıca uzaklık aracılığıyla alır.’ Yani Guf’un ZA’sının Kli’si Behina’sında olduğu için ona GAR’dan uzaklık Behina’sı eklenmiştir ve Beria gibi GAR Behina’sına yakın değildir."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
