@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:39",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 13:39:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Bu üç Roş, AA’daki NRN Behina’sıdır. Çünkü Galgalta Neşama, Avira Ruah, gizli Hohma ise Nefeş’tir:</b> Aşağıda ise Ari, Galgalta’nın AB, Avira’nın SAG ve Moha Stimaa’nın MA olduğunu söyler. Bunlar Haya, Neşama ve Ruah’tır. Görünüşte bu, burada onların NRN, yani SAG, MA ve BON olduğu sözüyle çelişir.<br>Bu yukarıda zaten iyice açıklandı: Kelim bakımından söz edildiğinde, on Sefirot’ta yalnızca Bina, ZA ve Malhut vardır. Çizgilerin ıslahı bakımından bunlar HBD, HGT ve NHY’dir; Haya ve Yehida’nın Kelim’i ise tümüyle eksiktir. Islahın sonuna kadar geçerli olan Gadlut’un en üst noktasında bile Keter ve Hohma’nın bu Kelim’ini edinemezler. Ancak Işıklar bakımından söz edildiğinde Yehida ve Haya’yı da edinirler; fakat bunlar Bina Kli’sinde, Neşama Işığının içine giyinir. O zaman Bina Kli’si GAR ve yedi alt Sefirot’a bölünür. Ondaki GAR, AB’ın HaVaYaH’ı Behinat’ıdır; ondaki yedi alt Sefirot ise SAG’ın HaVaYaH’ı Behinat’ıdır. İkisi de Bina’nın Kelim’i Behinat’ındadır ve çizgilerin ıslahı bakımından HBD’nın Kelim’idir. Çizgilerin ıslahı bakımından HGT NHY olan ZA ve Malhut’un Kelim’i ise MA’nın HaVaYaH’ı olur. Yukarıda uzun uzun açıklandığı gibi; orada iyice inceleyin. Bu bakımdan üç Roş’u AB, SAG ve MA adlı üç HaVaYaH’a böler. Fakat Kelim’in ilk bakış açısına göre bunlar yalnızca içlerine Nefeş, Ruah ve Neşama’nın giyindiği Bina, ZA ve Malhut’tur. Buradaki ayrım şudur: AB Behinat’ları, yukarıda belirtildiği gibi SAG’a Hohma aydınlatması verseler de kendileri Neşama Behinat’ı olan Bina’nın GAR’ının Işığı Behinat’ında kalır. Hohma aydınlatmasını verenler oldukları için AB sayılırlar. Bunu iyice anla."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
