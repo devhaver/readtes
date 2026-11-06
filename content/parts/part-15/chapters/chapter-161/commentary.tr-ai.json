@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:161",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:161:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Bina, Gevurot, alt Daat’ın yarısı ve üst Daat’ın yarısı... Bunlar ZA’dan ayrıldı. Ancak Or Makif sırrında kalmadılar... Reşimo niteliğinden</b> vb. Açıklaması: MAN olarak yükseldiğinde bile, yükselen Mohin’den bir Reşimo onda kalır. Bu Reşimo, MAN olarak yükselen Mohin’den, Or Makif sayılan bir aydınlatma alır. Burada, ayrılıp MAN olarak yükselen Bina ve Gevurot’un, ZA’da kalan Reşimo’ya Or Makif olarak aydınlatmadığını söylüyor. Bunun nedeni, ZON MAN olarak yükseldiğinde ZA’nın Aba’ya, Nukva’nın İma’ya dahil olmasıdır. O sırada Aba bütünüyle MA’dır; yani AA gibi MA’nın Hohma’sıdır. İma ise bütünüyle BON’dur. Çünkü Atik’in Roş’unu İma’nın durduğu AA’nın yerine eğmesi aracılığıyla İma, BON’un Hohma’sının GAR’ını alır. Bununla Aba’daki BON’un Hohma’sının VAK’ı da ona bağlanmıştır. Dolayısıyla şimdi İma’ya dahil olan Nukva, ondan Bina ve Gevurot’u, yani bütün BON’u alır. İma’ya dahil olmayan ZA’nın ise Bina ve Gevurot’tan hiç payı yoktur; yalnızca Aba niteliğindeki Hohma ve Hesed’den payı vardır. Böylece Aba ve İma’nın Hohma ve Hesed’i, yani ikisinin MA olan sağ tarafı, şimdi yalnızca Aba’ya dahildir. ZA da Aba’ya dahil olduğundan, bunlar onun üzerinde Or Makif sayılır. Ancak ikisinin şimdi yalnızca İma’ya dahil olan Bina ve Gevurot’u, şimdi Nukva’ya kıyafetlenir ve ZA’nın bunlarda payı yoktur."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {

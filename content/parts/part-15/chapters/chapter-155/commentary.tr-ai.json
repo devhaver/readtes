@@ -5,6 +5,17 @@
   "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:155",
   "items": [
     {
+      "anchorId": "op-1",
+      "order": 1,
+      "label": {
+        "he": "1",
+        "en": "1"
+      },
+      "sefariaRef": "Ohr Penimi on Talmud Eser HaSefirot 15:155:1",
+      "section": "ohr-pnimi",
+      "html": "<b>Konuların özeti: ZA’nın Yenika zamanına kadar sahip olduğu bütün Behinot, her bir uçtaki altı alt Sefirot niteliğidir... Bunlara Elokim niteliği denilir</b>. Bu, iki yıllık Yenika zamanına kadardır. O zaman İbur ve Yenika denen iki Partzuf’a sahiptir. Bunlar Nefeş ve Ruah’tır; Işıklar açısından HGT NHY, Kelim açısından HBD HGT diye adlandırılırlar. Nekudim’de çıkan Panim Kelim’idirler; Katnut sırasında bile orada Atzilut durumundaydılar. Yani yukarıda belirtildiği gibi, onları sona erdiren Hazeh noktasıyla birlikte Hazeh’e kadar HBD HGT’dirler. Bunlar Nekudim’in Katnut’unda çıkan yedi kraldır. Yayılmalarının başlangıcından itibaren Parsa’nın yukarısında olduklarından, Nekudim’in Gadlut’unda BYA’nın NHY’ıyla birleşmeselerdi, hiçbir şekilde kırılmaya uygun olmazlardı. Bu Panim Kelim’inin bütün kırılması, yukarıda belirtildiği gibi Parsa’nın dışına çıkıp BYA olan Hazeh’ten aşağıdaki Ahor Kelim’iyle karışmaları ve birleşmelerinden kaynaklandı. Kırılmaları kendilerinden kaynaklanmadığından, BYA’dan ayıklanıp Ahorayim Kelim’inden ayrılarak Atzilut’ta ıslah edildikten sonra, artık onlarda hiçbir zaman hiçbir azalma olmaz. Bunlar ZA’da kendi yayılmasının özü açısından ıslah edilen İbur ve Yenika adlı iki Partzuf’tur. Yukarıdaki nedenle ondan asla eksilmezler. ZA’nın yayılmasının özü sayılırlar; çünkü yukarıda belirtildiği gibi Nekudim’in yedi kralındaki kökünde de yayılmasının özü böyleydi. Ancak bunlarda Ruah’ın Neşama, Haya ve Yehida’sı denen Ruah GAR’ı yoktur; yalnızca Ruah’ın Nefeş ve Ruah’ı vardır. Nekudim’in Katnut’unda çıktıkları ve ZA’nın Atzilut’ta iki yıllık Yenika’da tamamlandığı gibi. Yukarıda Kısım 12’de belirtildiği gibi; oraya bakın. ZA’da Ruah’ın Nefeş ve Ruah’ından az da olsa fazla çıkan her şey, onun özüne ek sayılır. Çünkü bunlar Nekudim’in Panim Kelim’inde yoktu; Nekudim’in Ahor Kelim’inden ayıklanması gerekir. Bu ayıklamalar, iki yıllık Yenika’dan sonra gelen ikinci İbur diye adlandırılır. Çünkü Panim Kelim’inin ayıklanması daima ilk İbur diye adlandırılır. Nefeş ve Ruah’ın Nefeş-Ruah’ı olan İbur ve Yenika adlı iki Partzuf onlardan gelir ve yukarıda belirtildiği gibi onun yayılmasının esası sayılır. Ek olarak gelen ise ikinci İbur sayılır. Bunlar Ruah’ın GAR’ı içindir; zamanı iki yıllık Yenika’dan dokuz yıl ve bir güne kadardır. O zaman Ruah’ın Gadlut Partzuf’unu edinir. Bu üç Partzuf, üç Ahor Partzuf’u, yani Ahor’un İbur, Yenika ve Mohin’i diye adlandırılır. Yalnızca onun Kelim’ini tamamladıkları için böyle adlandırılırlar. Bundan sonra, yani dokuz yıl ve bir günden sonra, üçüncü İbur’u vardır. O zaman onda üç Panim Partzuf’u çıkar; bunlar da üç Ahor Partzuf’u düzenindedir ve ZA’nın Panim İbur, Yenika ve Mohin’i diye adlandırılır. Yukarıda Kısım 12’de belirtildiği gibi, bunlar on üç yıl ve bir günün Mohin’idir; oraya bakın."
+    },
+    {
       "anchorId": "op-2",
       "order": 2,
       "label": {
