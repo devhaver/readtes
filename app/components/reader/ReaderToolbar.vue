@@ -26,10 +26,19 @@ const props = defineProps<{
   next: ChapterLink | null;
   currentPartChapters?: TocChapter[];
   currentChapterId?: string;
+  // The chapter's seif numbers, for the "Go to seif" control; the control is
+  // omitted when there are none.
+  seifNumbers?: number[];
 }>();
 
 const { t, locale } = useI18n();
 const localePath = useLocalePath();
+
+const {
+  input: seifInput,
+  error: seifError,
+  jump: jumpToSeif,
+} = useSeifJump(() => props.seifNumbers ?? []);
 
 const { mode, setMode } = useReaderMode();
 const { visible: chromeVisible } = useAutoHidingChrome();
@@ -247,6 +256,35 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
       <div
         class="ms-auto flex max-w-full flex-wrap items-center justify-end gap-1 sm:shrink-0 sm:flex-nowrap sm:gap-2"
       >
+        <div
+          v-if="seifNumbers && seifNumbers.length > 0"
+          class="flex items-center gap-1"
+        >
+          <label for="reader-seif-jump" class="sr-only">{{
+            t("reader.jump.label")
+          }}</label>
+          <input
+            id="reader-seif-jump"
+            v-model="seifInput"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            dir="ltr"
+            :placeholder="t('reader.jump.placeholder')"
+            :aria-invalid="seifError ? true : undefined"
+            aria-describedby="reader-seif-jump-error"
+            class="h-8 w-20 rounded-input border border-(--border-control) bg-(--surface) px-2 text-sm text-(--text-primary) placeholder:text-(--text-muted) focus-visible:outline focus-visible:outline-2 focus-visible:outline-(--focus-ring)"
+            @keydown.enter.prevent="jumpToSeif"
+          />
+          <span
+            id="reader-seif-jump-error"
+            role="status"
+            aria-live="polite"
+            class="text-xs text-(--warning-text)"
+            >{{ seifError }}</span
+          >
+        </div>
+
         <button
           type="button"
           class="tes-icon-btn"

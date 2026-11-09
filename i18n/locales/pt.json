@@ -92,6 +92,11 @@
     "miniTocTitle": "Neste capítulo",
     "miniTocTruncated": "…e mais {count} — role para baixo para ler todos.",
     "seifLabel": "Item {n}",
+    "jump": {
+      "label": "Ir para o seif",
+      "placeholder": "N.º do seif",
+      "outOfRange": "Digite um número de seif de 1 a {max}."
+    },
     "noteLabel": "Nota {n}",
     "printMark": "Marca impressa na edição original",
     "missingAnchor": {

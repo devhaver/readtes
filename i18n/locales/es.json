@@ -92,6 +92,11 @@
     "miniTocTitle": "En este capítulo",
     "miniTocTruncated": "…y {count} más: desplácese hacia abajo para leerlos todos.",
     "seifLabel": "Inciso {n}",
+    "jump": {
+      "label": "Ir al seif",
+      "placeholder": "N.º de seif",
+      "outOfRange": "Introduzca un número de seif del 1 al {max}."
+    },
     "noteLabel": "Nota {n}",
     "printMark": "Marca impresa en la edición original",
     "missingAnchor": {

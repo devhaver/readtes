@@ -92,6 +92,11 @@
     "miniTocTitle": "В тази глава",
     "miniTocTruncated": "…и още {count} — превъртете надолу, за да прочетете всички.",
     "seifLabel": "Сѐиф {n}",
+    "jump": {
+      "label": "Към сеиф",
+      "placeholder": "Сеиф №",
+      "outOfRange": "Въведете номер на сеиф от 1 до {max}."
+    },
     "noteLabel": "Бележка {n}",
     "printMark": "Знак, отпечатан в оригиналното издание",
     "missingAnchor": {

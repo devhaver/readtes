@@ -92,6 +92,11 @@
     "miniTocTitle": "In diesem Kapitel",
     "miniTocTruncated": "… und {count} weitere – nach unten scrollen, um alle zu lesen.",
     "seifLabel": "Absatz {n}",
+    "jump": {
+      "label": "Zu Seif springen",
+      "placeholder": "Seif-Nr.",
+      "outOfRange": "Geben Sie eine Seif-Nummer von 1 bis {max} ein."
+    },
     "noteLabel": "Anmerkung {n}",
     "printMark": "Zeichen aus der Originalausgabe",
     "missingAnchor": {
