@@ -11,10 +11,12 @@
  *  - **Batch by characters, never by item count.** Commentary items run from
  *    29 to 37,057 characters — a 1,278x spread. Ten items can be a paragraph
  *    or a small book.
- *  - **Never split a chapter.** The emitted artifact is one file per chapter;
- *    splitting one across batches would mean two half-files racing to write
- *    the same path, for no benefit. A chapter that exceeds the budget on its
- *    own becomes its own batch instead.
+ *  - **Never split an item; split an oversized chapter only between items.**
+ *    A chapter that fits the budget stays whole. One that exceeds it spans
+ *    consecutive batches (see `packBatches`). Export batching is not
+ *    integration: apply pieces in source order and, when the workflow needs
+ *    atomic chapters, assemble the complete chapter before applying — never
+ *    have independent workers race writes to the same live chapter.
  */
 import type {
   CommentaryItem,

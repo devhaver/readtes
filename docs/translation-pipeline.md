@@ -55,8 +55,15 @@ Manifests land in `.translation/<lang>/` (git-ignored). Each is standalone:
 instructions, the binding glossary, per-chapter context, and the items.
 
 Batches are packed by **source-prose characters**, never item count — items run
-from 29 to 37,057 characters. Default budget 20,000. A chapter is never split
-across batches; one larger than the whole budget gets a batch to itself.
+from 29 to 37,057 characters. Default budget 20,000. A chapter larger than the
+whole budget is split across consecutive batches (and so consecutive
+manifests) by item; a single item is never split. A chapter that fits is never
+divided.
+
+Integration is a separate concern from export batching: apply pieces in source
+order, and when the workflow needs atomic chapters, assemble the complete
+chapter in scratch and apply it serially. Don't let independent workers race
+writes to the same live chapter.
 
 Re-running is safe and idempotent in the sense that matters: it only ever
 exports what no version in that language already covers, so a half-finished
