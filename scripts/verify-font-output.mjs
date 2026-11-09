@@ -36,12 +36,18 @@ import { join } from "node:path";
  */
 const FONT_DIRS = [".output/public/fonts", ".output/public/_fonts"];
 /**
- * The generated `@font-face` rules end up in the built entry stylesheet, not
- * in `.nuxt/nuxt-fonts-global.css` (which is the module's build-time input
- * and is empty by the time the output exists). Checking the shipped CSS is
- * also the more honest test: it is what the browser reads.
+ * Where the generated `@font-face` rules end up. `@nuxt/fonts` 0.x wrote them
+ * into the built entry stylesheet; 1.x inlines them into each page's `<head>`
+ * instead, so the entry stylesheet carries none. Both are scanned, and the
+ * Hebrew home page is the page that must carry the Hebrew reading faces.
+ * Checking the shipped output is also the more honest test: it is what the
+ * browser reads (`.nuxt/nuxt-fonts-global.css` is only the module's input).
  */
 const CSS_DIR = ".output/public/_nuxt";
+const HTML_PAGES = [
+  ".output/public/index.html",
+  ".output/public/he/index.html",
+];
 
 /** Families the reader cannot do without — the two Hebrew reading faces. */
 const REQUIRED_FAMILIES = ["David Libre", "Frank Ruhl Libre"];
@@ -93,9 +99,13 @@ if (bytes < MIN_BYTES) {
   fail(`${FONT_DIR} is ${bytes} bytes, expected at least ${MIN_BYTES}.`);
 }
 
-const css = readdirSync(CSS_DIR)
-  .filter((name) => name.endsWith(".css"))
-  .map((name) => readFileSync(join(CSS_DIR, name), "utf8"))
+const css = [
+  ...readdirSync(CSS_DIR)
+    .filter((name) => name.endsWith(".css"))
+    .map((name) => join(CSS_DIR, name)),
+  ...HTML_PAGES,
+]
+  .map((path) => readFileSync(path, "utf8"))
   .join("");
 
 const flat = css.replaceAll("\n", "");
