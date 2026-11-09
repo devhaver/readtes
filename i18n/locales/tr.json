@@ -127,6 +127,10 @@
       "unalignedCommentaryTitle": "Daha fazla şerh (henüz maddelerle eşleştirilmedi)"
     },
     "progressLabel": "Okuma ilerlemesi",
+    "copyLink": {
+      "label": "Bu seif için bağlantıyı kopyala",
+      "copied": "Bağlantı kopyalandı"
+    },
     "toolbar": {
       "preferencesButton": "Okuma tercihleri",
       "contentsButton": "İçindekiler",

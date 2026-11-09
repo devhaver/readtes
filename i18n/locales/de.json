@@ -127,6 +127,10 @@
       "unalignedCommentaryTitle": "Weiterer Kommentar (noch nicht Absätzen zugeordnet)"
     },
     "progressLabel": "Lesefortschritt",
+    "copyLink": {
+      "label": "Link zu diesem Seif kopieren",
+      "copied": "Link kopiert"
+    },
     "toolbar": {
       "preferencesButton": "Leseeinstellungen",
       "contentsButton": "Inhalt",

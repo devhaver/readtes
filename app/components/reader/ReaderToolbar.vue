@@ -75,6 +75,10 @@ const modeOptions = computed(() => [
 // toolbar slot, or directly alongside `StudyStream` in study mode).
 const showPreferences = ref(false);
 
+// Copies the link to the seif in view. `copied` drives a visually hidden
+// polite live region, so the confirmation reaches screen readers too.
+const { copied: linkCopied, copy: copyLink } = useCopiedLink();
+
 // The Contents panel (T90): provide/inject singleton, same as
 // `useCommentarySheet` — the reader page calls this first, so
 // `MobilePanePill` (a sibling, not a descendant, of this toolbar) injects
@@ -254,6 +258,19 @@ const isCollapsed = computed(() => isCollapsible.value && collapsed.value);
         >
           <span class="tes-icon tes-icon-contents h-5 w-5" aria-hidden="true" />
         </button>
+
+        <button
+          type="button"
+          class="tes-icon-btn"
+          :aria-label="t('reader.copyLink.label')"
+          :title="t('reader.copyLink.label')"
+          @click="copyLink"
+        >
+          <span class="tes-icon tes-icon-link h-5 w-5" aria-hidden="true" />
+        </button>
+        <span class="sr-only" role="status" aria-live="polite">{{
+          linkCopied ? t("reader.copyLink.copied") : ""
+        }}</span>
 
         <button
           type="button"

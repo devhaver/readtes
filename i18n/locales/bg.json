@@ -127,6 +127,10 @@
       "unalignedCommentaryTitle": "Още коментари (все още несъпоставени с параграфи)"
     },
     "progressLabel": "Напредък при четене",
+    "copyLink": {
+      "label": "Копиране на връзката към този сеиф",
+      "copied": "Връзката е копирана"
+    },
     "toolbar": {
       "preferencesButton": "Настройки за четене",
       "contentsButton": "Съдържание",

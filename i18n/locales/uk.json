@@ -127,6 +127,10 @@
       "unalignedCommentaryTitle": "Ще коментар (поки не зіставлено з пунктами)"
     },
     "progressLabel": "Прогрес читання",
+    "copyLink": {
+      "label": "Копіювати посилання на цей сеіф",
+      "copied": "Посилання скопійовано"
+    },
     "toolbar": {
       "preferencesButton": "Налаштування читання",
       "contentsButton": "Зміст",
