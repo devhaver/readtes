@@ -93,6 +93,17 @@ useLocalizedSeo({
   description: () => t("seo.home.description"),
 });
 
+// "Continue reading": `position` stays null until after mount (see
+// `useLastReadPosition`), so the card renders nothing on the server and in
+// the first client render.
+const { position: lastRead } = useLastReadPosition();
+const continueTo = computed(() => {
+  const last = lastRead.value;
+  if (!last) return null;
+  const hash = last.seif === null ? "" : `#seif-${last.seif}`;
+  return `${localePath(`/read/${last.chapterId}`)}${hash}`;
+});
+
 const layers = computed(() => [
   {
     title: t("home.howItWorksSourceTitle"),
@@ -292,6 +303,39 @@ const layers = computed(() => [
     </section>
 
     <div class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 sm:pb-16">
+      <!-- Continue reading: client-only, filled in after mount -->
+      <section
+        v-if="lastRead && continueTo"
+        class="mt-16 flex flex-wrap items-center justify-between gap-4 rounded-card border border-(--border) bg-(--surface) p-6"
+      >
+        <div>
+          <h2 class="font-display text-2xl text-(--text-primary)">
+            {{ t("home.continue.title") }}
+          </h2>
+          <p class="mt-1 text-sm text-(--text-muted)">
+            {{ t("common.part") }} {{ lastRead.part }} · {{ lastRead.title }}
+          </p>
+        </div>
+        <NuxtLink
+          :to="continueTo"
+          class="inline-flex items-center justify-center gap-2 rounded-button bg-navy-primary px-5 py-2.5 text-sm font-medium text-surface-white transition-colors hover:bg-navy-night focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--focus-ring)"
+        >
+          {{ t("home.continue.cta") }}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 rtl:rotate-180"
+            aria-hidden="true"
+          >
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </NuxtLink>
+      </section>
+
       <!-- How this reader works -->
       <section class="mt-16">
         <h2 class="font-display text-2xl text-(--text-primary)">

@@ -348,6 +348,24 @@ const anchorMarkers = computed(() =>
 // can see the other's scroll container on its own.
 const { currentSeif } = useCurrentSeif();
 
+// "Continue reading" on the home page: remember the chapter and seif the
+// reader is on. Client only; the seif is `null` until the source pane measures.
+const { savePosition } = useLastReadPosition();
+watch(
+  currentSeif,
+  (seif) => {
+    if (!import.meta.client) return;
+    void savePosition({
+      locale: locale.value,
+      part: partFile.part.number,
+      chapterId,
+      seif,
+      title: chapterTitle.value,
+    });
+  },
+  { immediate: true },
+);
+
 watch(mode, async () => {
   const seif = currentSeif.value;
   if (seif === null) return;

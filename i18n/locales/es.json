@@ -190,6 +190,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "El Estudio de las Diez Sefirot",
     "beginReading": "Empezar a leer",
+    "continue": {
+      "title": "Continuar leyendo",
+      "cta": "Continuar"
+    },
     "quoteSource": "El Estudio de las Diez Sefirot, Parte 1, capítulo 1",
     "howItWorksTitle": "Cómo funciona este lector",
     "howItWorksSourceTitle": "El texto del Ari",

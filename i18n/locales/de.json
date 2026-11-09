@@ -190,6 +190,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "Das Studium der Zehn Sefirot",
     "beginReading": "Mit dem Lesen beginnen",
+    "continue": {
+      "title": "Weiterlesen",
+      "cta": "Fortsetzen"
+    },
     "quoteSource": "Talmud Eser Sefirot, Teil 1, Kapitel 1",
     "howItWorksTitle": "So funktioniert dieser Reader",
     "howItWorksSourceTitle": "Der Text des Ari",

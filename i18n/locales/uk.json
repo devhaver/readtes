@@ -190,6 +190,10 @@
     "heroTitleHebrew": "תלמוד עשר הספירות",
     "heroSubtitle": "Вчення про десять сфірот",
     "beginReading": "Почати читання",
+    "continue": {
+      "title": "Продовжити читання",
+      "cta": "Продовжити"
+    },
     "quoteSource": "Вчення про десять сфірот, частина 1, розділ 1",
     "howItWorksTitle": "Як влаштоване читання",
     "howItWorksSourceTitle": "Текст АРІ",
