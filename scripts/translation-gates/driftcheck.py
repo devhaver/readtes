@@ -79,6 +79,16 @@ def count_tags(s):
     return c
 
 
+def with_occurrence(keys):
+    """Number repeats of a key, as translate-apply.ts pairs them: (k, i)."""
+    seen = Counter()
+    out = []
+    for k in keys:
+        out.append((k, seen[k]))
+        seen[k] += 1
+    return out
+
+
 def check(batch):
     src = load_chapters(f"{SCRATCH}/chs-{batch}.json")
     try:
@@ -87,41 +97,33 @@ def check(batch):
         print(f"[{batch}] MISSING out-{batch}.json")
         return 1
 
-    items = {}
-    order = []
-    for ch in src["chapters"]:
-        for it in ch["items"]:
-            k = (ch["chapterId"], it["anchorId"])
-            items[k] = it["he"]
-            order.append(k)
+    hes = [((ch["chapterId"], it["anchorId"]), it["he"]) for ch in src["chapters"] for it in ch["items"]]
+    order = with_occurrence([k for k, _ in hes])
+    items = {o: he for o, (_, he) in zip(order, hes)}
 
     problems = []
     if out.get("batch") != batch:
         problems.append(f"batch field is {out.get('batch')!r}, expected {batch!r}")
 
     tr = out.get("translations", [])
-    got = [(t.get("chapterId"), t.get("anchorId")) for t in tr]
+    got = with_occurrence([(t.get("chapterId"), t.get("anchorId")) for t in tr])
     if len(tr) != len(order):
         problems.append(f"item count {len(tr)} != manifest {len(order)}")
     missing = [k for k in order if k not in set(got)]
     extra = [k for k in got if k not in items]
-    dupes = [k for k, n in Counter(got).items() if n > 1]
     for k in missing:
-        problems.append(f"MISSING item {k[0]} {k[1]}")
+        problems.append(f"MISSING item {k[0][0]} {k[0][1]}")
     for k in extra:
-        problems.append(f"EXTRA item {k[0]} {k[1]} (not in manifest)")
-    for k in dupes:
-        problems.append(f"DUPLICATE item {k[0]} {k[1]}")
-    if got and got != order and not missing and not extra and not dupes:
+        problems.append(f"EXTRA item {k[0][0]} {k[0][1]} (not in manifest, or returned more often than the source has it)")
+    if got and got != order and not missing and not extra:
         problems.append("items are not in source order")
 
-    for t in tr:
-        k = (t.get("chapterId"), t.get("anchorId"))
+    for t, k in zip(tr, got):
         he = items.get(k)
         if he is None:
             continue
         html = t.get("html") or ""
-        tag = f"{k[0]} {k[1]}"
+        tag = f"{k[0][0]} {k[0][1]}"
 
         if not html.strip():
             problems.append(f"{tag}: empty html")
