@@ -15,11 +15,13 @@ defineProps<{
 
 const { t } = useI18n();
 const localePath = useLocalePath();
+const hintId = useId();
 </script>
 
 <template>
   <nav
     :aria-label="t('reader.original.pagination')"
+    :aria-describedby="hintId"
     class="flex items-center justify-between gap-3 border-y border-(--border) py-3 text-sm text-(--text-primary)"
   >
     <NuxtLink
@@ -67,5 +69,8 @@ const localePath = useLocalePath();
         >&#9654;</span
       >
     </span>
+    <span :id="hintId" class="sr-only"
+      >{{ t("reader.shortcuts.prev") }} · {{ t("reader.shortcuts.next") }}</span
+    >
   </nav>
 </template>

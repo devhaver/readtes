@@ -241,6 +241,11 @@ const commentaryItems = computed(() => commentaryFile.value?.items ?? []);
 
 const { prev, next } = prevNextChapterLinks(volumes.value, partFile, chapterId);
 
+useChapterShortcuts(() => ({
+  prev: prev ? localePath(`/read/${prev.id}`) : null,
+  next: next ? localePath(`/read/${next.id}`) : null,
+}));
+
 // Original mode's own Prev/Next pagination, scoped to this part's ToC order
 // (distinct from `prev`/`next` above, which cross part/volume boundaries) —
 // see `partPaginationPosition` for the `KIND_ORDER` caveat this inherits.

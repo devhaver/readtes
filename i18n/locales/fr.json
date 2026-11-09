@@ -108,6 +108,10 @@
       "panes": "Colonnes",
       "original": "Original"
     },
+    "shortcuts": {
+      "prev": "Clavier : [ précédent",
+      "next": "] suivant"
+    },
     "original": {
       "prev": "Préc.",
       "next": "Suiv.",

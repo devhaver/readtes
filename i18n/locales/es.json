@@ -108,6 +108,10 @@
       "panes": "Paneles",
       "original": "Original"
     },
+    "shortcuts": {
+      "prev": "Teclado: [ anterior",
+      "next": "] siguiente"
+    },
     "original": {
       "prev": "Ant.",
       "next": "Sig.",
