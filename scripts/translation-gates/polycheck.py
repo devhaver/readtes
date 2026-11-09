@@ -11,6 +11,13 @@ Checks: item-set equality and order, tag counts against the Hebrew, Hebrew
 leakage, straight quotes, the right script for the language (and Ukrainian
 that is not Russian), the expansion ratio, and the `required` / `banned`
 patterns of docs/translation/terms-<lang>.json.
+
+A source chapter can repeat an `n` (part-01 answers-topics does). Items are
+paired by occurrence, as scripts/translate-apply.ts does: the i-th output
+item with a key is compared with the i-th source item with that key.
+
+Self-test: python3 polycheck.py --selftest — two different paragraphs sharing
+one `n` must each be compared with their own Hebrew.
 """
 import json
 import os
@@ -34,11 +41,14 @@ CYRILLIC_LANGS = {"bg", "ru", "uk"}
 RATIO = (1.2, 2.25)
 
 args = sys.argv[1:]
-if "--lang" not in args:
-    sys.exit("usage: TX_SCRATCH=<dir> python3 polycheck.py --lang <code> <batch> …")
-i = args.index("--lang")
-lang = args[i + 1]
-batches = args[:i] + args[i + 2:]
+if "--selftest" in args:
+    lang, batches = "xx", []  # no terms-xx.json: only the mechanical checks run
+else:
+    if "--lang" not in args:
+        sys.exit("usage: TX_SCRATCH=<dir> python3 polycheck.py --lang <code> <batch> …")
+    i = args.index("--lang")
+    lang = args[i + 1]
+    batches = args[:i] + args[i + 2:]
 
 terms_path = os.path.join(REPO, "docs", "translation", f"terms-{lang}.json")
 terms = json.load(open(terms_path, encoding="utf-8")) if os.path.exists(terms_path) else {}
@@ -51,14 +61,23 @@ for r in terms.get("required", []):
 plain = lambda html: TAG.sub("", html)
 
 
+def occurrences(pairs):
+    """Key each (chapterId, id) pair by its occurrence: ((chapterId, id), i)."""
+    seen = {}
+    keys, values = [], {}
+    for k, v in pairs:
+        i = seen.get(k, 0)
+        seen[k] = i + 1
+        keys.append((k, i))
+        values[(k, i)] = v
+    return keys, values
+
+
 def check(batch):
     chs = json.load(open(f"{SCRATCH}/chs-{batch}.json", encoding="utf-8"))
     out = json.load(open(f"{SCRATCH}/out-{batch}.json", encoding="utf-8"))
-    key = lambda c, it: (c["chapterId"], str(it.get("anchorId", it.get("n"))))
-    want = [key(c, it) for c in chs for it in c["items"]]
-    he = {key(c, it): it["he"] for c in chs for it in c["items"]}
-    got = [(t["chapterId"], str(t.get("anchorId", t.get("n")))) for t in out["translations"]]
-    html = {(t["chapterId"], str(t.get("anchorId", t.get("n")))): t["html"] for t in out["translations"]}
+    want, he = occurrences([((c["chapterId"], str(it.get("anchorId", it.get("n")))), it["he"]) for c in chs for it in c["items"]])
+    got, html = occurrences([((t["chapterId"], str(t.get("anchorId", t.get("n")))), t["html"]) for t in out["translations"]])
     problems = []
     if got != want:
         missing = [k for k in want if k not in html]
@@ -68,7 +87,7 @@ def check(batch):
         if k not in html:
             continue
         h, t = he[k], html[k]
-        where = f"{k[0]} {k[1]}"
+        where = f"{k[0][0]} {k[0][1]}" + (f" (occurrence {k[1] + 1})" if k[1] else "")
         for tag in TAGS:
             if h.count(tag) != t.count(tag):
                 problems.append(f"{where}: {tag} {h.count(tag)} → {t.count(tag)}")
@@ -107,6 +126,33 @@ def check(batch):
     return len(problems)
 
 
-total = sum(check(b) for b in batches)
-print(f"total problems: {total}")
-sys.exit(1 if total else 0)
+def selftest():
+    import tempfile
+
+    global SCRATCH
+    he1 = "<b>אחד</b> " + "א" * 300
+    he2 = "ב" * 300
+    chs = [{"chapterId": "c", "items": [{"n": 5, "he": he1}, {"n": 5, "he": he2}]}]
+    good = [{"chapterId": "c", "n": 5, "html": "<b>one</b> " + "x" * 600},
+            {"chapterId": "c", "n": 5, "html": "y" * 600}]
+    cases = [("good", good, 0), ("swapped", good[::-1], 4)]
+    bad = 0
+    with tempfile.TemporaryDirectory() as tmp:
+        SCRATCH = tmp
+        json.dump(chs, open(f"{tmp}/chs-t.json", "w", encoding="utf-8"), ensure_ascii=False)
+        for name, tr, want in cases:
+            json.dump({"translations": tr}, open(f"{tmp}/out-t.json", "w", encoding="utf-8"), ensure_ascii=False)
+            got = check("t")
+            if got != want:
+                bad += 1
+                print(f"  FAIL {name}: {got} problem(s), expected {want}")
+    print(f"selftest: {len(cases) - bad}/{len(cases)} cases correct")
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    if "--selftest" in sys.argv:
+        sys.exit(selftest())
+    total = sum(check(b) for b in batches)
+    print(f"total problems: {total}")
+    sys.exit(1 if total else 0)
