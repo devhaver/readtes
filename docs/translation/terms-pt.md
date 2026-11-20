@@ -52,10 +52,10 @@ this file.
 | ח word-initial        | **h**                   | Hochma 114, Hesed 6, Haya 44, Hassadim 23, Hotem 3, Hirik 8, Holam 9, HGT 22, HB 17. Exceptions BB fixes: **Chazeh** 68, and the name **Chaim** Vital 4 |
 | ח medial/final        | **ch**                  | Achoraim 40, Achor 9, Netzach 6, Metzach 8, Ruach 23, Massach 240, Mochin 98, Rachamim 4                                                                |
 | כ soft                | **ch**                  | Malchut 145, Hizdakchut 28, Melech 22, Melachim 1, Shechinah 3, Halacha 3                                                                               |
-| כּ, ק                 | **k**                   | Keter 138, Kli 110, Kelim 181, Kedusha 22, Klipot 18, Nekudim 169, Akudim, Katnut 23, KHB 27                                                            |
+| כּ, ק                  | **k**                   | Keter 138, Kli 110, Kelim 181, Kedusha 22, Klipot 18, Nekudim 169, Akudim, Katnut 23, KHB 27                                                            |
 | צ                     | **tz**                  | Atzilut 226, Yetzira 64, Partzuf 300, Tzimtzum 66, Netzach, Metzach, Etzbaot, Mitzvot                                                                   |
-| שׁ                    | **sh**                  | Shoresh 19, Neshama 60, Bitush 30, Hitlabshut 34, Reshimo, Shuruk 13, Shechinah                                                                         |
-| ס / שׂ between vowels | **ss**                  | Massach 240, Yessod 13, Assia 54, Hassadim 23 (but Sefira, Sof, Sium, Nikvey)                                                                           |
+| שׁ                     | **sh**                  | Shoresh 19, Neshama 60, Bitush 30, Hitlabshut 34, Reshimo, Shuruk 13, Shechinah                                                                         |
+| ס / שׂ between vowels  | **ss**                  | Massach 240, Yessod 13, Assia 54, Hassadim 23 (but Sefira, Sof, Sium, Nikvey)                                                                           |
 | ג before e/i          | **gu**                  | Guimel 49, Guevura 6                                                                                                                                    |
 | ב soft, consonantal ו | **v**                   | Vav 9, HaVaYaH 10, VAK 49, Dvekut 4, Nikvey 45                                                                                                          |
 | final ה after a       | **-a, no accent, no h** | Hochma, Bina, Beria, Yetzira, Assia, Neshama, Haya, Yehida, Sefira, Kedusha, Klipa, Yenika, Mitzva                                                      |
