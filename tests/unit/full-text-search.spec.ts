@@ -45,9 +45,7 @@ const documents: SearchDocument[] = [
 
 describe("shared/utils/fullTextSearch", () => {
   it("normalizes Hebrew niqqud, quote marks, punctuation, case, and whitespace", () => {
-    expect(normalizedSearchText("  ז״א\nבְּחִינָה—LIGHT  ")).toBe(
-      "זא בחינה light",
-    );
+    expect(normalizedSearchText("  ז״א\nבְּחִינָה—LIGHT  ")).toBe("זא בחינה light");
   });
 
   it("turns content HTML into decoded, whitespace-normalized plain text", () => {

@@ -17,9 +17,7 @@ describe("shared/utils/searchHighlights", () => {
   });
 
   it("keeps niqqud and internal quote marks in highlighted Hebrew", () => {
-    expect(highlighted("אוֹר פְּנִימִי של ז״א", "אור פנימי")).toEqual([
-      "אוֹר פְּנִימִי",
-    ]);
+    expect(highlighted("אוֹר פְּנִימִי של ז״א", "אור פנימי")).toEqual(["אוֹר פְּנִימִי"]);
     expect(highlighted("אוֹר של ז״א", "זא")).toEqual(["ז״א"]);
   });
 
